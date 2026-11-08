@@ -41,6 +41,14 @@ def main(src, out):
                 t = x.get("text"); te = (en_list[i].get("text") if i < len(en_list) and isinstance(en_list[i], dict) else None) or t
             if t and not DROP.search(t):
                 dis.append({"kind": k, "iso": x.get("iso"), "date": x.get("date"), "ko": t, "en": te, "url": x.get("url")})
+    # flood is shown with its own animation: split it out of storm/weather by wording
+    for x in dis:
+        if x["kind"] in ("storm", "weather") and re.search(r"홍수|폭우|범람|flood|inundat", (x.get("ko") or "") + (x.get("en") or ""), re.I): x["kind"] = "flood"
+    # near-Earth asteroids / comets (NASA CNEOS / JPL), closest first
+    for a in sorted(cur.get("asteroid") or [], key=lambda a: float(a.get("ld") or 999))[:3]:
+        dis.append({"kind": "asteroid", "iso": "", "date": a.get("date"),
+                    "ko": f'소행성 {a.get("name")} 지구 근접 — 달 거리의 {a.get("ld")}배, 크기 {a.get("size","?")} (NASA 근접 통과 목록)',
+                    "en": f'Asteroid {a.get("name")} passes Earth — {a.get("ld")} lunar distances, size {a.get("size","?")} (NASA close-approach list)', "url": "https://cneos.jpl.nasa.gov/ca/"})
     ctry = []
     for f in glob.glob(os.path.join(src, "countries", "*.json")):
         d = load(f); r = d.get("risk") or {}; re_ = d.get("risk_en") or {}
