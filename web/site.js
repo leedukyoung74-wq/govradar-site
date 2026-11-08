@@ -235,3 +235,49 @@ window.gvLang = function (sel) {
   }
   if (window.crypto && crypto.subtle) { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run(); }
 })();
+
+/* ---- Live situation board (verified facts only) from the GitHub data branch: no Netlify deploy needed ---- */
+(function () {
+  var box = document.querySelectorAll(".liveboard"); if (!box.length) return;
+  var L = (location.pathname.match(/^\/([a-z]{2})\//) || [, "en"])[1], ko = L === "ko";
+  var T = {
+    ko: { war: "전쟁", tension: "긴장", watch: "경계", high: "위험", medium: "주의", hot: "진행 중인 분쟁", dis: "재난·감염병 (최근 7일)", ctry: "나라별 경보", asof: "기준", off: "공식 발표", more: "더 보기", fail: "상황판을 불러오지 못했습니다. 아래 상세 내용을 보세요.", k: { tsunami: "해일", quake: "지진", storm: "태풍·홍수", volcano: "화산", weather: "기상", fire: "산불", epidemic: "감염병" }, c: { conflict: "분쟁", disaster: "재해", epidemic: "감염병" } },
+    en: { war: "War", tension: "Tension", watch: "Watch", high: "High", medium: "Elevated", hot: "Active conflicts", dis: "Disasters & outbreaks (last 7 days)", ctry: "Country alerts", asof: "As of", off: "official", more: "More", fail: "Could not load the live board. See the details below.", k: { tsunami: "Tsunami", quake: "Earthquake", storm: "Storm/flood", volcano: "Volcano", weather: "Weather", fire: "Wildfire", epidemic: "Outbreak" }, c: { conflict: "Conflict", disaster: "Disaster", epidemic: "Outbreak" } },
+    es: { war: "Guerra", tension: "Tensión", watch: "Vigilancia", high: "Alto", medium: "Elevado", hot: "Conflictos activos", dis: "Desastres y brotes (últimos 7 días)", ctry: "Alertas por país", asof: "Al", off: "oficial", more: "Más" },
+    fr: { war: "Guerre", tension: "Tension", watch: "Vigilance", high: "Élevé", medium: "Modéré", hot: "Conflits en cours", dis: "Catastrophes et épidémies (7 derniers jours)", ctry: "Alertes par pays", asof: "Au", off: "officiel", more: "Plus" },
+    ar: { war: "حرب", tension: "توتر", watch: "مراقبة", high: "مرتفع", medium: "متوسط", hot: "نزاعات جارية", dis: "كوارث وأوبئة (آخر 7 أيام)", ctry: "تنبيهات الدول", asof: "حتى", off: "رسمي", more: "المزيد" },
+    vi: { war: "Chiến tranh", tension: "Căng thẳng", watch: "Theo dõi", high: "Cao", medium: "Trung bình", hot: "Xung đột đang diễn ra", dis: "Thiên tai và dịch bệnh (7 ngày qua)", ctry: "Cảnh báo theo quốc gia", asof: "Tính đến", off: "chính thức", more: "Thêm" },
+    id: { war: "Perang", tension: "Ketegangan", watch: "Pantauan", high: "Tinggi", medium: "Sedang", hot: "Konflik berlangsung", dis: "Bencana dan wabah (7 hari terakhir)", ctry: "Peringatan per negara", asof: "Per", off: "resmi", more: "Lainnya" }
+  };
+  var t = Object.assign({}, T.en, T[L] || {}); t.k = (T[L] && T[L].k) || T.en.k; t.c = (T[L] && T[L].c) || T.en.c;
+  function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
+  function pick(o) { return ko ? (o.ko || o.en) : (o.en || o.ko); }
+  function flag(iso) { return iso && iso.length === 2 ? String.fromCodePoint.apply(null, iso.toUpperCase().split("").map(function (c) { return 127397 + c.charCodeAt(0); })) : "🌐"; }
+  fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/hazards.json", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (d) {
+      box.forEach(function (b) {
+        var names = {}; try { names = JSON.parse(b.getAttribute("data-names")); } catch (e) {}
+        var home = b.getAttribute("data-mode") === "home";
+        function cn(iso) { var n = names[iso]; if (n && !n[1]) return flag(iso) + " " + esc(n[0]); return n ? '<a href="/' + L + "/" + n[1] + '/#risk">' + flag(iso) + " " + esc(n[0]) + "</a>" : flag(iso) + " " + esc(iso || ""); }
+        var h = '<p class="lb-asof"><b>' + t.asof + " " + esc((d.checked || d.updated || "").replace("T", " ")) + "</b>" + (d.summary_ko ? " · " + esc(ko ? d.summary_ko : (d.summary_en || "")).slice(0, home ? 220 : 600) + (home ? "…" : "") : "") + "</p>";
+        h += '<h3>' + t.hot + '</h3><div class="lb-grid">' + d.hotspots.map(function (x) {
+          return '<div class="lb-card"><p><b>' + cn(x.iso) + "</b> <span class=\"lv " + esc(x.level) + '">' + (t[x.level] || "") + "</span></p><p><b>" + esc(pick(x)) + "</b></p>" +
+            (home ? "" : "<ul>" + x.facts.map(function (f) { return "<li>" + esc(pick(f)) + (f.v === "official" ? ' <small class="note">(' + t.off + ")</small>" : "") + "</li>"; }).join("") + "</ul>") + "</div>";
+        }).join("") + "</div>";
+        var seen = {}, dis = home ? d.disasters.filter(function (x) { if (seen[x.kind]) return false; seen[x.kind] = 1; return true; }).slice(0, 6) : d.disasters;
+        h += "<h3>" + t.dis + '</h3><ul class="lb-list">' + dis.map(function (x) {
+          return "<li><span class=\"tag\">" + (t.k[x.kind] || x.kind) + "</span> " + cn(x.iso) + " · " + esc(x.date || "") + " — " + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + "</li>";
+        }).join("") + "</ul>";
+        var cs = home ? d.countries.filter(function (c) { return c.level === "high"; }) : d.countries;
+        h += "<h3>" + t.ctry + ' <small class="note">' + t.high + " " + d.countries.filter(function (c) { return c.level === "high"; }).length + " · " + t.medium + " " + d.countries.filter(function (c) { return c.level === "medium"; }).length + "</small></h3>";
+        h += home ? '<p class="lb-chips">' + cs.map(function (c) { return '<span class="lb-chip high">' + cn(c.iso) + "</span>"; }).join(" ") + "</p>"
+          : '<div class="lb-grid">' + cs.map(function (c) {
+            return '<div class="lb-card"><p><b>' + cn(c.iso) + '</b> <span class="lv ' + (c.level === "high" ? "war" : "tension") + '">' + t[c.level] + "</span></p><ul>" +
+              ["conflict", "disaster", "epidemic"].filter(function (k) { return c[k]; }).map(function (k) { return (ko ? c[k].ko : (c[k].en.length ? c[k].en : c[k].ko)).map(function (s) { return "<li><small class=\"note\">" + t.c[k] + "</small> " + esc(s) + "</li>"; }).join(""); }).join("") + "</ul></div>";
+          }).join("") + "</div>";
+        b.querySelector(".lb-body").innerHTML = h;
+      });
+    })
+    .catch(function () { box.forEach(function (b) { b.querySelector(".lb-body").innerHTML = '<p class="note">' + (t.fail || T.en.fail) + "</p>"; }); });
+})();
