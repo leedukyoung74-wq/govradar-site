@@ -156,3 +156,14 @@
     try { await window.WMMAuth.update({ data }); msg.textContent = "✓"; } catch (err) { msg.textContent = err.message; }
   });
 })();
+
+/* Language switch: stay on the same page in the new language (fall back to that language's page from the menu). */
+window.gvLang = function (sel) {
+  var o = sel.options[sel.selectedIndex], l = o.getAttribute("data-l"), fb = o.value;
+  var path = location.pathname, m = path.match(/^\/([a-z]{2})(\/.*)?$/);
+  if (!l || !m) { location.href = fb; return; }
+  var target = "/" + l + (m[2] || "/") + location.search + location.hash;
+  fetch("/" + l + (m[2] || "/"), { method: "HEAD" }).then(function (r) {
+    location.href = r.ok ? target : fb;
+  }).catch(function () { location.href = target; });
+};
