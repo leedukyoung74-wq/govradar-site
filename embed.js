@@ -1,0 +1,3 @@
+(function(){var s=document.currentScript,L=s.getAttribute('data-lang')||'ko',ind=s.getAttribute('data-industry')||'',iso=s.getAttribute('data-iso')||'',h=s.getAttribute('data-height')||'520';
+var f=document.createElement('iframe');f.src='https://radar.wmm-hoa.com/widget/?lang='+encodeURIComponent(L)+(ind?'&industry='+encodeURIComponent(ind):'')+(iso?'&iso='+encodeURIComponent(iso):'');
+f.style.cssText='width:100%;height:'+h+'px;border:0;border-radius:12px';f.loading='lazy';f.title='GOV RADAR';s.parentNode.insertBefore(f,s.nextSibling);})();

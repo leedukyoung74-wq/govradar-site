@@ -1,0 +1,11 @@
+/assets/*
+  Cache-Control: public, max-age=604800
+/data/*
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+/widget/*
+  Content-Security-Policy: frame-ancestors *
+/embed/*
+  Content-Security-Policy: frame-ancestors *
+/*
+  X-Content-Type-Options: nosniff
