@@ -167,3 +167,71 @@ window.gvLang = function (sel) {
     location.href = r.ok ? target : fb;
   }).catch(function () { location.href = target; });
 };
+
+/* ---- Analysis-member access: decrypt member-only analysis in the browser (keys and files on the GitHub data branch) ---- */
+(function () {
+  var BASE = "https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/m/";
+  var L = (location.pathname.match(/^\/([a-z]{2})\//) || [, "en"])[1], ko = L === "ko";
+  function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { return null; } }
+  function ss(k, v) { try { if (v === undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k, v); } catch (e) { return null; } }
+  var b64d = function (s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); };
+  var b64e = function (b) { return btoa(String.fromCharCode.apply(null, new Uint8Array(b))); };
+  function norm(c) { return (c || "").toUpperCase().replace(/[^0-9A-F]/g, "").replace(/(.{4})(?=.)/g, "$1-"); }
+  async function sha(t) { var h = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)); return Array.from(new Uint8Array(h)).map(function (x) { return x.toString(16).padStart(2, "0"); }).join(""); }
+  async function getK(code) {
+    var cached = ss("gv_k");
+    if (cached) return crypto.subtle.importKey("raw", b64d(cached), "AES-GCM", false, ["decrypt"]);
+    var kj = await fetch(BASE + "keys.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); });
+    var ent = kj.keys[(await sha("govradar:" + code)).slice(0, 20)];
+    if (!ent) throw new Error("nokey");
+    if (ent.exp < new Date().toISOString().slice(0, 10)) throw new Error("expired");
+    var base = await crypto.subtle.importKey("raw", new TextEncoder().encode(code), "PBKDF2", false, ["deriveKey"]);
+    var kek = await crypto.subtle.deriveKey({ name: "PBKDF2", salt: b64d(ent.s), iterations: kj.iter || 150000, hash: "SHA-256" }, base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+    var raw = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64d(ent.iv) }, kek, b64d(ent.w));
+    ss("gv_k", b64e(raw)); ls("gv_exp", ent.exp);
+    return crypto.subtle.importKey("raw", raw, "AES-GCM", false, ["decrypt"]);
+  }
+  async function dec(K, path) {
+    var j = await fetch(BASE + path).then(function (r) { if (!r.ok) throw 0; return r.json(); });
+    var pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64d(j.iv) }, K, b64d(j.c));
+    return JSON.parse(new TextDecoder().decode(pt));
+  }
+  function esc(s) { var d = document.createElement("div"); d.textContent = s || ""; return d.innerHTML; }
+  async function unlockCountry(K) {
+    var cards = document.querySelectorAll("a.card.locked[data-mi]");
+    if (!cards.length) return;
+    var data = await dec(K, L + "/" + cards[0].getAttribute("data-iso") + ".json");
+    cards.forEach(function (a) {
+      var b = data.biz[+a.getAttribute("data-mi")]; if (!b) return;
+      var div = document.createElement("div"); div.className = "card";
+      div.innerHTML = '<p class="note">' + (ko ? "분석 회원" : "Member") + "</p><h3>" + esc(b.title) + "</h3>" + (b.why ? "<p>" + esc(b.why) + "</p>" : "") + (b.target ? '<p class="note">' + esc(b.target) + "</p>" : "") + (b.basis ? '<p class="note">' + esc(b.basis) + "</p>" : "");
+      a.replaceWith(div);
+    });
+    document.querySelectorAll(".lockbox").forEach(function (x) { x.innerHTML = "<b>" + (ko ? "분석 회원으로 모든 분석을 보고 있습니다" : "You are viewing all analysis as a member") + "</b>"; });
+  }
+  async function run() {
+    var page = /\/member\/$/.test(location.pathname), st = document.getElementById("mstate");
+    var code = norm(page && location.hash.length > 5 ? decodeURIComponent(location.hash.slice(1)) : ls("gv_code"));
+    function say(t) { if (st) st.textContent = t; }
+    if (page) {
+      var inp = document.getElementById("mcode");
+      document.getElementById("mgo").onclick = function () { ss("gv_k", ""); try { sessionStorage.removeItem("gv_k"); } catch (e) {} ls("gv_code", norm(inp.value)); location.hash = ""; run(); };
+      document.getElementById("mout").onclick = function () { ls("gv_code", null); ls("gv_exp", null); try { sessionStorage.removeItem("gv_k"); } catch (e) {} say(ko ? "이 브라우저에서 해제했습니다." : "Signed out on this browser."); };
+      if (code && inp) inp.value = code;
+    }
+    if (!code) { if (page) say(ko ? "열람 코드를 넣어 주세요." : "Enter your access code."); return; }
+    try {
+      var K = await getK(code); ls("gv_code", code);
+      if (page) { history.replaceState(null, "", location.pathname); say((ko ? "열람이 켜졌습니다. 이용 기간: " : "Access is on. Valid until ") + (ls("gv_exp") || "")); }
+      document.documentElement.classList.add("is-member");
+      await unlockCountry(K);
+    } catch (e) {
+      var m = e && e.message;
+      if (m === "nokey" || m === "expired") { ls("gv_code", null); try { sessionStorage.removeItem("gv_k"); } catch (x) {} }
+      if (page) say(m === "expired" ? (ko ? "이용 기간이 끝났습니다. 연장은 73036396@naver.com으로 연락 주세요." : "Your access has expired. Write to 73036396@naver.com to renew.")
+        : m === "nokey" ? (ko ? "코드를 찾을 수 없습니다. 다시 확인해 주세요." : "Code not found. Please check it.")
+        : (ko ? "잠시 연결이 안 됩니다. 잠시 후 다시 시도해 주세요." : "Could not connect. Please try again shortly."));
+    }
+  }
+  if (window.crypto && crypto.subtle) { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run(); }
+})();
