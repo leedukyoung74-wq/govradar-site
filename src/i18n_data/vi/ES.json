@@ -1,0 +1,69 @@
+{
+"summary": "Chính phủ Sánchez đã đặt mức trần chi tiêu kỷ lục 226 tỷ € cho năm 2027 và đang chuẩn bị ngân sách 2027 lấy nhà ở làm trọng tâm. Chính phủ đã lỡ thời hạn hiến định cuối tháng 9 mà chưa đưa ra ngày trình dự luật lên Quốc hội, và vẫn đang vận hành dựa trên ngân sách 2023 được gia hạn.",
+"leader": "Vua Felipe VI (nguyên thủ quốc gia) / Thủ tướng Pedro Sánchez (người đứng đầu chính phủ)",
+"agenda": [
+"Mở rộng nguồn cung nhà ở (cơ quan nhà ở công CASA 47, hỗ trợ nhà ở giá phải chăng của tư nhân)",
+"Củng cố nhà nước phúc lợi (y tế, giáo dục, an sinh xã hội)",
+"Cắt giảm thâm hụt và nợ (mục tiêu kết thúc nhiệm kỳ với nợ dưới 100% GDP)",
+"Cải cách cơ chế tài chính vùng",
+"Đào tạo nghề (FP), đổi mới sáng tạo và ứng phó thảm họa khí hậu"
+],
+"projects": [
+{
+"title": "Trần chi tiêu phi tài chính năm 2027",
+"detail": "Mức trần kỷ lục, tăng 6,6% so với năm trước, được nội các phê duyệt ngày 7/7/2026. Chưa có ngày trình dự luật ngân sách lên Quốc hội",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Hỗ trợ xây dựng nhà ở giá phải chăng",
+"detail": "Tài trợ cho chủ đầu tư tư nhân xây dựng khoảng 2.500 căn nhà theo điều kiện của CASA 47, với tiền thuê tối đa 30% thu nhập hộ gia đình",
+"status": "Đang triển khai"
+},
+{
+"title": "Mạng lưới quốc gia các trung tâm đào tạo nghề (FP) xuất sắc",
+"detail": "Tối đa 200 nghìn € cho mỗi trung tâm, chi trả thông qua cơ quan FP cấp vùng",
+"status": "Đang triển khai"
+},
+{
+"title": "Công bố vùng thảm họa",
+"detail": "45 khu vực tại 9 vùng bị ảnh hưởng bởi cháy rừng, bão và lũ lụt trong tháng 9–10 đã được công bố là vùng thảm họa, mở đường cho việc tiếp cận viện trợ",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Hỗ trợ phân phối cho SME làm đẹp và thực phẩm Hàn Quốc tại Tây Ban Nha và Nam Âu",
+"why": "KOTRA đã tổ chức triển lãm thương hiệu Hàn Quốc khu vực Nam Âu tại Madrid và sử dụng Tây Ban Nha làm cứ điểm cho Nam Âu và Bắc Phi.",
+"target": "SME hàng tiêu dùng Hàn Quốc, người mua bán lẻ và mua sắm qua truyền hình Tây Ban Nha"
+},
+{
+"title": "Chatbot AI quản lý người thuê nhà ở công và xử lý khiếu nại",
+"why": "Quỹ nhà cho thuê công đang tăng nhanh thông qua CASA 47 và các chủ đầu tư tư nhân thực hiện theo hợp đồng.",
+"target": "CASA 47 (SEPES), các công ty nhà ở cấp vùng"
+},
+{
+"title": "Nội dung đào tạo và tư vấn về AI, tự động hóa cho các trung tâm FP",
+"why": "Đợt kêu gọi trung tâm FP xuất sắc mang lại nguồn kinh phí mới cho từng trung tâm.",
+"target": "Sở giáo dục cấp vùng, các trung tâm FP xuất sắc"
+},
+{
+"title": "Phân tích thiệt hại cháy rừng, lũ lụt và công cụ dữ liệu cảnh báo sớm",
+"why": "Việc công bố 45 vùng thảm họa tạo ra nhu cầu phục hồi và phòng ngừa.",
+"target": "Tổng cục Bảo vệ Dân sự, cơ quan ứng phó khẩn cấp cấp vùng"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng Thương mại KOTRA Madrid",
+"detail": "Cung cấp thông tin thị trường Tây Ban Nha, kết nối người mua và tư vấn thâm nhập thị trường."
+},
+{
+"title": "Triển lãm Thương hiệu Hàn Quốc khu vực Nam Âu 2026 (Madrid)",
+"detail": "Ngày 27–29/5/2026, 46 SME hàng tiêu dùng Hàn Quốc đã tổ chức các cuộc gặp xuất khẩu với 67 người mua châu Âu (đã hoàn thành)."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Phiếu hỗ trợ chi trả chi phí chứng nhận, nghiên cứu thị trường, tiếp thị và các dịch vụ mở rộng ra nước ngoài khác."
+}
+]
+}

@@ -1,0 +1,75 @@
+{
+"summary": "Fiji menggelar referendum nasional pada 9 Desember 2026, dengan pemilu umum diperkirakan antara akhir Desember 2026 dan awal Februari 2027. Fiji menjadi tuan rumah Pre-COP31 pada Oktober dan mempromosikan diplomasi iklim serta konsep 'Ocean of Peace'.",
+"leader": "Presiden Ratu Naiqama Lalabalavu; Perdana Menteri Sitiveni Rabuka (People's Alliance)",
+"agenda": [
+"Menggelar referendum 9 Desember 2026 (National Referendum Act 2026) dan menyiapkan pemilu umum",
+"Diplomasi iklim (tuan rumah Pre-COP31, posisi bersama Pasifik)",
+"Inisiatif keamanan regional 'Ocean of Peace'",
+"Perluasan energi terbarukan dan ketahanan energi",
+"Penguatan infrastruktur kesehatan dan pendidikan",
+"Akses layanan publik yang lebih baik (mis. kantor imigrasi baru)"
+],
+"projects": [
+{
+"title": "Referendum nasional",
+"detail": "UU disahkan 2 Oktober 2026; kampanye pemilu ditangguhkan selama referendum",
+"status": "Berjalan"
+},
+{
+"title": "Program kesehatan dan energi terbarukan KOICA",
+"detail": "Sekitar US$15,38 juta untuk kesehatan dan US$11,66 juta untuk energi terbarukan",
+"status": "Berjalan"
+},
+{
+"title": "National Rehabilitation Centre, Tamavua",
+"detail": "Fasilitas rehabilitasi yang didanai Korea",
+"status": "Berjalan"
+},
+{
+"title": "Peningkatan kapasitas FNU College of Medicine, Nursing and Health Sciences",
+"detail": "Pelatihan tenaga kesehatan yang didanai Korea",
+"status": "Berjalan"
+},
+{
+"title": "Surya/pertanian Ovalau dan pembangunan kembali pusat akuakultur Makogai",
+"detail": "Proyek energi dan perikanan pulau yang didanai Korea",
+"status": "Berjalan"
+},
+{
+"title": "Pertemuan Pre-COP31",
+"detail": "Pertemuan para pemimpin Pasifik yang diselenggarakan di Nadi pada Oktober 2026",
+"status": "Selesai"
+}
+],
+"biz": [
+{
+"title": "PMC energi terbarukan pulau dan pelatihan O&M",
+"why": "Kerja sama KOICA dan Korea-Fiji terkonsentrasi pada energi terbarukan.",
+"target": "Kementerian Energi, Energy Fiji Ltd, komunitas perdesaan"
+},
+{
+"title": "Pelatihan transformasi digital administrasi publik dan otomatisasi alur kerja AI",
+"why": "Korea dan Fiji menetapkan transformasi digital dan keterampilan sebagai bidang perluasan KOICA.",
+"target": "Kementerian Aparatur Sipil, Kantor PM"
+},
+{
+"title": "Konsultasi ekspor bagi perusahaan perikanan dan pengolahan hasil pertanian",
+"why": "Fiji ingin mengembangkan sektor kelautan dan industri sebagai hub Pasifik.",
+"target": "Kementerian Perikanan, Kementerian Pertanian, UKM lokal"
+}
+],
+"krsupport": [
+{
+"title": "Program negara KOICA Fiji",
+"detail": "Sekitar US$27,04 juta untuk kesehatan dan energi terbarukan pada 2025-2027; kantor Fiji memperingati ulang tahun ke-10 pada 2026."
+},
+{
+"title": "Penguatan kemitraan strategis Korea-Fiji",
+"detail": "Pertemuan menteri luar negeri Agustus 2026 sepakat memperluas kerja sama di bidang energi, maritim, digital, dan keterampilan."
+},
+{
+"title": "Export Voucher",
+"detail": "Menanggung biaya riset pasar dan pemasaran lokal di negara kepulauan Pasifik."
+}
+]
+}

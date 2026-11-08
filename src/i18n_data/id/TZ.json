@@ -1,0 +1,70 @@
+{
+"summary": "Anggaran pertama Tanzania di bawah Vision 2050 dan Rencana Lima Tahun Keempat (2026/27–2030/31) mendorong infrastruktur kereta api dan ketenagalistrikan serta peningkatan pendapatan domestik. Anggaran ini menargetkan sekitar 75% dibiayai dari dalam negeri untuk mengantisipasi penurunan bantuan Barat.",
+"leader": "Presiden Samia Suluhu Hassan (kepala negara dan kepala pemerintahan); Perdana Menteri Mwigulu Nchemba",
+"agenda": [
+"Melaksanakan Vision 2050 dan Rencana Lima Tahun Keempat",
+"Kemandirian fiskal: 75% pembiayaan domestik, pemungutan pajak digital, formalisasi usaha informal",
+"Transportasi dan logistik: perpanjangan SGR, revitalisasi TAZARA, hub Dodoma",
+"Peningkatan industri melalui pengolahan mineral di dalam negeri (logam tanah jarang, gas, bijih besi)",
+"Peningkatan pembangkitan listrik, elektrifikasi perdesaan, dan energi bersih"
+],
+"projects": [
+{
+"title": "Anggaran nasional 2026/27",
+"detail": "+10.3% secara tahunan; 74.2% dibiayai dari dalam negeri; defisit sekitar 3% PDB",
+"status": "Berjalan"
+},
+{
+"title": "Perpanjangan Standard Gauge Railway",
+"detail": "Pembangunan berlanjut pada ruas Dodoma–Mwanza dan Isaka–Kigoma",
+"status": "Berjalan"
+},
+{
+"title": "Revitalisasi TAZARA dan hub logistik Dodoma",
+"detail": "Mengembangkan Dodoma sebagai pusat transportasi dan logistik",
+"status": "Berjalan"
+},
+{
+"title": "PLTA Julius Nyerere dan elektrifikasi perdesaan",
+"detail": "Penambahan kapasitas pembangkitan dan sambungan desa oleh REA",
+"status": "Berjalan"
+},
+{
+"title": "Dana infrastruktur EPZ/SEZ",
+"detail": "5% dari pendapatan yang ditetapkan dialokasikan khusus untuk infrastruktur EPZ dan SEZ",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Sistem digital pengelolaan pendapatan dan belanja serta konsultasi bagi dewan daerah",
+"why": "Presiden meminta dewan daerah pada September 2026 untuk meningkatkan pendapatan dan mengendalikan belanja.",
+"target": "PO-RALG dan dewan daerah"
+},
+{
+"title": "Aplikasi seluler untuk pendaftaran usaha kecil dan pelaporan pajak presumtif",
+"why": "Langkah formalisasi dan perubahan pajak presumtif mulai berlaku pada Juli 2026.",
+"target": "Tanzania Revenue Authority, usaha kecil"
+},
+{
+"title": "Pelacakan kargo dan optimalisasi operasional untuk kereta api dan hub logistik",
+"why": "Perpanjangan SGR dan hub logistik Dodoma sedang dikembangkan.",
+"target": "TRC, TAZARA, Kementerian Transportasi"
+},
+{
+"title": "Dukungan masuk pasar Afrika Timur bagi UKM Korea (riset, penjodohan mitra)",
+"why": "Kebijakan yang melindungi manufaktur dan pengolahan lokal dapat meningkatkan permintaan akan usaha patungan lokal (perkiraan).",
+"target": "Produsen dan distributor lokal"
+}
+],
+"krsupport": [
+{
+"title": "Kantor KOTRA Dar es Salaam",
+"detail": "Memberikan saran mengenai riset pasar Tanzania dan penjodohan pembeli."
+},
+{
+"title": "Voucher ekspor UKM",
+"detail": "Menanggung layanan ekspor seperti riset pasar, penerjemahan, dan sertifikasi melalui voucher."
+}
+]
+}

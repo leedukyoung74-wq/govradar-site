@@ -1,0 +1,79 @@
+{
+"summary": "Pada Oktober 2026, Majelis Nasional memilih mantan diplomat Saleumxay Kommasith sebagai perdana menteri, sementara pendahulunya, Sonexay Siphandone, menjadi ketua Majelis. Berdasarkan Rencana Pembangunan Sosial-Ekonomi Nasional ke-10 (2026-2030), pemerintah menargetkan pertumbuhan minimal 6% per tahun dan utang publik di bawah 70% PDB pada 2030.",
+"leader": "Presiden Thongloun Sisoulith · Perdana Menteri Saleumxay Kommasith (sejak 2026-10-05, menggantikan Sonexay Siphandone)",
+"agenda": [
+"NSEDP ke-10 (2026-2030): pertumbuhan tahunan minimal 6%, PDB per kapita USD 3,104",
+"Menurunkan utang publik (sekitar 88% pada 2025 menjadi di bawah 70% pada 2030) dan menjaga inflasi di bawah 5%",
+"Memperkuat produksi dalam negeri dan mendukung UKM",
+"Memperluas ekonomi digital",
+"Infrastruktur konektivitas (jalan, kereta api, bandara, jaringan digital) dan kawasan ekonomi khusus",
+"Menanggulangi guncangan sektor pertanian (banjir, hama, demam babi Afrika) dan menjamin pasokan pangan"
+],
+"projects": [
+{
+"title": "Rencana Pembangunan Sosial-Ekonomi Nasional ke-10",
+"detail": "Enam sasaran strategis dan 26 program prioritas untuk pertumbuhan, pengurangan utang, dan digitalisasi",
+"status": "Berjalan"
+},
+{
+"title": "Peninjauan rencana pembangunan dan anggaran negara 2027",
+"detail": "Sidang Majelis bulan Oktober meninjau rencana pembangunan, anggaran, rencana moneter, dan audit 2025",
+"status": "Berjalan"
+},
+{
+"title": "Perluasan penyediaan air bersih Lak Sao (KOICA)",
+"detail": "Peningkatan penyediaan air bersih di Lak Sao, Borikhamxay, termasuk pembersihan UXO dan pelatihan operator",
+"status": "Berjalan"
+},
+{
+"title": "Proyek ADB Building Resilience and Reducing Rural Poverty",
+"detail": "Proyek pinjaman ADB (Loan 57225), kini dalam tahap pengadaan konsultan, antara lain bidang manajemen keuangan",
+"status": "Berjalan"
+},
+{
+"title": "TA ADB untuk memperkuat pengadaan publik dan manajemen keuangan",
+"detail": "TA-10235 mendukung perbaikan sistem pengadaan dan manajemen keuangan publik",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi digitalisasi pengadaan publik dan manajemen keuangan",
+"why": "Target pengurangan utang dan TA ADB untuk pengadaan/PFM berjalan secara bersamaan.",
+"target": "Kementerian Keuangan, Kementerian Perencanaan dan Investasi"
+},
+{
+"title": "Program diagnosis manajemen dan kapasitas ekspor UKM",
+"why": "Rencana ke-10 menjadikan produksi dalam negeri dan dukungan UMKM sebagai prioritas utama.",
+"target": "Kementerian Perindustrian dan Perdagangan, kamar dagang Laos, UKM lokal"
+},
+{
+"title": "Pilot layanan publik dan otomatisasi administrasi berbasis AI",
+"why": "Pemerintah menetapkan ekonomi digital dan administrasi digital sebagai agenda utama.",
+"target": "Kementerian Teknologi dan Komunikasi, pemerintah provinsi"
+},
+{
+"title": "Layanan PMC dan peningkatan kapasitas terkait proyek KOICA",
+"why": "Proyek air dan pengelolaan sampah KOICA sedang berjalan dan membutuhkan layanan pelatihan serta manajemen.",
+"target": "Kantor KOICA Laos, Kementerian Pekerjaan Umum dan Transportasi"
+}
+],
+"krsupport": [
+{
+"title": "Proyek air dan pengelolaan sampah KOICA di Laos",
+"detail": "Mendukung perluasan penyediaan air Lak Sao (2025-2029) serta proyek tahap II pengelolaan sampah padat dan air limbah bersama GGGI."
+},
+{
+"title": "Informasi pasar KOTRA Vientiane",
+"detail": "Menyediakan informasi tren pasar dan masuk pasar Laos."
+},
+{
+"title": "EDCF (Economic Development Cooperation Fund)",
+"detail": "Menyediakan pinjaman lunak untuk infrastruktur di negara berkembang, termasuk Laos."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Voucher menanggung biaya riset pasar luar negeri dan konsultasi."
+}
+]
+}

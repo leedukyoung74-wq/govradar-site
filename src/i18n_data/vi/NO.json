@@ -1,0 +1,60 @@
+{
+"summary": "Ngày 2026-10-07, chính phủ thiểu số của Công Đảng Na Uy đã đề xuất ngân sách năm 2027, rút 608,4 tỷ NOK từ quỹ tài sản quốc gia, tăng cường quốc phòng, tăng viện trợ cho Ukraine và giảm thuế thu nhập; ngân sách vẫn cần được đàm phán tại Quốc hội.",
+"leader": "Quốc vương Haakon VIII (lên ngôi tháng 8/2026); Thủ tướng Jonas Gahr Støre (chính phủ thiểu số Công Đảng); Bộ trưởng Tài chính Jens Stoltenberg",
+"agenda": [
+"Tăng cường năng lực quốc phòng (đề xuất tăng 65 tỷ NOK cho năm 2027)",
+"Hỗ trợ Ukraine (85 tỷ NOK cho chương trình Nansen năm 2027)",
+"Giảm thuế thu nhập và đóng góp an sinh xã hội (6,4 tỷ NOK)",
+"Hỗ trợ giá điện (Norgespris v.v., khoảng 16,4 tỷ NOK)",
+"Quy tắc tài khóa: thâm hụt cơ cấu phi dầu mỏ ở mức 2,7% giá trị quỹ"
+],
+"projects": [
+{
+"title": "Dự thảo ngân sách quốc gia 2027",
+"detail": "Rút 608,4 tỷ NOK từ quỹ, thâm hụt cơ cấu phi dầu mỏ 2,7% giá trị quỹ; cần đạt thỏa thuận với bốn đảng trung dung/cánh tả",
+"status": "Đang trình Quốc hội"
+},
+{
+"title": "Tăng cường năng lực quốc phòng",
+"detail": "Đề xuất tăng mạnh chi quốc phòng trong ngân sách 2027",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Chương trình hỗ trợ Ukraine Nansen",
+"detail": "85 tỷ NOK cho năm 2027, nâng tổng số lên 344 tỷ NOK",
+"status": "Đang triển khai"
+},
+{
+"title": "Hỗ trợ giá điện (Norgespris và cơ chế tiêu chuẩn)",
+"detail": "Giá điện cố định cho hộ gia đình và ngưỡng hỗ trợ",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Chương trình phát triển tổ chức và năng lực lãnh đạo cho cơ quan công quyền",
+"why": "Husbanken, NIBIO và các cơ quan khác hiện đang mời thầu các dịch vụ này.",
+"target": "Các cơ quan nhà nước (Husbanken, NIBIO, v.v.)"
+},
+{
+"title": "Tư vấn ICT độc lập và tự động hóa bằng AI cho chính quyền đô thị",
+"why": "Drammen đã mời thầu một hợp đồng khung tư vấn ICT trị giá 40 triệu NOK.",
+"target": "Các đô thị Na Uy"
+},
+{
+"title": "Hỗ trợ nhà cung cấp quốc phòng/đóng tàu Hàn Quốc tham gia chuỗi cung ứng",
+"why": "Mức tăng chi quốc phòng lớn năm 2027 sẽ mở rộng hoạt động mua sắm.",
+"target": "Cơ quan Vật tư Quốc phòng Na Uy và các doanh nghiệp quốc phòng"
+}
+],
+"krsupport": [
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Chi trả chi phí tiếp thị, chứng nhận và tư vấn để thâm nhập Na Uy."
+},
+{
+"title": "Văn phòng KOTRA ở nước ngoài (không có tại Na Uy; liên hệ văn phòng Bắc Âu lân cận)",
+"detail": "Có thể yêu cầu nghiên cứu thị trường và tìm kiếm người mua qua các văn phòng lân cận như Thụy Điển."
+}
+]
+}

@@ -1,0 +1,76 @@
+{
+"summary": "Pada 9 Oktober, PM Anwar menyampaikan Anggaran 2027 (belanja pemerintah RM459.8bn), anggaran kedua dalam Rancangan Malaysia Ke-13 (2026–2030). Anggaran ini berfokus pada perluasan bantuan tunai, dorongan menjadi negara AI, dukungan UKM, serta investasi jaringan listrik dan infrastruktur digital; pembahasan di parlemen berlangsung hingga akhir November.",
+"leader": "Raja Sultan Ibrahim (Yang di-Pertuan Agong); Perdana Menteri Anwar Ibrahim (merangkap Menteri Keuangan)",
+"agenda": [
+"Keringanan biaya hidup dan bantuan tunai bagi kelompok rentan (STR, SARA)",
+"'Negara AI' pada 2030, melatih 200,000 tenaga terampil AI",
+"Adopsi AI, pembiayaan, dan penurunan tarif pajak bagi UKM",
+"Pembangunan berimbang dalam Rancangan Malaysia Ke-13 (RMK13)",
+"Jaringan listrik, infrastruktur perdesaan, dan konektivitas digital",
+"Percepatan proses layanan pemerintah (gugus tugas STAR)"
+],
+"projects": [
+{
+"title": "Anggaran 2027",
+"detail": "Belanja pemerintah RM459.8bn; RM510bn termasuk GLIC dan investasi swasta; proyeksi pertumbuhan 2027 4.2–5.2%",
+"status": "Dalam pembahasan parlemen"
+},
+{
+"title": "Bantuan tunai STR dan SARA",
+"detail": "SARA hingga RM150 per bulan bagi seluruh penerima STR, menjangkau hingga 9 juta orang",
+"status": "Direncanakan"
+},
+{
+"title": "R&D AI, komersialisasi, dan adopsi AI oleh UKM",
+"detail": "RM6bn di berbagai kementerian; RM30m melalui MDEC untuk membantu 4,000 UKM mengadopsi AI; sertifikasi 5,000 profesional AI",
+"status": "Direncanakan"
+},
+{
+"title": "Dukungan UKM",
+"detail": "Penurunan tarif pajak UKM sebesar 1 poin, pembiayaan mikro RM6.6bn, jaminan SJPP/CGC hingga RM32bn",
+"status": "Direncanakan"
+},
+{
+"title": "Jaringan listrik, infrastruktur perdesaan dan digital",
+"detail": "RM15bn jaringan TNB, RM3.3bn infrastruktur dasar perdesaan, RM5bn konektivitas digital JENDELA",
+"status": "Direncanakan"
+},
+{
+"title": "Startup dan semikonduktor MOSTI",
+"detail": "Anggaran MOSTI RM1.29bn; peta jalan startup SUPER 2.0; SemiconStart RM10m",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Paket otomatisasi alur kerja AI untuk UKM (dipasok setelah registrasi vendor MDEC)",
+"why": "Anggaran 2027 mendanai adopsi AI bagi 4,000 UKM melalui MDEC.",
+"target": "UKM Malaysia, kanal solusi bersertifikat MDEC"
+},
+{
+"title": "Kursus sertifikasi profesional AI dan pelatihan AI korporat yang disesuaikan",
+"why": "Pemerintah menargetkan 200,000 tenaga terampil AI dan 5,000 profesional bersertifikat pada 2030.",
+"target": "Kementerian Digital, penyedia terdaftar HRD Corp, divisi SDM perusahaan"
+},
+{
+"title": "Otomatisasi dan chatbot untuk pemrosesan layanan publik",
+"why": "Gugus tugas STAR mendorong percepatan proses layanan pemerintah.",
+"target": "Kementerian federal, pemerintah negara bagian, dewan lokal"
+},
+{
+"title": "Strategi pertumbuhan dan nasihat masuk ke Korea bagi startup dan UKM semikonduktor",
+"why": "MOSTI mendukung startup melalui SUPER 2.0 dan SemiconStart.",
+"target": "Startup Cradle Fund, UKM desain chip"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Kuala Lumpur",
+"detail": "Menyediakan inkubasi kantor cabang (barang konsumsi, makanan, kecantikan, TIK, medis), riset pasar, misi dagang, dan dukungan masuk pasar terkait FTA/halal."
+},
+{
+"title": "Program Export Voucher",
+"detail": "Voucher menanggung layanan riset pasar, sertifikasi (termasuk halal), dan pemasaran untuk masuk ke Malaysia."
+}
+]
+}

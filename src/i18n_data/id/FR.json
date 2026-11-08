@@ -1,0 +1,74 @@
+{
+"summary": "RUU keuangan 2027 (PLF 2027) pemerintahan Lecornu memuat konsolidasi fiskal €54 miliar dan bertujuan memangkas defisit menjadi 5% PDB pada 2027. Tanpa mayoritas di Majelis, pemungutan suara atas bagian pendapatan ditunda, dan penggunaan Pasal 49.3 atau mosi kecaman sedang dibicarakan.",
+"leader": "Presiden Emmanuel Macron (kepala negara) / Perdana Menteri Sébastien Lecornu (kepala pemerintahan)",
+"agenda": [
+"Pengurangan defisit (target 5% PDB pada 2027, konsolidasi €54 miliar)",
+"Respons terhadap harga energi dan bahan bakar (pelepasan stok strategis solar)",
+"Daya beli dan penyesuaian pajak",
+"Langkah bagi pemuda dan pendidikan untuk siswa SMA dan mahasiswa",
+"Kedaulatan AI dan industri melalui rencana investasi France 2030"
+],
+"projects": [
+{
+"title": "RUU Keuangan 2027 (PLF 2027)",
+"detail": "Konsolidasi €54 miliar, terdiri atas sekitar €43 miliar langkah baru ditambah perpanjangan langkah 2026. Tenggat Majelis adalah 17 Nov dan tenggat akhir Parlemen adalah 17 Des",
+"status": "Dalam pembahasan parlemen"
+},
+{
+"title": "RUU Pembiayaan Jaminan Sosial 2027 (PLFSS)",
+"detail": "Pembacaan pertama sedang berlangsung di Majelis. Tenggat akhir Parlemen adalah 26 Nov",
+"status": "Dalam pembahasan parlemen"
+},
+{
+"title": "Pelepasan 10 juta barel stok strategis solar",
+"detail": "Pemerintah memperkirakan harga turun 12–18 sen per liter selama sekitar tiga bulan mulai 1 Nov",
+"status": "Berjalan"
+},
+{
+"title": "Panggilan France 2030 untuk solusi AI berdaulat bagi UKM dan perusahaan menengah (AMI)",
+"detail": "Menyusun daftar penyedia AI Prancis dan Eropa untuk direkomendasikan kepada UKM dan perusahaan menengah. Pendaftaran tetap dibuka secara bergulir setelah putaran pertama, dan tidak ada pendanaan langsung",
+"status": "Berjalan"
+},
+{
+"title": "Peningkatan pajak atas operator jalan tol dan bandara",
+"detail": "Bagian dari PLF 2027, diperkirakan menghasilkan sekitar €0,8 miliar",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi AI untuk otomatisasi proses dan analitik belanja sektor publik",
+"why": "PLF 2027 menuntut penghematan €54 miliar, yang meningkatkan tekanan efisiensi pada badan publik.",
+"target": "Sekretariat kementerian, départements dan region, lembaga publik"
+},
+{
+"title": "Diagnostik kesiapan AI dan paket otomatisasi untuk UKM (bersama mitra lokal)",
+"why": "Pemerintah mendorong adopsi AI oleh UKM tetapi mengutamakan penyedia berdaulat Prancis dan Eropa.",
+"target": "UKM dan perusahaan menengah Prancis, asosiasi sektor, dana pelatihan OPCO"
+},
+{
+"title": "Dukungan masuk pasar dan distribusi bagi merek konsumen dan kecantikan Korea",
+"why": "Pameran barang konsumsi Korea yang rutin digelar di Paris menunjukkan permintaan dari pembeli ritel Prancis.",
+"target": "UKM barang konsumsi Korea, peritel Prancis"
+},
+{
+"title": "Dasbor pemantauan penggunaan dan penghematan energi",
+"why": "Biaya bahan bakar dan listrik cukup tinggi hingga negara melepas stok strategis.",
+"target": "UKM, departemen fasilitas pemerintah kota"
+}
+],
+"krsupport": [
+{
+"title": "Kantor Dagang KOTRA Paris",
+"detail": "Menyediakan riset pasar Prancis, pencocokan pembeli, serta saran investasi dan masuk pasar bagi startup."
+},
+{
+"title": "K-Consumer Goods Fair di Paris (Juni 2026)",
+"detail": "185 UKM Korea bertemu pembeli Eropa untuk pembicaraan ekspor."
+},
+{
+"title": "2026 Export Voucher (MSS)",
+"detail": "Voucher menanggung biaya sertifikasi, riset pasar, pemasaran, dan layanan ekspansi luar negeri lainnya."
+}
+]
+}

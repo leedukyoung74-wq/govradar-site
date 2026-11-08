@@ -1,0 +1,76 @@
+{
+"summary": "Liên minh của ông Luxon đang tập trung ngân sách eo hẹp vào y tế, hạ tầng và đào tạo nghề, trong đó cuộc bầu cử ngày 7/11/2026 là yếu tố bất định chính. Chương trình AI trong Khu vực Công kéo dài hai năm (2026–2027) đang được triển khai.",
+"leader": "Quốc vương Charles III (nguyên thủ quốc gia); Thủ tướng Christopher Luxon (người đứng đầu chính phủ, liên minh do Đảng Quốc gia dẫn dắt) — tổng tuyển cử ngày 2026-11-07",
+"agenda": [
+"Củng cố tài khóa và cắt giảm chi tiêu khu vực công",
+"Mở rộng dịch vụ y tế (cấp vốn cho Pharmac, mở rộng sàng lọc ung thư)",
+"Đầu tư hạ tầng đường bộ, bệnh viện và trường học",
+"Tăng chỉ tiêu đào tạo nghề và cải cách chương trình giảng dạy",
+"Mở rộng ứng dụng AI trong khu vực công (Chương trình AI trong Khu vực Công)",
+"Giảm áp lực chi phí sinh hoạt"
+],
+"projects": [
+{
+"title": "Ngân sách y tế 2026/27",
+"detail": "Khoản mục lớn nhất của Ngân sách 2026, nhằm rút ngắn thời gian chờ và tăng sàng lọc",
+"status": "Đang triển khai"
+},
+{
+"title": "Tiết kiệm chi tiêu của chính phủ",
+"detail": "Cắt giảm biên chế khu vực công và chi tiêu của các cơ quan",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình AI trong Khu vực Công",
+"detail": "Kế hoạch hai năm nhằm đẩy nhanh việc ứng dụng AI trong toàn khu vực công",
+"status": "Đang triển khai"
+},
+{
+"title": "Tăng gấp đôi chỉ tiêu đào tạo nghề",
+"detail": "Được tài trợ một phần bằng việc bãi bỏ chương trình miễn học phí năm đầu",
+"status": "Đang triển khai"
+},
+{
+"title": "Nâng cấp SH76 Brougham Street",
+"detail": "Dự án nâng cấp quốc lộ tại Christchurch chuyển sang giai đoạn tiếp theo (2026-10-23)",
+"status": "Đang triển khai"
+},
+{
+"title": "Thuế đối với ngân hàng",
+"detail": "Áp dụng cho các tổ chức nhận tiền gửi từ giữa năm 2027",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "PoC tự động hóa bằng AI và tư vấn ứng dụng cho xử lý hồ sơ và tài liệu khu vực công",
+"why": "Chính phủ đang đẩy nhanh ứng dụng AI trong khu vực công đến năm 2027 để bù đắp việc cắt giảm nhân sự.",
+"target": "Các cơ quan trung ương, Crown entities, hội đồng địa phương"
+},
+{
+"title": "Công cụ số cho vận hành bệnh viện và dịch vụ bệnh nhân (suất ăn, đặt lịch, nhắc lịch sàng lọc)",
+"why": "Health NZ đang mua sắm giải pháp số cấp vùng qua GETS.",
+"target": "Các đơn vị vùng của Health New Zealand"
+},
+{
+"title": "Công cụ quản lý học tập và đánh giá bằng AI cho cơ sở đào tạo",
+"why": "Tăng chỉ tiêu đào tạo nghề làm tăng khối lượng vận hành của các cơ sở đào tạo.",
+"target": "Bộ Giáo dục, cơ sở đào tạo"
+},
+{
+"title": "Hỗ trợ SME Hàn Quốc thâm nhập thị trường New Zealand (nghiên cứu, kết nối đối tác)",
+"why": "Nhu cầu xuất khẩu hàng tiêu dùng và thực phẩm tiếp tục duy trì theo FTA Hàn Quốc – New Zealand.",
+"target": "Nhà nhập khẩu và phân phối New Zealand"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng KOTRA Auckland",
+"detail": "Hỗ trợ nghiên cứu thị trường New Zealand, kết nối người mua và dịch vụ văn phòng chi nhánh."
+},
+{
+"title": "Voucher xuất khẩu cho SME",
+"detail": "Chi trả các dịch vụ xuất khẩu như nghiên cứu thị trường, biên dịch và chứng nhận thông qua voucher."
+}
+]
+}

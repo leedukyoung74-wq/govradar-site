@@ -1,0 +1,38 @@
+{
+"summary": "Wilayah otonom Muslim di Mindanao, Filipina. Wilayah ini menggelar pemilu parlemen pertamanya pada September 2026, dan parlemen yang dilantik pada 30 Oktober memilih Macacua sebagai Chief Minister terpilih pertama. Anggaran 2026 sekitar ₱114bn berfokus pada pendidikan, kesehatan, dan infrastruktur; investasi yang disetujui telah melampaui total keseluruhan 2025 pada Q2.",
+"leader": "Chief Minister Abdulraof Macacua (terpilih 30 Okt 2026, 51 suara) · Ketua Parlemen Amer Rakim",
+"agenda": [
+"Pemerintahan terpilih pertama dan 'pemerintahan inklusif' (koalisi 46+ kursi)",
+"Menuntaskan proses perdamaian: dekomisioning, paket bantuan, transformasi kamp",
+"Melaksanakan anggaran 2026 yang dipimpin sektor pendidikan dan kesehatan (~₱114bn)",
+"Jaringan jalan dan jalan usaha tani (proyek kapasitas jalan JICA 2026–2029)",
+"Promosi investasi di bidang kesehatan, pariwisata, dan agribisnis"
+],
+"biz": [
+{
+"title": "Basis data aset jalan dan jembatan serta aplikasi inspeksi",
+"why": "Proyek JICA sedang membangun basis data jalan dan jembatan serta sistem pemeliharaan yang baru.",
+"target": "Kementerian Pekerjaan Umum BARMM, kantor distrik"
+},
+{
+"title": "Perangkat digital untuk administrasi sekolah dan pembelajaran jarak jauh",
+"why": "Pendidikan menyerap sekitar seperempat anggaran wilayah.",
+"target": "MBHTE, madrasah dan sekolah negeri"
+},
+{
+"title": "Pengolahan hasil pertanian dan pertanian cerdas yang terkait sertifikasi halal",
+"why": "Agribisnis merupakan sektor investasi yang disetujui teratas dengan akses ke pasar halal.",
+"target": "Investor BBOI, MAFAR"
+},
+{
+"title": "EMR dan telemedisin untuk pusat kesehatan",
+"why": "Kesehatan merupakan pos anggaran terbesar kedua dan akses ke pulau-pulau buruk.",
+"target": "Kementerian Kesehatan BARMM"
+},
+{
+"title": "Sistem e-procurement dan anggaran terbuka",
+"why": "Pemerintahan terpilih pertama menekankan kepercayaan dan tata kelola yang inklusif (perkiraan).",
+"target": "Kantor Chief Minister, kementerian keuangan"
+}
+]
+}

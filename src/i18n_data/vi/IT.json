@@ -1,0 +1,65 @@
+{
+"summary": "Chính phủ Meloni đã phê duyệt Kế hoạch Dự thảo Ngân sách 2027 (DPB) vào ngày 13/10 và đang xây dựng ngân sách khoảng 23,4 tỷ €, tận dụng phần thâm hụt bổ sung được phép cho năng lượng và quốc phòng. Tranh cãi trong liên minh về cắt giảm thuế thu nhập, lương hưu và khoản thu đối với ngân hàng đã nhiều lần trì hoãn việc nội các phê duyệt dự luật ngân sách.",
+"leader": "Tổng thống Sergio Mattarella (nguyên thủ quốc gia) / Thủ tướng Giorgia Meloni (người đứng đầu chính phủ)",
+"agenda": [
+"Giảm chi phí năng lượng cho doanh nghiệp và hộ gia đình (7 tỷ € cho năng lượng năm 2027 theo điều khoản miễn trừ quốc gia của EU)",
+"Tăng chi tiêu quốc phòng (hạn mức riêng 7 tỷ € năm 2027)",
+"Giảm thuế thu nhập (IRPEF) cho người có thu nhập trung bình và điều chỉnh lương hưu",
+"Hỗ trợ SME (phiếu hỗ trợ AI, bổ sung điện toán đám mây vào Transizione 5.0, tăng cường khấu hao siêu tốc)",
+"Hoàn thành kế hoạch phục hồi PNRR và có thể gia hạn đặc khu kinh tế phía nam (ZES)"
+],
+"projects": [
+{
+"title": "Kế hoạch Dự thảo Ngân sách 2027 và dự luật ngân sách",
+"detail": "Ngày 13/10, Quốc hội phê duyệt mức sai lệch thâm hụt 29 tỷ € cho năng lượng và quốc phòng, và nội các đã thông qua DPB. Dự luật ngân sách bị lùi từ 23/10 sang 28/10 trong khi đàm phán liên minh vẫn tiếp diễn",
+"status": "Đã lên kế hoạch (chờ nội các)"
+},
+{
+"title": "Gói hỗ trợ SME",
+"detail": "Đang được xem xét: phiếu hỗ trợ AI, bổ sung điện toán đám mây vào Transizione 5.0 và tăng cường khấu hao siêu tốc",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Dịch vụ đa năng năng lượng tích hợp cho y tế của Consip (MIES)",
+"detail": "Hợp đồng tích hợp quản lý các tòa nhà y tế công và nâng cấp hiệu quả năng lượng. Đóng thầu ngày 30/9/2026",
+"status": "Đã đóng thầu (giai đoạn đánh giá, ước tính)"
+},
+{
+"title": "Giai đoạn cuối của PNRR",
+"detail": "Việc thực hiện kết thúc ngày 31/8/2026 và yêu cầu thanh toán cuối cùng đã được nộp. EU dự kiến hoàn tất thanh toán trước cuối năm",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Chẩn đoán mức độ sẵn sàng AI và tự động hóa quy trình cho SME (gắn với phiếu hỗ trợ AI)",
+"why": "Các cuộc đàm phán ngân sách 2027 bao gồm phiếu hỗ trợ AI cho SME và hỗ trợ điện toán đám mây theo Transizione 5.0.",
+"target": "SME sản xuất và dịch vụ Ý, các hiệp hội Confindustria cấp vùng"
+},
+{
+"title": "Phân tích sử dụng năng lượng và tư vấn tiết kiệm cho SME sản xuất",
+"why": "Giảm chi phí năng lượng đã trở thành ưu tiên hàng đầu của ngân sách.",
+"target": "SME sản xuất tiêu thụ nhiều năng lượng"
+},
+{
+"title": "Linh kiện hệ thống quản lý năng lượng tòa nhà (BEMS) cho cơ sở y tế công",
+"why": "Consip đã mời thầu hợp đồng quản lý năng lượng tích hợp cho các tòa nhà y tế, và các liên danh trúng thầu sẽ cần tìm nguồn thiết bị.",
+"target": "Đơn vị quản lý cơ sở trúng thầu MIES, cơ quan y tế địa phương (ASL)"
+},
+{
+"title": "Hỗ trợ doanh nghiệp dược và sinh học Hàn Quốc thâm nhập thị trường Ý",
+"why": "Quan hệ trong ngành dược đang tiếp diễn, ví dụ khu gian hàng Hàn Quốc của KOTRA tại CPHI Milan.",
+"target": "SME dược và sinh học Hàn Quốc, nhà phân phối và CMO Ý"
+}
+],
+"krsupport": [
+{
+"title": "Khu gian hàng Hàn Quốc tại CPHI Milan 2026",
+"detail": "Đã vận hành khu gian hàng Hàn Quốc tại hội chợ dược phẩm thế giới ở Milan ngày 6–8/10/2026 (đã hoàn thành)."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Phiếu hỗ trợ chi trả chi phí chứng nhận, nghiên cứu thị trường, tiếp thị và các dịch vụ mở rộng ra nước ngoài khác."
+}
+]
+}

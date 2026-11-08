@@ -1,0 +1,74 @@
+{
+"summary": "Dalam kerangka strategi 'Uzbekistan-2030', tahun 2026 ditetapkan sebagai 'Tahun Pembangunan Mahalla dan Kesejahteraan Sosial', dengan program negara berisi 337 tugas. Pada akhir Oktober, presiden secara langsung mengawasi investasi besar di bidang kesehatan dan standar medis baru, sementara Korea memperluas kerja sama pendidikan TI dan tata kelola digital melalui KOICA.",
+"leader": "Presiden Shavkat Mirziyoyev (kepala negara) / Perdana Menteri Abdulla Aripov (kepala pemerintahan, dikukuhkan kembali pada Nov 2024; apakah masih menjabat pada 2026 akan dikonfirmasi pada pembaruan berikutnya)",
+"agenda": [
+"Infrastruktur mahalla (lingkungan permukiman) dan pertumbuhan regional yang berimbang",
+"Peningkatan standar kesehatan dan investasi layanan kesehatan",
+"Teknologi digital, industri TI, dan peralihan ke ekonomi berbasis inovasi",
+"Reformasi administrasi dan peradilan serta pemberantasan korupsi",
+"Kerangka pasar tenaga kerja baru dan pengelolaan air"
+],
+"projects": [
+{
+"title": "Program reformasi 2026 / program negara 'Uzbekistan-2030'",
+"detail": "Dekret presiden 17 Feb 2026 dengan 337 tugas, 59 undang-undang, dan 12 dokumen strategi",
+"status": "Berjalan"
+},
+{
+"title": "Anggaran negara 2026",
+"detail": "Pendapatan UZS 515.8tn dan belanja UZS 567.7tn, dengan defisit dijaga dalam batas 3% PDB (ditandatangani 26 Des 2025)",
+"status": "Berjalan"
+},
+{
+"title": "Proyek investasi kesehatan besar dan standar medis baru",
+"detail": "Presiden meninjau kemajuan pada 28 Okt 2026 dan mengumumkan standar medis baru serta peningkatan dukungan bagi dokter",
+"status": "Berjalan"
+},
+{
+"title": "Hub TI dan pusat pelatihan digital KOICA",
+"detail": "Hub TI di Nukus dan Karshi, 14 pusat TI di tujuh distrik, dan pelatihan AI, pemrograman, serta bidang lain bagi 500 spesialis dan pendidik, ditambah inkubasi startup",
+"status": "Berjalan"
+},
+{
+"title": "Batas pinjaman luar negeri dan PPP",
+"detail": "Pinjaman luar negeri baru USD 5bn pada 2026 (USD 2.5bn untuk anggaran dan USD 2.5bn untuk proyek investasi) dan batas USD 6.5bn untuk PPP baru yang dijamin negara",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Sistem rekam medis elektronik dan protokol klinis untuk rumah sakit regional",
+"why": "Presiden secara langsung meninjau investasi kesehatan dan telah mengumumkan standar medis baru.",
+"target": "Kementerian Kesehatan, pusat medis regional"
+},
+{
+"title": "Pelatihan AI dan pemasaran digital serta akselerasi startup yang terkait hub TI KOICA",
+"why": "KOICA membangun hub dan pusat TI dengan dana USD 14m, sehingga menciptakan permintaan akan konten pelatihan dan operator inkubasi.",
+"target": "Kementerian Teknologi Digital, IT Park, mitra pelaksana KOICA"
+},
+{
+"title": "Chatbot AI untuk permohonan warga mahalla",
+"why": "Program negara 2026 menjadikan layanan publik tingkat mahalla sebagai prioritas.",
+"target": "Pemerintah daerah (hokimiyat), lembaga yang membawahi mahalla"
+},
+{
+"title": "Studi kelayakan PPP dan konsultasi manajemen kinerja bagi lembaga publik",
+"why": "Batas pinjaman yang lebih rendah mendorong lebih banyak proyek ke pembiayaan PPP.",
+"target": "Unit PPP Kementerian Ekonomi dan Keuangan, badan proyek kementerian teknis"
+}
+],
+"krsupport": [
+{
+"title": "Dukungan ekosistem pendidikan TI KOICA (USD 14m)",
+"detail": "Membangun 2 hub TI dan 14 pusat TI serta melatih 500 spesialis pada 2026–2032."
+},
+{
+"title": "Kerja sama AI dan tata kelola digital KOICA di Asia Tengah",
+"detail": "Uzbekistan adalah mitra terbesar KOICA di Asia Tengah, dengan proyek tata kelola digital yang sedang berjalan seperti manajemen kekayaan intelektual (hingga 2029) dan rencana induk kebijakan AI (hingga 2030)."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Voucher menanggung biaya sertifikasi, riset pasar, pemasaran, dan layanan ekspansi luar negeri lainnya."
+}
+]
+}

@@ -1,0 +1,76 @@
+{
+"summary": "Brunei đang đa dạng hóa nền kinh tế, giảm phụ thuộc vào dầu khí theo Wawasan Brunei 2035; khu vực phi dầu khí hiện chiếm 54% GDP và 60% kim ngạch xuất khẩu. Ngày 2026-10-26, bộ trưởng kinh tế cam kết biến 27 dự án đầu tư trị giá khoảng 6 tỷ USD thành việc làm và xuất khẩu.",
+"leader": "Quốc vương Hassanal Bolkiah (kiêm Thủ tướng)",
+"agenda": [
+"Đa dạng hóa kinh tế theo Wawasan Brunei 2035",
+"Hóa dầu hạ nguồn (Hengyi giai đoạn 2) và sản xuất tiên tiến",
+"Nông sản thực phẩm, thủy sản và an ninh lương thực (Khu Thực phẩm Công nghệ Nông nghiệp Brunei-Singapore)",
+"Viễn thông, công nghiệp số và sáng tạo; giao thông và logistics",
+"Tỷ trọng năng lượng tái tạo 30% trong công suất lắp đặt vào năm 2035",
+"Đào tạo kỹ năng phù hợp nhu cầu của người sử dụng lao động"
+],
+"projects": [
+{
+"title": "Ngân sách phát triển 2026/2027",
+"detail": "Năm thứ 3 của Kế hoạch Phát triển Quốc gia lần thứ 12 (RKN12), phân bổ cho bền vững xã hội, đổi mới kinh tế và ổn định tài khóa",
+"status": "Đang triển khai"
+},
+{
+"title": "Mở rộng Hengyi giai đoạn 2",
+"detail": "Dự án mở rộng hóa dầu, mục tiêu đi vào vận hành năm 2029",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Mở rộng Cảng Muara",
+"detail": "Công suất container từ 220.000 lên 500.000 TEU (mục tiêu năm 2027)",
+"status": "Đang triển khai"
+},
+{
+"title": "Các dự án đầu tư do BEDB theo dõi",
+"detail": "27 dự án đang vận hành tính đến tháng 8/2026, sử dụng hơn 2.000 lao động địa phương; các dự án đang triển khai dự kiến tạo thêm hơn 2.900 việc làm",
+"status": "Đang triển khai"
+},
+{
+"title": "Khu Thực phẩm Công nghệ Nông nghiệp Brunei-Singapore",
+"detail": "Đang tiến hành nghiên cứu khả thi chung",
+"status": "Nghiên cứu khả thi"
+},
+{
+"title": "Các dự án nền tảng số",
+"detail": "Nền tảng dịch vụ doanh nghiệp quốc gia, mạng trường học giai đoạn 2, hệ thống giao thông thông minh (trong ngân sách phát triển)",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Chương trình đào tạo nghề và kết nối tuyển dụng gắn với các dự án đầu tư",
+"why": "Chính phủ nhấn mạnh việc biến đầu tư thành việc làm và đào tạo phù hợp nhu cầu của người sử dụng lao động.",
+"target": "Bộ Kinh tế, Thương mại và Công nghiệp; BEDB; cơ quan lao động"
+},
+{
+"title": "Giám sát môi trường bằng IoT và AI cho trang trại thông minh và nuôi trồng thủy sản",
+"why": "Nông sản thực phẩm và thủy sản là lĩnh vực ưu tiên, và các dự án nuôi trồng thủy sản nằm trong ngân sách phát triển.",
+"target": "Cơ quan nông nghiệp và thủy sản, doanh nghiệp nuôi trồng thủy sản"
+},
+{
+"title": "Tư vấn tự động hóa quy trình cấp phép và đăng ký kinh doanh",
+"why": "Nền tảng dịch vụ doanh nghiệp quốc gia được đưa vào ngân sách phát triển.",
+"target": "Bộ Tài chính và Kinh tế; Bộ Kinh tế, Thương mại và Công nghiệp"
+},
+{
+"title": "Tư vấn xuất khẩu khu vực và mở rộng ra nước ngoài cho SME địa phương",
+"why": "Chính phủ nhấn mạnh tăng trưởng SME trong dịch vụ và logistics thông qua BIMP-EAGA.",
+"target": "SME Brunei, cơ quan hỗ trợ SME"
+}
+],
+"krsupport": [
+{
+"title": "Mạng lưới văn phòng thương mại KOTRA Đông Nam Á",
+"detail": "Có thể yêu cầu thông tin thị trường Brunei và tìm kiếm người mua thông qua các văn phòng thương mại lân cận ở Đông Nam Á (cần kiểm tra xem có văn phòng tại chỗ hay không)."
+},
+{
+"title": "Dịch vụ ở nước ngoài theo Export Voucher",
+"detail": "Chi phí nghiên cứu thị trường và tìm kiếm đối tác địa phương tại Brunei có thể được chi trả bằng phiếu hỗ trợ."
+}
+]
+}

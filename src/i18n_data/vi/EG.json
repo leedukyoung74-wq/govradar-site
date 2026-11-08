@@ -1,0 +1,74 @@
+{
+"summary": "Ai Cập giữ lại Thủ tướng Madbouly trong đợt cải tổ tháng 2/2026, thay thế các bộ trưởng kế hoạch, đầu tư và ICT. Ngân sách tài khóa 2026/27 được phê duyệt vào tháng 6 (chi tiêu khoảng 5,2 nghìn tỷ EGP) kết hợp giảm nợ với tăng chi tiêu giáo dục và y tế.",
+"leader": "Tổng thống Abdel Fattah el-Sisi / Thủ tướng Mostafa Madbouly (được giữ lại sau đợt cải tổ tháng 2/2026)",
+"agenda": [
+"Củng cố tài khóa: thặng dư sơ cấp 5% GDP, thâm hụt 4,9%, nợ ở mức 78% GDP vào tháng 6/2027",
+"Thực hiện chương trình cải cách của IMF và cắt giảm nợ nước ngoài",
+"Tăng chi tiêu phát triển con người (giáo dục +25%, y tế +39,5%)",
+"Thu hút đầu tư sản xuất và logistics vào Đặc khu Kinh tế Kênh đào Suez",
+"Xúc tiến xuất khẩu (90 tỷ EGP trong ngân sách tài khóa 2026/27)",
+"Mở rộng sản lượng năng lượng và các dự án phát triển địa phương"
+],
+"projects": [
+{
+"title": "Ngân sách nhà nước tài khóa 2026/27",
+"detail": "Chi tiêu 5,178 nghìn tỷ EGP, đầu tư công 553,7 tỷ EGP, trợ cấp và phúc lợi xã hội 832,3 tỷ EGP",
+"status": "Đang triển khai"
+},
+{
+"title": "Kế hoạch Phát triển Kinh tế - Xã hội và kế hoạch trung hạn đến 2029/30",
+"detail": "Được phê duyệt cùng ngân sách; nhấn mạnh phát triển con người và phát triển địa phương (khoảng 39 tỷ EGP)",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình thu hút đầu tư vào Đặc khu Kinh tế Kênh đào Suez",
+"detail": "117 dự án và khoảng 7 tỷ $ vốn đầu tư trong tài khóa 2025/26, dự kiến tạo 73.000 việc làm",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình xúc tiến xuất khẩu",
+"detail": "Kinh phí hỗ trợ xuất khẩu được bố trí trong ngân sách tài khóa 2026/27",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Nghiên cứu khả thi và tư vấn gia nhập khu công nghiệp SCZONE",
+"why": "Đầu tư đang tăng nhanh và đặc khu đang nhắm tới nhà đầu tư châu Á.",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc trong lĩnh vực sản xuất và logistics"
+},
+{
+"title": "Tư vấn tự động hóa AI cho hành chính và tài chính chính phủ",
+"why": "Các mục tiêu tài khóa và bộ trưởng ICT mới cho thấy nhu cầu về hành chính số.",
+"target": "Bộ Tài chính, Bộ Kế hoạch và Bộ ICT"
+},
+{
+"title": "Giải pháp số cho y tế và giáo dục",
+"why": "Chi tiêu y tế tăng 39,5% và giáo dục tăng 25%.",
+"target": "Bộ Y tế và Dân số, Bộ Giáo dục, các trường đại học"
+},
+{
+"title": "Kết nối doanh nghiệp xuất khẩu Ai Cập với người mua Hàn Quốc",
+"why": "Chính phủ đã bố trí ngân sách lớn cho xúc tiến xuất khẩu.",
+"target": "Doanh nghiệp xuất khẩu Ai Cập, quỹ phát triển xuất khẩu"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Cairo",
+"detail": "Hỗ trợ thông tin thị trường, tìm kiếm người mua và tư vấn đầu tư, bao gồm SCZONE."
+},
+{
+"title": "Các chương trình của văn phòng KOICA tại Ai Cập",
+"detail": "Triển khai viện trợ không hoàn lại trong lĩnh vực giáo dục, y tế và số hóa do Ai Cập là quốc gia đối tác ưu tiên."
+},
+{
+"title": "Khoản vay ưu đãi EDCF",
+"detail": "Cung cấp khoản vay ưu đãi cho hạ tầng tại các nước đang phát triển và công bố thông báo mua sắm."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí tư vấn và chứng nhận ở nước ngoài thông qua phiếu hỗ trợ."
+}
+]
+}

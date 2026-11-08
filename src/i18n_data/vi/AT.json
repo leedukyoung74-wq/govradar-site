@@ -1,0 +1,71 @@
+{
+"summary": "Liên minh ÖVP-SPÖ-NEOS của Áo đang củng cố tài chính công thông qua ngân sách kép 2027/28 nhằm thoát khỏi thủ tục thâm hụt quá mức của EU vào năm 2028. Một kiến nghị bất tín nhiệm của FPÖ đã thất bại vào tháng 10, và Phó Thủ tướng Babler (SPÖ) dự kiến từ chức vào đầu năm 2027.",
+"leader": "Tổng thống Alexander Van der Bellen / Thủ tướng Christian Stocker (ÖVP; liên minh ÖVP-SPÖ-NEOS)",
+"agenda": [
+"Củng cố tài khóa: thâm hụt chính phủ chung trong mức 3% GDP vào năm 2028 để thoát khỏi thủ tục thâm hụt quá mức của EU",
+"Giảm chi phí lao động (giảm 1 điểm phần trăm mức đóng FLAF của người sử dụng lao động từ năm 2028)",
+"Năng lực cạnh tranh công nghiệp: giá điện công nghiệp, gói công nghiệp 750 triệu EUR, quỹ khởi nghiệp/mở rộng quy mô",
+"Chi tiêu có mục tiêu cho giáo dục, thị trường lao động và chăm sóc",
+"Chuẩn bị ứng phó khủng hoảng và khả năng chống chịu của chuỗi cung ứng (dự thảo luật khẩn cấp và chống chịu thị trường nội khối)",
+"Cải cách nghĩa vụ quân sự và nghĩa vụ dân sự"
+],
+"projects": [
+{
+"title": "Ngân sách kép liên bang 2027/28",
+"detail": "Chi tiêu liên bang năm 2027 là 128,2 tỷ EUR, thâm hụt liên bang 15,5 tỷ EUR (2,7% GDP); củng cố thêm 2,5 tỷ EUR đến năm 2028",
+"status": "Đang triển khai"
+},
+{
+"title": "Gói công nghiệp và quỹ khởi nghiệp/mở rộng quy mô",
+"detail": "Gói hỗ trợ công nghiệp dự kiến và quỹ mới cho các doanh nghiệp tăng trưởng",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Giảm gánh nặng chi phí lao động (cắt giảm mức đóng FLAF)",
+"detail": "Mức đóng của người sử dụng lao động vào quỹ cân bằng gánh nặng gia đình giảm từ 3,7% xuống 2,7% từ năm 2028, giúp doanh nghiệp tiết kiệm khoảng 2 tỷ EUR mỗi năm",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Dự thảo luật khẩn cấp và chống chịu thị trường nội khối (BNRG)",
+"detail": "Dự luật quy định việc cung ứng hàng hóa thiết yếu trong khủng hoảng khi xảy ra tình trạng khẩn cấp thị trường nội khối EU, đã trình nội các",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Mua sắm số hóa khu vực công (các công ty công cấp vùng)",
+"detail": "Gói thầu PMO/Scrum của tập đoàn giao thông Thượng Áo (OÖVH) và gói thầu khung dịch vụ CNTT của tập đoàn y tế",
+"status": "Đang đấu thầu"
+}
+],
+"biz": [
+{
+"title": "Dịch vụ PMO chuyển đổi số khu vực công và huấn luyện agile",
+"why": "Các công ty công cấp vùng đang mời thầu công khai dịch vụ quản lý dự án số hóa.",
+"target": "Các tập đoàn giao thông và y tế thuộc sở hữu nhà nước"
+},
+{
+"title": "Thí điểm tự động hóa AI cho văn bản hành chính và yêu cầu của người dân",
+"why": "Việc củng cố tài khóa đòi hỏi nâng cao hiệu quả mà không tăng nhân sự.",
+"target": "Các bộ liên bang và chính quyền địa phương"
+},
+{
+"title": "Gói thâm nhập Áo/DACH cho SME Hàn Quốc (nghiên cứu thị trường, kết nối đối tác)",
+"why": "Gói công nghiệp và hỗ trợ giá điện có thể mở rộng hợp tác sản xuất.",
+"target": "SME sản xuất và linh kiện Hàn Quốc"
+},
+{
+"title": "Tư vấn đánh giá khả năng chống chịu chuỗi cung ứng",
+"why": "Luật chống chịu tạo ra nhu cầu rà soát chuỗi cung ứng hàng hóa thiết yếu trong khủng hoảng.",
+"target": "Doanh nghiệp sản xuất và công ty công"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng Thương mại KOTRA Vienna",
+"detail": "Hỗ trợ thông tin thị trường, tìm kiếm người mua và tham gia hội chợ thương mại tại Áo."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí nghiên cứu thị trường nước ngoài, chứng nhận và tiếp thị thông qua phiếu hỗ trợ."
+}
+]
+}

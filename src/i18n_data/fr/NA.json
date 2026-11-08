@@ -1,0 +1,80 @@
+{
+"summary": "Lors de sa revue budgétaire de mi-exercice du 22 oct. 2026, la Namibie a revu à la baisse ses prévisions de recettes en raison de la faiblesse du secteur minier et relevé le budget d'environ 700 millions de N$ (de 87,9 Md N$ à 88,6 Md N$), la dette publique étant projetée à 201,7 milliards de N$. Les décisions finales d'investissement sur l'hydrogène vert (Hyphen) et le gisement pétrolier offshore Venus sont retardées, tandis que les projets de loi sur le foncier et le pétrole sont contestés.",
+"leader": "Présidente Netumbo Nandi-Ndaitwah (depuis mars 2025) / Vice-présidente Lucia Witbooi / Premier ministre Elijah Ngurare",
+"agenda": [
+"Santé budgétaire : stratégies à moyen terme de recettes et de gestion de la dette (avant févr. 2027)",
+"Hydrogène vert (Hyphen, participation de l'État de 24 %) et pétrole offshore (Venus)",
+"Loi foncière consolidée et interdiction de l'acquisition de terres par des étrangers",
+"Transfert de l'unité pétrolière amont à la Présidence (projet de loi modifiant la loi sur le pétrole)",
+"Soutien à l'agriculture, notamment la lutte contre la fièvre aphteuse et la préparation à la sécheresse",
+"Gouvernement resserré : ministères ramenés de 21 à 14"
+],
+"projects": [
+{
+"title": "Revue budgétaire de mi-exercice 2026/27",
+"detail": "Budget relevé de 87,9 Md N$ à 88,6 Md N$ (soumis à l'approbation du Parlement) ; recettes nettes de 42,4 Md N$ à fin septembre (51,4 % de l'objectif) ; réexamen du taux zéro de TVA sur le sucre",
+"status": "En cours"
+},
+{
+"title": "Projet d'hydrogène vert Hyphen",
+"detail": "Décision finale d'investissement reportée à fin 2027 ; jusqu'à 15 000 emplois en construction et 3 000 emplois permanents prévus",
+"status": "Prévu"
+},
+{
+"title": "Gisement pétrolier offshore Venus de TotalEnergies",
+"detail": "Objectif de 160 000 barils par jour ; aucune décision finale d'investissement à fin oct. 2026, conditions en cours de négociation",
+"status": "Prévu"
+},
+{
+"title": "Projet d'approvisionnement en eau Ruacana South, phase 1",
+"detail": "Programme d'appui au secteur de l'eau en Namibie financé par la BAfD ; travaux de canalisations principales, de réservoirs et d'installation de compteurs",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Approvisionnement en eau résilient au climat de l'aquifère d'Ohangwena (nord)",
+"detail": "Don de la KfW/BMZ allemande ; préqualification d'un consultant pluridisciplinaire (clôturée en juil. 2026)",
+"status": "En cours"
+},
+{
+"title": "Accord d'aide au développement avec l'Allemagne",
+"detail": "1,1 milliard EUR proposés sur 30 ans ; un recours devant la High Court est en cours",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Appui à la stratégie de recettes à moyen terme et analyse automatisée des données fiscales",
+"why": "Le gouvernement doit présenter une stratégie de recettes avant févr. 2027 et les recettes sont inférieures à l'objectif.",
+"target": "Ministère des Finances et des Entreprises publiques, Namibia Revenue Agency (NamRA)"
+},
+{
+"title": "Tableau de bord de suivi des marchés publics et de l'exécution budgétaire",
+"why": "L'exécution budgétaire accuse du retard et l'essentiel des dépenses est absorbé par les frais de fonctionnement.",
+"target": "Ministère des Finances et des Entreprises publiques, conseils régionaux"
+},
+{
+"title": "Conseil en mise en relation pour l'intégration de PME locales et coréennes à la chaîne d'approvisionnement de l'hydrogène vert",
+"why": "Hyphen promet de nombreux emplois de construction et des achats importants, et la période précédant la décision finale d'investissement laisse le temps de se préparer.",
+"target": "PME locales, fournisseurs d'équipements coréens"
+},
+{
+"title": "Système de suivi et de gestion de la lutte contre les maladies du bétail",
+"why": "La lutte contre la fièvre aphteuse est devenue un nouveau besoin de dépenses non budgétisé.",
+"target": "Ministère de l'Agriculture, de l'Eau et de la Réforme agraire"
+}
+],
+"krsupport": [
+{
+"title": "Korea-Africa AI Hub et K-AI Package",
+"detail": "Un cadre de coopération en IA, centres de données et énergie lié à l'EDCF ; aucun projet spécifique à la Namibie n'a été confirmé."
+},
+{
+"title": "Accompagnement de KOTRA pour l'entrée sur les marchés d'Afrique australe",
+"detail": "Études de marché et mise en relation avec des acheteurs par le bureau commercial compétent (le bureau couvrant la Namibie reste à confirmer)."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent les frais d'études de marché, de certification et de marketing local pour préparer l'entrée sur le marché."
+}
+]
+}

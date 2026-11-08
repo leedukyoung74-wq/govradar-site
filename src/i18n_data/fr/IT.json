@@ -1,0 +1,65 @@
+{
+"summary": "Le gouvernement Meloni a approuvé le 13 octobre le projet de plan budgétaire (DPB) 2027 et prépare un budget d'environ 23,4 Md€, en utilisant la marge de déficit supplémentaire autorisée pour l'énergie et la défense. Les désaccords au sein de la coalition sur les baisses d'impôt sur le revenu, les retraites et une contribution des banques ont retardé à plusieurs reprises l'approbation du projet de loi de finances en Conseil des ministres.",
+"leader": "Président Sergio Mattarella (chef de l'État) / Présidente du Conseil Giorgia Meloni (cheffe du gouvernement)",
+"agenda": [
+"Baisser les coûts de l'énergie pour les entreprises et les ménages (7 Md€ pour l'énergie en 2027 au titre de la clause dérogatoire nationale de l'UE)",
+"Hausse des dépenses de défense (enveloppe distincte de 7 Md€ en 2027)",
+"Baisses de l'impôt sur le revenu (IRPEF) pour les revenus moyens et ajustements des retraites",
+"Soutien aux PME (bons IA, cloud ajouté à Transizione 5.0, hyper-amortissement renforcé)",
+"Achever le plan de relance PNRR et éventuellement prolonger la zone économique spéciale du Sud (ZES)"
+],
+"projects": [
+{
+"title": "Projet de plan budgétaire 2027 et projet de loi de finances",
+"detail": "Le 13 octobre, le Parlement a approuvé un écart de déficit de 29 Md€ pour l'énergie et la défense, et le Conseil des ministres a adopté le DPB. Le projet de loi de finances a glissé du 23 au 28 octobre tandis que les discussions au sein de la coalition se poursuivent",
+"status": "Prévu (en attente du Conseil des ministres)"
+},
+{
+"title": "Paquet de soutien aux PME",
+"detail": "À l'étude : bons IA, cloud ajouté à Transizione 5.0 et hyper-amortissement renforcé",
+"status": "Prévu"
+},
+{
+"title": "Multiservice énergétique intégré Consip pour la santé (MIES)",
+"detail": "Contrat intégré de gestion des bâtiments de santé publics et d'amélioration de leur efficacité énergétique. Les offres ont été closes le 30 septembre 2026",
+"status": "Offres closes (phase d'évaluation, estimation)"
+},
+{
+"title": "Phase finale du PNRR",
+"detail": "La mise en œuvre s'est achevée le 31 août 2026 et la demande de paiement finale a été déposée. L'UE doit achever les paiements d'ici la fin de l'année",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Diagnostics de maturité IA et automatisation des processus pour les PME (liés aux bons IA)",
+"why": "Les discussions sur le budget 2027 incluent des bons IA pour les PME et un soutien au cloud dans le cadre de Transizione 5.0.",
+"target": "PME italiennes de l'industrie et des services, associations régionales de Confindustria"
+},
+{
+"title": "Analyse des consommations d'énergie et conseil en économies pour les PME industrielles",
+"why": "La baisse des coûts de l'énergie est devenue la priorité absolue du budget.",
+"target": "PME industrielles énergivores"
+},
+{
+"title": "Composants de gestion énergétique des bâtiments (BEMS) pour les établissements de santé publics",
+"why": "Consip a lancé un appel d'offres pour un contrat intégré de gestion énergétique des bâtiments de santé, et les consortiums lauréats devront s'approvisionner en équipements.",
+"target": "Gestionnaires d'installations lauréats du MIES, autorités sanitaires locales (ASL)"
+},
+{
+"title": "Accompagnement à l'entrée sur le marché italien pour les entreprises coréennes de la pharmacie et des biotechnologies",
+"why": "Les liens dans la pharmacie se poursuivent, par exemple avec le pavillon coréen de KOTRA au CPHI Milan.",
+"target": "PME coréennes de la pharmacie et des biotechnologies, distributeurs et CMO italiens"
+}
+],
+"krsupport": [
+{
+"title": "Pavillon coréen au CPHI Milan 2026",
+"detail": "A tenu un pavillon coréen au salon mondial de la pharmacie à Milan du 6 au 8 octobre 2026 (achevé)."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Les bons couvrent le coût de la certification, des études de marché, du marketing et d'autres services d'expansion à l'étranger."
+}
+]
+}

@@ -1,0 +1,70 @@
+{
+"summary": "Iraq đã chấm dứt tình trạng khuyết chính phủ kéo dài với tổng thống mới vào tháng 4/2026 và nội các của Thủ tướng al-Zaidi vào tháng 5. Sự gián đoạn tại eo biển Hormuz khiến việc đa dạng hóa tuyến xuất khẩu dầu trở nên cấp bách, và chính phủ đã đưa mở rộng sản xuất điện và cải cách tài khóa lên đầu chương trình nghị sự.",
+"leader": "Tổng thống Nizar Amidi (đắc cử tháng 4/2026) / Thủ tướng Ali Faleh al-Zaidi (nhậm chức tháng 5/2026)",
+"agenda": [
+"Mở rộng sản xuất điện (mục tiêu tăng gấp đôi sản lượng năm 2027, bao gồm 12.000 MW điện mặt trời)",
+"Đa dạng hóa tuyến xuất khẩu dầu (Ceyhan, Baniyas, Aqaba) và tăng sản lượng",
+"Cải cách tài khóa: tiết kiệm 17,8 nghìn tỷ IQD trong vòng một năm, tăng thu ngoài dầu mỏ",
+"Số hóa chính phủ, bao gồm tự động hóa hải quan ASYCUDA",
+"Cải cách an ninh: nhà nước độc quyền vũ khí và lộ trình rút quân đội nước ngoài",
+"Phân phối một triệu lô đất ở và khôi phục nông nghiệp"
+],
+"projects": [
+{
+"title": "Kế hoạch bảo đảm 37.000 MW công suất phát điện",
+"detail": "15.000 MW từ GE, 12.000 MW điện mặt trời, 10.000 MW nhiệt điện, đại tu 30.000 MW hiện có, tư nhân hóa khâu phân phối",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Điện mặt trời Artawi 1 GW (GGIP)",
+"detail": "Giai đoạn 1 (250 MW) đã hòa lưới tháng 3/2026; giai đoạn 2 (250 MW) mục tiêu ngày 8/12",
+"status": "Đang triển khai"
+},
+{
+"title": "Đa dạng hóa tuyến xuất khẩu dầu",
+"detail": "Tăng xuất khẩu qua Ceyhan (Thổ Nhĩ Kỳ), Baniyas (Syria) và Aqaba (Jordan); MoU với Syria về kéo dài đường ống",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự luật ngân sách 2026 (tập trung vào điện và điện mặt trời)",
+"detail": "Chính phủ cho biết sẽ sớm trình ngân sách lên Quốc hội; chi tiêu hiện vận hành theo quy tắc 1/12",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Tự động hóa hải quan (ASYCUDA)",
+"detail": "Hải quan điện tử tại tất cả cửa khẩu biên giới song song với số hóa rộng rãi các cơ quan nhà nước",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn mô hình vận hành và hệ thống tính hóa đơn cho tư nhân hóa phân phối điện",
+"why": "Chính phủ xác định tư nhân hóa khâu phân phối và tăng gấp đôi sản lượng là mục tiêu cốt lõi.",
+"target": "Bộ Điện lực, các công ty phân phối khu vực"
+},
+{
+"title": "Tự động hóa AI cho tài chính công và quản lý tài sản",
+"why": "Các mục tiêu tiết kiệm và chương trình số hóa đã được công bố.",
+"target": "Bộ Tài chính, Hội đồng Ổn định Tài chính và Tiền tệ"
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường cho doanh nghiệp điện mặt trời và thiết bị điện Hàn Quốc",
+"why": "Kế hoạch mua 12.000 MW điện mặt trời đã được công bố.",
+"target": "SME thiết bị điện Hàn Quốc, doanh nghiệp EPC địa phương"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Baghdad",
+"detail": "Hỗ trợ thâm nhập Iraq với thông tin mua sắm tại địa phương và các cuộc gặp người mua."
+},
+{
+"title": "Các chương trình của KOICA tại Iraq",
+"detail": "Triển khai viện trợ không hoàn lại trong lĩnh vực tái thiết, hành chính công và y tế."
+},
+{
+"title": "Hỗ trợ xây dựng ở nước ngoài",
+"detail": "Cung cấp thông tin đấu thầu điện và nhà máy tại Trung Đông và hỗ trợ giành hợp đồng."
+}
+]
+}

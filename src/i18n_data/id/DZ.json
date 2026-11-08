@@ -1,0 +1,69 @@
+{
+"summary": "Pemerintah Aljazair meninjau RUU keuangan 2027 pada 30 September 2026 dan mengirimnya ke Dewan Menteri bulan Oktober, dengan fokus pada perlindungan daya beli dan pengembangan sektor nonmigas. Penyelesaian jalur kereta selatan Aljir-Tamanrasset pada akhir 2028 menjadi proyek utama presiden.",
+"leader": "Presiden Abdelmadjid Tebboune / Perdana Menteri Sifi Ghrieb (diangkat secara resmi Sept 2025)",
+"agenda": [
+"Tahap akhir janji penggandaan gaji aparatur sipil dan perlindungan daya beli",
+"Tidak ada pajak baru bagi rumah tangga berpenghasilan rendah dan menengah",
+"Mengurangi ketergantungan pada hidrokarbon dan berinvestasi di sektor produktif",
+"Memperluas jaringan jalan dan rel serta menekan biaya logistik",
+"Jendela investasi tunggal, penyederhanaan prosedur pajak, dan layanan publik daring"
+],
+"projects": [
+{
+"title": "RUU keuangan 2027 (PLF 2027)",
+"detail": "Mencakup tahap terakhir kenaikan gaji (53% dari janji) dan mempertahankan belanja sosial untuk sekolah, kesehatan, dan perumahan",
+"status": "Pembahasan kabinet/parlemen"
+},
+{
+"title": "Jalur kereta selatan Laghouat-El Meniaa-In Salah-Tamanrasset",
+"detail": "Jalur selatan lebih dari 2.000 km; presiden memerintahkan dimulai segera dan selesai pada akhir 2028",
+"status": "Berjalan"
+},
+{
+"title": "Ruas rel Ghardaïa-El Meniaa (230 km)",
+"detail": "Dibiayai AfDB dan AIIB; tender kontraktor internasional ditutup pada Juni 2026",
+"status": "Tender ditutup (evaluasi)"
+},
+{
+"title": "Algeria Bid Round 2026 (eksplorasi hidrokarbon)",
+"detail": "Tujuh zona eksplorasi baru dibuka bagi investor asing, dengan kontrak bersama Sonatrach ditargetkan pada akhir Januari 2027",
+"status": "Proses tender"
+}
+],
+"biz": [
+{
+"title": "PMC dan perangkat penjadwalan digital untuk program rel skala besar",
+"why": "Dengan tenggat 2028, beberapa ruas dimulai secara bersamaan.",
+"target": "Kementerian Pekerjaan Umum, ANESRIF"
+},
+{
+"title": "Konsultasi otomatisasi alur kerja untuk e-government dan jendela investasi tunggal",
+"why": "RUU keuangan menyebut layanan publik daring dan operasi penuh jendela tunggal.",
+"target": "Badan promosi investasi, Kementerian Keuangan, otoritas pajak"
+},
+{
+"title": "Dukungan masuk pasar Aljazair bagi UKM Korea (mitra lokal, registrasi pengadaan)",
+"why": "Investasi publik yang berlanjut membuka peluang pasokan peralatan dan material (perkiraan).",
+"target": "UKM dan perusahaan menengah Korea yang membidik Aljazair"
+},
+{
+"title": "Analisis risiko lokal bagi perusahaan yang mempertimbangkan putaran tender eksplorasi",
+"why": "Penawaran untuk tujuh blok jatuh tempo pada 26 November.",
+"target": "Perusahaan yang mempertimbangkan penawaran"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Aljir",
+"detail": "Mendukung informasi pasar, aturan impor, dan pencarian pembeli."
+},
+{
+"title": "Dukungan konstruksi dan infrastruktur luar negeri",
+"detail": "Mendukung studi kelayakan dan investasi di bidang rel dan infrastruktur lainnya."
+},
+{
+"title": "Export Voucher",
+"detail": "Menanggung biaya penerjemahan bahasa Prancis, sertifikasi, dan konsultasi."
+}
+]
+}

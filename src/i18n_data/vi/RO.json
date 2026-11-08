@@ -1,0 +1,64 @@
+{
+"summary": "Sau khi chính phủ Bolojan sụp đổ vào tháng 5 và năm tháng bế tắc, ngày 20/10 Quốc hội đã phê chuẩn nội các PSD - kỹ trị của Thủ tướng Niculescu. Các thách thức chính là mức thâm hụt thuộc hàng cao nhất EU, lạm phát cao và các mối đe dọa an ninh ở biên giới.",
+"leader": "Tổng thống Nicușor Dan / Thủ tướng Luca Niculescu (nhà ngoại giao không đảng phái, được phê chuẩn ngày 2026-10-20; nội các PSD và kỹ trị)",
+"agenda": [
+"Khôi phục chính phủ có đầy đủ thẩm quyền và ổn định dịch vụ công",
+"Giảm thâm hụt ngân sách (theo dõi việc có tiếp tục đường lối thắt lưng buộc bụng năm 2025, bao gồm tăng VAT, hay không)",
+"Ứng phó các mối đe dọa an ninh ở Biển Đen và biên giới Ukraine (các sự cố UAV)",
+"Các cải cách do Ngân hàng Thế giới hỗ trợ như số hóa dịch vụ tư pháp",
+"Giảm ô nhiễm nông thôn và hạ tầng phòng ngừa rủi ro thiên tai"
+],
+"projects": [
+{
+"title": "Củng cố Nền tảng nhằm Cải thiện Cung cấp Dịch vụ Tư pháp",
+"detail": "Cải tạo cơ sở tòa án, xây dựng lại mạng LAN của Bộ Tư pháp và tư vấn chiến lược tư pháp số",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Dự án Phòng ngừa và Giảm thiểu Ô nhiễm Nông thôn (RAPID)",
+"detail": "Đã trao hợp đồng tư vấn cho hệ thống cảnh báo sớm kiểm dịch thực vật và hệ thống quản lý thông tin phòng thí nghiệm (tháng 10/2026)",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự án Tăng cường Quản lý Rủi ro Thiên tai",
+"detail": "Các hạng mục như đấu nối cơ sở ứng phó khẩn cấp vào lưới điện",
+"status": "Đang triển khai"
+},
+{
+"title": "Trường học An toàn hơn, Bao trùm và Bền vững",
+"detail": "Hợp đồng nội thất và thiết bị lớp học cho 11 trường",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn số hóa cơ quan công quyền và hệ thống quản lý dữ liệu",
+"why": "Các dự án của Ngân hàng Thế giới liên tục mời thầu tư vấn hệ thống CNTT trong lĩnh vực tư pháp và môi trường.",
+"target": "Bộ Tư pháp, các cơ quan môi trường"
+},
+{
+"title": "Hỗ trợ quản lý dự án (PMO) và giám sát kết quả các dự án dùng vốn EU",
+"why": "Chính phủ mới cần đẩy nhanh các dự án dùng vốn EU đang bị chậm.",
+"target": "Đơn vị quản lý quỹ EU của các bộ, chính quyền đô thị"
+},
+{
+"title": "Hỗ trợ SME Hàn Quốc thâm nhập thị trường Romania (nghiên cứu thị trường, kết nối đối tác)",
+"why": "Có sự quan tâm đến Romania như một cơ sở sản xuất và phân phối tại Đông Âu, dù cần kiểm tra rủi ro chính trị.",
+"target": "SME Hàn Quốc ngành hàng tiêu dùng và linh kiện"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng Thương mại KOTRA Bucharest",
+"detail": "Cung cấp thông tin thị trường Romania, tìm kiếm người mua và thông tin mua sắm."
+},
+{
+"title": "Hỗ trợ hạ tầng ở nước ngoài",
+"detail": "Hỗ trợ nghiên cứu khả thi và góp vốn vào các dự án hạ tầng ở nước ngoài."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Chi trả chi phí nghiên cứu thị trường nước ngoài, chứng nhận và tiếp thị thông qua voucher."
+}
+]
+}

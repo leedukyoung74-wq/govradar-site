@@ -1,0 +1,75 @@
+{
+"summary": "Ba Lan duy trì chi quốc phòng trên 4% GDP song song với các siêu dự án như sân bay trung tâm mới, đường sắt cao tốc và nhà máy điện hạt nhân đầu tiên, trong khi thâm hụt trong dự thảo ngân sách năm 2027 vượt 7% GDP. Việc Tổng thống thường xuyên phủ quyết khiến các dự luật của chính phủ thường bị chậm trễ.",
+"leader": "Tổng thống Karol Nawrocki / Thủ tướng Donald Tusk",
+"agenda": [
+"Tăng cường quốc phòng (khoảng 4,5% GDP năm 2027) và sản xuất vũ khí trong nước",
+"Tăng chi cho y tế",
+"An ninh năng lượng và chuyển đổi năng lượng, bao gồm nhà máy điện hạt nhân đầu tiên",
+"Hạ tầng lớn (sân bay trung tâm Port Polska, đường sắt cao tốc, cảng biển)",
+"Kiểm soát thâm hụt theo thủ tục thâm hụt quá mức của EU",
+"Đa dạng hóa thương mại và đầu tư sang châu Á"
+],
+"projects": [
+{
+"title": "Dự thảo ngân sách nhà nước 2027",
+"detail": "Chi 977,6 tỷ PLN, thâm hụt 282,6 tỷ PLN (7,1% GDP); 198,1 tỷ PLN cho quốc phòng, 274,1 tỷ PLN cho y tế",
+"status": "Đang trình Quốc hội"
+},
+{
+"title": "Sân bay trung tâm và đầu mối đường sắt Port Polska (trước đây là CPK)",
+"detail": "Năm liên danh được mời dự thầu nhà ga; mời thầu ga đường sắt sân bay, đường bộ, cầu ống lồng, tuyến Warszawa-Łódź và trạm biến áp. 29 thủ tục trị giá khoảng 14 tỷ PLN đã được khởi động tính đến cuối tháng 7",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Đoạn đường sắt cao tốc Warszawa-Łódź",
+"detail": "Đào hầm Łódź từ cuối năm 2026 đến 2027, các đoạn khác 2027-2029",
+"status": "Đang triển khai"
+},
+{
+"title": "Nhà máy điện hạt nhân đầu tiên (Kopalino-Lubiatowo)",
+"detail": "Liên danh Westinghouse-Bechtel; thi công chính từ năm 2028, tổ máy 1 dự kiến vận hành năm 2035",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Bến container nước sâu Świnoujście",
+"detail": "Bao gồm các công trình luồng tàu; xây dựng bến 2027-2029",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Gói thâm nhập thị trường Ba Lan cho SME quốc phòng (tìm đối tác, chứng nhận, kiểm soát xuất khẩu, rà soát hợp đồng)",
+"why": "Tại MSPO 2026, các SME Hàn Quốc cho biết tìm kiếm đối tác và rà soát chứng nhận/sở hữu trí tuệ là rào cản chính.",
+"target": "Nhà cung cấp quốc phòng Hàn Quốc, doanh nghiệp tham gia chuỗi cung ứng của Cơ quan Vũ khí"
+},
+{
+"title": "PMO số và công cụ lập tiến độ (BIM, phân tích tiến độ bằng AI) cho các siêu dự án",
+"why": "Port Polska đã bước vào giai đoạn thi công với hàng chục gói thầu song song.",
+"target": "Port Polska, PKP PLK, các liên danh nhà thầu và nhà thầu phụ"
+},
+{
+"title": "Tự động hóa bằng AI công tác hành chính và lập lịch tại bệnh viện công",
+"why": "Chi y tế tăng mạnh năm 2027 sẽ làm tăng nhu cầu nâng cao hiệu quả vận hành (ước tính).",
+"target": "Bộ Y tế, Quỹ Y tế Quốc gia (NFZ), bệnh viện khu vực"
+},
+{
+"title": "Tự động hóa hồ sơ và cấp phép cho nhà cung cấp ngành hạt nhân",
+"why": "Việc chuẩn bị thi công chính đang làm tăng khối lượng hồ sơ chất lượng và cấp phép ở các nhà cung cấp.",
+"target": "PEJ, nhà cung cấp của liên danh Westinghouse-Bechtel"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng KOTRA Warszawa",
+"detail": "Nghiên cứu thị trường, kết nối người mua và tiếp thị xuất khẩu trong lĩnh vực quốc phòng, AI, ô tô, năng lượng và hàng tiêu dùng."
+},
+{
+"title": "Phân tích hội chợ quốc phòng MSPO 2026",
+"detail": "Công bố tháng 10/2026, đề cập xu hướng nội địa hóa quốc phòng của Ba Lan và các rào cản thâm nhập của SME."
+},
+{
+"title": "K-Content Expo Poland 2026",
+"detail": "Tổ chức tại Warszawa vào tháng 9/2026 với các cuộc gặp trực tiếp cùng khoảng 100 người mua từ Trung và Đông Âu."
+}
+]
+}

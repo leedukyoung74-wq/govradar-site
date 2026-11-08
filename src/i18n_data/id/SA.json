@@ -1,0 +1,70 @@
+{
+"summary": "Pernyataan pra-anggaran TA2027 Kementerian Keuangan, yang diterbitkan pada 1 Oktober, memproyeksikan belanja sekitar SAR 1.392 triliun dan pendapatan sekitar SAR 1.202 triliun, dengan defisit 3.6% PDB. PDB riil diperkirakan menyusut pada 2026 akibat penurunan produksi minyak, namun pemerintah berencana mempertahankan belanja untuk diversifikasi nonmigas dan giga-proyek yang telah diprioritaskan ulang.",
+"leader": "Raja Salman bin Abdulaziz (Kepala Negara); Putra Mahkota merangkap Perdana Menteri Mohammed bin Salman (Kepala Pemerintahan)",
+"agenda": [
+"Diversifikasi ekonomi Vision 2030 dan pertumbuhan sektor swasta",
+"Keberlanjutan fiskal (defisit 3.6% PDB; peningkatan pembiayaan proyek, infrastruktur, dan kredit ekspor)",
+"Prioritas pada sektor dengan imbal hasil lebih cepat: AI dan pusat data, wisata religi, logistik, pertambangan",
+"Persiapan Expo 2030 Riyadh dan Piala Dunia FIFA 2034",
+"Reformasi konten lokal dan pengadaan pemerintah"
+],
+"projects": [
+{
+"title": "Anggaran TA2027 (pernyataan pra-anggaran)",
+"detail": "Pendapatan sekitar SAR 1.202tn; belanja diproyeksikan sekitar SAR 1.544tn pada 2029. PDB riil diperkirakan turun sekitar 3.6% pada 2026, dengan aktivitas nonmigas naik sekitar 3.2%",
+"status": "Direncanakan"
+},
+{
+"title": "Pembiayaan pusat data AI HUMAIN",
+"detail": "HUMAIN milik PIF sedang menghimpun dana untuk pusat data dan GPU berkapasitas 2 GW di sekitar Riyadh, dengan Goldman Sachs dilaporkan sebagai penasihat",
+"status": "Direncanakan"
+},
+{
+"title": "Expo 2030 Riyadh",
+"detail": "Pekerjaan awal telah dimulai; Expo dibuka pada Oktober 2030",
+"status": "Berjalan"
+},
+{
+"title": "Penetapan ulang prioritas giga-proyek (termasuk NEOM)",
+"detail": "NEOM telah dipecah menjadi tahap-tahap yang lebih kecil dan sedang ditinjau; prioritas beralih ke pariwisata, pembangunan perkotaan, manufaktur maju, logistik, dan energi terbarukan",
+"status": "Berjalan"
+},
+{
+"title": "Dammam Metro",
+"detail": "Rencana jaringan kereta perkotaan sepanjang sekitar 50 km",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Pilot otomatisasi AI untuk pemerintah (pemrosesan dokumen berbahasa Arab, layanan warga)",
+"why": "Pembangunan pusat data HUMAIN bertepatan dengan pembahasan pemerintah mengenai etika dan adopsi AI.",
+"target": "SDAIA, unit digital kementerian, lembaga kota (Balady)"
+},
+{
+"title": "Konsultasi masuk pasar terkait konten lokal bagi UKM Korea",
+"why": "Pengetatan aturan konten lokal dalam pengadaan menuntut strategi usaha patungan dan registrasi lokal.",
+"target": "UKM serta perusahaan manufaktur dan jasa menengah Korea yang masuk ke Arab Saudi"
+},
+{
+"title": "PMO digital untuk pengendalian jadwal dan biaya giga-proyek",
+"why": "Dengan proyek yang dibagi bertahap dan ditinjau ulang, pengendalian biaya dan jadwal menjadi lebih penting dari sebelumnya.",
+"target": "Pengembang PIF (ROSHN, Red Sea Global, dll.), organisasi Expo 2030"
+},
+{
+"title": "Dukungan masuk distribusi K-beauty dan barang konsumsi",
+"why": "MSS dan KOTRA menjalankan program khusus untuk masuk ke pasar Saudi.",
+"target": "UKM Korea di bidang kosmetik dan barang konsumsi"
+}
+],
+"krsupport": [
+{
+"title": "K-Beauty Saudi Market Entry Support Program",
+"detail": "Membantu perusahaan kosmetik Korea masuk ke pasar Saudi; sesi informasi diadakan pada Juli 2026."
+},
+{
+"title": "Program Export Voucher",
+"detail": "Menanggung biaya sertifikasi luar negeri, riset pasar, dan konsultasi lokalisasi."
+}
+]
+}

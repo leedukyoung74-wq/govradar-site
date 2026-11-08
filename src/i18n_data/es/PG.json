@@ -1,0 +1,75 @@
+{
+"summary": "Un presupuesto suplementario de 2026 reorienta fondos hacia el alivio de los precios del combustible, la respuesta a El Niño y la preparación de las elecciones de 2027, con un presupuesto equilibrado como meta para 2027. La decisión final de inversión de Papua LNG, por US$14.500 millones, está prevista para el 15 de diciembre de 2026.",
+"leader": "Jefe de Estado: rey Carlos III (gobernador general Gran Jefe Sir Bob Dadae); Primer ministro James Marape",
+"agenda": [
+"Consolidación fiscal y presupuesto equilibrado para 2027 (déficit cercano al 1%)",
+"FID de Papua LNG (US$14.500 millones) y aseguramiento de los ingresos por recursos",
+"Elecciones nacionales libres y justas en 2027 (K200 millones para la Comisión Electoral)",
+"Respuesta a El Niño y a la sequía, alivio de los precios del combustible",
+"Modernización del servicio público, incluida la IA",
+"Proceso constitucional sobre el futuro político de Bougainville"
+],
+"projects": [
+{
+"title": "Papua LNG",
+"detail": "Consorcio liderado por ExxonMobil; FID prevista para el 15 de diciembre de 2026",
+"status": "Planificado"
+},
+{
+"title": "IA en la administración pública (plataforma GovAoS)",
+"detail": "Plataforma de productividad con IA en fase piloto en el departamento del Primer Ministro, que se ampliará a todo el gobierno, con agentes de IA previstos",
+"status": "En curso"
+},
+{
+"title": "Preparativos para las elecciones nacionales de 2027",
+"detail": "Actualización del padrón electoral, logística de votación, capacitación de funcionarios, seguridad",
+"status": "En curso"
+},
+{
+"title": "Presupuesto suplementario 2026",
+"detail": "Apoyo a los precios del combustible (unos K800 millones, que se espera superen los K1.000 millones a fin de año), respuesta a El Niño, sin nuevo endeudamiento",
+"status": "En curso"
+},
+{
+"title": "Movilización de ingresos (IRC y Aduanas)",
+"detail": "La IRC recaudó K16.500 millones en 2026 (81% de la meta revisada de K20.300 millones); los ingresos aduaneros aumentaron un 42%",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Consultoría y capacitación en automatización de flujos de trabajo con IA para el gobierno",
+"why": "El departamento del Primer Ministro ha planteado formalmente pilotar una plataforma de IA, ampliarla a todo el gobierno e incorporar agentes de IA.",
+"target": "Departamento del PM y del NEC, Departamento de TIC, responsables de transformación digital de los departamentos"
+},
+{
+"title": "Analítica de datos tributarios y aduaneros y automatización de la recaudación",
+"why": "Aumentar los ingresos es central para el presupuesto equilibrado de 2027.",
+"target": "Comisión de Ingresos Internos, Aduanas de PNG"
+},
+{
+"title": "Apoyo a pymes locales para integrarse en la cadena de suministro en torno al GNL",
+"why": "Tras la FID podría surgir una gran demanda de compras locales (estimación).",
+"target": "Empresas locales, gobiernos provinciales, empresas de propietarios de tierras"
+},
+{
+"title": "Gestión del desempeño de organismos públicos y revisiones del gasto",
+"why": "El gobierno controla el gasto mediante reuniones semanales del Comité de Gestión Presupuestaria.",
+"target": "Departamento de Finanzas, Tesoro, Planificación Nacional"
+}
+],
+"krsupport": [
+{
+"title": "Reapertura de la oficina de KOICA en Port Moresby",
+"detail": "Un acuerdo marco de ayuda no reembolsable firmado en diciembre de 2025 permite a KOICA reabrir su oficina tras unos 12 años."
+},
+{
+"title": "Vale de Exportación",
+"detail": "Cubre mediante vales los costos de estudios de mercado y marketing local en el Pacífico."
+},
+{
+"title": "Apoyo al desarrollo de construcción e inversión en el exterior",
+"detail": "Podría explorarse apoyo para estudios de viabilidad de proyectos de inversión en infraestructura vinculados al GNL (estimación)."
+}
+]
+}

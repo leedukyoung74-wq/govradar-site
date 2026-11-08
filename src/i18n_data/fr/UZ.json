@@ -1,0 +1,74 @@
+{
+"summary": "Dans le cadre de la stratégie « Ouzbékistan-2030 », 2026 est l'« Année du développement des mahallas et de la prospérité sociale », avec un programme d'État de 337 tâches. Fin octobre, le Président supervise personnellement d'importants investissements dans la santé et de nouvelles normes médicales, tandis que la Corée élargit, via la KOICA, sa coopération dans l'enseignement informatique et la gouvernance numérique.",
+"leader": "Président Chavkat Mirzioïev (chef de l'État) / Premier ministre Abdulla Aripov (chef du gouvernement, reconduit en nov. 2024 ; son maintien en fonction en 2026 sera confirmé lors de la prochaine mise à jour)",
+"agenda": [
+"Infrastructures des mahallas (quartiers) et croissance régionale équilibrée",
+"Meilleures normes de santé et davantage d'investissements dans la santé",
+"Technologies numériques, industrie informatique et transition vers une économie fondée sur l'innovation",
+"Réforme administrative et judiciaire et lutte contre la corruption",
+"Nouveau cadre du marché du travail et gestion de l'eau"
+],
+"projects": [
+{
+"title": "Programme de réformes 2026 / programme d'État « Ouzbékistan-2030 »",
+"detail": "Décret présidentiel du 17 févr. 2026 comportant 337 tâches, 59 lois et 12 documents stratégiques",
+"status": "En cours"
+},
+{
+"title": "Budget de l'État 2026",
+"detail": "Recettes de 515 800 milliards d'UZS et dépenses de 567 700 milliards d'UZS, le déficit étant maintenu sous 3 % du PIB (signé le 26 déc. 2025)",
+"status": "En cours"
+},
+{
+"title": "Grands projets d'investissement dans la santé et nouvelles normes médicales",
+"detail": "Le Président a examiné l'avancement le 28 oct. 2026 et annoncé de nouvelles normes médicales et un soutien accru aux médecins",
+"status": "En cours"
+},
+{
+"title": "Hubs informatiques et centres de formation numérique de la KOICA",
+"detail": "Hubs informatiques à Noukous et Karchi, 14 centres informatiques dans sept districts, et formation à l'IA, à la programmation et dans d'autres domaines pour 500 spécialistes et enseignants, ainsi que l'incubation de start-ups",
+"status": "En cours"
+},
+{
+"title": "Plafonds d'emprunt extérieur et de PPP",
+"detail": "Nouveaux emprunts extérieurs de 5 Md USD en 2026 (2,5 Md USD pour le budget et 2,5 Md USD pour les projets d'investissement) et plafond de 6,5 Md USD pour les nouveaux PPP garantis par l'État",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Dossiers médicaux électroniques et systèmes de protocoles cliniques pour les hôpitaux régionaux",
+"why": "Le Président examine personnellement les investissements dans la santé et a annoncé de nouvelles normes médicales.",
+"target": "Ministère de la Santé, centres médicaux régionaux"
+},
+{
+"title": "Formation à l'IA et au marketing numérique et accélération de start-ups en lien avec les hubs informatiques de la KOICA",
+"why": "La KOICA construit des hubs et des centres informatiques pour 14 M USD, ce qui crée une demande de contenus de formation et d'opérateurs d'incubation.",
+"target": "Ministère des Technologies numériques, IT Park, partenaires de mise en œuvre de la KOICA"
+},
+{
+"title": "Chatbot IA pour les demandes des habitants des mahallas",
+"why": "Le programme d'État 2026 fait des services publics au niveau des mahallas une priorité.",
+"target": "Administrations locales (hokimiyats), organismes chargés des mahallas"
+},
+{
+"title": "Études de faisabilité de PPP et conseil en gestion de la performance pour les organismes publics",
+"why": "La baisse des plafonds d'emprunt oriente davantage de projets vers le financement en PPP.",
+"target": "Unité PPP du ministère de l'Économie et des Finances, agences de projets des ministères sectoriels"
+}
+],
+"krsupport": [
+{
+"title": "Soutien de la KOICA à l'écosystème de l'enseignement informatique (14 M USD)",
+"detail": "Construit 2 hubs informatiques et 14 centres informatiques et forme 500 spécialistes sur 2026–2032."
+},
+{
+"title": "Coopération de la KOICA en IA et gouvernance numérique en Asie centrale",
+"detail": "L'Ouzbékistan est le premier partenaire de la KOICA en Asie centrale, avec des projets de gouvernance numérique en cours comme la gestion de la propriété intellectuelle (jusqu'en 2029) et un plan directeur de politique de l'IA (jusqu'en 2030)."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Les bons couvrent les frais de certification, d'études de marché, de marketing et d'autres services de développement à l'international."
+}
+]
+}

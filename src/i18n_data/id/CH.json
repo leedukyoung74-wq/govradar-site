@@ -1,0 +1,60 @@
+{
+"summary": "Pemerintah federal Swiss memutuskan tidak diperlukan pemangkasan tambahan dalam anggaran 2027 sambil mempertahankan program penghematan 2027-2029, serta tengah menenderkan Swiss Government Cloud dengan plafon sekitar CHF 7 miliar seiring penyusunan regulasi AI.",
+"leader": "Presiden Federal Guy Parmelin (presidensi bergilir 2026); Dewan Federal beranggotakan tujuh orang bertindak secara kolektif sebagai pemerintah",
+"agenda": [
+"Konsolidasi fiskal: mempertahankan program penghematan 2027-2029 (~CHF 5,2 miliar), membatalkan pemangkasan tambahan 2027",
+"Modernisasi TI federal: hybrid multi-cloud 'Swiss Government Cloud' (SGC)",
+"Membangun kerangka regulasi AI (Dewan Federal mencatat kemajuan sementara)",
+"Memperkuat pertahanan dan kerja sama persenjataan termasuk dengan NATO",
+"Statistik resmi dan data untuk era AI (kehadiran daring baru Kantor Statistik Federal)"
+],
+"projects": [
+{
+"title": "Pengadaan Swiss Government Cloud (WTO 25002 609)",
+"detail": "Tiga lot: public cloud global, public cloud berbasis di Swiss, on-premise; total jangka waktu hingga 14 tahun",
+"status": "Proses tender"
+},
+{
+"title": "Anggaran federal 2027",
+"detail": "Proyeksi pajak korporasi yang lebih tinggi membuat tidak ada pemangkasan tambahan 2027; pemangkasan pencegahan CHF 540 juta dibatalkan; memerlukan persetujuan parlemen",
+"status": "Di parlemen"
+},
+{
+"title": "Program penghematan 2027-2029 (EP27)",
+"detail": "Paket keringanan belanja multitahun untuk menghapus defisit struktural",
+"status": "Berjalan"
+},
+{
+"title": "Regulasi AI",
+"detail": "Dewan Federal mencatat kemajuan sementara pada 2026-10-28",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Penilaian kesiapan migrasi cloud dan PMO untuk badan publik",
+"why": "Peluncuran SGC mengharuskan kantor federal merencanakan migrasi beban kerja.",
+"target": "Kantor federal dan departemen TI kanton"
+},
+{
+"title": "Paket tata kelola kesiapan regulasi AI",
+"why": "Perusahaan ingin bersiap selagi kerangka AI sedang disusun.",
+"target": "Perusahaan menengah Swiss, perusahaan keuangan dan kesehatan"
+},
+{
+"title": "Dukungan masuk pasar Swiss bagi perusahaan AI/otomatisasi Korea (pencarian mitra, lokalisasi)",
+"why": "Permintaan efisiensi meningkat dan mitra lokal menjadi kunci untuk masuk pasar.",
+"target": "UKM AI dan SaaS Korea"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Swiss",
+"detail": "Mendukung riset pasar Swiss, pencarian pembeli, dan pencocokan mitra lokal."
+},
+{
+"title": "Export Voucher programme",
+"detail": "Menanggung biaya pemasaran luar negeri, sertifikasi, dan konsultasi melalui voucher."
+}
+]
+}

@@ -1,0 +1,80 @@
+{
+"summary": "Trong khuôn khổ chương trình IMF trị giá 7 tỷ USD, Pakistan đã thông qua ngân sách tài khóa 2026-27 trị giá 18,77 nghìn tỷ Rs, cân bằng giữa củng cố tài khóa và chi cho phát triển. Cải cách doanh nghiệp nhà nước, đường bộ, đập và hạ tầng nước, cùng kế hoạch đầu tư AI 1 tỷ USD đến năm 2030 là các ưu tiên hàng đầu.",
+"leader": "Tổng thống Asif Ali Zardari / Thủ tướng Shehbaz Sharif",
+"agenda": [
+"Tuân thủ chương trình IMF, huy động nguồn thu và kiểm soát thâm hụt",
+"PSDP liên bang 1 nghìn tỷ Rs cho giao thông, năng lượng và nước",
+"AI và chuyển đổi số (1 tỷ USD đến năm 2030, đào tạo AI cho 1 triệu lao động ngoài ngành CNTT)",
+"Cải cách quản trị doanh nghiệp nhà nước và quản lý nợ",
+"CPEC 2.0 và mở rộng thủy điện, điện mặt trời và điện gió",
+"An ninh biên giới và chống khủng bố"
+],
+"projects": [
+{
+"title": "Ngân sách liên bang tài khóa 2026-27",
+"detail": "Mục tiêu tăng trưởng 4%, giả định lạm phát 8,2%, chi quốc phòng tăng khoảng 18%",
+"status": "Đang triển khai"
+},
+{
+"title": "Chi cho phát triển quốc gia (PSDP v.v.)",
+"detail": "PSDP liên bang 1 nghìn tỷ Rs, ADP các tỉnh 2,224 nghìn tỷ Rs, các tập đoàn 451 tỷ Rs; CPEC 2.0 là dự án mới duy nhất",
+"status": "Đang triển khai"
+},
+{
+"title": "Hạ tầng giao thông",
+"detail": "Đường cao tốc N-25 100 tỷ Rs, M-6 Sukkur-Hyderabad 30 tỷ Rs, đường sắt ML-1 do ADB tài trợ",
+"status": "Đang triển khai"
+},
+{
+"title": "Hạ tầng năng lượng và nước",
+"detail": "Các đập Dasu, Tarbela và Diamer-Bhasha, chín dự án điện mặt trời/gió, dự án cấp nước K-IV Karachi 22 tỷ Rs",
+"status": "Đang triển khai"
+},
+{
+"title": "Kế hoạch đầu tư AI",
+"detail": "1.000 học bổng tiến sĩ AI và đào tạo AI cho 1 triệu lao động ngoài ngành CNTT (công bố tháng 2/2026)",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Daanish IT Park (trước đây là Islamabad IT Park)",
+"detail": "Được xây dựng với sự hỗ trợ của Chính phủ Hàn Quốc và Korea Eximbank; khánh thành ngày 9/10/2026 với sự hiện diện của Thủ tướng nhằm phát triển nhân lực và xuất khẩu CNTT",
+"status": "Hoàn thành"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa bằng AI cho xử lý hồ sơ thuế và bộ phận hỗ trợ người nộp thuế",
+"why": "Các mục tiêu thu ngân sách của IMF đang gây sức ép và Vụ Tài chính đang tìm kiếm tư vấn thuế từ bên ngoài.",
+"target": "Vụ Tài chính, Cục Thu Liên bang (FBR)"
+},
+{
+"title": "Quản lý hiệu quả và chẩn đoán quản trị doanh nghiệp nhà nước",
+"why": "Chính sách doanh nghiệp nhà nước được sửa đổi vào tháng 10/2026 và báo cáo hiệu quả sáu tháng một lần nay đã thành thông lệ.",
+"target": "Đơn vị Giám sát Trung ương thuộc Vụ Tài chính, doanh nghiệp nhà nước liên bang"
+},
+{
+"title": "Khóa học AI thực hành cho công chức và người lao động CNTT",
+"why": "Chính phủ cam kết đào tạo AI cho 1 triệu lao động ngoài ngành CNTT và một khu CNTT do Hàn Quốc tài trợ vừa khánh thành.",
+"target": "Bộ CNTT, doanh nghiệp trong Daanish IT Park, các trường đại học"
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường cho hàng tiêu dùng và SME Hàn Quốc",
+"why": "Đàm phán CEPA Hàn Quốc - Pakistan đang diễn ra và KOTRA đang thúc đẩy thương mại và đầu tư.",
+"target": "SME Hàn Quốc, nhà nhập khẩu và phân phối Pakistan"
+}
+],
+"krsupport": [
+{
+"title": "Hỗ trợ xây dựng Daanish IT Park",
+"detail": "Khu CNTT Islamabad được xây dựng bằng nguồn tài chính của Hàn Quốc và khánh thành ngày 9/10/2026."
+},
+{
+"title": "Hợp tác phát triển của KOICA và KOPIA",
+"detail": "Hợp tác đang diễn ra trong lĩnh vực CNTT, y tế, nông nghiệp và an ninh lương thực."
+},
+{
+"title": "Sự kiện hợp tác công nghiệp của KOTRA tại Karachi",
+"detail": "Tổ chức sự kiện hợp tác công nghiệp Hàn Quốc - Pakistan tại Karachi (tháng 4/2025) về ô tô, thiết bị y tế và CNTT."
+}
+]
+}

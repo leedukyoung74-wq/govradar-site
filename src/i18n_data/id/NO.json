@@ -1,0 +1,60 @@
+{
+"summary": "Pemerintahan minoritas Partai Buruh Norwegia mengusulkan anggaran 2027 pada 2026-10-07 dengan penarikan NOK 608.4bn dari dana kekayaan negara, disertai penguatan pertahanan, peningkatan bantuan untuk Ukraina, dan keringanan pajak penghasilan, yang masih harus dinegosiasikan di parlemen.",
+"leader": "Raja Haakon VIII (naik takhta Agu 2026); Perdana Menteri Jonas Gahr Støre (pemerintahan minoritas Partai Buruh); Menteri Keuangan Jens Stoltenberg",
+"agenda": [
+"Penguatan kemampuan pertahanan (usulan kenaikan NOK 65bn untuk 2027)",
+"Dukungan untuk Ukraina (NOK 85bn untuk program Nansen pada 2027)",
+"Pemotongan pajak penghasilan dan iuran jaminan sosial (NOK 6.4bn)",
+"Dukungan listrik (Norgespris dll., ~NOK 16.4bn)",
+"Aturan fiskal: defisit struktural nonmigas sebesar 2.7% dari nilai dana"
+],
+"projects": [
+{
+"title": "Usulan anggaran nasional 2027",
+"detail": "Penarikan dana NOK 608.4bn, defisit struktural nonmigas 2.7% dari nilai dana; memerlukan kesepakatan dengan empat partai tengah/kiri",
+"status": "Di parlemen"
+},
+{
+"title": "Peningkatan kemampuan pertahanan",
+"detail": "Kenaikan besar anggaran pertahanan diusulkan dalam anggaran 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Program dukungan Ukraina Nansen",
+"detail": "NOK 85bn untuk 2027, sehingga total menjadi NOK 344bn",
+"status": "Berjalan"
+},
+{
+"title": "Dukungan listrik (Norgespris dan skema standar)",
+"detail": "Harga listrik rumah tangga tetap dan ambang batas dukungan",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Program pengembangan organisasi dan kepemimpinan bagi lembaga publik",
+"why": "Husbanken, NIBIO, dan lainnya sedang melelang layanan tersebut saat ini.",
+"target": "Lembaga negara (Husbanken, NIBIO, dll.)"
+},
+{
+"title": "Konsultasi TIK independen dan otomatisasi AI bagi pemerintah kota",
+"why": "Drammen telah melelang kerangka kerja konsultansi TIK senilai NOK 40m.",
+"target": "Pemerintah kota di Norwegia"
+},
+{
+"title": "Dukungan masuk rantai pasok bagi pemasok pertahanan/perkapalan Korea",
+"why": "Kenaikan besar anggaran pertahanan 2027 akan memperluas pengadaan.",
+"target": "Norwegian Defence Materiel Agency dan perusahaan pertahanan"
+}
+],
+"krsupport": [
+{
+"title": "Program Export Voucher",
+"detail": "Menanggung biaya pemasaran, sertifikasi, dan konsultasi untuk masuk ke Norwegia."
+},
+{
+"title": "Kantor luar negeri KOTRA (Norwegia tidak tercantum; hubungi kantor Nordik terdekat)",
+"detail": "Riset pasar dan pencarian pembeli dapat diajukan melalui kantor terdekat seperti Swedia."
+}
+]
+}

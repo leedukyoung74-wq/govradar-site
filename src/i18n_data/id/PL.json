@@ -1,0 +1,75 @@
+{
+"summary": "Polandia membelanjakan lebih dari 4% PDB untuk pertahanan bersamaan dengan megaproyek seperti bandara hub baru, kereta cepat, dan PLTN pertamanya, sementara defisit rancangan anggaran 2027 melampaui 7% PDB. Veto presiden yang sering kali dijatuhkan kerap menunda legislasi pemerintah.",
+"leader": "Presiden Karol Nawrocki / Perdana Menteri Donald Tusk",
+"agenda": [
+"Penguatan pertahanan (sekitar 4.5% PDB pada 2027) dan produksi senjata dalam negeri",
+"Peningkatan belanja kesehatan",
+"Ketahanan dan transisi energi, termasuk PLTN pertama",
+"Infrastruktur besar (bandara hub Port Polska, kereta cepat, pelabuhan)",
+"Pengendalian defisit di bawah prosedur defisit berlebih UE",
+"Diversifikasi perdagangan dan investasi ke Asia"
+],
+"projects": [
+{
+"title": "Rancangan anggaran negara 2027",
+"detail": "Belanja PLN 977.6bn, defisit PLN 282.6bn (7.1% PDB); PLN 198.1bn untuk pertahanan, PLN 274.1bn untuk kesehatan",
+"status": "Di parlemen"
+},
+{
+"title": "Bandara hub dan simpul kereta Port Polska (sebelumnya CPK)",
+"detail": "Lima konsorsium diundang menawar terminal; tender untuk stasiun kereta bandara, jalan, garbarata, jalur Warsawa-Łódź, dan gardu induk. 29 proses pengadaan senilai ~PLN 14bn diluncurkan hingga akhir Juli",
+"status": "Dalam tender"
+},
+{
+"title": "Kereta cepat ruas Warsawa-Łódź",
+"detail": "Pengeboran terowongan Łódź akhir 2026-2027, ruas lain 2027-2029",
+"status": "Berjalan"
+},
+{
+"title": "PLTN pertama (Kopalino-Lubiatowo)",
+"detail": "Konsorsium Westinghouse-Bechtel; konstruksi utama mulai 2028, unit 1 ditargetkan pada 2035",
+"status": "Direncanakan"
+},
+{
+"title": "Terminal peti kemas laut dalam Świnoujście",
+"detail": "Termasuk pekerjaan alur pelayaran; konstruksi terminal 2027-2029",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Paket masuk pasar Polandia bagi UKM pertahanan (pencarian mitra, sertifikasi, kontrol ekspor, peninjauan kontrak)",
+"why": "Di MSPO 2026, UKM Korea menyebut pencarian mitra serta peninjauan sertifikasi/HKI sebagai hambatan utama.",
+"target": "Pemasok pertahanan Korea, perusahaan yang masuk ke rantai pasok Armament Agency"
+},
+{
+"title": "PMO digital dan perangkat penjadwalan (BIM, analitik jadwal berbasis AI) untuk megaproyek",
+"why": "Port Polska telah memasuki tahap konstruksi dengan puluhan tender paralel.",
+"target": "Port Polska, PKP PLK, konsorsium kontraktor dan subkontraktor"
+},
+{
+"title": "Otomatisasi AI untuk administrasi dan penjadwalan rumah sakit publik",
+"why": "Kenaikan tajam belanja kesehatan 2027 diperkirakan meningkatkan permintaan efisiensi operasional (perkiraan).",
+"target": "Kementerian Kesehatan, National Health Fund (NFZ), rumah sakit regional"
+},
+{
+"title": "Otomatisasi dokumen dan perizinan bagi pemasok nuklir",
+"why": "Persiapan konstruksi utama meningkatkan beban dokumen mutu dan perizinan di seluruh pemasok.",
+"target": "PEJ, pemasok konsorsium Westinghouse-Bechtel"
+}
+],
+"krsupport": [
+{
+"title": "Kantor KOTRA Warsawa",
+"detail": "Riset pasar, penjodohan pembeli, dan pemasaran ekspor di bidang pertahanan, AI, otomotif, energi, dan barang konsumsi."
+},
+{
+"title": "Analisis pameran pertahanan MSPO 2026",
+"detail": "Diterbitkan Okt 2026, mencakup tren lokalisasi pertahanan Polandia dan hambatan masuk bagi UKM."
+},
+{
+"title": "K-Content Expo Poland 2026",
+"detail": "Diselenggarakan di Warsawa pada Sep 2026 dengan pertemuan empat mata bersama sekitar 100 pembeli dari Eropa Tengah dan Timur (CEE)."
+}
+]
+}

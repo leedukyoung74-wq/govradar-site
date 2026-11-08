@@ -1,0 +1,76 @@
+{
+"summary": "El Partido Laborista volvió a ganar las elecciones generales de Malta en mayo de 2026 y Robert Abela continuó como primer ministro; en junio Malta salió del procedimiento de déficit excesivo de la UE. El presupuesto de 2027 mantiene las ayudas frente al costo de vida, a la vez que eleva las ecocontribuciones turísticas y las tasas de los permisos de trabajo para ciudadanos de fuera de la UE, e invierte en salud y en interconexiones energéticas.",
+"leader": "Presidenta Myriam Spiteri Debono · Primer ministro Robert Abela (ganó las elecciones del 2026-05-30, juró nuevamente el 2026-06-01)",
+"agenda": [
+"Ayudas frente al costo de vida: COLA de EUR 6,41 semanales, aumento de las pensiones, bonificación exenta de impuestos de hasta EUR 1.000",
+"Consolidación fiscal: déficit del 2,6% del PIB (2026-27) que bajará al 1,8% en 2029",
+"Infraestructura sanitaria: ampliación de urgencias de Mater Dei, unidad de salud mental, plan maestro del Hospital General de Gozo",
+"Energía: segundo interconector con Sicilia, estudios de 300MW de eólica marina, 25% de renovables para 2030",
+"Gestión de la demanda turística y de transporte (mayor ecocontribución, tasas para cruceros y visitantes de Comino)",
+"Impuestos para pymes: tasa del 25% sobre beneficios retenidos o reinvertidos para empresas con una facturación de hasta EUR 1 millón"
+],
+"projects": [
+{
+"title": "Ampliación del servicio de urgencias del Hospital Mater Dei",
+"detail": "Los puestos de atención pasan de 35 a 70",
+"status": "Planificado"
+},
+{
+"title": "Nueva unidad de salud mental de 135 camas y edificio de diagnóstico por imagen",
+"detail": "Incluidos como infraestructura sanitaria en el presupuesto de 2027",
+"status": "Planificado"
+},
+{
+"title": "Segundo interconector Sicilia-Malta",
+"detail": "Junto con estudios para un tercer interconector y un enlace Malta-Gozo de 132kV",
+"status": "En curso"
+},
+{
+"title": "Estudio de 300MW de eólica marina",
+"detail": "Estudios de viabilidad de eólica marina más inversión en la red de distribución (unos EUR 75 millones)",
+"status": "Planificado"
+},
+{
+"title": "Suministro eléctrico en tierra en el sur del Grand Harbour y Lascaris",
+"detail": "Proyecto de suministro eléctrico en tierra para buques cuya finalización está prevista para fines de 2028",
+"status": "En curso"
+},
+{
+"title": "Programa de gasto de capital",
+"detail": "Unos EUR 1.450 millones de gasto de capital en 2027, incluidos unos EUR 390 millones procedentes de fondos de la UE",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Consultoría de automatización de flujos de trabajo (IA/RPA) para pymes",
+"why": "Las tasas de los permisos de trabajo para ciudadanos de fuera de la UE suben a EUR 800 más una nueva contribución anual de infraestructura de EUR 400, lo que encarece la mano de obra.",
+"target": "Pymes maltesas, empresas de turismo y hostelería"
+},
+{
+"title": "Solución de validación de facturas con IVA y automatización tributaria",
+"why": "Se avecinan nuevas sanciones de IVA por facturas incorrectas y una inversión del sujeto pasivo nacional en la construcción.",
+"target": "Empresas constructoras, pymes, firmas contables"
+},
+{
+"title": "Servicios de capacitación del personal de salud pública (ESF+)",
+"why": "El ministerio de salud licitó, mediante una licitación de la UE, una capacitación en competencia cultural para directivos.",
+"target": "Ministerio de Salud, Departamento de Contratos"
+},
+{
+"title": "Establecimiento de un hub de la UE en Malta para pymes coreanas",
+"why": "La tasa del 25% sobre beneficios reinvertidos para pequeñas empresas mejora las condiciones para las entidades pequeñas.",
+"target": "Pymes coreanas que apuntan a la UE y al norte de África"
+}
+],
+"krsupport": [
+{
+"title": "Noticias de mercados exteriores de KOTRA (Malta/UE)",
+"detail": "Ofrece información sobre la normativa de la UE y las tendencias del mercado."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Los vales cubren costos de entrada en el exterior, como la constitución de empresas, la certificación y el asesoramiento legal."
+}
+]
+}

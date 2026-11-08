@@ -1,0 +1,70 @@
+{
+"summary": "La declaración prepresupuestaria del ejercicio 2027 del Ministerio de Finanzas, publicada el 1 de octubre, prevé un gasto de unos SAR 1,392 billones frente a ingresos de unos SAR 1,202 billones, con un déficit del 3,6% del PIB. Se espera que el PIB real se contraiga en 2026 por la menor producción de petróleo, pero el gobierno prevé mantener el gasto en la diversificación no petrolera y en los gigaproyectos repriorizados.",
+"leader": "Rey Salmán bin Abdulaziz (jefe de Estado); Príncipe heredero y primer ministro Mohammed bin Salmán (jefe de Gobierno)",
+"agenda": [
+"Diversificación económica de la Visión 2030 y crecimiento del sector privado",
+"Sostenibilidad fiscal (déficit del 3,6% del PIB; más financiación de proyectos, infraestructura y créditos a la exportación)",
+"Prioridad a los sectores de retorno más rápido: IA y centros de datos, turismo religioso, logística, minería",
+"Preparación de la Expo 2030 Riad y de la Copa Mundial de la FIFA 2034",
+"Contenido local y reforma de la contratación pública"
+],
+"projects": [
+{
+"title": "Presupuesto del ejercicio 2027 (declaración prepresupuestaria)",
+"detail": "Ingresos de unos SAR 1,202 billones; gasto proyectado de unos SAR 1,544 billones para 2029. Se espera que el PIB real caiga alrededor del 3,6% en 2026, con un crecimiento de la actividad no petrolera de alrededor del 3,2%",
+"status": "Planificado"
+},
+{
+"title": "Financiación de los centros de datos de IA de HUMAIN",
+"detail": "HUMAIN, propiedad del PIF, recauda fondos para 2 GW de centros de datos y GPU en torno a Riad, con Goldman Sachs como asesor según informes",
+"status": "Planificado"
+},
+{
+"title": "Expo 2030 Riad",
+"detail": "Han comenzado las obras preliminares; la Expo abre en octubre de 2030",
+"status": "En curso"
+},
+{
+"title": "Repriorización de los gigaproyectos (incl. NEOM)",
+"detail": "NEOM se ha dividido en fases más pequeñas y está en revisión; la prioridad se ha desplazado al turismo, el desarrollo urbano, la manufactura avanzada, la logística y las renovables",
+"status": "En curso"
+},
+{
+"title": "Metro de Dammam",
+"detail": "Red de ferrocarril urbano prevista de unos 50 km",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Pilotos de automatización con IA para el gobierno (procesamiento de documentos en árabe, atención al ciudadano)",
+"why": "La expansión de los centros de datos de HUMAIN coincide con los debates del gobierno sobre la ética y la adopción de la IA.",
+"target": "SDAIA, unidades digitales de los ministerios, organismos municipales (Balady)"
+},
+{
+"title": "Consultoría de entrada con contenido local para pymes coreanas",
+"why": "Las normas más estrictas de contenido local en la contratación pública exigen una estrategia de empresa conjunta y registro local.",
+"target": "Pymes y empresas medianas coreanas manufactureras y de servicios que ingresan en Arabia Saudita"
+},
+{
+"title": "PMO digital para el control de cronogramas y costos de gigaproyectos",
+"why": "Con los proyectos divididos en fases y en revisión, el control de costos y plazos importa más que antes.",
+"target": "Desarrolladores del PIF (ROSHN, Red Sea Global, etc.), la organización de la Expo 2030"
+},
+{
+"title": "Apoyo para la entrada en la distribución de K-beauty y bienes de consumo",
+"why": "El MSS y KOTRA gestionan un programa específico para ingresar en el mercado saudí.",
+"target": "Pymes coreanas de cosméticos y bienes de consumo"
+}
+],
+"krsupport": [
+{
+"title": "Programa de Apoyo a la Entrada de K-Beauty en el Mercado Saudí",
+"detail": "Ayuda a las empresas coreanas de cosméticos a ingresar en el mercado saudí; en julio de 2026 se celebró una sesión informativa."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Cubre los costos de certificación en el exterior, estudios de mercado y consultoría de localización."
+}
+]
+}

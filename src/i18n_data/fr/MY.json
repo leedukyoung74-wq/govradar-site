@@ -1,0 +1,76 @@
+{
+"summary": "Le 9 octobre, le Premier ministre Anwar a présenté le budget 2027 (dépenses publiques de 459,8 milliards de RM), deuxième budget du 13e Plan de la Malaisie (2026–2030). Il est centré sur des aides en espèces accrues, l'ambition de « nation de l'IA », le soutien aux PME et les investissements dans le réseau électrique et les infrastructures numériques ; l'examen parlementaire se poursuit jusqu'à fin novembre.",
+"leader": "Roi Sultan Ibrahim (Yang di-Pertuan Agong) ; Premier ministre Anwar Ibrahim (également ministre des Finances)",
+"agenda": [
+"Allègement du coût de la vie et aides en espèces pour les groupes vulnérables (STR, SARA)",
+"« Nation de l'IA » d'ici 2030, avec la formation de 200 000 personnes qualifiées en IA",
+"Adoption de l'IA par les PME, financement et baisse du taux d'imposition des PME",
+"Développement équilibré dans le cadre du 13e Plan de la Malaisie (RMK13)",
+"Réseau électrique, infrastructures rurales et connectivité numérique",
+"Accélération du traitement administratif (task force STAR)"
+],
+"projects": [
+{
+"title": "Budget 2027",
+"detail": "Dépenses publiques 459,8 milliards de RM ; 510 milliards de RM y compris les GLIC et l'investissement privé ; prévision de croissance 2027 de 4,2–5,2 %",
+"status": "En cours d'examen parlementaire"
+},
+{
+"title": "Aides en espèces STR et SARA",
+"detail": "SARA jusqu'à 150 RM par mois pour tous les bénéficiaires de STR, couvrant jusqu'à 9 millions de personnes",
+"status": "Prévu"
+},
+{
+"title": "R&D en IA, commercialisation et adoption de l'IA par les PME",
+"detail": "6 milliards de RM répartis entre ministères ; 30 M RM via MDEC pour aider 4 000 PME à adopter l'IA ; certification de 5 000 professionnels de l'IA",
+"status": "Prévu"
+},
+{
+"title": "Soutien aux PME",
+"detail": "Baisse d'un point du taux d'imposition des PME, 6,6 milliards de RM de microfinance, garanties SJPP/CGC jusqu'à 32 milliards de RM",
+"status": "Prévu"
+},
+{
+"title": "Réseau électrique, infrastructures rurales et numériques",
+"detail": "15 milliards de RM pour le réseau de TNB, 3,3 milliards de RM pour les infrastructures rurales de base, 5 milliards de RM pour la connectivité numérique JENDELA",
+"status": "Prévu"
+},
+{
+"title": "Start-ups et semi-conducteurs du MOSTI",
+"detail": "Budget du MOSTI 1,29 milliard de RM ; feuille de route start-ups SUPER 2.0 ; 10 M RM pour SemiconStart",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Offres d'automatisation des processus par IA pour les PME (fournies après enregistrement comme fournisseur MDEC)",
+"why": "Le budget 2027 finance l'adoption de l'IA par 4 000 PME via MDEC.",
+"target": "PME malaisiennes, canaux de solutions certifiés MDEC"
+},
+{
+"title": "Cursus de certification professionnelle en IA et formations IA sur mesure pour les entreprises",
+"why": "Le gouvernement vise 200 000 personnes qualifiées en IA et 5 000 professionnels certifiés d'ici 2030.",
+"target": "Ministère du Numérique, prestataires enregistrés auprès de HRD Corp, DRH d'entreprises"
+},
+{
+"title": "Automatisation et chatbots pour le traitement des services publics",
+"why": "La task force STAR pousse à accélérer le traitement administratif.",
+"target": "Ministères fédéraux, gouvernements des États, conseils locaux"
+},
+{
+"title": "Conseil en stratégie de croissance et en entrée sur le marché coréen pour les start-ups et les PME des semi-conducteurs",
+"why": "Le MOSTI soutient les start-ups via SUPER 2.0 et SemiconStart.",
+"target": "Start-ups de Cradle Fund, PME de conception de puces"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Kuala Lumpur",
+"detail": "Propose l'incubation de bureaux de représentation (biens de consommation, alimentation, beauté, TIC, médical), des études de marché, des missions commerciales et un accompagnement à l'entrée sur le marché via les ALE et le halal."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent les études de marché, la certification (y compris halal) et les services marketing pour entrer sur le marché malaisien."
+}
+]
+}

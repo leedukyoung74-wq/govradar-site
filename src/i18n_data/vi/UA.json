@@ -1,0 +1,88 @@
+{
+"summary": "Chính phủ Koretskyi, thành lập tháng 7/2026, đặt ưu tiên hàng đầu cho việc chuẩn bị năng lượng mùa đông và tái thiết. Tháng 10, EU đã giải ngân đợt thứ 8 của Ukraine Facility (2,9 tỷ EUR), và ngân sách năm 2027 nặng về quốc phòng đang được Quốc hội xem xét.",
+"leader": "Tổng thống Volodymyr Zelenskyy / Thủ tướng Serhii Koretskyi (từ 2026-07-16)",
+"agenda": [
+"Bảo đảm nguồn cung năng lượng và sưởi ấm mùa đông, khôi phục lưới điện",
+"Các cải cách gắn với Ukraine Facility của EU (tư pháp, tài chính, môi trường kinh doanh, năng lượng v.v.)",
+"Cấp vốn cho quốc phòng và an ninh (4,885 nghìn tỷ UAH năm 2027)",
+"Khôi phục giao thông và logistics (đường sắt và cảng biển)",
+"Hài hòa thể chế phục vụ gia nhập EU"
+],
+"projects": [
+{
+"title": "Đợt giải ngân thứ 8 của Ukraine Facility",
+"detail": "2,9 tỷ EUR được giải ngân khi hoàn thành các bước cải cách; lần đầu tiên 800 triệu EUR được chuyển qua Khoản vay Hỗ trợ Ukraine",
+"status": "Hoàn thành"
+},
+{
+"title": "Khoản vay Hỗ trợ Ukraine của EU",
+"detail": "90 tỷ EUR cho giai đoạn 2026-2027 (60 tỷ EUR cho quốc phòng, 30 tỷ EUR hỗ trợ ngân sách)",
+"status": "Đang triển khai"
+},
+{
+"title": "Ngân sách nhà nước 2027",
+"detail": "Thâm hụt dự kiến 15% GDP và nợ công trên 110% GDP; lần đọc thứ hai và biểu quyết cuối cùng dự kiến vào ngày 23-26/11",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Chuẩn bị năng lượng mùa đông",
+"detail": "Quỹ Hỗ trợ Năng lượng đã huy động hơn 2 tỷ EUR, nhưng Thủ tướng cho biết cần thêm khoảng 650 triệu EUR; phát điện phân tán đang được mở rộng",
+"status": "Đang triển khai"
+},
+{
+"title": "Khả năng chống chịu hệ thống điện của Ngân hàng Thế giới (lưu trữ pin)",
+"detail": "BESS và EMS tại các nhà máy thủy điện Kyiv, Kaniv và các nhà máy khác",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Phục hồi logistics RELINC của Ngân hàng Thế giới",
+"detail": "Cơ quan quản lý cảng mua tàu kéo trong khuôn khổ sửa chữa mạng lưới cảng và logistics",
+"status": "Đang đấu thầu"
+},
+{
+"title": "20 đoàn tàu điện Intercity tài trợ bởi EDCF",
+"detail": "Khoản vay EDCF của Hàn Quốc để mua tàu cao tốc cho Ukrzaliznytsia, được mua sắm qua đấu thầu rộng rãi",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Gói hỗ trợ doanh nghiệp Hàn Quốc dự thầu tái thiết Ukraine (Ngân hàng Thế giới, Prozorro)",
+"why": "Các gói thầu do Ngân hàng Thế giới tài trợ liên tục xuất hiện trong lĩnh vực giáo dục, năng lượng và logistics, nên cần hỗ trợ về hồ sơ và đối tác.",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc nhắm đến tái thiết"
+},
+{
+"title": "Tư vấn lập kế hoạch chống chịu cộng đồng và PMO tái thiết",
+"why": "Các luật cần thiết cho viện trợ quốc tế đã được thông qua, tháo gỡ chi tiêu cho các kế hoạch chống chịu cộng đồng.",
+"target": "Cộng đồng địa phương (hromada) và chính quyền các tỉnh (oblast)"
+},
+{
+"title": "Tự động hóa bằng AI hồ sơ mua sắm công và thủ tục hành chính",
+"why": "Các điều kiện cải cách của EU và các chương trình lớn đã làm tăng khối lượng công việc hành chính (ước tính).",
+"target": "Các bộ trung ương và doanh nghiệp nhà nước"
+},
+{
+"title": "Kết nối đối tác địa phương cho doanh nghiệp ESS và phát điện phân tán Hàn Quốc",
+"why": "Thủ tướng nhấn mạnh việc xây dựng nguồn phát điện phân tán chứ không chỉ sửa chữa.",
+"target": "Ukrhydroenergo và các công ty năng lượng vùng"
+}
+],
+"krsupport": [
+{
+"title": "Thỏa thuận khung EDCF với Ukraine (2024-2029)",
+"detail": "Các khoản vay ưu đãi tới 2,1 tỷ USD để mua sắm thiết bị và hạ tầng tái thiết."
+},
+{
+"title": "Văn phòng KOTRA Kyiv và hỗ trợ tham gia tái thiết",
+"detail": "Hỗ trợ thông tin mua sắm tại địa phương và tìm kiếm người mua, đối tác."
+},
+{
+"title": "Hỗ trợ đầu tư hạ tầng và tái thiết ở nước ngoài",
+"detail": "Hỗ trợ nghiên cứu khả thi và đầu tư vào các dự án tái thiết hạ tầng."
+},
+{
+"title": "Voucher Xuất khẩu",
+"detail": "Voucher chi trả chi phí dịch hồ sơ dự thầu, chứng nhận và tư vấn."
+}
+]
+}

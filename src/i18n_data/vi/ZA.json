@@ -1,0 +1,76 @@
+{
+"summary": "Trong Tuyên bố Chính sách Ngân sách Trung hạn ngày 21/10/2026, Bộ Tài chính đã hạ dự báo tăng trưởng năm 2026 xuống 1,2% và đặt lộ trình giảm thâm hụt từ 4,3% GDP xuống 2,5% vào năm 2030. Tài chính hạ tầng (IFISA, BFI, PPP), cải cách nước và điện, cùng củng cố tài chính đô thị là trọng tâm, với cuộc bầu cử địa phương diễn ra ngày 4/11/2026.",
+"leader": "Tổng thống Cyril Ramaphosa (nguyên thủ quốc gia và người đứng đầu chính phủ, Chính phủ Đoàn kết Dân tộc)",
+"agenda": [
+"Củng cố tài khóa: tỷ lệ nợ đạt đỉnh và dự luật quy tắc tài khóa năm 2027",
+"Mở rộng quy mô hạ tầng: IFISA, Cơ chế Ngân sách cho Hạ tầng và danh mục dự án PPP",
+"Cải cách điện và nước: mở rộng lưới điện và giảm thất thoát nước không doanh thu",
+"Tái thiết chính quyền địa phương: tăng chuyển giao ngân sách, đồng hồ thông minh, Sách Trắng sửa đổi",
+"Chống bạo lực giới và sát hại phụ nữ, đồng thời duy trì trợ cấp xã hội",
+"Nền tảng chính phủ số MyMzansi"
+],
+"projects": [
+{
+"title": "Cơ quan Hỗ trợ Tài chính và Triển khai Hạ tầng (IFISA)",
+"detail": "Hoạt động từ ngày 1/4/2026 nhằm thu hút vốn tư nhân và các mô hình triển khai thay thế",
+"status": "Đang triển khai"
+},
+{
+"title": "Cơ chế Ngân sách cho Hạ tầng và trái phiếu hạ tầng",
+"detail": "Bốn đợt nhận hồ sơ mỗi năm; trái phiếu hạ tầng cấp vốn cho các dự án BFI",
+"status": "Đang triển khai"
+},
+{
+"title": "Danh mục PPP và Công cụ Bảo lãnh Tín dụng (CGV)",
+"detail": "68 dự án PPP (31 dự án cấp đô thị); CGV trước tiên bảo lãnh cho truyền tải điện, mục tiêu vận hành đầy đủ năm 2027",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Tài chính đô thị và đồng hồ thông minh",
+"detail": "Bổ sung 21,8 tỷ R phần chia công bằng và 13,4 tỷ R chia sẻ thuế nhiên liệu; thêm 3,5 tỷ R cho đồng hồ thông minh trong trung hạn",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Tư vấn giao dịch về nước không doanh thu cấp đô thị",
+"detail": "Đang lựa chọn tư vấn giao dịch để giảm NRW tại bốn đô thị",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Bến hàng rời khô Richards Bay",
+"detail": "Đang lựa chọn tư vấn pháp lý giao dịch cho dự án PPP",
+"status": "Đang đấu thầu"
+}
+],
+"biz": [
+{
+"title": "Phân tích nước không doanh thu và hóa đơn cho đô thị",
+"why": "DBSA đang mời thầu tư vấn giao dịch NRW cho bốn đô thị và kinh phí cho đồng hồ thông minh đang tăng.",
+"target": "Phòng cấp nước các đô thị, DBSA"
+},
+{
+"title": "SaaS dự toán chi phí và quản lý dự án kèm dịch vụ tư vấn",
+"why": "DBSA đang mua sắm khung và công cụ dự toán chi phí chương trình và dự án.",
+"target": "DBSA, các đơn vị hạ tầng của Bộ Tài chính Quốc gia, IFISA"
+},
+{
+"title": "Nghiên cứu khả thi và mô hình tài chính PPP",
+"why": "31 trong số 68 dự án PPP là cấp đô thị và năng lực chuẩn bị dự án còn mỏng.",
+"target": "Chính quyền đô thị, Đơn vị PPP của Bộ Tài chính, DBSA"
+},
+{
+"title": "Chatbot AI và tự động hóa quy trình cho dịch vụ công dân",
+"why": "Chính phủ đã cấp vốn cho một nền tảng dịch vụ số duy nhất.",
+"target": "Bộ Dịch vụ Công và Hành chính, Bộ Truyền thông và Công nghệ Số"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Johannesburg",
+"detail": "Hỗ trợ nghiên cứu thị trường, dịch vụ chi nhánh tại địa phương, hội chợ và đoàn xúc tiến thương mại, K-food và hàng tiêu dùng, cùng các lĩnh vực y tế, quốc phòng và hạt nhân."
+},
+{
+"title": "Hợp tác kinh tế của Đại sứ quán Hàn Quốc",
+"detail": "Nam Phi là đối tác thương mại lớn nhất của Hàn Quốc tại châu Phi và Đại sứ quán hỗ trợ doanh nghiệp tìm kiếm cơ hội kinh doanh."
+}
+]
+}

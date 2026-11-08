@@ -1,0 +1,74 @@
+{
+"summary": "Le gouvernement Fujimori a présenté au Congrès en août 2026 son plan 2026-2031, articulé autour de la sécurité, de la préparation aux catastrophes, du développement humain, de la productivité et de l'État de droit. Le ministre de l'Économie et des Finances Elmer Cuba a soumis un budget 2027 de 266,5 milliards de PEN (en hausse de 3,5 %), mettant en avant la préparation à El Niño et les investissements dans la santé, l'éducation et les transports.",
+"leader": "Présidente Keiko Fujimori (cheffe de l'État et du gouvernement, depuis le 2026-07-28) / Luis Galarreta, président du Conseil des ministres (depuis le 2026-07-29)",
+"agenda": [
+"Renforcement de la sécurité (extorsion et criminalité organisée ; unité policière anti-extorsion et vidéosurveillance par IA)",
+"Prévention d'El Niño et des catastrophes, curage des cours d'eau",
+"Développement humain : anémie infantile, santé maternelle, vaccination",
+"Hausse de la productivité et meilleur investissement public (y compris davantage de permis miniers)",
+"État de droit et cadre favorable à l'investissement"
+],
+"projects": [
+{
+"title": "Projet de budget public 2027",
+"detail": "8,945 milliards de PEN (3,5 %) de plus que le budget initial 2026 ; présenté en séance plénière du Congrès le 2026-09-03",
+"status": "En cours d'examen au Congrès"
+},
+{
+"title": "Budget de préparation à El Niño",
+"detail": "Travaux de prévention, d'infrastructures et de protection s'ajoutant aux 2,5 milliards de PEN déjà alloués en 2026 ; 536 sites fluviaux prioritaires",
+"status": "En cours"
+},
+{
+"title": "Budgets de la santé et de l'éducation",
+"detail": "La santé privilégie l'anémie, les soins maternels et néonatals et la vaccination ; l'éducation représente environ 49 milliards de PEN",
+"status": "Prévu"
+},
+{
+"title": "Portefeuille d'investissements dans les transports",
+"detail": "Poursuite des projets d'investissement en cours dans les transports",
+"status": "Prévu"
+},
+{
+"title": "Technologies de sécurité pour la police",
+"detail": "Investissement dans une division anti-extorsion et un système de vidéosurveillance par IA (discours de politique générale du président du Conseil, 2026-08-20)",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Tableau de bord d'alerte précoce aux inondations fondé sur les niveaux des cours d'eau et les précipitations",
+"why": "Environ 5 milliards de PEN sur deux ans sont alloués à la préparation à El Niño.",
+"target": "PCM, gouvernements régionaux, agence nationale de gestion des catastrophes"
+},
+{
+"title": "Plateforme d'analyse par IA des données d'incidents et de signalements de la police",
+"why": "Le gouvernement a fait d'une unité anti-extorsion et de la vidéosurveillance par IA des priorités centrales de sécurité.",
+"target": "Ministère de l'Intérieur, Police nationale"
+},
+{
+"title": "Suivi des indicateurs d'anémie et de santé maternelle pour les collectivités locales",
+"why": "Le budget de la santé privilégie la prévention de l'anémie et la santé maternelle.",
+"target": "Ministère de la Santé, gouvernements régionaux et municipaux"
+},
+{
+"title": "Gestion de projets d'investissement public (PMO) et conseil en évaluation",
+"why": "L'amélioration de l'investissement public est une priorité du gouvernement, et les transports représentent à eux seuls environ 16 milliards de PEN.",
+"target": "MEF, ministère des Transports et des Communications"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Lima",
+"detail": "Accompagne les études de marché, la recherche d'acheteurs et l'accès aux marchés publics au Pérou."
+},
+{
+"title": "Programme pays de la KOICA au Pérou",
+"detail": "Le Pérou est un partenaire prioritaire de la KOICA, avec des projets de dons et des contrats de services en cours dans la santé, le gouvernement numérique et la gestion des catastrophes."
+},
+{
+"title": "Services à l'étranger du bon d'exportation",
+"detail": "Les frais d'études de marché, de localisation et de mise en relation avec des acheteurs en Amérique latine peuvent être couverts par des bons."
+}
+]
+}

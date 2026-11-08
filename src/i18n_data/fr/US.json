@@ -1,0 +1,79 @@
+{
+"summary": "L'exercice 2027 fonctionne sous une résolution de financement provisoire (P.L. 119-103) qui expire le 11 décembre. À l'approche des élections de mi-mandat du 3 novembre, l'administration fait avancer par décrets l'IA et la science (Genesis Mission), le logement et l'allègement du coût de la vie, l'énergie et une politique commerciale fondée sur les droits de douane.",
+"leader": "Président Donald Trump (chef de l'État et du gouvernement)",
+"agenda": [
+"Leadership en IA/superintelligence et innovation scientifique (Genesis Mission)",
+"Réduire le coût du logement, des carburants et d'autres dépenses courantes",
+"Relocalisation de l'industrie et réalignement commercial via les droits de douane des sections 232/301",
+"Regroupement numérique des services publics (America.gov)",
+"Mise en œuvre de la loi de 2026 sur les sanctions contre la Russie et l'Iran"
+],
+"projects": [
+{
+"title": "Résolution de financement provisoire de l'exercice 2027 (P.L. 119-103)",
+"detail": "Signée en septembre 2026 ; finance l'administration jusqu'au 11 décembre. Les lois de crédits pour l'année complète sont toujours en suspens",
+"status": "En cours"
+},
+{
+"title": "Initiatives scientifiques de la Genesis Mission",
+"detail": "Annoncées en octobre 2026 ; investissements public-privé pour accélérer la recherche fondée sur l'IA",
+"status": "En cours"
+},
+{
+"title": "Concours Quantum Genesis Q",
+"detail": "Vise à démontrer un ordinateur quantique tolérant aux pannes",
+"status": "Prévu"
+},
+{
+"title": "Initiative de biologie virtuelle Bio Genesis",
+"detail": "Effort conjoint des NIH, du DOE et de Biohub",
+"status": "Prévu"
+},
+{
+"title": "Regroupement des services America.gov",
+"detail": "Décret du 2026-09-29 créant un point d'accès unique aux services fédéraux",
+"status": "En cours"
+},
+{
+"title": "Décret sur le coût du logement",
+"detail": "Signé le 2026-10-22 ; mesures sur l'offre et le coût du logement",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Analyse de l'impact des droits de douane des sections 232/301 et automatisation des règles d'origine pour les exportateurs",
+"why": "Après l'annulation des droits de douane IEEPA, les droits ont été reconstruits autour des sections 232 et 301, si bien que l'exposition par produit doit être recalculée.",
+"target": "PME coréennes exportant vers les États-Unis ; importateurs américains"
+},
+{
+"title": "Offre de recherche d'acheteurs et d'études de marché pour les primo-entrants aux États-Unis",
+"why": "KOTRA a désigné les États-Unis comme l'un des quatre marchés prioritaires pour les primo-exportateurs et organise actuellement des mises en relation.",
+"target": "PME coréennes de biens de consommation sans antécédents d'exportation"
+},
+{
+"title": "Chatbots IA et automatisation documentaire pour les services des États et des collectivités locales",
+"why": "Le décret America.gov accroît la pression en faveur de la numérisation des services publics.",
+"target": "Gouvernements des États et des comtés ; agences fédérales via des maîtres d'œuvre américains"
+},
+{
+"title": "Outils de curation des données de laboratoire et d'analyse par IA",
+"why": "La Genesis Mission accroît les investissements dans la recherche fondée sur l'IA.",
+"target": "Laboratoires nationaux, laboratoires universitaires"
+}
+],
+"krsupport": [
+{
+"title": "Semaine First Step to Exports 2026 (États-Unis parmi les quatre marchés prioritaires)",
+"detail": "À partir du 26 octobre, environ trois semaines de rendez-vous en visioconférence avec des acheteurs américains et d'autres acheteurs étrangers, ainsi qu'une aide aux frais logistiques pour les primo-exportateurs."
+},
+{
+"title": "Cursus d'entrée sur le marché par pays de la KOTRA Academy (États-Unis)",
+"detail": "Formation pratique toute l'année sur l'entrée sur le marché américain, ainsi que des cours sur le commerce numérique et l'IA."
+},
+{
+"title": "Bon d'exportation du MSS",
+"detail": "La troisième vague 2026 a proposé 47 Md KRW de bons de marketing à l'étranger à environ 1 200 entreprises."
+}
+]
+}

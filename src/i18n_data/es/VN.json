@@ -1,0 +1,79 @@
+{
+"summary": "Vietnam creció un 9,01% entre enero y septiembre de 2026 (9,95% en el tercer trimestre). En la sesión de octubre de la Asamblea Nacional, el gobierno fijó para 2027 metas de al menos un 10% de crecimiento y un PIB per cápita de USD 6.100, con prioridad para autopistas, ferrocarriles, aeropuertos, el Centro Nacional de Datos y el 5G.",
+"leader": "To Lam, secretario general del Partido y presidente del Estado; Primer ministro Le Minh Hung (elegido en abril de 2026)",
+"agenda": [
+"Crecimiento del PIB de al menos el 10% en 2027 con estabilidad macroeconómica",
+"Reducción de los trámites administrativos; reforma institucional y de la función pública",
+"Impulsar el sector privado y atraer de forma selectiva IED con transferencia de tecnología",
+"Ciencia, innovación y transformación digital (Centro Nacional de Datos, 5G en todo el país, pilotos de 6G)",
+"Acelerar el desembolso de la inversión pública, reasignando fondos de proyectos estancados"
+],
+"projects": [
+{
+"title": "Finalización de la red nacional de autopistas",
+"detail": "Tarea central de infraestructura del plan de 2027",
+"status": "En curso"
+},
+{
+"title": "Aeropuertos internacionales de Long Thanh y Gia Binh",
+"detail": "Se acelerará la construcción",
+"status": "En curso"
+},
+{
+"title": "Proyectos ferroviarios nacionales clave",
+"detail": "Aceleración de los grandes proyectos ferroviarios",
+"status": "Planificado"
+},
+{
+"title": "Operación del Centro Nacional de Datos",
+"detail": "Plataforma para integrar los datos de ministerios y sectores",
+"status": "En curso"
+},
+{
+"title": "1 millón de ha de arroz de alta calidad y bajas emisiones en el delta del Mekong",
+"detail": "Ampliación del cultivo de arroz de bajas emisiones",
+"status": "En curso"
+},
+{
+"title": "Preparativos para la organización de APEC 2027",
+"detail": "Eventos e instalaciones para el año APEC 2027 de Vietnam",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Vinculación con compradores y consultoría de entrada en la distribución para pymes coreanas de bienes de consumo",
+"why": "KOTRA ha designado a Vietnam como mercado prioritario para exportadores primerizos y actualmente organiza encuentros de negocios.",
+"target": "Pymes coreanas de alimentos y cosméticos; importadores y distribuidores vietnamitas"
+},
+{
+"title": "Pilotos de procesamiento de documentos con IA para simplificar los trámites administrativos provinciales",
+"why": "El plan de 2027 sitúa la reducción de trámites y la transformación digital en su núcleo.",
+"target": "Comités Populares provinciales/municipales, departamentos de servicios públicos"
+},
+{
+"title": "Consultoría de transformación digital y ERP para pymes vietnamitas",
+"why": "El apoyo a las pymes y la formalización de los negocios familiares son prioridades para 2027.",
+"target": "Pymes vietnamitas manufactureras y distribuidoras; departamentos provinciales de industria y comercio"
+},
+{
+"title": "PMC y gestión digital del avance de obras de infraestructura",
+"why": "El gobierno acelera las obras de autopistas, aeropuertos y ferrocarriles y recupera fondos de proyectos estancados.",
+"target": "PMU del Ministerio de Construcción, promotores provinciales de proyectos"
+}
+],
+"krsupport": [
+{
+"title": "Semana del Primer Paso a la Exportación 2026 (Vietnam entre los cuatro mercados prioritarios)",
+"detail": "Reuniones por video con compradores vietnamitas y apoyo logístico para exportadores primerizos de bienes de consumo."
+},
+{
+"title": "Curso de entrada al mercado vietnamita de la KOTRA Academy",
+"detail": "Capacitación práctica sobre cómo ingresar en Vietnam, con una sesión prevista para el 11 de diciembre."
+},
+{
+"title": "Becas de KOICA (CIAT) e intercambio de conocimientos sobre innovación en TIC",
+"detail": "Capacitación para funcionarios vietnamitas y eventos de intercambio de conocimientos, como un hackatón de TIC con VKU en Da Nang."
+}
+]
+}

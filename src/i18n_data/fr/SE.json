@@ -1,0 +1,49 @@
+{
+"summary": "Le bloc de centre gauche a remporté de justesse les élections du 2026-09-13 avec 176 sièges, mais les négociations de coalition sont au point mort, et le gouvernement intérimaire de Kristersson doit présenter un budget 2027 (ou un budget de transition) d'ici le 12 novembre.",
+"leader": "Roi Carl XVI Gustaf ; Premier ministre intérimaire Ulf Kristersson (démissionnaire le 2026-09-17, en fonction jusqu'à la formation d'un nouveau gouvernement)",
+"agenda": [
+"Formation du gouvernement : votes d'investiture du Premier ministre au Riksdag (jusqu'à quatre ; élections anticipées dans les trois mois en cas d'échec de tous)",
+"Présenter un budget 2027 ou un budget de transition (date limite : 12 novembre)",
+"Gouvernement intérimaire limité principalement aux affaires courantes et urgentes",
+"Poursuite du renforcement de la défense et de la sécurité (estimation)"
+],
+"projects": [
+{
+"title": "Processus d'investiture du Premier ministre",
+"detail": "Le vote du 15 oct. sur Andersson a échoué (99 pour, 248 contre) ; un vote sur la dirigeante du Parti du centre Thand Ringqvist est programmé",
+"status": "En cours"
+},
+{
+"title": "Budget 2027 / budget de transition",
+"detail": "En l'absence de nouveau gouvernement, le gouvernement intérimaire présente un budget de transition selon des principes établis",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Veille sur les évolutions politiques suédoises et rapport de stratégie d'entrée sur le marché",
+"why": "Les priorités budgétaires et politiques dépendent de la manière dont le gouvernement sera formé.",
+"target": "Entreprises coréennes envisageant d'entrer en Suède"
+},
+{
+"title": "Projets pilotes d'automatisation des processus par IA pour les communes",
+"why": "Les communes nordiques ont une forte demande en administration numérique (estimation).",
+"target": "Communes et régions suédoises"
+},
+{
+"title": "Mise en relation avec des partenaires nordiques pour les PME coréennes de la défense et de l'industrie",
+"why": "Les investissements de sécurité créent une demande de partenaires locaux dans la chaîne d'approvisionnement (estimation).",
+"target": "Entreprises suédoises de la défense et de l'industrie"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA en Suède (Stockholm)",
+"detail": "Accompagne les études de marché en Suède et dans les pays nordiques ainsi que la recherche d'acheteurs."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre, par des bons, les frais de marketing à l'étranger, de certification et de conseil."
+}
+]
+}

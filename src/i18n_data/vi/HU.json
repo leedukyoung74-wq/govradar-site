@@ -1,0 +1,76 @@
+{
+"summary": "Chính phủ Magyar, nhậm chức sau cuộc bầu cử tháng 4/2026, ưu tiên thu hồi các quỹ EU bị đóng băng, chống tham nhũng và củng cố tài khóa. Dự thảo ngân sách 2027 tập trung vào hạ tầng đường sắt, đường bộ và năng lượng, tín dụng doanh nghiệp, nhà ở cho thanh niên và tăng lương khu vực công.",
+"leader": "Tổng thống András Baka (đắc cử tháng 8/2026) / Thủ tướng Péter Magyar",
+"agenda": [
+"Thu hồi quỹ EU bị đóng băng và cải cách pháp quyền",
+"Chống tham nhũng và minh bạch chi tiêu công",
+"Giảm thâm hụt (chương trình ngân sách trung hạn 2027-2030)",
+"Nhà ở (Chương trình Wekerle) và hỗ trợ gia đình",
+"Tăng lương y tế và khu vực công",
+"Hạ tầng đường sắt, đường bộ và năng lượng"
+],
+"projects": [
+{
+"title": "Dự thảo ngân sách nhà nước 2027",
+"detail": "Hạ tầng đường sắt, đường bộ và năng lượng, các chương trình cho vay doanh nghiệp mới, hỗ trợ nhà ở cho thanh niên, thuế suất thuế thu nhập một chữ số cho khoảng một triệu người",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Chương trình kinh tế và ngân sách trung hạn 2027-2030",
+"detail": "Công bố ngày 28/10/2026, hướng tới tài chính có thể dự đoán và tăng trưởng trở lại",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Chương trình nhà ở Wekerle",
+"detail": "Công bố ngày 27/10/2026, bao gồm mua, cải tạo và thuê nhà",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Giải ngân quỹ EU và thực hiện quỹ phục hồi",
+"detail": "Thỏa thuận với Ủy ban châu Âu vào tháng 5/2026 để giải phóng quỹ; đang theo đuổi các khoản tài trợ và cho vay phục hồi",
+"status": "Đang triển khai"
+},
+{
+"title": "Tăng lương nhân lực y tế",
+"detail": "Mức tăng trung bình 15% cho nhân viên y tế trong ngân sách 2027",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Hỗ trợ Trung tâm Hợp tác Pin Hàn Quốc-Hungary (EIPP)",
+"detail": "KDI đã tổ chức cuộc họp báo cáo giữa kỳ và khảo sát thực địa tại Budapest vào tháng 8/2026 cùng HUBA, BME và các đơn vị khác",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Bảng điều khiển giám sát thực hiện quỹ EU và tư vấn PMO",
+"why": "Các khoản quỹ được giải phóng phải được chi tiêu và báo cáo trong thời gian ngắn.",
+"target": "Các bộ quản lý quỹ EU, chính quyền đô thị, công ty nhà nước"
+},
+{
+"title": "Phân tích AI phát hiện bất thường trong mua sắm công",
+"why": "Chính phủ mới đã đưa chống tham nhũng và minh bạch chi tiêu thành ưu tiên hàng đầu.",
+"target": "Cơ quan Mua sắm Công, cơ quan kiểm toán, Bộ Tài chính"
+},
+{
+"title": "Tư vấn nhân lực và chuỗi cung ứng cho nhà cung cấp pin Hàn Quốc",
+"why": "Trung tâm hợp tác pin Hàn Quốc-Hungary đang được chuẩn bị, và nhiều nhà máy pin Hàn Quốc đang hoạt động tại đây.",
+"target": "Nhà cung cấp pin Hàn Quốc tại Hungary, Hiệp hội Pin Hungary (HUBA)"
+},
+{
+"title": "SaaS đánh giá cải tạo nhà ở và hiệu quả năng lượng",
+"why": "Chương trình Wekerle bao gồm hỗ trợ cải tạo, nên nhu cầu dự kiến sẽ tăng.",
+"target": "Cơ quan nhà ở, nhà thầu, ngân hàng"
+}
+],
+"krsupport": [
+{
+"title": "EIPP Hungary (Trung tâm Hợp tác Pin Hàn Quốc-Hungary)",
+"detail": "Tư vấn thành lập trung tâm hợp tác pin trong giai đoạn 2025/26 và đã tổ chức cuộc họp giữa kỳ tại Budapest vào tháng 8/2026."
+},
+{
+"title": "Văn phòng KOTRA Budapest",
+"detail": "Hỗ trợ doanh nghiệp Hàn Quốc trong lĩnh vực pin, phụ tùng ô tô và các ngành khác bằng thông tin thị trường."
+}
+]
+}

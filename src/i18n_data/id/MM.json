@@ -1,0 +1,60 @@
+{
+"summary": "Setelah pemilu umum 2025-26, kabinet baru beranggotakan 34 orang di bawah Presiden Min Aung Hlaing mulai menjabat pada April 2026. Menghadapi pertumbuhan yang lemah (proyeksi Bank Dunia TA2026/27: 2%) dan guncangan harga BBM, pemerintah menekankan prioritas bagi investor lokal, penarikan FDI, dan diplomasi ekonomi ASEAN.",
+"leader": "Presiden Min Aung Hlaing (dipilih parlemen 2026-04-03; kepala negara dan kepala pemerintahan) · Wapres I Nyo Saw, Wapres II Nan Ni Ni Aye",
+"agenda": [
+"Pemulihan ekonomi: memprioritaskan investor lokal sambil menarik investasi asing",
+"Memperluas hubungan perdagangan dan investasi dengan ASEAN dan negara tetangga (kunjungan ke Malaysia, Thailand, India)",
+"Mengatasi kekurangan BBM dan listrik serta menarik investasi tenaga surya dan energi lainnya",
+"Mengembangkan manufaktur ekspor (alas kaki, ban, kulit, karet)",
+"Menjaga keamanan dan stabilitas (belanja pertahanan dan keamanan diprioritaskan)"
+],
+"projects": [
+{
+"title": "Kabinet baru dan restrukturisasi kementerian",
+"detail": "Usulan 31 kementerian dan 30 menteri, disusul pengangkatan kabinet dan 46 wakil menteri",
+"status": "Selesai"
+},
+{
+"title": "Myanmar-Malaysia High-Level Business Dialogue",
+"detail": "Kamar dagang menjajaki kerja sama perdagangan dan investasi selama kunjungan presiden",
+"status": "Berjalan"
+},
+{
+"title": "Menarik investasi pembangkit listrik tenaga surya dan manufaktur panel",
+"detail": "Memperluas investasi tenaga surya dan produksi panel untuk mengatasi kekurangan listrik di kawasan industri",
+"status": "Berjalan"
+},
+{
+"title": "Perluasan manufaktur ekspor",
+"detail": "Rencana meningkatkan produksi barang berpermintaan tinggi seperti alas kaki dan ban untuk China, India, Bangladesh, dan ASEAN",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Layanan penyaringan sanksi dan kepatuhan (uji tuntas pratransaksi untuk Myanmar)",
+"why": "Sanksi AS/UE/Inggris yang masih berlaku dan status Myanmar dalam daftar risiko tinggi FATF membuat perusahaan Korea perlu memeriksa mitra sebelum bertransaksi.",
+"target": "UKM Korea yang berdagang dengan atau mempertimbangkan Myanmar"
+},
+{
+"title": "Konsultasi strategi masuk melalui hub ASEAN (via Thailand/Malaysia)",
+"why": "Myanmar memperdalam hubungan dengan negara tetangga ASEAN, sehingga masuk melalui hub negara ketiga merupakan opsi realistis.",
+"target": "UKM Korea di bidang barang konsumsi dan suku cadang"
+},
+{
+"title": "Manajemen energi pabrik dan studi kelayakan PLTS atap",
+"why": "Kekurangan listrik kronis di kawasan industri mendorong kebutuhan pembangkitan mandiri.",
+"target": "Produsen swasta di kawasan industri sekitar Yangon"
+}
+],
+"krsupport": [
+{
+"title": "Informasi pasar KOTRA Yangon",
+"detail": "Menyediakan informasi tren pasar dan regulasi perdagangan Myanmar (status sanksi harus diperiksa secara terpisah)."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Voucher menanggung layanan ekspor seperti riset pasar, biaya hukum, dan sertifikasi."
+}
+]
+}

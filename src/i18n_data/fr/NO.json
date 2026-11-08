@@ -1,0 +1,60 @@
+{
+"summary": "Le gouvernement travailliste minoritaire de Norvège a proposé le 2026-10-07 un budget 2027 prélevant 608,4 Md NOK sur le fonds souverain, avec une défense renforcée, davantage d'aide à l'Ukraine et un allègement de l'impôt sur le revenu, qui reste à négocier au Parlement.",
+"leader": "Roi Haakon VIII (accédé au trône en août 2026) ; Premier ministre Jonas Gahr Støre (gouvernement travailliste minoritaire) ; ministre des Finances Jens Stoltenberg",
+"agenda": [
+"Renforcement des capacités de défense (hausse de 65 Md NOK proposée pour 2027)",
+"Soutien à l'Ukraine (85 Md NOK au programme Nansen en 2027)",
+"Baisse de l'impôt sur le revenu et des cotisations sociales (6,4 Md NOK)",
+"Aide à l'électricité (Norgespris, etc., ~16,4 Md NOK)",
+"Règle budgétaire : déficit structurel hors pétrole à 2,7 % du fonds"
+],
+"projects": [
+{
+"title": "Projet de budget national 2027",
+"detail": "Prélèvement de 608,4 Md NOK sur le fonds, déficit structurel hors pétrole de 2,7 % de la valeur du fonds ; nécessite un accord avec quatre partis du centre et de gauche",
+"status": "Au Parlement"
+},
+{
+"title": "Renforcement des capacités de défense",
+"detail": "Forte hausse de la défense proposée dans le budget 2027",
+"status": "Prévu"
+},
+{
+"title": "Programme Nansen de soutien à l'Ukraine",
+"detail": "85 Md NOK pour 2027, portant le total à 344 Md NOK",
+"status": "En cours"
+},
+{
+"title": "Aide à l'électricité (Norgespris et dispositif standard)",
+"detail": "Prix fixe de l'électricité pour les ménages et seuil de soutien",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Programmes de développement organisationnel et de leadership pour les organismes publics",
+"why": "Husbanken, NIBIO et d'autres lancent actuellement des appels d'offres pour ce type de services.",
+"target": "Agences de l'État (Husbanken, NIBIO, etc.)"
+},
+{
+"title": "Conseil TIC indépendant et conseil en automatisation par IA pour les communes",
+"why": "Drammen a lancé un appel d'offres pour un accord-cadre de conseil TIC de 40 M NOK.",
+"target": "Communes norvégiennes"
+},
+{
+"title": "Accompagnement à l'intégration des chaînes d'approvisionnement pour les fournisseurs coréens de la défense et de la construction navale",
+"why": "La forte hausse de la défense en 2027 élargira les achats.",
+"target": "Agence norvégienne du matériel de défense et entreprises de défense"
+}
+],
+"krsupport": [
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre les frais de marketing, de certification et de conseil pour entrer sur le marché norvégien."
+},
+{
+"title": "Bureaux de KOTRA à l'étranger (pas de bureau en Norvège ; contacter un bureau nordique voisin)",
+"detail": "Les études de marché et la recherche d'acheteurs peuvent être demandées via des bureaux voisins, comme celui de Suède."
+}
+]
+}

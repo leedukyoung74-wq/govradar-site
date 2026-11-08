@@ -1,0 +1,76 @@
+{
+"summary": "Brunei tengah melakukan diversifikasi dari minyak dan gas di bawah Wawasan Brunei 2035, dengan sektor nonmigas kini mencapai 54% PDB dan 60% ekspor. Pada 2026-10-26, menteri ekonomi berjanji mengubah 27 proyek investasi senilai sekitar USD 6 miliar menjadi lapangan kerja dan ekspor.",
+"leader": "Sultan Hassanal Bolkiah (juga Perdana Menteri)",
+"agenda": [
+"Diversifikasi ekonomi di bawah Wawasan Brunei 2035",
+"Petrokimia hilir (Hengyi tahap 2) dan manufaktur maju",
+"Agri-pangan, perikanan, dan ketahanan pangan (Brunei-Singapore Agri-Tech Food Zone)",
+"Telekomunikasi, industri digital dan kreatif; transportasi dan logistik",
+"Porsi energi terbarukan 30% dari kapasitas terpasang pada 2035",
+"Pelatihan keterampilan yang selaras dengan kebutuhan pemberi kerja"
+],
+"projects": [
+{
+"title": "Anggaran pembangunan 2026/2027",
+"detail": "Tahun ke-3 Rencana Pembangunan Nasional ke-12 (RKN12), terbagi atas keberlanjutan sosial, inovasi ekonomi, dan stabilitas fiskal",
+"status": "Berjalan"
+},
+{
+"title": "Ekspansi Hengyi tahap 2",
+"detail": "Ekspansi petrokimia yang ditargetkan mulai beroperasi pada 2029",
+"status": "Direncanakan"
+},
+{
+"title": "Ekspansi Pelabuhan Muara",
+"detail": "Kapasitas kontainer dari 220.000 menjadi 500.000 TEU (target 2027)",
+"status": "Berjalan"
+},
+{
+"title": "Proyek investasi yang dipantau BEDB",
+"detail": "27 proyek beroperasi per Agustus 2026 dengan lebih dari 2.000 tenaga kerja lokal; proyek yang sedang berjalan diperkirakan menambah lebih dari 2.900 lapangan kerja",
+"status": "Berjalan"
+},
+{
+"title": "Brunei-Singapore Agri-Tech Food Zone",
+"detail": "Studi kelayakan bersama sedang berlangsung",
+"status": "Studi kelayakan"
+},
+{
+"title": "Proyek platform digital",
+"detail": "Platform layanan bisnis nasional, jaringan sekolah tahap 2, sistem transportasi pintar (dalam anggaran pembangunan)",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Program pelatihan kerja dan pencocokan rekrutmen yang terkait proyek investasi",
+"why": "Pemerintah menekankan pengubahan investasi menjadi lapangan kerja dan pelatihan yang sesuai kebutuhan pemberi kerja.",
+"target": "Kementerian Ekonomi, Perdagangan dan Industri; BEDB; otoritas ketenagakerjaan"
+},
+{
+"title": "Pemantauan lingkungan berbasis IoT dan AI untuk smart farm dan akuakultur",
+"why": "Agri-pangan dan perikanan adalah sektor prioritas dan proyek akuakultur termasuk dalam anggaran pembangunan.",
+"target": "Departemen pertanian dan perikanan, perusahaan akuakultur"
+},
+{
+"title": "Konsultasi otomatisasi proses untuk perizinan dan pendaftaran usaha",
+"why": "Platform layanan bisnis nasional termasuk dalam anggaran pembangunan.",
+"target": "Kementerian Keuangan dan Ekonomi; Kementerian Ekonomi, Perdagangan dan Industri"
+},
+{
+"title": "Konsultasi ekspor regional dan ekspansi luar negeri bagi UKM lokal",
+"why": "Pemerintah menyoroti pertumbuhan UKM di bidang jasa dan logistik melalui BIMP-EAGA.",
+"target": "UKM Brunei, lembaga pendukung UKM"
+}
+],
+"krsupport": [
+{
+"title": "Jaringan kantor dagang KOTRA Asia Tenggara",
+"detail": "Informasi pasar Brunei dan pencarian pembeli dapat diminta melalui kantor dagang terdekat di Asia Tenggara (keberadaan kantor lokal perlu dicek)."
+},
+{
+"title": "Layanan luar negeri Export Voucher",
+"detail": "Biaya riset pasar dan pencarian mitra lokal untuk Brunei dapat ditanggung oleh voucher."
+}
+]
+}

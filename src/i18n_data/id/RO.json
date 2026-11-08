@@ -1,0 +1,64 @@
+{
+"summary": "Setelah jatuhnya pemerintahan Bolojan pada Mei dan kebuntuan selama lima bulan, parlemen mengukuhkan kabinet PSD-teknokrat Perdana Menteri Niculescu pada 20 Oktober. Tantangan utama meliputi salah satu defisit tertinggi di UE, inflasi tinggi, dan ancaman keamanan di perbatasan.",
+"leader": "Presiden Nicușor Dan / Perdana Menteri Luca Niculescu (diplomat nonpartisan, dikukuhkan 2026-10-20; kabinet PSD dan teknokrat)",
+"agenda": [
+"Memulihkan pemerintahan dengan kewenangan penuh dan menstabilkan layanan publik",
+"Memangkas defisit anggaran (cermati apakah garis penghematan 2025, termasuk kenaikan PPN, dilanjutkan)",
+"Menanggapi ancaman keamanan di Laut Hitam dan perbatasan Ukraina (insiden drone)",
+"Reformasi yang didukung Bank Dunia seperti digitalisasi layanan peradilan",
+"Pengurangan polusi perdesaan dan infrastruktur risiko bencana"
+],
+"projects": [
+{
+"title": "Strengthening Foundations for Improved Justice Service Delivery",
+"detail": "Rehabilitasi fasilitas pengadilan, pembangunan ulang LAN Kementerian Kehakiman, dan konsultasi strategi peradilan digital",
+"status": "Dalam tender"
+},
+{
+"title": "Rural Pollution Prevention and Reduction Project (RAPID)",
+"detail": "Kontrak konsultansi diberikan untuk sistem peringatan dini fitosanitari dan sistem manajemen informasi laboratorium (Okt 2026)",
+"status": "Berjalan"
+},
+{
+"title": "Strengthening Disaster Risk Management Project",
+"detail": "Pekerjaan seperti penyambungan fasilitas darurat ke jaringan listrik",
+"status": "Berjalan"
+},
+{
+"title": "Safer, Inclusive and Sustainable Schools",
+"detail": "Kontrak perabot dan peralatan kelas untuk 11 sekolah",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi digitalisasi lembaga publik dan sistem manajemen data",
+"why": "Proyek Bank Dunia terus melelang konsultansi sistem TI di bidang peradilan dan lingkungan.",
+"target": "Kementerian Kehakiman, lembaga lingkungan hidup"
+},
+{
+"title": "Dukungan manajemen proyek (PMO) dan pemantauan hasil proyek yang didanai UE",
+"why": "Pemerintahan baru perlu mempercepat proyek yang didanai UE yang tertunda.",
+"target": "Unit pengelola dana UE di kementerian, pemerintah kota"
+},
+{
+"title": "Dukungan masuk pasar Rumania bagi UKM Korea (riset pasar, penjodohan mitra)",
+"why": "Diminati sebagai basis produksi dan distribusi Eropa Timur, meskipun risiko politik perlu dicermati.",
+"target": "UKM Korea di bidang barang konsumsi dan komponen"
+}
+],
+"krsupport": [
+{
+"title": "Kantor Dagang KOTRA Bukares",
+"detail": "Menyediakan informasi pasar Rumania, pencarian pembeli, dan informasi pengadaan."
+},
+{
+"title": "Dukungan infrastruktur luar negeri",
+"detail": "Mendukung studi kelayakan dan penyertaan modal dalam proyek infrastruktur luar negeri."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Menanggung biaya riset pasar luar negeri, sertifikasi, dan pemasaran melalui voucher."
+}
+]
+}

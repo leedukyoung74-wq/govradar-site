@@ -1,0 +1,74 @@
+{
+"summary": "Pada 15 Oktober, Kamar Deputi mengesahkan Undang-Undang Pendapatan 2027 dengan pendapatan MXN 10.6 triliun dan pinjaman baru MXN 1.7 triliun; anggaran belanja (PEF) dijadwalkan final pada November. Dengan proyeksi pertumbuhan yang dipangkas, pemerintah meningkatkan penerimaan tanpa pajak baru dan memanfaatkan Plan México untuk menarik investasi kawasan industri dan nearshoring.",
+"leader": "Presiden Claudia Sheinbaum Pardo (Kepala Negara dan Kepala Pemerintahan)",
+"agenda": [
+"Plan México: pertumbuhan manufaktur dan investasi nearshoring (target 100 kawasan industri)",
+"Meningkatkan penerimaan tanpa pajak baru (pemberantasan penghindaran pajak, program regularisasi pajak 2027)",
+"Mempertahankan program kesejahteraan Bienestar dan rencana darurat perbaikan IMSS",
+"Investasi infrastruktur yang dipimpin kereta api, Pemex, dan CFE",
+"Mengelola peninjauan tahunan USMCA dan diversifikasi perdagangan (studi bersama dengan Korea mengenai perjanjian perdagangan)"
+],
+"projects": [
+{
+"title": "Undang-Undang Pendapatan 2027 (LIF)",
+"detail": "Penerimaan pajak MXN 6.2tn dan pinjaman MXN 1.7tn; kebutuhan pembiayaan sektor publik (RFSP) 3.9% PDB; kini dibahas di Senat",
+"status": "Dalam pembahasan kongres"
+},
+{
+"title": "Anggaran belanja federal 2027 (PEF)",
+"detail": "Program kesejahteraan sekitar MXN 1.03tn; infrastruktur prioritas sekitar MXN 560bn (kereta api, Pemex, CFE, air, jalan)",
+"status": "Direncanakan"
+},
+{
+"title": "Kawasan industri Plan México",
+"detail": "40 kawasan beroperasi (target 100); 20 kawasan lagi diumumkan pada 22 Okt 2026",
+"status": "Berjalan"
+},
+{
+"title": "Rencana darurat perbaikan IMSS (12 langkah)",
+"detail": "Diumumkan oleh Presiden pada 27 Okt 2026; kemajuan akan dilaporkan selama empat bulan ke depan",
+"status": "Berjalan"
+},
+{
+"title": "Inisiatif kerja sama ekonomi, industri, dan sumber daya Korea-Meksiko",
+"detail": "Ditandatangani sekitar KTT 24 Sep 2026; membentuk komite bersama mineral dan sumber daya serta meluncurkan prastudi bersama untuk perjanjian perdagangan",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi perpajakan dan e-faktur (CFDI) untuk produsen Korea di Meksiko",
+"why": "Undang-Undang Pendapatan 2027 bertumpu pada pengetatan pemungutan dan regularisasi pajak, bukan pajak baru.",
+"target": "Anak perusahaan manufaktur dan distribusi Korea di Meksiko, UKM lokal"
+},
+{
+"title": "Penerapan smart factory dan MES, serta konsultasi rantai pasok, bagi tenant kawasan industri",
+"why": "Kawasan industri Plan México bertambah dengan cepat.",
+"target": "Produsen di kawasan Plan México, badan pembangunan ekonomi negara bagian"
+},
+{
+"title": "Konsultasi optimalisasi ketentuan asal barang dan kepabeanan untuk tarif non-FTA",
+"why": "Meksiko menaikkan tarif bagi negara non-FTA, dan perusahaan Korea telah mengangkat isu kepabeanan.",
+"target": "UKM dan perusahaan menengah Korea yang mengekspor ke Meksiko"
+},
+{
+"title": "Dukungan listing ritel dan e-commerce untuk barang konsumsi Korea",
+"why": "KOTRA ingin memperluas ekspor ke Meksiko ke barang konsumsi, dan peritel serta platform besar setempat menunjukkan minat pada produk Korea.",
+"target": "UKM Korea di bidang kosmetik, makanan, dan peralatan rumah tangga"
+}
+],
+"krsupport": [
+{
+"title": "Kantor KOTRA Mexico City dan Monterrey",
+"detail": "Menyelenggarakan pameran produk Korea di Mexico City pada Sep 2026 (123 pembeli, 730 pertemuan) dan membuka kantor Monterrey pada Feb 2026."
+},
+{
+"title": "Inisiatif kerja sama ekonomi, industri, dan sumber daya Korea-Meksiko",
+"detail": "Membentuk komite bersama mineral dan sumber daya, berupaya memperbaiki iklim usaha bagi perusahaan Korea, dan meluncurkan studi bersama perjanjian perdagangan."
+},
+{
+"title": "Program Export Voucher",
+"detail": "Menanggung biaya sertifikasi Meksiko (NOM), riset pasar, dan konsultasi lokalisasi."
+}
+]
+}

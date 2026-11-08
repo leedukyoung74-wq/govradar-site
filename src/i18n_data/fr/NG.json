@@ -1,0 +1,75 @@
+{
+"summary": "L'Assemblée nationale a adopté un budget 2026 de 68 300 milliards de N, supérieur à la proposition de l'exécutif de 58 180 milliards de N, en privilégiant la sécurité, les infrastructures, la santé et l'éducation. L'élection présidentielle étant fixée au 20 févr. 2027, le président Tinubu a lancé sa campagne de réélection le 24 oct. 2026 ; aucune proposition de budget 2027 n'a été trouvée dans le cadre de cette revue.",
+"leader": "Président Bola Ahmed Tinubu (chef de l'État et du gouvernement)",
+"agenda": [
+"Élargir les recettes : nouvelles lois fiscales et hausse des recettes non pétrolières",
+"Achever des infrastructures clés comme les autoroutes et les gazoducs",
+"Révision constitutionnelle pour une police fédérale et une police des États",
+"Capital humain dans la santé et l'éducation ; lutte contre la fuite des médecins",
+"Développer l'approvisionnement en gaz et remettre en état les infrastructures énergétiques"
+],
+"projects": [
+{
+"title": "Budget fédéral 2026",
+"detail": "Déficit de 23 850 milliards de N (4,28 % du PIB) ; environ 6 Md USD d'emprunts extérieurs approuvés en avr. 2026",
+"status": "En cours"
+},
+{
+"title": "Autoroute Abuja-Kaduna",
+"detail": "Tronçon de 81km ouvert le 24 oct. 2026",
+"status": "Achevé (tronçon)"
+},
+{
+"title": "Stations de compression du gazoduc Escravos-Lagos (ELP)",
+"detail": "Des stations de compression construites par une entreprise locale accroissent la capacité gazière du gazoduc (annoncé le 22 oct. 2026)",
+"status": "Achevé"
+},
+{
+"title": "Révision constitutionnelle sur la double police",
+"detail": "Les approbations des assemblées des États ont atteint le seuil requis, ouvrant la voie à des polices d'État (23 oct. 2026)",
+"status": "En cours"
+},
+{
+"title": "Projet d'infrastructures numériques BRIDGE",
+"detail": "Infrastructures numériques financées par la Banque mondiale et pôles de recherche sur l'économie numérique pilotés par des universités",
+"status": "En cours"
+},
+{
+"title": "Programme de redressement du secteur de la distribution (DISREP)",
+"detail": "Soutien financé par la Banque mondiale aux projets de modernisation des départs des DisCos",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Automatisation et analyse par IA des déclarations et du recouvrement fiscaux",
+"why": "De nouvelles lois fiscales sont en vigueur et la pression pour accroître les recettes non pétrolières est forte.",
+"target": "Nigeria Revenue Service, services fiscaux des États"
+},
+{
+"title": "Gouvernance numérique et formation à l'IA des fonctionnaires",
+"why": "La KOICA étend ses projets de gouvernance numérique et d'académie pour start-ups.",
+"target": "Ministères fédéraux, gouvernements des États, opérateurs de mise en œuvre de la KOICA"
+},
+{
+"title": "Accompagnement à la croissance des PME/start-ups et conseil en mise en relation avec le marché coréen",
+"why": "Le renforcement de l'écosystème des MPME est au cœur des programmes des bailleurs et la demande locale est forte.",
+"target": "MPME, start-ups technologiques, agences d'entreprises des États"
+},
+{
+"title": "Logiciels de gestion des dossiers et de vidéosurveillance pour les polices d'État",
+"why": "La révision sur la double police devrait conduire à la création de nouvelles polices d'État.",
+"target": "Gouvernements des États, commandements de police des États"
+}
+],
+"krsupport": [
+{
+"title": "Programmes de la KOICA au Nigeria (numérique, éducation, jeunesse)",
+"detail": "Mène la phase II de Smart School dans 21 États, la gouvernance numérique, une académie d'innovation numérique pour start-ups et des emplois verts pour les jeunes."
+},
+{
+"title": "Bourses de la KOICA pour les fonctionnaires (CIAT)",
+"detail": "Environ 2 000 fonctionnaires nigérians ont participé à des formations en Corée."
+}
+]
+}

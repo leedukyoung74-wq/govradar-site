@@ -1,0 +1,69 @@
+{
+"summary": "Trong năm đầu tiên của Kế hoạch 5 năm lần thứ 15 (2026-2030), Trung Quốc ưu tiên tự chủ công nghệ, kinh tế số và giảm phát thải carbon. Với tăng trưởng quý 3 ở mức 4,5% (4,6% cho giai đoạn tháng 1-9) và đầu tư yếu, Trung Quốc đã đưa ra các biện pháp kích cầu tiêu dùng dựa trên AI, mở cửa khu vực dịch vụ và chính sách dân số.",
+"leader": "Chủ tịch nước Tập Cận Bình (Tổng Bí thư ĐCS Trung Quốc); Thủ tướng Lý Cường",
+"agenda": [
+"Tự chủ công nghệ và 'lực lượng sản xuất chất lượng mới' (chip, công nghệ sinh học, lượng tử)",
+"Nâng cấp AI+ cho thương mại, tiêu dùng và dịch vụ chăm sóc",
+"Gỡ bỏ rào cản gia nhập khu vực dịch vụ và mở rộng đầu tư tư nhân",
+"Ứng phó nhân khẩu học: xã hội thân thiện với sinh đẻ, tăng cường đào tạo nghề",
+"Mục tiêu xanh mang tính ràng buộc: giảm 17% cường độ carbon, 25% năng lượng phi hóa thạch vào năm 2030"
+],
+"projects": [
+{
+"title": "Kế hoạch 5 năm lần thứ 15 (2026-2030)",
+"detail": "Được Quốc hội (NPC) phê duyệt tháng 3/2026; chi R&D tăng trên 7% mỗi năm, các ngành cốt lõi của kinh tế số đạt 12,5% GDP vào năm 2030",
+"status": "Đang triển khai"
+},
+{
+"title": "18 biện pháp kích cầu tiêu dùng thông qua AI và công nghệ",
+"detail": "Logistics thông minh và giao hàng không người lái, tác tử AI thương mại, chăm sóc người cao tuổi và y tế thông minh, số hóa bán lẻ",
+"status": "Đang triển khai"
+},
+{
+"title": "Gói chính sách khu vực dịch vụ và dân số",
+"detail": "Phiên họp Quốc vụ viện ngày 2026-10-23: hỗ trợ tài chính, đất đai, nhân tài và dữ liệu, gỡ bỏ rào cản ngầm, tăng cường đào tạo nghề",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Mục tiêu chuyển đổi xanh mang tính ràng buộc",
+"detail": "Giảm 17% CO2 trên mỗi đơn vị GDP và 25% năng lượng phi hóa thạch vào năm 2030",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn kết nối người mua và niêm yết trên nền tảng cho doanh nghiệp hàng tiêu dùng Hàn Quốc vào Trung Quốc",
+"why": "KOTRA xếp Trung Quốc là thị trường trọng điểm cho doanh nghiệp xuất khẩu lần đầu trong khi Bắc Kinh mở rộng kích cầu tiêu dùng.",
+"target": "SME thực phẩm và mỹ phẩm Hàn Quốc; nhà nhập khẩu và phân phối Trung Quốc"
+},
+{
+"title": "Tự động hóa vận hành cửa hàng bằng AI (tồn kho, đơn hàng, tiếp thị) thông qua đối tác địa phương",
+"why": "Chín bộ ngành đang khuyến khích tác tử AI thương mại và số hóa bán lẻ.",
+"target": "Chuỗi bán lẻ và nhà hàng SME Trung Quốc"
+},
+{
+"title": "Tự động hóa ghi chép chăm sóc và giám sát cho cơ sở chăm sóc người cao tuổi thông minh",
+"why": "Già hóa dân số và chăm sóc người cao tuổi thông minh hiện là ưu tiên chính sách.",
+"target": "Cục dân chính địa phương, đơn vị chăm sóc tư nhân"
+},
+{
+"title": "Môi giới cấp phép và hỗ trợ hợp đồng cho IP nội dung Hàn Quốc tại Trung Quốc",
+"why": "Hội nghị kết nối kinh doanh nội dung Hàn Quốc-Trung Quốc được tổ chức tại Bắc Kinh vào tháng 11.",
+"target": "Nhà phân phối và nền tảng nội dung Trung Quốc"
+}
+],
+"krsupport": [
+{
+"title": "Hội nghị Kết nối Kinh doanh Ngành Nội dung Hàn Quốc-Trung Quốc 2026",
+"detail": "Ngày 25-27/11 tại Bắc Kinh, khoảng 20 doanh nghiệp nội dung Hàn Quốc gặp gỡ trực tiếp khoảng 50 người mua địa phương."
+},
+{
+"title": "Tuần lễ Bước đầu Xuất khẩu 2026 (Trung Quốc là một trong bốn thị trường trọng điểm)",
+"detail": "Họp trực tuyến với người mua Trung Quốc và hỗ trợ logistics cho doanh nghiệp xuất khẩu hàng tiêu dùng lần đầu."
+},
+{
+"title": "Khóa học thâm nhập thị trường Trung Quốc (hàng tiêu dùng) của KOTRA Academy",
+"detail": "Đào tạo thực hành về thâm nhập thị trường tiêu dùng Trung Quốc."
+}
+]
+}

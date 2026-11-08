@@ -1,0 +1,80 @@
+{
+"summary": "El gobierno del primer ministro Wong utiliza un Presupuesto 2026 récord (S$154.700 millones) para impulsar una transición nacional hacia la IA, ayudar a las empresas a expandirse al exterior y aliviar el costo de vida. El 1 de octubre, el ministerio de comercio se reorganizó como Ministerio de Energía, Comercio e Industria, y la diplomacia de octubre se ha centrado en la IA y las alianzas externas, incluida una visita del canciller de Alemania y una cumbre sobre seguridad de la IA de frontera.",
+"leader": "Presidente Tharman Shanmugaratnam; Primer ministro Lawrence Wong (también ministro de Finanzas)",
+"agenda": [
+"Transformación nacional hacia la IA liderada por el Consejo Nacional de IA, presidido por el Primer Ministro",
+"Mayor apoyo a la internacionalización y la financiación de las empresas",
+"Competitividad en los sectores de semiconductores, aeroespacial y biomédico, con la política energética integrada en el nuevo Ministerio de Energía, Comercio e Industria",
+"Recualificación de los trabajadores y crecimiento salarial mediante SkillsFuture",
+"Alivio del costo de vida y apoyo a familias y jubilados",
+"Vivienda e infraestructura preparadas para el cambio climático"
+],
+"projects": [
+{
+"title": "Presupuesto 2026",
+"detail": "Anunciado el 12 de febrero de 2026; gasto total de S$154.700 millones (alrededor del 18,4% del PIB), superávit previsto para el ejercicio 2026 de S$8.500 millones",
+"status": "En curso"
+},
+{
+"title": "Consejo Nacional de IA",
+"detail": "Presidido por el Primer Ministro; supervisa la adopción de IA por las empresas, la alfabetización en IA de los estudiantes y la capacitación en IA de los trabajadores",
+"status": "En curso"
+},
+{
+"title": "Paquete de apoyo a los hogares",
+"detail": "Vales CDC de S$500 por hogar (pagados en enero de 2027), créditos LifeSG de S$500 por cada hijo de 12 años o menos, entre otros",
+"status": "En curso"
+},
+{
+"title": "Aportes complementarios de jubilación del CPF",
+"detail": "Hasta S$1.500 para afiliados de 50 años o más por debajo de la Suma Básica de Jubilación; nuevas opciones de inversión del CPF",
+"status": "En curso"
+},
+{
+"title": "Criterios más estrictos para la mano de obra extranjera",
+"detail": "Salarios mínimos de calificación más altos para titulares de EP/S Pass y gravámenes más elevados en algunos sectores",
+"status": "En curso"
+},
+{
+"title": "Corredor marítimo verde y digital Corea–Singapur y MOU de cooperación digital",
+"detail": "Tras la elevación a Asociación Estratégica en noviembre de 2025: proyectos conjuntos de IA, un corredor marítimo verde y digital y apoyo conjunto a la transformación digital de la ASEAN",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Paquetes de automatización de flujos de trabajo con IA para pymes (contabilidad, atención al cliente, procesamiento de documentos) a través de revendedores locales",
+"why": "El Presupuesto 2026 creó un programa de adopción de IA para empresas, lo que aumenta la demanda subvencionada.",
+"target": "Pymes de Singapur, revendedores locales de TI"
+},
+{
+"title": "Cursos prácticos de IA generativa para trabajadores",
+"why": "El gobierno amplía el apoyo a las competencias en IA de los trabajadores.",
+"target": "Proveedores de formación acreditados por SkillsFuture, departamentos de RR. HH. de empresas"
+},
+{
+"title": "Asesoramiento de entrada al mercado coreano y vinculación con socios para empresas de Singapur",
+"why": "La Asociación Estratégica de 2025 y el MOU de cooperación digital amplían los lazos empresariales bilaterales.",
+"target": "Empresas apoyadas por Enterprise Singapore, startups locales"
+},
+{
+"title": "Consultoría de evaluación de riesgos de modelos de IA y revisión de gobernanza",
+"why": "Singapur lidera los debates internacionales sobre seguridad y gobernanza de la IA.",
+"target": "Instituciones financieras, grandes usuarios de IA, organismos públicos"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Singapur",
+"detail": "Ofrece vinculación con compradores, incubación de sucursales (robótica, alimentos, bienes de consumo, maquinaria, etc.), estudios de mercado y apoyo a la inversión."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Los vales cubren servicios de estudios de mercado, certificación y marketing, lo que reduce el costo de ingresar en Singapur."
+},
+{
+"title": "Asociación Estratégica Corea–Singapur y MOU de cooperación digital",
+"detail": "Abarca proyectos conjuntos de IA y un proyecto conjunto de transformación digital de la ASEAN financiado por el Singapore Cooperation Programme y el Fondo de Cooperación ASEAN-Corea."
+}
+]
+}

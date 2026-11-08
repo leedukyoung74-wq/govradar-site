@@ -1,0 +1,79 @@
+{
+"summary": "El ejercicio fiscal 2027 funciona con una resolución de continuidad (P.L. 119-103) que vence el 11 de diciembre. De cara a las elecciones de mitad de mandato del 3 de noviembre, la administración impulsa mediante órdenes ejecutivas la IA y la ciencia (Genesis Mission), el alivio de la vivienda y del costo de vida, la energía y una política comercial basada en aranceles.",
+"leader": "Presidente Donald Trump (jefe de Estado y de Gobierno)",
+"agenda": [
+"Liderazgo en IA/superinteligencia e innovación científica (Genesis Mission)",
+"Reducir los costos de la vivienda, el combustible y otros gastos de vida",
+"Relocalización de la manufactura y reajuste comercial mediante aranceles de las Secciones 232/301",
+"Consolidación digital de los servicios públicos (America.gov)",
+"Aplicación de la ley de sanciones de 2026 contra Rusia e Irán"
+],
+"projects": [
+{
+"title": "Resolución de continuidad del ejercicio 2027 (P.L. 119-103)",
+"detail": "Firmada en septiembre de 2026; financia al gobierno hasta el 11 de diciembre. Las leyes de asignaciones para todo el año siguen pendientes",
+"status": "En curso"
+},
+{
+"title": "Iniciativas científicas de la Genesis Mission",
+"detail": "Anunciadas en octubre de 2026; inversión público-privada para acelerar la investigación impulsada por IA",
+"status": "En curso"
+},
+{
+"title": "Competencia Quantum Genesis Q",
+"detail": "Busca demostrar una computadora cuántica tolerante a fallos",
+"status": "Planificado"
+},
+{
+"title": "Iniciativa de biología virtual Bio Genesis",
+"detail": "Esfuerzo conjunto de NIH, DOE y Biohub",
+"status": "Planificado"
+},
+{
+"title": "Consolidación de servicios America.gov",
+"detail": "Orden ejecutiva del 2026-09-29 que crea un punto de acceso único a los servicios federales",
+"status": "En curso"
+},
+{
+"title": "Orden ejecutiva sobre el costo de la vivienda",
+"detail": "Firmada el 2026-10-22; medidas sobre la oferta y los costos de la vivienda",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Análisis del impacto de los aranceles de las Secciones 232/301 y automatización de reglas de origen para exportadores",
+"why": "Tras la anulación de los aranceles IEEPA, los derechos se reconstruyeron en torno a las Secciones 232 y 301, por lo que debe recalcularse la exposición por producto.",
+"target": "Pymes coreanas que exportan a EE. UU.; importadores estadounidenses"
+},
+{
+"title": "Paquete de búsqueda de compradores y estudios de mercado para quienes ingresan por primera vez en EE. UU.",
+"why": "KOTRA ha designado a EE. UU. como uno de los cuatro mercados prioritarios para exportadores primerizos y actualmente organiza encuentros de negocios.",
+"target": "Pymes coreanas de bienes de consumo sin historial exportador"
+},
+{
+"title": "Chatbots con IA y automatización documental para servicios estatales y locales",
+"why": "La orden America.gov aumenta la presión para digitalizar los servicios públicos.",
+"target": "Gobiernos estatales y de condados; agencias federales a través de contratistas principales estadounidenses"
+},
+{
+"title": "Herramientas de curaduría de datos de laboratorio y análisis con IA",
+"why": "La Genesis Mission amplía la inversión en investigación impulsada por IA.",
+"target": "Laboratorios nacionales, laboratorios universitarios"
+}
+],
+"krsupport": [
+{
+"title": "Semana del Primer Paso a la Exportación 2026 (EE. UU. entre los cuatro mercados prioritarios)",
+"detail": "A partir del 26 de octubre, unas tres semanas de reuniones por video con compradores de EE. UU. y de otros países, además de apoyo en costos logísticos para exportadores primerizos."
+},
+{
+"title": "Curso de entrada al mercado por país de la KOTRA Academy (EE. UU.)",
+"detail": "Capacitación práctica durante todo el año sobre cómo ingresar en el mercado estadounidense, además de cursos de comercio digital con IA."
+},
+{
+"title": "Vale de exportación del MSS",
+"detail": "La tercera convocatoria de 2026 ofreció KRW 47.000 millones en vales de marketing en el exterior a unas 1.200 empresas."
+}
+]
+}

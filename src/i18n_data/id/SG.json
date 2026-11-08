@@ -1,0 +1,80 @@
+{
+"summary": "Pemerintahan PM Wong memanfaatkan Budget 2026 yang mencetak rekor (S$154.7bn) untuk mendorong transisi AI secara nasional, membantu perusahaan berekspansi ke luar negeri, dan meringankan biaya hidup. Pada 1 Oktober, kementerian perdagangan direorganisasi menjadi Ministry of Energy, Trade and Industry, dan diplomasi bulan Oktober berpusat pada AI dan kemitraan eksternal, termasuk kunjungan Kanselir Jerman dan KTT keselamatan AI frontier.",
+"leader": "Presiden Tharman Shanmugaratnam; Perdana Menteri Lawrence Wong (merangkap Menteri Keuangan)",
+"agenda": [
+"Transformasi AI nasional yang dipimpin National AI Council yang diketuai PM",
+"Penguatan dukungan internasionalisasi dan pembiayaan perusahaan",
+"Daya saing di sektor semikonduktor, kedirgantaraan, dan biomedis, dengan kebijakan energi diintegrasikan ke dalam Ministry of Energy, Trade and Industry yang baru",
+"Peningkatan keterampilan pekerja dan pertumbuhan upah melalui SkillsFuture",
+"Keringanan biaya hidup serta dukungan bagi keluarga dan pensiunan",
+"Perumahan dan infrastruktur yang siap menghadapi perubahan iklim"
+],
+"projects": [
+{
+"title": "Budget 2026",
+"detail": "Diumumkan 12 Feb 2026; total belanja S$154.7bn (sekitar 18.4% PDB), proyeksi surplus TA2026 sebesar S$8.5bn",
+"status": "Berjalan"
+},
+{
+"title": "National AI Council",
+"detail": "Diketuai oleh PM; mengawasi adopsi AI di perusahaan, literasi AI bagi pelajar, dan pelatihan keterampilan AI bagi pekerja",
+"status": "Berjalan"
+},
+{
+"title": "Paket dukungan rumah tangga",
+"detail": "Voucher CDC S$500 per rumah tangga (dibayarkan Januari 2027), kredit LifeSG S$500 per anak berusia 12 tahun ke bawah, dan lainnya",
+"status": "Berjalan"
+},
+{
+"title": "Top-up pensiun CPF",
+"detail": "Hingga S$1,500 bagi anggota berusia 50+ yang di bawah Basic Retirement Sum; opsi investasi CPF baru",
+"status": "Berjalan"
+},
+{
+"title": "Pengetatan kriteria tenaga kerja asing",
+"detail": "Kenaikan gaji minimum kualifikasi bagi pemegang EP/S Pass dan kenaikan pungutan di beberapa sektor",
+"status": "Berjalan"
+},
+{
+"title": "Koridor pelayaran hijau & digital Korea–Singapura dan MOU kerja sama digital",
+"detail": "Menyusul peningkatan menjadi Kemitraan Strategis pada Nov 2025: proyek AI bersama, koridor pelayaran hijau dan digital, serta dukungan bersama untuk transformasi digital ASEAN",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Paket otomatisasi alur kerja AI untuk UKM (akuntansi, layanan pelanggan, pemrosesan dokumen) melalui reseller lokal",
+"why": "Budget 2026 membentuk program adopsi AI bagi perusahaan, sehingga permintaan bersubsidi meningkat.",
+"target": "UKM Singapura, reseller TI lokal"
+},
+{
+"title": "Kursus pelatihan praktis AI generatif bagi pekerja",
+"why": "Pemerintah memperluas dukungan keterampilan AI bagi pekerja.",
+"target": "Penyelenggara pelatihan terakreditasi SkillsFuture, divisi SDM perusahaan"
+},
+{
+"title": "Konsultasi masuk pasar Korea dan penjodohan mitra bagi perusahaan Singapura",
+"why": "Kemitraan Strategis 2025 dan MOU kerja sama digital memperluas hubungan bisnis bilateral.",
+"target": "Perusahaan yang didukung Enterprise Singapore, startup lokal"
+},
+{
+"title": "Konsultasi penilaian risiko model AI dan peninjauan tata kelola",
+"why": "Singapura memimpin diskusi internasional mengenai keselamatan dan tata kelola AI.",
+"target": "Lembaga keuangan, pengguna AI berskala besar, lembaga publik"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Singapura",
+"detail": "Menawarkan penjodohan pembeli, inkubasi kantor cabang (robotika, makanan, barang konsumsi, mesin, dll.), riset pasar, dan dukungan investasi."
+},
+{
+"title": "Program Export Voucher",
+"detail": "Voucher menanggung layanan riset pasar, sertifikasi, dan pemasaran, sehingga menurunkan biaya masuk ke Singapura."
+},
+{
+"title": "Kemitraan Strategis Korea–Singapura dan MOU kerja sama digital",
+"detail": "Mencakup proyek AI bersama dan proyek bersama transformasi digital ASEAN yang didanai Singapore Cooperation Programme dan ASEAN-Korea Cooperation Fund."
+}
+]
+}

@@ -1,0 +1,80 @@
+{
+"summary": "En junio de 2026, Mauricio presentó un presupuesto 2026/27 basado en la IA y la digitalización, las startups y las pymes, y la economía azul, con el compromiso de reducir el déficit de alrededor del 6% del PIB al 3,7%. En octubre, las protestas por la escasez de agua, el costo de vida y un tiroteo policial llevaron a un toque de queda del 12 al 18 de octubre.",
+"leader": "Presidente Dharam Gokhool · Primer ministro y ministro de Finanzas Navin Ramgoolam",
+"agenda": [
+"Reducir el déficit fiscal (de alrededor del 6,0% del PIB al 3,7%)",
+"Aprovechar la IA y la digitalización, incluida la transformación digital del sector público",
+"Impulsar las startups y las pymes (exención fiscal de 10 años para startups)",
+"Economía azul y ampliación del espacio económico",
+"Reforma de los servicios financieros (digitalización de la FSC, refuerzo de ALD/CFT, banca abierta y tokenización)",
+"Agua, electricidad y otras infraestructuras básicas estables"
+],
+"projects": [
+{
+"title": "Paquete Económico Especial de la India",
+"detail": "Nuevo hospital nacional, torre de control del aeropuerto, autopista M4 y fase II de la Ring Road, equipamiento portuario y más",
+"status": "En curso"
+},
+{
+"title": "Estudio diagnóstico de país sobre APP",
+"detail": "Selección de un consultor para diagnosticar el marco y la cartera de APP",
+"status": "Licitación abierta"
+},
+{
+"title": "Proyecto de gemelo digital",
+"detail": "Selección de un consultor para diseñar y construir un gemelo digital nacional",
+"status": "Licitación abierta"
+},
+{
+"title": "Lago de datos de educación superior",
+"detail": "Análisis, diseño y construcción de una plataforma de datos de educación superior",
+"status": "Licitación abierta"
+},
+{
+"title": "Implementación y mantenimiento del pasaporte electrónico",
+"detail": "Manifestación de interés para un pasaporte electrónico seguro",
+"status": "Licitación abierta"
+},
+{
+"title": "Organización de la Cumbre Empresarial EE. UU.-África 2026",
+"detail": "Coorganizada por el Gobierno de Mauricio y el Corporate Council on Africa",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Consultoría de apoyo a la gestión de cooperativas y pymes",
+"why": "La división de cooperativas acaba de licitar una consultoría de integración y apoyo empresarial.",
+"target": "Ministerio de Industria, Pymes y Cooperativas"
+},
+{
+"title": "Asesoramiento en diagnóstico de APP y estructuración de proyectos",
+"why": "El ministerio de finanzas ha licitado un estudio diagnóstico de país sobre APP.",
+"target": "Ministerio de Finanzas"
+},
+{
+"title": "Plataformas de datos públicos y analítica con IA",
+"why": "El presupuesto convierte la IA y la digitalización en un pilar central, y hay licitaciones abiertas de lago de datos y gemelo digital.",
+"target": "Comisión de Educación Superior, Ministerio de Vivienda y Tierras, ministerio de TIC"
+},
+{
+"title": "Apoyo al aterrizaje de startups y a la constitución de empresas locales",
+"why": "La exención fiscal de 10 años para startups hace de Mauricio un hub más atractivo para África.",
+"target": "Startups y pymes coreanas que apuntan a África"
+}
+],
+"krsupport": [
+{
+"title": "Noticias de mercados exteriores de KOTRA (Mauricio/África)",
+"detail": "Ofrece información de mercado sobre Mauricio y el sur y el este de África."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Los vales cubren los costos de traducción de documentos de licitación, asesoramiento legal y estudios de mercado."
+},
+{
+"title": "Apoyo a infraestructura en el exterior de KIND",
+"detail": "Apoya estudios de viabilidad e inversión en proyectos de APP e infraestructura en el exterior."
+}
+]
+}

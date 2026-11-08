@@ -1,0 +1,38 @@
+{
+"summary": "Région autonome musulmane de Mindanao, aux Philippines. Elle a organisé ses premières élections parlementaires en septembre 2026, et le parlement installé le 30 octobre a choisi Macacua comme premier ministre en chef élu. Le budget 2026 d'environ 114 milliards de ₱ est axé sur l'éducation, la santé et les infrastructures ; les investissements approuvés avaient déjà dépassé le total de l'ensemble de l'année 2025 dès le deuxième trimestre.",
+"leader": "Ministre en chef Abdulraof Macacua (élu le 30 oct. 2026, 51 voix) · Président du parlement Amer Rakim",
+"agenda": [
+"Premier gouvernement élu et « gouvernement inclusif » (coalition de plus de 46 sièges)",
+"Conclusion du processus de paix : démobilisation, programmes d'aide, transformation des camps",
+"Mise en œuvre du budget 2026 axé sur l'éducation et la santé (~114 milliards de ₱)",
+"Réseaux routiers et de desserte agricole (projet de la JICA sur les capacités routières 2026–2029)",
+"Promotion des investissements dans la santé, le tourisme et l'agro-industrie"
+],
+"biz": [
+{
+"title": "Base de données du patrimoine routier et des ponts et application d'inspection",
+"why": "Le projet de la JICA met en place une nouvelle base de données des routes et des ponts et un système d'entretien.",
+"target": "Ministère des Travaux publics de la BARMM, bureaux de district"
+},
+{
+"title": "Outils numériques pour l'administration scolaire et l'enseignement à distance",
+"why": "L'éducation représente environ un quart du budget régional.",
+"target": "MBHTE, madrasas et écoles publiques"
+},
+{
+"title": "Transformation agroalimentaire et agriculture intelligente liées à la certification halal",
+"why": "L'agro-industrie est l'un des premiers secteurs d'investissements approuvés, avec un accès au marché halal.",
+"target": "Investisseurs du BBOI, MAFAR"
+},
+{
+"title": "Dossier médical électronique et télémédecine pour les centres de santé",
+"why": "La santé est le deuxième poste budgétaire et l'accès aux îles est difficile.",
+"target": "Ministère de la Santé de la BARMM"
+},
+{
+"title": "Systèmes de marchés publics électroniques et de budget ouvert",
+"why": "Le premier gouvernement élu met l'accent sur la confiance et la gouvernance inclusive (estimation).",
+"target": "Cabinet du ministre en chef, ministère des Finances"
+}
+]
+}

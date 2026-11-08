@@ -1,0 +1,100 @@
+{
+ "updated": "2026-10-31",
+ "summary_ko": "지금 실제로 진행 중인 무력충돌은 미국·이스라엘–이란 전쟁(2026년 2월 28일 시작, 호르무즈 해협 통항 제한·미국의 이란 항만 봉쇄)과 러시아–우크라이나 전쟁입니다. 10월 들어 호르무즈 일대 선박 공격이 늘었고 국제 유가가 크게 올랐습니다. 미국 중간선거(11월 3일) 이후 대이란 공습 재개 가능성이 보도됐지만 익명 관계자 인용 단일 보도입니다. 영국·네덜란드·아일랜드·일본·미국의 가정 비축 권고는 각국의 정례 대비 정책이며, 특정 전쟁이 임박했다는 공식 경고는 확인되지 않았습니다.",
+ "summary_en": "Two wars are actually under way: the US–Israel war with Iran (began 28 Feb 2026, with Iranian transit restrictions in the Strait of Hormuz and a US blockade of Iranian ports) and Russia–Ukraine. Attacks on shipping around Hormuz rose in October and oil prices climbed sharply. Possible renewed US strikes on Iran after the 3 Nov midterms have been reported, but only in a single report citing unnamed officials. Household-stockpile advice from the UK, Netherlands, Ireland, Japan and the US is routine preparedness policy; no official warning of an imminent specific war has been found.",
+ "advice_ko": "가정: 72시간~1주일분 물·식량·약·정전·통신 대비면 충분합니다. 기업: 중동 사업·해상 운송은 보험·우회 항로·유가 조항을 점검하고, 걸프 지역 출장은 외교부 여행경보를 먼저 확인하세요.",
+ "advice_en": "Households: 72 hours to one week of water, food, medicine, power and comms is enough. Companies: for Middle East projects and sea freight, check insurance, alternative routes and fuel-price clauses; check travel advisories before Gulf trips.",
+ "hotspots": [
+  {"id":"iran","iso":"IR","level":"war","ko":"미국·이스라엘–이란 / 호르무즈 해협","en":"US–Israel vs Iran / Strait of Hormuz",
+   "status_ko":"전쟁 진행 중 · 해협 통항 제한 · 미국의 이란 항만 봉쇄 지속","status_en":"War ongoing · transit restricted · US blockade of Iranian ports continues",
+   "facts":[
+    {"ko":"2026년 2월 28일 미국·이스라엘의 이란 공습으로 전쟁이 시작됐고, 이후 이란이 해협 통항을 통제하고 있다.","en":"The war began with US–Israeli strikes on Iran on 28 Feb 2026; Iran has controlled transit through the strait since.","v":"ok","src":[0,1]},
+    {"ko":"미국은 이란 항만에 대한 해상 봉쇄를 유지하고 있다(8월 말 기준 상선 83척 회항 조치, CENTCOM).","en":"The US maintains a naval blockade of Iranian ports (83 vessels redirected as of late Aug, CENTCOM).","v":"ok","src":[2,1]},
+    {"ko":"10월 29일 파나마 선적 유조선 Louise 1이 해협에서 흡착 기뢰 공격을 받아 기관실 화재가 났다(인명 피해 없음).","en":"On 29 Oct the Panama-flagged tanker Louise 1 was hit by limpet mines in the strait; engine-room fire, no injuries.","v":"official","src":[3]},
+    {"ko":"이란 혁명수비대는 10월 중순 유조선 여러 척이 기뢰에 맞았다고 발표했으나 미국은 일부를 부인했다(드론 공격이라고 설명).","en":"Iran's IRGC said several tankers hit mines in mid-October; the US denied part of this, saying a drone struck one instead.","v":"claim","src":[1,4]},
+    {"ko":"미군이 중간선거(11월 3일) 이후를 상정한 대이란 공격 선택지를 대통령에게 보고하고 있다는 보도가 있다.","en":"It is reported that the US military is presenting post-midterm (3 Nov) strike options on Iran to the President.","v":"single","src":[3]},
+    {"ko":"트럼프 대통령은 핵무기 사용과 지상군 투입을 배제했고, 중간선거 이후 종전 합의를 기대한다고 말했다.","en":"President Trump ruled out nuclear use and ground troops and said he expects a deal after the midterms.","v":"ok","src":[1,3]},
+    {"ko":"10월 30일 브렌트유는 배럴당 117달러대로 넉 달 연속 상승했다.","en":"Brent traded around $117/bbl on 30 Oct, a fourth straight monthly rise.","v":"single","src":[3]}
+   ],
+   "biz_ko":"걸프 지역 사업·해운·보험료·유가 연동 계약 점검. 이란 관련 거래는 제재 점검 필수.","biz_en":"Review Gulf projects, shipping, insurance and fuel-linked contracts. Screen anything touching Iran for sanctions."},
+  {"id":"ukraine","iso":"UA","level":"war","ko":"러시아–우크라이나","en":"Russia–Ukraine",
+   "status_ko":"전쟁 진행 중 · 전선 동결 휴전 제안 오가는 중","status_en":"War ongoing · front-line freeze proposals under discussion",
+   "facts":[
+    {"ko":"젤렌스키 대통령은 10월 21일 현 전선을 동결하는 즉시 휴전을 검토할 수 있다고 말했다.","en":"On 21 Oct President Zelensky said he could consider freezing current lines for an immediate ceasefire.","v":"ok","src":[5,6]},
+    {"ko":"크렘린은 우크라이나·유럽의 제안을 거부했지만, 미국·우크라이나와의 3자 협상을 11월 10일 전후 재개할 수 있다는 입장을 밝혔다.","en":"The Kremlin rejected Ukrainian/European proposals but said trilateral talks with the US and Ukraine could resume around 10 Nov.","v":"single","src":[5]},
+    {"ko":"ISW 분석으로 우크라이나는 2026년 1월 이후 약 1,080㎢를 되찾았다.","en":"Per ISW, Ukraine has retaken about 1,080 km² since January 2026.","v":"single","src":[5]},
+    {"ko":"러시아는 '소규모·국지 휴전'에는 열려 있다고 밝혔으나 공격은 이어지고 있다.","en":"Russia says it is open to limited local ceasefires, while attacks continue.","v":"ok","src":[7,8]}
+   ],
+   "biz_ko":"재건 사업(에너지·교통·주거)은 협상 진행에 따라 발주 일정이 바뀝니다. EBRD·World Bank 재건 기금 공고를 함께 보세요.","biz_en":"Reconstruction (energy, transport, housing) timing depends on talks. Watch EBRD/World Bank reconstruction calls."},
+  {"id":"korea","iso":"KP","level":"tension","ko":"한반도","en":"Korean Peninsula",
+   "status_ko":"긴장 · 북한 탄도미사일 시험 지속","status_en":"Tension · continued DPRK ballistic missile tests",
+   "facts":[
+    {"ko":"합참: 북한은 10월 3일 원산 일대에서 탄도미사일 1발, 10월 12일 평양 일대에서 2발을 발사했다(1발은 900㎞ 이상 비행).","en":"JCS: DPRK fired 1 ballistic missile from Wonsan on 3 Oct and 2 from Pyongyang on 12 Oct (one flew 900+ km).","v":"ok","src":[9,10]},
+    {"ko":"미 태평양사령부는 미국 인원·영토와 동맹에 즉각적인 위협은 아니라고 밝혔다.","en":"US Pacific Command said the launch posed no immediate threat to US personnel, territory or allies.","v":"official","src":[9]}
+   ],
+   "biz_ko":"국내 사업 영향은 제한적. 해외 발주처가 한국 리스크를 물을 때 공식 발표 문구를 그대로 인용하세요.","biz_en":"Limited direct business impact. When foreign buyers ask about Korea risk, quote official statements verbatim."},
+  {"id":"taiwan","iso":"TW","level":"watch","ko":"대만해협","en":"Taiwan Strait",
+   "status_ko":"경계 · 중국 연안 실사격 훈련","status_en":"Watch · PLA live-fire drills off China's coast",
+   "facts":[
+    {"ko":"중국은 10월 12~17일 황해·동중국해·남중국해·발해 5개 해역에서 실사격 훈련을 예고했다. 대만 국방부는 중국 연안 포병 훈련으로 대만 인근 선박에는 영향이 적다고 평가했다.","en":"China announced live-fire drills in five zones (Yellow, East and South China seas, Bohai) on 12–17 Oct. Taiwan's MND assessed them as coastal artillery drills unlikely to affect shipping near Taiwan.","v":"ok","src":[11,12]}
+   ],
+   "biz_ko":"동아시아 해운·반도체 공급망 일정에 여유를 두세요.","biz_en":"Build slack into East Asian shipping and chip supply schedules."},
+  {"id":"lebanon","iso":"LB","level":"tension","ko":"이스라엘–레바논","en":"Israel–Lebanon",
+   "status_ko":"불안정 · 휴전 중 교전 재발 보도","status_en":"Fragile · renewed fighting reported despite ceasefire",
+   "facts":[
+    {"ko":"이스라엘과 헤즈볼라 사이 교전이 다시 보고돼 휴전이 흔들리고 있다.","en":"Renewed Israel–Hezbollah fighting has been reported, straining the ceasefire.","v":"single","src":[13]}
+   ],
+   "biz_ko":"레바논·이스라엘 북부 출장·현장 사업은 일정 확정 전 여행경보 확인.","biz_en":"Check advisories before trips or site work in Lebanon or northern Israel."}
+ ],
+ "prep": [
+  {"ko":"미국 국방부 FORTRESS: 주요 기지가 외부 지원 없이 최대 90일 버티도록 자체 발전·소형 원자로·비축을 늘리는 계획","en":"US DoD FORTRESS: plan for major bases to run up to 90 days without outside support (own power, small reactors, stockpiles)","v":"part","note_ko":"계획의 존재는 여러 매체가 확인. '90일' 기준은 폭스뉴스 원 보도(국방부 대변인 숀 파넬 발언·문서 검토)에서 나왔고 다른 매체는 이를 인용. 모든 기지가 지금 90일 자립이 가능하다는 뜻은 아님.","note_en":"Plan confirmed by several outlets; the 90-day figure comes from Fox News' original report (spokesman Sean Parnell, documents reviewed) and others cite it. It does not mean every base can do this now.","src":[14,15,16]},
+  {"ko":"미 육군·JIATF-401 국내 드론 방어 계약 41억 5천만 달러, 10개사","en":"US Army/JIATF-401 domestic counter-drone contracts, $4.15B, 10 firms","v":"ok","note_ko":"최대 계약 한도 기준. 초기 실제 집행액(약 5,000만 달러)은 Defense One 보도로 단일 출처.","note_en":"Ceiling value. Initial obligation (~$50M) is from Defense One only.","src":[17,18]},
+  {"ko":"케이프코드 우주군기지(매사추세츠) 발전·마이크로그리드 1억 3,190만 달러, 미 육군 공병단","en":"Cape Cod Space Force Station (Massachusetts) power/microgrid, $131.9M, USACE","v":"ok","note_ko":"'콜로라도 기지'라는 주장은 사실 아님.","note_en":"The 'Colorado base' claim is false.","src":[19,20]},
+  {"ko":"영국 'Be Ready' 가정 72시간 대비 캠페인 (2026-10-22)","en":"UK 'Be Ready' 72-hour household campaign (22 Oct 2026)","v":"ok","src":[21,22]},
+  {"ko":"네덜란드 '미리 생각하기(Denk Vooruit)' — 72시간 안내서(2025-11) 전 가구 배포, 새 캠페인(2026-10-12)","en":"Netherlands 'Think Ahead' — 72-hour booklet to all households (Nov 2025), new campaign (12 Oct 2026)","v":"ok","src":[23,24]},
+  {"ko":"아일랜드 'Be Emergency Ready' 안내서 전 가구 배포 (2026-09)","en":"Ireland 'Be Emergency Ready' booklet to every household (Sep 2026)","v":"ok","src":[25,26]},
+  {"ko":"일본 방재청 출범 (2026-11-02)","en":"Japan Disaster Management Agency launches (2 Nov 2026)","v":"ok","note_ko":"3일~1주일분 비축 요청 예정 보도는 단일 출처.","note_en":"Reported 3-day to 1-week stockpile request is single-source.","src":[27,28]},
+  {"ko":"EU 복합위기 대응 훈련 'EU Integrated Resolve 2026' (10-19 ~ 11-20)","en":"EU crisis exercise 'EU Integrated Resolve 2026' (19 Oct – 20 Nov)","v":"ok","note_ko":"'러시아 훈련'이라는 주장은 사실 아님. EU·NATO 병행 훈련.","note_en":"The 'Russian exercise' claim is false; it is an EU–NATO parallel exercise.","src":[29,30]},
+  {"ko":"FEMA 17억 달러 대비 지원","en":"FEMA $1.7B preparedness grants","v":"unv","note_ko":"FEMA 공지는 있으나 17억 달러 총액은 확인하지 못함. 확인된 것은 국토안보 보조금(HSGP) 15억 달러.","note_en":"FEMA bulletins exist, but the $1.7B total could not be confirmed. Confirmed: $1.5B Homeland Security Grant Program.","src":[31,32]}
+ ],
+ "claims": [
+  {"ko":"여러 나라가 같은 전쟁을 동시에 예고하고 있다","en":"Several countries are jointly signalling the same war","v":"false","note_ko":"각국 정책의 시작 시점·배경이 다르고, 공동 경고 문서는 없음.","note_en":"Policies started at different times for different reasons; no joint warning exists."},
+  {"ko":"미군 기지는 이미 모두 90일 자립 상태다","en":"All US bases are already 90-day self-sufficient","v":"false","note_ko":"계획 목표이며 현재 능력이 아님.","note_en":"It is a goal, not a current capability."},
+  {"ko":"정부가 비축 캠페인으로 공포를 조성해 국민을 통제하려 한다","en":"Governments use stockpile campaigns to spread fear and control people","v":"nobasis","note_ko":"근거 자료 없음. 공식 안내는 정전·사이버 공격·기상 재해 대비를 명시.","note_en":"No evidence. Official guidance cites power cuts, cyber attacks and weather."}
+ ],
+ "sources": [
+  {"t":"Wikipedia — 2026 Strait of Hormuz crisis (for reference; check the original footnotes)","u":"https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis","tier":3},
+  {"t":"Al Jazeera — Iran says two tankers catch fire after hitting mines (2026-10-18)","u":"https://www.aljazeera.com/news/2026/10/18/iran-says-two-tankers-catch-fire-after-hitting-mines-in-strait-of-hormuz","tier":2},
+  {"t":"AP/PBS — U.S. strikes Iranian rocket launchers on the Strait of Hormuz (2026-08-30)","u":"https://www.pbs.org/newshour/world/ap-report-u-s-forces-strike-iranian-rocket-launchers-on-the-strait-of-hormuz-in-first-military-action-in-weeks","tier":2},
+  {"t":"Fox News live — US-Iran war, oil prices, Strait of Hormuz (2026-10-30; citing UKMTO and Reuters)","u":"https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26","tier":2},
+  {"t":"intellinews — Iran says two tankers hit mines as US denies claim","u":"https://www.intellinews.com/iran-says-two-tankers-hit-mines-in-strait-of-hormuz-as-us-denies-claim-455372/","tier":2},
+  {"t":"ISW — Russian Offensive Campaign Assessment (2026-10-21)","u":"https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-october-21-2026","tier":2},
+  {"t":"Zelenskyy says he would consider freezing front lines (2026-10-21)","u":"https://political.org/2026/10/21/zelenskyy-says-he-would-consider-freezing-front-lines-to-end-russia-war/","tier":3},
+  {"t":"Hürriyet Daily News (AFP) — Russia open to mini Ukraine ceasefires","u":"https://www.hurriyetdailynews.com/russia-says-open-to-mini-ukraine-ceasefires-but-no-let-up-in-war-228616","tier":2},
+  {"t":"Ahram Online — Russia open to mini Ukraine ceasefires","u":"https://english.ahram.org.eg/News/580935.aspx","tier":2},
+  {"t":"Korea Times — US Pacific Command says N. Korea fired 2 ballistic missiles (2026-10-13)","u":"https://www.koreatimes.co.kr/southkorea/defense/20261013/us-pacific-command-says-n-korea-fired-2-ballistic-missiles-reaffirms-defense-commitment","tier":2},
+  {"t":"Asia News Network — North Korea fires ballistic missiles, JCS","u":"https://asianews.network/?p=307358","tier":2},
+  {"t":"Focus Taiwan (CNA) — PLA drills 12–17 Oct, MND figures","u":"https://focustaiwan.tw/politics/202610120006","tier":2},
+  {"t":"ASPI — Tracker of China's military exercises around Taiwan","u":"https://www.pressurepoints.aspi.org.au/taiwan-and-the-taiwan-strait/chinas-military-coercion/chinas-large-scale-exercises-since-2022","tier":2},
+  {"t":"Sinclair Fact Check Team — renewed Israel-Hezbollah fighting","u":"https://wjla.com/news/nation-world/gallery/fact-check-team-renewed-israel-hezbollah-fighting-in-lebanon-tests-fragile-ceasefire-political-organization-iran-prime-minister-benjamin-netanyahu-military-civilians?photo=1","tier":2},
+  {"t":"Fox News — Inside the Pentagon's doomsday plan (2026-10-25)","u":"https://foxnews.com/politics/inside-pentagons-doomsday-plan-keep-america-fighting-global-war-erupts.amp","tier":2},
+  {"t":"The War Zone — 90 Days No Help (2026-10-26)","u":"https://www.twz.com/nuclear/90-days-no-help-fortress-americas-goal-to-make-bases-resilient-bastions-in-a-crisis","tier":2},
+  {"t":"Fortune — Pentagon FORTRESS bases 90 days (2026-10-26)","u":"https://fortune.com/2026/10/26/pentagon-fortress-bases-90-days-off-grid-uk-be-ready-stockpile/","tier":2},
+  {"t":"The Defense Post — US domestic drone shield (2026-10-05)","u":"https://thedefensepost.com/2026/10/05/us-domestic-drone-shield/","tier":2},
+  {"t":"Defense Daily — JIATF-401, Army counter-drone contracts","u":"https://www.defensedaily.com/jiatf-401-army-establish-7-billion-in-counter-drone-contracts-for-domestic-shield/unmanned-systems/","tier":2},
+  {"t":"HigherGov — J&J Contractors $132M Cape Cod SFS (W912WJ26CA019)","u":"https://www.highergov.com/news/j-j-contractors-wins-132-million-cape-cod-space-6490071/","tier":2},
+  {"t":"SAM 공고 — Cape Cod SFS Power Generation Microgrid (USACE)","u":"https://govcontractfinder.com/contracts/construction-services-of-a-power-generation-microgrid-at-cap-W912WJ26RA003","tier":3},
+  {"t":"Oman Observer — Be ready for emergencies, tells UK govt (2026-10-26)","u":"https://www.omanobserver.om/article/1198428/world/be-ready-for-emergencies-tells-uk-govt","tier":2},
+  {"t":"IBTimes UK — UK households prepare three days","u":"https://www.ibtimes.co.uk/uk-households-prepare-three-days-disruption-1827455","tier":2},
+  {"t":"Rijksoverheid — 정보 안내서 발표 (2025-11-17)","u":"https://www.rijksoverheid.nl/actueel/nieuws/2025/11/17/minister-van-oosten-presenteert-informatieboekje-bereid-je-voor-op-een-noodsituatie","tier":1},
+  {"t":"Rijksoverheid — 새 Denk Vooruit 캠페인 (2026-10-12)","u":"https://www.rijksoverheid.nl/actueel/nieuws/2026/10/12/nieuwe-denk-vooruit-campagne-om-extra-aandacht-te-vragen-om-voor-te-bereiden-op-noodsituatie","tier":1},
+  {"t":"Irish Times — Government's emergency booklet (2026-09-17)","u":"https://www.irishtimes.com/life-style/2026/09/17/governments-emergency-booklet-what-is-in-it-and-how-does-it-compare-to-eu-countries/","tier":2},
+  {"t":"Leitrim County Council — Be Emergency Ready toolkit","u":"https://www.leitrim.ie/council/news/be-emergency-ready-toolkit-lauched.html","tier":1},
+  {"t":"nippon.com (Jiji) — Japan to Launch Disaster Management Agency Nov. 2","u":"https://www.nippon.com/en/news/yjj2026092500414/","tier":2},
+  {"t":"IBTimes UK — Japan urges week-long emergency supplies","u":"https://www.ibtimes.co.uk/japan-households-three-days-emergency-supplies-1828131","tier":3},
+  {"t":"EEAS — Exercise EU Integrated Resolve 2026","u":"https://www.eeas.europa.eu/node/468382_de","tier":1},
+  {"t":"Lovguiden — EU Integrated Resolve 2026, 5주 훈련 (2026-10-19)","u":"https://www.lovguiden.dk/en/det-offentlige/raadet-for-den-europaeiske-union/2026-10-19-eu-integrated-resolve-2026-eu-oever-hybrid-krisestyring-i-fem-uger","tier":2},
+  {"t":"FEMA Bulletin — week of 2026-09-30","u":"https://content.govdelivery.com/accounts/USDHSFEMA/bulletins/42d126d","tier":1},
+  {"t":"HSToday — FEMA announces $1.5B HSGP","u":"https://www.hstoday.us/subject-matter-areas/emergency-preparedness/fema-announces-1-5b-to-empower-communities-to-prevent-terrorism-and-protect-american-infrastructure/","tier":2}
+ ]
+}

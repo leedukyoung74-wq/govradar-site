@@ -1,0 +1,69 @@
+{
+"summary": "Chính phủ Algeria đã xem xét dự luật tài chính 2027 vào ngày 30/9/2026 và chuyển lên Hội đồng Bộ trưởng vào tháng 10, tập trung vào bảo vệ sức mua và phát triển các ngành phi dầu khí. Hoàn thành tuyến đường sắt phía nam Algiers-Tamanrasset trước cuối năm 2028 là dự án hàng đầu của tổng thống.",
+"leader": "Tổng thống Abdelmadjid Tebboune / Thủ tướng Sifi Ghrieb (chính thức bổ nhiệm tháng 9/2025)",
+"agenda": [
+"Đợt cuối cùng của cam kết tăng gấp đôi lương công chức và bảo vệ sức mua",
+"Không áp thuế mới đối với hộ gia đình thu nhập thấp và trung bình",
+"Giảm phụ thuộc vào hydrocarbon và đầu tư vào các ngành sản xuất",
+"Mở rộng mạng lưới đường bộ, đường sắt và cắt giảm chi phí logistics",
+"Cơ chế đầu tư một cửa, đơn giản hóa thủ tục thuế và dịch vụ công trực tuyến"
+],
+"projects": [
+{
+"title": "Dự luật tài chính 2027 (PLF 2027)",
+"detail": "Bao gồm đợt tăng lương cuối cùng (53% của cam kết) và duy trì chi tiêu xã hội cho trường học, y tế và nhà ở",
+"status": "Nội các/Quốc hội đang xem xét"
+},
+{
+"title": "Tuyến đường sắt phía nam Laghouat-El Meniaa-In Salah-Tamanrasset",
+"detail": "Tuyến phía nam dài hơn 2.000 km; tổng thống chỉ đạo khởi công ngay và hoàn thành trước cuối năm 2028",
+"status": "Đang triển khai"
+},
+{
+"title": "Đoạn đường sắt Ghardaïa-El Meniaa (230 km)",
+"detail": "Do AfDB và AIIB tài trợ; gói thầu nhà thầu quốc tế đóng thầu vào tháng 6/2026",
+"status": "Đã đóng thầu (đang đánh giá)"
+},
+{
+"title": "Algeria Bid Round 2026 (thăm dò hydrocarbon)",
+"detail": "Bảy khu vực thăm dò mới được mở cho nhà đầu tư nước ngoài, mục tiêu ký hợp đồng với Sonatrach trước cuối tháng 1/2027",
+"status": "Đang đấu thầu"
+}
+],
+"biz": [
+{
+"title": "PMC và công cụ lập tiến độ số cho chương trình đường sắt quy mô lớn",
+"why": "Với thời hạn năm 2028, nhiều đoạn tuyến khởi công cùng lúc.",
+"target": "Bộ Công chính, ANESRIF"
+},
+{
+"title": "Tư vấn tự động hóa quy trình cho chính phủ điện tử và cơ chế đầu tư một cửa",
+"why": "Dự luật tài chính nêu rõ dịch vụ công trực tuyến và vận hành đầy đủ cơ chế một cửa.",
+"target": "Cơ quan xúc tiến đầu tư, Bộ Tài chính, cơ quan thuế"
+},
+{
+"title": "Hỗ trợ SME Hàn Quốc thâm nhập Algeria (đối tác địa phương, đăng ký mua sắm công)",
+"why": "Đầu tư công liên tục tạo cơ hội cung cấp thiết bị và vật tư (ước tính).",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc nhắm tới Algeria"
+},
+{
+"title": "Phân tích rủi ro địa phương cho doanh nghiệp cân nhắc tham gia vòng đấu thầu thăm dò",
+"why": "Hạn nộp hồ sơ dự thầu cho bảy lô là ngày 26/11.",
+"target": "Doanh nghiệp đang cân nhắc dự thầu"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Algiers",
+"detail": "Hỗ trợ thông tin thị trường, quy định nhập khẩu và tìm kiếm người mua."
+},
+{
+"title": "Hỗ trợ xây dựng và hạ tầng ở nước ngoài",
+"detail": "Hỗ trợ nghiên cứu khả thi và đầu tư vào đường sắt và các hạ tầng khác."
+},
+{
+"title": "Export Voucher",
+"detail": "Chi trả chi phí biên dịch tiếng Pháp, chứng nhận và tư vấn."
+}
+]
+}

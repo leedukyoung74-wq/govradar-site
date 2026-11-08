@@ -1,0 +1,79 @@
+{
+"summary": "Dans l'année qui a suivi le passage de l'ouragan Melissa en octobre 2025, le gouvernement a consacré environ 84 milliards J$ à la reconstruction et vise à clore la phase de relèvement d'ici janvier 2027. Le budget 2026/27 d'environ 1 400 milliards J$ a introduit les premières nouvelles mesures de recettes depuis huit ans.",
+"leader": "Chef de l'État : le roi Charles III (gouverneur général Sir Patrick Allen) ; Premier ministre Andrew Holness (réélu en septembre 2025)",
+"agenda": [
+"Rétablir les logements, les écoles et l'électricité après l'ouragan Melissa (fin de la phase de relèvement en janvier 2027)",
+"Maintenir la stabilité budgétaire et lever de nouvelles recettes, principalement fondées sur la consommation",
+"Transition énergétique, avec l'acquisition de 300 MW de renouvelables et de 150 MW de batteries",
+"Hausse des investissements dans la santé et l'éducation",
+"Renforcement de la sécurité publique (budget de la sécurité nationale accru)"
+],
+"projects": [
+{
+"title": "Subventions ROOFS pour la réparation des toitures",
+"detail": "75 000-500 000 J$ par ménage selon le niveau de dégâts ; 118 000 ménages ; 90 % doivent être servis d'ici décembre 2026",
+"status": "En cours"
+},
+{
+"title": "Réparation des écoles",
+"detail": "144 des 308 écoles de priorité 1 entièrement remises en état",
+"status": "En cours"
+},
+{
+"title": "Prêt pour la restauration du réseau de JPS",
+"detail": "Prêt à la compagnie d'électricité pour la remise en état",
+"status": "En cours"
+},
+{
+"title": "Acquisition de 300 MW de renouvelables + 150 MW de batteries",
+"detail": "Plus grand appel d'offres électrique prévu ; appel à propositions reporté au T4 2026",
+"status": "Prévu"
+},
+{
+"title": "Logements semi-permanents",
+"detail": "Logements semi-permanents pour les habitants déplacés",
+"status": "En cours"
+},
+{
+"title": "Équipe britannique d'experts en reconstruction",
+"detail": "Spécialistes de l'UK Delivery Team déployés avec un partage égal des coûts ; signature prévue lors du CHOGM",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Plateforme de données et d'automatisation pour le versement des aides aux sinistrés",
+"why": "La vérification et la réévaluation de 118 000 ménages doivent être achevées d'ici janvier 2027.",
+"target": "Ministère du Travail et de la Sécurité sociale, ODPEM, collectivités locales"
+},
+{
+"title": "PMO de reconstruction et conseil en passation de marchés",
+"why": "Les capacités de mise en œuvre sont si sollicitées que le gouvernement fait appel à des experts britanniques.",
+"target": "Cabinet du Premier ministre, ministère de la Croissance économique et des Infrastructures"
+},
+{
+"title": "Analyse par IA pour la réduction des pertes électriques et la gestion de la demande",
+"why": "Une mission de conseil sur la réduction des pertes et l'analyse de la demande fait déjà l'objet d'un appel d'offres.",
+"target": "Ministère de l'Énergie, JPS, GPE"
+},
+{
+"title": "Équipements et contenus pour classes numériques liés à la réparation des écoles",
+"why": "Plus de 164 écoles encore en réparation devront remplacer leurs équipements (estimation).",
+"target": "Ministère de l'Éducation"
+}
+],
+"krsupport": [
+{
+"title": "Coopération de l'ambassade de Corée en Jamaïque",
+"detail": "L'ambassade a organisé avec l'UWI un Forum de coopération future Corée-Jamaïque axé sur les énergies renouvelables."
+},
+{
+"title": "Export Voucher",
+"detail": "Couvre par des bons les frais d'étude des marchés caribéens, de certification et de marketing local."
+},
+{
+"title": "Soutien à l'entrée sur les marchés d'Amérique latine",
+"detail": "En l'absence de bureau dédié à la Jamaïque, la mise en relation avec des acheteurs passe par les bureaux voisins d'Amérique latine (estimation)."
+}
+]
+}

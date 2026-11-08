@@ -1,0 +1,75 @@
+{
+"summary": "Le budget 2026 a augmenté de 14 % pour atteindre 8 816,4 milliards FCFA, associant assainissement budgétaire et mise en œuvre de la SND30 dans un contexte de risque élevé de surendettement. Le président est rentré en août après environ dix semaines à l'étranger, mais en octobre aucun nouveau gouvernement n'avait été nommé.",
+"leader": "Président Paul Biya (investi pour un huitième mandat en novembre 2025) ; Premier ministre Joseph Dion Ngute",
+"agenda": [
+"Mise en œuvre de la Stratégie nationale de développement SND30 (2020-2030)",
+"Assainissement budgétaire conforme aux critères de convergence de la CEMAC",
+"Autonomisation économique des femmes et emploi des jeunes (fonds spécial de 50 milliards FCFA)",
+"Extension du réseau électrique et interconnexions régionales comme celle avec le Tchad",
+"Transformation numérique (PATNuC) et e-gouvernement",
+"Sécurité dans le Nord-Ouest/Sud-Ouest anglophones et l'Extrême-Nord"
+],
+"projects": [
+{
+"title": "Interconnexion électrique Cameroun-Tchad, phase 1",
+"detail": "426 km de lignes 225 kV, nouveau poste de Garoua II ; objectif de transits de 100 MW",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Fonds spécial pour l'autonomisation des femmes et l'emploi des jeunes",
+"detail": "Créé parmi les comptes spéciaux 2026 à la suite d'engagements présidentiels",
+"status": "En cours"
+},
+{
+"title": "Projet d'accélération de la transformation numérique (PATNuC)",
+"detail": "Appuyé par la Banque mondiale ; comprend des cadres gouvernementaux de cybersécurité, de signature électronique et d'ICP",
+"status": "En cours"
+},
+{
+"title": "SMART CAMPUS de l'administration publique (installations de formation à l'e-gouvernement)",
+"detail": "Financé par KOICA ; quatre bâtiments auditorium/exposition pour les écoles de la fonction publique",
+"status": "En cours"
+},
+{
+"title": "Programme de désenclavement et d'interconnexion des bassins économiques transfrontaliers, phase 1",
+"detail": "Réhabilitation routière appuyée par la BAD ; recherche de consultants de supervision",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Programme de formation aux compétences numériques et à l'e-gouvernement pour la fonction publique",
+"why": "Une fois construit, le SMART CAMPUS de KOICA aura besoin de contenus de formation pour fonctionner.",
+"target": "Ministère de la Fonction publique, ENAM, ISMP"
+},
+{
+"title": "Conseil en gestion de programme pour le fonds spécial jeunes et femmes",
+"why": "Le nouveau fonds de 50 milliards FCFA nécessite des systèmes de décaissement et de suivi des résultats.",
+"target": "Ministère des Finances, ministère des PME (MINPMEESA)"
+},
+{
+"title": "Consortium PMC/supervision pour les travaux de transport d'électricité",
+"why": "Après les dates limites de soumission de novembre, 34 mois de travaux devront être supervisés.",
+"target": "Sonatrel, ministère de l'Eau et de l'Énergie"
+},
+{
+"title": "Évaluation de la cybersécurité du secteur public et pilote d'automatisation administrative par IA",
+"why": "Le PATNuC met en place la cybersécurité et l'ICP de l'administration.",
+"target": "Ministère des Postes et Télécommunications, ANTIC"
+}
+],
+"krsupport": [
+{
+"title": "Programme d'e-gouvernement de KOICA au Cameroun",
+"detail": "Dans le cadre d'un accord de 23 milliards FCFA signé en 2024, KOICA réalise des travaux d'e-gouvernement, dont le SMART CAMPUS de la fonction publique."
+},
+{
+"title": "Export Voucher",
+"detail": "Couvre les frais d'étude de marché, de traduction et de marketing local pour l'Afrique centrale francophone."
+},
+{
+"title": "Études de marché à l'étranger et mise en relation avec des acheteurs",
+"detail": "Vérifier l'existence d'un bureau au Cameroun et passer par le bureau commercial le plus proche (estimation)."
+}
+]
+}

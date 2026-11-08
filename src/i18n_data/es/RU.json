@@ -1,0 +1,65 @@
+{
+"summary": "El gobierno de Rusia presentó a la Duma Estatal el 1 de octubre de 2026 su proyecto de presupuesto federal para 2027-2029, que prevé déficits durante tres años más con un fuerte gasto en defensa. Una remodelación del gabinete entre el 19 y el 21 de octubre convirtió además al ministro de Finanzas Siluánov en viceprimer ministro.",
+"leader": "Presidente Vladímir Putin / Primer ministro Mijaíl Mishustin",
+"agenda": [
+"Mantener el gasto en defensa y seguridad (unos RUB 17,15 billones en 2027)",
+"Gasto social en pensiones, salud y educación",
+"Apoyo a la vivienda, como las hipotecas familiares",
+"Infraestructura de transporte y desarrollo de la Ruta Marítima del Norte",
+"Aumentar los ingresos (IVA, etc.) y gestionar el déficit fiscal"
+],
+"projects": [
+{
+"title": "Proyecto de presupuesto federal 2027-2029",
+"detail": "Déficit previsto para 2027 de unos RUB 5,5 billones (alrededor del 2% del PIB), financiado en gran parte con más emisión de bonos",
+"status": "En revisión parlamentaria"
+},
+{
+"title": "Programa estatal de transporte",
+"detail": "Inversión en carreteras, ferrocarriles y otras redes de transporte",
+"status": "Planificado"
+},
+{
+"title": "Subsidios a la hipoteca familiar",
+"detail": "Subsidios de intereses para préstamos hipotecarios preferenciales a familias con hijos",
+"status": "En curso"
+},
+{
+"title": "Gasto en salud y educación",
+"detail": "Unos RUB 1,82 billones para salud y 1,78 billones para educación",
+"status": "Planificado"
+},
+{
+"title": "Actividades espaciales y Ruta Marítima del Norte",
+"detail": "La financiación del programa espacial y el desarrollo de la RMN figuran como prioridades",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Verificación del cumplimiento de sanciones y controles de exportación para pymes coreanas que comercian con Rusia",
+"why": "Las listas de sanciones de Corea, la UE y EE. UU. y los artículos sujetos a licencia cambian constantemente, por lo que hay demanda de verificaciones previas a las operaciones.",
+"target": "Pymes exportadoras coreanas que operan con Rusia/la CEI"
+},
+{
+"title": "Estrategia de mercados alternativos para empresas que reducen su presencia en Rusia",
+"why": "Las empresas que dependen de las ventas en Rusia buscan diversificar el riesgo (estimación).",
+"target": "Fabricantes y exportadores coreanos de bienes de consumo"
+},
+{
+"title": "Soluciones digitales y de IA para organismos gubernamentales y empresas estatales rusas",
+"why": "Existe demanda de administración digital, pero las sanciones y las barreras de pago hacen poco realista que empresas coreanas obtengan contratos.",
+"target": "Ministerios federales y gobiernos regionales"
+}
+],
+"krsupport": [
+{
+"title": "Oficinas comerciales de KOTRA en Rusia (Moscú, etc.)",
+"detail": "Ofrece información sobre el mercado local junto con actualizaciones sobre sanciones y cuestiones aduaneras."
+},
+{
+"title": "Clasificación de bienes estratégicos y verificación de controles de exportación a Rusia (Yestrade)",
+"detail": "Sistema para comprobar si los artículos son bienes estratégicos o requieren una licencia situacional antes de exportarlos."
+}
+]
+}

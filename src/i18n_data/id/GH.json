@@ -1,0 +1,79 @@
+{
+"summary": "Ghana mempertahankan stabilitas harga dan fiskal pasca-program IMF sambil menggunakan dorongan infrastruktur 'Big Push' dan kebijakan ekonomi 24 jam untuk mendongkrak pertumbuhan dan lapangan kerja. Anggaran 2027 dijadwalkan masuk Parlemen pada awal November.",
+"leader": "Presiden John Dramani Mahama (kepala negara dan pemerintahan)",
+"agenda": [
+"Stabilitas makroekonomi: target inflasi 8% (±2pp), surplus primer",
+"Infrastruktur Big Push (jalan dan proyek besar lainnya)",
+"Ekonomi 24 jam (24H+) untuk meningkatkan output dan lapangan kerja",
+"Strategi pertumbuhan 'ekonomi baru' dan promosi investasi",
+"Infrastruktur pendidikan dan penguatan TVET"
+],
+"projects": [
+{
+"title": "Program infrastruktur Big Push",
+"detail": "87 proyek dimulai; 13 di antaranya lebih dari 50% selesai pada akhir Juni 2026",
+"status": "Berjalan"
+},
+{
+"title": "Jalan raya Accra–Kumasi",
+"detail": "Dana dicadangkan khusus dalam rekening bank sentral",
+"status": "Berjalan"
+},
+{
+"title": "Program investasi 'ekonomi baru'",
+"detail": "Akan dimasukkan dalam anggaran 2027 (Menteri Keuangan, Sept 2026)",
+"status": "Direncanakan"
+},
+{
+"title": "Infrastruktur pendidikan",
+"detail": "210 proyek besar direncanakan; 10 SMA baru dengan dukungan Bank Dunia",
+"status": "Berjalan"
+},
+{
+"title": "Pelatihan otomotif Hyundai-KOICA NextGen",
+"detail": "Dua pusat pelatihan perawatan (selesai 2027) dan kurikulum hibrida/EV",
+"status": "Berjalan"
+},
+{
+"title": "Dana pelunasan utang domestik",
+"detail": "Menabung untuk utang domestik yang jatuh tempo pada Februari 2027",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "PMO digital untuk kemajuan dan pengendalian mutu proyek jalan",
+"why": "Lebih dari 87 proyek jalan Big Push berjalan bersamaan.",
+"target": "Kementerian Jalan dan Jalan Raya, Ghana Highway Authority, Department of Feeder Roads"
+},
+{
+"title": "SaaS penjadwalan produksi dan shift bagi produsen dan pengolah kecil",
+"why": "Kebijakan ekonomi 24 jam mendorong operasi multi-shift.",
+"target": "Produsen dan pengolah hasil pertanian yang bergabung dengan 24H+"
+},
+{
+"title": "Konsultasi pengajuan dan penyaringan insentif investasi",
+"why": "Program 'ekonomi baru' sekitar USD 10 miliar diisyaratkan untuk anggaran 2027.",
+"target": "Kementerian Keuangan, GIPC, investor yang masuk"
+},
+{
+"title": "Manajemen pelatihan dan konten digital untuk lembaga TVET",
+"why": "Proyek kerja sama Korea seperti milik KOICA aktif di bidang pelatihan vokasi.",
+"target": "CTVET, universitas teknik dan lembaga pelatihan"
+}
+],
+"krsupport": [
+{
+"title": "Hyundai-KOICA NextGen (Inclusive Business Solution)",
+"detail": "Membangun pusat pelatihan perawatan otomotif dan mendukung lapangan kerja serta start-up pemuda di Ghana hingga 2030."
+},
+{
+"title": "Kewirausahaan pemuda KOICA–UNICEF di Ghana",
+"detail": "Menjalankan program kewirausahaan pemuda di Ghana bersama UNICEF."
+},
+{
+"title": "Export voucher UKM",
+"detail": "Menanggung layanan ekspor seperti riset pasar, penerjemahan, dan sertifikasi melalui voucher."
+}
+]
+}

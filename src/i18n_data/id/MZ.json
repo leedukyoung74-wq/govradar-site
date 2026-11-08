@@ -1,0 +1,80 @@
+{
+"summary": "Pada 13 Okt 2026, kabinet Mozambik menyetujui Rencana Ekonomi dan Sosial serta Anggaran Negara 2027 (PESOE, MZN 511.2 miliar), yang memangkas belanja sekitar 1.8% dari 2026, dan menyerahkannya ke Parlemen. Pertumbuhan diproyeksikan hanya 1.6% pada 2027, namun pemerintah memperkirakan 9.5% pada 2029 jika proyek gas berjalan.",
+"leader": "Presiden Daniel Chapo (sejak Jan 2025) / Perdana Menteri Maria Benvinda Levi",
+"agenda": [
+"Stabilitas makroekonomi dan disiplin fiskal (defisit 2027 4.6% PDB, pinjaman domestik dibatasi 1.9%)",
+"Peningkatan produksi dalam negeri, diversifikasi, dan pengolahan mineral di dalam negeri",
+"Pembiayaan UKM melalui Local Economic Development Fund (FDEL) dan PRO-MULHER",
+"Peluncuran Mozambique Development Bank (BDM) pada 2027 untuk energi, pertanian, industri, dan pariwisata",
+"Kontrak kinerja aparatur sipil, pemberantasan korupsi, dan sikap tegas terhadap perdagangan narkoba",
+"Perluasan proyek gas Cabo Delgado dan pemulihan keamanan"
+],
+"projects": [
+{
+"title": "Rencana Ekonomi dan Sosial serta Anggaran Negara 2027 (PESOE)",
+"detail": "Pendapatan MZN 427.8bn (23.5% PDB), defisit sekitar MZN 83bn, investasi MZN 79.6bn; menunggu pembahasan parlemen",
+"status": "Direncanakan"
+},
+{
+"title": "Mozambique Development Bank (BDM)",
+"detail": "Mulai beroperasi pada 2027, berfokus pada energi, pertanian, industri, dan pariwisata",
+"status": "Direncanakan"
+},
+{
+"title": "Dana FDEL dan PRO-MULHER",
+"detail": "Pendanaan bagi UKM lokal dan wirausaha perempuan",
+"status": "Direncanakan"
+},
+{
+"title": "Desain dan pembangunan Koridor N1 Chimuara-Nicoadala Lot 1 (0-88 km)",
+"detail": "Program Safer Roads Bank Dunia, provinsi Zambezia",
+"status": "Dalam tender"
+},
+{
+"title": "LNG cekungan Rovuma",
+"detail": "Kilang terapung sudah mengekspor; Rovuma LNG yang dipimpin ExxonMobil direncanakan; pendapatan LNG sekitar MZN 3.07bn diharapkan pada 2027",
+"status": "Berjalan"
+},
+{
+"title": "Komitmen konferensi mineral Nacala",
+"detail": "Sekitar US$4.2bn dikomitmenkan pada Okt 2026; Presiden berjanji meninjau realisasinya",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi penilaian kapabilitas dan kesiapan sertifikasi bagi UKM lokal pemasok proyek gas",
+"why": "Gubernur Cabo Delgado mendesak proyek-proyek besar untuk membangun hubungan berkelanjutan dengan perusahaan lokal.",
+"target": "UKM lokal, operator proyek gas"
+},
+{
+"title": "Sistem digital penilaian dan pemantauan pinjaman untuk BDM dan FDEL",
+"why": "Bank kebijakan dan dana UKM baru mulai beroperasi pada 2027.",
+"target": "Kementerian Ekonomi dan Keuangan, BDM"
+},
+{
+"title": "Perangkat (toolkit) dan pelatihan penstrukturan PPP skala kecil untuk sampah dan air",
+"why": "Enabel telah melelang toolkit PPP sampah skala kecil dan dukungan hukum.",
+"target": "Pemerintah kota, Kementerian Pekerjaan Umum"
+},
+{
+"title": "Dasbor pemantauan kontrak kinerja aparatur sipil",
+"why": "Pemerintah menyatakan akan memeriksa hasil kontrak kinerja (19 Okt 2026).",
+"target": "Kantor Perdana Menteri, Kementerian Administrasi Negara"
+}
+],
+"krsupport": [
+{
+"title": "Proyek ketahanan bencana dan kohesi sosial KOICA-UNDP",
+"detail": "KOICA mendanai US$6.5 juta untuk peringatan dini dan mata pencaharian di lima provinsi termasuk Cabo Delgado, berlangsung hingga Maret 2028."
+},
+{
+"title": "Korea-Africa AI Hub dan K-AI Package",
+"detail": "Kerangka kerja sama AI, pusat data, dan ketenagalistrikan yang terkait EDCF, dipresentasikan di KOAFEC 2026."
+},
+{
+"title": "Dukungan masuk pasar Afrika KOTRA",
+"detail": "Riset pasar dan penjodohan pembeli melalui kantor dagang yang membawahi wilayah tersebut (kantor yang membawahi Mozambik masih perlu dikonfirmasi)."
+}
+]
+}

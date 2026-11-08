@@ -1,0 +1,85 @@
+{
+"summary": "Sau chiến thắng áp đảo của BNP trong cuộc bầu cử tháng 2/2026, chính phủ của Thủ tướng Tarique Rahman đang sử dụng ngân sách kỷ lục 9,38 nghìn tỷ Tk để kiềm chế giá cả, mở rộng an sinh xã hội như Thẻ Gia đình (Family Card) và cải thiện môi trường đầu tư. Invest Bangladesh, cơ quan hợp nhất BIDA, BEZA và PPPA, hiện đóng vai trò cơ quan đầu tư một cửa.",
+"leader": "Tổng thống Mohammed Shahabuddin / Thủ tướng Tarique Rahman (BNP, nhậm chức từ 2026-02-17)",
+"agenda": [
+"Ổn định giá hàng thiết yếu và nguồn cung điện/khí đốt",
+"Mở rộng an sinh xã hội (Thẻ Gia đình, Thẻ Nông dân)",
+"Ra mắt Invest Bangladesh và kế hoạch 180 ngày cải thiện môi trường kinh doanh",
+"Tỷ trọng năng lượng tái tạo 20% trong sản xuất điện vào năm 2030",
+"Chống tham nhũng và khôi phục trật tự pháp luật",
+"Chuẩn bị tốt nghiệp nhóm LDC (đã đề nghị hoãn đến năm 2029)"
+],
+"projects": [
+{
+"title": "Ngân sách tài khóa 2026-27",
+"detail": "Lớn nhất từ trước đến nay; thâm hụt 2,51 nghìn tỷ Tk (3,6% GDP), mục tiêu tăng trưởng 6,5%",
+"status": "Đang triển khai"
+},
+{
+"title": "Ra mắt Invest Bangladesh",
+"detail": "Cơ quan đầu tư duy nhất trực thuộc Văn phòng Thủ tướng (PMO), hợp nhất BIDA, BEZA và PPPA; vận hành nền tảng cấp phép một cửa Banglabiz",
+"status": "Đang triển khai"
+},
+{
+"title": "Chiến lược Phát triển Năng lượng Tái tạo Quốc gia",
+"detail": "20% năng lượng tái tạo và tiết kiệm 15% điện năng vào năm 2030; được nội các phê duyệt về nguyên tắc vào tháng 7/2026",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Quỹ SME và quỹ thanh niên",
+"detail": "Quỹ SME 20 tỷ Tk, quỹ phát triển khởi nghiệp 2,25 tỷ Tk, kinh tế sáng tạo thanh niên 3 tỷ Tk",
+"status": "Đang triển khai"
+},
+{
+"title": "Bến container New Mooring Chattogram",
+"detail": "DP World sẽ hiện đại hóa và vận hành; quyền sở hữu và kiểm soát vẫn thuộc cảng vụ",
+"status": "Đang triển khai"
+},
+{
+"title": "Cầu đường sắt-đường bộ Karnaphuli",
+"detail": "Cầu và đường dẫn tại Chattogram; khoản vay EDCF/EDPF của Hàn Quốc 810 triệu USD (tổng vốn 1,24 tỷ USD)",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Chatbot AI và sàng lọc hồ sơ tự động cho cấp phép đầu tư",
+"why": "Cơ quan mới hợp nhất phải sớm cho thấy kết quả theo kế hoạch 180 ngày.",
+"target": "Invest Bangladesh (PMO), nhóm vận hành nền tảng Banglabiz"
+},
+{
+"title": "Gói tuân thủ thẩm định chuỗi cung ứng EU và ESG cho SME may mặc/xuất khẩu",
+"why": "Việc tốt nghiệp nhóm LDC sẽ cắt giảm ưu đãi thương mại trong khi quy định chuỗi cung ứng của EU ngày càng chặt chẽ.",
+"target": "SME xuất khẩu, hội viên BGMEA, Bộ Thương mại"
+},
+{
+"title": "Đào tạo AI thực hành cho công chức và thanh niên",
+"why": "KOICA khởi động chương trình nhân lực AI vào năm 2026, tạo nhu cầu đào tạo theo mô hình Hàn Quốc.",
+"target": "Vụ ICT, các cơ sở đào tạo kỹ thuật, đơn vị thực hiện của KOICA"
+},
+{
+"title": "Hệ thống đăng ký và loại trùng đối tượng hưởng thẻ phúc lợi",
+"why": "Việc mở rộng Thẻ Gia đình và Thẻ Nông dân làm tăng khối lượng quản lý đối tượng thụ hưởng.",
+"target": "Bộ Phúc lợi Xã hội, Bộ Tài chính, chính quyền địa phương"
+},
+{
+"title": "Kiểm toán năng lượng nhà máy, tòa nhà và quản lý nhu cầu",
+"why": "Tình trạng thiếu khí đốt và điện vẫn kéo dài, và chính phủ đặt mục tiêu tiết kiệm 15% điện năng vào năm 2030.",
+"target": "Bộ Điện lực/Năng lượng, doanh nghiệp trong khu công nghiệp"
+}
+],
+"krsupport": [
+{
+"title": "Năm dự án mới của KOICA tại Bangladesh (96 triệu USD)",
+"detail": "Nhân lực AI, giảm nghèo theo mô hình Saemaul, trung tâm an ninh mạng AI và kỹ năng tái chế tàu biển, triển khai theo giai đoạn từ năm 2026."
+},
+{
+"title": "Khoản vay EDCF cho cầu Karnaphuli",
+"detail": "720 triệu USD EDCF cộng 90 triệu USD EDPF, là dự án EDCF đơn lẻ lớn nhất cho đến nay."
+},
+{
+"title": "Dự án kho dữ liệu thống kê của KOICA",
+"detail": "9,65 triệu USD cho kho dữ liệu thống kê quốc gia và nền tảng dữ liệu lớn tại Cục Thống kê Bangladesh."
+}
+]
+}

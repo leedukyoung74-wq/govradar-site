@@ -1,0 +1,74 @@
+{
+"summary": "Pemerintahan Marcos mengusulkan anggaran 2027 sebesar P7.2tn untuk memulihkan pertumbuhan yang melambat akibat skandal korupsi pengendalian banjir, dengan menaikkan belanja pekerjaan umum sambil memangkas pendidikan dan kesehatan. DPR telah mengesahkannya dan Senat sedang meninjaunya, sementara sidang pemakzulan Wakil Presiden Sara Duterte (dimulai Juli) dan KTT ASEAN November di Manila mendominasi kalender politik.",
+"leader": "Presiden Ferdinand Marcos Jr. (kepala negara dan kepala pemerintahan)",
+"agenda": [
+"Pemulihan ekonomi dan normalisasi belanja infrastruktur (target pertumbuhan 5–6% untuk 2027–2030)",
+"Penyelidikan korupsi pengendalian banjir dan peningkatan transparansi anggaran",
+"Keketuaan ASEAN 2026 (KTT November di Manila)",
+"Digitalisasi layanan pemerintah untuk memperbaiki iklim usaha dan menekan korupsi",
+"Respons terhadap harga energi dan stabilitas biaya hidup"
+],
+"projects": [
+{
+"title": "National Expenditure Program (NEP) 2027",
+"detail": "P7.2tn (sekitar US$118bn, 21.7% PDB), naik 6% dari 2026; anggaran 2026 diberlakukan kembali jika tidak disahkan hingga akhir tahun",
+"status": "Dalam peninjauan Senat"
+},
+{
+"title": "Anggaran DPWH",
+"detail": "Dipulihkan dengan kenaikan 22% setelah dipangkas sekitar 40% pada 2026 di tengah dugaan korupsi",
+"status": "Direncanakan"
+},
+{
+"title": "Anggaran pendidikan dan kesehatan",
+"detail": "Pendidikan P1.15tn (turun 11.5%), kesehatan P353.8bn (turun 21%), menuai kritik atas pemangkasan layanan sosial",
+"status": "Direncanakan"
+},
+{
+"title": "Hub manufaktur New Clark City",
+"detail": "Lahan 1,620 ha di Tarlac ditetapkan sebagai hub rantai pasok semikonduktor dan logam tanah jarang dalam inisiatif Pax Silica yang dipimpin AS",
+"status": "Direncanakan"
+},
+{
+"title": "Panay-Guimaras-Negros Island Bridges",
+"detail": "Proyek jembatan antarpulau yang dibiayai pinjaman EDCF Korea Eximbank sebesar US$56.6m",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Dasbor pemantauan kemajuan dan belanja proyek infrastruktur",
+"why": "Tuntutan transparansi pekerjaan umum meningkat setelah skandal pengendalian banjir, dan anggaran DPWH telah dipulihkan.",
+"target": "DPWH, Commission on Audit, pemerintah daerah"
+},
+{
+"title": "Chatbot AI dan otomatisasi alur kerja untuk perizinan dan layanan warga LGU",
+"why": "Presiden mendorong layanan pemerintah digital sebagai alat pemberantasan korupsi.",
+"target": "Unit pemerintah daerah (LGU), DICT"
+},
+{
+"title": "Konsultasi kelayakan dan lokasi bagi UKM manufaktur Korea yang masuk ke New Clark City",
+"why": "Lokasi hub rantai pasok semikonduktor dan logam tanah jarang telah ditetapkan dan perekrutan pemasok mulai berjalan.",
+"target": "BCDA, UKM suku cadang dan material Korea"
+},
+{
+"title": "Perangkat pembelajaran digital berbiaya rendah dan otomatisasi administrasi sekolah",
+"why": "Pemangkasan anggaran pendidikan 11.5% menciptakan permintaan akan perangkat efisiensi (perkiraan).",
+"target": "DepEd, sekolah swasta"
+}
+],
+"krsupport": [
+{
+"title": "Pinjaman infrastruktur EDCF untuk Filipina",
+"detail": "Pinjaman EDCF mendanai jembatan dan infrastruktur lain seperti jembatan Panay-Guimaras-Negros, membuka peluang desain dan supervisi."
+},
+{
+"title": "Program KOICA di Filipina",
+"detail": "Filipina telah menjadi mitra utama KOICA selama lebih dari 30 tahun di bidang pertanian, pendidikan, dan kesehatan."
+},
+{
+"title": "Program Export Voucher",
+"detail": "Voucher menanggung riset pasar, sertifikasi, dan pemasaran lokal untuk masuk ke Filipina."
+}
+]
+}

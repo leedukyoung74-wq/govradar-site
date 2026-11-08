@@ -1,0 +1,71 @@
+{
+"summary": "Trước thềm cuộc bầu cử năm 2027, chính phủ của Thủ tướng Fico đang thúc đẩy một tổ máy hạt nhân mới, phát triển vùng và mở rộng nhà cho thuê do nhà nước hỗ trợ. Căng thẳng trong liên minh vẫn kéo dài sau đề xuất hồi tháng 9 về việc bãi nhiệm Bộ trưởng Môi trường, và hiện ông Fico kiêm quyền Bộ trưởng Môi trường.",
+"leader": "Tổng thống Peter Pellegrini / Thủ tướng Robert Fico (liên minh do Smer-SD dẫn dắt)",
+"agenda": [
+"Tổ máy hạt nhân mới tại Bohunice (1.100 MWe, Westinghouse AP1000 của Mỹ)",
+"Giảm gánh nặng giá năng lượng và tiếp tục hỗ trợ năng lượng",
+"Mở rộng nhà cho thuê do nhà nước hỗ trợ",
+"Hỗ trợ phát triển các vùng chậm phát triển (Turiec, Orava, v.v.)",
+"Triển khai các dự án thuộc Kế hoạch Phục hồi EU và số hóa khu vực công",
+"Chuẩn bị ngân sách tài chính công giai đoạn 2027-2029"
+],
+"projects": [
+{
+"title": "Tổ máy hạt nhân mới tại Jaslovské Bohunice",
+"detail": "Ngày 2026-10-28, công ty nhà nước JESS đã ký hợp đồng FEED với Westinghouse; nhà máy sẽ thuộc sở hữu nhà nước hoàn toàn",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Mở rộng nhà cho thuê do nhà nước hỗ trợ",
+"detail": "Bổ sung thêm 151 căn hộ vào hệ thống (công bố ngày 2026-10-20)",
+"status": "Đang triển khai"
+},
+{
+"title": "Hỗ trợ phát triển các vùng phía bắc",
+"detail": "Phê duyệt hơn 2,3 triệu EUR cho Turiec, Orava và miền bắc Slovakia (2026-10-21)",
+"status": "Đang triển khai"
+},
+{
+"title": "Hệ thống trao đổi dữ liệu vân tay Prüm II",
+"detail": "Giải pháp tích hợp và bảo mật cho trao đổi dữ liệu vân tay theo Quy định EU 2024/982",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Nền tảng dịch vụ tích hợp thành phố thông minh",
+"detail": "Liptovský Mikuláš đang mua sắm một kênh số duy nhất cho cư dân",
+"status": "Đang đấu thầu"
+}
+],
+"biz": [
+{
+"title": "Nền tảng dữ liệu thành phố thông minh và dịch vụ công dân bằng AI cho đô thị",
+"why": "Nhiều thành phố đang đồng thời mời thầu các nền tảng dịch vụ và dữ liệu tích hợp.",
+"target": "Chính quyền thành phố (Liptovský Mikuláš, Banská Štiavnica, v.v.)"
+},
+{
+"title": "Tư vấn phân tích chính sách và chiến lược giao thông",
+"why": "Bộ Giao thông đang mời thầu các công việc thống kê, dự báo và chiến lược.",
+"target": "Bộ Giao thông"
+},
+{
+"title": "Hỗ trợ SME linh kiện Hàn Quốc tham gia chuỗi cung ứng hạt nhân",
+"why": "Giai đoạn FEED tạo ra nhu cầu đăng ký nhà cung cấp và hợp tác sớm.",
+"target": "JESS và các doanh nghiệp EPC đối tác"
+},
+{
+"title": "Tư vấn thâm nhập thị trường Slovakia cho nhà sản xuất Hàn Quốc (chuỗi cung ứng ô tô/pin)",
+"why": "Nhu cầu về cơ sở sản xuất tại Trung Âu vẫn ổn định.",
+"target": "SME linh kiện Hàn Quốc"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng Thương mại KOTRA Bratislava",
+"detail": "Cung cấp thông tin thị trường Slovakia và tư vấn về người mua/đầu tư."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Chi trả chi phí chứng nhận ở nước ngoài, nghiên cứu thị trường và tiếp thị thông qua voucher."
+}
+]
+}

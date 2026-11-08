@@ -1,0 +1,74 @@
+{
+"summary": "Le projet de loi de finances 2027 (PLF 2027) du gouvernement Lecornu prévoit 54 Md€ d'effort budgétaire et vise à ramener le déficit à 5 % du PIB en 2027. Faute de majorité à l'Assemblée, le vote sur la partie recettes a été reporté, et le recours à l'article 49.3 ou une motion de censure sont évoqués.",
+"leader": "Président Emmanuel Macron (chef de l'État) / Premier ministre Sébastien Lecornu (chef du gouvernement)",
+"agenda": [
+"Réduction du déficit (objectif de 5 % du PIB en 2027, 54 Md€ d'effort)",
+"Réponse aux prix de l'énergie et des carburants (déblocage des stocks stratégiques de gazole)",
+"Pouvoir d'achat et ajustements fiscaux",
+"Mesures pour la jeunesse et l'éducation en faveur des lycéens et des étudiants",
+"IA et souveraineté industrielle via le plan d'investissement France 2030"
+],
+"projects": [
+{
+"title": "Projet de loi de finances 2027 (PLF 2027)",
+"detail": "54 Md€ d'effort, composés d'environ 43 Md€ de mesures nouvelles et de la prolongation de mesures 2026. Le délai de l'Assemblée expire le 17 novembre et le délai final du Parlement le 17 décembre",
+"status": "En examen parlementaire"
+},
+{
+"title": "Projet de loi de financement de la sécurité sociale 2027 (PLFSS)",
+"detail": "Première lecture en cours à l'Assemblée. Le délai final du Parlement est fixé au 26 novembre",
+"status": "En examen parlementaire"
+},
+{
+"title": "Déblocage de 10 millions de barils de stocks stratégiques de gazole",
+"detail": "Le gouvernement prévoit une baisse des prix de 12 à 18 centimes par litre pendant environ trois mois à compter du 1er novembre",
+"status": "En cours"
+},
+{
+"title": "AMI France 2030 pour des solutions d'IA souveraines destinées aux PME et ETI",
+"detail": "Constitue une liste de fournisseurs d'IA français et européens à recommander aux PME et ETI. Les candidatures restent ouvertes au fil de l'eau après la première vague, sans financement direct",
+"status": "En cours"
+},
+{
+"title": "Taxation accrue des sociétés concessionnaires d'autoroutes et des exploitants d'aéroports",
+"detail": "Mesure du PLF 2027, devant rapporter environ 0,8 Md€",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Conseil en IA pour l'automatisation des processus et l'analyse des dépenses du secteur public",
+"why": "Le PLF 2027 exige 54 Md€ d'économies, ce qui accroît la pression sur l'efficacité des organismes publics.",
+"target": "Secrétariats généraux des ministères, départements et régions, agences publiques"
+},
+{
+"title": "Diagnostics de maturité IA et offres d'automatisation pour les PME (avec un partenaire local)",
+"why": "Le gouvernement encourage l'adoption de l'IA par les PME, mais privilégie les fournisseurs souverains français et européens.",
+"target": "PME et ETI françaises, fédérations professionnelles, OPCO"
+},
+{
+"title": "Accompagnement à l'entrée sur le marché et à la distribution pour les marques coréennes de consommation et de beauté",
+"why": "Les salons réguliers de biens de consommation coréens à Paris ont révélé une demande des acheteurs de la distribution française.",
+"target": "PME coréennes de biens de consommation, distributeurs français"
+},
+{
+"title": "Tableaux de bord de suivi des consommations d'énergie et d'économies",
+"why": "Les coûts des carburants et de l'électricité sont si élevés que l'État a débloqué des stocks stratégiques.",
+"target": "PME, services de gestion des équipements municipaux"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Paris",
+"detail": "Fournit des études du marché français, la mise en relation avec des acheteurs et des conseils sur l'investissement et l'implantation de startups."
+},
+{
+"title": "K-Consumer Goods Fair à Paris (juin 2026)",
+"detail": "185 PME coréennes ont rencontré des acheteurs européens pour des négociations à l'export."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Les bons couvrent le coût de la certification, des études de marché, du marketing et d'autres services d'expansion à l'étranger."
+}
+]
+}

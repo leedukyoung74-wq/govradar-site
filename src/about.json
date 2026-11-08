@@ -1,0 +1,156 @@
+{
+ "ko": {
+  "eb": "BUILD STATUS · 구축 현황",
+  "h": "세계 정부 아젠다 레이더 구축",
+  "lede": "UN 193개국과 자치·특별 지역 정부가 무엇을 사려 하는지, 매일 자동으로 모아 한 화면에 보여 줍니다. 한국 중소·기술기업이 해외 정부 사업 기회를 먼저 찾도록 WMM과 GCSME가 함께 구축했습니다.",
+  "kpi": [
+   [
+    "193",
+    "UN 회원국 전체"
+   ],
+   [
+    "23",
+    "자치·특별 지역"
+   ],
+   [
+    "7",
+    "서비스 언어"
+   ],
+   [
+    "매일",
+    "자동 갱신"
+   ]
+  ],
+  "mods_h": "구축된 기능",
+  "mods": [
+   [
+    "정부 아젠다·사업 폴더",
+    "나라별 핵심 국정 과제, 정부 사업, 공식 공지와 출처"
+   ],
+   [
+    "입찰·ODA·EDCF",
+    "입찰 공고와 마감 캘린더, 개발협력 사업, 우리 회사 적합도"
+   ],
+   [
+    "한국 수주·지원",
+    "한국 기업 수주 사례, KOTRA·KOICA 등 지원 제도, 컨소시엄 매칭"
+   ],
+   [
+    "위험·경제·제재",
+    "재해·전쟁·전염병, 신용등급·환율·K-SURE, 제재 점검"
+   ],
+   [
+    "지구·우주 관측과 대비",
+    "지진·해일·화산·태풍·우주기상·소행성, 가정 비축 키트"
+   ],
+   [
+    "AI 분석·Foresight",
+    "AI 질문, 제안서 초안, 시나리오별 선제 대응 (회원)"
+   ]
+  ],
+  "road_h": "로드맵",
+  "road": [
+   [
+    "완료",
+    "레이더 구축",
+    "193개국·지역 23곳, 회원 기능, 자동 갱신"
+   ],
+   [
+    "진행",
+    "CONNECT 접수 시작",
+    "정부사업 연결·기업 간 연결 의뢰 접수, 검증 후 양측 동의 소개"
+   ],
+   [
+    "진행",
+    "공개 사이트 오픈",
+    "7개 언어 나라별 페이지, 로그인, 알림"
+   ],
+   [
+    "예정",
+    "결제 · PROJECT ROOM",
+    "멤버십 정기결제, 새 프로젝트 팀 구성"
+   ]
+  ],
+  "cta": "레이더 보기",
+  "cta2": "멤버십 안내",
+  "by": "WORLD MAKING MEMBERS × GCSME · Global & Commonwealth SME Club",
+  "asof": "2026년 10월 기준"
+ },
+ "en": {
+  "eb": "BUILD STATUS",
+  "h": "Building the World Government Agenda Radar",
+  "lede": "What the governments of all 193 UN member states and their autonomous regions plan to buy, gathered automatically every day on one screen. Built by WMM and GCSME so SMEs and tech companies can find overseas government opportunities first.",
+  "kpi": [
+   [
+    "193",
+    "UN member states"
+   ],
+   [
+    "23",
+    "Autonomous & special regions"
+   ],
+   [
+    "7",
+    "Languages"
+   ],
+   [
+    "Daily",
+    "Automatic updates"
+   ]
+  ],
+  "mods_h": "What's built",
+  "mods": [
+   [
+    "Government agenda & project files",
+    "Each country's priorities, government projects, official notices and sources"
+   ],
+   [
+    "Tenders · ODA · EDCF",
+    "Tenders with a deadline calendar, development-finance projects, fit scoring"
+   ],
+   [
+    "Korean wins & support",
+    "Korean contract wins, KOTRA/KOICA support schemes, consortium matching"
+   ],
+   [
+    "Risk · economy · sanctions",
+    "Disaster, conflict, epidemic; ratings, FX, K-SURE; sanctions checks"
+   ],
+   [
+    "Earth & space watch, preparedness",
+    "Quakes, tsunamis, volcanoes, storms, space weather, asteroids; home stockpile kit"
+   ],
+   [
+    "AI analysis & Foresight",
+    "AI Q&A, proposal drafts, first-mover playbooks by scenario (members)"
+   ]
+  ],
+  "road_h": "Roadmap",
+  "road": [
+   [
+    "Done",
+    "Radar built",
+    "193 countries, 23 regions, member tools, automatic updates"
+   ],
+   [
+    "Now",
+    "CONNECT intake open",
+    "Government-linked and B2B match requests, verified and introduced with mutual consent"
+   ],
+   [
+    "Now",
+    "Public site launch",
+    "Country pages in 7 languages, sign-in, alerts"
+   ],
+   [
+    "Planned",
+    "Billing · PROJECT ROOM",
+    "Membership subscriptions and new-project team building"
+   ]
+  ],
+  "cta": "Open the radar",
+  "cta2": "Membership",
+  "by": "WORLD MAKING MEMBERS × GCSME · Global & Commonwealth SME Club",
+  "asof": "As of October 2026"
+ }
+}

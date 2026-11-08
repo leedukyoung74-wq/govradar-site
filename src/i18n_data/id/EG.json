@@ -1,0 +1,74 @@
+{
+"summary": "Mesir mempertahankan Perdana Menteri Madbouly dalam perombakan kabinet Februari 2026 yang mengganti menteri perencanaan, investasi, dan TIK. Anggaran TA2026/27 yang disetujui pada Juni (belanja sekitar EGP 5,2 triliun) memadukan pengurangan utang dengan peningkatan belanja pendidikan dan kesehatan.",
+"leader": "Presiden Abdel Fattah el-Sisi / Perdana Menteri Mostafa Madbouly (dipertahankan setelah perombakan Februari 2026)",
+"agenda": [
+"Konsolidasi fiskal: surplus primer 5% PDB, defisit 4,9%, utang 78% PDB pada Juni 2027",
+"Melaksanakan program reformasi IMF dan memangkas utang luar negeri",
+"Peningkatan belanja pembangunan manusia (pendidikan +25%, kesehatan +39,5%)",
+"Menarik investasi manufaktur dan logistik ke Suez Canal Economic Zone",
+"Promosi ekspor (EGP 90 miliar dalam anggaran TA2026/27)",
+"Memperluas produksi energi dan proyek pembangunan daerah"
+],
+"projects": [
+{
+"title": "Anggaran negara TA2026/27",
+"detail": "Belanja EGP 5,178 triliun, investasi publik EGP 553,7 miliar, subsidi dan tunjangan sosial EGP 832,3 miliar",
+"status": "Berjalan"
+},
+{
+"title": "Rencana Pembangunan Ekonomi dan Sosial serta rencana jangka menengah hingga 2029/30",
+"detail": "Disetujui bersama anggaran; menekankan pembangunan manusia dan pembangunan daerah (sekitar EGP 39 miliar)",
+"status": "Berjalan"
+},
+{
+"title": "Dorongan investasi Suez Canal Economic Zone",
+"detail": "117 proyek dan investasi sekitar $7 miliar pada TA2025/26, diperkirakan menciptakan 73.000 lapangan kerja",
+"status": "Berjalan"
+},
+{
+"title": "Program promosi ekspor",
+"detail": "Dana dukungan ekspor dialokasikan dalam anggaran TA2026/27",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Studi kelayakan SCZONE dan konsultasi masuk kawasan",
+"why": "Investasi meningkat pesat dan kawasan tersebut membidik investor Asia.",
+"target": "UKM dan perusahaan menengah manufaktur dan logistik Korea"
+},
+{
+"title": "Konsultasi otomatisasi AI untuk administrasi dan keuangan pemerintah",
+"why": "Target fiskal dan menteri TIK yang baru menunjukkan permintaan atas administrasi digital.",
+"target": "Kementerian Keuangan, Perencanaan, dan TIK"
+},
+{
+"title": "Solusi digital untuk kesehatan dan pendidikan",
+"why": "Belanja kesehatan naik 39,5% dan pendidikan 25%.",
+"target": "Kementerian Kesehatan dan Kependudukan, Kementerian Pendidikan, universitas"
+},
+{
+"title": "Pencocokan eksportir Mesir dengan pembeli Korea",
+"why": "Pemerintah telah mengalokasikan anggaran promosi ekspor yang besar.",
+"target": "Eksportir Mesir, dana pengembangan ekspor"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Kairo",
+"detail": "Mendukung informasi pasar, pencarian pembeli, dan konsultasi investasi termasuk SCZONE."
+},
+{
+"title": "Program kantor KOICA Mesir",
+"detail": "Menjalankan bantuan hibah di bidang pendidikan, kesehatan, dan digital karena Mesir adalah negara mitra prioritas."
+},
+{
+"title": "Pinjaman lunak EDCF",
+"detail": "Menyediakan pinjaman lunak untuk infrastruktur di negara berkembang dan menerbitkan pengumuman pengadaan."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Menanggung biaya konsultasi dan sertifikasi luar negeri melalui voucher."
+}
+]
+}

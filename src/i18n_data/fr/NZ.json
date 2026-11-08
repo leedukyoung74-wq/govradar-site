@@ -1,0 +1,76 @@
+{
+"summary": "La coalition Luxon concentre un budget serré sur la santé, les infrastructures et la formation professionnelle, l'élection du 7 novembre 2026 constituant la principale incertitude. Un Public Service AI Work Programme sur deux ans (2026–2027) est en cours.",
+"leader": "Roi Charles III (chef de l'État) ; Premier ministre Christopher Luxon (chef du gouvernement, coalition menée par le Parti national) — élections générales le 2026-11-07",
+"agenda": [
+"Assainissement budgétaire et réduction des dépenses du secteur public",
+"Développement des services de santé (financement de Pharmac, dépistage du cancer élargi)",
+"Investissements dans les routes, les hôpitaux et les écoles",
+"Davantage de places en formation professionnelle et réforme des programmes scolaires",
+"Recours accru à l'IA dans la fonction publique (Public Service AI Work Programme)",
+"Atténuer la pression sur le coût de la vie"
+],
+"projects": [
+{
+"title": "Budget de la santé 2026/27",
+"detail": "Premier poste du Budget 2026, visant à réduire les délais d'attente et à accroître le dépistage",
+"status": "En cours"
+},
+{
+"title": "Économies sur les dépenses publiques",
+"detail": "Réduction des effectifs du secteur public et des dépenses des agences",
+"status": "En cours"
+},
+{
+"title": "Public Service AI Work Programme",
+"detail": "Plan sur deux ans visant à accélérer l'adoption de l'IA dans l'ensemble de la fonction publique",
+"status": "En cours"
+},
+{
+"title": "Doublement des places en formation professionnelle",
+"detail": "Financé en partie par la suppression du dispositif de gratuité de la première année",
+"status": "En cours"
+},
+{
+"title": "Modernisation de SH76 Brougham Street",
+"detail": "Modernisation d'une route nationale de Christchurch passant à l'étape suivante (2026-10-23)",
+"status": "En cours"
+},
+{
+"title": "Taxe bancaire",
+"detail": "S'applique aux établissements de dépôt à partir de mi-2027",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "PoC d'automatisation par IA et conseil en adoption pour le traitement des dossiers et des documents du secteur public",
+"why": "Le gouvernement accélère l'adoption de l'IA dans le secteur public jusqu'en 2027 pour compenser les suppressions de postes.",
+"target": "Administrations centrales, Crown entities, conseils locaux"
+},
+{
+"title": "Outils numériques pour l'exploitation hospitalière et les services aux patients (repas, prise de rendez-vous, rappels de dépistage)",
+"why": "Health NZ acquiert des solutions numériques régionales via GETS.",
+"target": "Unités régionales de Health New Zealand"
+},
+{
+"title": "Outils IA de gestion de l'apprentissage et d'évaluation pour les organismes de formation",
+"why": "L'augmentation des places en formation professionnelle accroît la charge opérationnelle des organismes.",
+"target": "Ministère de l'Éducation, organismes de formation"
+},
+{
+"title": "Accompagnement des PME coréennes à l'entrée sur le marché néo-zélandais (études, mise en relation avec des partenaires)",
+"why": "La demande à l'exportation de biens de consommation et de produits alimentaires se poursuit dans le cadre de l'ALE Corée–Nouvelle-Zélande.",
+"target": "Importateurs et distributeurs néo-zélandais"
+}
+],
+"krsupport": [
+{
+"title": "Bureau de KOTRA à Auckland",
+"detail": "Accompagne les études de marché en Nouvelle-Zélande, la mise en relation avec des acheteurs et les services de bureau de représentation."
+},
+{
+"title": "Bon d'exportation pour les PME",
+"detail": "Couvre, par des bons, des services à l'exportation tels que les études de marché, la traduction et la certification."
+}
+]
+}

@@ -1,0 +1,71 @@
+{
+"summary": "Dengan proyeksi defisit KD9,8 miliar dalam anggaran 2026/27, Kuwait mendorong reformasi fiskal dan hukum melalui dekret, termasuk peningkatan pendapatan nonmigas, UU sukuk pemerintah, dan UU arbitrase baru. Proyek pelabuhan, bandara, dan air limbah berskala besar serta dorongan pemerintahan digital yang berpusat pada aplikasi Sahel terus berjalan.",
+"leader": "Amir Sheikh Mishal Al-Ahmad Al-Jaber Al-Sabah / Perdana Menteri Sheikh Ahmad Al-Abdullah Al-Ahmad Al-Sabah",
+"agenda": [
+"New Kuwait Vision 2035: diversifikasi dan pertumbuhan nonmigas",
+"Reformasi fiskal dan peningkatan pendapatan nonmigas",
+"Legislasi utang termasuk sukuk pemerintah",
+"UU arbitrase baru untuk sengketa kontrak pemerintah",
+"Pelaksanaan proyek infrastruktur besar",
+"Pemerintahan digital (platform Sahel) dan AI dalam pendidikan"
+],
+"projects": [
+{
+"title": "Anggaran negara TA2026/27",
+"detail": "Pendapatan KD16,3 miliar, belanja KD26,1 miliar, defisit KD9,8 miliar; harga minyak $57",
+"status": "Berjalan"
+},
+{
+"title": "Proyek modal (Pelabuhan Mubarak Al-Kabeer, Bandara T2, instalasi air limbah, dll.)",
+"detail": "Infrastruktur besar dalam anggaran 2026/27, termasuk instalasi air limbah Umm Al-Hayman dan North Kabd",
+"status": "Berjalan"
+},
+{
+"title": "Dekret-undang-undang sukuk pemerintah",
+"detail": "Disetujui Kabinet pada 1 Sep 2026 dan diteruskan kepada Amir",
+"status": "Direncanakan"
+},
+{
+"title": "UU Arbitrase Baru",
+"detail": "Mencakup aturan arbitrase kontrak pemerintah; disetujui Kabinet pada 16 Sep 2026 dan diteruskan kepada Amir",
+"status": "Direncanakan"
+},
+{
+"title": "Pemerintahan digital berbasis cloud dan layanan elektronik terpadu Sahel",
+"detail": "Kerja sama cloud, pusat data, dan keamanan dengan Google Cloud dan Microsoft; Sahel menghubungkan lembaga-lembaga secara elektronik",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Chatbot AI dan otomatisasi pemrosesan dokumen untuk layanan publik",
+"why": "Platform Sahel dan migrasi cloud mendorong permintaan otomatisasi layanan di seluruh kementerian.",
+"target": "Central Agency for Information Technology, kementerian layanan"
+},
+{
+"title": "Asisten belajar AI dan otomatisasi beban kerja guru untuk sekolah",
+"why": "Kabinet mendukung adopsi AI dalam pendidikan.",
+"target": "Kementerian Pendidikan"
+},
+{
+"title": "Konsultasi PMO untuk pengendalian jadwal dan biaya infrastruktur publik",
+"why": "Dengan defisit yang besar, pelaksanaan proyek belanja modal yang efisien menjadi lebih penting.",
+"target": "Kementerian Pekerjaan Umum, Kementerian Komunikasi, lokasi proyek kontraktor Korea"
+},
+{
+"title": "Konsultasi pendapatan nonmigas dan analitik data fiskal",
+"why": "Pemerintah menyoroti reformasi fiskal dan peningkatan pendapatan nonmigas.",
+"target": "Kementerian Keuangan"
+}
+],
+"krsupport": [
+{
+"title": "South Saad Al-Abdullah Smart City",
+"detail": "Kota baru pintar model Korea yang dikembangkan bersama otoritas perumahan Kuwait dan menawarkan jalur masuk bagi UKM Korea (materi 2022)."
+},
+{
+"title": "Kerja sama konstruksi dan dukungan perolehan kontrak Korea-Kuwait",
+"detail": "Dukungan tingkat pemerintah untuk operasi bandara, petrokimia Al-Zour, kota baru Abdullah, dan O&M jalan (materi 2023)."
+}
+]
+}

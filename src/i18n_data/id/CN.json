@@ -1,0 +1,69 @@
+{
+"summary": "Pada tahun pertama Rencana Lima Tahun ke-15 (2026-2030), Tiongkok memprioritaskan kemandirian teknologi, ekonomi digital, dan pengurangan karbon. Dengan pertumbuhan Q3 sebesar 4,5% (4,6% untuk Jan-Sep) dan investasi yang lemah, pemerintah meluncurkan langkah konsumsi berbasis AI, pembukaan sektor jasa, dan kebijakan kependudukan.",
+"leader": "Presiden Xi Jinping (Sekretaris Jenderal PKT); Perdana Menteri Li Qiang",
+"agenda": [
+"Kemandirian teknologi dan 'kekuatan produktif berkualitas baru' (cip, bioteknologi, kuantum)",
+"Peningkatan AI+ untuk perdagangan, konsumsi, dan layanan perawatan",
+"Menghapus hambatan masuk sektor jasa dan memperluas investasi swasta",
+"Respons demografis: masyarakat ramah kelahiran, perluasan pelatihan vokasi",
+"Target hijau mengikat: intensitas karbon 17% lebih rendah, 25% energi nonfosil pada 2030"
+],
+"projects": [
+{
+"title": "Rencana Lima Tahun ke-15 (2026-2030)",
+"detail": "Disetujui NPC pada Maret 2026; belanja litbang tumbuh 7%+ per tahun, industri inti ekonomi digital mencapai 12,5% PDB pada 2030",
+"status": "Berjalan"
+},
+{
+"title": "18 langkah mendorong konsumsi melalui AI dan teknologi",
+"detail": "Logistik pintar dan pengiriman nirawak, agen AI komersial, perawatan lansia dan kesehatan pintar, digitalisasi ritel",
+"status": "Berjalan"
+},
+{
+"title": "Paket sektor jasa dan kependudukan",
+"detail": "Rapat Dewan Negara 2026-10-23: dukungan keuangan, lahan, talenta, dan data, penghapusan hambatan tersembunyi, perluasan pelatihan vokasi",
+"status": "Direncanakan"
+},
+{
+"title": "Target transisi hijau yang mengikat",
+"detail": "Pemangkasan 17% CO2 per unit PDB dan 25% energi nonfosil pada 2030",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi pencocokan pembeli dan listing platform bagi perusahaan barang konsumsi Korea yang masuk ke Tiongkok",
+"why": "KOTRA menetapkan Tiongkok sebagai pasar fokus bagi eksportir pemula sementara Beijing memperluas stimulus konsumsi.",
+"target": "UKM makanan dan kosmetik Korea; importir dan distributor Tiongkok"
+},
+{
+"title": "Otomatisasi operasional toko berbasis AI (inventaris, pesanan, pemasaran) melalui mitra lokal",
+"why": "Sembilan kementerian mendorong agen AI komersial dan digitalisasi ritel.",
+"target": "Jaringan ritel dan restoran UKM Tiongkok"
+},
+{
+"title": "Otomatisasi catatan perawatan dan pemantauan untuk fasilitas perawatan lansia pintar",
+"why": "Penuaan penduduk dan perawatan lansia pintar kini menjadi prioritas kebijakan.",
+"target": "Biro urusan sipil daerah, operator perawatan swasta"
+},
+{
+"title": "Perantara lisensi dan dukungan kontrak untuk IP konten Korea di Tiongkok",
+"why": "Pertemuan bisnis konten Korea-Tiongkok digelar di Beijing pada November.",
+"target": "Distributor dan platform konten Tiongkok"
+}
+],
+"krsupport": [
+{
+"title": "2026 Korea-China Content Industry Business Meeting",
+"detail": "25-27 Nov di Beijing, sekitar 20 perusahaan konten Korea bertemu sekitar 50 pembeli lokal secara empat mata."
+},
+{
+"title": "2026 First Step to Exports Week (Tiongkok termasuk dalam empat pasar fokus)",
+"detail": "Pertemuan video dengan pembeli Tiongkok dan dukungan logistik bagi eksportir barang konsumsi pemula."
+},
+{
+"title": "Kursus masuk pasar KOTRA Academy China (barang konsumsi)",
+"detail": "Pelatihan praktis untuk memasuki pasar konsumen Tiongkok."
+}
+]
+}

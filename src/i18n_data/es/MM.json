@@ -1,0 +1,60 @@
+{
+"summary": "Tras las elecciones generales de 2025-26, en abril de 2026 asumió un nuevo gabinete de 34 miembros encabezado por el presidente Min Aung Hlaing. Ante un crecimiento débil (previsión del Banco Mundial para el ejercicio 2026/27: 2%) y una crisis de precios del combustible, el gobierno subraya la prioridad de los inversores locales, la atracción de IED y la diplomacia económica con la ASEAN.",
+"leader": "Presidente Min Aung Hlaing (elegido por el parlamento el 2026-04-03; jefe de Estado y de Gobierno) · Primer vicepresidente Nyo Saw, segunda vicepresidenta Nan Ni Ni Aye",
+"agenda": [
+"Recuperación económica: priorizar a los inversores locales sin dejar de atraer inversión extranjera",
+"Ampliar los lazos comerciales y de inversión con la ASEAN y los países vecinos (visitas a Malasia, Tailandia e India)",
+"Hacer frente a la escasez de combustible y electricidad y atraer inversión solar y en otras fuentes de energía",
+"Impulsar la manufactura de exportación (calzado, neumáticos, cuero, caucho)",
+"Mantener la seguridad y la estabilidad (prioridad del gasto en defensa y seguridad)"
+],
+"projects": [
+{
+"title": "Nuevo gabinete y reestructuración de ministerios",
+"detail": "Propuesta de 31 ministerios y 30 ministros, seguida del nombramiento del gabinete y de 46 viceministros",
+"status": "Finalizado"
+},
+{
+"title": "Diálogo Empresarial de Alto Nivel Myanmar-Malasia",
+"detail": "Las cámaras de comercio exploraron la cooperación en comercio e inversión durante la visita presidencial",
+"status": "En curso"
+},
+{
+"title": "Atracción de inversión en energía solar y fabricación de paneles",
+"detail": "Ampliación de la inversión solar y de la producción de paneles para aliviar la escasez de electricidad en las zonas industriales",
+"status": "En curso"
+},
+{
+"title": "Ampliación de la manufactura de exportación",
+"detail": "Plan para aumentar la producción de bienes de alta demanda, como calzado y neumáticos, destinados a China, India, Bangladés y la ASEAN",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Servicio de verificación de sanciones y cumplimiento (diligencia debida previa a operaciones en Myanmar)",
+"why": "Las sanciones vigentes de EE. UU., la UE y el Reino Unido, junto con la inclusión en la lista de alto riesgo del GAFI, obligan a las empresas coreanas a verificar a sus contrapartes antes de cualquier operación.",
+"target": "Pymes coreanas que comercian con Myanmar o lo evalúan como destino"
+},
+{
+"title": "Consultoría de estrategia de entrada a través de un hub de la ASEAN (vía Tailandia/Malasia)",
+"why": "Myanmar estrecha sus lazos con los vecinos de la ASEAN, por lo que la entrada a través de un hub en un tercer país es realista.",
+"target": "Pymes coreanas de bienes de consumo y autopartes"
+},
+{
+"title": "Gestión energética de fábricas y estudios de viabilidad de energía solar en techos",
+"why": "La escasez crónica de electricidad en las zonas industriales genera demanda de autogeneración.",
+"target": "Fabricantes privados en las zonas industriales del área de Yangón"
+}
+],
+"krsupport": [
+{
+"title": "Información de mercado de KOTRA Yangón",
+"detail": "Ofrece información sobre tendencias del mercado de Myanmar y su normativa comercial (la situación de las sanciones debe verificarse por separado)."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Los vales cubren servicios de exportación como estudios de mercado y costos legales y de certificación."
+}
+]
+}

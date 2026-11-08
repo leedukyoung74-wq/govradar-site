@@ -1,0 +1,79 @@
+{
+"summary": "Le Ghana préserve la stabilité des prix et des finances publiques acquise après le programme du FMI, tout en s'appuyant sur son programme d'infrastructures « Big Push » et sur sa politique d'économie 24 heures sur 24 pour stimuler la croissance et l'emploi. Le budget 2027 doit être présenté au Parlement début novembre.",
+"leader": "Président John Dramani Mahama (chef de l'État et du gouvernement)",
+"agenda": [
+"Stabilité macroéconomique : cible d'inflation de 8 % (±2 points), excédent primaire",
+"Infrastructures Big Push (routes et autres grands projets)",
+"Économie 24 heures sur 24 (24H+) pour accroître la production et l'emploi",
+"Stratégie de croissance de la « nouvelle économie » et promotion des investissements",
+"Infrastructures éducatives et renforcement de l'EFTP"
+],
+"projects": [
+{
+"title": "Programme d'infrastructures Big Push",
+"detail": "87 projets lancés ; 13 achevés à plus de 50 % fin juin 2026",
+"status": "En cours"
+},
+{
+"title": "Autoroute Accra–Kumasi",
+"detail": "Fonds cantonnés sur un compte de la banque centrale",
+"status": "En cours"
+},
+{
+"title": "Programme d'investissement de la « nouvelle économie »",
+"detail": "Doit figurer dans le budget 2027 (ministre des Finances, septembre 2026)",
+"status": "Prévu"
+},
+{
+"title": "Infrastructures éducatives",
+"detail": "210 grands projets prévus ; 10 nouveaux lycées avec le soutien de la Banque mondiale",
+"status": "En cours"
+},
+{
+"title": "Formation automobile Hyundai-KOICA NextGen",
+"detail": "Deux centres de formation à la maintenance (livraison en 2027) et programmes sur l'hybride/le véhicule électrique",
+"status": "En cours"
+},
+{
+"title": "Fonds d'amortissement de la dette intérieure",
+"detail": "Épargne en vue de la dette intérieure arrivant à échéance en février 2027",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "PMO numérique pour le suivi de l'avancement et le contrôle qualité des projets routiers",
+"why": "Plus de 87 projets routiers Big Push sont menés simultanément.",
+"target": "Ministère des Routes et Autoroutes, Ghana Highway Authority, Department of Feeder Roads"
+},
+{
+"title": "SaaS de planification de la production et des équipes pour les petits fabricants et transformateurs",
+"why": "La politique d'économie 24 heures sur 24 encourage le travail en plusieurs équipes.",
+"target": "Fabricants et agro-transformateurs adhérant au 24H+"
+},
+{
+"title": "Conseil en demandes et instruction des incitations à l'investissement",
+"why": "Un programme de « nouvelle économie » d'environ 10 Md USD est annoncé pour le budget 2027.",
+"target": "Ministère des Finances, GIPC, investisseurs entrants"
+},
+{
+"title": "Gestion de la formation et contenus numériques pour les établissements d'EFTP",
+"why": "Des projets de coopération coréens, comme ceux de KOICA, sont actifs dans la formation professionnelle.",
+"target": "CTVET, universités techniques et instituts de formation"
+}
+],
+"krsupport": [
+{
+"title": "Hyundai-KOICA NextGen (Inclusive Business Solution)",
+"detail": "Construit des centres de formation à la maintenance automobile et soutient l'emploi des jeunes et les start-ups au Ghana jusqu'en 2030."
+},
+{
+"title": "Entrepreneuriat des jeunes au Ghana KOICA–UNICEF",
+"detail": "Mène des programmes d'entrepreneuriat des jeunes au Ghana avec l'UNICEF."
+},
+{
+"title": "Export voucher pour les PME",
+"detail": "Couvre par des bons les services à l'export tels que les études de marché, la traduction et la certification."
+}
+]
+}

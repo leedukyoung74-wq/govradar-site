@@ -1,0 +1,74 @@
+{
+"summary": "Ngày 15/10, Hạ viện đã thông qua Luật Thu ngân sách 2027 với tổng thu 10,6 nghìn tỷ MXN và vay mới 1,7 nghìn tỷ MXN; dự toán chi tiêu (PEF) dự kiến được hoàn tất vào tháng 11. Trong bối cảnh dự báo tăng trưởng bị hạ, chính phủ tăng thu mà không đặt ra thuế mới và sử dụng Plan México để thu hút đầu tư vào khu công nghiệp và dịch chuyển sản xuất gần thị trường (nearshoring).",
+"leader": "Tổng thống Claudia Sheinbaum Pardo (Nguyên thủ quốc gia và Người đứng đầu Chính phủ)",
+"agenda": [
+"Plan México: tăng trưởng sản xuất và đầu tư nearshoring (mục tiêu 100 khu công nghiệp)",
+"Tăng thu không cần thuế mới (chống trốn thuế, chương trình hợp thức hóa thuế 2027)",
+"Duy trì các chương trình phúc lợi Bienestar và kế hoạch khẩn cấp cải thiện IMSS",
+"Đầu tư hạ tầng do đường sắt, Pemex và CFE dẫn dắt",
+"Quản lý đợt rà soát USMCA thường niên và đa dạng hóa thương mại (nghiên cứu chung với Hàn Quốc về hiệp định thương mại)"
+],
+"projects": [
+{
+"title": "Luật Thu ngân sách 2027 (LIF)",
+"detail": "Thu thuế 6,2 nghìn tỷ MXN và vay 1,7 nghìn tỷ MXN; nhu cầu vay của khu vực công (RFSP) 3,9% GDP; hiện đang trình Thượng viện",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Dự toán chi ngân sách liên bang 2027 (PEF)",
+"detail": "Chương trình phúc lợi khoảng 1,03 nghìn tỷ MXN; hạ tầng ưu tiên khoảng 560 tỷ MXN (đường sắt, Pemex, CFE, nước, đường bộ)",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Các khu công nghiệp Plan México",
+"detail": "40 khu đang hoạt động (mục tiêu 100); 20 khu khác được công bố ngày 22/10/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Kế hoạch khẩn cấp cải thiện IMSS (12 hành động)",
+"detail": "Được Tổng thống công bố ngày 27/10/2026; tiến độ sẽ được báo cáo trong bốn tháng tới",
+"status": "Đang triển khai"
+},
+{
+"title": "Sáng kiến hợp tác kinh tế, công nghiệp và tài nguyên Hàn Quốc - Mexico",
+"detail": "Ký kết nhân dịp hội nghị thượng đỉnh ngày 24/9/2026; thành lập ủy ban chung về khoáng sản và tài nguyên, khởi động nghiên cứu sơ bộ chung về hiệp định thương mại",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa thuế và hóa đơn điện tử (CFDI) cho nhà sản xuất Hàn Quốc tại Mexico",
+"why": "Luật Thu ngân sách 2027 dựa vào việc siết chặt thu thuế và hợp thức hóa thuế thay vì đặt ra thuế mới.",
+"target": "Công ty con sản xuất và phân phối của Hàn Quốc tại Mexico, SME địa phương"
+},
+{
+"title": "Triển khai nhà máy thông minh và MES, cùng tư vấn chuỗi cung ứng cho doanh nghiệp trong khu công nghiệp",
+"why": "Các khu công nghiệp Plan México đang tăng nhanh.",
+"target": "Nhà sản xuất trong các khu Plan México, cơ quan phát triển kinh tế cấp bang"
+},
+{
+"title": "Tư vấn quy tắc xuất xứ và tối ưu hóa hải quan đối với thuế quan ngoài FTA",
+"why": "Mexico đã tăng thuế đối với các nước không có FTA, và doanh nghiệp Hàn Quốc đã nêu các vướng mắc hải quan.",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc xuất khẩu sang Mexico"
+},
+{
+"title": "Hỗ trợ đưa hàng tiêu dùng Hàn Quốc lên kênh bán lẻ và thương mại điện tử",
+"why": "KOTRA muốn mở rộng xuất khẩu sang Mexico sang hàng tiêu dùng, và các nhà bán lẻ, nền tảng lớn tại địa phương đã bày tỏ quan tâm tới sản phẩm Hàn Quốc.",
+"target": "SME Hàn Quốc ngành mỹ phẩm, thực phẩm và đồ gia dụng"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng KOTRA tại Mexico City và Monterrey",
+"detail": "Tổ chức hội chợ sản phẩm Hàn Quốc tại Mexico City vào tháng 9/2026 (123 người mua, 730 cuộc gặp) và mở văn phòng Monterrey vào tháng 2/2026."
+},
+{
+"title": "Sáng kiến hợp tác kinh tế, công nghiệp và tài nguyên Hàn Quốc - Mexico",
+"detail": "Thành lập ủy ban chung về khoáng sản và tài nguyên, nỗ lực cải thiện môi trường kinh doanh cho doanh nghiệp Hàn Quốc và khởi động nghiên cứu chung về hiệp định thương mại."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Chi trả chi phí chứng nhận Mexico (NOM), nghiên cứu thị trường và tư vấn bản địa hóa."
+}
+]
+}

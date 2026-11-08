@@ -1,0 +1,74 @@
+{
+"summary": "El 15 de octubre, la Cámara de Diputados aprobó la Ley de Ingresos 2027, con MXN 10,6 billones en ingresos y MXN 1,7 billones de nuevo endeudamiento; el Presupuesto de Egresos (PEF) debe quedar definido en noviembre. Con las previsiones de crecimiento a la baja, el gobierno busca aumentar la recaudación sin nuevos impuestos y utiliza el Plan México para atraer inversión en parques industriales y nearshoring.",
+"leader": "Presidenta Claudia Sheinbaum Pardo (jefa de Estado y de Gobierno)",
+"agenda": [
+"Plan México: crecimiento manufacturero e inversión por nearshoring (meta de 100 parques industriales)",
+"Aumentar los ingresos sin nuevos impuestos (combate a la evasión, programa de regularización fiscal 2027)",
+"Mantener los programas sociales del Bienestar y un plan emergente para mejorar el IMSS",
+"Inversión en infraestructura encabezada por el ferrocarril, Pemex y CFE",
+"Gestionar la revisión anual del T-MEC y diversificar el comercio (estudio conjunto con Corea sobre un acuerdo comercial)"
+],
+"projects": [
+{
+"title": "Ley de Ingresos 2027 (LIF)",
+"detail": "Ingresos tributarios de MXN 6,2 billones y endeudamiento de MXN 1,7 billones; requerimientos financieros del sector público (RFSP) del 3,9% del PIB; actualmente en el Senado",
+"status": "En revisión en el Congreso"
+},
+{
+"title": "Presupuesto de Egresos de la Federación 2027 (PEF)",
+"detail": "Programas sociales por unos MXN 1,03 billones; infraestructura prioritaria por unos MXN 560.000 millones (ferrocarril, Pemex, CFE, agua, carreteras)",
+"status": "Planificado"
+},
+{
+"title": "Parques industriales del Plan México",
+"detail": "40 parques en operación (meta de 100); otros 20 se anunciaron el 22 de octubre de 2026",
+"status": "En curso"
+},
+{
+"title": "Plan emergente de mejora del IMSS (12 acciones)",
+"detail": "Anunciado por la Presidenta el 27 de octubre de 2026; los avances se informarán durante los próximos cuatro meses",
+"status": "En curso"
+},
+{
+"title": "Iniciativa de cooperación económica, industrial y de recursos Corea-México",
+"detail": "Firmada en torno a la cumbre del 24 de septiembre de 2026; crea un comité conjunto de minerales y recursos e inicia un estudio previo conjunto para un acuerdo comercial",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Automatización fiscal y de facturación electrónica (CFDI) para fabricantes coreanos en México",
+"why": "La Ley de Ingresos 2027 se apoya en una recaudación más estricta y en la regularización fiscal, en lugar de nuevos impuestos.",
+"target": "Filiales coreanas de manufactura y distribución en México, pymes locales"
+},
+{
+"title": "Implementación de fábricas inteligentes y MES, además de consultoría de cadena de suministro, para empresas instaladas en parques industriales",
+"why": "Los parques industriales del Plan México se multiplican rápidamente.",
+"target": "Fabricantes en los parques del Plan México, agencias estatales de desarrollo económico"
+},
+{
+"title": "Consultoría en reglas de origen y optimización aduanera frente a aranceles para países sin TLC",
+"why": "México ha elevado los aranceles a países sin TLC, y las empresas coreanas han planteado problemas aduaneros.",
+"target": "Pymes y medianas empresas coreanas que exportan a México"
+},
+{
+"title": "Apoyo para el listado de bienes de consumo coreanos en el comercio minorista y electrónico",
+"why": "KOTRA quiere ampliar las exportaciones a México hacia los bienes de consumo, y grandes minoristas y plataformas locales han mostrado interés en los productos coreanos.",
+"target": "Pymes coreanas de cosméticos, alimentos y artículos para el hogar"
+}
+],
+"krsupport": [
+{
+"title": "Oficinas de KOTRA en Ciudad de México y Monterrey",
+"detail": "Organizó una feria de productos coreanos en Ciudad de México en septiembre de 2026 (123 compradores, 730 reuniones) y abrió la oficina de Monterrey en febrero de 2026."
+},
+{
+"title": "Iniciativa de cooperación económica, industrial y de recursos Corea-México",
+"detail": "Crea un comité conjunto de minerales y recursos, trabaja para mejorar el entorno de negocios de las empresas coreanas e inicia un estudio conjunto sobre un acuerdo comercial."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Cubre los costos de certificación mexicana (NOM), estudios de mercado y consultoría de localización."
+}
+]
+}

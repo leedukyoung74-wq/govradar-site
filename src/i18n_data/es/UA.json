@@ -1,0 +1,88 @@
+{
+"summary": "El gobierno de Koretskyi, formado en julio de 2026, da prioridad a la preparación energética para el invierno y a la reconstrucción. En octubre, la UE pagó el 8.º tramo del Ukraine Facility (EUR 2.900 millones), y un presupuesto de 2027 con fuerte peso de la defensa avanza en el parlamento.",
+"leader": "Presidente Volodímir Zelenski / Primer ministro Serhii Koretskyi (desde el 2026-07-16)",
+"agenda": [
+"Garantizar el suministro de energía y calefacción en invierno y restablecer la red eléctrica",
+"Reformas vinculadas al Ukraine Facility de la UE (poder judicial, finanzas, clima de negocios, energía, etc.)",
+"Financiar la defensa y la seguridad (UAH 4,885 billones en 2027)",
+"Restablecer el transporte y la logística (ferrocarril y puertos)",
+"Adecuación institucional para la adhesión a la UE"
+],
+"projects": [
+{
+"title": "8.º pago del Ukraine Facility",
+"detail": "EUR 2.900 millones pagados tras completar etapas de reforma; por primera vez, EUR 800 millones llegaron a través del Préstamo de Apoyo a Ucrania",
+"status": "Finalizado"
+},
+{
+"title": "Préstamo de Apoyo a Ucrania de la UE",
+"detail": "EUR 90.000 millones para 2026-2027 (EUR 60.000 millones para defensa, EUR 30.000 millones de apoyo presupuestario)",
+"status": "En curso"
+},
+{
+"title": "Presupuesto del Estado 2027",
+"detail": "Déficit previsto del 15% del PIB y deuda pública superior al 110% del PIB; segunda lectura y votación final previstas para el 23-26 de noviembre",
+"status": "En revisión parlamentaria"
+},
+{
+"title": "Preparación energética para el invierno",
+"detail": "El Fondo de Apoyo Energético ha recaudado más de EUR 2.000 millones, pero el Primer Ministro afirma que se necesitan unos EUR 650 millones más; se está ampliando la generación distribuida",
+"status": "En curso"
+},
+{
+"title": "Resiliencia del sistema eléctrico del Banco Mundial (almacenamiento en baterías)",
+"detail": "BESS y EMS en las centrales hidroeléctricas de Kiev, Kaniv y otras",
+"status": "En licitación"
+},
+{
+"title": "Recuperación logística RELINC del Banco Mundial",
+"detail": "La autoridad portuaria adquiere un remolcador como parte de las reparaciones de la red portuaria y logística",
+"status": "En licitación"
+},
+{
+"title": "20 trenes eléctricos Intercity financiados por el EDCF",
+"detail": "Préstamo coreano del EDCF para trenes de alta velocidad para Ukrzaliznytsia, que se adquirirán mediante licitación abierta",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Paquete de apoyo para empresas coreanas que licitan en la reconstrucción de Ucrania (Banco Mundial, Prozorro)",
+"why": "Siguen apareciendo licitaciones financiadas por el Banco Mundial en educación, energía y logística, por lo que se necesita ayuda con la documentación y los socios.",
+"target": "Pymes y medianas empresas coreanas que apuntan a la reconstrucción"
+},
+{
+"title": "Consultoría de planificación de la resiliencia comunitaria y PMO de reconstrucción",
+"why": "Se aprobaron las leyes necesarias para la ayuda internacional, lo que desbloquea el gasto en planes de resiliencia comunitaria.",
+"target": "Comunidades locales (hromadas) y administraciones de óblast"
+},
+{
+"title": "Automatización con IA de la contratación pública y del papeleo administrativo",
+"why": "Las condiciones de reforma de la UE y los grandes programas han aumentado la carga administrativa (estimación).",
+"target": "Ministerios centrales y empresas estatales"
+},
+{
+"title": "Búsqueda de socios locales para empresas coreanas de ESS y generación distribuida",
+"why": "El Primer Ministro subrayó la necesidad de desarrollar generación distribuida, no solo de hacer reparaciones.",
+"target": "Ukrhydroenergo y empresas energéticas regionales"
+}
+],
+"krsupport": [
+{
+"title": "Acuerdo marco del EDCF con Ucrania (2024-2029)",
+"detail": "Préstamos en condiciones favorables de hasta USD 2.100 millones para compra de equipos e infraestructura de reconstrucción."
+},
+{
+"title": "Oficina de KOTRA en Kiev y apoyo para la entrada en la reconstrucción",
+"detail": "Ayuda con información sobre contratación local y con la búsqueda de compradores y socios."
+},
+{
+"title": "Apoyo a la inversión en infraestructura y reconstrucción en el exterior",
+"detail": "Apoya estudios de viabilidad e inversión en proyectos de reconstrucción de infraestructura."
+},
+{
+"title": "Vale de Exportación",
+"detail": "Los vales cubren los costos de traducción de documentos de licitación, certificación y consultoría."
+}
+]
+}

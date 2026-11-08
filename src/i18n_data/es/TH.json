@@ -1,0 +1,80 @@
+{
+"summary": "El primer ministro Anutin, reelegido en marzo tras las elecciones de febrero de 2026, encabeza un gobierno de coalición; el presupuesto del ejercicio 2027, de THB3,788 billones, fue aprobado por el Senado el 11 de septiembre. Con la deuda pública cerca del límite legal del 70% del PIB, el gobierno subraya la eficiencia del gasto junto con un impulso al gobierno digital basado en la IA.",
+"leader": "Rey Maha Vajiralongkorn (Rama X); Primer ministro Anutin Charnvirakul (reelegido tras las elecciones generales de 2026)",
+"agenda": [
+"Hoja de ruta de alta tecnología con la IA y la innovación digital como motores de crecimiento; innovación del sector público «AI Plus»",
+"Gobierno digital Cloud First, eficiencia del sector público y lucha contra la corrupción",
+"Adhesión a la OCDE para 2028 y promoción de inversiones (Thailand FastPass)",
+"Red de protección social ante el envejecimiento y equidad educativa",
+"Gestión del agua, respuesta a desastres, neutralidad de carbono para 2050 y economía Bio-Circular-Verde (BCG)",
+"Combate a las estafas de centros de llamadas y al lavado de dinero; seguridad fronteriza"
+],
+"projects": [
+{
+"title": "Presupuesto del ejercicio 2027",
+"detail": "THB3,788 billones con un déficit de THB788.000 millones; aprobado por el Senado el 11 de septiembre de 2026 (145 votos a favor); busca reducir el déficit por debajo del 3% del PIB para 2029",
+"status": "En curso"
+},
+{
+"title": "Reestructuración y reforma del sector público",
+"detail": "Incluye el gobierno digital Cloud First y la lucha contra la corrupción",
+"status": "En curso"
+},
+{
+"title": "Desarrollo de recursos humanos",
+"detail": "Incluye «aprender en cualquier lugar y momento» y el uso de la IA en la salud pública",
+"status": "En curso"
+},
+{
+"title": "Competitividad y SMEs Plus",
+"detail": "Inversión en logística, transporte, agricultura y turismo; apoyo a los ingresos de las pymes; más APP",
+"status": "En curso"
+},
+{
+"title": "Fortalecimiento de la economía Bio-Circular-Verde (asistencia técnica)",
+"detail": "Asistencia técnica del ADB para ayudar a la Oficina de Política Fiscal a desarrollar capacidad en políticas BCG, incluida la contratación de un especialista en desarrollo de la fuerza laboral",
+"status": "En curso"
+},
+{
+"title": "Desarrollo ambiental",
+"detail": "Transición baja en carbono y gestión del agua",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Automatización con IA de la atención ciudadana y el procesamiento de documentos administrativos en organismos públicos",
+"why": "El presupuesto del ejercicio 2027 asigna grandes fondos a Cloud First y a la innovación pública AI Plus.",
+"target": "Ministerio de Economía y Sociedad Digital, DGA, gobiernos locales"
+},
+{
+"title": "Chatbots con IA para citas y preevaluación, además de automatización de la administración hospitalaria",
+"why": "La IA en la salud pública forma parte del presupuesto de desarrollo de recursos humanos.",
+"target": "Ministerio de Salud Pública, hospitales públicos"
+},
+{
+"title": "Paquetes de consultoría en transformación digital y automatización de flujos de trabajo para pymes tailandesas",
+"why": "SMEs Plus financia el apoyo a las pymes y la competitividad.",
+"target": "OSMEP, pymes tailandesas"
+},
+{
+"title": "Diagnóstico y mejora de procesos de organismos públicos conforme a los estándares de la OCDE",
+"why": "La meta de adhesión a la OCDE en 2028 exige reformas administrativas y regulatorias.",
+"target": "PMO, Oficina de la Comisión de Desarrollo del Sector Público (OPDC)"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Bangkok",
+"detail": "Apoya la búsqueda de compradores, la incubación de sucursales, los estudios de mercado y el asesoramiento en inversión para ingresar en Tailandia."
+},
+{
+"title": "Misión comercial de Busan a SEOUL FOOD in Bangkok 2026",
+"detail": "Apoya la vinculación con compradores y las reuniones de ocho pymes alimentarias de Busan en la feria de Bangkok del 2 al 4 de diciembre."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Los vales cubren estudios de mercado, certificación y marketing local para ingresar en Tailandia."
+}
+]
+}

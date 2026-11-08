@@ -1,0 +1,65 @@
+{
+"summary": "Pemerintah Rusia menyerahkan rancangan anggaran federal 2027-2029 kepada Duma Negara pada 1 Oktober 2026, dengan proyeksi defisit selama tiga tahun lagi dan belanja pertahanan yang besar. Perombakan kabinet pada 19-21 Oktober menjadikan Menteri Keuangan Siluanov juga sebagai wakil perdana menteri.",
+"leader": "Presiden Vladimir Putin / Perdana Menteri Mikhail Mishustin",
+"agenda": [
+"Mempertahankan belanja pertahanan dan keamanan (sekitar RUB 17.15 trn pada 2027)",
+"Belanja sosial untuk pensiun, kesehatan, dan pendidikan",
+"Dukungan perumahan seperti KPR keluarga",
+"Infrastruktur transportasi dan pengembangan Rute Laut Utara",
+"Meningkatkan pendapatan (PPN, dll.) dan mengelola defisit fiskal"
+],
+"projects": [
+{
+"title": "Rancangan anggaran federal 2027-2029",
+"detail": "Defisit 2027 diproyeksikan sekitar RUB 5.5 trn (sekitar 2% PDB), sebagian besar dibiayai dengan penambahan penerbitan obligasi",
+"status": "Dalam peninjauan parlemen"
+},
+{
+"title": "Program negara bidang transportasi",
+"detail": "Investasi pada jalan, kereta api, dan jaringan transportasi lainnya",
+"status": "Direncanakan"
+},
+{
+"title": "Subsidi KPR keluarga",
+"detail": "Subsidi bunga atas KPR preferensial bagi keluarga dengan anak",
+"status": "Berjalan"
+},
+{
+"title": "Belanja kesehatan dan pendidikan",
+"detail": "Sekitar RUB 1.82 trn untuk kesehatan dan 1.78 trn untuk pendidikan",
+"status": "Direncanakan"
+},
+{
+"title": "Kegiatan antariksa dan Rute Laut Utara",
+"detail": "Pendanaan program antariksa dan pengembangan NSR ditetapkan sebagai prioritas",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Pemeriksaan kepatuhan sanksi dan kontrol ekspor bagi UKM Korea yang berdagang dengan Rusia",
+"why": "Daftar sanksi Korea, UE, dan AS serta barang yang memerlukan izin terus berubah, sehingga penyaringan pratransaksi banyak dibutuhkan.",
+"target": "Eksportir UKM Korea yang berurusan dengan Rusia/CIS"
+},
+{
+"title": "Strategi pasar alternatif bagi perusahaan yang mengurangi kegiatan di Rusia",
+"why": "Perusahaan yang bergantung pada penjualan ke Rusia berupaya mendiversifikasi risiko (perkiraan).",
+"target": "Produsen dan eksportir barang konsumsi Korea"
+},
+{
+"title": "Solusi AI dan digital untuk lembaga pemerintah dan BUMN Rusia",
+"why": "Ada permintaan administrasi digital, tetapi sanksi dan hambatan pembayaran membuat kemenangan kontrak bagi perusahaan Korea tidak realistis.",
+"target": "Kementerian federal dan pemerintah regional"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA di Rusia (Moskow, dll.)",
+"detail": "Menyediakan informasi pasar lokal beserta pembaruan mengenai sanksi dan isu kepabeanan."
+},
+{
+"title": "Klasifikasi barang strategis dan pemeriksaan kontrol ekspor Rusia (Yestrade)",
+"detail": "Sistem untuk memeriksa apakah suatu barang termasuk barang strategis atau memerlukan izin situasional sebelum diekspor."
+}
+]
+}

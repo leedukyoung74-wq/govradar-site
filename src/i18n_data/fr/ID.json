@@ -1,0 +1,83 @@
+{
+"summary": "Le 29 septembre, le Parlement a adopté le budget de l'État 2027 : 4 106 trillions IDR de dépenses, 3 435 trillions IDR de recettes et un déficit de 2,4 % du PIB. À mi-mandat de deux ans, le gouvernement Prabowo vise 8 % de croissance d'ici 2029 en s'appuyant sur les repas nutritifs gratuits (MBG), les coopératives villageoises, l'autosuffisance alimentaire et le fonds souverain Danantara.",
+"leader": "Président Prabowo Subianto (chef de l'État et du gouvernement)",
+"agenda": [
+"8 % de croissance d'ici 2029 (perspective de croissance 2027 de 5,8-6,5 %)",
+"Étendre les repas nutritifs gratuits (MBG) et les rendre plus transparents",
+"Autosuffisance alimentaire (réserves de riz record) et amélioration des revenus des agriculteurs et pêcheurs",
+"Coopératives villageoises (Koperasi Desa Merah Putih) et infrastructures de base telles que logements, écoles et ponts",
+"Renforcement du fonds souverain Danantara et mise en place d'un guichet unique pour les exportations"
+],
+"projects": [
+{
+"title": "Budget de l'État 2027 (APBN)",
+"detail": "Recettes de 3 435 trillions IDR (impôts 2 593 trillions IDR) ; transferts aux régions 735 trillions IDR ; déficit de 671 trillions IDR (2,4 % du PIB)",
+"status": "Approuvé"
+},
+{
+"title": "Coopératives villageoises (Koperasi Desa Merah Putih)",
+"detail": "10 000 en activité en octobre 2026",
+"status": "En cours"
+},
+{
+"title": "Repas nutritifs gratuits (MBG)",
+"detail": "Gérés par l'Agence nationale de la nutrition, avec un contrôle renforcé par des enquêtes pour fraude et des licenciements",
+"status": "En cours"
+},
+{
+"title": "Infrastructures de base (logements, écoles, ponts, hôpitaux régionaux)",
+"detail": "Environ 440 000 logements rénovés, près de 90 000 écoles réparées et environ 5 000 ponts achevés ; 22 des 66 hôpitaux régionaux financés achevés",
+"status": "En cours"
+},
+{
+"title": "Extension des écoles populaires (Sekolah Rakyat)",
+"detail": "Construction étendue à 100 sites dans 32 provinces",
+"status": "En cours"
+},
+{
+"title": "Flood Management in North Java Project (prêt de la BAsD)",
+"detail": "Mis en œuvre par la Direction générale des ressources en eau du ministère des Travaux publics et du Logement ; des consultants en gouvernance et en passation de marchés ont été recrutés",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Tableau de bord IA pour les achats alimentaires, le suivi des livraisons et la détection des fraudes du MBG",
+"why": "Les enquêtes et licenciements en cours liés aux fraudes au MBG font de la transparence une priorité urgente.",
+"target": "Agence nationale de la nutrition (BGN), exploitants des cuisines locales (SPPG)"
+},
+{
+"title": "SaaS de comptabilité et de gestion des stocks et formation à la gestion pour les coopératives villageoises",
+"why": "Les 10 000 coopératives nouvellement en activité ont besoin de systèmes de gestion de base.",
+"target": "Ministère des Coopératives, Koperasi Desa Merah Putih, banques publiques"
+},
+{
+"title": "Conseil à l'entrée en Indonésie pour les produits de consommation et halal coréens (certification, distribution)",
+"why": "La certification halal obligatoire est en cours de déploiement tandis que la demande de biens de consommation coréens augmente.",
+"target": "PME coréennes de l'alimentation et des cosmétiques entrant en Indonésie"
+},
+{
+"title": "Conseil en numérisation de la gestion budgétaire et de la performance des projets pour les gouvernements régionaux",
+"why": "Les importants transferts aux régions et programmes d'infrastructures nécessitent une gestion de l'exécution.",
+"target": "Gouvernements provinciaux et de district, ministère de l'Intérieur"
+}
+],
+"krsupport": [
+{
+"title": "Salon K-Premium des biens de consommation 2026 à Jakarta",
+"detail": "A réuni environ 200 entreprises coréennes de biens de consommation et des acheteurs locaux pour des rendez-vous d'export à Jakarta en septembre 2026."
+},
+{
+"title": "Plan à moyen terme 2026-2028 de l'EDCF",
+"detail": "Environ 3 000 Md KRW par an ; intègre l'IA dans les projets d'infrastructures de l'EDCF et étend le soutien aux pays riches en minerais critiques."
+},
+{
+"title": "Bureau de KOICA en Indonésie",
+"detail": "L'Indonésie est un pays partenaire prioritaire de KOICA, et le bureau local mène des projets de coopération au développement."
+},
+{
+"title": "Export Voucher program",
+"detail": "Couvre les frais de certification halal, d'étude de marché et de conseil en localisation."
+}
+]
+}

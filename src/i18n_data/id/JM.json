@@ -1,0 +1,79 @@
+{
+"summary": "Dalam setahun sejak Badai Melissa melanda pada Oktober 2025, pemerintah telah membelanjakan sekitar J$84 miliar untuk pemulihan dan menargetkan penutupan fase pemulihan pada Januari 2027. Anggaran 2026/27 sekitar J$1,4 triliun membawa langkah pendapatan baru pertama dalam delapan tahun.",
+"leader": "Kepala negara Raja Charles III (Gubernur Jenderal Sir Patrick Allen); Perdana Menteri Andrew Holness (terpilih kembali September 2025)",
+"agenda": [
+"Memulihkan rumah, sekolah, dan listrik pasca-Badai Melissa (fase pemulihan berakhir Januari 2027)",
+"Menjaga stabilitas fiskal dan meningkatkan pendapatan baru, terutama berbasis konsumsi",
+"Transisi energi, termasuk pengadaan 300 MW energi terbarukan dan 150 MW baterai",
+"Peningkatan investasi di bidang kesehatan dan pendidikan",
+"Penguatan keamanan publik (anggaran keamanan nasional yang lebih besar)"
+],
+"projects": [
+{
+"title": "Hibah perbaikan atap ROOFS",
+"detail": "J$75.000-500.000 per rumah tangga sesuai tingkat kerusakan; 118.000 rumah tangga; 90% ditargetkan terlayani pada Desember 2026",
+"status": "Berjalan"
+},
+{
+"title": "Perbaikan sekolah",
+"detail": "144 dari 308 sekolah Prioritas Satu telah pulih sepenuhnya",
+"status": "Berjalan"
+},
+{
+"title": "Pinjaman pemulihan jaringan JPS",
+"detail": "Pinjaman kepada perusahaan listrik untuk pemulihan",
+"status": "Berjalan"
+},
+{
+"title": "Pengadaan 300 MW energi terbarukan + 150 MW baterai",
+"detail": "Rencana tender listrik terbesar; RFP diundur ke Q4 2026",
+"status": "Direncanakan"
+},
+{
+"title": "Perumahan semipermanen",
+"detail": "Rumah semipermanen bagi warga yang mengungsi",
+"status": "Berjalan"
+},
+{
+"title": "Tim ahli rekonstruksi Inggris",
+"detail": "Spesialis UK Delivery Team dikerahkan dengan biaya ditanggung bersama secara setara; penandatanganan direncanakan di CHOGM",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Platform data dan otomatisasi penyaluran hibah bencana",
+"why": "Verifikasi dan penilaian ulang 118.000 rumah tangga harus selesai pada Januari 2027.",
+"target": "Kementerian Tenaga Kerja dan Jaminan Sosial, ODPEM, pemerintah daerah"
+},
+{
+"title": "Konsultasi PMO rekonstruksi dan pengadaan",
+"why": "Kapasitas pelaksanaan sangat terbatas hingga pemerintah mendatangkan ahli dari Inggris.",
+"target": "Kantor Perdana Menteri, Kementerian Pertumbuhan Ekonomi dan Infrastruktur"
+},
+{
+"title": "Analitik AI untuk pengurangan susut listrik dan manajemen permintaan",
+"why": "Konsultansi mitigasi susut dan analitik sisi permintaan sudah ditenderkan.",
+"target": "Kementerian energi, JPS, GPE"
+},
+{
+"title": "Peralatan dan konten kelas digital terkait perbaikan sekolah",
+"why": "Lebih dari 164 sekolah yang masih dalam perbaikan perlu mengganti peralatan (perkiraan).",
+"target": "Kementerian Pendidikan"
+}
+],
+"krsupport": [
+{
+"title": "Kerja sama Kedutaan Besar Korea di Jamaika",
+"detail": "Kedutaan telah menyelenggarakan Korea-Jamaica Future Cooperation Forum bersama UWI yang berfokus pada energi terbarukan."
+},
+{
+"title": "Export Voucher",
+"detail": "Menanggung biaya riset pasar Karibia, sertifikasi, dan pemasaran lokal melalui voucher."
+},
+{
+"title": "Dukungan masuk pasar Amerika Latin",
+"detail": "Karena tidak ada kantor khusus Jamaika, pencocokan pembeli dilakukan melalui kantor Amerika Latin terdekat (perkiraan)."
+}
+]
+}

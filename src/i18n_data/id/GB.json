@@ -1,0 +1,76 @@
+{
+"summary": "Andy Burnham menjadi Perdana Menteri pada 20 Juli setelah Keir Starmer mengundurkan diri, dan Menteri Keuangan John Healey menyampaikan Anggaran pertamanya pada 28 Oktober. Dengan ruang fiskal yang menyempit, pemerintah memprioritaskan dukungan biaya hidup, reindustrialisasi, peningkatan belanja pertahanan, dan desentralisasi fiskal ke daerah.",
+"leader": "Raja Charles III; Perdana Menteri Andy Burnham (Partai Buruh, menjabat sejak 20 Juli 2026)",
+"agenda": [
+"Keringanan biaya hidup (perpanjangan pemotongan cukai bahan bakar dan PPN 0% atas listrik rumah tangga) dan mengakhiri tunawisma jalanan",
+"'Reindustrialise Britain' dan sektor strategi industri IS-8 (manufaktur maju, energi bersih, digital, pertahanan, dan lainnya)",
+"Belanja pertahanan naik menjadi 3% PDB pada 2030",
+"Fiscal Devolution Roadmap: bagi hasil pajak penghasilan dan retensi business rates bagi wali kota",
+"Kapabilitas AI berdaulat, termasuk menteri Kabinet pertama untuk AI",
+"Insentif pajak bagi pendiri usaha dan perluasan keringanan business rates usaha kecil"
+],
+"projects": [
+{
+"title": "Autumn Budget 2026",
+"detail": "Anggaran pertama Healey: surcharge bank sementara 6%, kenaikan 2 poin tarif pajak penghasilan properti dan tabungan (April 2027), pemotongan cukai bahan bakar 5p diperpanjang hingga Juli 2027",
+"status": "Diumumkan"
+},
+{
+"title": "Founders' Relief",
+"detail": "CGT 10% atas keuntungan seumur hidup hingga £10 juta bagi pendiri perusahaan inovatif berpertumbuhan tinggi",
+"status": "Direncanakan"
+},
+{
+"title": "Perluasan keringanan business rates usaha kecil",
+"detail": "Ambang keringanan 100% dinaikkan menjadi nilai sewa £18.000, berkurang bertahap hingga £21.000; keringanan pub dan tempat acara naik dari 15% menjadi 35%",
+"status": "Direncanakan"
+},
+{
+"title": "Fiscal Devolution Roadmap",
+"detail": "Wali kota mendapat bagian pajak penghasilan mulai 2028–29 dan ikut retensi business rates mulai 2027–28; pungutan pengunjung diizinkan",
+"status": "Direncanakan"
+},
+{
+"title": "AI Hardware Plan dan Sovereign AI Fund",
+"detail": "£1,1 miliar untuk superkomputer AI nasional dan cip generasi berikutnya, plus dana £500 juta untuk pendiri AI Inggris",
+"status": "Berjalan"
+},
+{
+"title": "Defence Investment Plan",
+"detail": "Termasuk £5 miliar untuk drone; pemerintah baru menargetkan 3% PDB pada 2030",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Avatar/chatbot AI dan otomatisasi manajemen prospek untuk promosi investasi daerah",
+"why": "Desentralisasi fiskal memberi pemerintah daerah kepentingan langsung atas business rates dan investasi.",
+"target": "Otoritas strategis wali kota, dewan county (mis. Suffolk)"
+},
+{
+"title": "Konsultasi masuk pasar Inggris dan pencocokan mitra IS-8 bagi perusahaan Korea",
+"why": "Pemerintah baru menjadikan reindustrialisasi dan investasi sektor maju sebagai prioritas.",
+"target": "UKM dan perusahaan menengah Korea, badan investasi daerah Inggris"
+},
+{
+"title": "Konsultasi otomatisasi alur kerja AI bagi UKM Inggris",
+"why": "Skema adopsi AI bisnis seperti Bridge AI dan perluasan keringanan rates membuka kapasitas investasi.",
+"target": "UKM manufaktur dan jasa profesional"
+},
+{
+"title": "Evaluasi kapabilitas data dan digital serta manajemen kinerja bagi badan publik",
+"why": "NHS England dan lainnya sedang memesan tinjauan kerangka kapabilitas.",
+"target": "NHS England, kementerian pusat"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA London",
+"detail": "Mendukung pencarian pembeli, inkubasi kantor cabang, riset pasar, dan saran investasi untuk masuk ke Inggris."
+},
+{
+"title": "Export Voucher programme",
+"detail": "Voucher menanggung sertifikasi UKCA, riset pasar, dan pemasaran untuk masuk ke Inggris."
+}
+]
+}

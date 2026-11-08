@@ -1,0 +1,74 @@
+{
+"summary": "La coalition CDU/CSU-SPD fait avancer au Parlement un budget 2027 d'environ 555 milliards EUR, centré sur la défense, les infrastructures et la modernisation de l'État, avec un vote prévu en novembre. La montée de l'AfD et les différends sur la réforme des retraites mettent la coalition sous tension.",
+"leader": "Président fédéral Frank-Walter Steinmeier (chef de l'État) ; chancelier Friedrich Merz, CDU (chef du gouvernement)",
+"agenda": [
+"Renforcement de la défense (budget de défense de base 2027 d'environ 109,7 Md EUR)",
+"Réparation des ponts, routes et voies ferrées via le fonds spécial infrastructures et neutralité climatique",
+"Modernisation de l'État : administration numérique, réduction de la bureaucratie, mise en œuvre de l'AI Act de l'UE",
+"Restaurer la compétitivité grâce à une électricité industrielle moins chère et à des subventions des frais de réseau (2027-2029)",
+"Stabiliser les finances des retraites et de l'assurance maladie (y compris une taxe sur les boissons sucrées)"
+],
+"projects": [
+{
+"title": "Budget fédéral 2027",
+"detail": "Emprunt net d'environ 118,7 Md EUR ; en incluant les fonds spéciaux, la nouvelle dette dépasse 200 Md EUR. Le 14 octobre, le Conseil des ministres a adopté ses réponses aux observations du Bundesrat",
+"status": "En délibération parlementaire"
+},
+{
+"title": "Fonds spécial infrastructures et neutralité climatique",
+"detail": "Investissements dans les ponts, routes et voies ferrées ; l'opposition s'interroge sur la part réellement additionnelle",
+"status": "En cours"
+},
+{
+"title": "Hausse du budget de la défense",
+"detail": "Le budget de défense de base 2027 augmente d'environ un tiers par rapport à 2026, et le reliquat du fonds spécial de la Bundeswehr est également mobilisé",
+"status": "Prévu"
+},
+{
+"title": "Subvention fédérale des frais de réseau",
+"detail": "Décidée en septembre 2026 ; le dispositif de prix de l'électricité industrielle s'applique depuis mai 2026",
+"status": "Prévu"
+},
+{
+"title": "Plan d'action national pour un transport maritime respectueux du climat",
+"detail": "Présenté et examiné en Conseil des ministres le 14 octobre 2026",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Outils d'IA et RPA de traitement documentaire pour les services aux citoyens et les obligations déclaratives des collectivités",
+"why": "Le programme de modernisation de l'État donne la priorité à l'allègement des obligations déclaratives et à l'administration numérique.",
+"target": "Administrations des Länder et des communes, prestataires informatiques publics"
+},
+{
+"title": "Inspection vidéo par IA et jumeaux numériques pour les ponts et les actifs ferroviaires",
+"why": "Le fonds spécial finance la rénovation à grande échelle des ponts et voies ferrées vieillissants.",
+"target": "DB InfraGO, Autobahn GmbH, autorités de transport des Länder"
+},
+{
+"title": "Suivi énergétique et conseil en économies d'énergie pour les PME industrielles",
+"why": "La pression sur l'efficacité énergétique persiste malgré les subventions à l'électricité industrielle et aux frais de réseau.",
+"target": "Industriels du Mittelstand allemand, filiales locales d'entreprises coréennes"
+},
+{
+"title": "Conseil en entrée sur le marché allemand/européen pour les PME coréennes (certification, AI Act de l'UE)",
+"why": "La mise en œuvre de l'AI Act de l'UE et la recomposition des chaînes d'approvisionnement de la défense et de l'industrie stimulent la demande d'accompagnement à la conformité.",
+"target": "PME et ETI coréennes s'implantant en Allemagne"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA Francfort",
+"detail": "Accompagne les études du marché allemand et la recherche d'acheteurs, et a organisé une vitrine de contenus coréens en juillet 2026."
+},
+{
+"title": "K-Content Experience Hall 2026 en Allemagne",
+"detail": "Événement de deux jours à Francfort en juillet 2026 qui a aidé des entreprises coréennes de webtoons et de personnages à entrer sur le marché européen."
+},
+{
+"title": "Export Voucher program",
+"detail": "Couvre les frais de certification CE, d'étude de marché à l'étranger et de conseil."
+}
+]
+}

@@ -1,0 +1,73 @@
+{
+"summary": "Kabinet yang dipimpin Perdana Menteri Hun Manet menyetujui anggaran 2027 sekitar USD 11,7 miliar pada 2026-10-23, dan pada 2026-10-22 meluncurkan Strategi Nasional Pengembangan UKM 2026-2030. Di tengah perundingan perbatasan yang berlangsung dengan Thailand, pemerintah memadukan pembelaan kedaulatan dengan pertumbuhan yang dipimpin industri, jasa, dan pertanian.",
+"leader": "Raja Norodom Sihamoni / Perdana Menteri Hun Manet",
+"agenda": [
+"Membela kedaulatan dan wilayah; perundingan perbatasan dengan Thailand",
+"Penghidupan yang stabil dan pertumbuhan terarah di tengah ketidakpastian (proyeksi 4,8% untuk 2027)",
+"Industri, jasa, dan pertanian sebagai mesin pertumbuhan",
+"Melaksanakan Strategi Nasional Pengembangan UKM (2026-2030)",
+"Anggaran subnasional yang lebih besar dan langkah reformasi 2027"
+],
+"projects": [
+{
+"title": "Anggaran nasional 2027",
+"detail": "Total KHR 47.655 miliar; pendapatan KHR 32.327 miliar (13,49% PDB); target belanja KHR 39.700 miliar (16,57% PDB)",
+"status": "Disetujui kabinet (2026-10-23), menunggu parlemen"
+},
+{
+"title": "Anggaran administrasi subnasional",
+"detail": "18,7% dari belanja negara",
+"status": "Direncanakan"
+},
+{
+"title": "Strategi Nasional Pengembangan UKM 2026-2030",
+"detail": "Diluncurkan pada 2026-10-22 dengan dihadiri Perdana Menteri",
+"status": "Berjalan"
+},
+{
+"title": "Kanal Funan Techo tahap 2",
+"detail": "Dimulai April 2026, KPBU sekitar USD 1,7 miliar, penyelesaian ditargetkan 2028 (menurut catatan sebelumnya)",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Program diagnosis dan pendampingan kesiapan ekspor UKM",
+"why": "Strategi UKM nasional baru yang diluncurkan pada Oktober 2026 menciptakan permintaan atas program pelaksanaan.",
+"target": "Kementerian Industri, Sains, Teknologi dan Inovasi; Kamar Dagang Kamboja; mitra pembangunan"
+},
+{
+"title": "Konsultasi otomatisasi anggaran dan akuntansi bagi pemerintah daerah",
+"why": "Anggaran 2027 menaikkan alokasi subnasional menjadi KHR 7,9 triliun.",
+"target": "Kementerian Dalam Negeri, pemerintah provinsi dan kota"
+},
+{
+"title": "Penilaian kepatuhan asal barang dan ketenagakerjaan bagi eksportir garmen dan manufaktur",
+"why": "Tarif AS dan pengawasan rantai pasok membuat kepatuhan menjadi mendesak.",
+"target": "Produsen eksportir, asosiasi industri"
+},
+{
+"title": "Layanan pelanggan AI multibahasa untuk pariwisata dan jasa",
+"why": "Sektor jasa disebut sebagai mesin pertumbuhan 2027.",
+"target": "UKM pariwisata dan perhotelan, Kementerian Pariwisata"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Phnom Penh",
+"detail": "Mendukung riset pasar, pencarian pembeli, dan konsultasi masuk pasar Kamboja."
+},
+{
+"title": "Program negara KOICA Kamboja",
+"detail": "Kamboja adalah mitra prioritas KOICA dengan proyek hibah dan kontrak jasa yang berjalan di bidang pembangunan perdesaan, kesehatan, dan pendidikan."
+},
+{
+"title": "Pinjaman lunak EDCF untuk Kamboja",
+"detail": "Pinjaman infrastruktur untuk jalan dan penyediaan air membuka peran desain, supervisi, dan konstruksi bagi perusahaan Korea."
+},
+{
+"title": "Layanan luar negeri Export Voucher",
+"detail": "Biaya riset pasar dan pencocokan pembeli untuk masuk ke Kamboja dapat ditanggung oleh voucher."
+}
+]
+}

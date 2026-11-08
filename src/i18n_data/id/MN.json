@@ -1,0 +1,79 @@
+{
+"summary": "Pemerintahan koalisi Perdana Menteri Uchral, yang dibentuk pada Maret 2026, memegang kendali sementara parlemen meninjau anggaran konsolidasi 2027 dengan belanja MNT 43 triliun dan defisit 2.0% PDB. Kenaikan dividen dari BUMN dan Oyu Tolgoi membiayai kenaikan pensiun dan gaji pegawai negeri, sementara hubungan energi, BBM, dan kereta api dengan Rusia semakin erat.",
+"leader": "Presiden Ukhnaagiin Khürelsükh / Perdana Menteri Nyam-Osoryn Uchral (sejak 2026-03-31)",
+"agenda": [
+"Meningkatkan pendapatan melalui dividen yang lebih besar dari BUMN dan Oyu Tolgoi",
+"Memperluas pensiun dan kesejahteraan; menaikkan gaji pegawai negeri",
+"Menjamin pasokan BBM dan mempercepat infrastruktur energi (Pembangkit Listrik Tenaga Termal No. 3)",
+"Transisi hijau (energi terbarukan, pengisian daya kendaraan listrik) dan pengurangan polusi udara Ulaanbaatar",
+"Konektivitas transportasi seperti koridor kereta api Mongolia-Rusia-China"
+],
+"projects": [
+{
+"title": "Usulan anggaran konsolidasi 2027",
+"detail": "Pendapatan MNT 40.7 triliun (35.3% PDB), belanja MNT 43 triliun (37.3% PDB); defisit MNT 2.3 triliun dibiayai pinjaman lunak dan obligasi domestik",
+"status": "Dalam peninjauan parlemen"
+},
+{
+"title": "Peningkatan pendapatan dividen",
+"detail": "Dividen BUMN MNT 3.5 triliun dan dividen Oyu Tolgoi MNT 3 triliun",
+"status": "Direncanakan"
+},
+{
+"title": "Kenaikan pensiun, tunjangan, dan gaji pegawai negeri",
+"detail": "MNT 2.9 triliun untuk pensiun dan tunjangan, MNT 2.6 triliun untuk gaji pegawai negeri",
+"status": "Direncanakan"
+},
+{
+"title": "Pembangkit Listrik Tenaga Termal No. 3 dan kerja sama pasokan BBM",
+"detail": "Disepakati dengan Rusia pada Sept 2026 untuk mempercepat proyek; kelompok kerja bersama mengenai polusi udara Ulaanbaatar diusulkan",
+"status": "Dalam negosiasi"
+},
+{
+"title": "Perluasan infrastruktur pengisian daya kendaraan listrik",
+"detail": "Stasiun pengisian cepat bertenaga surya dibuka di Ulaanbaatar pada 2026-08-31; 38 stasiun di seluruh negeri, lebih banyak lagi direncanakan",
+"status": "Berjalan"
+},
+{
+"title": "PPA lelang energi terbarukan pertama",
+"detail": "Kontrak Juli 2026 untuk 220MW tenaga surya plus penyimpanan baterai di lima aimag (menurut catatan sebelumnya)",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi manajemen keuangan dan dividen untuk BUMN",
+"why": "Anggaran 2027 sangat bergantung pada dividen BUMN sebesar MNT 3.5 triliun.",
+"target": "Kementerian Keuangan, BUMN"
+},
+{
+"title": "Sistem otomatis pengajuan dan peninjauan perizinan elektronik",
+"why": "Pemerintah sedang memindahkan perizinan ke sistem daring dan telah merekrut konsultan untuk itu.",
+"target": "Sekretariat Kabinet, kementerian penerbit izin"
+},
+{
+"title": "Prakiraan berbasis AI dan operasi jarak jauh untuk pembangkit surya dan penyimpanan energi",
+"why": "Lelang energi terbarukan dan infrastruktur pengisian daya terus berkembang.",
+"target": "Kementerian Energi, produsen listrik"
+},
+{
+"title": "Platform analitik data kualitas udara perkotaan",
+"why": "Pengurangan polusi udara kini masuk dalam agenda kerja sama Mongolia-Rusia.",
+"target": "Kota Ulaanbaatar, Kementerian Lingkungan Hidup"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Ulaanbaatar",
+"detail": "Mendukung riset pasar, pencarian pembeli, dan konsultasi masuk pasar Mongolia."
+},
+{
+"title": "Program negara KOICA untuk Mongolia",
+"detail": "Mongolia adalah mitra prioritas KOICA dengan proyek hibah dan kontrak layanan yang sedang berjalan di bidang tata kelola, kesehatan, dan lingkungan."
+},
+{
+"title": "Pinjaman lunak EDCF untuk Mongolia",
+"detail": "Proyek pinjaman infrastruktur dan layanan publik membuka peran konsultansi dan konstruksi bagi perusahaan Korea."
+}
+]
+}

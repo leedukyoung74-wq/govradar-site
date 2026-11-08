@@ -1,0 +1,76 @@
+{
+"summary": "Andy Burnham est devenu Premier ministre le 20 juillet après la démission de Keir Starmer, et le chancelier de l'Échiquier John Healey a présenté son premier budget le 28 octobre. Avec des marges budgétaires réduites, le gouvernement donne la priorité au soutien face au coût de la vie, à la réindustrialisation, à la hausse des dépenses de défense et à la décentralisation fiscale vers les régions.",
+"leader": "Roi Charles III ; Premier ministre Andy Burnham (travailliste, en fonction depuis le 20 juillet 2026)",
+"agenda": [
+"Allègement du coût de la vie (prolongation de la baisse de la taxe sur les carburants et TVA à 0 % sur l'électricité domestique) et fin du sans-abrisme",
+"« Reindustrialise Britain » et les secteurs de la stratégie industrielle IS-8 (industrie avancée, énergie propre, numérique, défense, etc.)",
+"Dépenses de défense portées à 3 % du PIB d'ici 2030",
+"Fiscal Devolution Roadmap : part de l'impôt sur le revenu et rétention des business rates pour les maires",
+"Capacité d'IA souveraine, avec notamment le premier ministre de l'IA membre du Cabinet",
+"Incitations fiscales pour les fondateurs et allègement élargi des business rates pour les petites entreprises"
+],
+"projects": [
+{
+"title": "Budget d'automne 2026",
+"detail": "Premier budget de Healey : surtaxe bancaire temporaire de 6 %, hausse de 2 points des taux d'imposition des revenus fonciers et de l'épargne (avril 2027), baisse de 5 pence de la taxe sur les carburants prolongée jusqu'en juillet 2027",
+"status": "Annoncé"
+},
+{
+"title": "Founders' Relief",
+"detail": "CGT de 10 % sur jusqu'à 10 M£ de plus-values cumulées pour les fondateurs d'entreprises innovantes à forte croissance",
+"status": "Prévu"
+},
+{
+"title": "Allègement élargi des business rates pour les petites entreprises",
+"detail": "Seuil d'allègement de 100 % relevé à 18 000 £ de valeur locative, dégressif jusqu'à 21 000 £ ; allègement pour les pubs et salles porté de 15 % à 35 %",
+"status": "Prévu"
+},
+{
+"title": "Fiscal Devolution Roadmap",
+"detail": "Les maires perçoivent une part de l'impôt sur le revenu à partir de 2028-29 et participent à la rétention des business rates à partir de 2027-28 ; les taxes de séjour sont autorisées",
+"status": "Prévu"
+},
+{
+"title": "AI Hardware Plan et Sovereign AI Fund",
+"detail": "1,1 Md£ pour un supercalculateur national d'IA et des puces de nouvelle génération, plus un fonds de 500 M£ pour les fondateurs britanniques de l'IA",
+"status": "En cours"
+},
+{
+"title": "Defence Investment Plan",
+"detail": "Comprend 5 Md£ pour les drones ; le nouveau gouvernement vise 3 % du PIB d'ici 2030",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Avatars/chatbots IA et automatisation de la gestion des prospects pour la promotion des investissements régionaux",
+"why": "La décentralisation fiscale donne aux autorités locales un intérêt direct dans les business rates et l'investissement.",
+"target": "Autorités stratégiques dirigées par un maire, conseils de comté (p. ex. Suffolk)"
+},
+{
+"title": "Conseil en entrée sur le marché britannique et en mise en relation avec des partenaires IS-8 pour les entreprises coréennes",
+"why": "Le nouveau gouvernement a fait de la réindustrialisation et de l'investissement dans les secteurs avancés une priorité.",
+"target": "PME et ETI coréennes, agences britanniques régionales d'investissement"
+},
+{
+"title": "Conseil en automatisation des processus par IA pour les PME britanniques",
+"why": "Les dispositifs d'adoption de l'IA par les entreprises comme Bridge AI et l'allègement élargi des business rates libèrent des capacités d'investissement.",
+"target": "PME de l'industrie et des services professionnels"
+},
+{
+"title": "Évaluations des capacités en données et numérique et gestion de la performance pour les organismes publics",
+"why": "NHS England et d'autres commandent des revues de leurs référentiels de compétences.",
+"target": "NHS England, ministères centraux"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Londres",
+"detail": "Accompagne l'entrée au Royaume-Uni par la recherche d'acheteurs, l'incubation de bureaux de représentation, les études de marché et le conseil en investissement."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent la certification UKCA, les études de marché et le marketing pour entrer au Royaume-Uni."
+}
+]
+}

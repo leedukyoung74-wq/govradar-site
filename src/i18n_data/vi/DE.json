@@ -1,0 +1,74 @@
+{
+"summary": "Liên minh CDU/CSU-SPD đang đưa ngân sách 2027 trị giá khoảng 555 tỷ EUR, tập trung vào quốc phòng, hạ tầng và hiện đại hóa nhà nước, qua Quốc hội với cuộc biểu quyết dự kiến vào tháng 11. Sự trỗi dậy của AfD và tranh cãi về cải cách lương hưu đang gây sức ép lên liên minh.",
+"leader": "Tổng thống Liên bang Frank-Walter Steinmeier (Nguyên thủ quốc gia); Thủ tướng Friedrich Merz, CDU (Người đứng đầu chính phủ)",
+"agenda": [
+"Tăng cường quốc phòng (ngân sách quốc phòng cốt lõi năm 2027 khoảng 109,7 tỷ EUR)",
+"Sửa chữa cầu, đường bộ và đường sắt thông qua quỹ đặc biệt về hạ tầng và trung hòa khí hậu",
+"Hiện đại hóa nhà nước: hành chính số, giảm thủ tục giấy tờ, thực thi Đạo luật AI của EU (EU AI Act)",
+"Khôi phục năng lực cạnh tranh với giá điện công nghiệp rẻ hơn và trợ cấp phí lưới điện (2027-2029)",
+"Ổn định tài chính lương hưu và bảo hiểm y tế (bao gồm thuế đồ uống có đường)"
+],
+"projects": [
+{
+"title": "Ngân sách liên bang 2027",
+"detail": "Vay ròng khoảng 118,7 tỷ EUR; tính cả các quỹ đặc biệt, nợ mới vượt 200 tỷ EUR. Ngày 14/10, nội các đã thông qua văn bản trả lời ý kiến của Thượng viện (Bundesrat)",
+"status": "Đang được Quốc hội thảo luận"
+},
+{
+"title": "Quỹ đặc biệt về hạ tầng và trung hòa khí hậu",
+"detail": "Đầu tư vào cầu, đường bộ và đường sắt; phe đối lập đặt câu hỏi về mức độ thực sự bổ sung của quỹ",
+"status": "Đang triển khai"
+},
+{
+"title": "Tăng ngân sách quốc phòng",
+"detail": "Ngân sách quốc phòng cốt lõi năm 2027 tăng khoảng một phần ba so với năm 2026, đồng thời sử dụng phần còn lại của quỹ đặc biệt Bundeswehr",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Trợ cấp phí lưới điện liên bang",
+"detail": "Quyết định vào tháng 9/2026; cơ chế giá điện công nghiệp được áp dụng từ tháng 5/2026",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Kế hoạch hành động quốc gia về vận tải biển thân thiện với khí hậu",
+"detail": "Được trình và thảo luận tại nội các ngày 14/10/2026",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Công cụ AI và RPA xử lý văn bản cho dịch vụ công dân và nghĩa vụ báo cáo của chính quyền địa phương",
+"why": "Chương trình hiện đại hóa nhà nước ưu tiên giảm nghĩa vụ báo cáo và hành chính số.",
+"target": "Cơ quan hành chính cấp bang và đô thị, nhà cung cấp dịch vụ CNTT công"
+},
+{
+"title": "Kiểm tra video bằng AI và bản sao số (digital twin) cho cầu và tài sản đường sắt",
+"why": "Quỹ đặc biệt đang chi trả cho việc cải tạo quy mô lớn cầu và đường sắt xuống cấp.",
+"target": "DB InfraGO, Autobahn GmbH, cơ quan giao thông cấp bang"
+},
+{
+"title": "Tư vấn giám sát và tiết kiệm năng lượng cho doanh nghiệp sản xuất SME",
+"why": "Áp lực về hiệu quả năng lượng vẫn tồn tại ngay cả khi có trợ cấp giá điện công nghiệp và phí lưới điện.",
+"target": "Doanh nghiệp sản xuất Mittelstand của Đức, công ty con tại địa phương của doanh nghiệp Hàn Quốc"
+},
+{
+"title": "Tư vấn thâm nhập thị trường Đức/EU cho SME Hàn Quốc (chứng nhận, EU AI Act)",
+"why": "Việc thực thi EU AI Act và chuỗi cung ứng quốc phòng, sản xuất được định hình lại đang thúc đẩy nhu cầu hỗ trợ tuân thủ.",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc thâm nhập Đức"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA Frankfurt",
+"detail": "Hỗ trợ nghiên cứu thị trường Đức và tìm kiếm người mua, đồng thời đã tổ chức sự kiện giới thiệu K-content vào tháng 7/2026."
+},
+{
+"title": "Nhà Trải nghiệm K-Content 2026 tại Đức",
+"detail": "Sự kiện hai ngày tại Frankfurt vào tháng 7/2026 giúp các doanh nghiệp webtoon và nhân vật Hàn Quốc thâm nhập thị trường châu Âu."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí chứng nhận CE, nghiên cứu thị trường nước ngoài và tư vấn."
+}
+]
+}

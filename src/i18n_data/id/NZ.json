@@ -1,0 +1,76 @@
+{
+"summary": "Koalisi Luxon memusatkan anggaran yang ketat pada kesehatan, infrastruktur, dan pelatihan vokasi, dengan pemilu 7 November 2026 sebagai faktor ketidakpastian utama. Public Service AI Work Programme selama dua tahun (2026–2027) sedang berjalan.",
+"leader": "Raja Charles III (kepala negara); Perdana Menteri Christopher Luxon (kepala pemerintahan, koalisi yang dipimpin Partai National) — pemilu umum pada 2026-11-07",
+"agenda": [
+"Konsolidasi fiskal dan pemangkasan belanja sektor publik",
+"Perluasan layanan kesehatan (pendanaan Pharmac, perluasan skrining kanker)",
+"Investasi infrastruktur pada jalan, rumah sakit, dan sekolah",
+"Penambahan kuota pelatihan vokasi dan reformasi kurikulum",
+"Perluasan penggunaan AI di layanan publik (Public Service AI Work Programme)",
+"Meringankan tekanan biaya hidup"
+],
+"projects": [
+{
+"title": "Anggaran kesehatan 2026/27",
+"detail": "Pos terbesar dalam Anggaran 2026, ditujukan untuk memperpendek waktu tunggu dan memperbanyak skrining",
+"status": "Berjalan"
+},
+{
+"title": "Penghematan belanja pemerintah",
+"detail": "Pemangkasan jumlah pegawai sektor publik dan belanja lembaga",
+"status": "Berjalan"
+},
+{
+"title": "Public Service AI Work Programme",
+"detail": "Rencana dua tahun untuk mempercepat adopsi AI di seluruh layanan publik",
+"status": "Berjalan"
+},
+{
+"title": "Penggandaan kuota pelatihan vokasi",
+"detail": "Sebagian didanai dengan menghapus skema bebas biaya tahun pertama",
+"status": "Berjalan"
+},
+{
+"title": "Peningkatan SH76 Brougham Street",
+"detail": "Peningkatan jalan raya negara di Christchurch memasuki tahap berikutnya (2026-10-23)",
+"status": "Berjalan"
+},
+{
+"title": "Pungutan perbankan",
+"detail": "Berlaku bagi lembaga penghimpun simpanan mulai pertengahan 2027",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "PoC otomatisasi AI dan konsultasi adopsi untuk penanganan kasus dan dokumen sektor publik",
+"why": "Pemerintah mempercepat adopsi AI di sektor publik hingga 2027 untuk mengimbangi pemangkasan pegawai.",
+"target": "Lembaga pusat, Crown entities, dewan daerah"
+},
+{
+"title": "Perangkat digital operasional rumah sakit dan layanan pasien (makanan, pemesanan, pengingat skrining)",
+"why": "Health NZ sedang mengadakan solusi digital regional melalui GETS.",
+"target": "Unit regional Health New Zealand"
+},
+{
+"title": "Perangkat manajemen pembelajaran dan asesmen berbasis AI bagi penyelenggara pelatihan",
+"why": "Penambahan kuota vokasi meningkatkan beban operasional penyelenggara.",
+"target": "Kementerian Pendidikan, penyelenggara pelatihan"
+},
+{
+"title": "Dukungan masuk pasar Selandia Baru bagi UKM Korea (riset, penjodohan mitra)",
+"why": "Permintaan ekspor barang konsumsi dan makanan terus berlanjut di bawah FTA Korea–Selandia Baru.",
+"target": "Importir dan distributor Selandia Baru"
+}
+],
+"krsupport": [
+{
+"title": "Kantor KOTRA Auckland",
+"detail": "Mendukung riset pasar Selandia Baru, penjodohan pembeli, dan layanan kantor cabang."
+},
+{
+"title": "Voucher ekspor UKM",
+"detail": "Menanggung layanan ekspor seperti riset pasar, penerjemahan, dan sertifikasi melalui voucher."
+}
+]
+}

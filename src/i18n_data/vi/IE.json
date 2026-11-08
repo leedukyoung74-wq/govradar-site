@@ -1,0 +1,70 @@
+{
+"summary": "Ngày 2026-10-06, Ireland đã công bố Ngân sách 2027 trị giá 8,5 tỷ € (7 tỷ € chi tiêu, 1,5 tỷ € về thuế), trong khi Kế hoạch Phát triển Quốc gia đến năm 2035 trị giá 275,4 tỷ € mở rộng hạ tầng nhà ở, nước, năng lượng và giao thông.",
+"leader": "Tổng thống Catherine Connolly; Thủ tướng (Taoiseach) Micheál Martin; Phó Thủ tướng (Tánaiste) kiêm Bộ trưởng Tài chính Simon Harris",
+"agenda": [
+"Nguồn cung nhà ở (mục tiêu 300.000 căn nhà mới vào năm 2030)",
+"Hạ tầng theo Kế hoạch Phát triển Quốc gia 2026-2035 (nước, lưới điện, giao thông)",
+"Giảm thuế thu nhập cho người lao động (gói thuế 1,5 tỷ €)",
+"Số hóa dịch vụ công",
+"Phát triển dịch vụ tài chính, bao gồm tài sản số"
+],
+"projects": [
+{
+"title": "Ngân sách 2027",
+"detail": "Chi tiêu bổ sung 7 tỷ € cùng 1,5 tỷ € biện pháp thuế, bao gồm nâng ngưỡng thu nhập chịu thuế suất tiêu chuẩn",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Kế hoạch Phát triển Quốc gia 2026-2035",
+"detail": "Chương trình vốn công lớn nhất từ trước đến nay; 102,4 tỷ € cho giai đoạn 2026-2030",
+"status": "Đang triển khai"
+},
+{
+"title": "Đầu tư cấp nước và xử lý nước thải",
+"detail": "Mở rộng dịch vụ cấp nước theo NDP",
+"status": "Đang triển khai"
+},
+{
+"title": "Đầu tư lưới điện (góp vốn cho ESB Networks và EirGrid)",
+"detail": "Gia cố lưới điện phục vụ nhà ở và năng lượng tái tạo",
+"status": "Đang triển khai"
+},
+{
+"title": "Đầu tư giao thông (bao gồm MetroLink)",
+"detail": "Các dự án đường bộ, giao thông công cộng và giao thông các-bon thấp",
+"status": "Đang triển khai"
+},
+{
+"title": "Tài chính cho nhà thầu xây dựng nhỏ mua đất đã quy hoạch",
+"detail": "Các biện pháp cải thiện khả năng tiếp cận vốn để mua đất quy hoạch nhà ở",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn khả thi và tái thiết đô thị cho chính quyền địa phương",
+"why": "Vốn NDP chảy vào các dự án địa phương và các gói thầu tư vấn liên tục xuất hiện.",
+"target": "Hội đồng hạt (Fingal, Kildare, v.v.)"
+},
+{
+"title": "Thí điểm tự động hóa quy trình bằng AI cho cơ quan công (xử lý hồ sơ, văn bản)",
+"why": "Số hóa dịch vụ công là một ưu tiên của NDP.",
+"target": "Các bộ và cơ quan (NTMA, HEA, v.v.)"
+},
+{
+"title": "Gói thâm nhập Ireland làm trung tâm EU cho SME Hàn Quốc",
+"why": "Là thành viên EU nói tiếng Anh, Ireland đóng vai trò bàn đạp vào châu Âu.",
+"target": "SME xuất khẩu Hàn Quốc"
+}
+],
+"krsupport": [
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí tiếp thị, chứng nhận và tư vấn để thâm nhập các thị trường như Ireland."
+},
+{
+"title": "Văn phòng KOTRA ở nước ngoài (không có tại Ireland; liên hệ văn phòng lân cận ở châu Âu)",
+"detail": "Có thể yêu cầu nghiên cứu thị trường và tìm kiếm người mua thông qua các văn phòng lân cận ở châu Âu."
+}
+]
+}

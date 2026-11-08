@@ -1,0 +1,49 @@
+{
+"summary": "Blok kiri-tengah menang tipis dalam pemilu 2026-09-13 dengan 176 kursi, tetapi perundingan koalisi menemui jalan buntu, dan pemerintahan sementara Kristersson harus mengajukan anggaran 2027 (atau anggaran transisi) paling lambat 12 November.",
+"leader": "Raja Carl XVI Gustaf; Perdana Menteri sementara Ulf Kristersson (mengundurkan diri 2026-09-17, menjabat hingga terbentuk pemerintahan baru)",
+"agenda": [
+"Pembentukan pemerintahan: pemungutan suara PM di Riksdag (hingga empat kali; pemilu dipercepat dalam tiga bulan jika semuanya gagal)",
+"Mengajukan anggaran 2027 atau anggaran transisi (tenggat 12 November)",
+"Pemerintahan sementara terutama terbatas pada urusan yang sedang berjalan dan mendesak",
+"Penguatan pertahanan dan keamanan yang berkelanjutan (perkiraan)"
+],
+"projects": [
+{
+"title": "Proses pengukuhan perdana menteri",
+"detail": "Pemungutan suara 15 Okt untuk Andersson gagal (99 setuju, 248 menolak); pemungutan suara untuk pemimpin Partai Tengah Thand Ringqvist dijadwalkan",
+"status": "Berjalan"
+},
+{
+"title": "Anggaran 2027 / anggaran transisi",
+"detail": "Tanpa pemerintahan baru, pemerintahan sementara mengajukan anggaran transisi berdasarkan prinsip yang telah ditetapkan",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Laporan pemantauan perubahan kebijakan Swedia dan strategi masuk pasar",
+"why": "Prioritas anggaran dan kebijakan bergantung pada bagaimana pemerintahan terbentuk.",
+"target": "Perusahaan Korea yang berencana masuk ke Swedia"
+},
+{
+"title": "Pilot otomatisasi proses berbasis AI untuk pemerintah kota",
+"why": "Pemerintah kota di negara Nordik memiliki permintaan administrasi digital yang kuat (perkiraan).",
+"target": "Pemerintah kota dan regional Swedia"
+},
+{
+"title": "Penjodohan mitra Nordik bagi UKM pertahanan dan manufaktur Korea",
+"why": "Investasi keamanan menciptakan permintaan akan mitra rantai pasok lokal (perkiraan).",
+"target": "Perusahaan pertahanan dan manufaktur Swedia"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Swedia (Stockholm)",
+"detail": "Mendukung riset pasar Swedia/Nordik dan pencarian pembeli."
+},
+{
+"title": "Program Export Voucher",
+"detail": "Menanggung biaya pemasaran luar negeri, sertifikasi, dan konsultasi melalui voucher."
+}
+]
+}

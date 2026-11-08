@@ -1,0 +1,70 @@
+{
+"summary": "L'Irlande a annoncé le 2026-10-06 un budget 2027 de 8,5 Md€ (7 Md€ de dépenses, 1,5 Md€ de mesures fiscales), tandis que son Plan national de développement de 275,4 Md€ jusqu'en 2035 développe les infrastructures de logement, d'eau, d'énergie et de transport.",
+"leader": "Présidente Catherine Connolly ; Taoiseach Micheál Martin ; Tánaiste et ministre des Finances Simon Harris",
+"agenda": [
+"Offre de logements (objectif de 300 000 logements neufs d'ici 2030)",
+"Infrastructures du Plan national de développement 2026-2035 (eau, réseau électrique, transports)",
+"Allègement de l'impôt sur le revenu des travailleurs (paquet fiscal de 1,5 Md€)",
+"Numérisation des services publics",
+"Développement des services financiers, y compris les actifs numériques"
+],
+"projects": [
+{
+"title": "Budget 2027",
+"detail": "7 Md€ de dépenses supplémentaires plus 1,5 Md€ de mesures fiscales, dont un relèvement de la tranche au taux normal",
+"status": "Au Parlement"
+},
+{
+"title": "Plan national de développement 2026-2035",
+"detail": "Plus important programme d'investissement public jamais réalisé ; 102,4 Md€ pour 2026-2030",
+"status": "En cours"
+},
+{
+"title": "Investissements dans l'eau et l'assainissement",
+"detail": "Développement des services d'eau dans le cadre du NDP",
+"status": "En cours"
+},
+{
+"title": "Investissements dans le réseau électrique (fonds propres pour ESB Networks et EirGrid)",
+"detail": "Renforcement du réseau pour le logement et les renouvelables",
+"status": "En cours"
+},
+{
+"title": "Investissements dans les transports (y compris MetroLink)",
+"detail": "Routes, transports publics et projets bas carbone",
+"status": "En cours"
+},
+{
+"title": "Financement des petits constructeurs pour l'achat de terrains constructibles",
+"detail": "Mesures visant à améliorer l'accès au financement des terrains constructibles à usage résidentiel",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Conseil en faisabilité et en régénération urbaine pour les collectivités locales",
+"why": "Les fonds du NDP alimentent des projets locaux et les appels d'offres de conseil se multiplient.",
+"target": "Conseils de comté (Fingal, Kildare, etc.)"
+},
+{
+"title": "Pilotes d'automatisation des processus par IA pour les organismes publics (dossiers, documents)",
+"why": "La numérisation des services publics est une priorité du NDP.",
+"target": "Ministères et agences (NTMA, HEA, etc.)"
+},
+{
+"title": "Offre d'entrée en Irlande comme plateforme européenne pour les PME coréennes",
+"why": "En tant que membre anglophone de l'UE, l'Irlande sert de tête de pont vers l'Europe.",
+"target": "PME exportatrices coréennes"
+}
+],
+"krsupport": [
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre les frais de marketing, de certification et de conseil pour entrer sur des marchés comme l'Irlande."
+},
+{
+"title": "Bureaux de KOTRA à l'étranger (pas de bureau en Irlande ; contacter un bureau européen voisin)",
+"detail": "Les études de marché et la recherche d'acheteurs peuvent être demandées via les bureaux européens voisins."
+}
+]
+}

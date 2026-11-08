@@ -1,0 +1,80 @@
+{
+"summary": "Trong đợt rà soát giữa năm ngày 22/10/2026, Namibia đã hạ dự báo thu ngân sách do ngành khai khoáng yếu và tăng ngân sách thêm khoảng 700 triệu N$ (từ 87,9 tỷ N$ lên 88,6 tỷ N$), với nợ công dự kiến ở mức 201,7 tỷ N$. Quyết định đầu tư cuối cùng cho dự án hydro xanh (Hyphen) và mỏ dầu ngoài khơi Venus bị trì hoãn, trong khi các dự luật về đất đai và dầu khí đang gây tranh cãi.",
+"leader": "Tổng thống Netumbo Nandi-Ndaitwah (từ tháng 3/2025) / Phó Tổng thống Lucia Witbooi / Thủ tướng Elijah Ngurare",
+"agenda": [
+"Lành mạnh tài khóa: chiến lược trung hạn về quản lý thu ngân sách và nợ (trước tháng 2/2027)",
+"Hydro xanh (Hyphen, nhà nước nắm 24% cổ phần) và dầu khí ngoài khơi (Venus)",
+"Luật đất đai hợp nhất và lệnh cấm người nước ngoài mua đất",
+"Chuyển đơn vị dầu khí thượng nguồn về Phủ Tổng thống (dự luật sửa đổi luật dầu khí)",
+"Hỗ trợ nông nghiệp, bao gồm kiểm soát bệnh lở mồm long móng và chuẩn bị ứng phó hạn hán",
+"Tinh gọn chính phủ: giảm số bộ từ 21 xuống 14"
+],
+"projects": [
+{
+"title": "Rà soát giữa năm ngân sách tài khóa 2026/27",
+"detail": "Ngân sách tăng từ 87,9 tỷ N$ lên 88,6 tỷ N$ (cần Quốc hội phê duyệt); thu thuần 42,4 tỷ N$ tính đến cuối tháng 9 (51,4% mục tiêu); rà soát thuế suất VAT 0% đối với đường",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự án hydro xanh Hyphen",
+"detail": "Quyết định đầu tư cuối cùng lùi đến cuối năm 2027; dự báo tạo tới 15.000 việc làm xây dựng và 3.000 việc làm lâu dài",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Mỏ dầu ngoài khơi Venus của TotalEnergies",
+"detail": "Mục tiêu 160.000 thùng/ngày; chưa có quyết định đầu tư cuối cùng tính đến cuối tháng 10/2026, các điều khoản đang được đàm phán",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Dự án Cấp nước Ruacana South Giai đoạn 1",
+"detail": "Chương trình Hỗ trợ Ngành Nước Namibia do AfDB tài trợ; hạng mục đường ống dẫn chính, bể chứa và lắp đặt đồng hồ nước",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Cấp nước thích ứng khí hậu từ tầng ngậm nước Ohangwena (miền bắc)",
+"detail": "Viện trợ không hoàn lại của KfW/BMZ (Đức); sơ tuyển tư vấn đa ngành (đóng tháng 7/2026)",
+"status": "Đang triển khai"
+},
+{
+"title": "Thỏa thuận viện trợ phát triển với Đức",
+"detail": "1,1 tỷ EUR được đề xuất trong 30 năm; đang có vụ kiện tại Tòa án Tối cao",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Hỗ trợ chiến lược thu ngân sách trung hạn và phân tích dữ liệu thuế tự động",
+"why": "Chính phủ phải đưa ra chiến lược thu ngân sách trước tháng 2/2027 và thu ngân sách đang thấp hơn mục tiêu.",
+"target": "Bộ Tài chính và Doanh nghiệp Công, Cơ quan Thu ngân sách Namibia (NamRA)"
+},
+{
+"title": "Bảng điều khiển giám sát mua sắm công và thực hiện ngân sách",
+"why": "Việc thực hiện ngân sách đang chậm và phần lớn chi tiêu bị dồn vào chi phí hoạt động.",
+"target": "Bộ Tài chính và Doanh nghiệp Công, hội đồng các vùng"
+},
+{
+"title": "Tư vấn kết nối SME địa phương và Hàn Quốc tham gia chuỗi cung ứng hydro xanh",
+"why": "Hyphen hứa hẹn nhiều việc làm xây dựng và hoạt động mua sắm lớn, và giai đoạn trước FID cho thời gian chuẩn bị.",
+"target": "SME địa phương, nhà cung cấp thiết bị Hàn Quốc"
+},
+{
+"title": "Hệ thống quản lý truy xuất và kiểm soát dịch bệnh gia súc",
+"why": "Kiểm soát bệnh lở mồm long móng đã nổi lên như một nhu cầu chi tiêu mới chưa có trong ngân sách.",
+"target": "Bộ Nông nghiệp, Nước và Cải cách Ruộng đất"
+}
+],
+"krsupport": [
+{
+"title": "Trung tâm AI Hàn Quốc - châu Phi và Gói K-AI",
+"detail": "Khung hợp tác về AI, trung tâm dữ liệu và điện năng gắn với EDCF; chưa xác nhận dự án cụ thể nào cho Namibia."
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường Nam Phi của KOTRA",
+"detail": "Nghiên cứu thị trường và kết nối người mua thông qua văn phòng thương mại phụ trách (văn phòng phụ trách Namibia vẫn cần được xác nhận)."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả chi phí nghiên cứu thị trường, chứng nhận và tiếp thị tại địa phương để chuẩn bị thâm nhập thị trường."
+}
+]
+}

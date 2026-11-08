@@ -1,0 +1,60 @@
+{
+"summary": "Sau cuộc tổng tuyển cử 2025-26, nội các mới gồm 34 thành viên dưới thời Tổng thống Min Aung Hlaing đã nhậm chức vào tháng 4/2026. Đối mặt với tăng trưởng yếu (dự báo của Ngân hàng Thế giới cho tài khóa 2026/27: 2%) và cú sốc giá nhiên liệu, chính phủ nhấn mạnh ưu tiên nhà đầu tư trong nước, thu hút FDI và ngoại giao kinh tế với ASEAN.",
+"leader": "Tổng thống Min Aung Hlaing (được Quốc hội bầu ngày 2026-04-03; nguyên thủ quốc gia và người đứng đầu chính phủ) · Phó Tổng thống thứ nhất Nyo Saw, Phó Tổng thống thứ hai Nan Ni Ni Aye",
+"agenda": [
+"Phục hồi kinh tế: ưu tiên nhà đầu tư trong nước đồng thời thu hút đầu tư nước ngoài",
+"Mở rộng quan hệ thương mại và đầu tư với ASEAN và các nước láng giềng (các chuyến thăm Malaysia, Thái Lan, Ấn Độ)",
+"Giải quyết tình trạng thiếu nhiên liệu và điện, thu hút đầu tư vào điện mặt trời và các nguồn năng lượng khác",
+"Phát triển sản xuất hướng xuất khẩu (giày dép, lốp xe, da thuộc, cao su)",
+"Duy trì an ninh và ổn định (ưu tiên chi tiêu quốc phòng và an ninh)"
+],
+"projects": [
+{
+"title": "Nội các mới và tái cơ cấu các bộ",
+"detail": "Đề xuất 31 bộ và 30 bộ trưởng, sau đó bổ nhiệm nội các và 46 thứ trưởng",
+"status": "Hoàn thành"
+},
+{
+"title": "Đối thoại Doanh nghiệp Cấp cao Myanmar - Malaysia",
+"detail": "Các phòng thương mại đã tìm kiếm hợp tác thương mại và đầu tư trong chuyến thăm của Tổng thống",
+"status": "Đang triển khai"
+},
+{
+"title": "Thu hút đầu tư vào điện mặt trời và sản xuất tấm pin",
+"detail": "Mở rộng đầu tư điện mặt trời và sản xuất tấm pin nhằm giảm thiếu điện tại các khu công nghiệp",
+"status": "Đang triển khai"
+},
+{
+"title": "Mở rộng sản xuất hướng xuất khẩu",
+"detail": "Kế hoạch tăng sản lượng các mặt hàng có nhu cầu cao như giày dép và lốp xe cho Trung Quốc, Ấn Độ, Bangladesh và ASEAN",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Dịch vụ sàng lọc lệnh trừng phạt và tuân thủ (thẩm định trước giao dịch với Myanmar)",
+"why": "Các lệnh trừng phạt của Mỹ/EU/Anh vẫn còn hiệu lực và việc Myanmar bị FATF xếp vào danh sách rủi ro cao khiến doanh nghiệp Hàn Quốc cần kiểm tra đối tác trước mọi giao dịch.",
+"target": "SME Hàn Quốc đang giao dịch hoặc cân nhắc thâm nhập Myanmar"
+},
+{
+"title": "Tư vấn chiến lược thâm nhập qua trung tâm ASEAN (qua Thái Lan/Malaysia)",
+"why": "Myanmar đang thắt chặt quan hệ với các nước láng giềng ASEAN, nên việc thâm nhập thông qua trung tâm ở nước thứ ba là khả thi.",
+"target": "SME Hàn Quốc ngành hàng tiêu dùng và linh kiện"
+},
+{
+"title": "Quản lý năng lượng nhà máy và nghiên cứu khả thi điện mặt trời áp mái",
+"why": "Tình trạng thiếu điện kéo dài tại các khu công nghiệp tạo ra nhu cầu tự sản xuất điện.",
+"target": "Nhà sản xuất tư nhân tại các khu công nghiệp khu vực Yangon"
+}
+],
+"krsupport": [
+{
+"title": "Thông tin thị trường của KOTRA Yangon",
+"detail": "Cung cấp thông tin về xu hướng thị trường Myanmar và quy định thương mại (cần kiểm tra riêng tình trạng trừng phạt)."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả các dịch vụ xuất khẩu như nghiên cứu thị trường, chi phí pháp lý và chứng nhận."
+}
+]
+}

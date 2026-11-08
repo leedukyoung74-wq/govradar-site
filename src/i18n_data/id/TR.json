@@ -1,0 +1,76 @@
+{
+"summary": "Program Jangka Menengah Türkiye (2027-2029) menargetkan inflasi satu digit pada 2029 sambil mendorong pertumbuhan dan lapangan kerja. Rancangan anggaran 2027 menekankan perumahan dan pembaruan kota pascagempa, infrastruktur transportasi, serta lapangan kerja bagi pemuda.",
+"leader": "Presiden Recep Tayyip Erdoğan (kepala negara dan kepala pemerintahan)",
+"agenda": [
+"Disinflasi (satu digit pada 2029)",
+"Pasokan perumahan dan pembaruan kota yang tahan gempa",
+"Lebih banyak lapangan kerja bagi pemuda dan perempuan",
+"Transisi hijau (tuan rumah COP31 di Antalya)",
+"Infrastruktur transportasi (kereta cepat)",
+"Teknologi pertahanan dan antariksa"
+],
+"projects": [
+{
+"title": "Rancangan anggaran pemerintah pusat 2027",
+"detail": "Defisit 3.5% PDB, target pertumbuhan 4.2%, kenaikan tajam belanja perumahan",
+"status": "Di parlemen"
+},
+{
+"title": "Program Jangka Menengah (OVP) 2027-2029",
+"detail": "Diumumkan Sep 2026; menargetkan PDB USD 2.2tn dan inflasi satu digit pada 2029",
+"status": "Berjalan"
+},
+{
+"title": "Pembaruan kota 'Separuh dari Kami' (Yarısı Bizden)",
+"detail": "Dukungan pembangunan kembali tahan gempa yang berpusat di Istanbul; hibah TRY 875k ditambah pinjaman TRY 875k per unit; diperpanjang hingga akhir 2027",
+"status": "Berjalan"
+},
+{
+"title": "Kereta cepat Halkalı-Kapıkule",
+"detail": "Pembukaan ruas Çerkezköy-Kapıkule diumumkan pada Okt 2026",
+"status": "Berjalan"
+},
+{
+"title": "Program lapangan kerja pemuda İŞKUR",
+"detail": "150,000 kuota untuk 2026-2027 dengan uang saku harian dan jaminan sosial yang dibayar negara",
+"status": "Berjalan"
+},
+{
+"title": "Earthquake Recovery and Reconstruction Project (TERRP)",
+"detail": "Pemulihan wilayah terdampak gempa yang dibiayai Bank Dunia, termasuk peralatan darurat Kementerian Kesehatan seperti 285 ambulans",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Penilaian seismik dan manajemen konstruksi cerdas untuk lokasi pembaruan kota",
+"why": "Dukungan pembaruan kota berlaku hingga akhir 2027 dan belanja perumahan melonjak dalam anggaran 2027.",
+"target": "Kementerian Lingkungan, Urbanisasi, dan Perubahan Iklim, TOKİ, Istanbul Metropolitan Municipality"
+},
+{
+"title": "Platform AI untuk pelatihan vokasi dan penjodohan kerja",
+"why": "Program lapangan kerja pemuda diperluas menjadi 150,000 kuota, sehingga menciptakan permintaan akan perangkat penjodohan dan manajemen.",
+"target": "İŞKUR, Kementerian Tenaga Kerja dan Jaminan Sosial"
+},
+{
+"title": "Diagnostik pabrik cerdas dan konsultasi otomatisasi bagi UKM manufaktur",
+"why": "Program Jangka Menengah menjadikan produktivitas dan daya saing ekspor sebagai sasaran inti.",
+"target": "KOSGEB, produsen di kawasan industri terorganisasi"
+},
+{
+"title": "Efisiensi operasional rumah sakit kota berskala besar (AI penjadwalan dan manajemen tempat tidur)",
+"why": "Rumah sakit kota berskala besar yang baru terus dibuka, sehingga menciptakan kebutuhan efisiensi (perkiraan).",
+"target": "Kementerian Kesehatan, operator PPP rumah sakit kota"
+}
+],
+"krsupport": [
+{
+"title": "Kantor KOTRA Istanbul",
+"detail": "Mendukung riset pasar, penjodohan pembeli, dan partisipasi pameran dagang di Türkiye."
+},
+{
+"title": "Dukungan permukiman sementara bagi korban gempa Türkiye",
+"detail": "Mendukung permukiman sementara bagi pengungsi setelah gempa 2023 (proyek terdahulu)."
+}
+]
+}

@@ -1,0 +1,76 @@
+{
+"summary": "Le Parti travailliste a de nouveau remporté les élections générales de mai 2026 à Malte et Robert Abela est resté Premier ministre ; en juin, Malte est sortie de la procédure de l'UE concernant les déficits excessifs. Le budget 2027 maintient les aides face au coût de la vie tout en relevant les éco-contributions touristiques et les frais de permis de travail pour les ressortissants hors UE, et investit dans la santé et les interconnexions énergétiques.",
+"leader": "Présidente Myriam Spiteri Debono · Premier ministre Robert Abela (vainqueur des élections du 2026-05-30, de nouveau investi le 2026-06-01)",
+"agenda": [
+"Aides face au coût de la vie : COLA de 6,41 EUR par semaine, revalorisation des pensions, prime défiscalisée jusqu'à 1 000 EUR",
+"Assainissement budgétaire : déficit de 2,6 % du PIB (2026-27) ramené à 1,8 % d'ici 2029",
+"Infrastructures de santé : extension des urgences de Mater Dei, unité de santé mentale, plan directeur de l'hôpital général de Gozo",
+"Énergie : deuxième interconnexion avec la Sicile, études sur 300MW d'éolien en mer, 25 % d'énergies renouvelables d'ici 2030",
+"Gestion de la demande touristique et de transport (hausse de l'éco-contribution, redevances pour les croisiéristes et les visiteurs de Comino)",
+"Fiscalité des PME : taux de 25 % sur les bénéfices mis en réserve ou réinvestis pour les entreprises dont le chiffre d'affaires ne dépasse pas 1 M EUR"
+],
+"projects": [
+{
+"title": "Extension du service des urgences de l'hôpital Mater Dei",
+"detail": "Les postes de soins passent de 35 à 70",
+"status": "Prévu"
+},
+{
+"title": "Nouvelle unité de santé mentale de 135 lits et bâtiment d'imagerie médicale",
+"detail": "Inscrits au titre des infrastructures de santé dans le budget 2027",
+"status": "Prévu"
+},
+{
+"title": "Deuxième interconnexion Sicile-Malte",
+"detail": "Parallèlement à des études pour une troisième interconnexion et une liaison Malte-Gozo de 132kV",
+"status": "En cours"
+},
+{
+"title": "Étude sur 300MW d'éolien en mer",
+"detail": "Études de faisabilité de l'éolien en mer et investissement dans le réseau de distribution (environ 75 M EUR)",
+"status": "Prévu"
+},
+{
+"title": "Alimentation électrique à quai dans le sud du Grand Port et à Lascaris",
+"detail": "Projet d'alimentation électrique des navires à quai dont l'achèvement est prévu d'ici fin 2028",
+"status": "En cours"
+},
+{
+"title": "Programme de dépenses d'investissement",
+"detail": "Environ 1,45 Md EUR de dépenses d'investissement en 2027, dont environ 390 M EUR de fonds européens",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Conseil en automatisation des processus des PME (IA/RPA)",
+"why": "Les frais de permis de travail hors UE passent à 800 EUR, auxquels s'ajoute une nouvelle contribution annuelle aux infrastructures de 400 EUR, ce qui alourdit le coût du travail.",
+"target": "PME maltaises, entreprises du tourisme et de l'hôtellerie"
+},
+{
+"title": "Solution de validation des factures TVA et d'automatisation fiscale",
+"why": "De nouvelles pénalités TVA pour factures erronées et une autoliquidation nationale dans le BTP vont entrer en vigueur.",
+"target": "Entreprises du BTP, PME, cabinets comptables"
+},
+{
+"title": "Services de formation du personnel de santé publique (FSE+)",
+"why": "Le ministère de la Santé a lancé un appel d'offres européen pour une formation des cadres à la compétence culturelle.",
+"target": "Ministère de la Santé, Department of Contracts"
+},
+{
+"title": "Création d'un hub européen à Malte pour les PME coréennes",
+"why": "Le taux de 25 % sur les bénéfices réinvestis des petites entreprises améliore les conditions pour les petites structures.",
+"target": "PME coréennes ciblant l'UE et l'Afrique du Nord"
+}
+],
+"krsupport": [
+{
+"title": "Actualités des marchés étrangers de KOTRA (Malte/UE)",
+"detail": "Fournit des informations sur la réglementation européenne et les tendances du marché."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent les frais d'implantation à l'étranger, tels que la création d'entreprise, la certification et le conseil juridique."
+}
+]
+}

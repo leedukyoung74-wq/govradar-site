@@ -1,0 +1,71 @@
+{
+"summary": "Le gouvernement Kast donne la priorité à la sécurité, au contrôle migratoire et à la relance de l'investissement, et a transmis au Congrès un budget 2027 axé sur la réduction des dépenses. Les coupes dans les programmes sociaux et l'investissement régional suscitent des résistances au Congrès.",
+"leader": "Président José Antonio Kast (chef de l'État et du gouvernement, en fonction depuis le 2026-03-11)",
+"agenda": [
+"Durcissement de la sécurité et des peines (projet de loi limitant les réductions de peine pour les auteurs d'infractions sexuelles sur mineurs)",
+"Freiner la migration irrégulière et renforcer l'administration des migrations",
+"Relancer l'investissement et simplifier les autorisations",
+"Assainissement budgétaire (réduction des dépenses, baisse du déficit structurel)",
+"Baisse du taux de l'impôt sur les sociétés",
+"Infrastructures minières, énergétiques et de dessalement"
+],
+"projects": [
+{
+"title": "Projet de loi de finances 2027",
+"detail": "Dépenses totales +1,5 % ; priorité à la sécurité, à l'emploi et à la santé ; réduction de certaines aides au logement et de l'investissement régional",
+"status": "En examen au Congrès"
+},
+{
+"title": "Plan pour l'emploi Chile Despega",
+"detail": "Vise plus de 100 000 emplois",
+"status": "Prévu"
+},
+{
+"title": "Travaux publics de reconstruction après catastrophes",
+"detail": "241 chantiers de réparation doivent démarrer en janvier 2027",
+"status": "Prévu"
+},
+{
+"title": "Plan d'aides au logement",
+"detail": "Plus de 166 000 aides la première année",
+"status": "Prévu"
+},
+{
+"title": "Dessalement, réutilisation de l'eau, prisons et centres de santé",
+"detail": "Infrastructures inscrites dans la stratégie de croissance du gouvernement (montant non communiqué)",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Automatisation par IA de l'examen des dossiers migratoires et des services aux citoyens",
+"why": "Le contrôle migratoire renforcé a alourdi la charge administrative.",
+"target": "Service national des migrations, ministère de l'Intérieur"
+},
+{
+"title": "Vidéosurveillance municipale et analyse vidéo pour la sécurité",
+"why": "Les municipalités multiplient les appels d'offres de remplacement des caméras et d'extension de la surveillance.",
+"target": "Municipalités et autorités de sécurité"
+},
+{
+"title": "Conseil en automatisation de la documentation et du suivi des autorisations pour les mines et l'énergie",
+"why": "Le gouvernement veut accélérer les autorisations des investissements bloqués.",
+"target": "Entreprises minières et énergétiques, Service d'évaluation environnementale"
+},
+{
+"title": "Offres de transformation numérique et d'adoption de l'IA pour les PME",
+"why": "La politique de reprise de l'emploi s'accompagne d'une demande de soutien à la productivité des PME.",
+"target": "PME soutenues par Sercotec et Corfo"
+}
+],
+"krsupport": [
+{
+"title": "Bureau KOTRA de Santiago",
+"detail": "Conseille sur l'entrée sur le marché chilien, le marketing, les études, les projets défense/G2G et agroalimentaires."
+},
+{
+"title": "Export voucher pour les PME",
+"detail": "Couvre par des bons les services à l'export tels que les études de marché, la traduction et la certification."
+}
+]
+}

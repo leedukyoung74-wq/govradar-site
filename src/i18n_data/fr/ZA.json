@@ -1,0 +1,76 @@
+{
+"summary": "Dans sa déclaration de politique budgétaire à moyen terme du 21 oct. 2026, le Trésor a abaissé la prévision de croissance 2026 à 1,2 % et fixé une trajectoire de réduction du déficit de 4,3 % du PIB à 2,5 % d'ici 2030. Le financement des infrastructures (IFISA, BFI, PPP), la réforme de l'eau et de l'électricité et le renforcement des finances municipales sont au cœur du dispositif, les élections locales étant prévues le 4 nov. 2026.",
+"leader": "Président Cyril Ramaphosa (chef de l'État et du gouvernement, gouvernement d'unité nationale)",
+"agenda": [
+"Assainissement budgétaire : pic du ratio d'endettement et projet de loi sur une règle budgétaire en 2027",
+"Montée en puissance des infrastructures : IFISA, Budget Facility for Infrastructure et portefeuille de PPP",
+"Réforme de l'électricité et de l'eau : extension du réseau et réduction de l'eau non facturée",
+"Reconstruction des collectivités locales : transferts accrus, compteurs intelligents, Livre blanc révisé",
+"Lutte contre les violences fondées sur le genre et les féminicides tout en maintenant les allocations sociales",
+"Plateforme de gouvernement numérique MyMzansi"
+],
+"projects": [
+{
+"title": "Infrastructure Finance and Implementation Support Agency (IFISA)",
+"detail": "Opérationnelle depuis le 1er avr. 2026 pour attirer les capitaux privés et des modèles de réalisation alternatifs",
+"status": "En cours"
+},
+{
+"title": "Budget Facility for Infrastructure et obligations d'infrastructure",
+"detail": "Quatre fenêtres de candidature par an ; les obligations d'infrastructure financent les projets BFI",
+"status": "En cours"
+},
+{
+"title": "Portefeuille de PPP et Credit Guarantee Vehicle (CGV)",
+"detail": "68 PPP (dont 31 municipaux) ; le CGV soutiendra d'abord le transport d'électricité, avec un fonctionnement à plein visé pour 2027",
+"status": "Prévu"
+},
+{
+"title": "Finances municipales et compteurs intelligents",
+"detail": "21,8 Md R supplémentaires de part équitable et 13,4 Md R de partage de la taxe sur les carburants ; 3,5 Md R de plus pour les compteurs intelligents à moyen terme",
+"status": "Prévu"
+},
+{
+"title": "Conseil transactionnel sur l'eau non facturée municipale",
+"detail": "Sélection d'un conseil transactionnel pour la réduction de l'eau non facturée dans quatre municipalités",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Terminal vraquier sec de Richards Bay",
+"detail": "Sélection de conseils juridiques transactionnels pour le projet de PPP",
+"status": "Appel d'offres en cours"
+}
+],
+"biz": [
+{
+"title": "Analyse de l'eau non facturée et de la facturation municipales",
+"why": "La DBSA lance un appel d'offres pour du conseil transactionnel sur l'eau non facturée dans quatre municipalités et le financement des compteurs intelligents augmente.",
+"target": "Services municipaux de l'eau, DBSA"
+},
+{
+"title": "SaaS d'estimation des coûts et de gestion de projets, accompagné de conseil",
+"why": "La DBSA acquiert un cadre et un outil d'estimation des coûts des programmes et des projets.",
+"target": "DBSA, unités infrastructures du National Treasury, IFISA"
+},
+{
+"title": "Faisabilité de PPP et modélisation financière",
+"why": "31 des 68 PPP sont municipaux et les capacités de préparation sont limitées.",
+"target": "Municipalités, PPP Unit du Trésor, DBSA"
+},
+{
+"title": "Chatbot IA et automatisation des processus pour les services aux citoyens",
+"why": "Le gouvernement a financé une plateforme unique de services numériques.",
+"target": "Département de la Fonction publique et de l'Administration, Département des Communications et des Technologies numériques"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Johannesburg",
+"detail": "Accompagne les études de marché, les services de bureau local, les salons et missions, la K-food et les biens de consommation, ainsi que les secteurs médical, de la défense et du nucléaire."
+},
+{
+"title": "Coopération économique de l'ambassade de Corée",
+"detail": "L'Afrique du Sud est le premier partenaire commercial de la Corée en Afrique et l'ambassade aide les entreprises à identifier des opportunités d'affaires."
+}
+]
+}

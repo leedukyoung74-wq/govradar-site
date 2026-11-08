@@ -1,0 +1,564 @@
+{
+ "giles": {
+  "ko": "이 키트는 각국 정부(행정안전부 국민재난안전포털, 미국 FEMA·CDC, 영국 Be Ready, 네덜란드 Denk Vooruit, 일본 방재청)의 공식 비축 권고를 기준으로 만들었습니다. 공포에 따른 사재기가 아니라, 평소에 조금씩 준비하고 순환 소비하는 것을 권합니다.",
+  "en": "This kit follows official stockpile guidance from national governments (Korea's disaster-safety portal, US FEMA and CDC, UK Be Ready, Dutch Denk Vooruit, Japan's Disaster Management Agency). Prepare a little at a time and rotate stock — not panic buying.",
+  "note_ko": "수량은 성인 기준 계획치이며 가족 건강 상태·보관 공간에 맞춰 조정하세요.",
+  "note_en": "Quantities are planning figures for adults; adjust for health and storage space."
+ },
+ "stages": [
+  {
+   "id": "72h",
+   "ko": "1단계 · 72시간",
+   "en": "Stage 1 · 72 hours",
+   "p_ko": "물, 조리하지 않고 먹는 음식, 약, 손전등, 보조배터리부터 확보합니다.",
+   "p_en": "Secure water, no-cook food, medicines, a torch and a power bank first."
+  },
+  {
+   "id": "2w",
+   "ko": "2단계 · 2주",
+   "en": "Stage 2 · 2 weeks",
+   "p_ko": "평소 먹는 식품을 조금 더 사고, 유통기한이 가까운 것부터 먹는 순환 비축을 합니다.",
+   "p_en": "Buy a little more of what you normally eat and rotate stock — eat the oldest first."
+  },
+  {
+   "id": "1m",
+   "ko": "3단계 · 1개월 이상",
+   "en": "Stage 3 · 1 month +",
+   "p_ko": "가족 구성·보관 공간·비용·실제 위험에 따라 정합니다. 필요 이상으로 대량 구매할 근거는 없습니다.",
+   "p_en": "Decide by household, storage space, cost and real risk. There is no basis for buying in bulk beyond need."
+  }
+ ],
+ "cats": [
+  {
+   "id": "water",
+   "ko": "식수",
+   "en": "Water",
+   "items_ko": "생수, 물 보관용 통, 정수 필터",
+   "items_en": "Bottled water, water container, water filter",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "staple",
+   "ko": "주식",
+   "en": "Staples",
+   "items_ko": "쌀, 즉석밥, 국수, 파스타, 오트밀",
+   "items_en": "Rice, instant rice, noodles, pasta, oats",
+   "pri": "must",
+   "stage": "2w"
+  },
+  {
+   "id": "protein",
+   "ko": "단백질",
+   "en": "Protein",
+   "items_ko": "참치캔, 햄, 콩 통조림, 멸치, 건어물",
+   "items_en": "Canned tuna, ham, canned beans, dried anchovies and fish",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "side",
+   "ko": "반찬",
+   "en": "Side dishes",
+   "items_ko": "김, 김치 통조림, 장아찌, 레토르트 반찬",
+   "items_en": "Seaweed, canned kimchi, pickles, retort side dishes",
+   "pri": "must",
+   "stage": "2w"
+  },
+  {
+   "id": "energy",
+   "ko": "열량 보충",
+   "en": "Calories",
+   "items_ko": "식용유, 견과류, 땅콩버터, 에너지바",
+   "items_en": "Cooking oil, nuts, peanut butter, energy bars",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "season",
+   "ko": "조미료",
+   "en": "Seasoning",
+   "items_ko": "소금, 설탕, 간장, 고추장, 된장, 꿀",
+   "items_en": "Salt, sugar, soy sauce, gochujang, doenjang, honey",
+   "pri": "rec",
+   "stage": "2w"
+  },
+  {
+   "id": "snack",
+   "ko": "간편식",
+   "en": "Ready-to-eat",
+   "items_ko": "크래커, 건빵, 비스킷, 통조림 과일",
+   "items_en": "Crackers, hardtack, biscuits, canned fruit",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "drink",
+   "ko": "음료",
+   "en": "Drinks",
+   "items_ko": "멸균우유, 분유, 차, 전해질 보충 음료",
+   "items_en": "UHT milk, formula, tea, electrolyte drinks",
+   "pri": "rec",
+   "stage": "2w"
+  },
+  {
+   "id": "med",
+   "ko": "의약품",
+   "en": "Medicine",
+   "items_ko": "정기 복용약, 소독제, 밴드, 거즈, 체온계, 개인별 일반약",
+   "items_en": "Regular prescriptions, antiseptic, plasters, gauze, thermometer, OTC medicines",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "hyg",
+   "ko": "위생",
+   "en": "Hygiene",
+   "items_ko": "휴지, 물티슈, 치약, 칫솔, 비누, 생리용품",
+   "items_en": "Toilet paper, wet wipes, toothpaste, toothbrush, soap, sanitary products",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "clean",
+   "ko": "세탁·청소",
+   "en": "Laundry & cleaning",
+   "items_ko": "세제, 주방세제, 고무장갑, 쓰레기봉투",
+   "items_en": "Detergent, dish soap, rubber gloves, bin bags",
+   "pri": "rec",
+   "stage": "2w"
+  },
+  {
+   "id": "toilet",
+   "ko": "화장실",
+   "en": "Toilet",
+   "items_ko": "휴대용 비상변기, 배변봉투, 응고제",
+   "items_en": "Portable emergency toilet, waste bags, gelling agent",
+   "pri": "rec",
+   "stage": "2w"
+  },
+  {
+   "id": "power",
+   "ko": "정전 대비",
+   "en": "Blackout",
+   "items_ko": "손전등, LED 랜턴, 건전지, 보조배터리",
+   "items_en": "Torch, LED lantern, batteries, power bank",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "comms",
+   "ko": "통신",
+   "en": "Communication",
+   "items_ko": "건전지식 라디오, 충전 케이블, 종이 연락처",
+   "items_en": "Battery radio, charging cables, paper contact list",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "cook",
+   "ko": "취사",
+   "en": "Cooking",
+   "items_ko": "수동 캔따개, 조리도구, 야외용 버너",
+   "items_en": "Manual can opener, utensils, camping stove",
+   "pri": "rec",
+   "stage": "2w"
+  },
+  {
+   "id": "winter",
+   "ko": "겨울 대비",
+   "en": "Cold weather",
+   "items_ko": "침낭, 담요, 내복, 방한복, 방한장갑, 양말",
+   "items_en": "Sleeping bags, blankets, thermals, warm clothes, gloves, socks",
+   "pri": "must",
+   "stage": "2w"
+  },
+  {
+   "id": "evac",
+   "ko": "대피",
+   "en": "Evacuation",
+   "items_ko": "방수 배낭, 우의, 운동화, 호루라기",
+   "items_en": "Waterproof backpack, rain poncho, trainers, whistle",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "docs",
+   "ko": "금융·서류",
+   "en": "Cash & documents",
+   "items_ko": "소액 현금, 신분증 사본, 보험서류, 비상연락처",
+   "items_en": "Small cash, ID copies, insurance papers, emergency contacts",
+   "pri": "must",
+   "stage": "72h"
+  },
+  {
+   "id": "misc",
+   "ko": "기타",
+   "en": "Other",
+   "items_ko": "마스크, 보안경, 소화기, 안전장갑, 테이프",
+   "items_en": "Masks, safety goggles, fire extinguisher, work gloves, tape",
+   "pri": "rec",
+   "stage": "2w"
+  },
+  {
+   "id": "family",
+   "ko": "가족별 물품",
+   "en": "Family-specific",
+   "items_ko": "아기용품, 반려동물 사료, 안경, 보청기 배터리 등",
+   "items_en": "Baby supplies, pet food, glasses, hearing-aid batteries",
+   "pri": "if",
+   "stage": "72h"
+  }
+ ],
+ "qty": [
+  {
+   "id": "q1",
+   "ko": "생수",
+   "en": "Bottled water",
+   "per": 3,
+   "unit_ko": "L",
+   "unit_en": "L",
+   "base_ko": "84L 이상",
+   "base_en": "84 L +",
+   "mode": "pd"
+  },
+  {
+   "id": "q2",
+   "ko": "쌀",
+   "en": "Rice",
+   "base_ko": "5~6kg",
+   "base_en": "5–6 kg",
+   "lo": 5,
+   "hi": 6,
+   "unit_ko": "kg",
+   "unit_en": "kg",
+   "mode": "scale"
+  },
+  {
+   "id": "q3",
+   "ko": "즉석밥",
+   "en": "Instant rice",
+   "lo": 10,
+   "hi": 14,
+   "unit_ko": "개",
+   "unit_en": "packs",
+   "mode": "scale"
+  },
+  {
+   "id": "q4",
+   "ko": "참치·고기·콩 통조림",
+   "en": "Canned tuna, meat, beans",
+   "lo": 20,
+   "hi": 28,
+   "unit_ko": "개",
+   "unit_en": "cans",
+   "mode": "scale"
+  },
+  {
+   "id": "q5",
+   "ko": "국수·파스타·건면",
+   "en": "Noodles, pasta",
+   "lo": 2,
+   "hi": 3,
+   "unit_ko": "kg",
+   "unit_en": "kg",
+   "mode": "scale"
+  },
+  {
+   "id": "q6",
+   "ko": "레토르트 국·반찬",
+   "en": "Retort soups & sides",
+   "lo": 14,
+   "hi": 20,
+   "unit_ko": "개",
+   "unit_en": "packs",
+   "mode": "scale"
+  },
+  {
+   "id": "q7",
+   "ko": "견과류·에너지바·크래커",
+   "en": "Nuts, bars, crackers",
+   "lo": 14,
+   "hi": 28,
+   "unit_ko": "회분",
+   "unit_en": "servings",
+   "mode": "scale"
+  },
+  {
+   "id": "q8",
+   "ko": "식용유·소금·설탕·조미료",
+   "en": "Oil, salt, sugar, seasoning",
+   "txt_ko": "평소 사용량 {d}일분",
+   "txt_en": "{d} days of normal use",
+   "mode": "txt"
+  },
+  {
+   "id": "q9",
+   "ko": "화장지·물티슈·세면도구",
+   "en": "Toilet paper, wipes, toiletries",
+   "txt_ko": "{d}일분",
+   "txt_en": "{d} days' worth",
+   "mode": "txt"
+  },
+  {
+   "id": "q10",
+   "ko": "복용약·응급처치 물품",
+   "en": "Medicines & first aid",
+   "txt_ko": "최소 7~14일분*",
+   "txt_en": "At least 7–14 days*",
+   "mode": "fixed"
+  },
+  {
+   "id": "q11",
+   "ko": "LED 랜턴·보조배터리",
+   "en": "LED lanterns & power banks",
+   "txt_ko": "각 1~2개",
+   "txt_en": "1–2 each",
+   "mode": "fixed"
+  },
+  {
+   "id": "q12",
+   "ko": "침낭·방한용품",
+   "en": "Sleeping bags & warm gear",
+   "txt_ko": "각 {p}인분",
+   "txt_en": "{p} people's worth",
+   "mode": "txt"
+  }
+ ],
+ "products": [
+  {
+   "cat": "water",
+   "ko": "생수 2L × 6병 묶음",
+   "en": "Bottled water 2 L × 6",
+   "spec_ko": "제주삼다수·아이시스·백산수 등. 1인 하루 3L 기준, 유통기한 확인 후 순환",
+   "spec_en": "Jeju Samdasoo, ICIS, Baeksansoo etc. 3 L per person per day; rotate by expiry",
+   "q": "생수 2L 6개",
+   "calc": {
+    "per": 3,
+    "div": 12,
+    "unit_ko": "묶음",
+    "unit_en": "packs"
+   }
+  },
+  {
+   "cat": "water",
+   "ko": "접이식 물통 10~20L",
+   "en": "Collapsible water container 10–20 L",
+   "spec_ko": "수도꼭지(코크) 달린 식품용 PE",
+   "spec_en": "Food-grade PE with tap",
+   "q": "접이식 물통 20L"
+  },
+  {
+   "cat": "water",
+   "ko": "휴대용 정수 필터 (빨대·보틀형)",
+   "en": "Portable water filter (straw/bottle)",
+   "spec_ko": "0.1㎛ 중공사막 필터",
+   "spec_en": "0.1 µm hollow-fibre filter",
+   "q": "휴대용 정수 필터 빨대"
+  },
+  {
+   "cat": "staple",
+   "ko": "쌀 4kg / 10kg",
+   "en": "Rice 4 kg / 10 kg",
+   "spec_ko": "밀폐 쌀통에 보관, 평소 소비하며 보충",
+   "spec_en": "Keep in an airtight bin, eat and refill",
+   "q": "쌀 4kg"
+  },
+  {
+   "cat": "staple",
+   "ko": "즉석밥 210g 묶음",
+   "en": "Instant rice 210 g multipack",
+   "spec_ko": "햇반·오뚜기밥 등. 전자레인지 없이 중탕·상온 섭취 가능 제품 확인",
+   "spec_en": "Hetbahn, Ottogi etc. Check it can be eaten warmed in water or at room temp",
+   "q": "즉석밥 210g 24개"
+  },
+  {
+   "cat": "staple",
+   "ko": "건면·파스타·오트밀",
+   "en": "Dried noodles, pasta, oats",
+   "spec_ko": "소면·파스타 1kg, 퀵오트",
+   "spec_en": "1 kg noodles/pasta, quick oats",
+   "q": "오트밀 퀵오트"
+  },
+  {
+   "cat": "protein",
+   "ko": "참치캔 150g",
+   "en": "Canned tuna 150 g",
+   "spec_ko": "동원·사조 등. 원터치 캔이면 캔따개 불필요",
+   "spec_en": "Dongwon, Sajo etc. Ring-pull needs no opener",
+   "q": "참치캔 150g"
+  },
+  {
+   "cat": "protein",
+   "ko": "햄·런천미트 캔, 콩 통조림",
+   "en": "Canned ham/luncheon meat, beans",
+   "spec_ko": "스팸·리챔 등, 병아리콩·강낭콩 통조림",
+   "spec_en": "Spam, Richam etc.; chickpeas, kidney beans",
+   "q": "콩 통조림"
+  },
+  {
+   "cat": "protein",
+   "ko": "멸치·건어물",
+   "en": "Dried anchovies & fish",
+   "spec_ko": "볶음용 멸치, 황태채 (밀봉 보관)",
+   "spec_en": "Stir-fry anchovies, dried pollack (sealed)",
+   "q": "건멸치 황태채"
+  },
+  {
+   "cat": "side",
+   "ko": "도시락김·김치 캔",
+   "en": "Seaweed packs, canned kimchi",
+   "spec_ko": "상온 보관 캔김치, 장아찌",
+   "spec_en": "Shelf-stable canned kimchi, pickles",
+   "q": "캔김치"
+  },
+  {
+   "cat": "side",
+   "ko": "레토르트 국·반찬 파우치",
+   "en": "Retort soup & side-dish pouches",
+   "spec_ko": "곰탕·미역국·카레·짜장 등 데우지 않아도 먹을 수 있는 제품",
+   "spec_en": "Gomtang, seaweed soup, curry etc. — edible unheated",
+   "q": "레토르트 국 파우치"
+  },
+  {
+   "cat": "energy",
+   "ko": "하루견과·땅콩버터·에너지바",
+   "en": "Daily nut packs, peanut butter, energy bars",
+   "spec_ko": "개별포장 하루견과, 양갱, 단백질바",
+   "spec_en": "Single-serve nuts, yanggaeng, protein bars",
+   "q": "하루견과 50봉"
+  },
+  {
+   "cat": "snack",
+   "ko": "건빵·크래커·통조림 과일",
+   "en": "Hardtack, crackers, canned fruit",
+   "spec_ko": "장기보관 건빵, 황도·후르츠칵테일 캔",
+   "spec_en": "Long-life hardtack, peach and fruit-cocktail cans",
+   "q": "건빵 대용량"
+  },
+  {
+   "cat": "drink",
+   "ko": "멸균우유 200ml 24팩·전해질 분말",
+   "en": "UHT milk 200 ml × 24, electrolyte powder",
+   "spec_ko": "상온 보관, 경구수분보충 분말",
+   "spec_en": "Room-temperature storage; oral rehydration powder",
+   "q": "멸균우유 200ml 24팩"
+  },
+  {
+   "cat": "med",
+   "ko": "가정용 구급함 세트",
+   "en": "Home first-aid kit",
+   "spec_ko": "소독약·밴드·거즈·압박붕대·체온계. 상비약(해열진통제·소화제·지사제)은 약국에서",
+   "spec_en": "Antiseptic, plasters, gauze, bandage, thermometer. Get OTC medicines at a pharmacy",
+   "q": "가정용 구급함 세트"
+  },
+  {
+   "cat": "hyg",
+   "ko": "두루마리 휴지·물티슈·생리용품",
+   "en": "Toilet roll, wipes, sanitary products",
+   "spec_ko": "2주분 + 물 없이 쓰는 드라이샴푸·손소독제",
+   "spec_en": "Two weeks' supply + dry shampoo and hand sanitiser",
+   "q": "물티슈 대용량"
+  },
+  {
+   "cat": "toilet",
+   "ko": "재난용 휴대 비상변기 (응고제 포함)",
+   "en": "Disaster emergency toilet bags (with gel)",
+   "spec_ko": "1회용 배변봉투 + 응고제 세트, 1인 하루 5회 기준",
+   "spec_en": "Disposable bags + gelling agent; ~5 uses per person per day",
+   "q": "비상 간이변기 응고제"
+  },
+  {
+   "cat": "power",
+   "ko": "LED 랜턴 (건전지·USB 겸용)",
+   "en": "LED lantern (battery/USB)",
+   "spec_ko": "300루멘 이상, 헤드랜턴 1개 추가 권장",
+   "spec_en": "300 lm+, plus one head torch",
+   "q": "LED 캠핑랜턴 충전식"
+  },
+  {
+   "cat": "power",
+   "ko": "보조배터리 20,000mAh + AA·AAA 건전지",
+   "en": "Power bank 20,000 mAh + AA/AAA batteries",
+   "spec_ko": "3개월마다 충전 상태 점검",
+   "spec_en": "Check charge every 3 months",
+   "q": "보조배터리 20000mAh"
+  },
+  {
+   "cat": "comms",
+   "ko": "재난용 라디오 (손발전·태양광·건전지)",
+   "en": "Emergency radio (crank/solar/battery)",
+   "spec_ko": "AM/FM, 손전등·USB 충전 겸용",
+   "spec_en": "AM/FM with torch and USB charging",
+   "q": "재난용 라디오 손발전"
+  },
+  {
+   "cat": "cook",
+   "ko": "수동 캔따개·휴대용 버너와 부탄가스",
+   "en": "Manual can opener, portable stove and butane",
+   "spec_ko": "버너는 반드시 실외 또는 충분히 환기된 곳에서만 사용",
+   "spec_en": "Use stoves outdoors or with strong ventilation only",
+   "q": "휴대용 부탄가스 버너"
+  },
+  {
+   "cat": "winter",
+   "ko": "침낭·담요·핫팩",
+   "en": "Sleeping bag, blanket, heat packs",
+   "spec_ko": "동계용 침낭(사용온도 -5℃ 이하), 붙이는 핫팩",
+   "spec_en": "Winter bag rated −5 °C or lower, stick-on heat packs",
+   "q": "동계 침낭"
+  },
+  {
+   "cat": "evac",
+   "ko": "방수 생존배낭 (대피용 가방)",
+   "en": "Waterproof go-bag",
+   "spec_ko": "우의·호루라기·은박담요·마스크를 넣어 현관에 보관",
+   "spec_en": "Pack poncho, whistle, foil blanket, masks; keep by the door",
+   "q": "생존배낭 재난대비"
+  },
+  {
+   "cat": "docs",
+   "ko": "방수 서류 파우치·소액 현금",
+   "en": "Waterproof document pouch, small cash",
+   "spec_ko": "신분증·보험 사본, 종이 연락처, 소액권 현금",
+   "spec_en": "ID and insurance copies, paper contacts, small notes",
+   "q": "방수 서류 파우치"
+  },
+  {
+   "cat": "misc",
+   "ko": "KF94 마스크·가정용 소화기·덕트테이프",
+   "en": "KF94 masks, home extinguisher, duct tape",
+   "spec_ko": "분말소화기 3.3kg, 코팅 장갑, 보안경",
+   "spec_en": "3.3 kg powder extinguisher, coated gloves, goggles",
+   "q": "가정용 소화기 3.3kg"
+  }
+ ],
+ "safety_ko": [
+  "물은 이 표에서 1인 하루 3L로 잡았습니다. 미국 적십자 기준은 1인 하루 1갤런(약 3.8L)이므로, 여유가 있으면 더 준비하세요.",
+  "정전 대비로 냉동식품만 비축하면 취약합니다. 상온 보관·무조리 식품을 꼭 포함하세요.",
+  "실내에서 숯불·발전기·야외용 가스버너를 쓰면 일산화탄소 중독 위험이 있습니다.",
+  "처방약은 처방과 약사 안내 범위 안에서 확보하세요.",
+  "식량 수량은 식성·열량·건강 상태에 따라 달라지는 예시이며 완전한 영양을 보장하지 않습니다."
+ ],
+ "safety_en": [
+  "Water here is 3 L per person per day; the American Red Cross advises 1 gallon (about 3.8 L), so add more if you can.",
+  "Frozen food alone is fragile in a blackout — include shelf-stable, no-cook food.",
+  "Charcoal, generators or camping stoves indoors risk carbon-monoxide poisoning.",
+  "Get prescription medicines only within what your prescriber and pharmacist advise.",
+  "Food quantities are examples that vary with diet and health and do not guarantee complete nutrition."
+ ],
+ "sources": [
+  {
+   "title": "American Red Cross — Survival Kit Supplies",
+   "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/survival-kit-supplies.html"
+  },
+  {
+   "title": "British Red Cross — Prepare an emergency kit",
+   "url": "https://www.redcross.org.uk/get-help/prepare-for-emergencies/prepare-an-emergency-kit"
+  },
+  {
+   "title": "국민재난안전포털 — 비상대비 행동요령",
+   "url": "https://www.safekorea.go.kr"
+  }
+ ]
+}

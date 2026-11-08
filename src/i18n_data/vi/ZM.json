@@ -1,0 +1,75 @@
+{
+"summary": "Chính phủ của Tổng thống tái đắc cử Hichilema đang chuẩn bị khung ngân sách năm 2027 (được Nội các phê duyệt ngày 17/9/2026) theo chương trình nghị sự Grow Zambia, với nguồn lực năm 2027 dự kiến tăng 7,4%. Mở rộng sản lượng đồng (3 triệu tấn vào năm 2031), tăng nguồn điện và logistics, cùng một chương trình IMF mới là trọng tâm.",
+"leader": "Tổng thống Hakainde Hichilema (tái đắc cử tháng 8/2026, nhiệm kỳ thứ hai từ tháng 9/2026)",
+"agenda": [
+"Grow Zambia: việc làm, lạm phát một chữ số và ổn định tỷ giá",
+"Sản lượng đồng từ khoảng 890.000 tấn (2025) lên 3 triệu tấn vào năm 2031, tăng chế biến tại chỗ",
+"Tăng nguồn cung điện (cần thêm ít nhất 2.000 MW cho tăng trưởng ngành đồng) và cải thiện logistics",
+"Mở rộng cơ sở thuế và hệ thống thuế số",
+"Tìm kiếm chương trình IMF mới trong năm 2026",
+"Các hành lang giao thông khu vực như Lobito"
+],
+"projects": [
+{
+"title": "Ngân sách quốc gia 2027 và khung trung hạn 2027-2029",
+"detail": "Được Nội các phê duyệt ngày 17/9/2026; nguồn lực năm 2027 tăng 18,7 tỷ K (7,4%), tổng nguồn lực dự kiến 333 tỷ K vào năm 2029",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Hành lang TRACER: đường Serenje-Mpika (T2), khoảng 237 km",
+"detail": "Gói thầu thi công do Ngân hàng Thế giới tài trợ, chia thành hai gói",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Nâng cấp Trạm Kiểm soát Biên giới Một cửa Nakonde, Giai đoạn II",
+"detail": "Dự án tạo thuận lợi thương mại do Ngân hàng Thế giới tài trợ",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Dự án Đường bộ và Tiếp cận thuộc Hiệp định MCC Zambia",
+"detail": "Đang lựa chọn tư vấn nghiên cứu khả thi, thiết kế, ESIA và giám sát các tuyến đường T5 và D274/R185a",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Phát triển Hành lang Lobito",
+"detail": "Thỏa thuận với Angola và CHDC Congo nhằm đẩy nhanh phát triển hành lang",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn PMO và quản lý dự án cho hạ tầng đường bộ và cửa khẩu",
+"why": "Các dự án đường bộ TRACER, Nakonde của Ngân hàng Thế giới và MCC đang được mời thầu đồng thời.",
+"target": "RDA, MCTI, MCA-Zambia II"
+},
+{
+"title": "Hệ thống số giám sát thủy lợi và quản lý nước",
+"why": "FAO đang mời thầu hệ thống giám sát thủy lợi, cho thấy nhu cầu về nông nghiệp thích ứng khí hậu.",
+"target": "Bộ Nông nghiệp, các đơn vị dự án của FAO"
+},
+{
+"title": "Nền tảng số đăng ký và báo cáo sản lượng cho thợ mỏ quy mô nhỏ và thủ công",
+"why": "Tăng trưởng ngành đồng và mở rộng cơ sở thuế là các mục tiêu song hành.",
+"target": "Bộ Mỏ, Cơ quan Thu ngân sách Zambia (ZRA)"
+},
+{
+"title": "Tư vấn hiệu quả chi tiêu và lập ngân sách theo kết quả cho năm 2027",
+"why": "Chính phủ nhấn mạnh chi tiêu thận trọng trong bối cảnh áp lực tài khóa.",
+"target": "MoFNP, các bộ chuyên ngành"
+}
+],
+"krsupport": [
+{
+"title": "Chương trình học bổng KOICA (2026)",
+"detail": "Học viên học bổng KOICA năm 2026 được tuyển chọn thông qua Ủy ban Học bổng và Cho vay Giáo dục Đại học Zambia (HELSB)."
+},
+{
+"title": "Trung tâm AI Hàn Quốc - châu Phi và Gói K-AI",
+"detail": "Các dự án AI, trung tâm dữ liệu và điện năng gắn với EDCF cho châu Phi, phù hợp với một quốc gia thiếu điện."
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường châu Phi của KOTRA",
+"detail": "Nghiên cứu thị trường và kết nối người mua thông qua văn phòng thương mại phụ trách (văn phòng phụ trách Zambia vẫn cần được xác nhận)."
+}
+]
+}

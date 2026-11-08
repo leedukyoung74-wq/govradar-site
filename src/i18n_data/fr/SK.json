@@ -1,0 +1,71 @@
+{
+"summary": "À l'approche des élections de 2027, le gouvernement du Premier ministre Fico promeut une nouvelle tranche nucléaire, le développement régional et davantage de logements locatifs soutenus par l'État. Les tensions au sein de la coalition persistent après la proposition de septembre de révoquer le ministre de l'Environnement, Fico assurant désormais aussi l'intérim de ce ministère.",
+"leader": "Président Peter Pellegrini / Premier ministre Robert Fico (coalition menée par le Smer-SD)",
+"agenda": [
+"Nouvelle tranche nucléaire à Bohunice (1 100 MWe, AP1000 de l'américain Westinghouse)",
+"Allègement de la charge des prix de l'énergie et maintien des aides énergétiques",
+"Développement des logements locatifs soutenus par l'État",
+"Soutien au développement des régions en retard (Turiec, Orava, etc.)",
+"Mise en œuvre des projets du plan de relance de l'UE et numérisation publique",
+"Préparation du budget des finances publiques 2027-2029"
+],
+"projects": [
+{
+"title": "Nouvelle tranche nucléaire à Jaslovské Bohunice",
+"detail": "Le 2026-10-28, l'entreprise publique JESS a signé un contrat FEED avec Westinghouse ; la centrale sera entièrement détenue par l'État",
+"status": "Prévu"
+},
+{
+"title": "Développement des logements locatifs soutenus par l'État",
+"detail": "151 appartements supplémentaires intégrés au dispositif (annoncé le 2026-10-20)",
+"status": "En cours"
+},
+{
+"title": "Soutien au développement des régions du nord",
+"detail": "Plus de 2,3 M EUR approuvés pour Turiec, Orava et le nord de la Slovaquie (2026-10-21)",
+"status": "En cours"
+},
+{
+"title": "Système d'échange de données dactyloscopiques Prüm II",
+"detail": "Solution d'intégration et de sécurité pour l'échange de données dactyloscopiques au titre du règlement (UE) 2024/982",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Plateforme de services intégrés de ville intelligente",
+"detail": "Liptovský Mikuláš acquiert un canal numérique unique pour les habitants",
+"status": "Appel d'offres en cours"
+}
+],
+"biz": [
+{
+"title": "Plateforme de données de ville intelligente et services aux citoyens par IA pour les municipalités",
+"why": "Plusieurs villes lancent simultanément des appels d'offres pour des plateformes de services et de données intégrées.",
+"target": "Municipalités (Liptovský Mikuláš, Banská Štiavnica, etc.)"
+},
+{
+"title": "Analyse des politiques de transport et conseil en stratégie",
+"why": "Le ministère des Transports lance des appels d'offres pour des travaux de statistiques, de prévision et de stratégie.",
+"target": "Ministère des Transports"
+},
+{
+"title": "Accompagnement des PME coréennes de composants à l'intégration de la chaîne d'approvisionnement nucléaire",
+"why": "La phase FEED crée une demande d'enregistrement précoce des fournisseurs et de partenariats.",
+"target": "JESS et entreprises EPC partenaires"
+},
+{
+"title": "Conseil en entrée sur le marché slovaque pour les fabricants coréens (chaîne d'approvisionnement automobile/batteries)",
+"why": "La demande de bases de production en Europe centrale reste soutenue.",
+"target": "PME coréennes de composants"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Bratislava",
+"detail": "Fournit des informations sur le marché slovaque et des consultations sur les acheteurs et l'investissement."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre, par des bons, les frais de certification à l'étranger, d'études de marché et de marketing."
+}
+]
+}

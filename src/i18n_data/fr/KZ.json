@@ -1,0 +1,74 @@
+{
+"summary": "Une nouvelle Constitution adoptée par référendum en mars 2026 a créé un Parlement monocaméral (Kurultai) et une vice-présidence, et le Premier ministre Bektenov a été reconduit. Le gouvernement a proclamé 2026 « Année de la numérisation et de l'IA » et accélère la construction d'infrastructures et l'attraction d'investissements étrangers, en visant une croissance supérieure à 5 % par an en 2027-2029.",
+"leader": "Président Kassym-Jomart Tokaïev (chef de l'État), Premier ministre Olzhas Bektenov (chef du gouvernement, reconduit par le Kurultai le 31 août 2026), vice-président Yerlan Karin",
+"agenda": [
+"Mise en œuvre de la réforme politique et administrative prévue par la nouvelle Constitution (Kurultai monocaméral, vice-présidence)",
+"Adoption généralisée des outils numériques et de l'IA dans l'administration, l'éducation et la santé (2026, Année de la numérisation et de l'IA)",
+"Accélération de la construction d'infrastructures et d'équipements sociaux (« le pays comme un vaste chantier »)",
+"Croissance de l'énergie, de l'industrie manufacturière (automobile, machines, métaux) et de la logistique, et davantage d'investissements étrangers",
+"Renforcement de l'État de droit, de la discipline budgétaire et du développement régional"
+],
+"projects": [
+{
+"title": "Budget républicain 2027-2029 et prévisions socio-économiques",
+"detail": "Approuvés par le gouvernement le 25 août 2026. Prévoient un PIB nominal de 199,3 trillions KZT en 2027 et visent une croissance réelle supérieure à 5 % par an",
+"status": "Examen parlementaire (estimation)"
+},
+{
+"title": "51 projets industriels Kazakhstan–Corée",
+"detail": "Les projets couvrent l'automobile, les machines et les métaux. Le président a demandé aux entreprises coréennes d'étendre leur production et de participer aux projets d'infrastructures, et le gouvernement établira une liste de ces projets",
+"status": "En cours"
+},
+{
+"title": "9e Table ronde mondiale sur l'investissement au Kazakhstan (KGIR-2026)",
+"detail": "Tenue à Chymkent le 22 octobre 2026, avec la signature de documents d'investissement",
+"status": "Achevé"
+},
+{
+"title": "PPP des hôpitaux universitaires d'Aktobe et de Semeï",
+"detail": "La BAsD fournit des conseils techniques sur la structuration des PPP (appel à consultants lancé en juillet 2026)",
+"status": "En cours"
+},
+{
+"title": "Année de la numérisation et de l'IA",
+"detail": "Déploie l'IA et les technologies numériques dans l'économie, l'administration, l'éducation et la santé en 2026",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conseil en localisation pour les PME coréennes de pièces et d'équipements",
+"why": "Le président a publiquement demandé aux entreprises coréennes d'étendre leur production, et plus de 4 Md USD de projets communs sont en cours.",
+"target": "Constructeurs kazakhs d'automobiles et de machines, PME coréennes partenaires, Baiterek Holding"
+},
+{
+"title": "Chatbots IA pour les demandes des citoyens et automatisation des documents administratifs dans les collectivités locales",
+"why": "La proclamation de 2026 comme Année de la numérisation et de l'IA a fait de l'IA dans l'administration publique un objectif politique.",
+"target": "Ministère de l'IA et du Développement numérique, akimats régionaux"
+},
+{
+"title": "Conseil en numérisation des opérations hospitalières et des données sur les installations",
+"why": "Des travaux soutenus par la BAsD établissent une cartographie numérique des infrastructures de santé, et des PPP hospitaliers sont en préparation.",
+"target": "Ministère de la Santé, promoteurs des PPP des hôpitaux universitaires"
+},
+{
+"title": "Outils numériques de planification des chantiers et de contrôle qualité",
+"why": "Le gouvernement accélère la construction d'infrastructures et d'équipements sociaux.",
+"target": "Ministère de l'Industrie et de la Construction, services régionaux de la construction, maîtres d'ouvrage publics"
+}
+],
+"krsupport": [
+{
+"title": "Table ronde de coopération industrielle kazakho-coréenne (septembre 2026)",
+"detail": "A examiné 51 projets communs d'une valeur de plus de 4 Md USD et convenu de préparer une liste de projets d'infrastructures pour les entreprises coréennes."
+},
+{
+"title": "Coopération de KOICA en Asie centrale",
+"detail": "Le Kazakhstan a été le troisième bénéficiaire d'Asie centrale de l'aide de KOICA en 1992-2025, et la coopération régionale s'oriente vers l'IA et la gouvernance numérique."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Les bons couvrent le coût de la certification, des études de marché, du marketing et d'autres services d'expansion à l'étranger."
+}
+]
+}

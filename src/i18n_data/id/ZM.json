@@ -1,0 +1,75 @@
+{
+"summary": "Pemerintahan Presiden Hichilema yang terpilih kembali sedang menyiapkan kerangka anggaran 2027 (disetujui Kabinet pada 17 Sep 2026) dalam agenda Grow Zambia, dengan sumber daya 2027 diproyeksikan naik 7.4%. Ekspansi tembaga (3 juta ton pada 2031), peningkatan listrik dan logistik, serta program IMF baru menjadi pusat perhatian.",
+"leader": "Presiden Hakainde Hichilema (terpilih kembali Agu 2026, masa jabatan kedua sejak Sep 2026)",
+"agenda": [
+"Grow Zambia: lapangan kerja, inflasi satu digit, dan stabilitas nilai tukar",
+"Produksi tembaga dari sekitar 890,000 ton (2025) menjadi 3 juta ton pada 2031, dengan lebih banyak pengolahan di dalam negeri",
+"Peningkatan pasokan listrik (dibutuhkan tambahan minimal 2,000 MW untuk pertumbuhan tembaga) dan perbaikan logistik",
+"Perluasan basis pajak dan sistem perpajakan digital",
+"Mengupayakan program IMF baru dalam tahun 2026",
+"Koridor transportasi regional seperti Lobito"
+],
+"projects": [
+{
+"title": "Anggaran nasional 2027 dan kerangka jangka menengah 2027-2029",
+"detail": "Disetujui Kabinet 17 Sep 2026; sumber daya 2027 naik K18.7bn (7.4%), total sumber daya diproyeksikan K333bn pada 2029",
+"status": "Direncanakan"
+},
+{
+"title": "Koridor TRACER: jalan Serenje-Mpika (T2), sekitar 237 km",
+"detail": "Tender pekerjaan yang dibiayai Bank Dunia dalam dua lot",
+"status": "Dalam tender"
+},
+{
+"title": "Peningkatan Nakonde One Stop Border Post, Tahap II",
+"detail": "Proyek fasilitasi perdagangan yang didanai Bank Dunia",
+"status": "Dalam tender"
+},
+{
+"title": "MCC Zambia Compact Roads and Access Project",
+"detail": "Pemilihan konsultan untuk studi kelayakan, desain, ESIA, dan supervisi jalan T5 dan D274/R185a",
+"status": "Dalam tender"
+},
+{
+"title": "Pengembangan Koridor Lobito",
+"detail": "Kesepakatan dengan Angola dan DRC untuk mempercepat pengembangan koridor",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi PMO dan manajemen proyek untuk infrastruktur jalan dan perbatasan",
+"why": "Proyek jalan TRACER Bank Dunia, Nakonde, dan MCC sedang ditenderkan secara bersamaan.",
+"target": "RDA, MCTI, MCA-Zambia II"
+},
+{
+"title": "Sistem digital pemantauan irigasi dan pengelolaan air",
+"why": "FAO melelang sistem pemantauan irigasi, yang menunjukkan adanya permintaan akan pertanian tahan iklim.",
+"target": "Kementerian Pertanian, unit proyek FAO"
+},
+{
+"title": "Platform digital pendaftaran dan pelaporan produksi bagi penambang skala kecil dan rakyat",
+"why": "Pertumbuhan tembaga dan perluasan basis pajak merupakan sasaran bersama.",
+"target": "Kementerian Pertambangan, Zambia Revenue Authority (ZRA)"
+},
+{
+"title": "Konsultasi efisiensi belanja dan penganggaran berbasis kinerja untuk 2027",
+"why": "Pemerintah menekankan belanja yang hati-hati di tengah tekanan fiskal.",
+"target": "MoFNP, kementerian teknis"
+}
+],
+"krsupport": [
+{
+"title": "Program beasiswa KOICA (2026)",
+"detail": "Penerima beasiswa KOICA 2026 direkrut melalui Higher Education Loans and Scholarships Board (HELSB) Zambia."
+},
+{
+"title": "Korea-Africa AI Hub dan K-AI Package",
+"detail": "Proyek AI, pusat data, dan ketenagalistrikan yang terkait EDCF untuk Afrika, relevan bagi negara yang kekurangan listrik."
+},
+{
+"title": "Dukungan masuk pasar Afrika KOTRA",
+"detail": "Riset pasar dan penjodohan pembeli melalui kantor dagang yang membawahi wilayah tersebut (kantor yang membawahi Zambia masih perlu dikonfirmasi)."
+}
+]
+}

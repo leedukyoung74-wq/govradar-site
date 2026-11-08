@@ -1,0 +1,76 @@
+{
+"summary": "Le Programme à moyen terme (2027-2029) de la Türkiye vise à ramener l'inflation à un chiffre d'ici 2029 tout en stimulant la croissance et l'emploi. Le projet de budget 2027 met l'accent sur le logement et la rénovation urbaine liée aux séismes, les infrastructures de transport et l'emploi des jeunes.",
+"leader": "Président Recep Tayyip Erdoğan (chef de l'État et du gouvernement)",
+"agenda": [
+"Désinflation (à un chiffre d'ici 2029)",
+"Offre de logements et rénovation urbaine parasismique",
+"Davantage d'emplois pour les jeunes et les femmes",
+"Transition verte (accueil de la COP31 à Antalya)",
+"Infrastructures de transport (grande vitesse ferroviaire)",
+"Technologies de défense et spatiales"
+],
+"projects": [
+{
+"title": "Projet de budget de l'administration centrale 2027",
+"detail": "Déficit de 3,5 % du PIB, objectif de croissance de 4,2 %, forte hausse des dépenses de logement",
+"status": "Au Parlement"
+},
+{
+"title": "Programme à moyen terme (OVP) 2027-2029",
+"detail": "Annoncé en sept. 2026 ; vise un PIB de 2 200 milliards USD et une inflation à un chiffre d'ici 2029",
+"status": "En cours"
+},
+{
+"title": "Rénovation urbaine « La moitié de notre part » (Yarısı Bizden)",
+"detail": "Aide à la reconstruction parasismique centrée sur Istanbul ; subvention de 875 000 TRY plus prêt de 875 000 TRY par logement ; prolongée jusqu'à fin 2027",
+"status": "En cours"
+},
+{
+"title": "Ligne à grande vitesse Halkalı-Kapıkule",
+"detail": "Ouverture du tronçon Çerkezköy-Kapıkule annoncée en oct. 2026",
+"status": "En cours"
+},
+{
+"title": "Programme d'emploi des jeunes de l'İŞKUR",
+"detail": "150 000 places pour 2026-2027 avec indemnité journalière et assurance sociale prise en charge par l'État",
+"status": "En cours"
+},
+{
+"title": "Projet de relèvement et de reconstruction post-séisme (TERRP)",
+"detail": "Relèvement des régions touchées par le séisme financé par la Banque mondiale, y compris des équipements d'urgence du ministère de la Santé tels que 285 ambulances",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Évaluation sismique et gestion intelligente de la construction pour les chantiers de rénovation urbaine",
+"why": "Les aides à la rénovation urbaine courent jusqu'à fin 2027 et les dépenses de logement bondissent dans le budget 2027.",
+"target": "Ministère de l'Environnement, de l'Urbanisation et du Changement climatique, TOKİ, municipalité métropolitaine d'Istanbul"
+},
+{
+"title": "Plateforme d'IA pour la formation professionnelle et la mise en relation avec l'emploi",
+"why": "Le programme d'emploi des jeunes a été porté à 150 000 places, créant une demande d'outils de mise en relation et de gestion.",
+"target": "İŞKUR, ministère du Travail et de la Sécurité sociale"
+},
+{
+"title": "Diagnostic d'usine intelligente et conseil en automatisation pour les PME manufacturières",
+"why": "Le Programme à moyen terme fait de la productivité et de la compétitivité à l'exportation des objectifs centraux.",
+"target": "KOSGEB, fabricants des zones industrielles organisées"
+},
+{
+"title": "Efficacité opérationnelle des grands hôpitaux urbains (IA de planification et de gestion des lits)",
+"why": "De nouveaux grands hôpitaux urbains continuent d'ouvrir, créant des besoins d'efficacité (estimation).",
+"target": "Ministère de la Santé, opérateurs PPP des hôpitaux urbains"
+}
+],
+"krsupport": [
+{
+"title": "Bureau de KOTRA à Istanbul",
+"detail": "Accompagne les études de marché, la mise en relation avec des acheteurs et la participation aux salons en Türkiye."
+},
+{
+"title": "Soutien aux sites d'hébergement temporaire pour les sinistrés du séisme en Türkiye",
+"detail": "A soutenu des sites d'hébergement temporaire pour les personnes déplacées après les séismes de 2023 (projet passé)."
+}
+]
+}

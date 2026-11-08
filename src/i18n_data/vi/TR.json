@@ -1,0 +1,76 @@
+{
+"summary": "Chương trình Trung hạn (2027-2029) của Thổ Nhĩ Kỳ đặt mục tiêu đưa lạm phát về mức một chữ số vào năm 2029, đồng thời thúc đẩy tăng trưởng và việc làm. Dự thảo ngân sách năm 2027 nhấn mạnh nhà ở và cải tạo đô thị sau động đất, hạ tầng giao thông và việc làm cho thanh niên.",
+"leader": "Tổng thống Recep Tayyip Erdoğan (nguyên thủ quốc gia và người đứng đầu chính phủ)",
+"agenda": [
+"Giảm lạm phát (về mức một chữ số vào năm 2029)",
+"Nguồn cung nhà ở và cải tạo đô thị chống chịu động đất",
+"Tăng việc làm cho thanh niên và phụ nữ",
+"Chuyển đổi xanh (đăng cai COP31 tại Antalya)",
+"Hạ tầng giao thông (đường sắt cao tốc)",
+"Công nghệ quốc phòng và vũ trụ"
+],
+"projects": [
+{
+"title": "Dự thảo ngân sách chính phủ trung ương 2027",
+"detail": "Thâm hụt 3,5% GDP, mục tiêu tăng trưởng 4,2%, chi cho nhà ở tăng mạnh",
+"status": "Đang trình Quốc hội"
+},
+{
+"title": "Chương trình Trung hạn (OVP) 2027-2029",
+"detail": "Công bố tháng 9/2026; mục tiêu GDP 2,2 nghìn tỷ USD và lạm phát một chữ số vào năm 2029",
+"status": "Đang triển khai"
+},
+{
+"title": "Cải tạo đô thị 'Một nửa từ chúng tôi' (Yarısı Bizden)",
+"detail": "Hỗ trợ tái thiết chống động đất tập trung tại Istanbul; mỗi căn được hỗ trợ không hoàn lại 875 nghìn TRY cộng khoản vay 875 nghìn TRY; gia hạn đến cuối năm 2027",
+"status": "Đang triển khai"
+},
+{
+"title": "Đường sắt cao tốc Halkalı-Kapıkule",
+"detail": "Việc khai trương đoạn Çerkezköy-Kapıkule được công bố vào tháng 10/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình việc làm thanh niên İŞKUR",
+"detail": "150.000 suất cho giai đoạn 2026-2027 với trợ cấp hằng ngày và bảo hiểm xã hội do nhà nước chi trả",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự án Phục hồi và Tái thiết sau Động đất (TERRP)",
+"detail": "Phục hồi các vùng bị động đất do Ngân hàng Thế giới tài trợ, bao gồm thiết bị cấp cứu của Bộ Y tế như 285 xe cứu thương",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Đánh giá kháng chấn và quản lý xây dựng thông minh cho các công trường cải tạo đô thị",
+"why": "Hỗ trợ cải tạo đô thị kéo dài đến cuối năm 2027 và chi cho nhà ở tăng vọt trong ngân sách 2027.",
+"target": "Bộ Môi trường, Đô thị hóa và Biến đổi Khí hậu, TOKİ, Chính quyền Đô thị Istanbul"
+},
+{
+"title": "Nền tảng AI cho đào tạo nghề và kết nối việc làm",
+"why": "Chương trình việc làm thanh niên đã mở rộng lên 150.000 suất, tạo ra nhu cầu về công cụ kết nối và quản lý.",
+"target": "İŞKUR, Bộ Lao động và An sinh Xã hội"
+},
+{
+"title": "Tư vấn chẩn đoán nhà máy thông minh và tự động hóa cho SME sản xuất",
+"why": "Chương trình Trung hạn coi năng suất và năng lực cạnh tranh xuất khẩu là các mục tiêu cốt lõi.",
+"target": "KOSGEB, nhà sản xuất trong các khu công nghiệp tập trung"
+},
+{
+"title": "Hiệu quả vận hành cho các bệnh viện thành phố quy mô lớn (AI lập lịch và quản lý giường bệnh)",
+"why": "Các bệnh viện thành phố quy mô lớn mới liên tục đi vào hoạt động, tạo ra nhu cầu nâng cao hiệu quả (ước tính).",
+"target": "Bộ Y tế, nhà vận hành PPP bệnh viện thành phố"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng KOTRA Istanbul",
+"detail": "Hỗ trợ nghiên cứu thị trường, kết nối người mua và tham gia hội chợ thương mại tại Thổ Nhĩ Kỳ."
+},
+{
+"title": "Hỗ trợ khu tái định cư tạm thời cho nạn nhân động đất Thổ Nhĩ Kỳ",
+"detail": "Đã hỗ trợ các khu tái định cư tạm thời cho người dân mất nhà cửa sau các trận động đất năm 2023 (dự án trước đây)."
+}
+]
+}

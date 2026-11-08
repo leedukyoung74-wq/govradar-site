@@ -1,0 +1,80 @@
+{
+"summary": "Tras la asunción del gobierno 2026-2031, Uganda impulsa su Estrategia de Crecimiento Decuplicado y el inicio de la producción de petróleo con un presupuesto del ejercicio 2026/27 de UGX 84,3 billones, y espera un crecimiento del 10,2%. Hay licitaciones activas en proyectos digitales (UDAP-GovNet) y de red eléctrica financiados por el Banco Mundial.",
+"leader": "Presidente Yoweri Museveni (juró un séptimo mandato en mayo de 2026) / Primera ministra Robinah Nabbanja (confirmada en el cargo)",
+"agenda": [
+"Estrategia de Crecimiento Decuplicado: agroindustrialización, turismo, minerales y ciencia (ATMS)",
+"Inicio de la producción de petróleo y crecimiento previsto del 10,2% en el ejercicio 2026/27",
+"Aumentar los ingresos de los hogares mediante el programa de Creación de Riqueza",
+"Movilización de ingresos internos mediante nuevas medidas tributarias",
+"Inversión en riego, agricultura comercial y agroprocesamiento",
+"Mantener los servicios de salud ante la disminución de la ayuda"
+],
+"projects": [
+{
+"title": "Presupuesto nacional del ejercicio 2026/27",
+"detail": "Presentado el 11 de junio de 2026 por el ministro de Finanzas Musasizi para acelerar la Estrategia de Crecimiento Decuplicado",
+"status": "En curso"
+},
+{
+"title": "Programa de Agroindustrialización",
+"detail": "La mayor asignación de su historia",
+"status": "En curso"
+},
+{
+"title": "Programa de Creación de Riqueza",
+"detail": "Apoyo a los ingresos de los hogares",
+"status": "En curso"
+},
+{
+"title": "Proyecto de Aceleración Digital de Uganda (UDAP-GovNet)",
+"detail": "Financiado por el Banco Mundial; licitaciones de Wi-Fi en oficinas gubernamentales y zonas de acogida de refugiados y de una solución de salud digital para refugiados",
+"status": "En licitación"
+},
+{
+"title": "Obras de instalación de líneas eléctricas (Lote 2, partidas 9-11)",
+"detail": "Obras de acceso a la electricidad financiadas por el Banco Mundial",
+"status": "En licitación"
+},
+{
+"title": "Presupuesto del sector salud",
+"detail": "Reducido respecto del año pasado debido a la disminución de la ayuda exterior",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Diseño e impartición de un programa público de capacitación en competencias digitales",
+"why": "Actualmente se está seleccionando un consultor financiado por el Banco Mundial para el programa nacional de competencias digitales.",
+"target": "NITA-U, Ministerio de TIC"
+},
+{
+"title": "SaaS de producción e inventario más consultoría operativa para cooperativas de agroprocesamiento",
+"why": "La agroindustrialización tiene el mayor presupuesto de su historia y el Presidente impulsa la inversión en procesamiento.",
+"target": "Cooperativas de agricultores, procesadores, Ministerio de Agricultura"
+},
+{
+"title": "Sistema móvil de seguimiento del desempeño para los beneficiarios de Creación de Riqueza",
+"why": "Un programa de UGX 11 billones requiere el seguimiento de sus resultados.",
+"target": "Gobiernos locales, organismos ejecutores"
+},
+{
+"title": "Automatización de la declaración de impuestos y chatbot de asistencia con IA",
+"why": "Las nuevas medidas tributarias aumentan la necesidad de atención al contribuyente y de eficiencia en la recaudación.",
+"target": "Autoridad Tributaria de Uganda (URA)"
+}
+],
+"krsupport": [
+{
+"title": "Conversaciones de cooperación del EDCF del Korea Eximbank",
+"detail": "Durante KOAFEC, en septiembre de 2026, el banco abordó con el ministro de Finanzas de Uganda proyectos del EDCF y la participación de empresas coreanas."
+},
+{
+"title": "Hub de IA Corea-África y K-AI Package",
+"detail": "Soluciones de IA, centros de datos y proyectos de energía vinculados al EDCF promovidos en toda África."
+},
+{
+"title": "Programa de país de KOICA para Uganda",
+"detail": "Proyectos de ayuda no reembolsable y oportunidades de alianza a través de la oficina en Uganda."
+}
+]
+}

@@ -1,0 +1,38 @@
+{
+"summary": "Región autónoma musulmana de Mindanao, Filipinas. Celebró sus primeras elecciones parlamentarias en septiembre de 2026, y el parlamento constituido el 30 de octubre eligió a Macacua como primer ministro principal electo. El presupuesto de 2026, de unos ₱114.000 millones, se centra en educación, salud e infraestructura; la inversión aprobada ya había superado en el segundo trimestre el total de todo 2025.",
+"leader": "Ministro principal Abdulraof Macacua (elegido el 30 de octubre de 2026, 51 votos) · Presidente del parlamento Amer Rakim",
+"agenda": [
+"Primer gobierno electo y un «gobierno inclusivo» (coalición de más de 46 escaños)",
+"Cierre del proceso de paz: desmovilización, paquetes de asistencia, transformación de los campamentos",
+"Ejecución del presupuesto de 2026 centrado en educación y salud (~₱114.000 millones)",
+"Redes de carreteras y caminos de la granja al mercado (proyecto de capacidad vial de JICA 2026–2029)",
+"Promoción de inversiones en salud, turismo y agronegocios"
+],
+"biz": [
+{
+"title": "Base de datos de activos viales y de puentes y aplicación de inspección",
+"why": "El proyecto de JICA está creando una nueva base de datos de carreteras y puentes y un sistema de mantenimiento.",
+"target": "Ministerio de Obras Públicas de la BARMM, oficinas distritales"
+},
+{
+"title": "Herramientas digitales para la administración escolar y el aprendizaje a distancia",
+"why": "La educación absorbe alrededor de una cuarta parte del presupuesto regional.",
+"target": "MBHTE, madrasas y escuelas públicas"
+},
+{
+"title": "Agroprocesamiento y agricultura inteligente vinculados a la certificación halal",
+"why": "Los agronegocios son uno de los principales sectores de inversión aprobada, con acceso al mercado halal.",
+"target": "Inversores de la BBOI, MAFAR"
+},
+{
+"title": "Historia clínica electrónica y telemedicina para centros de salud",
+"why": "La salud es la segunda partida presupuestaria más grande y el acceso a las islas es deficiente.",
+"target": "Ministerio de Salud de la BARMM"
+},
+{
+"title": "Sistemas de contratación electrónica y presupuesto abierto",
+"why": "El primer gobierno electo pone el acento en la confianza y la gobernanza inclusiva (estimación).",
+"target": "Oficina del Ministro Principal, ministerio de finanzas"
+}
+]
+}

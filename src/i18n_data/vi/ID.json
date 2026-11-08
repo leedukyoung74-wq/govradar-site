@@ -1,0 +1,83 @@
+{
+"summary": "Ngày 29/9, Quốc hội đã thông qua ngân sách nhà nước 2027: chi tiêu 4.106 nghìn tỷ IDR, thu 3.435 nghìn tỷ IDR và thâm hụt 2,4% GDP. Sau hai năm cầm quyền, chính phủ Prabowo đặt mục tiêu tăng trưởng 8% vào năm 2029 dựa trên chương trình bữa ăn dinh dưỡng miễn phí (MBG), hợp tác xã thôn, tự chủ lương thực và quỹ đầu tư quốc gia Danantara.",
+"leader": "Tổng thống Prabowo Subianto (Nguyên thủ quốc gia kiêm Người đứng đầu chính phủ)",
+"agenda": [
+"Tăng trưởng 8% vào năm 2029 (triển vọng tăng trưởng năm 2027 là 5,8-6,5%)",
+"Mở rộng chương trình bữa ăn dinh dưỡng miễn phí (MBG) và tăng tính minh bạch",
+"Tự chủ lương thực (dự trữ gạo kỷ lục) và cải thiện sinh kế cho nông dân, ngư dân",
+"Hợp tác xã thôn (Koperasi Desa Merah Putih) và hạ tầng cơ bản như nhà ở, trường học và cầu",
+"Tăng cường quỹ đầu tư quốc gia Danantara và áp dụng cơ chế một cửa cho xuất khẩu"
+],
+"projects": [
+{
+"title": "Ngân sách nhà nước 2027 (APBN)",
+"detail": "Thu 3.435 nghìn tỷ IDR (thuế 2.593 nghìn tỷ IDR); chuyển giao cho địa phương 735 nghìn tỷ IDR; thâm hụt 671 nghìn tỷ IDR (2,4% GDP)",
+"status": "Đã phê duyệt"
+},
+{
+"title": "Hợp tác xã thôn (Koperasi Desa Merah Putih)",
+"detail": "10.000 hợp tác xã đang hoạt động tính đến tháng 10/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Bữa ăn dinh dưỡng miễn phí (MBG)",
+"detail": "Do Cơ quan Dinh dưỡng Quốc gia vận hành, với việc giám sát được siết chặt thông qua điều tra gian lận và cách chức",
+"status": "Đang triển khai"
+},
+{
+"title": "Hạ tầng cơ bản (nhà ở, trường học, cầu, bệnh viện vùng)",
+"detail": "Khoảng 440.000 căn nhà được cải tạo, gần 90.000 trường học được sửa chữa và khoảng 5.000 cây cầu được hoàn thành; 22 trên 66 bệnh viện vùng được cấp vốn đã hoàn thành",
+"status": "Đang triển khai"
+},
+{
+"title": "Mở rộng Trường học Nhân dân (Sekolah Rakyat)",
+"detail": "Mở rộng xây dựng lên 100 địa điểm tại 32 tỉnh",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự án Quản lý Lũ lụt Bắc Java (khoản vay ADB)",
+"detail": "Do Tổng cục Tài nguyên Nước thuộc Bộ Công chính và Nhà ở thực hiện; đã tuyển chọn tư vấn quản trị và mua sắm",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Bảng điều khiển AI cho mua sắm thực phẩm MBG, theo dõi giao nhận và phát hiện gian lận",
+"why": "Các cuộc điều tra và cách chức liên quan đến gian lận MBG đang diễn ra khiến tính minh bạch trở thành ưu tiên cấp bách.",
+"target": "Cơ quan Dinh dưỡng Quốc gia (BGN), đơn vị vận hành bếp ăn địa phương (SPPG)"
+},
+{
+"title": "SaaS kế toán và quản lý tồn kho kèm đào tạo vận hành cho hợp tác xã thôn",
+"why": "10.000 hợp tác xã mới đi vào hoạt động cần hệ thống quản lý cơ bản.",
+"target": "Bộ Hợp tác xã, Koperasi Desa Merah Putih, ngân hàng nhà nước"
+},
+{
+"title": "Tư vấn thâm nhập Indonesia cho sản phẩm tiêu dùng và sản phẩm halal Hàn Quốc (chứng nhận, phân phối)",
+"why": "Chứng nhận halal bắt buộc đang được triển khai trong khi nhu cầu hàng tiêu dùng Hàn Quốc tăng.",
+"target": "SME thực phẩm và mỹ phẩm Hàn Quốc thâm nhập Indonesia"
+},
+{
+"title": "Tư vấn số hóa quản lý hiệu quả ngân sách và dự án cho chính quyền địa phương",
+"why": "Các khoản chuyển giao lớn cho địa phương và chương trình hạ tầng cần được quản lý thực hiện.",
+"target": "Chính quyền cấp tỉnh và cấp huyện, Bộ Nội vụ"
+}
+],
+"krsupport": [
+{
+"title": "Hội chợ Hàng tiêu dùng K-Premium Jakarta 2026",
+"detail": "Kết nối khoảng 200 doanh nghiệp hàng tiêu dùng Hàn Quốc với người mua địa phương trong các cuộc gặp xuất khẩu tại Jakarta vào tháng 9/2026."
+},
+{
+"title": "Kế hoạch trung hạn EDCF 2026-2028",
+"detail": "Khoảng 3 nghìn tỷ KRW mỗi năm; đưa AI vào các dự án hạ tầng EDCF và mở rộng hỗ trợ cho các quốc gia giàu khoáng sản thiết yếu."
+},
+{
+"title": "Văn phòng KOICA tại Indonesia",
+"detail": "Indonesia là quốc gia đối tác ưu tiên của KOICA, và văn phòng tại địa phương triển khai các dự án hợp tác phát triển."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí chứng nhận halal, nghiên cứu thị trường và tư vấn bản địa hóa."
+}
+]
+}

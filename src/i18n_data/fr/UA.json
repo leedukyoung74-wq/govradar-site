@@ -1,0 +1,88 @@
+{
+"summary": "Le gouvernement Koretskyi, formé en juillet 2026, donne la priorité à la préparation énergétique de l'hiver et à la reconstruction. L'UE a versé en octobre la 8e tranche de la Facilité pour l'Ukraine (2,9 Md EUR), et un budget 2027 fortement axé sur la défense est en cours d'examen au Parlement.",
+"leader": "Président Volodymyr Zelensky / Premier ministre Serhii Koretskyi (depuis le 2026-07-16)",
+"agenda": [
+"Sécuriser l'approvisionnement en énergie et en chauffage pour l'hiver et rétablir le réseau",
+"Réformes liées à la Facilité pour l'Ukraine de l'UE (justice, finances, climat des affaires, énergie, etc.)",
+"Financer la défense et la sécurité (4 885 milliards d'UAH en 2027)",
+"Rétablir les transports et la logistique (rail et ports)",
+"Alignement institutionnel en vue de l'adhésion à l'UE"
+],
+"projects": [
+{
+"title": "8e versement de la Facilité pour l'Ukraine",
+"detail": "2,9 Md EUR versés à l'achèvement d'étapes de réforme ; 800 M EUR sont passés pour la première fois par le prêt de soutien à l'Ukraine",
+"status": "Achevé"
+},
+{
+"title": "Prêt de soutien de l'UE à l'Ukraine",
+"detail": "90 Md EUR pour 2026-2027 (60 Md EUR pour la défense, 30 Md EUR d'appui budgétaire)",
+"status": "En cours"
+},
+{
+"title": "Budget de l'État 2027",
+"detail": "Déficit projeté à 15 % du PIB et dette publique supérieure à 110 % du PIB ; deuxième lecture et vote final prévus du 23 au 26 novembre",
+"status": "En cours d'examen parlementaire"
+},
+{
+"title": "Préparation énergétique de l'hiver",
+"detail": "Le Fonds de soutien à l'énergie a levé plus de 2 Md EUR, mais le Premier ministre estime qu'il faut encore environ 650 M EUR ; la production décentralisée est en cours de développement",
+"status": "En cours"
+},
+{
+"title": "Résilience du système électrique de la Banque mondiale (stockage par batteries)",
+"detail": "BESS et EMS aux centrales hydroélectriques de Kyiv, de Kaniv et d'autres",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Relèvement logistique RELINC de la Banque mondiale",
+"detail": "L'autorité portuaire achète un remorqueur dans le cadre des réparations du réseau portuaire et logistique",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "20 trains électriques Intercity financés par l'EDCF",
+"detail": "Prêt EDCF coréen pour des trains à grande vitesse destinés à Ukrzaliznytsia, à acquérir par appel d'offres ouvert",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Offre d'accompagnement des entreprises coréennes soumissionnant à la reconstruction de l'Ukraine (Banque mondiale, Prozorro)",
+"why": "Des appels d'offres financés par la Banque mondiale continuent de paraître dans l'éducation, l'énergie et la logistique, d'où un besoin d'aide pour les dossiers et les partenaires.",
+"target": "PME et ETI coréennes ciblant la reconstruction"
+},
+{
+"title": "Planification de la résilience des communautés et conseil en PMO de reconstruction",
+"why": "Les lois nécessaires à l'aide internationale ont été adoptées, ce qui débloque les dépenses pour les plans de résilience des communautés.",
+"target": "Communautés locales (hromadas) et administrations des oblasts"
+},
+{
+"title": "Automatisation par IA des marchés publics et des formalités administratives",
+"why": "Les conditions de réforme de l'UE et les grands programmes ont alourdi la charge administrative (estimation).",
+"target": "Ministères centraux et entreprises publiques"
+},
+{
+"title": "Partenariats locaux pour les entreprises coréennes de stockage d'énergie (ESS) et de production décentralisée",
+"why": "Le Premier ministre a insisté sur le développement de la production décentralisée, et pas seulement sur les réparations.",
+"target": "Ukrhydroenergo et compagnies énergétiques régionales"
+}
+],
+"krsupport": [
+{
+"title": "Accord-cadre EDCF avec l'Ukraine (2024-2029)",
+"detail": "Prêts concessionnels jusqu'à 2,1 Md USD pour l'achat d'équipements et les infrastructures de reconstruction."
+},
+{
+"title": "Bureau de KOTRA à Kyiv et accompagnement à la reconstruction",
+"detail": "Aide à obtenir des informations sur les marchés publics locaux et à trouver des acheteurs et des partenaires."
+},
+{
+"title": "Soutien aux investissements dans les infrastructures et la reconstruction à l'étranger",
+"detail": "Soutient les études de faisabilité et l'investissement dans des projets de reconstruction d'infrastructures."
+},
+{
+"title": "Export Voucher",
+"detail": "Les bons couvrent les frais de traduction des dossiers d'appel d'offres, de certification et de conseil."
+}
+]
+}

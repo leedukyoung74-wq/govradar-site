@@ -1,0 +1,74 @@
+{
+"summary": "El gobierno de Marcos ha propuesto un presupuesto de P7,2 billones para 2027 con el fin de reactivar un crecimiento frenado por el escándalo de corrupción en el control de inundaciones; aumenta el gasto en obras públicas y recorta educación y salud. La Cámara de Representantes lo aprobó y el Senado lo está examinando, mientras el juicio político a la vicepresidenta Sara Duterte (iniciado en julio) y la cumbre de la ASEAN de noviembre en Manila dominan el calendario político.",
+"leader": "Presidente Ferdinand Marcos Jr. (jefe de Estado y de Gobierno)",
+"agenda": [
+"Recuperación económica y normalización del gasto en infraestructura (meta de crecimiento del 5–6% para 2027–2030)",
+"Investigación de la corrupción en el control de inundaciones y mayor transparencia presupuestaria",
+"Presidencia de la ASEAN en 2026 (cumbre de noviembre en Manila)",
+"Digitalización de los servicios públicos para mejorar el clima de negocios y frenar la corrupción",
+"Respuesta a los precios de la energía y estabilidad del costo de vida"
+],
+"projects": [
+{
+"title": "Programa Nacional de Gastos 2027 (NEP)",
+"detail": "P7,2 billones (unos US$118.000 millones, 21,7% del PIB), un 6% más que en 2026; si no se aprueba antes de fin de año, se reedita el presupuesto de 2026",
+"status": "En revisión en el Senado"
+},
+{
+"title": "Presupuesto del DPWH",
+"detail": "Restablecido con un aumento del 22% tras un recorte de alrededor del 40% en 2026 en medio de denuncias de corrupción",
+"status": "Planificado"
+},
+{
+"title": "Presupuestos de educación y salud",
+"detail": "Educación P1,15 billones (−11,5%), salud P353.800 millones (−21%), lo que ha suscitado críticas por los recortes en servicios sociales",
+"status": "Planificado"
+},
+{
+"title": "Hub manufacturero de New Clark City",
+"detail": "1.620 ha en Tarlac designadas como hub de la cadena de suministro de semiconductores y tierras raras en el marco de la iniciativa Pax Silica liderada por EE. UU.",
+"status": "Planificado"
+},
+{
+"title": "Puentes interinsulares Panay-Guimaras-Negros",
+"detail": "Proyecto de puentes interinsulares financiado con un préstamo del EDCF del Korea Eximbank por US$56,6 millones",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Paneles de seguimiento del avance y del gasto de proyectos de infraestructura",
+"why": "La demanda de transparencia en las obras públicas aumentó tras el escándalo del control de inundaciones, y el presupuesto del DPWH se ha restablecido.",
+"target": "DPWH, Comisión de Auditoría, gobiernos locales"
+},
+{
+"title": "Chatbots con IA y automatización de flujos de trabajo para permisos y servicios ciudadanos de las LGU",
+"why": "El Presidente promueve los servicios públicos digitales como herramienta contra la corrupción.",
+"target": "Unidades de gobierno local, DICT"
+},
+{
+"title": "Asesoramiento de viabilidad y emplazamiento para pymes manufactureras coreanas que se instalen en New Clark City",
+"why": "Se ha designado un emplazamiento para un hub de la cadena de suministro de semiconductores y tierras raras y comienza la captación de proveedores.",
+"target": "BCDA, pymes coreanas de componentes y materiales"
+},
+{
+"title": "Herramientas de bajo costo de aprendizaje digital y automatización de la administración escolar",
+"why": "Un recorte del 11,5% en el presupuesto educativo genera demanda de herramientas de eficiencia (estimación).",
+"target": "DepEd, escuelas privadas"
+}
+],
+"krsupport": [
+{
+"title": "Préstamos del EDCF para infraestructura en Filipinas",
+"detail": "Los préstamos del EDCF financian puentes y otras infraestructuras, como los puentes Panay-Guimaras-Negros, y abren oportunidades de diseño y supervisión."
+},
+{
+"title": "Programas de KOICA en Filipinas",
+"detail": "Filipinas es un socio importante de KOICA desde hace más de 30 años en agricultura, educación y salud."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Los vales cubren estudios de mercado, certificación y marketing local para ingresar en Filipinas."
+}
+]
+}

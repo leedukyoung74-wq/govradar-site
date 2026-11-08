@@ -1,0 +1,79 @@
+{
+"summary": "Le gouvernement De la Espriella, en fonction depuis août 2026, fait campagne sur une ligne dure en matière de sécurité et de réduction des dépenses. Le Congrès a adopté le 20 octobre un budget 2027 de 634,95 trn COP et a donné au président 90 jours pour présenter un plan d'ajustement budgétaire.",
+"leader": "Président Abelardo de la Espriella (en fonction depuis le 2026-08-07 ; chef de l'État et du gouvernement)",
+"agenda": [
+"Rétablir la sécurité face aux groupes armés et au crime organisé",
+"Réduire le déficit et adopter une loi budgétaire (Fiscal Law)",
+"Faire face à la crise de la santé et financer les retraites",
+"Gérer les subventions à l'énergie et aux carburants",
+"Un Plan national de développement centré sur les infrastructures régionales avec participation privée"
+],
+"projects": [
+{
+"title": "Budget national 2027 (PGN)",
+"detail": "Approbation définitive par le Congrès, qui a demandé au président un plan d'ajustement budgétaire sous 90 jours",
+"status": "Achevé (approuvé)"
+},
+{
+"title": "Loi budgétaire (Fiscal Law)",
+"detail": "Ajustement d'environ 45 trn COP (2,2 % du PIB) présenté comme simplification fiscale et soutien à la croissance, visant à ramener le déficit 2027 à environ 7,2 %",
+"status": "Prévu"
+},
+{
+"title": "Hausse des dépenses de santé",
+"detail": "3 trn COP ajoutés aux 2 trn prévus, soit 5 trn COP pour faire face à la crise de la santé",
+"status": "Prévu"
+},
+{
+"title": "Fonds de stabilisation des prix des carburants (FEPC) et subventions énergétiques",
+"detail": "9,6 trn COP pour la stabilisation des prix des carburants plus 3 trn COP supplémentaires pour les subventions à l'électricité et au gaz",
+"status": "Prévu"
+},
+{
+"title": "Plan national de développement (PND)",
+"detail": "Attendu après la loi budgétaire, centré sur les infrastructures régionales et un rôle accru du secteur privé",
+"status": "Prévu"
+},
+{
+"title": "Ligne 2 du métro de Bogotá",
+"detail": "L'appel d'offres international n'a reçu aucune offre en janvier 2026 ; relance avec le soutien de banques multilatérales, attribution visée au T1 2027",
+"status": "Nouvel appel d'offres en cours"
+}
+],
+"biz": [
+{
+"title": "Analyse par IA de l'efficacité de la dépense publique et numérisation fiscale",
+"why": "Le Congrès a exigé un plan d'ajustement budgétaire sous 90 jours, ce qui crée une demande de revues de dépenses.",
+"target": "Ministère des Finances, administration fiscale (DIAN)"
+},
+{
+"title": "Conseil en faisabilité et en structuration de PPP d'infrastructures régionales",
+"why": "Le nouveau plan de développement est centré sur les infrastructures régionales et la participation privée.",
+"target": "DNP, gouvernements départementaux, agence des infrastructures (ANI)"
+},
+{
+"title": "Offre d'entrée en Colombie pour les PME coréennes (étude de marché, mise en relation avec des acheteurs)",
+"why": "Les achats publics et privés évoluent avec le changement de politique sécuritaire et budgétaire (estimation).",
+"target": "PME coréennes souhaitant s'implanter en Colombie"
+},
+{
+"title": "Automatisation de l'administration de la santé et du traitement des demandes de remboursement",
+"why": "Le financement de la santé est passé à 5 trn COP mais les déficits persistent, d'où un besoin d'efficacité.",
+"target": "Ministère de la Santé, assureurs santé (EPS)"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Bogotá",
+"detail": "Fournit des informations de marché, la recherche d'acheteurs et des informations sur les marchés publics."
+},
+{
+"title": "Coopération de KOICA en Colombie",
+"detail": "Mène des programmes de dons dans des domaines tels que la consolidation de la paix et le développement rural."
+},
+{
+"title": "Export Voucher",
+"detail": "Couvre les frais de certification locale, de traduction et de conseil."
+}
+]
+}

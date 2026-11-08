@@ -1,0 +1,65 @@
+{
+"summary": "Pada bulan Oktober, Kabinet UEA menyetujui anggaran federal 2027-2029 sebesar AED292,5 miliar (naik 28,3% dari siklus sebelumnya), dengan penekanan pada AI, analitik data fiskal, dan penyederhanaan prosedur. Pada bulan April, pemerintah menetapkan target menjalankan separuh layanan dan operasi federal dengan agentic AI dalam dua tahun.",
+"leader": "Presiden Sheikh Mohamed bin Zayed Al Nahyan (kepala negara) / Wakil Presiden dan Perdana Menteri Sheikh Mohammed bin Rashid Al Maktoum (kepala pemerintahan)",
+"agenda": [
+"Menjalankan 50% layanan federal dengan agentic AI dalam dua tahun",
+"Perencanaan anggaran berbasis AI, analitik data fiskal, dan penyederhanaan prosedur",
+"Belanja pembangunan sosial yang berfokus pada pendidikan dan kesehatan",
+"Pembaruan peraturan perpajakan dan pembangunan",
+"Bidang pertumbuhan baru seperti ekonomi sirkular dan pertanian berkelanjutan"
+],
+"projects": [
+{
+"title": "Anggaran federal 2027-2029",
+"detail": "AED90,1 miliar untuk 2027; pembangunan sosial dan pensiun AED34,6 miliar (38,4%), pendidikan 18,8%, kesehatan 6,7%, infrastruktur dan ekonomi AED3 miliar",
+"status": "Direncanakan"
+},
+{
+"title": "Transformasi pemerintah federal dengan agentic AI",
+"detail": "Separuh sektor, layanan, dan operasi federal akan dijalankan dengan AI otonom, termasuk layanan proaktif seperti perpanjangan izin tinggal dan perizinan",
+"status": "Berjalan"
+},
+{
+"title": "Enterprise Project Management System Otoritas Pajak Federal",
+"detail": "Diumumkan di Platform Pengadaan Digital MoF, ditutup 2026-11-17",
+"status": "Tender terbuka"
+},
+{
+"title": "Pelatihan pegawai Kementerian Kehakiman (desain berbantuan AI, video, dll.)",
+"detail": "Empat program pelatihan ditenderkan bersamaan, ditutup 2026-11-19",
+"status": "Tender terbuka"
+}
+],
+"biz": [
+{
+"title": "Paket diagnostik proses plus PoC agen AI untuk entitas federal",
+"why": "Arahan PM untuk mengalihkan 50% operasi federal ke agentic AI dalam dua tahun membuat kementerian mencari mitra pelaksana.",
+"target": "Kementerian dan otoritas federal (Kehakiman, FTA, Ekonomi, dll.)"
+},
+{
+"title": "Pelatihan praktis AI generatif untuk aparatur sipil (pembuatan konten, analisis data)",
+"why": "Kementerian Kehakiman sedang menenderkan secara terbuka program pelatihan terkait AI.",
+"target": "Unit SDM dan pelatihan Kementerian Kehakiman dan kementerian lain"
+},
+{
+"title": "Analitik data fiskal dan dasbor kinerja anggaran",
+"why": "Anggaran 2027-2029 secara eksplisit menuntut perencanaan berbasis AI dan analitik data fiskal.",
+"target": "Kementerian Keuangan, unit perencanaan dan keuangan kementerian"
+},
+{
+"title": "Pencocokan mitra dan lokalisasi di UEA untuk UKM AI/energi Korea",
+"why": "KOTRA memperluas temu bisnis di bidang AI dan energi serta menautkannya dengan Dubai AI Week.",
+"target": "UKM AI dan energi Korea, BUMN UEA (mis. NMDC)"
+}
+],
+"krsupport": [
+{
+"title": "Korea-UAE AI and Energy Economic Cooperation Plaza",
+"detail": "Pada Nov 2025 di Abu Dhabi, acara ini memfasilitasi 217 pertemuan antara 23 UKM Korea dan 69 mitra lokal, dan direncanakan terhubung dengan Dubai AI Week."
+},
+{
+"title": "2026 Middle East Job Fair (K-Move)",
+"detail": "Bursa kerja luar negeri bagi kaum muda di Dubai pada akhir Agustus 2026 dengan 11 perusahaan dari sektor pertahanan, keuangan, elektronik, dan lainnya."
+}
+]
+}

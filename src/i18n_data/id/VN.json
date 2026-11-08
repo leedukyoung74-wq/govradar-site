@@ -1,0 +1,79 @@
+{
+"summary": "Ekonomi Vietnam tumbuh 9.01% pada Januari-September 2026 (9.95% pada Q3). Pada sidang Majelis Nasional bulan Oktober, pemerintah menetapkan target 2027 berupa pertumbuhan minimal 10% dan PDB per kapita USD 6,100, dengan prioritas pada jalan tol, kereta api, bandara, Pusat Data Nasional, dan 5G.",
+"leader": "To Lam, Sekretaris Jenderal Partai merangkap Presiden Negara; Perdana Menteri Le Minh Hung (terpilih April 2026)",
+"agenda": [
+"Pertumbuhan PDB minimal 10% pada 2027 dengan stabilitas makro",
+"Memangkas prosedur administrasi; reformasi kelembagaan dan aparatur sipil",
+"Mengembangkan sektor swasta dan menarik FDI alih teknologi secara selektif",
+"Sains, inovasi, dan transformasi digital (Pusat Data Nasional, 5G nasional, uji coba 6G)",
+"Percepatan penyerapan investasi publik, mengalihkan dana dari proyek yang mangkrak"
+],
+"projects": [
+{
+"title": "Penyelesaian jaringan jalan tol nasional",
+"detail": "Tugas infrastruktur inti dalam rencana 2027",
+"status": "Berjalan"
+},
+{
+"title": "Bandara internasional Long Thanh dan Gia Binh",
+"detail": "Pembangunan akan dipercepat",
+"status": "Berjalan"
+},
+{
+"title": "Proyek kereta api nasional utama",
+"detail": "Mempercepat proyek-proyek kereta api besar",
+"status": "Direncanakan"
+},
+{
+"title": "Operasional Pusat Data Nasional",
+"detail": "Platform integrasi data kementerian dan sektor",
+"status": "Berjalan"
+},
+{
+"title": "1 juta ha padi berkualitas tinggi dan rendah emisi di Delta Mekong",
+"detail": "Memperluas budidaya padi rendah emisi",
+"status": "Berjalan"
+},
+{
+"title": "Persiapan tuan rumah APEC 2027",
+"detail": "Acara dan fasilitas untuk tahun APEC Vietnam 2027",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Penjodohan pembeli dan konsultasi masuk distribusi bagi UKM barang konsumsi Korea",
+"why": "KOTRA menetapkan Vietnam sebagai pasar fokus bagi eksportir pemula dan kini menjalankan penjodohan bisnis.",
+"target": "UKM makanan dan kosmetik Korea; importir dan distributor Vietnam"
+},
+{
+"title": "Pilot pemrosesan dokumen berbasis AI untuk menyederhanakan prosedur administrasi provinsi",
+"why": "Rencana 2027 menempatkan pemangkasan prosedur dan transformasi digital sebagai inti.",
+"target": "Komite Rakyat provinsi/kota, dinas layanan publik"
+},
+{
+"title": "Konsultasi transformasi digital dan ERP bagi UKM Vietnam",
+"why": "Dukungan UKM dan formalisasi usaha rumah tangga merupakan prioritas 2027.",
+"target": "UKM manufaktur dan distributor Vietnam; dinas perindustrian dan perdagangan provinsi"
+},
+{
+"title": "PMC dan manajemen kemajuan konstruksi digital untuk infrastruktur",
+"why": "Pemerintah mempercepat pembangunan jalan tol, bandara, dan kereta api serta menarik kembali dana dari proyek yang mangkrak.",
+"target": "PMU Kementerian Konstruksi, pemilik proyek tingkat provinsi"
+}
+],
+"krsupport": [
+{
+"title": "First Step to Exports Week 2026 (Vietnam termasuk empat pasar fokus)",
+"detail": "Pertemuan video dengan pembeli Vietnam dan dukungan logistik bagi eksportir pemula barang konsumsi."
+},
+{
+"title": "Kursus masuk pasar Vietnam KOTRA Academy",
+"detail": "Pelatihan praktis tentang masuk ke Vietnam, dengan sesi dijadwalkan pada 11 Desember."
+},
+{
+"title": "KOICA Fellowship (CIAT) dan berbagi pengetahuan inovasi TIK",
+"detail": "Pelatihan bagi pejabat Vietnam dan acara berbagi pengetahuan seperti hackathon TIK bersama VKU di Da Nang."
+}
+]
+}

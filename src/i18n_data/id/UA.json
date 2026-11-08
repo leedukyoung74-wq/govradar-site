@@ -1,0 +1,88 @@
+{
+"summary": "Pemerintahan Koretskyi, yang dibentuk pada Juli 2026, menempatkan kesiapan energi musim dingin dan rekonstruksi sebagai prioritas utama. UE membayarkan tahap ke-8 Ukraine Facility (EUR 2.9 bn) pada Oktober, dan anggaran 2027 yang didominasi belanja pertahanan sedang dibahas di parlemen.",
+"leader": "Presiden Volodymyr Zelenskyy / Perdana Menteri Serhii Koretskyi (sejak 2026-07-16)",
+"agenda": [
+"Menjamin pasokan energi dan pemanas musim dingin serta memulihkan jaringan listrik",
+"Reformasi yang terkait dengan EU Ukraine Facility (peradilan, keuangan, iklim usaha, energi, dll.)",
+"Pendanaan pertahanan dan keamanan (UAH 4.885 trn pada 2027)",
+"Pemulihan transportasi dan logistik (kereta api dan pelabuhan)",
+"Penyelarasan kelembagaan untuk aksesi UE"
+],
+"projects": [
+{
+"title": "Pembayaran ke-8 Ukraine Facility",
+"detail": "EUR 2.9 bn dibayarkan setelah penyelesaian langkah reformasi; EUR 800 m untuk pertama kalinya disalurkan melalui Ukraine Support Loan",
+"status": "Selesai"
+},
+{
+"title": "EU Ukraine Support Loan",
+"detail": "EUR 90 bn untuk 2026-2027 (EUR 60 bn pertahanan, EUR 30 bn dukungan anggaran)",
+"status": "Berjalan"
+},
+{
+"title": "Anggaran negara 2027",
+"detail": "Defisit diproyeksikan 15% PDB dan utang publik di atas 110% PDB; pembacaan kedua dan pemungutan suara final direncanakan pada 23-26 November",
+"status": "Dalam peninjauan parlemen"
+},
+{
+"title": "Persiapan energi musim dingin",
+"detail": "Energy Support Fund telah menghimpun lebih dari EUR 2 bn, tetapi PM menyatakan masih dibutuhkan sekitar EUR 650 m; pembangkitan terdistribusi sedang diperluas",
+"status": "Berjalan"
+},
+{
+"title": "Ketahanan sistem kelistrikan Bank Dunia (penyimpanan baterai)",
+"detail": "BESS dan EMS di PLTA Kyiv, Kaniv, dan lainnya",
+"status": "Dalam tender"
+},
+{
+"title": "Pemulihan logistik RELINC Bank Dunia",
+"detail": "Otoritas pelabuhan membeli kapal tunda sebagai bagian dari perbaikan jaringan pelabuhan dan logistik",
+"status": "Dalam tender"
+},
+{
+"title": "20 kereta listrik Intercity yang didanai EDCF",
+"detail": "Pinjaman EDCF Korea untuk kereta cepat Ukrzaliznytsia, yang akan dibeli melalui tender terbuka",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Paket dukungan bagi perusahaan Korea yang mengikuti tender rekonstruksi Ukraina (Bank Dunia, Prozorro)",
+"why": "Tender yang didanai Bank Dunia terus bermunculan di bidang pendidikan, energi, dan logistik, sehingga diperlukan bantuan dokumen dan mitra.",
+"target": "UKM dan perusahaan menengah Korea yang menyasar rekonstruksi"
+},
+{
+"title": "Konsultasi perencanaan ketahanan komunitas dan PMO rekonstruksi",
+"why": "Undang-undang yang diperlukan untuk bantuan internasional telah disahkan, sehingga belanja untuk rencana ketahanan komunitas dapat dicairkan.",
+"target": "Komunitas lokal (hromada) dan administrasi oblast"
+},
+{
+"title": "Otomatisasi AI untuk pengadaan publik dan dokumen administrasi",
+"why": "Persyaratan reformasi UE dan program-program besar telah meningkatkan beban administrasi (perkiraan).",
+"target": "Kementerian pusat dan BUMN"
+},
+{
+"title": "Kemitraan lokal bagi perusahaan ESS dan pembangkitan terdistribusi Korea",
+"why": "PM menekankan pembangunan pembangkitan terdistribusi, bukan sekadar perbaikan.",
+"target": "Ukrhydroenergo dan perusahaan energi regional"
+}
+],
+"krsupport": [
+{
+"title": "Perjanjian kerangka EDCF dengan Ukraina (2024-2029)",
+"detail": "Pinjaman lunak hingga USD 2.1 bn untuk pembelian peralatan dan infrastruktur rekonstruksi."
+},
+{
+"title": "Kantor KOTRA Kyiv dan dukungan masuk proyek rekonstruksi",
+"detail": "Membantu penyediaan informasi pengadaan lokal serta pencarian pembeli dan mitra."
+},
+{
+"title": "Dukungan investasi infrastruktur dan rekonstruksi luar negeri",
+"detail": "Mendukung studi kelayakan dan investasi dalam proyek rekonstruksi infrastruktur."
+},
+{
+"title": "Export Voucher",
+"detail": "Voucher menanggung biaya penerjemahan dokumen tender, sertifikasi, dan konsultasi."
+}
+]
+}

@@ -1,0 +1,70 @@
+{
+"summary": "Israël a tenu les élections de la 26e Knesset le 27 octobre 2026, et les sondages de sortie des urnes ne donnent à aucun bloc la majorité de 61 sièges ; des négociations de coalition sont donc en cours. Le budget 2026 de 699 Md NIS adopté en mars fait la part belle à la défense, et le gouvernement développe les infrastructures d'IA via une direction nationale de l'IA rattachée au cabinet du Premier ministre.",
+"leader": "Président Isaac Herzog / Premier ministre Benjamin Netanyahou (sortant ; formation d'une coalition en cours après les élections du 27 octobre)",
+"agenda": [
+"Former une coalition et un nouveau gouvernement après les élections",
+"Reconstruire le dispositif de sécurité après la guerre de Gaza et augmenter les dépenses de défense",
+"Plan national d'IA (direction de l'IA du cabinet du Premier ministre, centres de données IA et capacités de calcul dans le Néguev)",
+"Gérer un déficit d'environ 5 % du PIB et assurer la stabilité budgétaire",
+"Développer les infrastructures de transport telles que l'électrification ferroviaire",
+"Réaffecter des fonds à la lutte contre la criminalité dans les communautés arabes"
+],
+"projects": [
+{
+"title": "Budget de l'État 2026",
+"detail": "Plus gros budget jamais adopté par la Knesset, le 30 mars 2026, avec 32 Md NIS supplémentaires pour la défense",
+"status": "En cours"
+},
+{
+"title": "Paquet de politique nationale de l'IA et direction de l'IA",
+"detail": "Approuvé le 16 juin 2026 ; centralise le budget et la politique de l'IA au cabinet du Premier ministre ; IA nationale, grands centres de données GPU, reconversion de la main-d'œuvre",
+"status": "En cours"
+},
+{
+"title": "Électrification du réseau d'Israel Railways",
+"detail": "Appel d'offres international pour la conception détaillée, la construction, les essais et la mise en service sur certaines parties du réseau",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Ajustement budgétaire du plan de rattrapage des communautés arabes (décision 4387)",
+"detail": "Décision du 15 juillet 2026 réaffectant environ 497 M NIS à la police et aux services de sécurité contre la criminalité et le trafic d'armes",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conseil en automatisation des processus par IA et PoC pour les organismes publics",
+"why": "De nouveaux budgets IA et un organe dédié au cabinet du Premier ministre créent une demande.",
+"target": "Direction de l'IA du cabinet du Premier ministre, ministères, municipalités"
+},
+{
+"title": "Entrée sur le marché via l'ALE Corée-Israël et mise en relation technologique pour les PME",
+"why": "Les avantages tarifaires et la demande de partenariats avec des start-ups israéliennes se poursuivent dans le cadre de l'ALE.",
+"target": "PME coréennes, entreprises technologiques israéliennes"
+},
+{
+"title": "Constitution de consortiums et accompagnement à la soumission pour l'appel d'offres d'électrification ferroviaire",
+"why": "Un appel d'offres international clôturant en décembre 2026 est ouvert.",
+"target": "Entreprises coréennes de construction ferroviaire et d'équipements électriques"
+},
+{
+"title": "Programmes de formation à la reconversion vers l'IA",
+"why": "Le gouvernement a officiellement signalé d'importants besoins de reconversion.",
+"target": "Universités, agences pour l'emploi, grandes entreprises"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Tel Aviv",
+"detail": "Accompagne l'entrée en Israël par des études de marché, la recherche d'acheteurs et des conseils sur l'ALE."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Couvre par des bons les frais de services à l'export tels que la certification, la traduction et le conseil."
+},
+{
+"title": "Soutien à la construction à l'étranger",
+"detail": "Fournit des informations sur les appels d'offres et du conseil pour des projets d'infrastructures tels que le ferroviaire."
+}
+]
+}

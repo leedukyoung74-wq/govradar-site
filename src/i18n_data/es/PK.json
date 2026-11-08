@@ -1,0 +1,80 @@
+{
+"summary": "En el marco de un programa del FMI de USD 7.000 millones, Pakistán aprobó un presupuesto para el ejercicio 2026-27 de Rs 18,77 billones que equilibra la consolidación fiscal con el gasto en desarrollo. La reforma de las empresas estatales, las carreteras, las presas y la infraestructura hídrica, y un plan de inversión en IA de USD 1.000 millones hasta 2030 son las prioridades destacadas.",
+"leader": "Presidente Asif Ali Zardari / Primer ministro Shehbaz Sharif",
+"agenda": [
+"Cumplimiento del programa del FMI, movilización de ingresos y control del déficit",
+"PSDP federal de Rs 1 billón para transporte, energía y agua",
+"IA y transformación digital (USD 1.000 millones para 2030, capacitación en IA para 1 millón de trabajadores ajenos a las TI)",
+"Reforma de la gobernanza de las empresas estatales y gestión de la deuda",
+"CPEC 2.0 y expansión de la energía hidroeléctrica, solar y eólica",
+"Seguridad fronteriza y lucha contra el terrorismo"
+],
+"projects": [
+{
+"title": "Presupuesto federal del ejercicio 2026-27",
+"detail": "Meta de crecimiento del 4%, supuesto de inflación del 8,2%, defensa con un aumento de alrededor del 18%",
+"status": "En curso"
+},
+{
+"title": "Gasto nacional en desarrollo (PSDP, etc.)",
+"detail": "PSDP federal de Rs 1 billón, ADP provinciales de Rs 2,224 billones, corporaciones Rs 451.000 millones; CPEC 2.0 es el único proyecto nuevo",
+"status": "En curso"
+},
+{
+"title": "Infraestructura de transporte",
+"detail": "Autopista N-25 Rs 100.000 millones, M-6 Sukkur-Hyderabad Rs 30.000 millones, ferrocarril ML-1 financiado por el ADB",
+"status": "En curso"
+},
+{
+"title": "Infraestructura energética e hídrica",
+"detail": "Presas de Dasu, Tarbela y Diamer-Bhasha, nueve proyectos solares/eólicos, abastecimiento de agua K-IV de Karachi Rs 22.000 millones",
+"status": "En curso"
+},
+{
+"title": "Plan de inversión en IA",
+"detail": "1.000 becas de doctorado en IA y capacitación en IA para 1 millón de trabajadores ajenos a las TI (anunciado en febrero de 2026)",
+"status": "Planificado"
+},
+{
+"title": "Daanish IT Park (antes Islamabad IT Park)",
+"detail": "Construido con apoyo del gobierno coreano y del Korea Eximbank; inaugurado el 9 de octubre de 2026 con la presencia del Primer Ministro para desarrollar talento y exportaciones de TI",
+"status": "Finalizado"
+}
+],
+"biz": [
+{
+"title": "Automatización con IA del procesamiento de documentos tributarios y de los servicios de atención al contribuyente",
+"why": "Las metas de ingresos del FMI apremian y la División de Finanzas busca asesoramiento tributario externo.",
+"target": "División de Finanzas, Junta Federal de Ingresos (FBR)"
+},
+{
+"title": "Gestión del desempeño y diagnóstico de gestión de empresas estatales",
+"why": "La política de empresas estatales se modificó en octubre de 2026 y los informes semestrales de desempeño son ahora habituales.",
+"target": "Unidad Central de Monitoreo de la División de Finanzas, empresas estatales federales"
+},
+{
+"title": "Cursos prácticos de IA para funcionarios públicos y trabajadores de TI",
+"why": "El gobierno se comprometió a capacitar en IA a 1 millón de trabajadores ajenos a las TI y acaba de inaugurarse un parque de TI financiado por Corea.",
+"target": "Ministerio de TI, empresas del Daanish IT Park, universidades"
+},
+{
+"title": "Apoyo para la entrada al mercado de bienes de consumo y pymes coreanos",
+"why": "Las negociaciones del CEPA Corea-Pakistán están en marcha y KOTRA impulsa el comercio y la inversión.",
+"target": "Pymes coreanas, importadores y distribuidores pakistaníes"
+}
+],
+"krsupport": [
+{
+"title": "Apoyo a la construcción del Daanish IT Park",
+"detail": "El parque de TI de Islamabad se construyó con financiación coreana y se inauguró el 9 de octubre de 2026."
+},
+{
+"title": "Cooperación para el desarrollo de KOICA y KOPIA",
+"detail": "Cooperación en curso en TI, salud, agricultura y seguridad alimentaria."
+},
+{
+"title": "Evento de colaboración industrial de KOTRA en Karachi",
+"detail": "Organizó en Karachi un evento de colaboración industrial Corea-Pakistán (abril de 2025) sobre automoción, dispositivos médicos y TI."
+}
+]
+}

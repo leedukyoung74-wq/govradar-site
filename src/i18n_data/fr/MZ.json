@@ -1,0 +1,80 @@
+{
+"summary": "Le 13 octobre 2026, le Conseil des ministres du Mozambique a approuvé le Plan économique et social et budget de l'État 2027 (PESOE, 511,2 milliards de MZN), qui réduit les dépenses d'environ 1,8 % par rapport à 2026, et l'a transmis au Parlement. La croissance est prévue à seulement 1,6 % en 2027, mais le gouvernement table sur 9,5 % d'ici 2029 si les projets gaziers avancent.",
+"leader": "Président Daniel Chapo (depuis janv. 2025) / Première ministre Maria Benvinda Levi",
+"agenda": [
+"Stabilité macroéconomique et discipline budgétaire (déficit 2027 de 4,6 % du PIB, emprunt intérieur plafonné à 1,9 %)",
+"Accroître la production nationale, diversifier l'économie et transformer localement les minerais",
+"Financement des PME via le Fonds de développement économique local (FDEL) et PRO-MULHER",
+"Lancement de la Banque de développement du Mozambique (BDM) en 2027 pour l'énergie, l'agriculture, l'industrie et le tourisme",
+"Contrats de performance dans la fonction publique, lutte contre la corruption et fermeté contre le trafic de drogue",
+"Développement des projets gaziers de Cabo Delgado et rétablissement de la sécurité"
+],
+"projects": [
+{
+"title": "Plan économique et social et budget de l'État 2027 (PESOE)",
+"detail": "Recettes 427,8 milliards de MZN (23,5 % du PIB), déficit d'environ 83 milliards de MZN, investissements 79,6 milliards de MZN ; en attente d'examen parlementaire",
+"status": "Prévu"
+},
+{
+"title": "Banque de développement du Mozambique (BDM)",
+"detail": "Doit démarrer ses activités en 2027, en ciblant l'énergie, l'agriculture, l'industrie et le tourisme",
+"status": "Prévu"
+},
+{
+"title": "Fonds FDEL et PRO-MULHER",
+"detail": "Financement des PME locales et des femmes entrepreneures",
+"status": "Prévu"
+},
+{
+"title": "Corridor N1 Chimuara-Nicoadala, lot 1 (0-88 km), conception-construction",
+"detail": "Programme Safer Roads de la Banque mondiale, province de Zambézie",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "GNL du bassin de la Rovuma",
+"detail": "Usine flottante déjà exportatrice ; projet Rovuma LNG mené par ExxonMobil prévu ; environ 3,07 milliards de MZN de recettes GNL attendues en 2027",
+"status": "En cours"
+},
+{
+"title": "Engagements de la conférence sur les minerais de Nacala",
+"detail": "Environ 4,2 Md USD engagés en oct. 2026 ; le Président a promis un examen de leur concrétisation",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Évaluation des capacités et conseil en préparation à la certification pour les PME locales fournisseurs des projets gaziers",
+"why": "Le gouverneur de Cabo Delgado presse les mégaprojets de nouer des liens durables avec les entreprises locales.",
+"target": "PME locales, opérateurs de projets gaziers"
+},
+{
+"title": "Système numérique d'instruction et de suivi des prêts pour la BDM et le FDEL",
+"why": "Une nouvelle banque publique de développement et un fonds pour les PME démarrent en 2027.",
+"target": "Ministère de l'Économie et des Finances, BDM"
+},
+{
+"title": "Boîte à outils et formation pour la structuration de PPP de petite taille dans les déchets et l'eau",
+"why": "Enabel a lancé un appel d'offres pour une boîte à outils sur les PPP de petite taille dans les déchets et un appui juridique.",
+"target": "Municipalités, ministère des Travaux publics"
+},
+{
+"title": "Tableau de bord de suivi des contrats de performance de la fonction publique",
+"why": "Le gouvernement a annoncé qu'il vérifierait les résultats des contrats de performance (19 oct. 2026).",
+"target": "Cabinet de la Première ministre, ministère de l'Administration de l'État"
+}
+],
+"krsupport": [
+{
+"title": "Projet KOICA-PNUD de résilience aux catastrophes et de cohésion sociale",
+"detail": "La KOICA finance 6,5 millions USD pour l'alerte précoce et les moyens de subsistance dans cinq provinces, dont Cabo Delgado, jusqu'en mars 2028."
+},
+{
+"title": "Korea-Africa AI Hub et K-AI Package",
+"detail": "Un cadre de coopération en IA, centres de données et énergie lié à l'EDCF, présenté lors du KOAFEC 2026."
+},
+{
+"title": "Accompagnement de KOTRA pour l'entrée sur les marchés africains",
+"detail": "Études de marché et mise en relation avec des acheteurs par le bureau commercial compétent (le bureau couvrant le Mozambique reste à confirmer)."
+}
+]
+}

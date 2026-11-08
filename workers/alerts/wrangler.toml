@@ -1,0 +1,11 @@
+name = "govradar-alerts"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+[triggers]
+crons = ["17 0 * * *"]
+[[kv_namespaces]]
+binding = "STATE"
+id = "PUT-KV-NAMESPACE-ID-HERE"
+[vars]
+SITE = "https://radar.wmm-hoa.com"
+MAIL_FROM = "GOV RADAR <radar@wmm-hoa.com>"

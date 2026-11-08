@@ -1,0 +1,75 @@
+{
+"summary": "Ngân sách năm 2026 tăng 14% lên 8.816,4 tỷ CFAF, kết hợp củng cố tài khóa với việc thực hiện SND30 trong bối cảnh xếp hạng nguy cơ nợ ở mức cao. Tổng thống đã trở về vào tháng 8 sau khoảng mười tuần ở nước ngoài, nhưng tính đến tháng 10 vẫn chưa bổ nhiệm nội các mới.",
+"leader": "Tổng thống Paul Biya (tuyên thệ nhiệm kỳ thứ tám vào tháng 11/2025); Thủ tướng Joseph Dion Ngute",
+"agenda": [
+"Thực hiện chiến lược phát triển quốc gia SND30 (2020-2030)",
+"Củng cố tài khóa phù hợp với tiêu chí hội tụ của CEMAC",
+"Trao quyền kinh tế cho phụ nữ và việc làm cho thanh niên (quỹ đặc biệt 50 tỷ CFAF)",
+"Mở rộng lưới điện và kết nối khu vực như liên kết lưới điện với Chad",
+"Chuyển đổi số (PATNuC) và chính phủ điện tử",
+"An ninh tại vùng Tây Bắc/Tây Nam nói tiếng Anh và vùng Cực Bắc"
+],
+"projects": [
+{
+"title": "Liên kết lưới điện Cameroon-Chad, giai đoạn 1",
+"detail": "426 km đường dây 225 kV, trạm biến áp mới Garoua II; mục tiêu truyền tải 100 MW",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Quỹ đặc biệt trao quyền cho phụ nữ và việc làm cho thanh niên",
+"detail": "Được lập trong các tài khoản đặc biệt năm 2026 theo cam kết của Tổng thống",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự án Tăng tốc Chuyển đổi Số (PATNuC)",
+"detail": "Được Ngân hàng Thế giới hỗ trợ; bao gồm các khung an ninh mạng chính phủ, chữ ký điện tử và PKI",
+"status": "Đang triển khai"
+},
+{
+"title": "SMART CAMPUS hành chính công (cơ sở đào tạo chính phủ điện tử)",
+"detail": "Do KOICA tài trợ; bốn tòa nhà hội trường/triển lãm cho các trường đào tạo công chức",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình khai thông và kết nối các vùng kinh tế xuyên biên giới, giai đoạn 1",
+"detail": "Cải tạo đường bộ do AfDB hỗ trợ; đang tìm kiếm tư vấn giám sát",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Chương trình đào tạo kỹ năng số và chính phủ điện tử cho công chức",
+"why": "Khi SMART CAMPUS của KOICA được xây dựng xong, sẽ cần nội dung đào tạo để vận hành.",
+"target": "Bộ Công vụ, ENAM, ISMP"
+},
+{
+"title": "Tư vấn quản lý chương trình cho quỹ đặc biệt dành cho thanh niên và phụ nữ",
+"why": "Quỹ mới 50 tỷ CFAF cần hệ thống giải ngân và theo dõi kết quả.",
+"target": "Bộ Tài chính, Bộ SME (MINPMEESA)"
+},
+{
+"title": "Liên danh PMC/giám sát cho các công trình truyền tải",
+"why": "Sau hạn nộp thầu tháng 11, 34 tháng thi công sẽ cần được giám sát.",
+"target": "Sonatrel, Bộ Nước và Năng lượng"
+},
+{
+"title": "Đánh giá an ninh mạng khu vực công và thí điểm tự động hóa hành chính bằng AI",
+"why": "PATNuC đang xây dựng an ninh mạng và PKI cho chính phủ.",
+"target": "Bộ Bưu chính Viễn thông, ANTIC"
+}
+],
+"krsupport": [
+{
+"title": "Chương trình chính phủ điện tử KOICA tại Cameroon",
+"detail": "Theo thỏa thuận 23 tỷ CFAF ký năm 2024, KOICA đang triển khai các hạng mục chính phủ điện tử bao gồm SMART CAMPUS cho công chức."
+},
+{
+"title": "Export Voucher",
+"detail": "Chi trả chi phí nghiên cứu thị trường, biên dịch và tiếp thị tại địa phương cho khu vực Trung Phi nói tiếng Pháp."
+},
+{
+"title": "Nghiên cứu thị trường nước ngoài và kết nối người mua",
+"detail": "Kiểm tra xem có văn phòng tại Cameroon hay không và đăng ký thông qua văn phòng thương mại gần nhất (ước tính)."
+}
+]
+}

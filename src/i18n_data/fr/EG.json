@@ -1,0 +1,74 @@
+{
+"summary": "L'Égypte a maintenu le Premier ministre Madbouly lors d'un remaniement en février 2026 qui a remplacé les ministres du Plan, de l'Investissement et des TIC. Le budget de l'exercice 2026/27 approuvé en juin (dépenses d'environ 5 200 Md EGP) associe réduction de la dette et hausse des dépenses d'éducation et de santé.",
+"leader": "Président Abdel Fattah al-Sissi / Premier ministre Mostafa Madbouly (maintenu après le remaniement de février 2026)",
+"agenda": [
+"Assainissement budgétaire : excédent primaire de 5 % du PIB, déficit de 4,9 %, dette à 78 % du PIB d'ici juin 2027",
+"Mise en œuvre du programme de réformes du FMI et réduction de la dette extérieure",
+"Davantage de dépenses de développement humain (éducation +25 %, santé +39,5 %)",
+"Attirer les investissements industriels et logistiques dans la Zone économique du canal de Suez",
+"Promotion des exportations (90 Md EGP au budget 2026/27)",
+"Accroître la production d'énergie et les projets de développement local"
+],
+"projects": [
+{
+"title": "Budget de l'État de l'exercice 2026/27",
+"detail": "Dépenses de 5 178 Md EGP, investissement public de 553,7 Md EGP, subventions et prestations sociales de 832,3 Md EGP",
+"status": "En cours"
+},
+{
+"title": "Plan de développement économique et social et plan à moyen terme jusqu'en 2029/30",
+"detail": "Approuvés avec le budget ; mettent l'accent sur le développement humain et le développement local (environ 39 Md EGP)",
+"status": "En cours"
+},
+{
+"title": "Campagne d'investissement de la Zone économique du canal de Suez",
+"detail": "117 projets et environ 7 Md $ d'investissements sur l'exercice 2025/26, qui devraient créer 73 000 emplois",
+"status": "En cours"
+},
+{
+"title": "Programme de promotion des exportations",
+"detail": "Fonds de soutien aux exportations réservés au budget 2026/27",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Études de faisabilité et conseil en implantation dans la SCZONE",
+"why": "Les investissements augmentent rapidement et la zone cible les investisseurs asiatiques.",
+"target": "PME et ETI coréennes de l'industrie et de la logistique"
+},
+{
+"title": "Conseil en automatisation par IA de l'administration et des finances publiques",
+"why": "Les objectifs budgétaires et un nouveau ministre des TIC laissent entrevoir une demande d'administration numérique.",
+"target": "Ministères des Finances, du Plan et des TIC"
+},
+{
+"title": "Solutions numériques pour la santé et l'éducation",
+"why": "Les dépenses de santé augmentent de 39,5 % et celles d'éducation de 25 %.",
+"target": "Ministère de la Santé et de la Population, ministère de l'Éducation, universités"
+},
+{
+"title": "Mise en relation d'exportateurs égyptiens avec des acheteurs coréens",
+"why": "Le gouvernement a réservé un budget important à la promotion des exportations.",
+"target": "Exportateurs égyptiens, fonds de développement des exportations"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA du Caire",
+"detail": "Fournit des informations de marché, la recherche d'acheteurs et des conseils en investissement, y compris pour la SCZONE."
+},
+{
+"title": "Programmes du bureau de KOICA en Égypte",
+"detail": "Mène des programmes d'aide non remboursable dans l'éducation, la santé et le numérique, l'Égypte étant un pays partenaire prioritaire."
+},
+{
+"title": "Prêts concessionnels EDCF",
+"detail": "Octroie des prêts concessionnels pour les infrastructures des pays en développement et publie des avis de marchés."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Couvre par des bons les frais de conseil et de certification à l'étranger."
+}
+]
+}

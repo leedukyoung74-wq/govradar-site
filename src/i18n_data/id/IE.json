@@ -1,0 +1,70 @@
+{
+"summary": "Irlandia mengumumkan Anggaran 2027 senilai €8,5 miliar (belanja €7 miliar, pajak €1,5 miliar) pada 2026-10-06, sementara Rencana Pembangunan Nasional senilai €275,4 miliar hingga 2035 memperluas infrastruktur perumahan, air, energi, dan transportasi.",
+"leader": "Presiden Catherine Connolly; Taoiseach Micheál Martin; Tánaiste dan Menteri Keuangan Simon Harris",
+"agenda": [
+"Pasokan perumahan (target 300.000 rumah baru pada 2030)",
+"Infrastruktur Rencana Pembangunan Nasional 2026-2035 (air, jaringan listrik, transportasi)",
+"Keringanan pajak penghasilan bagi pekerja (paket pajak €1,5 miliar)",
+"Digitalisasi layanan publik",
+"Pengembangan jasa keuangan termasuk aset digital"
+],
+"projects": [
+{
+"title": "Anggaran 2027",
+"detail": "Tambahan belanja €7 miliar plus langkah pajak €1,5 miliar termasuk batas tarif standar yang lebih tinggi",
+"status": "Di parlemen"
+},
+{
+"title": "Rencana Pembangunan Nasional 2026-2035",
+"detail": "Program modal publik terbesar sepanjang sejarah; €102,4 miliar untuk 2026-2030",
+"status": "Berjalan"
+},
+{
+"title": "Investasi air dan air limbah",
+"detail": "Perluasan layanan air di bawah NDP",
+"status": "Berjalan"
+},
+{
+"title": "Investasi jaringan listrik (ekuitas untuk ESB Networks dan EirGrid)",
+"detail": "Penguatan jaringan untuk perumahan dan energi terbarukan",
+"status": "Berjalan"
+},
+{
+"title": "Investasi transportasi (termasuk MetroLink)",
+"detail": "Proyek jalan, transportasi umum, dan rendah karbon",
+"status": "Berjalan"
+},
+{
+"title": "Pembiayaan bagi pengembang kecil untuk membeli lahan berzonasi",
+"detail": "Langkah untuk memperbaiki akses pendanaan bagi lahan berzonasi perumahan",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi kelayakan dan regenerasi bagi pemerintah daerah",
+"why": "Dana NDP mengalir ke proyek lokal dan tender konsultasi terus bermunculan.",
+"target": "Dewan county (Fingal, Kildare, dll.)"
+},
+{
+"title": "Pilot otomatisasi proses AI untuk badan publik (penanganan kasus, dokumen)",
+"why": "Digitalisasi layanan publik adalah prioritas NDP.",
+"target": "Kementerian dan lembaga (NTMA, HEA, dll.)"
+},
+{
+"title": "Paket masuk Irlandia sebagai hub UE bagi UKM Korea",
+"why": "Sebagai anggota UE berbahasa Inggris, Irlandia berfungsi sebagai pintu masuk ke Eropa.",
+"target": "UKM eksportir Korea"
+}
+],
+"krsupport": [
+{
+"title": "Export Voucher programme",
+"detail": "Menanggung biaya pemasaran, sertifikasi, dan konsultasi untuk memasuki pasar seperti Irlandia."
+},
+{
+"title": "Kantor luar negeri KOTRA (Irlandia tidak tercantum; hubungi kantor Eropa terdekat)",
+"detail": "Riset pasar dan pencarian pembeli dapat diminta melalui kantor Eropa terdekat."
+}
+]
+}

@@ -1,0 +1,76 @@
+{
+"summary": "Công Đảng tiếp tục thắng cuộc tổng tuyển cử tháng 5/2026 tại Malta và Robert Abela tiếp tục giữ chức Thủ tướng; tháng 6, Malta thoát khỏi thủ tục thâm hụt quá mức của EU. Ngân sách năm 2027 duy trì hỗ trợ chi phí sinh hoạt, đồng thời tăng phí đóng góp sinh thái du lịch và phí giấy phép lao động cho người ngoài EU, và đầu tư vào y tế và kết nối năng lượng.",
+"leader": "Tổng thống Myriam Spiteri Debono · Thủ tướng Robert Abela (thắng cử ngày 2026-05-30, tái tuyên thệ ngày 2026-06-01)",
+"agenda": [
+"Hỗ trợ chi phí sinh hoạt: COLA 6,41 EUR/tuần, tăng lương hưu, thưởng miễn thuế tới 1.000 EUR",
+"Củng cố tài khóa: thâm hụt 2,6% GDP (2026-27) giảm xuống 1,8% vào năm 2029",
+"Hạ tầng y tế: mở rộng khoa cấp cứu Mater Dei, đơn vị sức khỏe tâm thần, quy hoạch tổng thể Bệnh viện Đa khoa Gozo",
+"Năng lượng: tuyến kết nối điện thứ hai với Sicily, nghiên cứu điện gió ngoài khơi 300MW, 25% năng lượng tái tạo vào năm 2030",
+"Quản lý nhu cầu du lịch và giao thông (tăng phí đóng góp sinh thái, phí đối với khách du thuyền và khách tham quan Comino)",
+"Thuế SME: thuế suất 25% đối với lợi nhuận giữ lại hoặc tái đầu tư cho doanh nghiệp có doanh thu tới 1 triệu EUR"
+],
+"projects": [
+{
+"title": "Mở rộng khoa cấp cứu Bệnh viện Mater Dei",
+"detail": "Số chỗ điều trị tăng từ 35 lên 70",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Đơn vị sức khỏe tâm thần mới 135 giường và tòa nhà chẩn đoán hình ảnh",
+"detail": "Được đưa vào ngân sách 2027 dưới dạng hạ tầng y tế",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Tuyến kết nối điện thứ hai Sicily - Malta",
+"detail": "Song song với nghiên cứu tuyến kết nối thứ ba và tuyến 132kV Malta - Gozo",
+"status": "Đang triển khai"
+},
+{
+"title": "Nghiên cứu điện gió ngoài khơi 300MW",
+"detail": "Nghiên cứu khả thi điện gió ngoài khơi cùng đầu tư lưới phân phối (khoảng 75 triệu EUR)",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Cấp điện bờ tại phía nam Grand Harbour và Lascaris",
+"detail": "Dự án cấp điện bờ cho tàu dự kiến hoàn thành vào cuối năm 2028",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình chi đầu tư",
+"detail": "Khoảng 1,45 tỷ EUR chi đầu tư năm 2027, trong đó khoảng 390 triệu EUR từ quỹ EU",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn tự động hóa quy trình (AI/RPA) cho SME",
+"why": "Phí giấy phép lao động cho người ngoài EU tăng lên 800 EUR cùng khoản đóng góp hạ tầng mới 400 EUR/năm, làm tăng chi phí lao động.",
+"target": "SME Malta, doanh nghiệp du lịch và khách sạn - nhà hàng"
+},
+{
+"title": "Giải pháp kiểm tra hóa đơn VAT và tự động hóa thuế",
+"why": "Sắp áp dụng các mức phạt VAT mới đối với hóa đơn sai và cơ chế đảo ngược nghĩa vụ thuế nội địa trong ngành xây dựng.",
+"target": "Doanh nghiệp xây dựng, SME, công ty kế toán"
+},
+{
+"title": "Dịch vụ đào tạo nhân viên y tế công (ESF+)",
+"why": "Bộ Y tế đã mời thầu đào tạo năng lực văn hóa cho cán bộ quản lý thông qua một gói thầu EU.",
+"target": "Bộ Y tế, Cục Hợp đồng"
+},
+{
+"title": "Thiết lập trung tâm EU tại Malta cho SME Hàn Quốc",
+"why": "Thuế suất 25% đối với lợi nhuận tái đầu tư của doanh nghiệp nhỏ cải thiện điều kiện cho các chủ thể quy mô nhỏ.",
+"target": "SME Hàn Quốc nhắm đến EU và Bắc Phi"
+}
+],
+"krsupport": [
+{
+"title": "Tin tức thị trường nước ngoài của KOTRA (Malta/EU)",
+"detail": "Cung cấp thông tin về quy định EU và xu hướng thị trường."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả chi phí thâm nhập thị trường nước ngoài như thành lập công ty, chứng nhận và tư vấn pháp lý."
+}
+]
+}

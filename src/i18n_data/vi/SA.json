@@ -1,0 +1,70 @@
+{
+"summary": "Báo cáo tiền ngân sách tài khóa 2027 của Bộ Tài chính, công bố ngày 1/10, dự kiến chi khoảng 1,392 nghìn tỷ SAR so với thu khoảng 1,202 nghìn tỷ SAR, thâm hụt 3,6% GDP. GDP thực tế dự kiến giảm năm 2026 do sản lượng dầu thấp hơn, nhưng chính phủ dự định tiếp tục chi cho đa dạng hóa ngoài dầu mỏ và các siêu dự án đã được sắp xếp lại thứ tự ưu tiên.",
+"leader": "Quốc vương Salman bin Abdulaziz (Nguyên thủ quốc gia); Thái tử kiêm Thủ tướng Mohammed bin Salman (Người đứng đầu Chính phủ)",
+"agenda": [
+"Đa dạng hóa kinh tế theo Tầm nhìn 2030 và phát triển khu vực tư nhân",
+"Bền vững tài khóa (thâm hụt 3,6% GDP; tăng cấp vốn cho dự án, hạ tầng và tín dụng xuất khẩu)",
+"Ưu tiên các ngành thu hồi vốn nhanh hơn: AI và trung tâm dữ liệu, du lịch tôn giáo, logistics, khai khoáng",
+"Chuẩn bị cho Expo 2030 Riyadh và FIFA World Cup 2034",
+"Hàm lượng nội địa và cải cách mua sắm chính phủ"
+],
+"projects": [
+{
+"title": "Ngân sách tài khóa 2027 (báo cáo tiền ngân sách)",
+"detail": "Thu khoảng 1,202 nghìn tỷ SAR; chi dự kiến khoảng 1,544 nghìn tỷ SAR vào năm 2029. GDP thực tế dự kiến giảm khoảng 3,6% năm 2026, trong khi hoạt động ngoài dầu mỏ tăng khoảng 3,2%",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Huy động vốn cho trung tâm dữ liệu AI HUMAIN",
+"detail": "HUMAIN thuộc sở hữu của PIF đang huy động vốn cho 2 GW trung tâm dữ liệu và GPU quanh Riyadh, với Goldman Sachs được cho là đóng vai trò tư vấn",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Expo 2030 Riyadh",
+"detail": "Các hạng mục ban đầu đã khởi công; Expo khai mạc vào tháng 10/2030",
+"status": "Đang triển khai"
+},
+{
+"title": "Sắp xếp lại ưu tiên các siêu dự án (bao gồm NEOM)",
+"detail": "NEOM đã được chia thành các giai đoạn nhỏ hơn và đang được xem xét lại; ưu tiên chuyển sang du lịch, phát triển đô thị, sản xuất tiên tiến, logistics và năng lượng tái tạo",
+"status": "Đang triển khai"
+},
+{
+"title": "Tàu điện đô thị Dammam",
+"detail": "Mạng lưới đường sắt đô thị dự kiến dài khoảng 50 km",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Thí điểm tự động hóa bằng AI cho chính phủ (xử lý văn bản tiếng Ả Rập, dịch vụ công dân)",
+"why": "Việc HUMAIN xây dựng trung tâm dữ liệu diễn ra cùng lúc với các thảo luận của chính phủ về đạo đức và ứng dụng AI.",
+"target": "SDAIA, bộ phận số của các bộ, cơ quan đô thị (Balady)"
+},
+{
+"title": "Tư vấn thâm nhập theo yêu cầu hàm lượng nội địa cho SME Hàn Quốc",
+"why": "Quy định hàm lượng nội địa chặt chẽ hơn trong mua sắm đòi hỏi chiến lược liên doanh và đăng ký tại địa phương.",
+"target": "SME và doanh nghiệp sản xuất, dịch vụ quy mô vừa Hàn Quốc thâm nhập Ả Rập Xê Út"
+},
+{
+"title": "PMO số kiểm soát tiến độ và chi phí siêu dự án",
+"why": "Khi các dự án được chia giai đoạn và xem xét lại, việc kiểm soát chi phí và tiến độ trở nên quan trọng hơn trước.",
+"target": "Các nhà phát triển thuộc PIF (ROSHN, Red Sea Global, v.v.), tổ chức Expo 2030"
+},
+{
+"title": "Hỗ trợ thâm nhập kênh phân phối K-beauty và hàng tiêu dùng",
+"why": "MSS và KOTRA triển khai chương trình chuyên biệt hỗ trợ thâm nhập thị trường Ả Rập Xê Út.",
+"target": "SME Hàn Quốc ngành mỹ phẩm và hàng tiêu dùng"
+}
+],
+"krsupport": [
+{
+"title": "Chương trình Hỗ trợ Thâm nhập Thị trường Ả Rập Xê Út cho K-Beauty",
+"detail": "Giúp doanh nghiệp mỹ phẩm Hàn Quốc thâm nhập thị trường Ả Rập Xê Út; buổi giới thiệu chương trình đã được tổ chức vào tháng 7/2026."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Chi trả chi phí chứng nhận ở nước ngoài, nghiên cứu thị trường và tư vấn bản địa hóa."
+}
+]
+}

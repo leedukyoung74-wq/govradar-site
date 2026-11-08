@@ -1,0 +1,73 @@
+{
+ "_how_to_post": "WMM/GCSME KOREA headquarters notices. Newest first. status: open | progress | closed. issuer: WMM | WMM × GCSME KOREA | GCSME KOREA. link is a site path (without /ko/) or full https URL. | 공개 광고는 실제 본사 프로젝트만: \"public\": true 인 항목만 사이트에 나옵니다.",
+ "items": [
+  {
+   "id": "2026-11-pilot",
+   "date": "2026-11-01",
+   "kind": "order",
+   "status": "open",
+   "issuer": "WMM",
+   "ko": {
+    "title": "국가 진출 브리프·입찰 적합도 검토·3개월 파일럿 주문 접수 시작",
+    "body": "GOV RADAR 데이터를 바탕으로 AI가 초안을 쓰고 사람이 검수한 결과물을 이메일로 보내 드립니다. 견적·계좌이체 방식이며 자동갱신은 하지 않습니다."
+   },
+   "en": {
+    "title": "Orders open: market-entry briefs, tender fit reviews and a 3-month pilot",
+    "body": "AI-drafted, human-reviewed deliverables built on GOV RADAR data, sent by email. By quote and bank transfer, no auto-renewal."
+   },
+   "link": "pricing/",
+   "public": false
+  },
+  {
+   "id": "2026-11-consortium",
+   "date": "2026-11-01",
+   "kind": "recruit",
+   "status": "open",
+   "issuer": "WMM × GCSME KOREA",
+   "ko": {
+    "title": "대학·연구기관·기업·전문가 온라인 컨소시엄 관심 등록",
+    "body": "정부·국제기구 사업에 함께 들어갈 팀을 사업별로 꾸립니다. 협약 대학이 생긴 나라는 그 대학 박사진과 온라인으로 함께 검토합니다."
+   },
+   "en": {
+    "title": "Online consortium: universities, institutes, companies and experts",
+    "body": "We form a team for each project to pursue government and multilateral work. In countries with a partner university, its PhD faculty join the review online."
+   },
+   "link": "consortium/",
+   "public": false
+  },
+  {
+   "id": "2026-11-experts",
+   "date": "2026-11-01",
+   "kind": "recruit",
+   "status": "open",
+   "issuer": "WMM",
+   "ko": {
+    "title": "현지 언어 검증원·박사·기술 전문가 참여 등록 (만 19세 이상)",
+    "body": "AI가 만든 정부 정보를 원문과 대조해 확인하는 일입니다. 결과물마다 정해진 보수를 드리며, 가입비·교육비는 받지 않습니다."
+   },
+   "en": {
+    "title": "Local-language verifiers, PhDs and technical experts (19+)",
+    "body": "Check AI-drafted government information against the originals. Fixed pay per deliverable; we never charge any fees."
+   },
+   "link": "experts/",
+   "public": false
+  },
+  {
+   "id": "2026-10-projectlab",
+   "date": "2026-10-31",
+   "kind": "project",
+   "status": "progress",
+   "issuer": "WMM × GCSME KOREA",
+   "ko": {
+    "title": "프로젝트 랩: 정책 흐름에서 먼저 찾은 사업 아이디어 공개 — 참여 의향 접수",
+    "body": "각국 정부·국제기구의 정책과 예산 흐름에서 추론한 사업 아이디어를 공개했습니다. 근거와 검증 등급을 함께 표시하며, 참여하고 싶은 사업은 컨소시엄 등록으로 알려 주세요."
+   },
+   "en": {
+    "title": "Project Lab: project ideas inferred from policy trends — expressions of interest open",
+    "body": "Ideas inferred from government and multilateral policy and budget trends, shown with evidence and verification grades. Tell us which ones you want to join via the consortium form."
+   },
+   "link": "projects/",
+   "public": false
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+"summary": "Chính phủ Kast ưu tiên an ninh, kiểm soát di cư và phục hồi đầu tư, đồng thời đã trình Quốc hội ngân sách 2027 theo hướng cắt giảm chi tiêu. Việc cắt giảm các chương trình xã hội và đầu tư vùng đang vấp phải phản đối tại Quốc hội.",
+"leader": "Tổng thống José Antonio Kast (nguyên thủ quốc gia kiêm người đứng đầu chính phủ, nhậm chức từ 2026-03-11)",
+"agenda": [
+"Siết chặt an ninh và hình phạt hình sự (dự luật hạn chế giảm án đối với tội phạm tình dục trẻ em)",
+"Kiềm chế di cư bất hợp pháp và tăng cường quản lý di cư",
+"Phục hồi đầu tư và tinh gọn thủ tục cấp phép",
+"Củng cố tài khóa (cắt giảm chi tiêu, giảm thâm hụt cơ cấu)",
+"Giảm thuế suất thuế doanh nghiệp",
+"Hạ tầng khai khoáng, năng lượng và khử mặn"
+],
+"projects": [
+{
+"title": "Dự luật ngân sách 2027",
+"detail": "Tổng chi tiêu +1,5%; ưu tiên an ninh, việc làm và y tế; cắt giảm một phần trợ cấp nhà ở và đầu tư vùng",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Kế hoạch việc làm Chile Despega",
+"detail": "Mục tiêu hơn 100.000 việc làm",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Công trình công cộng khắc phục hậu quả thiên tai",
+"detail": "241 công trình sửa chữa dự kiến khởi công vào tháng 1/2027",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Kế hoạch trợ cấp nhà ở",
+"detail": "Hơn 166.000 khoản trợ cấp trong năm đầu tiên",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Khử mặn, tái sử dụng nước, nhà tù và trung tâm y tế",
+"detail": "Hạ tầng trong chiến lược tăng trưởng của chính phủ (quy mô chưa công bố)",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa AI thẩm định hồ sơ di cư và dịch vụ công dân",
+"why": "Kiểm soát di cư chặt chẽ hơn đã làm tăng khối lượng công việc hành chính.",
+"target": "Cơ quan Di cư Quốc gia, Bộ Nội vụ"
+},
+{
+"title": "CCTV an ninh đô thị và phân tích video",
+"why": "Các chính quyền đô thị liên tục mời thầu thay thế CCTV và mở rộng giám sát.",
+"target": "Chính quyền đô thị và cơ quan an ninh"
+},
+{
+"title": "Tư vấn tự động hóa hồ sơ và theo dõi cấp phép cho khai khoáng và năng lượng",
+"why": "Chính phủ muốn đẩy nhanh cấp phép cho các khoản đầu tư bị đình trệ.",
+"target": "Doanh nghiệp khai khoáng và năng lượng, Cơ quan Đánh giá Môi trường"
+},
+{
+"title": "Gói chuyển đổi số và ứng dụng AI cho SME",
+"why": "Chính sách phục hồi việc làm đi kèm nhu cầu hỗ trợ năng suất cho SME.",
+"target": "SME được Sercotec và Corfo hỗ trợ"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng KOTRA Santiago",
+"detail": "Tư vấn thâm nhập thị trường Chile, tiếp thị, nghiên cứu, các dự án quốc phòng/G2G và nông sản thực phẩm."
+},
+{
+"title": "Export voucher cho SME",
+"detail": "Chi trả các dịch vụ xuất khẩu như nghiên cứu thị trường, biên dịch và chứng nhận thông qua phiếu hỗ trợ."
+}
+]
+}

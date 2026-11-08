@@ -1,0 +1,80 @@
+{
+"summary": "Dalam tinjauan tengah tahun 22 Okt 2026, Namibia memangkas proyeksi pendapatan akibat lemahnya sektor pertambangan dan menaikkan anggaran sekitar N$700 juta (dari N$87.9bn menjadi N$88.6bn), dengan utang publik diproyeksikan mencapai N$201.7 miliar. Keputusan investasi final untuk hidrogen hijau (Hyphen) dan ladang minyak lepas pantai Venus tertunda, sementara RUU pertanahan dan perminyakan menuai perdebatan.",
+"leader": "Presiden Netumbo Nandi-Ndaitwah (sejak Mar 2025) / Wakil Presiden Lucia Witbooi / Perdana Menteri Elijah Ngurare",
+"agenda": [
+"Kesehatan fiskal: strategi pengelolaan pendapatan dan utang jangka menengah (sebelum Feb 2027)",
+"Hidrogen hijau (Hyphen, saham negara 24%) dan minyak lepas pantai (Venus)",
+"Undang-undang pertanahan terkonsolidasi dan larangan akuisisi lahan oleh pihak asing",
+"Pemindahan unit hulu migas ke Kantor Kepresidenan (RUU perubahan perminyakan)",
+"Dukungan pertanian, termasuk pengendalian penyakit mulut dan kuku serta kesiapsiagaan kekeringan",
+"Pemerintahan yang lebih ramping: kementerian dipangkas dari 21 menjadi 14"
+],
+"projects": [
+{
+"title": "Tinjauan anggaran tengah tahun TA2026/27",
+"detail": "Anggaran dinaikkan dari N$87.9bn menjadi N$88.6bn (memerlukan persetujuan Parlemen); pendapatan bersih N$42.4bn hingga akhir Sep (51.4% dari target); peninjauan tarif nol PPN untuk gula",
+"status": "Berjalan"
+},
+{
+"title": "Proyek hidrogen hijau Hyphen",
+"detail": "Keputusan investasi final diundur ke akhir 2027; diperkirakan hingga 15,000 lapangan kerja konstruksi dan 3,000 lapangan kerja tetap",
+"status": "Direncanakan"
+},
+{
+"title": "Ladang minyak lepas pantai Venus TotalEnergies",
+"detail": "Target 160,000 barel per hari; belum ada keputusan investasi final per akhir Okt 2026, ketentuan masih dinegosiasikan",
+"status": "Direncanakan"
+},
+{
+"title": "Ruacana South Water Supply Project Tahap 1",
+"detail": "Namibia Water Sector Support Programme yang didanai AfDB; pekerjaan pipa transmisi, reservoir, dan pemasangan meteran",
+"status": "Dalam tender"
+},
+{
+"title": "Penyediaan air tahan iklim Akuifer Ohangwena (utara)",
+"detail": "Hibah KfW/BMZ Jerman; prakualifikasi konsultan multidisiplin (ditutup Jul 2026)",
+"status": "Berjalan"
+},
+{
+"title": "Perjanjian bantuan pembangunan Jerman",
+"detail": "EUR 1.1 miliar ditawarkan selama 30 tahun; gugatan di Pengadilan Tinggi sedang berlangsung",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Dukungan strategi pendapatan jangka menengah dan analitik data perpajakan otomatis",
+"why": "Pemerintah wajib menyampaikan strategi pendapatan sebelum Feb 2027 dan pendapatan berada di bawah target.",
+"target": "Ministry of Finance and Public Enterprises, Namibia Revenue Agency (NamRA)"
+},
+{
+"title": "Dasbor pemantauan pengadaan publik dan pelaksanaan anggaran",
+"why": "Pelaksanaan anggaran tertinggal dan sebagian besar belanja terserap untuk biaya operasional.",
+"target": "Ministry of Finance and Public Enterprises, dewan regional"
+},
+{
+"title": "Konsultasi penjodohan UKM lokal dan Korea untuk bergabung dalam rantai pasok hidrogen hijau",
+"why": "Hyphen menjanjikan lapangan kerja konstruksi dan pengadaan berskala besar, dan masa sebelum FID memberi waktu untuk bersiap.",
+"target": "UKM lokal, pemasok peralatan Korea"
+},
+{
+"title": "Sistem manajemen pelacakan dan pengendalian penyakit ternak",
+"why": "Pengendalian penyakit mulut dan kuku muncul sebagai kebutuhan belanja baru yang belum dianggarkan.",
+"target": "Ministry of Agriculture, Water and Land Reform"
+}
+],
+"krsupport": [
+{
+"title": "Korea-Africa AI Hub dan K-AI Package",
+"detail": "Kerangka kerja sama AI, pusat data, dan ketenagalistrikan yang terkait EDCF; belum ada proyek khusus Namibia yang dikonfirmasi."
+},
+{
+"title": "Dukungan masuk pasar Afrika Selatan (kawasan) KOTRA",
+"detail": "Riset pasar dan penjodohan pembeli melalui kantor dagang yang membawahi wilayah tersebut (kantor yang membawahi Namibia masih perlu dikonfirmasi)."
+},
+{
+"title": "Program Export Voucher",
+"detail": "Voucher menanggung biaya riset pasar, sertifikasi, dan pemasaran lokal untuk persiapan masuk pasar."
+}
+]
+}

@@ -1,0 +1,80 @@
+{
+"summary": "Ruanda ejecuta su presupuesto del ejercicio 2026/27 (RWF 7.796.300 millones) en el marco de la NST2, centrado en la agricultura, el empleo y la resiliencia, mientras avanzan el ciclo presupuestario 2027/28 y las elecciones locales (del 10 de octubre al 15 de diciembre). En octubre concluyeron las conversaciones con el FMI sobre la primera revisión del ECF.",
+"leader": "Presidente Paul Kagame / Primer ministro Justin Nsengiyumva (desde julio de 2025)",
+"agenda": [
+"Ejecutar la NST2: pilares económico (63%), social (22%) y de gobernanza (15%)",
+"Productividad agrícola: insumos, riego y procesamiento",
+"Creación de empleo juvenil, manufactura local y exportaciones",
+"Infraestructura energética, de transporte y de agua",
+"Estabilidad macroeconómica y programa ECF del FMI",
+"Reestructuración de los gobiernos locales (células para febrero de 2027, distritos para julio de 2027)"
+],
+"projects": [
+{
+"title": "Presupuesto nacional del ejercicio 2026/27",
+"detail": "Aumento interanual del 12%; gasto corriente de RWF 4.785.500 millones, desarrollo de RWF 3.010.800 millones; ingresos internos de RWF 5.273.800 millones",
+"status": "En curso"
+},
+{
+"title": "Planificación y presupuestación del ejercicio 2027/28",
+"detail": "Un taller de tres semanas para planificadores centrales y locales dio inicio al siguiente ciclo (27 de octubre de 2026)",
+"status": "Planificado"
+},
+{
+"title": "Preparación, Respuesta y Resiliencia ante Emergencias Sanitarias (HEPRR)",
+"detail": "Financiado por el Banco Mundial; licitaciones de equipos de apoyo para el hospital CHUK Masaka, equipos de rayos X y más",
+"status": "En licitación"
+},
+{
+"title": "Política de Cooperación para el Desarrollo de Ruanda 2026-2050",
+"detail": "Política de cooperación a largo plazo que sustituye a la Política de Ayuda de 2006; aprobada por el Consejo de Ministros en septiembre de 2026",
+"status": "En curso"
+},
+{
+"title": "Planta A1 Iron & Steel (Musanze)",
+"detail": "Inversión manufacturera inaugurada por el Primer Ministro el 14 de septiembre de 2026",
+"status": "Finalizado"
+},
+{
+"title": "Seguro climático para trabajadores mineros",
+"detail": "Seguro climático en estudio para la minería y las canteras, que empleaban a unas 92.000 personas en 2025",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Herramientas y capacitación para automatizar la preparación presupuestaria y la gestión del desempeño en los gobiernos central y locales",
+"why": "El ciclo presupuestario 2027/28 y la reestructuración de los gobiernos locales avanzan al mismo tiempo, por lo que la demanda de procesos estandarizados es alta.",
+"target": "MINECOFIN, gobiernos distritales"
+},
+{
+"title": "Sistema de gestión de activos y mantenimiento de equipos hospitalarios",
+"why": "Las grandes entregas de equipos financiadas por el Banco Mundial requerirán gestión de posventa.",
+"target": "RBC, hospitales públicos"
+},
+{
+"title": "Panel de datos de insumos agrícolas y riego con pronóstico de rendimientos",
+"why": "La productividad agrícola es la principal prioridad presupuestaria.",
+"target": "Ministerio de Agricultura y Recursos Animales, RAB"
+},
+{
+"title": "Consultoría para pymes coreanas que utilicen Kigali como base en África Oriental",
+"why": "Las conversaciones de cooperación del EDCF están activas y Ruanda ofrece acceso a los mercados del COMESA.",
+"target": "Pymes coreanas, Junta de Desarrollo de Ruanda (RDB)"
+}
+],
+"krsupport": [
+{
+"title": "Conversaciones de cooperación del EDCF del Korea Eximbank",
+"detail": "Durante KOAFEC, en septiembre de 2026, el banco abordó con el ministro de Finanzas de Ruanda proyectos del EDCF y la participación de empresas coreanas."
+},
+{
+"title": "Hub de IA Corea-África y K-AI Package",
+"detail": "En KOAFEC 2026, Corea firmó una carta de intención sobre un hub de IA y presentó proyectos de IA, centros de datos y energía vinculados al EDCF."
+},
+{
+"title": "Programa de país de KOICA para Ruanda",
+"detail": "Proyectos de ayuda no reembolsable y oportunidades de alianza a través de la oficina en Ruanda."
+}
+]
+}

@@ -1,0 +1,65 @@
+{
+"summary": "Pemerintahan Meloni menyetujui Draft Budgetary Plan (DPB) 2027 pada 13 Oktober dan sedang menyusun anggaran sekitar €23,4 miliar, dengan memanfaatkan tambahan defisit yang diizinkan untuk energi dan pertahanan. Perselisihan koalisi mengenai pemangkasan pajak penghasilan, pensiun, dan pungutan atas bank berulang kali menunda persetujuan kabinet atas RUU anggaran.",
+"leader": "Presiden Sergio Mattarella (kepala negara) / Perdana Menteri Giorgia Meloni (kepala pemerintahan)",
+"agenda": [
+"Menurunkan biaya energi bagi bisnis dan rumah tangga (€7 miliar untuk energi pada 2027 di bawah klausul pengecualian nasional UE)",
+"Peningkatan belanja pertahanan (alokasi terpisah €7 miliar pada 2027)",
+"Pemangkasan pajak penghasilan (IRPEF) bagi berpenghasilan menengah dan penyesuaian pensiun",
+"Dukungan UKM (voucher AI, cloud ditambahkan ke Transizione 5.0, hiper-depresiasi yang diperkuat)",
+"Menyelesaikan rencana pemulihan PNRR dan kemungkinan memperpanjang kawasan ekonomi khusus selatan (ZES)"
+],
+"projects": [
+{
+"title": "Draft Budgetary Plan dan RUU anggaran 2027",
+"detail": "Pada 13 Okt, Parlemen menyetujui deviasi defisit €29 miliar untuk energi dan pertahanan, dan kabinet mengadopsi DPB. RUU anggaran mundur dari 23 Okt ke 28 Okt sementara pembicaraan koalisi berlanjut",
+"status": "Direncanakan (menunggu kabinet)"
+},
+{
+"title": "Paket dukungan UKM",
+"detail": "Sedang dipertimbangkan: voucher AI, cloud ditambahkan ke Transizione 5.0, dan hiper-depresiasi yang diperkuat",
+"status": "Direncanakan"
+},
+{
+"title": "Multilayanan energi terpadu Consip untuk layanan kesehatan (MIES)",
+"detail": "Kontrak terpadu untuk mengelola gedung layanan kesehatan publik dan meningkatkan efisiensi energinya. Penawaran ditutup pada 30 Sep 2026",
+"status": "Penawaran ditutup (tahap evaluasi, perkiraan)"
+},
+{
+"title": "Tahap akhir PNRR",
+"detail": "Pelaksanaan berakhir pada 31 Agu 2026 dan permintaan pembayaran akhir telah diajukan. UE dijadwalkan menyelesaikan pembayaran pada akhir tahun",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Diagnostik kesiapan AI dan otomatisasi proses untuk UKM (terkait voucher AI)",
+"why": "Pembahasan anggaran 2027 mencakup voucher AI untuk UKM dan dukungan cloud di bawah Transizione 5.0.",
+"target": "UKM manufaktur dan jasa Italia, asosiasi Confindustria daerah"
+},
+{
+"title": "Analitik penggunaan energi dan konsultasi penghematan bagi UKM manufaktur",
+"why": "Penurunan biaya energi telah menjadi prioritas utama anggaran.",
+"target": "UKM manufaktur padat energi"
+},
+{
+"title": "Komponen manajemen energi gedung (BEMS) untuk fasilitas kesehatan publik",
+"why": "Consip telah menenderkan kontrak manajemen energi terpadu untuk gedung layanan kesehatan, dan konsorsium pemenang perlu mengadakan peralatan.",
+"target": "Pengelola fasilitas pemenang MIES, otoritas kesehatan daerah (ASL)"
+},
+{
+"title": "Dukungan masuk pasar Italia bagi perusahaan farmasi dan bio Korea",
+"why": "Hubungan di bidang farmasi terus berjalan, misalnya paviliun Korea KOTRA di CPHI Milan.",
+"target": "UKM farmasi dan bio Korea, distributor dan CMO Italia"
+}
+],
+"krsupport": [
+{
+"title": "Paviliun Korea di CPHI Milan 2026",
+"detail": "Menyelenggarakan paviliun Korea di pameran farmasi dunia di Milan pada 6–8 Okt 2026 (selesai)."
+},
+{
+"title": "2026 Export Voucher (MSS)",
+"detail": "Voucher menanggung biaya sertifikasi, riset pasar, pemasaran, dan layanan ekspansi luar negeri lainnya."
+}
+]
+}

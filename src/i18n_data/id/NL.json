@@ -1,0 +1,71 @@
+{
+"summary": "Kabinet Jetten, yang dilantik pada Februari 2026, menyusun anggaran 2027 dengan fokus pada peningkatan belanja pertahanan, ketahanan energi, perumahan, dan kedaulatan teknologi. Kabinet ini merupakan koalisi minoritas, dan jajak pendapat September 2026 menunjukkan tingkat kepercayaan terhadap kabinet sebesar 16%, yang mengindikasikan momentum politik yang terbatas.",
+"leader": "Raja Willem-Alexander (kepala negara) / Perdana Menteri Rob Jetten (D66, kepala pemerintahan)",
+"agenda": [
+"Kenaikan anggaran pertahanan bertahap (3.5% PDB pada 2035, mengutamakan pemasok Eropa)",
+"Ketahanan dan transisi energi (CCS, jaringan angin lepas pantai, nuklir)",
+"Penambahan pasokan perumahan",
+"Kedaulatan teknologi (National Quantum Strategy 2035)",
+"Pemeliharaan dan pembaruan jalan, jembatan, dan pintu air"
+],
+"projects": [
+{
+"title": "Kenaikan anggaran pertahanan",
+"detail": "+EUR 0.6bn pada 2027, +EUR 9.9bn pada 2030, +EUR 19.3bn pada 2035 (tidak termasuk bantuan Ukraina); 10% anggaran investasi untuk inovasi dan peningkatan skala industri",
+"status": "Direncanakan"
+},
+{
+"title": "Proyek penyimpanan CO2 Aramis",
+"detail": "Pendanaan baru untuk penyimpanan CO2 di bawah Laut Utara",
+"status": "Direncanakan"
+},
+{
+"title": "Jaringan angin lepas pantai dan nuklir",
+"detail": "EUR 360m untuk jaringan dan EUR 200m untuk nuklir hingga 2031; sekitar EUR 500m untuk subsidi insulasi dan pompa panas",
+"status": "Direncanakan"
+},
+{
+"title": "Dukungan pembangunan perumahan",
+"detail": "Sekitar EUR 1bn per tahun mulai 2029 (termasuk EUR 100m/tahun untuk sewa menengah), pajak pengalihan properti nonhunian dipangkas dari 8% menjadi 7%",
+"status": "Direncanakan"
+},
+{
+"title": "National Quantum Strategy",
+"detail": "Diumumkan 5 Okt 2026, menargetkan kepemimpinan kuantum pada 2035; dukungan Growth Fund untuk Quantum Delta NL",
+"status": "Berjalan"
+},
+{
+"title": "Pemeliharaan dan pembaruan jalan, jembatan, dan pintu air",
+"detail": "Rencana diumumkan setelah rapat kabinet 16 Okt 2026; Rijkswaterstaat melelang pemeliharaan besar dan mengalihdayakan pekerjaan perizinan",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi AI untuk dokumentasi perizinan dan analisis dampak lingkungan",
+"why": "Perizinan menjadi hambatan bagi perumahan dan energi, dan pemerintah semakin banyak mengalihdayakan pekerjaan perizinan.",
+"target": "Rijkswaterstaat, unit perizinan kota dan provinsi"
+},
+{
+"title": "Analitik citra AI untuk inspeksi jembatan dan pintu air",
+"why": "Rencana pemeliharaan dan pembaruan infrastruktur diumumkan pada Okt 2026.",
+"target": "Rijkswaterstaat, pemerintah kota"
+},
+{
+"title": "SaaS untuk pengelolaan pemasangan insulasi dan pompa panas",
+"why": "Sekitar EUR 500m telah dialokasikan untuk subsidi insulasi dan pompa panas.",
+"target": "Asosiasi perumahan, instalatur, pemerintah kota"
+},
+{
+"title": "Konsultasi masuk rantai pasok Eropa bagi perusahaan pertahanan dan chip Korea",
+"why": "Pengadaan pertahanan mengutamakan perusahaan Eropa, sehingga diperlukan entitas lokal dan kemitraan.",
+"target": "Perusahaan pertahanan dan semikonduktor Korea di Belanda, Defence Materiel Organisation (COMMIT)"
+}
+],
+"krsupport": [
+{
+"title": "Kantor KOTRA Amsterdam",
+"detail": "Mendukung pendirian kantor cabang, logistik, masuknya investasi, dan pencarian target M&A, termasuk di bidang pertahanan dan semikonduktor."
+}
+]
+}

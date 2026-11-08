@@ -1,0 +1,60 @@
+{
+"summary": "Chính phủ liên bang Thụy Sĩ quyết định không cần cắt giảm thêm trong ngân sách 2027 nhưng vẫn giữ chương trình thắt lưng buộc bụng 2027-2029, đồng thời đang mời thầu Swiss Government Cloud với mức trần khoảng 7 tỷ CHF song song với việc xây dựng quy định về AI.",
+"leader": "Tổng thống Liên bang Guy Parmelin (nhiệm kỳ luân phiên năm 2026); Hội đồng Liên bang bảy thành viên điều hành chính phủ theo nguyên tắc tập thể",
+"agenda": [
+"Củng cố tài khóa: giữ chương trình thắt lưng buộc bụng 2027-2029 (khoảng 5,2 tỷ CHF), bỏ các khoản cắt giảm bổ sung năm 2027",
+"Hiện đại hóa CNTT liên bang: đám mây lai đa nền tảng 'Swiss Government Cloud' (SGC)",
+"Xây dựng khung pháp lý về AI (Hội đồng Liên bang đã ghi nhận tiến độ giữa kỳ)",
+"Tăng cường hợp tác quốc phòng và vũ khí, bao gồm với NATO",
+"Thống kê chính thức và dữ liệu cho kỷ nguyên AI (giao diện trực tuyến mới của Văn phòng Thống kê Liên bang)"
+],
+"projects": [
+{
+"title": "Mua sắm Swiss Government Cloud (WTO 25002 609)",
+"detail": "Ba gói: đám mây công cộng toàn cầu, đám mây công cộng đặt tại Thụy Sĩ, hạ tầng tại chỗ (on-premise); tổng thời hạn tối đa 14 năm",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Ngân sách liên bang 2027",
+"detail": "Dự báo thu thuế doanh nghiệp cao hơn nên không cắt giảm thêm năm 2027; bỏ khoản cắt giảm phòng ngừa 540 triệu CHF; cần Quốc hội phê duyệt",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Chương trình thắt lưng buộc bụng 2027-2029 (EP27)",
+"detail": "Gói giảm chi tiêu nhiều năm nhằm xóa bỏ thâm hụt cơ cấu",
+"status": "Đang triển khai"
+},
+{
+"title": "Quy định về AI",
+"detail": "Hội đồng Liên bang đã ghi nhận tiến độ giữa kỳ vào ngày 2026-10-28",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Đánh giá mức độ sẵn sàng chuyển đổi lên đám mây và PMO cho cơ quan công",
+"why": "Việc triển khai SGC đòi hỏi các văn phòng liên bang lập kế hoạch di chuyển khối lượng công việc.",
+"target": "Các văn phòng liên bang và bộ phận CNTT cấp bang (canton)"
+},
+{
+"title": "Gói quản trị sẵn sàng tuân thủ quy định AI",
+"why": "Doanh nghiệp muốn chuẩn bị trong khi khung pháp lý AI đang được soạn thảo.",
+"target": "Doanh nghiệp quy mô vừa Thụy Sĩ, công ty tài chính và y tế"
+},
+{
+"title": "Hỗ trợ doanh nghiệp AI/tự động hóa Hàn Quốc thâm nhập Thụy Sĩ (tìm đối tác, bản địa hóa)",
+"why": "Nhu cầu nâng cao hiệu quả đang tăng và đối tác địa phương là yếu tố then chốt để thâm nhập.",
+"target": "SME AI và SaaS Hàn Quốc"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Thụy Sĩ",
+"detail": "Hỗ trợ nghiên cứu thị trường Thụy Sĩ, tìm kiếm người mua và kết nối đối tác địa phương."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí tiếp thị ở nước ngoài, chứng nhận và tư vấn thông qua phiếu hỗ trợ."
+}
+]
+}

@@ -1,0 +1,66 @@
+{
+"summary": "Pemerintahan Orpo di Finlandia menyepakati anggaran terakhirnya sebelum pemilu 2027, dengan belanja EUR 92,5 miliar dan defisit EUR 12,4 miliar. Pemerintah berupaya mendorong pertumbuhan melalui peningkatan belanja pertahanan serta pemangkasan pajak korporasi dan penghasilan sambil tetap berada di jalur belanja prosedur defisit berlebih UE.",
+"leader": "Presiden Alexander Stubb / Perdana Menteri Petteri Orpo (koalisi yang dipimpin Partai Koalisi Nasional)",
+"agenda": [
+"Konsolidasi fiskal dan kepatuhan pada jalur belanja prosedur defisit berlebih UE",
+"Pemangkasan pajak korporasi dari 20% menjadi 18% dan keringanan pajak penghasilan bagi berpenghasilan rendah dan menengah",
+"Peningkatan belanja pertahanan dan dukungan berkelanjutan bagi Ukraina",
+"Langkah ketenagakerjaan seperti voucher bagi pemuda dan penganggur jangka panjang",
+"Stimulus renovasi dan pembangunan perumahan",
+"Investasi infrastruktur jalan, rel, dan pelabuhan"
+],
+"projects": [
+{
+"title": "Usulan anggaran negara 2027",
+"detail": "Belanja EUR 92,5 miliar, defisit EUR 12,4 miliar; biaya bunga naik menjadi EUR 4,4 miliar",
+"status": "Direncanakan"
+},
+{
+"title": "Peningkatan anggaran pertahanan",
+"detail": "Pendanaan kementerian pertahanan naik EUR 618 juta, pengadaan peralatan EUR 1,3 miliar, EUR 200 juta untuk Ukraina",
+"status": "Direncanakan"
+},
+{
+"title": "Pemangkasan pajak korporasi",
+"detail": "Tarif dipangkas dari 20% menjadi 18%, dengan biaya pendapatan sekitar EUR 850 juta",
+"status": "Direncanakan"
+},
+{
+"title": "Hibah renovasi perumahan dan penjaminan pinjaman",
+"detail": "Hibah renovasi sementara dan perubahan penjaminan pinjaman senilai EUR 110 juta pada 2026-2027",
+"status": "Berjalan"
+},
+{
+"title": "Dynamic purchasing system platform data publik dan AI",
+"detail": "DPS DigiFinland untuk manajemen berbasis data dan platform AI, lisensi, serta layanan tenaga ahli",
+"status": "Proses tender"
+}
+],
+"biz": [
+{
+"title": "Gudang data publik, analitik, dan otomatisasi AI",
+"why": "Badan properti negara dan perusahaan digital kesejahteraan secara terbuka mengadakan layanan data dan AI.",
+"target": "Senaatti-kiinteistöt, DigiFinland, wellbeing services counties"
+},
+{
+"title": "Konsultasi digitalisasi proses untuk universitas dan lembaga",
+"why": "Tekanan untuk memangkas biaya operasional mendorong permintaan otomatisasi alur kerja.",
+"target": "Universitas dan lembaga pusat"
+},
+{
+"title": "Dukungan masuk pasar Finlandia/Nordik bagi UKM Korea",
+"why": "Pemangkasan pajak korporasi serta belanja pertahanan/infrastruktur dapat meningkatkan permintaan kemitraan.",
+"target": "UKM TIK dan komponen Korea"
+}
+],
+"krsupport": [
+{
+"title": "Kantor Dagang KOTRA Helsinki",
+"detail": "Mendukung intelijen pasar Finlandia dan pencarian pembeli TIK/cleantech."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Menanggung biaya sertifikasi luar negeri, riset pasar, dan pemasaran melalui voucher."
+}
+]
+}

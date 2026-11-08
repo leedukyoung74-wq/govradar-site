@@ -1,0 +1,89 @@
+{
+"summary": "Sau khi suy giảm trong năm 2024 và 2025 do nhu cầu kim cương yếu, Botswana đặt mục tiêu tăng trưởng 3,1% năm 2026 và đang chuyển từ tăng trưởng do nhà nước dẫn dắt sang tăng trưởng dựa vào khu vực tư nhân và xuất khẩu theo chương trình 'chuyển đổi kinh tế và thận trọng tài khóa'. Chuyến thăm cấp nhà nước tới Trung Quốc vào tháng 10/2026 đã nâng quan hệ lên đối tác hợp tác chiến lược toàn diện.",
+"leader": "Tổng thống Duma Gideon Boko (nguyên thủ quốc gia kiêm người đứng đầu chính phủ); Phó Tổng thống kiêm Bộ trưởng Tài chính Ndaba Gaolathe",
+"agenda": [
+"Đa dạng hóa, giảm phụ thuộc vào kim cương (NDP12 và chương trình chuyển đổi BETP)",
+"Tái thiết bộ đệm tài khóa và nguồn thu (hóa đơn điện tử, VAT đối với dịch vụ từ xa, đề xuất tăng thuế bậc cao nhất và thuế doanh nghiệp)",
+"Chuyển đổi số, bao gồm hệ thống mua sắm điện tử quốc gia",
+"Xây dựng ngành sản xuất, vượt qua lối làm ăn dựa vào thầu ('tenderpreneurship'), ưu tiên nhà sản xuất địa phương trong mua sắm công",
+"Hạ tầng năng lượng, nước và giao thông tích hợp",
+"Cải cách y tế (tái cơ cấu Central Medical Stores, Bảo hiểm Y tế Quốc gia theo lộ trình)"
+],
+"projects": [
+{
+"title": "Hệ thống Mua sắm Điện tử Quốc gia",
+"detail": "Mục tiêu vận hành đầy đủ trong năm tài khóa 2026/27",
+"status": "Đang triển khai"
+},
+{
+"title": "Hóa đơn điện tử bắt buộc",
+"detail": "Triển khai toàn quốc theo lộ trình từ tháng 4/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Ra mắt Sở Giao dịch Hàng hóa Botswana (BMX)",
+"detail": "Hỗ trợ định giá hàng hóa và đa dạng hóa ngoài kim cương",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Quỹ của các Quỹ Quốc gia cho MSME",
+"detail": "Công cụ tài chính cho SME dự kiến hoạt động năm 2027/28",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Trang trại điện gió 100 MW phía bắc Letlhakane",
+"detail": "Đã mời thầu tư vấn khảo sát địa kỹ thuật, địa hình và thủy văn",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Cải tạo và bảo trì tài sản công",
+"detail": "Ngân sách cải tạo các cơ sở công hiện có",
+"status": "Đang triển khai"
+},
+{
+"title": "Hội nghị Bàn tròn Doanh nghiệp của Tổng thống",
+"detail": "Khởi động tháng 3/2026; đã tổ chức 10 trên 18 cuộc họp ngành; chu kỳ thực thi chính sách 24 tuần",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Gói PMO số hóa mua sắm công và đào tạo",
+"why": "Hệ thống mua sắm điện tử phải đi vào vận hành trong năm tài khóa 2026/27, tạo nhu cầu lớn về đào tạo nhà cung cấp và công chức.",
+"target": "Bộ Tài chính, cơ quan quản lý mua sắm, doanh nghiệp nhà nước (SOE)"
+},
+{
+"title": "Tự động hóa kê khai thuế và hóa đơn điện tử dựa trên AI",
+"why": "Hóa đơn điện tử bắt buộc thúc đẩy SME tìm kiếm công cụ tự động hóa kế toán.",
+"target": "SME địa phương, BURS"
+},
+{
+"title": "Chương trình tăng tốc xuất khẩu và sản xuất cho MSME",
+"why": "Tổng thống công khai kêu gọi phát triển doanh nghiệp sản xuất và doanh nghiệp dựa trên sở hữu trí tuệ.",
+"target": "Bộ thương mại, cơ quan hỗ trợ SME, đơn vị quản lý quỹ của các quỹ"
+},
+{
+"title": "Tư vấn chính sách AI khu vực công và kỹ năng số",
+"why": "Kênh hợp tác AI/ICT Hàn Quốc-Botswana vừa được thiết lập.",
+"target": "Bộ truyền thông/số, Văn phòng Phó Tổng thống"
+}
+],
+"krsupport": [
+{
+"title": "Đàm phán hợp tác EDCF",
+"detail": "Tại hội nghị bộ trưởng KOAFEC tháng 9/2026, Korea Eximbank đã thảo luận danh mục dự án EDCF và sự tham gia của doanh nghiệp Hàn Quốc với Phó Tổng thống Botswana."
+},
+{
+"title": "Hợp tác AI và ICT Hàn Quốc-Botswana",
+"detail": "Ngày 2026-09-10, Thứ trưởng Hàn Quốc đã gặp Phó Tổng thống Botswana về chính sách AI và thu hẹp khoảng cách số."
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường Nam Phi",
+"detail": "Không có văn phòng riêng tại Botswana, vì vậy nghiên cứu thị trường và kết nối người mua được thực hiện qua các văn phòng lân cận như Nam Phi (ước tính)."
+},
+{
+"title": "Export Voucher",
+"detail": "Chi trả chi phí nghiên cứu thị trường nước ngoài, chứng nhận và tiếp thị tại địa phương thông qua phiếu hỗ trợ."
+}
+]
+}

@@ -1,0 +1,74 @@
+{
+"summary": "Chính phủ Fujimori đã trình Quốc hội kế hoạch 2026-2031 vào tháng 8/2026, dựa trên an ninh, phòng chống thiên tai, phát triển con người, năng suất và pháp quyền. Bộ trưởng Tài chính Elmer Cuba đã trình ngân sách năm 2027 trị giá 266,5 tỷ PEN (tăng 3,5%), nhấn mạnh chuẩn bị ứng phó El Niño và đầu tư vào y tế, giáo dục và giao thông.",
+"leader": "Tổng thống Keiko Fujimori (nguyên thủ quốc gia và người đứng đầu chính phủ, từ 2026-07-28) / Luis Galarreta, Chủ tịch Hội đồng Bộ trưởng (từ 2026-07-29)",
+"agenda": [
+"Tăng cường an ninh (tống tiền và tội phạm có tổ chức; đơn vị cảnh sát chống tống tiền và giám sát video bằng AI)",
+"Phòng chống El Niño và thiên tai, nạo vét làm sạch sông",
+"Phát triển con người: thiếu máu ở trẻ em, sức khỏe bà mẹ, tiêm chủng",
+"Nâng cao năng suất và cải thiện đầu tư công (bao gồm tăng cấp phép khai khoáng)",
+"Pháp quyền và khuôn khổ thân thiện với đầu tư"
+],
+"projects": [
+{
+"title": "Dự toán ngân sách công 2027",
+"detail": "Cao hơn 8,945 tỷ PEN (3,5%) so với ngân sách đầu năm 2026; trình phiên họp toàn thể Quốc hội ngày 2026-09-03",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Ngân sách chuẩn bị ứng phó El Niño",
+"detail": "Các công trình phòng ngừa, hạ tầng và bảo vệ, bổ sung cho 2,5 tỷ PEN đã phân bổ năm 2026; 536 điểm sông ưu tiên",
+"status": "Đang triển khai"
+},
+{
+"title": "Ngân sách y tế và giáo dục",
+"detail": "Y tế ưu tiên thiếu máu, chăm sóc bà mẹ - sơ sinh và tiêm chủng; giáo dục khoảng 49 tỷ PEN",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Danh mục đầu tư giao thông",
+"detail": "Duy trì các dự án đầu tư giao thông đang triển khai",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Công nghệ an ninh cho cảnh sát",
+"detail": "Đầu tư vào đơn vị chống tống tiền và hệ thống giám sát video bằng AI (bài phát biểu chính sách của Thủ tướng, 2026-08-20)",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Bảng điều khiển cảnh báo sớm lũ dựa trên mực nước sông và lượng mưa",
+"why": "Khoảng 5 tỷ PEN trong hai năm được phân bổ cho chuẩn bị ứng phó El Niño.",
+"target": "PCM, chính quyền vùng, cơ quan quốc gia về thiên tai"
+},
+{
+"title": "Nền tảng phân tích bằng AI cho dữ liệu vụ việc và tin báo của cảnh sát",
+"why": "Chính phủ coi đơn vị chống tống tiền và giám sát video bằng AI là ưu tiên an ninh cốt lõi.",
+"target": "Bộ Nội vụ, Cảnh sát Quốc gia"
+},
+{
+"title": "Giám sát chỉ số thiếu máu và sức khỏe bà mẹ cho chính quyền địa phương",
+"why": "Ngân sách y tế ưu tiên phòng chống thiếu máu và sức khỏe bà mẹ.",
+"target": "Bộ Y tế, chính quyền vùng và thành phố"
+},
+{
+"title": "Tư vấn quản lý dự án đầu tư công (PMO) và đánh giá",
+"why": "Cải thiện đầu tư công là ưu tiên của chính phủ, và riêng giao thông đã khoảng 16 tỷ PEN.",
+"target": "MEF, Bộ Giao thông và Truyền thông"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Lima",
+"detail": "Hỗ trợ nghiên cứu thị trường, tìm kiếm người mua và tham gia mua sắm công tại Peru."
+},
+{
+"title": "Chương trình quốc gia của KOICA tại Peru",
+"detail": "Peru là đối tác ưu tiên của KOICA với các dự án viện trợ không hoàn lại và hợp đồng dịch vụ đang triển khai trong lĩnh vực y tế, chính phủ số và quản lý thiên tai."
+},
+{
+"title": "Dịch vụ ở nước ngoài theo voucher xuất khẩu",
+"detail": "Chi phí nghiên cứu thị trường, bản địa hóa và kết nối người mua cho khu vực Mỹ Latinh có thể được chi trả bằng voucher."
+}
+]
+}

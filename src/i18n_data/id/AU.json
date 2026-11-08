@@ -1,0 +1,75 @@
+{
+"summary": "Pada periode keduanya, pemerintahan Partai Buruh Albanese berfokus pada pasokan perumahan, keringanan biaya hidup, dan ketahanan bahan bakar. Anggaran 2026-27 mereformasi ketentuan pajak perumahan investasi dan menambahkan paket ketahanan bahan bakar senilai A$14,7 miliar.",
+"leader": "Raja Charles III (Kepala Negara); Perdana Menteri Anthony Albanese (Kepala Pemerintahan)",
+"agenda": [
+"Meningkatkan pasokan perumahan dan mereformasi ketentuan pajak properti investasi",
+"Memperkuat ketahanan bahan bakar dan energi, termasuk cadangan bahan bakar yang dikendalikan pemerintah",
+"Keringanan biaya hidup dan dukungan pajak bagi usaha kecil",
+"Mengembangkan industri AI dan meningkatkan produktivitas",
+"Menyederhanakan perizinan dan mempercepat penilaian migrasi tenaga terampil"
+],
+"projects": [
+{
+"title": "Paket ketahanan bahan bakar",
+"detail": "Termasuk cadangan keamanan bahan bakar yang dikendalikan pemerintah senilai A$3,2 miliar dan menaikkan jumlah hari stok minimum untuk solar, avtur, dan bensin",
+"status": "Berjalan"
+},
+{
+"title": "Housing Support Program – dana infrastruktur lokal",
+"detail": "Mendanai infrastruktur lokal yang dibutuhkan untuk membuka pasokan perumahan",
+"status": "Berjalan"
+},
+{
+"title": "Hibah AI Accelerator",
+"detail": "Hibah untuk pengembangan dan komersialisasi AI dalam negeri",
+"status": "Direncanakan"
+},
+{
+"title": "Reformasi pajak perumahan investasi",
+"detail": "Mengganti diskon CGT 50% untuk rumah lama dengan indeksasi, dan membatasi negative gearing hanya untuk bangunan baru",
+"status": "Direncanakan"
+},
+{
+"title": "Instant asset write-off A$20.000 permanen",
+"detail": "Menjadikan write-off permanen dan memberlakukan kembali loss carry-back",
+"status": "Berjalan"
+},
+{
+"title": "Pembukaan Western Sydney International Airport",
+"detail": "Penerbangan penumpang pertama pada 25 Okt 2026, layanan internasional mulai 26 Okt",
+"status": "Selesai"
+}
+],
+"biz": [
+{
+"title": "Dasbor AI untuk pemantauan persediaan dan prakiraan permintaan bahan bakar",
+"why": "Cadangan bahan bakar baru yang dikendalikan pemerintah memerlukan manajemen stok secara real-time.",
+"target": "Department of Climate Change, Energy; distributor bahan bakar dan operator terminal"
+},
+{
+"title": "SaaS untuk otomatisasi peninjauan dokumen perizinan perumahan bagi pemerintah daerah",
+"why": "Perizinan harus dipercepat agar target perumahan tercapai.",
+"target": "Departemen perencanaan negara bagian, dewan kota"
+},
+{
+"title": "Paket otomatisasi AI untuk UKM, plus konsultasi pengajuan hibah",
+"why": "Hibah AI dan instant asset write-off permanen memberi UKM ruang lebih besar untuk berinvestasi pada perangkat digital.",
+"target": "UKM Australia, bisnis Korea-Australia"
+},
+{
+"title": "Uji tuntas masuk pasar dan pencocokan mitra lokal bagi UKM Korea",
+"why": "Diversifikasi rantai pasok dan kebutuhan infrastruktur menarik perusahaan bahan dan komponen Korea.",
+"target": "UKM dan perusahaan menengah Korea yang bersiap masuk ke Australia"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA Sydney (termasuk desk Brisbane)",
+"detail": "Mendukung masuk pasar melalui riset pasar lokal, pencocokan pembeli, dan bursa kerja."
+},
+{
+"title": "Export Voucher program",
+"detail": "Voucher yang menanggung biaya riset pasar luar negeri, sertifikasi, dan konsultasi; juga dapat digunakan untuk persiapan masuk ke Australia."
+}
+]
+}

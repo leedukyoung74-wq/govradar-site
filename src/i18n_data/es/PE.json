@@ -1,0 +1,74 @@
+{
+"summary": "El gobierno de Fujimori presentó al Congreso su plan 2026-2031 en agosto de 2026, basado en la seguridad, la preparación ante desastres, el desarrollo humano, la productividad y el Estado de derecho. El ministro de Economía y Finanzas, Elmer Cuba, presentó un presupuesto para 2027 de PEN 266.500 millones (un 3,5% más), que destaca la preparación ante El Niño y la inversión en salud, educación y transporte.",
+"leader": "Presidenta Keiko Fujimori (jefa de Estado y de Gobierno, desde el 2026-07-28) / Luis Galarreta, presidente del Consejo de Ministros (desde el 2026-07-29)",
+"agenda": [
+"Mayor seguridad (extorsión y crimen organizado; unidad policial contra la extorsión y videovigilancia con IA)",
+"Prevención de El Niño y de desastres, limpieza de ríos",
+"Desarrollo humano: anemia infantil, salud materna, vacunación",
+"Mayor productividad y mejor inversión pública (incl. más permisos mineros)",
+"Estado de derecho y un marco favorable a la inversión"
+],
+"projects": [
+{
+"title": "Proyecto de presupuesto público 2027",
+"detail": "PEN 8.945 millones (3,5%) por encima del presupuesto de apertura de 2026; presentado al pleno del Congreso el 2026-09-03",
+"status": "En revisión en el Congreso"
+},
+{
+"title": "Presupuesto de preparación ante El Niño",
+"detail": "Obras de prevención, infraestructura y protección adicionales a los PEN 2.500 millones ya asignados en 2026; 536 puntos fluviales prioritarios",
+"status": "En curso"
+},
+{
+"title": "Presupuestos de salud y educación",
+"detail": "Salud prioriza la anemia, la atención materno-neonatal y la vacunación; educación, unos PEN 49.000 millones",
+"status": "Planificado"
+},
+{
+"title": "Cartera de inversión en transporte",
+"detail": "Continuidad de los proyectos de inversión en transporte en curso",
+"status": "Planificado"
+},
+{
+"title": "Tecnología de seguridad policial",
+"detail": "Inversión en una división contra la extorsión y un sistema de videovigilancia con IA (discurso de política del premier, 2026-08-20)",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Panel de alerta temprana de inundaciones basado en niveles de ríos y precipitaciones",
+"why": "Se asignan unos PEN 5.000 millones en dos años a la preparación ante El Niño.",
+"target": "PCM, gobiernos regionales, agencia nacional de gestión de desastres"
+},
+{
+"title": "Plataforma de analítica con IA para datos de incidentes y denuncias policiales",
+"why": "El gobierno convirtió una unidad contra la extorsión y la videovigilancia con IA en prioridades centrales de seguridad.",
+"target": "Ministerio del Interior, Policía Nacional"
+},
+{
+"title": "Monitoreo de indicadores de anemia y salud materna para gobiernos locales",
+"why": "El presupuesto de salud prioriza la prevención de la anemia y la salud materna.",
+"target": "Ministerio de Salud, gobiernos regionales y municipales"
+},
+{
+"title": "Consultoría de gestión (PMO) y evaluación de proyectos de inversión pública",
+"why": "Mejorar la inversión pública es una prioridad del gobierno, y solo el transporte suma unos PEN 16.000 millones.",
+"target": "MEF, Ministerio de Transportes y Comunicaciones"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Lima",
+"detail": "Apoya estudios de mercado, búsqueda de compradores y la entrada en la contratación pública del Perú."
+},
+{
+"title": "Programa de país de KOICA para el Perú",
+"detail": "El Perú es un socio prioritario de KOICA, con proyectos de donación y contratos de servicios en curso en salud, gobierno digital y gestión de desastres."
+},
+{
+"title": "Servicios en el exterior del vale de exportación",
+"detail": "Los costos de estudios de mercado, localización y vinculación con compradores para América Latina pueden cubrirse con vales."
+}
+]
+}

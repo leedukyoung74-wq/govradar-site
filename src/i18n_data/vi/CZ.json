@@ -1,0 +1,65 @@
+{
+"summary": "Chính phủ Babiš đang thúc đẩy ngân sách 2027 với mức tăng lương hưu, lương khu vực công, đầu tư quốc phòng và giao thông, khiến thâm hụt nới rộng. Dự án mở rộng nhà máy điện hạt nhân Dukovany do KHNP dẫn đầu sắp khởi động gói thầu thiết bị phụ trợ đầu tiên vào tháng 11/2026.",
+"leader": "Tổng thống Petr Pavel / Thủ tướng Andrej Babiš",
+"agenda": [
+"Tăng lương hưu và lương khu vực công",
+"Tăng đầu tư quốc phòng và giao thông, bao gồm PPP đường cao tốc",
+"An ninh năng lượng, bao gồm nhà máy điện hạt nhân Dukovany",
+"Các biện pháp tăng thu và ổn định giá nhiên liệu",
+"Bổ sung nhân lực cảnh sát và cứu hỏa"
+],
+"projects": [
+{
+"title": "Dự thảo ngân sách nhà nước 2027",
+"detail": "Thâm hụt 386 tỷ CZK (tăng 76 tỷ CZK); thông qua lần đọc thứ nhất ngày 22/10/2026",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Các tổ máy hạt nhân mới Dukovany (KHNP)",
+"detail": "Hơn 60 doanh nghiệp Séc đủ điều kiện làm nhà cung cấp; gói thầu thiết bị và vật tư phụ trợ đầu tiên dự kiến vào tháng 11/2026; nộp hồ sơ cấp phép tháng 4/2027; mục tiêu tổ máy 1 vào năm 2036",
+"status": "Đang triển khai"
+},
+{
+"title": "Nhượng quyền đường cao tốc D35 (Opatovec-Mohelnice)",
+"detail": "Hợp đồng nhượng quyền thiết kế-xây dựng-tài trợ-vận hành-bảo trì được chính phủ phê duyệt ngày 26/10/2026",
+"status": "Hợp đồng đã được phê duyệt"
+},
+{
+"title": "Điều tiết giá nhiên liệu",
+"detail": "Giá điều tiết đối với một số loại nhiên liệu và miễn thuế tiêu thụ đặc biệt cho một số dầu khoáng, từ 1-30/11/2026",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn kết nối chuỗi cung ứng hạt nhân Hàn Quốc-Séc và nội địa hóa (liên doanh/thầu phụ)",
+"why": "Gói thầu thiết bị phụ trợ đầu tiên dự kiến vào tháng 11/2026 và kỳ vọng về sự tham gia của doanh nghiệp địa phương rất cao.",
+"target": "Nhà cung cấp Hàn Quốc đã đăng ký với KHNP, hơn 60 doanh nghiệp Séc đủ điều kiện"
+},
+{
+"title": "Tự động hóa hồ sơ chất lượng và hồ sơ dự thầu cho nhà cung cấp hạt nhân",
+"why": "KHNP đã công bố yêu cầu chất lượng và tiêu chí đánh giá kỹ thuật, làm tăng khối lượng giấy tờ.",
+"target": "SME nhà cung cấp Hàn Quốc và Séc tham gia đấu thầu Dukovany"
+},
+{
+"title": "Tư vấn quy tắc xuất xứ FTA và tuân thủ xuất khẩu",
+"why": "Tư vấn quy tắc xuất xứ là một phần của buổi giới thiệu gói thầu, cho thấy có nhu cầu.",
+"target": "SME Hàn Quốc cung ứng cho dự án hạt nhân Séc"
+},
+{
+"title": "Phân tích dữ liệu và bảo trì bằng AI cho đường cao tốc nhượng quyền",
+"why": "Hợp đồng nhượng quyền D35 đòi hỏi quản lý hiệu quả hoạt động vận hành và bảo trì của tư nhân.",
+"target": "Bộ Giao thông, Cục Đường bộ và Đường cao tốc (ŘSD), đơn vị nhận nhượng quyền"
+}
+],
+"krsupport": [
+{
+"title": "Buổi giới thiệu gói thầu thiết bị phụ trợ Dukovany",
+"detail": "Ngày 30/9/2026, hơn 130 nhà cung cấp đã được giới thiệu về lịch trình đấu thầu, mua sắm điện tử, quản lý chất lượng và quy tắc xuất xứ."
+},
+{
+"title": "Văn phòng KOTRA Praha",
+"detail": "Cung cấp thông tin thị trường Séc, kết nối người mua và hỗ trợ các dự án hợp tác hạt nhân và các lĩnh vực khác."
+}
+]
+}

@@ -1,0 +1,74 @@
+{
+"summary": "Le gouvernement Milei a déposé son budget 2027 le 15 septembre 2026, tablant sur une croissance de 4 %, une inflation de 18 % et un quatrième excédent budgétaire consécutif. Il a adopté une réforme du travail et ratifié l'accord UE-Mercosur début 2026, et poursuit une réforme fiscale et la dérégulation.",
+"leader": "Président Javier Milei / Chef de cabinet Diego Santilli (depuis fin juin 2026)",
+"agenda": [
+"Maintien d'un excédent budgétaire (solde primaire 2027 de 1,3 % du PIB)",
+"Réduction de l'inflation (objectif de 18 % pour 2027)",
+"Réforme fiscale et dérégulation",
+"Mise en œuvre de la réforme du travail (adoptée en février 2026)",
+"Ouverture commerciale (UE-Mercosur, accord commercial avec les États-Unis) et attraction de grands investissements (RIGI)"
+],
+"projects": [
+{
+"title": "Projet de loi de finances 2027",
+"detail": "Prévoit une croissance de 4 %, une inflation de 18 %, un excédent primaire de 1,3 % du PIB, un excédent global de 0,2 % et des exportations supérieures à 130 Md USD",
+"status": "En examen au Congrès"
+},
+{
+"title": "Loi de réforme du marché du travail",
+"detail": "Horaires flexibles (jusqu'à 12 heures par jour avec compensation), limitation des grèves dans les infrastructures critiques, coûts de licenciement plus prévisibles",
+"status": "Achevé (promulguée)"
+},
+{
+"title": "Ratification de l'accord UE-Mercosur",
+"detail": "Ratifié par le Sénat le 2026-02-26 ; l'UE a annoncé son application provisoire le lendemain",
+"status": "En cours"
+},
+{
+"title": "Paquet de réforme fiscale et de dérégulation",
+"detail": "Réformes fiscales, réglementaires et éducatives parmi les 90 mesures annoncées dans le discours de mars devant le Congrès",
+"status": "Prévu"
+},
+{
+"title": "Modernisation de la ligne ferroviaire Mitre de Buenos Aires (Banque mondiale)",
+"detail": "Modernisation du train de banlieue, y compris des travaux sur les sous-stations de la ligne Mitre",
+"status": "Appel d'offres en cours"
+}
+],
+"biz": [
+{
+"title": "Solutions d'IA pour l'automatisation et la simplification des processus du secteur public",
+"why": "La dérégulation en cours et la réduction de l'appareil d'État imposent de faire fonctionner l'administration avec moins de personnel.",
+"target": "Ministère de l'Économie, ministère de la Dérégulation, gouvernements provinciaux"
+},
+{
+"title": "Conseil en gouvernance des entreprises publiques et en préparation aux privatisations",
+"why": "Le SIGEN mène un programme de gouvernance des entreprises publiques, signe d'une forte demande d'amélioration.",
+"target": "Entreprises publiques, SIGEN"
+},
+{
+"title": "Accompagnement des PME coréennes pour l'entrée en Argentine et dans le Mercosur",
+"why": "L'ouverture commerciale et le ralentissement de l'inflation élargissent le marché des importations (estimation).",
+"target": "PME coréennes ciblant l'Amérique latine"
+},
+{
+"title": "Mise en relation avec la chaîne d'approvisionnement locale pour les investisseurs miniers et énergétiques RIGI",
+"why": "Des projets bénéficiant du régime d'incitation aux grands investissements (RIGI) sont en cours dans le lithium et l'énergie (estimation).",
+"target": "Investisseurs agréés RIGI"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Buenos Aires",
+"detail": "Fournit des informations de marché, la recherche d'acheteurs et des conseils sur la réglementation des importations."
+},
+{
+"title": "Export Voucher",
+"detail": "Les bons couvrent les frais de certification locale, de traduction et de conseil."
+},
+{
+"title": "Soutien aux investissements dans les infrastructures à l'étranger",
+"detail": "Finance des études de faisabilité et des investissements dans des projets d'infrastructures ferroviaires et énergétiques."
+}
+]
+}

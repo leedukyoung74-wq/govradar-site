@@ -1,0 +1,74 @@
+{
+"summary": "Chính phủ Takaichi đã chọn duy trì tính liên tục của chính sách trong đợt cải tổ tháng 9 và nhấn mạnh ưu tiên tăng trưởng tại kỳ họp bất thường của Quốc hội vào tháng 10. Đề nghị ngân sách tài khóa 2027 của các bộ đạt mức kỷ lục 143 nghìn tỷ JPY, tập trung vào AI và chip, an ninh kinh tế, năng lượng/GX và số hóa y tế.",
+"leader": "Thủ tướng Sanae Takaichi (nguyên thủ quốc gia: Thiên hoàng Naruhito)",
+"agenda": [
+"Khung đầu tư 'Nhật Bản Mạnh mẽ và Thịnh vượng': đầu tư nhiều năm vào 17 lĩnh vực chiến lược bao gồm AI, chip và robot",
+"An ninh kinh tế và nền tảng công nghiệp quốc phòng",
+"An ninh năng lượng và chuyển đổi xanh (GX)",
+"Số hóa y tế và chính phủ (AI, an ninh mạng), chuẩn hóa hệ thống của chính quyền địa phương",
+"Ứng phó tỷ lệ sinh thấp và tăng lương thực tế"
+],
+"projects": [
+{
+"title": "Đề nghị ngân sách tài khóa 2027",
+"detail": "Mức kỷ lục năm thứ tư liên tiếp; dự thảo của chính phủ dự kiến vào cuối năm sau khi Bộ Tài chính (MOF) thẩm định",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Khung đầu tư 'Nhật Bản Mạnh mẽ và Thịnh vượng'",
+"detail": "Khung đề nghị đặc biệt cho đầu tư chiến lược nhiều năm; tổng đề nghị toàn chính phủ khoảng 14,2 nghìn tỷ JPY",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Ngân sách AI, bán dẫn và robot của METI",
+"detail": "Trong đề nghị 7,79 nghìn tỷ JPY tài khóa 2027 của METI: khoảng 1,99 nghìn tỷ JPY cho AI/chip/robot, 1,55 nghìn tỷ cho an ninh kinh tế và công nghiệp quốc phòng, 1,98 nghìn tỷ cho GX",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "DX y tế, AI và an ninh mạng",
+"detail": "Đề nghị 36,58 nghìn tỷ JPY tài khóa 2027 của MHLW ưu tiên phát triển thuốc, cung ứng thuốc và DX y tế",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "R&D công-tư 180 nghìn tỷ JPY",
+"detail": "Mục tiêu của chiến lược tăng trưởng tháng 7/2026 cho giai đoạn tài khóa 2026-2030",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "PoC tự động hóa quy trình bằng tác tử AI cho chính quyền địa phương Nhật Bản (cùng SIer địa phương)",
+"why": "Cơ quan Kỹ thuật số đã liên tiếp mời thầu về sử dụng tác tử AI và mua sắm SaaS cho địa phương.",
+"target": "Chính quyền địa phương; nhà tích hợp hệ thống Nhật Bản"
+},
+{
+"title": "Tư vấn kết nối người mua và bản địa hóa cho SME hàng tiêu dùng Hàn Quốc",
+"why": "KOTRA đã xếp Nhật Bản là thị trường trọng điểm cho doanh nghiệp xuất khẩu lần đầu và đang triển khai hoạt động kết nối.",
+"target": "SME thực phẩm và mỹ phẩm Hàn Quốc; nhà nhập khẩu và phân phối Nhật Bản"
+},
+{
+"title": "Tư vấn nâng cao năng suất bằng AI tạo sinh cho SME Nhật Bản",
+"why": "Áp lực tiền lương và thiếu hụt lao động thúc đẩy cải thiện năng suất (ước tính).",
+"target": "SME sản xuất và dịch vụ Nhật Bản"
+},
+{
+"title": "Liên doanh Hàn Quốc-Nhật Bản trong lĩnh vực nội dung và công nghệ thực phẩm",
+"why": "Nội dung và công nghệ thực phẩm nằm trong 17 lĩnh vực chiến lược.",
+"target": "Doanh nghiệp nội dung và thực phẩm Nhật Bản"
+}
+],
+"krsupport": [
+{
+"title": "Tuần lễ Bước đầu Xuất khẩu 2026 (Nhật Bản là một trong bốn thị trường trọng điểm)",
+"detail": "Họp trực tuyến với người mua Nhật Bản và hỗ trợ logistics cho doanh nghiệp xuất khẩu hàng tiêu dùng lần đầu."
+},
+{
+"title": "Khóa học thâm nhập thị trường Nhật Bản của KOTRA Academy",
+"detail": "Đào tạo thực hành quanh năm về thâm nhập thị trường Nhật Bản."
+},
+{
+"title": "Export voucher của MSS",
+"detail": "Phiếu hỗ trợ cho tiếp thị ở nước ngoài, biên dịch, chứng nhận và các dịch vụ xuất khẩu khác."
+}
+]
+}

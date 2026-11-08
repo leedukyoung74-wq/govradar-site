@@ -1,0 +1,80 @@
+{
+"summary": "Thủ tướng Anutin, tái đắc cử vào tháng 3 sau cuộc bầu cử tháng 2/2026, lãnh đạo chính phủ liên minh; ngân sách tài khóa 2027 trị giá 3,788 nghìn tỷ THB đã được Thượng viện thông qua ngày 11/9. Với nợ công tiến gần trần pháp lý 70% GDP, chính phủ nhấn mạnh hiệu quả chi tiêu song song với thúc đẩy chính phủ số dựa trên AI.",
+"leader": "Quốc vương Maha Vajiralongkorn (Rama X); Thủ tướng Anutin Charnvirakul (tái đắc cử sau cuộc tổng tuyển cử năm 2026)",
+"agenda": [
+"Lộ trình công nghệ cao với AI và đổi mới số là động lực tăng trưởng; đổi mới khu vực công 'AI Plus'",
+"Chính phủ số Cloud First, hiệu quả khu vực công và chống tham nhũng",
+"Gia nhập OECD vào năm 2028 và xúc tiến đầu tư (Thailand FastPass)",
+"Mạng lưới an sinh xã hội cho già hóa dân số và công bằng giáo dục",
+"Quản lý nước, ứng phó thiên tai, trung hòa carbon năm 2050 và kinh tế Sinh học - Tuần hoàn - Xanh (BCG)",
+"Trấn áp lừa đảo qua tổng đài và rửa tiền; an ninh biên giới"
+],
+"projects": [
+{
+"title": "Ngân sách tài khóa 2027",
+"detail": "3,788 nghìn tỷ THB với thâm hụt 788 tỷ THB; được Thượng viện thông qua ngày 11/9/2026 (145 phiếu thuận); hướng tới giảm thâm hụt xuống dưới 3% GDP vào năm 2029",
+"status": "Đang triển khai"
+},
+{
+"title": "Tái cơ cấu và cải cách khu vực công",
+"detail": "Bao gồm chính phủ số Cloud First và chống tham nhũng",
+"status": "Đang triển khai"
+},
+{
+"title": "Phát triển nguồn nhân lực",
+"detail": "Bao gồm 'học mọi nơi, mọi lúc' và ứng dụng AI trong y tế công",
+"status": "Đang triển khai"
+},
+{
+"title": "Năng lực cạnh tranh và SMEs Plus",
+"detail": "Đầu tư vào logistics, giao thông, nông nghiệp và du lịch; hỗ trợ thu nhập cho SME; tăng cường PPP",
+"status": "Đang triển khai"
+},
+{
+"title": "Tăng cường kinh tế Sinh học - Tuần hoàn - Xanh (hỗ trợ kỹ thuật)",
+"detail": "TA của ADB giúp Văn phòng Chính sách Tài khóa xây dựng năng lực chính sách BCG, bao gồm tuyển chuyên gia phát triển lực lượng lao động",
+"status": "Đang triển khai"
+},
+{
+"title": "Phát triển môi trường",
+"detail": "Chuyển đổi các-bon thấp và quản lý nước",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa bằng AI cho dịch vụ công dân và xử lý văn bản hành chính tại cơ quan chính phủ",
+"why": "Ngân sách tài khóa 2027 phân bổ nguồn vốn lớn cho Cloud First và đổi mới khu vực công AI Plus.",
+"target": "Bộ Kinh tế và Xã hội Số, DGA, chính quyền địa phương"
+},
+{
+"title": "Chatbot AI đặt lịch hẹn và sàng lọc sơ bộ cùng tự động hóa quản lý bệnh viện",
+"why": "AI trong y tế công là một phần của ngân sách phát triển nguồn nhân lực.",
+"target": "Bộ Y tế Công cộng, bệnh viện công"
+},
+{
+"title": "Gói tư vấn chuyển đổi số và tự động hóa quy trình cho SME Thái Lan",
+"why": "SMEs Plus cấp vốn cho hỗ trợ SME và nâng cao năng lực cạnh tranh.",
+"target": "OSMEP, SME Thái Lan"
+},
+{
+"title": "Chẩn đoán và cải tiến quy trình cho cơ quan công quyền theo chuẩn OECD",
+"why": "Mục tiêu gia nhập OECD năm 2028 đòi hỏi cải cách hành chính và quy định.",
+"target": "Văn phòng Thủ tướng (PMO), Văn phòng Ủy ban Phát triển Khu vực Công (OPDC)"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Bangkok",
+"detail": "Hỗ trợ tìm kiếm người mua, ươm tạo văn phòng chi nhánh, nghiên cứu thị trường và tư vấn đầu tư để thâm nhập Thái Lan."
+},
+{
+"title": "Đoàn xúc tiến thương mại Busan tại SEOUL FOOD in Bangkok 2026",
+"detail": "Hỗ trợ kết nối người mua và tổ chức các cuộc gặp cho tám SME thực phẩm Busan tại hội chợ Bangkok ngày 2–4/12."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả nghiên cứu thị trường, chứng nhận và tiếp thị tại địa phương để thâm nhập Thái Lan."
+}
+]
+}

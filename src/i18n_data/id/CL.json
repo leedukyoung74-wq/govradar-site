@@ -1,0 +1,71 @@
+{
+"summary": "Pemerintahan Kast memprioritaskan keamanan, pengendalian migrasi, dan kebangkitan investasi, serta telah mengirim ke Kongres anggaran 2027 yang berorientasi pemangkasan belanja. Pemangkasan program sosial dan investasi daerah mendapat penolakan di Kongres.",
+"leader": "Presiden José Antonio Kast (kepala negara dan pemerintahan, menjabat sejak 2026-03-11)",
+"agenda": [
+"Pengetatan keamanan dan sanksi pidana (RUU pembatasan pengurangan hukuman bagi pelaku kejahatan seksual terhadap anak)",
+"Menekan migrasi ireguler dan memperkuat administrasi migrasi",
+"Menghidupkan kembali investasi dan menyederhanakan perizinan",
+"Konsolidasi fiskal (pemangkasan belanja, penurunan defisit struktural)",
+"Menurunkan tarif pajak korporasi",
+"Infrastruktur pertambangan, energi, dan desalinasi"
+],
+"projects": [
+{
+"title": "RUU anggaran 2027",
+"detail": "Total belanja +1,5%; keamanan, lapangan kerja, dan kesehatan diprioritaskan; sebagian subsidi perumahan dan investasi daerah dipangkas",
+"status": "Dalam pembahasan Kongres"
+},
+{
+"title": "Rencana lapangan kerja Chile Despega",
+"detail": "Menargetkan lebih dari 100.000 lapangan kerja",
+"status": "Direncanakan"
+},
+{
+"title": "Pekerjaan umum pemulihan bencana",
+"detail": "241 pekerjaan perbaikan dijadwalkan dimulai pada Januari 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Rencana subsidi perumahan",
+"detail": "Lebih dari 166.000 subsidi pada tahun pertama",
+"status": "Direncanakan"
+},
+{
+"title": "Desalinasi, daur ulang air, penjara, dan pusat kesehatan",
+"detail": "Infrastruktur dalam strategi pertumbuhan pemerintah (nilai tidak diungkapkan)",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi AI untuk peninjauan dokumen migrasi dan layanan warga",
+"why": "Pengetatan pengendalian migrasi telah meningkatkan beban kerja administrasi.",
+"target": "Layanan Migrasi Nasional, Kementerian Dalam Negeri"
+},
+{
+"title": "CCTV keamanan kota dan analitik video",
+"why": "Pemerintah kota terus menenderkan penggantian CCTV dan perluasan pengawasan.",
+"target": "Pemerintah kota dan otoritas keamanan"
+},
+{
+"title": "Konsultasi otomatisasi dokumentasi dan pelacakan izin untuk pertambangan dan energi",
+"why": "Pemerintah ingin mempercepat perizinan bagi investasi yang tertunda.",
+"target": "Perusahaan pertambangan dan energi, Layanan Penilaian Lingkungan"
+},
+{
+"title": "Paket transformasi digital dan adopsi AI untuk UKM",
+"why": "Kebijakan pemulihan lapangan kerja disertai permintaan dukungan produktivitas UKM.",
+"target": "UKM yang didukung Sercotec dan Corfo"
+}
+],
+"krsupport": [
+{
+"title": "Kantor KOTRA Santiago",
+"detail": "Memberi saran mengenai masuk pasar Cile, pemasaran, riset, proyek pertahanan/G2G, dan agri-pangan."
+},
+{
+"title": "Export voucher UKM",
+"detail": "Menanggung layanan ekspor seperti riset pasar, penerjemahan, dan sertifikasi melalui voucher."
+}
+]
+}

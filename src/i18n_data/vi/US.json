@@ -1,0 +1,79 @@
+{
+"summary": "Tài khóa 2027 đang vận hành theo nghị quyết chi tiêu tạm thời (P.L. 119-103) hết hạn ngày 11/12. Trước cuộc bầu cử giữa kỳ ngày 3/11, chính quyền đang thúc đẩy AI và khoa học (Genesis Mission), hỗ trợ nhà ở và chi phí sinh hoạt, năng lượng và chính sách thương mại dựa trên thuế quan thông qua các sắc lệnh hành pháp.",
+"leader": "Tổng thống Donald Trump (nguyên thủ quốc gia và người đứng đầu chính phủ)",
+"agenda": [
+"Dẫn đầu về AI/siêu trí tuệ và đổi mới khoa học (Genesis Mission)",
+"Giảm chi phí nhà ở, nhiên liệu và các chi phí sinh hoạt khác",
+"Đưa sản xuất trở về trong nước và tái cân bằng thương mại thông qua thuế quan theo Mục 232/301",
+"Hợp nhất số hóa các dịch vụ chính phủ (America.gov)",
+"Thực thi đạo luật trừng phạt Nga và Iran năm 2026"
+],
+"projects": [
+{
+"title": "Nghị quyết chi tiêu tạm thời tài khóa 2027 (P.L. 119-103)",
+"detail": "Ký tháng 9/2026; cấp kinh phí hoạt động cho chính phủ đến ngày 11/12. Các dự luật ngân sách cả năm vẫn đang chờ thông qua",
+"status": "Đang triển khai"
+},
+{
+"title": "Các sáng kiến khoa học Genesis Mission",
+"detail": "Công bố tháng 10/2026; đầu tư công - tư nhằm đẩy nhanh nghiên cứu dựa trên AI",
+"status": "Đang triển khai"
+},
+{
+"title": "Cuộc thi Quantum Genesis Q",
+"detail": "Hướng tới trình diễn máy tính lượng tử có khả năng chịu lỗi",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Sáng kiến sinh học ảo Bio Genesis",
+"detail": "Nỗ lực chung của NIH, DOE và Biohub",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Hợp nhất dịch vụ America.gov",
+"detail": "Sắc lệnh hành pháp ngày 2026-09-29 thiết lập đầu mối truy cập duy nhất vào các dịch vụ liên bang",
+"status": "Đang triển khai"
+},
+{
+"title": "Sắc lệnh hành pháp về chi phí nhà ở",
+"detail": "Ký ngày 2026-10-22; các biện pháp về nguồn cung và chi phí nhà ở",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Phân tích tác động thuế quan Mục 232/301 và tự động hóa quy tắc xuất xứ cho nhà xuất khẩu",
+"why": "Sau khi thuế quan theo IEEPA bị hủy bỏ, các mức thuế được xây dựng lại dựa trên Mục 232 và 301, nên cần tính toán lại mức độ ảnh hưởng theo từng sản phẩm.",
+"target": "SME Hàn Quốc xuất khẩu sang Mỹ; nhà nhập khẩu Mỹ"
+},
+{
+"title": "Gói tìm kiếm người mua và nghiên cứu thị trường cho doanh nghiệp lần đầu thâm nhập Mỹ",
+"why": "KOTRA đã xác định Mỹ là một trong bốn thị trường trọng điểm cho doanh nghiệp xuất khẩu lần đầu và hiện đang tổ chức kết nối giao thương.",
+"target": "SME hàng tiêu dùng Hàn Quốc chưa có thành tích xuất khẩu"
+},
+{
+"title": "Chatbot AI và tự động hóa văn bản cho dịch vụ cấp bang và địa phương",
+"why": "Sắc lệnh America.gov làm tăng áp lực số hóa dịch vụ công.",
+"target": "Chính quyền bang và quận; cơ quan liên bang thông qua các nhà thầu chính của Mỹ"
+},
+{
+"title": "Công cụ quản lý dữ liệu phòng thí nghiệm và phân tích bằng AI",
+"why": "Genesis Mission đang mở rộng đầu tư vào nghiên cứu dựa trên AI.",
+"target": "Phòng thí nghiệm quốc gia, phòng thí nghiệm đại học"
+}
+],
+"krsupport": [
+{
+"title": "Tuần lễ Bước đầu Xuất khẩu 2026 (Mỹ nằm trong bốn thị trường trọng điểm)",
+"detail": "Từ ngày 26/10, khoảng ba tuần gặp gỡ trực tuyến với người mua Mỹ và các nước khác, cùng hỗ trợ chi phí logistics cho doanh nghiệp xuất khẩu lần đầu."
+},
+{
+"title": "Khóa học thâm nhập thị trường theo quốc gia của KOTRA Academy (Mỹ)",
+"detail": "Đào tạo thực hành quanh năm về thâm nhập thị trường Mỹ cùng các khóa học thương mại số ứng dụng AI."
+},
+{
+"title": "Voucher xuất khẩu của MSS",
+"detail": "Đợt thứ ba năm 2026 cung cấp 47 tỷ KRW voucher tiếp thị ở nước ngoài cho khoảng 1.200 doanh nghiệp."
+}
+]
+}

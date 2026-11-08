@@ -1,0 +1,74 @@
+{
+"summary": "Pemerintahan Takaichi memilih kesinambungan kebijakan dalam perombakan kabinet September dan menekankan pertumbuhan sebagai prioritas dalam sidang luar biasa Diet bulan Oktober. Usulan anggaran kementerian TA2027 mencapai rekor JPY 143 triliun, berfokus pada AI dan cip, keamanan ekonomi, energi/GX, dan digitalisasi layanan kesehatan.",
+"leader": "Perdana Menteri Sanae Takaichi (kepala negara: Kaisar Naruhito)",
+"agenda": [
+"Kerangka investasi 'Strong and Prosperous Japan': investasi multitahun di 17 bidang strategis termasuk AI, cip, dan robotika",
+"Keamanan ekonomi dan basis industri pertahanan",
+"Ketahanan energi dan transformasi hijau (GX)",
+"Digitalisasi layanan kesehatan dan pemerintahan (AI, keamanan siber), standardisasi sistem pemerintah daerah",
+"Menangani rendahnya angka kelahiran dan menaikkan upah riil"
+],
+"projects": [
+{
+"title": "Usulan anggaran TA2027",
+"detail": "Rekor keempat berturut-turut; draf pemerintah dijadwalkan pada akhir tahun setelah tinjauan MOF",
+"status": "Direncanakan"
+},
+{
+"title": "Kerangka investasi 'Strong and Prosperous Japan'",
+"detail": "Jendela usulan khusus untuk investasi strategis multitahun; sekitar JPY 14,2 triliun diusulkan di seluruh pemerintahan",
+"status": "Direncanakan"
+},
+{
+"title": "Anggaran AI, semikonduktor, dan robotika METI",
+"detail": "Dari usulan METI TA2027 sebesar JPY 7,79 triliun: sekitar JPY 1,99 triliun untuk AI/cip/robotika, 1,55 triliun untuk keamanan ekonomi dan industri pertahanan, 1,98 triliun untuk GX",
+"status": "Direncanakan"
+},
+{
+"title": "DX layanan kesehatan, AI, dan keamanan siber",
+"detail": "Usulan MHLW TA2027 sebesar JPY 36,58 triliun memprioritaskan penemuan obat, pasokan obat, dan DX medis",
+"status": "Direncanakan"
+},
+{
+"title": "Litbang publik-swasta JPY 180 triliun",
+"detail": "Target strategi pertumbuhan Juli 2026 untuk TA2026-2030",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "PoC otomatisasi alur kerja agen AI untuk pemerintah daerah Jepang (bersama SIer lokal)",
+"why": "Digital Agency telah menerbitkan tender berturut-turut tentang pemanfaatan agen AI dan pengadaan SaaS lokal.",
+"target": "Pemerintah daerah; system integrator Jepang"
+},
+{
+"title": "Konsultasi pencocokan pembeli dan lokalisasi bagi UKM barang konsumsi Korea",
+"why": "KOTRA menetapkan Jepang sebagai pasar fokus bagi eksportir pemula dan sedang menjalankan temu bisnis.",
+"target": "UKM makanan dan kosmetik Korea; importir dan distributor Jepang"
+},
+{
+"title": "Konsultasi produktivitas AI generatif bagi UKM Jepang",
+"why": "Tekanan upah dan kekurangan tenaga kerja mendorong peningkatan produktivitas (perkiraan).",
+"target": "UKM manufaktur dan jasa Jepang"
+},
+{
+"title": "Usaha patungan Korea-Jepang di bidang konten dan food tech",
+"why": "Konten dan food tech termasuk di antara 17 bidang strategis.",
+"target": "Perusahaan konten dan makanan Jepang"
+}
+],
+"krsupport": [
+{
+"title": "2026 First Step to Exports Week (Jepang termasuk dalam empat pasar fokus)",
+"detail": "Pertemuan video dengan pembeli Jepang dan dukungan logistik bagi eksportir barang konsumsi pemula."
+},
+{
+"title": "Kursus masuk pasar KOTRA Academy Japan",
+"detail": "Pelatihan praktis sepanjang tahun untuk memasuki pasar Jepang."
+},
+{
+"title": "Export voucher MSS",
+"detail": "Voucher untuk pemasaran luar negeri, penerjemahan, sertifikasi, dan layanan ekspor lainnya."
+}
+]
+}

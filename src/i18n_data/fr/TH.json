@@ -1,0 +1,80 @@
+{
+"summary": "Le Premier ministre Anutin, reconduit en mars après les élections de février 2026, dirige un gouvernement de coalition ; le budget de l'exercice 2027, de 3 788 milliards de THB, a été adopté par le Sénat le 11 septembre. La dette publique approchant le plafond légal de 70 % du PIB, le gouvernement met l'accent sur l'efficacité des dépenses parallèlement à un effort de gouvernement numérique porté par l'IA.",
+"leader": "Roi Maha Vajiralongkorn (Rama X) ; Premier ministre Anutin Charnvirakul (reconduit après les élections générales de 2026)",
+"agenda": [
+"Feuille de route high-tech faisant de l'IA et de l'innovation numérique des moteurs de croissance ; innovation publique « AI Plus »",
+"Gouvernement numérique Cloud First, efficacité du secteur public et lutte contre la corruption",
+"Adhésion à l'OCDE d'ici 2028 et promotion de l'investissement (Thailand FastPass)",
+"Filet de sécurité sociale face au vieillissement et équité éducative",
+"Gestion de l'eau, réponse aux catastrophes, neutralité carbone en 2050 et économie Bio-Circulaire-Verte (BCG)",
+"Répression des escroqueries par centres d'appels et du blanchiment ; sécurité des frontières"
+],
+"projects": [
+{
+"title": "Budget de l'exercice 2027",
+"detail": "3 788 milliards de THB avec un déficit de 788 milliards de THB ; adopté par le Sénat le 11 sept. 2026 (145 voix pour) ; vise à ramener le déficit sous 3 % du PIB d'ici 2029",
+"status": "En cours"
+},
+{
+"title": "Restructuration et réforme du secteur public",
+"detail": "Comprend le gouvernement numérique Cloud First et la lutte contre la corruption",
+"status": "En cours"
+},
+{
+"title": "Développement des ressources humaines",
+"detail": "Comprend « apprendre partout, à tout moment » et l'utilisation de l'IA dans la santé publique",
+"status": "En cours"
+},
+{
+"title": "Compétitivité et SMEs Plus",
+"detail": "Investissements dans la logistique, les transports, l'agriculture et le tourisme ; soutien au revenu des PME ; davantage de PPP",
+"status": "En cours"
+},
+{
+"title": "Renforcement de l'économie Bio-Circulaire-Verte (assistance technique)",
+"detail": "AT de la BAD aidant le Fiscal Policy Office à renforcer ses capacités en matière de politique BCG, y compris le recrutement d'un spécialiste du développement de la main-d'œuvre",
+"status": "En cours"
+},
+{
+"title": "Développement environnemental",
+"detail": "Transition bas carbone et gestion de l'eau",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Automatisation par IA des services aux citoyens et du traitement des documents administratifs dans les organismes publics",
+"why": "Le budget de l'exercice 2027 alloue des fonds importants à Cloud First et à l'innovation publique AI Plus.",
+"target": "Ministère de l'Économie et de la Société numériques, DGA, collectivités locales"
+},
+{
+"title": "Chatbots IA pour les rendez-vous et la présélection, et automatisation de l'administration hospitalière",
+"why": "L'IA dans la santé publique fait partie du budget de développement des ressources humaines.",
+"target": "Ministère de la Santé publique, hôpitaux publics"
+},
+{
+"title": "Offres de conseil en transformation numérique et en automatisation des processus pour les PME thaïlandaises",
+"why": "SMEs Plus finance le soutien aux PME et la compétitivité.",
+"target": "OSMEP, PME thaïlandaises"
+},
+{
+"title": "Diagnostic et amélioration des processus des organismes publics au regard des normes de l'OCDE",
+"why": "L'objectif d'adhésion à l'OCDE en 2028 exige une réforme administrative et réglementaire.",
+"target": "PMO, Office of the Public Sector Development Commission (OPDC)"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Bangkok",
+"detail": "Accompagne la recherche d'acheteurs, l'incubation de bureaux de représentation, les études de marché et le conseil en investissement pour entrer en Thaïlande."
+},
+{
+"title": "Mission commerciale de Busan au SEOUL FOOD in Bangkok 2026",
+"detail": "Soutient la mise en relation et les rendez-vous avec des acheteurs pour huit PME agroalimentaires de Busan lors du salon de Bangkok du 2 au 4 décembre."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent les études de marché, la certification et le marketing local pour entrer sur le marché thaïlandais."
+}
+]
+}

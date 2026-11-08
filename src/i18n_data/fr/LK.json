@@ -1,0 +1,80 @@
+{
+"summary": "Le Sri Lanka maintient sa discipline budgétaire dans le cadre de son programme EFF du FMI, tandis que le budget 2027 augmente les dépenses d'investissement, offre certains allègements fiscaux et soutient le développement numérique et rural. La reconstruction après le cyclone et un cadre de financement des risques de catastrophe figurent également parmi les priorités.",
+"leader": "Président Anura Kumara Dissanayake (chef de l'État et du gouvernement) / Première ministre Harini Amarasuriya",
+"agenda": [
+"Mise en œuvre du programme du FMI et des objectifs de solde primaire",
+"Relèvement après les catastrophes et reconstruction des infrastructures publiques",
+"Allègement du coût de la vie (baisses d'impôts promises, aide sur les carburants) et protection sociale élargie",
+"Économie numérique (1 000 tours de télécommunication)",
+"Réforme de l'éducation à partir de la 6e année et amélioration des services de santé",
+"Lancement d'infrastructures de transport comme le rail électrique"
+],
+"projects": [
+{
+"title": "Loi de finances 2027 (Appropriation Bill)",
+"detail": "Dépenses totales +12,6 %, dépenses d'investissement +24,7 %",
+"status": "Devant le Parlement"
+},
+{
+"title": "Tours de télécommunication rurales",
+"detail": "1 000 tours en trois ans, dont 750 financées en 2027",
+"status": "Prévu"
+},
+{
+"title": "Développement rural et sécurité sociale",
+"detail": "Aide sociale élargie, y compris Aswesuma",
+"status": "Prévu"
+},
+{
+"title": "Transports, autoroutes et développement urbain",
+"detail": "Projet de rail électrique prévu pour démarrer en 2027",
+"status": "Prévu"
+},
+{
+"title": "5e/6e revues de l'EFF du FMI achevées",
+"detail": "Environ 695 M USD décaissés, soit environ 2,4 Md USD au total",
+"status": "Achevé"
+},
+{
+"title": "Automatisation des recettes municipales de Colombo (KOICA)",
+"detail": "Automatise la perception des principales sources de recettes, comme la taxe foncière et les droits de licence",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Automatisation de la perception des recettes et des services des collectivités locales",
+"why": "La demande est démontrée par le projet de Colombo, et le budget augmente les dépenses d'investissement locales.",
+"target": "Collectivités locales, ministère des Collectivités locales"
+},
+{
+"title": "Systèmes de données sur l'éligibilité et les paiements des aides sociales",
+"why": "Le financement de l'aide sociale, y compris Aswesuma, a plus que doublé.",
+"target": "Welfare Benefits Board, ministère du Développement rural et de la Sécurité sociale"
+},
+{
+"title": "Conseil en évaluation des investissements publics et en gestion de la performance",
+"why": "Le programme du FMI exige une réforme de la GIP alors que les dépenses d'investissement augmentent de près de 25 %.",
+"target": "Département de la planification nationale, ministères sectoriels"
+},
+{
+"title": "Outils numériques d'évaluation des dommages et de gestion des projets de reconstruction",
+"why": "La reconstruction après le cyclone est en cours et une stratégie de financement des risques de catastrophe est en préparation.",
+"target": "Centre de gestion des catastrophes, Trésor"
+}
+],
+"krsupport": [
+{
+"title": "Dialogue politique EDCF Corée–Sri Lanka et restructuration de la dette",
+"detail": "Le dialogue d'avril 2026 a finalisé la restructuration de 18 prêts EDCF et examiné la prolongation de l'accord-cadre."
+},
+{
+"title": "Projet d'automatisation des recettes de Colombo (KOICA)",
+"detail": "Un don de 8,5 M USD automatise la perception des principales sources de recettes municipales de Colombo."
+},
+{
+"title": "Bon d'exportation pour les PME",
+"detail": "Couvre, par des bons, des services à l'exportation tels que les études de marché, la traduction et la certification."
+}
+]
+}

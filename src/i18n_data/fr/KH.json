@@ -1,0 +1,73 @@
+{
+"summary": "Le Conseil des ministres présidé par le Premier ministre Hun Manet a approuvé le 2026-10-23 un budget 2027 d'environ 11,7 milliards USD et a lancé le 2026-10-22 la Stratégie nationale de développement des PME 2026-2030. Sur fond de négociations frontalières en cours avec la Thaïlande, le gouvernement associe la défense de la souveraineté à une croissance tirée par l'industrie, les services et l'agriculture.",
+"leader": "Roi Norodom Sihamoni / Premier ministre Hun Manet",
+"agenda": [
+"Défense de la souveraineté et du territoire ; négociations frontalières avec la Thaïlande",
+"Moyens de subsistance stables et croissance ciblée dans un contexte incertain (prévision de 4,8 % pour 2027)",
+"L'industrie, les services et l'agriculture comme moteurs de croissance",
+"Mise en œuvre de la Stratégie nationale de développement des PME (2026-2030)",
+"Budgets infranationaux accrus et mesures de réforme 2027"
+],
+"projects": [
+{
+"title": "Budget national 2027",
+"detail": "Total de 47 655 milliards KHR ; recettes de 32 327 milliards KHR (13,49 % du PIB) ; objectif de dépenses de 39 700 milliards KHR (16,57 % du PIB)",
+"status": "Approuvé en Conseil des ministres (2026-10-23), en attente du Parlement"
+},
+{
+"title": "Budget de l'administration infranationale",
+"detail": "18,7 % des dépenses de l'État",
+"status": "Prévu"
+},
+{
+"title": "Stratégie nationale de développement des PME 2026-2030",
+"detail": "Lancée le 2026-10-22 en présence du Premier ministre",
+"status": "En cours"
+},
+{
+"title": "Canal Funan Techo, phase 2",
+"detail": "Démarrée en avril 2026, PPP d'environ 1,7 milliard USD, achèvement visé pour 2028 (selon un relevé antérieur)",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Programme de diagnostic et d'accompagnement de la préparation à l'export des PME",
+"why": "La nouvelle stratégie nationale des PME lancée en octobre 2026 crée une demande de programmes de mise en œuvre.",
+"target": "Ministère de l'Industrie, de la Science, de la Technologie et de l'Innovation ; Chambre de commerce du Cambodge ; partenaires de développement"
+},
+{
+"title": "Conseil en automatisation budgétaire et comptable pour les collectivités locales",
+"why": "Le budget 2027 porte les dotations infranationales à 7 900 milliards KHR.",
+"target": "Ministère de l'Intérieur, gouvernements provinciaux et municipaux"
+},
+{
+"title": "Évaluations de conformité en matière d'origine et de droit du travail pour les exportateurs du textile et de l'industrie",
+"why": "Les droits de douane américains et la surveillance des chaînes d'approvisionnement rendent la conformité urgente.",
+"target": "Industriels exportateurs, associations professionnelles"
+},
+{
+"title": "Service client multilingue par IA pour le tourisme et les services",
+"why": "Les services sont désignés comme moteur de croissance pour 2027.",
+"target": "PME du tourisme et de l'hôtellerie, ministère du Tourisme"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Phnom Penh",
+"detail": "Fournit des études de marché, la recherche d'acheteurs et des consultations d'implantation pour le Cambodge."
+},
+{
+"title": "Programme pays de KOICA au Cambodge",
+"detail": "Le Cambodge est un partenaire prioritaire de KOICA, avec des projets de dons et des contrats de services en cours dans le développement rural, la santé et l'éducation."
+},
+{
+"title": "Prêts concessionnels EDCF au Cambodge",
+"detail": "Les prêts d'infrastructures pour les routes et l'approvisionnement en eau offrent aux entreprises coréennes des rôles en conception, supervision et construction."
+},
+{
+"title": "Services à l'étranger de l'Export Voucher",
+"detail": "Les frais d'étude de marché et de mise en relation avec des acheteurs pour entrer au Cambodge peuvent être couverts par des bons."
+}
+]
+}

@@ -1,0 +1,76 @@
+{
+"summary": "Ngày 9/10, Thủ tướng Anwar trình Ngân sách 2027 (chi tiêu chính phủ 459,8 tỷ RM), ngân sách thứ hai theo Kế hoạch Malaysia lần thứ 13 (2026–2030). Ngân sách tập trung vào tăng trợ cấp tiền mặt, thúc đẩy quốc gia AI, hỗ trợ SME và đầu tư vào lưới điện và hạ tầng số; Quốc hội sẽ thẩm tra đến cuối tháng 11.",
+"leader": "Quốc vương Sultan Ibrahim (Yang di-Pertuan Agong); Thủ tướng Anwar Ibrahim (kiêm Bộ trưởng Tài chính)",
+"agenda": [
+"Giảm gánh nặng chi phí sinh hoạt và trợ cấp tiền mặt cho nhóm dễ bị tổn thương (STR, SARA)",
+"'Quốc gia AI' vào năm 2030, đào tạo 200.000 người có kỹ năng AI",
+"Ứng dụng AI, tài chính cho SME và giảm thuế suất SME",
+"Phát triển cân bằng theo Kế hoạch Malaysia lần thứ 13 (RMK13)",
+"Lưới điện, hạ tầng nông thôn và kết nối số",
+"Đẩy nhanh xử lý thủ tục của chính phủ (tổ công tác STAR)"
+],
+"projects": [
+{
+"title": "Ngân sách 2027",
+"detail": "Chi tiêu chính phủ 459,8 tỷ RM; 510 tỷ RM khi tính cả GLIC và đầu tư tư nhân; dự báo tăng trưởng 2027 là 4,2–5,2%",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Trợ cấp tiền mặt STR và SARA",
+"detail": "SARA tới 150 RM/tháng cho tất cả người nhận STR, bao phủ tới 9 triệu người",
+"status": "Theo kế hoạch"
+},
+{
+"title": "R&D AI, thương mại hóa và ứng dụng AI cho SME",
+"detail": "6 tỷ RM cho các bộ; 30 triệu RM qua MDEC giúp 4.000 SME ứng dụng AI; chứng nhận 5.000 chuyên gia AI",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Hỗ trợ SME",
+"detail": "Giảm 1 điểm phần trăm thuế suất SME, 6,6 tỷ RM tài chính vi mô, bảo lãnh SJPP/CGC tới 32 tỷ RM",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Lưới điện, hạ tầng nông thôn và hạ tầng số",
+"detail": "15 tỷ RM cho lưới điện TNB, 3,3 tỷ RM cho hạ tầng cơ bản nông thôn, 5 tỷ RM cho kết nối số JENDELA",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Khởi nghiệp và bán dẫn của MOSTI",
+"detail": "Ngân sách MOSTI 1,29 tỷ RM; lộ trình khởi nghiệp SUPER 2.0; 10 triệu RM cho SemiconStart",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Gói tự động hóa quy trình bằng AI cho SME (cung cấp sau khi đăng ký nhà cung cấp với MDEC)",
+"why": "Ngân sách 2027 tài trợ ứng dụng AI cho 4.000 SME thông qua MDEC.",
+"target": "SME Malaysia, các kênh giải pháp được MDEC chứng nhận"
+},
+{
+"title": "Khóa học chứng chỉ chuyên gia AI và đào tạo AI thiết kế riêng cho doanh nghiệp",
+"why": "Chính phủ đặt mục tiêu 200.000 người có kỹ năng AI và 5.000 chuyên gia được chứng nhận vào năm 2030.",
+"target": "Bộ Kỹ thuật số, đơn vị đào tạo đăng ký với HRD Corp, bộ phận nhân sự doanh nghiệp"
+},
+{
+"title": "Tự động hóa và chatbot cho xử lý dịch vụ công",
+"why": "Tổ công tác STAR đang thúc đẩy đẩy nhanh xử lý thủ tục của chính phủ.",
+"target": "Các bộ liên bang, chính quyền bang, hội đồng địa phương"
+},
+{
+"title": "Tư vấn chiến lược tăng trưởng và thâm nhập Hàn Quốc cho khởi nghiệp và SME bán dẫn",
+"why": "MOSTI đang hỗ trợ khởi nghiệp thông qua SUPER 2.0 và SemiconStart.",
+"target": "Doanh nghiệp khởi nghiệp của Cradle Fund, SME thiết kế chip"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Kuala Lumpur",
+"detail": "Cung cấp dịch vụ ươm tạo văn phòng chi nhánh (hàng tiêu dùng, thực phẩm, làm đẹp, ICT, y tế), nghiên cứu thị trường, đoàn xúc tiến thương mại và hỗ trợ thâm nhập theo FTA/halal."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả các dịch vụ nghiên cứu thị trường, chứng nhận (bao gồm halal) và tiếp thị để thâm nhập Malaysia."
+}
+]
+}

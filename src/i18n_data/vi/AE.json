@@ -1,0 +1,65 @@
+{
+"summary": "Vào tháng 10, Nội các UAE đã phê duyệt ngân sách liên bang 292,5 tỷ AED cho giai đoạn 2027-2029 (tăng 28,3% so với chu kỳ trước), nhấn mạnh AI, phân tích dữ liệu tài khóa và đơn giản hóa thủ tục. Vào tháng 4, chính phủ đặt mục tiêu vận hành một nửa dịch vụ và hoạt động liên bang bằng AI tác tử (agentic AI) trong vòng hai năm.",
+"leader": "Tổng thống Sheikh Mohamed bin Zayed Al Nahyan (nguyên thủ quốc gia) / Phó Tổng thống kiêm Thủ tướng Sheikh Mohammed bin Rashid Al Maktoum (người đứng đầu chính phủ)",
+"agenda": [
+"Vận hành 50% dịch vụ liên bang bằng AI tác tử trong vòng hai năm",
+"Lập kế hoạch ngân sách dựa trên AI, phân tích dữ liệu tài khóa và đơn giản hóa thủ tục",
+"Chi tiêu phát triển xã hội tập trung vào giáo dục và y tế",
+"Cập nhật pháp luật về thuế và phát triển",
+"Các lĩnh vực tăng trưởng mới như kinh tế tuần hoàn và nông nghiệp bền vững"
+],
+"projects": [
+{
+"title": "Ngân sách liên bang 2027-2029",
+"detail": "90,1 tỷ AED cho năm 2027; phát triển xã hội và lương hưu 34,6 tỷ AED (38,4%), giáo dục 18,8%, y tế 6,7%, hạ tầng và kinh tế 3 tỷ AED",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Chuyển đổi chính phủ liên bang bằng AI tác tử",
+"detail": "Một nửa các lĩnh vực, dịch vụ và hoạt động liên bang sẽ vận hành bằng AI tự chủ, với các dịch vụ chủ động như gia hạn cư trú và cấp phép",
+"status": "Đang triển khai"
+},
+{
+"title": "Hệ thống Quản lý Dự án Doanh nghiệp của Cơ quan Thuế Liên bang",
+"detail": "Đăng trên Nền tảng Mua sắm Số của MoF, đóng thầu ngày 2026-11-17",
+"status": "Đang mời thầu"
+},
+{
+"title": "Đào tạo cán bộ Bộ Tư pháp (thiết kế, video có hỗ trợ AI, v.v.)",
+"detail": "Bốn chương trình đào tạo được mời thầu cùng lúc, đóng thầu ngày 2026-11-19",
+"status": "Đang mời thầu"
+}
+],
+"biz": [
+{
+"title": "Gói chẩn đoán quy trình kèm PoC tác tử AI cho các cơ quan liên bang",
+"why": "Chỉ thị của Thủ tướng chuyển 50% hoạt động liên bang sang AI tác tử trong hai năm khiến các bộ đang tìm kiếm đối tác triển khai.",
+"target": "Các bộ và cơ quan liên bang (Tư pháp, FTA, Kinh tế, v.v.)"
+},
+{
+"title": "Đào tạo AI tạo sinh thực hành cho công chức (tạo nội dung, phân tích dữ liệu)",
+"why": "Bộ Tư pháp đang mời thầu công khai các chương trình đào tạo liên quan đến AI.",
+"target": "Bộ phận nhân sự và đào tạo của Bộ Tư pháp và các bộ khác"
+},
+{
+"title": "Phân tích dữ liệu tài khóa và bảng điều khiển hiệu quả ngân sách",
+"why": "Ngân sách 2027-2029 yêu cầu rõ việc lập kế hoạch dựa trên AI và phân tích dữ liệu tài khóa.",
+"target": "Bộ Tài chính, bộ phận kế hoạch và tài chính của các bộ"
+},
+{
+"title": "Kết nối đối tác UAE và bản địa hóa cho SME AI/năng lượng Hàn Quốc",
+"why": "KOTRA đang mở rộng hoạt động kết nối AI và năng lượng, đồng thời liên kết với Dubai AI Week.",
+"target": "SME AI và năng lượng Hàn Quốc, doanh nghiệp nhà nước UAE (ví dụ NMDC)"
+}
+],
+"krsupport": [
+{
+"title": "Diễn đàn Hợp tác Kinh tế AI và Năng lượng Hàn Quốc-UAE",
+"detail": "Tháng 11/2025 tại Abu Dhabi, chương trình đã tổ chức 217 cuộc gặp giữa 23 SME Hàn Quốc và 69 đối tác địa phương, và dự kiến liên kết với Dubai AI Week."
+},
+{
+"title": "Hội chợ Việc làm Trung Đông 2026 (K-Move)",
+"detail": "Hội chợ việc làm ở nước ngoài dành cho thanh niên tại Dubai vào cuối tháng 8/2026 với 11 doanh nghiệp thuộc các ngành quốc phòng, tài chính, điện tử và các lĩnh vực khác."
+}
+]
+}

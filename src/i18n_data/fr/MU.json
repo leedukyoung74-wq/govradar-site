@@ -1,0 +1,80 @@
+{
+"summary": "En juin 2026, Maurice a présenté un budget 2026/27 axé sur l'IA et la numérisation, les start-ups et les PME, et l'économie bleue, en s'engageant à réduire le déficit d'environ 6 % du PIB à 3,7 %. En octobre, des manifestations liées aux pénuries d'eau, au coût de la vie et à une fusillade impliquant la police ont entraîné un couvre-feu du 12 au 18 octobre.",
+"leader": "Président Dharam Gokhool · Premier ministre et ministre des Finances Navin Ramgoolam",
+"agenda": [
+"Réduire le déficit budgétaire (d'environ 6,0 % du PIB à 3,7 %)",
+"Recourir à l'IA et à la numérisation, y compris la transformation numérique du secteur public",
+"Développer les start-ups et les PME (exonération fiscale de 10 ans pour les start-ups)",
+"Économie bleue et élargissement de l'espace économique",
+"Réforme des services financiers (numérisation de la FSC, renforcement de la LBC/FT, open banking et tokenisation)",
+"Fiabilité de l'eau, de l'électricité et des autres infrastructures de base"
+],
+"projects": [
+{
+"title": "Paquet économique spécial de l'Inde",
+"detail": "Nouvel hôpital national, tour de contrôle aéroportuaire, autoroute M4 et phase II de la Ring Road, équipements portuaires, etc.",
+"status": "En cours"
+},
+{
+"title": "Étude diagnostique pays sur les PPP",
+"detail": "Sélection d'un consultant pour diagnostiquer le cadre et le portefeuille de PPP",
+"status": "Appel d'offres ouvert"
+},
+{
+"title": "Projet de jumeau numérique",
+"detail": "Sélection d'un consultant pour concevoir et construire un jumeau numérique national",
+"status": "Appel d'offres ouvert"
+},
+{
+"title": "Data lake de l'enseignement supérieur",
+"detail": "Analyse, conception et construction d'une plateforme de données de l'enseignement supérieur",
+"status": "Appel d'offres ouvert"
+},
+{
+"title": "Mise en place et maintenance du passeport électronique",
+"detail": "Appel à manifestation d'intérêt pour un passeport électronique sécurisé",
+"status": "Appel d'offres ouvert"
+},
+{
+"title": "Accueil du U.S.-Africa Business Summit 2026",
+"detail": "Coorganisé par le gouvernement mauricien et le Corporate Council on Africa",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Conseil en appui à la gestion des coopératives et des PME",
+"why": "La division des coopératives vient de lancer un appel d'offres pour une mission de conseil en intégration et en accompagnement des entreprises.",
+"target": "Ministère de l'Industrie, des PME et des Coopératives"
+},
+{
+"title": "Conseil en diagnostic de PPP et en structuration de projets",
+"why": "Le ministère des Finances a lancé un appel d'offres pour une étude diagnostique pays sur les PPP.",
+"target": "Ministère des Finances"
+},
+{
+"title": "Plateformes de données publiques et analyse par IA",
+"why": "Le budget fait de l'IA et de la numérisation un pilier central, et des appels d'offres pour un data lake et un jumeau numérique sont ouverts.",
+"target": "Higher Education Commission, ministère du Logement et des Terres, ministère des TIC"
+},
+{
+"title": "Accompagnement à l'implantation des start-ups et à la création de sociétés locales",
+"why": "L'exonération fiscale de 10 ans pour les start-ups renforce l'attrait de Maurice comme hub vers l'Afrique.",
+"target": "Start-ups et PME coréennes ciblant l'Afrique"
+}
+],
+"krsupport": [
+{
+"title": "Actualités des marchés étrangers de KOTRA (Maurice/Afrique)",
+"detail": "Fournit des informations de marché sur Maurice et l'Afrique australe et orientale."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent les frais de traduction des dossiers d'appel d'offres, de conseil juridique et d'études de marché."
+},
+{
+"title": "Soutien de KIND aux infrastructures à l'étranger",
+"detail": "Soutient les études de faisabilité et l'investissement dans des projets de PPP et d'infrastructures à l'étranger."
+}
+]
+}

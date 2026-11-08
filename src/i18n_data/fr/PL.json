@@ -1,0 +1,75 @@
+{
+"summary": "La Pologne maintient des dépenses de défense supérieures à 4 % du PIB parallèlement à des mégaprojets tels que le nouvel aéroport hub, la grande vitesse ferroviaire et sa première centrale nucléaire, tandis que le déficit du projet de budget 2027 dépasse 7 % du PIB. Les vetos présidentiels fréquents retardent souvent la législation gouvernementale.",
+"leader": "Président Karol Nawrocki / Premier ministre Donald Tusk",
+"agenda": [
+"Renforcement de la défense (environ 4,5 % du PIB en 2027) et production locale d'armements",
+"Hausse des dépenses de santé",
+"Sécurité et transition énergétiques, y compris la première centrale nucléaire",
+"Grandes infrastructures (aéroport hub Port Polska, grande vitesse ferroviaire, ports)",
+"Maîtrise du déficit dans le cadre de la procédure de l'UE concernant les déficits excessifs",
+"Diversification du commerce et des investissements vers l'Asie"
+],
+"projects": [
+{
+"title": "Projet de budget de l'État 2027",
+"detail": "Dépenses 977,6 Md PLN, déficit 282,6 Md PLN (7,1 % du PIB) ; 198,1 Md PLN pour la défense, 274,1 Md PLN pour la santé",
+"status": "Au Parlement"
+},
+{
+"title": "Aéroport hub et nœud ferroviaire Port Polska (anciennement CPK)",
+"detail": "Cinq consortiums invités à soumissionner pour le terminal ; appels d'offres pour la gare ferroviaire de l'aéroport, les routes, les passerelles d'embarquement, la ligne Varsovie-Łódź et les sous-stations. 29 procédures d'une valeur d'environ 14 Md PLN lancées à fin juillet",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Tronçon Varsovie-Łódź de la ligne à grande vitesse",
+"detail": "Creusement du tunnel de Łódź fin 2026-2027, autres tronçons 2027-2029",
+"status": "En cours"
+},
+{
+"title": "Première centrale nucléaire (Kopalino-Lubiatowo)",
+"detail": "Consortium Westinghouse-Bechtel ; construction principale à partir de 2028, tranche 1 visée pour 2035",
+"status": "Prévu"
+},
+{
+"title": "Terminal à conteneurs en eau profonde de Świnoujście",
+"detail": "Y compris les travaux du chenal ; construction du terminal 2027-2029",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Offre d'entrée sur le marché polonais pour les PME de la défense (recherche de partenaires, certification, contrôle des exportations, revue des contrats)",
+"why": "Au MSPO 2026, les PME coréennes ont cité la recherche de partenaires et la certification/l'examen de la propriété intellectuelle comme principaux obstacles.",
+"target": "Fournisseurs coréens de la défense, entreprises intégrant la chaîne d'approvisionnement de l'Agence de l'armement"
+},
+{
+"title": "PMO numérique et outils de planification (BIM, analyse des plannings par IA) pour les mégaprojets",
+"why": "Port Polska est entré en phase de construction avec des dizaines d'appels d'offres en parallèle.",
+"target": "Port Polska, PKP PLK, consortiums d'entreprises et sous-traitants"
+},
+{
+"title": "Automatisation par IA de l'administration et de la planification des hôpitaux publics",
+"why": "La forte hausse des dépenses de santé en 2027 devrait accroître la demande d'efficacité opérationnelle (estimation).",
+"target": "Ministère de la Santé, Fonds national de santé (NFZ), hôpitaux régionaux"
+},
+{
+"title": "Automatisation de la documentation et des autorisations pour les fournisseurs du nucléaire",
+"why": "La préparation de la construction principale alourdit la documentation qualité et d'autorisation chez les fournisseurs.",
+"target": "PEJ, fournisseurs du consortium Westinghouse-Bechtel"
+}
+],
+"krsupport": [
+{
+"title": "Bureau de KOTRA à Varsovie",
+"detail": "Études de marché, mise en relation avec des acheteurs et marketing à l'exportation dans la défense, l'IA, l'automobile, l'énergie et les biens de consommation."
+},
+{
+"title": "Analyse du salon de défense MSPO 2026",
+"detail": "Publiée en oct. 2026, elle porte sur la tendance à la localisation de la défense en Pologne et les obstacles à l'entrée des PME."
+},
+{
+"title": "K-Content Expo Poland 2026",
+"detail": "Organisée à Varsovie en sept. 2026, avec des rendez-vous individuels avec environ 100 acheteurs d'Europe centrale et orientale."
+}
+]
+}

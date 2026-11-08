@@ -1,0 +1,75 @@
+{
+"summary": "Quốc hội đã thông qua ngân sách năm 2026 trị giá 68,3 nghìn tỷ N, cao hơn mức đề xuất 58,18 nghìn tỷ N của chính phủ, ưu tiên an ninh, hạ tầng, y tế và giáo dục. Với cuộc bầu cử tổng thống ấn định ngày 20/2/2027, Tổng thống Tinubu đã khởi động chiến dịch tái tranh cử ngày 24/10/2026; trong đợt rà soát này không tìm thấy dự toán ngân sách năm 2027.",
+"leader": "Tổng thống Bola Ahmed Tinubu (nguyên thủ quốc gia và người đứng đầu chính phủ)",
+"agenda": [
+"Mở rộng nguồn thu: luật thuế mới và tăng thu ngoài dầu mỏ",
+"Hoàn thành các hạ tầng trọng điểm như đường cao tốc và đường ống dẫn khí",
+"Sửa đổi Hiến pháp về lực lượng cảnh sát liên bang và cấp bang",
+"Vốn con người trong y tế và giáo dục; giải quyết tình trạng chảy máu chất xám ngành y",
+"Mở rộng nguồn cung khí đốt và khôi phục hạ tầng năng lượng"
+],
+"projects": [
+{
+"title": "Ngân sách liên bang 2026",
+"detail": "Thâm hụt 23,85 nghìn tỷ N (4,28% GDP); khoảng 6 tỷ USD vay nước ngoài được phê duyệt vào tháng 4/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Đường cao tốc Abuja-Kaduna",
+"detail": "Đoạn dài 81km được thông xe ngày 24/10/2026",
+"status": "Hoàn thành (một đoạn)"
+},
+{
+"title": "Trạm nén khí đường ống Escravos-Lagos (ELP)",
+"detail": "Các trạm nén do một doanh nghiệp trong nước xây dựng giúp nâng công suất khí của đường ống (công bố ngày 22/10/2026)",
+"status": "Hoàn thành"
+},
+{
+"title": "Sửa đổi Hiến pháp về cơ chế cảnh sát hai cấp",
+"detail": "Số hội đồng lập pháp bang phê chuẩn đã đạt ngưỡng, mở đường cho cảnh sát cấp bang (23/10/2026)",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự án hạ tầng số BRIDGE",
+"detail": "Hạ tầng số do Ngân hàng Thế giới tài trợ và các cụm nghiên cứu kinh tế số do trường đại học dẫn dắt",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình Phục hồi Ngành Phân phối điện (DISREP)",
+"detail": "Ngân hàng Thế giới tài trợ hỗ trợ các dự án nâng cấp xuất tuyến của các công ty phân phối điện (DisCo)",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa và phân tích bằng AI cho kê khai và thu thuế",
+"why": "Luật thuế mới đã có hiệu lực và áp lực tăng thu ngoài dầu mỏ rất lớn.",
+"target": "Cơ quan Thuế Nigeria, cơ quan thu nội địa các bang"
+},
+{
+"title": "Quản trị số và đào tạo AI cho công chức",
+"why": "KOICA đang mở rộng các dự án quản trị số và học viện khởi nghiệp.",
+"target": "Các bộ liên bang, chính quyền bang, đơn vị thực hiện dự án KOICA"
+},
+{
+"title": "Hỗ trợ tăng trưởng SME/khởi nghiệp và tư vấn kết nối thị trường Hàn Quốc",
+"why": "Tăng cường hệ sinh thái MSME là trọng tâm của các chương trình nhà tài trợ và nhu cầu trong nước lớn.",
+"target": "MSME, doanh nghiệp khởi nghiệp công nghệ, cơ quan phát triển doanh nghiệp cấp bang"
+},
+{
+"title": "Phần mềm quản lý hồ sơ vụ việc và giám sát CCTV cho cảnh sát cấp bang",
+"why": "Việc sửa đổi Hiến pháp về cảnh sát hai cấp dự kiến sẽ hình thành các lực lượng cảnh sát cấp bang mới.",
+"target": "Chính quyền bang, bộ chỉ huy cảnh sát cấp bang"
+}
+],
+"krsupport": [
+{
+"title": "Các chương trình của KOICA tại Nigeria (số hóa, giáo dục, thanh niên)",
+"detail": "Triển khai Trường học Thông minh Giai đoạn II tại 21 bang, quản trị số, học viện đổi mới số cho khởi nghiệp và việc làm xanh cho thanh niên."
+},
+{
+"title": "Chương trình học bổng công chức của KOICA (CIAT)",
+"detail": "Khoảng 2.000 cán bộ Nigeria đã tham gia đào tạo tại Hàn Quốc."
+}
+]
+}

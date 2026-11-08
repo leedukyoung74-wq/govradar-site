@@ -1,0 +1,71 @@
+{
+"summary": "El gabinete Jetten, que juró en febrero de 2026, articuló su presupuesto de 2027 en torno a un mayor gasto en defensa, la seguridad energética, la vivienda y la soberanía tecnológica. Se trata de una coalición minoritaria, y una encuesta de septiembre de 2026 situó la confianza en el gabinete en el 16%, lo que sugiere un impulso político limitado.",
+"leader": "Rey Guillermo Alejandro (jefe de Estado) / Primer ministro Rob Jetten (D66, jefe de Gobierno)",
+"agenda": [
+"Aumentos escalonados en defensa (3,5% del PIB para 2035, con prioridad para proveedores europeos)",
+"Seguridad y transición energéticas (CCS, red eólica marina, energía nuclear)",
+"Mayor oferta de vivienda",
+"Soberanía tecnológica (Estrategia Nacional Cuántica 2035)",
+"Mantenimiento y renovación de carreteras, puentes y esclusas"
+],
+"projects": [
+{
+"title": "Aumento del presupuesto de defensa",
+"detail": "+EUR 600 millones en 2027, +EUR 9.900 millones en 2030, +EUR 19.300 millones en 2035 (sin incluir la ayuda a Ucrania); 10% del presupuesto de inversión para innovación y escalamiento industrial",
+"status": "Planificado"
+},
+{
+"title": "Proyecto de almacenamiento de CO2 Aramis",
+"detail": "Nueva financiación para el almacenamiento de CO2 bajo el mar del Norte",
+"status": "Planificado"
+},
+{
+"title": "Red eólica marina y energía nuclear",
+"detail": "EUR 360 millones para la red y EUR 200 millones para energía nuclear hasta 2031; unos EUR 500 millones en subsidios para aislamiento y bombas de calor",
+"status": "Planificado"
+},
+{
+"title": "Apoyo a la construcción de viviendas",
+"detail": "Unos EUR 1.000 millones anuales a partir de 2029 (incl. EUR 100 millones/año para alquiler medio), impuesto de transmisiones sobre inmuebles no residenciales reducido del 8% al 7%",
+"status": "Planificado"
+},
+{
+"title": "Estrategia Nacional Cuántica",
+"detail": "Anunciada el 5 de octubre de 2026, con el objetivo de alcanzar el liderazgo cuántico para 2035; apoyo del Fondo de Crecimiento a Quantum Delta NL",
+"status": "En curso"
+},
+{
+"title": "Mantenimiento y renovación de carreteras, puentes y esclusas",
+"detail": "Plan anunciado tras el consejo de ministros del 16 de octubre de 2026; Rijkswaterstaat está licitando grandes obras de mantenimiento y externalizando la tramitación de permisos",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Automatización con IA de la documentación de permisos y de impacto ambiental",
+"why": "Los permisos son un cuello de botella para la vivienda y la energía, y el gobierno externaliza cada vez más la tramitación de permisos.",
+"target": "Rijkswaterstaat, unidades municipales y provinciales de permisos"
+},
+{
+"title": "Analítica de imágenes con IA para inspecciones de puentes y esclusas",
+"why": "En octubre de 2026 se anunció un plan de mantenimiento y renovación de infraestructuras.",
+"target": "Rijkswaterstaat, municipios"
+},
+{
+"title": "SaaS para gestionar instalaciones de aislamiento y bombas de calor",
+"why": "Se han asignado unos EUR 500 millones a subsidios para aislamiento y bombas de calor.",
+"target": "Asociaciones de vivienda, instaladores, municipios"
+},
+{
+"title": "Consultoría para que empresas coreanas de defensa y chips ingresen en las cadenas de suministro europeas",
+"why": "Las compras de defensa favorecen a las empresas europeas, por lo que se necesitan entidades locales y alianzas.",
+"target": "Empresas coreanas de defensa y semiconductores en los Países Bajos, Organización de Material de Defensa (COMMIT)"
+}
+],
+"krsupport": [
+{
+"title": "Oficina de KOTRA en Ámsterdam",
+"detail": "Apoya la apertura de sucursales, la logística, la entrada de inversiones y la búsqueda de oportunidades de M&A, incluidas las de defensa y semiconductores."
+}
+]
+}

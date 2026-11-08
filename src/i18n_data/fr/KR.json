@@ -1,0 +1,79 @@
+{
+"summary": "Le gouvernement a approuvé un projet de budget 2027 de 820,9 trillions KRW de dépenses totales (en hausse de 12,8 %), concentrant les fonds sur la jeunesse, les moteurs de croissance, les régions et l'éducation/les talents. Le projet du ministère des PME atteint un record de 18,07 trillions KRW, avec de fortes hausses pour le soutien à l'export et la transition vers l'IA dans l'industrie manufacturière.",
+"leader": "Président Lee Jae-myung / Premier ministre Han Seong-sook (nommée en juillet 2026)",
+"agenda": [
+"Investir les recettes fiscales exceptionnelles des semi-conducteurs dans les futurs moteurs de croissance (nouveau Future Response Fund)",
+"Affecter les dépenses à la jeunesse, aux régions et à l'éducation/aux talents (45,4 trillions KRW pour quatre domaines)",
+"Développer les exportations des PME et répondre aux risques tarifaires et commerciaux",
+"Transition vers l'IA de l'industrie manufacturière et des PME (IA physique, usines intelligentes)",
+"Développer l'écosystème des startups (« Startups for Everyone », fonds de fonds de 1,3 trillion KRW)"
+],
+"projects": [
+{
+"title": "Projet de budget de l'État 2027",
+"detail": "Dépenses totales de 820,9 trillions KRW, recettes totales de 880,8 trillions KRW, nouveau compte spécial pour la compétitivité des semi-conducteurs",
+"status": "En examen à l'Assemblée nationale"
+},
+{
+"title": "Projet de budget 2027 du ministère des PME",
+"detail": "En hausse de 9,4 % sur un an, soumis à l'Assemblée nationale (2026-09-03)",
+"status": "En examen à l'Assemblée nationale"
+},
+{
+"title": "Soutien élargi à l'export (refonte de l'export voucher)",
+"detail": "L'export voucher est scindé en un bon de base et un paquet croissance ; 23,8 milliards KRW pour l'entrée conjointe à l'étranger grandes entreprises-PME et 27,9 milliards KRW pour la réponse aux réglementations étrangères",
+"status": "Prévu"
+},
+{
+"title": "Démonstration de l'IA physique pour les PME et usines intelligentes",
+"detail": "Nouvelle démonstration de l'IA physique 172,8 milliards KRW, usines intelligentes y compris IA manufacturière 468,2 milliards KRW, main-d'œuvre de l'IA manufacturière 28,4 milliards KRW",
+"status": "Prévu"
+},
+{
+"title": "Startups for Everyone et paquet régional pour les startups",
+"detail": "Startups for Everyone 441,1 milliards KRW (20 000 participants) ; nouveau paquet régional pour les startups 170 milliards KRW",
+"status": "Prévu"
+},
+{
+"title": "Budget supplémentaire pour les PME lié à la guerre au Moyen-Orient",
+"detail": "100 milliards KRW supplémentaires pour les export vouchers (de 7 000 à 14 000), 100 milliards KRW de plus pour les fonds de nouveaux marchés, 75 milliards KRW pour l'IA manufacturière",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "S'enregistrer comme prestataire de l'export voucher : offre stratégie internationale, étude de marché et recherche d'acheteurs",
+"why": "Le soutien à l'export 2027 fait plus que doubler pour atteindre 313,7 milliards KRW, ce qui accroît la demande de bons.",
+"target": "PME exportatrices en démarrage et en croissance"
+},
+{
+"title": "Conseil en diagnostic et mise en œuvre de la transition vers l'IA pour les PME industrielles (y compris l'automatisation des processus)",
+"why": "Plus de 600 milliards KRW sont alloués à la démonstration de l'IA physique et aux usines intelligentes.",
+"target": "PME industrielles, technoparcs et agences régionales de promotion"
+},
+{
+"title": "Conseil sur les réglementations et certifications à l'export à l'étranger",
+"why": "27,9 milliards KRW sont prévus pour la réponse aux réglementations étrangères à l'export.",
+"target": "PME exportatrices, KOSME et KOTRA"
+},
+{
+"title": "Soumission aux contrats de conseil en transformation IA (AX) du secteur public",
+"why": "Les agences régionales et les entreprises publiques ont publié en 2026 un flux continu d'appels d'offres de conseil en IA sur KONEPS.",
+"target": "Collectivités locales, entreprises publiques, technoparcs"
+}
+],
+"krsupport": [
+{
+"title": "Export Voucher Program",
+"detail": "Les PME et ETI achètent des services de marketing et de conseil à l'étranger avec des bons ; en 2027, le dispositif se scinde en un bon de base et un paquet croissance."
+},
+{
+"title": "Soutien de KOTRA à l'entrée sur les marchés étrangers",
+"detail": "Fournit des études de marché, la mise en relation avec des acheteurs et un soutien aux salons via les bureaux commerciaux à l'étranger."
+},
+{
+"title": "Prêts publics de KOSME pour l'export et l'expansion à l'étranger",
+"detail": "Gère des fonds publics pour l'entrée sur de nouveaux marchés et la stabilité des PME exportatrices, augmentés par le budget supplémentaire 2026."
+}
+]
+}

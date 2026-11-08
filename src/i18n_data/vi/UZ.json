@@ -1,0 +1,74 @@
+{
+"summary": "Theo chiến lược 'Uzbekistan-2030', năm 2026 là 'Năm Phát triển Mahalla và Thịnh vượng Xã hội', với chương trình nhà nước gồm 337 nhiệm vụ. Cuối tháng 10, Tổng thống trực tiếp giám sát các khoản đầu tư lớn vào y tế và tiêu chuẩn y khoa mới, trong khi Hàn Quốc đang mở rộng hợp tác về giáo dục CNTT và quản trị số thông qua KOICA.",
+"leader": "Tổng thống Shavkat Mirziyoyev (nguyên thủ quốc gia) / Thủ tướng Abdulla Aripov (người đứng đầu chính phủ, tái bổ nhiệm tháng 11/2024; việc ông còn tại nhiệm năm 2026 hay không sẽ được xác nhận ở lần cập nhật tới)",
+"agenda": [
+"Hạ tầng mahalla (khu dân cư) và tăng trưởng cân bằng giữa các vùng",
+"Nâng cao tiêu chuẩn y tế và tăng đầu tư cho y tế",
+"Công nghệ số, ngành CNTT và chuyển sang nền kinh tế dựa trên đổi mới sáng tạo",
+"Cải cách hành chính, tư pháp và chống tham nhũng",
+"Khung thị trường lao động mới và quản lý nước"
+],
+"projects": [
+{
+"title": "Chương trình cải cách 2026 / chương trình nhà nước 'Uzbekistan-2030'",
+"detail": "Sắc lệnh Tổng thống ngày 17/2/2026 với 337 nhiệm vụ, 59 luật và 12 văn kiện chiến lược",
+"status": "Đang triển khai"
+},
+{
+"title": "Ngân sách nhà nước 2026",
+"detail": "Thu 515,8 nghìn tỷ UZS và chi 567,7 nghìn tỷ UZS, thâm hụt được giữ trong mức 3% GDP (ký ngày 26/12/2025)",
+"status": "Đang triển khai"
+},
+{
+"title": "Các dự án đầu tư y tế lớn và tiêu chuẩn y khoa mới",
+"detail": "Tổng thống đã xem xét tiến độ ngày 28/10/2026 và công bố tiêu chuẩn y khoa mới cùng tăng hỗ trợ cho bác sĩ",
+"status": "Đang triển khai"
+},
+{
+"title": "Trung tâm CNTT và trung tâm đào tạo số của KOICA",
+"detail": "Các trung tâm CNTT tại Nukus và Karshi, 14 trung tâm CNTT tại bảy huyện, đào tạo AI, lập trình và các lĩnh vực khác cho 500 chuyên gia và nhà giáo dục, cùng ươm tạo khởi nghiệp",
+"status": "Đang triển khai"
+},
+{
+"title": "Trần vay nước ngoài và PPP",
+"detail": "Vay nước ngoài mới 5 tỷ USD năm 2026 (2,5 tỷ USD cho ngân sách và 2,5 tỷ USD cho các dự án đầu tư) và trần 6,5 tỷ USD đối với PPP mới có bảo lãnh của nhà nước",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Hệ thống hồ sơ bệnh án điện tử và phác đồ lâm sàng cho bệnh viện khu vực",
+"why": "Tổng thống đang trực tiếp xem xét các khoản đầu tư y tế và đã công bố tiêu chuẩn y khoa mới.",
+"target": "Bộ Y tế, các trung tâm y tế khu vực"
+},
+{
+"title": "Đào tạo AI và tiếp thị số, tăng tốc khởi nghiệp gắn với các trung tâm CNTT của KOICA",
+"why": "KOICA đang xây dựng các trung tâm CNTT với 14 triệu USD, tạo ra nhu cầu về nội dung đào tạo và đơn vị vận hành ươm tạo.",
+"target": "Bộ Công nghệ Số, IT Park, các đối tác thực hiện của KOICA"
+},
+{
+"title": "Chatbot AI tiếp nhận yêu cầu của cư dân mahalla",
+"why": "Chương trình nhà nước 2026 ưu tiên dịch vụ công cấp mahalla.",
+"target": "Chính quyền địa phương (hokimiyat), cơ quan phụ trách mahalla"
+},
+{
+"title": "Nghiên cứu khả thi PPP và tư vấn quản lý hiệu quả cho cơ quan công quyền",
+"why": "Trần vay thấp hơn đang đẩy nhiều dự án chuyển sang hình thức tài trợ PPP.",
+"target": "Đơn vị PPP thuộc Bộ Kinh tế và Tài chính, cơ quan dự án của các bộ chuyên ngành"
+}
+],
+"krsupport": [
+{
+"title": "Hỗ trợ hệ sinh thái giáo dục CNTT của KOICA (14 triệu USD)",
+"detail": "Xây dựng 2 trung tâm CNTT lớn và 14 trung tâm CNTT, đào tạo 500 chuyên gia trong giai đoạn 2026–2032."
+},
+{
+"title": "Hợp tác AI và quản trị số của KOICA tại Trung Á",
+"detail": "Uzbekistan là đối tác Trung Á lớn nhất của KOICA, với các dự án quản trị số đang triển khai như quản lý sở hữu trí tuệ (đến 2029) và quy hoạch tổng thể chính sách AI (đến 2030)."
+},
+{
+"title": "Voucher Xuất khẩu 2026 (MSS)",
+"detail": "Voucher chi trả chi phí chứng nhận, nghiên cứu thị trường, tiếp thị và các dịch vụ mở rộng ra nước ngoài khác."
+}
+]
+}

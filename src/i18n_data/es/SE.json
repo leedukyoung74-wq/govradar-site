@@ -1,0 +1,49 @@
+{
+"summary": "El bloque de centroizquierda ganó por estrecho margen las elecciones del 2026-09-13 con 176 escaños, pero las negociaciones de coalición están estancadas, y el gobierno en funciones de Kristersson debe presentar un presupuesto para 2027 (o un presupuesto de transición) antes del 12 de noviembre.",
+"leader": "Rey Carlos XVI Gustavo; Primer ministro en funciones Ulf Kristersson (dimitió el 2026-09-17, en funciones hasta que haya un nuevo gobierno)",
+"agenda": [
+"Formación de gobierno: votaciones de investidura en el Riksdag (hasta cuatro; elecciones anticipadas en un plazo de tres meses si todas fracasan)",
+"Presentar un presupuesto para 2027 o un presupuesto de transición (plazo: 12 de noviembre)",
+"El gobierno en funciones se limita principalmente a asuntos en curso y urgentes",
+"Continuación del refuerzo de la defensa y la seguridad (estimación)"
+],
+"projects": [
+{
+"title": "Proceso de investidura del primer ministro",
+"detail": "La votación del 15 de octubre sobre Andersson fracasó (99 a favor, 248 en contra); está prevista una votación sobre la líder del Partido de Centro, Thand Ringqvist",
+"status": "En curso"
+},
+{
+"title": "Presupuesto 2027 / presupuesto de transición",
+"detail": "Sin un nuevo gobierno, el gobierno en funciones presenta un presupuesto de transición conforme a principios establecidos",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Seguimiento de los cambios de política en Suecia e informe de estrategia de entrada al mercado",
+"why": "Las prioridades presupuestarias y de política dependen de cómo se forme el gobierno.",
+"target": "Empresas coreanas que planean ingresar en Suecia"
+},
+{
+"title": "Pilotos de automatización de procesos con IA para municipios",
+"why": "Los municipios nórdicos tienen una fuerte demanda de administración digital (estimación).",
+"target": "Municipios y regiones de Suecia"
+},
+{
+"title": "Vinculación con socios nórdicos para pymes coreanas de defensa y manufactura",
+"why": "La inversión en seguridad genera demanda de socios locales en la cadena de suministro (estimación).",
+"target": "Empresas suecas de defensa y manufactura"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Suecia (Estocolmo)",
+"detail": "Apoya estudios del mercado sueco/nórdico y la búsqueda de compradores."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Cubre mediante vales los costos de marketing, certificación y consultoría en el exterior."
+}
+]
+}

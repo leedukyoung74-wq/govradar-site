@@ -1,0 +1,89 @@
+{
+"summary": "Setelah kontraksi pada 2024 dan 2025 akibat lemahnya permintaan berlian, Botswana menargetkan pertumbuhan 3,1% pada 2026 dan beralih dari pertumbuhan yang dipimpin negara ke pertumbuhan berbasis swasta dan ekspor di bawah agenda 'transformasi ekonomi dan kehati-hatian fiskal'. Kunjungan kenegaraan ke Tiongkok pada Oktober 2026 meningkatkan hubungan menjadi kemitraan kerja sama strategis komprehensif.",
+"leader": "Presiden Duma Gideon Boko (kepala negara dan pemerintahan); Wakil Presiden dan Menteri Keuangan Ndaba Gaolathe",
+"agenda": [
+"Diversifikasi dari berlian (NDP12 dan program transformasi BETP)",
+"Membangun kembali penyangga fiskal dan pendapatan (e-invoicing, PPN atas layanan jarak jauh, usulan kenaikan pajak golongan teratas dan korporasi)",
+"Transformasi digital, termasuk sistem e-procurement nasional",
+"Membangun manufaktur, melampaui 'tenderpreneurship', preferensi pengadaan bagi produsen lokal",
+"Infrastruktur energi, air, dan transportasi terpadu",
+"Reformasi kesehatan (pembenahan Central Medical Stores, Asuransi Kesehatan Nasional bertahap)"
+],
+"projects": [
+{
+"title": "National e-Procurement System",
+"detail": "Ditargetkan beroperasi penuh dalam TA2026/27",
+"status": "Berjalan"
+},
+{
+"title": "E-invoicing wajib",
+"detail": "Penerapan nasional bertahap mulai April 2026",
+"status": "Berjalan"
+},
+{
+"title": "Peluncuran Botswana Mercantile Exchange (BMX)",
+"detail": "Mendukung pembentukan harga komoditas dan diversifikasi di luar berlian",
+"status": "Direncanakan"
+},
+{
+"title": "National Fund of Funds untuk UMKM",
+"detail": "Wahana pembiayaan UKM yang diperkirakan beroperasi pada 2027/28",
+"status": "Direncanakan"
+},
+{
+"title": "Ladang angin 100 MW di utara Letlhakane",
+"detail": "Tender konsultansi dibuka untuk studi geoteknik, topografi, dan hidrologi",
+"status": "Proses tender"
+},
+{
+"title": "Rehabilitasi dan pemeliharaan aset publik",
+"detail": "Anggaran untuk renovasi fasilitas publik yang ada",
+"status": "Berjalan"
+},
+{
+"title": "Presidential Business Roundtable",
+"detail": "Diluncurkan Maret 2026; 10 dari 18 pertemuan sektoral telah digelar; siklus implementasi kebijakan 24 minggu",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "PMO dan paket pelatihan digitalisasi pengadaan publik",
+"why": "Sistem e-procurement harus beroperasi dalam TA2026/27, menciptakan permintaan besar atas pelatihan pemasok dan aparatur sipil.",
+"target": "Kementerian Keuangan, regulator pengadaan, BUMN"
+},
+{
+"title": "Otomatisasi pelaporan pajak dan e-invoicing berbasis AI",
+"why": "E-invoicing wajib mendorong UKM mencari perangkat otomatisasi akuntansi.",
+"target": "UKM lokal, BURS"
+},
+{
+"title": "Program akselerator ekspor dan manufaktur UMKM",
+"why": "Presiden secara terbuka menyerukan perusahaan manufaktur dan berbasis kekayaan intelektual.",
+"target": "Kementerian perdagangan, lembaga pendukung UKM, pengelola fund-of-funds"
+},
+{
+"title": "Konsultasi kebijakan AI sektor publik dan keterampilan digital",
+"why": "Saluran kerja sama AI/TIK Korea-Botswana baru saja dibuka.",
+"target": "Kementerian komunikasi/digital, Kantor Wakil Presiden"
+}
+],
+"krsupport": [
+{
+"title": "Pembicaraan kerja sama EDCF",
+"detail": "Pada pertemuan tingkat menteri KOAFEC September 2026, Korea Eximbank membahas daftar proyek EDCF dan partisipasi perusahaan Korea dengan Wakil Presiden Botswana."
+},
+{
+"title": "Kerja sama AI dan TIK Korea-Botswana",
+"detail": "Pada 2026-09-10, Wakil Menteri Korea bertemu Wakil Presiden Botswana membahas kebijakan AI dan penutupan kesenjangan digital."
+},
+{
+"title": "Dukungan masuk pasar Afrika Selatan bagian selatan",
+"detail": "Tidak ada kantor khusus Botswana, sehingga riset pasar dan pencocokan pembeli dilakukan melalui kantor terdekat seperti Afrika Selatan (perkiraan)."
+},
+{
+"title": "Export Voucher",
+"detail": "Menanggung biaya riset pasar luar negeri, sertifikasi, dan pemasaran lokal melalui voucher."
+}
+]
+}

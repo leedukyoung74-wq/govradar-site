@@ -1,0 +1,62 @@
+{
+"summary": "Presiden Lula mengalahkan Flávio Bolsonaro 51,77% berbanding 48,23% dalam putaran kedua 25 Oktober untuk meraih periode keempat, dan aset Brasil serta real melemah segera setelah hasilnya diumumkan. RUU anggaran 2027 yang sedang dibahas Kongres mencakup investasi publik R$133,8 miliar (R$61,5 miliar untuk Novo PAC).",
+"leader": "Presiden Luiz Inácio Lula da Silva (kepala negara dan pemerintahan; terpilih kembali untuk periode keempat dalam putaran kedua 25 Okt 2026)",
+"agenda": [
+"Mempertahankan program sosial dalam kerangka fiskal",
+"Memperluas investasi infrastruktur dan perumahan Novo PAC",
+"Kebijakan industri serta industri digital/kreatif (gim)",
+"Dukungan lebih luas bagi wirausaha mikro (MEI)",
+"Amandemen konstitusi untuk transportasi umum gratis (Tarifa Zero)",
+"Rumah sakit pintar SUS dan kesehatan digital"
+],
+"projects": [
+{
+"title": "RUU anggaran federal 2027 (PLOA 2027)",
+"detail": "Investasi publik R$133,8 miliar (naik 20%+ dari R$110,8 miliar pada 2026), di atas batas bawah R$88,7 miliar (0,6% PDB); dikirim ke Kongres pada 31 Agu 2026",
+"status": "Dalam pembahasan kongres"
+},
+{
+"title": "Alokasi Novo PAC 2027",
+"detail": "Minha Casa Minha Vida R$8,25 miliar, transportasi umum perkotaan R$1,19 miliar, drainase dan pencegahan banjir R$667,2 juta",
+"status": "Direncanakan"
+},
+{
+"title": "Jaringan rumah sakit dan layanan pintar SUS",
+"detail": "Program digitalisasi kesehatan publik yang diumumkan pada Jan 2026",
+"status": "Berjalan"
+},
+{
+"title": "Dekret kerangka hukum gim video dan dukungan industri",
+"detail": "Diterbitkan dan diumumkan pada Okt 2026",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi AI untuk penjadwalan, daftar tunggu, dan dokumen medis rumah sakit publik",
+"why": "Digitalisasi kesehatan publik sedang berjalan melalui jaringan rumah sakit pintar SUS.",
+"target": "Kementerian Kesehatan, dinas kesehatan negara bagian dan kota, rumah sakit publik"
+},
+{
+"title": "Otomatisasi lokalisasi/operasional untuk studio gim Brasil dan konsultasi pengembangan bersama Korea-Brasil",
+"why": "Dekret kerangka hukum gim dan langkah dukungan baru saja diterbitkan.",
+"target": "Studio gim Brasil, program dukungan kementerian kebudayaan/industri"
+},
+{
+"title": "Aplikasi otomatisasi akuntansi dan pelaporan pajak untuk MEI",
+"why": "UU manfaat MEI yang baru ditandatangani memperluas basis wirausaha mikro.",
+"target": "Wirausaha mikro MEI, lembaga pendukung seperti SEBRAE"
+},
+{
+"title": "Dasbor pemantauan kemajuan proyek perumahan dan transportasi kota",
+"why": "Investasi Novo PAC meningkat tajam dalam RUU anggaran 2027.",
+"target": "Kementerian Perkotaan, pemerintah negara bagian dan kota"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA AI Export Assistant",
+"detail": "AI percakapan yang merekomendasikan pembeli dan menyusun laporan masuk pasar yang disesuaikan untuk pasar sasaran seperti Brasil, dengan rilis pertama direncanakan pada 2026."
+}
+]
+}

@@ -1,0 +1,71 @@
+{
+"summary": "Nội các Jetten, tuyên thệ nhậm chức vào tháng 2/2026, xây dựng ngân sách năm 2027 xoay quanh tăng chi quốc phòng, an ninh năng lượng, nhà ở và chủ quyền công nghệ. Đây là liên minh thiểu số, và một cuộc thăm dò tháng 9/2026 cho thấy mức độ tin tưởng vào nội các chỉ đạt 16%, cho thấy động lực chính trị hạn chế.",
+"leader": "Quốc vương Willem-Alexander (nguyên thủ quốc gia) / Thủ tướng Rob Jetten (D66, người đứng đầu chính phủ)",
+"agenda": [
+"Tăng chi quốc phòng theo từng giai đoạn (3,5% GDP vào năm 2035, ưu tiên nhà cung cấp châu Âu)",
+"An ninh năng lượng và chuyển đổi năng lượng (CCS, lưới điện gió ngoài khơi, điện hạt nhân)",
+"Tăng nguồn cung nhà ở",
+"Chủ quyền công nghệ (Chiến lược Lượng tử Quốc gia 2035)",
+"Bảo trì và cải tạo đường bộ, cầu và âu thuyền"
+],
+"projects": [
+{
+"title": "Tăng ngân sách quốc phòng",
+"detail": "+0,6 tỷ EUR năm 2027, +9,9 tỷ EUR năm 2030, +19,3 tỷ EUR năm 2035 (không gồm viện trợ Ukraine); 10% ngân sách đầu tư dành cho đổi mới sáng tạo và mở rộng quy mô công nghiệp",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Dự án lưu trữ CO2 Aramis",
+"detail": "Nguồn vốn mới cho lưu trữ CO2 dưới Biển Bắc",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Lưới điện gió ngoài khơi và điện hạt nhân",
+"detail": "360 triệu EUR cho lưới điện và 200 triệu EUR cho điện hạt nhân đến năm 2031; khoảng 500 triệu EUR trợ cấp cách nhiệt và bơm nhiệt",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Hỗ trợ xây dựng nhà ở",
+"detail": "Khoảng 1 tỷ EUR/năm từ năm 2029 (bao gồm 100 triệu EUR/năm cho nhà cho thuê giá trung bình), thuế chuyển nhượng bất động sản phi nhà ở giảm từ 8% xuống 7%",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Chiến lược Lượng tử Quốc gia",
+"detail": "Công bố ngày 5/10/2026, hướng tới vị thế dẫn đầu về lượng tử vào năm 2035; Quỹ Tăng trưởng hỗ trợ Quantum Delta NL",
+"status": "Đang triển khai"
+},
+{
+"title": "Bảo trì và cải tạo đường bộ, cầu và âu thuyền",
+"detail": "Kế hoạch được công bố sau cuộc họp nội các ngày 16/10/2026; Rijkswaterstaat đang mời thầu các hạng mục bảo trì lớn và thuê ngoài công tác cấp phép",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa bằng AI hồ sơ cấp phép và đánh giá tác động môi trường",
+"why": "Cấp phép là điểm nghẽn đối với nhà ở và năng lượng, và chính phủ đang thuê ngoài nhiều hơn công tác cấp phép.",
+"target": "Rijkswaterstaat, bộ phận cấp phép của các đô thị và tỉnh"
+},
+{
+"title": "Phân tích hình ảnh bằng AI cho kiểm định cầu và âu thuyền",
+"why": "Kế hoạch bảo trì và cải tạo hạ tầng đã được công bố vào tháng 10/2026.",
+"target": "Rijkswaterstaat, chính quyền đô thị"
+},
+{
+"title": "SaaS quản lý lắp đặt cách nhiệt và bơm nhiệt",
+"why": "Khoảng 500 triệu EUR đã được phân bổ cho trợ cấp cách nhiệt và bơm nhiệt.",
+"target": "Hiệp hội nhà ở, đơn vị lắp đặt, chính quyền đô thị"
+},
+{
+"title": "Tư vấn tham gia chuỗi cung ứng châu Âu cho doanh nghiệp quốc phòng và chip Hàn Quốc",
+"why": "Mua sắm quốc phòng ưu tiên doanh nghiệp châu Âu, do đó cần có pháp nhân và quan hệ đối tác tại địa phương.",
+"target": "Doanh nghiệp quốc phòng và bán dẫn Hàn Quốc tại Hà Lan, Tổ chức Vật tư Quốc phòng (COMMIT)"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng KOTRA Amsterdam",
+"detail": "Hỗ trợ thành lập chi nhánh, logistics, thâm nhập đầu tư và tìm kiếm cơ hội M&A, bao gồm lĩnh vực quốc phòng và bán dẫn."
+}
+]
+}

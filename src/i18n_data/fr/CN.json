@@ -1,0 +1,69 @@
+{
+"summary": "En cette première année du 15e Plan quinquennal (2026-2030), la Chine donne la priorité à l'autonomie technologique, à l'économie numérique et à la réduction du carbone. Avec une croissance de 4,5 % au T3 (4,6 % sur janvier-septembre) et un investissement atone, elle a déployé des mesures de consommation fondées sur l'IA, une ouverture du secteur des services et des politiques démographiques.",
+"leader": "Président Xi Jinping (secrétaire général du PCC) ; Premier ministre Li Qiang",
+"agenda": [
+"Autonomie technologique et « nouvelles forces productives de qualité » (puces, biotechnologies, quantique)",
+"Modernisation « IA+ » du commerce, de la consommation et des services de soins",
+"Suppression des barrières à l'entrée dans les services et développement de l'investissement privé",
+"Réponse démographique : société favorable à la natalité, davantage de formation professionnelle",
+"Objectifs verts contraignants : intensité carbone réduite de 17 %, 25 % d'énergie non fossile d'ici 2030"
+],
+"projects": [
+{
+"title": "15e Plan quinquennal (2026-2030)",
+"detail": "Approuvé par l'APN en mars 2026 ; dépenses de R&D en hausse de plus de 7 % par an, industries cœur de l'économie numérique à 12,5 % du PIB d'ici 2030",
+"status": "En cours"
+},
+{
+"title": "18 mesures pour stimuler la consommation par l'IA et la technologie",
+"detail": "Logistique intelligente et livraison sans pilote, agents IA commerciaux, soins aux personnes âgées et santé intelligents, numérisation du commerce de détail",
+"status": "En cours"
+},
+{
+"title": "Paquet services et démographie",
+"detail": "Réunion du Conseil des affaires de l'État du 2026-10-23 : soutien financier, foncier, en talents et en données, suppression des barrières cachées, davantage de formation professionnelle",
+"status": "Prévu"
+},
+{
+"title": "Objectifs contraignants de transition verte",
+"detail": "Réduction de 17 % des émissions de CO2 par unité de PIB et 25 % d'énergie non fossile d'ici 2030",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conseil en mise en relation avec des acheteurs et en référencement sur les plateformes pour les entreprises coréennes de biens de consommation entrant en Chine",
+"why": "KOTRA classe la Chine parmi les marchés prioritaires pour les primo-exportateurs, tandis que Pékin élargit ses mesures de relance de la consommation.",
+"target": "PME coréennes de l'alimentation et des cosmétiques ; importateurs et distributeurs chinois"
+},
+{
+"title": "Automatisation par IA de la gestion des magasins (stocks, commandes, marketing) via des partenaires locaux",
+"why": "Neuf ministères encouragent les agents IA commerciaux et la numérisation du commerce de détail.",
+"target": "Chaînes chinoises de commerce de détail et de restauration de taille PME"
+},
+{
+"title": "Automatisation des dossiers de soins et du suivi pour les établissements de soins intelligents aux personnes âgées",
+"why": "Le vieillissement et les soins intelligents aux personnes âgées sont désormais des priorités politiques.",
+"target": "Bureaux locaux des affaires civiles, opérateurs privés de soins"
+},
+{
+"title": "Courtage de licences et accompagnement contractuel pour la PI de contenus coréens en Chine",
+"why": "Une rencontre d'affaires Corée-Chine sur les contenus se tient à Pékin en novembre.",
+"target": "Distributeurs et plateformes de contenus chinois"
+}
+],
+"krsupport": [
+{
+"title": "Rencontre d'affaires 2026 Corée-Chine de l'industrie des contenus",
+"detail": "Du 25 au 27 novembre à Pékin, une vingtaine d'entreprises coréennes de contenus rencontrent en tête-à-tête une cinquantaine d'acheteurs locaux."
+},
+{
+"title": "Semaine 2026 « First Step to Exports » (la Chine parmi quatre marchés prioritaires)",
+"detail": "Rendez-vous en visioconférence avec des acheteurs chinois et soutien logistique pour les primo-exportateurs de biens de consommation."
+},
+{
+"title": "Cours d'entrée sur le marché de la KOTRA Academy Chine (biens de consommation)",
+"detail": "Formation pratique à l'entrée sur le marché chinois de la consommation."
+}
+]
+}

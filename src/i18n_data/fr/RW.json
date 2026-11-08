@@ -1,0 +1,80 @@
+{
+"summary": "Le Rwanda exécute son budget 2026/27 (7 796,3 milliards de RWF) dans le cadre de la NST2, en mettant l'accent sur l'agriculture, l'emploi et la résilience, tandis que le cycle budgétaire 2027/28 et les élections locales (du 10 oct. au 15 déc.) sont en cours. Les discussions avec le FMI sur la première revue de la FEC se sont conclues en octobre.",
+"leader": "Président Paul Kagame / Premier ministre Justin Nsengiyumva (depuis juillet 2025)",
+"agenda": [
+"Mettre en œuvre la NST2 : piliers économique (63 %), social (22 %) et gouvernance (15 %)",
+"Productivité agricole : intrants, irrigation et transformation",
+"Création d'emplois pour les jeunes, fabrication locale et exportations",
+"Infrastructures énergétiques, de transport et hydrauliques",
+"Stabilité macroéconomique et programme FEC du FMI",
+"Restructuration des collectivités locales (cellules d'ici févr. 2027, districts d'ici juil. 2027)"
+],
+"projects": [
+{
+"title": "Budget national 2026/27",
+"detail": "En hausse de 12 % sur un an ; fonctionnement 4 785,5 Md RWF, développement 3 010,8 Md RWF ; recettes intérieures 5 273,8 Md RWF",
+"status": "En cours"
+},
+{
+"title": "Planification et budgétisation 2027/28",
+"detail": "Un atelier de trois semaines pour les planificateurs centraux et locaux a lancé le prochain cycle (27 oct. 2026)",
+"status": "Prévu"
+},
+{
+"title": "Health Emergency Preparedness, Response and Resilience (HEPRR)",
+"detail": "Financé par la Banque mondiale ; appels d'offres pour des équipements d'appui de l'hôpital CHUK Masaka, des appareils de radiographie, etc.",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Politique de coopération au développement du Rwanda 2026-2050",
+"detail": "Politique de coopération à long terme remplaçant la politique d'aide de 2006 ; approuvée par le Conseil des ministres en sept. 2026",
+"status": "En cours"
+},
+{
+"title": "Usine A1 Iron & Steel (Musanze)",
+"detail": "Investissement manufacturier inauguré par le Premier ministre le 14 sept. 2026",
+"status": "Achevé"
+},
+{
+"title": "Assurance climatique pour les travailleurs des mines",
+"detail": "Assurance climatique à l'étude pour les mines et carrières, qui employaient environ 92 000 personnes en 2025",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Outils et formation pour l'automatisation de la préparation budgétaire et de la gestion de la performance des administrations centrales et locales",
+"why": "Le cycle budgétaire 2027/28 et la restructuration des collectivités locales se déroulent simultanément, d'où une forte demande de processus standardisés.",
+"target": "MINECOFIN, administrations de district"
+},
+{
+"title": "Système de gestion du parc et de la maintenance des équipements hospitaliers",
+"why": "D'importantes livraisons d'équipements financées par la Banque mondiale nécessiteront une gestion du service après-vente.",
+"target": "RBC, hôpitaux publics"
+},
+{
+"title": "Tableau de bord des données sur les intrants agricoles et l'irrigation avec prévision des rendements",
+"why": "La productivité agricole est la première priorité budgétaire.",
+"target": "Ministère de l'Agriculture et des Ressources animales, RAB"
+},
+{
+"title": "Conseil aux PME coréennes utilisant Kigali comme base pour l'Afrique de l'Est",
+"why": "Les discussions de coopération EDCF sont actives et le Rwanda offre un accès aux marchés du COMESA.",
+"target": "PME coréennes, Rwanda Development Board (RDB)"
+}
+],
+"krsupport": [
+{
+"title": "Discussions de coopération EDCF avec Korea Eximbank",
+"detail": "Lors du KOAFEC en sept. 2026, la banque a discuté avec le ministre rwandais des Finances de projets EDCF et de la participation d'entreprises coréennes."
+},
+{
+"title": "Korea-Africa AI Hub et K-AI Package",
+"detail": "Lors du KOAFEC 2026, la Corée a signé une lettre d'intention sur un hub d'IA et présenté des projets d'IA, de centres de données et d'énergie liés à l'EDCF."
+},
+{
+"title": "Programme pays de la KOICA au Rwanda",
+"detail": "Projets d'aide sous forme de dons et opportunités de partenariat par l'intermédiaire du bureau au Rwanda."
+}
+]
+}

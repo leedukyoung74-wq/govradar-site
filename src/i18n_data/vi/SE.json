@@ -1,0 +1,49 @@
+{
+"summary": "Khối trung tả đã giành chiến thắng sít sao trong cuộc bầu cử ngày 2026-09-13 với 176 ghế nhưng các cuộc đàm phán liên minh đang bế tắc, và chính phủ tạm quyền của ông Kristersson phải trình ngân sách năm 2027 (hoặc ngân sách chuyển tiếp) trước ngày 12/11.",
+"leader": "Quốc vương Carl XVI Gustaf; Thủ tướng tạm quyền Ulf Kristersson (từ chức ngày 2026-09-17, tại nhiệm cho đến khi có chính phủ mới)",
+"agenda": [
+"Thành lập chính phủ: các vòng bỏ phiếu chọn Thủ tướng tại Riksdag (tối đa bốn lần; bầu cử sớm trong vòng ba tháng nếu tất cả đều thất bại)",
+"Trình ngân sách năm 2027 hoặc ngân sách chuyển tiếp (hạn chót 12/11)",
+"Chính phủ tạm quyền chủ yếu chỉ xử lý các công việc thường xuyên và khẩn cấp",
+"Tiếp tục tăng cường quốc phòng và an ninh (ước tính)"
+],
+"projects": [
+{
+"title": "Quy trình bầu Thủ tướng",
+"detail": "Cuộc bỏ phiếu ngày 15/10 cho bà Andersson thất bại (99 thuận, 248 chống); đã lên lịch bỏ phiếu cho lãnh đạo Đảng Trung tâm Thand Ringqvist",
+"status": "Đang triển khai"
+},
+{
+"title": "Ngân sách 2027 / ngân sách chuyển tiếp",
+"detail": "Nếu không có chính phủ mới, chính phủ tạm quyền sẽ trình ngân sách chuyển tiếp theo các nguyên tắc đã định",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Báo cáo theo dõi thay đổi chính sách Thụy Điển và chiến lược thâm nhập thị trường",
+"why": "Các ưu tiên ngân sách và chính sách phụ thuộc vào cách chính phủ được thành lập.",
+"target": "Doanh nghiệp Hàn Quốc có kế hoạch thâm nhập Thụy Điển"
+},
+{
+"title": "Thí điểm tự động hóa quy trình bằng AI cho chính quyền đô thị",
+"why": "Các đô thị Bắc Âu có nhu cầu lớn về hành chính số (ước tính).",
+"target": "Các đô thị và vùng của Thụy Điển"
+},
+{
+"title": "Kết nối đối tác Bắc Âu cho SME quốc phòng và sản xuất Hàn Quốc",
+"why": "Đầu tư an ninh tạo ra nhu cầu về đối tác chuỗi cung ứng tại địa phương (ước tính).",
+"target": "Doanh nghiệp quốc phòng và sản xuất Thụy Điển"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Thụy Điển (Stockholm)",
+"detail": "Hỗ trợ nghiên cứu thị trường Thụy Điển/Bắc Âu và tìm kiếm người mua."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Chi trả chi phí tiếp thị, chứng nhận và tư vấn ở nước ngoài thông qua voucher."
+}
+]
+}

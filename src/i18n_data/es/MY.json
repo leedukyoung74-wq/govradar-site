@@ -1,0 +1,76 @@
+{
+"summary": "El 9 de octubre, el primer ministro Anwar presentó el Presupuesto 2027 (gasto público de RM459.800 millones), el segundo bajo el 13.º Plan de Malasia (2026–2030). Se centra en mayores ayudas en efectivo, el impulso a una «nación de IA», el apoyo a las pymes y la inversión en la red eléctrica y la infraestructura digital; el examen parlamentario se extiende hasta finales de noviembre.",
+"leader": "Rey sultán Ibrahim (Yang di-Pertuan Agong); Primer ministro Anwar Ibrahim (también ministro de Finanzas)",
+"agenda": [
+"Alivio del costo de vida y ayudas en efectivo para grupos vulnerables (STR, SARA)",
+"«Nación de IA» para 2030, con la formación de 200.000 personas con competencias en IA",
+"Adopción de IA, financiación y una tasa impositiva más baja para las pymes",
+"Desarrollo equilibrado en el marco del 13.º Plan de Malasia (RMK13)",
+"Red eléctrica, infraestructura rural y conectividad digital",
+"Tramitación gubernamental más ágil (grupo de trabajo STAR)"
+],
+"projects": [
+{
+"title": "Presupuesto 2027",
+"detail": "Gasto público de RM459.800 millones; RM510.000 millones incluidos los GLIC y la inversión privada; previsión de crecimiento para 2027 del 4,2–5,2%",
+"status": "En revisión parlamentaria"
+},
+{
+"title": "Ayudas en efectivo STR y SARA",
+"detail": "SARA de hasta RM150 al mes para todos los beneficiarios de STR, con una cobertura de hasta 9 millones de personas",
+"status": "Planificado"
+},
+{
+"title": "I+D y comercialización de IA y adopción de IA por las pymes",
+"detail": "RM6.000 millones entre varios ministerios; RM30 millones a través de MDEC para ayudar a 4.000 pymes a adoptar IA; certificación de 5.000 profesionales de IA",
+"status": "Planificado"
+},
+{
+"title": "Apoyo a las pymes",
+"detail": "Reducción de 1 punto en la tasa impositiva para pymes, RM6.600 millones en microfinanzas, garantías SJPP/CGC de hasta RM32.000 millones",
+"status": "Planificado"
+},
+{
+"title": "Red eléctrica e infraestructura rural y digital",
+"detail": "RM15.000 millones para la red de TNB, RM3.300 millones para infraestructura básica rural, RM5.000 millones para la conectividad digital JENDELA",
+"status": "Planificado"
+},
+{
+"title": "Startups y semiconductores del MOSTI",
+"detail": "Presupuesto del MOSTI de RM1.290 millones; hoja de ruta de startups SUPER 2.0; RM10 millones para SemiconStart",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Paquetes de automatización de flujos de trabajo con IA para pymes (suministrados tras el registro como proveedor de MDEC)",
+"why": "El Presupuesto 2027 financia la adopción de IA en 4.000 pymes a través de MDEC.",
+"target": "Pymes malasias, canales de soluciones certificados por MDEC"
+},
+{
+"title": "Cursos de certificación profesional en IA y capacitación corporativa en IA a medida",
+"why": "El gobierno se propone contar con 200.000 personas con competencias en IA y 5.000 profesionales certificados para 2030.",
+"target": "Ministerio Digital, proveedores registrados en HRD Corp, departamentos de RR. HH. de empresas"
+},
+{
+"title": "Automatización y chatbots para la tramitación de servicios públicos",
+"why": "El grupo de trabajo STAR impulsa una tramitación gubernamental más ágil.",
+"target": "Ministerios federales, gobiernos estatales, consejos locales"
+},
+{
+"title": "Asesoramiento en estrategia de crecimiento y entrada a Corea para startups y pymes de semiconductores",
+"why": "El MOSTI respalda a las startups mediante SUPER 2.0 y SemiconStart.",
+"target": "Startups de Cradle Fund, pymes de diseño de chips"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Kuala Lumpur",
+"detail": "Ofrece incubación de sucursales (bienes de consumo, alimentos, belleza, TIC, sector médico), estudios de mercado, misiones comerciales y apoyo para la entrada mediante TLC/halal."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Los vales cubren servicios de estudios de mercado, certificación (incluida la halal) y marketing para ingresar en Malasia."
+}
+]
+}

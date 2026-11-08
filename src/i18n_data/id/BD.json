@@ -1,0 +1,85 @@
+{
+"summary": "Setelah kemenangan telak BNP pada pemilu Februari 2026, pemerintahan Perdana Menteri Tarique Rahman menggunakan anggaran rekor Tk 9,38 triliun untuk mengendalikan harga, memperluas perlindungan sosial seperti Family Card, dan memperbaiki iklim investasi. Invest Bangladesh, hasil penggabungan BIDA, BEZA, dan PPPA, kini berfungsi sebagai badan investasi satu pintu.",
+"leader": "Presiden Mohammed Shahabuddin / Perdana Menteri Tarique Rahman (BNP, menjabat sejak 2026-02-17)",
+"agenda": [
+"Menstabilkan harga kebutuhan pokok serta pasokan listrik/gas",
+"Memperluas perlindungan sosial (Family Card, Farmer Card)",
+"Peluncuran Invest Bangladesh dan rencana iklim usaha 180 hari",
+"Porsi energi terbarukan 20% dalam pembangkitan listrik pada 2030",
+"Pemberantasan korupsi dan pemulihan ketertiban hukum",
+"Persiapan kelulusan dari status LDC (diajukan penundaan hingga 2029)"
+],
+"projects": [
+{
+"title": "Anggaran TA2026-27",
+"detail": "Terbesar sepanjang sejarah; defisit Tk 2,51 triliun (3,6% PDB), target pertumbuhan 6,5%",
+"status": "Berjalan"
+},
+{
+"title": "Peluncuran Invest Bangladesh",
+"detail": "Badan investasi tunggal di bawah PMO yang menggabungkan BIDA, BEZA, dan PPPA; mengelola platform perizinan satu pintu Banglabiz",
+"status": "Berjalan"
+},
+{
+"title": "Strategi Nasional Pengembangan Energi Terbarukan",
+"detail": "20% energi terbarukan dan 15% penghematan listrik pada 2030; disetujui secara prinsip oleh kabinet pada Jul 2026",
+"status": "Direncanakan"
+},
+{
+"title": "Dana UKM dan pemuda",
+"detail": "Dana UKM Tk 20 miliar, dana pengembangan start-up Tk 2,25 miliar, ekonomi kreatif pemuda Tk 3 miliar",
+"status": "Berjalan"
+},
+{
+"title": "Chattogram New Mooring Container Terminal",
+"detail": "DP World akan memodernisasi dan mengoperasikannya; kepemilikan dan kendali tetap pada otoritas pelabuhan",
+"status": "Berjalan"
+},
+{
+"title": "Jembatan rel-jalan Karnaphuli",
+"detail": "Jembatan dan jalan akses di Chattogram; pinjaman EDCF/EDPF Korea USD 810 juta (total biaya USD 1,24 miliar)",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Chatbot AI dan penyaringan dokumen otomatis untuk perizinan investasi",
+"why": "Badan hasil merger yang baru harus menunjukkan hasil cepat dalam rencana 180 harinya.",
+"target": "Invest Bangladesh (PMO), tim platform Banglabiz"
+},
+{
+"title": "Paket kepatuhan uji tuntas UE dan ESG untuk UKM garmen/ekspor",
+"why": "Kelulusan dari status LDC akan memangkas preferensi dagang sementara aturan rantai pasok UE semakin ketat.",
+"target": "UKM ekspor, anggota BGMEA, Kementerian Perdagangan"
+},
+{
+"title": "Pelatihan AI praktis bagi aparatur sipil dan pemuda",
+"why": "KOICA memulai program talenta AI pada 2026, menciptakan permintaan atas pelatihan bergaya Korea.",
+"target": "ICT Division, lembaga pelatihan teknis, pelaksana KOICA"
+},
+{
+"title": "Sistem registrasi dan deduplikasi penerima kartu kesejahteraan",
+"why": "Perluasan Family Card dan Farmer Card menambah beban pengelolaan penerima manfaat.",
+"target": "Kementerian Kesejahteraan Sosial, Kementerian Keuangan, administrasi daerah"
+},
+{
+"title": "Audit energi dan manajemen permintaan untuk pabrik dan gedung",
+"why": "Kekurangan gas dan listrik terus berlanjut dan pemerintah menargetkan penghematan listrik 15% pada 2030.",
+"target": "Kementerian Listrik/Energi, penyewa kawasan industri"
+}
+],
+"krsupport": [
+{
+"title": "Lima proyek baru KOICA di Bangladesh (USD 96 juta)",
+"detail": "Talenta AI, pengentasan kemiskinan Saemaul, pusat keamanan siber AI, dan keterampilan daur ulang kapal, diterapkan bertahap mulai 2026."
+},
+{
+"title": "Pinjaman EDCF untuk jembatan Karnaphuli",
+"detail": "EDCF USD 720 juta plus EDPF USD 90 juta, proyek EDCF tunggal terbesar hingga saat ini."
+},
+{
+"title": "Proyek gudang data statistik KOICA",
+"detail": "USD 9,65 juta untuk gudang data statistik nasional dan platform big data di Biro Statistik Bangladesh."
+}
+]
+}

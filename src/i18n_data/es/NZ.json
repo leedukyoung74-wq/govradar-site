@@ -1,0 +1,76 @@
+{
+"summary": "La coalición de Luxon concentra un presupuesto ajustado en salud, infraestructura y formación profesional, y las elecciones del 7 de noviembre de 2026 son la principal incertidumbre. Está en marcha un Programa de Trabajo de IA en el Servicio Público de dos años (2026–2027).",
+"leader": "Rey Carlos III (jefe de Estado); Primer ministro Christopher Luxon (jefe de Gobierno, coalición liderada por el Partido Nacional) — elecciones generales el 2026-11-07",
+"agenda": [
+"Consolidación fiscal y recortes del gasto del sector público",
+"Ampliación de los servicios de salud (financiación de Pharmac, mayor cribado de cáncer)",
+"Inversión en infraestructura de carreteras, hospitales y escuelas",
+"Más plazas de formación profesional y reforma curricular",
+"Mayor uso de la IA en el servicio público (Programa de Trabajo de IA en el Servicio Público)",
+"Aliviar la presión del costo de vida"
+],
+"projects": [
+{
+"title": "Presupuesto de salud 2026/27",
+"detail": "La partida más grande del Presupuesto 2026, orientada a reducir los tiempos de espera y ampliar el cribado",
+"status": "En curso"
+},
+{
+"title": "Ahorro en el gasto público",
+"detail": "Recortes de personal del sector público y del gasto de los organismos",
+"status": "En curso"
+},
+{
+"title": "Programa de Trabajo de IA en el Servicio Público",
+"detail": "Plan de dos años para acelerar la adopción de la IA en todo el servicio público",
+"status": "En curso"
+},
+{
+"title": "Duplicación de las plazas de formación profesional",
+"detail": "Financiada en parte con la eliminación del programa de gratuidad del primer año",
+"status": "En curso"
+},
+{
+"title": "Mejora de Brougham Street (SH76)",
+"detail": "La mejora de la carretera estatal de Christchurch pasa a la siguiente etapa (2026-10-23)",
+"status": "En curso"
+},
+{
+"title": "Gravamen bancario",
+"detail": "Se aplica a las entidades captadoras de depósitos a partir de mediados de 2027",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "PoC de automatización con IA y consultoría de adopción para la gestión de casos y documentos del sector público",
+"why": "El gobierno acelera la adopción de IA en el sector público hasta 2027 para compensar los recortes de personal.",
+"target": "Agencias centrales, entidades de la Corona, consejos locales"
+},
+{
+"title": "Herramientas digitales para la operación hospitalaria y los servicios al paciente (comidas, citas, recordatorios de cribado)",
+"why": "Health NZ está adquiriendo soluciones digitales regionales a través de GETS.",
+"target": "Unidades regionales de Health New Zealand"
+},
+{
+"title": "Herramientas de gestión del aprendizaje y evaluación con IA para proveedores de formación",
+"why": "El aumento de plazas de formación profesional incrementa la carga operativa de los proveedores.",
+"target": "Ministerio de Educación, proveedores de formación"
+},
+{
+"title": "Apoyo a pymes coreanas para ingresar en el mercado neozelandés (estudios, vinculación con socios)",
+"why": "La demanda de exportaciones de bienes de consumo y alimentos continúa en el marco del TLC Corea–Nueva Zelanda.",
+"target": "Importadores y distribuidores neozelandeses"
+}
+],
+"krsupport": [
+{
+"title": "Oficina de KOTRA en Auckland",
+"detail": "Apoya estudios del mercado neozelandés, vinculación con compradores y servicios de sucursal."
+},
+{
+"title": "Vale de exportación para pymes",
+"detail": "Cubre mediante vales servicios de exportación como estudios de mercado, traducción y certificación."
+}
+]
+}

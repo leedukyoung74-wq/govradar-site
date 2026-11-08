@@ -1,0 +1,70 @@
+{
+"summary": "El primer presupuesto de Tanzania en el marco de la Visión 2050 y del Cuarto Plan Quinquenal (2026/27–2030/31) impulsa la infraestructura ferroviaria y eléctrica y el aumento de los ingresos internos. Su objetivo es financiar alrededor del 75% del presupuesto con recursos internos ante una posible caída de la ayuda occidental.",
+"leader": "Presidenta Samia Suluhu Hassan (jefa de Estado y de Gobierno); Primer ministro Mwigulu Nchemba",
+"agenda": [
+"Ejecutar la Visión 2050 y el Cuarto Plan Quinquenal",
+"Autosuficiencia fiscal: 75% de financiación interna, recaudación tributaria digital, formalización de la economía informal",
+"Transporte y logística: extensiones del SGR, reactivación de TAZARA, hub de Dodoma",
+"Mejora industrial mediante el procesamiento local de minerales (tierras raras, gas, mineral de hierro)",
+"Más generación eléctrica, electrificación rural y energía limpia"
+],
+"projects": [
+{
+"title": "Presupuesto nacional 2026/27",
+"detail": "+10,3% interanual; 74,2% con financiación interna; déficit de alrededor del 3% del PIB",
+"status": "En curso"
+},
+{
+"title": "Extensiones del Ferrocarril de Ancho Estándar",
+"detail": "Continúa la construcción de los tramos Dodoma–Mwanza e Isaka–Kigoma",
+"status": "En curso"
+},
+{
+"title": "Reactivación de TAZARA y hub logístico de Dodoma",
+"detail": "Desarrollo de Dodoma como centro de transporte y logística",
+"status": "En curso"
+},
+{
+"title": "Hidroeléctrica Julius Nyerere y electrificación rural",
+"detail": "Más capacidad de generación y conexiones de aldeas por parte de la REA",
+"status": "En curso"
+},
+{
+"title": "Fondo de infraestructura para EPZ/SEZ",
+"detail": "5% de los ingresos designados destinado a infraestructura de EPZ y SEZ",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Sistemas digitales de gestión de ingresos y gastos, además de consultoría, para consejos locales",
+"why": "La Presidenta pidió en septiembre de 2026 a los consejos locales que aumenten los ingresos y controlen el gasto.",
+"target": "PO-RALG y consejos locales"
+},
+{
+"title": "Aplicación móvil para el registro de pequeñas empresas y la declaración del impuesto presuntivo",
+"why": "Las medidas de formalización y los cambios en el impuesto presuntivo entraron en vigor en julio de 2026.",
+"target": "Autoridad Tributaria de Tanzania, pequeñas empresas"
+},
+{
+"title": "Rastreo de carga y optimización de operaciones para hubs ferroviarios y logísticos",
+"why": "Las extensiones del SGR y el hub logístico de Dodoma están en desarrollo.",
+"target": "TRC, TAZARA, Ministerio de Transporte"
+},
+{
+"title": "Apoyo a pymes coreanas para ingresar en el mercado de África Oriental (estudios, vinculación con socios)",
+"why": "Las políticas de protección de la manufactura y el procesamiento locales podrían aumentar la demanda de empresas conjuntas locales (estimación).",
+"target": "Fabricantes y distribuidores locales"
+}
+],
+"krsupport": [
+{
+"title": "Oficina de KOTRA en Dar es Salaam",
+"detail": "Asesora sobre estudios del mercado tanzano y vinculación con compradores."
+},
+{
+"title": "Vale de exportación para pymes",
+"detail": "Cubre mediante vales servicios de exportación como estudios de mercado, traducción y certificación."
+}
+]
+}

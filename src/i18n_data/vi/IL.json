@@ -1,0 +1,70 @@
+{
+"summary": "Israel đã tổ chức bầu cử Knesset lần thứ 26 vào ngày 27/10/2026, và các cuộc thăm dò tại cửa phòng bỏ phiếu cho thấy không khối nào đạt đa số 61 ghế, nên các cuộc đàm phán liên minh đang diễn ra. Ngân sách 2026 trị giá 699 tỷ NIS được thông qua vào tháng 3 tập trung nhiều vào quốc phòng, và chính phủ đang mở rộng hạ tầng AI thông qua cơ quan AI quốc gia trực thuộc Văn phòng Thủ tướng.",
+"leader": "Tổng thống Isaac Herzog / Thủ tướng Benjamin Netanyahu (đương nhiệm; đang thành lập liên minh sau cuộc bầu cử ngày 27/10)",
+"agenda": [
+"Thành lập liên minh và chính phủ mới sau bầu cử",
+"Tái thiết thế trận an ninh sau chiến tranh Gaza và tăng chi tiêu quốc phòng",
+"Kế hoạch AI quốc gia (cơ quan AI thuộc Văn phòng Thủ tướng, trung tâm dữ liệu AI và năng lực tính toán tại Negev)",
+"Quản lý thâm hụt khoảng 5% GDP và ổn định tài khóa",
+"Mở rộng hạ tầng giao thông như điện khí hóa đường sắt",
+"Phân bổ lại ngân sách để xử lý tội phạm trong cộng đồng Ả Rập"
+],
+"projects": [
+{
+"title": "Ngân sách nhà nước 2026",
+"detail": "Ngân sách lớn nhất từ trước đến nay được Knesset thông qua ngày 30/3/2026, với thêm 32 tỷ NIS cho quốc phòng",
+"status": "Đang triển khai"
+},
+{
+"title": "Gói chính sách AI quốc gia và cơ quan AI",
+"detail": "Phê duyệt ngày 16/6/2026; tập trung ngân sách và chính sách AI về Văn phòng Thủ tướng; AI nội địa, trung tâm dữ liệu GPU quy mô lớn, đào tạo lại lực lượng lao động",
+"status": "Đang triển khai"
+},
+{
+"title": "Điện khí hóa mạng lưới Israel Railways",
+"detail": "Gói thầu quốc tế cho thiết kế chi tiết, thi công, thử nghiệm và vận hành chạy thử trên một phần mạng lưới",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Điều chỉnh ngân sách kế hoạch thu hẹp khoảng cách cộng đồng Ả Rập (Quyết định 4387)",
+"detail": "Quyết định ngày 15/7/2026 chuyển khoảng 497 triệu NIS cho cảnh sát và cơ quan an ninh để chống tội phạm và buôn lậu vũ khí",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn tự động hóa quy trình bằng AI và PoC cho cơ quan công",
+"why": "Ngân sách AI mới và cơ quan chuyên trách trong Văn phòng Thủ tướng đang tạo ra nhu cầu.",
+"target": "Cơ quan AI thuộc Văn phòng Thủ tướng, các bộ, chính quyền đô thị"
+},
+{
+"title": "Thâm nhập thị trường theo FTA Hàn Quốc-Israel và kết nối đối tác công nghệ cho SME",
+"why": "Ưu đãi thuế quan và nhu cầu hợp tác với startup Israel tiếp tục duy trì theo FTA.",
+"target": "SME Hàn Quốc, doanh nghiệp công nghệ Israel"
+},
+{
+"title": "Xây dựng liên danh và hỗ trợ dự thầu gói thầu điện khí hóa đường sắt",
+"why": "Gói thầu quốc tế đóng thầu vào tháng 12/2026 đang mở.",
+"target": "Doanh nghiệp xây dựng đường sắt và thiết bị điện Hàn Quốc"
+},
+{
+"title": "Chương trình đào tạo lại về AI",
+"why": "Chính phủ đã chính thức nêu nhu cầu đào tạo lại quy mô lớn.",
+"target": "Các trường đại học, cơ quan việc làm, doanh nghiệp lớn"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Tel Aviv",
+"detail": "Hỗ trợ nghiên cứu thị trường, tìm kiếm người mua và tư vấn FTA để thâm nhập Israel."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí dịch vụ xuất khẩu như chứng nhận, biên dịch và tư vấn thông qua phiếu hỗ trợ."
+},
+{
+"title": "Hỗ trợ xây dựng ở nước ngoài",
+"detail": "Cung cấp thông tin đấu thầu và tư vấn cho các dự án hạ tầng như đường sắt."
+}
+]
+}

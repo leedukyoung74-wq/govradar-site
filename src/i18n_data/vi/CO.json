@@ -1,0 +1,79 @@
+{
+"summary": "Chính phủ De la Espriella, nhậm chức từ tháng 8/2026, theo đuổi đường lối cứng rắn về an ninh và cắt giảm chi tiêu. Ngày 20/10, Quốc hội đã thông qua ngân sách 2027 trị giá 634,95 nghìn tỷ COP và yêu cầu tổng thống trình kế hoạch điều chỉnh tài khóa trong vòng 90 ngày.",
+"leader": "Tổng thống Abelardo de la Espriella (nhậm chức từ 2026-08-07; nguyên thủ quốc gia kiêm người đứng đầu chính phủ)",
+"agenda": [
+"Khôi phục an ninh trước các nhóm vũ trang và tội phạm có tổ chức",
+"Cắt giảm thâm hụt và thông qua Luật Tài khóa",
+"Giải quyết khủng hoảng y tế và bảo đảm nguồn chi lương hưu",
+"Quản lý trợ giá năng lượng và nhiên liệu",
+"Kế hoạch Phát triển Quốc gia tập trung vào hạ tầng vùng với sự tham gia của khu vực tư nhân"
+],
+"projects": [
+{
+"title": "Ngân sách quốc gia 2027 (PGN)",
+"detail": "Được Quốc hội phê duyệt chính thức, kèm yêu cầu tổng thống trình kế hoạch điều chỉnh tài khóa trong vòng 90 ngày",
+"status": "Hoàn thành (đã phê duyệt)"
+},
+{
+"title": "Luật Tài khóa",
+"detail": "Điều chỉnh khoảng 45 nghìn tỷ COP (2,2% GDP) dưới hình thức đơn giản hóa thuế và hỗ trợ tăng trưởng, nhằm đưa thâm hụt năm 2027 về khoảng 7,2%",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Tăng chi tiêu y tế",
+"detail": "Bổ sung 3 nghìn tỷ COP vào mức 2 nghìn tỷ dự kiến, thành 5 nghìn tỷ COP để giải quyết khủng hoảng y tế",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Quỹ bình ổn giá nhiên liệu (FEPC) và trợ giá năng lượng",
+"detail": "9,6 nghìn tỷ COP cho bình ổn giá nhiên liệu cộng thêm 3 nghìn tỷ COP cho trợ giá điện và khí đốt",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Kế hoạch Phát triển Quốc gia (PND)",
+"detail": "Sẽ được trình sau Luật Tài khóa, tập trung vào hạ tầng vùng và vai trò lớn hơn của khu vực tư nhân",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Tuyến Metro số 2 Bogotá",
+"detail": "Gói thầu quốc tế không nhận được hồ sơ dự thầu nào vào tháng 1/2026; mời thầu lại với sự hỗ trợ của ngân hàng đa phương, mục tiêu trao thầu trong quý 1/2027",
+"status": "Đang mời thầu lại"
+}
+],
+"biz": [
+{
+"title": "Phân tích AI về hiệu quả chi tiêu công và số hóa thuế",
+"why": "Quốc hội yêu cầu kế hoạch điều chỉnh tài khóa trong vòng 90 ngày, tạo nhu cầu rà soát chi tiêu.",
+"target": "Bộ Tài chính, cơ quan thuế (DIAN)"
+},
+{
+"title": "Tư vấn khả thi và cấu trúc dự án PPP hạ tầng vùng",
+"why": "Kế hoạch phát triển mới tập trung vào hạ tầng vùng và sự tham gia của khu vực tư nhân.",
+"target": "DNP, chính quyền các tỉnh (departamento), cơ quan hạ tầng (ANI)"
+},
+{
+"title": "Gói thâm nhập Colombia cho SME Hàn Quốc (nghiên cứu thị trường, kết nối người mua)",
+"why": "Hoạt động mua sắm công và tư đang dịch chuyển theo thay đổi chính sách an ninh và tài khóa (ước tính).",
+"target": "SME Hàn Quốc muốn thâm nhập Colombia"
+},
+{
+"title": "Tự động hóa quản lý y tế và xử lý yêu cầu thanh toán",
+"why": "Ngân sách y tế tăng lên 5 nghìn tỷ COP nhưng tình trạng thiếu hụt vẫn kéo dài, nên cần nâng cao hiệu quả.",
+"target": "Bộ Y tế, các đơn vị bảo hiểm y tế (EPS)"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Bogotá",
+"detail": "Hỗ trợ thông tin thị trường, tìm kiếm người mua và thông tin mua sắm công."
+},
+{
+"title": "Hợp tác của KOICA tại Colombia",
+"detail": "Triển khai các chương trình viện trợ không hoàn lại trong các lĩnh vực như kiến tạo hòa bình và phát triển nông thôn."
+},
+{
+"title": "Export Voucher",
+"detail": "Chi trả chi phí chứng nhận, biên dịch và tư vấn tại địa phương."
+}
+]
+}

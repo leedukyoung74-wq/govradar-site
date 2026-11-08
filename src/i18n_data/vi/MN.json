@@ -1,0 +1,79 @@
+{
+"summary": "Chính phủ liên minh của Thủ tướng Uchral, thành lập tháng 3/2026, đang điều hành trong khi Quốc hội xem xét ngân sách hợp nhất năm 2027 với tổng chi 43 nghìn tỷ MNT và thâm hụt 2,0% GDP. Cổ tức cao hơn từ doanh nghiệp nhà nước và Oyu Tolgoi được dùng để tăng lương hưu và lương công chức, đồng thời quan hệ năng lượng, nhiên liệu và đường sắt với Nga ngày càng sâu rộng.",
+"leader": "Tổng thống Ukhnaagiin Khürelsükh / Thủ tướng Nyam-Osoryn Uchral (từ 2026-03-31)",
+"agenda": [
+"Tăng thu ngân sách thông qua cổ tức lớn hơn từ doanh nghiệp nhà nước và Oyu Tolgoi",
+"Mở rộng lương hưu và phúc lợi; tăng lương công chức",
+"Bảo đảm nguồn cung nhiên liệu và đẩy nhanh hạ tầng năng lượng (Nhà máy Nhiệt điện số 3)",
+"Chuyển đổi xanh (năng lượng tái tạo, sạc xe điện) và giảm ô nhiễm không khí tại Ulaanbaatar",
+"Kết nối giao thông như hành lang đường sắt Mông Cổ - Nga - Trung Quốc"
+],
+"projects": [
+{
+"title": "Dự toán ngân sách hợp nhất năm 2027",
+"detail": "Thu 40,7 nghìn tỷ MNT (35,3% GDP), chi 43 nghìn tỷ MNT (37,3% GDP); thâm hụt 2,3 nghìn tỷ MNT được bù đắp bằng vay ưu đãi và trái phiếu trong nước",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Tăng thu từ cổ tức",
+"detail": "Cổ tức doanh nghiệp nhà nước 3,5 nghìn tỷ MNT và cổ tức Oyu Tolgoi 3 nghìn tỷ MNT",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Tăng lương hưu, trợ cấp và lương công chức",
+"detail": "2,9 nghìn tỷ MNT cho lương hưu và trợ cấp, 2,6 nghìn tỷ MNT cho lương công chức",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Nhà máy Nhiệt điện số 3 và hợp tác cung ứng nhiên liệu",
+"detail": "Tháng 9/2026 đã thỏa thuận với Nga đẩy nhanh các dự án; đề xuất thành lập nhóm công tác chung về ô nhiễm không khí tại Ulaanbaatar",
+"status": "Đang đàm phán"
+},
+{
+"title": "Mở rộng hạ tầng sạc xe điện",
+"detail": "Trạm sạc nhanh sử dụng điện mặt trời khai trương tại Ulaanbaatar ngày 2026-08-31; 38 trạm trên cả nước, dự kiến thêm nhiều trạm",
+"status": "Đang triển khai"
+},
+{
+"title": "Các hợp đồng mua bán điện (PPA) từ phiên đấu giá năng lượng tái tạo đầu tiên",
+"detail": "Hợp đồng tháng 7/2026 cho 220MW điện mặt trời kết hợp lưu trữ pin tại năm aimag (theo ghi nhận trước đó)",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn quản lý tài chính và cổ tức cho doanh nghiệp nhà nước",
+"why": "Ngân sách 2027 phụ thuộc nhiều vào 3,5 nghìn tỷ MNT cổ tức từ doanh nghiệp nhà nước.",
+"target": "Bộ Tài chính, doanh nghiệp nhà nước"
+},
+{
+"title": "Hệ thống tự động tiếp nhận và thẩm định cấp phép điện tử",
+"why": "Chính phủ đang chuyển thủ tục cấp phép lên môi trường trực tuyến và đã tuyển tư vấn cho việc này.",
+"target": "Văn phòng Nội các, các bộ cấp phép"
+},
+{
+"title": "Dự báo bằng AI và vận hành từ xa cho nhà máy điện mặt trời và lưu trữ",
+"why": "Các phiên đấu giá năng lượng tái tạo và hạ tầng sạc đang được mở rộng.",
+"target": "Bộ Năng lượng, nhà sản xuất điện"
+},
+{
+"title": "Nền tảng phân tích dữ liệu chất lượng không khí đô thị",
+"why": "Giảm ô nhiễm không khí nay đã nằm trong chương trình hợp tác Mông Cổ - Nga.",
+"target": "Thành phố Ulaanbaatar, Bộ Môi trường"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Ulaanbaatar",
+"detail": "Hỗ trợ nghiên cứu thị trường, tìm kiếm người mua và tư vấn thâm nhập thị trường Mông Cổ."
+},
+{
+"title": "Chương trình quốc gia của KOICA tại Mông Cổ",
+"detail": "Mông Cổ là đối tác ưu tiên của KOICA với các dự án viện trợ không hoàn lại và hợp đồng dịch vụ đang triển khai trong lĩnh vực quản trị, y tế và môi trường."
+},
+{
+"title": "Khoản vay ưu đãi EDCF cho Mông Cổ",
+"detail": "Các dự án vay về hạ tầng và dịch vụ công mở ra cơ hội tư vấn và xây dựng cho doanh nghiệp Hàn Quốc."
+}
+]
+}

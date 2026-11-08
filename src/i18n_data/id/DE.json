@@ -1,0 +1,74 @@
+{
+"summary": "Koalisi CDU/CSU-SPD sedang membawa anggaran 2027 sekitar EUR 555 miliar, yang berpusat pada pertahanan, infrastruktur, dan modernisasi negara, melalui parlemen dengan pemungutan suara dijadwalkan pada November. Kebangkitan AfD dan perselisihan mengenai reformasi pensiun membebani koalisi.",
+"leader": "Presiden Federal Frank-Walter Steinmeier (Kepala Negara); Kanselir Friedrich Merz, CDU (Kepala Pemerintahan)",
+"agenda": [
+"Memperkuat pertahanan (anggaran inti pertahanan 2027 sekitar EUR 109,7 miliar)",
+"Memperbaiki jembatan, jalan, dan rel melalui dana khusus infrastruktur dan netralitas iklim",
+"Modernisasi negara: administrasi digital, pengurangan birokrasi, implementasi EU AI Act",
+"Memulihkan daya saing dengan listrik industri yang lebih murah dan subsidi biaya jaringan (2027-2029)",
+"Menstabilkan keuangan pensiun dan asuransi kesehatan (termasuk pajak minuman manis)"
+],
+"projects": [
+{
+"title": "Anggaran federal 2027",
+"detail": "Pinjaman bersih sekitar EUR 118,7 miliar; termasuk dana khusus, utang baru melampaui EUR 200 miliar. Pada 14 Okt, kabinet mengesahkan tanggapannya atas masukan Bundesrat",
+"status": "Dalam pembahasan parlemen"
+},
+{
+"title": "Dana khusus infrastruktur dan netralitas iklim",
+"detail": "Investasi pada jembatan, jalan, dan rel; oposisi mempertanyakan seberapa banyak yang benar-benar merupakan tambahan",
+"status": "Berjalan"
+},
+{
+"title": "Peningkatan anggaran pertahanan",
+"detail": "Anggaran inti pertahanan 2027 naik sekitar sepertiga dibanding 2026, dan sisa dana khusus Bundeswehr juga digunakan",
+"status": "Direncanakan"
+},
+{
+"title": "Subsidi biaya jaringan federal",
+"detail": "Diputuskan pada Sep 2026; skema harga listrik industri berlaku sejak Mei 2026",
+"status": "Direncanakan"
+},
+{
+"title": "Rencana aksi nasional pelayaran ramah iklim",
+"detail": "Dipresentasikan dan dibahas oleh kabinet pada 14 Okt 2026",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Perangkat AI dan RPA pemrosesan dokumen untuk layanan warga dan kewajiban pelaporan di pemerintah daerah",
+"why": "Agenda modernisasi negara mengutamakan pengurangan kewajiban pelaporan dan administrasi digital.",
+"target": "Administrasi negara bagian dan kota, penyedia layanan TI publik"
+},
+{
+"title": "Inspeksi video AI dan digital twin untuk aset jembatan dan rel",
+"why": "Dana khusus membiayai renovasi besar-besaran jembatan dan rel yang menua.",
+"target": "DB InfraGO, Autobahn GmbH, otoritas transportasi negara bagian"
+},
+{
+"title": "Konsultasi pemantauan dan penghematan energi bagi produsen UKM",
+"why": "Tekanan efisiensi energi tetap ada meskipun ada subsidi listrik industri dan biaya jaringan.",
+"target": "Produsen Mittelstand Jerman, anak perusahaan lokal perusahaan Korea"
+},
+{
+"title": "Konsultasi masuk pasar Jerman/UE bagi UKM Korea (sertifikasi, EU AI Act)",
+"why": "Implementasi EU AI Act dan perubahan rantai pasok pertahanan serta manufaktur mendorong permintaan dukungan kepatuhan.",
+"target": "UKM dan perusahaan menengah Korea yang masuk ke Jerman"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA Frankfurt",
+"detail": "Mendukung riset pasar Jerman dan pencarian pembeli, serta menyelenggarakan pameran K-content pada Juli 2026."
+},
+{
+"title": "2026 K-Content Experience Hall di Jerman",
+"detail": "Acara dua hari di Frankfurt pada Juli 2026 yang membantu perusahaan webtoon dan karakter Korea memasuki pasar Eropa."
+},
+{
+"title": "Export Voucher program",
+"detail": "Menanggung biaya sertifikasi CE, riset pasar luar negeri, dan konsultasi."
+}
+]
+}

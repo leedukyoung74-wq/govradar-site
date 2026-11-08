@@ -1,0 +1,74 @@
+{
+"summary": "Le 15 octobre, la Chambre des députés a adopté la loi de recettes 2027, prévoyant 10 600 milliards de MXN de recettes et 1 700 milliards de MXN de nouveaux emprunts ; le budget des dépenses (PEF) doit être finalisé en novembre. Face à la révision à la baisse des prévisions de croissance, le gouvernement accroît la collecte sans créer de nouveaux impôts et s'appuie sur le Plan México pour attirer les investissements dans les parcs industriels et le nearshoring.",
+"leader": "Présidente Claudia Sheinbaum Pardo (cheffe de l'État et du gouvernement)",
+"agenda": [
+"Plan México : croissance manufacturière et investissements de nearshoring (objectif de 100 parcs industriels)",
+"Accroître les recettes sans nouveaux impôts (lutte contre la fraude, programme de régularisation fiscale 2027)",
+"Maintien des programmes sociaux Bienestar et plan d'urgence pour améliorer l'IMSS",
+"Investissements dans les infrastructures portés par le rail, Pemex et la CFE",
+"Gestion de la révision annuelle de l'ACEUM et diversification commerciale (étude conjointe avec la Corée sur un accord commercial)"
+],
+"projects": [
+{
+"title": "Loi de recettes 2027 (LIF)",
+"detail": "Recettes fiscales 6 200 milliards de MXN et emprunts 1 700 milliards de MXN ; besoins de financement du secteur public (RFSP) 3,9 % du PIB ; désormais devant le Sénat",
+"status": "En cours d'examen au Congrès"
+},
+{
+"title": "Budget fédéral des dépenses 2027 (PEF)",
+"detail": "Programmes sociaux environ 1 030 milliards de MXN ; infrastructures prioritaires environ 560 milliards de MXN (rail, Pemex, CFE, eau, routes)",
+"status": "Prévu"
+},
+{
+"title": "Parcs industriels du Plan México",
+"detail": "40 parcs en activité (objectif 100) ; 20 supplémentaires annoncés le 22 oct. 2026",
+"status": "En cours"
+},
+{
+"title": "Plan d'urgence d'amélioration de l'IMSS (12 actions)",
+"detail": "Annoncé par la Présidente le 27 oct. 2026 ; un point d'avancement sera présenté au cours des quatre prochains mois",
+"status": "En cours"
+},
+{
+"title": "Initiative de coopération économique, industrielle et dans les ressources Corée-Mexique",
+"detail": "Signée autour du sommet du 24 sept. 2026 ; crée un comité conjoint sur les minerais et les ressources et lance une pré-étude conjointe en vue d'un accord commercial",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Automatisation fiscale et de la facturation électronique (CFDI) pour les fabricants coréens au Mexique",
+"why": "La loi de recettes 2027 mise sur un recouvrement renforcé et la régularisation fiscale plutôt que sur de nouveaux impôts.",
+"target": "Filiales coréennes de production et de distribution au Mexique, PME locales"
+},
+{
+"title": "Déploiement d'usines intelligentes et de MES, et conseil en chaîne d'approvisionnement, pour les entreprises des parcs industriels",
+"why": "Les parcs industriels du Plan México se multiplient rapidement.",
+"target": "Fabricants des parcs du Plan México, agences de développement économique des États"
+},
+{
+"title": "Conseil en règles d'origine et en optimisation douanière face aux droits de douane hors ALE",
+"why": "Le Mexique a relevé ses droits de douane sur les pays sans ALE, et les entreprises coréennes ont signalé des difficultés douanières.",
+"target": "PME et ETI coréennes exportant vers le Mexique"
+},
+{
+"title": "Accompagnement au référencement en distribution et en e-commerce pour les biens de consommation coréens",
+"why": "KOTRA souhaite élargir les exportations vers le Mexique aux biens de consommation, et de grands distributeurs et plateformes locaux ont manifesté leur intérêt pour les produits coréens.",
+"target": "PME coréennes des cosmétiques, de l'alimentation et des articles ménagers"
+}
+],
+"krsupport": [
+{
+"title": "Bureaux de KOTRA à Mexico et à Monterrey",
+"detail": "A organisé un salon des produits coréens à Mexico en sept. 2026 (123 acheteurs, 730 rendez-vous) et ouvert le bureau de Monterrey en févr. 2026."
+},
+{
+"title": "Initiative de coopération économique, industrielle et dans les ressources Corée-Mexique",
+"detail": "Crée un comité conjoint sur les minerais et les ressources, œuvre à améliorer l'environnement des affaires pour les entreprises coréennes et lance une étude conjointe sur un accord commercial."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre les frais de certification mexicaine (NOM), d'études de marché et de conseil en localisation."
+}
+]
+}

@@ -1,0 +1,89 @@
+{
+"summary": "Après des contractions en 2024 et 2025 dues à la faible demande de diamants, le Botswana vise une croissance de 3,1 % en 2026 et passe d'une croissance tirée par l'État à une croissance privée tirée par les exportations, dans le cadre d'un programme de « transformation économique et de prudence budgétaire ». Une visite d'État en Chine en octobre 2026 a élevé les relations au rang de partenariat de coopération stratégique global.",
+"leader": "Président Duma Gideon Boko (chef de l'État et du gouvernement) ; vice-président et ministre des Finances Ndaba Gaolathe",
+"agenda": [
+"Diversification au-delà du diamant (NDP12 et programme de transformation BETP)",
+"Reconstitution des marges budgétaires et des recettes (facturation électronique, TVA sur les services à distance, hausses proposées de la tranche supérieure et de l'impôt sur les sociétés)",
+"Transformation numérique, y compris un système national de marchés publics électroniques",
+"Développement de l'industrie manufacturière, dépassement de la « tenderpreneurship », préférence aux fabricants locaux dans les marchés publics",
+"Infrastructures intégrées d'énergie, d'eau et de transport",
+"Réforme de la santé (refonte des Central Medical Stores, assurance maladie nationale progressive)"
+],
+"projects": [
+{
+"title": "Système national de marchés publics électroniques",
+"detail": "Pleine opérationnalité visée au cours de l'exercice 2026/27",
+"status": "En cours"
+},
+{
+"title": "Facturation électronique obligatoire",
+"detail": "Déploiement national progressif à partir d'avril 2026",
+"status": "En cours"
+},
+{
+"title": "Lancement de la Botswana Mercantile Exchange (BMX)",
+"detail": "Soutient la formation des prix des matières premières et la diversification au-delà du diamant",
+"status": "Prévu"
+},
+{
+"title": "National Fund of Funds pour les MPME",
+"detail": "Véhicule de financement des PME dont l'activité est attendue en 2027/28",
+"status": "Prévu"
+},
+{
+"title": "Parc éolien de 100 MW au nord de Letlhakane",
+"detail": "Appels d'offres de conseil lancés pour des études géotechniques, topographiques et hydrologiques",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Réhabilitation et entretien des actifs publics",
+"detail": "Budget pour la remise en état des équipements publics existants",
+"status": "En cours"
+},
+{
+"title": "Presidential Business Roundtable",
+"detail": "Lancée en mars 2026 ; 10 des 18 réunions sectorielles tenues ; cycle de mise en œuvre des politiques de 24 semaines",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "PMO et offre de formation pour la numérisation des marchés publics",
+"why": "Le système de marchés publics électroniques doit entrer en service au cours de l'exercice 2026/27, ce qui crée une forte demande de formation des fournisseurs et des fonctionnaires.",
+"target": "Ministère des Finances, autorité de régulation des marchés publics, entreprises publiques"
+},
+{
+"title": "Automatisation par IA des déclarations fiscales et de la facturation électronique",
+"why": "La facturation électronique obligatoire pousse les PME à rechercher des outils d'automatisation comptable.",
+"target": "PME locales, BURS"
+},
+{
+"title": "Programme d'accélération des MPME exportatrices et manufacturières",
+"why": "Le président appelle ouvertement à développer des entreprises manufacturières et fondées sur la propriété intellectuelle.",
+"target": "Ministère du Commerce, agences de soutien aux PME, gestionnaires du fonds de fonds"
+},
+{
+"title": "Conseil en politique d'IA et compétences numériques pour le secteur public",
+"why": "Un canal de coopération Corée-Botswana dans l'IA et les TIC vient d'être ouvert.",
+"target": "Ministères des Communications/du Numérique, cabinet du vice-président"
+}
+],
+"krsupport": [
+{
+"title": "Discussions de coopération EDCF",
+"detail": "Lors de la réunion ministérielle KOAFEC de septembre 2026, la Korea Eximbank a discuté avec le vice-président du Botswana des projets EDCF en préparation et de la participation des entreprises coréennes."
+},
+{
+"title": "Coopération Corée-Botswana dans l'IA et les TIC",
+"detail": "Le 2026-09-10, le vice-ministre coréen a rencontré le vice-président du Botswana au sujet de la politique d'IA et de la réduction de la fracture numérique."
+},
+{
+"title": "Soutien à l'entrée sur les marchés d'Afrique australe",
+"detail": "Il n'existe pas de bureau dédié au Botswana ; les études de marché et la mise en relation avec des acheteurs passent par des bureaux voisins comme celui d'Afrique du Sud (estimation)."
+},
+{
+"title": "Export Voucher",
+"detail": "Couvre par des bons les frais d'étude de marché à l'étranger, de certification et de marketing local."
+}
+]
+}

@@ -1,0 +1,71 @@
+{
+"summary": "Ngân sách tài khóa 2026/27 trị giá 4,82 nghìn tỷ KSh của Kenya đi theo Chương trình Chuyển đổi Kinh tế Từ dưới lên, ưu tiên nông nghiệp, nhà ở giá phải chăng, y tế, giáo dục và doanh nghiệp nhỏ. Chính phủ đã thành lập Quỹ Hạ tầng Quốc gia và Quỹ Đầu tư Quốc gia, và sẽ công bố tầm nhìn kế tiếp Vision 2030 sau khi tham vấn công chúng.",
+"leader": "Tổng thống William Ruto (nguyên thủ quốc gia kiêm người đứng đầu chính phủ)",
+"agenda": [
+"Chương trình Chuyển đổi Kinh tế Từ dưới lên: nông nghiệp, nhà ở giá phải chăng, y tế, MSME",
+"Tài trợ hạ tầng thông qua Quỹ Hạ tầng Quốc gia và Quỹ Đầu tư Quốc gia",
+"Bao phủ y tế toàn dân và tăng cường Cơ quan Y tế Xã hội",
+"Việc làm cho thanh niên (NextGen.ke) và mở rộng tài trợ giáo dục đại học",
+"Tầm nhìn quốc gia dài hạn mới sau Vision 2030"
+],
+"projects": [
+{
+"title": "Ngân sách quốc gia tài khóa 2026/27",
+"detail": "Thu 3,63 nghìn tỷ KSh, thâm hụt 1,15 nghìn tỷ KSh (5,5% GDP); giáo dục 784,5 tỷ, năng lượng/hạ tầng/ICT 531,3 tỷ, đường bộ 220,4 tỷ, y tế 177,2 tỷ, nông nghiệp/nông thôn 111,7 tỷ",
+"status": "Đang triển khai"
+},
+{
+"title": "Nhà ở giá phải chăng và nhà ở xã hội",
+"detail": "50,6 tỷ KSh cho nhà ở giá phải chăng và 20,9 tỷ KSh cho nhà ở xã hội",
+"status": "Đang triển khai"
+},
+{
+"title": "Quỹ Hạ tầng Quốc gia (NIF)",
+"detail": "Huy động 350 tỷ KSh trong khoảng ba tháng (công bố ngày 11/7/2026); mục tiêu hơn 20.000 km đường bộ và khoảng 10.000 MW điện trong bảy năm",
+"status": "Đang triển khai"
+},
+{
+"title": "Quỹ Đầu tư Quốc gia",
+"detail": "Luật được ký ngày 8/7/2026; một phần thu nhập từ tài sản nhà nước được tích lũy và đầu tư",
+"status": "Đang triển khai"
+},
+{
+"title": "PPP đường bộ Nairobi-Mombasa",
+"detail": "KeNHA đã mua sắm dịch vụ tư vấn khả thi và tư vấn giao dịch cho dự án PPP (đóng thầu tháng 8/2026)",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Tầm nhìn dài hạn sau Vision 2030",
+"detail": "Đã nhận báo cáo của các học giả ngày 21/7/2026; tầm nhìn mới sẽ được đưa ra sau tham vấn công chúng",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn PMO giám sát tiến độ hạ tầng và tài chính",
+"why": "NIF đã huy động nguồn vốn lớn trong thời gian ngắn, khiến việc giám sát triển khai đường bộ và điện trở nên then chốt.",
+"target": "Bộ Tài chính Quốc gia (National Treasury), KeNHA, Bộ Năng lượng"
+},
+{
+"title": "Tự động hóa AI cho yêu cầu thanh toán y tế và kiểm tra điều kiện hưởng",
+"why": "Mở rộng bao phủ toàn dân đang làm tăng khối lượng yêu cầu thanh toán của SHA.",
+"target": "Cơ quan Y tế Xã hội, Bộ Y tế"
+},
+{
+"title": "Đào tạo nghề số/AI và nền tảng kết nối việc làm cho thanh niên",
+"why": "Chính phủ vừa khởi động chương trình việc làm cho thanh niên.",
+"target": "Bộ Công vụ và Thanh niên, chính quyền các hạt"
+},
+{
+"title": "Số hóa quản lý ngân sách và hiệu quả cấp hạt",
+"why": "Vốn phát triển ngày càng được chi ở cấp hạt, làm tăng nhu cầu theo dõi hiệu quả (ước tính).",
+"target": "Chính quyền các hạt, Hội đồng Thống đốc"
+}
+],
+"krsupport": [
+{
+"title": "Chương trình học bổng (CIAT) và tư vấn phát triển (DEEP) của KOICA",
+"detail": "KOICA triển khai các chương trình đào tạo chính thức và tư vấn phát triển; đợt rà soát này chưa xác nhận dự án riêng cho Kenya."
+}
+]
+}

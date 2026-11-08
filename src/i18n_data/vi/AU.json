@@ -1,0 +1,75 @@
+{
+"summary": "Trong nhiệm kỳ thứ hai, chính phủ Công đảng của Albanese tập trung vào nguồn cung nhà ở, giảm áp lực chi phí sinh hoạt và an ninh nhiên liệu. Ngân sách 2026-27 cải cách chính sách thuế đối với nhà ở đầu tư và bổ sung gói chống chịu nhiên liệu trị giá 14,7 tỷ AUD.",
+"leader": "Vua Charles III (Nguyên thủ quốc gia); Thủ tướng Anthony Albanese (Người đứng đầu chính phủ)",
+"agenda": [
+"Tăng nguồn cung nhà ở và cải cách chính sách thuế đối với bất động sản đầu tư",
+"Tăng cường an ninh nhiên liệu và năng lượng, bao gồm kho dự trữ nhiên liệu do chính phủ kiểm soát",
+"Giảm áp lực chi phí sinh hoạt và hỗ trợ thuế cho doanh nghiệp nhỏ",
+"Phát triển ngành AI và nâng cao năng suất",
+"Tinh gọn thủ tục phê duyệt và đẩy nhanh thẩm định di cư tay nghề"
+],
+"projects": [
+{
+"title": "Gói chống chịu nhiên liệu",
+"detail": "Bao gồm kho dự trữ an ninh nhiên liệu do chính phủ kiểm soát trị giá 3,2 tỷ AUD và nâng số ngày dự trữ tối thiểu đối với diesel, nhiên liệu phản lực và xăng",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình Hỗ trợ Nhà ở – quỹ hạ tầng địa phương",
+"detail": "Tài trợ hạ tầng địa phương cần thiết để khai thông nguồn cung nhà ở",
+"status": "Đang triển khai"
+},
+{
+"title": "Tài trợ AI Accelerator",
+"detail": "Tài trợ cho phát triển và thương mại hóa AI trong nước",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Cải cách thuế nhà ở đầu tư",
+"detail": "Thay thế mức giảm 50% thuế lợi vốn (CGT) đối với nhà hiện hữu bằng cơ chế chỉ số hóa, và giới hạn negative gearing chỉ áp dụng cho nhà xây mới",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Khấu hao tức thì tài sản 20.000 AUD vĩnh viễn",
+"detail": "Áp dụng vĩnh viễn cơ chế khấu hao tức thì và tái áp dụng chuyển lỗ về trước (loss carry-back)",
+"status": "Đang triển khai"
+},
+{
+"title": "Khai trương Sân bay Quốc tế Western Sydney",
+"detail": "Chuyến bay chở khách đầu tiên ngày 25/10/2026, các chuyến bay quốc tế từ ngày 26/10",
+"status": "Hoàn thành"
+}
+],
+"biz": [
+{
+"title": "Bảng điều khiển AI giám sát tồn kho nhiên liệu và dự báo nhu cầu",
+"why": "Kho dự trữ nhiên liệu mới do chính phủ kiểm soát cần quản lý tồn kho theo thời gian thực.",
+"target": "Bộ Biến đổi Khí hậu, Năng lượng; nhà phân phối nhiên liệu và đơn vị vận hành kho cảng"
+},
+{
+"title": "SaaS tự động hóa thẩm định hồ sơ phê duyệt nhà ở cho chính quyền địa phương",
+"why": "Thủ tục phê duyệt phải nhanh hơn để đạt mục tiêu nhà ở.",
+"target": "Sở quy hoạch cấp bang, hội đồng địa phương"
+},
+{
+"title": "Gói tự động hóa AI cho SME, kèm tư vấn hồ sơ xin tài trợ",
+"why": "Các khoản tài trợ AI và cơ chế khấu hao tức thì vĩnh viễn giúp SME có thêm dư địa đầu tư vào công cụ số.",
+"target": "SME Úc, doanh nghiệp người Úc gốc Hàn"
+},
+{
+"title": "Thẩm định gia nhập thị trường và kết nối đối tác địa phương cho SME Hàn Quốc",
+"why": "Đa dạng hóa chuỗi cung ứng và nhu cầu hạ tầng đang thu hút các doanh nghiệp vật liệu và linh kiện Hàn Quốc.",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc chuẩn bị thâm nhập Úc"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA Sydney (bao gồm bàn Brisbane)",
+"detail": "Hỗ trợ thâm nhập thị trường thông qua nghiên cứu thị trường địa phương, kết nối người mua và hội chợ việc làm."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Phiếu hỗ trợ chi trả chi phí nghiên cứu thị trường nước ngoài, chứng nhận và tư vấn; cũng có thể dùng để chuẩn bị thâm nhập Úc."
+}
+]
+}

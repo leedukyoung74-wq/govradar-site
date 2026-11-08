@@ -1,0 +1,80 @@
+{
+"summary": "Sri Lanka tetap menjaga disiplin fiskal di bawah program IMF EFF, sementara anggaran 2027 menaikkan belanja modal, memberikan sejumlah keringanan pajak, serta mendorong pembangunan digital dan perdesaan. Pemulihan pascasiklon dan kerangka pembiayaan risiko bencana juga menjadi prioritas.",
+"leader": "Presiden Anura Kumara Dissanayake (kepala negara dan kepala pemerintahan) / Perdana Menteri Harini Amarasuriya",
+"agenda": [
+"Pelaksanaan program IMF dan target keseimbangan primer",
+"Pemulihan bencana dan pembangunan kembali infrastruktur publik",
+"Keringanan biaya hidup (janji pemotongan pajak, subsidi BBM) dan perluasan perlindungan sosial",
+"Ekonomi digital (1,000 menara komunikasi)",
+"Reformasi pendidikan mulai Kelas 6 dan peningkatan layanan kesehatan",
+"Memulai infrastruktur transportasi seperti kereta listrik"
+],
+"projects": [
+{
+"title": "RUU Apropriasi 2027",
+"detail": "Total belanja +12.6%, belanja modal +24.7%",
+"status": "Dibahas di Parlemen"
+},
+{
+"title": "Menara komunikasi perdesaan",
+"detail": "1,000 menara dalam tiga tahun, 750 didanai pada 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Pembangunan perdesaan dan jaminan sosial",
+"detail": "Perluasan bantuan kesejahteraan, termasuk Aswesuma",
+"status": "Direncanakan"
+},
+{
+"title": "Transportasi, jalan raya, dan pembangunan perkotaan",
+"detail": "Proyek kereta listrik dijadwalkan dimulai pada 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Peninjauan ke-5/ke-6 IMF EFF selesai",
+"detail": "Sekitar USD 695m dicairkan, total sekitar USD 2.4bn",
+"status": "Selesai"
+},
+{
+"title": "Otomatisasi pendapatan kota Kolombo (KOICA)",
+"detail": "Mengotomatiskan pemungutan sumber pendapatan utama seperti pajak penilaian dan biaya izin",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi pemungutan pendapatan dan layanan pemerintah daerah",
+"why": "Permintaan terbukti melalui proyek Kolombo, dan anggaran menaikkan belanja modal daerah.",
+"target": "Pemerintah daerah, Kementerian Pemerintahan Daerah"
+},
+{
+"title": "Sistem data kelayakan dan pembayaran bantuan sosial",
+"why": "Pendanaan bantuan sosial, termasuk Aswesuma, meningkat lebih dari dua kali lipat.",
+"target": "Welfare Benefits Board, Kementerian Pembangunan Perdesaan dan Jaminan Sosial"
+},
+{
+"title": "Konsultasi penilaian investasi publik dan manajemen kinerja",
+"why": "Program IMF mensyaratkan reformasi PIM seiring kenaikan belanja modal hampir 25%.",
+"target": "Department of National Planning, kementerian teknis"
+},
+{
+"title": "Perangkat digital untuk penilaian kerusakan dan manajemen proyek pemulihan",
+"why": "Pemulihan pascasiklon sedang berjalan dan strategi pembiayaan risiko bencana sedang disusun.",
+"target": "Disaster Management Centre, Kementerian Keuangan (Treasury)"
+}
+],
+"krsupport": [
+{
+"title": "Dialog kebijakan EDCF dan restrukturisasi utang Korea–Sri Lanka",
+"detail": "Dialog April 2026 merampungkan restrukturisasi 18 pinjaman EDCF dan membahas perpanjangan perjanjian kerangka kerja."
+},
+{
+"title": "Proyek otomatisasi pendapatan Kolombo oleh KOICA",
+"detail": "Hibah USD 8.5m untuk mengotomatiskan pemungutan sumber pendapatan utama kota Kolombo."
+},
+{
+"title": "Voucher ekspor UKM",
+"detail": "Menanggung layanan ekspor seperti riset pasar, penerjemahan, dan sertifikasi melalui voucher."
+}
+]
+}

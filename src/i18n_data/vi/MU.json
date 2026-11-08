@@ -1,0 +1,80 @@
+{
+"summary": "Tháng 6/2026, Mauritius công bố ngân sách 2026/27 dựa trên AI và số hóa, khởi nghiệp và SME, cùng kinh tế biển, cam kết giảm thâm hụt từ khoảng 6% GDP xuống 3,7%. Tháng 10, các cuộc biểu tình về thiếu nước, chi phí sinh hoạt và một vụ cảnh sát nổ súng đã dẫn đến lệnh giới nghiêm từ ngày 12 đến 18/10.",
+"leader": "Tổng thống Dharam Gokhool · Thủ tướng kiêm Bộ trưởng Tài chính Navin Ramgoolam",
+"agenda": [
+"Giảm thâm hụt tài khóa (từ khoảng 6,0% GDP xuống 3,7%)",
+"Ứng dụng AI và số hóa, bao gồm chuyển đổi số khu vực công",
+"Phát triển khởi nghiệp và SME (miễn thuế 10 năm cho doanh nghiệp khởi nghiệp)",
+"Kinh tế biển và mở rộng không gian kinh tế",
+"Cải cách dịch vụ tài chính (số hóa FSC, tăng cường AML/CFT, ngân hàng mở và token hóa)",
+"Ổn định nước, điện và các hạ tầng cơ bản khác"
+],
+"projects": [
+{
+"title": "Gói Kinh tế Đặc biệt của Ấn Độ",
+"detail": "Bệnh viện quốc gia mới, tháp điều khiển sân bay, đường cao tốc M4 và Đường vành đai giai đoạn II, thiết bị cảng và các hạng mục khác",
+"status": "Đang triển khai"
+},
+{
+"title": "Nghiên cứu chẩn đoán PPP cấp quốc gia",
+"detail": "Đang lựa chọn tư vấn để chẩn đoán khung PPP và danh mục dự án",
+"status": "Đang mời thầu"
+},
+{
+"title": "Dự án bản sao số (digital twin)",
+"detail": "Đang lựa chọn tư vấn để thiết kế và xây dựng bản sao số quốc gia",
+"status": "Đang mời thầu"
+},
+{
+"title": "Hồ dữ liệu giáo dục đại học",
+"detail": "Phân tích, thiết kế và xây dựng nền tảng dữ liệu giáo dục đại học",
+"status": "Đang mời thầu"
+},
+{
+"title": "Triển khai và bảo trì hộ chiếu điện tử",
+"detail": "Mời bày tỏ quan tâm cho hộ chiếu điện tử bảo mật",
+"status": "Đang mời thầu"
+},
+{
+"title": "Đăng cai Hội nghị Thượng đỉnh Doanh nghiệp Hoa Kỳ - châu Phi 2026",
+"detail": "Đồng tổ chức bởi Chính phủ Mauritius và Corporate Council on Africa",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn hỗ trợ quản lý hợp tác xã và SME",
+"why": "Bộ phận hợp tác xã vừa mời thầu dịch vụ tư vấn lồng ghép và hỗ trợ kinh doanh.",
+"target": "Bộ Công nghiệp, SME và Hợp tác xã"
+},
+{
+"title": "Tư vấn chẩn đoán PPP và cấu trúc dự án",
+"why": "Bộ Tài chính đã mời thầu nghiên cứu chẩn đoán PPP cấp quốc gia.",
+"target": "Bộ Tài chính"
+},
+{
+"title": "Nền tảng dữ liệu công và phân tích bằng AI",
+"why": "Ngân sách coi AI và số hóa là trụ cột cốt lõi, và các gói thầu hồ dữ liệu và bản sao số đang mở.",
+"target": "Ủy ban Giáo dục Đại học, Bộ Nhà ở và Đất đai, Bộ CNTT-TT"
+},
+{
+"title": "Hỗ trợ khởi nghiệp đặt chân và thành lập công ty tại địa phương",
+"why": "Chính sách miễn thuế 10 năm cho khởi nghiệp khiến Mauritius trở thành trung tâm hấp dẫn hơn để tiếp cận châu Phi.",
+"target": "Doanh nghiệp khởi nghiệp và SME Hàn Quốc nhắm đến châu Phi"
+}
+],
+"krsupport": [
+{
+"title": "Tin tức thị trường nước ngoài của KOTRA (Mauritius/châu Phi)",
+"detail": "Cung cấp thông tin thị trường về Mauritius và khu vực Nam Phi, Đông Phi."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả chi phí dịch hồ sơ mời thầu, tư vấn pháp lý và nghiên cứu thị trường."
+},
+{
+"title": "Hỗ trợ hạ tầng nước ngoài của KIND",
+"detail": "Hỗ trợ nghiên cứu khả thi và đầu tư vào các dự án PPP và hạ tầng ở nước ngoài."
+}
+]
+}

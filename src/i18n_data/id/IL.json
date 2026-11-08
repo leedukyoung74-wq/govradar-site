@@ -1,0 +1,70 @@
+{
+"summary": "Israel menggelar pemilu Knesset ke-26 pada 27 Oktober 2026, dan exit poll menunjukkan tidak ada blok yang mencapai mayoritas 61 kursi, sehingga pembicaraan koalisi sedang berlangsung. Anggaran 2026 senilai NIS 699 miliar yang disahkan pada Maret didominasi belanja pertahanan, dan pemerintah memperluas infrastruktur AI melalui direktorat AI nasional di Kantor Perdana Menteri.",
+"leader": "Presiden Isaac Herzog / Perdana Menteri Benjamin Netanyahu (petahana; pembentukan koalisi sedang berlangsung setelah pemilu 27 Okt)",
+"agenda": [
+"Membentuk koalisi dan pemerintahan baru setelah pemilu",
+"Membangun kembali postur keamanan pasca-perang Gaza dan peningkatan belanja pertahanan",
+"Rencana AI nasional (direktorat AI PMO, pusat data AI dan komputasi di Negev)",
+"Mengelola defisit sekitar 5% PDB dan stabilitas fiskal",
+"Memperluas infrastruktur transportasi seperti elektrifikasi rel",
+"Realokasi dana untuk menanggulangi kejahatan di komunitas Arab"
+],
+"projects": [
+{
+"title": "Anggaran negara 2026",
+"detail": "Anggaran terbesar sepanjang sejarah yang disahkan Knesset pada 30 Maret 2026, dengan tambahan NIS 32 miliar untuk pertahanan",
+"status": "Berjalan"
+},
+{
+"title": "Paket kebijakan AI nasional dan direktorat AI",
+"detail": "Disetujui 16 Juni 2026; memusatkan anggaran dan kebijakan AI di PMO; AI buatan dalam negeri, pusat data GPU besar, reskilling tenaga kerja",
+"status": "Berjalan"
+},
+{
+"title": "Elektrifikasi jaringan Israel Railways",
+"detail": "Tender internasional untuk desain rinci, konstruksi, pengujian, dan commissioning pada sebagian jaringan",
+"status": "Proses tender"
+},
+{
+"title": "Penyesuaian anggaran rencana kesenjangan komunitas Arab (Keputusan 4387)",
+"detail": "Keputusan 15 Juli 2026 yang mengalihkan sekitar NIS 497 juta ke kepolisian dan badan keamanan untuk melawan kejahatan dan penyelundupan senjata",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi otomatisasi alur kerja AI dan PoC untuk badan publik",
+"why": "Anggaran AI baru dan badan khusus di PMO menciptakan permintaan.",
+"target": "Direktorat AI PMO, kementerian, pemerintah kota"
+},
+{
+"title": "Masuk pasar melalui FTA Korea-Israel dan pencocokan kemitraan teknologi bagi UKM",
+"why": "Manfaat tarif dan permintaan kemitraan dengan start-up Israel terus berlanjut di bawah FTA.",
+"target": "UKM Korea, perusahaan teknologi Israel"
+},
+{
+"title": "Pembentukan konsorsium dan dukungan penawaran untuk tender elektrifikasi rel",
+"why": "Tender internasional yang ditutup pada Desember 2026 sedang dibuka.",
+"target": "Perusahaan konstruksi rel dan peralatan listrik Korea"
+},
+{
+"title": "Program pelatihan reskilling AI",
+"why": "Pemerintah secara resmi menyoroti kebutuhan reskilling berskala besar.",
+"target": "Universitas, lembaga ketenagakerjaan, perusahaan besar"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Tel Aviv",
+"detail": "Mendukung riset pasar, pencarian pembeli, dan saran FTA untuk masuk ke Israel."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Menanggung biaya layanan ekspor seperti sertifikasi, penerjemahan, dan konsultasi melalui voucher."
+},
+{
+"title": "Dukungan konstruksi luar negeri",
+"detail": "Menyediakan informasi tender dan konsultasi untuk proyek infrastruktur seperti rel."
+}
+]
+}

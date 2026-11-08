@@ -1,0 +1,75 @@
+{
+"summary": "Les Fidji organisent un référendum national le 9 décembre 2026, les élections générales étant attendues entre fin décembre 2026 et début février 2027. Le pays a accueilli la Pré-COP31 en octobre et promeut la diplomatie climatique ainsi que son concept d'« Océan de paix ».",
+"leader": "Président Ratu Naiqama Lalabalavu ; Premier ministre Sitiveni Rabuka (People's Alliance)",
+"agenda": [
+"Tenue du référendum du 9 décembre 2026 (National Referendum Act 2026) et préparation des élections générales",
+"Diplomatie climatique (hôte de la Pré-COP31, position commune du Pacifique)",
+"Initiative de sécurité régionale « Océan de paix »",
+"Développement des énergies renouvelables et résilience énergétique",
+"Renforcement des infrastructures de santé et d'éducation",
+"Meilleur accès aux services publics (p. ex. nouveaux bureaux de l'immigration)"
+],
+"projects": [
+{
+"title": "Référendum national",
+"detail": "Loi promulguée le 2 octobre 2026 ; campagne électorale suspendue pendant le référendum",
+"status": "En cours"
+},
+{
+"title": "Programme santé et énergies renouvelables de KOICA",
+"detail": "Environ 15,38 millions USD pour la santé et 11,66 millions USD pour les énergies renouvelables",
+"status": "En cours"
+},
+{
+"title": "Centre national de réadaptation, Tamavua",
+"detail": "Établissement de réadaptation financé par la Corée",
+"status": "En cours"
+},
+{
+"title": "Renforcement des capacités du College of Medicine, Nursing and Health Sciences de la FNU",
+"detail": "Formation du personnel de santé financée par la Corée",
+"status": "En cours"
+},
+{
+"title": "Solaire/agriculture à Ovalau et reconstruction du centre aquacole de Makogai",
+"detail": "Projets insulaires d'énergie et de pêche financés par la Corée",
+"status": "En cours"
+},
+{
+"title": "Réunion Pré-COP31",
+"detail": "Réunion des dirigeants du Pacifique organisée à Nadi en octobre 2026",
+"status": "Achevé"
+}
+],
+"biz": [
+{
+"title": "PMC et formation à l'exploitation-maintenance des énergies renouvelables insulaires",
+"why": "La coopération de KOICA et entre la Corée et les Fidji se concentre sur les énergies renouvelables.",
+"target": "Ministère de l'Énergie, Energy Fiji Ltd, communautés rurales"
+},
+{
+"title": "Formation à la transformation numérique de l'administration publique et à l'automatisation des processus par IA",
+"why": "La Corée et les Fidji ont désigné la transformation numérique et les compétences comme domaines d'expansion de KOICA.",
+"target": "Ministère de la Fonction publique, cabinet du Premier ministre"
+},
+{
+"title": "Conseil à l'export pour les entreprises de la pêche et de l'agro-transformation",
+"why": "Les Fidji veulent développer les secteurs maritime et industriel en tant que plateforme du Pacifique.",
+"target": "Ministère de la Pêche, ministère de l'Agriculture, PME locales"
+}
+],
+"krsupport": [
+{
+"title": "Programme pays de KOICA aux Fidji",
+"detail": "Environ 27,04 millions USD pour la santé et les énergies renouvelables en 2025-2027 ; le bureau des Fidji fête ses 10 ans en 2026."
+},
+{
+"title": "Partenariat stratégique Corée-Fidji renforcé",
+"detail": "La réunion des ministres des Affaires étrangères d'août 2026 a convenu d'élargir la coopération dans l'énergie, le maritime, le numérique et les compétences."
+},
+{
+"title": "Export Voucher",
+"detail": "Couvre les frais d'étude des marchés insulaires du Pacifique et de marketing local."
+}
+]
+}

@@ -1,0 +1,80 @@
+{
+"summary": "El 13 de octubre de 2026, el consejo de ministros de Mozambique aprobó el Plan Económico y Social y Presupuesto del Estado 2027 (PESOE, MZN 511.200 millones), que reduce el gasto alrededor de un 1,8% respecto de 2026, y lo envió al Parlamento. Se prevé un crecimiento de solo el 1,6% en 2027, pero el gobierno estima un 9,5% para 2029 si avanzan los proyectos de gas.",
+"leader": "Presidente Daniel Chapo (desde enero de 2025) / Primera ministra Maria Benvinda Levi",
+"agenda": [
+"Estabilidad macroeconómica y disciplina fiscal (déficit de 2027 del 4,6% del PIB, endeudamiento interno limitado al 1,9%)",
+"Más producción nacional, diversificación y procesamiento local de minerales",
+"Financiación de pymes mediante el Fondo de Desarrollo Económico Local (FDEL) y PRO-MULHER",
+"Puesta en marcha del Banco de Desarrollo de Mozambique (BDM) en 2027 para energía, agricultura, industria y turismo",
+"Contratos de desempeño en la función pública, lucha contra la corrupción y mano dura contra el narcotráfico",
+"Ampliación de los proyectos de gas de Cabo Delgado y restablecimiento de la seguridad"
+],
+"projects": [
+{
+"title": "Plan Económico y Social y Presupuesto del Estado 2027 (PESOE)",
+"detail": "Ingresos de MZN 427.800 millones (23,5% del PIB), déficit de unos MZN 83.000 millones, inversión de MZN 79.600 millones; pendiente de revisión parlamentaria",
+"status": "Planificado"
+},
+{
+"title": "Banco de Desarrollo de Mozambique (BDM)",
+"detail": "Comenzará a operar en 2027, centrado en energía, agricultura, industria y turismo",
+"status": "Planificado"
+},
+{
+"title": "Fondos FDEL y PRO-MULHER",
+"detail": "Financiación para pymes locales y mujeres emprendedoras",
+"status": "Planificado"
+},
+{
+"title": "Diseño y construcción del Corredor N1 Chimuara-Nicoadala, Lote 1 (0-88 km)",
+"detail": "Programa de Carreteras más Seguras del Banco Mundial, provincia de Zambezia",
+"status": "En licitación"
+},
+{
+"title": "GNL de la cuenca de Rovuma",
+"detail": "La planta flotante ya exporta; está previsto el proyecto Rovuma LNG liderado por ExxonMobil; se esperan unos MZN 3.070 millones de ingresos por GNL en 2027",
+"status": "En curso"
+},
+{
+"title": "Compromisos de la conferencia de minerales de Nacala",
+"detail": "Unos US$4.200 millones comprometidos en octubre de 2026; el Presidente prometió revisar su cumplimiento",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Consultoría de evaluación de capacidades y preparación para la certificación de pymes locales proveedoras de proyectos de gas",
+"why": "El gobernador de Cabo Delgado presiona a los megaproyectos para que establezcan vínculos duraderos con empresas locales.",
+"target": "Pymes locales, operadores de proyectos de gas"
+},
+{
+"title": "Sistema digital de evaluación y seguimiento de préstamos para el BDM y el FDEL",
+"why": "En 2027 comienzan a operar un nuevo banco de fomento y un fondo para pymes.",
+"target": "Ministerio de Economía y Finanzas, BDM"
+},
+{
+"title": "Kit de herramientas y capacitación para estructurar APP de pequeña escala en residuos y agua",
+"why": "Enabel ha licitado un kit de herramientas para APP de residuos de pequeña escala y apoyo jurídico.",
+"target": "Municipios, Ministerio de Obras Públicas"
+},
+{
+"title": "Panel de seguimiento de los contratos de desempeño de la función pública",
+"why": "El gobierno anunció que verificará los resultados de los contratos de desempeño (19 de octubre de 2026).",
+"target": "Oficina del Primer Ministro, Ministerio de Administración Estatal"
+}
+],
+"krsupport": [
+{
+"title": "Proyecto KOICA-PNUD de resiliencia ante desastres y cohesión social",
+"detail": "KOICA financia US$6,5 millones para alerta temprana y medios de vida en cinco provincias, entre ellas Cabo Delgado, hasta marzo de 2028."
+},
+{
+"title": "Hub de IA Corea-África y K-AI Package",
+"detail": "Un marco de cooperación en IA, centros de datos y energía vinculado al EDCF, presentado en KOAFEC 2026."
+},
+{
+"title": "Apoyo de KOTRA para la entrada en mercados africanos",
+"detail": "Estudios de mercado y vinculación con compradores a través de la oficina comercial competente (aún debe confirmarse qué oficina cubre Mozambique)."
+}
+]
+}

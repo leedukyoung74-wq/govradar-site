@@ -1,0 +1,71 @@
+{
+"summary": "De cara a las elecciones de 2027, el gobierno del primer ministro Fico impulsa una nueva unidad nuclear, el desarrollo regional y más viviendas de alquiler con apoyo estatal. Las tensiones en la coalición persisten tras la propuesta de septiembre de destituir al ministro de Medio Ambiente, y Fico ejerce ahora además como ministro de Medio Ambiente.",
+"leader": "Presidente Peter Pellegrini / Primer ministro Robert Fico (coalición liderada por Smer-SD)",
+"agenda": [
+"Nueva unidad nuclear de Bohunice (1.100 MWe, AP1000 de la estadounidense Westinghouse)",
+"Aliviar la carga de los precios de la energía y mantener las ayudas energéticas",
+"Ampliar la vivienda de alquiler con apoyo estatal",
+"Apoyo al desarrollo de regiones rezagadas (Turiec, Orava, etc.)",
+"Ejecutar proyectos del Plan de Recuperación de la UE y la digitalización pública",
+"Preparar el presupuesto de finanzas públicas 2027-2029"
+],
+"projects": [
+{
+"title": "Nueva unidad nuclear en Jaslovské Bohunice",
+"detail": "El 2026-10-28, la empresa estatal JESS firmó un contrato FEED con Westinghouse; la central será totalmente de propiedad estatal",
+"status": "Planificado"
+},
+{
+"title": "Ampliación de la vivienda de alquiler con apoyo estatal",
+"detail": "151 apartamentos más incorporados al sistema (anunciado el 2026-10-20)",
+"status": "En curso"
+},
+{
+"title": "Apoyo al desarrollo de las regiones del norte",
+"detail": "Más de EUR 2,3 millones aprobados para Turiec, Orava y el norte de Eslovaquia (2026-10-21)",
+"status": "En curso"
+},
+{
+"title": "Sistema de intercambio de datos dactiloscópicos Prüm II",
+"detail": "Solución de integración y seguridad para el intercambio de datos dactiloscópicos conforme al Reglamento (UE) 2024/982",
+"status": "En licitación"
+},
+{
+"title": "Plataforma integrada de servicios de ciudad inteligente",
+"detail": "Liptovský Mikuláš está adquiriendo un canal digital único para los residentes",
+"status": "En licitación"
+}
+],
+"biz": [
+{
+"title": "Plataforma municipal de datos de ciudad inteligente y servicios ciudadanos con IA",
+"why": "Varias ciudades licitan al mismo tiempo plataformas integradas de servicios y datos.",
+"target": "Gobiernos municipales (Liptovský Mikuláš, Banská Štiavnica, etc.)"
+},
+{
+"title": "Consultoría de análisis y estrategia de política de transporte",
+"why": "El ministerio de transporte está licitando trabajos de estadística, previsión y estrategia.",
+"target": "Ministerio de Transporte"
+},
+{
+"title": "Apoyo a pymes coreanas de componentes para ingresar en la cadena de suministro nuclear",
+"why": "La fase FEED genera demanda de registro temprano de proveedores y de alianzas.",
+"target": "JESS y empresas EPC asociadas"
+},
+{
+"title": "Consultoría de entrada al mercado eslovaco para fabricantes coreanos (cadena de suministro de automoción/baterías)",
+"why": "La demanda de bases de producción en Europa Central se mantiene estable.",
+"target": "Pymes coreanas de componentes"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Bratislava",
+"detail": "Ofrece información sobre el mercado eslovaco y consultas sobre compradores e inversión."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Cubre mediante vales los costos de certificación, estudios de mercado y marketing en el exterior."
+}
+]
+}

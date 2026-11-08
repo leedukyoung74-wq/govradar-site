@@ -1,0 +1,66 @@
+{
+"summary": "Sau cuộc bầu cử tháng 3/2026 và 69 ngày đàm phán kỷ lục, nội các thứ ba của bà Frederiksen gồm Đảng Dân chủ Xã hội, Cánh tả Xanh, Đảng Ôn hòa và Đảng Tự do Xã hội đã nhậm chức dưới dạng liên minh thiểu số. Dự luật tài chính 2027 công bố ngày 9/10 dựa trên ba trụ cột an ninh, phúc lợi và chuyển đổi xanh.",
+"leader": "Vua Frederik X / Thủ tướng Mette Frederiksen (Đảng Dân chủ Xã hội; liên minh thiểu số trung tả lần thứ ba, thành lập ngày 2026-06-03)",
+"agenda": [
+"Nâng chi tiêu quốc phòng lên 3,5% GDP vào năm 2030",
+"Phúc lợi: trường học và nhà trẻ, chăm sóc nha khoa miễn phí cho nhóm dễ bị tổn thương (toàn dân vào năm 2035), tăng lương hưu cho người hưu trí thu nhập thấp nhất",
+"Chuyển đổi xanh: điện khí hóa, loại bỏ dần nhiên liệu hóa thạch và tự chủ năng lượng",
+"Áp dụng dần giao thông công cộng miễn phí cho người dưới 22 tuổi",
+"Giảm thuế cho nhóm thu nhập trung bình nhằm khuyến khích làm thêm",
+"Đầu tư và thắt chặt quan hệ với Greenland"
+],
+"projects": [
+{
+"title": "Dự luật tài chính 2027 (Finanslovforslag 2027)",
+"detail": "Tập trung vào an ninh, phúc lợi và chuyển đổi xanh; 1,2 tỷ DKK cho trường học và nhà trẻ năm 2027",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Hỗ trợ điện khí hóa và loại bỏ nhiên liệu hóa thạch",
+"detail": "650 triệu DKK năm 2027 và 850 triệu DKK mỗi năm giai đoạn 2028-2030",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Giao thông công cộng miễn phí cho người trẻ",
+"detail": "Áp dụng theo lộ trình cho người dưới 22 tuổi",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Giải pháp Kê đơn Thú y Đan Mạch (DVR)",
+"detail": "Hệ thống số dùng chung thay thế việc kê đơn thú y bằng giấy, fax và PDF",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Chi tiêu quốc phòng lên 3,5% GDP",
+"detail": "Tăng dần đến năm 2030",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa AI cho quản lý tài trợ và cấp phép công",
+"why": "Các cơ quan đang mời thầu hệ thống hành chính mới cho tài trợ và kê đơn.",
+"target": "Các cơ quan trung ương (Cơ quan Dược phẩm, Cơ quan Cung điện và Văn hóa, v.v.)"
+},
+{
+"title": "Cung cấp dịch vụ tư vấn CNTT qua hệ thống mua sắm động (DPS) của SKI",
+"why": "DPS của SKI liên tục mua dịch vụ tư vấn chiến lược CNTT và phân tích tình huống kinh doanh (business case).",
+"target": "Nhà nước và chính quyền đô thị (thông qua SKI)"
+},
+{
+"title": "Hỗ trợ doanh nghiệp công nghệ xanh và điện khí hóa Hàn Quốc thâm nhập Đan Mạch",
+"why": "Dự luật dành hàng trăm triệu DKK mỗi năm cho điện khí hóa và loại bỏ nhiên liệu hóa thạch.",
+"target": "Chính quyền đô thị, doanh nghiệp tiện ích và các công ty Đan Mạch"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng Thương mại KOTRA Copenhagen",
+"detail": "Hỗ trợ thông tin thị trường Đan Mạch/Bắc Âu và tìm kiếm người mua trong ngành công nghiệp xanh."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí chứng nhận ở nước ngoài, nghiên cứu thị trường và tiếp thị thông qua phiếu hỗ trợ."
+}
+]
+}

@@ -1,0 +1,35 @@
+{
+ "verdicts": {
+  "ok":{"ko":"확인됨","en":"Confirmed","c":"ok","d_ko":"서로 독립된 출처 2곳 이상, 그중 1·2등급 1곳 이상","d_en":"2+ independent sources incl. at least one tier 1–2"},
+  "official":{"ko":"공식 발표","en":"Official statement","c":"ok","d_ko":"정부·군·국제기구 발표 1건. 발표했다는 사실만 확인","d_en":"One government/military/IO statement; confirms only that it was stated"},
+  "part":{"ko":"일부 사실","en":"Partly true","c":"mid","d_ko":"핵심은 맞지만 수치·범위·시점 일부가 다르거나 단일 출처","d_en":"Core is right; some figures, scope or timing differ or are single-source"},
+  "claim":{"ko":"당사자 주장","en":"Party claim","c":"mid","d_ko":"분쟁 당사자 발표, 상대 측이나 제3자 확인 없음","d_en":"Statement by a party to the conflict, not independently confirmed"},
+  "single":{"ko":"단일 출처","en":"Single source","c":"mid","d_ko":"출처 1곳(또는 같은 통신사 받아쓰기). 표시하고 보여줌","d_en":"One source (or one wire copied). Shown with this label"},
+  "unv":{"ko":"미확인","en":"Unverified","c":"low","d_ko":"근거를 찾지 못함. 공개 화면에는 싣지 않음","d_en":"No supporting source found. Not shown publicly"},
+  "false":{"ko":"사실 아님","en":"False","c":"bad","d_ko":"공식 자료와 반대","d_en":"Contradicted by official records"},
+  "nobasis":{"ko":"근거 없음","en":"No evidence","c":"bad","d_ko":"주장을 뒷받침하는 자료가 없음","d_en":"No material supports the claim"}
+ },
+ "tiers": [
+  {"n":1,"ko":"정부·군·국제기구 공식 발표와 문서 (국방부·합참·CENTCOM·INDOPACOM·국무부·UN·NATO·EU·각국 정부)","en":"Official government, military and international-organisation statements and documents (DoD, JCS, CENTCOM, INDOPACOM, State, UN, NATO, EU, national governments)"},
+  {"n":2,"ko":"통신사(AP·Reuters·AFP·연합뉴스·Jiji)와 주요 언론, 국방 전문매체(The War Zone·Defense One·Defense News), 연구기관(ISW·ASPI·CSIS)","en":"Wire services (AP, Reuters, AFP, Yonhap, Jiji), major outlets, defense trade press (The War Zone, Defense One, Defense News), research institutes (ISW, ASPI, CSIS)"},
+  {"n":3,"ko":"그 밖의 매체, 위키, 블로그, SNS, 유튜브 영상","en":"Other outlets, wikis, blogs, social media, YouTube"}
+ ],
+ "rules_ko": [
+  "'확인됨'은 서로 독립된 출처 2곳 이상이 같은 사실을 말하고, 그중 1곳 이상이 1·2등급일 때만 붙입니다.",
+  "같은 통신사 기사를 여러 매체가 옮긴 경우는 1곳으로 셉니다.",
+  "분쟁 당사자의 발표는 상대 측이나 제3자가 확인하기 전까지 '당사자 주장'으로 표시합니다.",
+  "금액은 최대 한도와 실제 집행액을, 날짜는 발표일과 시행일을 나눠 적습니다.",
+  "'미확인' 항목은 공개·회원 화면에 싣지 않고 운영자 검토로 넘깁니다.",
+  "매일 자동 교차검증을 돌리고, 바뀐 판정과 정정은 정정 기록에 남깁니다.",
+  "예언·점술 콘텐츠는 이 검증 체계에 넣지 않으며 공개·회원 화면에 싣지 않습니다."
+ ],
+ "rules_en": [
+  "'Confirmed' requires 2+ independent sources saying the same thing, at least one of them tier 1 or 2.",
+  "Several outlets copying one wire story count as one source.",
+  "Statements by a party to a conflict are labelled 'Party claim' until the other side or a third party confirms.",
+  "Amounts separate ceiling from actual obligation; dates separate announcement from effect.",
+  "'Unverified' items are kept off public and member screens and go to operator review.",
+  "An automatic cross-check runs daily; changed verdicts and corrections are logged.",
+  "Prophecy or fortune-telling content is outside this system and never shown on public or member screens."
+ ]
+}

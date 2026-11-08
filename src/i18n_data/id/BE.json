@@ -1,0 +1,55 @@
+{
+"summary": "Pemerintah federal Belgia sedang merundingkan anggaran multitahun yang menargetkan penyesuaian sekitar €10 miliar hingga 2029, tetapi belum mencapai kesepakatan pada akhir Oktober, dan kini berupaya menyepakati terlebih dahulu paket 2027 sekitar €3-4 miliar.",
+"leader": "Raja Philippe; Perdana Menteri Bart De Wever (N-VA, koalisi lima partai 'Arizona')",
+"agenda": [
+"Konsolidasi fiskal: penyesuaian ~€10 miliar hingga 2029, menahan biaya bunga",
+"Mengesahkan anggaran 2027 tepat waktu (menghindari provisional twelfths)",
+"Mempertimbangkan rem utang (pembekuan belanja darurat)",
+"Perubahan pajak (kenaikan PPN dibatalkan; pendapatan sewa dan perusahaan manajemen)",
+"Pengendalian belanja kesehatan"
+],
+"projects": [
+{
+"title": "Paket anggaran federal 2027",
+"detail": "Setelah gagal mencapai kesepakatan multitahun, blok penghematan 2027 pertama diupayakan; ditargetkan masuk parlemen pada awal November",
+"status": "Dalam perundingan"
+},
+{
+"title": "Penyesuaian fiskal multitahun (hingga 2029)",
+"detail": "Memenuhi aturan fiskal UE dan memangkas defisit (5,2% PDB pada 2025)",
+"status": "Dalam perundingan"
+},
+{
+"title": "Legislasi rem utang",
+"detail": "Pembekuan belanja darurat melalui parlemen jika tidak ada kesepakatan multitahun hingga akhir tahun",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Diagnostik efisiensi belanja publik dan otomatisasi proses",
+"why": "Tekanan penyesuaian €10 miliar meningkatkan kebutuhan efisiensi administrasi.",
+"target": "Layanan publik federal (SPF/FOD) dan pemerintah regional"
+},
+{
+"title": "Dukungan pengadaan dan kebijakan UE bagi perusahaan Korea (hub Brussel)",
+"why": "Informasi pengadaan dan regulasi lembaga UE terkonsentrasi di Brussel.",
+"target": "UKM dan perusahaan menengah Korea"
+},
+{
+"title": "Pilot AI untuk dokumen dan penanganan kasus di badan publik",
+"why": "Layanan harus dipertahankan tanpa penambahan pegawai (perkiraan).",
+"target": "Badan publik federal dan regional"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Belgia (Brussel)",
+"detail": "Mendukung riset pasar Belgia/UE serta pencarian pembeli dan mitra."
+},
+{
+"title": "Export Voucher programme",
+"detail": "Menanggung biaya sertifikasi UE, pemasaran, dan konsultasi melalui voucher."
+}
+]
+}

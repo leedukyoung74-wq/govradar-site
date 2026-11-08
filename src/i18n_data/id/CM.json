@@ -1,0 +1,75 @@
+{
+"summary": "Anggaran 2026 naik 14% menjadi CFAF 8.816,4 miliar, memadukan konsolidasi fiskal dengan pelaksanaan SND30 di tengah peringkat risiko gagal bayar utang yang tinggi. Presiden kembali pada Agustus setelah sekitar sepuluh minggu di luar negeri, tetapi hingga Oktober belum ada kabinet baru yang diumumkan.",
+"leader": "Presiden Paul Biya (dilantik untuk periode kedelapan pada November 2025); Perdana Menteri Joseph Dion Ngute",
+"agenda": [
+"Melaksanakan strategi pembangunan nasional SND30 (2020-2030)",
+"Konsolidasi fiskal sejalan dengan kriteria konvergensi CEMAC",
+"Pemberdayaan ekonomi perempuan dan lapangan kerja pemuda (dana khusus CFAF 50 miliar)",
+"Perluasan jaringan listrik dan interkoneksi regional seperti dengan Chad",
+"Transformasi digital (PATNuC) dan e-government",
+"Keamanan di wilayah Anglofon Barat Laut/Barat Daya dan Ujung Utara"
+],
+"projects": [
+{
+"title": "Interkoneksi listrik Kamerun-Chad, tahap 1",
+"detail": "Jaringan 225 kV sepanjang 426 km, gardu induk baru Garoua II; target transfer 100 MW",
+"status": "Proses tender"
+},
+{
+"title": "Dana khusus pemberdayaan perempuan dan lapangan kerja pemuda",
+"detail": "Dibentuk dalam rekening khusus 2026 menindaklanjuti komitmen presiden",
+"status": "Berjalan"
+},
+{
+"title": "Project to Accelerate Digital Transformation (PATNuC)",
+"detail": "Didukung Bank Dunia; mencakup kerangka keamanan siber pemerintah, tanda tangan elektronik, dan PKI",
+"status": "Berjalan"
+},
+{
+"title": "SMART CAMPUS administrasi publik (fasilitas pelatihan e-government)",
+"detail": "Didanai KOICA; empat gedung auditorium/pameran untuk sekolah aparatur sipil",
+"status": "Berjalan"
+},
+{
+"title": "Program pembukaan dan konektivitas kawasan ekonomi lintas batas, tahap 1",
+"detail": "Rehabilitasi jalan yang didukung AfDB; konsultan supervisi sedang dicari",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Program pelatihan keterampilan digital aparatur sipil dan e-government",
+"why": "Setelah SMART CAMPUS KOICA selesai dibangun, diperlukan konten pelatihan untuk menjalankannya.",
+"target": "Kementerian Aparatur Sipil, ENAM, ISMP"
+},
+{
+"title": "Konsultasi manajemen program untuk dana khusus pemuda dan perempuan",
+"why": "Dana baru CFAF 50 miliar memerlukan sistem penyaluran dan pemantauan hasil.",
+"target": "Kementerian Keuangan, Kementerian UKM (MINPMEESA)"
+},
+{
+"title": "Konsorsium PMC/supervisi untuk pekerjaan transmisi",
+"why": "Setelah tenggat penawaran November, pekerjaan selama 34 bulan akan memerlukan supervisi.",
+"target": "Sonatrel, Kementerian Air dan Energi"
+},
+{
+"title": "Penilaian keamanan siber sektor publik dan pilot otomatisasi administrasi berbasis AI",
+"why": "PATNuC sedang membangun keamanan siber dan PKI pemerintah.",
+"target": "Kementerian Pos dan Telekomunikasi, ANTIC"
+}
+],
+"krsupport": [
+{
+"title": "Program e-government KOICA di Kamerun",
+"detail": "Berdasarkan perjanjian senilai CFAF 23 miliar yang ditandatangani pada 2024, KOICA melaksanakan pekerjaan e-government termasuk SMART CAMPUS aparatur sipil."
+},
+{
+"title": "Export Voucher",
+"detail": "Menanggung biaya riset pasar, penerjemahan, dan pemasaran lokal untuk Afrika Tengah berbahasa Prancis."
+},
+{
+"title": "Riset pasar luar negeri dan pencocokan pembeli",
+"detail": "Periksa apakah ada kantor di Kamerun dan ajukan melalui kantor dagang terdekat (perkiraan)."
+}
+]
+}

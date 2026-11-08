@@ -1,0 +1,80 @@
+{
+"summary": "Ngày 13/10/2026, Hội đồng Bộ trưởng Mozambique đã thông qua Kế hoạch Kinh tế - Xã hội và Ngân sách Nhà nước năm 2027 (PESOE, 511,2 tỷ MZN), cắt giảm chi tiêu khoảng 1,8% so với năm 2026, và trình lên Quốc hội. Tăng trưởng năm 2027 dự báo chỉ đạt 1,6%, nhưng chính phủ kỳ vọng đạt 9,5% vào năm 2029 nếu các dự án khí đốt được triển khai.",
+"leader": "Tổng thống Daniel Chapo (từ tháng 1/2025) / Thủ tướng Maria Benvinda Levi",
+"agenda": [
+"Ổn định kinh tế vĩ mô và kỷ luật tài khóa (thâm hụt năm 2027 là 4,6% GDP, vay trong nước giới hạn ở mức 1,9%)",
+"Tăng sản xuất trong nước, đa dạng hóa và chế biến khoáng sản tại chỗ",
+"Tài chính cho SME qua Quỹ Phát triển Kinh tế Địa phương (FDEL) và PRO-MULHER",
+"Ra mắt Ngân hàng Phát triển Mozambique (BDM) vào năm 2027 cho năng lượng, nông nghiệp, công nghiệp và du lịch",
+"Hợp đồng hiệu quả công vụ, chống tham nhũng và xử lý cứng rắn buôn bán ma túy",
+"Mở rộng các dự án khí đốt Cabo Delgado và khôi phục an ninh"
+],
+"projects": [
+{
+"title": "Kế hoạch Kinh tế - Xã hội và Ngân sách Nhà nước năm 2027 (PESOE)",
+"detail": "Thu 427,8 tỷ MZN (23,5% GDP), thâm hụt khoảng 83 tỷ MZN, đầu tư 79,6 tỷ MZN; đang chờ Quốc hội xem xét",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Ngân hàng Phát triển Mozambique (BDM)",
+"detail": "Bắt đầu hoạt động năm 2027, tập trung vào năng lượng, nông nghiệp, công nghiệp và du lịch",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Quỹ FDEL và PRO-MULHER",
+"detail": "Cấp vốn cho SME địa phương và doanh nhân nữ",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Thiết kế và thi công Hành lang N1 Chimuara-Nicoadala Gói 1 (0-88 km)",
+"detail": "Chương trình Đường bộ An toàn hơn của Ngân hàng Thế giới, tỉnh Zambezia",
+"status": "Đang đấu thầu"
+},
+{
+"title": "LNG lưu vực Rovuma",
+"detail": "Nhà máy nổi đã xuất khẩu; dự án Rovuma LNG do ExxonMobil dẫn dắt đang được lên kế hoạch; dự kiến thu khoảng 3,07 tỷ MZN từ LNG năm 2027",
+"status": "Đang triển khai"
+},
+{
+"title": "Các cam kết tại hội nghị khoáng sản Nacala",
+"detail": "Khoảng 4,2 tỷ USD được cam kết vào tháng 10/2026; Tổng thống hứa sẽ rà soát việc thực hiện",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn đánh giá năng lực và chuẩn bị chứng nhận cho SME địa phương cung ứng cho dự án khí đốt",
+"why": "Thống đốc Cabo Delgado đang yêu cầu các siêu dự án xây dựng quan hệ lâu dài với doanh nghiệp địa phương.",
+"target": "SME địa phương, nhà vận hành dự án khí đốt"
+},
+{
+"title": "Hệ thống số thẩm định và giám sát khoản vay cho BDM và FDEL",
+"why": "Một ngân hàng chính sách mới và quỹ SME bắt đầu hoạt động năm 2027.",
+"target": "Bộ Kinh tế và Tài chính, BDM"
+},
+{
+"title": "Bộ công cụ và đào tạo cấu trúc PPP quy mô nhỏ cho lĩnh vực chất thải và nước",
+"why": "Enabel đã mời thầu bộ công cụ PPP chất thải quy mô nhỏ và hỗ trợ pháp lý.",
+"target": "Chính quyền đô thị, Bộ Công chính"
+},
+{
+"title": "Bảng điều khiển giám sát hợp đồng hiệu quả công vụ",
+"why": "Chính phủ cho biết sẽ kiểm tra kết quả hợp đồng hiệu quả (19/10/2026).",
+"target": "Văn phòng Thủ tướng, Bộ Hành chính Nhà nước"
+}
+],
+"krsupport": [
+{
+"title": "Dự án KOICA-UNDP về khả năng chống chịu thiên tai và gắn kết xã hội",
+"detail": "KOICA tài trợ 6,5 triệu USD cho cảnh báo sớm và sinh kế tại năm tỉnh, bao gồm Cabo Delgado, kéo dài đến tháng 3/2028."
+},
+{
+"title": "Trung tâm AI Hàn Quốc - châu Phi và Gói K-AI",
+"detail": "Khung hợp tác về AI, trung tâm dữ liệu và điện năng gắn với EDCF được giới thiệu tại KOAFEC 2026."
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường châu Phi của KOTRA",
+"detail": "Nghiên cứu thị trường và kết nối người mua thông qua văn phòng thương mại phụ trách (văn phòng phụ trách Mozambique vẫn cần được xác nhận)."
+}
+]
+}

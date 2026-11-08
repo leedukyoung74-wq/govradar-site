@@ -1,0 +1,74 @@
+{
+"summary": "Chính phủ Marcos đã đề xuất ngân sách năm 2027 trị giá 7,2 nghìn tỷ P nhằm phục hồi tăng trưởng bị chững lại bởi bê bối tham nhũng trong các dự án chống lũ, tăng chi cho công trình công cộng trong khi cắt giảm giáo dục và y tế. Hạ viện đã thông qua và Thượng viện đang xem xét, trong khi phiên tòa luận tội Phó Tổng thống Sara Duterte (bắt đầu từ tháng 7) và hội nghị thượng đỉnh ASEAN tháng 11 tại Manila chi phối lịch trình chính trị.",
+"leader": "Tổng thống Ferdinand Marcos Jr. (nguyên thủ quốc gia và người đứng đầu chính phủ)",
+"agenda": [
+"Phục hồi kinh tế và bình thường hóa chi tiêu hạ tầng (mục tiêu tăng trưởng 5–6% giai đoạn 2027–2030)",
+"Điều tra tham nhũng trong dự án chống lũ và tăng cường minh bạch ngân sách",
+"Chủ tịch ASEAN năm 2026 (hội nghị thượng đỉnh tháng 11 tại Manila)",
+"Số hóa dịch vụ chính phủ nhằm cải thiện môi trường kinh doanh và hạn chế tham nhũng",
+"Ứng phó giá năng lượng và ổn định chi phí sinh hoạt"
+],
+"projects": [
+{
+"title": "Chương trình Chi tiêu Quốc gia 2027 (NEP)",
+"detail": "7,2 nghìn tỷ P (khoảng 118 tỷ USD, 21,7% GDP), tăng 6% so với năm 2026; ngân sách năm 2026 sẽ được tái áp dụng nếu không được thông qua trước cuối năm",
+"status": "Đang được Thượng viện xem xét"
+},
+{
+"title": "Ngân sách DPWH",
+"detail": "Được khôi phục với mức tăng 22% sau khi bị cắt khoảng 40% năm 2026 giữa các cáo buộc tham nhũng",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Ngân sách giáo dục và y tế",
+"detail": "Giáo dục 1,15 nghìn tỷ P (giảm 11,5%), y tế 353,8 tỷ P (giảm 21%), gây chỉ trích về việc cắt giảm dịch vụ xã hội",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Trung tâm sản xuất New Clark City",
+"detail": "1.620 ha tại Tarlac được chỉ định làm trung tâm chuỗi cung ứng bán dẫn và đất hiếm theo sáng kiến Pax Silica do Hoa Kỳ dẫn dắt",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Cầu nối đảo Panay-Guimaras-Negros",
+"detail": "Dự án cầu liên đảo được tài trợ bằng khoản vay EDCF 56,6 triệu USD của Korea Eximbank",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Bảng điều khiển giám sát tiến độ và chi tiêu cho các dự án hạ tầng",
+"why": "Nhu cầu minh bạch trong công trình công cộng tăng sau bê bối chống lũ, và ngân sách DPWH đã được khôi phục.",
+"target": "DPWH, Ủy ban Kiểm toán, chính quyền địa phương"
+},
+{
+"title": "Chatbot AI và tự động hóa quy trình cho cấp phép và dịch vụ công dân của LGU",
+"why": "Tổng thống đang thúc đẩy dịch vụ chính phủ số như một công cụ chống tham nhũng.",
+"target": "Các đơn vị chính quyền địa phương (LGU), DICT"
+},
+{
+"title": "Tư vấn khả thi và địa điểm cho SME sản xuất Hàn Quốc vào New Clark City",
+"why": "Địa điểm trung tâm chuỗi cung ứng bán dẫn và đất hiếm đã được chỉ định và việc tuyển chọn nhà cung cấp đang bắt đầu.",
+"target": "BCDA, SME linh kiện và vật liệu Hàn Quốc"
+},
+{
+"title": "Công cụ học tập số chi phí thấp và tự động hóa quản lý trường học",
+"why": "Việc cắt giảm 11,5% ngân sách giáo dục tạo ra nhu cầu về công cụ nâng cao hiệu quả (ước tính).",
+"target": "DepEd, trường tư thục"
+}
+],
+"krsupport": [
+{
+"title": "Khoản vay hạ tầng EDCF cho Philippines",
+"detail": "Các khoản vay EDCF tài trợ cầu và hạ tầng khác như cầu Panay-Guimaras-Negros, mở ra cơ hội thiết kế và giám sát."
+},
+{
+"title": "Các chương trình của KOICA tại Philippines",
+"detail": "Philippines là đối tác lớn của KOICA hơn 30 năm qua trong lĩnh vực nông nghiệp, giáo dục và y tế."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả nghiên cứu thị trường, chứng nhận và tiếp thị tại địa phương để thâm nhập Philippines."
+}
+]
+}

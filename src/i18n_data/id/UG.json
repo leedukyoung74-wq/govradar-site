@@ -1,0 +1,80 @@
+{
+"summary": "Setelah pemerintahan 2026-2031 mulai menjabat, Uganda menjalankan Ten-Fold Growth Strategy dan memulai produksi minyak dengan anggaran TA2026/27 sebesar UGX 84.3 triliun, dengan perkiraan pertumbuhan 10.2%. Tender proyek digital (UDAP-GovNet) dan jaringan listrik yang didanai Bank Dunia sedang aktif.",
+"leader": "Presiden Yoweri Museveni (dilantik untuk masa jabatan ketujuh, Mei 2026) / Perdana Menteri Robinah Nabbanja (dipertahankan)",
+"agenda": [
+"Ten-Fold Growth Strategy: agroindustrialisasi, pariwisata, mineral, dan sains (ATMS)",
+"Dimulainya produksi minyak dan perkiraan pertumbuhan 10.2% pada TA2026/27",
+"Meningkatkan pendapatan rumah tangga melalui program Wealth Creation",
+"Mobilisasi pendapatan domestik melalui kebijakan pajak baru",
+"Investasi irigasi, pertanian komersial, dan pengolahan hasil pertanian",
+"Mempertahankan layanan kesehatan di tengah penurunan bantuan"
+],
+"projects": [
+{
+"title": "Anggaran nasional TA2026/27",
+"detail": "Disampaikan pada 11 Jun 2026 oleh Menteri Keuangan Musasizi untuk mempercepat Ten-Fold Growth Strategy",
+"status": "Berjalan"
+},
+{
+"title": "Program Agroindustrialisasi",
+"detail": "Alokasi terbesar sepanjang sejarah",
+"status": "Berjalan"
+},
+{
+"title": "Program Wealth Creation",
+"detail": "Dukungan pendapatan rumah tangga",
+"status": "Berjalan"
+},
+{
+"title": "Uganda Digital Acceleration Project (UDAP-GovNet)",
+"detail": "Dibiayai Bank Dunia; tender Wi-Fi di kantor pemerintah dan wilayah penampungan pengungsi serta solusi kesehatan digital bagi pengungsi",
+"status": "Dalam tender"
+},
+{
+"title": "Pekerjaan pemasangan jaringan listrik (Batch 2, Lot 9-11)",
+"detail": "Pekerjaan akses listrik yang didanai Bank Dunia",
+"status": "Dalam tender"
+},
+{
+"title": "Anggaran sektor kesehatan",
+"detail": "Dikurangi dari tahun lalu seiring penurunan bantuan luar negeri",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Perancangan dan penyelenggaraan program pelatihan keterampilan digital publik",
+"why": "Konsultan yang didanai Bank Dunia untuk program keterampilan digital nasional sedang dipilih saat ini.",
+"target": "NITA-U, Kementerian TIK"
+},
+{
+"title": "SaaS produksi dan inventaris serta konsultasi operasional bagi koperasi pengolahan hasil pertanian",
+"why": "Agroindustrialisasi mendapat anggaran terbesar sepanjang sejarah dan Presiden mendorong investasi pengolahan.",
+"target": "Koperasi petani, pengolah, Kementerian Pertanian"
+},
+{
+"title": "Sistem pemantauan kinerja berbasis seluler bagi penerima program Wealth Creation",
+"why": "Program senilai UGX 11 triliun memerlukan pelacakan hasil.",
+"target": "Pemerintah daerah, lembaga pelaksana"
+},
+{
+"title": "Otomatisasi pelaporan pajak dan chatbot layanan bantuan berbasis AI",
+"why": "Kebijakan pajak baru meningkatkan kebutuhan layanan wajib pajak dan efisiensi pemungutan.",
+"target": "Uganda Revenue Authority (URA)"
+}
+],
+"krsupport": [
+{
+"title": "Pembicaraan kerja sama EDCF Korea Eximbank",
+"detail": "Selama KOAFEC pada Sep 2026, bank tersebut membahas proyek EDCF dan partisipasi perusahaan Korea dengan menteri keuangan Uganda."
+},
+{
+"title": "Korea-Africa AI Hub dan K-AI Package",
+"detail": "Solusi AI, pusat data, dan proyek ketenagalistrikan yang terkait EDCF dipromosikan di seluruh Afrika."
+},
+{
+"title": "Program negara KOICA untuk Uganda",
+"detail": "Proyek bantuan hibah dan peluang kemitraan melalui kantor Uganda."
+}
+]
+}

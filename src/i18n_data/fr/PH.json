@@ -1,0 +1,74 @@
+{
+"summary": "Le gouvernement Marcos a proposé un budget 2027 de 7 200 milliards de P pour relancer une croissance freinée par le scandale de corruption lié aux ouvrages de protection contre les inondations, en augmentant les dépenses de travaux publics tout en réduisant celles de l'éducation et de la santé. La Chambre l'a adopté et le Sénat l'examine, tandis que le procès en destitution de la vice-présidente Sara Duterte (ouvert en juillet) et le sommet de l'ASEAN de novembre à Manille dominent le calendrier politique.",
+"leader": "Président Ferdinand Marcos Jr. (chef de l'État et du gouvernement)",
+"agenda": [
+"Relance économique et normalisation des dépenses d'infrastructures (objectif de croissance de 5–6 % pour 2027–2030)",
+"Enquête sur la corruption dans les ouvrages anti-inondations et transparence budgétaire accrue",
+"Présidence de l'ASEAN en 2026 (sommet de novembre à Manille)",
+"Numérisation des services publics pour améliorer le climat des affaires et lutter contre la corruption",
+"Réponse aux prix de l'énergie et stabilité du coût de la vie"
+],
+"projects": [
+{
+"title": "National Expenditure Program (NEP) 2027",
+"detail": "7 200 milliards de P (environ 118 Md USD, 21,7 % du PIB), en hausse de 6 % par rapport à 2026 ; le budget 2026 est reconduit s'il n'est pas adopté d'ici la fin de l'année",
+"status": "En cours d'examen au Sénat"
+},
+{
+"title": "Budget du DPWH",
+"detail": "Rétabli avec une hausse de 22 % après une baisse d'environ 40 % en 2026 sur fond d'accusations de corruption",
+"status": "Prévu"
+},
+{
+"title": "Budgets de l'éducation et de la santé",
+"detail": "Éducation 1 150 milliards de P (en baisse de 11,5 %), santé 353,8 milliards de P (en baisse de 21 %), suscitant des critiques sur les coupes dans les services sociaux",
+"status": "Prévu"
+},
+{
+"title": "Pôle manufacturier de New Clark City",
+"detail": "1 620 ha à Tarlac désignés comme pôle de la chaîne d'approvisionnement des semi-conducteurs et des terres rares dans le cadre de l'initiative Pax Silica menée par les États-Unis",
+"status": "Prévu"
+},
+{
+"title": "Ponts insulaires Panay-Guimaras-Negros",
+"detail": "Projet de ponts inter-îles financé par un prêt EDCF de 56,6 M USD de Korea Eximbank",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Tableaux de bord de suivi de l'avancement et des dépenses des projets d'infrastructures",
+"why": "La demande de transparence dans les travaux publics a augmenté après le scandale des ouvrages anti-inondations, et le budget du DPWH a été rétabli.",
+"target": "DPWH, Commission on Audit, collectivités locales"
+},
+{
+"title": "Chatbots IA et automatisation des processus pour les permis et services aux citoyens des LGU",
+"why": "Le Président promeut les services publics numériques comme outil de lutte contre la corruption.",
+"target": "Unités de gouvernement local, DICT"
+},
+{
+"title": "Conseil en faisabilité et en implantation pour les PME manufacturières coréennes s'installant à New Clark City",
+"why": "Un site de pôle de la chaîne d'approvisionnement des semi-conducteurs et des terres rares a été désigné et le recrutement des fournisseurs commence.",
+"target": "BCDA, PME coréennes de pièces et de matériaux"
+},
+{
+"title": "Outils d'apprentissage numérique à bas coût et d'automatisation de l'administration scolaire",
+"why": "Une baisse de 11,5 % du budget de l'éducation crée une demande d'outils d'efficacité (estimation).",
+"target": "DepEd, écoles privées"
+}
+],
+"krsupport": [
+{
+"title": "Prêts EDCF pour les infrastructures aux Philippines",
+"detail": "Les prêts EDCF financent des ponts et d'autres infrastructures comme les ponts Panay-Guimaras-Negros, ouvrant des opportunités de conception et de supervision."
+},
+{
+"title": "Programmes de la KOICA aux Philippines",
+"detail": "Les Philippines sont un partenaire majeur de la KOICA depuis plus de 30 ans dans l'agriculture, l'éducation et la santé."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent les études de marché, la certification et le marketing local pour entrer sur le marché philippin."
+}
+]
+}

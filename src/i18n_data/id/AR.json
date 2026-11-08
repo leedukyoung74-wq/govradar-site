@@ -1,0 +1,74 @@
+{
+"summary": "Pemerintahan Milei mengajukan anggaran 2027 pada 15 September 2026 dengan asumsi pertumbuhan 4%, inflasi 18%, dan surplus fiskal keempat berturut-turut. Pemerintah mengesahkan reformasi ketenagakerjaan dan meratifikasi perjanjian EU-Mercosur pada awal 2026, serta tengah menjalankan reformasi pajak dan deregulasi.",
+"leader": "Presiden Javier Milei / Kepala Kabinet Diego Santilli (sejak akhir Juni 2026)",
+"agenda": [
+"Mempertahankan surplus fiskal (keseimbangan primer 2027 sebesar 1,3% PDB)",
+"Menurunkan inflasi (target 18% untuk 2027)",
+"Reformasi pajak dan deregulasi",
+"Implementasi reformasi ketenagakerjaan (disahkan Feb 2026)",
+"Keterbukaan perdagangan (EU-Mercosur, perjanjian dagang dengan AS) dan menarik investasi besar (RIGI)"
+],
+"projects": [
+{
+"title": "RUU anggaran 2027",
+"detail": "Memproyeksikan pertumbuhan 4%, inflasi 18%, surplus primer 1,3% PDB, surplus keseluruhan 0,2%, dan ekspor di atas USD 130 miliar",
+"status": "Dalam pembahasan kongres"
+},
+{
+"title": "UU reformasi pasar tenaga kerja",
+"detail": "Jam kerja fleksibel (hingga 12 jam sehari dengan kompensasi), pembatasan mogok di infrastruktur kritis, biaya pesangon yang lebih dapat diprediksi",
+"status": "Selesai (diundangkan)"
+},
+{
+"title": "Ratifikasi perjanjian EU-Mercosur",
+"detail": "Senat meratifikasi pada 2026-02-26; UE mengumumkan penerapan sementara keesokan harinya",
+"status": "Berjalan"
+},
+{
+"title": "Paket reformasi pajak dan deregulasi",
+"detail": "Reformasi pajak, regulasi, dan pendidikan termasuk di antara 90 langkah yang diumumkan dalam pidato di Kongres bulan Maret",
+"status": "Direncanakan"
+},
+{
+"title": "Modernisasi jalur kereta Mitre Buenos Aires (Bank Dunia)",
+"detail": "Peningkatan kereta komuter termasuk pekerjaan gardu induk Jalur Mitre",
+"status": "Proses tender"
+}
+],
+"biz": [
+{
+"title": "Solusi AI untuk otomatisasi dan penyederhanaan alur kerja sektor publik",
+"why": "Deregulasi dan perampingan negara yang berlangsung menuntut administrasi berjalan dengan pegawai yang lebih sedikit.",
+"target": "Kementerian Ekonomi, Kementerian Deregulasi, pemerintah provinsi"
+},
+{
+"title": "Konsultasi tata kelola BUMN dan kesiapan privatisasi",
+"why": "SIGEN menjalankan program tata kelola BUMN, menunjukkan kebutuhan perbaikan yang besar.",
+"target": "BUMN, SIGEN"
+},
+{
+"title": "Dukungan masuk pasar Argentina dan Mercosur bagi UKM Korea",
+"why": "Keterbukaan perdagangan dan melambatnya inflasi memperluas pasar impor (perkiraan).",
+"target": "UKM Korea yang membidik Amerika Latin"
+},
+{
+"title": "Pencocokan rantai pasok lokal bagi investor pertambangan dan energi RIGI",
+"why": "Proyek insentif investasi besar (RIGI) sedang berjalan di sektor litium dan energi (perkiraan).",
+"target": "Investor yang disetujui RIGI"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Buenos Aires",
+"detail": "Mendukung informasi pasar, pencarian pembeli, dan panduan aturan impor."
+},
+{
+"title": "Export Voucher",
+"detail": "Voucher menanggung biaya sertifikasi lokal, penerjemahan, dan konsultasi."
+},
+{
+"title": "Dukungan investasi infrastruktur luar negeri",
+"detail": "Mendukung studi kelayakan dan investasi pada proyek infrastruktur kereta dan energi."
+}
+]
+}

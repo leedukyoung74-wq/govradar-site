@@ -1,0 +1,76 @@
+{
+"summary": "Brunei diversifie son économie au-delà du pétrole et du gaz dans le cadre de Wawasan Brunei 2035 ; le secteur non pétrolier représente désormais 54 % du PIB et 60 % des exportations. Le 2026-10-26, le ministre de l'Économie s'est engagé à transformer 27 projets d'investissement d'environ 6 milliards USD en emplois et en exportations.",
+"leader": "Sultan Hassanal Bolkiah (également Premier ministre)",
+"agenda": [
+"Diversification économique dans le cadre de Wawasan Brunei 2035",
+"Pétrochimie aval (phase 2 de Hengyi) et industrie manufacturière avancée",
+"Agroalimentaire, pêche et sécurité alimentaire (Brunei-Singapore Agri-Tech Food Zone)",
+"Télécommunications, industries numériques et créatives ; transport et logistique",
+"Part de 30 % des renouvelables dans la capacité installée d'ici 2035",
+"Formation professionnelle adaptée aux besoins des employeurs"
+],
+"projects": [
+{
+"title": "Budget de développement 2026/2027",
+"detail": "3e année du 12e Plan national de développement (RKN12), réparti entre durabilité sociale, innovation économique et stabilité budgétaire",
+"status": "En cours"
+},
+{
+"title": "Extension de Hengyi, phase 2",
+"detail": "Extension pétrochimique dont la mise en service est visée pour 2029",
+"status": "Prévu"
+},
+{
+"title": "Extension du port de Muara",
+"detail": "Capacité conteneurs portée de 220 000 à 500 000 EVP (objectif 2027)",
+"status": "En cours"
+},
+{
+"title": "Projets d'investissement suivis par le BEDB",
+"detail": "27 projets en exploitation en août 2026 employant plus de 2 000 locaux ; les projets en cours devraient créer plus de 2 900 emplois supplémentaires",
+"status": "En cours"
+},
+{
+"title": "Brunei-Singapore Agri-Tech Food Zone",
+"detail": "Étude de faisabilité conjointe en cours",
+"status": "Étude de faisabilité"
+},
+{
+"title": "Projets de plateformes numériques",
+"detail": "Plateforme nationale de services aux entreprises, phase 2 du réseau scolaire, système de transport intelligent (inscrits au budget de développement)",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Programmes de formation professionnelle et de mise en relation pour l'embauche liés aux projets d'investissement",
+"why": "Le gouvernement a insisté sur la transformation des investissements en emplois et sur une formation adaptée aux besoins des employeurs.",
+"target": "Ministère de l'Économie, du Commerce et de l'Industrie ; BEDB ; autorités du travail"
+},
+{
+"title": "Surveillance environnementale par IoT et IA pour les fermes intelligentes et l'aquaculture",
+"why": "L'agroalimentaire et la pêche sont des secteurs prioritaires et des projets aquacoles figurent au budget de développement.",
+"target": "Services de l'agriculture et de la pêche, entreprises aquacoles"
+},
+{
+"title": "Conseil en automatisation des processus de licences et d'immatriculation des entreprises",
+"why": "Une plateforme nationale de services aux entreprises est inscrite au budget de développement.",
+"target": "Ministère des Finances et de l'Économie ; ministère de l'Économie, du Commerce et de l'Industrie"
+},
+{
+"title": "Conseil en exportation régionale et en expansion internationale pour les PME locales",
+"why": "Le gouvernement a mis en avant la croissance des PME dans les services et la logistique via le BIMP-EAGA.",
+"target": "PME brunéiennes, agences de soutien aux PME"
+}
+],
+"krsupport": [
+{
+"title": "Réseau des bureaux commerciaux KOTRA en Asie du Sud-Est",
+"detail": "Les informations sur le marché brunéien et la recherche d'acheteurs peuvent être demandées via les bureaux voisins d'Asie du Sud-Est (l'existence d'un bureau local reste à vérifier)."
+},
+{
+"title": "Services à l'étranger de l'Export Voucher",
+"detail": "Les frais d'étude de marché et de recherche de partenaires locaux pour Brunei peuvent être couverts par des bons."
+}
+]
+}

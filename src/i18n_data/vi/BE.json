@@ -1,0 +1,55 @@
+{
+"summary": "Chính phủ liên bang Bỉ đang đàm phán ngân sách nhiều năm nhằm điều chỉnh khoảng 10 tỷ € đến năm 2029 nhưng chưa đạt được thỏa thuận vào cuối tháng 10, và hiện đang cố gắng thống nhất trước một gói khoảng 3-4 tỷ € cho năm 2027.",
+"leader": "Vua Philippe; Thủ tướng Bart De Wever (N-VA, liên minh năm đảng 'Arizona')",
+"agenda": [
+"Củng cố tài khóa: điều chỉnh khoảng 10 tỷ € đến năm 2029, kiềm chế chi phí lãi vay",
+"Thông qua ngân sách 2027 đúng hạn (tránh cơ chế chi tạm thời theo phần mười hai)",
+"Xem xét cơ chế phanh nợ (đóng băng chi tiêu khẩn cấp)",
+"Thay đổi thuế (bỏ tăng VAT; thu nhập cho thuê và công ty quản lý)",
+"Kiểm soát chi tiêu y tế"
+],
+"projects": [
+{
+"title": "Gói ngân sách liên bang 2027",
+"detail": "Sau khi thất bại với thỏa thuận nhiều năm, chính phủ theo đuổi khối tiết kiệm đầu tiên cho năm 2027; mục tiêu trình Quốc hội vào đầu tháng 11",
+"status": "Đang đàm phán"
+},
+{
+"title": "Điều chỉnh tài khóa nhiều năm (đến năm 2029)",
+"detail": "Đáp ứng quy tắc tài khóa của EU và cắt giảm thâm hụt (5,2% GDP năm 2025)",
+"status": "Đang đàm phán"
+},
+{
+"title": "Luật phanh nợ",
+"detail": "Đóng băng chi tiêu khẩn cấp thông qua Quốc hội nếu không có thỏa thuận nhiều năm trước cuối năm",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Chẩn đoán hiệu quả chi tiêu công và tự động hóa quy trình",
+"why": "Áp lực điều chỉnh 10 tỷ € làm tăng nhu cầu nâng cao hiệu quả hành chính.",
+"target": "Các cơ quan công vụ liên bang (SPF/FOD) và chính quyền vùng"
+},
+{
+"title": "Hỗ trợ doanh nghiệp Hàn Quốc về mua sắm và chính sách EU (trung tâm Brussels)",
+"why": "Thông tin mua sắm của các thể chế EU và thông tin quy định tập trung tại Brussels.",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc"
+},
+{
+"title": "Thí điểm AI xử lý văn bản và hồ sơ cho cơ quan công",
+"why": "Dịch vụ phải được duy trì mà không tăng nhân sự (ước tính).",
+"target": "Cơ quan công cấp liên bang và cấp vùng"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Bỉ (Brussels)",
+"detail": "Hỗ trợ nghiên cứu thị trường Bỉ/EU và tìm kiếm người mua, đối tác."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí chứng nhận EU, tiếp thị và tư vấn thông qua phiếu hỗ trợ."
+}
+]
+}

@@ -1,0 +1,74 @@
+{
+"summary": "Le gouvernement Takaichi a opté pour la continuité politique lors de son remaniement de septembre et a mis l'accent sur la croissance lors de la session extraordinaire de la Diète en octobre. Les demandes budgétaires des ministères pour l'exercice 2027 atteignent un record de 143 trillions JPY, centrées sur l'IA et les puces, la sécurité économique, l'énergie/GX et la numérisation de la santé.",
+"leader": "Première ministre Sanae Takaichi (chef de l'État : l'empereur Naruhito)",
+"agenda": [
+"Cadre d'investissement « Japon fort et prospère » : investissements pluriannuels dans 17 domaines stratégiques, dont l'IA, les puces et la robotique",
+"Sécurité économique et base industrielle de défense",
+"Sécurité énergétique et transformation verte (GX)",
+"Numérisation de la santé et de l'administration (IA, cybersécurité), standardisation des systèmes des collectivités locales",
+"Lutte contre la faible natalité et hausse des salaires réels"
+],
+"projects": [
+{
+"title": "Demandes budgétaires de l'exercice 2027",
+"detail": "Quatrième record consécutif ; projet du gouvernement attendu en fin d'année après examen par le ministère des Finances",
+"status": "Prévu"
+},
+{
+"title": "Cadre d'investissement « Japon fort et prospère »",
+"detail": "Guichet spécial de demandes pour l'investissement stratégique pluriannuel ; environ 14,2 trillions JPY demandés pour l'ensemble du gouvernement",
+"status": "Prévu"
+},
+{
+"title": "Budget du METI pour l'IA, les semi-conducteurs et la robotique",
+"detail": "Sur la demande de 7,79 trillions JPY du METI pour l'exercice 2027 : environ 1,99 trillion JPY pour l'IA/les puces/la robotique, 1,55 trillion pour la sécurité économique et l'industrie de défense, 1,98 trillion pour la GX",
+"status": "Prévu"
+},
+{
+"title": "DX, IA et cybersécurité dans la santé",
+"detail": "La demande de 36,58 trillions JPY du MHLW pour l'exercice 2027 donne la priorité à la découverte de médicaments, à l'approvisionnement en médicaments et à la DX médicale",
+"status": "Prévu"
+},
+{
+"title": "180 trillions JPY de R&D public-privé",
+"detail": "Objectif de la stratégie de croissance de juillet 2026 pour les exercices 2026-2030",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "PoC d'automatisation des processus par agents IA pour les collectivités locales japonaises (avec des intégrateurs locaux)",
+"why": "L'Agence du numérique a lancé une série d'appels d'offres sur l'utilisation d'agents IA et l'achat de SaaS locaux.",
+"target": "Collectivités locales ; intégrateurs de systèmes japonais"
+},
+{
+"title": "Conseil en mise en relation avec des acheteurs et en localisation pour les PME coréennes de biens de consommation",
+"why": "KOTRA a désigné le Japon comme marché prioritaire pour les primo-exportateurs et mène actuellement des rencontres d'affaires.",
+"target": "PME coréennes de l'alimentation et des cosmétiques ; importateurs et distributeurs japonais"
+},
+{
+"title": "Conseil en productivité par l'IA générative pour les PME japonaises",
+"why": "La pression salariale et les pénuries de main-d'œuvre poussent à améliorer la productivité (estimation).",
+"target": "PME japonaises de l'industrie et des services"
+},
+{
+"title": "Coentreprises Corée-Japon dans les contenus et la food tech",
+"why": "Les contenus et la food tech figurent parmi les 17 domaines stratégiques.",
+"target": "Entreprises japonaises de contenus et de l'alimentation"
+}
+],
+"krsupport": [
+{
+"title": "Semaine 2026 « First Step to Exports » (le Japon parmi quatre marchés prioritaires)",
+"detail": "Rendez-vous en visioconférence avec des acheteurs japonais et soutien logistique pour les primo-exportateurs de biens de consommation."
+},
+{
+"title": "Cours d'entrée sur le marché de la KOTRA Academy Japon",
+"detail": "Formation pratique tout au long de l'année à l'entrée sur le marché japonais."
+},
+{
+"title": "Export voucher du MSS",
+"detail": "Bons pour le marketing à l'étranger, la traduction, la certification et d'autres services à l'export."
+}
+]
+}

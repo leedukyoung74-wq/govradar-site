@@ -1,0 +1,80 @@
+{
+"summary": "Dans le cadre d'un programme du FMI de 7 Md USD, le Pakistan a adopté un budget 2026-27 de 18 770 milliards de Rs qui concilie assainissement budgétaire et dépenses de développement. La réforme des entreprises publiques, les routes, les barrages et les infrastructures hydrauliques, ainsi qu'un plan d'investissement de 1 Md USD dans l'IA d'ici 2030, figurent parmi les priorités phares.",
+"leader": "Président Asif Ali Zardari / Premier ministre Shehbaz Sharif",
+"agenda": [
+"Respect du programme du FMI, mobilisation des recettes et maîtrise du déficit",
+"PSDP fédéral de 1 000 milliards de Rs pour les transports, l'énergie et l'eau",
+"IA et transformation numérique (1 Md USD d'ici 2030, formation à l'IA de 1 million de travailleurs hors IT)",
+"Réforme de la gouvernance des entreprises publiques et gestion de la dette",
+"CPEC 2.0 et développement de l'hydroélectricité, du solaire et de l'éolien",
+"Sécurité des frontières et lutte contre le terrorisme"
+],
+"projects": [
+{
+"title": "Budget fédéral 2026-27",
+"detail": "Objectif de croissance de 4 %, hypothèse d'inflation de 8,2 %, défense en hausse d'environ 18 %",
+"status": "En cours"
+},
+{
+"title": "Enveloppe nationale de développement (PSDP, etc.)",
+"detail": "PSDP fédéral 1 000 milliards de Rs, ADP provinciaux 2 224 milliards de Rs, entreprises publiques 451 milliards de Rs ; le CPEC 2.0 est le seul nouveau projet",
+"status": "En cours"
+},
+{
+"title": "Infrastructures de transport",
+"detail": "Autoroute N-25 100 milliards de Rs, M-6 Sukkur-Hyderabad 30 milliards de Rs, ligne ferroviaire ML-1 financée par la BAD",
+"status": "En cours"
+},
+{
+"title": "Infrastructures énergétiques et hydrauliques",
+"detail": "Barrages de Dasu, Tarbela et Diamer-Bhasha, neuf projets solaires/éoliens, adduction d'eau K-IV de Karachi 22 milliards de Rs",
+"status": "En cours"
+},
+{
+"title": "Plan d'investissement dans l'IA",
+"detail": "1 000 bourses de doctorat en IA et formation à l'IA de 1 million de travailleurs hors IT (annoncé en févr. 2026)",
+"status": "Prévu"
+},
+{
+"title": "Daanish IT Park (anciennement Islamabad IT Park)",
+"detail": "Construit avec le soutien du gouvernement coréen et de Korea Eximbank ; inauguré le 9 oct. 2026 en présence du Premier ministre pour développer les talents et les exportations dans l'IT",
+"status": "Achevé"
+}
+],
+"biz": [
+{
+"title": "Automatisation par IA du traitement des documents fiscaux et des services d'assistance aux contribuables",
+"why": "Les objectifs de recettes du FMI sont pressants et la Finance Division recherche des conseils fiscaux externes.",
+"target": "Finance Division, Federal Board of Revenue (FBR)"
+},
+{
+"title": "Gestion de la performance et diagnostics de gestion des entreprises publiques",
+"why": "La politique relative aux entreprises publiques a été modifiée en oct. 2026 et les rapports de performance semestriels sont désormais systématiques.",
+"target": "Central Monitoring Unit de la Finance Division, entreprises publiques fédérales"
+},
+{
+"title": "Formations pratiques à l'IA pour les fonctionnaires et les professionnels de l'IT",
+"why": "Le gouvernement s'est engagé à former à l'IA 1 million de travailleurs hors IT et un parc IT financé par la Corée vient d'ouvrir.",
+"target": "Ministère de l'IT, entreprises du Daanish IT Park, universités"
+},
+{
+"title": "Accompagnement à l'entrée sur le marché pour les biens de consommation et les PME coréens",
+"why": "Les négociations du CEPA Corée-Pakistan sont en cours et KOTRA promeut le commerce et l'investissement.",
+"target": "PME coréennes, importateurs et distributeurs pakistanais"
+}
+],
+"krsupport": [
+{
+"title": "Soutien à la construction du Daanish IT Park",
+"detail": "Le parc IT d'Islamabad a été construit grâce à un financement coréen et inauguré le 9 oct. 2026."
+},
+{
+"title": "Coopération au développement de la KOICA et du KOPIA",
+"detail": "Coopération en cours dans l'IT, la santé, l'agriculture et la sécurité alimentaire."
+},
+{
+"title": "Événement de collaboration industrielle de KOTRA à Karachi",
+"detail": "A organisé à Karachi (avr. 2025) un événement de collaboration industrielle Corée-Pakistan sur l'automobile, les dispositifs médicaux et l'IT."
+}
+]
+}

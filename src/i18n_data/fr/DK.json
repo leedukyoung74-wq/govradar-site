@@ -1,0 +1,66 @@
+{
+"summary": "Après les élections de mars 2026 et une négociation record de 69 jours, le troisième gouvernement Frederiksen, réunissant sociaux-démocrates, Gauche verte, Modérés et sociaux-libéraux, a pris ses fonctions en tant que coalition minoritaire. Le projet de loi de finances 2027 présenté le 9 octobre repose sur la sécurité, la protection sociale et la transition verte.",
+"leader": "Roi Frederik X / Première ministre Mette Frederiksen (sociaux-démocrates ; troisième coalition minoritaire de centre gauche, formée le 2026-06-03)",
+"agenda": [
+"Porter les dépenses de défense à 3,5 % du PIB d'ici 2030",
+"Protection sociale : écoles et crèches, soins dentaires gratuits pour les groupes vulnérables (tous les citoyens d'ici 2035), hausse des pensions des retraités aux revenus les plus faibles",
+"Transition verte : électrification, sortie des combustibles fossiles et autonomie énergétique",
+"Gratuité progressive des transports publics pour les moins de 22 ans",
+"Allègement fiscal de la tranche intermédiaire pour récompenser le travail supplémentaire",
+"Investissements et liens renforcés avec le Groenland"
+],
+"projects": [
+{
+"title": "Projet de loi de finances 2027 (Finanslovforslag 2027)",
+"detail": "Accent sur la sécurité, la protection sociale et la transition verte ; 1,2 Md DKK pour les écoles et les crèches en 2027",
+"status": "Prévu"
+},
+{
+"title": "Soutien à l'électrification et à la sortie des énergies fossiles",
+"detail": "650 M DKK en 2027 et 850 M DKK par an en 2028-2030",
+"status": "Prévu"
+},
+{
+"title": "Transports publics gratuits pour les jeunes",
+"detail": "Introduction progressive pour les moins de 22 ans",
+"status": "Prévu"
+},
+{
+"title": "Solution danoise de prescription vétérinaire (DVR)",
+"detail": "Système numérique partagé destiné à remplacer les prescriptions vétérinaires sur papier, par fax et en PDF",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Dépenses de défense portées à 3,5 % du PIB",
+"detail": "Hausse progressive jusqu'en 2030",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Automatisation par IA de la gestion des subventions et autorisations publiques",
+"why": "Les agences lancent des appels d'offres pour de nouveaux systèmes administratifs de subventions et de prescriptions.",
+"target": "Agences centrales (Agence des médicaments, Agence des palais et de la culture, etc.)"
+},
+{
+"title": "Fourniture de conseil informatique via le système d'acquisition dynamique de SKI",
+"why": "Le SAD de SKI achète en continu du conseil en stratégie informatique et en analyses de rentabilité.",
+"target": "État et communes (via SKI)"
+},
+{
+"title": "Accompagnement à l'entrée au Danemark des entreprises coréennes des technologies vertes et de l'électrification",
+"why": "Le projet de loi réserve chaque année des centaines de millions de DKK à l'électrification et à la sortie des énergies fossiles.",
+"target": "Communes, services publics et entreprises danois"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Copenhague",
+"detail": "Fournit des études du marché danois/nordique et la recherche d'acheteurs dans l'industrie verte."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Couvre par des bons les frais de certification à l'étranger, d'étude de marché et de marketing."
+}
+]
+}

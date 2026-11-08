@@ -1,0 +1,79 @@
+{
+"summary": "Việt Nam tăng trưởng 9,01% trong tháng 1-9/2026 (quý 3 đạt 9,95%). Tại kỳ họp Quốc hội tháng 10, Chính phủ đặt mục tiêu năm 2027 tăng trưởng ít nhất 10% và GDP bình quân đầu người 6.100 USD, ưu tiên đường cao tốc, đường sắt, sân bay, Trung tâm Dữ liệu Quốc gia và 5G.",
+"leader": "Tô Lâm, Tổng Bí thư kiêm Chủ tịch nước; Thủ tướng Lê Minh Hưng (được bầu tháng 4/2026)",
+"agenda": [
+"Tăng trưởng GDP ít nhất 10% năm 2027 gắn với ổn định kinh tế vĩ mô",
+"Cắt giảm thủ tục hành chính; cải cách thể chế và công vụ",
+"Phát triển khu vực kinh tế tư nhân và thu hút có chọn lọc FDI chuyển giao công nghệ",
+"Khoa học, đổi mới sáng tạo và chuyển đổi số (Trung tâm Dữ liệu Quốc gia, 5G toàn quốc, thử nghiệm 6G)",
+"Đẩy nhanh giải ngân đầu tư công, điều chuyển vốn từ các dự án chậm triển khai"
+],
+"projects": [
+{
+"title": "Hoàn thiện mạng lưới đường cao tốc quốc gia",
+"detail": "Nhiệm vụ hạ tầng cốt lõi của kế hoạch năm 2027",
+"status": "Đang triển khai"
+},
+{
+"title": "Cảng hàng không quốc tế Long Thành và Gia Bình",
+"detail": "Đẩy nhanh tiến độ thi công",
+"status": "Đang triển khai"
+},
+{
+"title": "Các dự án đường sắt trọng điểm quốc gia",
+"detail": "Đẩy nhanh các dự án đường sắt lớn",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Vận hành Trung tâm Dữ liệu Quốc gia",
+"detail": "Nền tảng tích hợp dữ liệu của các bộ, ngành",
+"status": "Đang triển khai"
+},
+{
+"title": "1 triệu ha lúa chất lượng cao, phát thải thấp tại Đồng bằng sông Cửu Long",
+"detail": "Mở rộng canh tác lúa phát thải thấp",
+"status": "Đang triển khai"
+},
+{
+"title": "Chuẩn bị đăng cai APEC 2027",
+"detail": "Các sự kiện và cơ sở vật chất cho Năm APEC 2027 của Việt Nam",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn kết nối người mua và thâm nhập kênh phân phối cho SME hàng tiêu dùng Hàn Quốc",
+"why": "KOTRA đã xác định Việt Nam là thị trường trọng điểm cho doanh nghiệp xuất khẩu lần đầu và hiện đang tổ chức kết nối giao thương.",
+"target": "SME thực phẩm và mỹ phẩm Hàn Quốc; nhà nhập khẩu và phân phối Việt Nam"
+},
+{
+"title": "Thí điểm xử lý văn bản bằng AI nhằm tinh gọn thủ tục hành chính cấp tỉnh",
+"why": "Kế hoạch năm 2027 đặt cắt giảm thủ tục và chuyển đổi số vào trọng tâm.",
+"target": "UBND tỉnh/thành phố, các sở, ngành cung cấp dịch vụ công"
+},
+{
+"title": "Tư vấn chuyển đổi số và ERP cho SME Việt Nam",
+"why": "Hỗ trợ SME và chính thức hóa hộ kinh doanh là các ưu tiên năm 2027.",
+"target": "SME sản xuất và phân phối Việt Nam; Sở Công Thương các tỉnh"
+},
+{
+"title": "PMC và quản lý tiến độ xây dựng bằng công nghệ số cho hạ tầng",
+"why": "Chính phủ đang đẩy nhanh các công trình đường cao tốc, sân bay và đường sắt, đồng thời thu hồi vốn từ các dự án chậm triển khai.",
+"target": "Các Ban QLDA thuộc Bộ Xây dựng, chủ đầu tư dự án cấp tỉnh"
+}
+],
+"krsupport": [
+{
+"title": "Tuần lễ Bước đầu Xuất khẩu 2026 (Việt Nam nằm trong bốn thị trường trọng điểm)",
+"detail": "Gặp gỡ trực tuyến với người mua Việt Nam và hỗ trợ logistics cho doanh nghiệp xuất khẩu hàng tiêu dùng lần đầu."
+},
+{
+"title": "Khóa học thâm nhập thị trường Việt Nam của KOTRA Academy",
+"detail": "Đào tạo thực hành về thâm nhập thị trường Việt Nam, với một buổi học dự kiến vào ngày 11/12."
+},
+{
+"title": "Học bổng KOICA (CIAT) và chia sẻ tri thức đổi mới sáng tạo ICT",
+"detail": "Đào tạo cho cán bộ Việt Nam và các sự kiện chia sẻ tri thức như cuộc thi hackathon ICT phối hợp với VKU tại Đà Nẵng."
+}
+]
+}

@@ -1,0 +1,80 @@
+{
+"summary": "Chính phủ của Thủ tướng Wong đang sử dụng Ngân sách 2026 kỷ lục (154,7 tỷ S$) để thúc đẩy chuyển đổi AI trên toàn quốc, hỗ trợ doanh nghiệp vươn ra nước ngoài và giảm chi phí sinh hoạt. Ngày 1/10, Bộ Thương mại được tái cơ cấu thành Bộ Năng lượng, Thương mại và Công nghiệp, và hoạt động ngoại giao tháng 10 tập trung vào AI và quan hệ đối tác bên ngoài, bao gồm chuyến thăm của Thủ tướng Đức và một hội nghị thượng đỉnh về an toàn AI tiên phong.",
+"leader": "Tổng thống Tharman Shanmugaratnam; Thủ tướng Lawrence Wong (kiêm Bộ trưởng Tài chính)",
+"agenda": [
+"Chuyển đổi AI trên toàn quốc do Hội đồng AI Quốc gia do Thủ tướng làm chủ tịch dẫn dắt",
+"Tăng cường hỗ trợ doanh nghiệp quốc tế hóa và tiếp cận tài chính",
+"Năng lực cạnh tranh trong các ngành bán dẫn, hàng không vũ trụ và y sinh, với chính sách năng lượng được tích hợp vào Bộ Năng lượng, Thương mại và Công nghiệp mới",
+"Đào tạo lại kỹ năng và tăng lương cho người lao động thông qua SkillsFuture",
+"Giảm gánh nặng chi phí sinh hoạt và hỗ trợ gia đình, người nghỉ hưu",
+"Nhà ở và hạ tầng thích ứng với khí hậu"
+],
+"projects": [
+{
+"title": "Ngân sách 2026",
+"detail": "Công bố ngày 12/2/2026; tổng chi 154,7 tỷ S$ (khoảng 18,4% GDP), dự kiến thặng dư tài khóa 2026 là 8,5 tỷ S$",
+"status": "Đang triển khai"
+},
+{
+"title": "Hội đồng AI Quốc gia",
+"detail": "Do Thủ tướng làm chủ tịch; giám sát việc ứng dụng AI trong doanh nghiệp, hiểu biết về AI cho học sinh và đào tạo kỹ năng AI cho người lao động",
+"status": "Đang triển khai"
+},
+{
+"title": "Gói hỗ trợ hộ gia đình",
+"detail": "Voucher CDC 500 S$ mỗi hộ (chi trả tháng 1/2027), tín dụng LifeSG 500 S$ cho mỗi trẻ từ 12 tuổi trở xuống, cùng các khoản khác",
+"status": "Đang triển khai"
+},
+{
+"title": "Bổ sung tiền hưu trí CPF",
+"detail": "Tới 1.500 S$ cho thành viên từ 50 tuổi trở lên có số dư dưới Mức Hưu trí Cơ bản; các lựa chọn đầu tư CPF mới",
+"status": "Đang triển khai"
+},
+{
+"title": "Siết chặt tiêu chí lao động nước ngoài",
+"detail": "Nâng mức lương đủ điều kiện cho người có EP/S Pass và tăng phí ở một số ngành",
+"status": "Đang triển khai"
+},
+{
+"title": "Hành lang vận tải biển xanh và số Hàn Quốc – Singapore và MOU hợp tác số",
+"detail": "Sau khi nâng cấp lên Đối tác Chiến lược vào tháng 11/2025: các dự án AI chung, hành lang vận tải biển xanh và số, và cùng hỗ trợ chuyển đổi số ASEAN",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Gói tự động hóa quy trình bằng AI cho SME (kế toán, chăm sóc khách hàng, xử lý tài liệu) qua các đại lý bán lại tại địa phương",
+"why": "Ngân sách 2026 đã lập chương trình ứng dụng AI trong doanh nghiệp, làm tăng nhu cầu có trợ cấp.",
+"target": "SME Singapore, đại lý bán lại CNTT tại địa phương"
+},
+{
+"title": "Khóa đào tạo AI tạo sinh thực hành cho người lao động",
+"why": "Chính phủ đang mở rộng hỗ trợ kỹ năng AI cho người lao động.",
+"target": "Đơn vị đào tạo được SkillsFuture công nhận, bộ phận nhân sự doanh nghiệp"
+},
+{
+"title": "Tư vấn thâm nhập thị trường Hàn Quốc và kết nối đối tác cho doanh nghiệp Singapore",
+"why": "Quan hệ Đối tác Chiến lược năm 2025 và MOU hợp tác số đang mở rộng quan hệ kinh doanh song phương.",
+"target": "Doanh nghiệp được Enterprise Singapore hỗ trợ, doanh nghiệp khởi nghiệp địa phương"
+},
+{
+"title": "Tư vấn đánh giá rủi ro mô hình AI và rà soát quản trị",
+"why": "Singapore đang dẫn dắt các thảo luận quốc tế về an toàn và quản trị AI.",
+"target": "Tổ chức tài chính, doanh nghiệp ứng dụng AI quy mô lớn, cơ quan công quyền"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Singapore",
+"detail": "Cung cấp dịch vụ kết nối người mua, ươm tạo văn phòng chi nhánh (robot, thực phẩm, hàng tiêu dùng, máy móc, v.v.), nghiên cứu thị trường và hỗ trợ đầu tư."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả các dịch vụ nghiên cứu thị trường, chứng nhận và tiếp thị, giảm chi phí thâm nhập Singapore."
+},
+{
+"title": "Đối tác Chiến lược Hàn Quốc – Singapore và MOU hợp tác số",
+"detail": "Bao gồm các dự án AI chung và dự án chung về chuyển đổi số ASEAN do Chương trình Hợp tác Singapore và Quỹ Hợp tác ASEAN - Hàn Quốc tài trợ."
+}
+]
+}

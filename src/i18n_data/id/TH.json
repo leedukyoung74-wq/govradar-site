@@ -1,0 +1,80 @@
+{
+"summary": "PM Anutin, yang terpilih kembali pada Maret setelah pemilu Februari 2026, memimpin pemerintahan koalisi; anggaran TA2027 sebesar THB3.788tn disahkan Senat pada 11 September. Dengan utang publik yang mendekati batas hukum 70% PDB, pemerintah menekankan efisiensi belanja seiring dorongan pemerintahan digital berbasis AI.",
+"leader": "Raja Maha Vajiralongkorn (Rama X); Perdana Menteri Anutin Charnvirakul (terpilih kembali setelah pemilu umum 2026)",
+"agenda": [
+"Peta jalan teknologi tinggi dengan AI dan inovasi digital sebagai mesin pertumbuhan; inovasi sektor publik 'AI Plus'",
+"Pemerintahan digital Cloud First, efisiensi sektor publik, dan pemberantasan korupsi",
+"Aksesi OECD pada 2028 dan promosi investasi (Thailand FastPass)",
+"Jaring pengaman sosial untuk masyarakat menua dan pemerataan pendidikan",
+"Pengelolaan air, penanggulangan bencana, netralitas karbon 2050, dan ekonomi Bio-Circular-Green (BCG)",
+"Penindakan penipuan call center dan pencucian uang; keamanan perbatasan"
+],
+"projects": [
+{
+"title": "Anggaran TA2027",
+"detail": "THB3.788tn dengan defisit THB788bn; disahkan Senat pada 11 Sep 2026 (145 suara setuju); menargetkan penurunan defisit di bawah 3% PDB pada 2029",
+"status": "Berjalan"
+},
+{
+"title": "Restrukturisasi dan reformasi sektor publik",
+"detail": "Mencakup pemerintahan digital Cloud First dan pemberantasan korupsi",
+"status": "Berjalan"
+},
+{
+"title": "Pengembangan sumber daya manusia",
+"detail": "Mencakup 'belajar di mana saja, kapan saja' dan pemanfaatan AI dalam layanan kesehatan publik",
+"status": "Berjalan"
+},
+{
+"title": "Daya saing dan SMEs Plus",
+"detail": "Investasi logistik, transportasi, pertanian, dan pariwisata; dukungan pendapatan UKM; perluasan PPP",
+"status": "Berjalan"
+},
+{
+"title": "Penguatan ekonomi Bio-Circular-Green (bantuan teknis)",
+"detail": "TA ADB membantu Fiscal Policy Office membangun kapasitas kebijakan BCG, termasuk perekrutan spesialis pengembangan tenaga kerja",
+"status": "Berjalan"
+},
+{
+"title": "Pembangunan lingkungan hidup",
+"detail": "Transisi rendah karbon dan pengelolaan air",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi AI untuk layanan warga dan pemrosesan dokumen administrasi di lembaga pemerintah",
+"why": "Anggaran TA2027 mengalokasikan dana besar untuk Cloud First dan inovasi publik AI Plus.",
+"target": "Kementerian Ekonomi Digital dan Masyarakat, DGA, pemerintah daerah"
+},
+{
+"title": "Chatbot AI untuk janji temu dan prapenapisan serta otomatisasi administrasi rumah sakit",
+"why": "AI dalam layanan kesehatan publik merupakan bagian dari anggaran pengembangan sumber daya manusia.",
+"target": "Kementerian Kesehatan Masyarakat, rumah sakit publik"
+},
+{
+"title": "Paket konsultasi transformasi digital dan otomatisasi alur kerja bagi UKM Thailand",
+"why": "SMEs Plus mendanai dukungan UKM dan daya saing.",
+"target": "OSMEP, UKM Thailand"
+},
+{
+"title": "Diagnostik dan perbaikan proses lembaga publik berdasarkan standar OECD",
+"why": "Target aksesi OECD 2028 mensyaratkan reformasi administrasi dan regulasi.",
+"target": "PMO, Office of the Public Sector Development Commission (OPDC)"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Bangkok",
+"detail": "Mendukung pencarian pembeli, inkubasi kantor cabang, riset pasar, dan nasihat investasi untuk masuk ke Thailand."
+},
+{
+"title": "Misi dagang Busan ke SEOUL FOOD in Bangkok 2026",
+"detail": "Mendukung penjodohan pembeli dan pertemuan bagi delapan UKM makanan Busan pada pameran Bangkok 2–4 Desember."
+},
+{
+"title": "Program Export Voucher",
+"detail": "Voucher menanggung riset pasar, sertifikasi, dan pemasaran lokal untuk masuk ke Thailand."
+}
+]
+}

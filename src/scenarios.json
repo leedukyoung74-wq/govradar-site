@@ -1,0 +1,23 @@
+{"updated":"2026-10-31",
+ "note_ko":"전략 대비를 위한 가정 시나리오입니다. 예측이 아니며 사실로 확인된 내용이 아닙니다. 각 시나리오 옆에 지금 확인된 실제 지표를 함께 적었습니다.",
+ "note_en":"Hypothetical scenarios for strategic preparedness. They are not predictions or verified facts. Each is shown next to the indicators confirmed today.",
+ "items":[
+  {"iso":"KR","ko":"한반도 복합 재난","en":"Korean Peninsula compound crisis","s_ko":"무력 충돌과 감염병·지진·해일이 겹치는 상황을 가정합니다.","s_en":"Assumes armed conflict overlapping with epidemic, earthquake and tsunami.",
+   "now_ko":"북한 탄도미사일 시험 지속(10/3·10/12, 합참). 미 태평양사령부 평가는 '즉각적 위협 아님'.","now_en":"Continued DPRK missile tests (3 & 12 Oct, JCS); US Pacific Command: no immediate threat.","v":"ok",
+   "prep_ko":["집·직장 주변 대피소 확인","가족 3~14일 비축","해안 지역은 지진해일 대피로 확인","기업: 원격 근무·백업 데이터센터"],"prep_en":["Locate nearby shelters","3–14 days of household supplies","Coastal areas: tsunami evacuation routes","Companies: remote work and backup data centres"]},
+  {"iso":"TW","ko":"대만해협 위기와 주변국 관여","en":"Taiwan Strait crisis with regional involvement","s_ko":"중국–대만 군사 긴장이 커지고 한국·일본·호주 등 주변국이 대응에 관여하는 상황을 가정합니다.","s_en":"Assumes rising China–Taiwan military tension with Korea, Japan and Australia drawn into the response.",
+   "now_ko":"10/12~17 중국 연안 실사격 훈련. 대만 국방부는 대만 인근 선박 영향이 적다고 평가.","now_en":"PLA coastal live-fire drills 12–17 Oct; Taiwan MND sees little impact on nearby shipping.","v":"ok",
+   "prep_ko":["반도체·부품 대체 공급처 확보","대만 거래 결제·보험 조건 점검","동아시아 해운 일정 여유"],"prep_en":["Secure alternative chip and component suppliers","Review payment and insurance terms for Taiwan trade","Add slack to East Asian shipping"]},
+  {"iso":"KP","ko":"북·러 군사협력 확대","en":"Expanded DPRK–Russia military cooperation","s_ko":"북한의 대러 병력·무기 지원이 늘고 유럽 전쟁과 한반도 긴장이 연결되는 상황을 가정합니다.","s_en":"Assumes growing DPRK troop and arms support to Russia, linking the European war with peninsula tension.",
+   "now_ko":"북한군의 러시아 전쟁 참여는 2025년 양국이 인정. 추가 파병 규모는 보도마다 다름.","now_en":"DPRK troops' role in Russia's war was acknowledged by both in 2025; reported numbers vary.","v":"part",
+   "prep_ko":["러시아·벨라루스 관련 거래 제재 점검","유럽 물류 대체 경로","방산·이중용도 품목 수출 통제 확인"],"prep_en":["Screen Russia/Belarus-linked deals for sanctions","Alternative European logistics","Check dual-use export controls"]},
+  {"iso":"IR","ko":"중동 확전과 해상 봉쇄 장기화","en":"Middle East escalation and prolonged blockade","s_ko":"호르무즈 통항 제한이 수개월 더 이어지고 걸프 국가 시설로 공격이 번지는 상황을 가정합니다.","s_en":"Assumes Hormuz restrictions last months longer and attacks spread to Gulf states' facilities.",
+   "now_ko":"해협 통항 제한·미국의 이란 항만 봉쇄 지속, 10월 선박 공격 증가, 브렌트유 117달러대(10/30).","now_en":"Transit restrictions and US blockade continue; more ship attacks in October; Brent near $117 (30 Oct).","v":"ok",
+   "prep_ko":["유가 연동·불가항력 조항 점검","원자재 2~4주 선확보","걸프 출장 전 여행경보 확인"],"prep_en":["Review fuel-indexation and force-majeure clauses","Pull forward 2–4 weeks of inputs","Check advisories before Gulf travel"]},
+  {"iso":"UN","ko":"세계 금융·공급 혼란","en":"Global financial and supply disruption","s_ko":"은행·결제 지연과 생필품 공급 차질이 동시에 오는 상황을 가정합니다.","s_en":"Assumes payment delays and shortages of essentials at the same time.",
+   "now_ko":"유가 급등과 해상 운송 차질이 확인됨. 금융 시스템 위기 공식 경고는 확인되지 않음.","now_en":"Oil spike and shipping disruption confirmed; no official warning of a financial-system crisis found.","v":"part",
+   "prep_ko":["부채 줄이기·3~6개월 운영자금","결제 수단 분산(현금 소액 포함)","공급처 다변화"],"prep_en":["Reduce debt; 3–6 months of operating cash","Diversify payment means (incl. some cash)","Diversify suppliers"]},
+  {"iso":"UN","ko":"대규모 정전·통신 두절","en":"Large-scale blackout and communications loss","s_ko":"사이버 공격이나 재난으로 며칠간 전기·통신이 끊기는 상황을 가정합니다.","s_en":"Assumes several days without power or telecoms after a cyber attack or disaster.",
+   "now_ko":"영국·네덜란드·아일랜드·일본 정부가 72시간~1주 대비를 권고(정례 정책).","now_en":"UK, Dutch, Irish and Japanese governments recommend 72 hours to one week of preparedness (routine policy).","v":"ok",
+   "prep_ko":["손전등·라디오·보조배터리","가족 집결 장소·연락 담당자","기업: 오프라인 업무 절차"],"prep_en":["Torch, radio, power banks","Family meeting point and contact person","Companies: offline procedures"]}
+ ]}

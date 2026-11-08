@@ -1,0 +1,79 @@
+{
+"summary": "Le Viet Nam a enregistré une croissance de 9,01 % de janvier à septembre 2026 (9,95 % au 3e trimestre). Lors de la session d'octobre de l'Assemblée nationale, le gouvernement a fixé pour 2027 des objectifs d'au moins 10 % de croissance et d'un PIB par habitant de 6 100 USD, en donnant la priorité aux autoroutes, au rail, aux aéroports, au Centre national de données et à la 5G.",
+"leader": "To Lam, secrétaire général du Parti et président de l'État ; Premier ministre Le Minh Hung (élu en avril 2026)",
+"agenda": [
+"Croissance du PIB d'au moins 10 % en 2027 avec stabilité macroéconomique",
+"Réduction des procédures administratives ; réforme institutionnelle et de la fonction publique",
+"Développer le secteur privé et attirer de manière sélective des IDE porteurs de transferts de technologie",
+"Science, innovation et transformation numérique (Centre national de données, 5G sur tout le territoire, pilotes 6G)",
+"Accélérer le décaissement des investissements publics en réaffectant les fonds des projets bloqués"
+],
+"projects": [
+{
+"title": "Achèvement du réseau autoroutier national",
+"detail": "Tâche centrale d'infrastructure du plan 2027",
+"status": "En cours"
+},
+{
+"title": "Aéroports internationaux de Long Thanh et de Gia Binh",
+"detail": "Construction à accélérer",
+"status": "En cours"
+},
+{
+"title": "Grands projets ferroviaires nationaux",
+"detail": "Accélération des grands projets ferroviaires",
+"status": "Prévu"
+},
+{
+"title": "Exploitation du Centre national de données",
+"detail": "Plateforme d'intégration des données des ministères et des secteurs",
+"status": "En cours"
+},
+{
+"title": "1 million d'hectares de riz de haute qualité et à faibles émissions dans le delta du Mékong",
+"detail": "Extension de la riziculture à faibles émissions",
+"status": "En cours"
+},
+{
+"title": "Préparatifs de l'accueil de l'APEC 2027",
+"detail": "Événements et installations pour l'année APEC 2027 du Viet Nam",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Mise en relation avec des acheteurs et conseil en entrée dans la distribution pour les PME coréennes de biens de consommation",
+"why": "KOTRA a désigné le Viet Nam comme marché prioritaire pour les primo-exportateurs et organise actuellement des mises en relation.",
+"target": "PME coréennes de l'alimentation et des cosmétiques ; importateurs et distributeurs vietnamiens"
+},
+{
+"title": "Projets pilotes de traitement documentaire par IA pour simplifier les procédures administratives provinciales",
+"why": "Le plan 2027 place la réduction des procédures et la transformation numérique en son cœur.",
+"target": "Comités populaires des provinces/villes, services publics"
+},
+{
+"title": "Conseil en transformation numérique et en ERP pour les PME vietnamiennes",
+"why": "Le soutien aux PME et la formalisation des entreprises familiales sont des priorités pour 2027.",
+"target": "PME manufacturières et de distribution vietnamiennes ; services provinciaux de l'industrie et du commerce"
+},
+{
+"title": "PMC et gestion numérique de l'avancement des chantiers d'infrastructures",
+"why": "Le gouvernement accélère les travaux d'autoroutes, d'aéroports et de rail et récupère les fonds des projets bloqués.",
+"target": "Unités de gestion de projets (PMU) du ministère de la Construction, maîtres d'ouvrage provinciaux"
+}
+],
+"krsupport": [
+{
+"title": "Semaine First Step to Exports 2026 (Viet Nam parmi les quatre marchés prioritaires)",
+"detail": "Rendez-vous en visioconférence avec des acheteurs vietnamiens et aide logistique pour les primo-exportateurs de biens de consommation."
+},
+{
+"title": "Cursus d'entrée sur le marché vietnamien de la KOTRA Academy",
+"detail": "Formation pratique sur l'entrée au Viet Nam, avec une session prévue le 11 décembre."
+},
+{
+"title": "Bourses de la KOICA (CIAT) et partage de connaissances sur l'innovation dans les TIC",
+"detail": "Formation de fonctionnaires vietnamiens et événements de partage de connaissances, comme un hackathon TIC avec la VKU à Da Nang."
+}
+]
+}

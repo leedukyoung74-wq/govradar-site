@@ -1,0 +1,80 @@
+{
+"summary": "Sri Lanka mantiene la disciplina fiscal en el marco de su programa EFF con el FMI, mientras que el presupuesto de 2027 aumenta el gasto de capital, ofrece cierto alivio tributario e impulsa el desarrollo digital y rural. La recuperación tras el ciclón y un marco de financiación del riesgo de desastres también son prioridades.",
+"leader": "Presidente Anura Kumara Dissanayake (jefe de Estado y de Gobierno) / Primera ministra Harini Amarasuriya",
+"agenda": [
+"Ejecución del programa del FMI y de las metas de saldo primario",
+"Recuperación tras desastres y reconstrucción de la infraestructura pública",
+"Alivio del costo de vida (rebajas de impuestos comprometidas, apoyo al combustible) y ampliación de la protección social",
+"Economía digital (1.000 torres de comunicaciones)",
+"Reforma educativa a partir del 6.º grado y mejores servicios de salud",
+"Inicio de infraestructura de transporte, como el ferrocarril eléctrico"
+],
+"projects": [
+{
+"title": "Proyecto de Ley de Asignaciones de 2027",
+"detail": "Gasto total +12,6%, gasto de capital +24,7%",
+"status": "En el Parlamento"
+},
+{
+"title": "Torres de comunicaciones rurales",
+"detail": "1.000 torres en tres años, 750 financiadas en 2027",
+"status": "Planificado"
+},
+{
+"title": "Desarrollo rural y seguridad social",
+"detail": "Ampliación de las ayudas sociales, incluido Aswesuma",
+"status": "Planificado"
+},
+{
+"title": "Transporte, autopistas y desarrollo urbano",
+"detail": "Proyecto de ferrocarril eléctrico previsto para iniciar en 2027",
+"status": "Planificado"
+},
+{
+"title": "Finalizadas la 5.ª y 6.ª revisiones del EFF del FMI",
+"detail": "Desembolso de unos USD 695 millones, aproximadamente USD 2.400 millones en total",
+"status": "Finalizado"
+},
+{
+"title": "Automatización de la recaudación municipal de Colombo (KOICA)",
+"detail": "Automatiza el cobro de las principales fuentes de ingresos, como el impuesto de tasación y las tasas de licencias",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Automatización de la recaudación y los servicios de los gobiernos locales",
+"why": "El proyecto de Colombo demuestra la demanda y el presupuesto aumenta el gasto de capital local.",
+"target": "Autoridades locales, Ministerio de Gobierno Local"
+},
+{
+"title": "Sistemas de datos para la elegibilidad y el pago de prestaciones sociales",
+"why": "La financiación de las ayudas sociales, incluido Aswesuma, se ha más que duplicado.",
+"target": "Junta de Prestaciones Sociales, Ministerio de Desarrollo Rural y Seguridad Social"
+},
+{
+"title": "Consultoría en evaluación de inversiones públicas y gestión del desempeño",
+"why": "El programa del FMI exige una reforma de la PIM mientras el gasto de capital crece casi un 25%.",
+"target": "Departamento de Planificación Nacional, ministerios sectoriales"
+},
+{
+"title": "Herramientas digitales para la evaluación de daños y la gestión de proyectos de recuperación",
+"why": "La recuperación tras el ciclón está en marcha y se está elaborando una estrategia de financiación del riesgo de desastres.",
+"target": "Centro de Gestión de Desastres, Tesoro"
+}
+],
+"krsupport": [
+{
+"title": "Diálogo de políticas Corea–Sri Lanka sobre el EDCF y reestructuración de la deuda",
+"detail": "El diálogo de abril de 2026 concluyó la reestructuración de 18 préstamos del EDCF y abordó la prórroga del acuerdo marco."
+},
+{
+"title": "Proyecto de KOICA de automatización de la recaudación de Colombo",
+"detail": "Una donación de USD 8,5 millones automatiza el cobro de las principales fuentes de ingresos municipales de Colombo."
+},
+{
+"title": "Vale de exportación para pymes",
+"detail": "Cubre mediante vales servicios de exportación como estudios de mercado, traducción y certificación."
+}
+]
+}

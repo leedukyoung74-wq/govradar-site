@@ -1,0 +1,79 @@
+{
+"summary": "Ghana đang duy trì ổn định giá cả và tài khóa sau chương trình IMF, đồng thời sử dụng chương trình hạ tầng 'Big Push' và chính sách kinh tế 24 giờ để thúc đẩy tăng trưởng và việc làm. Ngân sách 2027 dự kiến được trình Quốc hội vào đầu tháng 11.",
+"leader": "Tổng thống John Dramani Mahama (nguyên thủ quốc gia kiêm người đứng đầu chính phủ)",
+"agenda": [
+"Ổn định kinh tế vĩ mô: mục tiêu lạm phát 8% (±2 điểm phần trăm), thặng dư sơ cấp",
+"Hạ tầng Big Push (đường bộ và các dự án lớn khác)",
+"Kinh tế 24 giờ (24H+) nhằm tăng sản lượng và việc làm",
+"Chiến lược tăng trưởng 'kinh tế mới' và xúc tiến đầu tư",
+"Hạ tầng giáo dục và tăng cường TVET"
+],
+"projects": [
+{
+"title": "Chương trình hạ tầng Big Push",
+"detail": "87 dự án đã khởi công; 13 dự án hoàn thành trên 50% tính đến cuối tháng 6/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Đường cao tốc Accra–Kumasi",
+"detail": "Kinh phí được bảo đảm riêng trong một tài khoản tại ngân hàng trung ương",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình đầu tư 'kinh tế mới'",
+"detail": "Sẽ được phản ánh trong ngân sách 2027 (Bộ trưởng Tài chính, tháng 9/2026)",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Hạ tầng giáo dục",
+"detail": "210 dự án lớn theo kế hoạch; 10 trường trung học phổ thông mới với sự hỗ trợ của Ngân hàng Thế giới",
+"status": "Đang triển khai"
+},
+{
+"title": "Đào tạo ô tô NextGen của Hyundai-KOICA",
+"detail": "Hai trung tâm đào tạo bảo dưỡng (hoàn thành năm 2027) và chương trình đào tạo xe hybrid/xe điện",
+"status": "Đang triển khai"
+},
+{
+"title": "Quỹ trả nợ trong nước",
+"detail": "Tích lũy để trả các khoản nợ trong nước đáo hạn vào tháng 2/2027",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "PMO số cho quản lý tiến độ và chất lượng dự án đường bộ",
+"why": "Hơn 87 dự án đường bộ Big Push đang được triển khai cùng lúc.",
+"target": "Bộ Đường bộ và Đường cao tốc, Cơ quan Đường cao tốc Ghana, Cục Đường nhánh"
+},
+{
+"title": "SaaS lập kế hoạch sản xuất và phân ca cho doanh nghiệp sản xuất và chế biến nhỏ",
+"why": "Chính sách kinh tế 24 giờ khuyến khích vận hành nhiều ca.",
+"target": "Doanh nghiệp sản xuất và chế biến nông sản tham gia 24H+"
+},
+{
+"title": "Tư vấn hồ sơ xin ưu đãi đầu tư và thẩm định",
+"why": "Chương trình 'kinh tế mới' khoảng 10 tỷ USD được đề cập cho ngân sách 2027.",
+"target": "Bộ Tài chính, GIPC, nhà đầu tư mới"
+},
+{
+"title": "Quản lý đào tạo và nội dung số cho các cơ sở TVET",
+"why": "Các dự án hợp tác của Hàn Quốc như của KOICA đang hoạt động tích cực trong đào tạo nghề.",
+"target": "CTVET, các trường đại học kỹ thuật và cơ sở đào tạo"
+}
+],
+"krsupport": [
+{
+"title": "Hyundai-KOICA NextGen (Giải pháp Kinh doanh Bao trùm)",
+"detail": "Xây dựng trung tâm đào tạo bảo dưỡng ô tô và hỗ trợ việc làm, khởi nghiệp cho thanh niên tại Ghana đến năm 2030."
+},
+{
+"title": "KOICA–UNICEF hỗ trợ khởi nghiệp thanh niên tại Ghana",
+"detail": "Triển khai các chương trình khởi nghiệp cho thanh niên tại Ghana cùng UNICEF."
+},
+{
+"title": "Export voucher cho SME",
+"detail": "Chi trả các dịch vụ xuất khẩu như nghiên cứu thị trường, biên dịch và chứng nhận thông qua phiếu hỗ trợ."
+}
+]
+}

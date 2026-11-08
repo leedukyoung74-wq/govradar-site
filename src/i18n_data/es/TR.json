@@ -1,0 +1,76 @@
+{
+"summary": "El Programa de Mediano Plazo (2027-2029) de Türkiye busca llevar la inflación a un dígito para 2029 y, al mismo tiempo, impulsar el crecimiento y el empleo. El proyecto de presupuesto de 2027 pone el acento en la vivienda y la renovación urbana motivada por los terremotos, la infraestructura de transporte y el empleo juvenil.",
+"leader": "Presidente Recep Tayyip Erdoğan (jefe de Estado y de Gobierno)",
+"agenda": [
+"Desinflación (un dígito para 2029)",
+"Oferta de vivienda y renovación urbana resistente a los terremotos",
+"Más empleo para jóvenes y mujeres",
+"Transición verde (sede de la COP31 en Antalya)",
+"Infraestructura de transporte (tren de alta velocidad)",
+"Tecnología de defensa y espacial"
+],
+"projects": [
+{
+"title": "Proyecto de presupuesto del gobierno central 2027",
+"detail": "Déficit del 3,5% del PIB, meta de crecimiento del 4,2%, fuerte aumento del gasto en vivienda",
+"status": "En el parlamento"
+},
+{
+"title": "Programa de Mediano Plazo (OVP) 2027-2029",
+"detail": "Anunciado en septiembre de 2026; apunta a un PIB de USD 2,2 billones y a una inflación de un dígito para 2029",
+"status": "En curso"
+},
+{
+"title": "Renovación urbana «La mitad la ponemos nosotros» (Yarısı Bizden)",
+"detail": "Apoyo a la reconstrucción antisísmica centrado en Estambul; donación de TRY 875.000 más préstamo de TRY 875.000 por unidad; prorrogado hasta fines de 2027",
+"status": "En curso"
+},
+{
+"title": "Tren de alta velocidad Halkalı-Kapıkule",
+"detail": "La apertura del tramo Çerkezköy-Kapıkule se anunció en octubre de 2026",
+"status": "En curso"
+},
+{
+"title": "Programa de empleo juvenil de İŞKUR",
+"detail": "150.000 plazas para 2026-2027 con estipendio diario y seguridad social pagada por el Estado",
+"status": "En curso"
+},
+{
+"title": "Proyecto de Recuperación y Reconstrucción tras el Terremoto (TERRP)",
+"detail": "Recuperación financiada por el Banco Mundial en las regiones afectadas por el sismo, incluido equipamiento de emergencia del Ministerio de Salud como 285 ambulancias",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Evaluación sísmica y gestión inteligente de obras para zonas de renovación urbana",
+"why": "El apoyo a la renovación urbana se extiende hasta fines de 2027 y el gasto en vivienda se dispara en el presupuesto de 2027.",
+"target": "Ministerio de Medio Ambiente, Urbanización y Cambio Climático, TOKİ, Municipalidad Metropolitana de Estambul"
+},
+{
+"title": "Plataforma de IA para la formación profesional y la intermediación laboral",
+"why": "El programa de empleo juvenil se ha ampliado a 150.000 plazas, lo que genera demanda de herramientas de intermediación y gestión.",
+"target": "İŞKUR, Ministerio de Trabajo y Seguridad Social"
+},
+{
+"title": "Diagnóstico de fábrica inteligente y consultoría de automatización para pymes manufactureras",
+"why": "El Programa de Mediano Plazo convierte la productividad y la competitividad exportadora en objetivos centrales.",
+"target": "KOSGEB, fabricantes en zonas industriales organizadas"
+},
+{
+"title": "Eficiencia operativa para grandes hospitales urbanos (IA para programación y gestión de camas)",
+"why": "Siguen abriéndose nuevos grandes hospitales urbanos, lo que genera necesidades de eficiencia (estimación).",
+"target": "Ministerio de Salud, operadores APP de hospitales urbanos"
+}
+],
+"krsupport": [
+{
+"title": "Oficina de KOTRA en Estambul",
+"detail": "Apoya estudios de mercado, vinculación con compradores y participación en ferias comerciales en Türkiye."
+},
+{
+"title": "Apoyo a asentamientos temporales para las víctimas del terremoto en Türkiye",
+"detail": "Apoyó asentamientos temporales para personas desplazadas tras los terremotos de 2023 (proyecto anterior)."
+}
+]
+}

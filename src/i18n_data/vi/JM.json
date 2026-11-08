@@ -1,0 +1,79 @@
+{
+"summary": "Trong một năm kể từ khi bão Melissa đổ bộ vào tháng 10/2025, chính phủ đã chi khoảng 84 tỷ J$ cho công tác phục hồi và đặt mục tiêu kết thúc giai đoạn phục hồi vào tháng 1/2027. Ngân sách 2026/27 khoảng 1,4 nghìn tỷ J$ đưa ra các biện pháp tăng thu mới đầu tiên sau tám năm.",
+"leader": "Nguyên thủ quốc gia là Vua Charles III (Toàn quyền Sir Patrick Allen); Thủ tướng Andrew Holness (tái đắc cử tháng 9/2025)",
+"agenda": [
+"Khôi phục nhà ở, trường học và điện sau bão Melissa (giai đoạn phục hồi kết thúc vào tháng 1/2027)",
+"Duy trì ổn định tài khóa và tăng nguồn thu mới, chủ yếu dựa trên tiêu dùng",
+"Chuyển đổi năng lượng, bao gồm mua sắm 300 MW năng lượng tái tạo và 150 MW pin lưu trữ",
+"Tăng đầu tư cho y tế và giáo dục",
+"Tăng cường an ninh công cộng (mở rộng ngân sách an ninh quốc gia)"
+],
+"projects": [
+{
+"title": "Trợ cấp sửa chữa mái nhà ROOFS",
+"detail": "75.000-500.000 J$ mỗi hộ tùy mức độ thiệt hại; 118.000 hộ; 90% sẽ được hỗ trợ trước tháng 12/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Sửa chữa trường học",
+"detail": "144 trên 308 trường thuộc nhóm Ưu tiên Một đã được khôi phục hoàn toàn",
+"status": "Đang triển khai"
+},
+{
+"title": "Khoản vay khôi phục lưới điện JPS",
+"detail": "Khoản vay cho công ty điện lực để khôi phục hệ thống",
+"status": "Đang triển khai"
+},
+{
+"title": "Mua sắm 300 MW năng lượng tái tạo + 150 MW pin lưu trữ",
+"detail": "Gói thầu điện lớn nhất theo kế hoạch; RFP được lùi sang quý 4/2026",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Nhà ở bán kiên cố",
+"detail": "Nhà bán kiên cố cho người dân phải di dời",
+"status": "Đang triển khai"
+},
+{
+"title": "Đội chuyên gia tái thiết của Anh",
+"detail": "Các chuyên gia thuộc UK Delivery Team được triển khai với chi phí chia đều; dự kiến ký kết tại CHOGM",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Nền tảng dữ liệu và tự động hóa giải ngân trợ cấp thiên tai",
+"why": "Việc xác minh và đánh giá lại 118.000 hộ phải hoàn thành trước tháng 1/2027.",
+"target": "Bộ Lao động và An sinh Xã hội, ODPEM, chính quyền địa phương"
+},
+{
+"title": "PMO tái thiết và tư vấn mua sắm",
+"why": "Năng lực triển khai quá tải đến mức chính phủ phải đưa chuyên gia Anh vào hỗ trợ.",
+"target": "Văn phòng Thủ tướng, Bộ Tăng trưởng Kinh tế và Hạ tầng"
+},
+{
+"title": "Phân tích AI giảm tổn thất điện năng và quản lý nhu cầu",
+"why": "Gói tư vấn giảm tổn thất và phân tích phía cầu đã được mời thầu.",
+"target": "Bộ năng lượng, JPS, GPE"
+},
+{
+"title": "Thiết bị và nội dung lớp học số gắn với sửa chữa trường học",
+"why": "Hơn 164 trường học vẫn đang sửa chữa sẽ cần thay thế thiết bị (ước tính).",
+"target": "Bộ Giáo dục"
+}
+],
+"krsupport": [
+{
+"title": "Hợp tác của Đại sứ quán Hàn Quốc tại Jamaica",
+"detail": "Đại sứ quán đã tổ chức Diễn đàn Hợp tác Tương lai Hàn Quốc-Jamaica cùng UWI, tập trung vào năng lượng tái tạo."
+},
+{
+"title": "Export Voucher",
+"detail": "Chi trả chi phí nghiên cứu thị trường Caribe, chứng nhận và tiếp thị tại địa phương thông qua phiếu hỗ trợ."
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường Mỹ Latinh",
+"detail": "Do không có văn phòng riêng tại Jamaica, việc kết nối người mua được thực hiện qua các văn phòng lân cận ở Mỹ Latinh (ước tính)."
+}
+]
+}

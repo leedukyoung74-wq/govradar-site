@@ -1,0 +1,69 @@
+{
+"summary": "El PAM quedó en primer lugar con 97 escaños en las elecciones del 23 de septiembre de 2026, y la jefa de Gobierno El Mansouri formó una coalición cuatripartita de PAM, Istiqlal, USFP y PPS (207 escaños) que asumió el 16 de octubre. Las prioridades del nuevo gobierno son aumentar la inversión, mejorar las condiciones de vida y preparar la infraestructura para el Mundial de 2030.",
+"leader": "Rey Mohammed VI / Jefa de Gobierno Fatima Zahra El Mansouri (nombrada el 29 de septiembre de 2026, primera mujer en el cargo)",
+"agenda": [
+"Fomento de la inversión y fortalecimiento de la capacidad industrial",
+"Mayor poder adquisitivo de los hogares, empleo y servicios públicos",
+"Preparación de la infraestructura para la Copa Mundial de la FIFA 2030 (coorganizada con España y Portugal)",
+"Justicia social y equidad territorial",
+"Soberanía alimentaria, capital humano y competitividad industrial",
+"Reestructuración de las empresas públicas, marco moderno de APP, reforma de la gobernanza del agua y la electricidad (con respaldo del AfDB)"
+],
+"projects": [
+{
+"title": "Programa del AfDB de gobernanza económica y resiliencia climática (PGRCC Fase III)",
+"detail": "Reestructuración de empresas públicas, modernización de las APP, apoyo a pymes e innovación, reforma de la gobernanza del agua y la electricidad",
+"status": "En curso"
+},
+{
+"title": "Infraestructura para el Mundial de 2030",
+"detail": "Grandes infraestructuras de turismo, transporte y servicios señaladas como prioridad del nuevo gobierno",
+"status": "En curso"
+},
+{
+"title": "Programa del nuevo gobierno",
+"detail": "Programa con prioridades presupuestarias y mecanismos de evaluación que se presentará al parlamento",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Consultoría de viabilidad y estructuración de APP",
+"why": "Las reformas respaldadas por el AfDB incluyen la modernización del marco de APP.",
+"target": "Ministerio de Economía y Finanzas, empresas públicas, gobiernos regionales"
+},
+{
+"title": "Inserción de pymes marroquíes en cadenas de valor y vinculación con empresas coreanas",
+"why": "La innovación de las pymes y su integración en cadenas de valor son objetivos declarados de la reforma.",
+"target": "Ministerio de Industria y Comercio, agencias de pymes, fabricantes locales"
+},
+{
+"title": "Servicios digitales de turismo y transporte para el Mundial",
+"why": "El nuevo gobierno ha convertido la infraestructura del Mundial en una prioridad máxima.",
+"target": "Ministerio de Turismo, empresas públicas de transporte, ciudades sede"
+},
+{
+"title": "Evaluación del desempeño de políticas y automatización administrativa con IA",
+"why": "El nuevo gobierno prepara un programa con mecanismos de evaluación.",
+"target": "Oficina del Jefe de Gobierno, ministerios"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Casablanca",
+"detail": "Ofrece información sobre el mercado marroquí y asesoramiento sobre compradores e inversión."
+},
+{
+"title": "Programas de KOICA en Marruecos",
+"detail": "Gestiona ayuda no reembolsable en formación profesional, digitalización y gestión del agua."
+},
+{
+"title": "Préstamos en condiciones favorables del EDCF",
+"detail": "Otorga préstamos en condiciones favorables para infraestructura en países en desarrollo y publica avisos de licitación."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Cubre mediante vales los costos de consultoría y certificación en el exterior."
+}
+]
+}

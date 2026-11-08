@@ -1,0 +1,75 @@
+{
+"summary": "Majelis Nasional mengesahkan anggaran 2026 sebesar N68.3 triliun, di atas usulan eksekutif N58.18 triliun, dengan prioritas keamanan, infrastruktur, kesehatan, dan pendidikan. Dengan pemilihan presiden dijadwalkan pada 20 Feb 2027, Presiden Tinubu meluncurkan kampanye pencalonan kembalinya pada 24 Okt 2026; usulan anggaran 2027 tidak ditemukan dalam tinjauan ini.",
+"leader": "Presiden Bola Ahmed Tinubu (kepala negara dan kepala pemerintahan)",
+"agenda": [
+"Memperluas basis pendapatan: undang-undang perpajakan baru dan peningkatan pendapatan nonmigas",
+"Menyelesaikan infrastruktur utama seperti jalan raya dan pipa gas",
+"Amendemen konstitusi untuk kepolisian federal dan negara bagian",
+"Modal manusia di bidang kesehatan dan pendidikan; mengatasi eksodus tenaga medis (brain drain)",
+"Memperluas pasokan gas dan memulihkan infrastruktur energi"
+],
+"projects": [
+{
+"title": "Anggaran federal 2026",
+"detail": "Defisit N23.85tr (4.28% PDB); pinjaman luar negeri sekitar USD 6bn disetujui pada Apr 2026",
+"status": "Berjalan"
+},
+{
+"title": "Jalan raya Abuja-Kaduna",
+"detail": "Ruas sepanjang 81km dibuka pada 24 Okt 2026",
+"status": "Selesai (ruas)"
+},
+{
+"title": "Stasiun kompresor Escravos-Lagos Pipeline (ELP)",
+"detail": "Stasiun kompresor yang dibangun perusahaan lokal meningkatkan kapasitas gas pipa (diumumkan 22 Okt 2026)",
+"status": "Selesai"
+},
+{
+"title": "Amendemen konstitusi kepolisian ganda",
+"detail": "Persetujuan dewan negara bagian telah memenuhi ambang batas, membuka jalan bagi kepolisian negara bagian (23 Okt 2026)",
+"status": "Berjalan"
+},
+{
+"title": "Proyek infrastruktur digital BRIDGE",
+"detail": "Infrastruktur digital yang dibiayai Bank Dunia dan klaster riset ekonomi digital yang dipimpin universitas",
+"status": "Berjalan"
+},
+{
+"title": "Distribution Sector Recovery Program (DISREP)",
+"detail": "Dukungan yang dibiayai Bank Dunia untuk proyek peningkatan penyulang (feeder) DisCo",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi AI dan analitik untuk pelaporan dan pemungutan pajak",
+"why": "Undang-undang perpajakan baru telah berlaku dan tekanan untuk meningkatkan pendapatan nonmigas tinggi.",
+"target": "Nigeria Revenue Service, dinas pendapatan negara bagian"
+},
+{
+"title": "Pelatihan tata kelola digital dan AI bagi aparatur sipil",
+"why": "KOICA memperluas proyek tata kelola digital dan akademi startup.",
+"target": "Kementerian federal, pemerintah negara bagian, pelaksana proyek KOICA"
+},
+{
+"title": "Dukungan pertumbuhan UKM/startup dan konsultasi keterhubungan dengan pasar Korea",
+"why": "Penguatan ekosistem UMKM menjadi inti program donor dan permintaan lokal kuat.",
+"target": "UMKM, startup teknologi, lembaga usaha negara bagian"
+},
+{
+"title": "Perangkat lunak manajemen kasus dan pemantauan CCTV untuk kepolisian negara bagian",
+"why": "Amendemen kepolisian ganda diperkirakan akan melahirkan satuan kepolisian negara bagian yang baru.",
+"target": "Pemerintah negara bagian, komando kepolisian negara bagian"
+}
+],
+"krsupport": [
+{
+"title": "Program KOICA di Nigeria (digital, pendidikan, pemuda)",
+"detail": "Menjalankan Smart School Tahap II di 21 negara bagian, tata kelola digital, akademi inovasi digital startup, dan lapangan kerja hijau bagi pemuda."
+},
+{
+"title": "Fellowship aparatur sipil KOICA (CIAT)",
+"detail": "Sekitar 2,000 pejabat Nigeria telah mengikuti pelatihan di Korea."
+}
+]
+}

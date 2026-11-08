@@ -1,0 +1,64 @@
+{
+"summary": "Après la chute du gouvernement Bolojan en mai et cinq mois de blocage, le Parlement a investi le 20 octobre le gouvernement PSD-technocrate du Premier ministre Niculescu. Les principaux défis sont l'un des déficits les plus élevés de l'UE, une inflation forte et les menaces sécuritaires à la frontière.",
+"leader": "Président Nicușor Dan / Premier ministre Luca Niculescu (diplomate sans étiquette, investi le 2026-10-20 ; gouvernement PSD et technocrate)",
+"agenda": [
+"Rétablir un gouvernement de plein exercice et stabiliser les services publics",
+"Réduire le déficit budgétaire (à surveiller : la poursuite de la ligne d'austérité de 2025, y compris la hausse de la TVA)",
+"Répondre aux menaces sécuritaires en mer Noire et à la frontière ukrainienne (incidents de drones)",
+"Réformes soutenues par la Banque mondiale, comme la numérisation des services judiciaires",
+"Réduction de la pollution en milieu rural et infrastructures de gestion des risques de catastrophe"
+],
+"projects": [
+{
+"title": "Strengthening Foundations for Improved Justice Service Delivery",
+"detail": "Réhabilitation des bâtiments judiciaires, refonte du réseau local du ministère de la Justice et conseil en stratégie de justice numérique",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Projet de prévention et de réduction de la pollution rurale (RAPID)",
+"detail": "Contrats de conseil attribués pour un système d'alerte précoce phytosanitaire et un système de gestion des informations de laboratoire (oct. 2026)",
+"status": "En cours"
+},
+{
+"title": "Projet de renforcement de la gestion des risques de catastrophe",
+"detail": "Travaux tels que le raccordement des installations d'urgence au réseau électrique",
+"status": "En cours"
+},
+{
+"title": "Écoles plus sûres, inclusives et durables",
+"detail": "Contrats de mobilier et d'équipement de salles de classe pour 11 écoles",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conseil en numérisation des organismes publics et en systèmes de gestion des données",
+"why": "Les projets de la Banque mondiale continuent de lancer des appels d'offres de conseil en systèmes informatiques dans la justice et l'environnement.",
+"target": "Ministère de la Justice, agences environnementales"
+},
+{
+"title": "Gestion de projets financés par l'UE (PMO) et appui au suivi des résultats",
+"why": "Le nouveau gouvernement doit accélérer les projets financés par l'UE qui ont pris du retard.",
+"target": "Unités de gestion des fonds européens des ministères, municipalités"
+},
+{
+"title": "Accompagnement des PME coréennes à l'entrée sur le marché roumain (études de marché, mise en relation avec des partenaires)",
+"why": "Intérêt en tant que base de production et de distribution en Europe de l'Est, même si le risque politique doit être vérifié.",
+"target": "PME coréennes de biens de consommation et de composants"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Bucarest",
+"detail": "Fournit des informations sur le marché roumain, la recherche d'acheteurs et les marchés publics."
+},
+{
+"title": "Soutien aux infrastructures à l'étranger",
+"detail": "Soutient les études de faisabilité et les prises de participation dans des projets d'infrastructures à l'étranger."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre, par des bons, les frais d'études de marché à l'étranger, de certification et de marketing."
+}
+]
+}

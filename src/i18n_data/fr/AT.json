@@ -1,0 +1,71 @@
+{
+"summary": "La coalition autrichienne ÖVP-SPÖ-NEOS assainit les finances publiques au moyen d'un double budget 2027/28 visant à sortir de la procédure de l'UE concernant les déficits excessifs d'ici 2028. Une motion de censure du FPÖ a échoué en octobre, et le vice-chancelier SPÖ Babler prévoit de se retirer début 2027.",
+"leader": "Président Alexander Van der Bellen / Chancelier Christian Stocker (ÖVP ; coalition ÖVP-SPÖ-NEOS)",
+"agenda": [
+"Assainissement budgétaire : déficit des administrations publiques ramené à 3 % du PIB d'ici 2028 pour sortir de la procédure de l'UE concernant les déficits excessifs",
+"Baisse du coût du travail (cotisation patronale FLAF réduite de 1 point à partir de 2028)",
+"Compétitivité industrielle : prix de l'électricité industrielle, paquet industriel de 750 M EUR, fonds pour startups/scale-ups",
+"Dépenses ciblées en faveur de l'éducation, du marché du travail et des soins",
+"Préparation aux crises et résilience des chaînes d'approvisionnement (projet de loi sur l'urgence et la résilience du marché intérieur)",
+"Réforme du service militaire et du service civil"
+],
+"projects": [
+{
+"title": "Double budget fédéral 2027/28",
+"detail": "Dépenses fédérales 2027 de 128,2 Md EUR, déficit fédéral de 15,5 Md EUR (2,7 % du PIB) ; assainissement supplémentaire de 2,5 Md EUR d'ici 2028",
+"status": "En cours"
+},
+{
+"title": "Paquet industriel et fonds pour startups/scale-ups",
+"detail": "Paquet de soutien industriel prévu et nouveau fonds pour les entreprises en croissance",
+"status": "Prévu"
+},
+{
+"title": "Allègement du coût du travail (baisse de la cotisation FLAF)",
+"detail": "La cotisation patronale au fonds de compensation des charges familiales passe de 3,7 % à 2,7 % à partir de 2028, soit une économie d'environ 2 Md EUR par an pour les entreprises",
+"status": "Prévu"
+},
+{
+"title": "Projet de loi sur l'urgence et la résilience du marché intérieur (BNRG)",
+"detail": "Projet de loi fixant les règles d'approvisionnement en biens critiques en cas d'urgence du marché intérieur de l'UE, présenté en Conseil des ministres",
+"status": "Prévu"
+},
+{
+"title": "Achats de numérisation du secteur public (entreprises publiques régionales)",
+"detail": "Appels d'offres-cadres pour un PMO/Scrum de la holding de transport de Haute-Autriche (OÖVH) et pour des services informatiques de la holding de santé",
+"status": "Appel d'offres en cours"
+}
+],
+"biz": [
+{
+"title": "Services de PMO et de coaching agile pour la transformation numérique publique",
+"why": "Les entreprises publiques régionales lancent des appels d'offres ouverts pour des services de gestion de projets de numérisation.",
+"target": "Holdings publiques de transport et de santé"
+},
+{
+"title": "Pilote d'automatisation par IA des documents administratifs et des demandes des citoyens",
+"why": "L'assainissement exige des gains d'efficacité sans personnel supplémentaire.",
+"target": "Ministères fédéraux et communes"
+},
+{
+"title": "Offre d'entrée sur le marché autrichien/DACH pour les PME coréennes (étude de marché, mise en relation avec des partenaires)",
+"why": "Le paquet industriel et le soutien aux prix de l'électricité pourraient élargir la coopération manufacturière.",
+"target": "PME coréennes de l'industrie manufacturière et des composants"
+},
+{
+"title": "Conseil en évaluation de la résilience des chaînes d'approvisionnement",
+"why": "La loi sur la résilience crée une demande d'examen des chaînes d'approvisionnement en biens critiques.",
+"target": "Industriels et entreprises publiques"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Vienne",
+"detail": "Fournit des études de marché, la recherche d'acheteurs et un soutien à la participation aux salons en Autriche."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Couvre par des bons les frais d'étude de marché à l'étranger, de certification et de marketing."
+}
+]
+}

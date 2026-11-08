@@ -1,0 +1,70 @@
+{
+"summary": "Ekspor LNG anjlok setelah serangan terhadap Ras Laffan pada Maret 2026 dan gangguan di Selat Hormuz, sehingga Qatar mengalami defisit kuartalan; pada 21 Oktober Kabinet menyetujui rancangan anggaran 2027 dan meneruskannya ke Dewan Syura. Train LNG pertama North Field East sedang disiapkan untuk November, dengan produksi diperkirakan dimulai pada 2027.",
+"leader": "Emir Sheikh Tamim bin Hamad Al Thani / Perdana Menteri merangkap Menteri Luar Negeri Sheikh Mohammed bin Abdulrahman Al Thani",
+"agenda": [
+"NDS3 (2024-2030): pertumbuhan berkelanjutan, kualitas hidup, reformasi kelembagaan pemerintah, keberlanjutan fiskal",
+"Memulihkan produksi LNG dan menuntaskan perluasan North Field",
+"Memperluas sektor swasta dan mempertimbangkan alih daya infrastruktur di tengah penghematan",
+"Meningkatkan konten lokal dan memprioritaskan produk nasional",
+"Investasi kesehatan dan pendidikan"
+],
+"projects": [
+{
+"title": "Rancangan anggaran negara 2027",
+"detail": "Disetujui Kabinet pada 21 Okt 2026 dan diteruskan ke Dewan Syura",
+"status": "Direncanakan"
+},
+{
+"title": "Anggaran negara 2026",
+"detail": "Pendapatan QR199bn (minyak $55), belanja modal utama QR62.8bn; defisit Q2 QR21.2bn",
+"status": "Berjalan"
+},
+{
+"title": "Perluasan LNG North Field East",
+"detail": "Train pertama disiapkan untuk beroperasi pada Nov 2026; produksi LNG diperkirakan pada H1 2027",
+"status": "Berjalan"
+},
+{
+"title": "Perbaikan kerusakan Ras Laffan",
+"detail": "Serangan Maret menghilangkan sekitar 17% kapasitas LNG; dua train yang rusak dapat memerlukan hingga 3 tahun, satu kilang GTL ditargetkan pada Q1 2027",
+"status": "Berjalan"
+},
+{
+"title": "Rencana pengadaan pemerintah 2026",
+"detail": "Sekitar 4,464 kontrak senilai lebih dari QR70bn untuk sektor swasta, termasuk QR49bn oleh Ashghal",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Paket diagnostik proses dan otomatisasi RPA/AI untuk entitas pemerintah",
+"why": "Reformasi kelembagaan adalah pilar inti NDS3 di tengah defisit dan penghematan.",
+"target": "Ministry of Communications and IT (MCIT), kementerian, entitas semi-pemerintah"
+},
+{
+"title": "Sertifikasi konten lokal dan pencarian mitra lokal bagi UKM Korea",
+"why": "Preferensi produk nasional dan aturan konten lokal kini menjadi syarat akses pengadaan.",
+"target": "UKM manufaktur/TI Korea, distributor dan mitra JV Qatar"
+},
+{
+"title": "Solusi AI untuk penjadwalan dan manajemen pasokan rumah sakit",
+"why": "Hamad Medical Corporation menerbitkan tender peralatan dan bahan habis pakai dalam jumlah besar.",
+"target": "Hamad Medical Corporation, Ministry of Public Health"
+},
+{
+"title": "Konsultasi penstrukturan PPP infrastruktur dan studi kelayakan",
+"why": "Kementerian Keuangan sedang meninjau alih daya proyek infrastruktur kepada sektor swasta.",
+"target": "Kementerian Keuangan, Ashghal"
+}
+],
+"krsupport": [
+{
+"title": "MOU kerja sama UKM dan inovasi Korea-Qatar serta TIPF",
+"detail": "MOU yang ditandatangani pada KTT 2023 yang menjadi dasar pertukaran UKM dan masuk pasar (materi 2023)."
+},
+{
+"title": "MOU konstruksi dan geospasial Team Korea dengan Qatar",
+"detail": "MOU dengan Ashghal dan Ministry of Municipality mengenai konstruksi cerdas dan data geospasial (materi 2023)."
+}
+]
+}

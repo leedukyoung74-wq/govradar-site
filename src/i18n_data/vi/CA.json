@@ -1,0 +1,71 @@
+{
+"summary": "Trước khi công bố ngân sách liên bang thứ hai vào ngày 5/11, chính phủ Carney cho biết sẽ cân đối ngân sách vận hành trong khi mở rộng chi tiêu vốn và hạ tầng. Trước sức ép thuế quan của Mỹ, các ưu tiên gồm thu hút đầu tư, năng lượng và lưới điện, ứng dụng AI và tăng chi tiêu quốc phòng.",
+"leader": "Thủ tướng Mark Carney (người đứng đầu chính phủ); nguyên thủ quốc gia là Vua Charles III",
+"agenda": [
+"Ứng phó thuế quan của Mỹ và đa dạng hóa thương mại, đầu tư",
+"Kiềm chế chi tiêu vận hành trong khi mở rộng chi tiêu vốn (hạ tầng)",
+"Chiến lược AI quốc gia và mở rộng ứng dụng AI trong SME",
+"Cải tạo năng lượng nhà ở và Chiến lược Điện lực Quốc gia (tăng gấp đôi lưới điện vào năm 2050)",
+"Tăng mạnh chi tiêu quốc phòng",
+"Tăng cường sự tham gia kinh tế của người bản địa"
+],
+"projects": [
+{
+"title": "Ngân sách Liên bang 2026",
+"detail": "Bộ trưởng Tài chính Champagne sẽ trình vào ngày 5/11; PBO dự báo thâm hụt 63,3 tỷ C$ cho năm 2026-27",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Cải tạo năng lượng một triệu ngôi nhà",
+"detail": "Chương trình Hoàn tiền Bơm nhiệt Quốc gia (tối đa 820.000 hộ, tối đa 10.000 $) cùng 280.000 căn hộ thông qua CMHC và CIB",
+"status": "Đang triển khai"
+},
+{
+"title": "Hội đồng Quốc gia về AI và chiến lược AI quốc gia",
+"detail": "Hội đồng ra mắt ngày 2/10/2026 nhằm thúc đẩy ứng dụng AI",
+"status": "Đang triển khai"
+},
+{
+"title": "Chiến lược Điện lực Quốc gia",
+"detail": "Khởi động tháng 5/2026; mục tiêu tăng gấp đôi công suất lưới điện vào năm 2050",
+"status": "Đang triển khai"
+},
+{
+"title": "Tăng chi tiêu quốc phòng",
+"detail": "PBO ước tính tăng từ khoảng 75 tỷ C$ lên 95,7 tỷ C$ vào năm 2030-31",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Gói tự động hóa quy trình bằng AI và đào tạo cho SME",
+"why": "Chính phủ đã đưa ứng dụng AI thành ưu tiên quốc gia với Hội đồng Quốc gia về AI mới thành lập.",
+"target": "SME sản xuất và dịch vụ tại Ontario/Quebec, các cơ quan phát triển vùng"
+},
+{
+"title": "SaaS tự động hóa đăng ký/xác minh hoàn tiền bơm nhiệt và quản lý nhà thầu",
+"why": "Cam kết phê duyệt trong 24 giờ cho tối đa 820.000 khoản hoàn tiền tạo nhu cầu xử lý khối lượng lớn.",
+"target": "Bộ Tài nguyên Thiên nhiên Canada, cơ quan hiệu quả năng lượng cấp tỉnh, nhà thầu"
+},
+{
+"title": "Tư vấn đa dạng hóa xuất khẩu sang châu Á cho doanh nghiệp sản xuất chịu thuế quan",
+"why": "Sau khi đàm phán thương mại với Mỹ đổ vỡ vào tháng 8, hỗ trợ cho ngành thép và ô tô đang được mở rộng.",
+"target": "Doanh nghiệp thép và phụ tùng ô tô Ontario, bộ phát triển kinh tế cấp tỉnh"
+},
+{
+"title": "PMO và nghiên cứu thị trường cho các liên doanh quốc phòng/vũ trụ/hydro Hàn Quốc-Canada",
+"why": "Hàng loạt MOU của Hanwha và các doanh nghiệp khác tạo nhu cầu cho các SME nhà cung cấp đi theo.",
+"target": "SME đối tác Hàn Quốc, đối tác Canada (Telesat, MDA, v.v.)"
+}
+],
+"krsupport": [
+{
+"title": "Hội nghị Bàn tròn Doanh nghiệp Hợp tác Công nghiệp Tiên tiến Hàn Quốc-Canada",
+"detail": "Tổ chức tại Toronto vào cuối tháng 5/2026, kết nối doanh nghiệp trong lĩnh vực quốc phòng, vũ trụ và hydro, đạt được ba MOU."
+},
+{
+"title": "Diễn đàn Hợp tác Công nghiệp Hàn Quốc-Canada",
+"detail": "Tổ chức tại Toronto vào tháng 1/2026 với sáu MOU về di chuyển tương lai, AI và khoáng sản thiết yếu."
+}
+]
+}

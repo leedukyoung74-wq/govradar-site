@@ -1,0 +1,80 @@
+{
+"summary": "Pada Juni 2026, Mauritius menyampaikan anggaran 2026/27 yang bertumpu pada AI dan digitalisasi, startup dan UKM, serta ekonomi biru, dengan janji menurunkan defisit dari sekitar 6% PDB menjadi 3.7%. Pada Oktober, unjuk rasa terkait kekurangan air, biaya hidup, dan penembakan oleh polisi berujung pada jam malam dari 12 hingga 18 Oktober.",
+"leader": "Presiden Dharam Gokhool · Perdana Menteri merangkap Menteri Keuangan Navin Ramgoolam",
+"agenda": [
+"Menurunkan defisit fiskal (sekitar 6.0% PDB menjadi 3.7%)",
+"Memanfaatkan AI dan digitalisasi, termasuk transformasi digital sektor publik",
+"Mengembangkan startup dan UKM (tax holiday 10 tahun untuk startup)",
+"Ekonomi biru dan perluasan ruang ekonomi",
+"Reformasi jasa keuangan (digitalisasi FSC, penguatan AML/CFT, open banking dan tokenisasi)",
+"Infrastruktur dasar yang andal untuk air, listrik, dan lainnya"
+],
+"projects": [
+{
+"title": "Paket Ekonomi Khusus India",
+"detail": "Rumah sakit nasional baru, menara kontrol bandara, jalan tol M4 dan Ring Road tahap II, peralatan pelabuhan, dan lainnya",
+"status": "Berjalan"
+},
+{
+"title": "Studi diagnostik PPP tingkat negara",
+"detail": "Pemilihan konsultan untuk mendiagnosis kerangka dan pipeline PPP",
+"status": "Tender terbuka"
+},
+{
+"title": "Proyek digital twin",
+"detail": "Pemilihan konsultan untuk merancang dan membangun digital twin nasional",
+"status": "Tender terbuka"
+},
+{
+"title": "Data lake pendidikan tinggi",
+"detail": "Analisis, perancangan, dan pembangunan platform data pendidikan tinggi",
+"status": "Tender terbuka"
+},
+{
+"title": "Implementasi dan pemeliharaan e-Passport",
+"detail": "Pernyataan minat (EOI) untuk paspor elektronik yang aman",
+"status": "Tender terbuka"
+},
+{
+"title": "Tuan rumah U.S.-Africa Business Summit 2026",
+"detail": "Diselenggarakan bersama oleh Pemerintah Mauritius dan Corporate Council on Africa",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi dukungan manajemen koperasi dan UKM",
+"why": "Divisi koperasi baru saja melelang jasa konsultansi pengarusutamaan dan dukungan usaha.",
+"target": "Ministry of Industry, SME and Cooperatives"
+},
+{
+"title": "Nasihat diagnostik PPP dan penstrukturan proyek",
+"why": "Kementerian keuangan telah melelang studi diagnostik PPP tingkat negara.",
+"target": "Kementerian Keuangan"
+},
+{
+"title": "Platform data publik dan analitik AI",
+"why": "Anggaran menjadikan AI dan digitalisasi sebagai pilar utama, dan tender data lake serta digital twin sedang dibuka.",
+"target": "Higher Education Commission, Ministry of Housing and Lands, kementerian TIK"
+},
+{
+"title": "Dukungan soft landing startup dan pendirian perusahaan lokal",
+"why": "Tax holiday startup 10 tahun menjadikan Mauritius hub yang lebih menarik untuk Afrika.",
+"target": "Startup dan UKM Korea yang menyasar Afrika"
+}
+],
+"krsupport": [
+{
+"title": "Berita pasar luar negeri KOTRA (Mauritius/Afrika)",
+"detail": "Menyediakan informasi pasar Mauritius serta Afrika bagian selatan dan timur."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Voucher menanggung biaya penerjemahan dokumen tender, hukum, dan riset pasar."
+},
+{
+"title": "Dukungan infrastruktur luar negeri KIND",
+"detail": "Mendukung studi kelayakan dan investasi pada proyek PPP dan infrastruktur luar negeri."
+}
+]
+}

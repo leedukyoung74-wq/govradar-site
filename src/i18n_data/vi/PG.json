@@ -1,0 +1,75 @@
+{
+"summary": "Ngân sách bổ sung năm 2026 điều chuyển vốn cho hỗ trợ giá nhiên liệu, ứng phó El Niño và chuẩn bị bầu cử năm 2027, với mục tiêu cân bằng ngân sách năm 2027. Quyết định đầu tư cuối cùng cho dự án Papua LNG trị giá 14,5 tỷ USD dự kiến vào ngày 15/12/2026.",
+"leader": "Nguyên thủ quốc gia Quốc vương Charles III (Toàn quyền Grand Chief Sir Bob Dadae); Thủ tướng James Marape",
+"agenda": [
+"Củng cố tài khóa và cân bằng ngân sách năm 2027 (thâm hụt gần 1%)",
+"Quyết định đầu tư cuối cùng (FID) cho Papua LNG (14,5 tỷ USD) và bảo đảm nguồn thu từ tài nguyên",
+"Cuộc bầu cử quốc gia năm 2027 tự do và công bằng (200 triệu K cho Ủy ban Bầu cử)",
+"Ứng phó El Niño và hạn hán, hỗ trợ giá nhiên liệu",
+"Hiện đại hóa nền công vụ, bao gồm ứng dụng AI",
+"Tiến trình hiến định về tương lai chính trị của Bougainville"
+],
+"projects": [
+{
+"title": "Papua LNG",
+"detail": "Liên doanh do ExxonMobil dẫn dắt; FID dự kiến vào ngày 15/12/2026",
+"status": "Theo kế hoạch"
+},
+{
+"title": "AI trong hành chính công (nền tảng GovAoS)",
+"detail": "Nền tảng nâng cao năng suất bằng AI được thí điểm tại Văn phòng Thủ tướng, sẽ được mở rộng toàn chính phủ, có kế hoạch triển khai các tác nhân AI (AI agent)",
+"status": "Đang triển khai"
+},
+{
+"title": "Chuẩn bị bầu cử quốc gia năm 2027",
+"detail": "Cập nhật danh sách cử tri, hậu cần bỏ phiếu, đào tạo cán bộ, an ninh",
+"status": "Đang triển khai"
+},
+{
+"title": "Ngân sách bổ sung năm 2026",
+"detail": "Hỗ trợ giá nhiên liệu (khoảng 800 triệu K, dự kiến vượt 1 tỷ K vào cuối năm), ứng phó El Niño, không vay mới",
+"status": "Đang triển khai"
+},
+{
+"title": "Huy động nguồn thu (IRC và Hải quan)",
+"detail": "IRC thu được 16,5 tỷ K năm 2026 (81% mục tiêu điều chỉnh 20,3 tỷ K); thu hải quan tăng 42%",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn và đào tạo tự động hóa quy trình bằng AI cho chính phủ",
+"why": "Văn phòng Thủ tướng đã chính thức đề ra việc thí điểm nền tảng AI, mở rộng toàn chính phủ và bổ sung các tác nhân AI.",
+"target": "Văn phòng Thủ tướng và NEC, Bộ ICT, cán bộ chuyển đổi số của các bộ ngành"
+},
+{
+"title": "Phân tích dữ liệu thuế và hải quan, tự động hóa thu",
+"why": "Tăng thu là trọng tâm của mục tiêu cân bằng ngân sách năm 2027.",
+"target": "Ủy ban Thu nội địa (IRC), Hải quan PNG"
+},
+{
+"title": "Hỗ trợ SME địa phương tham gia chuỗi cung ứng xung quanh LNG",
+"why": "Nhu cầu mua sắm lớn tại địa phương có thể xuất hiện sau FID (ước tính).",
+"target": "Doanh nghiệp địa phương, chính quyền tỉnh, công ty của chủ đất"
+},
+{
+"title": "Quản lý hiệu quả cơ quan công quyền và rà soát chi tiêu",
+"why": "Chính phủ đang kiểm soát chi tiêu thông qua các cuộc họp hằng tuần của Ủy ban Quản lý Ngân sách.",
+"target": "Bộ Tài chính, Bộ Ngân khố, Bộ Kế hoạch Quốc gia"
+}
+],
+"krsupport": [
+{
+"title": "Tái lập văn phòng KOICA tại Port Moresby",
+"detail": "Hiệp định khung về viện trợ không hoàn lại ký tháng 12/2025 cho phép KOICA mở lại văn phòng sau khoảng 12 năm."
+},
+{
+"title": "Voucher Xuất khẩu",
+"detail": "Chi trả chi phí nghiên cứu thị trường Thái Bình Dương và tiếp thị tại địa phương thông qua voucher."
+},
+{
+"title": "Hỗ trợ phát triển xây dựng và đầu tư ở nước ngoài",
+"detail": "Có thể xem xét hỗ trợ nghiên cứu khả thi cho các dự án đầu tư hạ tầng gắn với LNG (ước tính)."
+}
+]
+}

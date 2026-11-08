@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GOV RADAR · 글로벌로 가는 길</title>
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"WMM Nexon";font-weight:300;font-display:swap;src:local("NEXON Lv1 Gothic Light"),url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:400;font-display:swap;src:local("NEXON Lv1 Gothic"),url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:700;font-display:swap;src:local("NEXON Lv1 Gothic Bold"),url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff")}
+:root{--bg:#07090d;--bg2:#0d1420;--ink:#f4f6f8;--muted:#a9b3bf;--acc:#6fb6ff;--acc2:#2f7fe0;--line:rgba(255,255,255,.12);--btn:#f4f6f8;--btnink:#07090d}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;word-break:keep-all}
+.gate{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 78% 40%,var(--bg2) 0%,var(--bg) 62%);padding:56px 48px}
+.gate:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.35;mask-image:radial-gradient(80% 80% at 75% 45%,#000 30%,transparent 75%);pointer-events:none}
+.wrap{position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center}
+html[lang=ko] h1 em{white-space:nowrap}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 var(--acc);animation:ping 2s infinite}
+h1{font-size:clamp(28px,3.8vw,48px);line-height:1.18;margin:16px 0 18px;font-weight:700;letter-spacing:-.01em}
+h1 em{font-style:normal;background:linear-gradient(90deg,#fff,var(--acc));-webkit-background-clip:text;background-clip:text;color:transparent}
+p.lede{font-size:17px;line-height:1.7;color:var(--muted);font-weight:400;margin:0 0 26px;max-width:36em}
+.stats{display:flex;gap:28px;margin:0 0 30px;padding:0;list-style:none;flex-wrap:wrap}
+.stats li{border-left:2px solid var(--acc2);padding-left:12px}
+.stats b{display:block;font-size:28px;font-weight:700;line-height:1.1}
+.stats span{font-size:13px;color:var(--muted);font-weight:300}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:1px solid var(--line);color:var(--ink);transition:transform .15s,box-shadow .15s}
+.btn.pri{background:var(--btn);color:var(--btnink);border-color:transparent;box-shadow:0 8px 30px rgba(111,182,255,.25)}
+.btn:hover{transform:translateY(-2px)}
+.note{margin-top:16px;font-size:13px;color:var(--muted);font-weight:300}
+.radar{position:relative;width:min(100%,460px);margin:0 auto;aspect-ratio:640/709}
+.radar img{position:relative;width:100%;height:auto;display:block;z-index:2;filter:drop-shadow(0 0 28px rgba(80,160,255,.35))}
+/* sweep sits inside the logo's ring: centre 49.5% / 37.1%, diameter 63.8% of width */
+.sweep,.pulse{position:absolute;left:49.5%;top:37.1%;width:63.8%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;z-index:3;pointer-events:none}
+.sweep{background:conic-gradient(from 0deg,rgba(111,182,255,0) 0deg,rgba(111,182,255,0) 290deg,rgba(111,182,255,.18) 330deg,rgba(150,210,255,.75) 359deg,rgba(111,182,255,0) 360deg);mix-blend-mode:screen;animation:spin 4s linear infinite}
+.pulse{border:2px solid rgba(111,182,255,.55);animation:pulse 4s ease-out infinite;z-index:1}
+.pulse.p2{animation-delay:2s}
+.blip{position:absolute;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#bfe3ff;box-shadow:0 0 12px 4px rgba(111,182,255,.9);z-index:4;opacity:0;animation:blip 4s infinite}
+.blip.b1{left:34%;top:24%;animation-delay:.55s}
+.blip.b2{left:41%;top:47%;animation-delay:1.3s}
+.blip.b3{left:66%;top:44%;animation-delay:2.4s}
+.blip.b4{left:58%;top:18%;animation-delay:3.3s}
+.tag{position:absolute;z-index:5;font-size:12px;font-weight:700;color:#dff0ff;background:rgba(7,9,13,.72);border:1px solid rgba(111,182,255,.5);padding:4px 9px;border-radius:999px;white-space:nowrap;opacity:0;animation:blip 4s infinite}
+.tag.t1{left:6%;top:16%;animation-delay:.6s}.tag.t2{left:2%;top:52%;animation-delay:1.35s}.tag.t3{right:0;top:50%;animation-delay:2.45s}.tag.t4{right:6%;top:8%;animation-delay:3.35s}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes pulse{0%{transform:translate(-50%,-50%) scale(.35);opacity:.9}100%{transform:translate(-50%,-50%) scale(1.25);opacity:0}}
+@keyframes blip{0%,100%{opacity:0}8%{opacity:1}40%{opacity:.15}}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(111,182,255,.7)}100%{box-shadow:0 0 0 12px rgba(111,182,255,0)}}
+@media (prefers-reduced-motion:reduce){.sweep{animation:spin 6s linear infinite}.pulse{animation:pulse 6s ease-out infinite}.tag{display:none}}
+@media (max-width:820px){.gate{padding:40px 20px}h1{font-size:26px}.wrap{grid-template-columns:1fr;gap:28px}.radar{order:-1;width:min(78%,340px)}.stats{gap:18px}.stats b{font-size:24px}.tag{display:none}}
+</style>
+</head>
+<body>
+<section class="gate">
+ <div class="wrap">
+  <div>
+   <span class="eyebrow"><i></i><span data-t="eyebrow">WMM × GCSME · GOV RADAR</span></span>
+   <h1 data-t="h1">글로벌로 가는 길,<br><em>193개국 정부가 먼저 알려 줍니다</em></h1>
+   <p class="lede" data-t="lede">193개국 정부가 무엇을 사고 어디에 예산을 쓰는지 추적합니다. 입찰·ODA·국제기구 사업과 한국 지원제도를 한 화면에서 보고, 우리 회사가 들어갈 자리를 먼저 찾으세요.</p>
+   <ul class="stats">
+    <li><b>193</b><span data-t="s1">추적 국가</span></li>
+    <li><b>80+</b><span data-t="s2">심층 조사 국가</span></li>
+    <li><b>7</b><span data-t="s3">서비스 언어</span></li>
+   </ul>
+   <div class="cta">
+    <a class="btn pri" id="go" href="https://radar.wmm-hoa.com/ko/" target="_blank" rel="noopener"><span data-t="c1">GOV RADAR 바로가기</span> →</a>
+    <a class="btn" id="go2" href="https://radar.wmm-hoa.com/ko/mdb/" target="_blank" rel="noopener" data-t="c2">마감 임박 입찰 보기</a>
+   </div>
+   <p class="note" data-t="note">무료로 둘러보고, 필요한 나라만 회원으로 깊게 보세요.</p>
+  </div>
+  <a class="radar" id="go3" href="https://radar.wmm-hoa.com/ko/" target="_blank" rel="noopener" aria-label="GOV RADAR">
+   <span class="pulse"></span><span class="pulse p2"></span>
+   <img src="/assets/govradar-logo.webp" alt="GOV RADAR" width="640" height="709">
+   <span class="sweep"></span>
+   <span class="blip b1"></span><span class="blip b2"></span><span class="blip b3"></span><span class="blip b4"></span>
+   <span class="tag t1" data-t="g1">🇻🇳 정부 사업</span><span class="tag t2" data-t="g2">🇰🇪 입찰 마감 D-7</span><span class="tag t3" data-t="g3">🇸🇦 ODA</span><span class="tag t4" data-t="g4">🌐 세계은행 공고</span>
+  </a>
+ </div>
+</section>
+<script>
+(function(){
+ var q=new URLSearchParams(location.search),site=(q.get("site")||"wmm").replace(/[^a-z-]/g,""),L=q.get("lang")==="en"?"en":"ko";
+ document.documentElement.dataset.site=site;document.documentElement.lang=L;
+ var EN={eyebrow:"WMM × GCSME · GOV RADAR",h1:"Your road to global markets —<br><em>193 governments show you first</em>",lede:"We track what 193 governments plan to buy and where their budgets go. See tenders, aid-funded projects, development-bank work and Korean support schemes in one place, and find where your company fits before others do.",s1:"countries tracked",s2:"researched in depth",s3:"languages",c1:"Open GOV RADAR",c2:"Tenders closing soon",note:"Browse free. Go deeper on the countries you need as a member.",g1:"🇻🇳 Government programmes",g2:"🇰🇪 Tender closes D-7",g3:"🇸🇦 Aid projects",g4:"🌐 World Bank notices"};
+ if(L==="en"){document.querySelectorAll("[data-t]").forEach(function(e){var v=EN[e.dataset.t];if(v!=null)e.innerHTML=v});document.title="GOV RADAR · Your road to global markets"}
+ var ref="?ref="+encodeURIComponent(site);
+ document.getElementById("go").href="https://radar.wmm-hoa.com/"+L+"/"+ref;
+ document.getElementById("go3").href="https://radar.wmm-hoa.com/"+L+"/"+ref;
+ document.getElementById("go2").href="https://radar.wmm-hoa.com/"+L+"/mdb/"+ref;
+ function send(){try{parent.postMessage({govradarHeight:document.documentElement.scrollHeight},"*")}catch(e){}}
+ addEventListener("load",send);addEventListener("resize",send);setTimeout(send,600);
+})();
+</script>
+</body>
+</html>

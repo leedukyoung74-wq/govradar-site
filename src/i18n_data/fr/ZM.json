@@ -1,0 +1,75 @@
+{
+"summary": "Le gouvernement du président réélu Hichilema prépare le cadre budgétaire 2027 (approuvé par le Conseil des ministres le 17 sept. 2026) dans le cadre de l'agenda Grow Zambia, les ressources 2027 devant augmenter de 7,4 %. L'expansion du cuivre (3 millions de tonnes d'ici 2031), davantage d'électricité et de logistique, et un nouveau programme du FMI sont au cœur des priorités.",
+"leader": "Président Hakainde Hichilema (réélu en août 2026, second mandat depuis sept. 2026)",
+"agenda": [
+"Grow Zambia : emplois, inflation à un chiffre et stabilité du taux de change",
+"Production de cuivre portée d'environ 890 000 tonnes (2025) à 3 millions de tonnes d'ici 2031, avec davantage de transformation locale",
+"Davantage d'approvisionnement électrique (au moins 2 000 MW supplémentaires nécessaires pour la croissance du cuivre) et meilleure logistique",
+"Élargissement de l'assiette fiscale et systèmes fiscaux numériques",
+"Obtenir un nouveau programme du FMI dans le courant de 2026",
+"Corridors de transport régionaux tels que Lobito"
+],
+"projects": [
+{
+"title": "Budget national 2027 et cadre à moyen terme 2027-2029",
+"detail": "Approuvé par le Conseil des ministres le 17 sept. 2026 ; ressources 2027 en hausse de 18,7 Md K (7,4 %), ressources totales projetées à 333 Md K d'ici 2029",
+"status": "Prévu"
+},
+{
+"title": "Corridor TRACER : route Serenje-Mpika (T2), environ 237 km",
+"detail": "Appel d'offres de travaux financé par la Banque mondiale, en deux lots",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Modernisation du poste frontière à guichet unique de Nakonde, phase II",
+"detail": "Projet de facilitation des échanges financé par la Banque mondiale",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "MCC Zambia Compact Roads and Access Project",
+"detail": "Sélection d'un consultant pour la faisabilité, la conception, l'EIES et la supervision des routes T5 et D274/R185a",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Développement du corridor de Lobito",
+"detail": "Accord avec l'Angola et la RDC pour accélérer le développement du corridor",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "PMO et conseil en gestion de projets pour les infrastructures routières et frontalières",
+"why": "Les projets routiers TRACER de la Banque mondiale, de Nakonde et du MCC font l'objet d'appels d'offres simultanés.",
+"target": "RDA, MCTI, MCA-Zambia II"
+},
+{
+"title": "Système numérique de suivi de l'irrigation et de gestion de l'eau",
+"why": "La FAO lance un appel d'offres pour un système de suivi de l'irrigation, ce qui témoigne d'une demande d'agriculture résiliente au climat.",
+"target": "Ministère de l'Agriculture, unités de projet de la FAO"
+},
+{
+"title": "Plateforme numérique d'enregistrement et de déclaration de production pour les mineurs à petite échelle et artisanaux",
+"why": "La croissance du cuivre et l'élargissement de l'assiette fiscale sont des objectifs conjoints.",
+"target": "Ministère des Mines, Zambia Revenue Authority (ZRA)"
+},
+{
+"title": "Conseil en efficacité des dépenses et en budgétisation axée sur la performance pour 2027",
+"why": "Le gouvernement insiste sur la prudence des dépenses sous la pression budgétaire.",
+"target": "MoFNP, ministères sectoriels"
+}
+],
+"krsupport": [
+{
+"title": "Programme de bourses de la KOICA (2026)",
+"detail": "Les boursiers 2026 de la KOICA ont été recrutés par l'intermédiaire du Higher Education Loans and Scholarships Board (HELSB) de Zambie."
+},
+{
+"title": "Korea-Africa AI Hub et K-AI Package",
+"detail": "Projets d'IA, de centres de données et d'énergie liés à l'EDCF pour l'Afrique, pertinents pour un pays en déficit d'électricité."
+},
+{
+"title": "Accompagnement de KOTRA pour l'entrée sur les marchés africains",
+"detail": "Études de marché et mise en relation avec des acheteurs par le bureau commercial compétent (le bureau couvrant la Zambie reste à confirmer)."
+}
+]
+}

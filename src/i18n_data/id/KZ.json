@@ -1,0 +1,74 @@
+{
+"summary": "Konstitusi baru yang diadopsi melalui referendum pada Maret 2026 membentuk parlemen satu kamar (Kurultai) dan jabatan wakil presiden, dan Perdana Menteri Bektenov dikukuhkan kembali. Pemerintah menetapkan 2026 sebagai 'Tahun Digitalisasi dan AI' serta mempercepat pembangunan infrastruktur dan investasi asing, dengan target pertumbuhan di atas 5% per tahun pada 2027–2029.",
+"leader": "Presiden Kassym-Jomart Tokayev (kepala negara), Perdana Menteri Olzhas Bektenov (kepala pemerintahan, dikukuhkan kembali oleh Kurultai pada 31 Agu 2026), Wakil Presiden Yerlan Karin",
+"agenda": [
+"Melaksanakan reformasi politik dan administrasi di bawah konstitusi baru (Kurultai satu kamar, jabatan wakil presiden)",
+"Adopsi penuh perangkat digital dan AI di pemerintahan, pendidikan, dan kesehatan (2026 Tahun Digitalisasi dan AI)",
+"Percepatan pembangunan infrastruktur dan fasilitas sosial ('negara sebagai satu lokasi konstruksi besar')",
+"Pertumbuhan energi, manufaktur (otomotif, permesinan, logam), dan logistik, serta peningkatan investasi asing",
+"Penguatan supremasi hukum, disiplin fiskal, dan pembangunan daerah"
+],
+"projects": [
+{
+"title": "Anggaran Republik 2027–2029 dan proyeksi sosial-ekonomi",
+"detail": "Disetujui pemerintah pada 25 Agu 2026. Memproyeksikan PDB nominal KZT 199,3 triliun pada 2027 dan menargetkan pertumbuhan riil di atas 5% per tahun",
+"status": "Pembahasan parlemen (perkiraan)"
+},
+{
+"title": "51 proyek industri Kazakhstan–Korea",
+"detail": "Proyek mencakup otomotif, permesinan, dan logam. Presiden meminta perusahaan Korea memperluas produksi dan ikut serta dalam proyek infrastruktur, dan pemerintah akan menyusun daftar proyek tersebut",
+"status": "Berjalan"
+},
+{
+"title": "9th Kazakhstan Global Investment Roundtable (KGIR-2026)",
+"detail": "Digelar di Shymkent pada 22 Okt 2026, tempat dokumen investasi ditandatangani",
+"status": "Selesai"
+},
+{
+"title": "KPBU rumah sakit universitas Aktobe dan Semey",
+"detail": "ADB memberikan saran teknis mengenai penstrukturan KPBU (panggilan konsultan diterbitkan Juli 2026)",
+"status": "Berjalan"
+},
+{
+"title": "Tahun Digitalisasi dan AI",
+"detail": "Menerapkan AI dan teknologi digital di seluruh perekonomian, pemerintahan, pendidikan, dan kesehatan pada 2026",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi lokalisasi bagi UKM suku cadang dan peralatan Korea",
+"why": "Presiden secara terbuka meminta perusahaan Korea memperluas produksi, dan proyek bersama senilai lebih dari USD 4 miliar sedang berjalan.",
+"target": "Produsen otomotif dan permesinan Kazakhstan, UKM mitra Korea, Baiterek Holding"
+},
+{
+"title": "Chatbot AI untuk permohonan warga dan otomatisasi dokumen administrasi di pemerintah daerah",
+"why": "Penetapan 2026 sebagai Tahun Digitalisasi dan AI menjadikan AI dalam administrasi publik sebagai tujuan kebijakan.",
+"target": "Kementerian AI dan Pembangunan Digital, akimat daerah"
+},
+{
+"title": "Konsultasi digitalisasi operasional rumah sakit dan data fasilitas",
+"why": "Pekerjaan yang didukung ADB sedang membangun peta digital infrastruktur kesehatan, dan KPBU rumah sakit sedang disiapkan.",
+"target": "Kementerian Kesehatan, sponsor KPBU rumah sakit universitas"
+},
+{
+"title": "Perangkat penjadwalan konstruksi digital dan pengendalian mutu",
+"why": "Pemerintah mempercepat pembangunan infrastruktur dan fasilitas sosial.",
+"target": "Kementerian Industri dan Konstruksi, departemen konstruksi daerah, pemilik proyek negara"
+}
+],
+"krsupport": [
+{
+"title": "Roundtable kerja sama industri Kazakhstan–Korea (Sep 2026)",
+"detail": "Meninjau 51 proyek bersama senilai lebih dari USD 4 miliar dan sepakat menyiapkan daftar proyek infrastruktur bagi perusahaan Korea."
+},
+{
+"title": "Kerja sama KOICA di Asia Tengah",
+"detail": "Kazakhstan adalah penerima bantuan KOICA terbesar ketiga di Asia Tengah pada 1992–2025, dan kerja sama regional bergerak ke arah AI dan tata kelola digital."
+},
+{
+"title": "2026 Export Voucher (MSS)",
+"detail": "Voucher menanggung biaya sertifikasi, riset pasar, pemasaran, dan layanan ekspansi luar negeri lainnya."
+}
+]
+}

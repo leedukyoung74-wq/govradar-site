@@ -1,0 +1,76 @@
+{
+"summary": "Andy Burnham trở thành Thủ tướng ngày 20/7 sau khi Keir Starmer từ chức, và Bộ trưởng Tài chính John Healey đã công bố Ngân sách đầu tiên của mình vào ngày 28/10. Với dư địa tài khóa bị thu hẹp, chính phủ ưu tiên hỗ trợ chi phí sinh hoạt, tái công nghiệp hóa, tăng chi tiêu quốc phòng và phân cấp tài khóa cho các vùng.",
+"leader": "Vua Charles III; Thủ tướng Andy Burnham (Công đảng, nhậm chức từ ngày 20/7/2026)",
+"agenda": [
+"Giảm áp lực chi phí sinh hoạt (gia hạn giảm thuế nhiên liệu và VAT 0% đối với điện sinh hoạt) và chấm dứt tình trạng vô gia cư ngủ ngoài đường",
+"'Tái công nghiệp hóa nước Anh' và các ngành trong chiến lược công nghiệp IS-8 (sản xuất tiên tiến, năng lượng sạch, số hóa, quốc phòng và các ngành khác)",
+"Nâng chi tiêu quốc phòng lên 3% GDP vào năm 2030",
+"Lộ trình Phân cấp Tài khóa: chia sẻ thuế thu nhập và giữ lại thuế tài sản kinh doanh (business rates) cho các thị trưởng",
+"Năng lực AI có chủ quyền, bao gồm bộ trưởng Nội các đầu tiên phụ trách AI",
+"Ưu đãi thuế cho nhà sáng lập và mở rộng miễn giảm thuế tài sản kinh doanh cho doanh nghiệp nhỏ"
+],
+"projects": [
+{
+"title": "Ngân sách Mùa thu 2026",
+"detail": "Ngân sách đầu tiên của Healey: phụ thu ngân hàng tạm thời 6%, tăng 2 điểm thuế suất thuế thu nhập từ bất động sản và tiền tiết kiệm (tháng 4/2027), gia hạn giảm 5p thuế nhiên liệu đến tháng 7/2027",
+"status": "Đã công bố"
+},
+{
+"title": "Founders' Relief",
+"detail": "CGT 10% trên tối đa 10 triệu £ lợi vốn trọn đời cho nhà sáng lập các công ty đổi mới sáng tạo tăng trưởng cao",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Mở rộng miễn giảm thuế tài sản kinh doanh cho doanh nghiệp nhỏ",
+"detail": "Ngưỡng miễn giảm 100% nâng lên giá trị tính thuế 18.000 £, giảm dần đến 21.000 £; miễn giảm cho quán rượu và địa điểm giải trí tăng từ 15% lên 35%",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Lộ trình Phân cấp Tài khóa",
+"detail": "Các thị trưởng được chia sẻ thuế thu nhập từ năm 2028–29 và tham gia cơ chế giữ lại thuế tài sản kinh doanh từ năm 2027–28; cho phép thu phí du khách",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Kế hoạch Phần cứng AI và Quỹ AI Có chủ quyền",
+"detail": "1,1 tỷ £ cho siêu máy tính AI quốc gia và chip thế hệ mới, cùng quỹ 500 triệu £ cho nhà sáng lập AI của Anh",
+"status": "Đang triển khai"
+},
+{
+"title": "Kế hoạch Đầu tư Quốc phòng",
+"detail": "Bao gồm 5 tỷ £ cho máy bay không người lái; chính phủ mới đặt mục tiêu 3% GDP vào năm 2030",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Avatar/chatbot AI và tự động hóa quản lý khách hàng tiềm năng cho xúc tiến đầu tư vùng",
+"why": "Phân cấp tài khóa mang lại cho chính quyền địa phương lợi ích trực tiếp từ thuế tài sản kinh doanh và đầu tư.",
+"target": "Chính quyền chiến lược cấp thị trưởng, hội đồng hạt (ví dụ Suffolk)"
+},
+{
+"title": "Tư vấn thâm nhập thị trường Anh và kết nối đối tác IS-8 cho doanh nghiệp Hàn Quốc",
+"why": "Chính phủ mới đã đưa tái công nghiệp hóa và đầu tư vào các ngành tiên tiến thành ưu tiên.",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc, cơ quan đầu tư vùng của Anh"
+},
+{
+"title": "Tư vấn tự động hóa quy trình bằng AI cho SME Anh",
+"why": "Các chương trình ứng dụng AI cho doanh nghiệp như Bridge AI và việc mở rộng miễn giảm thuế tài sản kinh doanh giải phóng năng lực đầu tư.",
+"target": "SME sản xuất và dịch vụ chuyên môn"
+},
+{
+"title": "Đánh giá năng lực dữ liệu, số hóa và quản lý hiệu quả cho cơ quan công",
+"why": "NHS England và các cơ quan khác đang đặt hàng rà soát khung năng lực.",
+"target": "NHS England, các bộ ngành trung ương"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA London",
+"detail": "Hỗ trợ tìm kiếm người mua, ươm tạo văn phòng chi nhánh, nghiên cứu thị trường và tư vấn đầu tư để thâm nhập Anh."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Phiếu hỗ trợ chi trả chứng nhận UKCA, nghiên cứu thị trường và tiếp thị để thâm nhập Anh."
+}
+]
+}

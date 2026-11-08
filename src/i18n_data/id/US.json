@@ -1,0 +1,79 @@
+{
+"summary": "TA2027 berjalan dengan continuing resolution (P.L. 119-103) yang berakhir pada 11 Desember. Menjelang pemilu sela 3 November, pemerintahan mendorong AI dan sains (Genesis Mission), keringanan biaya perumahan dan biaya hidup, energi, serta kebijakan perdagangan berbasis tarif melalui perintah eksekutif.",
+"leader": "Presiden Donald Trump (kepala negara dan kepala pemerintahan)",
+"agenda": [
+"Kepemimpinan dalam AI/superinteligensi dan inovasi sains (Genesis Mission)",
+"Menurunkan biaya perumahan, BBM, dan biaya hidup lainnya",
+"Pemulangan manufaktur (reshoring) dan penataan ulang perdagangan melalui tarif Section 232/301",
+"Konsolidasi digital layanan pemerintah (America.gov)",
+"Pelaksanaan undang-undang sanksi Rusia dan Iran 2026"
+],
+"projects": [
+{
+"title": "Continuing resolution TA2027 (P.L. 119-103)",
+"detail": "Ditandatangani September 2026; mendanai pemerintahan hingga 11 Desember. RUU anggaran setahun penuh masih tertunda",
+"status": "Berjalan"
+},
+{
+"title": "Inisiatif sains Genesis Mission",
+"detail": "Diumumkan Oktober 2026; investasi publik-swasta untuk mempercepat riset berbasis AI",
+"status": "Berjalan"
+},
+{
+"title": "Kompetisi Quantum Genesis Q",
+"detail": "Bertujuan mendemonstrasikan komputer kuantum yang toleran terhadap kesalahan (fault-tolerant)",
+"status": "Direncanakan"
+},
+{
+"title": "Inisiatif biologi virtual Bio Genesis",
+"detail": "Upaya bersama NIH, DOE, dan Biohub",
+"status": "Direncanakan"
+},
+{
+"title": "Konsolidasi layanan America.gov",
+"detail": "Perintah eksekutif 2026-09-29 yang membentuk satu titik akses tunggal ke layanan federal",
+"status": "Berjalan"
+},
+{
+"title": "Perintah eksekutif tentang biaya perumahan",
+"detail": "Ditandatangani 2026-10-22; langkah-langkah terkait pasokan dan biaya perumahan",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Analisis dampak tarif Section 232/301 dan otomatisasi ketentuan asal barang bagi eksportir",
+"why": "Setelah tarif IEEPA dibatalkan, bea masuk disusun ulang berdasarkan Section 232 dan 301, sehingga eksposur per produk harus dihitung ulang.",
+"target": "UKM Korea yang mengekspor ke AS; importir AS"
+},
+{
+"title": "Paket pencarian pembeli dan riset pasar bagi pendatang baru di pasar AS",
+"why": "KOTRA menetapkan AS sebagai salah satu dari empat pasar fokus bagi eksportir pemula dan kini menjalankan penjodohan bisnis.",
+"target": "UKM barang konsumsi Korea yang belum memiliki rekam jejak ekspor"
+},
+{
+"title": "Chatbot AI dan otomatisasi dokumen untuk layanan negara bagian dan pemerintah lokal",
+"why": "Perintah America.gov meningkatkan tekanan untuk mendigitalkan layanan publik.",
+"target": "Pemerintah negara bagian dan county; lembaga federal melalui kontraktor utama AS"
+},
+{
+"title": "Perangkat kurasi data laboratorium dan analisis AI",
+"why": "Genesis Mission memperluas investasi riset berbasis AI.",
+"target": "Laboratorium nasional, laboratorium universitas"
+}
+],
+"krsupport": [
+{
+"title": "First Step to Exports Week 2026 (AS termasuk empat pasar fokus)",
+"detail": "Mulai 26 Oktober, sekitar tiga minggu pertemuan video dengan pembeli AS dan luar negeri lainnya serta dukungan biaya logistik bagi eksportir pemula."
+},
+{
+"title": "Kursus masuk pasar per negara KOTRA Academy (AS)",
+"detail": "Pelatihan praktis sepanjang tahun tentang masuk ke pasar AS serta kursus perdagangan digital berbasis AI."
+},
+{
+"title": "Voucher ekspor MSS",
+"detail": "Putaran ketiga 2026 menawarkan voucher pemasaran luar negeri senilai KRW 47bn kepada sekitar 1,200 perusahaan."
+}
+]
+}

@@ -1,0 +1,80 @@
+{
+"summary": "Rwanda sedang melaksanakan anggaran TA2026/27 (RWF 7,796.3 miliar) dalam kerangka NST2 dengan fokus pada pertanian, lapangan kerja, dan ketahanan, sementara siklus anggaran 2027/28 dan pemilu lokal (10 Okt hingga 15 Des) sedang berlangsung. Pembicaraan dengan IMF mengenai peninjauan pertama ECF selesai pada Oktober.",
+"leader": "Presiden Paul Kagame / Perdana Menteri Justin Nsengiyumva (sejak Juli 2025)",
+"agenda": [
+"Melaksanakan NST2: pilar ekonomi (63%), sosial (22%), dan tata kelola (15%)",
+"Produktivitas pertanian: sarana produksi, irigasi, dan pengolahan",
+"Penciptaan lapangan kerja bagi pemuda serta manufaktur dan ekspor dalam negeri",
+"Infrastruktur energi, transportasi, dan air",
+"Stabilitas makroekonomi dan program IMF ECF",
+"Restrukturisasi pemerintahan daerah (sel pada Feb 2027, distrik pada Jul 2027)"
+],
+"projects": [
+{
+"title": "Anggaran nasional TA2026/27",
+"detail": "Naik 12% secara tahunan; belanja rutin RWF 4,785.5bn, pembangunan RWF 3,010.8bn; pendapatan domestik RWF 5,273.8bn",
+"status": "Berjalan"
+},
+{
+"title": "Perencanaan dan penganggaran TA2027/28",
+"detail": "Lokakarya tiga minggu bagi perencana pusat dan daerah memulai siklus berikutnya (27 Okt 2026)",
+"status": "Direncanakan"
+},
+{
+"title": "Health Emergency Preparedness, Response and Resilience (HEPRR)",
+"detail": "Dibiayai Bank Dunia; tender peralatan penunjang rumah sakit CHUK Masaka, mesin sinar-X, dan lainnya",
+"status": "Dalam tender"
+},
+{
+"title": "Rwanda Development Cooperation Policy 2026-2050",
+"detail": "Kebijakan kerja sama jangka panjang yang menggantikan Aid Policy 2006; disetujui Kabinet pada Sep 2026",
+"status": "Berjalan"
+},
+{
+"title": "Pabrik A1 Iron & Steel (Musanze)",
+"detail": "Investasi manufaktur yang diresmikan oleh Perdana Menteri pada 14 Sep 2026",
+"status": "Selesai"
+},
+{
+"title": "Asuransi iklim bagi pekerja tambang",
+"detail": "Asuransi iklim sedang dikaji untuk sektor pertambangan dan penggalian, yang mempekerjakan sekitar 92,000 orang pada 2025",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Perangkat otomatisasi penyusunan anggaran dan manajemen kinerja serta pelatihan bagi pemerintah pusat dan daerah",
+"why": "Siklus anggaran 2027/28 dan restrukturisasi pemerintahan daerah berjalan bersamaan, sehingga kebutuhan proses yang terstandar tinggi.",
+"target": "MINECOFIN, pemerintah distrik"
+},
+{
+"title": "Sistem manajemen aset dan pemeliharaan peralatan rumah sakit",
+"why": "Pengiriman peralatan dalam jumlah besar yang didanai Bank Dunia akan memerlukan manajemen purnajual.",
+"target": "RBC, rumah sakit publik"
+},
+{
+"title": "Dasbor data sarana produksi pertanian dan irigasi dengan prakiraan hasil panen",
+"why": "Produktivitas pertanian adalah prioritas utama anggaran.",
+"target": "Kementerian Pertanian dan Sumber Daya Hewan, RAB"
+},
+{
+"title": "Konsultasi bagi UKM Korea yang menjadikan Kigali basis di Afrika Timur",
+"why": "Pembicaraan kerja sama EDCF aktif dan Rwanda menawarkan akses ke pasar COMESA.",
+"target": "UKM Korea, Rwanda Development Board (RDB)"
+}
+],
+"krsupport": [
+{
+"title": "Pembicaraan kerja sama EDCF Korea Eximbank",
+"detail": "Selama KOAFEC pada Sep 2026, bank tersebut membahas proyek EDCF dan partisipasi perusahaan Korea dengan menteri keuangan Rwanda."
+},
+{
+"title": "Korea-Africa AI Hub dan K-AI Package",
+"detail": "Di KOAFEC 2026, Korea menandatangani surat pernyataan minat AI hub dan memaparkan proyek AI, pusat data, dan ketenagalistrikan yang terkait EDCF."
+},
+{
+"title": "Program negara KOICA untuk Rwanda",
+"detail": "Proyek bantuan hibah dan peluang kemitraan melalui kantor Rwanda."
+}
+]
+}

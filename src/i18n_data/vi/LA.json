@@ -1,0 +1,79 @@
+{
+"summary": "Tháng 10/2026, Quốc hội đã bầu cựu nhà ngoại giao Saleumxay Kommasith làm Thủ tướng, trong khi người tiền nhiệm Sonexay Siphandone trở thành Chủ tịch Quốc hội. Theo Kế hoạch Phát triển Kinh tế - Xã hội Quốc gia lần thứ 10 (2026-2030), chính phủ đặt mục tiêu tăng trưởng ít nhất 6%/năm và nợ công dưới 70% GDP vào năm 2030.",
+"leader": "Chủ tịch nước Thongloun Sisoulith · Thủ tướng Saleumxay Kommasith (từ 2026-10-05, kế nhiệm Sonexay Siphandone)",
+"agenda": [
+"NSEDP lần thứ 10 (2026-2030): tăng trưởng ít nhất 6%/năm, GDP bình quân đầu người 3.104 USD",
+"Giảm nợ công (từ khoảng 88% năm 2025 xuống dưới 70% vào năm 2030) và giữ lạm phát dưới 5%",
+"Tăng cường sản xuất trong nước và hỗ trợ doanh nghiệp nhỏ và vừa (SME)",
+"Mở rộng kinh tế số",
+"Hạ tầng kết nối (đường bộ, đường sắt, sân bay, mạng số) và các đặc khu kinh tế",
+"Ứng phó với các cú sốc nông nghiệp (lũ lụt, sâu bệnh, dịch tả lợn châu Phi) và bảo đảm nguồn cung lương thực"
+],
+"projects": [
+{
+"title": "Kế hoạch Phát triển Kinh tế - Xã hội Quốc gia lần thứ 10",
+"detail": "Sáu mục tiêu chiến lược và 26 chương trình ưu tiên về tăng trưởng, giảm nợ và số hóa",
+"status": "Đang triển khai"
+},
+{
+"title": "Xem xét kế hoạch phát triển và ngân sách nhà nước năm 2027",
+"detail": "Kỳ họp Quốc hội tháng 10 xem xét kế hoạch phát triển, ngân sách, kế hoạch tiền tệ và kết quả kiểm toán năm 2025",
+"status": "Đang triển khai"
+},
+{
+"title": "Mở rộng cấp nước Lak Sao (KOICA)",
+"detail": "Nâng cấp hệ thống cấp nước tại Lak Sao, tỉnh Borikhamxay, bao gồm rà phá bom mìn chưa nổ (UXO) và đào tạo đơn vị vận hành",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự án Tăng cường khả năng chống chịu và Giảm nghèo nông thôn của ADB",
+"detail": "Dự án vay vốn ADB (Khoản vay 57225), hiện đang tuyển chọn tư vấn, chẳng hạn tư vấn quản lý tài chính",
+"status": "Đang triển khai"
+},
+{
+"title": "Hỗ trợ kỹ thuật (TA) của ADB nhằm tăng cường mua sắm công và quản lý tài chính",
+"detail": "TA-10235 hỗ trợ cải thiện hệ thống mua sắm và quản lý tài chính công",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn số hóa mua sắm công và quản lý tài chính",
+"why": "Các mục tiêu giảm nợ và một chương trình TA của ADB về mua sắm/quản lý tài chính công (PFM) đang được triển khai đồng thời.",
+"target": "Bộ Tài chính, Bộ Kế hoạch và Đầu tư"
+},
+{
+"title": "Chương trình chẩn đoán quản trị và nâng cao năng lực xuất khẩu cho SME",
+"why": "Kế hoạch lần thứ 10 coi sản xuất trong nước và hỗ trợ doanh nghiệp siêu nhỏ, nhỏ và vừa (MSME) là ưu tiên cốt lõi.",
+"target": "Bộ Công Thương, Phòng Thương mại Lào, SME địa phương"
+},
+{
+"title": "Thí điểm dịch vụ công và tự động hóa hành chính dựa trên AI",
+"why": "Chính phủ xác định kinh tế số và hành chính số là các nội dung trọng tâm trong chương trình nghị sự.",
+"target": "Bộ Công nghệ và Truyền thông, chính quyền các tỉnh"
+},
+{
+"title": "Dịch vụ PMC và nâng cao năng lực gắn với các dự án KOICA",
+"why": "Các dự án cấp nước và xử lý chất thải của KOICA đang triển khai và cần dịch vụ đào tạo, quản lý.",
+"target": "Văn phòng KOICA tại Lào, Bộ Công chính và Vận tải"
+}
+],
+"krsupport": [
+{
+"title": "Các dự án cấp nước và chất thải của KOICA tại Lào",
+"detail": "Hỗ trợ dự án mở rộng cấp nước Lak Sao (2025-2029) và dự án giai đoạn II về chất thải rắn và nước thải phối hợp với GGGI."
+},
+{
+"title": "Thông tin thị trường của KOTRA Viêng Chăn",
+"detail": "Cung cấp thông tin về xu hướng thị trường Lào và việc thâm nhập thị trường."
+},
+{
+"title": "EDCF (Quỹ Hợp tác Phát triển Kinh tế)",
+"detail": "Cung cấp các khoản vay ưu đãi cho hạ tầng tại các nước đang phát triển, trong đó có Lào."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Voucher chi trả chi phí nghiên cứu thị trường nước ngoài và tư vấn."
+}
+]
+}

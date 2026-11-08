@@ -1,0 +1,69 @@
+{
+"summary": "Le gouvernement Sánchez a fixé un plafond de dépenses record de 226 Md€ pour 2027 et prépare un budget 2027 centré sur le logement. Il a manqué l'échéance constitutionnelle de fin septembre sans annoncer de date de dépôt du projet de loi au Parlement, et fonctionne toujours avec les budgets 2023 prorogés.",
+"leader": "Roi Felipe VI (chef de l'État) / Président du gouvernement Pedro Sánchez (chef du gouvernement)",
+"agenda": [
+"Accroître l'offre de logements (agence publique du logement CASA 47, soutien au logement abordable privé)",
+"Renforcer l'État-providence (santé, éducation, protection sociale)",
+"Réduire le déficit et la dette (objectif de terminer la législature avec une dette inférieure à 100 % du PIB)",
+"Réformer le financement des régions",
+"Formation professionnelle (FP), innovation et réponse aux catastrophes climatiques"
+],
+"projects": [
+{
+"title": "Plafond de dépenses non financières 2027",
+"detail": "Plafond record, en hausse de 6,6 % sur un an, approuvé en Conseil des ministres le 7 juillet 2026. Aucune date n'a été fixée pour le dépôt du projet de budget lui-même au Parlement",
+"status": "Prévu"
+},
+{
+"title": "Soutien à la construction de logements abordables",
+"detail": "Financement de promoteurs privés pour construire environ 2 500 logements aux conditions de CASA 47, avec des loyers plafonnés à 30 % des revenus du ménage",
+"status": "En cours"
+},
+{
+"title": "Réseau national de centres d'excellence de formation professionnelle (FP)",
+"detail": "Jusqu'à 200 k€ par centre, versés par l'intermédiaire des autorités régionales de FP",
+"status": "En cours"
+},
+{
+"title": "Déclarations de zones sinistrées",
+"detail": "45 zones de 9 régions touchées par des incendies, des tempêtes et des inondations en septembre-octobre ont été déclarées zones sinistrées, ce qui ouvre l'accès aux aides",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Soutien à la distribution en Espagne et en Europe du Sud pour les PME coréennes de la beauté et de l'alimentation",
+"why": "KOTRA a organisé à Madrid une exposition des marques coréennes pour l'Europe du Sud et utilise l'Espagne comme base pour l'Europe du Sud et l'Afrique du Nord.",
+"target": "PME coréennes de biens de consommation, acheteurs espagnols de la distribution et du téléachat"
+},
+{
+"title": "Chatbot IA pour la gestion des locataires et des réclamations du logement public",
+"why": "Le parc locatif public croît rapidement grâce à CASA 47 et aux promoteurs privés sous contrat.",
+"target": "CASA 47 (SEPES), sociétés régionales de logement"
+},
+{
+"title": "Contenus de formation et conseil en IA et automatisation pour les centres de FP",
+"why": "L'appel à centres d'excellence de FP apporte à chaque centre de nouveaux financements.",
+"target": "Départements régionaux de l'éducation, centres d'excellence de FP"
+},
+{
+"title": "Outils d'analyse des dégâts d'incendies et d'inondations et de données d'alerte précoce",
+"why": "La déclaration de 45 zones sinistrées crée une demande de reconstruction et de prévention.",
+"target": "Direction de la Protection civile, agences régionales d'urgence"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Madrid",
+"detail": "Fournit des informations sur le marché espagnol, la mise en relation avec des acheteurs et du conseil à l'implantation."
+},
+{
+"title": "Korea Brand Expo 2026 en Europe du Sud (Madrid)",
+"detail": "Du 27 au 29 mai 2026, 46 PME coréennes de biens de consommation ont tenu des rendez-vous d'export avec 67 acheteurs européens (achevé)."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Les bons couvrent le coût de la certification, des études de marché, du marketing et d'autres services d'expansion à l'étranger."
+}
+]
+}

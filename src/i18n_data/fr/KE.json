@@ -1,0 +1,71 @@
+{
+"summary": "Le budget kényan de 4 820 Md KSh pour l'exercice 2026/27 s'inscrit dans le Bottom-Up Economic Transformation Agenda, avec pour priorités l'agriculture, le logement abordable, la santé, l'éducation et les petites entreprises. Le gouvernement a créé un Fonds national d'infrastructures et un fonds souverain, et annoncera un successeur à Vision 2030 après consultation publique.",
+"leader": "Président William Ruto (chef de l'État et du gouvernement)",
+"agenda": [
+"Bottom-Up Economic Transformation Agenda : agriculture, logement abordable, santé, MPME",
+"Financement des infrastructures via le Fonds national d'infrastructures et le fonds souverain",
+"Couverture santé universelle et renforcement de la Social Health Authority",
+"Emploi des jeunes (NextGen.ke) et financement élargi de l'enseignement supérieur",
+"Une nouvelle vision nationale à long terme après Vision 2030"
+],
+"projects": [
+{
+"title": "Budget national de l'exercice 2026/27",
+"detail": "Recettes de 3 630 Md KSh, déficit de 1 150 Md KSh (5,5 % du PIB) ; éducation 784,5 Md, énergie/infrastructures/TIC 531,3 Md, routes 220,4 Md, santé 177,2 Md, agriculture/développement rural 111,7 Md",
+"status": "En cours"
+},
+{
+"title": "Logement abordable et social",
+"detail": "50,6 Md KSh pour le logement abordable et 20,9 Md KSh pour le logement social",
+"status": "En cours"
+},
+{
+"title": "Fonds national d'infrastructures (NIF)",
+"detail": "350 Md KSh levés en environ trois mois (annoncé le 11 juillet 2026) ; vise plus de 20 000 km de routes et environ 10 000 MW d'électricité sur sept ans",
+"status": "En cours"
+},
+{
+"title": "Fonds souverain",
+"detail": "Loi promulguée le 8 juillet 2026 ; une partie des revenus des actifs de l'État est épargnée et investie",
+"status": "En cours"
+},
+{
+"title": "PPP routier Nairobi-Mombasa",
+"detail": "KeNHA a acquis des services de faisabilité et de conseil transactionnel pour un PPP (clôture en août 2026)",
+"status": "Prévu"
+},
+{
+"title": "Vision à long terme post-Vision 2030",
+"detail": "Rapport des universitaires reçu le 21 juillet 2026 ; la nouvelle vision suivra la consultation publique",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Conseil en PMO pour le suivi de l'avancement et le suivi financier des infrastructures",
+"why": "Le NIF a levé rapidement des sommes importantes, ce qui rend essentiel le contrôle de l'exécution des projets routiers et électriques.",
+"target": "National Treasury, KeNHA, ministère de l'Énergie"
+},
+{
+"title": "Automatisation par IA des demandes de remboursement santé et des contrôles d'éligibilité",
+"why": "L'extension de la couverture universelle accroît le volume des demandes adressées à la SHA.",
+"target": "Social Health Authority, ministère de la Santé"
+},
+{
+"title": "Plateforme de formation numérique/IA et de mise en relation emploi pour les jeunes",
+"why": "Le gouvernement vient de lancer un programme pour l'emploi des jeunes.",
+"target": "Ministère de la Fonction publique et de la Jeunesse, gouvernements des comtés"
+},
+{
+"title": "Numérisation de la gestion budgétaire et de la performance des comtés",
+"why": "Les fonds de développement sont de plus en plus dépensés au niveau des comtés, ce qui accroît la demande de suivi de la performance (estimation).",
+"target": "Gouvernements des comtés, Council of Governors"
+}
+],
+"krsupport": [
+{
+"title": "Programmes de bourses (CIAT) et de conseil au développement (DEEP) de KOICA",
+"detail": "KOICA mène des programmes officiels de formation et de conseil au développement ; aucun projet spécifique au Kenya n'a été confirmé lors de cet examen."
+}
+]
+}

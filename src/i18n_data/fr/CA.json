@@ -1,0 +1,71 @@
+{
+"summary": "À l'approche de son deuxième budget fédéral le 5 novembre, le gouvernement Carney affirme qu'il équilibrera le budget de fonctionnement tout en augmentant les dépenses d'investissement et d'infrastructures. Sous la pression des droits de douane américains, les priorités sont l'attraction des investissements, l'énergie et le réseau électrique, l'adoption de l'IA et la hausse des dépenses de défense.",
+"leader": "Premier ministre Mark Carney (chef du gouvernement) ; chef de l'État : le roi Charles III",
+"agenda": [
+"Répondre aux droits de douane américains et diversifier le commerce et l'investissement",
+"Contenir les dépenses de fonctionnement tout en augmentant les dépenses d'investissement (infrastructures)",
+"Stratégie nationale d'IA et adoption accrue de l'IA par les PME",
+"Rénovations énergétiques résidentielles et Stratégie nationale sur l'électricité (doubler le réseau d'ici 2050)",
+"Forte hausse des dépenses de défense",
+"Participation économique accrue des Autochtones"
+],
+"projects": [
+{
+"title": "Budget fédéral 2026",
+"detail": "Le ministre des Finances Champagne le déposera le 5 novembre ; le DPB prévoit un déficit de 63,3 Md CAD pour 2026-27",
+"status": "Prévu"
+},
+{
+"title": "Un million de rénovations énergétiques résidentielles",
+"detail": "Remise nationale pour thermopompes (jusqu'à 820 000 ménages, jusqu'à 10 000 $) plus 280 000 logements en appartement via la SCHL et la BIC",
+"status": "En cours"
+},
+{
+"title": "Conseil national sur l'IA et stratégie nationale d'IA",
+"detail": "Conseil lancé le 2 octobre 2026 pour stimuler l'adoption de l'IA",
+"status": "En cours"
+},
+{
+"title": "Stratégie nationale sur l'électricité",
+"detail": "Lancée en mai 2026 ; vise à doubler la capacité du réseau d'ici 2050",
+"status": "En cours"
+},
+{
+"title": "Hausse des dépenses de défense",
+"detail": "Le DPB estime une hausse d'environ 75 Md CAD à 95,7 Md CAD d'ici 2030-31",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Offre d'automatisation des flux de travail par IA et formation pour les PME",
+"why": "Le gouvernement a fait de l'adoption de l'IA une priorité nationale avec un nouveau Conseil national sur l'IA.",
+"target": "PME manufacturières et de services de l'Ontario/du Québec, agences de développement régional"
+},
+{
+"title": "Automatisation des demandes/vérifications de remises pour thermopompes et SaaS de gestion des entrepreneurs",
+"why": "La promesse d'une approbation en 24 heures pour jusqu'à 820 000 remises crée des besoins de traitement à grande échelle.",
+"target": "Ressources naturelles Canada, agences provinciales d'efficacité énergétique, entrepreneurs"
+},
+{
+"title": "Conseil en diversification des exportations vers l'Asie pour les fabricants touchés par les droits de douane",
+"why": "Après l'échec des négociations commerciales avec les États-Unis en août, le soutien aux secteurs de l'acier et de l'automobile s'élargit.",
+"target": "Entreprises ontariennes de l'acier et des pièces automobiles, ministère provincial du Développement économique"
+},
+{
+"title": "PMO et études de marché pour les coentreprises Corée-Canada dans la défense, l'espace et l'hydrogène",
+"why": "Une série de protocoles d'entente signés par Hanwha et d'autres crée une demande pour que des PME fournisseurs suivent.",
+"target": "PME coréennes partenaires, partenaires canadiens (Telesat, MDA, etc.)"
+}
+],
+"krsupport": [
+{
+"title": "Table ronde d'affaires Corée-Canada sur la coopération dans les industries de pointe",
+"detail": "Tenue à Toronto fin mai 2026, elle a mis en relation des entreprises de la défense, de l'espace et de l'hydrogène et a débouché sur trois protocoles d'entente."
+},
+{
+"title": "Forum de coopération industrielle Corée-Canada",
+"detail": "Tenu à Toronto en janvier 2026, avec six protocoles d'entente sur la mobilité du futur, l'IA et les minéraux critiques."
+}
+]
+}

@@ -1,0 +1,76 @@
+{
+"summary": "Le gouvernement Magyar, en fonction depuis les élections d'avril 2026, donne la priorité au déblocage des fonds européens gelés, à la lutte contre la corruption et à l'assainissement budgétaire. Le projet de budget 2027 se concentre sur les infrastructures ferroviaires, routières et énergétiques, le crédit aux entreprises, le logement des jeunes et les hausses de salaires dans le secteur public.",
+"leader": "Président András Baka (élu en août 2026) / Premier ministre Péter Magyar",
+"agenda": [
+"Déblocage des fonds européens gelés et réforme de l'État de droit",
+"Lutte contre la corruption et transparence de la dépense publique",
+"Réduction du déficit (programme budgétaire à moyen terme 2027-2030)",
+"Logement (programme Wekerle) et soutien aux familles",
+"Hausses de salaires dans la santé et le secteur public",
+"Infrastructures ferroviaires, routières et énergétiques"
+],
+"projects": [
+{
+"title": "Projet de budget de l'État 2027",
+"detail": "Infrastructures ferroviaires, routières et énergétiques, nouveaux dispositifs de prêts aux entreprises, aide au logement des jeunes, taux d'impôt sur le revenu à un chiffre pour environ un million de personnes",
+"status": "Au Parlement"
+},
+{
+"title": "Programme économique et budgétaire à moyen terme 2027-2030",
+"detail": "Publié le 28 octobre 2026, visant des finances prévisibles et une reprise de la croissance",
+"status": "Prévu"
+},
+{
+"title": "Programme de logement Wekerle",
+"detail": "Annoncé le 27 octobre 2026, couvrant l'achat, la rénovation et la location",
+"status": "Prévu"
+},
+{
+"title": "Déblocage des fonds européens et mise en œuvre du fonds de relance",
+"detail": "Accord avec la Commission européenne en mai 2026 pour dégeler les fonds ; subventions et prêts de relance en cours de mobilisation",
+"status": "En cours"
+},
+{
+"title": "Hausse des salaires du personnel de santé",
+"detail": "Augmentation moyenne de 15 % pour les personnels de santé dans le budget 2027",
+"status": "Prévu"
+},
+{
+"title": "Soutien au Centre de coopération Corée-Hongrie sur les batteries (EIPP)",
+"detail": "Le KDI a tenu une réunion de rapport intermédiaire et mené une enquête de terrain à Budapest en août 2026 avec HUBA, BME et d'autres",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Tableaux de bord de suivi de la mise en œuvre des fonds européens et conseil en PMO",
+"why": "Les fonds débloqués doivent être dépensés et faire l'objet de rapports dans un délai court.",
+"target": "Ministères gestionnaires des fonds européens, communes, entreprises publiques"
+},
+{
+"title": "Analyse par IA pour détecter les irrégularités dans les marchés publics",
+"why": "Le nouveau gouvernement a fait de la lutte contre la corruption et de la transparence des dépenses une priorité absolue.",
+"target": "Autorité des marchés publics, organes de contrôle, ministère des Finances"
+},
+{
+"title": "Conseil en main-d'œuvre et en chaîne d'approvisionnement pour les fournisseurs coréens de batteries",
+"why": "Un centre de coopération Corée-Hongrie sur les batteries est en préparation, et de nombreuses usines coréennes de batteries y sont implantées.",
+"target": "Fournisseurs coréens de batteries en Hongrie, Association hongroise des batteries (HUBA)"
+},
+{
+"title": "SaaS d'évaluation de la rénovation et de l'efficacité énergétique des logements",
+"why": "Le programme Wekerle comprend une aide à la rénovation, la demande devrait donc augmenter.",
+"target": "Autorités du logement, entrepreneurs, banques"
+}
+],
+"krsupport": [
+{
+"title": "EIPP Hongrie (Centre de coopération Corée-Hongrie sur les batteries)",
+"detail": "Conseille sur la création d'un centre de coopération sur les batteries en 2025/26 et a tenu une réunion intermédiaire à Budapest en août 2026."
+},
+{
+"title": "Bureau KOTRA de Budapest",
+"detail": "Fournit des informations de marché aux entreprises coréennes des batteries, des pièces automobiles et d'autres secteurs."
+}
+]
+}

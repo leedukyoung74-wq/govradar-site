@@ -1,0 +1,73 @@
+{
+"summary": "Ngày 2026-10-23, nội các do Thủ tướng Hun Manet chủ trì đã phê duyệt ngân sách 2027 khoảng 11,7 tỷ USD, và ngày 2026-10-22 đã khởi động Chiến lược Phát triển SME Quốc gia 2026-2030. Trong bối cảnh đàm phán biên giới với Thái Lan đang diễn ra, chính phủ kết hợp bảo vệ chủ quyền với tăng trưởng dựa vào công nghiệp, dịch vụ và nông nghiệp.",
+"leader": "Quốc vương Norodom Sihamoni / Thủ tướng Hun Manet",
+"agenda": [
+"Bảo vệ chủ quyền và toàn vẹn lãnh thổ; đàm phán biên giới với Thái Lan",
+"Ổn định sinh kế và tăng trưởng có mục tiêu trong bối cảnh bất định (dự báo 4,8% năm 2027)",
+"Công nghiệp, dịch vụ và nông nghiệp là động lực tăng trưởng",
+"Thực hiện Chiến lược Phát triển SME Quốc gia (2026-2030)",
+"Tăng ngân sách cấp địa phương và các biện pháp cải cách năm 2027"
+],
+"projects": [
+{
+"title": "Ngân sách quốc gia 2027",
+"detail": "Tổng cộng 47.655 tỷ KHR; thu 32.327 tỷ KHR (13,49% GDP); mục tiêu chi 39.700 tỷ KHR (16,57% GDP)",
+"status": "Nội các đã phê duyệt (2026-10-23), chờ Quốc hội"
+},
+{
+"title": "Ngân sách hành chính cấp địa phương",
+"detail": "18,7% chi tiêu nhà nước",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Chiến lược Phát triển SME Quốc gia 2026-2030",
+"detail": "Khởi động ngày 2026-10-22 với sự tham dự của Thủ tướng",
+"status": "Đang triển khai"
+},
+{
+"title": "Kênh đào Funan Techo giai đoạn 2",
+"detail": "Khởi công tháng 4/2026, PPP khoảng 1,7 tỷ USD, mục tiêu hoàn thành năm 2028 (theo ghi nhận trước đó)",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Chương trình chẩn đoán và huấn luyện sẵn sàng xuất khẩu cho SME",
+"why": "Chiến lược SME quốc gia mới khởi động tháng 10/2026 tạo nhu cầu về các chương trình triển khai.",
+"target": "Bộ Công nghiệp, Khoa học, Công nghệ và Đổi mới; Phòng Thương mại Campuchia; các đối tác phát triển"
+},
+{
+"title": "Tư vấn tự động hóa ngân sách và kế toán cho chính quyền địa phương",
+"why": "Ngân sách 2027 nâng phân bổ cho cấp địa phương lên 7,9 nghìn tỷ KHR.",
+"target": "Bộ Nội vụ, chính quyền cấp tỉnh và thành phố"
+},
+{
+"title": "Đánh giá tuân thủ xuất xứ và lao động cho doanh nghiệp xuất khẩu may mặc và sản xuất",
+"why": "Thuế quan của Mỹ và việc giám sát chuỗi cung ứng khiến tuân thủ trở nên cấp bách.",
+"target": "Doanh nghiệp sản xuất xuất khẩu, hiệp hội ngành"
+},
+{
+"title": "Dịch vụ khách hàng AI đa ngôn ngữ cho du lịch và dịch vụ",
+"why": "Dịch vụ được xác định là một động lực tăng trưởng năm 2027.",
+"target": "SME du lịch và lưu trú, Bộ Du lịch"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Phnom Penh",
+"detail": "Hỗ trợ nghiên cứu thị trường, tìm kiếm người mua và tư vấn thâm nhập Campuchia."
+},
+{
+"title": "Chương trình quốc gia của KOICA tại Campuchia",
+"detail": "Campuchia là đối tác ưu tiên của KOICA với các dự án viện trợ không hoàn lại và hợp đồng dịch vụ đang triển khai trong lĩnh vực phát triển nông thôn, y tế và giáo dục."
+},
+{
+"title": "Khoản vay ưu đãi EDCF cho Campuchia",
+"detail": "Các khoản vay hạ tầng cho đường bộ và cấp nước mở ra cơ hội thiết kế, giám sát và thi công cho doanh nghiệp Hàn Quốc."
+},
+{
+"title": "Dịch vụ ở nước ngoài theo Export voucher",
+"detail": "Chi phí nghiên cứu thị trường và kết nối người mua để thâm nhập Campuchia có thể được chi trả bằng phiếu hỗ trợ."
+}
+]
+}

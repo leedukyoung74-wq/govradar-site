@@ -1,0 +1,75 @@
+{
+"summary": "Fiji tổ chức trưng cầu dân ý toàn quốc vào ngày 9/12/2026, với cuộc tổng tuyển cử dự kiến diễn ra từ cuối tháng 12/2026 đến đầu tháng 2/2027. Fiji đã đăng cai Pre-COP31 vào tháng 10 và đang thúc đẩy ngoại giao khí hậu cùng sáng kiến 'Đại dương Hòa bình' (Ocean of Peace).",
+"leader": "Tổng thống Ratu Naiqama Lalabalavu; Thủ tướng Sitiveni Rabuka (Liên minh Nhân dân - People's Alliance)",
+"agenda": [
+"Tổ chức trưng cầu dân ý ngày 9/12/2026 (Đạo luật Trưng cầu Dân ý Quốc gia 2026) và chuẩn bị tổng tuyển cử",
+"Ngoại giao khí hậu (nước chủ nhà Pre-COP31, lập trường chung của khu vực Thái Bình Dương)",
+"Sáng kiến an ninh khu vực 'Đại dương Hòa bình'",
+"Mở rộng năng lượng tái tạo và khả năng chống chịu năng lượng",
+"Tăng cường hạ tầng y tế và giáo dục",
+"Cải thiện khả năng tiếp cận dịch vụ công (ví dụ văn phòng xuất nhập cảnh mới)"
+],
+"projects": [
+{
+"title": "Trưng cầu dân ý toàn quốc",
+"detail": "Đạo luật được phê chuẩn ngày 2/10/2026; hoạt động vận động bầu cử tạm dừng trong thời gian trưng cầu dân ý",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình y tế và năng lượng tái tạo của KOICA",
+"detail": "Khoảng 15,38 triệu USD cho y tế và 11,66 triệu USD cho năng lượng tái tạo",
+"status": "Đang triển khai"
+},
+{
+"title": "Trung tâm Phục hồi Chức năng Quốc gia, Tamavua",
+"detail": "Cơ sở phục hồi chức năng do Hàn Quốc tài trợ",
+"status": "Đang triển khai"
+},
+{
+"title": "Nâng cao năng lực Trường Y, Điều dưỡng và Khoa học Sức khỏe thuộc FNU",
+"detail": "Đào tạo nhân lực y tế do Hàn Quốc tài trợ",
+"status": "Đang triển khai"
+},
+{
+"title": "Điện mặt trời/nông nghiệp Ovalau và tái thiết trung tâm nuôi trồng thủy sản Makogai",
+"detail": "Các dự án năng lượng và thủy sản trên đảo do Hàn Quốc tài trợ",
+"status": "Đang triển khai"
+},
+{
+"title": "Hội nghị Pre-COP31",
+"detail": "Hội nghị các nhà lãnh đạo Thái Bình Dương được tổ chức tại Nadi vào tháng 10/2026",
+"status": "Hoàn thành"
+}
+],
+"biz": [
+{
+"title": "PMC năng lượng tái tạo trên đảo và đào tạo vận hành, bảo trì (O&M)",
+"why": "Hợp tác của KOICA và hợp tác Hàn Quốc-Fiji tập trung vào năng lượng tái tạo.",
+"target": "Bộ Năng lượng, Energy Fiji Ltd, cộng đồng nông thôn"
+},
+{
+"title": "Đào tạo chuyển đổi số hành chính công và tự động hóa quy trình bằng AI",
+"why": "Hàn Quốc và Fiji đã xác định chuyển đổi số và kỹ năng là các lĩnh vực mở rộng của KOICA.",
+"target": "Bộ Công vụ, Văn phòng Thủ tướng"
+},
+{
+"title": "Tư vấn xuất khẩu cho doanh nghiệp thủy sản và chế biến nông sản",
+"why": "Fiji muốn phát triển các ngành kinh tế biển và công nghiệp với vai trò trung tâm Thái Bình Dương.",
+"target": "Bộ Thủy sản, Bộ Nông nghiệp, SME địa phương"
+}
+],
+"krsupport": [
+{
+"title": "Chương trình quốc gia của KOICA tại Fiji",
+"detail": "Khoảng 27,04 triệu USD cho y tế và năng lượng tái tạo giai đoạn 2025-2027; văn phòng Fiji kỷ niệm 10 năm thành lập vào năm 2026."
+},
+{
+"title": "Tăng cường quan hệ đối tác chiến lược Hàn Quốc-Fiji",
+"detail": "Cuộc gặp ngoại trưởng tháng 8/2026 đã nhất trí mở rộng hợp tác trong lĩnh vực năng lượng, hàng hải, số hóa và kỹ năng."
+},
+{
+"title": "Export Voucher",
+"detail": "Chi trả chi phí nghiên cứu thị trường các đảo quốc Thái Bình Dương và tiếp thị tại địa phương."
+}
+]
+}

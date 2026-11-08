@@ -1,0 +1,75 @@
+{
+"summary": "Polonia mantiene un gasto en defensa superior al 4% del PIB junto con megaproyectos como el nuevo aeropuerto hub, el tren de alta velocidad y su primera central nuclear, mientras que el déficit del proyecto de presupuesto de 2027 supera el 7% del PIB. Los frecuentes vetos presidenciales retrasan a menudo la legislación del gobierno.",
+"leader": "Presidente Karol Nawrocki / Primer ministro Donald Tusk",
+"agenda": [
+"Refuerzo de la defensa (alrededor del 4,5% del PIB en 2027) y producción nacional de armamento",
+"Mayor gasto en salud",
+"Seguridad y transición energéticas, incluida la primera central nuclear",
+"Grandes infraestructuras (aeropuerto hub Port Polska, tren de alta velocidad, puertos)",
+"Control del déficit en el marco del procedimiento de déficit excesivo de la UE",
+"Diversificación del comercio y la inversión hacia Asia"
+],
+"projects": [
+{
+"title": "Proyecto de presupuesto del Estado 2027",
+"detail": "Gasto de PLN 977.600 millones, déficit de PLN 282.600 millones (7,1% del PIB); PLN 198.100 millones para defensa, PLN 274.100 millones para salud",
+"status": "En el parlamento"
+},
+{
+"title": "Aeropuerto hub y nodo ferroviario Port Polska (antes CPK)",
+"detail": "Cinco consorcios invitados a ofertar por la terminal; licitaciones para la estación ferroviaria del aeropuerto, carreteras, pasarelas de embarque, la línea Varsovia-Łódź y subestaciones. 29 procedimientos por ~PLN 14.000 millones lanzados hasta fines de julio",
+"status": "En licitación"
+},
+{
+"title": "Tramo Varsovia-Łódź del tren de alta velocidad",
+"detail": "Perforación del túnel de Łódź a fines de 2026-2027, otros tramos en 2027-2029",
+"status": "En curso"
+},
+{
+"title": "Primera central nuclear (Kopalino-Lubiatowo)",
+"detail": "Consorcio Westinghouse-Bechtel; construcción principal a partir de 2028, unidad 1 prevista para 2035",
+"status": "Planificado"
+},
+{
+"title": "Terminal de contenedores de aguas profundas de Świnoujście",
+"detail": "Incluye obras en el canal de navegación; construcción de la terminal en 2027-2029",
+"status": "Planificado"
+}
+],
+"biz": [
+{
+"title": "Paquete de entrada al mercado polaco para pymes de defensa (búsqueda de socios, certificación, control de exportaciones, revisión de contratos)",
+"why": "En MSPO 2026, las pymes coreanas señalaron la búsqueda de socios y la revisión de certificación/PI como sus principales obstáculos.",
+"target": "Proveedores coreanos de defensa, empresas que ingresan en la cadena de suministro de la Agencia de Armamento"
+},
+{
+"title": "PMO digital y herramientas de planificación (BIM, analítica de cronogramas con IA) para megaproyectos",
+"why": "Port Polska ha entrado en fase de construcción con decenas de licitaciones en paralelo.",
+"target": "Port Polska, PKP PLK, consorcios contratistas y subcontratistas"
+},
+{
+"title": "Automatización con IA de la administración y la programación de hospitales públicos",
+"why": "El fuerte aumento del gasto en salud en 2027 debería elevar la demanda de eficiencia operativa (estimación).",
+"target": "Ministerio de Salud, Fondo Nacional de Salud (NFZ), hospitales regionales"
+},
+{
+"title": "Automatización de documentación y permisos para proveedores nucleares",
+"why": "La preparación de la construcción principal está aumentando la documentación de calidad y de licencias entre los proveedores.",
+"target": "PEJ, proveedores del consorcio Westinghouse-Bechtel"
+}
+],
+"krsupport": [
+{
+"title": "Oficina de KOTRA en Varsovia",
+"detail": "Estudios de mercado, vinculación con compradores y marketing de exportación en defensa, IA, automoción, energía y bienes de consumo."
+},
+{
+"title": "Análisis de la feria de defensa MSPO 2026",
+"detail": "Publicado en octubre de 2026; aborda la tendencia de localización de la defensa en Polonia y las barreras de entrada para las pymes."
+},
+{
+"title": "K-Content Expo Poland 2026",
+"detail": "Celebrada en Varsovia en septiembre de 2026, con reuniones individuales con unos 100 compradores de Europa Central y Oriental."
+}
+]
+}

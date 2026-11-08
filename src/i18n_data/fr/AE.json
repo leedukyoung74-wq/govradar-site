@@ -1,0 +1,65 @@
+{
+"summary": "En octobre, le Conseil des ministres des Émirats arabes unis a approuvé un budget fédéral de 292,5 Md AED pour 2027-2029 (en hausse de 28,3 % par rapport au cycle précédent), mettant l'accent sur l'IA, l'analyse des données budgétaires et la simplification des procédures. En avril, le gouvernement s'est fixé pour objectif de faire fonctionner la moitié des services et opérations fédéraux grâce à l'IA agentique d'ici deux ans.",
+"leader": "Président Cheikh Mohamed ben Zayed Al Nahyane (chef de l'État) / Vice-président et Premier ministre Cheikh Mohammed ben Rachid Al Maktoum (chef du gouvernement)",
+"agenda": [
+"Faire fonctionner 50 % des services fédéraux grâce à l'IA agentique d'ici deux ans",
+"Planification budgétaire pilotée par l'IA, analyse des données budgétaires et simplification des procédures",
+"Dépenses de développement social axées sur l'éducation et la santé",
+"Actualisation de la législation fiscale et de développement",
+"Nouveaux secteurs de croissance tels que l'économie circulaire et l'agriculture durable"
+],
+"projects": [
+{
+"title": "Budget fédéral 2027-2029",
+"detail": "90,1 Md AED pour 2027 ; développement social et retraites 34,6 Md AED (38,4 %), éducation 18,8 %, santé 6,7 %, infrastructures et économie 3 Md AED",
+"status": "Prévu"
+},
+{
+"title": "Transformation du gouvernement fédéral par l'IA agentique",
+"detail": "La moitié des secteurs, services et opérations fédéraux fonctionneront grâce à l'IA autonome, avec des services proactifs tels que le renouvellement des titres de séjour et des permis",
+"status": "En cours"
+},
+{
+"title": "Système de gestion de projets d'entreprise de la Federal Tax Authority",
+"detail": "Publié sur la plateforme d'achats numériques du ministère des Finances, clôture le 2026-11-17",
+"status": "Appel d'offres ouvert"
+},
+{
+"title": "Formation du personnel du ministère de la Justice (conception assistée par IA, vidéo, etc.)",
+"detail": "Quatre programmes de formation mis en concurrence ensemble, clôture le 2026-11-19",
+"status": "Appel d'offres ouvert"
+}
+],
+"biz": [
+{
+"title": "Offre combinée diagnostic des processus et PoC d'agents IA pour les entités fédérales",
+"why": "La directive du Premier ministre visant à basculer 50 % des opérations fédérales vers l'IA agentique en deux ans pousse les ministères à rechercher des partenaires de mise en œuvre.",
+"target": "Ministères et autorités fédéraux (Justice, FTA, Économie, etc.)"
+},
+{
+"title": "Formation pratique à l'IA générative pour les fonctionnaires (création de contenu, analyse de données)",
+"why": "Le ministère de la Justice lance des appels d'offres publics pour des programmes de formation liés à l'IA.",
+"target": "Services RH et formation du ministère de la Justice et d'autres ministères"
+},
+{
+"title": "Analyse des données budgétaires et tableaux de bord de performance budgétaire",
+"why": "Le budget 2027-2029 prévoit explicitement une planification pilotée par l'IA et l'analyse des données budgétaires.",
+"target": "Ministère des Finances, services de planification et des finances des ministères"
+},
+{
+"title": "Mise en relation avec des partenaires émiriens et localisation pour les PME coréennes de l'IA et de l'énergie",
+"why": "KOTRA développe la mise en relation dans l'IA et l'énergie ainsi que les liens avec la Dubai AI Week.",
+"target": "PME coréennes de l'IA et de l'énergie, entreprises publiques émiriennes (p. ex. NMDC)"
+}
+],
+"krsupport": [
+{
+"title": "Plaza de coopération économique Corée-EAU dans l'IA et l'énergie",
+"detail": "En novembre 2025 à Abou Dhabi, elle a organisé 217 rendez-vous entre 23 PME coréennes et 69 partenaires locaux, et prévoit des liens avec la Dubai AI Week."
+},
+{
+"title": "Salon de l'emploi Moyen-Orient 2026 (K-Move)",
+"detail": "Salon de l'emploi à l'étranger pour les jeunes, organisé à Dubaï fin août 2026 avec 11 entreprises des secteurs de la défense, de la finance, de l'électronique et d'autres."
+}
+]
+}

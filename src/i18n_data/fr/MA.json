@@ -1,0 +1,69 @@
+{
+"summary": "Le PAM est arrivé en tête avec 97 sièges aux élections du 23 septembre 2026, et la cheffe du gouvernement El Mansouri a formé une coalition quadripartite PAM, Istiqlal, USFP et PPS (207 sièges), entrée en fonction le 16 octobre. Les priorités du nouveau gouvernement sont l'accroissement des investissements, l'amélioration des conditions de vie et la préparation des infrastructures pour la Coupe du monde 2030.",
+"leader": "Roi Mohammed VI / Cheffe du gouvernement Fatima Zahra El Mansouri (nommée le 29 sept. 2026, première femme à ce poste)",
+"agenda": [
+"Promotion de l'investissement et renforcement des capacités industrielles",
+"Amélioration du pouvoir d'achat des ménages, de l'emploi et des services publics",
+"Préparation des infrastructures pour la Coupe du monde de la FIFA 2030 (coorganisée avec l'Espagne et le Portugal)",
+"Justice sociale et équité territoriale",
+"Souveraineté alimentaire, capital humain et compétitivité industrielle",
+"Restructuration des entreprises publiques, cadre PPP modernisé, réforme de la gouvernance de l'eau et de l'électricité (avec l'appui de la BAD)"
+],
+"projects": [
+{
+"title": "Programme de la BAD sur la gouvernance économique et la résilience climatique (PGRCC Phase III)",
+"detail": "Restructuration des entreprises publiques, modernisation des PPP, soutien aux PME et à l'innovation, réforme de la gouvernance de l'eau et de l'électricité",
+"status": "En cours"
+},
+{
+"title": "Infrastructures pour la Coupe du monde 2030",
+"detail": "Grandes infrastructures touristiques, de transport et de services désignées comme priorité du nouveau gouvernement",
+"status": "En cours"
+},
+{
+"title": "Programme du nouveau gouvernement",
+"detail": "Programme assorti de priorités budgétaires et de mécanismes d'évaluation, à présenter au Parlement",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Conseil en faisabilité et en structuration de PPP",
+"why": "Les réformes soutenues par la BAD comprennent la modernisation du cadre des PPP.",
+"target": "Ministère de l'Économie et des Finances, entreprises publiques, conseils régionaux"
+},
+{
+"title": "Intégration des PME marocaines aux chaînes de valeur et mise en relation avec des entreprises coréennes",
+"why": "L'innovation des PME et l'intégration aux chaînes de valeur sont des objectifs de réforme affichés.",
+"target": "Ministère de l'Industrie et du Commerce, agences de PME, fabricants locaux"
+},
+{
+"title": "Services numériques de tourisme et de transport pour la Coupe du monde",
+"why": "Le nouveau gouvernement a fait des infrastructures de la Coupe du monde une priorité absolue.",
+"target": "Ministère du Tourisme, entreprises publiques de transport, villes hôtes"
+},
+{
+"title": "Évaluation de la performance des politiques et automatisation administrative par l'IA",
+"why": "Le nouveau gouvernement prépare un programme doté de mécanismes d'évaluation.",
+"target": "Services du Chef du gouvernement, ministères"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Casablanca",
+"detail": "Fournit des informations sur le marché marocain et des conseils sur les acheteurs et l'investissement."
+},
+{
+"title": "Programmes de la KOICA au Maroc",
+"detail": "Mène des projets de dons dans la formation professionnelle, le numérique et la gestion de l'eau."
+},
+{
+"title": "Prêts concessionnels EDCF",
+"detail": "Accorde des prêts concessionnels pour les infrastructures dans les pays en développement et publie des avis de marchés."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre, par des bons, les frais de conseil et de certification à l'étranger."
+}
+]
+}

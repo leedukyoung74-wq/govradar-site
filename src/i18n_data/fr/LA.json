@@ -1,0 +1,79 @@
+{
+"summary": "En octobre 2026, l'Assemblée nationale a élu l'ancien diplomate Saleumxay Kommasith au poste de Premier ministre, tandis que son prédécesseur Sonexay Siphandone est devenu président de l'Assemblée. Dans le cadre du 10e Plan national de développement socio-économique (2026-2030), le gouvernement vise une croissance d'au moins 6 % par an et une dette publique inférieure à 70 % du PIB d'ici 2030.",
+"leader": "Président Thongloun Sisoulith · Premier ministre Saleumxay Kommasith (depuis le 2026-10-05, succédant à Sonexay Siphandone)",
+"agenda": [
+"10e NSEDP (2026-2030) : croissance annuelle d'au moins 6 %, PIB par habitant de 3 104 USD",
+"Réduire la dette publique (environ 88 % en 2025 à moins de 70 % d'ici 2030) et maintenir l'inflation sous 5 %",
+"Renforcer la production nationale et soutenir les PME",
+"Développer l'économie numérique",
+"Infrastructures de connectivité (routes, rail, aéroports, réseaux numériques) et zones économiques spéciales",
+"Faire face aux chocs agricoles (inondations, ravageurs, peste porcine africaine) et sécuriser l'approvisionnement alimentaire"
+],
+"projects": [
+{
+"title": "10e Plan national de développement socio-économique",
+"detail": "Six objectifs stratégiques et 26 programmes prioritaires pour la croissance, la réduction de la dette et la numérisation",
+"status": "En cours"
+},
+{
+"title": "Plan de développement et examen du budget de l'État 2027",
+"detail": "La session d'octobre de l'Assemblée examine le plan de développement, le budget, le plan monétaire et l'audit 2025",
+"status": "En cours"
+},
+{
+"title": "Extension de l'approvisionnement en eau de Lak Sao (KOICA)",
+"detail": "Modernisation de l'approvisionnement en eau à Lak Sao, Borikhamxay, y compris le déminage des UXO et la formation des exploitants",
+"status": "En cours"
+},
+{
+"title": "Projet de la BAD pour le renforcement de la résilience et la réduction de la pauvreté rurale",
+"detail": "Projet financé par un prêt de la BAD (Loan 57225), en phase de recrutement de consultants, notamment en gestion financière",
+"status": "En cours"
+},
+{
+"title": "AT de la BAD pour renforcer les marchés publics et la gestion financière",
+"detail": "TA-10235 soutient l'amélioration des systèmes de passation des marchés et de gestion des finances publiques",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conseil en numérisation des marchés publics et de la gestion financière",
+"why": "Les objectifs de réduction de la dette et une AT de la BAD sur les marchés publics et la GFP sont menés simultanément.",
+"target": "Ministère des Finances, ministère du Plan et de l'Investissement"
+},
+{
+"title": "Programme de diagnostic de gestion et de capacité d'exportation des PME",
+"why": "Le 10e plan fait de la production nationale et du soutien aux MPME des priorités centrales.",
+"target": "Ministère de l'Industrie et du Commerce, chambre de commerce lao, PME locales"
+},
+{
+"title": "Projet pilote de services publics et d'automatisation administrative fondés sur l'IA",
+"why": "Le gouvernement inscrit l'économie numérique et l'administration numérique parmi ses priorités clés.",
+"target": "Ministère des Technologies et des Communications, gouvernements provinciaux"
+},
+{
+"title": "Services de PMC et de renforcement des capacités liés aux projets de la KOICA",
+"why": "Les projets de la KOICA dans l'eau et les déchets sont en cours et nécessitent des services de formation et de gestion.",
+"target": "Bureau de la KOICA au Laos, ministère des Travaux publics et des Transports"
+}
+],
+"krsupport": [
+{
+"title": "Projets de la KOICA au Laos dans l'eau et les déchets",
+"detail": "Soutient l'extension de l'approvisionnement en eau de Lak Sao (2025-2029) et un projet de phase II sur les déchets solides et les eaux usées avec le GGGI."
+},
+{
+"title": "Informations de marché de KOTRA Vientiane",
+"detail": "Fournit des informations sur les tendances du marché lao et l'entrée sur ce marché."
+},
+{
+"title": "EDCF (Fonds de coopération pour le développement économique)",
+"detail": "Accorde des prêts concessionnels pour les infrastructures dans les pays en développement, dont le Laos."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent les frais d'études de marché et de conseil à l'étranger."
+}
+]
+}

@@ -1,0 +1,71 @@
+{
+"summary": "Với mức thâm hụt dự kiến 9,8 tỷ KD trong ngân sách 2026/27, Kuwait đang thúc đẩy cải cách tài khóa và pháp lý bằng sắc lệnh, bao gồm tăng thu ngoài dầu mỏ, luật sukuk chính phủ và luật trọng tài mới. Các dự án lớn về cảng, sân bay và xử lý nước thải cùng chương trình chính phủ số xoay quanh ứng dụng Sahel tiếp tục được triển khai.",
+"leader": "Quốc vương (Amir) Sheikh Mishal Al-Ahmad Al-Jaber Al-Sabah / Thủ tướng Sheikh Ahmad Al-Abdullah Al-Ahmad Al-Sabah",
+"agenda": [
+"Tầm nhìn Kuwait Mới 2035: đa dạng hóa và tăng trưởng ngoài dầu mỏ",
+"Cải cách tài khóa và tăng thu ngoài dầu mỏ",
+"Pháp luật về nợ, bao gồm sukuk chính phủ",
+"Luật trọng tài mới cho tranh chấp hợp đồng chính phủ",
+"Triển khai các dự án hạ tầng lớn",
+"Chính phủ số (nền tảng Sahel) và AI trong giáo dục"
+],
+"projects": [
+{
+"title": "Ngân sách nhà nước tài khóa 2026/27",
+"detail": "Thu 16,3 tỷ KD, chi 26,1 tỷ KD, thâm hụt 9,8 tỷ KD; giá dầu giả định 57 $",
+"status": "Đang triển khai"
+},
+{
+"title": "Các dự án vốn (Cảng Mubarak Al-Kabeer, Nhà ga T2 sân bay, nhà máy xử lý nước thải, v.v.)",
+"detail": "Hạ tầng lớn trong ngân sách 2026/27, bao gồm các nhà máy xử lý nước thải Umm Al-Hayman và North Kabd",
+"status": "Đang triển khai"
+},
+{
+"title": "Sắc lệnh-luật về sukuk chính phủ",
+"detail": "Được Nội các phê duyệt ngày 1/9/2026 và chuyển lên Quốc vương",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Luật Trọng tài mới",
+"detail": "Bao gồm quy định về trọng tài hợp đồng chính phủ; được Nội các phê duyệt ngày 16/9/2026 và chuyển lên Quốc vương",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Chính phủ số dựa trên đám mây và dịch vụ điện tử hợp nhất Sahel",
+"detail": "Hợp tác về đám mây, trung tâm dữ liệu và bảo mật với Google Cloud và Microsoft; Sahel kết nối điện tử các cơ quan",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Chatbot AI và tự động hóa xử lý văn bản cho dịch vụ công",
+"why": "Nền tảng Sahel và việc chuyển đổi lên đám mây đang thúc đẩy nhu cầu tự động hóa dịch vụ ở các bộ.",
+"target": "Cơ quan Công nghệ Thông tin Trung ương, các bộ cung cấp dịch vụ"
+},
+{
+"title": "Trợ lý học tập AI và tự động hóa công việc của giáo viên cho trường học",
+"why": "Nội các đã ủng hộ việc ứng dụng AI trong giáo dục.",
+"target": "Bộ Giáo dục"
+},
+{
+"title": "Tư vấn PMO kiểm soát tiến độ và chi phí hạ tầng công",
+"why": "Với mức thâm hụt lớn, việc triển khai hiệu quả các dự án đầu tư càng trở nên quan trọng.",
+"target": "Bộ Công chính, Bộ Truyền thông, công trường của nhà thầu Hàn Quốc"
+},
+{
+"title": "Tư vấn thu ngoài dầu mỏ và phân tích dữ liệu tài khóa",
+"why": "Chính phủ đang nhấn mạnh cải cách tài khóa và tăng thu ngoài dầu mỏ.",
+"target": "Bộ Tài chính"
+}
+],
+"krsupport": [
+{
+"title": "Thành phố thông minh South Saad Al-Abdullah",
+"detail": "Khu đô thị mới thông minh theo mô hình Hàn Quốc được phát triển cùng cơ quan nhà ở Kuwait, mở ra lối vào cho SME Hàn Quốc (tài liệu năm 2022)."
+},
+{
+"title": "Hợp tác xây dựng Hàn Quốc-Kuwait và hỗ trợ giành hợp đồng",
+"detail": "Hỗ trợ cấp chính phủ cho vận hành sân bay, hóa dầu Al-Zour, khu đô thị mới Abdullah và vận hành, bảo trì (O&M) đường bộ (tài liệu năm 2023)."
+}
+]
+}

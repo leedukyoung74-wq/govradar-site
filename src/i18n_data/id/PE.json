@@ -1,0 +1,74 @@
+{
+"summary": "Pemerintahan Fujimori menyampaikan rencana 2026-2031 kepada Kongres pada Agustus 2026, yang bertumpu pada keamanan, kesiapsiagaan bencana, pembangunan manusia, produktivitas, dan supremasi hukum. Menteri Keuangan Elmer Cuba mengajukan anggaran 2027 sebesar PEN 266.5 miliar (naik 3.5%), dengan menyoroti kesiapsiagaan El Niño serta investasi kesehatan, pendidikan, dan transportasi.",
+"leader": "Presiden Keiko Fujimori (kepala negara dan kepala pemerintahan, sejak 2026-07-28) / Luis Galarreta, Ketua Dewan Menteri (sejak 2026-07-29)",
+"agenda": [
+"Penguatan keamanan (pemerasan dan kejahatan terorganisasi; unit antipemerasan kepolisian dan pengawasan video berbasis AI)",
+"Pencegahan El Niño dan bencana, pembersihan sungai",
+"Pembangunan manusia: anemia anak, kesehatan ibu, imunisasi",
+"Peningkatan produktivitas dan perbaikan investasi publik (termasuk penambahan izin pertambangan)",
+"Supremasi hukum dan kerangka yang ramah investasi"
+],
+"projects": [
+{
+"title": "Usulan anggaran publik 2027",
+"detail": "PEN 8.945 miliar (3.5%) di atas anggaran awal 2026; disampaikan ke sidang pleno Kongres pada 2026-09-03",
+"status": "Dalam pembahasan kongres"
+},
+{
+"title": "Anggaran kesiapsiagaan El Niño",
+"detail": "Pekerjaan pencegahan, infrastruktur, dan perlindungan di luar PEN 2.5 miliar yang telah dialokasikan pada 2026; 536 titik sungai prioritas",
+"status": "Berjalan"
+},
+{
+"title": "Anggaran kesehatan dan pendidikan",
+"detail": "Kesehatan memprioritaskan anemia, layanan ibu dan bayi baru lahir, serta imunisasi; pendidikan sekitar PEN 49 miliar",
+"status": "Direncanakan"
+},
+{
+"title": "Portofolio investasi transportasi",
+"detail": "Mempertahankan proyek investasi transportasi yang sedang berjalan",
+"status": "Direncanakan"
+},
+{
+"title": "Teknologi keamanan kepolisian",
+"detail": "Investasi pada divisi antipemerasan dan sistem pengawasan video berbasis AI (pidato kebijakan perdana menteri, 2026-08-20)",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Dasbor peringatan dini banjir berbasis tinggi muka air sungai dan curah hujan",
+"why": "Sekitar PEN 5 miliar selama dua tahun dialokasikan untuk kesiapsiagaan El Niño.",
+"target": "PCM, pemerintah regional, badan penanggulangan bencana nasional"
+},
+{
+"title": "Platform analitik AI untuk data insiden dan laporan kepolisian",
+"why": "Pemerintah menjadikan unit antipemerasan dan pengawasan video berbasis AI sebagai prioritas utama keamanan.",
+"target": "Kementerian Dalam Negeri, Kepolisian Nasional"
+},
+{
+"title": "Pemantauan indikator anemia dan kesehatan ibu bagi pemerintah daerah",
+"why": "Anggaran kesehatan memprioritaskan pencegahan anemia dan kesehatan ibu.",
+"target": "Kementerian Kesehatan, pemerintah regional dan kota"
+},
+{
+"title": "Konsultasi manajemen proyek investasi publik (PMO) dan evaluasi",
+"why": "Perbaikan investasi publik merupakan prioritas pemerintah, dan sektor transportasi saja mencapai sekitar PEN 16 miliar.",
+"target": "MEF, Kementerian Transportasi dan Komunikasi"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Lima",
+"detail": "Mendukung riset pasar, pencarian pembeli, dan masuknya ke pengadaan publik di Peru."
+},
+{
+"title": "Program negara KOICA untuk Peru",
+"detail": "Peru adalah mitra prioritas KOICA dengan proyek hibah dan kontrak layanan yang sedang berjalan di bidang kesehatan, pemerintahan digital, dan manajemen bencana."
+},
+{
+"title": "Layanan luar negeri voucher ekspor",
+"detail": "Biaya riset pasar, lokalisasi, dan penjodohan pembeli untuk Amerika Latin dapat ditanggung melalui voucher."
+}
+]
+}

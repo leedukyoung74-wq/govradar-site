@@ -1,0 +1,74 @@
+{
+"summary": "En el marco de la estrategia «Uzbekistán-2030», 2026 es el «Año del Desarrollo de la Mahalla y la Prosperidad Social», con un programa estatal de 337 tareas. A finales de octubre, el presidente supervisa personalmente grandes inversiones en salud y nuevos estándares médicos, mientras Corea amplía la cooperación en educación en TI y gobernanza digital a través de KOICA.",
+"leader": "Presidente Shavkat Mirziyoyev (jefe de Estado) / Primer ministro Abdulla Aripov (jefe de Gobierno, ratificado en noviembre de 2024; si sigue en el cargo en 2026 se confirmará en la próxima actualización)",
+"agenda": [
+"Infraestructura de las mahallas (barrios) y crecimiento regional equilibrado",
+"Mejores estándares de salud y más inversión sanitaria",
+"Tecnología digital, industria de TI y transición hacia una economía basada en la innovación",
+"Reforma administrativa y judicial y lucha contra la corrupción",
+"Un nuevo marco para el mercado laboral y gestión del agua"
+],
+"projects": [
+{
+"title": "Programa de reformas 2026 / programa estatal «Uzbekistán-2030»",
+"detail": "Decreto presidencial del 17 de febrero de 2026 con 337 tareas, 59 leyes y 12 documentos estratégicos",
+"status": "En curso"
+},
+{
+"title": "Presupuesto del Estado 2026",
+"detail": "Ingresos de UZS 515,8 billones y gasto de UZS 567,7 billones, con el déficit dentro del 3% del PIB (firmado el 26 de diciembre de 2025)",
+"status": "En curso"
+},
+{
+"title": "Grandes proyectos de inversión en salud y nuevos estándares médicos",
+"detail": "El presidente revisó los avances el 28 de octubre de 2026 y anunció nuevos estándares médicos y más apoyo a los médicos",
+"status": "En curso"
+},
+{
+"title": "Hubs de TI y centros de formación digital de KOICA",
+"detail": "Hubs de TI en Nukus y Karshi, 14 centros de TI en siete distritos y capacitación en IA, programación y otros campos para 500 especialistas y docentes, además de incubación de startups",
+"status": "En curso"
+},
+{
+"title": "Límites al endeudamiento externo y a las APP",
+"detail": "Nuevo endeudamiento externo de USD 5.000 millones en 2026 (USD 2.500 millones para el presupuesto y USD 2.500 millones para proyectos de inversión) y un límite de USD 6.500 millones para nuevas APP con garantía estatal",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Sistemas de historia clínica electrónica y protocolos clínicos para hospitales regionales",
+"why": "El presidente revisa personalmente las inversiones en salud y ha anunciado nuevos estándares médicos.",
+"target": "Ministerio de Salud, centros médicos regionales"
+},
+{
+"title": "Capacitación en IA y marketing digital y aceleración de startups vinculadas a los hubs de TI de KOICA",
+"why": "KOICA está construyendo hubs y centros de TI con USD 14 millones, lo que genera demanda de contenidos de formación y operadores de incubación.",
+"target": "Ministerio de Tecnologías Digitales, IT Park, socios ejecutores de KOICA"
+},
+{
+"title": "Chatbot con IA para las solicitudes de los vecinos de las mahallas",
+"why": "El programa estatal de 2026 da prioridad a los servicios públicos a nivel de mahalla.",
+"target": "Administraciones locales (hokimiyats), organismos responsables de las mahallas"
+},
+{
+"title": "Estudios de viabilidad de APP y consultoría de gestión del desempeño para organismos públicos",
+"why": "Los límites de endeudamiento más bajos empujan más proyectos hacia la financiación mediante APP.",
+"target": "Unidad de APP del Ministerio de Economía y Finanzas, agencias de proyectos de los ministerios sectoriales"
+}
+],
+"krsupport": [
+{
+"title": "Apoyo de KOICA al ecosistema de educación en TI (USD 14 millones)",
+"detail": "Construye 2 hubs de TI y 14 centros de TI y forma a 500 especialistas entre 2026 y 2032."
+},
+{
+"title": "Cooperación de KOICA en IA y gobernanza digital en Asia Central",
+"detail": "Uzbekistán es el mayor socio de KOICA en Asia Central, con proyectos de gobernanza digital en curso como la gestión de la propiedad intelectual (hasta 2029) y un plan maestro de política de IA (hasta 2030)."
+},
+{
+"title": "Vale de Exportación 2026 (MSS)",
+"detail": "Los vales cubren el costo de certificación, estudios de mercado, marketing y otros servicios de expansión al exterior."
+}
+]
+}

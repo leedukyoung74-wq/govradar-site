@@ -1,0 +1,80 @@
+{
+"summary": "Sri Lanka duy trì kỷ luật tài khóa theo chương trình EFF của IMF, trong khi ngân sách năm 2027 tăng chi đầu tư, giảm một phần thuế và thúc đẩy phát triển số và nông thôn. Phục hồi sau bão xoáy và khung tài chính rủi ro thiên tai cũng là những ưu tiên.",
+"leader": "Tổng thống Anura Kumara Dissanayake (nguyên thủ quốc gia và người đứng đầu chính phủ) / Thủ tướng Harini Amarasuriya",
+"agenda": [
+"Thực hiện chương trình IMF và các mục tiêu cân bằng ngân sách sơ cấp",
+"Phục hồi sau thiên tai và tái thiết hạ tầng công cộng",
+"Giảm gánh nặng chi phí sinh hoạt (cam kết giảm thuế, hỗ trợ nhiên liệu) và mở rộng an sinh xã hội",
+"Kinh tế số (1.000 trạm viễn thông)",
+"Cải cách giáo dục từ Lớp 6 và nâng cao dịch vụ y tế",
+"Khởi động hạ tầng giao thông như đường sắt điện"
+],
+"projects": [
+{
+"title": "Dự luật Phân bổ Ngân sách 2027",
+"detail": "Tổng chi +12,6%, chi đầu tư +24,7%",
+"status": "Đang trình Quốc hội"
+},
+{
+"title": "Trạm viễn thông nông thôn",
+"detail": "1.000 trạm trong ba năm, 750 trạm được cấp vốn năm 2027",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Phát triển nông thôn và an sinh xã hội",
+"detail": "Mở rộng hỗ trợ phúc lợi, bao gồm chương trình Aswesuma",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Giao thông, đường cao tốc và phát triển đô thị",
+"detail": "Dự án đường sắt điện dự kiến khởi công năm 2027",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Hoàn tất đánh giá lần 5/lần 6 chương trình EFF của IMF",
+"detail": "Giải ngân khoảng 695 triệu USD, tổng cộng khoảng 2,4 tỷ USD",
+"status": "Hoàn thành"
+},
+{
+"title": "Tự động hóa thu ngân sách thành phố Colombo (KOICA)",
+"detail": "Tự động hóa thu các nguồn thu chính như thuế định giá tài sản và phí giấy phép",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa thu ngân sách và dịch vụ của chính quyền địa phương",
+"why": "Nhu cầu đã được chứng minh qua dự án Colombo, và ngân sách tăng chi đầu tư của địa phương.",
+"target": "Chính quyền địa phương, Bộ Chính quyền Địa phương"
+},
+{
+"title": "Hệ thống dữ liệu xét duyệt đối tượng và chi trả phúc lợi",
+"why": "Kinh phí phúc lợi, bao gồm Aswesuma, đã tăng hơn gấp đôi.",
+"target": "Ủy ban Phúc lợi, Bộ Phát triển Nông thôn và An sinh Xã hội"
+},
+{
+"title": "Tư vấn thẩm định đầu tư công và quản lý hiệu quả",
+"why": "Chương trình IMF yêu cầu cải cách quản lý đầu tư công (PIM) trong khi chi đầu tư tăng gần 25%.",
+"target": "Cục Kế hoạch Quốc gia, các bộ chuyên ngành"
+},
+{
+"title": "Công cụ số đánh giá thiệt hại và quản lý dự án phục hồi",
+"why": "Công tác phục hồi sau bão đang diễn ra và chiến lược tài chính rủi ro thiên tai đang được xây dựng.",
+"target": "Trung tâm Quản lý Thiên tai, Bộ Tài chính (Treasury)"
+}
+],
+"krsupport": [
+{
+"title": "Đối thoại chính sách EDCF Hàn Quốc – Sri Lanka và tái cơ cấu nợ",
+"detail": "Cuộc đối thoại tháng 4/2026 đã hoàn tất tái cơ cấu 18 khoản vay EDCF và thảo luận gia hạn thỏa thuận khung."
+},
+{
+"title": "Dự án tự động hóa thu ngân sách Colombo của KOICA",
+"detail": "Khoản viện trợ không hoàn lại 8,5 triệu USD tự động hóa thu các nguồn thu chính của thành phố Colombo."
+},
+{
+"title": "Voucher xuất khẩu cho SME",
+"detail": "Chi trả các dịch vụ xuất khẩu như nghiên cứu thị trường, biên dịch và chứng nhận thông qua voucher."
+}
+]
+}

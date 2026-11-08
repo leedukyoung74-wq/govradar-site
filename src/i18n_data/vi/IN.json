@@ -1,0 +1,80 @@
+{
+"summary": "Ngân sách 2026-27 đặt mức chi đầu tư công kỷ lục 12,2 lakh crore INR, tập trung vào sản xuất, hạ tầng và an ninh năng lượng. Vào tháng 10, chính phủ đã phê duyệt việc bán cổ phần Ngân hàng IDBI và khánh thành các dự án hạ tầng tại Ladakh, tiếp tục quá trình tư nhân hóa và đầu tư vùng.",
+"leader": "Tổng thống Droupadi Murmu (nguyên thủ quốc gia); Thủ tướng Narendra Modi (người đứng đầu chính phủ)",
+"agenda": [
+"Viksit Bharat (Ấn Độ Phát triển) 2047",
+"Sản xuất: bán dẫn, xe điện, điện tử, dược sinh học, đất hiếm",
+"Hạ tầng logistics: đường sắt cao tốc, hành lang vận tải hàng hóa chuyên dụng, đường thủy nội địa",
+"Hỗ trợ MSME và doanh nghiệp nông thôn, hạ tầng công cộng số",
+"An ninh năng lượng và thu giữ carbon (CCUS)",
+"Bán cổ phần doanh nghiệp nhà nước và ngân hàng công"
+],
+"projects": [
+{
+"title": "Chi đầu tư công 2026-27",
+"detail": "Chi đầu tư thực tế 4,4% GDP, mức kỷ lục",
+"status": "Đang triển khai"
+},
+{
+"title": "Bảy hành lang đường sắt cao tốc; hành lang vận tải hàng hóa chuyên dụng Dankuni-Surat",
+"detail": "Được công bố trong ngân sách 2026-27",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Chương trình CCUS",
+"detail": "Hỗ trợ trong năm năm cho thu giữ, sử dụng và lưu trữ carbon",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Vùng Kinh tế Đô thị (City Economic Regions)",
+"detail": "Đầu tư tập trung theo vùng kinh tế đô thị",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Bán 60,72% cổ phần Ngân hàng IDBI",
+"detail": "Được CCEA phê duyệt ngày 2026-10-14; cổ phần của chính phủ và LIC được bán cho một công ty con của Fairfax",
+"status": "Đang triển khai"
+},
+{
+"title": "Năm dự án hạ tầng tại Ladakh",
+"detail": "Được Thủ tướng Modi khánh thành ngày 2026-10-15: nhà ga mới sân bay Leh, đường Nimmu-Padum-Darcha (298 km), thủy điện Hanu (9 MW) và các dự án khác",
+"status": "Hoàn thành"
+}
+],
+"biz": [
+{
+"title": "Niêm yết trên kênh thương mại nhanh (quick-commerce) và trực tuyến cho SME hàng tiêu dùng Hàn Quốc tại Ấn Độ",
+"why": "KOTRA đang mở rộng chương trình hàng tiêu dùng tại Chennai và hoạt động tiếp thị K-beauty.",
+"target": "Nhà bán lẻ trực tuyến/ngoại tuyến Ấn Độ, nền tảng thương mại nhanh"
+},
+{
+"title": "Tư vấn tận dụng CEPA Hàn Quốc-Ấn Độ và quy tắc xuất xứ",
+"why": "Hai bên đang thảo luận nâng cấp CEPA và đặt mục tiêu tăng gấp đôi thương mại vào năm 2030.",
+"target": "SME và doanh nghiệp quy mô vừa Hàn Quốc xuất khẩu sang Ấn Độ"
+},
+{
+"title": "Thẩm định chuỗi cung ứng địa phương và đối tác cho doanh nghiệp sản xuất Hàn Quốc",
+"why": "Hỗ trợ tham gia chuỗi cung ứng Ấn Độ trong lĩnh vực chip, xe điện và điện tử đang được mở rộng.",
+"target": "Doanh nghiệp linh kiện Hàn Quốc thâm nhập Ấn Độ; OEM Ấn Độ"
+},
+{
+"title": "Công cụ tự động hóa quy trình bằng AI cho MSME Ấn Độ thông qua đối tác địa phương",
+"why": "Ngân sách ưu tiên MSME và hạ tầng công cộng số.",
+"target": "MSME Ấn Độ, hiệp hội ngành"
+}
+],
+"krsupport": [
+{
+"title": "Korea-India Business Partnership Plus",
+"detail": "Đã tổ chức diễn đàn CEPA và các cuộc gặp giữa 39 doanh nghiệp Hàn Quốc và 41 người mua tại New Delhi vào tháng 8/2026, với các sự kiện về hàng tiêu dùng và bán dẫn tiếp theo trong nửa cuối năm."
+},
+{
+"title": "Chương trình hàng tiêu dùng K-Lifestyle in Chennai 2026",
+"detail": "Họp trực tuyến, thử nghiệm mẫu, niêm yết trên kênh phân phối và tiếp thị số cho hàng tiêu dùng Hàn Quốc."
+},
+{
+"title": "Khóa học thâm nhập thị trường Ấn Độ của KOTRA Academy",
+"detail": "Đào tạo thực hành về thâm nhập thị trường Ấn Độ."
+}
+]
+}

@@ -1,0 +1,79 @@
+{
+"summary": "Chính phủ đã phê duyệt đề xuất ngân sách 2027 với tổng chi tiêu 820,9 nghìn tỷ KRW (tăng 12,8%), tập trung nguồn lực cho thanh niên, động lực tăng trưởng, các địa phương và giáo dục/nhân tài. Đề xuất ngân sách của Bộ SME đạt mức kỷ lục 18,07 nghìn tỷ KRW, với mức tăng mạnh cho hỗ trợ xuất khẩu và chuyển đổi AI trong sản xuất.",
+"leader": "Tổng thống Lee Jae-myung / Thủ tướng Han Seong-sook (bổ nhiệm tháng 7/2026)",
+"agenda": [
+"Đầu tư nguồn thu thuế vượt dự kiến từ ngành bán dẫn vào các động lực tăng trưởng tương lai (Quỹ Ứng phó Tương lai mới)",
+"Phân bổ chi tiêu cho thanh niên, địa phương và giáo dục/nhân tài (45,4 nghìn tỷ KRW cho bốn lĩnh vực)",
+"Mở rộng xuất khẩu của SME và ứng phó rủi ro thuế quan, thương mại",
+"Chuyển đổi AI cho sản xuất và SME (AI vật lý, nhà máy thông minh)",
+"Mở rộng hệ sinh thái khởi nghiệp ('Khởi nghiệp cho Mọi người', quỹ của các quỹ 1,3 nghìn tỷ KRW)"
+],
+"projects": [
+{
+"title": "Đề xuất ngân sách chính phủ 2027",
+"detail": "Tổng chi 820,9 nghìn tỷ KRW, tổng thu 880,8 nghìn tỷ KRW, tài khoản đặc biệt mới cho năng lực cạnh tranh bán dẫn",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Đề xuất ngân sách 2027 của Bộ SME",
+"detail": "Tăng 9,4% so với cùng kỳ, đã trình Quốc hội (2026-09-03)",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Mở rộng hỗ trợ xuất khẩu (cải tổ export voucher)",
+"detail": "Export voucher được tách thành voucher nền tảng và gói tăng trưởng; 23,8 tỷ KRW cho doanh nghiệp lớn và SME cùng thâm nhập nước ngoài và 27,9 tỷ KRW cho ứng phó quy định ở nước ngoài",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Trình diễn AI vật lý cho SME và nhà máy thông minh",
+"detail": "Chương trình trình diễn AI vật lý mới 172,8 tỷ KRW, nhà máy thông minh bao gồm AI sản xuất 468,2 tỷ KRW, nhân lực AI sản xuất 28,4 tỷ KRW",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Khởi nghiệp cho Mọi người và gói khởi nghiệp địa phương",
+"detail": "Khởi nghiệp cho Mọi người 441,1 tỷ KRW (20.000 người tham gia); gói khởi nghiệp địa phương mới 170 tỷ KRW",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Ngân sách bổ sung cho SME ứng phó chiến tranh Trung Đông",
+"detail": "Bổ sung 100 tỷ KRW cho export voucher (từ 7.000 lên 14.000), thêm 100 tỷ KRW cho quỹ thị trường mới, 75 tỷ KRW cho AI sản xuất",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Đăng ký làm nhà cung cấp export voucher: gói chiến lược nước ngoài, nghiên cứu thị trường và tìm kiếm người mua",
+"why": "Hỗ trợ xuất khẩu năm 2027 tăng hơn gấp đôi lên 313,7 tỷ KRW, làm tăng nhu cầu voucher.",
+"target": "SME xuất khẩu giai đoạn đầu và đang tăng trưởng"
+},
+{
+"title": "Tư vấn chẩn đoán và triển khai chuyển đổi AI cho SME sản xuất (bao gồm tự động hóa quy trình)",
+"why": "Hơn 600 tỷ KRW được phân bổ cho trình diễn AI vật lý và nhà máy thông minh.",
+"target": "SME sản xuất, các technopark và cơ quan xúc tiến địa phương"
+},
+{
+"title": "Tư vấn quy định và chứng nhận xuất khẩu ở nước ngoài",
+"why": "27,9 tỷ KRW được bố trí cho ứng phó quy định xuất khẩu ở nước ngoài.",
+"target": "SME xuất khẩu, KOSME và KOTRA"
+},
+{
+"title": "Đấu thầu các hợp đồng tư vấn chuyển đổi AI (AX) khu vực công",
+"why": "Các cơ quan địa phương và tổng công ty nhà nước liên tục đăng gói thầu tư vấn AI trên KONEPS trong năm 2026.",
+"target": "Chính quyền địa phương, tổng công ty nhà nước, các technopark"
+}
+],
+"krsupport": [
+{
+"title": "Chương trình Export Voucher",
+"detail": "SME và doanh nghiệp quy mô vừa mua dịch vụ tiếp thị và tư vấn ở nước ngoài bằng phiếu hỗ trợ; năm 2027 chương trình được tách thành voucher nền tảng và gói tăng trưởng."
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường nước ngoài của KOTRA",
+"detail": "Cung cấp nghiên cứu thị trường, kết nối người mua và hỗ trợ tham gia hội chợ thương mại thông qua các văn phòng thương mại ở nước ngoài."
+},
+{
+"title": "Khoản vay chính sách xuất khẩu và mở rộng ra nước ngoài của KOSME",
+"detail": "Vận hành các quỹ chính sách hỗ trợ SME xuất khẩu thâm nhập thị trường mới và ổn định kinh doanh, được tăng thêm nhờ ngân sách bổ sung năm 2026."
+}
+]
+}

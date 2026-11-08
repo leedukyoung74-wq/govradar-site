@@ -1,0 +1,65 @@
+{
+"summary": "Le gouvernement russe a soumis le 1er octobre 2026 à la Douma d'État son projet de budget fédéral 2027-2029, qui prévoit des déficits pendant encore trois ans avec des dépenses de défense élevées. Un remaniement ministériel les 19-21 octobre a également fait du ministre des Finances Silouanov un vice-Premier ministre.",
+"leader": "Président Vladimir Poutine / Premier ministre Mikhaïl Michoustine",
+"agenda": [
+"Maintien des dépenses de défense et de sécurité (environ 17 150 milliards de RUB en 2027)",
+"Dépenses sociales pour les retraites, la santé et l'éducation",
+"Aides au logement telles que les prêts immobiliers familiaux",
+"Infrastructures de transport et développement de la route maritime du Nord",
+"Hausse des recettes (TVA, etc.) et gestion du déficit budgétaire"
+],
+"projects": [
+{
+"title": "Projet de budget fédéral 2027-2029",
+"detail": "Déficit 2027 projeté à environ 5 500 milliards de RUB (environ 2 % du PIB), financé en grande partie par davantage d'émissions obligataires",
+"status": "En cours d'examen parlementaire"
+},
+{
+"title": "Programme d'État pour les transports",
+"detail": "Investissements dans les routes, le rail et les autres réseaux de transport",
+"status": "Prévu"
+},
+{
+"title": "Subventions aux prêts immobiliers familiaux",
+"detail": "Bonification d'intérêts sur les prêts immobiliers préférentiels pour les familles avec enfants",
+"status": "En cours"
+},
+{
+"title": "Dépenses de santé et d'éducation",
+"detail": "Environ 1 820 milliards de RUB pour la santé et 1 780 milliards pour l'éducation",
+"status": "Prévu"
+},
+{
+"title": "Activités spatiales et route maritime du Nord",
+"detail": "Financement du programme spatial et développement de la route maritime du Nord inscrits parmi les priorités",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Contrôles de conformité aux sanctions et au contrôle des exportations pour les PME coréennes commerçant avec la Russie",
+"why": "Les listes de sanctions coréennes, européennes et américaines et les biens soumis à licence évoluent sans cesse, d'où une demande de filtrage préalable aux transactions.",
+"target": "PME exportatrices coréennes traitant avec la Russie/la CEI"
+},
+{
+"title": "Stratégie de marchés alternatifs pour les entreprises réduisant leur activité en Russie",
+"why": "Les entreprises dépendantes de leurs ventes en Russie cherchent à diversifier les risques (estimation).",
+"target": "Fabricants coréens et exportateurs de biens de consommation"
+},
+{
+"title": "Solutions d'IA et numériques pour les organismes publics et les entreprises d'État russes",
+"why": "Il existe une demande d'administration numérique, mais les sanctions et les obstacles aux paiements rendent irréaliste l'obtention de marchés par des entreprises coréennes.",
+"target": "Ministères fédéraux et gouvernements régionaux"
+}
+],
+"krsupport": [
+{
+"title": "Bureaux commerciaux de KOTRA en Russie (Moscou, etc.)",
+"detail": "Fournit des informations sur le marché local ainsi que des mises à jour sur les sanctions et les questions douanières."
+},
+{
+"title": "Classification des biens stratégiques et vérification du contrôle des exportations vers la Russie (Yestrade)",
+"detail": "Système permettant de vérifier si des articles sont des biens stratégiques ou nécessitent une licence situationnelle avant l'exportation."
+}
+]
+}

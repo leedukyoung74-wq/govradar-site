@@ -1,0 +1,70 @@
+{
+"summary": "Le premier budget de la Tanzanie dans le cadre de la Vision 2050 et du quatrième Plan quinquennal (2026/27–2030/31) privilégie les infrastructures ferroviaires et électriques et l'augmentation des recettes intérieures. Il vise à financer environ 75 % du budget sur ressources intérieures en prévision d'une baisse de l'aide occidentale.",
+"leader": "Présidente Samia Suluhu Hassan (cheffe de l'État et du gouvernement) ; Premier ministre Mwigulu Nchemba",
+"agenda": [
+"Mise en œuvre de la Vision 2050 et du quatrième Plan quinquennal",
+"Autonomie budgétaire : 75 % de financement intérieur, collecte fiscale numérique, formalisation des activités informelles",
+"Transport et logistique : extensions du SGR, relance de TAZARA, hub de Dodoma",
+"Montée en gamme industrielle par la transformation locale des minerais (terres rares, gaz, minerai de fer)",
+"Davantage de production électrique, électrification rurale et énergie propre"
+],
+"projects": [
+{
+"title": "Budget national 2026/27",
+"detail": "+10,3 % sur un an ; financé à 74,2 % sur ressources intérieures ; déficit d'environ 3 % du PIB",
+"status": "En cours"
+},
+{
+"title": "Extensions du chemin de fer à écartement standard",
+"detail": "La construction se poursuit sur Dodoma–Mwanza et Isaka–Kigoma",
+"status": "En cours"
+},
+{
+"title": "Relance de TAZARA et hub logistique de Dodoma",
+"detail": "Développement de Dodoma comme centre de transport et de logistique",
+"status": "En cours"
+},
+{
+"title": "Centrale hydroélectrique Julius Nyerere et électrification rurale",
+"detail": "Davantage de capacités de production et de raccordements de villages par la REA",
+"status": "En cours"
+},
+{
+"title": "Fonds d'infrastructures des EPZ/SEZ",
+"detail": "5 % de recettes désignées affectés aux infrastructures des EPZ et SEZ",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Systèmes numériques de gestion des recettes et des dépenses et conseil pour les conseils locaux",
+"why": "La Présidente a demandé en septembre 2026 aux conseils locaux d'accroître leurs recettes et de maîtriser leurs dépenses.",
+"target": "PO-RALG et conseils locaux"
+},
+{
+"title": "Application mobile pour l'immatriculation des petites entreprises et la déclaration de l'impôt forfaitaire",
+"why": "Les mesures de formalisation et les modifications de l'impôt forfaitaire sont entrées en vigueur en juillet 2026.",
+"target": "Tanzania Revenue Authority, petites entreprises"
+},
+{
+"title": "Suivi du fret et optimisation des opérations pour les hubs ferroviaires et logistiques",
+"why": "Les extensions du SGR et le hub logistique de Dodoma sont en cours de développement.",
+"target": "TRC, TAZARA, ministère des Transports"
+},
+{
+"title": "Accompagnement des PME coréennes à l'entrée sur les marchés d'Afrique de l'Est (études, mise en relation avec des partenaires)",
+"why": "Les politiques de protection de la fabrication et de la transformation locales pourraient accroître la demande de coentreprises locales (estimation).",
+"target": "Fabricants et distributeurs locaux"
+}
+],
+"krsupport": [
+{
+"title": "Bureau de KOTRA à Dar es Salaam",
+"detail": "Conseille sur les études de marché en Tanzanie et la mise en relation avec des acheteurs."
+},
+{
+"title": "Bon d'exportation pour les PME",
+"detail": "Couvre, par des bons, des services à l'exportation tels que les études de marché, la traduction et la certification."
+}
+]
+}

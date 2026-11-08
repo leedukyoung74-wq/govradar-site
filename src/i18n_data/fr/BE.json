@@ -1,0 +1,55 @@
+{
+"summary": "Le gouvernement fédéral belge négocie un budget pluriannuel visant un ajustement d'environ 10 Md€ d'ici 2029, mais n'avait trouvé aucun accord fin octobre ; il tente désormais de s'entendre d'abord sur un paquet 2027 d'environ 3 à 4 Md€.",
+"leader": "Roi Philippe ; Premier ministre Bart De Wever (N-VA, coalition « Arizona » à cinq partis)",
+"agenda": [
+"Assainissement budgétaire : ajustement d'environ 10 Md€ d'ici 2029, maîtrise des charges d'intérêts",
+"Adopter le budget 2027 dans les délais (éviter les douzièmes provisoires)",
+"Envisager un frein à l'endettement (gel d'urgence des dépenses)",
+"Mesures fiscales (hausse de la TVA abandonnée ; revenus locatifs et sociétés de management)",
+"Maîtrise des dépenses de santé"
+],
+"projects": [
+{
+"title": "Paquet budgétaire fédéral 2027",
+"detail": "Faute d'accord pluriannuel, un premier volet d'économies pour 2027 est recherché ; objectif de le soumettre au Parlement début novembre",
+"status": "En négociation"
+},
+{
+"title": "Ajustement budgétaire pluriannuel (jusqu'en 2029)",
+"detail": "Respecter les règles budgétaires de l'UE et réduire le déficit (5,2 % du PIB en 2025)",
+"status": "En négociation"
+},
+{
+"title": "Législation sur le frein à l'endettement",
+"detail": "Gel d'urgence des dépenses via le Parlement en l'absence d'accord pluriannuel d'ici la fin de l'année",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Diagnostic de l'efficacité de la dépense publique et de l'automatisation des processus",
+"why": "La pression d'un ajustement de 10 Md€ accroît la demande d'efficacité administrative.",
+"target": "Services publics fédéraux (SPF/FOD) et gouvernements régionaux"
+},
+{
+"title": "Accompagnement des entreprises coréennes sur les marchés publics et les politiques de l'UE (hub de Bruxelles)",
+"why": "Les marchés des institutions européennes et l'information réglementaire sont concentrés à Bruxelles.",
+"target": "PME et ETI coréennes"
+},
+{
+"title": "Pilotes d'IA pour les documents et le traitement des dossiers dans les organismes publics",
+"why": "Les services doivent être maintenus sans personnel supplémentaire (estimation).",
+"target": "Organismes publics fédéraux et régionaux"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA Belgique (Bruxelles)",
+"detail": "Fournit des études du marché belge/européen et la recherche d'acheteurs et de partenaires."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre par des bons les frais de certification UE, de marketing et de conseil."
+}
+]
+}

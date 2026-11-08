@@ -1,0 +1,65 @@
+{
+"summary": "Chypre a transmis au Parlement un budget 2027 de 14,4 Md EUR de dépenses totales (11,1 Md EUR hors service de la dette), prévoyant un excédent et une dette publique ramenée à environ 45 % du PIB. Les dépenses de défense augmentent fortement, et le président a demandé que des projets locaux puissent bénéficier du prochain budget pluriannuel de l'UE (2028-2034).",
+"leader": "Président Nikos Christodoulides (chef de l'État et du gouvernement) · Ministre des Finances Makis Keravnos",
+"agenda": [
+"Maintenir les excédents budgétaires et réduire la dette publique (45,2 % du PIB prévus fin 2027)",
+"Renforcement de la défense : 430 M EUR en 2027 dans le cadre d'un programme 2027-2029 de 1,28 Md EUR",
+"Investissements dans la santé (GESY), la protection sociale et l'éducation",
+"Modernisation des routes et des infrastructures (p. ex. route Paphos-Polis)",
+"Identifier environ 3,5 Md EUR de projets liés au budget de l'UE 2028-2034"
+],
+"projects": [
+{
+"title": "Budget de l'État 2027",
+"detail": "14,4 Md EUR de dépenses totales, 1,165 Md EUR de dépenses de développement ; examen en commission puis vote en séance plénière en décembre",
+"status": "En examen"
+},
+{
+"title": "Programme d'investissement dans la défense",
+"detail": "Les dépenses de défense passent de 176,8 M EUR en 2026 à 430 M EUR en 2027",
+"status": "Prévu"
+},
+{
+"title": "Nouveau musée de Chypre",
+"detail": "Financement de la construction inscrit au budget 2027",
+"status": "En cours"
+},
+{
+"title": "Route Paphos-Polis Chrysochous",
+"detail": "Financement des travaux de l'axe routier occidental",
+"status": "En cours"
+},
+{
+"title": "Appel à projets des collectivités locales (fonds UE 2028-2034)",
+"detail": "Les collectivités locales préparent leurs propositions pendant dix mois ; le Conseil des ministres sélectionne les projets en septembre 2027",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Conseil en planification de projets et en rédaction de propositions pour les fonds européens à destination des collectivités locales",
+"why": "Le président a demandé des propositions de projets locaux, avec une sélection prévue en septembre 2027.",
+"target": "Municipalités et administrations de district chypriotes"
+},
+{
+"title": "Automatisation par IA de l'administration publique (traitement des dossiers et des documents)",
+"why": "Elle correspond à l'orientation budgétaire de réduction des postes et de maîtrise de la masse salariale.",
+"target": "Ministère des Finances, administrations ministérielles"
+},
+{
+"title": "Services d'analyse de données marines et hydriques",
+"why": "Le département des pêches a lancé un appel d'offres pour une étude marine et les dépenses liées à l'eau augmentent.",
+"target": "Département des pêches et de la recherche marine, département du développement hydraulique"
+}
+],
+"krsupport": [
+{
+"title": "Actualités des marchés étrangers de KOTRA (Chypre/UE)",
+"detail": "Fournit des informations sur la réglementation du marché européen et les marchés publics."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Les bons couvrent les frais de certification UE, juridiques et de localisation."
+}
+]
+}

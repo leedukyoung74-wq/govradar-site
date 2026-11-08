@@ -1,0 +1,76 @@
+{
+"summary": "En su Declaración de Política Presupuestaria de Mediano Plazo del 21 de octubre de 2026, el Tesoro rebajó la previsión de crecimiento para 2026 al 1,2% y fijó una trayectoria para reducir el déficit del 4,3% del PIB al 2,5% en 2030. El financiamiento de infraestructura (IFISA, BFI, APP), la reforma del agua y la electricidad y el fortalecimiento de las finanzas municipales son centrales, con elecciones locales previstas para el 4 de noviembre de 2026.",
+"leader": "Presidente Cyril Ramaphosa (jefe de Estado y de Gobierno, Gobierno de Unidad Nacional)",
+"agenda": [
+"Consolidación fiscal: pico del ratio de deuda y proyecto de ley de regla fiscal en 2027",
+"Ampliar la infraestructura: IFISA, el Mecanismo Presupuestario para Infraestructura y la cartera de APP",
+"Reforma de la electricidad y el agua: ampliación de la red y reducción del agua no facturada",
+"Reconstruir el gobierno local: mayores transferencias, medidores inteligentes, Libro Blanco revisado",
+"Combatir la violencia de género y el feminicidio manteniendo las prestaciones sociales",
+"Plataforma de gobierno digital MyMzansi"
+],
+"projects": [
+{
+"title": "Agencia de Financiamiento y Apoyo a la Ejecución de Infraestructura (IFISA)",
+"detail": "Operativa desde el 1 de abril de 2026 para atraer capital privado y modelos alternativos de ejecución",
+"status": "En curso"
+},
+{
+"title": "Mecanismo Presupuestario para Infraestructura y bonos de infraestructura",
+"detail": "Cuatro ventanas de convocatoria al año; los bonos de infraestructura financian proyectos del BFI",
+"status": "En curso"
+},
+{
+"title": "Cartera de APP y Vehículo de Garantía Crediticia (CGV)",
+"detail": "68 APP (31 municipales); el CGV respaldará primero la transmisión, con plena operación prevista para 2027",
+"status": "Planificado"
+},
+{
+"title": "Finanzas municipales y medidores inteligentes",
+"detail": "R21.800 millones adicionales de participación equitativa y R13.400 millones de reparto del impuesto al combustible; R3.500 millones más para medidores inteligentes a mediano plazo",
+"status": "Planificado"
+},
+{
+"title": "Asesoría transaccional sobre agua no facturada municipal",
+"detail": "Selección de un asesor transaccional para la reducción del ANF en cuatro municipios",
+"status": "En licitación"
+},
+{
+"title": "Terminal de Graneles Secos de Richards Bay",
+"detail": "Selección de asesores jurídicos transaccionales para el proyecto de APP",
+"status": "En licitación"
+}
+],
+"biz": [
+{
+"title": "Analítica de agua no facturada y facturación municipal",
+"why": "El DBSA licita asesoría transaccional sobre ANF para cuatro municipios y aumenta la financiación de medidores inteligentes.",
+"target": "Departamentos municipales de agua, DBSA"
+},
+{
+"title": "SaaS de costeo y gestión de proyectos más asesoramiento",
+"why": "El DBSA está adquiriendo un marco y una herramienta de costeo de programas y proyectos.",
+"target": "DBSA, unidades de infraestructura del Tesoro Nacional, IFISA"
+},
+{
+"title": "Viabilidad y modelización financiera de APP",
+"why": "31 de las 68 APP son municipales y la capacidad de preparación es escasa.",
+"target": "Municipios, Unidad de APP del Tesoro, DBSA"
+},
+{
+"title": "Chatbot con IA y automatización de flujos de trabajo para la atención ciudadana",
+"why": "El gobierno ha financiado una plataforma única de servicios digitales.",
+"target": "Departamento de Servicio Público y Administración, Departamento de Comunicaciones y Tecnologías Digitales"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Johannesburgo",
+"detail": "Apoya estudios de mercado, servicios de sucursal local, ferias y misiones comerciales, K-food y bienes de consumo, y los sectores médico, de defensa y nuclear."
+},
+{
+"title": "Cooperación económica de la Embajada de Corea",
+"detail": "Sudáfrica es el mayor socio comercial de Corea en África y la embajada ayuda a las empresas a encontrar oportunidades de negocio."
+}
+]
+}

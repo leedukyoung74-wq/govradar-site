@@ -1,0 +1,76 @@
+{
+"summary": "Dalam Medium-Term Budget Policy Statement 21 Okt 2026, Kementerian Keuangan (Treasury) memangkas proyeksi pertumbuhan 2026 menjadi 1.2% dan menetapkan jalur untuk menurunkan defisit dari 4.3% PDB menjadi 2.5% pada 2030. Pembiayaan infrastruktur (IFISA, BFI, PPP), reformasi air dan listrik, serta penguatan keuangan pemerintah kota menjadi pusat perhatian, dengan pemilu lokal dijadwalkan pada 4 Nov 2026.",
+"leader": "Presiden Cyril Ramaphosa (kepala negara dan kepala pemerintahan, Pemerintahan Persatuan Nasional)",
+"agenda": [
+"Konsolidasi fiskal: rasio utang mencapai puncak dan RUU aturan fiskal pada 2027",
+"Peningkatan skala infrastruktur: IFISA, Budget Facility for Infrastructure, dan pipeline PPP",
+"Reformasi listrik dan air: perluasan jaringan dan pengurangan air tak berekening (non-revenue water)",
+"Membangun kembali pemerintahan daerah: kenaikan transfer, meteran pintar, revisi White Paper",
+"Menangani kekerasan berbasis gender dan femisida sambil mempertahankan bantuan sosial",
+"Platform pemerintahan digital MyMzansi"
+],
+"projects": [
+{
+"title": "Infrastructure Finance and Implementation Support Agency (IFISA)",
+"detail": "Beroperasi sejak 1 Apr 2026 untuk menarik modal swasta dan model pelaksanaan alternatif",
+"status": "Berjalan"
+},
+{
+"title": "Budget Facility for Infrastructure dan obligasi infrastruktur",
+"detail": "Empat jendela pengajuan per tahun; obligasi infrastruktur mendanai proyek BFI",
+"status": "Berjalan"
+},
+{
+"title": "Pipeline PPP dan Credit Guarantee Vehicle (CGV)",
+"detail": "68 PPP (31 di tingkat kota); CGV akan mendukung transmisi terlebih dahulu, operasi penuh ditargetkan pada 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Keuangan pemerintah kota dan meteran pintar",
+"detail": "Tambahan equitable share R21.8bn dan bagi hasil pungutan BBM R13.4bn; tambahan R3.5bn untuk meteran pintar dalam jangka menengah",
+"status": "Direncanakan"
+},
+{
+"title": "Penasihat transaksi air tak berekening untuk pemerintah kota",
+"detail": "Pemilihan penasihat transaksi untuk pengurangan NRW di empat pemerintah kota",
+"status": "Dalam tender"
+},
+{
+"title": "Richards Bay Dry Bulk Terminal",
+"detail": "Pemilihan penasihat hukum transaksi untuk proyek PPP",
+"status": "Dalam tender"
+}
+],
+"biz": [
+{
+"title": "Analitik air tak berekening dan penagihan untuk pemerintah kota",
+"why": "DBSA melelang jasa penasihat transaksi NRW untuk empat pemerintah kota dan pendanaan meteran pintar meningkat.",
+"target": "Dinas air pemerintah kota, DBSA"
+},
+{
+"title": "SaaS perhitungan biaya dan manajemen proyek serta jasa konsultasi",
+"why": "DBSA sedang mengadakan kerangka kerja dan perangkat perhitungan biaya program dan proyek.",
+"target": "DBSA, unit infrastruktur National Treasury, IFISA"
+},
+{
+"title": "Studi kelayakan PPP dan pemodelan keuangan",
+"why": "31 dari 68 PPP berada di tingkat kota dan kapasitas persiapannya terbatas.",
+"target": "Pemerintah kota, Treasury PPP Unit, DBSA"
+},
+{
+"title": "Chatbot AI dan otomatisasi alur kerja untuk layanan warga",
+"why": "Pemerintah telah mendanai platform layanan digital tunggal.",
+"target": "Department of Public Service and Administration, Department of Communications and Digital Technologies"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Johannesburg",
+"detail": "Mendukung riset pasar, layanan kantor cabang lokal, pameran dagang dan misi dagang, K-food dan barang konsumsi, serta sektor medis, pertahanan, dan nuklir."
+},
+{
+"title": "Kerja sama ekonomi Kedutaan Besar Korea",
+"detail": "Afrika Selatan adalah mitra dagang terbesar Korea di Afrika dan kedutaan membantu perusahaan menemukan peluang bisnis."
+}
+]
+}

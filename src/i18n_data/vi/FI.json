@@ -1,0 +1,66 @@
+{
+"summary": "Chính phủ Orpo của Phần Lan đã thống nhất ngân sách cuối cùng trước cuộc bầu cử năm 2027, với chi tiêu 92,5 tỷ EUR và thâm hụt 12,4 tỷ EUR. Chính phủ hướng tới thúc đẩy tăng trưởng thông qua tăng chi tiêu quốc phòng và cắt giảm thuế doanh nghiệp, thuế thu nhập, đồng thời vẫn tuân thủ lộ trình chi tiêu theo thủ tục thâm hụt quá mức của EU.",
+"leader": "Tổng thống Alexander Stubb / Thủ tướng Petteri Orpo (liên minh do Đảng Liên minh Quốc gia dẫn dắt)",
+"agenda": [
+"Củng cố tài khóa và tuân thủ lộ trình chi tiêu theo thủ tục thâm hụt quá mức của EU",
+"Giảm thuế doanh nghiệp từ 20% xuống 18% và giảm thuế thu nhập cho người có thu nhập thấp và trung bình",
+"Tăng chi tiêu quốc phòng và tiếp tục hỗ trợ Ukraine",
+"Các biện pháp việc làm như phiếu hỗ trợ cho thanh niên và người thất nghiệp dài hạn",
+"Kích thích cải tạo và xây dựng nhà ở",
+"Đầu tư hạ tầng đường bộ, đường sắt và cảng biển"
+],
+"projects": [
+{
+"title": "Đề xuất ngân sách nhà nước 2027",
+"detail": "Chi tiêu 92,5 tỷ EUR, thâm hụt 12,4 tỷ EUR; chi phí lãi vay tăng lên 4,4 tỷ EUR",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Tăng ngân sách quốc phòng",
+"detail": "Kinh phí Bộ Quốc phòng tăng 618 triệu EUR, mua sắm trang thiết bị 1,3 tỷ EUR, 200 triệu EUR cho Ukraine",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Giảm thuế doanh nghiệp",
+"detail": "Thuế suất giảm từ 20% xuống 18%, khiến nguồn thu giảm khoảng 850 triệu EUR",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Trợ cấp cải tạo nhà ở và bảo lãnh vay",
+"detail": "Thay đổi tạm thời về trợ cấp cải tạo và bảo lãnh vay trị giá 110 triệu EUR trong giai đoạn 2026-2027",
+"status": "Đang triển khai"
+},
+{
+"title": "Hệ thống mua sắm động cho nền tảng dữ liệu công và AI",
+"detail": "DPS của DigiFinland cho quản lý dựa trên dữ liệu và nền tảng AI, giấy phép và dịch vụ chuyên gia",
+"status": "Đang đấu thầu"
+}
+],
+"biz": [
+{
+"title": "Kho dữ liệu công, phân tích và tự động hóa AI",
+"why": "Cơ quan quản lý tài sản nhà nước và công ty số hóa phúc lợi đang mua sắm công khai dịch vụ dữ liệu và AI.",
+"target": "Senaatti-kiinteistöt, DigiFinland, các vùng dịch vụ phúc lợi"
+},
+{
+"title": "Tư vấn số hóa quy trình cho các trường đại học và cơ quan nhà nước",
+"why": "Áp lực cắt giảm chi phí vận hành thúc đẩy nhu cầu tự động hóa quy trình.",
+"target": "Các trường đại học và cơ quan trung ương"
+},
+{
+"title": "Hỗ trợ SME Hàn Quốc thâm nhập Phần Lan/Bắc Âu",
+"why": "Việc giảm thuế doanh nghiệp và chi tiêu quốc phòng/hạ tầng có thể làm tăng nhu cầu hợp tác.",
+"target": "SME ICT và linh kiện Hàn Quốc"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng Thương mại KOTRA Helsinki",
+"detail": "Hỗ trợ thông tin thị trường Phần Lan và tìm kiếm người mua trong lĩnh vực ICT/công nghệ sạch."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Chi trả chi phí chứng nhận ở nước ngoài, nghiên cứu thị trường và tiếp thị thông qua phiếu hỗ trợ."
+}
+]
+}

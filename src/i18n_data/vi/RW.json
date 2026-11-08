@@ -1,0 +1,80 @@
+{
+"summary": "Rwanda đang thực hiện ngân sách tài khóa 2026/27 (7.796,3 tỷ RWF) theo NST2, tập trung vào nông nghiệp, việc làm và khả năng chống chịu, trong khi chu kỳ ngân sách 2027/28 và các cuộc bầu cử địa phương (từ 10/10 đến 15/12) đang diễn ra. Các cuộc đàm phán với IMF về đợt rà soát ECF đầu tiên đã kết thúc vào tháng 10.",
+"leader": "Tổng thống Paul Kagame / Thủ tướng Justin Nsengiyumva (từ tháng 7/2025)",
+"agenda": [
+"Thực hiện NST2: các trụ cột kinh tế (63%), xã hội (22%) và quản trị (15%)",
+"Năng suất nông nghiệp: vật tư đầu vào, thủy lợi và chế biến",
+"Tạo việc làm cho thanh niên, sản xuất trong nước và xuất khẩu",
+"Hạ tầng năng lượng, giao thông và nước",
+"Ổn định kinh tế vĩ mô và chương trình ECF của IMF",
+"Tái cơ cấu chính quyền địa phương (cấp cell trước tháng 2/2027, cấp huyện trước tháng 7/2027)"
+],
+"projects": [
+{
+"title": "Ngân sách quốc gia tài khóa 2026/27",
+"detail": "Tăng 12% so với cùng kỳ; chi thường xuyên 4.785,5 tỷ RWF, chi phát triển 3.010,8 tỷ RWF; thu nội địa 5.273,8 tỷ RWF",
+"status": "Đang triển khai"
+},
+{
+"title": "Lập kế hoạch và ngân sách tài khóa 2027/28",
+"detail": "Hội thảo ba tuần dành cho cán bộ kế hoạch trung ương và địa phương khởi động chu kỳ tiếp theo (27/10/2026)",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Chuẩn bị, Ứng phó và Chống chịu Tình trạng Khẩn cấp Y tế (HEPRR)",
+"detail": "Do Ngân hàng Thế giới tài trợ; mời thầu thiết bị hỗ trợ cho bệnh viện CHUK Masaka, máy X-quang và các hạng mục khác",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Chính sách Hợp tác Phát triển Rwanda 2026-2050",
+"detail": "Chính sách hợp tác dài hạn thay thế Chính sách Viện trợ năm 2006; được Nội các phê duyệt vào tháng 9/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Nhà máy A1 Iron & Steel (Musanze)",
+"detail": "Dự án đầu tư sản xuất được Thủ tướng khánh thành ngày 14/9/2026",
+"status": "Hoàn thành"
+},
+{
+"title": "Bảo hiểm khí hậu cho công nhân mỏ",
+"detail": "Đang nghiên cứu bảo hiểm khí hậu cho ngành khai khoáng và khai thác đá, vốn sử dụng khoảng 92.000 lao động năm 2025",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Công cụ tự động hóa và đào tạo về lập ngân sách và quản lý hiệu quả cho chính quyền trung ương và địa phương",
+"why": "Chu kỳ ngân sách 2027/28 và tái cơ cấu chính quyền địa phương diễn ra đồng thời, nên nhu cầu về quy trình chuẩn hóa cao.",
+"target": "MINECOFIN, chính quyền các huyện"
+},
+{
+"title": "Hệ thống quản lý tài sản và bảo trì thiết bị bệnh viện",
+"why": "Lượng lớn thiết bị do Ngân hàng Thế giới tài trợ được bàn giao sẽ cần quản lý hậu mãi.",
+"target": "RBC, bệnh viện công"
+},
+{
+"title": "Bảng điều khiển dữ liệu vật tư nông nghiệp và thủy lợi kèm dự báo năng suất",
+"why": "Năng suất nông nghiệp là ưu tiên ngân sách hàng đầu.",
+"target": "Bộ Nông nghiệp và Tài nguyên Động vật, RAB"
+},
+{
+"title": "Tư vấn cho SME Hàn Quốc sử dụng Kigali làm cơ sở tại Đông Phi",
+"why": "Các cuộc trao đổi hợp tác EDCF đang sôi động và Rwanda mở ra khả năng tiếp cận thị trường COMESA.",
+"target": "SME Hàn Quốc, Ủy ban Phát triển Rwanda (RDB)"
+}
+],
+"krsupport": [
+{
+"title": "Trao đổi hợp tác EDCF của Korea Eximbank",
+"detail": "Trong khuôn khổ KOAFEC tháng 9/2026, ngân hàng đã thảo luận với Bộ trưởng Tài chính Rwanda về các dự án EDCF và sự tham gia của doanh nghiệp Hàn Quốc."
+},
+{
+"title": "Trung tâm AI Hàn Quốc - châu Phi và Gói K-AI",
+"detail": "Tại KOAFEC 2026, Hàn Quốc đã ký thư ý định về trung tâm AI và giới thiệu các dự án AI, trung tâm dữ liệu và điện năng gắn với EDCF."
+},
+{
+"title": "Chương trình quốc gia của KOICA tại Rwanda",
+"detail": "Các dự án viện trợ không hoàn lại và cơ hội hợp tác thông qua văn phòng tại Rwanda."
+}
+]
+}

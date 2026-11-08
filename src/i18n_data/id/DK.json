@@ -1,0 +1,66 @@
+{
+"summary": "Setelah pemilu Maret 2026 dan perundingan rekor selama 69 hari, kabinet ketiga Frederiksen yang terdiri atas Sosial Demokrat, Kiri Hijau, Moderat, dan Liberal Sosial mulai menjabat sebagai koalisi minoritas. RUU keuangan 2027 yang disampaikan pada 9 Oktober bertumpu pada keamanan, kesejahteraan, dan transisi hijau.",
+"leader": "Raja Frederik X / Perdana Menteri Mette Frederiksen (Sosial Demokrat; koalisi minoritas kiri-tengah ketiga, dibentuk 2026-06-03)",
+"agenda": [
+"Menaikkan belanja pertahanan menjadi 3,5% PDB pada 2030",
+"Kesejahteraan: sekolah dan penitipan anak, perawatan gigi gratis bagi kelompok rentan (seluruh warga pada 2035), pensiun lebih tinggi bagi pensiunan berpenghasilan terendah",
+"Transisi hijau: elektrifikasi, penghapusan bahan bakar fosil, dan kemandirian energi",
+"Penerapan bertahap transportasi umum gratis bagi warga di bawah 22 tahun",
+"Keringanan pajak golongan menengah untuk menghargai kerja tambahan",
+"Investasi dan hubungan yang lebih erat dengan Greenland"
+],
+"projects": [
+{
+"title": "RUU keuangan 2027 (Finanslovforslag 2027)",
+"detail": "Fokus pada keamanan, kesejahteraan, dan transisi hijau; DKK 1,2 miliar untuk sekolah dan penitipan anak pada 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Dukungan elektrifikasi dan penghapusan fosil",
+"detail": "DKK 650 juta pada 2027 dan DKK 850 juta per tahun pada 2028-2030",
+"status": "Direncanakan"
+},
+{
+"title": "Transportasi umum gratis bagi kaum muda",
+"detail": "Penerapan bertahap bagi warga di bawah 22 tahun",
+"status": "Direncanakan"
+},
+{
+"title": "Danish Veterinary Prescription solution (DVR)",
+"detail": "Sistem digital bersama untuk menggantikan resep hewan berbasis kertas, faks, dan PDF",
+"status": "Proses tender"
+},
+{
+"title": "Belanja pertahanan menjadi 3,5% PDB",
+"detail": "Kenaikan bertahap hingga 2030",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi AI untuk administrasi hibah dan perizinan publik",
+"why": "Lembaga-lembaga sedang menenderkan sistem administrasi baru untuk hibah dan resep.",
+"target": "Lembaga pusat (Medicines Agency, Palaces and Culture Agency, dll.)"
+},
+{
+"title": "Pasokan konsultasi TI melalui dynamic purchasing system SKI",
+"why": "DPS SKI terus-menerus membeli konsultasi strategi TI dan business case.",
+"target": "Negara dan pemerintah kota (melalui SKI)"
+},
+{
+"title": "Dukungan masuk pasar Denmark bagi perusahaan teknologi hijau dan elektrifikasi Korea",
+"why": "RUU tersebut mengalokasikan ratusan juta DKK per tahun untuk elektrifikasi dan penghapusan fosil.",
+"target": "Pemerintah kota, utilitas, dan perusahaan Denmark"
+}
+],
+"krsupport": [
+{
+"title": "Kantor Dagang KOTRA Kopenhagen",
+"detail": "Mendukung intelijen pasar Denmark/Nordik dan pencarian pembeli industri hijau."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Menanggung biaya sertifikasi luar negeri, riset pasar, dan pemasaran melalui voucher."
+}
+]
+}

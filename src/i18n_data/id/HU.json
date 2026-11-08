@@ -1,0 +1,76 @@
+{
+"summary": "Pemerintahan Magyar, yang menjabat sejak pemilu April 2026, memprioritaskan pemulihan dana UE yang dibekukan, pemberantasan korupsi, dan konsolidasi fiskal. Rancangan anggaran 2027 berfokus pada infrastruktur rel, jalan, dan energi, kredit usaha, perumahan pemuda, dan kenaikan gaji sektor publik.",
+"leader": "Presiden András Baka (terpilih Agu 2026) / Perdana Menteri Péter Magyar",
+"agenda": [
+"Pemulihan dana UE yang dibekukan dan reformasi supremasi hukum",
+"Pemberantasan korupsi dan belanja publik yang transparan",
+"Pengurangan defisit (program anggaran jangka menengah 2027-2030)",
+"Perumahan (Program Wekerle) dan dukungan keluarga",
+"Kenaikan gaji kesehatan dan sektor publik",
+"Infrastruktur rel, jalan, dan energi"
+],
+"projects": [
+{
+"title": "Rancangan anggaran negara 2027",
+"detail": "Infrastruktur rel, jalan, dan energi, skema pinjaman usaha baru, dukungan perumahan pemuda, tarif pajak penghasilan satu digit bagi sekitar satu juta orang",
+"status": "Di parlemen"
+},
+{
+"title": "Program ekonomi dan anggaran jangka menengah 2027-2030",
+"detail": "Diterbitkan 28 Okt 2026, bertujuan menciptakan keuangan yang dapat diprediksi dan pertumbuhan baru",
+"status": "Direncanakan"
+},
+{
+"title": "Program perumahan Wekerle",
+"detail": "Diumumkan 27 Okt 2026, mencakup pembelian, renovasi, dan sewa",
+"status": "Direncanakan"
+},
+{
+"title": "Pencairan dana UE dan implementasi dana pemulihan",
+"detail": "Kesepakatan dengan Komisi Eropa pada Mei 2026 untuk mencairkan dana; hibah dan pinjaman pemulihan sedang diupayakan",
+"status": "Berjalan"
+},
+{
+"title": "Kenaikan gaji tenaga kesehatan",
+"detail": "Kenaikan rata-rata 15% bagi tenaga kesehatan dalam anggaran 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Dukungan Korea-Hungary Battery Cooperation Center (EIPP)",
+"detail": "KDI menggelar rapat laporan sementara dan survei lapangan di Budapest pada Agu 2026 bersama HUBA, BME, dan lainnya",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Dasbor pemantauan implementasi dana UE dan konsultasi PMO",
+"why": "Dana yang dicairkan harus dibelanjakan dan dilaporkan dalam waktu singkat.",
+"target": "Kementerian pengelola dana UE, pemerintah kota, BUMN"
+},
+{
+"title": "Analitik AI untuk mendeteksi penyimpangan pengadaan",
+"why": "Pemerintah baru menjadikan pemberantasan korupsi dan transparansi belanja prioritas utama.",
+"target": "Otoritas Pengadaan Publik, lembaga audit, Kementerian Keuangan"
+},
+{
+"title": "Konsultasi tenaga kerja dan rantai pasok bagi pemasok baterai Korea",
+"why": "Pusat kerja sama baterai Korea-Hungaria sedang disiapkan, dan banyak pabrik baterai Korea beroperasi di sana.",
+"target": "Pemasok baterai Korea di Hungaria, Asosiasi Baterai Hungaria (HUBA)"
+},
+{
+"title": "SaaS penilaian renovasi rumah dan efisiensi energi",
+"why": "Program Wekerle mencakup dukungan renovasi, sehingga permintaan diperkirakan naik.",
+"target": "Otoritas perumahan, kontraktor, bank"
+}
+],
+"krsupport": [
+{
+"title": "EIPP Hungaria (Korea-Hungary Battery Cooperation Center)",
+"detail": "Memberi saran pendirian pusat kerja sama baterai pada 2025/26 dan menggelar rapat sementara di Budapest pada Agu 2026."
+},
+{
+"title": "Kantor KOTRA Budapest",
+"detail": "Mendukung perusahaan Korea di sektor baterai, suku cadang otomotif, dan lainnya dengan informasi pasar."
+}
+]
+}

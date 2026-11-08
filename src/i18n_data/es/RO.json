@@ -1,0 +1,64 @@
+{
+"summary": "Tras la caída del gobierno Bolojan en mayo y cinco meses de bloqueo, el parlamento ratificó el 20 de octubre el gabinete del PSD y tecnócratas del primer ministro Niculescu. Los principales desafíos son uno de los déficits más altos de la UE, una inflación elevada y las amenazas a la seguridad en la frontera.",
+"leader": "Presidente Nicușor Dan / Primer ministro Luca Niculescu (diplomático independiente, ratificado el 2026-10-20; gabinete del PSD y tecnócratas)",
+"agenda": [
+"Restablecer un gobierno con plenas facultades y estabilizar los servicios públicos",
+"Reducir el déficit presupuestario (observar si continúa la línea de austeridad de 2025, incluida la subida del IVA)",
+"Responder a las amenazas a la seguridad en el mar Negro y la frontera con Ucrania (incidentes con drones)",
+"Reformas respaldadas por el Banco Mundial, como la digitalización de los servicios de justicia",
+"Reducción de la contaminación rural e infraestructura frente al riesgo de desastres"
+],
+"projects": [
+{
+"title": "Fortalecimiento de las Bases para una Mejor Prestación de los Servicios de Justicia",
+"detail": "Rehabilitación de instalaciones judiciales, reconstrucción de la LAN del Ministerio de Justicia y consultoría sobre la estrategia de justicia digital",
+"status": "En licitación"
+},
+{
+"title": "Proyecto de Prevención y Reducción de la Contaminación Rural (RAPID)",
+"detail": "Contratos de consultoría adjudicados para un sistema fitosanitario de alerta temprana y un sistema de gestión de información de laboratorio (octubre de 2026)",
+"status": "En curso"
+},
+{
+"title": "Proyecto de Fortalecimiento de la Gestión del Riesgo de Desastres",
+"detail": "Obras como la conexión de instalaciones de emergencia a la red eléctrica",
+"status": "En curso"
+},
+{
+"title": "Escuelas Más Seguras, Inclusivas y Sostenibles",
+"detail": "Contratos de mobiliario y equipamiento de aulas para 11 escuelas",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Consultoría en digitalización de organismos públicos y sistemas de gestión de datos",
+"why": "Los proyectos del Banco Mundial siguen licitando consultoría de sistemas informáticos en justicia y medio ambiente.",
+"target": "Ministerio de Justicia, agencias ambientales"
+},
+{
+"title": "Apoyo a la gestión (PMO) y al seguimiento de resultados de proyectos financiados por la UE",
+"why": "El nuevo gobierno necesita acelerar los proyectos financiados por la UE que acumulan retrasos.",
+"target": "Unidades de gestión de fondos de la UE de los ministerios, municipios"
+},
+{
+"title": "Apoyo a pymes coreanas para ingresar en el mercado rumano (estudios de mercado, vinculación con socios)",
+"why": "Interés como base de producción y distribución en Europa del Este, aunque es necesario evaluar el riesgo político.",
+"target": "Pymes coreanas de bienes de consumo y componentes"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Bucarest",
+"detail": "Ofrece información sobre el mercado rumano, búsqueda de compradores e información sobre contratación pública."
+},
+{
+"title": "Apoyo a infraestructura en el exterior",
+"detail": "Apoya estudios de viabilidad y participación accionaria en proyectos de infraestructura en el exterior."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Cubre mediante vales los costos de estudios de mercado, certificación y marketing en el exterior."
+}
+]
+}

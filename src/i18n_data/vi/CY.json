@@ -1,0 +1,65 @@
+{
+"summary": "Síp đã trình Quốc hội ngân sách 2027 với tổng chi tiêu 14,4 tỷ EUR (11,1 tỷ EUR không tính trả nợ), dự báo thặng dư và nợ công giảm xuống khoảng 45% GDP. Chi tiêu quốc phòng tăng mạnh, và tổng thống đã yêu cầu các dự án địa phương tận dụng ngân sách dài hạn tiếp theo của EU (2028-2034).",
+"leader": "Tổng thống Nikos Christodoulides (nguyên thủ quốc gia kiêm người đứng đầu chính phủ) · Bộ trưởng Tài chính Makis Keravnos",
+"agenda": [
+"Duy trì thặng dư tài khóa và giảm nợ công (dự báo 45,2% GDP vào cuối năm 2027)",
+"Tăng cường quốc phòng: 430 triệu EUR năm 2027 trong chương trình 1,28 tỷ EUR giai đoạn 2027-2029",
+"Đầu tư vào y tế (GESY), phúc lợi xã hội và giáo dục",
+"Nâng cấp đường bộ và hạ tầng (ví dụ tuyến đường Paphos-Polis)",
+"Xác định khoảng 3,5 tỷ EUR dự án gắn với ngân sách EU 2028-2034"
+],
+"projects": [
+{
+"title": "Ngân sách Nhà nước 2027",
+"detail": "Tổng chi tiêu 14,4 tỷ EUR, chi đầu tư phát triển 1,165 tỷ EUR; ủy ban xem xét, sau đó biểu quyết tại phiên toàn thể tháng 12",
+"status": "Đang xem xét"
+},
+{
+"title": "Chương trình đầu tư quốc phòng",
+"detail": "Chi tiêu quốc phòng tăng từ 176,8 triệu EUR năm 2026 lên 430 triệu EUR năm 2027",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Bảo tàng Síp mới",
+"detail": "Kinh phí xây dựng được đưa vào ngân sách 2027",
+"status": "Đang triển khai"
+},
+{
+"title": "Tuyến đường Paphos-Polis Chrysochous",
+"detail": "Kinh phí cho các hạng mục tuyến đường trục phía tây",
+"status": "Đang triển khai"
+},
+{
+"title": "Kêu gọi đề xuất dự án của chính quyền địa phương (quỹ EU 2028-2034)",
+"detail": "Chính quyền địa phương chuẩn bị đề xuất trong mười tháng; nội các lựa chọn dự án vào tháng 9/2027",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn lập kế hoạch dự án và hồ sơ đề xuất quỹ EU cho chính quyền địa phương",
+"why": "Tổng thống đã yêu cầu các đề xuất dự án địa phương, với thời điểm lựa chọn vào tháng 9/2027.",
+"target": "Các đô thị và cơ quan hành chính cấp quận của Síp"
+},
+{
+"title": "Tự động hóa AI cho hành chính công (xử lý hồ sơ và văn bản)",
+"why": "Phù hợp với chủ trương tài khóa tinh giản biên chế và kiểm soát quỹ lương.",
+"target": "Bộ Tài chính, bộ máy hành chính các bộ"
+},
+{
+"title": "Dịch vụ phân tích dữ liệu biển và nguồn nước",
+"why": "Cục thủy sản đã mời thầu khảo sát biển và chi tiêu liên quan đến nước đang tăng.",
+"target": "Cục Thủy sản và Nghiên cứu Biển, Cục Phát triển Nguồn nước"
+}
+],
+"krsupport": [
+{
+"title": "Tin thị trường nước ngoài của KOTRA (Síp/EU)",
+"detail": "Cung cấp thông tin về quy định thị trường và mua sắm công của EU."
+},
+{
+"title": "Chương trình Export Voucher",
+"detail": "Phiếu hỗ trợ chi trả chi phí chứng nhận EU, pháp lý và bản địa hóa."
+}
+]
+}

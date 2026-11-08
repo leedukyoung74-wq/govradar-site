@@ -1,0 +1,80 @@
+{
+"summary": "Sau khi chính phủ nhiệm kỳ 2026-2031 nhậm chức, Uganda đang theo đuổi Chiến lược Tăng trưởng Gấp mười lần và việc bắt đầu khai thác dầu với ngân sách tài khóa 2026/27 trị giá 84,3 nghìn tỷ UGX, kỳ vọng tăng trưởng 10,2%. Các gói thầu cho dự án số (UDAP-GovNet) và lưới điện do Ngân hàng Thế giới tài trợ đang diễn ra sôi động.",
+"leader": "Tổng thống Yoweri Museveni (tuyên thệ nhiệm kỳ thứ bảy, tháng 5/2026) / Thủ tướng Robinah Nabbanja (tiếp tục tại nhiệm)",
+"agenda": [
+"Chiến lược Tăng trưởng Gấp mười lần: công nghiệp hóa nông nghiệp, du lịch, khoáng sản và khoa học (ATMS)",
+"Bắt đầu khai thác dầu và kỳ vọng tăng trưởng 10,2% trong tài khóa 2026/27",
+"Nâng cao thu nhập hộ gia đình thông qua chương trình Tạo dựng Thịnh vượng (Wealth Creation)",
+"Huy động nguồn thu nội địa thông qua các biện pháp thuế mới",
+"Đầu tư vào thủy lợi, nông nghiệp thương mại và chế biến nông sản",
+"Duy trì dịch vụ y tế khi viện trợ giảm"
+],
+"projects": [
+{
+"title": "Ngân sách quốc gia tài khóa 2026/27",
+"detail": "Được Bộ trưởng Tài chính Musasizi trình bày ngày 11/6/2026 nhằm đẩy nhanh Chiến lược Tăng trưởng Gấp mười lần",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình Công nghiệp hóa Nông nghiệp",
+"detail": "Mức phân bổ lớn nhất từ trước đến nay",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình Tạo dựng Thịnh vượng",
+"detail": "Hỗ trợ thu nhập hộ gia đình",
+"status": "Đang triển khai"
+},
+{
+"title": "Dự án Tăng tốc Số Uganda (UDAP-GovNet)",
+"detail": "Do Ngân hàng Thế giới tài trợ; mời thầu Wi-Fi tại cơ quan chính phủ và khu vực tiếp nhận người tị nạn, cùng giải pháp y tế số cho người tị nạn",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Thi công lắp đặt đường dây điện (Đợt 2, Gói 9-11)",
+"detail": "Hạng mục tiếp cận điện năng do Ngân hàng Thế giới tài trợ",
+"status": "Đang đấu thầu"
+},
+{
+"title": "Ngân sách ngành y tế",
+"detail": "Giảm so với năm trước do viện trợ nước ngoài suy giảm",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Thiết kế và triển khai chương trình đào tạo kỹ năng số cho khu vực công",
+"why": "Hiện đang tuyển chọn tư vấn do Ngân hàng Thế giới tài trợ cho chương trình kỹ năng số quốc gia.",
+"target": "NITA-U, Bộ ICT"
+},
+{
+"title": "SaaS quản lý sản xuất và tồn kho cùng tư vấn vận hành cho hợp tác xã chế biến nông sản",
+"why": "Công nghiệp hóa nông nghiệp có mức ngân sách lớn nhất từ trước đến nay và Tổng thống đang thúc đẩy đầu tư chế biến.",
+"target": "Hợp tác xã nông dân, doanh nghiệp chế biến, Bộ Nông nghiệp"
+},
+{
+"title": "Hệ thống di động giám sát hiệu quả cho đối tượng thụ hưởng Wealth Creation",
+"why": "Một chương trình trị giá 11 nghìn tỷ UGX cần theo dõi kết quả.",
+"target": "Chính quyền địa phương, cơ quan thực hiện"
+},
+{
+"title": "Tự động hóa kê khai thuế và chatbot hỗ trợ bằng AI",
+"why": "Các biện pháp thuế mới làm tăng nhu cầu về dịch vụ người nộp thuế và hiệu quả thu.",
+"target": "Cơ quan Thu ngân sách Uganda (URA)"
+}
+],
+"krsupport": [
+{
+"title": "Trao đổi hợp tác EDCF của Korea Eximbank",
+"detail": "Trong khuôn khổ KOAFEC tháng 9/2026, ngân hàng đã thảo luận với Bộ trưởng Tài chính Uganda về các dự án EDCF và sự tham gia của doanh nghiệp Hàn Quốc."
+},
+{
+"title": "Trung tâm AI Hàn Quốc - châu Phi và Gói K-AI",
+"detail": "Các giải pháp AI, trung tâm dữ liệu và dự án điện năng gắn với EDCF được thúc đẩy trên toàn châu Phi."
+},
+{
+"title": "Chương trình quốc gia của KOICA tại Uganda",
+"detail": "Các dự án viện trợ không hoàn lại và cơ hội hợp tác thông qua văn phòng tại Uganda."
+}
+]
+}

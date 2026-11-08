@@ -1,0 +1,41 @@
+{
+ "week":"2026-W44","updated":"2026-10-31","edition":1,
+ "headline_ko":"호르무즈 통항은 사실상 막힌 상태가 이어지고, 10월 선박 공격이 늘며 브렌트유가 117달러대로 올랐습니다. 11월 3일 미국 중간선거 전후가 다음 고비입니다.",
+ "headline_en":"Hormuz transit remains effectively blocked; October saw more ship attacks and Brent near $117. The 3 Nov US midterms are the next inflection point.",
+ "kpi":[
+  {"k_ko":"브렌트유","k_en":"Brent","v":"$117.62","d_ko":"10/30 · 8월 말 대비 약 +31%","d_en":"30 Oct · ~+31% vs end-Aug","v2":"single","src":[0,1]},
+  {"k_ko":"WTI","k_en":"WTI","v":"$113.58","d_ko":"10/30","d_en":"30 Oct","v2":"single","src":[0]},
+  {"k_ko":"해협 원유 통과량","k_en":"Crude through strait","v":"2.9M bbl","d_ko":"10/11 하루 (10/8 20.8M) · Kpler","d_en":"11 Oct, one day (8 Oct: 20.8M) · Kpler","v2":"single","src":[2]},
+  {"k_ko":"전쟁 전 통항","k_en":"Pre-war traffic","v":"~130척/일","d_ko":"AP","d_en":"AP","v2":"single","src":[1]}
+ ],
+ "sections":[
+  {"h_ko":"안보·통항","h_en":"Security & transit","items":[
+   {"ko":"이란이 해협 통항 사전 허가제를 유지하고, 미국은 이란 항만 봉쇄를 계속하고 있다.","en":"Iran keeps prior authorisation for transit; the US continues its blockade of Iranian ports.","v":"ok","src":[2,1]},
+   {"ko":"10월 중순 하루 6척이 공격받아 개전 이후 최다를 기록했다.","en":"Six vessels were attacked in a single day in mid-October, the most since the war began.","v":"single","src":[2]},
+   {"ko":"10월 29일 유조선 Louise 1이 흡착 기뢰 공격을 받았다(UKMTO). 인명 피해는 없었다.","en":"On 29 Oct the tanker Louise 1 was hit by limpet mines (UKMTO); no injuries.","v":"official","src":[0]},
+   {"ko":"이란 혁명수비대의 '유조선 기뢰 피격' 발표 중 일부를 미국이 부인했다.","en":"The US denied part of the IRGC's tanker-mine claims.","v":"claim","src":[3]}
+  ]},
+  {"h_ko":"정치·협상","h_en":"Politics & talks","items":[
+   {"ko":"트럼프 대통령은 핵무기 사용과 지상군 투입을 배제하고, 중간선거 이후 합의를 기대한다고 말했다.","en":"President Trump ruled out nuclear use and ground troops and expects a deal after the midterms.","v":"ok","src":[2,0]},
+   {"ko":"중간선거 이후를 상정한 대이란 공격 선택지가 보고되고 있다는 보도가 있다.","en":"Post-midterm strike options on Iran are reportedly being presented.","v":"single","src":[0]}
+  ]},
+  {"h_ko":"보험·해운","h_en":"Insurance & shipping","items":[
+   {"ko":"10월 미·이란 충돌 재개로 호르무즈 전쟁위험 보험료에 다시 상승 압력이 걸렸다고 보험 전문매체가 보도했다(요율 수치는 미확인).","en":"Trade press reports renewed upward pressure on Hormuz war-risk premiums as clashes resumed (rate figures unverified).","v":"single","src":[4]},
+   {"ko":"정부는 원유 수입선 정상화 전까지 홍해 우회 수송을 우선한다는 입장이었다(7월 기준).","en":"Korea's government prioritised Red Sea rerouting for crude imports until normalisation (as of July).","v":"single","src":[5]}
+  ]}
+ ],
+ "checklist_ko":["걸프 지역 계약서의 유가 연동·불가항력 조항 확인","해상 운송 견적에 전쟁위험 할증과 우회 운임을 반영","K-SURE 단기수출보험·국가등급 확인, 이란 관련 거래는 제재 점검","중동 출장은 외교부 여행경보를 출발 전날 다시 확인","원자재·연료 재고를 2~4주분 앞당겨 확보할지 검토"],
+ "checklist_en":["Check fuel-indexation and force-majeure clauses in Gulf contracts","Price war-risk surcharges and rerouting into freight quotes","Check K-SURE cover and country ratings; screen anything touching Iran for sanctions","Re-check travel advisories the day before any Gulf trip","Consider pulling forward 2–4 weeks of input and fuel stock"],
+ "watch_ko":["11월 3일 미국 중간선거 전후 공습 재개 여부","UKMTO·JMIC 선박 사고 공지","이란 '해협 관리청' 통항 규정 변경","OPEC+·IEA 비축유 방출 결정"],
+ "watch_en":["Whether strikes resume around the 3 Nov US midterms","UKMTO / JMIC incident notices","Changes to Iran's strait transit rules","OPEC+ and IEA stock-release decisions"],
+ "sources":[
+  {"t":"Fox News live (Reuters·UKMTO 인용) 2026-10-30","u":"https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26","tier":2},
+  {"t":"AP/PBS — U.S. strikes Iranian rocket launchers (2026-08-30)","u":"https://www.pbs.org/newshour/world/ap-report-u-s-forces-strike-iranian-rocket-launchers-on-the-strait-of-hormuz-in-first-military-action-in-weeks","tier":2},
+  {"t":"Al Jazeera — Iran says two tankers hit mines (2026-10-18; Kpler 인용)","u":"https://www.aljazeera.com/news/2026/10/18/iran-says-two-tankers-catch-fire-after-hitting-mines-in-strait-of-hormuz","tier":2},
+  {"t":"intellinews — Iran says tankers hit mines as US denies","u":"https://www.intellinews.com/iran-says-two-tankers-hit-mines-in-strait-of-hormuz-as-us-denies-claim-455372/","tier":2},
+  {"t":"Insurance Business — Hormuz war-risk rates face fresh pressure","u":"https://www.insurancebusinessmag.com/uk/news/marine/hormuz-warrisk-rates-face-fresh-pressure-as-iranus-clashes-resume-588287.aspx","tier":2},
+  {"t":"뉴시스 — 호르무즈 원유 수입선 정상화는 언제 (2026-07-02)","u":"https://mobile.newsis.com/view/NISX20260702_0003693962","tier":2}
+ ],
+ "disc_ko":"시나리오·사실 정리이며 투자·법률 조언이 아닙니다. 판정은 GOV RADAR 검증 원칙을 따릅니다.",
+ "disc_en":"Facts and scenarios only; not investment or legal advice. Verdicts follow the GOV RADAR verification policy."
+}

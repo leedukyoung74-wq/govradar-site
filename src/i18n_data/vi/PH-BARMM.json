@@ -1,0 +1,38 @@
+{
+"summary": "Vùng tự trị Hồi giáo tại Mindanao, Philippines. Vùng đã tổ chức cuộc bầu cử nghị viện đầu tiên vào tháng 9/2026, và nghị viện nhóm họp ngày 30/10 đã chọn ông Macacua làm Thủ hiến dân cử đầu tiên. Ngân sách năm 2026 khoảng 114 tỷ ₱ tập trung vào giáo dục, y tế và hạ tầng; vốn đầu tư được phê duyệt đã vượt tổng mức cả năm 2025 ngay trong quý 2.",
+"leader": "Thủ hiến Abdulraof Macacua (được bầu ngày 30/10/2026, 51 phiếu) · Chủ tịch Nghị viện Amer Rakim",
+"agenda": [
+"Chính quyền dân cử đầu tiên và 'chính quyền bao trùm' (liên minh từ 46 ghế trở lên)",
+"Kết thúc tiến trình hòa bình: giải giáp, các gói hỗ trợ, chuyển đổi các trại",
+"Thực hiện ngân sách năm 2026 ưu tiên giáo dục và y tế (khoảng 114 tỷ ₱)",
+"Mạng lưới đường bộ và đường từ nông trại ra chợ (dự án năng lực đường bộ của JICA 2026–2029)",
+"Xúc tiến đầu tư vào y tế, du lịch và kinh doanh nông nghiệp"
+],
+"biz": [
+{
+"title": "Cơ sở dữ liệu tài sản đường bộ, cầu và ứng dụng kiểm tra",
+"why": "Dự án JICA đang xây dựng cơ sở dữ liệu đường bộ, cầu và hệ thống bảo trì mới.",
+"target": "Bộ Công chính BARMM, các văn phòng quận"
+},
+{
+"title": "Công cụ số cho quản lý trường học và học tập từ xa",
+"why": "Giáo dục chiếm khoảng một phần tư ngân sách của vùng.",
+"target": "MBHTE, trường madrasa và trường công lập"
+},
+{
+"title": "Chế biến nông sản và nông nghiệp thông minh gắn với chứng nhận halal",
+"why": "Kinh doanh nông nghiệp là lĩnh vực dẫn đầu về đầu tư được phê duyệt, với khả năng tiếp cận thị trường halal.",
+"target": "Nhà đầu tư BBOI, MAFAR"
+},
+{
+"title": "Hồ sơ bệnh án điện tử (EMR) và y tế từ xa cho các trung tâm y tế",
+"why": "Y tế là khoản mục ngân sách lớn thứ hai và việc tiếp cận các đảo còn khó khăn.",
+"target": "Bộ Y tế BARMM"
+},
+{
+"title": "Hệ thống mua sắm điện tử và ngân sách mở",
+"why": "Chính quyền dân cử đầu tiên nhấn mạnh niềm tin và quản trị bao trùm (ước tính).",
+"target": "Văn phòng Thủ hiến, bộ tài chính"
+}
+]
+}

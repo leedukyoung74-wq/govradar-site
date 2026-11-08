@@ -1,0 +1,75 @@
+{
+"summary": "Anggaran perubahan 2026 mengalihkan dana untuk keringanan harga BBM, penanganan El Niño, dan persiapan pemilu 2027, dengan target anggaran berimbang pada 2027. Keputusan investasi final Papua LNG senilai US$14.5 miliar dijadwalkan pada 15 Desember 2026.",
+"leader": "Kepala negara Raja Charles III (Gubernur Jenderal Grand Chief Sir Bob Dadae); Perdana Menteri James Marape",
+"agenda": [
+"Konsolidasi fiskal dan anggaran 2027 yang berimbang (defisit mendekati 1%)",
+"FID Papua LNG (US$14.5 miliar) dan pengamanan pendapatan sumber daya alam",
+"Pemilu nasional 2027 yang bebas dan adil (K200 juta untuk Komisi Pemilihan Umum)",
+"Penanganan El Niño dan kekeringan, keringanan harga BBM",
+"Modernisasi layanan publik, termasuk AI",
+"Proses konstitusional mengenai masa depan politik Bougainville"
+],
+"projects": [
+{
+"title": "Papua LNG",
+"detail": "Konsorsium yang dipimpin ExxonMobil; FID dijadwalkan pada 15 Desember 2026",
+"status": "Direncanakan"
+},
+{
+"title": "AI dalam administrasi publik (platform GovAoS)",
+"detail": "Platform produktivitas AI diujicobakan di departemen PM, akan diperluas ke seluruh pemerintahan, dengan rencana agen AI",
+"status": "Berjalan"
+},
+{
+"title": "Persiapan pemilu nasional 2027",
+"detail": "Pembaruan daftar pemilih, logistik pemungutan suara, pelatihan petugas, keamanan",
+"status": "Berjalan"
+},
+{
+"title": "Anggaran perubahan 2026",
+"detail": "Dukungan harga BBM (sekitar K800 juta, diperkirakan melebihi K1 miliar pada akhir tahun), penanganan El Niño, tanpa pinjaman baru",
+"status": "Berjalan"
+},
+{
+"title": "Mobilisasi pendapatan (IRC dan Bea Cukai)",
+"detail": "IRC memungut K16.5 miliar pada 2026 (81% dari target revisi K20.3 miliar); pendapatan Bea Cukai naik 42%",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi dan pelatihan otomatisasi alur kerja AI pemerintah",
+"why": "Departemen PM secara resmi telah menetapkan uji coba platform AI, perluasannya ke seluruh pemerintahan, dan penambahan agen AI.",
+"target": "Department of PM and NEC, Department of ICT, pejabat transformasi digital di setiap departemen"
+},
+{
+"title": "Analitik data pajak dan kepabeanan serta otomatisasi pemungutan",
+"why": "Peningkatan pendapatan menjadi inti anggaran berimbang 2027.",
+"target": "Internal Revenue Commission, PNG Customs"
+},
+{
+"title": "Dukungan masuk rantai pasok bagi UKM lokal di sekitar proyek LNG",
+"why": "Permintaan pengadaan lokal berskala besar dapat muncul setelah FID (perkiraan).",
+"target": "Perusahaan lokal, pemerintah provinsi, perusahaan milik pemilik lahan adat"
+},
+{
+"title": "Manajemen kinerja lembaga publik dan tinjauan belanja",
+"why": "Pemerintah mengendalikan belanja melalui rapat mingguan Budget Management Committee.",
+"target": "Department of Finance, Treasury, National Planning"
+}
+],
+"krsupport": [
+{
+"title": "Pembukaan kembali kantor KOICA Port Moresby",
+"detail": "Perjanjian kerangka bantuan hibah yang ditandatangani pada Desember 2025 memungkinkan KOICA membuka kembali kantornya setelah sekitar 12 tahun."
+},
+{
+"title": "Export Voucher",
+"detail": "Menanggung biaya riset pasar Pasifik dan pemasaran lokal melalui voucher."
+},
+{
+"title": "Dukungan pengembangan konstruksi dan investasi luar negeri",
+"detail": "Dukungan studi kelayakan dapat dijajaki untuk proyek investasi infrastruktur terkait LNG (perkiraan)."
+}
+]
+}

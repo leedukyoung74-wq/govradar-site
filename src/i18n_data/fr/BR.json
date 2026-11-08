@@ -1,0 +1,62 @@
+{
+"summary": "Le président Lula a battu Flávio Bolsonaro par 51,77 % contre 48,23 % au second tour du 25 octobre pour remporter un quatrième mandat, et les actifs brésiliens ainsi que le real ont reculé juste après le résultat. Le projet de budget 2027 soumis au Congrès prévoit 133,8 Md R$ d'investissement public (61,5 Md R$ pour le Novo PAC).",
+"leader": "Président Luiz Inácio Lula da Silva (chef de l'État et du gouvernement ; réélu pour un quatrième mandat au second tour du 25 octobre 2026)",
+"agenda": [
+"Maintenir les programmes sociaux dans le cadre budgétaire",
+"Accroître les investissements du Novo PAC dans les infrastructures et le logement",
+"Politique industrielle et industries numériques/créatives (jeux vidéo)",
+"Soutien élargi aux micro-entrepreneurs (MEI)",
+"Amendement constitutionnel pour la gratuité des transports publics (Tarifa Zero)",
+"Hôpitaux intelligents du SUS et santé numérique"
+],
+"projects": [
+{
+"title": "Projet de loi de finances fédérale 2027 (PLOA 2027)",
+"detail": "Investissement public de 133,8 Md R$ (plus de 20 % de hausse par rapport aux 110,8 Md R$ de 2026), au-dessus du plancher de 88,7 Md R$ (0,6 % du PIB) ; transmis au Congrès le 31 août 2026",
+"status": "En examen au Congrès"
+},
+{
+"title": "Dotation Novo PAC 2027",
+"detail": "Minha Casa Minha Vida 8,25 Md R$, transports publics urbains 1,19 Md R$, drainage et prévention des inondations 667,2 M R$",
+"status": "Prévu"
+},
+{
+"title": "Réseau d'hôpitaux et de services intelligents du SUS",
+"detail": "Programme de numérisation de la santé publique annoncé en janvier 2026",
+"status": "En cours"
+},
+{
+"title": "Décret sur le cadre juridique du jeu vidéo et soutien à l'industrie",
+"detail": "Publié et annoncé en octobre 2026",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Automatisation par IA de la prise de rendez-vous, des listes d'attente et des documents médicaux dans les hôpitaux publics",
+"why": "La numérisation de la santé publique est en cours via le réseau d'hôpitaux intelligents du SUS.",
+"target": "Ministère de la Santé, secrétariats à la santé des États et des municipalités, hôpitaux publics"
+},
+{
+"title": "Localisation/automatisation des opérations pour les studios de jeux brésiliens et conseil en co-développement Corée-Brésil",
+"why": "Le décret sur le cadre juridique des jeux et les mesures de soutien viennent d'être publiés.",
+"target": "Studios de jeux brésiliens, programmes de soutien des ministères de la Culture/de l'Industrie"
+},
+{
+"title": "Application d'automatisation de la comptabilité et des déclarations fiscales pour les MEI",
+"why": "La loi sur les avantages des MEI qui vient d'être promulguée élargit la base des micro-entrepreneurs.",
+"target": "Micro-entrepreneurs MEI, organismes de soutien tels que le SEBRAE"
+},
+{
+"title": "Tableau de bord de suivi de l'avancement des projets municipaux de logement et de transport",
+"why": "Les investissements du Novo PAC augmentent fortement dans le projet de budget 2027.",
+"target": "Ministère des Villes, gouvernements des États et des municipalités"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA AI Export Assistant",
+"detail": "IA conversationnelle qui recommande des acheteurs et génère des rapports d'entrée sur le marché personnalisés pour des marchés cibles comme le Brésil, avec une première version prévue en 2026."
+}
+]
+}

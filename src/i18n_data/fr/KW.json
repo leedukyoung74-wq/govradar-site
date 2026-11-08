@@ -1,0 +1,71 @@
+{
+"summary": "Avec un déficit prévu de 9,8 Md KD dans le budget 2026/27, le Koweït mène des réformes budgétaires et juridiques par décret, notamment la hausse des recettes non pétrolières, une loi sur les sukuk souverains et une nouvelle loi sur l'arbitrage. Les grands projets portuaires, aéroportuaires et d'assainissement ainsi qu'une stratégie de gouvernement numérique centrée sur l'application Sahel se poursuivent.",
+"leader": "Émir Cheikh Mechaal al-Ahmad al-Jaber al-Sabah / Premier ministre Cheikh Ahmad al-Abdallah al-Ahmad al-Sabah",
+"agenda": [
+"New Kuwait Vision 2035 : diversification et croissance hors pétrole",
+"Réforme budgétaire et hausse des recettes non pétrolières",
+"Législation sur la dette, y compris les sukuk souverains",
+"Nouvelle loi sur l'arbitrage des litiges liés aux contrats publics",
+"Exécution des grands projets d'infrastructures",
+"Gouvernement numérique (plateforme Sahel) et IA dans l'éducation"
+],
+"projects": [
+{
+"title": "Budget de l'État de l'exercice 2026/27",
+"detail": "Recettes de 16,3 Md KD, dépenses de 26,1 Md KD, déficit de 9,8 Md KD ; pétrole à 57 $",
+"status": "En cours"
+},
+{
+"title": "Projets d'investissement (port Moubarak al-Kabir, terminal 2 de l'aéroport, stations d'épuration, etc.)",
+"detail": "Grandes infrastructures inscrites au budget 2026/27, dont les stations d'épuration d'Umm Al-Hayman et de North Kabd",
+"status": "En cours"
+},
+{
+"title": "Décret-loi sur les sukuk souverains",
+"detail": "Approuvé en Conseil des ministres le 1er septembre 2026 et transmis à l'émir",
+"status": "Prévu"
+},
+{
+"title": "Nouvelle loi sur l'arbitrage",
+"detail": "Comprend des règles pour l'arbitrage des contrats publics ; approuvée en Conseil des ministres le 16 septembre 2026 et transmise à l'émir",
+"status": "Prévu"
+},
+{
+"title": "Gouvernement numérique fondé sur le cloud et e-services unifiés Sahel",
+"detail": "Coopération en matière de cloud, de centres de données et de sécurité avec Google Cloud et Microsoft ; Sahel relie électroniquement les administrations",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Chatbot IA et automatisation du traitement documentaire pour les services publics",
+"why": "La plateforme Sahel et la migration vers le cloud stimulent la demande d'automatisation des services dans tous les ministères.",
+"target": "Agence centrale des technologies de l'information, ministères de services"
+},
+{
+"title": "Assistant d'apprentissage IA et automatisation de la charge de travail des enseignants pour les écoles",
+"why": "Le Conseil des ministres a soutenu l'adoption de l'IA dans l'éducation.",
+"target": "Ministère de l'Éducation"
+},
+{
+"title": "Conseil en PMO pour la maîtrise des délais et des coûts des infrastructures publiques",
+"why": "Avec un déficit important, l'exécution efficace des projets d'investissement gagne en importance.",
+"target": "Ministère des Travaux publics, ministère des Communications, chantiers des entrepreneurs coréens"
+},
+{
+"title": "Conseil en recettes non pétrolières et en analyse des données budgétaires",
+"why": "Le gouvernement met en avant la réforme budgétaire et la hausse des recettes non pétrolières.",
+"target": "Ministère des Finances"
+}
+],
+"krsupport": [
+{
+"title": "Ville intelligente de South Saad Al-Abdullah",
+"detail": "Ville nouvelle intelligente sur le modèle coréen développée avec l'autorité koweïtienne du logement, offrant une voie d'entrée aux PME coréennes (documentation de 2022)."
+},
+{
+"title": "Coopération Corée-Koweït dans la construction et soutien à l'obtention de contrats",
+"detail": "Soutien au niveau gouvernemental pour l'exploitation aéroportuaire, la pétrochimie d'Al-Zour, la ville nouvelle d'Abdullah et l'exploitation-maintenance routière (documentation de 2023)."
+}
+]
+}

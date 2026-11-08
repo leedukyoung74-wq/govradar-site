@@ -1,0 +1,70 @@
+{
+"summary": "Irak mengakhiri kekosongan pemerintahan yang panjang dengan presiden baru pada April 2026 dan kabinet Perdana Menteri al-Zaidi pada Mei. Gangguan di Selat Hormuz membuat diversifikasi rute ekspor minyak menjadi mendesak, dan pemerintah menempatkan perluasan pembangkit listrik serta reformasi fiskal di puncak agendanya.",
+"leader": "Presiden Nizar Amidi (terpilih April 2026) / Perdana Menteri Ali Faleh al-Zaidi (menjabat Mei 2026)",
+"agenda": [
+"Memperluas pembangkitan listrik (target menggandakan output pada 2027, termasuk 12.000 MW tenaga surya)",
+"Diversifikasi rute ekspor minyak (Ceyhan, Baniyas, Aqaba) dan peningkatan produksi",
+"Reformasi fiskal: penghematan IQD 17,8 triliun dalam setahun, peningkatan pendapatan nonmigas",
+"Digitalisasi pemerintahan, termasuk otomatisasi kepabeanan ASYCUDA",
+"Reformasi keamanan: monopoli negara atas senjata dan jadwal penarikan pasukan asing",
+"Distribusi satu juta kavling perumahan dan pembangunan kembali pertanian"
+],
+"projects": [
+{
+"title": "Rencana pengamanan pembangkitan 37.000 MW",
+"detail": "15.000 MW dari GE, 12.000 MW surya, 10.000 MW termal, perbaikan menyeluruh 30.000 MW yang ada, privatisasi distribusi",
+"status": "Direncanakan"
+},
+{
+"title": "PLTS Artawi 1 GW (GGIP)",
+"detail": "Tahap 1 (250 MW) tersambung Maret 2026; tahap 2 (250 MW) ditargetkan 8 Desember",
+"status": "Berjalan"
+},
+{
+"title": "Diversifikasi rute ekspor minyak",
+"detail": "Peningkatan ekspor melalui Ceyhan (Turki), Baniyas (Suriah), dan Aqaba (Yordania); MoU dengan Suriah tentang perpanjangan pipa",
+"status": "Berjalan"
+},
+{
+"title": "RUU anggaran 2026 (fokus listrik dan surya)",
+"detail": "Pemerintah menyatakan akan segera mengirim anggaran ke parlemen; belanja dijalankan berdasarkan aturan 1/12",
+"status": "Direncanakan"
+},
+{
+"title": "Otomatisasi kepabeanan (ASYCUDA)",
+"detail": "Kepabeanan elektronik di semua pos lintas batas seiring digitalisasi lembaga negara yang lebih luas",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi model operasi dan sistem penagihan untuk privatisasi distribusi listrik",
+"why": "Pemerintah menetapkan privatisasi distribusi dan penggandaan output sebagai tujuan utama.",
+"target": "Kementerian Listrik, perusahaan distribusi daerah"
+},
+{
+"title": "Otomatisasi AI untuk keuangan publik dan manajemen aset",
+"why": "Target penghematan dan dorongan digitalisasi telah diumumkan.",
+"target": "Kementerian Keuangan, Dewan Stabilitas Keuangan dan Moneter"
+},
+{
+"title": "Dukungan masuk pasar bagi perusahaan peralatan surya dan listrik Korea",
+"why": "Rencana pembelian 12.000 MW tenaga surya telah diumumkan.",
+"target": "UKM peralatan listrik Korea, perusahaan EPC lokal"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Baghdad",
+"detail": "Mendukung masuk ke Irak dengan informasi pengadaan lokal dan pertemuan pembeli."
+},
+{
+"title": "Program KOICA di Irak",
+"detail": "Menjalankan bantuan hibah di bidang rekonstruksi, administrasi publik, dan kesehatan."
+},
+{
+"title": "Dukungan konstruksi luar negeri",
+"detail": "Menyediakan informasi tender listrik dan pabrik di Timur Tengah serta dukungan memenangkan kontrak."
+}
+]
+}

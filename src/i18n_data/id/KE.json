@@ -1,0 +1,71 @@
+{
+"summary": "Anggaran TA2026/27 Kenya senilai KSh 4,82 triliun mengikuti Bottom-Up Economic Transformation Agenda, dengan prioritas pada pertanian, perumahan terjangkau, kesehatan, pendidikan, dan usaha kecil. Pemerintah telah membentuk National Infrastructure Fund dan Sovereign Wealth Fund serta akan mengumumkan pengganti Vision 2030 setelah konsultasi publik.",
+"leader": "Presiden William Ruto (kepala negara dan pemerintahan)",
+"agenda": [
+"Bottom-Up Economic Transformation Agenda: pertanian, perumahan terjangkau, kesehatan, UMKM",
+"Pembiayaan infrastruktur melalui National Infrastructure Fund dan Sovereign Wealth Fund",
+"Jaminan kesehatan semesta dan penguatan Social Health Authority",
+"Lapangan kerja pemuda (NextGen.ke) dan perluasan pendanaan pendidikan tinggi",
+"Visi nasional jangka panjang baru setelah Vision 2030"
+],
+"projects": [
+{
+"title": "Anggaran nasional TA2026/27",
+"detail": "Pendapatan KSh 3,63 triliun, defisit KSh 1,15 triliun (5,5% PDB); pendidikan 784,5 miliar, energi/infrastruktur/TIK 531,3 miliar, jalan 220,4 miliar, kesehatan 177,2 miliar, pertanian/perdesaan 111,7 miliar",
+"status": "Berjalan"
+},
+{
+"title": "Perumahan terjangkau dan sosial",
+"detail": "KSh 50,6 miliar untuk perumahan terjangkau dan KSh 20,9 miliar untuk perumahan sosial",
+"status": "Berjalan"
+},
+{
+"title": "National Infrastructure Fund (NIF)",
+"detail": "KSh 350 miliar terhimpun dalam sekitar tiga bulan (diumumkan 11 Jul 2026); menargetkan 20.000+ km jalan dan sekitar 10.000 MW listrik selama tujuh tahun",
+"status": "Berjalan"
+},
+{
+"title": "Sovereign Wealth Fund",
+"detail": "RUU ditandatangani 8 Jul 2026; sebagian pendapatan aset negara ditabung dan diinvestasikan",
+"status": "Berjalan"
+},
+{
+"title": "KPBU jalan Nairobi-Mombasa",
+"detail": "KeNHA mengadakan layanan penasihat kelayakan dan transaksi untuk KPBU (ditutup Agu 2026)",
+"status": "Direncanakan"
+},
+{
+"title": "Visi jangka panjang pasca-Vision 2030",
+"detail": "Laporan para akademisi diterima 21 Jul 2026; visi baru menyusul setelah konsultasi publik",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi PMO untuk pemantauan kemajuan dan keuangan infrastruktur",
+"why": "NIF menghimpun dana besar dengan cepat, sehingga pengawasan pelaksanaan jalan dan listrik menjadi krusial.",
+"target": "National Treasury, KeNHA, Kementerian Energi"
+},
+{
+"title": "Otomatisasi AI untuk klaim kesehatan dan pemeriksaan kelayakan",
+"why": "Perluasan jaminan semesta meningkatkan volume klaim SHA.",
+"target": "Social Health Authority, Kementerian Kesehatan"
+},
+{
+"title": "Platform pelatihan kerja digital/AI dan pencocokan kerja bagi pemuda",
+"why": "Pemerintah baru saja meluncurkan program ketenagakerjaan pemuda.",
+"target": "Kementerian Aparatur Sipil dan Pemuda, pemerintah county"
+},
+{
+"title": "Digitalisasi manajemen anggaran dan kinerja county",
+"why": "Dana pembangunan semakin banyak dibelanjakan di tingkat county, meningkatkan permintaan pemantauan kinerja (perkiraan).",
+"target": "Pemerintah county, Council of Governors"
+}
+],
+"krsupport": [
+{
+"title": "Program fellowship (CIAT) dan konsultasi pembangunan (DEEP) KOICA",
+"detail": "KOICA menjalankan program pelatihan resmi dan konsultasi pembangunan; tidak ada proyek khusus Kenya yang terkonfirmasi dalam tinjauan ini."
+}
+]
+}

@@ -1,0 +1,79 @@
+{
+"summary": "El gobierno de coalición del primer ministro Uchral, formado en marzo de 2026, está al frente mientras el parlamento examina un presupuesto consolidado para 2027 de MNT 43 billones de gasto, con un déficit del 2,0% del PIB. Los mayores dividendos de las empresas estatales y de Oyu Tolgoi financian aumentos de pensiones y de los salarios de los funcionarios, y se profundizan los lazos con Rusia en energía, combustible y ferrocarril.",
+"leader": "Presidente Ukhnaagiin Khürelsükh / Primer ministro Nyam-Osoryn Uchral (desde el 2026-03-31)",
+"agenda": [
+"Aumentar los ingresos mediante mayores dividendos de las empresas estatales y de Oyu Tolgoi",
+"Ampliar las pensiones y las prestaciones sociales; aumentar los salarios de los funcionarios",
+"Garantizar el suministro de combustible y acelerar la infraestructura energética (Central Térmica N.º 3)",
+"Transición verde (renovables, recarga de vehículos eléctricos) y reducción de la contaminación del aire en Ulán Bator",
+"Enlaces de transporte como el corredor ferroviario Mongolia-Rusia-China"
+],
+"projects": [
+{
+"title": "Proyecto de presupuesto consolidado para 2027",
+"detail": "Ingresos de MNT 40,7 billones (35,3% del PIB), gasto de MNT 43 billones (37,3% del PIB); déficit de MNT 2,3 billones financiado con préstamos en condiciones favorables y bonos internos",
+"status": "En revisión parlamentaria"
+},
+{
+"title": "Mayores ingresos por dividendos",
+"detail": "Dividendos de empresas estatales por MNT 3,5 billones y de Oyu Tolgoi por MNT 3 billones",
+"status": "Planificado"
+},
+{
+"title": "Aumentos de pensiones, subsidios y salarios de los funcionarios",
+"detail": "MNT 2,9 billones para pensiones y subsidios, MNT 2,6 billones para salarios de los funcionarios",
+"status": "Planificado"
+},
+{
+"title": "Central Térmica N.º 3 y cooperación en suministro de combustible",
+"detail": "Acuerdo con Rusia en septiembre de 2026 para acelerar los proyectos; se propuso un grupo de trabajo conjunto sobre la contaminación del aire en Ulán Bator",
+"status": "En negociación"
+},
+{
+"title": "Ampliación de la infraestructura de recarga de vehículos eléctricos",
+"detail": "Estación de carga rápida alimentada con energía solar inaugurada en Ulán Bator el 2026-08-31; 38 estaciones en todo el país, con más previstas",
+"status": "En curso"
+},
+{
+"title": "Primeros PPA de la subasta de energías renovables",
+"detail": "Contratos de julio de 2026 para 220MW de energía solar con almacenamiento en baterías en cinco aimags (según un registro anterior)",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Consultoría de gestión financiera y de dividendos para empresas estatales",
+"why": "El presupuesto de 2027 depende en gran medida de MNT 3,5 billones en dividendos de empresas estatales.",
+"target": "Ministerio de Finanzas, empresas estatales"
+},
+{
+"title": "Sistema automatizado de solicitud y revisión de licencias electrónicas",
+"why": "El gobierno está trasladando los permisos a la modalidad en línea y ha contratado consultores para ello.",
+"target": "Secretaría del Gabinete, ministerios que otorgan licencias"
+},
+{
+"title": "Pronóstico con IA y operación remota de plantas solares y de almacenamiento",
+"why": "Las subastas de renovables y la infraestructura de recarga están en expansión.",
+"target": "Ministerio de Energía, productores de electricidad"
+},
+{
+"title": "Plataforma de análisis de datos de calidad del aire urbano",
+"why": "La reducción de la contaminación del aire figura ahora en la agenda de cooperación Mongolia-Rusia.",
+"target": "Ciudad de Ulán Bator, Ministerio de Medio Ambiente"
+}
+],
+"krsupport": [
+{
+"title": "Oficina comercial de KOTRA en Ulán Bator",
+"detail": "Apoya estudios de mercado, búsqueda de compradores y consultas sobre la entrada al mercado de Mongolia."
+},
+{
+"title": "Programa de país de KOICA para Mongolia",
+"detail": "Mongolia es un socio prioritario de KOICA, con proyectos de donación y contratos de servicios en curso en gobernanza, salud y medio ambiente."
+},
+{
+"title": "Préstamos en condiciones favorables del EDCF a Mongolia",
+"detail": "Los proyectos de préstamo para infraestructura y servicios públicos ofrecen oportunidades de consultoría y construcción a empresas coreanas."
+}
+]
+}

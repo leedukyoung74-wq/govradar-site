@@ -1,0 +1,70 @@
+{
+"summary": "Oman xây dựng ngân sách năm 2026, năm đầu tiên của Kế hoạch Phát triển 5 năm lần thứ 11 (2026-2030), với tổng chi 11,98 tỷ OMR và thâm hụt 1,3% GDP. Theo Tầm nhìn 2040, Oman đang mời thầu các dự án đường bộ, y tế và chống lũ, đồng thời thu hút đầu tư vào các lĩnh vực mới như trung tâm dữ liệu AI và amoniac xanh.",
+"leader": "Quốc vương Haitham bin Tarik (nguyên thủ quốc gia kiêm thủ tướng)",
+"agenda": [
+"Thực hiện Kế hoạch Phát triển 5 năm lần thứ 11 (2026-2030) với mức tăng trưởng khoảng 4%",
+"Duy trì kỷ luật tài khóa và chuẩn bị áp dụng thuế thu nhập cá nhân vào năm 2028",
+"Đầu tư vào giáo dục, y tế, hạ tầng giao thông và nhà ở",
+"Tăng cường phòng chống lũ (đập và công trình phòng hộ)",
+"Thu hút đầu tư vào trung tâm dữ liệu AI, hydro xanh và amoniac",
+"Nội địa hóa (hàm lượng nội địa) và hóa đơn điện tử (Fawtara)"
+],
+"projects": [
+{
+"title": "Ngân sách nhà nước 2026",
+"detail": "Giả định giá dầu 60 USD/thùng; thu 11,45 tỷ OMR, thâm hụt 530 triệu OMR",
+"status": "Đang triển khai"
+},
+{
+"title": "Danh mục dự án phát triển của chính phủ",
+"detail": "Diễn đàn Dự án Chính phủ 2026 công bố hơn 1,5 tỷ OMR dự án và khoảng 10.000 gói thầu từ 57 đơn vị",
+"status": "Đang đấu thầu"
+},
+{
+"title": "74 hợp đồng chính phủ được trao từ tháng 1 đến tháng 7/2026",
+"detail": "Khoảng 734 triệu OMR, bao gồm thuốc, mở rộng Đường cao tốc Muscat, cảng cá Mahout và một trung tâm hệ gen; 60 gói thầu mới (chống lũ, cổng y tế điện tử và các hạng mục khác)",
+"status": "Đang triển khai"
+},
+{
+"title": "Trung tâm dữ liệu AI Salalah",
+"detail": "Oman và Vương quốc Anh đã thỏa thuận xây dựng trung tâm dữ liệu AI trị giá 1 tỷ GBP (đưa tin tháng 10/2026)",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa hồ sơ dự thầu mua sắm công và tư vấn đấu thầu",
+"why": "Khoảng 10.000 gói thầu được lên kế hoạch tại 57 đơn vị.",
+"target": "SME xây dựng và CNTT Hàn Quốc, đối tác Oman"
+},
+{
+"title": "Dịch vụ y tế số (vận hành cổng y tế điện tử, hỗ trợ lâm sàng bằng AI)",
+"why": "Gói thầu vận hành cổng y tế điện tử của Bộ Y tế đã được phát hành.",
+"target": "Bộ Y tế, bệnh viện"
+},
+{
+"title": "Giải pháp và đào tạo gắn với trung tâm dữ liệu AI",
+"why": "Một khoản đầu tư lớn vào trung tâm dữ liệu AI đã được thỏa thuận.",
+"target": "Cơ quan đầu tư, nhà mạng viễn thông, cơ quan công quyền"
+},
+{
+"title": "Tư vấn tuân thủ thuế thu nhập cá nhân và hóa đơn điện tử",
+"why": "Fawtara đang được mở rộng và thuế thu nhập sẽ được áp dụng vào năm 2028.",
+"target": "Doanh nghiệp địa phương, doanh nghiệp Hàn Quốc tại Oman"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Muscat",
+"detail": "Cung cấp thông tin về mua sắm chính phủ và người mua tại Oman, cùng tư vấn thâm nhập thị trường."
+},
+{
+"title": "Hỗ trợ xây dựng ở nước ngoài",
+"detail": "Cung cấp thông tin đấu thầu hạ tầng Trung Đông, như đường bộ và đập, và hỗ trợ giành hợp đồng."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Chi trả chi phí chứng nhận ở nước ngoài và tiếp thị tại địa phương thông qua voucher."
+}
+]
+}

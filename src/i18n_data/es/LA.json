@@ -1,0 +1,79 @@
+{
+"summary": "En octubre de 2026, la Asamblea Nacional eligió como primer ministro al exdiplomático Saleumxay Kommasith, mientras que su predecesor, Sonexay Siphandone, pasó a presidir la Asamblea. En el marco del 10.º Plan Nacional de Desarrollo Socioeconómico (2026-2030), el gobierno se propone un crecimiento de al menos el 6% anual y una deuda pública inferior al 70% del PIB para 2030.",
+"leader": "Presidente Thongloun Sisoulith · Primer ministro Saleumxay Kommasith (desde el 2026-10-05, sucesor de Sonexay Siphandone)",
+"agenda": [
+"10.º NSEDP (2026-2030): crecimiento anual de al menos el 6%, PIB per cápita de USD 3.104",
+"Reducir la deuda pública (de alrededor del 88% en 2025 a menos del 70% en 2030) y mantener la inflación por debajo del 5%",
+"Fortalecer la producción nacional y apoyar a las pymes",
+"Ampliar la economía digital",
+"Infraestructura de conectividad (carreteras, ferrocarril, aeropuertos, redes digitales) y zonas económicas especiales",
+"Responder a las crisis agrícolas (inundaciones, plagas, peste porcina africana) y garantizar el abastecimiento de alimentos"
+],
+"projects": [
+{
+"title": "10.º Plan Nacional de Desarrollo Socioeconómico",
+"detail": "Seis objetivos estratégicos y 26 programas prioritarios para el crecimiento, la reducción de la deuda y la digitalización",
+"status": "En curso"
+},
+{
+"title": "Revisión del plan de desarrollo y del presupuesto del Estado para 2027",
+"detail": "La sesión de octubre de la Asamblea revisa el plan de desarrollo, el presupuesto, el plan monetario y la auditoría de 2025",
+"status": "En curso"
+},
+{
+"title": "Ampliación del suministro de agua de Lak Sao (KOICA)",
+"detail": "Mejora del suministro de agua en Lak Sao, Borikhamxay, incluida la remoción de UXO y la capacitación de operadores",
+"status": "En curso"
+},
+{
+"title": "Proyecto del ADB para Fortalecer la Resiliencia y Reducir la Pobreza Rural",
+"detail": "Proyecto con préstamo del ADB (Loan 57225), actualmente en contratación de consultores, por ejemplo en gestión financiera",
+"status": "En curso"
+},
+{
+"title": "Asistencia técnica del ADB para fortalecer la contratación pública y la gestión financiera",
+"detail": "La TA-10235 apoya la mejora de los sistemas de contratación y de gestión de las finanzas públicas",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Consultoría para la digitalización de la contratación pública y la gestión financiera",
+"why": "Las metas de reducción de la deuda y una asistencia técnica del ADB en contratación y PFM avanzan al mismo tiempo.",
+"target": "Ministerio de Finanzas, Ministerio de Planificación e Inversión"
+},
+{
+"title": "Programa de diagnóstico de gestión y capacidad exportadora para pymes",
+"why": "El 10.º plan sitúa la producción nacional y el apoyo a las mipymes como prioridades centrales.",
+"target": "Ministerio de Industria y Comercio, cámara de comercio de Laos, pymes locales"
+},
+{
+"title": "Piloto de servicios públicos y automatización administrativa basados en IA",
+"why": "El gobierno incluye la economía digital y la administración digital entre los puntos clave de su agenda.",
+"target": "Ministerio de Tecnología y Comunicaciones, gobiernos provinciales"
+},
+{
+"title": "Servicios de PMC y fortalecimiento de capacidades vinculados a proyectos de KOICA",
+"why": "Los proyectos de agua y residuos de KOICA están en marcha y requieren servicios de capacitación y gestión.",
+"target": "Oficina de KOICA en Laos, Ministerio de Obras Públicas y Transporte"
+}
+],
+"krsupport": [
+{
+"title": "Proyectos de agua y residuos de KOICA en Laos",
+"detail": "Apoya la ampliación del suministro de agua de Lak Sao (2025-2029) y un proyecto de fase II de residuos sólidos y aguas residuales con GGGI."
+},
+{
+"title": "Información de mercado de KOTRA Vientián",
+"detail": "Ofrece información sobre tendencias del mercado laosiano y sobre cómo ingresar en él."
+},
+{
+"title": "EDCF (Fondo de Cooperación para el Desarrollo Económico)",
+"detail": "Otorga préstamos en condiciones favorables para infraestructura en países en desarrollo, entre ellos Laos."
+},
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Los vales cubren los costos de estudios de mercado y consultoría en el exterior."
+}
+]
+}

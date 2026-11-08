@@ -1,0 +1,83 @@
+{
+"summary": "Pada 29 September, DPR mengesahkan APBN 2027: belanja Rp4.106 triliun, pendapatan Rp3.435 triliun, dan defisit 2,4% PDB. Memasuki dua tahun masa jabatannya, pemerintahan Prabowo menargetkan pertumbuhan 8% pada 2029 dengan bertumpu pada Makan Bergizi Gratis (MBG), koperasi desa, swasembada pangan, dan dana kekayaan negara Danantara.",
+"leader": "Presiden Prabowo Subianto (Kepala Negara dan Kepala Pemerintahan)",
+"agenda": [
+"Pertumbuhan 8% pada 2029 (proyeksi pertumbuhan 2027 sebesar 5,8-6,5%)",
+"Memperluas Makan Bergizi Gratis (MBG) dan meningkatkan transparansinya",
+"Swasembada pangan (cadangan beras rekor) dan peningkatan kesejahteraan petani dan nelayan",
+"Koperasi desa (Koperasi Desa Merah Putih) dan infrastruktur dasar seperti perumahan, sekolah, dan jembatan",
+"Memperkuat dana kekayaan negara Danantara dan memperkenalkan single window untuk ekspor"
+],
+"projects": [
+{
+"title": "APBN 2027",
+"detail": "Pendapatan Rp3.435 triliun (pajak Rp2.593 triliun); transfer ke daerah Rp735 triliun; defisit Rp671 triliun (2,4% PDB)",
+"status": "Disetujui"
+},
+{
+"title": "Koperasi desa (Koperasi Desa Merah Putih)",
+"detail": "10.000 beroperasi per Okt 2026",
+"status": "Berjalan"
+},
+{
+"title": "Makan Bergizi Gratis (MBG)",
+"detail": "Dijalankan oleh Badan Gizi Nasional, dengan pengawasan diperketat melalui penyelidikan kecurangan dan pemberhentian",
+"status": "Berjalan"
+},
+{
+"title": "Infrastruktur dasar (perumahan, sekolah, jembatan, rumah sakit daerah)",
+"detail": "Sekitar 440.000 rumah direnovasi, hampir 90.000 sekolah diperbaiki, dan sekitar 5.000 jembatan selesai; 22 dari 66 rumah sakit daerah yang didanai telah selesai",
+"status": "Berjalan"
+},
+{
+"title": "Perluasan Sekolah Rakyat",
+"detail": "Pembangunan diperluas ke 100 lokasi di 32 provinsi",
+"status": "Berjalan"
+},
+{
+"title": "Flood Management in North Java Project (pinjaman ADB)",
+"detail": "Dilaksanakan oleh Ditjen Sumber Daya Air Kementerian Pekerjaan Umum dan Perumahan Rakyat; konsultan tata kelola dan pengadaan telah direkrut",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Dasbor AI untuk pengadaan pangan MBG, pelacakan distribusi, dan deteksi kecurangan",
+"why": "Penyelidikan dan pemberhentian yang terus berlangsung terkait kecurangan MBG menjadikan transparansi prioritas mendesak.",
+"target": "Badan Gizi Nasional (BGN), pengelola dapur MBG lokal (SPPG)"
+},
+{
+"title": "SaaS akuntansi dan inventaris plus pelatihan operasional untuk koperasi desa",
+"why": "10.000 koperasi yang baru beroperasi memerlukan sistem manajemen dasar.",
+"target": "Kementerian Koperasi, Koperasi Desa Merah Putih, bank BUMN"
+},
+{
+"title": "Konsultasi masuk pasar Indonesia untuk produk konsumen dan halal Korea (sertifikasi, distribusi)",
+"why": "Kewajiban sertifikasi halal sedang diberlakukan sementara permintaan barang konsumsi Korea terus tumbuh.",
+"target": "UKM makanan dan kosmetik Korea yang masuk ke Indonesia"
+},
+{
+"title": "Konsultasi digitalisasi manajemen kinerja anggaran dan proyek bagi pemerintah daerah",
+"why": "Transfer ke daerah dan program infrastruktur yang besar memerlukan manajemen pelaksanaan.",
+"target": "Pemerintah provinsi dan kabupaten/kota, Kementerian Dalam Negeri"
+}
+],
+"krsupport": [
+{
+"title": "2026 Jakarta K-Premium Consumer Goods Fair",
+"detail": "Mempertemukan sekitar 200 perusahaan barang konsumsi Korea dengan pembeli lokal untuk pertemuan ekspor di Jakarta pada Sep 2026."
+},
+{
+"title": "Rencana jangka menengah EDCF 2026-2028",
+"detail": "Sekitar KRW 3 triliun per tahun; memasukkan AI ke dalam proyek infrastruktur EDCF dan memperluas dukungan bagi negara kaya mineral kritis."
+},
+{
+"title": "Kantor KOICA Indonesia",
+"detail": "Indonesia adalah negara mitra prioritas KOICA, dan kantor lokal menjalankan proyek kerja sama pembangunan."
+},
+{
+"title": "Export Voucher program",
+"detail": "Menanggung biaya sertifikasi halal, riset pasar, dan konsultasi lokalisasi."
+}
+]
+}

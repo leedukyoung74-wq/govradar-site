@@ -1,0 +1,74 @@
+{
+"summary": "Dự luật tài chính 2027 (PLF 2027) của chính phủ Lecornu bao gồm 54 tỷ € củng cố tài khóa và đặt mục tiêu giảm thâm hụt xuống 5% GDP vào năm 2027. Do không có đa số tại Quốc hội, cuộc biểu quyết phần thu ngân sách đã bị hoãn, và việc sử dụng Điều 49.3 hoặc một kiến nghị bất tín nhiệm đang được bàn thảo.",
+"leader": "Tổng thống Emmanuel Macron (nguyên thủ quốc gia) / Thủ tướng Sébastien Lecornu (người đứng đầu chính phủ)",
+"agenda": [
+"Giảm thâm hụt (mục tiêu 5% GDP năm 2027, củng cố tài khóa 54 tỷ €)",
+"Ứng phó giá năng lượng và nhiên liệu (xả kho dự trữ diesel chiến lược)",
+"Sức mua và điều chỉnh thuế",
+"Các biện pháp về thanh niên và giáo dục cho học sinh trung học và sinh viên đại học",
+"AI và chủ quyền công nghiệp thông qua kế hoạch đầu tư France 2030"
+],
+"projects": [
+{
+"title": "Dự luật Tài chính 2027 (PLF 2027)",
+"detail": "Củng cố tài khóa 54 tỷ €, gồm khoảng 43 tỷ € biện pháp mới cộng với việc gia hạn các biện pháp năm 2026. Thời hạn của Hạ viện là 17/11 và thời hạn cuối cùng của Quốc hội là 17/12",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Dự luật Tài chính An sinh Xã hội 2027 (PLFSS)",
+"detail": "Đang trong lần đọc thứ nhất tại Hạ viện. Thời hạn cuối cùng của Quốc hội là 26/11",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Xả 10 triệu thùng dự trữ diesel chiến lược",
+"detail": "Chính phủ dự kiến giá giảm 12–18 xu mỗi lít trong khoảng ba tháng kể từ ngày 1/11",
+"status": "Đang triển khai"
+},
+{
+"title": "Kêu gọi bày tỏ quan tâm (AMI) France 2030 về giải pháp AI có chủ quyền cho SME và doanh nghiệp quy mô vừa",
+"detail": "Xây dựng danh sách nhà cung cấp AI của Pháp và châu Âu để giới thiệu cho SME và doanh nghiệp quy mô vừa. Hồ sơ tiếp tục được nhận liên tục sau vòng đầu tiên, và không có tài trợ trực tiếp",
+"status": "Đang triển khai"
+},
+{
+"title": "Tăng thuế đối với đơn vị vận hành đường cao tốc và sân bay",
+"detail": "Thuộc PLF 2027, dự kiến thu về khoảng 0,8 tỷ €",
+"status": "Đã lên kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn AI về tự động hóa quy trình và phân tích chi tiêu khu vực công",
+"why": "PLF 2027 yêu cầu tiết kiệm 54 tỷ €, làm tăng áp lực nâng cao hiệu quả đối với các cơ quan công.",
+"target": "Văn phòng các bộ, các tỉnh (département) và vùng, cơ quan công"
+},
+{
+"title": "Chẩn đoán mức độ sẵn sàng AI và gói tự động hóa cho SME (cùng đối tác địa phương)",
+"why": "Chính phủ đang thúc đẩy SME ứng dụng AI nhưng ưu tiên nhà cung cấp có chủ quyền của Pháp và châu Âu.",
+"target": "SME và doanh nghiệp quy mô vừa Pháp, hiệp hội ngành, quỹ đào tạo OPCO"
+},
+{
+"title": "Hỗ trợ thâm nhập thị trường và phân phối cho thương hiệu tiêu dùng và làm đẹp Hàn Quốc",
+"why": "Các hội chợ hàng tiêu dùng Hàn Quốc định kỳ tại Paris cho thấy nhu cầu từ người mua bán lẻ Pháp.",
+"target": "SME hàng tiêu dùng Hàn Quốc, nhà bán lẻ Pháp"
+},
+{
+"title": "Bảng điều khiển giám sát và tiết kiệm năng lượng",
+"why": "Chi phí nhiên liệu và điện cao đến mức nhà nước phải xả kho dự trữ chiến lược.",
+"target": "SME, bộ phận quản lý cơ sở vật chất của chính quyền đô thị"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng Thương mại KOTRA Paris",
+"detail": "Cung cấp nghiên cứu thị trường Pháp, kết nối người mua và tư vấn về đầu tư và thâm nhập cho startup."
+},
+{
+"title": "Hội chợ Hàng tiêu dùng Hàn Quốc tại Paris (tháng 6/2026)",
+"detail": "185 SME Hàn Quốc đã gặp gỡ người mua châu Âu để đàm phán xuất khẩu."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Phiếu hỗ trợ chi trả chi phí chứng nhận, nghiên cứu thị trường, tiếp thị và các dịch vụ mở rộng ra nước ngoài khác."
+}
+]
+}

@@ -1,0 +1,186 @@
+[
+ {
+  "iso": "PH-BARMM",
+  "parent": "PH",
+  "f": "",
+  "type": "auto",
+  "ko": "방사모로 자치지역 (BARMM)",
+  "en": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)"
+ },
+ {
+  "iso": "IQ-KRI",
+  "parent": "IQ",
+  "f": "",
+  "type": "auto",
+  "ko": "쿠르디스탄 지역",
+  "en": "Kurdistan Region"
+ },
+ {
+  "iso": "TZ-ZAN",
+  "parent": "TZ",
+  "f": "",
+  "type": "auto",
+  "ko": "잔지바르",
+  "en": "Zanzibar"
+ },
+ {
+  "iso": "ID-AC",
+  "parent": "ID",
+  "f": "",
+  "type": "special",
+  "ko": "아체 특별자치주",
+  "en": "Aceh"
+ },
+ {
+  "iso": "ID-PP",
+  "parent": "ID",
+  "f": "",
+  "type": "special",
+  "ko": "파푸아 특별자치 지역",
+  "en": "Papua special autonomy provinces"
+ },
+ {
+  "iso": "PG-NSB",
+  "parent": "PG",
+  "f": "",
+  "type": "auto",
+  "ko": "부건빌 자치지역",
+  "en": "Autonomous Region of Bougainville"
+ },
+ {
+  "iso": "MY-SBH",
+  "parent": "MY",
+  "f": "",
+  "type": "special",
+  "ko": "사바",
+  "en": "Sabah"
+ },
+ {
+  "iso": "MY-SWK",
+  "parent": "MY",
+  "f": "",
+  "type": "special",
+  "ko": "사라왁",
+  "en": "Sarawak"
+ },
+ {
+  "iso": "CN-HK",
+  "parent": "CN",
+  "f": "HK",
+  "type": "sar",
+  "ko": "홍콩 특별행정구",
+  "en": "Hong Kong SAR"
+ },
+ {
+  "iso": "CN-MO",
+  "parent": "CN",
+  "f": "MO",
+  "type": "sar",
+  "ko": "마카오 특별행정구",
+  "en": "Macao SAR"
+ },
+ {
+  "iso": "DK-GL",
+  "parent": "DK",
+  "f": "GL",
+  "type": "auto",
+  "ko": "그린란드",
+  "en": "Greenland"
+ },
+ {
+  "iso": "DK-FO",
+  "parent": "DK",
+  "f": "FO",
+  "type": "auto",
+  "ko": "페로 제도",
+  "en": "Faroe Islands"
+ },
+ {
+  "iso": "FI-AX",
+  "parent": "FI",
+  "f": "AX",
+  "type": "auto",
+  "ko": "올란드 제도",
+  "en": "Åland Islands"
+ },
+ {
+  "iso": "PT-20",
+  "parent": "PT",
+  "f": "",
+  "type": "auto",
+  "ko": "아소르스 자치지역",
+  "en": "Azores"
+ },
+ {
+  "iso": "PT-30",
+  "parent": "PT",
+  "f": "",
+  "type": "auto",
+  "ko": "마데이라 자치지역",
+  "en": "Madeira"
+ },
+ {
+  "iso": "ES-PV",
+  "parent": "ES",
+  "f": "",
+  "type": "auto",
+  "ko": "바스크 자치지방",
+  "en": "Basque Country"
+ },
+ {
+  "iso": "ES-CT",
+  "parent": "ES",
+  "f": "",
+  "type": "auto",
+  "ko": "카탈루냐",
+  "en": "Catalonia"
+ },
+ {
+  "iso": "GB-SCT",
+  "parent": "GB",
+  "f": "",
+  "type": "dev",
+  "ko": "스코틀랜드",
+  "en": "Scotland"
+ },
+ {
+  "iso": "GB-WLS",
+  "parent": "GB",
+  "f": "",
+  "type": "dev",
+  "ko": "웨일스",
+  "en": "Wales"
+ },
+ {
+  "iso": "GB-NIR",
+  "parent": "GB",
+  "f": "",
+  "type": "dev",
+  "ko": "북아일랜드",
+  "en": "Northern Ireland"
+ },
+ {
+  "iso": "FR-NC",
+  "parent": "FR",
+  "f": "NC",
+  "type": "terr",
+  "ko": "뉴칼레도니아",
+  "en": "New Caledonia"
+ },
+ {
+  "iso": "US-PR",
+  "parent": "US",
+  "f": "PR",
+  "type": "terr",
+  "ko": "푸에르토리코",
+  "en": "Puerto Rico"
+ },
+ {
+  "iso": "SO-SL",
+  "parent": "SO",
+  "f": "",
+  "type": "defacto",
+  "ko": "소말릴란드 (사실상 독립)",
+  "en": "Somaliland (de facto)"
+ }
+]

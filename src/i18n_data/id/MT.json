@@ -1,0 +1,76 @@
+{
+"summary": "Partai Buruh (Labour) kembali memenangkan pemilu umum Malta Mei 2026 dan Robert Abela tetap menjabat perdana menteri; pada Juni Malta keluar dari prosedur defisit berlebih UE. Anggaran 2027 mempertahankan bantuan biaya hidup sambil menaikkan kontribusi lingkungan pariwisata dan biaya izin kerja non-UE, serta berinvestasi pada kesehatan dan interkoneksi energi.",
+"leader": "Presiden Myriam Spiteri Debono · Perdana Menteri Robert Abela (memenangkan pemilu 2026-05-30, dilantik kembali 2026-06-01)",
+"agenda": [
+"Bantuan biaya hidup: COLA sebesar EUR 6.41 per minggu, kenaikan pensiun, bonus bebas pajak hingga EUR 1,000",
+"Konsolidasi fiskal: defisit 2.6% PDB (2026-27) turun menjadi 1.8% pada 2029",
+"Infrastruktur kesehatan: perluasan IGD Mater Dei, unit kesehatan jiwa, rencana induk Gozo General Hospital",
+"Energi: interkonektor Sisilia kedua, studi angin lepas pantai 300MW, 25% energi terbarukan pada 2030",
+"Mengelola permintaan pariwisata dan transportasi (kenaikan kontribusi lingkungan, pungutan pengunjung kapal pesiar dan Comino)",
+"Pajak UKM: tarif 25% atas laba ditahan atau diinvestasikan kembali bagi perusahaan dengan omzet hingga EUR 1m"
+],
+"projects": [
+{
+"title": "Perluasan instalasi gawat darurat Mater Dei Hospital",
+"detail": "Ruang perawatan bertambah dari 35 menjadi 70",
+"status": "Direncanakan"
+},
+{
+"title": "Unit kesehatan jiwa baru berkapasitas 135 tempat tidur dan gedung pencitraan medis",
+"detail": "Termasuk infrastruktur kesehatan dalam anggaran 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Interkonektor Sisilia-Malta kedua",
+"detail": "Bersamaan dengan studi interkonektor ketiga dan jaringan 132kV Malta-Gozo",
+"status": "Berjalan"
+},
+{
+"title": "Studi angin lepas pantai 300MW",
+"detail": "Studi kelayakan angin lepas pantai ditambah investasi jaringan distribusi (sekitar EUR 75m)",
+"status": "Direncanakan"
+},
+{
+"title": "Pasokan listrik darat (shore power) di Grand Harbour selatan dan Lascaris",
+"detail": "Proyek shore power kapal dijadwalkan selesai pada akhir 2028",
+"status": "Berjalan"
+},
+{
+"title": "Program belanja modal",
+"detail": "Sekitar EUR 1.45bn belanja modal pada 2027, termasuk sekitar EUR 390m dari dana UE",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi otomatisasi alur kerja (AI/RPA) untuk UKM",
+"why": "Biaya izin kerja non-UE naik menjadi EUR 800 ditambah kontribusi infrastruktur tahunan baru sebesar EUR 400, sehingga biaya tenaga kerja meningkat.",
+"target": "UKM Malta, perusahaan pariwisata dan perhotelan"
+},
+{
+"title": "Solusi validasi faktur PPN dan otomatisasi perpajakan",
+"why": "Sanksi PPN baru atas faktur yang salah dan mekanisme reverse charge domestik di sektor konstruksi akan diberlakukan.",
+"target": "Perusahaan konstruksi, UKM, kantor akuntan"
+},
+{
+"title": "Layanan pelatihan staf kesehatan masyarakat (ESF+)",
+"why": "Kementerian kesehatan telah melelang pelatihan kompetensi budaya bagi manajer melalui tender UE.",
+"target": "Ministry for Health, Department of Contracts"
+},
+{
+"title": "Pendirian hub UE di Malta untuk UKM Korea",
+"why": "Tarif 25% atas laba yang diinvestasikan kembali bagi perusahaan kecil memperbaiki kondisi bagi entitas kecil.",
+"target": "UKM Korea yang menyasar UE dan Afrika Utara"
+}
+],
+"krsupport": [
+{
+"title": "Berita pasar luar negeri KOTRA (Malta/UE)",
+"detail": "Menyediakan informasi regulasi UE dan tren pasar."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Voucher menanggung biaya masuk pasar luar negeri seperti pendirian perusahaan, sertifikasi, dan nasihat hukum."
+}
+]
+}

@@ -1,0 +1,74 @@
+{
+"summary": "Hiến pháp mới được thông qua bằng trưng cầu dân ý vào tháng 3/2026 đã lập ra quốc hội đơn viện (Kurultai) và chức phó tổng thống, đồng thời Thủ tướng Bektenov được tái xác nhận. Chính phủ tuyên bố năm 2026 là 'Năm Số hóa và AI' và đang đẩy mạnh xây dựng hạ tầng và thu hút đầu tư nước ngoài, với mục tiêu tăng trưởng trên 5% mỗi năm trong giai đoạn 2027–2029.",
+"leader": "Tổng thống Kassym-Jomart Tokayev (nguyên thủ quốc gia), Thủ tướng Olzhas Bektenov (người đứng đầu chính phủ, được Kurultai tái xác nhận ngày 31/8/2026), Phó Tổng thống Yerlan Karin",
+"agenda": [
+"Thực hiện cải cách chính trị và hành chính theo hiến pháp mới (Kurultai đơn viện, chức phó tổng thống)",
+"Ứng dụng toàn diện công cụ số và AI trong chính phủ, giáo dục và y tế (Năm Số hóa và AI 2026)",
+"Đẩy nhanh xây dựng hạ tầng và công trình xã hội ('cả nước là một đại công trường')",
+"Phát triển năng lượng, sản xuất (ô tô, máy móc, kim loại) và logistics, tăng cường đầu tư nước ngoài",
+"Tăng cường pháp quyền, kỷ luật tài khóa và phát triển vùng"
+],
+"projects": [
+{
+"title": "Ngân sách Cộng hòa 2027–2029 và dự báo kinh tế - xã hội",
+"detail": "Được chính phủ phê duyệt ngày 25/8/2026. Dự báo GDP danh nghĩa 199,3 nghìn tỷ KZT năm 2027 và đặt mục tiêu tăng trưởng thực tế trên 5% mỗi năm",
+"status": "Đang được Quốc hội xem xét (ước tính)"
+},
+{
+"title": "51 dự án công nghiệp Kazakhstan–Hàn Quốc",
+"detail": "Các dự án trải rộng trong lĩnh vực ô tô, máy móc và kim loại. Tổng thống đề nghị doanh nghiệp Hàn Quốc mở rộng sản xuất và tham gia các dự án hạ tầng, và chính phủ sẽ lập danh sách các dự án này",
+"status": "Đang triển khai"
+},
+{
+"title": "Hội nghị Bàn tròn Đầu tư Toàn cầu Kazakhstan lần thứ 9 (KGIR-2026)",
+"detail": "Tổ chức tại Shymkent ngày 22/10/2026, nơi các văn kiện đầu tư đã được ký kết",
+"status": "Hoàn thành"
+},
+{
+"title": "PPP bệnh viện đại học Aktobe và Semey",
+"detail": "ADB đang cung cấp tư vấn kỹ thuật về cấu trúc PPP (đã kêu gọi tư vấn vào tháng 7/2026)",
+"status": "Đang triển khai"
+},
+{
+"title": "Năm Số hóa và AI",
+"detail": "Triển khai AI và công nghệ số trong toàn bộ nền kinh tế, chính phủ, giáo dục và y tế trong năm 2026",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tư vấn nội địa hóa cho SME linh kiện và thiết bị Hàn Quốc",
+"why": "Tổng thống đã công khai đề nghị doanh nghiệp Hàn Quốc mở rộng sản xuất, và các dự án chung trị giá hơn 4 tỷ USD đang được triển khai.",
+"target": "Nhà sản xuất ô tô và máy móc Kazakhstan, SME đối tác Hàn Quốc, Baiterek Holding"
+},
+{
+"title": "Chatbot AI xử lý yêu cầu của người dân và tự động hóa văn bản hành chính tại chính quyền địa phương",
+"why": "Việc tuyên bố năm 2026 là Năm Số hóa và AI đã đưa ứng dụng AI trong hành chính công thành mục tiêu chính sách.",
+"target": "Bộ AI và Phát triển Số, các akimat cấp vùng"
+},
+{
+"title": "Tư vấn số hóa vận hành bệnh viện và dữ liệu cơ sở vật chất",
+"why": "Hoạt động do ADB hỗ trợ đang xây dựng bản đồ số hạ tầng y tế, và các dự án PPP bệnh viện đang được chuẩn bị.",
+"target": "Bộ Y tế, nhà tài trợ dự án PPP bệnh viện đại học"
+},
+{
+"title": "Công cụ số lập tiến độ thi công và kiểm soát chất lượng",
+"why": "Chính phủ đang đẩy nhanh xây dựng hạ tầng và công trình xã hội.",
+"target": "Bộ Công nghiệp và Xây dựng, sở xây dựng cấp vùng, chủ đầu tư dự án nhà nước"
+}
+],
+"krsupport": [
+{
+"title": "Hội nghị bàn tròn hợp tác công nghiệp Kazakhstan–Hàn Quốc (tháng 9/2026)",
+"detail": "Rà soát 51 dự án chung trị giá hơn 4 tỷ USD và nhất trí chuẩn bị danh sách dự án hạ tầng dành cho doanh nghiệp Hàn Quốc."
+},
+{
+"title": "Hợp tác của KOICA tại Trung Á",
+"detail": "Kazakhstan là nước nhận viện trợ KOICA lớn thứ ba tại Trung Á trong giai đoạn 1992–2025, và hợp tác khu vực đang chuyển dần sang AI và quản trị số."
+},
+{
+"title": "Export Voucher 2026 (MSS)",
+"detail": "Phiếu hỗ trợ chi trả chi phí chứng nhận, nghiên cứu thị trường, tiếp thị và các dịch vụ mở rộng ra nước ngoài khác."
+}
+]
+}

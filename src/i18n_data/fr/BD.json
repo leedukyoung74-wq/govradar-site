@@ -1,0 +1,85 @@
+{
+"summary": "Après la victoire écrasante du BNP aux élections de février 2026, le gouvernement du Premier ministre Tarique Rahman s'appuie sur un budget record de 9 380 Md Tk pour contenir les prix, élargir la protection sociale, notamment la Family Card, et améliorer le climat d'investissement. Invest Bangladesh, qui fusionne BIDA, BEZA et PPPA, sert désormais de guichet unique pour l'investissement.",
+"leader": "Président Mohammed Shahabuddin / Premier ministre Tarique Rahman (BNP, en fonction depuis le 2026-02-17)",
+"agenda": [
+"Stabiliser les prix des produits de première nécessité et l'approvisionnement en électricité et en gaz",
+"Élargir la protection sociale (Family Card, Farmer Card)",
+"Lancement d'Invest Bangladesh et d'un plan de 180 jours pour le climat des affaires",
+"Part de 20 % des renouvelables dans la production d'électricité d'ici 2030",
+"Lutte contre la corruption et rétablissement de l'ordre public",
+"Préparation à la sortie de la catégorie des PMA (report à 2029 demandé)"
+],
+"projects": [
+{
+"title": "Budget de l'exercice 2026-27",
+"detail": "Le plus important jamais adopté ; déficit de 2 510 Md Tk (3,6 % du PIB), objectif de croissance de 6,5 %",
+"status": "En cours"
+},
+{
+"title": "Lancement d'Invest Bangladesh",
+"detail": "Agence unique d'investissement rattachée au cabinet du Premier ministre, fusionnant BIDA, BEZA et PPPA ; gère la plateforme de licences à guichet unique Banglabiz",
+"status": "En cours"
+},
+{
+"title": "Stratégie nationale de développement des énergies renouvelables",
+"detail": "20 % de renouvelables et 15 % d'économies d'électricité d'ici 2030 ; approuvée sur le principe par le Conseil des ministres en juillet 2026",
+"status": "Prévu"
+},
+{
+"title": "Fonds pour les PME et la jeunesse",
+"detail": "Fonds PME de 20 Md Tk, fonds de développement des start-ups de 2,25 Md Tk, économie créative des jeunes 3 Md Tk",
+"status": "En cours"
+},
+{
+"title": "Terminal à conteneurs New Mooring de Chattogram",
+"detail": "DP World le modernisera et l'exploitera ; la propriété et le contrôle restent à l'autorité portuaire",
+"status": "En cours"
+},
+{
+"title": "Pont rail-route de Karnaphuli",
+"detail": "Pont et routes d'accès à Chattogram ; prêt coréen EDCF/EDPF de 810 M USD (coût total 1,24 Md USD)",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Chatbot IA et examen automatisé des dossiers pour les licences d'investissement",
+"why": "La nouvelle agence fusionnée doit montrer des résultats rapides dans le cadre de son plan de 180 jours.",
+"target": "Invest Bangladesh (cabinet du Premier ministre), équipe de la plateforme Banglabiz"
+},
+{
+"title": "Offre de conformité au devoir de vigilance de l'UE et ESG pour les PME du textile/de l'export",
+"why": "La sortie de la catégorie des PMA réduira les préférences commerciales tandis que les règles européennes sur les chaînes d'approvisionnement se durcissent.",
+"target": "PME exportatrices, membres de la BGMEA, ministère du Commerce"
+},
+{
+"title": "Formation pratique à l'IA pour les fonctionnaires et les jeunes",
+"why": "KOICA lance en 2026 un programme de formation de talents en IA, ce qui crée une demande de formations à la coréenne.",
+"target": "ICT Division, instituts de formation technique, opérateurs de KOICA"
+},
+{
+"title": "Système d'enregistrement et de dédoublonnage des bénéficiaires des cartes sociales",
+"why": "L'extension des Family Cards et Farmer Cards alourdit la gestion des bénéficiaires.",
+"target": "Ministère de la Protection sociale, ministère des Finances, administration locale"
+},
+{
+"title": "Audits énergétiques des usines et bâtiments et gestion de la demande",
+"why": "Les pénuries de gaz et d'électricité persistent et le gouvernement vise 15 % d'économies d'électricité d'ici 2030.",
+"target": "Ministère de l'Électricité et de l'Énergie, entreprises des zones industrielles"
+}
+],
+"krsupport": [
+{
+"title": "Cinq nouveaux projets de KOICA au Bangladesh (96 M USD)",
+"detail": "Talents en IA, lutte contre la pauvreté Saemaul, centre de cybersécurité IA et compétences en recyclage des navires, déployés progressivement à partir de 2026."
+},
+{
+"title": "Prêt EDCF pour le pont de Karnaphuli",
+"detail": "720 M USD de l'EDCF plus 90 M USD de l'EDPF, le plus important projet EDCF individuel à ce jour."
+},
+{
+"title": "Projet KOICA d'entrepôt de données statistiques",
+"detail": "9,65 M USD pour un entrepôt national de données statistiques et une plateforme big data au Bangladesh Bureau of Statistics."
+}
+]
+}

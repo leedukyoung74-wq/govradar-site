@@ -1,0 +1,69 @@
+{
+"summary": "Le gouvernement algérien a examiné le projet de loi de finances 2027 le 30 septembre 2026 et l'a transmis au Conseil des ministres d'octobre ; il est centré sur la protection du pouvoir d'achat et le développement des secteurs hors hydrocarbures. L'achèvement de la ligne ferroviaire du Sud Alger-Tamanrasset d'ici fin 2028 est le projet prioritaire du président.",
+"leader": "Président Abdelmadjid Tebboune / Premier ministre Sifi Ghrieb (nommé officiellement en septembre 2025)",
+"agenda": [
+"Dernière tranche de l'engagement de doublement des salaires de la fonction publique et protection du pouvoir d'achat",
+"Aucun nouvel impôt pour les ménages à revenus modestes et moyens",
+"Réduire la dépendance aux hydrocarbures et investir dans les secteurs productifs",
+"Développer les réseaux routier et ferroviaire et réduire les coûts logistiques",
+"Guichet unique de l'investissement, procédures fiscales simplifiées et services publics en ligne"
+],
+"projects": [
+{
+"title": "Projet de loi de finances 2027 (PLF 2027)",
+"detail": "Comprend la dernière tranche de hausse salariale (53 % de l'engagement) et maintient les dépenses sociales pour l'école, la santé et le logement",
+"status": "Examen en Conseil des ministres/au Parlement"
+},
+{
+"title": "Ligne ferroviaire du Sud Laghouat-El Meniaa-In Salah-Tamanrasset",
+"detail": "Ligne sud de plus de 2 000 km ; le président a ordonné un démarrage immédiat et un achèvement d'ici fin 2028",
+"status": "En cours"
+},
+{
+"title": "Section ferroviaire Ghardaïa-El Meniaa (230 km)",
+"detail": "Financée par la BAD et l'AIIB ; l'appel d'offres international aux entreprises s'est clôturé en juin 2026",
+"status": "Appel d'offres clos (évaluation)"
+},
+{
+"title": "Algeria Bid Round 2026 (exploration d'hydrocarbures)",
+"detail": "Sept nouvelles zones d'exploration ouvertes aux investisseurs étrangers, avec des contrats avec Sonatrach visés d'ici fin janvier 2027",
+"status": "Appel d'offres en cours"
+}
+],
+"biz": [
+{
+"title": "PMC et outils numériques de planification pour le grand programme ferroviaire",
+"why": "Avec une échéance en 2028, plusieurs sections démarrent simultanément.",
+"target": "Ministère des Travaux publics, ANESRIF"
+},
+{
+"title": "Conseil en automatisation des processus pour l'e-gouvernement et le guichet unique de l'investissement",
+"why": "La loi de finances mentionne les services publics en ligne et le plein fonctionnement du guichet unique.",
+"target": "Agence de promotion de l'investissement, ministère des Finances, administration fiscale"
+},
+{
+"title": "Accompagnement à l'entrée en Algérie des PME coréennes (partenaires locaux, enregistrement pour les marchés publics)",
+"why": "La poursuite de l'investissement public crée des débouchés pour la fourniture d'équipements et de matériaux (estimation).",
+"target": "PME et ETI coréennes ciblant l'Algérie"
+},
+{
+"title": "Analyse des risques locaux pour les entreprises envisageant l'appel d'offres d'exploration",
+"why": "Les offres pour sept blocs doivent être remises le 26 novembre.",
+"target": "Entreprises envisageant de soumissionner"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA d'Alger",
+"detail": "Fournit des informations de marché, des informations sur la réglementation des importations et la recherche d'acheteurs."
+},
+{
+"title": "Soutien à la construction et aux infrastructures à l'étranger",
+"detail": "Finance des études de faisabilité et des investissements dans le ferroviaire et d'autres infrastructures."
+},
+{
+"title": "Export Voucher",
+"detail": "Couvre les frais de traduction en français, de certification et de conseil."
+}
+]
+}

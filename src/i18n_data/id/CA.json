@@ -1,0 +1,71 @@
+{
+"summary": "Menjelang anggaran federal keduanya pada 5 November, pemerintahan Carney menyatakan akan menyeimbangkan anggaran operasional sambil memperluas belanja modal dan infrastruktur. Di bawah tekanan tarif AS, prioritasnya adalah menarik investasi, energi dan jaringan listrik, adopsi AI, serta peningkatan belanja pertahanan.",
+"leader": "Perdana Menteri Mark Carney (kepala pemerintahan); kepala negara Raja Charles III",
+"agenda": [
+"Merespons tarif AS dan mendiversifikasi perdagangan serta investasi",
+"Menahan belanja operasional sambil memperluas belanja modal (infrastruktur)",
+"Strategi AI nasional dan perluasan adopsi AI oleh UKM",
+"Retrofit energi rumah dan National Electricity Strategy (menggandakan jaringan pada 2050)",
+"Peningkatan besar belanja pertahanan",
+"Partisipasi ekonomi masyarakat adat yang lebih besar"
+],
+"projects": [
+{
+"title": "Anggaran Federal 2026",
+"detail": "Menteri Keuangan Champagne akan mengajukannya pada 5 Nov; PBO memproyeksikan defisit C$63,3 miliar untuk 2026-27",
+"status": "Direncanakan"
+},
+{
+"title": "Satu juta retrofit energi rumah",
+"detail": "National Heat Pump Rebate (hingga 820.000 rumah tangga, hingga $10.000) plus 280.000 unit apartemen melalui CMHC dan CIB",
+"status": "Berjalan"
+},
+{
+"title": "National Council on AI dan strategi AI nasional",
+"detail": "Dewan diluncurkan pada 2 Okt 2026 untuk mendorong adopsi AI",
+"status": "Berjalan"
+},
+{
+"title": "National Electricity Strategy",
+"detail": "Diluncurkan Mei 2026; bertujuan menggandakan kapasitas jaringan pada 2050",
+"status": "Berjalan"
+},
+{
+"title": "Peningkatan belanja pertahanan",
+"detail": "PBO memperkirakan kenaikan dari sekitar C$75 miliar menjadi C$95,7 miliar pada 2030-31",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Paket otomatisasi alur kerja AI dan pelatihan untuk UKM",
+"why": "Pemerintah menjadikan adopsi AI prioritas nasional dengan National Council on AI yang baru.",
+"target": "UKM manufaktur dan jasa di Ontario/Quebec, lembaga pembangunan regional"
+},
+{
+"title": "Otomatisasi pengajuan/verifikasi rebate heat pump dan SaaS manajemen kontraktor",
+"why": "Janji persetujuan 24 jam untuk hingga 820.000 rebate menciptakan kebutuhan pemrosesan bervolume tinggi.",
+"target": "Natural Resources Canada, lembaga efisiensi provinsi, kontraktor"
+},
+{
+"title": "Konsultasi diversifikasi ekspor ke Asia bagi produsen yang terdampak tarif",
+"why": "Setelah perundingan dagang dengan AS gagal pada Agustus, dukungan bagi sektor baja dan otomotif diperluas.",
+"target": "Perusahaan baja dan suku cadang otomotif Ontario, kementerian pembangunan ekonomi provinsi"
+},
+{
+"title": "PMO dan riset pasar untuk usaha patungan pertahanan/antariksa/hidrogen Korea-Kanada",
+"why": "Rangkaian MOU oleh Hanwha dan lainnya menciptakan permintaan bagi UKM pemasok untuk ikut serta.",
+"target": "UKM mitra Korea, mitra Kanada (Telesat, MDA, dll.)"
+}
+],
+"krsupport": [
+{
+"title": "Korea-Canada Advanced Industry Cooperation Business Roundtable",
+"detail": "Digelar di Toronto pada akhir Mei 2026, mempertemukan perusahaan di bidang pertahanan, antariksa, dan hidrogen serta menghasilkan tiga MOU."
+},
+{
+"title": "Korea-Canada Industrial Cooperation Forum",
+"detail": "Digelar di Toronto pada Januari 2026 dengan enam MOU di bidang mobilitas masa depan, AI, dan mineral kritis."
+}
+]
+}

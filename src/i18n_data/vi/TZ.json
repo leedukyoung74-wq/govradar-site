@@ -1,0 +1,70 @@
+{
+"summary": "Ngân sách đầu tiên của Tanzania theo Tầm nhìn 2050 và Kế hoạch 5 năm lần thứ tư (2026/27–2030/31) thúc đẩy hạ tầng đường sắt và điện năng cùng việc tăng thu nội địa. Ngân sách hướng tới tự chủ khoảng 75% từ nguồn trong nước để phòng trường hợp viện trợ phương Tây suy giảm.",
+"leader": "Tổng thống Samia Suluhu Hassan (nguyên thủ quốc gia và người đứng đầu chính phủ); Thủ tướng Mwigulu Nchemba",
+"agenda": [
+"Thực hiện Tầm nhìn 2050 và Kế hoạch 5 năm lần thứ tư",
+"Tự chủ tài khóa: 75% nguồn vốn trong nước, thu thuế số hóa, chính thức hóa kinh doanh phi chính thức",
+"Giao thông và logistics: mở rộng SGR, khôi phục TAZARA, đầu mối Dodoma",
+"Nâng cấp công nghiệp thông qua chế biến khoáng sản tại chỗ (đất hiếm, khí đốt, quặng sắt)",
+"Tăng sản lượng điện, điện khí hóa nông thôn và năng lượng sạch"
+],
+"projects": [
+{
+"title": "Ngân sách quốc gia 2026/27",
+"detail": "+10,3% so với cùng kỳ; 74,2% từ nguồn trong nước; thâm hụt khoảng 3% GDP",
+"status": "Đang triển khai"
+},
+{
+"title": "Mở rộng Đường sắt khổ tiêu chuẩn (SGR)",
+"detail": "Tiếp tục thi công các tuyến Dodoma–Mwanza và Isaka–Kigoma",
+"status": "Đang triển khai"
+},
+{
+"title": "Khôi phục TAZARA và trung tâm logistics Dodoma",
+"detail": "Phát triển Dodoma thành trung tâm giao thông và logistics",
+"status": "Đang triển khai"
+},
+{
+"title": "Thủy điện Julius Nyerere và điện khí hóa nông thôn",
+"detail": "Tăng công suất phát điện và đấu nối điện cho các làng do REA thực hiện",
+"status": "Đang triển khai"
+},
+{
+"title": "Quỹ hạ tầng EPZ/SEZ",
+"detail": "Dành 5% nguồn thu được chỉ định cho hạ tầng EPZ và SEZ",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Hệ thống số quản lý thu chi và tư vấn cho hội đồng địa phương",
+"why": "Tháng 9/2026, Tổng thống đã yêu cầu các hội đồng địa phương tăng thu và kiểm soát chi tiêu.",
+"target": "PO-RALG và các hội đồng địa phương"
+},
+{
+"title": "Ứng dụng di động đăng ký hộ kinh doanh nhỏ và kê khai thuế khoán",
+"why": "Các biện pháp chính thức hóa và thay đổi về thuế khoán có hiệu lực từ tháng 7/2026.",
+"target": "Cơ quan Thu ngân sách Tanzania, hộ kinh doanh nhỏ"
+},
+{
+"title": "Theo dõi hàng hóa và tối ưu hóa vận hành cho đường sắt và trung tâm logistics",
+"why": "Các tuyến SGR mở rộng và trung tâm logistics Dodoma đang được phát triển.",
+"target": "TRC, TAZARA, Bộ Giao thông"
+},
+{
+"title": "Hỗ trợ SME Hàn Quốc thâm nhập thị trường Đông Phi (nghiên cứu, kết nối đối tác)",
+"why": "Các chính sách bảo hộ sản xuất và chế biến trong nước có thể làm tăng nhu cầu liên doanh với đối tác địa phương (ước tính).",
+"target": "Nhà sản xuất và phân phối địa phương"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng KOTRA Dar es Salaam",
+"detail": "Tư vấn nghiên cứu thị trường Tanzania và kết nối người mua."
+},
+{
+"title": "Voucher xuất khẩu cho SME",
+"detail": "Chi trả các dịch vụ xuất khẩu như nghiên cứu thị trường, biên dịch và chứng nhận thông qua voucher."
+}
+]
+}

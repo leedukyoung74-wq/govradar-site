@@ -1,0 +1,65 @@
+{
+"summary": "Ngày 1/10/2026, Chính phủ Nga đã trình Duma Quốc gia dự thảo ngân sách liên bang giai đoạn 2027-2029, dự báo tiếp tục thâm hụt thêm ba năm với chi tiêu quốc phòng lớn. Đợt cải tổ nội các ngày 19-21/10 đã đưa Bộ trưởng Tài chính Siluanov kiêm nhiệm chức Phó Thủ tướng.",
+"leader": "Tổng thống Vladimir Putin / Thủ tướng Mikhail Mishustin",
+"agenda": [
+"Duy trì chi tiêu quốc phòng và an ninh (khoảng 17,15 nghìn tỷ RUB năm 2027)",
+"Chi tiêu xã hội cho lương hưu, y tế và giáo dục",
+"Hỗ trợ nhà ở như vay thế chấp cho gia đình",
+"Hạ tầng giao thông và phát triển Tuyến đường biển phía Bắc",
+"Tăng thu (VAT v.v.) và quản lý thâm hụt tài khóa"
+],
+"projects": [
+{
+"title": "Dự thảo ngân sách liên bang 2027-2029",
+"detail": "Thâm hụt năm 2027 dự kiến khoảng 5,5 nghìn tỷ RUB (khoảng 2% GDP), chủ yếu được bù đắp bằng phát hành thêm trái phiếu",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Chương trình nhà nước về giao thông",
+"detail": "Đầu tư vào đường bộ, đường sắt và các mạng lưới giao thông khác",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Trợ cấp vay thế chấp cho gia đình",
+"detail": "Trợ cấp lãi suất cho các khoản vay mua nhà ưu đãi dành cho gia đình có con",
+"status": "Đang triển khai"
+},
+{
+"title": "Chi cho y tế và giáo dục",
+"detail": "Khoảng 1,82 nghìn tỷ RUB cho y tế và 1,78 nghìn tỷ cho giáo dục",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Hoạt động vũ trụ và Tuyến đường biển phía Bắc",
+"detail": "Kinh phí cho chương trình vũ trụ và phát triển NSR được xác định là ưu tiên",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Kiểm tra tuân thủ lệnh trừng phạt và kiểm soát xuất khẩu cho SME Hàn Quốc giao dịch với Nga",
+"why": "Danh sách trừng phạt của Hàn Quốc, EU và Mỹ cùng các mặt hàng cần giấy phép liên tục thay đổi, nên nhu cầu sàng lọc trước giao dịch cao.",
+"target": "SME xuất khẩu Hàn Quốc giao dịch với Nga/CIS"
+},
+{
+"title": "Chiến lược thị trường thay thế cho doanh nghiệp thu hẹp hoạt động tại Nga",
+"why": "Các doanh nghiệp phụ thuộc vào doanh số tại Nga đang tìm cách đa dạng hóa rủi ro (ước tính).",
+"target": "Nhà sản xuất và nhà xuất khẩu hàng tiêu dùng Hàn Quốc"
+},
+{
+"title": "Giải pháp AI và số hóa cho cơ quan chính phủ và doanh nghiệp nhà nước Nga",
+"why": "Có nhu cầu về hành chính số, nhưng các lệnh trừng phạt và rào cản thanh toán khiến doanh nghiệp Hàn Quốc khó có khả năng trúng thầu.",
+"target": "Các bộ liên bang và chính quyền vùng"
+}
+],
+"krsupport": [
+{
+"title": "Các văn phòng thương mại KOTRA tại Nga (Moskva v.v.)",
+"detail": "Cung cấp thông tin thị trường địa phương cùng cập nhật về lệnh trừng phạt và các vấn đề hải quan."
+},
+{
+"title": "Phân loại hàng hóa chiến lược và kiểm tra kiểm soát xuất khẩu sang Nga (Yestrade)",
+"detail": "Hệ thống kiểm tra mặt hàng có phải là hàng hóa chiến lược hay cần giấy phép theo tình huống trước khi xuất khẩu."
+}
+]
+}

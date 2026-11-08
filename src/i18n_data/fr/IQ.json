@@ -1,0 +1,70 @@
+{
+"summary": "L'Irak a mis fin à une longue vacance gouvernementale avec un nouveau président en avril 2026 et le gouvernement du Premier ministre al-Zaidi en mai. Les perturbations dans le détroit d'Ormuz rendent urgente la diversification des routes d'exportation du pétrole, et le gouvernement a placé l'augmentation de la production électrique et la réforme budgétaire en tête de son programme.",
+"leader": "Président Nizar Amidi (élu en avril 2026) / Premier ministre Ali Faleh al-Zaidi (entré en fonction en mai 2026)",
+"agenda": [
+"Accroître la production d'électricité (objectif de doubler la production en 2027, dont 12 000 MW de solaire)",
+"Diversifier les routes d'exportation du pétrole (Ceyhan, Baniyas, Aqaba) et augmenter la production",
+"Réforme budgétaire : 17 800 Md IQD d'économies en un an, davantage de recettes hors pétrole",
+"Numérisation de l'administration, y compris l'automatisation douanière ASYCUDA",
+"Réforme de la sécurité : monopole de l'État sur les armes et calendrier de retrait des troupes étrangères",
+"Distribution d'un million de parcelles résidentielles et reconstruction de l'agriculture"
+],
+"projects": [
+{
+"title": "Plan visant à sécuriser 37 000 MW de capacité de production",
+"detail": "15 000 MW de GE, 12 000 MW de solaire, 10 000 MW de thermique, remise en état des 30 000 MW existants, privatisation de la distribution",
+"status": "Prévu"
+},
+{
+"title": "Centrale solaire d'Artawi de 1 GW (GGIP)",
+"detail": "Phase 1 (250 MW) raccordée en mars 2026 ; phase 2 (250 MW) visée pour le 8 décembre",
+"status": "En cours"
+},
+{
+"title": "Diversification des routes d'exportation du pétrole",
+"detail": "Davantage d'exportations via Ceyhan (Turquie), Baniyas (Syrie) et Aqaba (Jordanie) ; protocole d'accord avec la Syrie sur une extension d'oléoduc",
+"status": "En cours"
+},
+{
+"title": "Projet de budget 2026 (accent sur l'électricité et le solaire)",
+"detail": "Le gouvernement affirme qu'il transmettra prochainement le budget au Parlement ; les dépenses sont exécutées selon la règle du 1/12",
+"status": "Prévu"
+},
+{
+"title": "Automatisation douanière (ASYCUDA)",
+"detail": "Douane électronique à tous les postes frontières, parallèlement à une numérisation plus large des organismes publics",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conseil en modèle opérationnel et en système de facturation pour la privatisation de la distribution d'électricité",
+"why": "Le gouvernement a fait de la privatisation de la distribution et du doublement de la production des objectifs centraux.",
+"target": "Ministère de l'Électricité, sociétés régionales de distribution"
+},
+{
+"title": "Automatisation par IA des finances publiques et de la gestion des actifs",
+"why": "Des objectifs d'économies et une campagne de numérisation ont été annoncés.",
+"target": "Ministère des Finances, Conseil de stabilité financière et monétaire"
+},
+{
+"title": "Accompagnement à l'entrée sur le marché pour les entreprises coréennes du solaire et des équipements électriques",
+"why": "Un plan d'achat de 12 000 MW de solaire a été annoncé.",
+"target": "PME coréennes d'équipements électriques, entreprises EPC locales"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA de Bagdad",
+"detail": "Accompagne l'entrée en Irak avec des informations sur les marchés publics locaux et des rendez-vous avec des acheteurs."
+},
+{
+"title": "Programmes de KOICA en Irak",
+"detail": "Mène des programmes d'aide non remboursable dans la reconstruction, l'administration publique et la santé."
+},
+{
+"title": "Soutien à la construction à l'étranger",
+"detail": "Fournit des informations sur les appels d'offres d'électricité et d'usines au Moyen-Orient et un soutien à l'obtention de contrats."
+}
+]
+}

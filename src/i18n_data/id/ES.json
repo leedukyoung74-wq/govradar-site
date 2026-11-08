@@ -1,0 +1,69 @@
+{
+"summary": "Pemerintahan Sánchez telah menetapkan plafon belanja rekor €226 miliar untuk 2027 dan sedang menyiapkan anggaran 2027 yang berpusat pada perumahan. Pemerintah melewatkan tenggat konstitusional akhir September tanpa menetapkan tanggal penyampaian RUU ke parlemen, dan masih menjalankan anggaran 2023 yang diperpanjang.",
+"leader": "Raja Felipe VI (kepala negara) / Perdana Menteri Pedro Sánchez (kepala pemerintahan)",
+"agenda": [
+"Memperluas pasokan perumahan (badan perumahan publik CASA 47, dukungan bagi perumahan terjangkau swasta)",
+"Memperkuat negara kesejahteraan (kesehatan, pendidikan, perlindungan sosial)",
+"Memangkas defisit dan utang (target mengakhiri masa jabatan dengan utang di bawah 100% PDB)",
+"Mereformasi pembiayaan daerah",
+"Pelatihan vokasi (FP), inovasi, dan respons bencana iklim"
+],
+"projects": [
+{
+"title": "Plafon belanja nonfinansial 2027",
+"detail": "Plafon rekor, naik 6,6% dari tahun sebelumnya, disetujui kabinet pada 7 Jul 2026. Belum ada tanggal yang ditetapkan untuk menyampaikan RUU anggaran ke parlemen",
+"status": "Direncanakan"
+},
+{
+"title": "Dukungan pembangunan perumahan terjangkau",
+"detail": "Pendanaan bagi pengembang swasta untuk membangun sekitar 2.500 rumah dengan ketentuan CASA 47, dengan sewa dibatasi 30% dari pendapatan rumah tangga",
+"status": "Berjalan"
+},
+{
+"title": "Jaringan nasional pusat keunggulan pelatihan vokasi (FP)",
+"detail": "Hingga €200 ribu per pusat, disalurkan melalui otoritas FP daerah",
+"status": "Berjalan"
+},
+{
+"title": "Penetapan zona bencana",
+"detail": "45 wilayah di 9 daerah yang dilanda kebakaran hutan, badai, dan banjir pada September–Oktober ditetapkan sebagai zona bencana, membuka akses bantuan",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Dukungan distribusi bagi UKM kecantikan dan makanan Korea di Spanyol dan Eropa Selatan",
+"why": "KOTRA menggelar pameran K-brand Eropa Selatan di Madrid dan menjadikan Spanyol basis untuk Eropa Selatan dan Afrika Utara.",
+"target": "UKM barang konsumsi Korea, pembeli ritel dan home-shopping Spanyol"
+},
+{
+"title": "Chatbot AI untuk manajemen penghuni dan keluhan perumahan publik",
+"why": "Stok rumah sewa publik tumbuh pesat melalui CASA 47 dan pengembang swasta yang bekerja berdasarkan kontrak.",
+"target": "CASA 47 (SEPES), perusahaan perumahan daerah"
+},
+{
+"title": "Konten pelatihan AI dan otomatisasi serta konsultasi untuk pusat FP",
+"why": "Panggilan pusat keunggulan FP memberi setiap pusat pendanaan baru.",
+"target": "Dinas pendidikan daerah, pusat keunggulan FP"
+},
+{
+"title": "Analitik kerusakan kebakaran hutan dan banjir serta perangkat data peringatan dini",
+"why": "Penetapan 45 zona bencana menciptakan permintaan untuk pemulihan dan pencegahan.",
+"target": "Direktorat Perlindungan Sipil, badan kedaruratan daerah"
+}
+],
+"krsupport": [
+{
+"title": "Kantor Dagang KOTRA Madrid",
+"detail": "Menyediakan informasi pasar Spanyol, pencocokan pembeli, dan konsultasi masuk pasar."
+},
+{
+"title": "2026 Korea Brand Expo di Eropa Selatan (Madrid)",
+"detail": "Pada 27–29 Mei 2026, 46 UKM barang konsumsi Korea mengadakan pertemuan ekspor dengan 67 pembeli Eropa (selesai)."
+},
+{
+"title": "2026 Export Voucher (MSS)",
+"detail": "Voucher menanggung biaya sertifikasi, riset pasar, pemasaran, dan layanan ekspansi luar negeri lainnya."
+}
+]
+}

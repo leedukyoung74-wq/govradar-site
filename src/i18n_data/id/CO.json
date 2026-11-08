@@ -1,0 +1,79 @@
+{
+"summary": "Pemerintahan De la Espriella, yang menjabat sejak Agustus 2026, mengusung garis keras di bidang keamanan dan pemangkasan belanja. Kongres mengesahkan anggaran 2027 sebesar COP 634,95 triliun pada 20 Oktober dan memberi presiden waktu 90 hari untuk menyampaikan rencana penyesuaian fiskal.",
+"leader": "Presiden Abelardo de la Espriella (menjabat sejak 2026-08-07; kepala negara dan pemerintahan)",
+"agenda": [
+"Memulihkan keamanan dari kelompok bersenjata dan kejahatan terorganisasi",
+"Memangkas defisit dan mengesahkan UU Fiskal",
+"Menangani krisis kesehatan dan mendanai pensiun",
+"Mengelola subsidi energi dan bahan bakar",
+"Rencana Pembangunan Nasional yang berpusat pada infrastruktur daerah dengan partisipasi swasta"
+],
+"projects": [
+{
+"title": "Anggaran nasional 2027 (PGN)",
+"detail": "Persetujuan akhir oleh Kongres, yang meminta presiden menyampaikan rencana penyesuaian fiskal dalam 90 hari",
+"status": "Selesai (disetujui)"
+},
+{
+"title": "UU Fiskal",
+"detail": "Penyesuaian sekitar COP 45 triliun (2,2% PDB) yang dikemas sebagai penyederhanaan pajak dan dukungan pertumbuhan, bertujuan menurunkan defisit 2027 menjadi sekitar 7,2%",
+"status": "Direncanakan"
+},
+{
+"title": "Peningkatan belanja kesehatan",
+"detail": "Tambahan COP 3 triliun di atas rencana 2 triliun, sehingga COP 5 triliun untuk menangani krisis kesehatan",
+"status": "Direncanakan"
+},
+{
+"title": "Dana stabilisasi harga bahan bakar (FEPC) dan subsidi energi",
+"detail": "COP 9,6 triliun untuk stabilisasi harga bahan bakar plus tambahan COP 3 triliun untuk subsidi listrik dan gas",
+"status": "Direncanakan"
+},
+{
+"title": "Rencana Pembangunan Nasional (PND)",
+"detail": "Dijadwalkan setelah UU Fiskal, berfokus pada infrastruktur daerah dan peran sektor swasta yang lebih besar",
+"status": "Direncanakan"
+},
+{
+"title": "Metro Bogotá Jalur 2",
+"detail": "Tender internasional tidak menarik penawar pada Januari 2026; diluncurkan ulang dengan dukungan bank multilateral, penetapan pemenang ditargetkan Q1 2027",
+"status": "Tender ulang sedang berjalan"
+}
+],
+"biz": [
+{
+"title": "Analitik AI untuk efisiensi belanja publik dan digitalisasi pajak",
+"why": "Kongres menuntut rencana penyesuaian fiskal dalam 90 hari, menciptakan kebutuhan tinjauan belanja.",
+"target": "Kementerian Keuangan, otoritas pajak (DIAN)"
+},
+{
+"title": "Konsultasi kelayakan dan penstrukturan KPBU infrastruktur daerah",
+"why": "Rencana pembangunan baru berpusat pada infrastruktur daerah dan partisipasi swasta.",
+"target": "DNP, pemerintah departemen, badan infrastruktur (ANI)"
+},
+{
+"title": "Paket masuk pasar Kolombia bagi UKM Korea (riset pasar, pencocokan pembeli)",
+"why": "Pengadaan publik dan swasta bergeser seiring perubahan kebijakan keamanan dan fiskal (perkiraan).",
+"target": "UKM Korea yang ingin masuk ke Kolombia"
+},
+{
+"title": "Otomatisasi administrasi dan klaim kesehatan",
+"why": "Pendanaan kesehatan naik menjadi COP 5 triliun tetapi kekurangan masih ada, sehingga efisiensi diperlukan.",
+"target": "Kementerian Kesehatan, perusahaan asuransi kesehatan (EPS)"
+}
+],
+"krsupport": [
+{
+"title": "Kantor dagang KOTRA Bogotá",
+"detail": "Mendukung informasi pasar, pencarian pembeli, dan informasi pengadaan publik."
+},
+{
+"title": "Kerja sama KOICA di Kolombia",
+"detail": "Menjalankan program hibah di bidang seperti pembangunan perdamaian dan pembangunan perdesaan."
+},
+{
+"title": "Export Voucher",
+"detail": "Menanggung biaya sertifikasi lokal, penerjemahan, dan konsultasi."
+}
+]
+}

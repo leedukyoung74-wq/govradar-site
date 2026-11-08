@@ -1,0 +1,62 @@
+{
+"summary": "Tổng thống Lula đã đánh bại Flávio Bolsonaro với tỷ lệ 51,77% so với 48,23% trong vòng bầu cử thứ hai ngày 25/10 để giành nhiệm kỳ thứ tư, và tài sản Brazil cùng đồng real đã giảm ngay sau kết quả. Dự luật ngân sách 2027 đang được Quốc hội xem xét bao gồm 133,8 tỷ R$ đầu tư công (61,5 tỷ R$ cho Novo PAC).",
+"leader": "Tổng thống Luiz Inácio Lula da Silva (nguyên thủ quốc gia kiêm người đứng đầu chính phủ; tái đắc cử nhiệm kỳ thứ tư trong vòng bầu cử thứ hai ngày 25/10/2026)",
+"agenda": [
+"Duy trì các chương trình xã hội trong khuôn khổ tài khóa",
+"Mở rộng đầu tư hạ tầng và nhà ở theo Novo PAC",
+"Chính sách công nghiệp và công nghiệp số/sáng tạo (trò chơi điện tử)",
+"Mở rộng hỗ trợ cho vi doanh nhân (MEI)",
+"Sửa đổi Hiến pháp về giao thông công cộng miễn phí (Tarifa Zero)",
+"Bệnh viện thông minh SUS và y tế số"
+],
+"projects": [
+{
+"title": "Dự luật ngân sách liên bang 2027 (PLOA 2027)",
+"detail": "Đầu tư công 133,8 tỷ R$ (tăng hơn 20% so với 110,8 tỷ R$ năm 2026), cao hơn mức sàn 88,7 tỷ R$ (0,6% GDP); trình Quốc hội ngày 31/8/2026",
+"status": "Đang được Quốc hội xem xét"
+},
+{
+"title": "Phân bổ Novo PAC 2027",
+"detail": "Minha Casa Minha Vida 8,25 tỷ R$, giao thông công cộng đô thị 1,19 tỷ R$, thoát nước và phòng chống lũ lụt 667,2 triệu R$",
+"status": "Đã lên kế hoạch"
+},
+{
+"title": "Mạng lưới bệnh viện và dịch vụ thông minh SUS",
+"detail": "Chương trình số hóa y tế công được công bố vào tháng 1/2026",
+"status": "Đang triển khai"
+},
+{
+"title": "Nghị định khung pháp lý trò chơi điện tử và hỗ trợ ngành",
+"detail": "Ban hành và công bố vào tháng 10/2026",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Tự động hóa AI cho lịch hẹn, danh sách chờ và hồ sơ y tế tại bệnh viện công",
+"why": "Số hóa y tế công đang được triển khai thông qua mạng lưới bệnh viện thông minh SUS.",
+"target": "Bộ Y tế, sở y tế cấp bang và thành phố, bệnh viện công"
+},
+{
+"title": "Tự động hóa bản địa hóa/vận hành cho studio game Brazil và tư vấn đồng phát triển Hàn Quốc-Brazil",
+"why": "Nghị định khung pháp lý trò chơi điện tử và các biện pháp hỗ trợ vừa được ban hành.",
+"target": "Studio game Brazil, chương trình hỗ trợ của bộ văn hóa/công nghiệp"
+},
+{
+"title": "Ứng dụng tự động hóa kế toán và kê khai thuế cho MEI",
+"why": "Luật phúc lợi MEI vừa được ký ban hành mở rộng lực lượng vi doanh nhân.",
+"target": "Vi doanh nhân MEI, tổ chức hỗ trợ như SEBRAE"
+},
+{
+"title": "Bảng điều khiển theo dõi tiến độ dự án nhà ở và giao thông của thành phố",
+"why": "Đầu tư Novo PAC tăng mạnh trong dự luật ngân sách 2027.",
+"target": "Bộ Đô thị, chính quyền cấp bang và thành phố"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA AI Export Assistant",
+"detail": "Trợ lý AI hội thoại gợi ý người mua và tạo báo cáo thâm nhập thị trường theo yêu cầu cho các thị trường mục tiêu như Brazil, dự kiến phát hành phiên bản đầu tiên năm 2026."
+}
+]
+}

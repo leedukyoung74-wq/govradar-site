@@ -1,0 +1,60 @@
+{
+"summary": "Après les élections générales de 2025-26, un nouveau gouvernement de 34 membres dirigé par le président Min Aung Hlaing est entré en fonction en avril 2026. Face à une croissance faible (prévision de la Banque mondiale pour l'exercice 2026/27 : 2 %) et à un choc sur les prix des carburants, le gouvernement met l'accent sur la priorité aux investisseurs locaux, l'attraction des IDE et la diplomatie économique au sein de l'ASEAN.",
+"leader": "Président Min Aung Hlaing (élu par le Parlement le 2026-04-03 ; chef de l'État et du gouvernement) · 1er vice-président Nyo Saw, 2e vice-présidente Nan Ni Ni Aye",
+"agenda": [
+"Relance économique : priorité aux investisseurs locaux tout en attirant les investissements étrangers",
+"Développer les liens commerciaux et d'investissement avec l'ASEAN et les pays voisins (visites en Malaisie, en Thaïlande, en Inde)",
+"Remédier aux pénuries de carburant et d'électricité et attirer les investissements dans le solaire et d'autres énergies",
+"Développer l'industrie manufacturière d'exportation (chaussures, pneus, cuir, caoutchouc)",
+"Maintenir la sécurité et la stabilité (dépenses de défense et de sécurité prioritaires)"
+],
+"projects": [
+{
+"title": "Nouveau gouvernement et restructuration des ministères",
+"detail": "Proposition de 31 ministères et 30 ministres, suivie de la nomination du gouvernement et de 46 vice-ministres",
+"status": "Achevé"
+},
+{
+"title": "Dialogue d'affaires de haut niveau Myanmar-Malaisie",
+"detail": "Les chambres de commerce ont étudié des coopérations en matière de commerce et d'investissement lors de la visite présidentielle",
+"status": "En cours"
+},
+{
+"title": "Attraction d'investissements dans l'énergie solaire et la fabrication de panneaux",
+"detail": "Développement des investissements solaires et de la production de panneaux pour atténuer les pénuries d'électricité dans les zones industrielles",
+"status": "En cours"
+},
+{
+"title": "Développement de l'industrie manufacturière d'exportation",
+"detail": "Projet d'augmenter la production de biens très demandés, comme les chaussures et les pneus, à destination de la Chine, de l'Inde, du Bangladesh et de l'ASEAN",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Service de filtrage des sanctions et de conformité (due diligence préalable aux transactions au Myanmar)",
+"why": "Les sanctions américaines, européennes et britanniques en vigueur et l'inscription sur la liste des pays à haut risque du GAFI imposent aux entreprises coréennes de vérifier leurs contreparties avant toute transaction.",
+"target": "PME coréennes commerçant avec le Myanmar ou l'envisageant"
+},
+{
+"title": "Conseil en stratégie d'entrée via un hub de l'ASEAN (Thaïlande/Malaisie)",
+"why": "Le Myanmar renforce ses liens avec ses voisins de l'ASEAN, ce qui rend réaliste une entrée par un hub dans un pays tiers.",
+"target": "PME coréennes de biens de consommation et de pièces détachées"
+},
+{
+"title": "Gestion énergétique des usines et études de faisabilité de solaire en toiture",
+"why": "Les pénuries chroniques d'électricité dans les zones industrielles créent une demande d'autoproduction.",
+"target": "Fabricants privés des zones industrielles de la région de Yangon"
+}
+],
+"krsupport": [
+{
+"title": "Informations de marché de KOTRA Yangon",
+"detail": "Fournit des informations sur les tendances du marché birman et la réglementation commerciale (l'état des sanctions doit être vérifié séparément)."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Les bons couvrent des services à l'exportation tels que les études de marché, les frais juridiques et de certification."
+}
+]
+}

@@ -1,0 +1,71 @@
+{
+"summary": "Koalisi ÖVP-SPÖ-NEOS Austria tengah mengonsolidasikan keuangan publik melalui anggaran ganda 2027/28 yang bertujuan keluar dari prosedur defisit berlebih UE pada 2028. Mosi tidak percaya FPÖ gagal pada Oktober, dan Wakil Kanselir SPÖ Babler berencana mundur pada awal 2027.",
+"leader": "Presiden Alexander Van der Bellen / Kanselir Christian Stocker (ÖVP; koalisi ÖVP-SPÖ-NEOS)",
+"agenda": [
+"Konsolidasi fiskal: defisit pemerintah umum maksimal 3% PDB pada 2028 untuk keluar dari prosedur defisit berlebih UE",
+"Menurunkan biaya tenaga kerja (iuran FLAF pemberi kerja dipangkas 1 pp mulai 2028)",
+"Daya saing industri: harga listrik industri, paket industri EUR 750 juta, dana startup/scale-up",
+"Belanja terarah untuk pendidikan, pasar tenaga kerja, dan perawatan",
+"Kesiapsiagaan krisis dan ketahanan rantai pasok (rancangan UU darurat dan ketahanan pasar internal)",
+"Reformasi dinas militer dan dinas sipil"
+],
+"projects": [
+{
+"title": "Anggaran ganda federal 2027/28",
+"detail": "Belanja federal 2027 EUR 128,2 miliar, defisit federal EUR 15,5 miliar (2,7% PDB); tambahan konsolidasi EUR 2,5 miliar hingga 2028",
+"status": "Berjalan"
+},
+{
+"title": "Paket industri dan dana startup/scale-up",
+"detail": "Rencana paket dukungan industri dan dana baru untuk perusahaan bertumbuh",
+"status": "Direncanakan"
+},
+{
+"title": "Keringanan biaya tenaga kerja (pemangkasan iuran FLAF)",
+"detail": "Iuran pemberi kerja ke dana penyeimbang beban keluarga turun dari 3,7% menjadi 2,7% mulai 2028, menghemat sekitar EUR 2 miliar per tahun bagi perusahaan",
+"status": "Direncanakan"
+},
+{
+"title": "Rancangan UU darurat dan ketahanan pasar internal (BNRG)",
+"detail": "RUU yang menetapkan aturan pasokan barang kritis saat keadaan darurat pasar internal UE, telah diajukan ke kabinet",
+"status": "Direncanakan"
+},
+{
+"title": "Pengadaan digitalisasi sektor publik (perusahaan publik daerah)",
+"detail": "Tender kerangka PMO/Scrum holding transportasi Austria Hulu (OÖVH) dan layanan TI holding kesehatan",
+"status": "Proses tender"
+}
+],
+"biz": [
+{
+"title": "Layanan PMO transformasi digital publik dan coaching agile",
+"why": "Perusahaan publik daerah secara terbuka menenderkan layanan manajemen proyek untuk digitalisasi.",
+"target": "Holding transportasi dan kesehatan milik negara"
+},
+{
+"title": "Pilot otomatisasi AI untuk dokumen administrasi dan permohonan warga",
+"why": "Konsolidasi menuntut peningkatan efisiensi tanpa penambahan pegawai.",
+"target": "Kementerian federal dan pemerintah kota"
+},
+{
+"title": "Paket masuk pasar Austria/DACH bagi UKM Korea (riset pasar, pencocokan mitra)",
+"why": "Paket industri dan dukungan harga listrik dapat memperluas kerja sama manufaktur.",
+"target": "UKM manufaktur dan komponen Korea"
+},
+{
+"title": "Konsultasi penilaian ketahanan rantai pasok",
+"why": "UU ketahanan menciptakan kebutuhan peninjauan rantai pasok barang krisis.",
+"target": "Produsen dan perusahaan publik"
+}
+],
+"krsupport": [
+{
+"title": "Kantor Dagang KOTRA Wina",
+"detail": "Mendukung intelijen pasar, pencarian pembeli, dan partisipasi pameran dagang di Austria."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Menanggung biaya riset pasar luar negeri, sertifikasi, dan pemasaran melalui voucher."
+}
+]
+}

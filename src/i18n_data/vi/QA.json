@@ -1,0 +1,70 @@
+{
+"summary": "Xuất khẩu LNG sụt giảm mạnh sau vụ tấn công vào Ras Laffan tháng 3/2026 và gián đoạn tại eo biển Hormuz, khiến Qatar rơi vào thâm hụt theo quý; ngày 21/10, Nội các đã thông qua dự thảo ngân sách năm 2027 và chuyển lên Hội đồng Shura. Dây chuyền LNG đầu tiên của North Field East đang được chuẩn bị đưa vào vận hành tháng 11, dự kiến cho sản lượng vào năm 2027.",
+"leader": "Quốc vương (Amir) Sheikh Tamim bin Hamad Al Thani / Thủ tướng kiêm Bộ trưởng Ngoại giao Sheikh Mohammed bin Abdulrahman Al Thani",
+"agenda": [
+"NDS3 (2024-2030): tăng trưởng bền vững, chất lượng cuộc sống, cải cách thể chế chính phủ, bền vững tài khóa",
+"Khôi phục sản lượng LNG và hoàn thành mở rộng North Field",
+"Mở rộng khu vực tư nhân và cân nhắc thuê ngoài hạ tầng trong bối cảnh thắt lưng buộc bụng",
+"Tăng hàm lượng nội địa và ưu tiên sản phẩm quốc gia",
+"Đầu tư vào y tế và giáo dục"
+],
+"projects": [
+{
+"title": "Dự thảo ngân sách nhà nước 2027",
+"detail": "Được Nội các thông qua ngày 21/10/2026 và chuyển lên Hội đồng Shura",
+"status": "Theo kế hoạch"
+},
+{
+"title": "Ngân sách nhà nước 2026",
+"detail": "Thu 199 tỷ QR (giá dầu 55 USD), chi đầu tư lớn 62,8 tỷ QR; thâm hụt quý 2 là 21,2 tỷ QR",
+"status": "Đang triển khai"
+},
+{
+"title": "Mở rộng LNG North Field East",
+"detail": "Dây chuyền đầu tiên chuẩn bị vận hành vào tháng 11/2026; dự kiến có sản lượng LNG trong nửa đầu năm 2027",
+"status": "Đang triển khai"
+},
+{
+"title": "Khắc phục thiệt hại tại Ras Laffan",
+"detail": "Các cuộc tấn công tháng 3 làm mất khoảng 17% công suất LNG; hai dây chuyền bị hư hại có thể mất tới 3 năm, một nhà máy GTL đặt mục tiêu khôi phục vào quý 1/2027",
+"status": "Đang triển khai"
+},
+{
+"title": "Kế hoạch mua sắm chính phủ 2026",
+"detail": "Khoảng 4.464 hợp đồng trị giá hơn 70 tỷ QR dành cho khu vực tư nhân, trong đó 49 tỷ QR do Ashghal thực hiện",
+"status": "Đang triển khai"
+}
+],
+"biz": [
+{
+"title": "Gói chẩn đoán quy trình và tự động hóa RPA/AI cho các cơ quan chính phủ",
+"why": "Cải cách thể chế là trụ cột cốt lõi của NDS3 trong bối cảnh thâm hụt và thắt lưng buộc bụng.",
+"target": "Bộ Truyền thông và CNTT (MCIT), các bộ, các đơn vị bán chính phủ"
+},
+{
+"title": "Chứng nhận hàm lượng nội địa và tìm đối tác địa phương cho SME Hàn Quốc",
+"why": "Chính sách ưu tiên sản phẩm quốc gia và quy định hàm lượng nội địa nay quyết định khả năng tiếp cận mua sắm.",
+"target": "SME sản xuất/CNTT Hàn Quốc, nhà phân phối và đối tác liên doanh Qatar"
+},
+{
+"title": "Giải pháp AI cho lập lịch và quản lý vật tư bệnh viện",
+"why": "Hamad Medical Corporation đang phát hành số lượng lớn gói thầu thiết bị và vật tư tiêu hao.",
+"target": "Hamad Medical Corporation, Bộ Y tế Công cộng"
+},
+{
+"title": "Tư vấn cấu trúc PPP hạ tầng và nghiên cứu khả thi",
+"why": "Bộ Tài chính đang xem xét thuê ngoài các dự án hạ tầng cho khu vực tư nhân.",
+"target": "Bộ Tài chính, Ashghal"
+}
+],
+"krsupport": [
+{
+"title": "MOU hợp tác SME và đổi mới sáng tạo Hàn Quốc - Qatar và TIPF",
+"detail": "Các MOU ký tại hội nghị thượng đỉnh năm 2023, làm nền tảng cho giao lưu SME và thâm nhập thị trường (tài liệu năm 2023)."
+},
+{
+"title": "Các MOU của Team Korea với Qatar về xây dựng và dữ liệu không gian",
+"detail": "MOU với Ashghal và Bộ Đô thị về xây dựng thông minh và dữ liệu không gian địa lý (tài liệu năm 2023)."
+}
+]
+}

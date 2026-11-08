@@ -1,0 +1,69 @@
+{
+"summary": "PAM dẫn đầu với 97 ghế trong cuộc bầu cử ngày 23/9/2026, và Người đứng đầu Chính phủ El Mansouri đã thành lập liên minh bốn đảng gồm PAM, Istiqlal, USFP và PPS (207 ghế), nhậm chức ngày 16/10. Các ưu tiên của chính phủ mới là tăng đầu tư, cải thiện điều kiện sống và chuẩn bị hạ tầng cho World Cup 2030.",
+"leader": "Quốc vương Mohammed VI / Người đứng đầu Chính phủ Fatima Zahra El Mansouri (bổ nhiệm 29/9/2026, người phụ nữ đầu tiên giữ cương vị này)",
+"agenda": [
+"Thúc đẩy đầu tư và nâng cao năng lực công nghiệp",
+"Cải thiện sức mua hộ gia đình, việc làm và dịch vụ công",
+"Chuẩn bị hạ tầng cho FIFA World Cup 2030 (đồng đăng cai với Tây Ban Nha và Bồ Đào Nha)",
+"Công bằng xã hội và công bằng giữa các vùng lãnh thổ",
+"Chủ quyền lương thực, vốn con người và năng lực cạnh tranh công nghiệp",
+"Tái cơ cấu doanh nghiệp nhà nước, khung PPP hiện đại, cải cách quản trị nước và điện (được AfDB hỗ trợ)"
+],
+"projects": [
+{
+"title": "Chương trình quản trị kinh tế và khả năng chống chịu khí hậu của AfDB (PGRCC Giai đoạn III)",
+"detail": "Tái cơ cấu doanh nghiệp nhà nước, hiện đại hóa PPP, hỗ trợ SME và đổi mới sáng tạo, cải cách quản trị nước và điện",
+"status": "Đang triển khai"
+},
+{
+"title": "Hạ tầng cho World Cup 2030",
+"detail": "Hạ tầng du lịch, giao thông và dịch vụ quy mô lớn được xác định là ưu tiên của chính phủ mới",
+"status": "Đang triển khai"
+},
+{
+"title": "Chương trình hành động của chính phủ mới",
+"detail": "Chương trình gồm các ưu tiên ngân sách và cơ chế đánh giá sẽ được trình Quốc hội",
+"status": "Theo kế hoạch"
+}
+],
+"biz": [
+{
+"title": "Tư vấn nghiên cứu khả thi và cấu trúc dự án PPP",
+"why": "Các cải cách do AfDB hỗ trợ bao gồm hiện đại hóa khung PPP.",
+"target": "Bộ Kinh tế và Tài chính, doanh nghiệp nhà nước, chính quyền vùng"
+},
+{
+"title": "Đưa SME Ma-rốc vào chuỗi giá trị và kết nối với doanh nghiệp Hàn Quốc",
+"why": "Đổi mới sáng tạo của SME và hội nhập chuỗi giá trị là các mục tiêu cải cách đã được nêu rõ.",
+"target": "Bộ Công nghiệp và Thương mại, các cơ quan hỗ trợ SME, nhà sản xuất trong nước"
+},
+{
+"title": "Dịch vụ du lịch và giao thông số phục vụ World Cup",
+"why": "Chính phủ mới coi hạ tầng World Cup là ưu tiên hàng đầu.",
+"target": "Bộ Du lịch, doanh nghiệp nhà nước ngành giao thông, các thành phố đăng cai"
+},
+{
+"title": "Đánh giá hiệu quả chính sách và tự động hóa hành chính bằng AI",
+"why": "Chính phủ mới đang chuẩn bị một chương trình hành động có cơ chế đánh giá.",
+"target": "Văn phòng Người đứng đầu Chính phủ, các bộ"
+}
+],
+"krsupport": [
+{
+"title": "Văn phòng thương mại KOTRA Casablanca",
+"detail": "Cung cấp thông tin thị trường Ma-rốc và tư vấn về người mua và đầu tư."
+},
+{
+"title": "Các chương trình của KOICA tại Ma-rốc",
+"detail": "Triển khai viện trợ không hoàn lại trong lĩnh vực đào tạo nghề, chuyển đổi số và quản lý nước."
+},
+{
+"title": "Khoản vay ưu đãi EDCF",
+"detail": "Cung cấp các khoản vay ưu đãi cho hạ tầng tại các nước đang phát triển và công bố thông báo mua sắm."
+},
+{
+"title": "Chương trình Voucher Xuất khẩu",
+"detail": "Chi trả chi phí tư vấn và chứng nhận ở nước ngoài thông qua voucher."
+}
+]
+}

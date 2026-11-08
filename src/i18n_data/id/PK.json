@@ -1,0 +1,80 @@
+{
+"summary": "Di bawah program IMF senilai USD 7bn, Pakistan mengesahkan anggaran TA2026-27 sebesar Rs 18.77 triliun yang menyeimbangkan konsolidasi fiskal dengan belanja pembangunan. Reformasi BUMN, jalan, bendungan dan infrastruktur air, serta rencana investasi AI senilai USD 1bn hingga 2030 menjadi prioritas utama.",
+"leader": "Presiden Asif Ali Zardari / Perdana Menteri Shehbaz Sharif",
+"agenda": [
+"Kepatuhan pada program IMF, mobilisasi pendapatan, dan pengendalian defisit",
+"PSDP federal Rs 1 triliun untuk transportasi, energi, dan air",
+"AI dan transformasi digital (USD 1bn hingga 2030, pelatihan AI bagi 1 juta pekerja non-TI)",
+"Reformasi tata kelola BUMN dan manajemen utang",
+"CPEC 2.0 dan perluasan pembangkit listrik tenaga air, surya, dan angin",
+"Keamanan perbatasan dan penanggulangan terorisme"
+],
+"projects": [
+{
+"title": "Anggaran federal TA2026-27",
+"detail": "Target pertumbuhan 4%, asumsi inflasi 8.2%, anggaran pertahanan naik sekitar 18%",
+"status": "Berjalan"
+},
+{
+"title": "Belanja pembangunan nasional (PSDP dll.)",
+"detail": "PSDP federal Rs 1tr, ADP provinsi Rs 2.224tr, korporasi Rs 451bn; CPEC 2.0 adalah satu-satunya proyek baru",
+"status": "Berjalan"
+},
+{
+"title": "Infrastruktur transportasi",
+"detail": "Jalan raya N-25 Rs 100bn, M-6 Sukkur-Hyderabad Rs 30bn, jalur kereta ML-1 dibiayai ADB",
+"status": "Berjalan"
+},
+{
+"title": "Infrastruktur energi dan air",
+"detail": "Bendungan Dasu, Tarbela, dan Diamer-Bhasha, sembilan proyek surya/angin, proyek air Karachi K-IV Rs 22bn",
+"status": "Berjalan"
+},
+{
+"title": "Rencana investasi AI",
+"detail": "1,000 beasiswa PhD AI dan pelatihan AI bagi 1 juta pekerja non-TI (diumumkan Feb 2026)",
+"status": "Direncanakan"
+},
+{
+"title": "Daanish IT Park (sebelumnya Islamabad IT Park)",
+"detail": "Dibangun dengan dukungan pemerintah Korea dan Korea Eximbank; diresmikan 9 Okt 2026 dengan kehadiran PM untuk mengembangkan talenta dan ekspor TI",
+"status": "Selesai"
+}
+],
+"biz": [
+{
+"title": "Otomatisasi AI untuk pemrosesan dokumen pajak dan layanan bantuan wajib pajak",
+"why": "Target pendapatan IMF semakin mendesak dan Finance Division sedang mencari penasihat pajak eksternal.",
+"target": "Finance Division, Federal Board of Revenue (FBR)"
+},
+{
+"title": "Manajemen kinerja dan diagnostik manajemen BUMN",
+"why": "Kebijakan BUMN diamendemen pada Okt 2026 dan pelaporan kinerja dua kali setahun kini menjadi rutin.",
+"target": "Central Monitoring Unit Finance Division, BUMN federal"
+},
+{
+"title": "Kursus AI praktis bagi aparatur sipil dan pekerja TI",
+"why": "Pemerintah berjanji melatih AI bagi 1 juta pekerja non-TI dan taman TI yang didanai Korea baru saja dibuka.",
+"target": "Kementerian TI, tenant Daanish IT Park, universitas"
+},
+{
+"title": "Dukungan masuk pasar bagi barang konsumsi dan UKM Korea",
+"why": "Perundingan CEPA Korea-Pakistan sedang berlangsung dan KOTRA mendorong perdagangan serta investasi.",
+"target": "UKM Korea, importir dan distributor Pakistan"
+}
+],
+"krsupport": [
+{
+"title": "Dukungan pembangunan Daanish IT Park",
+"detail": "Taman TI Islamabad dibangun dengan pembiayaan Korea dan diresmikan pada 9 Okt 2026."
+},
+{
+"title": "Kerja sama pembangunan KOICA dan KOPIA",
+"detail": "Kerja sama berkelanjutan di bidang TI, kesehatan, pertanian, dan ketahanan pangan."
+},
+{
+"title": "Acara kolaborasi industri KOTRA Karachi",
+"detail": "Menyelenggarakan acara kolaborasi industri Korea-Pakistan di Karachi (Apr 2025) di bidang otomotif, alat kesehatan, dan TI."
+}
+]
+}

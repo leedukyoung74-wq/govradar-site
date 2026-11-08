@@ -1,0 +1,75 @@
+{
+"summary": "La Asamblea Nacional aprobó un presupuesto para 2026 de N68,3 billones, superior a la propuesta del Ejecutivo de N58,18 billones, con prioridad en seguridad, infraestructura, salud y educación. Con las elecciones presidenciales fijadas para el 20 de febrero de 2027, el presidente Tinubu lanzó su campaña de reelección el 24 de octubre de 2026; en esta revisión no se encontró una propuesta de presupuesto para 2027.",
+"leader": "Presidente Bola Ahmed Tinubu (jefe de Estado y de Gobierno)",
+"agenda": [
+"Ampliar los ingresos: nuevas leyes tributarias y mayores ingresos no petroleros",
+"Finalizar infraestructuras clave como autopistas y gasoductos",
+"Reforma constitucional para la policía federal y estatal",
+"Capital humano en salud y educación; frenar la fuga de profesionales médicos",
+"Ampliar el suministro de gas y restablecer la infraestructura energética"
+],
+"projects": [
+{
+"title": "Presupuesto federal 2026",
+"detail": "Déficit de N23,85 billones (4,28% del PIB); unos USD 6.000 millones de endeudamiento externo aprobados en abril de 2026",
+"status": "En curso"
+},
+{
+"title": "Autopista Abuja-Kaduna",
+"detail": "Tramo de 81km inaugurado el 24 de octubre de 2026",
+"status": "Finalizado (tramo)"
+},
+{
+"title": "Estaciones de compresión del gasoducto Escravos-Lagos (ELP)",
+"detail": "Estaciones de compresión construidas por una empresa local aumentan la capacidad de gas del gasoducto (anunciado el 22 de octubre de 2026)",
+"status": "Finalizado"
+},
+{
+"title": "Reforma constitucional sobre la doble policía",
+"detail": "Las aprobaciones de las asambleas estatales alcanzaron el umbral, lo que abre el camino a la policía estatal (23 de octubre de 2026)",
+"status": "En curso"
+},
+{
+"title": "Proyecto de infraestructura digital BRIDGE",
+"detail": "Infraestructura digital financiada por el Banco Mundial y clústeres de investigación sobre economía digital liderados por universidades",
+"status": "En curso"
+},
+{
+"title": "Programa de Recuperación del Sector de Distribución (DISREP)",
+"detail": "Apoyo financiado por el Banco Mundial a proyectos de mejora de alimentadores de las DisCo",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Automatización y analítica con IA para la declaración y recaudación de impuestos",
+"why": "Las nuevas leyes tributarias están en vigor y la presión para aumentar los ingresos no petroleros es alta.",
+"target": "Servicio de Ingresos de Nigeria, servicios estatales de ingresos internos"
+},
+{
+"title": "Capacitación en gobernanza digital e IA para funcionarios públicos",
+"why": "KOICA está ampliando sus proyectos de gobernanza digital y de academia para startups.",
+"target": "Ministerios federales, gobiernos estatales, ejecutores de KOICA"
+},
+{
+"title": "Apoyo al crecimiento de pymes/startups y consultoría de vinculación con el mercado coreano",
+"why": "El fortalecimiento del ecosistema de mipymes es central en los programas de los donantes y la demanda local es fuerte.",
+"target": "Mipymes, startups tecnológicas, agencias estatales de fomento empresarial"
+},
+{
+"title": "Software de gestión de casos y monitoreo por CCTV para la policía estatal",
+"why": "Se espera que la reforma sobre la doble policía cree nuevos cuerpos de policía estatal.",
+"target": "Gobiernos estatales, comandos de la policía estatal"
+}
+],
+"krsupport": [
+{
+"title": "Programas de KOICA en Nigeria (digital, educación, juventud)",
+"detail": "Gestiona la fase II de Smart School en 21 estados, gobernanza digital, una academia de innovación digital para startups y empleos verdes para jóvenes."
+},
+{
+"title": "Becas de KOICA para funcionarios públicos (CIAT)",
+"detail": "Unos 2.000 funcionarios nigerianos han participado en capacitaciones en Corea."
+}
+]
+}

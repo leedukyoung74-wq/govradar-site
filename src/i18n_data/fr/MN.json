@@ -1,0 +1,79 @@
+{
+"summary": "Le gouvernement de coalition du Premier ministre Uchral, formé en mars 2026, est aux commandes tandis que le Parlement examine un budget consolidé 2027 de 43 000 milliards de MNT de dépenses, avec un déficit de 2,0 % du PIB. La hausse des dividendes des entreprises publiques et d'Oyu Tolgoi finance l'augmentation des pensions et des salaires des fonctionnaires, et les liens avec la Russie dans l'énergie, les carburants et le rail se renforcent.",
+"leader": "Président Ukhnaagiin Khürelsükh / Premier ministre Nyam-Osoryn Uchral (depuis le 2026-03-31)",
+"agenda": [
+"Accroître les recettes grâce à des dividendes plus élevés des entreprises publiques et d'Oyu Tolgoi",
+"Étendre les pensions et l'aide sociale ; augmenter les salaires des fonctionnaires",
+"Sécuriser l'approvisionnement en carburant et accélérer les infrastructures énergétiques (centrale thermique n° 3)",
+"Transition verte (énergies renouvelables, recharge des VE) et réduction de la pollution de l'air à Oulan-Bator",
+"Liaisons de transport telles que le corridor ferroviaire Mongolie-Russie-Chine"
+],
+"projects": [
+{
+"title": "Projet de budget consolidé 2027",
+"detail": "Recettes 40 700 milliards de MNT (35,3 % du PIB), dépenses 43 000 milliards de MNT (37,3 % du PIB) ; déficit de 2 300 milliards de MNT financé par des prêts concessionnels et des obligations intérieures",
+"status": "En cours d'examen parlementaire"
+},
+{
+"title": "Hausse des recettes de dividendes",
+"detail": "Dividendes des entreprises publiques 3 500 milliards de MNT et dividendes d'Oyu Tolgoi 3 000 milliards de MNT",
+"status": "Prévu"
+},
+{
+"title": "Hausse des pensions, des allocations et des salaires des fonctionnaires",
+"detail": "2 900 milliards de MNT pour les pensions et allocations, 2 600 milliards de MNT pour les salaires des fonctionnaires",
+"status": "Prévu"
+},
+{
+"title": "Centrale thermique n° 3 et coopération sur l'approvisionnement en carburant",
+"detail": "Accord avec la Russie en sept. 2026 pour accélérer les projets ; groupe de travail conjoint sur la pollution de l'air à Oulan-Bator proposé",
+"status": "En négociation"
+},
+{
+"title": "Développement des infrastructures de recharge des VE",
+"detail": "Station de recharge rapide alimentée à l'énergie solaire ouverte à Oulan-Bator le 2026-08-31 ; 38 stations dans le pays, d'autres prévues",
+"status": "En cours"
+},
+{
+"title": "Premiers contrats d'achat d'électricité issus d'une enchère d'énergies renouvelables",
+"detail": "Contrats de juillet 2026 portant sur 220MW de solaire avec stockage par batteries dans cinq aimags (selon un relevé antérieur)",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conseil en gestion financière et des dividendes pour les entreprises publiques",
+"why": "Le budget 2027 repose fortement sur 3 500 milliards de MNT de dividendes des entreprises publiques.",
+"target": "Ministère des Finances, entreprises publiques"
+},
+{
+"title": "Système automatisé de demande et d'instruction des licences électroniques",
+"why": "Le gouvernement dématérialise les autorisations et a recruté des consultants à cet effet.",
+"target": "Secrétariat du Cabinet, ministères délivrant des licences"
+},
+{
+"title": "Prévision par IA et exploitation à distance de centrales solaires et de stockage",
+"why": "Les enchères d'énergies renouvelables et les infrastructures de recharge se développent.",
+"target": "Ministère de l'Énergie, producteurs d'électricité"
+},
+{
+"title": "Plateforme d'analyse des données de qualité de l'air urbain",
+"why": "La réduction de la pollution de l'air figure désormais à l'agenda de la coopération Mongolie-Russie.",
+"target": "Ville d'Oulan-Bator, ministère de l'Environnement"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Oulan-Bator",
+"detail": "Accompagne les études de marché, la recherche d'acheteurs et les consultations d'entrée sur le marché mongol."
+},
+{
+"title": "Programme pays de la KOICA en Mongolie",
+"detail": "La Mongolie est un partenaire prioritaire de la KOICA, avec des projets de dons et des contrats de services en cours dans la gouvernance, la santé et l'environnement."
+},
+{
+"title": "Prêts concessionnels EDCF à la Mongolie",
+"detail": "Les projets de prêts pour les infrastructures et les services publics offrent des missions de conseil et de construction aux entreprises coréennes."
+}
+]
+}

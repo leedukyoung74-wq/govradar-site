@@ -1,0 +1,60 @@
+{
+"summary": "El gobierno laborista en minoría de Noruega propuso el 2026-10-07 un presupuesto para 2027 que retira NOK 608.400 millones del fondo soberano, con una defensa reforzada, más ayuda a Ucrania y alivio del impuesto sobre la renta, aún pendiente de negociación en el parlamento.",
+"leader": "Rey Haakon VIII (accedió al trono en agosto de 2026); Primer ministro Jonas Gahr Støre (gobierno laborista en minoría); Ministro de Finanzas Jens Stoltenberg",
+"agenda": [
+"Reforzar la capacidad de defensa (aumento de NOK 65.000 millones propuesto para 2027)",
+"Apoyo a Ucrania (NOK 85.000 millones para el programa Nansen en 2027)",
+"Rebajas del impuesto sobre la renta y de las cotizaciones a la seguridad social (NOK 6.400 millones)",
+"Ayudas a la electricidad (Norgespris, etc., ~NOK 16.400 millones)",
+"Regla fiscal: déficit estructural no petrolero del 2,7% del fondo"
+],
+"projects": [
+{
+"title": "Proyecto de presupuesto nacional 2027",
+"detail": "Retiro de NOK 608.400 millones del fondo, déficit estructural no petrolero del 2,7% del valor del fondo; requiere un acuerdo con cuatro partidos de centro/izquierda",
+"status": "En el parlamento"
+},
+{
+"title": "Refuerzo de la capacidad de defensa",
+"detail": "Gran aumento de defensa propuesto en el presupuesto de 2027",
+"status": "Planificado"
+},
+{
+"title": "Programa Nansen de apoyo a Ucrania",
+"detail": "NOK 85.000 millones para 2027, con lo que el total asciende a NOK 344.000 millones",
+"status": "En curso"
+},
+{
+"title": "Ayudas a la electricidad (Norgespris y régimen general)",
+"detail": "Precio fijo de la electricidad para los hogares y umbral de ayuda",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Programas de desarrollo organizacional y de liderazgo para organismos públicos",
+"why": "Husbanken, NIBIO y otros están licitando actualmente este tipo de servicios.",
+"target": "Agencias estatales (Husbanken, NIBIO, etc.)"
+},
+{
+"title": "Asesoramiento independiente en TIC y consultoría de automatización con IA para municipios",
+"why": "Drammen ha licitado un acuerdo marco de asesoramiento en TIC por NOK 40 millones.",
+"target": "Municipios noruegos"
+},
+{
+"title": "Apoyo para que proveedores coreanos de defensa/construcción naval ingresen en las cadenas de suministro",
+"why": "El fuerte aumento de defensa de 2027 ampliará las compras.",
+"target": "Agencia Noruega de Material de Defensa y empresas de defensa"
+}
+],
+"krsupport": [
+{
+"title": "Programa de Vales de Exportación",
+"detail": "Cubre los costos de marketing, certificación y consultoría para ingresar en Noruega."
+},
+{
+"title": "Oficinas de KOTRA en el exterior (Noruega no figura; contactar una oficina nórdica cercana)",
+"detail": "Los estudios de mercado y la búsqueda de compradores pueden solicitarse a través de oficinas cercanas, como la de Suecia."
+}
+]
+}

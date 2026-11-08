@@ -1,0 +1,80 @@
+{
+"summary": "Après l'entrée en fonction du gouvernement 2026-2031, l'Ouganda poursuit sa Ten-Fold Growth Strategy et le démarrage de la production pétrolière avec un budget 2026/27 de 84 300 milliards d'UGX, tablant sur une croissance de 10,2 %. Les appels d'offres pour des projets numériques (UDAP-GovNet) et de réseau électrique financés par la Banque mondiale sont actifs.",
+"leader": "Président Yoweri Museveni (investi pour un septième mandat en mai 2026) / Première ministre Robinah Nabbanja (reconduite)",
+"agenda": [
+"Ten-Fold Growth Strategy : agro-industrialisation, tourisme, minerais et science (ATMS)",
+"Démarrage de la production pétrolière et croissance attendue de 10,2 % en 2026/27",
+"Hausse des revenus des ménages grâce au programme Wealth Creation",
+"Mobilisation des recettes intérieures grâce à de nouvelles mesures fiscales",
+"Investissements dans l'irrigation, l'agriculture commerciale et la transformation agroalimentaire",
+"Maintien des services de santé face à la baisse de l'aide"
+],
+"projects": [
+{
+"title": "Budget national 2026/27",
+"detail": "Présenté le 11 juin 2026 par le ministre des Finances Musasizi pour accélérer la Ten-Fold Growth Strategy",
+"status": "En cours"
+},
+{
+"title": "Programme d'agro-industrialisation",
+"detail": "Dotation la plus élevée jamais accordée",
+"status": "En cours"
+},
+{
+"title": "Programme Wealth Creation",
+"detail": "Soutien au revenu des ménages",
+"status": "En cours"
+},
+{
+"title": "Uganda Digital Acceleration Project (UDAP-GovNet)",
+"detail": "Financé par la Banque mondiale ; appels d'offres pour le Wi-Fi dans les bureaux de l'administration et les zones d'accueil des réfugiés, et pour une solution de santé numérique destinée aux réfugiés",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Travaux d'installation de lignes électriques (lot 2, sous-lots 9-11)",
+"detail": "Travaux d'accès à l'électricité financés par la Banque mondiale",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Budget du secteur de la santé",
+"detail": "En baisse par rapport à l'an dernier en raison du recul de l'aide étrangère",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conception et mise en œuvre d'un programme public de formation aux compétences numériques",
+"why": "Un consultant financé par la Banque mondiale pour le programme national de compétences numériques est en cours de sélection.",
+"target": "NITA-U, ministère des TIC"
+},
+{
+"title": "SaaS de production et de gestion des stocks et conseil opérationnel pour les coopératives de transformation agroalimentaire",
+"why": "L'agro-industrialisation bénéficie de son budget le plus élevé jamais accordé et le Président pousse les investissements dans la transformation.",
+"target": "Coopératives agricoles, transformateurs, ministère de l'Agriculture"
+},
+{
+"title": "Système mobile de suivi de la performance des bénéficiaires de Wealth Creation",
+"why": "Un programme de 11 000 milliards d'UGX nécessite un suivi des résultats.",
+"target": "Collectivités locales, organismes de mise en œuvre"
+},
+{
+"title": "Automatisation des déclarations fiscales et chatbot IA d'assistance",
+"why": "Les nouvelles mesures fiscales renforcent le besoin de services aux contribuables et d'efficacité du recouvrement.",
+"target": "Uganda Revenue Authority (URA)"
+}
+],
+"krsupport": [
+{
+"title": "Discussions de coopération EDCF avec Korea Eximbank",
+"detail": "Lors du KOAFEC en sept. 2026, la banque a discuté avec le ministre ougandais des Finances de projets EDCF et de la participation d'entreprises coréennes."
+},
+{
+"title": "Korea-Africa AI Hub et K-AI Package",
+"detail": "Solutions d'IA, centres de données et projets énergétiques liés à l'EDCF promus dans toute l'Afrique."
+},
+{
+"title": "Programme pays de la KOICA en Ouganda",
+"detail": "Projets d'aide sous forme de dons et opportunités de partenariat par l'intermédiaire du bureau en Ouganda."
+}
+]
+}

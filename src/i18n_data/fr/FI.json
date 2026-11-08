@@ -1,0 +1,66 @@
+{
+"summary": "Le gouvernement finlandais d'Orpo a arrêté son dernier budget avant les élections de 2027, avec 92,5 Md EUR de dépenses et un déficit de 12,4 Md EUR. Il entend stimuler la croissance par une hausse des dépenses de défense et des baisses de l'impôt sur les sociétés et sur le revenu, tout en respectant la trajectoire de dépenses de la procédure de l'UE concernant les déficits excessifs.",
+"leader": "Président Alexander Stubb / Premier ministre Petteri Orpo (coalition menée par le Rassemblement national)",
+"agenda": [
+"Assainissement budgétaire et respect de la trajectoire de dépenses de la procédure de l'UE concernant les déficits excessifs",
+"Baisse de l'impôt sur les sociétés de 20 % à 18 % et allègement de l'impôt sur le revenu pour les revenus faibles et moyens",
+"Hausse des dépenses de défense et soutien continu à l'Ukraine",
+"Mesures pour l'emploi telles que des bons pour les jeunes et les chômeurs de longue durée",
+"Relance de la rénovation et de la construction de logements",
+"Investissements dans les infrastructures routières, ferroviaires et portuaires"
+],
+"projects": [
+{
+"title": "Projet de budget de l'État 2027",
+"detail": "92,5 Md EUR de dépenses, déficit de 12,4 Md EUR ; les charges d'intérêts atteignent 4,4 Md EUR",
+"status": "Prévu"
+},
+{
+"title": "Hausse du budget de la défense",
+"detail": "Crédits du ministère de la Défense en hausse de 618 M EUR, 1,3 Md EUR d'acquisitions d'équipements, 200 M EUR pour l'Ukraine",
+"status": "Prévu"
+},
+{
+"title": "Baisse de l'impôt sur les sociétés",
+"detail": "Taux ramené de 20 % à 18 %, pour un coût d'environ 850 M EUR de recettes",
+"status": "Prévu"
+},
+{
+"title": "Aides à la rénovation de logements et garanties de prêts",
+"detail": "Aide temporaire à la rénovation et modifications des garanties de prêts pour 110 M EUR en 2026-2027",
+"status": "En cours"
+},
+{
+"title": "Système d'acquisition dynamique pour les données publiques et les plateformes d'IA",
+"detail": "SAD de DigiFinland pour le pilotage par les données et les plateformes d'IA, les licences et les services d'experts",
+"status": "Appel d'offres en cours"
+}
+],
+"biz": [
+{
+"title": "Entrepôt de données publiques, analyse et automatisation par IA",
+"why": "L'agence immobilière de l'État et l'entreprise numérique du secteur social achètent ouvertement des services de données et d'IA.",
+"target": "Senaatti-kiinteistöt, DigiFinland, régions de services de bien-être"
+},
+{
+"title": "Conseil en numérisation des processus pour les universités et les agences",
+"why": "La pression pour réduire les coûts de fonctionnement stimule la demande d'automatisation des processus.",
+"target": "Universités et agences centrales"
+},
+{
+"title": "Accompagnement à l'entrée en Finlande/dans les pays nordiques pour les PME coréennes",
+"why": "La baisse de l'impôt sur les sociétés et les dépenses de défense/d'infrastructures pourraient accroître la demande de partenariats.",
+"target": "PME coréennes des TIC et des composants"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA d'Helsinki",
+"detail": "Fournit des études du marché finlandais et la recherche d'acheteurs dans les TIC et les technologies propres."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Couvre par des bons les frais de certification à l'étranger, d'étude de marché et de marketing."
+}
+]
+}

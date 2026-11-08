@@ -1,0 +1,75 @@
+{
+"summary": "Pour son second mandat, le gouvernement travailliste d'Albanese se concentre sur l'offre de logements, l'allègement du coût de la vie et la sécurité des approvisionnements en carburant. Le budget 2026-27 réforme la fiscalité de l'immobilier locatif et ajoute un plan de résilience en carburant de 14,7 Md AUD.",
+"leader": "Roi Charles III (chef de l'État) ; Premier ministre Anthony Albanese (chef du gouvernement)",
+"agenda": [
+"Accroître l'offre de logements et réformer la fiscalité de l'immobilier d'investissement",
+"Renforcer la sécurité énergétique et des carburants, notamment par une réserve de carburant contrôlée par l'État",
+"Allègement du coût de la vie et soutien fiscal aux petites entreprises",
+"Développer l'industrie de l'IA et améliorer la productivité",
+"Simplifier les autorisations et accélérer l'évaluation des migrations qualifiées"
+],
+"projects": [
+{
+"title": "Plan de résilience en carburant",
+"detail": "Comprend une réserve de sécurité de carburant contrôlée par l'État de 3,2 Md AUD et relève le nombre minimal de jours de stocks de diesel, kérosène et essence",
+"status": "En cours"
+},
+{
+"title": "Housing Support Program – fonds pour les infrastructures locales",
+"detail": "Finance les infrastructures locales nécessaires pour débloquer l'offre de logements",
+"status": "En cours"
+},
+{
+"title": "Subventions AI Accelerator",
+"detail": "Subventions au développement et à la commercialisation de l'IA nationale",
+"status": "Prévu"
+},
+{
+"title": "Réforme fiscale de l'immobilier d'investissement",
+"detail": "Remplace l'abattement de 50 % sur les plus-values (CGT) des logements existants par une indexation et limite le negative gearing aux constructions neuves",
+"status": "Prévu"
+},
+{
+"title": "Amortissement immédiat permanent des actifs jusqu'à 20 000 AUD",
+"detail": "Rend l'amortissement permanent et réintroduit le report en arrière des pertes",
+"status": "En cours"
+},
+{
+"title": "Ouverture de l'aéroport international de Western Sydney",
+"detail": "Premiers vols passagers le 25 octobre 2026, vols internationaux à partir du 26 octobre",
+"status": "Achevé"
+}
+],
+"biz": [
+{
+"title": "Tableau de bord IA de suivi des stocks de carburant et de prévision de la demande",
+"why": "La nouvelle réserve de carburant contrôlée par l'État nécessite une gestion des stocks en temps réel.",
+"target": "Department of Climate Change, Energy ; distributeurs de carburant et exploitants de terminaux"
+},
+{
+"title": "SaaS automatisant l'examen des dossiers d'autorisation de logements pour les collectivités locales",
+"why": "Les autorisations doivent être accélérées pour atteindre les objectifs de logement.",
+"target": "Services d'urbanisme des États, conseils locaux"
+},
+{
+"title": "Offre d'automatisation par IA pour les PME, avec conseil en demandes de subventions",
+"why": "Les subventions IA et l'amortissement immédiat permanent laissent aux PME davantage de marge pour investir dans les outils numériques.",
+"target": "PME australiennes, entreprises coréano-australiennes"
+},
+{
+"title": "Due diligence d'entrée sur le marché et mise en relation avec des partenaires locaux pour les PME coréennes",
+"why": "La diversification des chaînes d'approvisionnement et la demande d'infrastructures attirent les entreprises coréennes de matériaux et de composants.",
+"target": "PME et ETI coréennes préparant leur entrée en Australie"
+}
+],
+"krsupport": [
+{
+"title": "KOTRA Sydney (y compris l'antenne de Brisbane)",
+"detail": "Accompagne l'entrée sur le marché par des études de marché locales, la mise en relation avec des acheteurs et des salons de l'emploi."
+},
+{
+"title": "Export Voucher program",
+"detail": "Bons couvrant les frais d'étude de marché à l'étranger, de certification et de conseil ; ils peuvent aussi servir à préparer une entrée en Australie."
+}
+]
+}

@@ -1,0 +1,71 @@
+{
+"summary": "Menjelang pemilu 2027, pemerintahan Perdana Menteri Fico mendorong unit nuklir baru, pembangunan daerah, dan perluasan perumahan sewa yang didukung negara. Ketegangan koalisi berlanjut setelah usulan pemberhentian menteri lingkungan hidup pada September, dan kini Fico juga merangkap sebagai menteri lingkungan hidup.",
+"leader": "Presiden Peter Pellegrini / Perdana Menteri Robert Fico (koalisi yang dipimpin Smer-SD)",
+"agenda": [
+"Unit nuklir baru Bohunice (1,100 MWe, Westinghouse AP1000 dari AS)",
+"Meringankan beban harga energi dan melanjutkan bantuan energi",
+"Memperluas perumahan sewa yang didukung negara",
+"Dukungan pembangunan bagi daerah tertinggal (Turiec, Orava, dll.)",
+"Melaksanakan proyek Rencana Pemulihan UE dan digitalisasi publik",
+"Menyiapkan anggaran keuangan publik 2027-2029"
+],
+"projects": [
+{
+"title": "Unit nuklir baru di Jaslovské Bohunice",
+"detail": "Pada 2026-10-28, JESS milik negara menandatangani kontrak FEED dengan Westinghouse; pembangkit ini akan sepenuhnya dimiliki negara",
+"status": "Direncanakan"
+},
+{
+"title": "Perluasan perumahan sewa yang didukung negara",
+"detail": "151 unit apartemen tambahan masuk ke dalam sistem (diumumkan 2026-10-20)",
+"status": "Berjalan"
+},
+{
+"title": "Dukungan pembangunan wilayah utara",
+"detail": "Lebih dari EUR 2.3m disetujui untuk Turiec, Orava, dan Slowakia utara (2026-10-21)",
+"status": "Berjalan"
+},
+{
+"title": "Sistem pertukaran data sidik jari Prüm II",
+"detail": "Solusi integrasi dan keamanan untuk pertukaran data sidik jari berdasarkan Regulasi UE 2024/982",
+"status": "Dalam tender"
+},
+{
+"title": "Platform layanan terpadu kota cerdas",
+"detail": "Liptovský Mikuláš sedang mengadakan satu kanal digital tunggal bagi warga",
+"status": "Dalam tender"
+}
+],
+"biz": [
+{
+"title": "Platform data kota cerdas dan layanan warga berbasis AI",
+"why": "Beberapa kota melelang platform layanan terpadu dan data secara bersamaan.",
+"target": "Pemerintah kota (Liptovský Mikuláš, Banská Štiavnica, dll.)"
+},
+{
+"title": "Konsultasi analisis kebijakan dan strategi transportasi",
+"why": "Kementerian transportasi melelang pekerjaan statistik, prakiraan, dan strategi.",
+"target": "Kementerian Transportasi"
+},
+{
+"title": "Dukungan masuk rantai pasok nuklir bagi UKM komponen Korea",
+"why": "Tahap FEED menciptakan kebutuhan registrasi pemasok dan kemitraan sejak dini.",
+"target": "JESS dan perusahaan EPC mitra"
+},
+{
+"title": "Konsultasi masuk pasar Slowakia bagi produsen Korea (rantai pasok otomotif/baterai)",
+"why": "Permintaan akan basis produksi di Eropa Tengah tetap stabil.",
+"target": "UKM komponen Korea"
+}
+],
+"krsupport": [
+{
+"title": "Kantor Dagang KOTRA Bratislava",
+"detail": "Menyediakan informasi pasar Slowakia serta konsultasi pembeli/investasi."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Menanggung biaya sertifikasi luar negeri, riset pasar, dan pemasaran melalui voucher."
+}
+]
+}

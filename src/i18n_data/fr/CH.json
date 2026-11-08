@@ -1,0 +1,60 @@
+{
+"summary": "Le gouvernement fédéral suisse a estimé qu'aucune coupe supplémentaire n'était nécessaire dans le budget 2027 tout en maintenant le programme d'allègement 2027-2029, et lance l'appel d'offres d'un Swiss Government Cloud plafonné à environ 7 Md CHF parallèlement aux travaux sur la réglementation de l'IA.",
+"leader": "Président de la Confédération Guy Parmelin (présidence tournante pour 2026) ; le Conseil fédéral de sept membres gouverne de manière collégiale",
+"agenda": [
+"Assainissement budgétaire : maintien du programme d'allègement 2027-2029 (~5,2 Md CHF), abandon des coupes supplémentaires pour 2027",
+"Modernisation informatique fédérale : « Swiss Government Cloud » (SGC) multi-cloud hybride",
+"Élaboration d'un cadre réglementaire pour l'IA (le Conseil fédéral a pris acte de l'état d'avancement)",
+"Renforcement de la défense et de la coopération en matière d'armement, y compris avec l'OTAN",
+"Statistique publique et données à l'ère de l'IA (nouvelle présence en ligne de l'Office fédéral de la statistique)"
+],
+"projects": [
+{
+"title": "Acquisition du Swiss Government Cloud (OMC 25002 609)",
+"detail": "Trois lots : cloud public mondial, cloud public résidant en Suisse, sur site ; durée totale jusqu'à 14 ans",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "Budget fédéral 2027",
+"detail": "Des prévisions d'impôt sur les sociétés plus élevées rendent inutiles de nouvelles coupes en 2027 ; les coupes de précaution de 540 M CHF sont abandonnées ; approbation parlementaire requise",
+"status": "Au Parlement"
+},
+{
+"title": "Programme d'allègement 2027-2029 (EP27)",
+"detail": "Paquet pluriannuel d'allègement des dépenses visant à éliminer le déficit structurel",
+"status": "En cours"
+},
+{
+"title": "Réglementation de l'IA",
+"detail": "Le Conseil fédéral a pris acte de l'état d'avancement le 2026-10-28",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Évaluation de la préparation à la migration vers le cloud et PMO pour les organismes publics",
+"why": "Le déploiement du SGC impose aux offices fédéraux de planifier la migration de leurs charges de travail.",
+"target": "Offices fédéraux et services informatiques cantonaux"
+},
+{
+"title": "Offre de gouvernance pour se préparer à la réglementation de l'IA",
+"why": "Les entreprises veulent se préparer pendant l'élaboration du cadre sur l'IA.",
+"target": "ETI suisses, entreprises de la finance et de la santé"
+},
+{
+"title": "Accompagnement des entreprises coréennes d'IA/automatisation sur le marché suisse (recherche de partenaires, localisation)",
+"why": "La demande d'efficacité augmente et les partenaires locaux sont essentiels pour entrer sur le marché.",
+"target": "PME coréennes de l'IA et du SaaS"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial KOTRA Suisse",
+"detail": "Fournit des études du marché suisse, la recherche d'acheteurs et la mise en relation avec des partenaires locaux."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre par des bons les frais de marketing à l'étranger, de certification et de conseil."
+}
+]
+}

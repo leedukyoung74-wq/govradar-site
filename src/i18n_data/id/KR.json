@@ -1,0 +1,79 @@
+{
+"summary": "Pemerintah menyetujui usulan anggaran 2027 dengan total belanja KRW 820,9 triliun (naik 12,8%), memusatkan dana pada pemuda, mesin pertumbuhan, daerah, dan pendidikan/talenta. Usulan kementerian UKM mencapai rekor KRW 18,07 triliun, dengan kenaikan tajam untuk dukungan ekspor dan transisi AI manufaktur.",
+"leader": "Presiden Lee Jae-myung / Perdana Menteri Han Seong-sook (diangkat Juli 2026)",
+"agenda": [
+"Menginvestasikan durian runtuh pajak semikonduktor ke mesin pertumbuhan masa depan (Future Response Fund baru)",
+"Mengalokasikan belanja untuk pemuda, daerah, dan pendidikan/talenta (KRW 45,4 triliun untuk empat bidang)",
+"Memperluas ekspor UKM dan merespons risiko tarif dan perdagangan",
+"Transisi AI untuk manufaktur dan UKM (physical AI, smart factory)",
+"Memperluas ekosistem startup ('Startups for Everyone', fund of funds KRW 1,3 triliun)"
+],
+"projects": [
+{
+"title": "Usulan anggaran pemerintah 2027",
+"detail": "Total belanja KRW 820,9 triliun, total pendapatan KRW 880,8 triliun, rekening khusus baru untuk daya saing semikonduktor",
+"status": "Dalam pembahasan Majelis Nasional"
+},
+{
+"title": "Usulan anggaran kementerian UKM 2027",
+"detail": "Naik 9,4% dibanding tahun sebelumnya, diajukan ke Majelis Nasional (2026-09-03)",
+"status": "Dalam pembahasan Majelis Nasional"
+},
+{
+"title": "Perluasan dukungan ekspor (perombakan export voucher)",
+"detail": "Export voucher dibagi menjadi voucher dasar dan paket pertumbuhan; KRW 23,8 miliar untuk masuk pasar luar negeri bersama perusahaan besar-UKM dan KRW 27,9 miliar untuk respons regulasi luar negeri",
+"status": "Direncanakan"
+},
+{
+"title": "Demonstrasi physical AI UKM dan smart factory",
+"detail": "Demonstrasi physical AI baru KRW 172,8 miliar, smart factory termasuk AI manufaktur KRW 468,2 miliar, tenaga kerja AI manufaktur KRW 28,4 miliar",
+"status": "Direncanakan"
+},
+{
+"title": "Startups for Everyone dan paket startup daerah",
+"detail": "Startups for Everyone KRW 441,1 miliar (20.000 peserta); paket startup daerah baru KRW 170 miliar",
+"status": "Direncanakan"
+},
+{
+"title": "Anggaran tambahan UKM untuk perang Timur Tengah",
+"detail": "Tambahan KRW 100 miliar untuk export voucher (dari 7.000 menjadi 14.000), KRW 100 miliar lagi untuk dana pasar baru, KRW 75 miliar untuk AI manufaktur",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Mendaftar sebagai penyedia export voucher: paket strategi luar negeri, riset pasar, dan pencarian pembeli",
+"why": "Dukungan ekspor 2027 naik lebih dari dua kali lipat menjadi KRW 313,7 miliar, meningkatkan permintaan voucher.",
+"target": "UKM eksportir tahap awal dan bertumbuh"
+},
+{
+"title": "Konsultasi diagnosis dan implementasi transisi AI bagi UKM manufaktur (termasuk otomatisasi proses)",
+"why": "Lebih dari KRW 600 miliar dialokasikan untuk demonstrasi physical AI dan smart factory.",
+"target": "UKM manufaktur, technopark, dan badan promosi daerah"
+},
+{
+"title": "Konsultasi regulasi ekspor dan sertifikasi luar negeri",
+"why": "KRW 27,9 miliar dialokasikan untuk respons regulasi ekspor luar negeri.",
+"target": "UKM eksportir, KOSME dan KOTRA"
+},
+{
+"title": "Mengikuti tender kontrak konsultasi transformasi AI (AX) sektor publik",
+"why": "Lembaga daerah dan korporasi publik menerbitkan tender konsultasi AI secara rutin di KONEPS pada 2026.",
+"target": "Pemerintah daerah, korporasi publik, technopark"
+}
+],
+"krsupport": [
+{
+"title": "Export Voucher Program",
+"detail": "UKM dan perusahaan menengah membeli layanan pemasaran dan konsultasi luar negeri dengan voucher; pada 2027 dibagi menjadi voucher dasar dan paket pertumbuhan."
+},
+{
+"title": "Dukungan masuk pasar luar negeri KOTRA",
+"detail": "Menyediakan riset pasar, pencocokan pembeli, dan dukungan pameran dagang melalui kantor dagang luar negeri."
+},
+{
+"title": "Pinjaman kebijakan ekspor dan ekspansi luar negeri KOSME",
+"detail": "Mengelola dana kebijakan untuk masuk pasar baru dan stabilitas UKM eksportir, ditambah melalui anggaran tambahan 2026."
+}
+]
+}

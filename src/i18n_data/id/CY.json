@@ -1,0 +1,65 @@
+{
+"summary": "Siprus telah mengirim ke parlemen anggaran 2027 dengan total belanja EUR 14,4 miliar (EUR 11,1 miliar tanpa pembayaran utang), memproyeksikan surplus dan utang publik turun menjadi sekitar 45% PDB. Belanja pertahanan naik tajam, dan presiden meminta proyek lokal untuk memanfaatkan anggaran jangka panjang UE berikutnya (2028-2034).",
+"leader": "Presiden Nikos Christodoulides (kepala negara dan pemerintahan) · Menteri Keuangan Makis Keravnos",
+"agenda": [
+"Mempertahankan surplus fiskal dan memangkas utang publik (proyeksi 45,2% PDB pada akhir 2027)",
+"Penguatan pertahanan: EUR 430 juta pada 2027 dalam program 2027-2029 senilai EUR 1,28 miliar",
+"Investasi di bidang kesehatan (GESY), kesejahteraan sosial, dan pendidikan",
+"Peningkatan jalan dan infrastruktur (mis. jalan Paphos-Polis)",
+"Mengidentifikasi proyek senilai sekitar EUR 3,5 miliar yang terkait anggaran UE 2028-2034"
+],
+"projects": [
+{
+"title": "Anggaran Negara 2027",
+"detail": "Total belanja EUR 14,4 miliar, belanja pembangunan EUR 1,165 miliar; pembahasan di komisi lalu pemungutan suara paripurna pada Desember",
+"status": "Dalam pembahasan"
+},
+{
+"title": "Program investasi pertahanan",
+"detail": "Belanja pertahanan naik dari EUR 176,8 juta pada 2026 menjadi EUR 430 juta pada 2027",
+"status": "Direncanakan"
+},
+{
+"title": "Museum Siprus Baru",
+"detail": "Pendanaan konstruksi termasuk dalam anggaran 2027",
+"status": "Berjalan"
+},
+{
+"title": "Jalan Paphos-Polis Chrysochous",
+"detail": "Pendanaan pekerjaan jalan arteri barat",
+"status": "Berjalan"
+},
+{
+"title": "Panggilan proyek pemerintah daerah (dana UE 2028-2034)",
+"detail": "Pemerintah daerah menyiapkan proposal selama sepuluh bulan; kabinet memilih proyek pada September 2027",
+"status": "Direncanakan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi perencanaan proyek dan proposal dana UE bagi pemerintah daerah",
+"why": "Presiden meminta proposal proyek lokal, dengan seleksi dijadwalkan September 2027.",
+"target": "Pemerintah kota dan administrasi distrik Siprus"
+},
+{
+"title": "Otomatisasi AI untuk administrasi publik (pemrosesan kasus dan dokumen)",
+"why": "Sejalan dengan sikap fiskal untuk mengurangi formasi dan mengendalikan belanja pegawai.",
+"target": "Kementerian Keuangan, administrasi kementerian"
+},
+{
+"title": "Layanan analitik data kelautan dan air",
+"why": "Departemen perikanan telah menenderkan survei kelautan dan belanja terkait air meningkat.",
+"target": "Department of Fisheries and Marine Research, Water Development Department"
+}
+],
+"krsupport": [
+{
+"title": "Berita pasar luar negeri KOTRA (Siprus/UE)",
+"detail": "Menyediakan informasi regulasi pasar dan pengadaan UE."
+},
+{
+"title": "Export Voucher Program",
+"detail": "Voucher menanggung biaya sertifikasi UE, hukum, dan lokalisasi."
+}
+]
+}

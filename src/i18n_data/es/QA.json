@@ -1,0 +1,70 @@
+{
+"summary": "Las exportaciones de GNL se desplomaron tras el ataque de marzo de 2026 contra Ras Laffan y las perturbaciones en el estrecho de Ormuz, lo que llevó a Qatar a registrar déficits trimestrales; el 21 de octubre, el Consejo de Ministros aprobó el proyecto de presupuesto de 2027 y lo remitió al Consejo de la Shura. El primer tren de GNL de North Field East se prepara para noviembre, con producción prevista en 2027.",
+"leader": "Emir jeque Tamim bin Hamad Al Thani / Primer ministro y ministro de Asuntos Exteriores jeque Mohammed bin Abdulrahman Al Thani",
+"agenda": [
+"NDS3 (2024-2030): crecimiento sostenible, calidad de vida, reforma institucional del gobierno, sostenibilidad fiscal",
+"Restablecer la producción de GNL y completar la expansión de North Field",
+"Ampliar el sector privado y estudiar la externalización de la infraestructura en un contexto de austeridad",
+"Aumentar el contenido local y dar prioridad a los productos nacionales",
+"Inversión en salud y educación"
+],
+"projects": [
+{
+"title": "Proyecto de presupuesto del Estado 2027",
+"detail": "Aprobado por el Consejo de Ministros el 21 de octubre de 2026 y remitido al Consejo de la Shura",
+"status": "Planificado"
+},
+{
+"title": "Presupuesto del Estado 2026",
+"detail": "Ingresos de QR199.000 millones (petróleo a $55), grandes inversiones de capital por QR62.800 millones; déficit del segundo trimestre de QR21.200 millones",
+"status": "En curso"
+},
+{
+"title": "Expansión de GNL de North Field East",
+"detail": "Primer tren listo para operar en noviembre de 2026; producción de GNL prevista para el primer semestre de 2027",
+"status": "En curso"
+},
+{
+"title": "Reparación de los daños en Ras Laffan",
+"detail": "Los ataques de marzo eliminaron alrededor del 17% de la capacidad de GNL; dos trenes dañados podrían tardar hasta 3 años, una planta GTL prevista para el primer trimestre de 2027",
+"status": "En curso"
+},
+{
+"title": "Plan de contratación pública 2026",
+"detail": "Unos 4.464 contratos por más de QR70.000 millones para el sector privado, incl. QR49.000 millones de Ashghal",
+"status": "En curso"
+}
+],
+"biz": [
+{
+"title": "Paquete de diagnóstico de procesos y automatización RPA/IA para entidades gubernamentales",
+"why": "La reforma institucional es un pilar central de la NDS3 en un contexto de déficits y austeridad.",
+"target": "Ministerio de Comunicaciones y TI (MCIT), ministerios, entidades semigubernamentales"
+},
+{
+"title": "Certificación de contenido local y búsqueda de socios locales para pymes coreanas",
+"why": "La preferencia por productos nacionales y las normas de contenido local condicionan ahora el acceso a la contratación pública.",
+"target": "Pymes coreanas manufactureras/de TI, distribuidores y socios de JV qataríes"
+},
+{
+"title": "Solución de IA para la programación hospitalaria y la gestión de suministros",
+"why": "Hamad Medical Corporation publica grandes volúmenes de licitaciones de equipos y consumibles.",
+"target": "Hamad Medical Corporation, Ministerio de Salud Pública"
+},
+{
+"title": "Asesoramiento en estructuración y viabilidad de APP de infraestructura",
+"why": "El Ministerio de Finanzas estudia externalizar proyectos de infraestructura al sector privado.",
+"target": "Ministerio de Finanzas, Ashghal"
+}
+],
+"krsupport": [
+{
+"title": "MOU de cooperación Corea-Qatar en pymes e innovación y TIPF",
+"detail": "MOU firmados en la cumbre de 2023 que sustentan los intercambios de pymes y la entrada al mercado (material de 2023)."
+},
+{
+"title": "MOU de Team Korea con Qatar en construcción y datos geoespaciales",
+"detail": "MOU con Ashghal y el Ministerio de Municipios sobre construcción inteligente y datos geoespaciales (material de 2023)."
+}
+]
+}

@@ -1,0 +1,65 @@
+{
+"summary": "Pemerintahan Babiš mendorong anggaran 2027 dengan kenaikan pensiun, gaji sektor publik, pertahanan, dan investasi transportasi, sehingga defisit melebar. Ekspansi nuklir Dukovany yang dipimpin KHNP akan segera meluncurkan tender peralatan bantu pertamanya pada November 2026.",
+"leader": "Presiden Petr Pavel / Perdana Menteri Andrej Babiš",
+"agenda": [
+"Kenaikan pensiun dan gaji sektor publik",
+"Peningkatan investasi pertahanan dan transportasi, termasuk KPBU jalan tol",
+"Ketahanan energi termasuk PLTN Dukovany",
+"Langkah pendapatan dan stabilitas harga bahan bakar",
+"Pemenuhan personel kepolisian dan pemadam kebakaran"
+],
+"projects": [
+{
+"title": "Rancangan anggaran negara 2027",
+"detail": "Defisit CZK 386 miliar (naik CZK 76 miliar); lolos pembacaan pertama pada 22 Okt 2026",
+"status": "Di parlemen"
+},
+{
+"title": "Unit nuklir baru Dukovany (KHNP)",
+"detail": "60+ perusahaan Ceko lolos kualifikasi sebagai pemasok; tender peralatan & material bantu pertama direncanakan Nov 2026; pengajuan izin Apr 2027; unit 1 ditargetkan 2036",
+"status": "Berjalan"
+},
+{
+"title": "Konsesi jalan tol D35 (Opatovec-Mohelnice)",
+"detail": "Konsesi design-build-finance-operate-maintain disetujui pemerintah pada 26 Okt 2026",
+"status": "Kontrak disetujui"
+},
+{
+"title": "Regulasi harga bahan bakar",
+"detail": "Harga diatur untuk sebagian bahan bakar dan pembebasan cukai untuk minyak mineral tertentu, 1-30 Nov 2026",
+"status": "Berjalan"
+}
+],
+"biz": [
+{
+"title": "Konsultasi pencocokan rantai pasok nuklir Korea-Ceko dan lokalisasi (JV/subkontrak)",
+"why": "Tender peralatan bantu pertama dijadwalkan Nov 2026 dan ekspektasi partisipasi lokal tinggi.",
+"target": "Pemasok Korea yang terdaftar di KHNP, 60+ perusahaan Ceko yang lolos kualifikasi"
+},
+{
+"title": "Otomatisasi dokumentasi mutu dan dokumen penawaran bagi pemasok nuklir",
+"why": "KHNP telah menerbitkan persyaratan mutu dan kriteria evaluasi teknis, sehingga beban administrasi meningkat.",
+"target": "Pemasok UKM Korea dan Ceko yang mengikuti tender Dukovany"
+},
+{
+"title": "Konsultasi aturan asal barang FTA dan kepatuhan ekspor",
+"why": "Saran aturan asal barang menjadi bagian dari pengarahan tender, menunjukkan adanya permintaan.",
+"target": "UKM Korea yang memasok proyek nuklir Ceko"
+},
+{
+"title": "Analitik data konsesi jalan tol dan pemeliharaan berbasis AI",
+"why": "Konsesi D35 memerlukan manajemen kinerja operasi dan pemeliharaan oleh swasta.",
+"target": "Kementerian Transportasi, Direktorat Jalan dan Jalan Tol (ŘSD), pemegang konsesi"
+}
+],
+"krsupport": [
+{
+"title": "Pengarahan tender peralatan bantu Dukovany",
+"detail": "Pada 30 Sep 2026, lebih dari 130 pemasok mendapat pengarahan mengenai jadwal tender, e-procurement, manajemen mutu, dan aturan asal barang."
+},
+{
+"title": "Kantor KOTRA Praha",
+"detail": "Menyediakan informasi pasar Ceko, pencocokan pembeli, dan dukungan untuk proyek kerja sama nuklir dan lainnya."
+}
+]
+}

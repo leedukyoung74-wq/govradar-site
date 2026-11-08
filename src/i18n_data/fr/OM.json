@@ -1,0 +1,70 @@
+{
+"summary": "Oman a fixé son budget 2026, première année du 11e Plan quinquennal de développement (2026-2030), à 11,98 Md OMR de dépenses avec un déficit de 1,3 % du PIB. Dans le cadre de la Vision 2040, le pays lance des appels d'offres pour des projets routiers, sanitaires et de protection contre les inondations, et attire des investissements dans de nouveaux secteurs comme les centres de données d'IA et l'ammoniac vert.",
+"leader": "Sultan Haitham bin Tarik (chef de l'État et Premier ministre)",
+"agenda": [
+"Mise en œuvre du 11e Plan quinquennal de développement (2026-2030) avec une croissance d'environ 4 %",
+"Maintien de la discipline budgétaire et préparation de l'impôt sur le revenu des personnes physiques pour 2028",
+"Investissements dans l'éducation, la santé, les infrastructures de transport et le logement",
+"Renforcement de la protection contre les inondations (barrages et ouvrages de défense)",
+"Attraction d'investissements dans les centres de données d'IA, l'hydrogène vert et l'ammoniac",
+"Localisation (contenu local) et facturation électronique (Fawtara)"
+],
+"projects": [
+{
+"title": "Budget de l'État 2026",
+"detail": "Hypothèse d'un pétrole à 60 $/baril ; recettes 11,45 Md OMR, déficit 530 M OMR",
+"status": "En cours"
+},
+{
+"title": "Portefeuille de projets de développement publics",
+"detail": "Le Government Projects Forum 2026 a présenté plus de 1,5 Md OMR de projets et environ 10 000 appels d'offres émanant de 57 entités",
+"status": "Appel d'offres en cours"
+},
+{
+"title": "74 marchés publics attribués de janv. à juil. 2026",
+"detail": "Environ 734 M OMR, dont des médicaments, l'extension de la Muscat Expressway, le port de pêche de Mahout et un centre de génomique ; 60 nouveaux appels d'offres (protection contre les inondations, portail de e-santé, etc.)",
+"status": "En cours"
+},
+{
+"title": "Centre de données d'IA de Salalah",
+"detail": "Oman et le Royaume-Uni se sont accordés sur un centre de données d'IA de 1 Md GBP (rapporté en octobre 2026)",
+"status": "Prévu"
+}
+],
+"biz": [
+{
+"title": "Automatisation des réponses aux marchés publics et conseil en appels d'offres",
+"why": "Environ 10 000 appels d'offres sont prévus dans 57 entités.",
+"target": "PME coréennes du BTP et de l'informatique, partenaires omanais"
+},
+{
+"title": "Services de santé numérique (exploitation du portail de e-santé, aide clinique par IA)",
+"why": "Un appel d'offres pour l'exploitation du portail de e-santé du ministère de la Santé a été lancé.",
+"target": "Ministère de la Santé, hôpitaux"
+},
+{
+"title": "Solutions et formations liées aux centres de données d'IA",
+"why": "Un important investissement dans un centre de données d'IA a été conclu.",
+"target": "Autorité d'investissement, opérateurs de télécommunications, organismes publics"
+},
+{
+"title": "Conseil en conformité à l'impôt sur le revenu des personnes physiques et à la facturation électronique",
+"why": "Fawtara se généralise et l'impôt sur le revenu entre en vigueur en 2028.",
+"target": "Entreprises locales, entreprises coréennes à Oman"
+}
+],
+"krsupport": [
+{
+"title": "Bureau commercial de KOTRA à Mascate",
+"detail": "Fournit des informations sur les marchés publics et les acheteurs omanais, ainsi que des conseils d'entrée sur le marché."
+},
+{
+"title": "Soutien à la construction à l'étranger",
+"detail": "Fournit des informations sur les appels d'offres d'infrastructures au Moyen-Orient, comme les routes et les barrages, et un appui à l'obtention de marchés."
+},
+{
+"title": "Programme Export Voucher",
+"detail": "Couvre, par des bons, les frais de certification à l'étranger et de marketing local."
+}
+]
+}

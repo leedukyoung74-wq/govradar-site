@@ -1,0 +1,65 @@
+{
+"summary": "Le gouvernement Babiš défend un budget 2027 prévoyant des hausses des retraites, des salaires publics, de la défense et des investissements dans les transports, ce qui creuse le déficit. L'extension nucléaire de Dukovany menée par KHNP s'apprête à lancer son premier appel d'offres pour équipements auxiliaires en novembre 2026.",
+"leader": "Président Petr Pavel / Premier ministre Andrej Babiš",
+"agenda": [
+"Hausse des retraites et des salaires du secteur public",
+"Davantage d'investissements dans la défense et les transports, y compris des PPP autoroutiers",
+"Sécurité énergétique, y compris la centrale nucléaire de Dukovany",
+"Mesures de recettes et stabilité des prix des carburants",
+"Effectifs de la police et des pompiers"
+],
+"projects": [
+{
+"title": "Projet de budget de l'État 2027",
+"detail": "Déficit de 386 Md CZK (en hausse de 76 Md CZK) ; adopté en première lecture le 22 octobre 2026",
+"status": "Au Parlement"
+},
+{
+"title": "Nouvelles tranches nucléaires de Dukovany (KHNP)",
+"detail": "Plus de 60 entreprises tchèques qualifiées comme fournisseurs ; premier appel d'offres équipements et matériaux auxiliaires prévu en novembre 2026 ; demande d'autorisation en avril 2027 ; tranche 1 visée pour 2036",
+"status": "En cours"
+},
+{
+"title": "Concession autoroutière D35 (Opatovec-Mohelnice)",
+"detail": "Concession conception-construction-financement-exploitation-maintenance approuvée par le gouvernement le 26 octobre 2026",
+"status": "Contrat approuvé"
+},
+{
+"title": "Régulation des prix des carburants",
+"detail": "Prix réglementés pour certains carburants et exonération d'accises pour certaines huiles minérales, du 1er au 30 novembre 2026",
+"status": "En cours"
+}
+],
+"biz": [
+{
+"title": "Conseil en mise en relation et en localisation (coentreprise/sous-traitance) pour la chaîne d'approvisionnement nucléaire Corée-Tchéquie",
+"why": "Le premier appel d'offres pour équipements auxiliaires est attendu en novembre 2026 et les attentes en matière de participation locale sont élevées.",
+"target": "Fournisseurs coréens enregistrés auprès de KHNP, plus de 60 entreprises tchèques qualifiées"
+},
+{
+"title": "Automatisation de la documentation qualité et des dossiers d'appel d'offres pour les fournisseurs nucléaires",
+"why": "KHNP a publié des exigences de qualité et des critères d'évaluation technique, ce qui alourdit la charge documentaire.",
+"target": "PME fournisseurs coréennes et tchèques soumissionnant pour Dukovany"
+},
+{
+"title": "Conseil en règles d'origine des ALE et en conformité à l'export",
+"why": "Des conseils sur les règles d'origine faisaient partie de la réunion d'information sur l'appel d'offres, signe d'une demande.",
+"target": "PME coréennes fournissant le projet nucléaire tchèque"
+},
+{
+"title": "Analyse de données et maintenance par IA pour les concessions autoroutières",
+"why": "La concession D35 impose une gestion de la performance de l'exploitation et de la maintenance privées.",
+"target": "Ministère des Transports, Direction des routes et autoroutes (ŘSD), concessionnaire"
+}
+],
+"krsupport": [
+{
+"title": "Réunion d'information sur l'appel d'offres pour équipements auxiliaires de Dukovany",
+"detail": "Le 30 septembre 2026, plus de 130 fournisseurs ont été informés du calendrier de l'appel d'offres, des achats électroniques, du management de la qualité et des règles d'origine."
+},
+{
+"title": "Bureau KOTRA de Prague",
+"detail": "Fournit des informations sur le marché tchèque, la mise en relation avec des acheteurs et un soutien aux projets de coopération, nucléaires et autres."
+}
+]
+}
