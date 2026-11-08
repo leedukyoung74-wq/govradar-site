@@ -50,5 +50,6 @@
       setTimeout(() => all.forEach(b => { if (!b.dataset.done) { io.unobserve(b); draw(b); } }), 2500);
     } else all.forEach(draw);
   }
+  window.gvHotmap = function (el) { if (el) draw(el); };
   if (document.readyState === "complete") init(); else window.addEventListener("load", init);
 })();

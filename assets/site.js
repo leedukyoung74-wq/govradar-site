@@ -241,8 +241,8 @@ window.gvLang = function (sel) {
   var box = document.querySelectorAll(".liveboard"); if (!box.length) return;
   var L = (location.pathname.match(/^\/([a-z]{2})\//) || [, "en"])[1], ko = L === "ko";
   var T = {
-    ko: { war: "전쟁", tension: "긴장", watch: "경계", high: "위험", medium: "주의", hot: "진행 중인 분쟁", dis: "재난·감염병 (최근 7일)", ctry: "나라별 경보", asof: "기준", off: "공식 발표", more: "더 보기", fail: "상황판을 불러오지 못했습니다. 아래 상세 내용을 보세요.", k: { tsunami: "해일", quake: "지진", storm: "태풍·홍수", volcano: "화산", weather: "기상", fire: "산불", epidemic: "감염병" }, c: { conflict: "분쟁", disaster: "재해", epidemic: "감염병" } },
-    en: { war: "War", tension: "Tension", watch: "Watch", high: "High", medium: "Elevated", hot: "Active conflicts", dis: "Disasters & outbreaks (last 7 days)", ctry: "Country alerts", asof: "As of", off: "official", more: "More", fail: "Could not load the live board. See the details below.", k: { tsunami: "Tsunami", quake: "Earthquake", storm: "Storm/flood", volcano: "Volcano", weather: "Weather", fire: "Wildfire", epidemic: "Outbreak" }, c: { conflict: "Conflict", disaster: "Disaster", epidemic: "Outbreak" } },
+    ko: { war: "전쟁", tension: "긴장", watch: "경계", high: "위험", medium: "주의", hot: "진행 중인 분쟁", dis: "재난·감염병 (최근 7일)", ctry: "나라별 경보", asof: "기준", off: "공식 발표", more: "더 보기", fail: "상황판을 불러오지 못했습니다. 아래 상세 내용을 보세요.", k: { tsunami: "쓰나미", quake: "지진", storm: "태풍", flood: "홍수", volcano: "화산", weather: "폭우·이상기상", fire: "산불", epidemic: "감염병", asteroid: "소행성·혜성" }, c: { conflict: "분쟁", disaster: "재해", epidemic: "감염병" } },
+    en: { war: "War", tension: "Tension", watch: "Watch", high: "High", medium: "Elevated", hot: "Active conflicts", dis: "Disasters & outbreaks (last 7 days)", ctry: "Country alerts", asof: "As of", off: "official", more: "More", fail: "Could not load the live board. See the details below.", k: { tsunami: "Tsunami", quake: "Earthquake", storm: "Typhoon", flood: "Flood", volcano: "Volcano", weather: "Extreme weather", fire: "Wildfire", epidemic: "Outbreak", asteroid: "Asteroid / comet" }, c: { conflict: "Conflict", disaster: "Disaster", epidemic: "Outbreak" } },
     es: { war: "Guerra", tension: "Tensión", watch: "Vigilancia", high: "Alto", medium: "Elevado", hot: "Conflictos activos", dis: "Desastres y brotes (últimos 7 días)", ctry: "Alertas por país", asof: "Al", off: "oficial", more: "Más" },
     fr: { war: "Guerre", tension: "Tension", watch: "Vigilance", high: "Élevé", medium: "Modéré", hot: "Conflits en cours", dis: "Catastrophes et épidémies (7 derniers jours)", ctry: "Alertes par pays", asof: "Au", off: "officiel", more: "Plus" },
     ar: { war: "حرب", tension: "توتر", watch: "مراقبة", high: "مرتفع", medium: "متوسط", hot: "نزاعات جارية", dis: "كوارث وأوبئة (آخر 7 أيام)", ctry: "تنبيهات الدول", asof: "حتى", off: "رسمي", more: "المزيد" },
@@ -251,6 +251,23 @@ window.gvLang = function (sel) {
   };
   var t = Object.assign({}, T.en, T[L] || {}); t.k = (T[L] && T[L].k) || T.en.k; t.c = (T[L] && T[L].c) || T.en.c;
   function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
+  /* animated hazard overlays drawn over the radar map */
+  var FX = {
+    flood: '<svg viewBox="0 0 160 100" preserveAspectRatio="none"><g class="fl-rise"><path class="fl-w1" d="M-160 62 Q-140 54 -120 62 T-80 62 T-40 62 T0 62 T40 62 T80 62 T120 62 T160 62 T200 62 T240 62 T280 62 T320 62 V100 H-160Z"/><path class="fl-w2" d="M-160 70 Q-140 63 -120 70 T-80 70 T-40 70 T0 70 T40 70 T80 70 T120 70 T160 70 T200 70 T240 70 T280 70 T320 70 V100 H-160Z"/></g><g class="rain">' + Array.apply(null, Array(14)).map(function (_, i) { return '<line x1="' + (i * 12 + 4) + '" y1="-10" x2="' + (i * 12) + '" y2="6" style="animation-delay:' + (i % 5) * .17 + 's"/>'; }).join("") + '</g></svg>',
+    storm: '<svg viewBox="-50 -50 100 100"><g class="ty-spin"><path d="M0 0 C 14 -2 22 -14 16 -28 C 30 -14 26 8 6 12" /><path d="M0 0 C -14 2 -22 14 -16 28 C -30 14 -26 -8 -6 -12" /><path class="ty-arm" d="M0 0 C 8 10 24 14 36 6"/><path class="ty-arm" d="M0 0 C -8 -10 -24 -14 -36 -6"/></g><circle class="ty-eye" r="4"/></svg>',
+    tsunami: '<svg viewBox="0 0 160 100" preserveAspectRatio="none"><g class="ts-move"><path class="ts-body" d="M-90 100 L-90 70 C -60 66 -40 40 -14 30 C 6 22 26 30 30 46 C 22 40 10 42 8 52 C 6 62 22 70 40 72 L 60 74 L 60 100 Z"/><path class="ts-foam" d="M-14 30 C 6 22 26 30 30 46 C 22 40 10 42 8 52"/></g></svg>',
+    quake: '<svg viewBox="0 0 160 100" preserveAspectRatio="none"><polyline class="qk-line" points="0,50 20,50 26,30 32,72 38,22 44,80 50,36 56,62 62,46 70,50 90,50 96,40 102,60 108,50 160,50"/></svg><i class="qk-r"></i><i class="qk-r r2"></i><i class="qk-r r3"></i>',
+    fire: '<svg viewBox="0 0 160 100"><g class="fi-g">' + [40, 62, 84, 106, 128].map(function (x, i) { return '<path class="fi-f" style="animation-delay:' + i * .13 + 's" d="M' + x + ' 92 C ' + (x - 10) + ' 78 ' + (x - 6) + ' 64 ' + x + ' 52 C ' + (x + 2) + ' 64 ' + (x + 12) + ' 70 ' + (x + 8) + ' 92 Z"/>'; }).join("") + '</g>' + Array.apply(null, Array(8)).map(function (_, i) { return '<circle class="fi-e" r="1.4" cx="' + (36 + i * 13) + '" cy="60" style="animation-delay:' + i * .3 + 's"/>'; }).join("") + '</svg>',
+    volcano: '<svg viewBox="0 0 160 100"><path class="vo-smoke" d="M80 40 C 70 30 74 18 86 16 C 90 6 106 8 106 18 C 118 18 118 32 106 34 Z"/><path class="vo-m" d="M40 100 L72 46 L88 46 L120 100 Z"/><path class="vo-lava" d="M74 46 L86 46 L92 60 L84 56 L80 70 L76 56 L68 62 Z"/>' + Array.apply(null, Array(7)).map(function (_, i) { return '<circle class="vo-p" r="2" cx="80" cy="46" style="--dx:' + ((i - 3) * 9) + 'px;animation-delay:' + i * .22 + 's"/>'; }).join("") + '</svg>',
+    weather: '<svg viewBox="0 0 160 100" preserveAspectRatio="none"><g class="rain heavy">' + Array.apply(null, Array(22)).map(function (_, i) { return '<line x1="' + (i * 8) + '" y1="-10" x2="' + (i * 8 - 5) + '" y2="10" style="animation-delay:' + (i % 7) * .11 + 's"/>'; }).join("") + '</g></svg>',
+    epidemic: '<svg viewBox="-50 -50 100 100">' + [[0, 0, 13], [-26, -14, 7], [24, 16, 8], [22, -20, 5], [-20, 20, 6]].map(function (v, i) { return '<g class="vi-g" style="animation-delay:' + i * .35 + 's" transform="translate(' + v[0] + " " + v[1] + ')"><circle r="' + v[2] + '"/>' + [0, 45, 90, 135, 180, 225, 270, 315].map(function (a) { return '<line x1="0" y1="' + -v[2] + '" x2="0" y2="' + -(v[2] + v[2] * .45) + '" transform="rotate(' + a + ')"/>'; }).join("") + '</g>'; }).join("") + '</svg>',
+    asteroid: '<svg viewBox="0 0 160 100">' + Array.apply(null, Array(18)).map(function (_, i) { return '<circle class="st" r="' + (i % 3 ? .6 : 1) + '" cx="' + ((i * 37) % 160) + '" cy="' + ((i * 23) % 100) + '" style="animation-delay:' + (i % 6) * .4 + 's"/>'; }).join("") + '<g class="co-move"><path class="co-tail" d="M0 0 L-70 -26 L-66 -18 Z"/><circle class="co-head" r="4"/></g><circle class="earth" cx="128" cy="78" r="16"/></svg>'
+  };
+  FX.tsunami += ""; FX.war = '<i class="qk-r"></i><i class="qk-r r2"></i>';
+  function hzCard(x, cn, label, home) {
+    var k = x.kind, map = x.iso ? '<div class="hotmap hzmap" data-focus="' + esc(x.iso) + '" data-hl="' + esc(x.iso) + '" data-pts="[]"></div>' : '<div class="hzmap space"></div>';
+    return '<div class="lb-hz hz-' + k + '"><div class="hz-vis">' + map + '<div class="hzfx">' + (FX[k] || FX.quake) + '</div><span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (ko ? "지구 근접" : "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(ko ? x.ko : (x.en || x.ko)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
+  }
   function pick(o) { return ko ? (o.ko || o.en) : (o.en || o.ko); }
   function flag(iso) { return iso && iso.length === 2 ? String.fromCodePoint.apply(null, iso.toUpperCase().split("").map(function (c) { return 127397 + c.charCodeAt(0); })) : "🌐"; }
   fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/hazards.json", { cache: "no-cache" })
@@ -265,9 +282,14 @@ window.gvLang = function (sel) {
           return '<div class="lb-card"><p><b>' + cn(x.iso) + "</b> <span class=\"lv " + esc(x.level) + '">' + (t[x.level] || "") + "</span></p><p><b>" + esc(pick(x)) + "</b></p>" +
             (home ? "" : "<ul>" + x.facts.map(function (f) { return "<li>" + esc(pick(f)) + (f.v === "official" ? ' <small class="note">(' + t.off + ")</small>" : "") + "</li>"; }).join("") + "</ul>") + "</div>";
         }).join("") + "</div>";
-        var seen = {}, dis = home ? d.disasters.filter(function (x) { if (seen[x.kind]) return false; seen[x.kind] = 1; return true; }).slice(0, 6) : d.disasters;
-        h += "<h3>" + t.dis + '</h3><ul class="lb-list">' + dis.map(function (x) {
-          return "<li><span class=\"tag\">" + (t.k[x.kind] || x.kind) + "</span> " + cn(x.iso) + " · " + esc(x.date || "") + " — " + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + "</li>";
+        var seen = {}, dis = home ? d.disasters.filter(function (x) { if (seen[x.kind]) return false; seen[x.kind] = 1; return true; }).slice(0, 6) : d.disasters.slice();
+        if (!home) { var order = ["tsunami", "quake", "storm", "flood", "volcano", "fire", "weather", "epidemic", "asteroid"], first = [], rest = [], got = {};
+          dis.forEach(function (x) { if (!got[x.kind]) { got[x.kind] = 1; first.push(x); } else rest.push(x); });
+          first.sort(function (a, b) { return order.indexOf(a.kind) - order.indexOf(b.kind); }); dis = first.concat(rest); }
+        var nCard = home ? dis.length : Math.min(12, dis.length);
+        h += "<h3>" + t.dis + '</h3><div class="lb-hzgrid">' + dis.slice(0, nCard).map(function (x) { return hzCard(x, cn, t.k[x.kind] || x.kind, home); }).join("") + "</div>";
+        if (dis.length > nCard) h += '<ul class="lb-list">' + dis.slice(nCard).map(function (x) {
+          return "<li><span class=\"tag\">" + (t.k[x.kind] || x.kind) + "</span> " + (x.iso ? cn(x.iso) : "🌍") + " · " + esc(x.date || "") + " — " + esc(pick(x)) + (x.url ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + "</li>";
         }).join("") + "</ul>";
         var cs = home ? d.countries.filter(function (c) { return c.level === "high"; }) : d.countries;
         h += "<h3>" + t.ctry + ' <small class="note">' + t.high + " " + d.countries.filter(function (c) { return c.level === "high"; }).length + " · " + t.medium + " " + d.countries.filter(function (c) { return c.level === "medium"; }).length + "</small></h3>";
@@ -277,6 +299,8 @@ window.gvLang = function (sel) {
               ["conflict", "disaster", "epidemic"].filter(function (k) { return c[k]; }).map(function (k) { return (ko ? c[k].ko : (c[k].en.length ? c[k].en : c[k].ko)).map(function (s) { return "<li><small class=\"note\">" + t.c[k] + "</small> " + esc(s) + "</li>"; }).join(""); }).join("") + "</ul></div>";
           }).join("") + "</div>";
         b.querySelector(".lb-body").innerHTML = h;
+        var draw = function () { b.querySelectorAll(".hzmap:not(.space)").forEach(function (m) { if (window.gvHotmap) window.gvHotmap(m); }); };
+        if (window.jsVectorMap) draw(); else window.addEventListener("load", draw);
       });
     })
     .catch(function () { box.forEach(function (b) { b.querySelector(".lb-body").innerHTML = '<p class="note">' + (t.fail || T.en.fail) + "</p>"; }); });

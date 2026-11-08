@@ -368,3 +368,64 @@ details.faq{background:#fff;border:1px solid var(--line);border-radius:8px;paddi
 .lb-chips{line-height:2.2}.lb-chip{display:inline-block;border:1px solid #c33;border-radius:999px;padding:2px 10px;margin:2px;font-size:14px}
 .lb-chip a,.lb-card a,.lb-list a{text-decoration:none}
 @media (max-width:600px){.lb-grid{grid-template-columns:1fr}}
+/* animated hazard radar cards */
+.lb-hzgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.lb-hz{border:1px solid #ddd9cf;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.hz-vis{position:relative}
+.hz-vis .hotmap{border-radius:0;border:0;aspect-ratio:16/10}
+.hzmap.space{aspect-ratio:16/10;background:radial-gradient(120% 100% at 80% 80%,#0d1730 0%,#04060d 70%)}
+.hzfx{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
+.hzfx svg{position:absolute;inset:0;width:100%;height:100%}
+.hz-tag{position:absolute;z-index:5;left:10px;top:10px;font-size:12px;font-weight:700;color:#fff;background:rgba(0,0,0,.62);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px}
+.hz-txt{padding:10px 12px;font-size:14px;line-height:1.55}.hz-txt p{margin:0 0 4px}.hz-txt a{text-decoration:none}
+/* flood: water rising, rain */
+.hz-flood .fl-rise{animation:flrise 5s ease-in-out infinite}
+.fl-w1{fill:rgba(60,150,255,.55);animation:flx 3s linear infinite}.fl-w2{fill:rgba(30,110,230,.6);animation:flx 2.2s linear infinite reverse}
+@keyframes flx{to{transform:translateX(80px)}}@keyframes flrise{0%,100%{transform:translateY(18px)}50%{transform:translateY(-8px)}}
+.rain line{stroke:rgba(170,210,255,.75);stroke-width:1.2;animation:rain .7s linear infinite}.rain.heavy line{stroke-width:1.4}
+@keyframes rain{from{transform:translate(0,-10px)}to{transform:translate(-14px,110px)}}
+/* typhoon: spinning spiral */
+.hz-storm svg{width:70%;left:15%}
+.ty-spin{transform-origin:0 0;animation:tyspin 2.4s linear infinite}
+.ty-spin path{fill:rgba(235,245,255,.82);stroke:none}.ty-spin .ty-arm{fill:none;stroke:rgba(235,245,255,.55);stroke-width:5;stroke-linecap:round}
+.ty-eye{fill:#0a0f14;stroke:rgba(255,255,255,.7);stroke-width:1}
+@keyframes tyspin{to{transform:rotate(-360deg)}}
+/* tsunami: big wave sweeping in */
+.ts-move{animation:tsmove 4s cubic-bezier(.4,0,.6,1) infinite}
+.ts-body{fill:rgba(40,130,230,.78)}.ts-foam{fill:none;stroke:#eaf6ff;stroke-width:3;stroke-linecap:round}
+@keyframes tsmove{0%{transform:translateX(-40px) scaleY(.6);opacity:0}15%{opacity:1}70%{transform:translateX(150px) scaleY(1.15);opacity:1}100%{transform:translateX(190px) scaleY(1);opacity:0}}
+/* earthquake: shaking map, seismograph, shock rings */
+.hz-quake .hotmap .hm-map{animation:qkshake .5s steps(2) infinite}
+.qk-line{fill:none;stroke:#ffb347;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-dasharray:300;animation:qkdraw 2.2s linear infinite}
+@keyframes qkdraw{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+@keyframes qkshake{0%{transform:translate(1.5px,-1px)}50%{transform:translate(-1.5px,1px)}100%{transform:translate(1px,1.5px)}}
+.qk-r{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border:2px solid rgba(255,120,70,.9);border-radius:50%;animation:qkring 2.4s ease-out infinite}
+.qk-r.r2{animation-delay:.8s}.qk-r.r3{animation-delay:1.6s}
+@keyframes qkring{from{transform:scale(.3);opacity:1}to{transform:scale(6);opacity:0}}
+/* wildfire: flickering flames and embers */
+.fi-f{fill:url(#none);fill:rgba(255,120,30,.9);transform-box:fill-box;transform-origin:50% 100%;animation:fiflick .6s ease-in-out infinite alternate}
+.fi-f:nth-child(2n){fill:rgba(255,200,60,.9)}
+@keyframes fiflick{from{transform:scaleY(.8) skewX(-4deg)}to{transform:scaleY(1.18) skewX(5deg)}}
+.fi-e{fill:#ffcc66;animation:fiember 2.4s linear infinite}
+@keyframes fiember{from{transform:translateY(0);opacity:1}to{transform:translateY(-60px) translateX(8px);opacity:0}}
+/* volcano: eruption, lava bombs, smoke */
+.vo-m{fill:#3d2b22;stroke:#1b120d}.vo-lava{fill:#ff5a1f;animation:volava 1.2s ease-in-out infinite alternate}
+@keyframes volava{from{opacity:.7}to{opacity:1;filter:drop-shadow(0 0 4px #ff7a2f)}}
+.vo-p{fill:#ff8c2a;animation:vobomb 1.6s ease-out infinite}
+@keyframes vobomb{0%{transform:translate(0,0);opacity:1}60%{transform:translate(var(--dx),-38px)}100%{transform:translate(calc(var(--dx)*1.5),-10px);opacity:0}}
+.vo-smoke{fill:rgba(200,200,200,.45);transform-box:fill-box;transform-origin:30% 100%;animation:vosmoke 3.5s ease-in-out infinite}
+@keyframes vosmoke{0%{transform:scale(.6) translateY(10px);opacity:0}40%{opacity:.8}100%{transform:scale(1.3) translateY(-14px);opacity:0}}
+/* outbreak: pulsing virus particles */
+.hz-epidemic svg{width:60%;left:20%}
+.vi-g circle{fill:rgba(140,230,120,.35);stroke:#9ef08a;stroke-width:1.4}.vi-g line{stroke:#9ef08a;stroke-width:1.4;stroke-linecap:round}
+.vi-g{animation:vipulse 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes vipulse{0%,100%{opacity:.55}50%{opacity:1}}
+/* asteroid / comet: streak with tail toward Earth */
+.st{fill:#fff;animation:twinkle 2.4s ease-in-out infinite}@keyframes twinkle{50%{opacity:.25}}
+.co-move{animation:comove 4.5s linear infinite}
+.co-head{fill:#fff;filter:drop-shadow(0 0 5px #9fd0ff)}.co-tail{fill:url(#none);fill:rgba(160,210,255,.55)}
+@keyframes comove{from{transform:translate(-20px,-10px)}to{transform:translate(190px,60px)}}
+.earth{fill:#2a6fd6;stroke:#9fd0ff;stroke-width:1.2;filter:drop-shadow(0 0 6px rgba(80,160,255,.7))}
+/* keep these moving even when the phone asks for reduced motion (slower) */
+@media (prefers-reduced-motion:reduce){.ty-spin{animation:tyspin 5s linear infinite!important}.ts-move{animation:tsmove 7s linear infinite!important}.fl-rise{animation:flrise 8s ease-in-out infinite!important}.fi-f{animation:fiflick 1.2s ease-in-out infinite alternate!important}.vo-p{animation:vobomb 3s ease-out infinite!important}.co-move{animation:comove 8s linear infinite!important}.qk-r{animation:qkring 4s ease-out infinite!important}.rain line{animation:rain 1.4s linear infinite!important}.vi-g{animation:vipulse 4s ease-in-out infinite!important}.hz-quake .hotmap .hm-map{animation:none!important}}
+@media (max-width:600px){.lb-hzgrid{grid-template-columns:1fr}}
