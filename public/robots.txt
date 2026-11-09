@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /widget/
+
+Sitemap: https://radar.wmm-hoa.com/sitemap.xml
