@@ -422,7 +422,7 @@ def how_page(L, C):
 <label>{"가장 도움이 된 것" if ko else "What helped most"}<input name="best"></label>
 <label>{"고쳐야 할 것 · 틀린 정보 신고" if ko else "What to improve · report an error"}<textarea name="improve" rows="3"></textarea></label>
 <label>{"답변 받을 이메일 (선택)" if ko else "Email for a reply (optional)"}<input name="email" type="email"></label>
-<button class="btn pri" type="submit">{"보내기" if ko else "Send"}</button></form>"""
+<button class="btn pri" type="submit">{"보내기" if ko else "Send"}</button><p class="note">{"이메일은 답변을 드릴 때만 쓰고, 답변 후 삭제합니다." if L=="ko" else "We use your email only to reply and delete it afterwards."}</p></form>"""
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a> · <a href="/{L}/pricing/">{"요금" if ko else "Pricing"}</a></p>
 <h1>{"서비스는 이렇게 진행됩니다" if ko else "How the service works"}</h1>
 <p class="lede" style="color:#d9d7d0;max-width:64ch">{"신청부터 결과물을 받기까지 무엇을, 언제까지, 어떤 기준으로 드리는지 미리 약속합니다." if ko else "From request to delivery: what you get, by when, and to what standard — promised up front."}</p></div></section>

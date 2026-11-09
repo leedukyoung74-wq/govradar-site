@@ -21,7 +21,7 @@
   "금액은 최대 한도와 실제 집행액을, 날짜는 발표일과 시행일을 나눠 적습니다.",
   "'미확인' 항목은 공개·회원 화면에 싣지 않고 운영자 검토로 넘깁니다.",
   "매일 자동 교차검증을 돌리고, 바뀐 판정과 정정은 정정 기록에 남깁니다.",
-  "예언·점술 콘텐츠는 이 검증 체계에 넣지 않으며 공개·회원 화면에 싣지 않습니다."
+  "점술·근거 없는 예측성 콘텐츠는 싣지 않습니다."
  ],
  "rules_en": [
   "'Confirmed' requires 2+ independent sources saying the same thing, at least one of them tier 1 or 2.",
@@ -30,6 +30,6 @@
   "Amounts separate ceiling from actual obligation; dates separate announcement from effect.",
   "'Unverified' items are kept off public and member screens and go to operator review.",
   "An automatic cross-check runs daily; changed verdicts and corrections are logged.",
-  "Prophecy or fortune-telling content is outside this system and never shown on public or member screens."
+  "Fortune-telling and unfounded predictions are never published."
  ]
 }

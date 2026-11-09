@@ -404,7 +404,7 @@ def conflict_page(L):
 {scen_html(L)}
 <h2>{"National preparedness policies — fact-checked" if en else "각국 대비 정책 — 사실 확인"}</h2><ul>{prep}</ul>
 <h2>{"Circulating claims — verdicts" if en else "떠도는 주장 판정"}</h2><ul>{claims}</ul>
-<div class="card" style="border-left:4px solid #b54708"><p class="note">{"WEEKLY · ANALYSIS MEMBERS" if en else "주간 · 분석 회원"}</p><h3>{"Hormuz & Middle East risk brief" if en else "호르무즈·중동 리스크 브리프"}</h3><p><b>{e(ME["week"])}</b> — {e(ME["headline_en"] if en else ME["headline_ko"])}</p><p class="note">{"Full indicators (oil, transit, insurance), item-by-item verdicts and the weekly action checklist are for BUILD M2+ members." if en else "유가·통항·보험 지표, 항목별 검증 판정, 이번 주 할 일 체크리스트 전체는 BUILD M2 이상 회원에게 제공합니다."}</p><p><a class="btn pri" href="{P3.paylink(L, "risk")}">{"Analysis member · ₩19,800/mo →" if en else "분석 회원 월 19,800원으로 보기 →"}</a></p></div>
+<div class="card" style="border-left:4px solid #b54708"><p class="note">{"WEEKLY · ANALYSIS MEMBERS" if en else "주간 · 분석 회원"}</p><h3>{"Hormuz & Middle East risk brief" if en else "호르무즈·중동 리스크 브리프"}</h3><p><b>{e(ME["week"])}</b> — {e(ME["headline_en"] if en else ME["headline_ko"])}</p><p class="note">{"Full indicators (oil, transit, insurance), item-by-item verdicts and the weekly action checklist are for analysis members." if en else "유가·통항·보험 지표, 항목별 검증 판정, 이번 주 할 일 체크리스트 전체는 분석 회원에게 제공합니다."}</p><p><a class="btn pri" href="{P3.paylink(L, "risk")}">{"Analysis member · ₩19,800/mo →" if en else "분석 회원 월 19,800원으로 보기 →"}</a></p></div>
 <p><a class="btn" href="/{L}/prepare/">{"Home stockpile kit →" if en else "가정 비축 키트 →"}</a> <a class="btn" href="/{L}/verify/">{"Verification policy" if en else "검증 원칙"}</a></p>
 <h2>{"Sources" if en else "출처"}</h2><ol class="src">{srcs}</ol></div>"""
     jl = ld({"@context": "https://schema.org", "@type": "WebPage", "name": t_, "inLanguage": L, "dateModified": C["updated"], "publisher": ORG})
@@ -420,7 +420,7 @@ import pages2 as P2
 import pages3 as P3
 def about_page(L):
     lk = "ko" if L == "ko" else "en"; a = GB.A[lk]
-    sec_ = GB.section(lk).replace(GB.BASE + f"/{lk}/", f"/{L}/")
+    sec_ = GB.section(lk).replace(GB.BASE + f"/{lk}/", f"/{L}/").replace('<h2 class="grb-h">', '<h1 class="grb-h">', 1).replace('</h2><p class="grb-p">', '</h1><p class="grb-p">', 1)
     jl = ld({"@context": "https://schema.org", "@type": "AboutPage", "name": a["h"], "inLanguage": L, "publisher": ORG, "description": a["lede"]})
     return head(L, a["h"] + " · GOV RADAR", a["lede"][:150], f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}, jl + GB.CSS) + sec_ + foot(L)
 
@@ -742,6 +742,9 @@ def build():
     W("/_headers", "/assets/*\n  Cache-Control: public, max-age=604800\n/data/*\n  Cache-Control: public, max-age=3600\n  X-Robots-Tag: noindex\n/widget/*\n  Content-Security-Policy: frame-ancestors *\n/embed/*\n  Content-Security-Policy: frame-ancestors *\n/*\n  X-Content-Type-Options: nosniff\n")
     # UI strings for es/fr/ar/vi/id: exact text-node replacement from English (src/i18n_ui/<L>_*.json)
     import html as _h
+    _NUMPAT = re.compile(r"(\d+) tenders · (\d+) government projects · (\d+) countries")
+    _NUMTR = {"es": "{0} licitaciones · {1} proyectos públicos · {2} países", "fr": "{0} appels d'offres · {1} projets publics · {2} pays",
+              "ar": "{0} مناقصة · {1} مشروعًا حكوميًا · {2} دولة", "vi": "{0} gói thầu · {1} dự án chính phủ · {2} quốc gia", "id": "{0} tender · {1} proyek pemerintah · {2} negara"}
     for _L in ("es", "fr", "ar", "vi", "id"):
         mp = {}
         for f in sorted(glob.glob(os.path.join(SRC, "i18n_ui", _L + "_u*.json"))):
@@ -751,6 +754,9 @@ def build():
         def _tn(m):
             raw = m.group(1); s = _h.unescape(raw).strip()
             v = mp.get(s)
+            if not v:
+                mm = _NUMPAT.fullmatch(s)
+                if mm: v = _NUMTR[_L].format(*mm.groups())
             if not v: return m.group(0)
             lead = raw[:len(raw) - len(raw.lstrip())]; tail = raw[len(raw.rstrip()):]
             return ">" + lead + _h.escape(v, quote=False) + tail + "<"

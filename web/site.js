@@ -112,11 +112,7 @@
     window.__liveSpace = true; const n = sc["0"] || {};
     space({ r: "R" + (n.R && n.R.Scale || 0), s: "S" + (n.S && n.S.Scale || 0), g: "G" + (n.G && n.G.Scale || 0), kp: kp && kp.length > 1 ? kp[kp.length - 1][1] : null });
   }).catch(() => {});
-  // NASA JPL close approaches (next 60 days, within 0.05 au)
-  fetch("https://ssd-api.jpl.nasa.gov/cad.api?dist-max=0.05&date-min=now&date-max=%2B60&sort=dist").then(r => r.json()).then(j => {
-    window.__liveNeo = true; const f = j.fields, idx = k => f.indexOf(k);
-    list("asteroid", j.data.slice(0, 6), r => `<li><b>${esc(r[idx("des")])}</b> · ${esc(String(r[idx("cd")]).slice(0, 11))} · ${(parseFloat(r[idx("dist")]) / 0.00257).toFixed(1)} ${esc(LD)} · H ${esc(r[idx("h")])}</li>`);
-  }).catch(() => {});
+  // NASA JPL blocks cross-site requests; asteroid list comes from the daily hazard data instead
   function tick(q) {
     const t = $("#htick"); if (!t) return; const p = [];
     (q || []).slice(0, 2).forEach(f => p.push("M" + f.properties.mag.toFixed(1) + " " + (f.properties.place || "")));
