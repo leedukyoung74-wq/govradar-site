@@ -285,7 +285,7 @@ def country_page(iso, L):
 <div class="box"><b>{"이 나라 진출 브리프" if L=="ko" else "Market-entry brief for this country"}</b><p class="note">{"정부 과제·입찰·한국 지원·위험을 사람이 검수해 5영업일 안에 보내 드립니다." if L=="ko" else "Priorities, tenders, Korean support and risks, reviewed by a person and delivered within five business days."}</p><a class="btn pri" href="/{L}/pricing/?p=brief&c={e(name)}#order">{"견적 요청" if L=="ko" else "Request a quote"}</a></div>
 <div class="box"><b>{e(t['alert_cta'])}</b><button class="btn member" data-act="follow" data-iso="{iso}">{e(t['cta_join'])}</button></div>
 <div class="box"><b>{e(t['more_cty'])}</b><div class="mini">{''.join(f'<a href="{url(L,x["iso"])}">{flag(x["iso"])} {e(nm(x["iso"],L))}</a>' for x in same)}</div></div>
-<div class="box gc"><img src="/assets/emblem.png" alt="" width="40" height="40"><span>GCSME · Global &amp; Commonwealth SME Club<br><a href="https://www.gcsme.kr" target="_blank" rel="noopener">gcsme.kr</a></span></div>
+
 </aside>"""
     jl = ld({"@context": "https://schema.org", "@type": "Article", "headline": title, "description": desc, "inLanguage": L,
              "dateModified": d.get("updated") or TODAY, "about": ({"@type": "AdministrativeArea", "name": c["en"], "containedInPlace": {"@type": "Country", "name": BY[c["parent"]]["en"]}} if c.get("reg") else {"@type": "Country", "name": c["en"]}),
