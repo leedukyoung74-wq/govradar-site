@@ -429,3 +429,22 @@ details.faq{background:#fff;border:1px solid var(--line);border-radius:8px;paddi
 /* keep these moving even when the phone asks for reduced motion (slower) */
 @media (prefers-reduced-motion:reduce){.ty-spin{animation:tyspin 5s linear infinite!important}.ts-move{animation:tsmove 7s linear infinite!important}.fl-rise{animation:flrise 8s ease-in-out infinite!important}.fi-f{animation:fiflick 1.2s ease-in-out infinite alternate!important}.vo-p{animation:vobomb 3s ease-out infinite!important}.co-move{animation:comove 8s linear infinite!important}.qk-r{animation:qkring 4s ease-out infinite!important}.rain line{animation:rain 1.4s linear infinite!important}.vi-g{animation:vipulse 4s ease-in-out infinite!important}.hz-quake .hotmap .hm-map{animation:none!important}}
 @media (max-width:600px){.lb-hzgrid{grid-template-columns:1fr}}
+/* access tiers */
+.accs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:14px}
+.acc{border:1px solid #ddd9cf;border-radius:14px;padding:18px;background:#fff;display:flex;flex-direction:column}
+.acc-h{font-weight:700;margin:0 0 2px}.acc-p{font-size:22px;font-weight:800;margin:0 0 10px}
+.acc ul{padding-left:18px;margin:0 0 14px;line-height:1.6;font-size:14.5px;flex:1}
+.acc .cta{margin:0}
+.acc-member{border:2px solid #111}.acc-open .acc-p{color:#2c6e3f}
+@media (max-width:960px){.accs{grid-template-columns:1fr 1fr}}@media (max-width:560px){.accs{grid-template-columns:1fr}}
+/* grouped footer */
+.fcols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:22px 0 10px;text-align:left}
+.fcols h4{margin:0 0 8px;font-size:13px;letter-spacing:.06em;opacity:.7}
+.fcols a{display:block;padding:3px 0;font-size:14px;text-decoration:none}
+@media (max-width:760px){.fcols{grid-template-columns:1fr 1fr}}
+/* free sign-up gate */
+.sgate{position:relative}
+html:not(.signed-in) .sgate{max-height:230px;overflow:hidden}
+html:not(.signed-in) .sgate::after{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(transparent,var(--bg) 70%);pointer-events:none}
+.sgate-box{position:absolute;z-index:2;left:0;right:0;bottom:0;text-align:center;padding:14px}
+.sgate-box p{margin:6px 0}

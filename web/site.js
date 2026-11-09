@@ -309,3 +309,26 @@ window.gvLang = function (sel) {
     })
     .catch(function () { box.forEach(function (b) { b.querySelector(".lb-body").innerHTML = '<p class="note">' + (t.fail || T.en.fail) + "</p>"; }); });
 })();
+
+/* ---- Free sign-up gate: working details open once signed in (or as an analysis member) ---- */
+(function () {
+  var L = (location.pathname.match(/^\/([a-z]{2})\//) || [, "en"])[1], ko = L === "ko";
+  var M = { ko: ["무료 가입하면 바로 보입니다", "이메일만으로 가입 · 관심 나라 저장 · 내 입찰 담기", "무료 가입", "이미 가입했어요"], en: ["Sign up free to see this", "Email only · save countries · keep your tender list", "Sign up free", "I already have an account"],
+    es: ["Regístrese gratis para verlo", "Solo correo · guarde países y licitaciones", "Registro gratis", "Ya tengo cuenta"], fr: ["Inscrivez-vous gratuitement pour voir ceci", "E-mail uniquement · enregistrez pays et appels d'offres", "Inscription gratuite", "J'ai déjà un compte"],
+    ar: ["سجّل مجانًا لرؤية هذا", "بالبريد الإلكتروني فقط · احفظ الدول والمناقصات", "سجّل مجانًا", "لدي حساب"], vi: ["Đăng ký miễn phí để xem", "Chỉ cần email · lưu quốc gia và gói thầu", "Đăng ký miễn phí", "Tôi đã có tài khoản"], id: ["Daftar gratis untuk melihat", "Cukup email · simpan negara dan tender", "Daftar gratis", "Saya sudah punya akun"] };
+  var m = M[L] || M.en;
+  function signed() { try { var s = JSON.parse(localStorage.getItem("wmm.auth.v1") || "null"); return !!(s && s.access_token) || !!localStorage.getItem("gv_code"); } catch (e) { return false; } }
+  function apply() {
+    var on = signed(); document.documentElement.classList.toggle("signed-in", on);
+    document.querySelectorAll(".sgate").forEach(function (g) {
+      var box = g.querySelector(".sgate-box");
+      if (on) { if (box) box.remove(); return; }
+      if (box) return;
+      box = document.createElement("div"); box.className = "sgate-box";
+      box.innerHTML = "<b>🔓 " + m[0] + "</b><p>" + m[1] + '</p><p><button class="btn pri" data-auth="signup">' + m[2] + '</button> <button class="btn" data-auth="login">' + m[3] + "</button></p>";
+      g.appendChild(box);
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply); else apply();
+  window.addEventListener("storage", apply); setInterval(apply, 4000);
+})();

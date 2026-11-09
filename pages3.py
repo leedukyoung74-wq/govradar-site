@@ -581,3 +581,35 @@ def member_page(L, C):
     return C["head"](L, ("분석 회원 열람" if ko else "Analysis member access") + " · GOV RADAR",
                      "분석 회원 개인 열람 코드로 잠긴 분석을 엽니다" if ko else "Open member-only analysis with your personal access code",
                      f"/{L}/member/", {l: f"/{l}/member/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
+
+
+# ---------------------------------------------------------------- what is open to whom (home + pricing)
+ACCESS = [
+ ("open", "누구나 · 가입 없이", "Anyone · no sign-up", "무료", "Free",
+  ["193개국 개요·국정 과제·정부 사업", "모든 입찰 목록(발주처·마감·원문 링크)", "전쟁·분쟁·자연재해·감염병 상황판", "유망 사업 제목 + 나라마다 매주 1건 분석 공개"],
+  ["Overview, priorities and programmes for 193 countries", "Every open tender (buyer, deadline, notice link)", "War, conflict, disaster and outbreak board", "Opportunity titles + one fully opened analysis per country each week"],
+  "#map", "나라 찾기", "Find a country", ""),
+ ("free", "무료 가입 · 이메일만", "Free sign-up · email only", "무료", "Free",
+  ["나라별 '정부에 파는 법'(조달 등록·현지 파트너 요건)", "한국 기업 수주 실적 전체", "입찰 참가 조건 상세(매출·실적·인증·컨소시엄)", "관심 나라 저장·내 입찰 담기"],
+  ["How to sell to each government (registration, local-partner rules)", "All past Korean wins", "Detailed tender eligibility (revenue, track record, certificates, consortium)", "Save countries and keep your own tender list"],
+  "", "무료 가입", "Sign up free", "signup"),
+ ("member", "분석 회원", "Analysis member", "월 19,800원", "₩19,800/mo",
+  ["모든 나라의 '왜 지금·누가 살 사람·근거' 전체", "월요일 맞춤 이메일: 관심 10개국 요약·마감 D-7 알림", "중동 리스크 주간 브리프", "회원에게 맞는 본사 프로젝트 개인 안내·설명회 우선 좌석"],
+  ["Why-now, target buyers and basis for every country", "Monday email: 10-country summary and D-7 deadline alerts", "Weekly Middle East risk brief", "Personal invitations to matching HQ projects, priority meet-up seats"],
+  "pricing/?p=member#order", "분석 회원 신청", "Become a member", ""),
+ ("order", "주문형 · 사람이 함께", "On request · with a person", "상담 후", "After a call",
+  ["국가 진출 브리프 30만 원부터", "입찰 적합도 검토 10만 원", "프로젝트 파트너십: 첫 상담 무료, 착수금·성공보수는 상담 후 결정"],
+  ["Market-entry brief from ₩300,000", "Tender fit review ₩100,000", "Project partnership: first call free, fees agreed after it"],
+  "pricing/?p=partner#order", "무료 상담 신청", "Book a free call", ""),
+]
+def access_html(L):
+    ko = L == "ko"
+    cols = []
+    for key, hk, he, pk, pe, ik, ie, link, bk, be, auth in ACCESS:
+        btn = (f'<button class="btn{" pri" if key == "free" else ""}" data-auth="signup">{bk if ko else be}</button>' if auth
+               else f'<a class="btn{" pri" if key == "member" else ""}" href="/{L}/{link}">{bk if ko else be}</a>')
+        cols.append(f'<div class="acc acc-{key}"><p class="acc-h">{hk if ko else he}</p><p class="acc-p">{pk if ko else pe}</p><ul>'
+                    + "".join(f"<li>{x}</li>" for x in (ik if ko else ie)) + f'</ul><p class="cta">{btn}</p></div>')
+    h = "무엇을 어디까지 볼 수 있나" if ko else "What you can see, and when"
+    p = "정보는 무료입니다. 가입하면 실무 자료가, 회원이면 분석이 열리고, 실제 사업은 사람이 함께 갑니다." if ko else "The data is free. Sign up for the working details, become a member for the analysis, and do real deals with a person alongside you."
+    return f'<section class="band" id="access"><div class="in"><h2>{h}</h2><p class="note">{p}</p><div class="accs">{"".join(cols)}</div></div></section>'

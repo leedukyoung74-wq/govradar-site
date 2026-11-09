@@ -162,6 +162,19 @@ def prepbar(L):
     return f'''<div class="prepbar"><div class="in"><b>{e(tx(L,"prep_t"))}</b><a class="pkit" href="/{L}/prepare/">{ {"ko":"비축 키트","en":"Stockpile kit","es":"Kit de reservas","fr":"Kit de réserves","ar":"حقيبة الطوارئ","vi":"Bộ dự trữ","id":"Kit persediaan"}[L] }</a><div class="pchips">{chips}</div><span class="tick" id="htick"></span></div></div>
 <div class="preppanel" id="preppanel" hidden><div class="in"><div>{panels}</div><div><p class="note">{e(tx(L,"prep_src"))}</p><ul class="src">{src}</ul><button class="btn sm" id="pp-x">×</button></div></div></div>'''
 
+FOOTCOLS = {
+ "ko": [("서비스", [("#map", "나라 찾기"), ("mdb/", "입찰·사업"), ("conflict/", "세계 상황판"), ("prepare/", "위기 대비 키트"), ("pricing/", "요금·회원"), ("member/", "분석 회원 열람"), ("sample/", "샘플 브리프")]),
+        ("함께하기", [("solutions/", "진출 지원"), ("pricing/?p=partner#order", "프로젝트 파트너십"), ("notices/", "본사 프로젝트"), ("gcsme/", "GCSME 회원"), ("partners/", "파트너 프로그램"), ("individuals/", "개인 참여")]),
+        ("믿고 쓰는 법", [("how/", "서비스 진행 방식"), ("verify/", "검증 원칙"), ("contracts/", "계약서"), ("feeds/", "업종별 피드(RSS)"), ("embed/", "레이더 넣기")]),
+        ("약관", [("legal/terms/", "이용약관"), ("legal/privacy/", "개인정보 처리방침"), ("legal/refund/", "환불 정책"), ("legal/disclaimer/", "면책 안내")])],
+ "en": [("Service", [("#map", "Countries"), ("mdb/", "Tenders"), ("conflict/", "World watch"), ("prepare/", "Preparedness kit"), ("pricing/", "Pricing"), ("member/", "Member access"), ("sample/", "Sample brief")]),
+        ("Work with us", [("solutions/", "Go global"), ("pricing/?p=partner#order", "Project partnership"), ("notices/", "HQ projects"), ("gcsme/", "GCSME members"), ("partners/", "Partner programme"), ("individuals/", "For individuals")]),
+        ("Trust", [("how/", "How it works"), ("verify/", "Verification principles"), ("contracts/", "Contracts"), ("feeds/", "Sector feeds (RSS)"), ("embed/", "Embed the radar")]),
+        ("Legal", [("legal/terms/", "Terms"), ("legal/privacy/", "Privacy"), ("legal/refund/", "Refunds"), ("legal/disclaimer/", "Disclaimer")])],
+}
+def footcols(L):
+    cols = FOOTCOLS.get(L) or FOOTCOLS["en"]
+    return '<div class="fcols">' + "".join(f'<div><h4>{e(h)}</h4>' + "".join(f'<a href="/{L}/{p}">{e(t)}</a>' for p, t in items) + "</div>" for h, items in cols) + "</div>\n"
 def foot(L):
     t = T[L]
     return f"""</main><footer><div class="in">
@@ -169,9 +182,7 @@ def foot(L):
 <div class="lic"><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=5898801039" target="_blank" rel="noopener">{e(t['biz_info'])}</a><span class="bar"></span><span>ONLINE LICENCE : 제2024-서울서초-2185호</span></div>
 <p class="corp">{e(t['foot_corp'])} · E-mail 73036396@naver.com</p>
 <div class="sites"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><b>WORLD MAKING MEMBERS</b><span>www.wmm-hoa.com ↗</span></a><a href="https://www.gcsme.kr" target="_blank" rel="noopener"><b>GCSME KOREA</b><span>www.gcsme.kr ↗</span></a><a href="https://www.gcsme.club" target="_blank" rel="noopener"><b>GLOBAL &amp; COMMONWEALTH SME CLUB</b><span>www.gcsme.club ↗</span></a></div>
-<p class="corp"><a href="/{L}/notices/">{"본사 공지" if L=="ko" else "HQ notices"}</a> · <a href="/{L}/solutions/">{"진출 지원" if L=="ko" else "Who it's for"}</a> · <a href="/{L}/individuals/">{"개인 참여" if L=="ko" else "For individuals"}</a> · <a href="/{L}/gcsme/">{"GCSME 회원" if L=="ko" else "GCSME members"}</a> · <a href="/{L}/partners/">{"파트너 프로그램" if L=="ko" else "Partner programme"}</a> · <a href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a> · <a href="/{L}/how/">{"서비스 진행 방식" if L=="ko" else "How it works"}</a> · <a href="/{L}/sample/">{"샘플 브리프" if L=="ko" else "Sample brief"}</a> · <a href="/{L}/about/">{"구축 현황" if L=="ko" else "Build status"}</a> · <a href="/{L}/mdb/">{"국제기구 조달" if L=="ko" else "MDB & UN tenders"}</a> · <a href="/{L}/conflict/">{"분쟁 상황판" if L=="ko" else "Conflict watch"}</a> · <a href="/{L}/prepare/">{"비축 키트" if L=="ko" else "Stockpile kit"}</a> · <a href="/{L}/verify/">{"검증 원칙" if L=="ko" else "Verification"}</a> · <a href="/{L}/projects/">{"프로젝트 랩" if L=="ko" else "Project Lab"}</a> · <a href="/{L}/consortium/">{"컨소시엄" if L=="ko" else "Consortium"}</a> · <a href="/{L}/experts/">{"검증원·전문가 참여" if L=="ko" else "Work with us"}</a> · <a href="/{L}/contracts/">{"계약서" if L=="ko" else "Contracts"}</a></p>
-<p class="corp"><a href="/{L}/legal/terms/">{"이용약관" if L=="ko" else "Terms"}</a> · <a href="/{L}/legal/privacy/"><b>{"개인정보 처리방침" if L=="ko" else "Privacy"}</b></a> · <a href="/{L}/legal/refund/">{"환불 정책" if L=="ko" else "Refunds"}</a> · <a href="/{L}/legal/disclaimer/">{"면책 안내" if L=="ko" else "Disclaimer"}</a> · <a href="/{L}/feeds/">{e(t['feed'])}</a> · <a href="/{L}/embed/">{e(t['embed'])}</a></p>
-<p class="corp">{e(t['disc'])}</p></div></footer>
+{footcols(L)}<p class="corp">{e(t['disc'])}</p></div></footer>
 <div class="fband"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><img src="/assets/wmm-logo-white.png" alt="WORLD MAKING MEMBERS" width="150" height="150"></a></div>
 <div class="modal" id="authm" hidden><div class="mbox"><button class="x" id="authx" aria-label="close">×</button><h3 id="auth-h">{e(AT[L]['login'])}</h3>
 <p class="note" id="authsoon" hidden></p>
@@ -247,7 +258,7 @@ def country_page(iso, L):
         def oda(x): return f'<li><b>{e(x.get("title"))}</b><span class="note"> · {e(" · ".join(str(v) for v in [x.get("program"), x.get("stage"), x.get("amount")] if v))}</span></li>'
         body.append(sec("oda", t["oda"], lst(G(d, "oda", L), oda)))
         def kw(x): return f'<li><b>{e(x.get("company"))}</b> — {e(x.get("title"))} <span class="note">{e(" · ".join(str(v) for v in [x.get("year"), x.get("value")] if v))}</span></li>'
-        body.append(sec("krwins", t["krwins"], lst(G(d, "krwins", L), kw)))
+        _kw = lst(G(d, "krwins", L), kw); body.append(sec("krwins", t["krwins"], f'<div class="sgate">{_kw}</div>' if _kw else ""))
         def ks(x): return f'<li><b>{e(x.get("title"))}</b><span class="note"> · {e(x.get("org",""))}</span>{" — "+e(x.get("detail")) if x.get("detail") else ""}</li>'
         body.append(sec("krsupport", t["krsupport"], lst(G(d, "krsupport", L), ks)))
         g = G(d, "gov", L) or {}
@@ -320,11 +331,11 @@ def guide_page(iso, L):
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a> / <a href="{url(L,iso)}">{e(name)}</a></p><div class="ct">{flag(iso,'big')}<div><h1>{e(title)}</h1><p class="alt">{"Checked" if en else "확인일"} {e(g.get('checked',''))}</p></div></div></div></section>
 <div class="in stock"><blockquote class="summary">{e(v('who') or '')}</blockquote>
 <h2>{"Procurement portals" if en else "조달 포털"}</h2><ul>{''.join(f'<li><a href="{e(p["url"])}" target="_blank" rel="noopener nofollow">{e(p["name"])}</a>{"" if en else " — "+e(p.get("note",""))}</li>' for p in g.get('portals',[]))}</ul>
-<h2>{"How to take part" if en else "참여 순서"}</h2><ol>{''.join(f"<li>{e(x)}</li>" for x in (v('steps') or []))}</ol>
+<div class="sgate"><h2>{"How to take part" if en else "참여 순서"}</h2><ol>{''.join(f"<li>{e(x)}</li>" for x in (v('steps') or []))}</ol>
 <h2>{"Local preference & limits" if en else "현지 우대·제한"}</h2>{li(v('local'))}
 <p><b>{"Bid language" if en else "입찰 언어"}</b> · {e(v('lang') or '—')}</p>
 {f'<h2>{"Development-bank projects" if en else "개발은행 사업"}</h2><p>{e(v("mdb"))}</p>' if v('mdb') else ''}
-{f'<h2>{"Good to know" if en else "알아 둘 점"}</h2>'+li(v('tips')) if v('tips') else ''}
+{f'<h2>{"Good to know" if en else "알아 둘 점"}</h2>'+li(v('tips')) if v('tips') else ''}</div>
 <h2>{"Sources" if en else "자료 원문"}</h2><ul class="src">{''.join(f'<li><a href="{e(x["url"])}" target="_blank" rel="noopener">{e(x["title"])}</a></li>' for x in g.get('sources',[]))}</ul>
 <p class="note">{"Summary of public sources. Check the original and latest rules before bidding." if en else "공개 자료 요약입니다. 입찰 전 원문과 최신 규정을 확인하세요."}</p>
 <p><a class="btn pri" href="{url(L,iso)}">{e(name)} {"radar" if en else "레이더 보기"}</a> <a class="btn" href="/{L}/mdb/">{"Development bank tenders" if en else "개발은행·국제기구 조달"}</a></p></div>"""
@@ -515,24 +526,17 @@ def home(L):
 <a class="hradar" href="#map" aria-label="GOV RADAR"><span class="hp"></span><span class="hp p2"></span><img src="/assets/govradar-logo.webp" alt="GOV RADAR" width="640" height="709"><span class="hsw"></span><span class="hbl b1"></span><span class="hbl b2"></span><span class="hbl b3"></span><span class="hbl b4"></span>{"".join(f'<span class="htg t{i+1}">{x}</span>' for i, x in enumerate((["🇻🇳 정부 사업", "🇰🇪 입찰 마감 D-7", "🇸🇦 ODA", "🌐 세계은행 공고"] if L=="ko" else ["🇻🇳 Programmes", "🇰🇪 Tender D-7", "🇸🇦 Aid projects", "🌐 World Bank"])))}</a>
 <div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b>{n_t}</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span></div><div><b>{e(last[5:].replace('-','/') or '—')}</b><span>{e(t['k_last'])}</span></div></div>
 </div></section>
-{P3.edge_html(L)}<section class="band segband"><div class="in"><h2>{"이런 분들이 여기서 사업을 만듭니다" if L=="ko" else "Who does business here"}</h2>{P3.segments_html(L, L=="ko")}<p class="cta"><a class="btn pri" href="/{L}/solutions/">{"분야별로 무엇을 얻는지 보기" if L=="ko" else "See what each sector offers"}</a> <a class="btn" href="/{L}/individuals/">{"개인으로 참여하기" if L=="ko" else "Join as an individual"}</a> <a class="btn" href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a></p></div></section>
-<section class="band" id="hqnotice"><div class="in"><h2>{"본사 프로젝트 공지 — WMM · GCSME KOREA · GCSME 영국 본사" if L=="ko" else "Headquarters notices — WMM · GCSME KOREA · GCSME UK"}</h2><div class="ntcs">{P3.LTR(L, P3.notice_items(L, C3(), 3))}</div><p class="cta"><a class="btn" href="/{L}/notices/">{"공지 전체 보기" if L=="ko" else "All notices"}</a></p></div></section>
-<section class="band" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a></p></div></section>
-<section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=8, home=True)}<p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="map"><div class="in"><h2>{e(t['map_h'])}</h2>
 <div class="mapbox"><div id="wmap" data-lang="{L}"></div></div>
 <div class="filters"><input id="q" type="search" placeholder="{e(t['search'])}" aria-label="{e(t['search'])}"><button class="chip on" data-r="ALL">{e(t['all'])}</button>{regions}</div>
 <div class="grid" id="grid">{grid}</div></div></section>
-<section class="band alt" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
-{hotband(L)}
+<section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=8, home=True)}<p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
+<section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
+<section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a></p></div></section>
+{P3.edge_html(L)}{P3.access_html(L)}
+<section class="band segband"><div class="in"><h2>{"이런 분들이 여기서 사업을 만듭니다" if L=="ko" else "Who does business here"}</h2>{P3.segments_html(L, L=="ko")}<p class="cta"><a class="btn pri" href="/{L}/solutions/">{"분야별로 무엇을 얻는지 보기" if L=="ko" else "See what each sector offers"}</a> <a class="btn" href="/{L}/individuals/">{"개인으로 참여하기" if L=="ko" else "Join as an individual"}</a> <a class="btn" href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a></p></div></section>
 <section class="band" id="events"><div class="in"><h2>{e(t['ev_h'])}</h2><div class="evs">{evh}</div></div></section>
-<section class="band" id="autoreg"><div class="in"><h2>{e(tx(L,'rg_h'))}</h2><p class="note">{e(tx(L,'rg_p'))}</p>
-<div class="grid rgrid">{"".join(f'<a class="flag {"done" if done(x["iso"]) else ""}" href="{url(L,x["iso"])}">{flag(x["iso"])}<span>{e(nm(x["iso"],L))}<small>{e(nm(x["parent"],L))} · {e(tx(L,"rgt")[x["type"]])}</small></span></a>' for x in REGS)}</div></div></section>
-{earth_section(L)}{foresight_section(L)}
-<section class="band ordband" id="plans"><div class="in"><h2>{"정보는 무료, 분석은 주문하세요" if L=="ko" else "Data is free. Order the analysis."}</h2>
-<p class="lede" {"dir=ltr" if L=="ar" else ""}>{"분석 회원(월 19,800원), 국가 진출 브리프, 입찰 적합도 검토를 견적·계좌이체로 받습니다(자동갱신 없음). 프로젝트 파트너십은 첫 상담이 무료입니다." if L=="ko" else "Analysis membership (₩19,800/mo), market-entry briefs and tender fit reviews, by quote and bank transfer (no auto-renewal). The first project-partnership consultation is free."}</p>
-<p class="cta"><a class="btn pri" href="/{L}/pricing/">{"주문·요금 보기" if L=="ko" else "See orders & pricing"}</a> <a class="btn" href="/{L}/consortium/">{"대학·기관 컨소시엄" if L=="ko" else "University & institution consortium"}</a></p>
-{P3.credit([s_[0] for s_ in P3.SEG], L=="ko")}</div></section>
+
 """ + foot(L)
 
 # ---------------------------------------------------------------- feeds, widget, sitemap

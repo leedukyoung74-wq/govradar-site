@@ -48,13 +48,13 @@ AT["id"] = _tr("en", login="Masuk", signup="Buat akun", reset="Atur ulang sandi"
 
 # short top menu: (anchor/path, label)
 NAV = {
- "ko": [('#map', '나라 찾기'), ('mdb/', '입찰·마감'), ('notices/', '본사 공지'), ('solutions/', '진출 지원'), ('prepare/', '대비하기'), ('pricing/', '요금')],
- "en": [('#map', 'Countries'), ('mdb/', 'Tenders'), ('notices/', 'HQ notices'), ('solutions/', "Who it's for"), ('prepare/', 'Prepare'), ('pricing/', 'Pricing')],
- "es": [('#map', 'Países'), ('mdb/', 'Licitaciones'), ('notices/', 'Avisos'), ('solutions/', 'Para quién'), ('prepare/', 'Prepararse'), ('pricing/', 'Precios')],
- "fr": [('#map', 'Pays'), ('mdb/', "Appels d'offres"), ('notices/', 'Annonces'), ('solutions/', 'Pour qui'), ('prepare/', 'Se préparer'), ('pricing/', 'Tarifs')],
- "ar": [('#map', 'الدول'), ('mdb/', 'المناقصات'), ('notices/', 'إعلانات'), ('solutions/', 'لمن'), ('prepare/', 'الاستعداد'), ('pricing/', 'الأسعار')],
- "vi": [('#map', 'Quốc gia'), ('mdb/', 'Đấu thầu'), ('notices/', 'Thông báo'), ('solutions/', 'Dành cho ai'), ('prepare/', 'Chuẩn bị'), ('pricing/', 'Bảng giá')],
- "id": [('#map', 'Negara'), ('mdb/', 'Tender'), ('notices/', 'Pengumuman'), ('solutions/', 'Untuk siapa'), ('prepare/', 'Siaga'), ('pricing/', 'Harga')],
+ "ko": [('#map', '나라 찾기'), ('mdb/', '입찰·사업'), ('conflict/', '세계 상황'), ('solutions/', '진출 지원'), ('pricing/', '요금·회원')],
+ "en": [('#map', 'Countries'), ('mdb/', 'Tenders'), ('conflict/', 'World watch'), ('solutions/', 'Go global'), ('pricing/', 'Pricing')],
+ "es": [('#map', 'Países'), ('mdb/', 'Licitaciones'), ('conflict/', 'Situación mundial'), ('solutions/', 'Expansión'), ('pricing/', 'Precios')],
+ "fr": [('#map', 'Pays'), ('mdb/', "Appels d'offres"), ('conflict/', 'Veille mondiale'), ('solutions/', "S'implanter"), ('pricing/', 'Tarifs')],
+ "ar": [('#map', 'الدول'), ('mdb/', 'المناقصات'), ('conflict/', 'الوضع العالمي'), ('solutions/', 'التوسع'), ('pricing/', 'الأسعار')],
+ "vi": [('#map', 'Quốc gia'), ('mdb/', 'Đấu thầu'), ('conflict/', 'Tình hình thế giới'), ('solutions/', 'Mở rộng'), ('pricing/', 'Bảng giá')],
+ "id": [('#map', 'Negara'), ('mdb/', 'Tender'), ('conflict/', 'Situasi dunia'), ('solutions/', 'Ekspansi'), ('pricing/', 'Harga')],
 }
 MENU = {"ko":"메뉴","en":"Menu","es":"Menú","fr":"Menu","ar":"القائمة","vi":"Menu","id":"Menu"}
 PREP_T = {  # prep-bar chip names for languages without full content
