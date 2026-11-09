@@ -32,7 +32,7 @@ a{color:inherit}img{max-width:100%}
 .live{width:8px;height:8px;border-radius:50%;background:#F2F2EF;animation:pulse 2.2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,242,239,.6)}70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
 .hero h1{font-size:clamp(32px,6vw,72px);line-height:1.1;letter-spacing:-.02em;margin:14px 0 0;font-weight:700;text-wrap:balance;max-width:16ch}
-.lede{font-weight:300;font-size:clamp(15px,1.8vw,18px);color:#B8B8B3;max-width:60ch}
+.lede{font-weight:400;font-size:clamp(15px,1.8vw,18px);color:#B8B8B3;max-width:60ch}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .hero .btn.pri{background:#F2F2EF;color:#0a0a0a;border-color:#F2F2EF}.hero .btn.ghost{color:#F2F2EF}
 .kpis{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);margin-top:30px}
@@ -139,7 +139,7 @@ h1,h2,h3,.lede{word-break:keep-all;overflow-wrap:anywhere}
 html,body,button,input,select,textarea{font-family:"WMM Nexon","NEXON Lv1 Gothic","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
 body,p,li,td,input,select,textarea{font-weight:400}
 h1,h2,h3,h4,h5,h6,b,strong,th,.btn,summary,.chip.on,.kpis b{font-weight:700}
-small,figcaption,caption,.note,.meta,.crumb,.alt,.lede,.eb,.kpis span,.byline,.corp,.rgrid .flag small,.cards .card .note{font-weight:300}
+small,figcaption,caption,.note,.meta,.crumb,.alt,.eb,.kpis span,.byline,.corp,.rgrid .flag small,.cards .card .note{font-weight:300}
 
 /* footer logos: WMM + GCSME KOREA */
 .flogos{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;margin-bottom:6px}
