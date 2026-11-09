@@ -241,15 +241,15 @@ window.gvLang = function (sel) {
   var box = document.querySelectorAll(".liveboard"); if (!box.length) return;
   var L = (location.pathname.match(/^\/([a-z]{2})\//) || [, "en"])[1], ko = L === "ko";
   var T = {
-    ko: { war: "전쟁", tension: "긴장", watch: "경계", high: "위험", medium: "주의", hot: "진행 중인 분쟁", dis: "재난·감염병 (최근 7일)", ctry: "나라별 경보", asof: "기준", off: "공식 발표", more: "더 보기", fail: "상황판을 불러오지 못했습니다. 아래 상세 내용을 보세요.", k: { tsunami: "쓰나미", quake: "지진", storm: "태풍", flood: "홍수", volcano: "화산", weather: "폭우·이상기상", fire: "산불", epidemic: "감염병", asteroid: "소행성·혜성" }, c: { conflict: "분쟁", disaster: "재해", epidemic: "감염병" } },
-    en: { war: "War", tension: "Tension", watch: "Watch", high: "High", medium: "Elevated", hot: "Active conflicts", dis: "Disasters & outbreaks (last 7 days)", ctry: "Country alerts", asof: "As of", off: "official", more: "More", fail: "Could not load the live board. See the details below.", k: { tsunami: "Tsunami", quake: "Earthquake", storm: "Typhoon", flood: "Flood", volcano: "Volcano", weather: "Extreme weather", fire: "Wildfire", epidemic: "Outbreak", asteroid: "Asteroid / comet" }, c: { conflict: "Conflict", disaster: "Disaster", epidemic: "Outbreak" } },
-    es: { war: "Guerra", tension: "Tensión", watch: "Vigilancia", high: "Alto", medium: "Elevado", hot: "Conflictos activos", dis: "Desastres y brotes (últimos 7 días)", ctry: "Alertas por país", asof: "Al", off: "oficial", more: "Más" },
-    fr: { war: "Guerre", tension: "Tension", watch: "Vigilance", high: "Élevé", medium: "Modéré", hot: "Conflits en cours", dis: "Catastrophes et épidémies (7 derniers jours)", ctry: "Alertes par pays", asof: "Au", off: "officiel", more: "Plus" },
-    ar: { war: "حرب", tension: "توتر", watch: "مراقبة", high: "مرتفع", medium: "متوسط", hot: "نزاعات جارية", dis: "كوارث وأوبئة (آخر 7 أيام)", ctry: "تنبيهات الدول", asof: "حتى", off: "رسمي", more: "المزيد" },
-    vi: { war: "Chiến tranh", tension: "Căng thẳng", watch: "Theo dõi", high: "Cao", medium: "Trung bình", hot: "Xung đột đang diễn ra", dis: "Thiên tai và dịch bệnh (7 ngày qua)", ctry: "Cảnh báo theo quốc gia", asof: "Tính đến", off: "chính thức", more: "Thêm" },
-    id: { war: "Perang", tension: "Ketegangan", watch: "Pantauan", high: "Tinggi", medium: "Sedang", hot: "Konflik berlangsung", dis: "Bencana dan wabah (7 hari terakhir)", ctry: "Peringatan per negara", asof: "Per", off: "resmi", more: "Lainnya" }
+    ko: { war: "전쟁", tension: "긴장", watch: "경계", high: "위험", medium: "주의", hot: "진행 중인 전쟁·분쟁", dis: "자연재해·감염병 (최근 7일)", ctry: "나라별 경보", asof: "기준", off: "공식 발표", more: "더 보기", ne: "지구 근접", fail: "상황판을 불러오지 못했습니다. 아래 상세 내용을 보세요.", k: { tsunami: "쓰나미", quake: "지진", storm: "태풍", flood: "홍수", volcano: "화산", weather: "폭우·이상기상", fire: "산불", epidemic: "감염병", asteroid: "소행성·혜성" }, c: { conflict: "분쟁", disaster: "재해", epidemic: "감염병" } },
+    en: { war: "War", tension: "Tension", watch: "Watch", high: "High", medium: "Elevated", hot: "Active conflicts", dis: "Disasters & outbreaks (last 7 days)", ctry: "Country alerts", asof: "As of", off: "official", more: "More", ne: "Near Earth", fail: "Could not load the live board. See the details below.", k: { tsunami: "Tsunami", quake: "Earthquake", storm: "Typhoon", flood: "Flood", volcano: "Volcano", weather: "Extreme weather", fire: "Wildfire", epidemic: "Outbreak", asteroid: "Asteroid / comet" }, c: { conflict: "Conflict", disaster: "Disaster", epidemic: "Outbreak" } },
+    es: { war: "Guerra", tension: "Tensión", watch: "Vigilancia", high: "Alto", medium: "Elevado", hot: "Conflictos activos", dis: "Desastres y brotes (últimos 7 días)", ctry: "Alertas por país", asof: "Al", off: "oficial", more: "Más" , ne: "Cerca de la Tierra", k: { tsunami: "Tsunami", quake: "Terremoto", storm: "Tifón", flood: "Inundación", volcano: "Volcán", weather: "Clima extremo", fire: "Incendio forestal", epidemic: "Brote", asteroid: "Asteroide / cometa" }, c: { conflict: "Conflicto", disaster: "Desastre", epidemic: "Brote" } },
+    fr: { war: "Guerre", tension: "Tension", watch: "Vigilance", high: "Élevé", medium: "Modéré", hot: "Conflits en cours", dis: "Catastrophes et épidémies (7 derniers jours)", ctry: "Alertes par pays", asof: "Au", off: "officiel", more: "Plus" , ne: "Près de la Terre", k: { tsunami: "Tsunami", quake: "Séisme", storm: "Typhon", flood: "Inondation", volcano: "Volcan", weather: "Météo extrême", fire: "Feu de forêt", epidemic: "Épidémie", asteroid: "Astéroïde / comète" }, c: { conflict: "Conflit", disaster: "Catastrophe", epidemic: "Épidémie" } },
+    ar: { war: "حرب", tension: "توتر", watch: "مراقبة", high: "مرتفع", medium: "متوسط", hot: "نزاعات جارية", dis: "كوارث وأوبئة (آخر 7 أيام)", ctry: "تنبيهات الدول", asof: "حتى", off: "رسمي", more: "المزيد" , ne: "قرب الأرض", k: { tsunami: "تسونامي", quake: "زلزال", storm: "إعصار", flood: "فيضان", volcano: "بركان", weather: "طقس متطرف", fire: "حريق غابات", epidemic: "تفشٍّ وبائي", asteroid: "كويكب / مذنب" }, c: { conflict: "نزاع", disaster: "كارثة", epidemic: "وباء" } },
+    vi: { war: "Chiến tranh", tension: "Căng thẳng", watch: "Theo dõi", high: "Cao", medium: "Trung bình", hot: "Xung đột đang diễn ra", dis: "Thiên tai và dịch bệnh (7 ngày qua)", ctry: "Cảnh báo theo quốc gia", asof: "Tính đến", off: "chính thức", more: "Thêm" , ne: "Gần Trái Đất", k: { tsunami: "Sóng thần", quake: "Động đất", storm: "Bão", flood: "Lũ lụt", volcano: "Núi lửa", weather: "Thời tiết cực đoan", fire: "Cháy rừng", epidemic: "Dịch bệnh", asteroid: "Tiểu hành tinh / sao chổi" }, c: { conflict: "Xung đột", disaster: "Thiên tai", epidemic: "Dịch bệnh" } },
+    id: { war: "Perang", tension: "Ketegangan", watch: "Pantauan", high: "Tinggi", medium: "Sedang", hot: "Konflik berlangsung", dis: "Bencana dan wabah (7 hari terakhir)", ctry: "Peringatan per negara", asof: "Per", off: "resmi", more: "Lainnya" , ne: "Dekat Bumi", k: { tsunami: "Tsunami", quake: "Gempa", storm: "Topan", flood: "Banjir", volcano: "Gunung api", weather: "Cuaca ekstrem", fire: "Kebakaran hutan", epidemic: "Wabah", asteroid: "Asteroid / komet" }, c: { conflict: "Konflik", disaster: "Bencana", epidemic: "Wabah" } }
   };
-  var t = Object.assign({}, T.en, T[L] || {}); t.k = (T[L] && T[L].k) || T.en.k; t.c = (T[L] && T[L].c) || T.en.c;
+  var t = Object.assign({}, T.en, T[L] || {}); window.__gvT = t; t.k = (T[L] && T[L].k) || T.en.k; t.c = (T[L] && T[L].c) || T.en.c;
   function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
   /* animated hazard overlays drawn over the radar map */
   var FX = {
@@ -266,18 +266,22 @@ window.gvLang = function (sel) {
   FX.tsunami += ""; FX.war = '<i class="qk-r"></i><i class="qk-r r2"></i>';
   function hzCard(x, cn, label, home) {
     var k = x.kind, map = x.iso ? '<div class="hotmap hzmap" data-focus="' + esc(x.iso) + '" data-hl="' + esc(x.iso) + '" data-pts="[]"></div>' : '<div class="hzmap space"></div>';
-    return '<div class="lb-hz hz-' + k + '"><div class="hz-vis">' + map + '<div class="hzfx">' + (FX[k] || FX.quake) + '</div><span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (ko ? "지구 근접" : "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(ko ? x.ko : (x.en || x.ko)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
+    return '<div class="lb-hz hz-' + k + '"><div class="hz-vis">' + map + '<div class="hzfx">' + (FX[k] || FX.quake) + '</div><span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (window.__gvT && window.__gvT.ne || "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
   }
-  function pick(o) { return ko ? (o.ko || o.en) : (o.en || o.ko); }
+  var TR = {};
+  function tr(s) { return (s && TR[s]) || s; }
+  function pick(o) { return ko ? (o.ko || o.en) : tr(o.en || o.ko); }
   function flag(iso) { return iso && iso.length === 2 ? String.fromCodePoint.apply(null, iso.toUpperCase().split("").map(function (c) { return 127397 + c.charCodeAt(0); })) : "🌐"; }
-  fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/hazards.json", { cache: "no-cache" })
-    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+  var RAW = "https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/";
+  var trP = (L === "ko" || L === "en") ? Promise.resolve({}) : fetch(RAW + "i18n/" + L + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+  Promise.all([fetch(RAW + "hazards.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }), trP])
+    .then(function (a) { TR = a[1] || {}; return a[0]; })
     .then(function (d) {
       box.forEach(function (b) {
         var names = {}; try { names = JSON.parse(b.getAttribute("data-names")); } catch (e) {}
         var home = b.getAttribute("data-mode") === "home";
         function cn(iso) { var n = names[iso]; if (n && !n[1]) return flag(iso) + " " + esc(n[0]); return n ? '<a href="/' + L + "/" + n[1] + '/#risk">' + flag(iso) + " " + esc(n[0]) + "</a>" : flag(iso) + " " + esc(iso || ""); }
-        var h = '<p class="lb-asof"><b>' + t.asof + " " + esc((d.checked || d.updated || "").replace("T", " ")) + "</b>" + (d.summary_ko ? " · " + esc(ko ? d.summary_ko : (d.summary_en || "")).slice(0, home ? 220 : 600) + (home ? "…" : "") : "") + "</p>";
+        var h = '<p class="lb-asof"><b>' + t.asof + " " + esc((d.checked || d.updated || "").replace("T", " ")) + "</b>" + (d.summary_ko ? " · " + esc(ko ? d.summary_ko : tr(d.summary_en || "")).slice(0, home ? 220 : 600) + (home ? "…" : "") : "") + "</p>";
         h += '<h3>' + t.hot + '</h3><div class="lb-grid">' + d.hotspots.map(function (x) {
           return '<div class="lb-card"><p><b>' + cn(x.iso) + "</b> <span class=\"lv " + esc(x.level) + '">' + (t[x.level] || "") + "</span></p><p><b>" + esc(pick(x)) + "</b></p>" +
             (home ? "" : "<ul>" + x.facts.map(function (f) { return "<li>" + esc(pick(f)) + (f.v === "official" ? ' <small class="note">(' + t.off + ")</small>" : "") + "</li>"; }).join("") + "</ul>") + "</div>";
@@ -296,7 +300,7 @@ window.gvLang = function (sel) {
         h += home ? '<p class="lb-chips">' + cs.map(function (c) { return '<span class="lb-chip high">' + cn(c.iso) + "</span>"; }).join(" ") + "</p>"
           : '<div class="lb-grid">' + cs.map(function (c) {
             return '<div class="lb-card"><p><b>' + cn(c.iso) + '</b> <span class="lv ' + (c.level === "high" ? "war" : "tension") + '">' + t[c.level] + "</span></p><ul>" +
-              ["conflict", "disaster", "epidemic"].filter(function (k) { return c[k]; }).map(function (k) { return (ko ? c[k].ko : (c[k].en.length ? c[k].en : c[k].ko)).map(function (s) { return "<li><small class=\"note\">" + t.c[k] + "</small> " + esc(s) + "</li>"; }).join(""); }).join("") + "</ul></div>";
+              ["conflict", "disaster", "epidemic"].filter(function (k) { return c[k]; }).map(function (k) { return (ko ? c[k].ko : (c[k].en.length ? c[k].en : c[k].ko)).map(function (s) { return "<li><small class=\"note\">" + t.c[k] + "</small> " + esc(ko ? s : tr(s)) + "</li>"; }).join(""); }).join("") + "</ul></div>";
           }).join("") + "</div>";
         b.querySelector(".lb-body").innerHTML = h;
         var draw = function () { b.querySelectorAll(".hzmap:not(.space)").forEach(function (m) { if (window.gvHotmap) window.gvHotmap(m); }); };
