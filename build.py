@@ -371,14 +371,14 @@ def scen_html(L):
 def liveboard(L, mode="full"):
     names = {iso: [nm(iso, L), BY[iso]["slug"]] for iso in BY if not BY[iso].get("reg")}
     names.setdefault("TW", [{"ko": "대만", "es": "Taiwán", "fr": "Taïwan", "ar": "تايوان", "vi": "Đài Loan", "id": "Taiwan"}.get(L, "Taiwan"), ""])
-    hd = {"ko": ("지금 세계 상황 — 확인된 사실만", "매일 아침 자동 갱신 · 2곳 이상 독립 출처 또는 정부·국제기구 공식 발표만 싣습니다"),
-          "en": ("World situation now — verified facts only", "Updated automatically every morning · only facts confirmed by 2+ independent sources or an official statement")}.get(L) or ("World situation now — verified facts only", "Updated automatically every morning · only facts confirmed by 2+ independent sources or an official statement")
+    hd = {"ko": ("지금 세계 상황 — 전쟁·분쟁·자연재해·감염병, 확인된 사실만", "매일 아침 자동 갱신 · 2곳 이상 독립 출처 또는 정부·국제기구 공식 발표만 싣습니다"),
+          "en": ("World situation now — wars, conflicts, natural disasters & outbreaks, verified facts only", "Updated automatically every morning · only facts confirmed by 2+ independent sources or an official statement")}.get(L) or ("World situation now — wars, conflicts, natural disasters & outbreaks, verified facts only", "Updated automatically every morning · only facts confirmed by 2+ independent sources or an official statement")
     return (f'<div class="liveboard" data-mode="{mode}" data-names=\'{e(json.dumps(names, ensure_ascii=False))}\'>'
             f'<h2>{e(hd[0])}</h2><p class="note">{e(hd[1])}</p><div class="lb-body"><p class="note">…</p></div></div>')
 def conflict_page(L):
     en = L != "ko"; C = CONF; S = C["sources"]
     sr = lambda a: '<span class="sref">' + "".join(f'<a href="{e(S[i]["u"])}" target="_blank" rel="noopener">[{i+1}]</a>' for i in (a or []) if i < len(S)) + "</span>"
-    t_ = "Conflict watch — verified facts only" if en else "전쟁·분쟁 상황판 — 확인된 사실만"
+    t_ = "War, conflict, natural disaster & outbreak watch — verified facts only" if en else "전쟁·분쟁·자연재해·감염병 상황판 — 확인된 사실만"
     LV = {"war": "WAR" if en else "전쟁", "tension": "TENSION" if en else "긴장", "watch": "WATCH" if en else "경계"}
     def gm(h):
         g = GEO.get(h["id"]) or dict(focus=h["iso"], hl=h["iso"], pts=[])
@@ -387,7 +387,7 @@ def conflict_page(L):
     prep = "".join(f'<li>{vbh(p["v"],en)}{e(p["en"] if en else p["ko"])}{sr(p.get("src"))}' + (f'<br><small class="note">{e(p.get("note_en") if en else p.get("note_ko"))}</small>' if (p.get("note_en") if en else p.get("note_ko")) else "") + "</li>" for p in C["prep"] if p["v"] != "unv")
     claims = "".join(f'<li>{vbh(p["v"],en)}“{e(p["en"] if en else p["ko"])}”<br><small class="note">{e(p["note_en"] if en else p["note_ko"])}</small></li>' for p in C["claims"])
     srcs = "".join(f'<li><a href="{e(z["u"])}" target="_blank" rel="noopener">{e(z["t"])}</a> <small class="note">T{z["tier"]}</small></li>' for z in S)
-    body = f"""<section class="chero img-cf"><div class="in cfhero"><div><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1><p class="lede">{"US DoD, JCS, CENTCOM, NATO and EU statements cross-checked with wire services and defence press." if en else "미 국방부·합참·CENTCOM·NATO·EU 발표를 통신사·국방 전문매체와 교차 확인합니다."}</p></div>{hotmap("WORLD", "IR,UA,KP,TW,LB", WORLDPTS)}</div></section>
+    body = f"""<section class="chero img-cf"><div class="in cfhero"><div><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1><p class="lede">{"Wars and conflicts (US DoD, JCS, CENTCOM, NATO, EU), earthquakes, tsunamis, typhoons, floods, wildfires, volcanoes, outbreaks and near-Earth asteroids (USGS, GDACS, WHO, NASA) — cross-checked with wire services and specialist press." if en else "전쟁·분쟁(미 국방부·합참·CENTCOM·NATO·EU)과 지진·쓰나미·태풍·홍수·산불·화산·감염병·소행성(USGS·GDACS·WHO·NASA) 발표를 통신사·전문매체와 교차 확인합니다."}</p></div>{hotmap("WORLD", "IR,UA,KP,TW,LB", WORLDPTS)}</div></section>
 <div class="in stock">{liveboard(L)}<h2 style="margin-top:40px">{"Detail with sources" if en else "출처가 달린 상세 내용"}</h2><blockquote class="summary cfh"><b>{"As of" if en else "기준일"} {e(C["updated"])}</b> · {e(C["summary_en"] if en else C["summary_ko"])}<br><small class="note">{e(C["advice_en"] if en else C["advice_ko"])}</small></blockquote>
 <div class="cards c2">{cards}</div>
 {scen_html(L)}
@@ -517,7 +517,7 @@ def home(L):
 </div></section>
 {P3.edge_html(L)}<section class="band segband"><div class="in"><h2>{"이런 분들이 여기서 사업을 만듭니다" if L=="ko" else "Who does business here"}</h2>{P3.segments_html(L, L=="ko")}<p class="cta"><a class="btn pri" href="/{L}/solutions/">{"분야별로 무엇을 얻는지 보기" if L=="ko" else "See what each sector offers"}</a> <a class="btn" href="/{L}/individuals/">{"개인으로 참여하기" if L=="ko" else "Join as an individual"}</a> <a class="btn" href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a></p></div></section>
 <section class="band" id="hqnotice"><div class="in"><h2>{"본사 프로젝트 공지 — WMM · GCSME KOREA · GCSME 영국 본사" if L=="ko" else "Headquarters notices — WMM · GCSME KOREA · GCSME UK"}</h2><div class="ntcs">{P3.LTR(L, P3.notice_items(L, C3(), 3))}</div><p class="cta"><a class="btn" href="/{L}/notices/">{"공지 전체 보기" if L=="ko" else "All notices"}</a></p></div></section>
-<section class="band" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·재해 상황판 전체 보기" if L=="ko" else "Open the full situation board"}</a></p></div></section>
+<section class="band" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a></p></div></section>
 <section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=8, home=True)}<p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="map"><div class="in"><h2>{e(t['map_h'])}</h2>
 <div class="mapbox"><div id="wmap" data-lang="{L}"></div></div>
