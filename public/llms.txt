@@ -86,6 +86,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Germany](https://radar.wmm-hoa.com/en/germany/): The CDU/CSU-SPD coalition is steering a roughly EUR 555 billion 2027 budget, centred on defence, infrastructure and state modernisation, through parliament with
 - [Greece](https://radar.wmm-hoa.com/en/greece/): Ahead of a spring 2027 election, the Mitsotakis government tabled a 2027 draft budget with about 2% growth and a primary surplus above 3% of GDP. Debt is set to
 - [Hungary](https://radar.wmm-hoa.com/en/hungary/): The Magyar government, in office since the April 2026 election, prioritises recovering frozen EU funds, fighting corruption and fiscal consolidation. The 2027 d
+- [Iceland](https://radar.wmm-hoa.com/en/iceland/): The Frostadóttir government's 2027 budget bill turns a 2026 deficit of ISK 28.1bn into a 2027 surplus of ISK 4.7bn, ending a long run of deficits. It raises ISK
 - [Ireland](https://radar.wmm-hoa.com/en/ireland/): Ireland announced an €8.5bn Budget 2027 (€7bn spending, €1.5bn tax) on 2026-10-06, while its €275.4bn National Development Plan to 2035 expands housing, water, 
 - [Italy](https://radar.wmm-hoa.com/en/italy/): The Meloni government approved the 2027 Draft Budgetary Plan (DPB) on 13 October and is building a budget of about €23.4bn, using extra deficit allowed for ener
 - [Latvia](https://radar.wmm-hoa.com/en/latvia/): After a drone dispute toppled the Siliņa cabinet, Kulbergs' four-party coalition took office in May 2026. Following the 3 October election the president renomin
@@ -95,6 +96,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Moldova](https://radar.wmm-hoa.com/en/moldova/): On 22 July 2026 a cabinet led by non-party technocrat Vasile Tofan took office with a 'European Economy, Efficient State' programme, aiming to sign an EU access
 - [Montenegro](https://radar.wmm-hoa.com/en/montenegro/): PM Spajić's government aims to close talks in 2026, sign the accession treaty in 2027 and join the EU in 2028 ('28th member by '28'). All 33 chapters are open a
 - [Netherlands](https://radar.wmm-hoa.com/en/netherlands/): The Jetten cabinet, sworn in in February 2026, built its 2027 budget around higher defence spending, energy security, housing and technological sovereignty. It 
+- [North Macedonia](https://radar.wmm-hoa.com/en/north-macedonia/): The Mickoski government's 2027 draft budget spends MKD 440.4bn (about €7.2bn, +4.8%) with a deficit of 3.5% of GDP. It allots MKD 40.8bn to capital investment, 
 - [Norway](https://radar.wmm-hoa.com/en/norway/): Norway's Labour minority government proposed a 2027 budget on 2026-10-07 drawing NOK 608.4bn from the wealth fund, with stronger defence, more Ukraine aid and i
 - [Poland](https://radar.wmm-hoa.com/en/poland/): Poland is running defence spending above 4% of GDP alongside mega-projects such as the new hub airport, high-speed rail and its first nuclear plant, while the 2
 - [Portugal](https://radar.wmm-hoa.com/en/portugal/): Montenegro's centre-right minority government has tabled the 2027 budget, which is expected to pass with the Socialists abstaining. It pairs a small surplus and
@@ -122,8 +124,11 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Cuba](https://radar.wmm-hoa.com/en/cuba/): The government is pursuing an economic programme of 176 'transformation' measures, but frequent blackouts and food shortages persist. President Díaz-Canel said 
 - [Dominican Republic](https://radar.wmm-hoa.com/en/dominican-republic/): The Abinader government aims for investment grade by 2028, and Fitch upgraded the sovereign to BB on 2026-11-03. Public investment goes mostly to transport such
 - [Ecuador](https://radar.wmm-hoa.com/en/ecuador/): The Noboa government is pursuing a security crackdown and fiscal consolidation under an IMF programme, citing a 2026 S&P upgrade and rising FDI. El Niño reconst
+- [El Salvador](https://radar.wmm-hoa.com/en/el-salvador/): The Bukele government passed the 2nd and 3rd reviews of its IMF Extended Fund Facility (about $1.4bn) in October, unlocking $138m. Growth is better than expecte
 - [Guatemala](https://radar.wmm-hoa.com/en/guatemala/): Without a congressional majority, the Arévalo government stresses anti-corruption and stronger institutions ahead of the 2027-06-27 general election. A Q192bn 2
 - [Guyana](https://radar.wmm-hoa.com/en/guyana/): Guyana's 2026 budget of GY$1.558 trillion (about US$7.5bn) is 307% larger than in 2021, with large allocations to roads and bridges, education, health, housing 
+- [Haiti](https://radar.wmm-hoa.com/en/haiti/): Haiti has not held elections for over a decade; with the presidency vacant, unelected Prime Minister Alix Didier Fils-Aimé leads the administration. The elector
+- [Honduras](https://radar.wmm-hoa.com/en/honduras/): President Nasry Asfura's 2026 budget of HNL 444.3bn passed Congress in April. It adds funding for health (new hospitals), education (school repairs, meals) and 
 - [Jamaica](https://radar.wmm-hoa.com/en/jamaica/): In the year since Hurricane Melissa struck in October 2025, the government has spent about J$84 billion on recovery and aims to close the recovery phase by Janu
 - [Panama](https://radar.wmm-hoa.com/en/panama/): The Mulino government is cutting the fiscal deficit and defending investment grade, with 36% of the US$35.1bn 2027 budget going to public investment. The Canal 
 - [Paraguay](https://radar.wmm-hoa.com/en/paraguay/): The collapse of digital lender ueno bank led the Senate to remove President Santiago Peña on 6 Nov 2026, and Vice President Pedro Alliana was sworn in. Containi
@@ -243,6 +248,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [독일](https://radar.wmm-hoa.com/ko/germany/)
 - [그리스](https://radar.wmm-hoa.com/ko/greece/)
 - [헝가리](https://radar.wmm-hoa.com/ko/hungary/)
+- [아이슬란드](https://radar.wmm-hoa.com/ko/iceland/)
 - [아일랜드](https://radar.wmm-hoa.com/ko/ireland/)
 - [이탈리아](https://radar.wmm-hoa.com/ko/italy/)
 - [라트비아](https://radar.wmm-hoa.com/ko/latvia/)
@@ -252,6 +258,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [몰도바](https://radar.wmm-hoa.com/ko/moldova/)
 - [몬테네그로](https://radar.wmm-hoa.com/ko/montenegro/)
 - [네덜란드](https://radar.wmm-hoa.com/ko/netherlands/)
+- [북마케도니아](https://radar.wmm-hoa.com/ko/north-macedonia/)
 - [노르웨이](https://radar.wmm-hoa.com/ko/norway/)
 - [폴란드](https://radar.wmm-hoa.com/ko/poland/)
 - [포르투갈](https://radar.wmm-hoa.com/ko/portugal/)
@@ -279,8 +286,11 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [쿠바](https://radar.wmm-hoa.com/ko/cuba/)
 - [도미니카 공화국](https://radar.wmm-hoa.com/ko/dominican-republic/)
 - [에콰도르](https://radar.wmm-hoa.com/ko/ecuador/)
+- [엘살바도르](https://radar.wmm-hoa.com/ko/el-salvador/)
 - [과테말라](https://radar.wmm-hoa.com/ko/guatemala/)
 - [가이아나](https://radar.wmm-hoa.com/ko/guyana/)
+- [아이티](https://radar.wmm-hoa.com/ko/haiti/)
+- [온두라스](https://radar.wmm-hoa.com/ko/honduras/)
 - [자메이카](https://radar.wmm-hoa.com/ko/jamaica/)
 - [파나마](https://radar.wmm-hoa.com/ko/panama/)
 - [파라과이](https://radar.wmm-hoa.com/ko/paraguay/)
