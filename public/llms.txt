@@ -7,15 +7,19 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 ## Countries (English)
 - [Algeria](https://radar.wmm-hoa.com/en/algeria/): Algeria's government reviewed the 2027 finance bill on 30 September 2026 and sent it to the October Council of Ministers, centered on protecting purchasing powe
 - [Angola](https://radar.wmm-hoa.com/en/angola/): The Council of Ministers chaired by President Lourenço approved an AOA 37.34 trillion 2027 budget on 27 October 2026; parliament holds the general vote on 12 No
+- [Benin](https://radar.wmm-hoa.com/en/benin/): President Wadagni's government approved a 2027 draft budget of CFAF 4,757bn (about $8.1bn, +14.7%) on 7 October. It targets 7.5% growth and a deficit of at most
 - [Botswana](https://radar.wmm-hoa.com/en/botswana/): After contractions in 2024 and 2025 driven by weak diamond demand, Botswana targets 3.1% growth in 2026 and is shifting from state-led to private, export-led gr
 - [Cameroon](https://radar.wmm-hoa.com/en/cameroon/): The 2026 budget rose 14% to CFAF 8,816.4 billion, pairing fiscal consolidation with SND30 delivery amid a high debt-distress rating. The President returned in A
 - [DR Congo](https://radar.wmm-hoa.com/en/dr-congo/): PM Suminwa presented the 2027 draft budget (about USD 24.8bn) to the National Assembly on 29 Oct 2026, prioritising security, jobs and infrastructure amid confl
 - [Côte d'Ivoire](https://radar.wmm-hoa.com/en/cote-d-ivoire/): Ouattara was re-elected in October 2025 and his party won a majority in December's legislative elections; in January 2026 PM Mambé was reappointed and the presi
 - [Egypt](https://radar.wmm-hoa.com/en/egypt/): Egypt kept Prime Minister Madbouly in a February 2026 reshuffle that replaced the planning, investment and ICT ministers. The FY2026/27 budget approved in June 
 - [Ethiopia](https://radar.wmm-hoa.com/en/ethiopia/): Abiy Ahmed began a new five-year term in October 2026 after his Prosperity Party won 438 of 547 seats in the June election, and a 22-minister cabinet was approv
+- [Gabon](https://radar.wmm-hoa.com/en/gabon/): After an 11 October reshuffle, President Oligui Nguema pressed for results in the 2027 budget and set six pillars: water and power access, entrepreneurship, you
 - [Ghana](https://radar.wmm-hoa.com/en/ghana/): Ghana is holding on to post-IMF-programme price and fiscal stability while using its 'Big Push' infrastructure drive and 24-hour economy policy to lift growth a
+- [Guinea](https://radar.wmm-hoa.com/en/guinea/): President Doumbouya's government plans a slightly wider 2027 deficit of 2.5% of GDP to keep investing in schools, hospitals and roads. The revised 2026 budget w
 - [Kenya](https://radar.wmm-hoa.com/en/kenya/): Kenya's KSh 4.82 trillion FY2026/27 budget follows the Bottom-Up Economic Transformation Agenda, prioritising agriculture, affordable housing, health, education
 - [Libya](https://radar.wmm-hoa.com/en/libya/): In April 2026 the eastern House of Representatives and the western High Council of State agreed Libya's first unified budget in 13 years, LYD 190bn (about $30bn
+- [Madagascar](https://radar.wmm-hoa.com/en/madagascar/): The transitional government led by Colonel Randrianirina has filed its 2027 budget bill. It targets growth rising from 4.1% in 2026 to 5.1% in 2027 and prioriti
 - [Malawi](https://radar.wmm-hoa.com/en/malawi/): Malawi's FY2026/27 budget of K10.978 trillion (about US$6.8bn), passed on 24 March 2026, gives agriculture the largest share at K971.3bn. With the World Bank pr
 - [Mauritius](https://radar.wmm-hoa.com/en/mauritius/): In June 2026 Mauritius presented a 2026/27 budget built on AI and digitisation, start-ups and SMEs, and the blue economy, pledging to cut the deficit from about
 - [Morocco](https://radar.wmm-hoa.com/en/morocco/): PAM came first with 97 seats in the 23 September 2026 election, and Head of Government El Mansouri formed a four-party coalition of PAM, Istiqlal, USFP and PPS 
@@ -42,6 +46,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Indonesia](https://radar.wmm-hoa.com/en/indonesia/): On 29 September parliament passed the 2027 state budget: IDR 4,106 trillion in spending, IDR 3,435 trillion in revenue and a deficit of 2.4% of GDP. Two years i
 - [Japan](https://radar.wmm-hoa.com/en/japan/): The Takaichi government chose policy continuity in its September reshuffle and stressed growth first at the October extraordinary Diet session. FY2027 ministry 
 - [Kazakhstan](https://radar.wmm-hoa.com/en/kazakhstan/): A new constitution adopted by referendum in March 2026 created a single-chamber parliament (Kurultai) and a vice presidency, and Prime Minister Bektenov was rec
+- [North Korea](https://radar.wmm-hoa.com/en/north-korea/): The 9th Workers' Party Congress (19-25 Feb 2026) set a 2026-2030 five-year plan aimed at economic stability and 'gradual qualitative development'. It stresses t
 - [South Korea](https://radar.wmm-hoa.com/en/south-korea/): The government approved a 2027 budget proposal of KRW 820.9 trillion in total spending (up 12.8%), concentrating funds on youth, growth engines, regions and edu
 - [Kyrgyzstan](https://radar.wmm-hoa.com/en/kyrgyzstan/): The 2027 draft budget plans KGS728.3bn revenue against KGS695.8bn spending (excl. financial assets), a KGS32.5bn surplus, with a large rise in social protection
 - [Laos](https://radar.wmm-hoa.com/en/laos/): In October 2026 the National Assembly elected former diplomat Saleumxay Kommasith as prime minister, while his predecessor Sonexay Siphandone became Assembly pr
@@ -179,15 +184,19 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 ## 국가 (한국어)
 - [알제리](https://radar.wmm-hoa.com/ko/algeria/)
 - [앙골라](https://radar.wmm-hoa.com/ko/angola/)
+- [베냉](https://radar.wmm-hoa.com/ko/benin/)
 - [보츠와나](https://radar.wmm-hoa.com/ko/botswana/)
 - [카메룬](https://radar.wmm-hoa.com/ko/cameroon/)
 - [콩고민주공화국](https://radar.wmm-hoa.com/ko/dr-congo/)
 - [코트디부아르](https://radar.wmm-hoa.com/ko/cote-d-ivoire/)
 - [이집트](https://radar.wmm-hoa.com/ko/egypt/)
 - [에티오피아](https://radar.wmm-hoa.com/ko/ethiopia/)
+- [가봉](https://radar.wmm-hoa.com/ko/gabon/)
 - [가나](https://radar.wmm-hoa.com/ko/ghana/)
+- [기니](https://radar.wmm-hoa.com/ko/guinea/)
 - [케냐](https://radar.wmm-hoa.com/ko/kenya/)
 - [리비아](https://radar.wmm-hoa.com/ko/libya/)
+- [마다가스카르](https://radar.wmm-hoa.com/ko/madagascar/)
 - [말라위](https://radar.wmm-hoa.com/ko/malawi/)
 - [모리셔스](https://radar.wmm-hoa.com/ko/mauritius/)
 - [모로코](https://radar.wmm-hoa.com/ko/morocco/)
@@ -214,6 +223,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [인도네시아](https://radar.wmm-hoa.com/ko/indonesia/)
 - [일본](https://radar.wmm-hoa.com/ko/japan/)
 - [카자흐스탄](https://radar.wmm-hoa.com/ko/kazakhstan/)
+- [북한](https://radar.wmm-hoa.com/ko/north-korea/)
 - [대한민국](https://radar.wmm-hoa.com/ko/south-korea/)
 - [키르기스스탄](https://radar.wmm-hoa.com/ko/kyrgyzstan/)
 - [라오스](https://radar.wmm-hoa.com/ko/laos/)
