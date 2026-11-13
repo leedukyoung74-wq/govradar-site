@@ -1,0 +1,31 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/assets/site.css"><style>.pay{max-width:560px;margin:48px auto;padding:0 16px}.pay .box{border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:24px;margin:16px 0}.pay label{display:block;margin:12px 0 4px}.pay input[type=email],.pay input[type=text]{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:transparent;color:inherit}.pay .opt{display:flex;gap:10px;align-items:center;margin:8px 0}.pay button{margin-top:18px;width:100%;padding:14px;border:0;border-radius:10px;font-weight:700;cursor:pointer}.pay .muted{opacity:.7;font-size:14px}</style><title>결제 — GOV RADAR</title></head><body><main class="pay">
+<h1>분석 회원 결제</h1>
+<p class="lede">결제가 확인되면 회원 코드를 이메일로 보내 드립니다. 자동 갱신은 없습니다.</p>
+<div id="notready" class="box" hidden><p>온라인 결제를 준비하고 있습니다. 지금은 <a href="/ko/pricing/">주문서</a>로 신청해 주세요.</p></div>
+<form id="pf" class="box" hidden>
+ <div class="opt"><input type="radio" name="item" id="m" value="analysis-month" checked><label for="m">1개월 · 19,800원 (VAT 포함)</label></div>
+ <div class="opt"><input type="radio" name="item" id="y" value="analysis-year"><label for="y">12개월 · 198,000원 (VAT 포함)</label></div>
+ <label for="nm">이름 또는 회사명</label><input type="text" id="nm" required maxlength="60">
+ <label for="em">회원 코드를 받을 이메일</label><input type="email" id="em" required maxlength="120">
+ <div class="opt"><input type="checkbox" id="ag" required><label for="ag"><a href="/ko/legal/terms/" target="_blank">이용약관</a>·<a href="/ko/legal/refund/" target="_blank">환불정책(7일 청약철회)</a>·<a href="/ko/legal/privacy/" target="_blank">개인정보 처리방침</a>에 동의합니다.</label></div>
+ <button type="submit">결제하기</button>
+ <p class="muted">결제는 토스페이먼츠가 처리하며, 카드 정보는 GOV RADAR에 저장되지 않습니다.</p>
+</form>
+<p class="muted">월드메이킹멤버스 주식회사 · 대표 이덕영 · 통신판매업신고 제2024-서울서초-2185호 · E-mail 73036396@naver.com</p>
+</main>
+<script src="https://js.tosspayments.com/v2/standard"></script>
+<script>
+(async()=>{let c;try{c=await (await fetch('/pay/config')).json();}catch(e){c={enabled:false};}
+if(!c.enabled||typeof TossPayments!=='function'){document.getElementById('notready').hidden=false;return;}
+const f=document.getElementById('pf');f.hidden=false;
+f.addEventListener('submit',async ev=>{ev.preventDefault();
+ const item=f.querySelector('input[name=item]:checked').value,p=c.products[item];
+ const email=document.getElementById('em').value.trim(),name=document.getElementById('nm').value.trim();
+ const orderId=item+'-'+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+ const q='?item='+item+'&email='+encodeURIComponent(email)+'&name='+encodeURIComponent(name);
+ try{const tp=TossPayments(c.clientKey);const pay=tp.payment({customerKey:TossPayments.ANONYMOUS});
+  await pay.requestPayment({method:'CARD',amount:{currency:'KRW',value:p.amount},orderId,orderName:p.name,customerEmail:email,customerName:name,
+   successUrl:location.origin+'/pay/success/'+q,failUrl:location.origin+'/pay/fail/'});
+ }catch(e){alert(e.message||'결제를 시작하지 못했습니다.');}});
+})();
+</script></body></html>

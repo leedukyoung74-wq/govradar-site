@@ -1,0 +1,12 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/assets/site.css"><style>.pay{max-width:560px;margin:48px auto;padding:0 16px}.pay .box{border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:24px;margin:16px 0}.pay label{display:block;margin:12px 0 4px}.pay input[type=email],.pay input[type=text]{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:transparent;color:inherit}.pay .opt{display:flex;gap:10px;align-items:center;margin:8px 0}.pay button{margin-top:18px;width:100%;padding:14px;border:0;border-radius:10px;font-weight:700;cursor:pointer}.pay .muted{opacity:.7;font-size:14px}</style><title>결제 확인 — GOV RADAR</title></head><body><main class="pay">
+<h1 id="t">결제를 확인하고 있습니다…</h1><div class="box"><p id="m">잠시만 기다려 주세요. 이 창을 닫지 마세요.</p></div>
+<p><a href="/ko/">GOV RADAR 홈으로</a></p></main>
+<script>
+(async()=>{const u=new URLSearchParams(location.search),T=document.getElementById('t'),M=document.getElementById('m');
+const body={paymentKey:u.get('paymentKey'),orderId:u.get('orderId'),amount:Number(u.get('amount')),item:u.get('item'),email:u.get('email')||'',name:u.get('name')||''};
+let r;try{r=await (await fetch('/pay/confirm',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)})).json();}catch(e){r={ok:false,message:'네트워크 오류'};}
+if(r.ok){T.textContent='결제가 완료되었습니다';M.innerHTML='';const s=(x)=>{const p=document.createElement('p');p.textContent=x;M.appendChild(p);};
+ s(r.item+' · '+r.amount.toLocaleString('ko-KR')+'원');s('주문번호 '+r.orderId);s('회원 코드는 영업일 기준 1일 안에 '+(body.email||'입력하신 이메일')+'로 보내 드립니다.');
+ if(r.receipt){const a=document.createElement('a');a.href=r.receipt;a.target='_blank';a.rel='noopener';a.textContent='카드 영수증 보기';M.appendChild(a);}
+}else{T.textContent='결제를 완료하지 못했습니다';M.textContent=(r.message||'다시 시도해 주세요.')+' 카드 승인이 났는데 이 화면이 보이면 73036396@naver.com 으로 주문번호와 함께 알려 주세요.';}})();
+</script></body></html>
