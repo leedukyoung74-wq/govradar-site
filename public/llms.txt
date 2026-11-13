@@ -67,10 +67,13 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Saudi Arabia](https://radar.wmm-hoa.com/en/saudi-arabia/): The Ministry of Finance's FY2027 pre-budget statement, issued on 1 October, projects spending of about SAR 1.392 trillion against revenue of about SAR 1.202 tri
 - [United Arab Emirates](https://radar.wmm-hoa.com/en/united-arab-emirates/): In October the UAE Cabinet approved a AED292.5bn federal budget for 2027-2029 (up 28.3% on the previous cycle), stressing AI, fiscal data analytics and simpler 
 - [Türkiye](https://radar.wmm-hoa.com/en/turkiye/): Türkiye's Medium-Term Programme (2027-2029) aims to bring inflation to single digits by 2029 while lifting growth and jobs. The 2027 draft budget emphasises hou
+- [Albania](https://radar.wmm-hoa.com/en/albania/): The Rama government's 2027 budget spends over €10bn, with welfare, fiscal stability and investment plus EU accession as its three priorities. It targets public 
 - [Armenia](https://radar.wmm-hoa.com/en/armenia/): Civil Contract won a majority with 49.8% in the June 2026 election and Pashinyan began a third term. The 2027 draft budget plans AMD 4.072tn in spending, with t
 - [Austria](https://radar.wmm-hoa.com/en/austria/): Austria's ÖVP-SPÖ-NEOS coalition is consolidating public finances through a 2027/28 double budget aimed at leaving the EU excessive deficit procedure by 2028. A
 - [Azerbaijan](https://radar.wmm-hoa.com/en/azerbaijan/): The government is diversifying the economy around non-oil growth, renewables, Karabakh reconstruction and Europe-Asia transport corridors, and approved a Digita
+- [Belarus](https://radar.wmm-hoa.com/en/belarus/): The Lukashenko government drafted the 2027 budget and outlook around meeting the 2026-2030 five-year plan. PM Turchin's cabinet prioritises building up to 5,000
 - [Belgium](https://radar.wmm-hoa.com/en/belgium/): Belgium's federal government is negotiating a multi-year budget aiming at about €10bn of adjustment by 2029 but had no deal by late October, and is now trying t
+- [Bosnia and Herzegovina](https://radar.wmm-hoa.com/en/bosnia-and-herzegovina/): In the 4 October 2026 general election (42% turnout) SDA led in the Federation and SNSD in Republika Srpska, and coalition talks are under way. Bosnia has alrea
 - [Bulgaria](https://radar.wmm-hoa.com/en/bulgaria/): Bulgaria joined the euro area in January 2026; cutting a national-basis deficit of 5.7% of GDP is the Radev government's main task, and the EU opened an excessi
 - [Croatia](https://radar.wmm-hoa.com/en/croatia/): The Plenković government is raising pensions, demographic and housing support while keeping the deficit below 3% of GDP. Credit standing is improving, with S&P 
 - [Cyprus](https://radar.wmm-hoa.com/en/cyprus/): Cyprus has sent parliament a 2027 budget with EUR 14.4bn of total spending (EUR 11.1bn excluding debt service), projecting a surplus and public debt falling to 
@@ -89,6 +92,8 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Lithuania](https://radar.wmm-hoa.com/en/lithuania/): After PM Ruginienė resigned, Social Democrat leader Sinkevičius formed a coalition government in July 2026. The 2027 draft budget keeps defence at about EUR 4.8
 - [Luxembourg](https://radar.wmm-hoa.com/en/luxembourg/): The 2027 draft budget cuts the general government deficit to 0.6% of GDP (EUR 570m) and focuses on fighting poverty, middle-class purchasing power and tax relie
 - [Malta](https://radar.wmm-hoa.com/en/malta/): Labour won Malta's May 2026 general election again and Robert Abela stayed on as prime minister; in June Malta exited the EU excessive deficit procedure. The 20
+- [Moldova](https://radar.wmm-hoa.com/en/moldova/): On 22 July 2026 a cabinet led by non-party technocrat Vasile Tofan took office with a 'European Economy, Efficient State' programme, aiming to sign an EU access
+- [Montenegro](https://radar.wmm-hoa.com/en/montenegro/): PM Spajić's government aims to close talks in 2026, sign the accession treaty in 2027 and join the EU in 2028 ('28th member by '28'). All 33 chapters are open a
 - [Netherlands](https://radar.wmm-hoa.com/en/netherlands/): The Jetten cabinet, sworn in in February 2026, built its 2027 budget around higher defence spending, energy security, housing and technological sovereignty. It 
 - [Norway](https://radar.wmm-hoa.com/en/norway/): Norway's Labour minority government proposed a 2027 budget on 2026-10-07 drawing NOK 608.4bn from the wealth fund, with stronger defence, more Ukraine aid and i
 - [Poland](https://radar.wmm-hoa.com/en/poland/): Poland is running defence spending above 4% of GDP alongside mega-projects such as the new hub airport, high-speed rail and its first nuclear plant, while the 2
@@ -219,10 +224,13 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [사우디아라비아](https://radar.wmm-hoa.com/ko/saudi-arabia/)
 - [아랍에미리트](https://radar.wmm-hoa.com/ko/united-arab-emirates/)
 - [튀르키예](https://radar.wmm-hoa.com/ko/turkiye/)
+- [알바니아](https://radar.wmm-hoa.com/ko/albania/)
 - [아르메니아](https://radar.wmm-hoa.com/ko/armenia/)
 - [오스트리아](https://radar.wmm-hoa.com/ko/austria/)
 - [아제르바이잔](https://radar.wmm-hoa.com/ko/azerbaijan/)
+- [벨라루스](https://radar.wmm-hoa.com/ko/belarus/)
 - [벨기에](https://radar.wmm-hoa.com/ko/belgium/)
+- [보스니아 헤르체고비나](https://radar.wmm-hoa.com/ko/bosnia-and-herzegovina/)
 - [불가리아](https://radar.wmm-hoa.com/ko/bulgaria/)
 - [크로아티아](https://radar.wmm-hoa.com/ko/croatia/)
 - [키프로스](https://radar.wmm-hoa.com/ko/cyprus/)
@@ -241,6 +249,8 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [리투아니아](https://radar.wmm-hoa.com/ko/lithuania/)
 - [룩셈부르크](https://radar.wmm-hoa.com/ko/luxembourg/)
 - [몰타](https://radar.wmm-hoa.com/ko/malta/)
+- [몰도바](https://radar.wmm-hoa.com/ko/moldova/)
+- [몬테네그로](https://radar.wmm-hoa.com/ko/montenegro/)
 - [네덜란드](https://radar.wmm-hoa.com/ko/netherlands/)
 - [노르웨이](https://radar.wmm-hoa.com/ko/norway/)
 - [폴란드](https://radar.wmm-hoa.com/ko/poland/)
