@@ -32,7 +32,9 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Uganda](https://radar.wmm-hoa.com/en/uganda/): After the 2026-2031 government took office, Uganda is pursuing its Ten-Fold Growth Strategy and the start of oil production with a UGX 84.3 trillion FY2026/27 b
 - [Zambia](https://radar.wmm-hoa.com/en/zambia/): Re-elected President Hichilema's government is preparing the 2027 budget framework (approved by Cabinet on Sep 17, 2026) under the Grow Zambia agenda, with 2027
 - [Zimbabwe](https://radar.wmm-hoa.com/en/zimbabwe/): Finance Minister Mthuli Ncube set a 2027 growth target of 3.5% and a deficit below 3% of GDP. Revenue exceeded spending in January-September 2026, and the budge
+- [Afghanistan](https://radar.wmm-hoa.com/en/afghanistan/): Five years into its rule, the Taliban government promotes investment, mining, trade and infrastructure. Flagship projects are the 285km Qosh Tepa irrigation can
 - [Bangladesh](https://radar.wmm-hoa.com/en/bangladesh/): After the BNP's landslide in the February 2026 election, Prime Minister Tarique Rahman's government is using a record Tk 9.38 trillion budget to tame prices, wi
+- [Bhutan](https://radar.wmm-hoa.com/en/bhutan/): PM Tobgay's 2026-27 budget is Nu 153.3bn (about 30% of the 13th Plan outlay), with capital spending of Nu 72.5bn (+16%). Under 'Building Resilience and Self-Rel
 - [Brunei](https://radar.wmm-hoa.com/en/brunei/): Brunei is diversifying away from oil and gas under Wawasan Brunei 2035, with the non-oil sector now 54% of GDP and 60% of exports. On 2026-10-26 the economy min
 - [Cambodia](https://radar.wmm-hoa.com/en/cambodia/): The cabinet chaired by Prime Minister Hun Manet approved a 2027 budget of about USD 11.7 billion on 2026-10-23, and on 2026-10-22 launched the National SME Deve
 - [China](https://radar.wmm-hoa.com/en/china/): In the first year of the 15th Five-Year Plan (2026-2030), China is prioritizing tech self-reliance, the digital economy and carbon cuts. With Q3 growth at 4.5% 
@@ -54,6 +56,8 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Sri Lanka](https://radar.wmm-hoa.com/en/sri-lanka/): Sri Lanka is keeping to fiscal discipline under its IMF EFF programme while the 2027 budget raises capital spending, offers some tax relief and pushes digital a
 - [Tajikistan](https://radar.wmm-hoa.com/en/tajikistan/): President Rahmon has ruled for decades, with PM Rasulzoda leading the cabinet. The Rogun hydropower plant dominates state spending, and at the September 2026 Ko
 - [Thailand](https://radar.wmm-hoa.com/en/thailand/): PM Anutin, re-elected in March after the February 2026 election, leads a coalition government; the THB3.788tn FY2027 budget passed the Senate on 11 September. W
+- [Timor-Leste](https://radar.wmm-hoa.com/en/timor-leste/): PM Gusmão's 2027 state budget of $2.57bn passed parliament's first vote on 11 November. Themed on resilience and economic diversification, it allots $535m to pu
+- [Turkmenistan](https://radar.wmm-hoa.com/en/turkmenistan/): President Serdar Berdimuhamedov says phase four of the Galkynysh gas field (started April 2026) will sharply raise gas exports and the TAPI pipeline will streng
 - [Uzbekistan](https://radar.wmm-hoa.com/en/uzbekistan/): Under the 'Uzbekistan-2030' strategy, 2026 is the 'Year of Mahalla Development and Social Prosperity', with a state programme of 337 tasks. In late October the 
 - [Vietnam](https://radar.wmm-hoa.com/en/vietnam/): Viet Nam grew 9.01% in January-September 2026 (9.95% in Q3). At the October National Assembly session the government set 2027 targets of at least 10% growth and
 - [Bahrain](https://radar.wmm-hoa.com/en/bahrain/): The two-year 2025-26 budget plans BD8.9bn spending against BD6.4bn revenue, a ~BD2.5bn deficit, with interest close to a quarter of spending. The 2026 Iran conf
@@ -68,6 +72,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Saudi Arabia](https://radar.wmm-hoa.com/en/saudi-arabia/): The Ministry of Finance's FY2027 pre-budget statement, issued on 1 October, projects spending of about SAR 1.392 trillion against revenue of about SAR 1.202 tri
 - [Syria](https://radar.wmm-hoa.com/en/syria/): President Ahmed al-Sharaa told the UN General Assembly in September that lifting sanctions has opened a 'new phase of revival' in reconstruction and investment.
 - [United Arab Emirates](https://radar.wmm-hoa.com/en/united-arab-emirates/): In October the UAE Cabinet approved a AED292.5bn federal budget for 2027-2029 (up 28.3% on the previous cycle), stressing AI, fiscal data analytics and simpler 
+- [Yemen](https://radar.wmm-hoa.com/en/yemen/): The recognised government (Presidential Leadership Council, chaired by Rashad al-Alimi) launched Operation Dawn of Yemen on 5 October with Saudi-led air support
 - [Türkiye](https://radar.wmm-hoa.com/en/turkiye/): Türkiye's Medium-Term Programme (2027-2029) aims to bring inflation to single digits by 2029 while lifting growth and jobs. The 2027 draft budget emphasises hou
 - [Albania](https://radar.wmm-hoa.com/en/albania/): The Rama government's 2027 budget spends over €10bn, with welfare, fiscal stability and investment plus EU accession as its three priorities. It targets public 
 - [Armenia](https://radar.wmm-hoa.com/en/armenia/): Civil Contract won a majority with 49.8% in the June 2026 election and Pashinyan began a third term. The 2027 draft budget plans AMD 4.072tn in spending, with t
@@ -199,7 +204,9 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [우간다](https://radar.wmm-hoa.com/ko/uganda/)
 - [잠비아](https://radar.wmm-hoa.com/ko/zambia/)
 - [짐바브웨](https://radar.wmm-hoa.com/ko/zimbabwe/)
+- [아프가니스탄](https://radar.wmm-hoa.com/ko/afghanistan/)
 - [방글라데시](https://radar.wmm-hoa.com/ko/bangladesh/)
+- [부탄](https://radar.wmm-hoa.com/ko/bhutan/)
 - [브루나이](https://radar.wmm-hoa.com/ko/brunei/)
 - [캄보디아](https://radar.wmm-hoa.com/ko/cambodia/)
 - [중국](https://radar.wmm-hoa.com/ko/china/)
@@ -221,6 +228,8 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [스리랑카](https://radar.wmm-hoa.com/ko/sri-lanka/)
 - [타지키스탄](https://radar.wmm-hoa.com/ko/tajikistan/)
 - [태국](https://radar.wmm-hoa.com/ko/thailand/)
+- [동티모르](https://radar.wmm-hoa.com/ko/timor-leste/)
+- [투르크메니스탄](https://radar.wmm-hoa.com/ko/turkmenistan/)
 - [우즈베키스탄](https://radar.wmm-hoa.com/ko/uzbekistan/)
 - [베트남](https://radar.wmm-hoa.com/ko/vietnam/)
 - [바레인](https://radar.wmm-hoa.com/ko/bahrain/)
@@ -235,6 +244,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [사우디아라비아](https://radar.wmm-hoa.com/ko/saudi-arabia/)
 - [시리아](https://radar.wmm-hoa.com/ko/syria/)
 - [아랍에미리트](https://radar.wmm-hoa.com/ko/united-arab-emirates/)
+- [예멘](https://radar.wmm-hoa.com/ko/yemen/)
 - [튀르키예](https://radar.wmm-hoa.com/ko/turkiye/)
 - [알바니아](https://radar.wmm-hoa.com/ko/albania/)
 - [아르메니아](https://radar.wmm-hoa.com/ko/armenia/)
