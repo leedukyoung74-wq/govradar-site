@@ -9,6 +9,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Angola](https://radar.wmm-hoa.com/en/angola/): The Council of Ministers chaired by President Lourenço approved an AOA 37.34 trillion 2027 budget on 27 October 2026; parliament holds the general vote on 12 No
 - [Benin](https://radar.wmm-hoa.com/en/benin/): President Wadagni's government approved a 2027 draft budget of CFAF 4,757bn (about $8.1bn, +14.7%) on 7 October. It targets 7.5% growth and a deficit of at most
 - [Botswana](https://radar.wmm-hoa.com/en/botswana/): After contractions in 2024 and 2025 driven by weak diamond demand, Botswana targets 3.1% growth in 2026 and is shifting from state-led to private, export-led gr
+- [Burkina Faso](https://radar.wmm-hoa.com/en/burkina-faso/): Captain Traoré's government approved a 2027 draft budget on 8 October with revenue of CFAF 4.2tn and spending of CFAF 4.8tn (about $8.2bn, +22.5%). In line with
 - [Cameroon](https://radar.wmm-hoa.com/en/cameroon/): The 2026 budget rose 14% to CFAF 8,816.4 billion, pairing fiscal consolidation with SND30 delivery amid a high debt-distress rating. The President returned in A
 - [DR Congo](https://radar.wmm-hoa.com/en/dr-congo/): PM Suminwa presented the 2027 draft budget (about USD 24.8bn) to the National Assembly on 29 Oct 2026, prioritising security, jobs and infrastructure amid confl
 - [Côte d'Ivoire](https://radar.wmm-hoa.com/en/cote-d-ivoire/): Ouattara was re-elected in October 2025 and his party won a majority in December's legislative elections; in January 2026 PM Mambé was reappointed and the presi
@@ -21,10 +22,13 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Libya](https://radar.wmm-hoa.com/en/libya/): In April 2026 the eastern House of Representatives and the western High Council of State agreed Libya's first unified budget in 13 years, LYD 190bn (about $30bn
 - [Madagascar](https://radar.wmm-hoa.com/en/madagascar/): The transitional government led by Colonel Randrianirina has filed its 2027 budget bill. It targets growth rising from 4.1% in 2026 to 5.1% in 2027 and prioriti
 - [Malawi](https://radar.wmm-hoa.com/en/malawi/): Malawi's FY2026/27 budget of K10.978 trillion (about US$6.8bn), passed on 24 March 2026, gives agriculture the largest share at K971.3bn. With the World Bank pr
+- [Mali](https://radar.wmm-hoa.com/en/mali/): The Goïta government approved a 2027 draft budget on 18 September with spending of CFAF 4,462.6bn (+11.75%). Revenue rises 14.6%, the deficit narrows to CFAF 59
+- [Mauritania](https://radar.wmm-hoa.com/en/mauritania/): President Ghazouani's government approved the 2027 budget on 21 October (revenue MRU 152.1bn, spending MRU 145.9bn), a surplus of about $155m. Assuming 5.0% gro
 - [Mauritius](https://radar.wmm-hoa.com/en/mauritius/): In June 2026 Mauritius presented a 2026/27 budget built on AI and digitisation, start-ups and SMEs, and the blue economy, pledging to cut the deficit from about
 - [Morocco](https://radar.wmm-hoa.com/en/morocco/): PAM came first with 97 seats in the 23 September 2026 election, and Head of Government El Mansouri formed a four-party coalition of PAM, Istiqlal, USFP and PPS 
 - [Mozambique](https://radar.wmm-hoa.com/en/mozambique/): On Oct 13, 2026 Mozambique's cabinet approved the 2027 Economic and Social Plan and State Budget (PESOE, MZN 511.2 billion), cutting spending about 1.8% from 20
 - [Namibia](https://radar.wmm-hoa.com/en/namibia/): In its Oct 22, 2026 mid-year review Namibia cut its revenue outlook on weak mining and raised the budget by about N$700 million (N$87.9bn to N$88.6bn), with pub
+- [Niger](https://radar.wmm-hoa.com/en/niger/): General Tiani's government revised the 2026 budget on 21 August to CFAF 2.98tn (about $5.3bn, +2%), adding defence and security funds. It reflects oil price swi
 - [Nigeria](https://radar.wmm-hoa.com/en/nigeria/): The National Assembly passed a 2026 budget of N68.3 trillion, above the executive's N58.18 trillion proposal, prioritising security, infrastructure, health and 
 - [Rwanda](https://radar.wmm-hoa.com/en/rwanda/): Rwanda is executing its FY2026/27 budget (RWF 7,796.3 billion) under NST2 with a focus on agriculture, jobs and resilience, while the 2027/28 budget cycle and l
 - [Senegal](https://radar.wmm-hoa.com/en/senegal/): President Faye dismissed PM Ousmane Sonko in May 2026 and appointed economist Ahmadou Al Aminou Lo; Sonko became Assembly speaker and now opposes the executive.
@@ -32,6 +36,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Sierra Leone](https://radar.wmm-hoa.com/en/sierra-leone/): Sierra Leone's 2026 budget of NLe30.3bn (after the supplementary) focuses on education, infrastructure, health and the flagship Feed Salone agriculture programm
 - [South Africa](https://radar.wmm-hoa.com/en/south-africa/): In its 21 Oct 2026 Medium-Term Budget Policy Statement, the Treasury cut the 2026 growth forecast to 1.2% and set a path to shrink the deficit from 4.3% of GDP 
 - [Tanzania](https://radar.wmm-hoa.com/en/tanzania/): Tanzania's first budget under Vision 2050 and the Fourth Five-Year Plan (2026/27–2030/31) pushes rail and power infrastructure and higher domestic revenue. It a
+- [Togo](https://radar.wmm-hoa.com/en/togo/): The government of Council President Faure Gnassingbé approved a 2027 budget of CFAF 2.68tn (-2.5%) on 22 October, citing global uncertainty and tighter financin
 - [Tunisia](https://radar.wmm-hoa.com/en/tunisia/): The 2027 draft budget of TND68.9bn (+8.4% on 2026), with a TND14.6bn deficit and a 3.1% growth target, is before parliament. As year two of the 2026-2030 plan, 
 - [Uganda](https://radar.wmm-hoa.com/en/uganda/): After the 2026-2031 government took office, Uganda is pursuing its Ten-Fold Growth Strategy and the start of oil production with a UGX 84.3 trillion FY2026/27 b
 - [Zambia](https://radar.wmm-hoa.com/en/zambia/): Re-elected President Hichilema's government is preparing the 2027 budget framework (approved by Cabinet on Sep 17, 2026) under the Grow Zambia agenda, with 2027
@@ -186,6 +191,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [앙골라](https://radar.wmm-hoa.com/ko/angola/)
 - [베냉](https://radar.wmm-hoa.com/ko/benin/)
 - [보츠와나](https://radar.wmm-hoa.com/ko/botswana/)
+- [부르키나파소](https://radar.wmm-hoa.com/ko/burkina-faso/)
 - [카메룬](https://radar.wmm-hoa.com/ko/cameroon/)
 - [콩고민주공화국](https://radar.wmm-hoa.com/ko/dr-congo/)
 - [코트디부아르](https://radar.wmm-hoa.com/ko/cote-d-ivoire/)
@@ -198,10 +204,13 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [리비아](https://radar.wmm-hoa.com/ko/libya/)
 - [마다가스카르](https://radar.wmm-hoa.com/ko/madagascar/)
 - [말라위](https://radar.wmm-hoa.com/ko/malawi/)
+- [말리](https://radar.wmm-hoa.com/ko/mali/)
+- [모리타니](https://radar.wmm-hoa.com/ko/mauritania/)
 - [모리셔스](https://radar.wmm-hoa.com/ko/mauritius/)
 - [모로코](https://radar.wmm-hoa.com/ko/morocco/)
 - [모잠비크](https://radar.wmm-hoa.com/ko/mozambique/)
 - [나미비아](https://radar.wmm-hoa.com/ko/namibia/)
+- [니제르](https://radar.wmm-hoa.com/ko/niger/)
 - [나이지리아](https://radar.wmm-hoa.com/ko/nigeria/)
 - [르완다](https://radar.wmm-hoa.com/ko/rwanda/)
 - [세네갈](https://radar.wmm-hoa.com/ko/senegal/)
@@ -209,6 +218,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [시에라리온](https://radar.wmm-hoa.com/ko/sierra-leone/)
 - [남아프리카공화국](https://radar.wmm-hoa.com/ko/south-africa/)
 - [탄자니아](https://radar.wmm-hoa.com/ko/tanzania/)
+- [토고](https://radar.wmm-hoa.com/ko/togo/)
 - [튀니지](https://radar.wmm-hoa.com/ko/tunisia/)
 - [우간다](https://radar.wmm-hoa.com/ko/uganda/)
 - [잠비아](https://radar.wmm-hoa.com/ko/zambia/)
