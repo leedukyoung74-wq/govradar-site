@@ -62,9 +62,11 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Israel](https://radar.wmm-hoa.com/en/israel/): Israel held its 26th Knesset election on 27 October 2026, and exit polls show no bloc reaching a 61-seat majority, so coalition talks are under way. The NIS 699
 - [Jordan](https://radar.wmm-hoa.com/en/jordan/): The Hassan government pursues fiscal consolidation under the Economic Modernisation Vision and the Public Sector Modernisation Roadmap. The 2026 budget targets 
 - [Kuwait](https://radar.wmm-hoa.com/en/kuwait/): With a projected KD9.8bn deficit in the 2026/27 budget, Kuwait is pushing fiscal and legal reforms by decree, including higher non-oil revenue, a government suk
+- [Lebanon](https://radar.wmm-hoa.com/en/lebanon/): The Salam cabinet adopted a 2027 draft budget of $6.87bn (+14.2%) on 1 October. The World Bank expects the economy to shrink 6.4% in 2026, and PM Salam said the
 - [Oman](https://radar.wmm-hoa.com/en/oman/): Oman set its 2026 budget, the first year of the 11th Five-Year Development Plan (2026-2030), at OMR 11.98bn of spending with a deficit of 1.3% of GDP. Under Vis
 - [Qatar](https://radar.wmm-hoa.com/en/qatar/): LNG exports collapsed after the March 2026 strike on Ras Laffan and disruption in the Strait of Hormuz, pushing Qatar into quarterly deficits; on October 21 the
 - [Saudi Arabia](https://radar.wmm-hoa.com/en/saudi-arabia/): The Ministry of Finance's FY2027 pre-budget statement, issued on 1 October, projects spending of about SAR 1.392 trillion against revenue of about SAR 1.202 tri
+- [Syria](https://radar.wmm-hoa.com/en/syria/): President Ahmed al-Sharaa told the UN General Assembly in September that lifting sanctions has opened a 'new phase of revival' in reconstruction and investment.
 - [United Arab Emirates](https://radar.wmm-hoa.com/en/united-arab-emirates/): In October the UAE Cabinet approved a AED292.5bn federal budget for 2027-2029 (up 28.3% on the previous cycle), stressing AI, fiscal data analytics and simpler 
 - [Türkiye](https://radar.wmm-hoa.com/en/turkiye/): Türkiye's Medium-Term Programme (2027-2029) aims to bring inflation to single digits by 2029 while lifting growth and jobs. The 2027 draft budget emphasises hou
 - [Albania](https://radar.wmm-hoa.com/en/albania/): The Rama government's 2027 budget spends over €10bn, with welfare, fiscal stability and investment plus EU accession as its three priorities. It targets public 
@@ -116,6 +118,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Argentina](https://radar.wmm-hoa.com/en/argentina/): The Milei government filed its 2027 budget on 15 September 2026, assuming 4% growth, 18% inflation and a fourth straight fiscal surplus. It passed a labor refor
 - [Bahamas](https://radar.wmm-hoa.com/en/bahamas/): PM Davis's PLP won 33 of 41 seats (unofficial) in the 12 May 2026 snap election, the first back-to-back term in about 30 years. The FY2026/27 budget projects a 
 - [Barbados](https://radar.wmm-hoa.com/en/barbados/): PM Mottley's BLP won all 30 seats in the 11 February 2026 election for a third term. The 2026-27 estimates put spending at BDS$5.88bn with a deficit of 4.0% of 
+- [Belize](https://radar.wmm-hoa.com/en/belize/): PM Briceño's 2026/27 budget spends BZ$1.9bn (+12.7%) with record capital spending of BZ$606.8m (32%). Key items are road upgrades such as the George Price Highw
 - [Bolivia](https://radar.wmm-hoa.com/en/bolivia/): After 20 years of MAS rule, the Paz government is ending fuel subsidies and stabilising the economy under an IMF programme, but it lacks a legislative majority 
 - [Brazil](https://radar.wmm-hoa.com/en/brazil/): President Lula beat Flávio Bolsonaro 51.77% to 48.23% in the October 25 runoff to win a fourth term, and Brazilian assets and the real fell right after the resu
 - [Chile](https://radar.wmm-hoa.com/en/chile/): The Kast government prioritises security, migration control and a revival of investment, and has sent Congress a spending-cut-oriented 2027 budget. Cuts to soci
@@ -130,9 +133,11 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Haiti](https://radar.wmm-hoa.com/en/haiti/): Haiti has not held elections for over a decade; with the presidency vacant, unelected Prime Minister Alix Didier Fils-Aimé leads the administration. The elector
 - [Honduras](https://radar.wmm-hoa.com/en/honduras/): President Nasry Asfura's 2026 budget of HNL 444.3bn passed Congress in April. It adds funding for health (new hospitals), education (school repairs, meals) and 
 - [Jamaica](https://radar.wmm-hoa.com/en/jamaica/): In the year since Hurricane Melissa struck in October 2025, the government has spent about J$84 billion on recovery and aims to close the recovery phase by Janu
+- [Nicaragua](https://radar.wmm-hoa.com/en/nicaragua/): The Ortega-Murillo government's 2027 draft budget projects revenue of NIO 195.1bn (+13.6%) and spending of NIO 168.2bn, a surplus of 2.8% of GDP (seventh straig
 - [Panama](https://radar.wmm-hoa.com/en/panama/): The Mulino government is cutting the fiscal deficit and defending investment grade, with 36% of the US$35.1bn 2027 budget going to public investment. The Canal 
 - [Paraguay](https://radar.wmm-hoa.com/en/paraguay/): The collapse of digital lender ueno bank led the Senate to remove President Santiago Peña on 6 Nov 2026, and Vice President Pedro Alliana was sworn in. Containi
 - [Peru](https://radar.wmm-hoa.com/en/peru/): The Fujimori government presented its 2026-2031 plan to Congress in August 2026, built on security, disaster preparedness, human development, productivity and r
+- [Suriname](https://radar.wmm-hoa.com/en/suriname/): In her 30 September annual address, President Jennifer Geerlings-Simons presented the 2027 draft budget (revenue SRD 70.1bn, spending SRD 80.9bn, deficit 4% of 
 - [Trinidad and Tobago](https://radar.wmm-hoa.com/en/trinidad-and-tobago/): The FY2027 budget plans TT$63.37bn of spending against TT$59.73bn of revenue, cutting the deficit to 2.1% of GDP through measures such as capping loss relief an
 - [Uruguay](https://radar.wmm-hoa.com/en/uruguay/): The Orsi government's five-year budget law aims to cut the deficit gradually, mainly through revenue, while prioritising child poverty and security. Growth is m
 - [Venezuela](https://radar.wmm-hoa.com/en/venezuela/): After Maduro was removed by a US operation in January 2026, Acting President Delcy Rodríguez is opening the oil sector and improving ties with the US. A July re
@@ -224,9 +229,11 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [이스라엘](https://radar.wmm-hoa.com/ko/israel/)
 - [요르단](https://radar.wmm-hoa.com/ko/jordan/)
 - [쿠웨이트](https://radar.wmm-hoa.com/ko/kuwait/)
+- [레바논](https://radar.wmm-hoa.com/ko/lebanon/)
 - [오만](https://radar.wmm-hoa.com/ko/oman/)
 - [카타르](https://radar.wmm-hoa.com/ko/qatar/)
 - [사우디아라비아](https://radar.wmm-hoa.com/ko/saudi-arabia/)
+- [시리아](https://radar.wmm-hoa.com/ko/syria/)
 - [아랍에미리트](https://radar.wmm-hoa.com/ko/united-arab-emirates/)
 - [튀르키예](https://radar.wmm-hoa.com/ko/turkiye/)
 - [알바니아](https://radar.wmm-hoa.com/ko/albania/)
@@ -278,6 +285,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [아르헨티나](https://radar.wmm-hoa.com/ko/argentina/)
 - [바하마](https://radar.wmm-hoa.com/ko/bahamas/)
 - [바베이도스](https://radar.wmm-hoa.com/ko/barbados/)
+- [벨리즈](https://radar.wmm-hoa.com/ko/belize/)
 - [볼리비아](https://radar.wmm-hoa.com/ko/bolivia/)
 - [브라질](https://radar.wmm-hoa.com/ko/brazil/)
 - [칠레](https://radar.wmm-hoa.com/ko/chile/)
@@ -292,9 +300,11 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [아이티](https://radar.wmm-hoa.com/ko/haiti/)
 - [온두라스](https://radar.wmm-hoa.com/ko/honduras/)
 - [자메이카](https://radar.wmm-hoa.com/ko/jamaica/)
+- [니카라과](https://radar.wmm-hoa.com/ko/nicaragua/)
 - [파나마](https://radar.wmm-hoa.com/ko/panama/)
 - [파라과이](https://radar.wmm-hoa.com/ko/paraguay/)
 - [페루](https://radar.wmm-hoa.com/ko/peru/)
+- [수리남](https://radar.wmm-hoa.com/ko/suriname/)
 - [트리니다드 토바고](https://radar.wmm-hoa.com/ko/trinidad-and-tobago/)
 - [우루과이](https://radar.wmm-hoa.com/ko/uruguay/)
 - [베네수엘라](https://radar.wmm-hoa.com/ko/venezuela/)
