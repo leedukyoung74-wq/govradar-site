@@ -6,6 +6,8 @@
 /verify/  /ko/verify/  301
 /prepare  /ko/prepare/  301
 /prepare/  /ko/prepare/  301
+/ready  /ko/ready/  301
+/ready/  /ko/ready/  301
 /mdb  /ko/mdb/  301
 /mdb/  /ko/mdb/  301
 /feeds  /ko/feeds/  301
