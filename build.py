@@ -238,6 +238,31 @@ def lst(items, fmt):
 def sec(id_, h, body):
     return f'<section class="sec" id="{id_}"><h2>{e(h)}</h2>{body}</section>' if body else ""
 
+GL = {"ko": ("{c} 한눈에 보기", "사진", "핵심 자료", "주요 뉴스·공식 자료", "정부 과제", "예산 사업", "유망 사업", "공개 입찰", "위험 단계", "원문 보기", "자료 기준", "참고 사진"),
+ "en": ("{c} at a glance", "Photo", "Key data", "News and official sources", "Government priorities", "Funded projects", "Business opportunities", "Open tenders", "Risk level", "Read source", "Data as of", "Reference photo"),
+ "es": ("{c} de un vistazo", "Foto", "Datos clave", "Noticias y fuentes oficiales", "Prioridades del gobierno", "Proyectos con presupuesto", "Oportunidades de negocio", "Licitaciones abiertas", "Nivel de riesgo", "Ver fuente", "Datos al", "Foto de referencia"),
+ "fr": ("{c} en un coup d'œil", "Photo", "Données clés", "Actualités et sources officielles", "Priorités du gouvernement", "Projets financés", "Opportunités d'affaires", "Appels d'offres ouverts", "Niveau de risque", "Voir la source", "Données au", "Photo de référence"),
+ "ar": ("{c} في لمحة", "صورة", "بيانات أساسية", "أخبار ومصادر رسمية", "أولويات الحكومة", "مشاريع ممولة", "فرص أعمال", "مناقصات مفتوحة", "مستوى المخاطر", "اقرأ المصدر", "البيانات حتى", "صورة مرجعية"),
+ "vi": ("{c} trong nháy mắt", "Ảnh", "Dữ liệu chính", "Tin tức và nguồn chính thức", "Ưu tiên của chính phủ", "Dự án có ngân sách", "Cơ hội kinh doanh", "Gói thầu đang mở", "Mức rủi ro", "Xem nguồn", "Dữ liệu đến", "Ảnh tham khảo"),
+ "id": ("{c} sekilas", "Foto", "Data utama", "Berita dan sumber resmi", "Prioritas pemerintah", "Proyek berdana", "Peluang bisnis", "Tender terbuka", "Tingkat risiko", "Baca sumber", "Data per", "Foto referensi")}
+def glance(iso, L, d, name):
+    g = GL.get(L) or GL["en"]; t = T[L]
+    ph = PHOTOS.get(iso)
+    lv = lvl(iso)
+    nums = [(len(G(d, "agenda", L) or []), g[4]), (len(G(d, "projects", L) or []), g[5]), (len(G(d, "biz", L) or []), g[6]), (len(d.get("tenders") or []), g[7])]
+    pic = (f'<figure class="gl-ph"><img src="{e(ph["src"])}" referrerpolicy="no-referrer" alt="{e(g[11])}: {e(ph.get("place",""))}" loading="lazy" width="1600" height="900">'
+           f'<figcaption>{e(g[11])}: {e(ph.get("place",""))} · <a href="{e(ph["page"])}" target="_blank" rel="noopener nofollow">{e(ph["artist"])}</a> · {e(ph["license"])} · Wikimedia Commons</figcaption></figure>') if ph else ""
+    data = (f'<div class="gl-data"><p class="gl-k">{e(g[2])}</p><div class="gl-n">' + "".join(f'<div><b>{n or "—"}</b><span>{e(lb)}</span></div>' for n, lb in nums) + '</div>'
+            + (f'<p class="gl-r"><span>{e(g[8])}</span> <span class="lvl" data-l="{lv}">{e(t["rl"][lv])}</span></p>' if lv else "")
+            + f'<p class="gl-a">{e(g[10])} {e(d.get("updated") or "—")}</p></div>')
+    srcs = [x for x in (d.get("sources") or []) if isinstance(x, dict) and str(x.get("url", "")).startswith("http")][:4]
+    def card(x):
+        tt = x.get("title") or ""; m = re.split(r"\s[–—-]\s", tt, maxsplit=1)
+        pub, head_ = (m[0], m[1]) if len(m) == 2 else (re.sub(r"^https?://(www\.)?([^/]+).*$", r"\2", x["url"]), tt)
+        return f'<a class="gl-nw" href="{e(x["url"])}" target="_blank" rel="noopener nofollow"><i>{e(pub[:1].upper())}</i><span><small>{e(pub)}</small><b>{e(head_)}</b><em>{e(g[9])} ↗</em></span></a>'
+    news = (f'<div class="gl-news"><p class="gl-k">{e(g[3])}</p>' + "".join(card(x) for x in srcs) + '</div>') if srcs else ""
+    return f'<section class="glance"><h2>{e(g[0].format(c=name))}</h2><div class="gl-top">{pic}{data}</div>{news}</section>'
+
 def country_page(iso, L):
     t, d, c = T[L], DATA.get(iso) or {}, BY[iso]
     name = nm(iso, L)
@@ -258,6 +283,7 @@ def country_page(iso, L):
         body.append(f'<p class="summary">{e(tx(L,"rg_wait") if c.get("reg") else t["notyet"])}</p>')
     else:
         body.append(f'<p class="summary">{e(summ)}</p>')
+        body.append(glance(iso, L, d, name))
         body.append(P3.next_box(iso, L, C3(), d))
         st = G(d, "status", L)
         if st:
@@ -325,6 +351,8 @@ def country_page(iso, L):
     crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "GOV RADAR", "item": BASE + f"/{L}/"},
         {"@type": "ListItem", "position": 2, "name": name, "item": BASE + path}]})
+    ph = PHOTOS.get(iso); phs = f' style="--ph:url(/assets/c-{iso.lower()}.webp)"' if ph else ""
+    phc = (f'<p class="phc">{e(PHC.get(L, PHC["en"]))}: {e(ph.get("place",""))} · <a href="{e(ph["page"])}" target="_blank" rel="noopener nofollow">{e(ph["artist"])}</a> · {e(ph["license"])} · Wikimedia Commons</p>') if ph else ""
     hero = f"""<section class="chero"><div class="in">
 <p class="crumb"><a href="/{L}/">GOV RADAR</a> / {e(t['regions'][c['r']])}{(' / <a href="'+url(L,c['parent'])+'">'+e(nm(c['parent'],L))+'</a> / '+e(tx(L,'rgt')[c['type']])) if c.get('reg') else ''}</p>
 <div class="ct">{flag(iso, 'big')}<div><h1>{e(name)}</h1><p class="alt">{e(c['en'] if L!='en' else c['ko'])} · {iso}{' · Commonwealth' if c.get('cw') else ''}</p></div></div>
@@ -332,6 +360,11 @@ def country_page(iso, L):
 </div></section>"""
     return head(L, title, desc, path, alts, jl + crumbs) + hero + f'<div class="in cgrid"><article>{"".join(body)}</article>{side}</div>' + foot(L)
 
+_PHF = os.path.join(SRC, "photos.json")
+PHOTOS = json.load(open(_PHF, encoding="utf8")) if os.path.exists(_PHF) else {}
+for _k, _v in PHOTOS.items():
+    _v["src"] = f"/assets/c-{_k.lower()}.webp" if os.path.exists(os.path.join(ROOT, "web", f"c-{_k.lower()}.webp")) else (_v.get("thumb") or "").replace("/1600px-", "/1280px-")
+PHC = {"ko": "사진", "en": "Photo", "es": "Foto", "fr": "Photo", "ar": "صورة", "vi": "Ảnh", "id": "Foto"}
 STK = json.load(open(os.path.join(SRC, "stock.json"), encoding="utf8"))
 GUIDES = json.load(open(os.path.join(SRC, "guides.json"), encoding="utf8"))
 for _iso, _d in DATA.items():
