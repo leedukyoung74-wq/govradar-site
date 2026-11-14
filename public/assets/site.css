@@ -758,3 +758,14 @@ body{background:#F8F8F8 url(/assets/paper-w.jpg) repeat;background-size:1280px a
 .pz-b:hover{color:#0a0a0a}
 .sbnd{background:#0a0a0a url(/assets/spot.jpg) center/cover}.sbnd-p{color:#CFCFCB}.sbnd ul{color:#E8E8E4}.sbnd .btn.pri{color:#0a0a0a}
 .band.alt{background:rgba(0,0,0,.035)}
+/* 2026-11-14 b: bigger hero logo; backgrounds that never tile or stretch on phones */
+.hero .hradar{width:clamp(280px,36vw,500px)!important}
+body{background:#F8F8F8!important}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:#F8F8F8 url(/assets/paper-w.jpg) center/cover no-repeat}
+@media (max-width:760px){
+ body::before{background-image:url(/assets/paper-wm.jpg)}
+ .hero,.chero,.sbnd{background:#060606 url(/assets/spot.jpg) center top/100% auto no-repeat!important}
+ .hero .hradar{width:210px!important;margin:0 auto -4px}
+}
+@media (min-width:761px){.hero h1{font-size:clamp(34px,4.4vw,64px)}}
+@media (min-width:761px){.hero h1{font-size:clamp(34px,3.9vw,56px)}}
