@@ -361,3 +361,23 @@ window.gvLang = function (sel) {
   a.setAttribute("style", "position:fixed;right:14px;bottom:14px;z-index:9999;background:#1d2b4f;color:#fff;font-weight:700;font-size:13px;padding:9px 14px;border-radius:20px;box-shadow:0 2px 8px rgba(0,0,0,.25);text-decoration:none");
   document.body.appendChild(a);
 })();
+
+/* home: hero search + collapsible country list */
+(function () {
+  var q = document.getElementById("hsq"), out = document.getElementById("hsout");
+  var gw = document.getElementById("gwrap"), gm = document.getElementById("gmore");
+  if (gm && gw) gm.addEventListener("click", function () { var o = gw.classList.toggle("open"); gm.textContent = o ? gm.dataset.b : gm.dataset.a; });
+  var mq = document.getElementById("q"); if (mq && gw) mq.addEventListener("input", function () { if (mq.value) { gw.classList.add("open"); if (gm) gm.textContent = gm.dataset.b; } });
+  if (!q || !out) return;
+  var flags = [].slice.call(document.querySelectorAll("#grid a.flag")), inds = [].slice.call(document.querySelectorAll(".hs-c"));
+  function norm(s) { return (s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, ""); }
+  function run() {
+    var v = norm(q.value.trim()); if (!v) { out.hidden = true; return []; }
+    var r = inds.filter(function (a) { return norm(a.textContent).indexOf(v) >= 0; }).slice(0, 3).map(function (a) { return '<a href="' + a.getAttribute("href") + '"><i>▦</i>' + a.textContent + "</a>"; });
+    flags.filter(function (a) { return norm(a.dataset.n).indexOf(v) >= 0; }).slice(0, 8).forEach(function (a) { r.push('<a href="' + a.getAttribute("href") + '">' + a.innerHTML.replace(/<i class="?rk[^>]*><\/i>/, "") + "</a>"); });
+    out.innerHTML = r.join("") || '<p class="note">—</p>'; out.hidden = false; return r;
+  }
+  q.addEventListener("input", run);
+  q.form.addEventListener("submit", function () { run(); var a = out.querySelector("a"); if (a) location.href = a.getAttribute("href"); });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".hs")) out.hidden = true; });
+})();
