@@ -660,7 +660,7 @@ def home(L):
 </div></section>
 <section class="band" id="map"><div class="in"><h2>{e(t['map_h'])}</h2>
 <div class="mapbox"><div id="wmap" data-lang="{L}"></div></div>
-<div class="filters"><input id="q" type="search" placeholder="{e(t['search'])}" aria-label="{e(t['search'])}"><button class="chip on" data-r="ALL">{e(t['all'])}</button>{regions}</div>
+<div class="filters"><input id="q" type="search" autocomplete="off" list="qlist" placeholder="{e(t['search'])}" aria-label="{e(t['search'])}"><datalist id="qlist">{"".join(f'<option value="{e(nm(c["iso"],L))}">' for c in sorted(META, key=lambda c: nm(c["iso"], L)))}</datalist><button class="chip on" data-r="ALL">{e(t['all'])}</button>{regions}</div>
 <div class="gwrap" id="gwrap"><div class="grid" id="grid">{grid}</div></div><p class="cta"><button class="btn" type="button" id="gmore" data-a="{e(GM.get(L, GM['en'])[0])}" data-b="{e(GM.get(L, GM['en'])[1])}">{e(GM.get(L, GM['en'])[0])}</button></p>{region_block(L)}</div></section>
 <section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=6, home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
