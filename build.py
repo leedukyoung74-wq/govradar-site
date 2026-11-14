@@ -494,6 +494,19 @@ def hz_band(L):
     return f'''<section class="band" id="hz16"><div class="in"><h2>{e(h)}</h2><p class="note" style="font-size:15px;max-width:46em">{e(p_)}</p><div class="hzg" id="hz16g" data-l="{lang}"></div><p class="cta">{hz_link(L)}</p></div></section>
 <script src="/hazards/hzfx.js" defer></script><script>addEventListener("DOMContentLoaded",function(){{var g=document.getElementById("hz16g"),X=window.HZFX;if(!g||!X)return;var l=g.dataset.l,N=X.NM[l]||X.NM.en;g.innerHTML=["flood","storm","quake","tsunami","wildfire","volcano","war","protest"].map(function(k){{return X.card(k,"none",N[k],"","")}}).join("")}});</script>'''
 
+PZ = {"ko": [("사업과 입찰 기회를 찾습니다", "나라·산업 선택 → 진행 중 기회 → 참가 조건"), ("나와 가족의 위험에 대비합니다", "지역·재난 선택 → 지금 할 일과 준비 계획"), ("제품·기술 협력 상대를 찾습니다", "요청 찾기·등록 → 참여와 제안")],
+ "en": [("Find business and tender opportunities", "Country and industry → open opportunities → entry conditions"), ("Prepare my family for risks", "Area and hazard → what to do now and a plan"), ("Find partners for products and technology", "Browse or post requests → join and propose")],
+ "es": [("Buscar oportunidades de negocio y licitaciones", "País e industria → oportunidades abiertas → requisitos"), ("Preparar a mi familia ante riesgos", "Zona y riesgo → qué hacer ahora y un plan"), ("Encontrar socios de productos y tecnología", "Ver o publicar solicitudes → participar y proponer")],
+ "fr": [("Trouver des affaires et des appels d'offres", "Pays et secteur → opportunités ouvertes → conditions"), ("Préparer ma famille aux risques", "Zone et risque → que faire maintenant et un plan"), ("Trouver des partenaires produits et technologies", "Voir ou publier des demandes → participer et proposer")],
+ "ar": [("ابحث عن فرص الأعمال والمناقصات", "الدولة والقطاع ← الفرص المفتوحة ← شروط المشاركة"), ("جهّز أسرتي لمواجهة المخاطر", "المنطقة والخطر ← ما تفعله الآن وخطة"), ("ابحث عن شركاء للمنتجات والتقنية", "تصفّح الطلبات أو انشرها ← شارك وقدّم عرضًا")],
+ "vi": [("Tìm cơ hội kinh doanh và gói thầu", "Quốc gia, ngành → cơ hội đang mở → điều kiện tham gia"), ("Chuẩn bị cho gia đình trước rủi ro", "Khu vực, hiểm họa → việc cần làm ngay và kế hoạch"), ("Tìm đối tác sản phẩm và công nghệ", "Xem hoặc đăng yêu cầu → tham gia và đề xuất")],
+ "id": [("Cari peluang bisnis dan tender", "Negara dan industri → peluang terbuka → syarat ikut"), ("Siapkan keluarga menghadapi risiko", "Wilayah dan bahaya → yang dilakukan sekarang dan rencana"), ("Cari mitra produk dan teknologi", "Lihat atau pasang permintaan → ikut dan ajukan")]}
+def purpose3(L):
+    xs = PZ.get(L) or PZ["en"]
+    hrefs = [f"/{L}/mdb/", f"/{L}/ready/", f"/{L}/consortium/"]
+    ic = ["📑", "🛡️", "🤝"]
+    return '<div class="pz">' + "".join(f'<a class="pz-b" href="{h}"><i>{i}</i><b>{e(t)}</b><span>{e(d)}</span></a>' for (t, d), h, i in zip(xs, hrefs, ic)) + "</div>"
+
 def ready_band(L):
     import ready_art as ART
     h, p_, b = RB.get(L) or RB["en"]
@@ -613,7 +626,7 @@ def home(L):
 <section class="hero"><div class="in"><div>
 <p class="eb"><i class="live"></i>{({"ko":"193개국 추적 · {n}개국 심층 조사","es":"193 gobiernos seguidos · {n} analizados a fondo","fr":"193 gouvernements suivis · {n} étudiés en détail","ar":"نتابع 193 حكومة · {n} مدروسة بعمق","vi":"Theo dõi 193 chính phủ · {n} nước nghiên cứu sâu","id":"Memantau 193 pemerintah · {n} diteliti mendalam"}.get(L,"Tracking 193 governments · {n} researched in depth")).replace("{n}",str(n_done))}</p>
 <h1>{e(t['tagline']).replace('정부가 ','정부가<br>',1)}</h1><p class="lede">{e(t['lede']).replace('모았습니다. ','모았습니다.<br>',1)}</p>
-<div class="cta"><a class="btn pri" href="#map">{e(t['cta_map'])}</a><button class="btn ghost" data-act="join">{e(t['cta_join'])}</button></div>
+{purpose3(L)}<p class="pz-sub"><a href="#map">{e(t['cta_map'])}</a> · <button class="lnk" data-act="join">{e(t['cta_join'])}</button></p>
 <p class="byline"><img src="/assets/emblem.png" alt="" width="24" height="24">WORLD MAKING MEMBERS × GCSME</p></div>
 <a class="hradar" href="#map" aria-label="GOV RADAR"><span class="hp"></span><span class="hp p2"></span><img src="/assets/govradar-logo.webp" alt="GOV RADAR" width="640" height="709"><span class="hsw"></span><span class="hbl b1"></span><span class="hbl b2"></span><span class="hbl b3"></span><span class="hbl b4"></span>{"".join(f'<span class="htg t{i+1}">{x}</span>' for i, x in enumerate((["🇻🇳 정부 사업", "🇰🇪 입찰 마감 D-7", "🇸🇦 ODA", "🌐 세계은행 공고"] if L=="ko" else ["🇻🇳 Programmes", "🇰🇪 Tender D-7", "🇸🇦 Aid projects", "🌐 World Bank"])))}</a>
 <div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b>{n_t}</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span></div><div><b>{e(last[5:].replace('-','/') or '—')}</b><span>{e(t['k_last'])}</span></div></div>
@@ -677,7 +690,7 @@ def account_page(L):
 <div id="acct-out"><p class="note">{e(t['members_only'])}</p><p><button class="btn pri" data-auth="login">{e(AT[L]['login'])}</button> <button class="btn" data-auth="signup">{e(AT[L]['signup'])}</button></p></div>
 <div id="acct-in" hidden><p><b id="acct-st"></b> · <span class="lv watch" id="acct-tier"></span> <button class="btn sm" id="acct-logout" type="button">{e(t['logout'])}</button></p>
 <p class="note">{lab('등급 변경·결제는 73036396@naver.com 으로 문의하세요. 등급은 다음 로그인 때 반영됩니다.','To change plan or pay, contact 73036396@naver.com. Plan changes apply at your next sign-in.')}</p>
-<h3>{lab('내 입찰 관심 목록','My watchlist')}</h3><ul id="acct-watch"></ul></div>
+<p><a class="btn pri" href="/{L}/request/">{lab('분석 의뢰하기 (4가지)','Request an analysis (4 types)')}</a></p><h3>{lab('내 입찰 관심 목록','My watchlist')}</h3><ul id="acct-watch"></ul><h3>{lab('관심 나라','Followed countries')}</h3><p id="acct-follow" class="note">—</p></div>
 <form id="acct" hidden>
 <label>{lab('회사명','Company')}<input name="company"></label>
 <fieldset><legend>{lab('관심 분야 (알림 기준)','Industries (for alerts)')}</legend><div class="chks">{inds}</div></fieldset>
@@ -760,7 +773,7 @@ def build():
         W(f"/{L}/about/index.html", about_page(L)); urls.append((f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}))
         W(f"/{L}/prepare/index.html", stock_page(L)); urls.append((f"/{L}/prepare/", {l: f"/{l}/prepare/" for l in LANGS}))
         W(f"/{L}/ready/index.html", ready_page(L)); urls.append((f"/{L}/ready/", {l: f"/{l}/ready/" for l in LANGS}))
-        W(f"/{L}/feeds/index.html", feeds_page(L)); W(f"/{L}/embed/index.html", embed_page(L)); W(f"/{L}/account/index.html", account_page(L))
+        W(f"/{L}/feeds/index.html", feeds_page(L)); W(f"/{L}/embed/index.html", embed_page(L)); W(f"/{L}/account/index.html", account_page(L)); import pages_req as PRQ; W(f"/{L}/request/index.html", PRQ.request_page(L, head, foot, LANGS)); urls.append((f"/{L}/request/", {l: f"/{l}/request/" for l in LANGS}))
         for c in META:
             W(f"/{L}/{c['slug']}/index.html", country_page(c["iso"], L))
             urls.append((url(L, c["iso"]), {l: url(l, c["iso"]) for l in LANGS}))
@@ -823,7 +836,7 @@ def build():
         lm = (DATA.get(iso) or {}).get("updated", TODAY) if iso else TODAY
         sm.append(f"<url><loc>{BASE}{p}</loc><lastmod>{lm}</lastmod>" + "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{BASE}{a}"/>' for l, a in alts.items()) + "</url>")
     sm.append("</urlset>"); W("/sitemap.xml", "".join(sm))
-    W("/_redirects", "".join(f"/{p}  /ko/{p}/  301\n/{p}/  /ko/{p}/  301\n" for p in ["about","conflict","verify","prepare","ready","mdb","feeds","embed","account","consortium","projects","contracts","experts","solutions","pricing","notices","individuals","unlock","gcsme","partners"]))
+    W("/_redirects", "".join(f"/{p}  /ko/{p}/  301\n/{p}/  /ko/{p}/  301\n" for p in ["about","conflict","verify","prepare","ready","mdb","feeds","embed","account","consortium","projects","contracts","experts","solutions","pricing","notices","individuals","unlock","gcsme","partners","request"]))
     try:
         from PIL import Image
         im = Image.open(os.path.join(OUT, "assets", "mark.png")).convert("RGBA"); im.save(os.path.join(OUT, "favicon.ico"), sizes=[(16,16),(32,32),(48,48)])

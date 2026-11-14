@@ -140,6 +140,7 @@
     if (tierEl) tierEl.textContent = (window.RADAR_AT && window.RADAR_AT.tiers && window.RADAR_AT.tiers[au.tier()]) || au.tier();
     for (const el of f.elements) { if (!el.name) continue; if (el.name === "ind") el.checked = (p.industries || []).includes(el.value); else if (el.type === "checkbox") el.checked = !!p[el.name]; else if (el.name === "certs") el.value = (p.certs || []).join(", "); else if (p[el.name] != null) el.value = p[el.name]; }
     const wl = document.getElementById("acct-watch"); if (wl) wl.innerHTML = (p.watch || []).map(w => `<li>${String(w.title).replace(/[<>&]/g, "")} <span class="note">${w.iso} ${w.deadline || ""}</span></li>`).join("") || "<li class=note>—</li>";
+    const fl = document.getElementById("acct-follow"); if (fl) fl.textContent = (p.follows || []).join(" · ") || "—";
   }
   document.addEventListener("DOMContentLoaded", () => { paint(); window.WMMAuth && window.WMMAuth.onChange(paint); });
   const lo = document.getElementById("acct-logout"); if (lo) lo.addEventListener("click", () => { window.WMMAuth.logout(); location.href = "/" + (window.RADAR_LANG || "en") + "/"; });

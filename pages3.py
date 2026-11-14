@@ -363,7 +363,7 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
     body = f'''<section class="phero short">{img("sign", "", 1800, 700, "bg", True)}<div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p>
 <h1>{"필요한 만큼 주문하세요" if ko else "Order what you need"}</h1>
 <p class="lede">{"정보는 누구나 무료로 봅니다. 분석·알림은 합리적인 월 19,800원에, 실제 사업은 직접 만나 프로젝트 파트너십으로 함께합니다. 카드 결제를 열기 전까지는 견적·계좌이체로 받고, 자동갱신은 하지 않습니다." if ko else "Anyone can browse the data for free. Analysis and alerts cost a fair ₩19,800/month, and real deals are done in person through a project partnership. Until card payment opens, we take orders by quote and bank transfer, with no auto-renewal."}</p></div></section>
-<section class="band" id="tier"><div class="in"><div class="needban" id="needban" hidden></div>
+<section class="band" id="tier"><div class="in"><div class="needban" id="needban" hidden></div><p class="cta" style="margin:0 0 18px"><a class="btn pri" href="/{L}/request/">{"회원 분석 의뢰 4가지 — 범위·한도·처리 기준 보고 보내기 →" if ko else "Member analysis requests — see scope, limit and handling before you send →"}</a></p>
 <h2>{"무료·분석 회원·파트너십 비교" if ko else "Free, analysis membership and partnership"}</h2><p class="note"><a href="/{L}/how/">{"신청 후 진행 순서·납기·고객 약속 보기 →" if ko else "How it works: steps, turnaround and our promises →"}</a></p><p class="note">{"정보(정부 사업·입찰 전체·위험)는 모두 무료입니다. 돈은 AI 분석과 알림(분석 회원 월 19,800원), 사람이 하는 판단(적합도·브리프), 그리고 직접 만나 함께하는 프로젝트 파트너십에서 받습니다." if ko else "All data — programmes, every tender, risk — is free. We charge for AI analysis and alerts (₩19,800/month), human judgement (fit reviews, briefs) and in-person project partnerships."}</p>{tier_table(L)}</div></section>
 <section class="band"><div class="in"><h2>{"지금 주문할 수 있는 것" if ko else "Available now"}</h2><div class="offers">{orows}</div></div></section>
 <section class="band alt"><div class="in"><h2>{"주문하면 이렇게 진행됩니다" if ko else "How an order works"}</h2><ol class="flow">{"".join(f"<li>{x}</li>" for x in steps)}</ol></div></section>
@@ -388,6 +388,7 @@ document.addEventListener("click",function(ev){{var a=ev.target.closest("[data-p
 
 # ---------------------------------------------------------------- deadline board (top of /L/mdb/)
 NB = lambda L: '<em class="nb">' + pt("new", L if isinstance(L, str) else ("ko" if L else "en")) + "</em>"
+SV = {"ko": "내 관심 목록에 담기", "en": "Save to my watchlist", "es": "Guardar en mi lista", "fr": "Ajouter à ma liste", "ar": "احفظ في قائمتي", "vi": "Lưu vào danh sách của tôi", "id": "Simpan ke daftar saya"}
 def deadline_board(L, C, limit=None, home=False):
     ko = L == "ko"; e = C["e"]; T = all_tenders(C["DATA"], C["BY"], C["TODAY"])
     if limit: T = T[:limit]
@@ -404,7 +405,7 @@ def deadline_board(L, C, limit=None, home=False):
     nlk = len(T) - len([i for i in range(len(T)) if i in free])
     rows = "".join(lockrow(x) if i not in free else f'''<li class="{"new" if x.get("new") else ""}" data-s="{" ".join(x["sec"]) or "other"}" data-dl="{x["dl"]}"><span class="dd" data-dl="{x["dl"]}">{x["dl"][5:].replace("-", "/")}{NB(L) if x.get("new") else ""}</span>
 <span class="tt"><a href="{C["url"](L, x["iso"])}#tenders">{C["flag"](x["iso"])} {e(C["nm"](x["iso"], L))}</a><b>{e((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))}</b><small>{e((x["te"].get("buyer") if not ko else None) or x["t"].get("buyer", ""))}</small></span>
-{f'<a class="src" href="{e(x["t"]["url"])}" target="_blank" rel="noopener nofollow">{"원문" if ko else "Notice"} ↗</a>' if str(x["t"].get("url", "")).startswith("https://") else ""}</li>''' for i, x in enumerate(T))
+{f'<a class="src" href="{e(x["t"]["url"])}" target="_blank" rel="noopener nofollow">{"원문" if ko else "Notice"} ↗</a>' if str(x["t"].get("url", "")).startswith("https://") else ""}<button class="sv" type="button" data-act="watch" data-iso="{x["iso"]}" data-title="{e((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))}" data-deadline="{x["dl"]}" title="{SV.get(L, SV["en"])}" aria-label="{SV.get(L, SV["en"])}">☆</button></li>''' for i, x in enumerate(T))
     chips = "" if home else (f'<div class="filters dlf"><button class="chip on" data-s="all">{"전체" if ko else "All"}</button>' + "".join(f'<button class="chip" data-s="{k}">{nk if ko else ne}</button>' for k, nk, ne, *_ in SECT) + "</div>")
     js = '''<script>(function(){var t=new Date();t.setHours(0,0,0,0);document.querySelectorAll(".dl .dd").forEach(function(s){var d=new Date(s.dataset.dl+"T00:00:00"),n=Math.round((d-t)/864e5);if(n<0){s.closest("li").remove();return}if(s.closest(".lk"))return;s.insertAdjacentHTML("beforeend","<i>D-"+(n||"day")+"</i>");if(n<=15){s.classList.add("soon");s.closest("li").classList.add("hot")}});
 var cs=document.querySelectorAll(".dlf .chip");function f(k){cs.forEach(function(c){c.classList.toggle("on",c.dataset.s===k)});document.querySelectorAll(".dl li").forEach(function(li){li.hidden=!(k==="all"||li.dataset.s.split(" ").indexOf(k)>=0)})}
