@@ -423,8 +423,10 @@ window.gvLang = function (sel) {
   nums.forEach(function (el) { io.observe(el); });
 })();
 
-/* second bar: highlight the section in view */
-(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var A=[].slice.call(n.querySelectorAll('a[href^="#"]')),S=A.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))});
-function up(){var y=scrollY+130,k=-1;S.forEach(function(s,i){if(s&&s.offsetParent!==null&&s.getBoundingClientRect().top+scrollY<=y)k=i});A.forEach(function(a,i){if(i===k){if(!a.hasAttribute("aria-current")){a.setAttribute("aria-current","true");a.scrollIntoView({block:"nearest",inline:"center"})}}else a.removeAttribute("aria-current")})}
-var t;addEventListener("scroll",function(){if(!t)t=requestAnimationFrame(function(){t=0;up()})},{passive:true});up();}
+/* second bar: highlight the section in view (no page scroll side effects) */
+(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var box=n.querySelector(".in")||n,A=[].slice.call(n.querySelectorAll('a[href^="#"]'));if(!A.length)return;
+var S=A.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)))}),cur=-1,lock=0,vis={};
+function mark(k){if(k===cur)return;cur=k;A.forEach(function(a,i){if(i===k)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")});var a=A[k];if(a){var l=a.offsetLeft-(box.clientWidth-a.offsetWidth)/2;box.scrollTo({left:Math.max(0,l),behavior:"smooth"})}}
+A.forEach(function(a,i){a.addEventListener("click",function(ev){var s=S[i];if(!s||s.offsetParent===null)return;ev.preventDefault();lock=Date.now()+900;mark(i);var y=s.getBoundingClientRect().top+scrollY-118;scrollTo({top:y,behavior:"smooth"});try{history.replaceState(null,"",a.getAttribute("href"))}catch(e){}})});
+if(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[S.indexOf(e.target)]=e.isIntersecting});if(Date.now()<lock)return;var k=-1;for(var i=0;i<S.length;i++)if(vis[i]){k=i;break}if(k<0){var y=scrollY+130;S.forEach(function(s,i){if(s&&s.getBoundingClientRect().top+scrollY<=y)k=i})}if(k>=0)mark(k)},{rootMargin:"-118px 0px -55% 0px"});S.forEach(function(s){if(s)io.observe(s)});}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();

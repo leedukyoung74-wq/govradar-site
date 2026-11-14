@@ -640,7 +640,7 @@ bgWorld();render();
 </script>
 <script src="trend.js"></script>
 <script>
-(function(){var T=window.TR;if(!T||!window.d3)return;var ko=(typeof lang==='undefined'?'ko':lang)==='ko';
+(function(){var T=window.TR;if(!T||!window.d3)return;var ko=(new URLSearchParams(location.search).get('l')||'ko')==='ko';
 var X={
  h:['1950년부터 75년, 기록은 어떻게 변했나','75 years of records, 1950–2025'],
  s:['공식 기관 6곳이 공개한 연도별 숫자를 곡선으로 놓았습니다. 옅은 선은 해마다의 값, 진한 선은 10년 이동평균입니다. 그래프에 마우스를 올리거나 누르면 그해 값이 나옵니다.','Yearly numbers published by six official sources. The thin line is each year, the thick line a 10-year moving average. Hover or tap a chart for that year.'],

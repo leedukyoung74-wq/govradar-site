@@ -105,7 +105,7 @@ var b=document.getElementById("gvhb"),n=document.getElementById("gvhl");b.onclic
 __SPY__"""
     return js.replace("__SPY__", SPYJS).replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__CSS__", json.dumps(css)).replace("__SUBCSS__", json.dumps(SUBCSS))
 
-SPYJS = '(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var A=[].slice.call(n.querySelectorAll(\'a[href^="#"]\')),S=A.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))});\nfunction up(){var y=scrollY+130,k=-1;S.forEach(function(s,i){if(s&&s.offsetParent!==null&&s.getBoundingClientRect().top+scrollY<=y)k=i});A.forEach(function(a,i){if(i===k){if(!a.hasAttribute("aria-current")){a.setAttribute("aria-current","true");a.scrollIntoView({block:"nearest",inline:"center"})}}else a.removeAttribute("aria-current")})}\nvar t;addEventListener("scroll",function(){if(!t)t=requestAnimationFrame(function(){t=0;up()})},{passive:true});up();}\nif(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();'
+SPYJS = '(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var box=n.querySelector(".in")||n,A=[].slice.call(n.querySelectorAll(\'a[href^="#"]\'));if(!A.length)return;\nvar S=A.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)))}),cur=-1,lock=0,vis={};\nfunction mark(k){if(k===cur)return;cur=k;A.forEach(function(a,i){if(i===k)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")});var a=A[k];if(a){var l=a.offsetLeft-(box.clientWidth-a.offsetWidth)/2;box.scrollTo({left:Math.max(0,l),behavior:"smooth"})}}\nA.forEach(function(a,i){a.addEventListener("click",function(ev){var s=S[i];if(!s||s.offsetParent===null)return;ev.preventDefault();lock=Date.now()+900;mark(i);var y=s.getBoundingClientRect().top+scrollY-118;scrollTo({top:y,behavior:"smooth"});try{history.replaceState(null,"",a.getAttribute("href"))}catch(e){}})});\nif(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[S.indexOf(e.target)]=e.isIntersecting});if(Date.now()<lock)return;var k=-1;for(var i=0;i<S.length;i++)if(vis[i]){k=i;break}if(k<0){var y=scrollY+130;S.forEach(function(s,i){if(s&&s.getBoundingClientRect().top+scrollY<=y)k=i})}if(k>=0)mark(k)},{rootMargin:"-118px 0px -55% 0px"});S.forEach(function(s){if(s)io.observe(s)});}\nif(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();'
 SUBCSS = """.subnav{position:sticky;top:60px;z-index:19;background:#0b0b0b;border-bottom:1px solid #2a2a28}
 .subnav .in{display:flex;gap:4px;height:44px;align-items:center;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
 .subnav .in::-webkit-scrollbar{display:none}
@@ -145,7 +145,7 @@ def toc_post(html):
     rd = _re.search(r'<nav class="rd-nav"[^>]*><div class="rd-in">(.*?)</div></nav>', body, _re.S)
     links = []
     if rd:
-        links = [(h_, _re.sub("<[^>]+>", "", t)) for h_, t in _re.findall(r'<a href="(#[^"]+)">(.*?)</a>', rd.group(1))]
+        links = [(h_, _h.unescape(_re.sub("<[^>]+>", "", t))) for h_, t in _re.findall(r'<a href="(#[^"]+)">(.*?)</a>', rd.group(1))]
     else:
         n = [0]
         def addid(m):
