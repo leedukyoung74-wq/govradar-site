@@ -386,3 +386,39 @@ window.gvLang = function (sel) {
   q.addEventListener("change", function () { var v = q.value.trim(); if (!v) return;
     var a = [].slice.call(document.querySelectorAll("#grid a.flag")).filter(function (x) { var s = x.querySelector("span"); return s && s.textContent.trim() === v; })[0];
     if (a) location.href = a.getAttribute("href"); }); })();
+
+/* ===== motion layer: live ticker, count-up numbers, scroll reveal ===== */
+(function () {
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* live ticker: real closing tenders + official alerts */
+  var tk = document.getElementById("tickt");
+  if (tk) {
+    var L = tk.closest(".tick").dataset.l, items = [];
+    [].slice.call(document.querySelectorAll(".dl li:not(.lk)")).slice(0, 10).forEach(function (li) {
+      var c = li.querySelector(".cn, .tt a"), b = li.querySelector(".tt b"), d = li.querySelector(".dd i");
+      if (b) items.push('<span class="ti"><em>' + (d ? d.textContent : "") + "</em>" + (c ? c.textContent.trim() + " · " : "") + b.textContent.trim() + "</span>");
+    });
+    function paint() { if (!items.length) return; var h = items.join(""); tk.innerHTML = h + h; tk.style.animationDuration = Math.max(40, items.length * 7) + "s"; }
+    paint();
+    fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/official.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (f) {
+      if (!f) return; var add = [];
+      ["gdacs", "usgs", "who"].forEach(function (k) { (f.items[k] || []).slice(0, 3).forEach(function (x) { add.push('<span class="ti al"><em>' + (x.lvl ? x.lvl.toUpperCase() : k.toUpperCase()) + "</em>" + String(x.t).replace(/[<>&]/g, "").slice(0, 90) + "</span>"); }); });
+      for (var i = 0; i < add.length; i++) items.splice(Math.min(items.length, i * 2 + 1), 0, add[i]); paint();
+    }).catch(function () {});
+  }
+  /* count-up for big numbers */
+  function countUp(el) {
+    var m = el.firstChild && el.firstChild.nodeType === 3 ? el.firstChild.nodeValue.match(/^(\d{1,6})$/) : null; if (!m) return;
+    var to = +m[1], t0 = null, node = el.firstChild; if (reduce || to < 2) return;
+    function step(t) { if (!t0) t0 = t; var k = Math.min(1, (t - t0) / 1400), v = Math.round(to * (1 - Math.pow(1 - k, 3))); node.nodeValue = v; if (k < 1) requestAnimationFrame(step); }
+    node.nodeValue = 0; requestAnimationFrame(step);
+  }
+  var nums = [].slice.call(document.querySelectorAll(".kpis b, .gl-n b, .fc-k b"));
+  /* scroll reveal */
+  var rv = [].slice.call(document.querySelectorAll("main > section, body > section.band, .band, .glance, .sbnd, .rd-band, .hzc, .lb-hz, .opp, .gl-nw, .pz-b"));
+  if (!("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (!x.isIntersecting) return; var el = x.target; io.unobserve(el);
+    if (el.classList.contains("rv")) el.classList.add("in"); else countUp(el); }); }, { rootMargin: "0px 0px -8% 0px" });
+  rv.forEach(function (el, i) { if (el.closest(".hero")) return; el.classList.add("rv"); el.style.transitionDelay = (el.matches(".hzc,.lb-hz,.opp,.gl-nw") ? (i % 4) * 70 : 0) + "ms"; io.observe(el); });
+  nums.forEach(function (el) { io.observe(el); });
+})();
