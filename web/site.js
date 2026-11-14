@@ -418,7 +418,7 @@ window.gvLang = function (sel) {
   var rv = [].slice.call(document.querySelectorAll("main > section, body > section.band, .band, .glance, .sbnd, .rd-band, .hzc, .lb-hz, .opp, .gl-nw, .pz-b"));
   if (!("IntersectionObserver" in window)) return;
   var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (!x.isIntersecting) return; var el = x.target; io.unobserve(el);
-    if (el.classList.contains("rv")) el.classList.add("in"); else countUp(el); }); }, { rootMargin: "0px 0px -8% 0px" });
+    if (el.classList.contains("rv")) el.classList.add("rv-on"); else countUp(el); }); }, { rootMargin: "0px 0px -8% 0px" });
   rv.forEach(function (el, i) { if (el.closest(".hero")) return; el.classList.add("rv"); el.style.transitionDelay = (el.matches(".hzc,.lb-hz,.opp,.gl-nw") ? (i % 4) * 70 : 0) + "ms"; io.observe(el); });
   nums.forEach(function (el) { io.observe(el); });
 })();
