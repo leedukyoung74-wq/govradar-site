@@ -19,7 +19,8 @@ a{color:var(--gold2)}
 header.top{border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
 header.top a{color:var(--ink);text-decoration:none;font-weight:700;letter-spacing:.5px}
-header.top nav a{font-weight:400;color:var(--soft);margin-left:20px;font-size:15px}
+header.top nav a{font-weight:400;color:var(--soft);margin-left:18px;font-size:15px}
+@media (max-width:1100px){header.top nav{display:none}}
 .hero{position:relative;padding:88px 0 64px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 70% 0%,#2A2113 0%,#0B0B0A 60%)}
 .eb{font-size:13px;letter-spacing:6px;color:var(--gold)}
 .hero h1{font-weight:300;font-size:clamp(34px,5vw,60px);line-height:1.2;color:var(--ink);margin:18px 0 20px;letter-spacing:-1px}
@@ -132,7 +133,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;font-size:13px;color
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap"><a href="/ko/">GOV RADAR</a><nav><a href="/ko/">세계 지도</a><a href="/hazards/">재난 한눈에</a><a href="/signals/" aria-current="page">표지와 풍자 읽기</a></nav></div></header>
+<header class="top"><div class="wrap"><a href="/ko/">GOV RADAR</a><nav><a href="/ko/#map">나라 찾기</a><a href="/ko/mdb/">입찰·사업</a><a href="/ko/solutions/">진출 지원</a><a href="/ko/conflict/">세계 상황</a><a href="/hazards/">재난 지도</a><a href="/ko/ready/">재난 대비</a><a href="/signals/" aria-current="page" style="color:var(--gold2)">표지·풍자</a><a href="/ko/pricing/">요금·회원</a></nav></div></header>
 
 <section class="hero"><div class="wrap">
 <p class="eb">COVERS &amp; SATIRE · 2015 — 2026</p>
