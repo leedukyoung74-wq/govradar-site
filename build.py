@@ -157,7 +157,7 @@ FONTLINK = {
 }
 # en/es/fr/id use the house font (WMM Nexon) only; vi/ar keep a fallback for glyphs Nexon lacks
 def navhtml(L):
-    items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l=en"}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
+    items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l=en"}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/signals/">{e(lbl)}</a>' if p == "@signals" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
     return items
 def head(L, title, desc, path, alt_paths, extra=""):
     t = T[L]
@@ -561,6 +561,13 @@ def sample_band(L):
     return f'''<section class="band sbnd"><div class="in sbnd-g"><div><h2>{e(h)}</h2><p class="sbnd-p">{e(p_)}</p><ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul><p class="cta"><a class="btn pri" href="/{L}/sample/">{e(b1)}</a> <a class="btn" href="/{L}/request/">{e(b2)}</a></p></div>
 <a class="sbnd-img" href="/{L}/sample/"><img src="/assets/{im}" alt="{e(b1)}" width="1290" height="1530" loading="lazy"></a></div></section>'''
 
+TK = {"ko": ("LIVE", "마감 임박 입찰 · 공식 경보"), "en": ("LIVE", "Closing tenders · official alerts"), "es": ("EN VIVO", "Licitaciones por cerrar · alertas oficiales"),
+ "fr": ("EN DIRECT", "Appels d'offres proches · alertes officielles"), "ar": ("مباشر", "مناقصات تقترب · تنبيهات رسمية"), "vi": ("TRỰC TIẾP", "Gói thầu sắp hết hạn · cảnh báo chính thức"),
+ "id": ("LANGSUNG", "Tender segera tutup · peringatan resmi")}
+def ticker(L):
+    a, b = TK.get(L) or TK["en"]
+    return f'<section class="tick" aria-label="{e(b)}" data-l="{L}"><div class="tick-l"><i></i>{e(a)}<span>{e(b)}</span></div><div class="tick-w"><div class="tick-t" id="tickt"></div></div></section>'
+
 def purpose3(L):
     xs = PZ.get(L) or PZ["en"]
     hrefs = [f"/{L}/mdb/", f"/{L}/ready/", f"/{L}/consortium/"]
@@ -691,6 +698,7 @@ def home(L):
 <a class="hradar" href="#map" aria-label="GOV RADAR"><span class="hp"></span><span class="hp p2"></span><img src="/assets/govradar-logo.webp" alt="GOV RADAR" width="640" height="709"><span class="hsw"></span><span class="hbl b1"></span><span class="hbl b2"></span><span class="hbl b3"></span><span class="hbl b4"></span>{"".join(f'<span class="htg t{i+1}">{x}</span>' for i, x in enumerate((["🇻🇳 정부 사업", "🇰🇪 입찰 마감 D-7", "🇸🇦 ODA", "🌐 세계은행 공고"] if L=="ko" else ["🇻🇳 Programmes", "🇰🇪 Tender D-7", "🇸🇦 Aid projects", "🌐 World Bank"])))}</a>
 <div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b>{n_t}</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span></div><div><b>{e(last[5:].replace('-','/') or '—')}</b><span>{e(t['k_last'])}</span></div></div>
 </div></section>
+{ticker(L)}
 <section class="band" id="map"><div class="in"><h2>{e(t['map_h'])}</h2>
 <div class="mapbox"><div id="wmap" data-lang="{L}"></div></div>
 <div class="filters"><input id="q" type="search" autocomplete="off" list="qlist" placeholder="{e(t['search'])}" aria-label="{e(t['search'])}"><datalist id="qlist">{"".join(f'<option value="{e(nm(c["iso"],L))}">' for c in sorted(META, key=lambda c: nm(c["iso"], L)))}</datalist><button class="chip on" data-r="ALL">{e(t['all'])}</button>{regions}</div>
@@ -698,7 +706,7 @@ def home(L):
 <section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=6, home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
 {sample_band(L)}
-<section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a> {hz_link(L)}</p></div></section>
+<section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a> {hz_link(L)}{' <a class="btn" href="/signals/">이코노미스트 표지·심슨·7인 전망 읽기 →</a>' if L=="ko" else ''}</p></div></section>
 {hz_band(L)}
 {ready_band(L)}
 {P3.edge_html(L)}{P3.access_html(L)}

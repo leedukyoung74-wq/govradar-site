@@ -20,5 +20,5 @@ for iso, x in P.items():
             print("retry", iso, e, file=sys.stderr, flush=True); time.sleep(120 * (i + 1))
     else:
         bad += 1
-    time.sleep(25)
+    time.sleep(60)
 print("saved", ok, "failed", bad)

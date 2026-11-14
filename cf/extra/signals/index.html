@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="이코노미스트 연말 특집 표지와 심슨 가족 '예측'설을 2016~2026년 연도별로 모아, 인기 해석과 사실 확인 결과를 나란히 보여 줍니다 — GOV RADAR">
+<link rel="icon" href="/favicon.ico">
+<title>표지와 풍자 읽기 — GOV RADAR</title>
+<style>
+@font-face{font-family:"WMM Nexon";font-weight:300;font-display:swap;src:local("NEXON Lv1 Gothic OTF Light"),url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:400;font-display:swap;src:local("NEXON Lv1 Gothic OTF"),url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:700;font-display:swap;src:local("NEXON Lv1 Gothic OTF Bold"),url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff")}
+:root{--bg:#0B0B0A;--panel:#141311;--panel2:#1C1A16;--ink:#F2ECDF;--soft:#CFC7B6;--muted:#9A917E;--line:#2E2A22;--gold:#C8A96A;--gold2:#E3CC96;
+--ok:#7FB7A4;--mid:#E0A33A;--no:#9A917E;--fake:#E0705C;--f:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--soft);font:17px/1.65 var(--f)}
+a{color:var(--gold2)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+header.top a{color:var(--ink);text-decoration:none;font-weight:700;letter-spacing:.5px}
+header.top nav a{font-weight:400;color:var(--soft);margin-left:20px;font-size:15px}
+.hero{position:relative;padding:88px 0 64px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 70% 0%,#2A2113 0%,#0B0B0A 60%)}
+.eb{font-size:13px;letter-spacing:6px;color:var(--gold)}
+.hero h1{font-weight:300;font-size:clamp(34px,5vw,60px);line-height:1.2;color:var(--ink);margin:18px 0 20px;letter-spacing:-1px}
+.hero p.lead{font-size:clamp(17px,2vw,20px);max-width:760px;color:var(--soft)}
+.hair{width:96px;height:1px;background:var(--gold);margin:28px 0}
+.notice{margin-top:28px;border:1px solid #4A3E26;background:#15120C;padding:18px 22px;max-width:860px;font-size:15px;color:var(--soft)}
+.notice b{color:var(--gold2)}
+.tabs{position:sticky;top:0;z-index:5;background:rgba(11,11,10,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:6px;overflow-x:auto}
+.tabs button{font:inherit;font-size:15px;background:none;border:0;color:var(--muted);padding:16px 14px;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--gold)}
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;padding:26px 0 6px;font-size:14px;color:var(--muted)}
+.b{display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:3px 10px;border:1px solid currentColor;border-radius:999px;white-space:nowrap}
+.b.ok{color:var(--ok)}.b.mid{color:var(--mid)}.b.no{color:var(--no)}.b.fake{color:var(--fake)}
+.tl{position:relative;padding:20px 0 40px}
+.yr{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--line)}
+.yr .y{font-weight:300;font-size:48px;line-height:1;color:var(--gold2)}
+.yr .y small{display:block;font-size:13px;letter-spacing:2px;color:var(--muted);margin-top:10px}
+.yr h3{font-weight:700;font-size:21px;color:var(--ink);line-height:1.4}
+.yr .sub{color:var(--muted);font-size:14px;margin:4px 0 16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.box{background:var(--panel);border-top:1px solid var(--gold);padding:16px 18px}
+.box h4{font-size:13px;letter-spacing:3px;color:var(--gold);font-weight:400;margin-bottom:8px}
+.box ul{list-style:none;padding:0}.box li{display:flex;gap:10px;align-items:flex-start;font-size:15px;margin:6px 0}
+.ic{flex:0 0 22px;width:22px;height:22px;margin-top:1px;color:var(--gold2)}
+.ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.claim .h b{display:flex;gap:10px;align-items:center}
+.verdict{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:15px}
+.src{margin-top:10px;font-size:13px;color:var(--muted)}
+.src a{color:var(--muted)}
+.cl{display:grid;gap:12px;margin-top:4px}
+.claim{background:var(--panel);padding:16px 18px;border-left:2px solid var(--line)}
+.claim.ok{border-left-color:var(--ok)}.claim.mid{border-left-color:var(--mid)}.claim.no{border-left-color:var(--no)}.claim.fake{border-left-color:var(--fake)}
+.claim .h{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.claim .h b{color:var(--ink);font-size:17px}
+.claim p{font-size:15px;margin-top:6px}
+.guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:36px 0}
+.guide .g{border-top:1px solid var(--gold);padding-top:18px}
+.guide .g .n{font-weight:300;font-size:40px;color:var(--gold2);line-height:1}
+.guide .g h3{color:var(--ink);font-size:20px;margin:10px 0 8px}
+.quote{border-left:2px solid var(--gold);padding:6px 0 6px 18px;margin:18px 0;color:var(--ink);font-size:18px}
+.quote small{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+table.srcs{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 50px}
+table.srcs th,table.srcs td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}
+table.srcs th{color:var(--muted);font-weight:400;font-size:13px;letter-spacing:2px}
+.covers{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;padding:26px 0 18px}
+@media (max-width:760px){.covers{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:150px;overflow-x:auto;scroll-snap-type:x mandatory}}
+.cv{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:3/4;padding:16px 14px;color:var(--ink);text-decoration:none;border:1px solid rgba(255,255,255,.12);scroll-snap-align:start;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.cv:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.cv::before{content:"";position:absolute;inset:8px;border:1px solid var(--ac);opacity:.55;pointer-events:none}
+.cv .cy{font-weight:300;font-size:44px;line-height:1;color:var(--ac);letter-spacing:-1px}
+.cv .ct{font-size:11px;letter-spacing:2px;color:var(--soft);margin-top:6px}
+.cv .cm{font-weight:700;font-size:17px;line-height:1.3;margin-top:auto}
+.cv .ck{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.cv .ck span{font-size:11px;padding:1px 6px;border:1px solid var(--ac);color:var(--ac);border-radius:999px}
+.cv .co{font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:1px}
+.yr.eco{grid-template-columns:200px 1fr}
+.yr.eco .cv{width:200px}
+.yr.eco .cv .cy{font-size:54px}
+@media (max-width:760px){.yr.eco{grid-template-columns:1fr}.yr.eco .cv{width:100%;max-width:260px;aspect-ratio:4/3}}
+.b.fut{color:#9DB8E0}
+.pz{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;padding:26px 0}
+.pc{position:relative;background:linear-gradient(170deg,var(--pc) -60%,#121110 55%);border:1px solid rgba(255,255,255,.08);padding:18px 14px 16px;text-decoration:none;color:var(--soft);display:flex;flex-direction:column;gap:6px;transition:transform .25s}
+.pc:hover{transform:translateY(-4px)}
+.pc .mono{width:64px;height:64px;border-radius:50%;border:1px solid var(--pc);display:grid;place-items:center;font-weight:300;font-size:22px;letter-spacing:1px;color:var(--pc);margin-bottom:6px}
+.pc .cn{font-size:12px;letter-spacing:2px;color:var(--muted)}
+.pc .ct{font-size:14px;line-height:1.5;color:var(--ink)}
+.pc .kr{font-size:12px;color:var(--pc);margin-top:auto}
+.tl7{border-top:1px solid var(--line);margin-top:10px}
+.tl7 .row{display:grid;grid-template-columns:110px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.tl7 .yy{font-weight:300;font-size:36px;color:var(--gold2);line-height:1}
+.vs{display:grid;grid-template-columns:52px minmax(0,1fr) minmax(0,1fr) 210px;gap:0;align-items:stretch;margin-bottom:8px}
+.vs .ini{display:grid;place-items:center;font-size:13px;letter-spacing:1px;border:1px solid var(--pc);color:var(--pc);border-radius:999px;height:30px;align-self:start;margin-top:10px;width:46px}
+.vs .say{background:#17140F;border-left:2px solid var(--pc);padding:10px 14px;font-size:15px;color:var(--ink)}
+.vs .chk{background:#EDE6D6;color:#2A251C;padding:10px 14px;font-size:15px}
+.vs .chk small{display:block;font-size:11px;letter-spacing:2px;color:#7E6331}
+.vs .say small{display:block;font-size:11px;letter-spacing:2px;color:var(--muted)}
+.vs .vb{padding:10px 0 0 12px}
+.ps{padding:44px 0;border-top:1px solid var(--line)}
+.ps .hd{display:flex;align-items:center;gap:20px;margin-bottom:22px}
+.ps .hd .mono{width:84px;height:84px;font-size:28px;border-radius:50%;border:1px solid var(--pc);display:grid;place-items:center;color:var(--pc);font-weight:300;flex:0 0 84px}
+.ps .hd h3{font-size:24px;color:var(--ink);font-weight:300}
+.ps .hd p{font-size:14px;color:var(--muted)}
+.tri{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:0}
+.tri>div{padding:22px 22px}
+.tri h4{font-size:12px;letter-spacing:4px;font-weight:400;margin-bottom:12px}
+.tri ul{padding-left:18px}.tri li{font-size:15px;margin:6px 0}
+.t1{background:#15120D;border-top:2px solid var(--pc)}.t1 h4{color:var(--pc)}
+.t2{background:linear-gradient(180deg,#2A2213,#16130D);border-top:2px solid var(--gold)}.t2 h4{color:var(--gold2)}
+.t3{background:#EDE6D6;color:#2A251C;border-top:2px solid #2A251C}.t3 h4{color:#7E6331}
+.prem{font-size:15px;color:var(--ink);margin-bottom:12px;font-style:normal}
+.stp{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px dashed #4A3E26;font-size:14.5px}
+.stp b{color:var(--gold2);font-weight:400}
+.bz{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.bz div{background:var(--panel);padding:14px 16px;font-size:14px}
+.bz h5{font-size:12px;letter-spacing:3px;color:var(--gold);font-weight:400;margin-bottom:6px}
+.mx{width:100%;border-collapse:collapse;margin:16px 0 30px;font-size:15px}
+.mx th,.mx td{padding:12px 8px;border-bottom:1px solid var(--line);text-align:center}
+.mx th:first-child,.mx td:first-child{text-align:left;color:var(--ink)}
+.mx td:last-child{text-align:left;color:var(--gold2);background:#15120D}
+.mx th{font-weight:400;font-size:13px;letter-spacing:1px;color:var(--muted)}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--pc)}
+.sh{font-weight:300;font-size:30px;color:var(--ink);margin:46px 0 4px}
+.sh+p{color:var(--muted);font-size:15px}
+@media (max-width:900px){.pz{grid-template-columns:repeat(2,minmax(0,1fr))}.tri,.bz{grid-template-columns:1fr}.vs{grid-template-columns:52px 1fr}.vs .chk,.vs .vb{grid-column:2}.tl7 .row{grid-template-columns:1fr}.mx{font-size:13px}}
+footer{border-top:1px solid var(--line);padding:30px 0 50px;font-size:13px;color:var(--muted)}
+[hidden]{display:none!important}
+@media (max-width:760px){.yr{grid-template-columns:1fr;gap:10px}.yr .y{font-size:38px}.grid3,.guide{grid-template-columns:1fr}header.top nav{display:none}}
+@media (prefers-reduced-motion:no-preference){.yr{animation:rise .7s both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="/ko/">GOV RADAR</a><nav><a href="/ko/">세계 지도</a><a href="/hazards/">재난 한눈에</a><a href="/signals/" aria-current="page">표지와 풍자 읽기</a></nav></div></header>
+
+<section class="hero"><div class="wrap">
+<p class="eb">COVERS &amp; SATIRE · 2015 — 2026</p>
+<h1>표지와 풍자,<br>사람들은 어떻게 읽었을까</h1>
+<p class="lead">이코노미스트 연말 특집 「The World in / The World Ahead」 표지와, 심슨 가족이 '미리 맞혔다'고 퍼진 장면을 연도별로 모았습니다. 인기 해석 사이트에서 자주 나온 해석과 사실 확인 결과를 나란히 보여 드립니다.</p>
+<div class="hair"></div>
+<div class="notice"><b>먼저 읽어 주세요.</b> 이 코너는 화제가 된 해석을 정리한 참고 자료이며, 미래를 맞히는 근거가 아닙니다. 이코노미스트 편집진은 표지 그림이 그 호의 본문 기사와 직접 연결된다고 밝혔습니다. 표지 이미지는 저작권 때문에 싣지 않고 설명과 원문 링크로 대신합니다.</div>
+</div></section>
+
+<div class="tabs"><div class="wrap" role="tablist">
+<button role="tab" aria-selected="true" data-t="eco">이코노미스트 표지</button>
+<button role="tab" aria-selected="false" data-t="simp">심슨 가족 '예측'설</button>
+<button role="tab" aria-selected="false" data-t="p7">7인 전망 시나리오</button>
+<button role="tab" aria-selected="false" data-t="how">읽는 법 · 출처</button>
+</div></div>
+
+<main class="wrap">
+<div class="legend"><span class="b ok">● 본문 주제와 일치</span><span class="b mid">◐ 지나고 나서 맞춘 해석</span><span class="b no">○ 근거 확인 안 됨</span><span class="b fake">✕ 합성·가짜</span></div>
+<section id="eco" class="tl"><div class="covers" id="covers" aria-label="연도별 표지 카드"></div></section>
+<section id="simp" class="tl" hidden></section>
+<section id="p7" hidden></section>
+<section id="how" hidden>
+<div class="guide">
+<div class="g"><p class="n">I</p><h3>표지는 그 호의 목차입니다</h3><p>그림 하나하나는 대개 안쪽 기사 하나와 짝을 이룹니다. 표지 해석보다 해당 기사를 읽는 편이 정확합니다.</p></div>
+<div class="g"><p class="n">II</p><h3>지나고 나서 맞추기를 조심하세요</h3><p>그림이 수십 개, 해석 방법은 무한합니다. 일이 일어난 뒤에 그림을 끼워 맞추면 무엇이든 '예측'처럼 보입니다.</p></div>
+<div class="g"><p class="n">III</p><h3>원본부터 확인하세요</h3><p>퍼지는 표지와 장면 상당수가 합성이거나 AI로 만든 가짜입니다. 공식 사이트와 방영 기록을 먼저 보세요.</p></div>
+</div>
+<p class="quote">“표지에 비밀 메시지가 숨어 있다는 생각은 터무니없다. 그림과 본문 기사 사이에는 단순하고 직접적인 연결이 있다.”<small>톰 스탠디지, 이코노미스트 부편집장 (T—Ж 인용, 요지)</small></p>
+<p class="quote">“다트를 많이 던지면 몇 개는 과녁에 맞는다.”<small>알 진, 심슨 가족 총괄 제작자 (요지)</small></p>
+<h3 style="color:var(--ink);font-size:20px;margin:30px 0 6px">사업에 쓰는 법</h3>
+<p>표지에 오른 주제는 이코노미스트가 그해 가장 중요하다고 본 의제입니다. GOV RADAR 국가별 의제·입찰과 함께 보면, 어느 나라에서 어떤 정책이 움직일지 가늠하는 출발점이 됩니다.</p>
+<h3 style="color:var(--ink);font-size:20px;margin:36px 0 6px">참고한 사이트</h3>
+<table class="srcs"><tr><th>사이트</th><th>성격</th><th>다룬 내용</th></tr><tbody id="srcs"></tbody></table>
+</section>
+</main>
+
+<footer><div class="wrap">GOV RADAR · 월드메이킹멤버스(WMM) · 문의 73036396@naver.com<br>이 페이지의 해석 요약은 각 출처의 주장을 정리한 것이며 GOV RADAR의 의견이 아닙니다. The Economist와 The Simpsons는 각 권리자의 상표입니다.</div></footer>
+
+<script>
+var V={ok:["ok","● 본문 주제와 일치"],mid:["mid","◐ 지나고 나서 맞춘 해석"],no:["no","○ 근거 확인 안 됨"],fake:["fake","✕ 합성·가짜"]};
+var CV={"2015": ["앨리스와 체셔 고양이", ["앨리스", "체셔 고양이", "군중"], "#1F2A3A", "#B8C8F0"], "2016": ["본문 전망 중심", ["난민", "신흥국", "금리", "미 대선"], "#2B3A4A", "#8FB3D1"], "2017": ["타로 카드 8장", ["탑", "심판", "죽음", "운명의 수레바퀴"], "#3A1F2B", "#E3A6C0"], "2018": ["'긴장의 해'", ["북한", "브렉시트", "월드컵", "중간선거"], "#1F3A33", "#8FD1BC"], "2019": ["비트루비우스 인간", ["VR 고글", "네 기사", "천산갑"], "#3A2E17", "#E3CC96"], "2020": ["시력 검사표", ["Trump", "exit", "Tokyo", "rat"], "#1E2A3A", "#A9C4E8"], "2021": ["슬롯머신", ["바이든", "백신", "틱톡", "21"], "#3A2A14", "#F0B860"], "2022": ["과녁", ["주사기", "위성", "칩", "2021·22·23"], "#2E1A1A", "#E89A8A"], "2023": ["격자 위 인물", ["대관식 왕관", "LNG선", "제임스웹", "뇌"], "#1A2433", "#9DB8E0"], "2024": ["선거의 해", ["로켓", "AI", "통화", "산불"], "#26331A", "#BCD98F"], "2025": ["가운데 트럼프", ["전기차", "모래시계", "백신", "제인 오스틴"], "#33201A", "#E8B49A"], "2026": ["250 케이크", ["탱크", "컨테이너선", "조이스틱"], "#2A1A33", "#C9A6E8"]};
+var ECO=[
+{y:2015,t:"The World in 2015",sub:"「이상한 나라의 앨리스」 출간 150주년",el:["앨리스와 체셔 고양이","비틀스 「서전트 페퍼」 앨범 표지처럼 모여 선 인물들"],it:["표지 해석 글은 적음"],rl:["「이상한 나라의 앨리스」 출간 150주년(1865년 출간)","파리 기후협정 채택","유럽 난민 위기"],v:"ok",vt:"앨리스는 150주년 기사와 짝",s:[["Lewis Carroll Society of North America","https://www.lewiscarroll.org/2014/11/27/the-economists-world-in-2015/"]]},
+{y:2016,t:"The World in 2016",sub:"표지 그림 해석 자료는 적고, 본문 전망이 주로 회자됨",el:["표지 그림에 대한 해석 글은 거의 없음","본문 전망: 시리아 난민 유출 지속, 신흥국 둔화, 미 연준 금리 인상","힐러리 클린턴을 가장 유력한 대선 후보로 봄"],it:["해석 사이트보다 '전망 적중률' 점검 글이 주로 다룸"],rl:["시리아 난민 위기 지속","연준 12월 금리 인상","미 대선은 트럼프 당선 — 유력 후보 전망은 빗나감","브라질 호세프 대통령 탄핵"],v:"ok",vt:"본문 전망 상당수 적중, 대선 전망은 빗나감",s:[["Envisioning Hindsight","https://www.envisioning.com/hindsight/the-economist/the-world-ahead/2016"]]},
+{y:2017,t:"The World in 2017",sub:"타로 카드 8장으로 그린 표지",el:["탑(Tower), 심판(트럼프), 세계, 은둔자, 죽음(버섯구름·모기·죽은 물고기), 마법사(VR·3D 프린터), 운명의 수레바퀴(르펜 상승·메르켈 하강), 별"],it:["'비밀 엘리트의 계획표'라는 주장","핵 충돌·지카 바이러스 경고","르펜 집권 예고"],rl:["북한 핵·미사일 긴장 고조","프랑스 대선: 르펜 결선 진출, 마크롱 당선","독일 총선: 메르켈 4선, 득표는 감소"],v:"mid",vt:"각 카드는 그해 선거·기술·위험 기사 주제. '계획표' 해석은 근거 없음",s:[["Vigilant Citizen","https://vigilantcitizen.com/vigilantreport/economists-world-2017-makes-grim-predictions-using-symbolic-tarot-cards/"]]},
+{y:2018,t:"The World in 2018",sub:"표지 그림보다 '긴장의 해' 전망이 주로 소개됨",el:["본문 주제: 북한 핵, 브렉시트 협상, 러시아 월드컵, 미국 중간선거, 브라질·멕시코 대선, 달 관광"],it:["표지 해석 글은 적음"],rl:["싱가포르 북미 정상회담","러시아 월드컵 개최","미국 중간선거에서 민주당 하원 탈환"],v:"ok",vt:"전망한 주요 일정이 실제로 진행됨",s:[["MediaPost","https://www.mediapost.com/publications/article/310483/the-economist-debuts-special-2018-issue.html"]]},
+{y:2019,t:"The World in 2019",sub:"다빈치 「비트루비우스 인간」을 바꾼 표지",el:["VR 고글 쓴 비트루비우스 인간, 거울 글씨","5대 4로 기운 저울, 얼굴 인식 스케치","트럼프·푸틴·판다, 묵시록의 네 기사(하나는 마스크 쓴 자유의 여신상)","화산과 달, 바코드 찍힌 아기, 천산갑, 탐사선 뉴허라이즌스"],it:["마스크 → 코로나19 예고","천산갑 → 코로나 기원설","화산 → 아낙 크라카타우 쓰나미(2018.12)"],rl:["다빈치 서거 500주년(2019)","뉴허라이즌스, 2019년 1월 1일 '울티마 툴레' 근접 비행","코로나19는 2019년 말 처음 보고"],v:"mid",vt:"그림은 다빈치 기념·기술·무역 기사. 코로나 연결은 지난 뒤 맞춘 해석",s:[["nspirement","https://nspirement.com/?p=454169"],["La Libre Info","https://lalibre-info.blogspot.com/2019/02/la-signification-des-messages-cryptes.html"]]},
+{y:2020,t:"The World in 2020",sub:"시력 검사표 「2020 Vision」",el:["시력표 글자: Trump, exit, AI, Tokyo, Mars, climate, Xi, recession, Modi, Expo, SDGs","작은 글씨 'rat'(쥐띠 해)"],it:["Trump·exit → 트럼프 낙선","rat → 역병 예고","recession → 코로나 불황"],rl:["코로나19 대유행과 경기 침체","도쿄 올림픽·두바이 엑스포 1년 연기","트럼프 대선 패배"],v:"mid",vt:"글자는 대선·올림픽·기후 등 본문 주제. 'rat'은 쥐띠 해 표기",s:[["The Drum (편집장 인터뷰)","https://www.thedrum.com/opinion/2019/12/05/why-1m-readers-and-few-illuminati-conspiracists-buy-the-economist-s-predictions"],["nspirement","https://nspirement.com/?p=454169"]]},
+{y:2021,t:"The World in 2021",sub:"슬롯머신 — '21은 행운·위험·주사위'",el:["바이든, 갈라진 성조기, 틱톡 로고","백신 주사기, 바이러스, 물음표","핵폭탄, 화상회의 카메라, 불타는 나무"],it:["핵 충돌 예고","백신 부작용 경고"],rl:["바이든 취임, 백신 대량 접종","미중 갈등 지속, 원격근무 정착","대형 산불 반복"],v:"ok",vt:"공식 10대 주제(백신·불균등 회복·미중 갈등 등)와 대부분 일치",s:[["The Economist 보도자료","https://prnewswire.com/news-releases/2021-will-be-a-year-of-luck-risk-taking-and-chance-according-to-the-economists-the-world-in-2021-301174794.html"]]},
+{y:2022,t:"The World Ahead 2022",sub:"과녁 모양 표지 — '새 현실에 적응하는 해'",el:["칼 모양 주사기, 백신 병, 코로나 바이러스","위성, 현미경, 칩, 번개 화살표","가운데 2021 · 2022 · 2023"],it:["숫자를 더해 666이 된다는 주장","칩 이식 예고"],rl:["러시아의 우크라이나 침공(2월)","물가 급등과 금리 인상","코로나 방역 완화"],v:"no",vt:"666·칩 이식 해석은 근거 없음. 표지는 해의 최대 사건(전쟁)을 담지 못함",s:[["Telestai Substack","https://telestai.substack.com/p/los-cantos-de-xochi-about-666-carbon"],["IESE 요약","https://www.iese.edu/stories/economist-world-2022-pandemic-politics/"]]},
+{y:2023,t:"The World Ahead 2023",sub:"격자 위 인물과 기술 그림",el:["시진핑·푸틴·바이든·차이잉원·젤렌스키·멜로니","LNG선, 이동식 미사일, 프시케 위성, 제임스웹 망원경, 드론 택시","메탄 분자, 낙타 적혈구, 엔화 국채, 에드워드 왕관, 뇌"],it:["에너지 부족 '작전'설","멜로니 표적설"],rl:["찰스 3세 대관식(5월)","전쟁 장기화, 에너지 가격 부담","일본 국채 금리 정책 논란"],v:"ok",vt:"왕관=대관식, 뇌=환각제 치료 등 대부분 본문 기사와 짝",s:[["Xochipelli Substack","https://xochipelli.substack.com/p/the-economist-the-world-ahead-2023"],["The Economist 보도자료","https://prnewswire.com/news-releases/2023-will-be-the-year-of-aftershocks-and-unpredictability-according-to-the-economists-the-world-ahead-2023-301678380.html"]]},
+{y:2024,t:"The World Ahead 2024",sub:"'사상 최대 선거의 해'",el:["로켓·위성, 뇌·AI","무역·통화 시장","재생에너지, 허리케인, 산불","젤렌스키, 시진핑"],it:["표지 해석 글은 비교적 적음"],rl:["70여 나라 선거, 미 대선 트럼프 당선","AI 투자 확대"],v:"ok",vt:"편집진은 그해 주제 모음이라고 설명",s:[["관련 블로그","https://ohomen171s-journey-through-life.blogspot.com/2023/11/the-economist-magazine-cover-for.html"]]},
+{y:2025,t:"The World Ahead 2025",sub:"가운데 트럼프",el:["트럼프, 전기차·상승 그래프·로켓","젤렌스키·푸틴 실루엣, 폰데어라이엔과 부서진 투표함","백신, 달러·엔, 모래시계 얹은 지구본","제인 오스틴 그림과 붉은 주먹"],it:["백신 → 새 팬데믹","붉은 주먹 → 여성 봉기","모래시계 → 기후 마감"],rl:["트럼프 2기 출범, 관세 확대","머스크 정부효율부(DOGE)","제인 오스틴 탄생 250주년(2025)"],v:"mid",vt:"오스틴은 250주년 기사. '새 팬데믹' 해석은 근거 확인 안 됨",s:[["Istanbul Chronicle","https://www.theistanbulchronicle.com/post/depicting-the-year-we-are-about-to-enter-the-economist-the-world-ahead"],["112.ua","https://news.112.ua/en/the-economist-vipustiv-obkladinku-rebus-z-prognozom-na-2025-rik-46965"]]},
+{y:2026,t:"The World Ahead 2026",sub:"2025년 11월 공개 · 올해 진행 중",el:["알약·주사기, 탱크","대포 쏘는 컨테이너선","수갑 찬 손과 '250' 케이크","칩 박힌 뇌와 게임 조이스틱, 고대 그리스 배","트럼프·모디·시진핑·젤렌스키"],it:["'전쟁을 예고한다'는 주장(ZeroHedge 등)","250 케이크 → 미국 분열"],rl:["미국 건국 250주년(2026년 7월)","연말에 결과를 점검해 이 칸을 채웁니다"],v:"ok",vt:"편집진: 그림은 무역전쟁·AI·250주년·『오디세이아』 추천 기사와 직결",s:[["T—Ж","https://t-j.ru/economist-cover-2026/"],["ZeroHedge","https://www.zerohedge.com/geopolitical/super-creepy-world-ahead-2026-economist-magazine-cover-shows-they-expect-war"],["Vocal Media","https://vocal.media/journal/the-economist-s-2026-cover-prediction-pattern-or-power-play"]]}
+];
+var SIMP=[
+{y:2015,c:[["FIFA 부패 수사","2014년 「You Don't Have to Live Like a Referee」에서 월드컵 심판 매수를 풍자한 장면은 실제. 2015년 FIFA 수사와 이어 화제.","mid",[["위키백과 정리","https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/The_Simpsons_future_predictions"]]]]},
+{y:2016,c:[["트럼프 대통령 당선","2000년 「Bart to the Future」에 실제로 '트럼프 대통령 다음' 대사가 나옴. 다만 함께 퍼진 비교 영상은 2015년 7월(출마 선언 뒤) 홍보물.","mid",[["Snopes","https://www.snopes.com/list/simpson-predictions-internet-hoaxes/"]]]]},
+{y:2017,c:[["트럼프가 빛나는 구체를 만지는 장면","실제 사건(5월 21일) 닷새 뒤 공식 페이스북에 올린 패러디. 방영분 아님.","fake",[["Lead Stories","https://leadstories.com/hoax-alert/2021/05/fact-check-the-simpsons-did-not-predict-george-floyd-death-the-notre-dame-fire-the-ebola-breakout-or-donald-trump-touching-an-orb.html"]]]]},
+{y:2018,c:[["캐나다 기호용 대마 합법화","2005년 「Midnight Rx」 장면은 실제. 당시 이미 캐나다에서 논의되던 주제.","mid",[["위키백과 정리","https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/The_Simpsons_future_predictions"]]],["미국 남자 컬링 올림픽 금메달","2010년 「Boy Meets Curl」 장면은 실제. 우연의 일치로 봄.","mid",[["위키백과 정리","https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/The_Simpsons_future_predictions"]]]]},
+{y:2019,c:[["디즈니의 21세기폭스 인수 완료","1998년 방영분 간판 개그 'A Division of Walt Disney Co'는 실제. 농담이 현실이 된 사례.","mid",[["위키백과 정리","https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/The_Simpsons_future_predictions"]]],["노트르담 대성당 화재","2007년 방영분의 성당에는 불이 나지 않음. 불길과 번스 사장은 합성.","fake",[["Snopes","https://www.snopes.com/list/simpson-predictions-internet-hoaxes/"]]],["트럼프의 그린란드 매입 구상","해당 에피소드가 존재하지 않음.","fake",[["Snopes","https://www.snopes.com/list/simpson-predictions-internet-hoaxes/"]]]]},
+{y:2020,c:[["코로나19","1993년 「Marge in Chains」의 '오사카 독감'에 'coronavirus' 글자를 합성.","fake",[["That's Nonsense","https://thatsnonsense.com/?p=16561"]]],["조지 플로이드 사건","화가 Yuri Pomo가 사건 뒤 그린 그림. 방영분 아님.","fake",[["Lead Stories","https://leadstories.com/hoax-alert/2021/05/fact-check-the-simpsons-did-not-predict-george-floyd-death-the-notre-dame-fire-the-ebola-breakout-or-donald-trump-touching-an-orb.html"]]],["베이루트 항구 폭발","서로 다른 두 에피소드의 폭발 장면을 이어 붙임.","fake",[["Snopes","https://www.snopes.com/list/simpson-predictions-internet-hoaxes/"]]]]},
+{y:2021,c:[["미국 의사당 난입","1996년 방영분과의 연결 주장은 근거가 확인되지 않음.","no",[["위키백과 정리","https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/The_Simpsons_future_predictions"]]],["영화 「매트릭스 4」","2004년 대사로 4편을 농담한 장면은 실제.","mid",[["위키백과 정리","https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/The_Simpsons_future_predictions"]]]]},
+{y:2022,c:[["러시아의 우크라이나 침공","2019년 에피소드, 2016년 모바일 게임, 2010년 에피소드 그림을 섞은 콜라주. 우크라이나·2022 표시 없음.","fake",[["PolitiFact","https://www.politifact.com/factchecks/2022/mar/25/viral-image/no-simpsons-did-not-predict-russias-invasion-ukrai"]]]]},
+{y:2023,c:[["실리콘밸리은행 파산","1995년 장면의 은행 이름을 'Silicon Valley Bank'로 바꾼 조작 영상. 원래는 스프링필드 제일은행.","fake",[["Snopes","https://www.snopes.com/list/simpson-predictions-internet-hoaxes/"]]],["타이탄 잠수정 실종","2006년 에피소드와 막연하게 비슷할 뿐. 우연으로 봄.","no",[["Snopes","https://www.snopes.com/list/simpson-predictions-internet-hoaxes/"]]],["트럼프 기소·체포","방영 장면 근거가 확인되지 않음.","no",[["위키백과 정리","https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/The_Simpsons_future_predictions"]]]]},
+{y:2024,c:[["사이프러스 힐과 런던 심포니 공연","1996년 「Homerpalooza」 개그는 실제. 2024년 로열 앨버트 홀 공연으로 현실이 됨.","mid",[["위키백과 정리","https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/The_Simpsons_future_predictions"]]]]},
+{y:2025,c:[["연초마다 도는 '올해의 심슨 예측' 목록","출처 장면이 표시되지 않은 이미지가 대부분. 검증된 사례만 골라 추가할 예정.","no",[["Snopes 모음","https://www.snopes.com/collections/the-simpsons-didnt-predict-that"]]]]},
+{y:2026,c:[["올해 화제가 된 주장","확인 중. 연말에 검증된 사례만 추가합니다.","no",[]]]}
+];
+var SRC=[["Vigilant Citizen","해석","2017·2019 표지 상징 해석"],["ZeroHedge · Michael Snyder","해석","2026 표지 '전쟁 예고' 주장"],["Substack 해석 글 (Xochipelli 등)","해석","2022·2023·2025 표지 해석"],["Istanbul Chronicle","해석","2025 표지 요소별 해석"],["nspirement","해석","2019~2021 표지 해석"],["Vocal Media","해석","2026 표지 해석"],["T—Ж (러시아어)","보도","2026 표지와 편집진 발언"],["112.ua","보도","2025 표지 수수께끼 소개"],["The Drum","보도","편집장 인터뷰, 2020 표지"],["Snopes","사실 확인","심슨 '예측' 가짜 10건"],["PolitiFact","사실 확인","우크라이나 침공 콜라주"],["Lead Stories","사실 확인","조지 플로이드·노트르담·구체"],["That's Nonsense","사실 확인","코로나 장면 합성"],["Wikipedia 「The Simpsons future predictions」","정리","실제 장면 목록과 제작진 발언"]];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function links(a){return a.length?'<p class="src">출처 · '+a.map(function(x){return'<a href="'+esc(x[1])+'" target="_blank" rel="noopener nofollow">'+esc(x[0])+'</a>'}).join(" · ")+'</p>':''}
+var IC={
+war:'<path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
+vote:'<rect x="4" y="10" width="16" height="10" rx="1"/><path d="M8 10V5h8v5"/><path d="M10 7h4"/>',
+money:'<path d="M4 18l5-6 4 3 7-8"/><path d="M15 7h5v5"/>',
+health:'<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/>',
+tech:'<rect x="7" y="7" width="10" height="10" rx="1"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>',
+climate:'<path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l7-7"/>',
+space:'<path d="M12 3c3 3 4 7 3 11l-3 3-3-3c-1-4 0-8 3-11z"/><circle cx="12" cy="9" r="1.5"/><path d="M9 14l-3 2 1 3M15 14l3 2-1 3"/>',
+trade:'<path d="M3 15h18l-2 4H5z"/><path d="M6 15V9h12v6"/><path d="M9 9V6h6v3"/>',
+person:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>',
+culture:'<path d="M4 5h6a2 2 0 012 2v12a2 2 0 00-2-2H4z"/><path d="M20 5h-6a2 2 0 00-2 2v12a2 2 0 012-2h6z"/>',
+fake:'<circle cx="12" cy="12" r="9"/><path d="M8 8l8 8M16 8l-8 8"/>',
+eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+dot:'<circle cx="12" cy="12" r="3"/>'};
+var KW=[["fake",/합성|가짜|존재하지|조작|이어 붙/],["war",/전쟁|침공|핵|미사일|탱크|무기|충돌|대포|북한|분쟁|의사당|난입|폭발|베이루트/],["health",/백신|주사|코로나|바이러스|팬데믹|역병|알약|약|지카|에볼라|의료|환각|적혈구|메르스/],["vote",/선거|대선|당선|투표|탄핵|낙선|취임|중간선거|체포|기소/],["person",/트럼프|바이든|시진핑|푸틴|젤렌스키|모디|멜로니|폰데어라이엔|르펜|메르켈|마크롱|인물|대통령/],["money",/금리|불황|침체|경제|통화|달러|엔화|국채|은행|파산|물가|그래프|recession|관세|인수/],["tech",/칩 박힌|AI|칩|VR|3D|로봇|기술|게임|조이스틱|뇌|얼굴 인식|드론|전기차|DOGE/],["trade",/무역|컨테이너|LNG|선박|배|틱톡|브렉시트/],["space",/로켓|위성|우주|달|뉴허라이즌스|탐사선|제임스웹|프시케|화성|Mars/],["climate",/기후|산불|허리케인|화산|쓰나미|풍력|재생|메탄|모래시계|지구본|천산갑/],["culture",/다빈치|오스틴|대관식|왕관|올림픽|월드컵|컬링|영화|공연|오디세이아|250|타로|카드|엑스포|대마|디즈니|매트릭스/],["eye",/해석|주장|예고|읽|시력|거울/]];
+function icon(t){for(var i=0;i<KW.length;i++)if(KW[i][1].test(t))return KW[i][0];return"dot"}
+function svg(k){return'<span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24">'+IC[k]+'</svg></span>'}
+function li(a){return"<ul>"+a.map(function(x){return"<li>"+svg(icon(x))+"<span>"+esc(x)+"</span></li>"}).join("")+"</ul>"}
+function q(y){return"https://www.google.com/search?tbm=isch&q="+encodeURIComponent("The Economist "+(y<2022?"The World in ":"The World Ahead ")+y+" cover")}
+function card(d,tag,href){var c=CV[d.y];return'<'+tag+' class="cv" '+(href?'href="'+href+'"':'')+' style="--ac:'+c[3]+';background:linear-gradient(160deg,'+c[2]+' 0%,#0B0B0A 85%)"><div><p class="cy">'+d.y+'</p><p class="ct">'+esc(d.t.toUpperCase())+'</p></div><div><p class="cm">'+esc(c[0])+'</p><div class="ck">'+c[1].map(function(k){return"<span>"+esc(k)+"</span>"}).join("")+'</div>'+(tag==="div"?'<a class="co" href="'+q(d.y)+'" target="_blank" rel="noopener nofollow">원본 표지 보기 ↗</a>':'<p class="co">자세히 ↓</p>')+'</div></'+tag+'>'}
+document.getElementById("eco").innerHTML='<div class="covers" aria-label="연도별 표지 카드">'+ECO.map(function(d){return card(d,"a","#y"+d.y)}).join("")+'</div>'+ECO.map(function(d){var v=V[d.v];return'<article class="yr eco" id="y'+d.y+'">'+card(d,"div")+'<div><h3>'+esc(d.t)+'</h3><p class="sub">'+esc(d.sub)+'</p><div class="grid3"><div class="box"><h4>표지에 나온 것</h4>'+li(d.el)+'</div><div class="box"><h4>자주 나온 해석</h4>'+li(d.it)+'</div><div class="box"><h4>그해 실제로 일어난 일</h4>'+li(d.rl)+'</div></div><p class="verdict"><span class="b '+v[0]+'">'+v[1]+'</span><span>'+esc(d.vt)+'</span></p>'+(d.warn?'<div class="notice" style="margin-top:14px">'+esc(d.warn)+' <a href="https://mythdetector.com/en/fake-versions-of-the-economist/" target="_blank" rel="noopener nofollow">확인 기사</a></div>':'')+links(d.s)+'</div></article>'}).join("");
+document.getElementById("simp").innerHTML='<div class="notice" style="margin:10px 0 6px">심슨 가족은 35시즌 넘게 750편 이상 방영됐습니다. 제작진은 맞아떨어진 장면 대부분을 \'교육받은 추측\'이나 우연으로 설명합니다. 연도는 \'맞혔다\'고 주장된 사건이 일어난 해입니다.</div>'+SIMP.map(function(d){return'<article class="yr"><p class="y">'+d.y+'<small>THE SIMPSONS</small></p><div class="cl">'+d.c.map(function(c){var v=V[c[2]];return'<div class="claim '+v[0]+'"><div class="h"><b>'+svg(c[2]==="fake"?"fake":icon(c[0]))+esc(c[0])+'</b><span class="b '+v[0]+'">'+v[1]+'</span></div><p>'+esc(c[1])+'</p>'+links(c[3])+'</div>'}).join("")+'</div></article>'}).join("");
+document.getElementById("srcs").innerHTML=SRC.map(function(s){return"<tr><td>"+esc(s[0])+"</td><td>"+esc(s[1])+"</td><td>"+esc(s[2])+"</td></tr>"}).join("");
+var tabs=document.querySelectorAll("[role=tab]");tabs.forEach(function(b){b.onclick=function(){tabs.forEach(function(x){x.setAttribute("aria-selected",x===b);document.getElementById(x.dataset.t).hidden=x!==b});document.querySelector(".legend").hidden=b.dataset.t==="how"||b.dataset.t==="p7"}});
+</script>
+<script src="/signals/p7.js"></script>
+<script>
+(function(){var D=window.P7;if(!D)return;
+var VV={ok:["ok","● 일치"],mid:["mid","◐ 부분 일치"],no:["no","○ 일어나지 않음·확인 안 됨"],fut:["fut","◇ 미래·진행 중"]};
+var COL={};D.P.forEach(function(p){COL[p.i]=p.col});
+function ul(a){return"<ul>"+a.map(function(x){return"<li>"+esc(x)+"</li>"}).join("")+"</ul>"}
+var h='<div class="notice" style="margin:10px 0 0">신앙 지도자 7명이 공개 방송·인터뷰에서 밝힌 미래 전망을 <b>이니셜</b>로 정리했습니다. 종교 교리 자체는 다루지 않고 경제·안보·재난과 관련된 내용만 골랐습니다. 이 탭은 <b>사실 확인 대상이 아니며</b>, 일어날 일을 뜻하지 않습니다. 가상 시나리오는 GOV RADAR가 대비 계획을 세우려고 만든 가정입니다.</div>';
+h+='<div class="pz">'+D.P.map(function(p){return'<a class="pc" href="#p-'+p.i+'" style="--pc:'+p.col+'"><span class="mono">'+p.i+'</span><span class="cn">'+esc(p.c)+'</span><span class="ct">'+esc(p.th)+'</span><span class="kr">한국 언급 · '+esc(p.kr)+'</span></a>'}).join("")+'</div>';
+h+='<h3 class="sh">2015년부터 연도별로 — 말한 것과 실제</h3><p>왼쪽은 그때 나온 전망, 오른쪽은 지금까지 확인된 사실입니다.</p><div class="tl7">'+D.TL.map(function(r){return'<div class="row"><p class="yy">'+esc(r[0])+'</p><div>'+r[1].map(function(e){var v=VV[e[3]];return'<div class="vs" style="--pc:'+COL[e[0]]+'"><span class="ini">'+e[0]+'</span><div class="say"><small>전망</small>'+esc(e[1])+'</div><div class="chk"><small>실제</small>'+esc(e[2])+'</div><div class="vb"><span class="b '+v[0]+'">'+v[1]+'</span></div></div>'}).join("")+'</div></div>'}).join("")+'</div>';
+h+='<h3 class="sh">주제별로 겹쳐 보기</h3><p>7인의 전망과 이코노미스트 연말호 표지가 같은 주제를 다룬 해를 나란히 놓았습니다.</p><table class="mx"><tr><th>주제</th>'+D.P.map(function(p){return'<th style="color:'+p.col+'">'+p.i+'</th>'}).join("")+'<th>이코노미스트 표지에 나온 해</th></tr>'+D.MX.map(function(m){return'<tr><td>'+esc(m[0])+'</td>'+D.P.map(function(p){return'<td>'+(m[1].indexOf(p.i)>=0?'<span class="dot" style="--pc:'+p.col+'" aria-label="'+p.i+'"></span>':'')+'</td>'}).join("")+'<td>'+esc(m[2])+'</td></tr>'}).join("")+'</table>';
+h+='<h3 class="sh">인물별 가상 시나리오</h3><p>전망 → 그것이 현실이 된다고 가정한 시나리오 → 지금까지 확인된 사실 순서로 대비했습니다.</p>';
+h+=D.P.map(function(p){return'<section class="ps" id="p-'+p.i+'" style="--pc:'+p.col+'"><div class="hd"><span class="mono">'+p.i+'</span><div><h3>'+esc(p.th)+'</h3><p>'+esc(p.c)+' · '+esc(p.when)+'</p></div></div>'+p.sc.map(function(k,ix){var s=D.S[k];if(!s)return"";return'<div class="tri"'+(ix?' style="margin-top:14px;grid-template-columns:1fr"':'')+'>'+(ix?'':'<div class="t1"><h4>말한 내용</h4>'+ul(p.said)+'</div>')+'<div class="t2"><h4>가상 시나리오 · '+esc(s.t)+'</h4><p class="prem">'+esc(s.premise)+'</p>'+s.tl.map(function(t){return'<div class="stp"><b>'+esc(t[0])+'</b><span>'+esc(t[1])+'</span></div>'}).join("")+'</div>'+(ix?'':'<div class="t3"><h4>지금까지 확인된 사실</h4>'+ul(p.real)+'</div>')+'</div><div class="bz"><div><h5>한국 영향</h5>'+esc(s.kr||"")+'</div><div><h5>사업 기회</h5>'+esc(s.biz||"")+'</div><div><h5>지켜볼 신호</h5>'+esc((s.watch||[]).join(" · "))+'</div><div><h5>정상 복귀 기준</h5>'+esc(s.exit||"")+'</div></div>'}).join("")+'</section>'}).join("");
+h+='<div class="notice" style="margin:30px 0 50px"><b>어느 쪽이 맞든 쓸모 있는 준비</b> — 빚을 줄이고, 물·식량·약을 3일→7일→14일로 단계적으로 갖추고, 대피소와 가족 연락 방법을 정해 두세요. 기준은 정부 지침을 따릅니다. <a href="/hazards/">재난 한눈에 보기 →</a></div>';
+document.getElementById("p7").innerHTML=h;})();
+
+</script>
+</body>
+</html>

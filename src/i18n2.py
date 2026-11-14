@@ -48,7 +48,7 @@ AT["id"] = _tr("en", login="Masuk", signup="Buat akun", reset="Atur ulang sandi"
 
 # short top menu: (anchor/path, label)
 NAV = {
- "ko": [('#map', '나라 찾기'), ('mdb/', '입찰·사업'), ('conflict/', '세계 상황'), ('@hazards', '재난 지도'), ('ready/', '재난 대비'), ('solutions/', '진출 지원'), ('pricing/', '요금·회원')],
+ "ko": [('#map', '나라 찾기'), ('mdb/', '입찰·사업'), ('conflict/', '세계 상황'), ('@hazards', '재난 지도'), ('@signals', '표지·풍자'), ('ready/', '재난 대비'), ('solutions/', '진출 지원'), ('pricing/', '요금·회원')],
  "en": [('#map', 'Countries'), ('mdb/', 'Tenders'), ('conflict/', 'World watch'), ('@hazards', 'Hazard map'), ('ready/', 'Preparedness'), ('solutions/', 'Go global'), ('pricing/', 'Pricing')],
  "es": [('#map', 'Países'), ('mdb/', 'Licitaciones'), ('conflict/', 'Situación mundial'), ('@hazards', 'Mapa de riesgos'), ('ready/', 'Preparación'), ('solutions/', 'Expansión'), ('pricing/', 'Precios')],
  "fr": [('#map', 'Pays'), ('mdb/', "Appels d'offres"), ('conflict/', 'Veille mondiale'), ('@hazards', 'Carte des risques'), ('ready/', 'Préparation'), ('solutions/', "S'implanter"), ('pricing/', 'Tarifs')],
