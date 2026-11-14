@@ -1,7 +1,7 @@
 """재난 대비센터 page renderer (/ko/ready/, /en/ready/; other languages get the English body with a note).
 Everything personal (household, stock, contact card) stays in the visitor's browser (localStorage); nothing is sent
 except the optional consultation form."""
-import html
+import html, json, os, glob
 import ready_art as ART
 import ready_content as RC
 
@@ -12,6 +12,17 @@ NOTE_OTHER = {"es": "Este centro está disponible por ahora en coreano e inglés
               "vi": "Trung tâm hiện có tiếng Hàn và tiếng Anh; đây là bản tiếng Anh.",
               "id": "Pusat ini sementara tersedia dalam bahasa Korea dan Inggris; ini versi bahasa Inggris."}
 
+def js_tr(L):
+    """English->L strings for the browser script (same files the build uses for text nodes)."""
+    if L in ("ko", "en"): return {}
+    mp = {}
+    for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "i18n_ui", L + "_u*.json"))):
+        try: mp.update(json.load(open(f, encoding="utf8")))
+        except Exception: pass
+    return {k: v for k, v in mp.items() if k in JS_KEYS}
+
+JS_KEYS = set(['Water needed (L)', 'Water short (L)', 'Calories needed', 'Calories short', 'Meals (3 a day)', 'One year of water is {0} L, about {1} tonnes. Rather than storing it all, keep 3–14 days at home plus verified ways to get and carry more.', 'Light', 'Phone charging', 'Per day ', 'battery example ', '3 days ≈ ', 'Device', 'past', 'No items yet.', 'item,qty,unit_price,expiry,location', 'Family', 'Nearby meeting place', 'Distant meeting place', 'Shelter / high ground', 'Out-of-area contact', 'Child pick-up / care', 'Medicine / medical', 'Schedule done — keep seasonal checks', 'water ', 'food ', ' ({0}-day target)', 'Nothing short for the target period', ' · recorded ', 'Done — print it', 'Missing ', ' (meeting place, shelter, out-of-area contact)', ' (item expiring)', ' (monthly check)', 'Add your last check date'])
+
 def body(L):
     ko = L == "ko"; t = (lambda k, en: k if ko else en)
     src = lambda ids: " ".join(f'<a class="ref" href="{e(RC.SRC[i][2])}" target="_blank" rel="noopener">[{i}] {e(RC.SRC[i][0] if ko else RC.SRC[i][1])}</a>' for i in ids)
@@ -19,7 +30,6 @@ def body(L):
     nav = [("now", "지금 위험할 때", "If danger is now"), ("setup", "내 상황", "My situation"), ("plan", "맞춤 계획", "My plan"), ("calc", "준비량 계산", "Quantities"),
            ("stock", "재고·교체", "Stock & expiry"), ("card", "대피·연락카드", "Contact card"), ("hazards", "재난별 안내", "By hazard"), ("help", "상담 요청", "Get help")]
     out = []
-    if L not in ("ko", "en"): out.append(f'<p class="rd-lang">{e(NOTE_OTHER.get(L, ""))}</p>')
     out.append(f'''<section class="rd-hero"><div class="rd-in rd-hero-g">
 <div class="rd-hero-t"><p class="crumb"><a href="/{L}/">GOV RADAR</a> · <a href="/{L}/conflict/">{t("세계 상황판", "World watch")}</a></p>
 <h1>{t("재난 대비센터", "Preparedness centre")}</h1>
@@ -162,13 +172,13 @@ def body(L):
 <h2>{t("공식 출처와 적용 범위", "Official sources and scope")}</h2>
 <p>{t("조사 기준 2026년 11월 14일. 해외 자료는 일반 준비의 근거이며, 실제 행동은 거주지 당국 지침과 맞는지 확인하세요. 수량 예시·확장 일정·계산기·화면 구성은 WMM의 설계이며 공식기관이 승인한 서비스나 개인 의료 판단이 아닙니다. 그림은 WMM이 직접 그린 일러스트입니다.", "Checked on 14 November 2026. Foreign sources support general preparation; always check against your local authority. Quantity examples, extended schedules, calculators and layout are WMM's design, not an officially endorsed service or medical advice. Illustrations are original WMM artwork.")}</p>
 <ol class="rd-srcl">{"".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(k if ko else n)}</a></li>' for i, (k, n, u) in sorted(RC.SRC.items()))}</ol></div></section>''')
-    return "\n".join(out) + JS.replace("__L__", L)
+    return "\n".join(out) + JS.replace("__L__", L).replace("__TR__", json.dumps(js_tr(L), ensure_ascii=False))
 
 JS = r'''<script>(function(){
 var L="__L__",ko=L==="ko",S=function(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem("gvr_"+k)||"null");localStorage.setItem("gvr_"+k,JSON.stringify(v))}catch(e){return null}};
 var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
 var fmt=function(n){return Math.round(n).toLocaleString(ko?"ko-KR":"en-US")};
-var T=function(k,e){return ko?k:e};
+var TR=__TR__;var T=function(k,e){return ko?k:(TR[e]||e)};var TF=function(k,e,a){var x=T(k,e);return x.replace(/\{(\d)\}/g,function(m,i){return a[+i]})};
 /* setup + calc fields */
 var st=S("setup")||{};$$("[data-k]").forEach(function(i){if(st[i.dataset.k]!=null)i.value=st[i.dataset.k];i.addEventListener("input",function(){st[i.dataset.k]=i.value;S("setup",st);calc();status()})});
 function num(k,d){var v=parseFloat(st[k]);if(isNaN(v)){var el=$('[data-k="'+k+'"]');v=el?parseFloat(el.value):NaN}return isNaN(v)?d:v}
@@ -179,7 +189,7 @@ r+="<tr><th>"+T("물 부족(L)","Water short (L)")+"</th>"+D.map(function(d){var
 r+="<tr><th>"+T("열량 총수요(kcal)","Calories needed")+"</th>"+D.map(function(d){return"<td>"+fmt(p*k*d)+"</td>"}).join("")+"</tr>";
 r+="<tr><th>"+T("열량 부족(kcal)","Calories short")+"</th>"+D.map(function(d){var s=p*k*d-hk;return"<td class='"+(s>0?"rd-neg":"")+"'>"+(s>0?fmt(s):"0")+"</td>"}).join("")+"</tr>";
 r+="<tr><th>"+T("끼니(하루 3끼)","Meals (3 a day)")+"</th>"+D.map(function(d){return"<td>"+fmt(p*3*d)+"</td>"}).join("")+"</tr>";
-var b=$("#rd-calc");if(b)b.innerHTML=r;var w=$("#rd-weight");if(w)w.textContent=T("1년 물 계산값은 "+fmt(p*l*365)+"L, 무게만 약 "+(p*l*365/1000).toFixed(1)+"톤입니다. 한곳에 쌓기보다 초기 3~14일분과 검증된 급수·운반·보충 경로를 함께 확보하세요.","One year of water is "+fmt(p*l*365)+" L, about "+(p*l*365/1000).toFixed(1)+" tonnes. Rather than storing it all, keep 3–14 days at home plus verified ways to get and carry more.");}
+var b=$("#rd-calc");if(b)b.innerHTML=r;var w=$("#rd-weight");if(w)w.textContent=TF("1년 물 계산값은 {0}L, 무게만 약 {1}톤입니다. 한곳에 쌓기보다 초기 3~14일분과 검증된 급수·운반·보충 경로를 함께 확보하세요.","One year of water is {0} L, about {1} tonnes. Rather than storing it all, keep 3–14 days at home plus verified ways to get and carry more.",[fmt(p*l*365),(p*l*365/1000).toFixed(1)]);}
 /* power */
 var pw=S("pw")||[{n:T("조명","Light"),w:5,h:4},{n:T("휴대폰 충전","Phone charging"),w:10,h:3}];
 function pwr(){var b=$("#rd-pw tbody");if(!b)return;b.innerHTML=pw.map(function(x,i){return"<tr><td><input data-pi='"+i+"' data-f='n' value='"+String(x.n).replace(/'/g,"&#39;")+"'></td><td><input type='number' min='0' data-pi='"+i+"' data-f='w' value='"+x.w+"'></td><td><input type='number' min='0' step='0.5' data-pi='"+i+"' data-f='h' value='"+x.h+"'></td><td><button type='button' data-pd='"+i+"'>×</button></td></tr>"}).join("");
@@ -204,7 +214,7 @@ $$("[data-c]").forEach(function(i){i.value=cd[i.dataset.c]||"";i.addEventListene
 function status(){var i,todo=null;for(i=0;i<9;i++){if(!ck["tl"+i]){todo=$$(".rd-tl li")[i];break}}
 $("#st-todo").textContent=todo?todo.querySelector(".rd-task").firstChild.textContent:T("일정 완료 — 계절 점검을 이어가세요","Schedule done — keep seasonal checks");
 var p=people(),d=num("days",30),sw=p*num("lpd",4)*d-num("haveW",0),sk=p*num("kcal",2100)*d-num("haveK",0),sh=[];if(sw>0)sh.push(T("물 ","water ")+fmt(sw)+"L");if(sk>0)sh.push(T("식량 ","food ")+fmt(sk)+"kcal");
-$("#st-short").textContent=sh.length?sh.join(" · ")+" ("+d+T("일 기준",  "-day target")+")":T("목표 기간 기준 부족 없음","Nothing short for the target period");
+$("#st-short").textContent=sh.length?sh.join(" · ")+TF(" ({0}일 기준)"," ({0}-day target)",[d]):T("목표 기간 기준 부족 없음","Nothing short for the target period");
 var used=stk.reduce(function(a,x){return a+(x.q||0)*(x.p||0)},0),bud=num("budget",0);$("#st-budget").textContent=fmt(bud)+(ko?"원":"")+T(" 중 기록 "," · recorded ")+fmt(used)+(ko?"원":"");
 var filled=["near","shelter","out"].filter(function(k){return cd[k]}).length;$("#st-card").textContent=filled===3?T("작성 완료 — 인쇄해 두세요","Done — print it"):T("미작성 항목 ","Missing ")+(3-filled)+T("개 (만남 장소·대피소·다른 지역 연락인)"," (meeting place, shelter, out-of-area contact)");
 var exp=stk.filter(function(x){return x.x}).map(function(x){return x.x}).sort()[0],lc=st.check,nx=null;if(lc){var t=new Date(lc+"T00:00:00");t.setMonth(t.getMonth()+1);nx=t.toISOString().slice(0,10)}var c=[exp,nx].filter(Boolean).sort()[0];

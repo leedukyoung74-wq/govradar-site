@@ -106,7 +106,36 @@ def G(d, k, L):
     if v: return v
     v = (d.get("en") or {}).get(k)
     if v not in (None, [], ""): return v
-    return d.get(k)
+    return _scrub(d.get(k))
+_HANG = re.compile(r"[가-힣]")
+def _scrub(v):
+    """Non-Korean pages: when a field has no translation, never show the Korean original."""
+    if isinstance(v, str): return "" if _HANG.search(v) else v
+    if isinstance(v, list):
+        out = []
+        for x in v:
+            y = _scrub(x)
+            if y in ("", None, {}, []): continue
+            if isinstance(y, dict) and isinstance(x, dict) and x.get("title") and not y.get("title"): continue
+            out.append(y)
+        return out
+    if isinstance(v, dict): return {k: _scrub(x) for k, x in v.items()}
+    return v
+def _asof(d, L):
+    a = d.get("asof") or ""
+    if L == "ko" or not _HANG.search(a): return a
+    a2 = (d.get("en") or {}).get("asof") or ""
+    if a2: return a2
+    m = re.findall(r"\d{4}-\d{2}(?:-\d{2})?", a)
+    return max(m) if m else ""
+def _stl(title, url, L):
+    """Source title for the viewer; Korean-only titles show the site's domain on non-Korean pages."""
+    title = str(title or url or "")
+    if L != "ko" and _HANG.search(title):
+        from urllib.parse import urlparse
+        h = urlparse(str(url or "")).netloc.replace("www.", "")
+        return h or title
+    return title
 def risk_txt(d, L):
     r = d.get("risk") or {}
     if L != "ko" and d.get("risk_en"): r = {**r, **d["risk_en"]}
@@ -158,7 +187,7 @@ def prepbar(L):
     nm_ = lambda x: (PREP_T.get(L) or {}).get(x["id"]) or x[lk]
     chips = "".join(f'<button data-pp="{x["id"]}">{e(nm_(x))}</button>' for x in CT["prep"]["scenarios"])
     panels = "".join(f'<div class="pp" data-pp="{x["id"]}" hidden><h3>{e(x[lk])}</h3><ul>{"".join(f"<li>{e(i)}</li>" for i in x[lk+"_items"])}</ul></div>' for x in CT["prep"]["scenarios"])
-    src = "".join(f'<li><a href="{e(z["url"])}" target="_blank" rel="noopener">{e(z["title"])}</a></li>' for z in CT["prep"]["sources"])
+    src = "".join(f'<li><a href="{e(z["url"])}" target="_blank" rel="noopener">{e(_stl(z["title"], z["url"], L))}</a></li>' for z in CT["prep"]["sources"])
     return f'''<div class="prepbar"><div class="in"><b>{e(tx(L,"prep_t"))}</b><a class="pkit" href="/{L}/prepare/">{ {"ko":"비축 키트","en":"Stockpile kit","es":"Kit de reservas","fr":"Kit de réserves","ar":"حقيبة الطوارئ","vi":"Bộ dự trữ","id":"Kit persediaan"}[L] }</a><div class="pchips">{chips}</div><span class="tick" id="htick"></span></div></div>
 <div class="preppanel" id="preppanel" hidden><div class="in"><div>{panels}</div><div><p class="note">{e(tx(L,"prep_src"))}</p><ul class="src">{src}</ul><button class="btn sm" id="pp-x">×</button></div></div></div>'''
 
@@ -279,7 +308,7 @@ def country_page(iso, L):
     if ec: body.append(sec("econ", t["econ"], f'<p>{e(ec.get("rating","—"))} · K-SURE {e(ec.get("ksure","—"))} · {e((ec.get("fx") or {}).get("code",""))} {e((ec.get("fx") or {}).get("change_30d",""))}</p>'))
     sc = G(d, "sanctions", L)
     if sc: body.append(sec("sanctions", t["sanctions"], f'<p>{e(", ".join(sc.get("programs") or []) or "—")}</p><p class="note">{e(sc.get("summary",""))}</p>'))
-    src = lst(d.get("sources"), lambda s: f'<li><a href="{e(s.get("url"))}" target="_blank" rel="noopener nofollow">{e(s.get("title") or s.get("url"))}</a></li>' if str(s.get("url","")).startswith("https://") else "")
+    src = lst(d.get("sources"), lambda s: f'<li><a href="{e(s.get("url"))}" target="_blank" rel="noopener nofollow">{e(_stl(s.get("title"), s.get("url"), L))}</a></li>' if str(s.get("url","")).startswith("https://") else "")
     body.append(sec("sources", t["sources"], src))
     # sidebar
     same = [x for x in META if x["r"] == c["r"] and x["iso"] != iso and done(x["iso"])][:12]
@@ -299,7 +328,7 @@ def country_page(iso, L):
     hero = f"""<section class="chero"><div class="in">
 <p class="crumb"><a href="/{L}/">GOV RADAR</a> / {e(t['regions'][c['r']])}{(' / <a href="'+url(L,c['parent'])+'">'+e(nm(c['parent'],L))+'</a> / '+e(tx(L,'rgt')[c['type']])) if c.get('reg') else ''}</p>
 <div class="ct">{flag(iso, 'big')}<div><h1>{e(name)}</h1><p class="alt">{e(c['en'] if L!='en' else c['ko'])} · {iso}{' · Commonwealth' if c.get('cw') else ''}</p></div></div>
-<p class="meta">{e(t['updated'])} {e(d.get('updated','—'))}{(' · '+e(t['asof'])+' '+e(d.get('asof'))) if d.get('asof') else ''}{f" · <span class=lvl data-l={lv}>{e(t['rl'][lv])}</span>" if lv else ''}</p>
+<p class="meta">{e(t['updated'])} {e(d.get('updated','—'))}{(' · '+e(t['asof'])+' '+e(_asof(d, L))) if _asof(d, L) else ''}{f" · <span class=lvl data-l={lv}>{e(t['rl'][lv])}</span>" if lv else ''}</p>
 </div></section>"""
     return head(L, title, desc, path, alts, jl + crumbs) + hero + f'<div class="in cgrid"><article>{"".join(body)}</article>{side}</div>' + foot(L)
 
@@ -315,6 +344,19 @@ MDBI = [("WB","World Bank","세계은행","https://projects.worldbank.org/en/pro
  ("AIIB","AIIB","아시아인프라투자은행","https://www.aiib.org/en/opportunities/business/project-procurement/index.html",["aiib","아시아인프라투자은행"]),
  ("UNGM","UN Global Marketplace","UN 조달 (UNGM)","https://www.ungm.org",["ungm","undp","unicef","unops","유엔","unido"]),
  ("KR","Korea EDCF · KOICA","한국 EDCF·KOICA","",["edcf","koica","수출입은행","대외경제협력기금","코이카"])]
+_HAN = re.compile(r"[가-힣]")
+def _lv(xe, x, keys, en):
+    for k in keys:
+        v = (xe.get(k) if en else None) or x.get(k)
+        if v and (not en or not _HAN.search(str(v))): return v
+    return ""
+def _evo(x, L):
+    org, city = x.get("org", ""), x.get("city", "")
+    if L != "ko":
+        org = x.get("org_en") or ("Local host" if org == "현지 주최" else org)
+        city = x.get("city_en") or city
+        org, city = ("" if _HAN.search(str(org)) else org), ("" if _HAN.search(str(city)) else city)
+    return " · ".join(v for v in (org, city) if v)
 def mdb_items():
     out = []
     for iso, d in DATA.items():
@@ -333,7 +375,7 @@ def guide_page(iso, L):
     li = lambda a: "<ul>" + "".join(f"<li>{e(x)}</li>" for x in (a or [])) + "</ul>"
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a> / <a href="{url(L,iso)}">{e(name)}</a></p><div class="ct">{flag(iso,'big')}<div><h1>{e(title)}</h1><p class="alt">{"Checked" if en else "확인일"} {e(g.get('checked',''))}</p></div></div></div></section>
 <div class="in stock"><blockquote class="summary">{e(v('who') or '')}</blockquote>
-<h2>{"Procurement portals" if en else "조달 포털"}</h2><ul>{''.join(f'<li><a href="{e(p["url"])}" target="_blank" rel="noopener nofollow">{e(p["name"])}</a>{"" if en else " — "+e(p.get("note",""))}</li>' for p in g.get('portals',[]))}</ul>
+<h2>{"Procurement portals" if en else "조달 포털"}</h2><ul>{''.join(f'<li><a href="{e(p["url"])}" target="_blank" rel="noopener nofollow">{e((p.get("name_en") if en else None) or p["name"])}</a>{"" if en else " — "+e(p.get("note",""))}</li>' for p in g.get('portals',[]))}</ul>
 <div class="sgate"><h2>{"How to take part" if en else "참여 순서"}</h2><ol>{''.join(f"<li>{e(x)}</li>" for x in (v('steps') or []))}</ol>
 <h2>{"Local preference & limits" if en else "현지 우대·제한"}</h2>{li(v('local'))}
 <p><b>{"Bid language" if en else "입찰 언어"}</b> · {e(v('lang') or '—')}</p>
@@ -348,7 +390,7 @@ def mdb_page(L):
     en = L != "ko"; items = mdb_items()
     t_ = "Tenders & deadlines — governments and development banks" if en else "입찰·마감 보드 — 각국 정부와 개발은행"
     inst = "".join(f'<a class="card" href="{e(b[3])}" target="_blank" rel="noopener"><h3>{e(b[1] if en else b[2])} ↗</h3></a>' for b in MDBI if b[3])
-    rows = "".join(f'<div class="card"><p class="note"><a href="{url(L,x["iso"])}">{flag(x["iso"])} {e(nm(x["iso"],L))}</a> · {e(x["b"][1] if en else x["b"][2])}</p><h3>{e((x["xe"].get("title") if en else None) or x["x"].get("title",""))}</h3><p class="note">{e(" · ".join(str(v) for v in [x["x"].get("buyer") or x["x"].get("agency"), x["x"].get("value") or x["x"].get("amount"), x["x"].get("deadline")] if v))}</p>{f"<a href={chr(34)}{e(x[chr(120)][chr(117)+chr(114)+chr(108)])}{chr(34)} target=_blank rel=noopener>{chr(8599)}</a>" if str(x["x"].get("url","")).startswith("https://") else ""}</div>' for x in items)
+    rows = "".join(f'<div class="card"><p class="note"><a href="{url(L,x["iso"])}">{flag(x["iso"])} {e(nm(x["iso"],L))}</a> · {e(x["b"][1] if en else x["b"][2])}</p><h3>{e((x["xe"].get("title") if en else None) or x["x"].get("title",""))}</h3><p class="note">{e(" · ".join(str(v) for v in [_lv(x["xe"], x["x"], ("buyer", "agency"), en), _lv(x["xe"], x["x"], ("value", "amount"), en), x["x"].get("deadline")] if v))}</p>{f"<a href={chr(34)}{e(x[chr(120)][chr(117)+chr(114)+chr(108)])}{chr(34)} target=_blank rel=noopener>{chr(8599)}</a>" if str(x["x"].get("url","")).startswith("https://") else ""}</div>' for x in items)
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1></div></section>
 <div class="in stock"><h2 id="deadlines">{"Open tenders by deadline" if en else "마감일 순 열린 입찰"}</h2><p class="note">{"Choose your field. Deadlines are taken from the original notices; always check the notice before bidding." if en else "분야를 고르세요. 마감일은 원문 공고 기준이며, 입찰 전 반드시 원문을 확인하세요."} <a href="{P3.paylink(L, "fit")}">{"Partnership consultation (free) →" if en else "프로젝트 파트너십 무료 상담 →"}</a> · <a href="/{L}/pricing/?p=fit#order">{"Fit review ₩100,000 →" if en else "공고 1건 적합도 검토 10만 원 →"}</a></p>{P3.deadline_board(L, C3())}
 <h2 id="past">{P3.pt("h_mdb", L)}</h2>{P3.past_board(L, C3())}
@@ -401,7 +443,7 @@ def conflict_page(L):
     cards = "".join(f'<div class="card"><div class="cf-h2"><div><h3>{flag(h["iso"])} {e(h["en"] if en else h["ko"])} <span class="lv {h["level"]}">{LV.get(h["level"],"")}</span></h3><p class="note">{e(h["status_en"] if en else h["status_ko"])}</p></div>{gm(h)}</div><ul>' + "".join(f'<li>{vbh(f["v"],en)}{e(f["en"] if en else f["ko"])}{sr(f.get("src"))}</li>' for f in h["facts"] if f["v"] != "unv") + f'</ul><p class="note">{e(h["biz_en"] if en else h["biz_ko"])}</p></div>' for h in C["hotspots"])
     prep = "".join(f'<li>{vbh(p["v"],en)}{e(p["en"] if en else p["ko"])}{sr(p.get("src"))}' + (f'<br><small class="note">{e(p.get("note_en") if en else p.get("note_ko"))}</small>' if (p.get("note_en") if en else p.get("note_ko")) else "") + "</li>" for p in C["prep"] if p["v"] != "unv")
     claims = "".join(f'<li>{vbh(p["v"],en)}“{e(p["en"] if en else p["ko"])}”<br><small class="note">{e(p["note_en"] if en else p["note_ko"])}</small></li>' for p in C["claims"])
-    srcs = "".join(f'<li><a href="{e(z["u"])}" target="_blank" rel="noopener">{e(z["t"])}</a> <small class="note">T{z["tier"]}</small></li>' for z in S)
+    srcs = "".join(f'<li><a href="{e(z["u"])}" target="_blank" rel="noopener">{e(_stl(z["t"], z["u"], L))}</a> <small class="note">T{z["tier"]}</small></li>' for z in S)
     body = f"""<section class="chero img-cf"><div class="in cfhero"><div><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1><p class="lede">{"Wars and conflicts (US DoD, JCS, CENTCOM, NATO, EU), earthquakes, tsunamis, typhoons, floods, wildfires, volcanoes, outbreaks and near-Earth asteroids (USGS, GDACS, WHO, NASA) — cross-checked with wire services and specialist press." if en else "전쟁·분쟁(미 국방부·합참·CENTCOM·NATO·EU)과 지진·쓰나미·태풍·홍수·산불·화산·감염병·소행성(USGS·GDACS·WHO·NASA) 발표를 통신사·전문매체와 교차 확인합니다."}</p></div>{hotmap("WORLD", "IR,UA,KP,TW,LB", WORLDPTS)}</div></section>
 <div class="in stock">{liveboard(L)}<h2 style="margin-top:40px">{"Detail with sources" if en else "출처가 달린 상세 내용"}</h2><blockquote class="summary cfh"><b>{"As of" if en else "기준일"} {e(C["updated"])}</b> · {e(C["summary_en"] if en else C["summary_ko"])}<br><small class="note">{e(C["advice_en"] if en else C["advice_ko"])}</small></blockquote>
 <div class="cards c2">{cards}</div>
@@ -455,7 +497,7 @@ def stock_page(L):
 <h2>{e(H['q'])}</h2><table class="qt">{''.join(f'<tr><td>{e(nmk(q))}</td><td><b>{e(qv(q))}</b></td></tr>' for q in STK['qty'])}</table>
 <h2>{e(H['pr'])}</h2><p class="note">{e(H['prp'])}</p><div class="cards">{''.join(f'<div class="card"><p class="note">{e(CN.get(x["cat"],""))}</p><h3>{e(nmk(x))}</h3><p>{e(k(x,"spec"))}</p><p><a href="https://search.shopping.naver.com/search/all?query={quote(x["q"])}" target="_blank" rel="noopener nofollow">{"Naver Shopping" if en else "네이버쇼핑"}</a> · <a href="https://www.coupang.com/np/search?q={quote(x["q"])}" target="_blank" rel="noopener nofollow">{"Coupang" if en else "쿠팡"}</a></p></div>' for x in STK['products'])}</div>
 <h2>{e(H['sf'])}</h2><ul>{''.join(f'<li>{e(x)}</li>' for x in STK['safety_en' if en else 'safety_ko'])}</ul>
-<h2>{e(H['src'])}</h2><ul class="src">{''.join(f'<li><a href="{e(z["url"])}" target="_blank" rel="noopener">{e(z["title"])}</a></li>' for z in STK['sources'])}</ul>
+<h2>{e(H['src'])}</h2><ul class="src">{''.join(f'<li><a href="{e(z["url"])}" target="_blank" rel="noopener">{e((z.get("title_en") if en else None) or z["title"])}</a></li>' for z in STK['sources'])}</ul>
 </div>"""
     jl = ld({"@context": "https://schema.org", "@type": "HowTo", "name": H["t"], "inLanguage": L, "supply": [{"@type": "HowToSupply", "name": nmk(c)} for c in STK["cats"]], "step": [{"@type": "HowToStep", "name": nmk(x), "text": k(x, "p")} for x in STK["stages"]]})
     return head(L, H["t"] + " · GOV RADAR", H["d"], f"/{L}/prepare/", {l: f"/{l}/prepare/" for l in LANGS}, jl) + body + foot(L)
@@ -512,7 +554,7 @@ def lockbox(L, iso, n):
             f'<p class="cta"><a class="btn pri" href="{P3.paylink(L, "biz", iso)}">{"분석 회원 월 19,800원으로 전체 보기" if ko else "See all — analysis member ₩19,800/mo"}</a> <a class="btn" href="/{L}/unlock/?c={iso}">{"무료로 3개국 요약 받기" if ko else "Get 3 countries free"}</a></p></div>')
 
 def C3():
-    return dict(e=e, head=head, foot=foot, url=url, flag=flag, nm=nm, DATA=DATA, BY=BY, LANGS=LANGS, TODAY=TODAY, G=G)
+    return dict(e=e, head=head, foot=foot, url=url, flag=flag, nm=nm, DATA=DATA, BY=BY, LANGS=LANGS, TODAY=TODAY, G=G, stl=_stl)
 
 P3._NM = lambda iso, L: nm(iso, L)
 
@@ -535,7 +577,7 @@ def home(L):
     lk = "ko" if L == "ko" else "en"
     board = "".join(f'<a class="opp{"" if j < 6 else " lk"}" href="{url(L,o["iso"])+"#biz" if j < 6 else P3.paylink(L, "biz", o["iso"])}"><span class="who">{flag(o["iso"])} {e(nm(o["iso"],L))}{" <i class=fit>"+e(t["fit"])+"</i>" if o["fit"]=="high" else ""}</span><b>{e(o[lk])}</b><span class="note">{e(o["why_"+lk][:120]) if j < 6 else ("🔒 이유·대상 바이어 — 분석 회원 월 19,800원" if L=="ko" else "🔒 Why-now & buyers — analysis member ₩19,800/mo")}</span></a>' for j, o in enumerate(O[:24]))
     evs = events()[:12]
-    evh = "".join(f'<a class="ev" href="{url(L,x["iso"])}#events"><span class="d">{e(x.get("date","")[5:].replace("-","/"))}</span><span>{flag(x["iso"])} <b>{e(x.get("title_en") if L!="ko" and x.get("title_en") else x.get("title"))}</b><br><span class="note">{e(x.get("org",""))} · {e(x.get("city",""))}</span></span></a>' for x in evs) or f'<p class="note">—</p>'
+    evh = "".join(f'<a class="ev" href="{url(L,x["iso"])}#events"><span class="d">{e(x.get("date","")[5:].replace("-","/"))}</span><span>{flag(x["iso"])} <b>{e(x.get("title_en") if L!="ko" and x.get("title_en") else x.get("title"))}</b><br><span class="note">{e(_evo(x, L))}</span></span></a>' for x in evs) or f'<p class="note">—</p>'
     plans = "".join(f'<div class="plan{" mid" if a.startswith("BUILD M2") else ""}"><span class="tier">{e(a)}</span><b class="price">{e(b)}</b><p>{e(c)}</p></div>' for i, (a, b, c) in enumerate(PLANS[L]))
     jl = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "GOV RADAR", "url": BASE + "/", "inLanguage": L, "publisher": ORG, "description": t["desc_home"]})
     return head(L, t["title_home"], t["desc_home"], path, alts, jl + JSVM + '<script src="/assets/hotmap.js" defer></script>') + f"""
@@ -762,6 +804,25 @@ def build():
     llms += ["", "## 국가 (한국어)"] + [f"- [{c['ko']}]({BASE}{url('ko', c['iso'])})" for c in META if done(c["iso"])]
     W("/llms.txt", "\n".join(llms) + "\n")
     W("/_headers", "/assets/*\n  Cache-Control: public, max-age=604800\n/data/*\n  Cache-Control: public, max-age=3600\n  X-Robots-Tag: noindex\n/widget/*\n  Content-Security-Policy: frame-ancestors *\n/embed/*\n  Content-Security-Policy: frame-ancestors *\n/*\n  X-Content-Type-Options: nosniff\n")
+    # Non-Korean pages: replace stray Korean words left inside English data with English
+    _K2E = [("조달정책위원회", "Government Procurement Policy Board"), ("국민재난안전포털", "Korea Safety Portal"), ("기상청", "Korea Meteorological Administration"),
+            ("연방 조달 포털, SICAF 포함", "federal procurement portal, incl. SICAF"), ("국가조달청", "national procurement agency"), ("중소기업청", "SME agency"),
+            ("전자입찰", "e-bidding"), ("무상", "grant"), ("승인", "approved"), ("진행", "ongoing"), ("발굴", "identified")]
+    def _k2e(m):
+        t = m.group(1)
+        if not re.search(r"[가-힣]", t): return m.group(0)
+        for k, v in _K2E: t = t.replace(k, v)
+        return ">" + t + "<"
+    for _L in [l for l in LANGS if l != "ko"]:
+        for dp, _, fs in os.walk(os.path.join(OUT, _L)):
+            for fn in fs:
+                if not fn.endswith(".html"): continue
+                fp = os.path.join(dp, fn); h = open(fp, encoding="utf-8").read()
+                if not re.search(r"[가-힣]", h): continue
+                parts = re.split(r"(<script\b.*?</script>|<style\b.*?</style>)", h, flags=re.S)
+                for i in range(0, len(parts), 2): parts[i] = re.sub(r">([^<>]+)<", _k2e, parts[i])
+                h2 = "".join(parts)
+                if h2 != h: open(fp, "w", encoding="utf-8").write(h2)
     # UI strings for es/fr/ar/vi/id: exact text-node replacement from English (src/i18n_ui/<L>_*.json)
     import html as _h
     _NUMPAT = re.compile(r"(\d+) tenders · (\d+) government projects · (\d+) countries")

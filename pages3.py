@@ -403,7 +403,7 @@ def deadline_board(L, C, limit=None, home=False):
 <a class="src" href="{paylink(L, "tenders", x["iso"])}">{"🔒 보기" if ko else "🔒 Unlock"}</a></li>'''
     nlk = len(T) - len([i for i in range(len(T)) if i in free])
     rows = "".join(lockrow(x) if i not in free else f'''<li class="{"new" if x.get("new") else ""}" data-s="{" ".join(x["sec"]) or "other"}" data-dl="{x["dl"]}"><span class="dd" data-dl="{x["dl"]}">{x["dl"][5:].replace("-", "/")}{NB(L) if x.get("new") else ""}</span>
-<span class="tt"><a href="{C["url"](L, x["iso"])}#tenders">{C["flag"](x["iso"])} {e(C["nm"](x["iso"], L))}</a><b>{e((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))}</b><small>{e(x["t"].get("buyer", ""))}</small></span>
+<span class="tt"><a href="{C["url"](L, x["iso"])}#tenders">{C["flag"](x["iso"])} {e(C["nm"](x["iso"], L))}</a><b>{e((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))}</b><small>{e((x["te"].get("buyer") if not ko else None) or x["t"].get("buyer", ""))}</small></span>
 {f'<a class="src" href="{e(x["t"]["url"])}" target="_blank" rel="noopener nofollow">{"원문" if ko else "Notice"} ↗</a>' if str(x["t"].get("url", "")).startswith("https://") else ""}</li>''' for i, x in enumerate(T))
     chips = "" if home else (f'<div class="filters dlf"><button class="chip on" data-s="all">{"전체" if ko else "All"}</button>' + "".join(f'<button class="chip" data-s="{k}">{nk if ko else ne}</button>' for k, nk, ne, *_ in SECT) + "</div>")
     js = '''<script>(function(){var t=new Date();t.setHours(0,0,0,0);document.querySelectorAll(".dl .dd").forEach(function(s){var d=new Date(s.dataset.dl+"T00:00:00"),n=Math.round((d-t)/864e5);if(n<0){s.closest("li").remove();return}if(s.closest(".lk"))return;s.insertAdjacentHTML("beforeend","<i>D-"+(n||"day")+"</i>");if(n<=15){s.classList.add("soon");s.closest("li").classList.add("hot")}});
@@ -617,11 +617,11 @@ def sample_page(L, C, iso="ZA"):
     nm = C["nm"](iso, L)
     proj = li(g("projects"), lambda x: f'<b>{e(x.get("title"))}</b>' + (f' — {e(x.get("detail",""))}' if x.get("detail") else "") + (f' <span class="note">{e(x.get("ministry",""))} {e(x.get("budget",""))}</span>' if x.get("ministry") or x.get("budget") else ""))
     biz = li(g("biz"), lambda x: f'<b>{e(x.get("title"))}</b>' + (f'<br>{"이유" if ko else "Why now"}: {e(x.get("why",""))}' if x.get("why") else "") + (f'<br>{"대상 바이어" if ko else "Target buyers"}: {e(x.get("target",""))}' if x.get("target") else ""))
-    td = li(d.get("tenders"), lambda x: f'<b>{e(x.get("title"))}</b> — {e(x.get("buyer",""))} · {"마감" if ko else "deadline"} {e(x.get("deadline",""))}' + (f' · <a href="{e(x["url"])}" target="_blank" rel="noopener nofollow">{"원문" if ko else "Notice"} ↗</a>' if str(x.get("url","")).startswith("https://") else ""))
+    td = li(g("tenders"), lambda x: f'<b>{e(x.get("title"))}</b> — {e(x.get("buyer",""))} · {"마감" if ko else "deadline"} {e(x.get("deadline",""))}' + (f' · <a href="{e(x["url"])}" target="_blank" rel="noopener nofollow">{"원문" if ko else "Notice"} ↗</a>' if str(x.get("url","")).startswith("https://") else ""))
     krs = li(g("krsupport"), lambda x: f'<b>{e(x.get("title"))}</b> — {e(x.get("detail",""))}')
     rk = d.get("risk_en" if not ko else "risk") or {}
     risk = li((rk.get("conflict") or []) + (rk.get("disaster") or []) + (rk.get("epidemic") or []), lambda x: e(x))
-    src = li(d.get("sources"), lambda x: f'<a href="{e(x.get("url",""))}" target="_blank" rel="noopener nofollow">{e(x.get("title",""))}</a>')
+    src = li(d.get("sources"), lambda x: f'<a href="{e(x.get("url",""))}" target="_blank" rel="noopener nofollow">{e(C["stl"](x.get("title",""), x.get("url",""), L) if C.get("stl") else x.get("title",""))}</a>')
     nxt = (["이 나라 전자조달 포털에 공급자 등록 여부 확인", "위 입찰 중 1건을 골라 입찰 적합도 검토 받기", "한국 지원제도(위 목록) 중 해당하는 1개에 이번 분기 신청", "현지 파트너 후보 2~3곳 목록 만들기"] if ko else
            ["Check supplier registration on the national e-procurement portal", "Pick one tender above and get a fit review", "Apply this quarter to one Korean support programme listed above", "List 2–3 local partner candidates"])
     sec = lambda h, body: f'<section class="sec"><h2>{h}</h2>{body}</section>' if body else ""

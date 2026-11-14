@@ -1,55 +1,320 @@
 {
  "updated": "2026-10-31",
- "method_ko": ["교차검증된 사실(정부 발표·국제기구 문서·통신사 보도)만 근거로 씁니다.","정책 방향 → 예산·재원 → 아직 발주되지 않은 수요 순서로 추론합니다.","한국 기업·대학이 실제로 맡을 수 있는 역할이 있는지 확인합니다.","제안마다 필요한 참여자(대학·기업·은행·기관)를 정하고 컨소시엄으로 연결합니다.","매주 새 근거를 반영해 제안을 고치거나 내립니다."],
- "method_en": ["Only cross-checked facts (government statements, multilateral documents, wire reports) are used.","Inference runs policy → budget/funding → demand not yet tendered.","We check that Korean companies or universities can realistically take a role.","Each proposal lists the participants needed and links them through the consortium.","Proposals are revised or withdrawn weekly as evidence changes."],
+ "method_ko": [
+  "교차검증된 사실(정부 발표·국제기구 문서·통신사 보도)만 근거로 씁니다.",
+  "정책 방향 → 예산·재원 → 아직 발주되지 않은 수요 순서로 추론합니다.",
+  "한국 기업·대학이 실제로 맡을 수 있는 역할이 있는지 확인합니다.",
+  "제안마다 필요한 참여자(대학·기업·은행·기관)를 정하고 컨소시엄으로 연결합니다.",
+  "매주 새 근거를 반영해 제안을 고치거나 내립니다."
+ ],
+ "method_en": [
+  "Only cross-checked facts (government statements, multilateral documents, wire reports) are used.",
+  "Inference runs policy → budget/funding → demand not yet tendered.",
+  "We check that Korean companies or universities can realistically take a role.",
+  "Each proposal lists the participants needed and links them through the consortium.",
+  "Proposals are revised or withdrawn weekly as evidence changes."
+ ],
  "projects": [
-  {"id":"gulf-bypass","iso":["OM","AE","SA"],"region_ko":"걸프·오만해","region_en":"Gulf & Gulf of Oman","horizon":"6–24m",
-   "title_ko":"호르무즈 우회 물류·비축 거점 사업","title_en":"Hormuz-bypass logistics and stockpile hubs",
-   "idea_ko":"해협 밖 항만(오만·UAE 동부)과 육상 송유·물류망, 전략 비축 저장시설 수요를 겨냥한 설계·스마트 항만·저장 탱크 모니터링 컨소시엄.","idea_en":"Design, smart-port and tank-monitoring consortium for ports outside the strait (Oman, eastern UAE), overland pipelines and strategic storage.",
-   "basis":[{"v":"ok","ko":"이란의 해협 통항 통제와 미국의 이란 항만 봉쇄가 이어지고 있다.","en":"Iranian transit control and the US blockade of Iranian ports continue."},{"v":"single","ko":"10월 11일 해협 원유 통과량이 하루 290만 배럴로 급감(Kpler).","en":"Crude through the strait fell to 2.9M bbl on 11 Oct (Kpler)."}],
-   "roles_ko":["항만·물류 IT 기업","플랜트 설계사","해운·보험 금융","대학 물류·해양공학과"],"roles_en":["Port & logistics IT","Plant engineering","Shipping finance & insurance","University logistics / ocean engineering"],
-   "buyers_ko":"오만·UAE 항만 당국, 국영 석유사, 개발은행 인프라 창구","buyers_en":"Omani/UAE port authorities, national oil companies, MDB infrastructure windows"},
-  {"id":"ua-rebuild","iso":["UA"],"region_ko":"우크라이나","region_en":"Ukraine","horizon":"3–36m",
-   "title_ko":"우크라이나 에너지망·교량 신속 복구 패키지","title_en":"Ukraine rapid energy-grid and bridge recovery package",
-   "idea_ko":"휴전 협상 진전에 대비해 모듈형 변전 설비·ESS·조립식 교량을 묶은 신속 복구 패키지를 미리 설계하고 재건 기금 공고에 맞춰 제안.","idea_en":"Pre-design modular substations, storage and prefabricated bridges as a rapid package aligned with reconstruction-fund calls.",
-   "basis":[{"v":"ok","ko":"젤렌스키 대통령이 현 전선 동결 휴전을 검토할 수 있다고 밝혔다.","en":"President Zelensky said he could consider a ceasefire on current lines."},{"v":"single","ko":"미·러·우 3자 협상이 11월 10일 전후 재개될 수 있다는 크렘린 입장.","en":"Kremlin says trilateral talks could resume around 10 Nov."}],
-   "roles_ko":["전력기기·ESS 기업","건설·강구조 기업","수출금융(수은·K-SURE)","대학 전기·토목공학과"],"roles_en":["Power equipment & storage","Construction & steel structures","Export finance","University electrical / civil engineering"],
-   "buyers_ko":"EBRD·World Bank 재건 사업, 우크라이나 정부 재건청","buyers_en":"EBRD / World Bank reconstruction, Ukrainian recovery agencies"},
-  {"id":"base-resilience","iso":["US","KR","JP"],"region_ko":"미국·동맹국","region_en":"US & allies","horizon":"6–36m",
-   "title_ko":"공공·군 시설 에너지 자립(마이크로그리드) 솔루션","title_en":"Energy resilience (microgrids) for public and defence sites",
-   "idea_ko":"장기 정전·사이버 공격에 대비한 마이크로그리드·ESS·EMP 보호 설계를 동맹국 공공시설·병원·데이터센터에 맞춰 패키지화.","idea_en":"Package microgrids, storage and EMP protection for allied public sites, hospitals and data centres facing long outages or cyber attacks.",
-   "basis":[{"v":"part","ko":"미 국방부 FORTRESS 계획: 주요 기지 최대 90일 자립 목표(90일 수치는 단일 출처).","en":"US DoD FORTRESS: major bases up to 90 days self-sufficient (90-day figure single-source)."},{"v":"ok","ko":"케이프코드 우주군기지 발전·마이크로그리드 1억 3,190만 달러 계약.","en":"$131.9M power/microgrid contract at Cape Cod Space Force Station."}],
-   "roles_ko":["ESS·인버터 기업","전력 IT·보안 기업","EPC","대학 에너지공학과"],"roles_en":["Storage & inverters","Grid IT & cybersecurity","EPC","University energy engineering"],
-   "buyers_ko":"미 육군 공병단 ERCIP, 동맹국 국방·공공기관","buyers_en":"USACE ERCIP, allied defence and public agencies"},
-  {"id":"prep-edu","iso":["GB","NL","IE","JP","KR"],"region_ko":"유럽·일본·한국","region_en":"Europe, Japan, Korea","horizon":"3–12m",
-   "title_ko":"국민 비상대비 교육·키트 공공조달","title_en":"Civil-preparedness education and kit procurement",
-   "idea_ko":"각국 정부의 72시간~1주 비축 캠페인에 맞춰 지자체·학교용 대비 교육 콘텐츠(온라인)와 표준 비상 키트를 공급.","idea_en":"Supply online preparedness curricula and standard kits to municipalities and schools in line with national 72-hour to one-week campaigns.",
-   "basis":[{"v":"ok","ko":"영국 'Be Ready' 72시간 캠페인(10/22), 네덜란드 Denk Vooruit 새 캠페인(10/12), 아일랜드 전 가구 안내서(9월).","en":"UK 'Be Ready' (22 Oct), Dutch Denk Vooruit campaign (12 Oct), Irish household booklet (Sep)."},{"v":"ok","ko":"일본 방재청 11월 2일 출범.","en":"Japan's Disaster Management Agency launches 2 Nov."}],
-   "roles_ko":["에듀테크 기업","생활용품 제조사","대학 재난안전·교육학과","청소년 교육 단체"],"roles_en":["Edtech","Consumer-goods makers","University disaster-safety / education","Youth education groups"],
-   "buyers_ko":"각국 지자체·교육청, 방재 기관","buyers_en":"Municipalities, education offices, disaster agencies"},
-  {"id":"drone-detect","iso":["US","GB","DE","PL"],"region_ko":"미국·유럽","region_en":"US & Europe","horizon":"6–24m",
-   "title_ko":"민간 핵심기반시설 드론 탐지·경보 서비스","title_en":"Drone detection and alerting for civilian critical infrastructure",
-   "idea_ko":"공항·발전소·항만의 드론 침입을 탐지해 관제에 알리는 센서·소프트웨어 서비스(무력화 장비 제외, 탐지·경보 중심).","idea_en":"Sensor and software services detecting drone incursions at airports, plants and ports and alerting operators (detection only, no defeat systems).",
-   "basis":[{"v":"ok","ko":"미 육군·JIATF-401 국내 드론 방어 계약 최대 41억 5천만 달러, 10개사.","en":"US Army / JIATF-401 domestic counter-drone contracts, up to $4.15B, 10 firms."}],
-   "roles_ko":["레이더·RF 센서 기업","영상 AI 기업","대학 전자공학과"],"roles_en":["Radar / RF sensors","Vision AI","University electronics"],
-   "buyers_ko":"공항공사·발전사·항만공사, 국토안보 기관","buyers_en":"Airport, power and port operators; homeland-security agencies"},
-  {"id":"jp-dma","iso":["JP"],"region_ko":"일본","region_en":"Japan","horizon":"6–18m",
-   "title_ko":"방재청 출범에 맞춘 피난소 운영·재난 데이터 플랫폼","title_en":"Shelter operations and disaster-data platform for Japan's new agency",
-   "idea_ko":"피난소 수용 현황·물자 재고·요배려자 관리를 실시간으로 보는 클라우드 플랫폼을 지자체 대상으로 제안.","idea_en":"Cloud platform for real-time shelter capacity, supplies and vulnerable-person tracking for municipalities.",
-   "basis":[{"v":"ok","ko":"일본 방재청 2026년 11월 2일 출범, 설치법 7월 제정.","en":"Agency launches 2 Nov 2026; founding law enacted in July."}],
-   "roles_ko":["공공 SaaS 기업","GIS 기업","일본 협약 대학"],"roles_en":["Public-sector SaaS","GIS","Partner Japanese university"],
-   "buyers_ko":"일본 지자체, 방재청","buyers_en":"Japanese municipalities, the new agency"},
-  {"id":"barmm","iso":["PH"],"region_ko":"필리핀 방사모로(BARMM)","region_en":"Bangsamoro (BARMM), Philippines","horizon":"6–36m",
-   "title_ko":"방사모로 평화·개발 디지털 행정","title_en":"Bangsamoro peace-and-development digital government",
-   "idea_ko":"새 자치정부 출범 초기에 필요한 전자 결재·주민 서비스·예산 집행 투명성 시스템을 JICA·ODA 재원과 연계해 제안.","idea_en":"E-approval, citizen services and budget-transparency systems for the new autonomous government, linked to JICA / ODA funding.",
-   "basis":[{"v":"ok","ko":"방사모로 의회가 10월 30일 새 수석장관을 선출했다(51대 27).","en":"The Bangsamoro parliament elected a new Chief Minister on 30 Oct (51–27)."},{"v":"single","ko":"JICA 방사모로 지원 사업(2026–2029) 진행.","en":"JICA Bangsamoro support programme (2026–2029) under way."}],
-   "roles_ko":["전자정부 기업","현지 협약 대학","KOICA 연계 기관"],"roles_en":["E-government firms","Partner local university","KOICA-linked institutions"],
-   "buyers_ko":"BARMM 정부, JICA, KOICA","buyers_en":"BARMM government, JICA, KOICA"},
-  {"id":"youth-lab","iso":["KR"],"region_ko":"한국·전 세계","region_en":"Korea & global","horizon":"상시 (ongoing)",
-   "title_ko":"청년·대학생 국제개발 프로젝트 챌린지","title_en":"Youth & student international-development project challenge",
-   "idea_ko":"대학생·청년 팀이 레이더 데이터로 국가별 사업 제안서를 만들고, 협약 대학 교수·기업 멘토가 온라인으로 평가해 우수 제안을 컨소시엄 실제 과제로 연결.","idea_en":"Student and young-adult teams draft country proposals from radar data; partner professors and company mentors judge online and promote the best into real consortium projects.",
-   "basis":[{"v":"official","ko":"GOV RADAR 무료 회원은 누구나 같은 조건 (만 19세 미만은 열람·학습 전용), 대학은 UNI 기관 코드로 참여.","en":"GOV RADAR FREE is the same for everyone (under-19s read and learn only); universities join with a UNI institution code."}],
-   "roles_ko":["대학 국제개발·국제통상학과","기업 멘토","청소년 교육 단체"],"roles_en":["University development / trade departments","Company mentors","Youth education groups"],
-   "buyers_ko":"대학·지자체 청년 사업, 기업 CSR","buyers_en":"University and municipal youth programmes, corporate CSR"}
+  {
+   "id": "gulf-bypass",
+   "iso": [
+    "OM",
+    "AE",
+    "SA"
+   ],
+   "region_ko": "걸프·오만해",
+   "region_en": "Gulf & Gulf of Oman",
+   "horizon": "6–24m",
+   "title_ko": "호르무즈 우회 물류·비축 거점 사업",
+   "title_en": "Hormuz-bypass logistics and stockpile hubs",
+   "idea_ko": "해협 밖 항만(오만·UAE 동부)과 육상 송유·물류망, 전략 비축 저장시설 수요를 겨냥한 설계·스마트 항만·저장 탱크 모니터링 컨소시엄.",
+   "idea_en": "Design, smart-port and tank-monitoring consortium for ports outside the strait (Oman, eastern UAE), overland pipelines and strategic storage.",
+   "basis": [
+    {
+     "v": "ok",
+     "ko": "이란의 해협 통항 통제와 미국의 이란 항만 봉쇄가 이어지고 있다.",
+     "en": "Iranian transit control and the US blockade of Iranian ports continue."
+    },
+    {
+     "v": "single",
+     "ko": "10월 11일 해협 원유 통과량이 하루 290만 배럴로 급감(Kpler).",
+     "en": "Crude through the strait fell to 2.9M bbl on 11 Oct (Kpler)."
+    }
+   ],
+   "roles_ko": [
+    "항만·물류 IT 기업",
+    "플랜트 설계사",
+    "해운·보험 금융",
+    "대학 물류·해양공학과"
+   ],
+   "roles_en": [
+    "Port & logistics IT",
+    "Plant engineering",
+    "Shipping finance & insurance",
+    "University logistics / ocean engineering"
+   ],
+   "buyers_ko": "오만·UAE 항만 당국, 국영 석유사, 개발은행 인프라 창구",
+   "buyers_en": "Omani/UAE port authorities, national oil companies, MDB infrastructure windows"
+  },
+  {
+   "id": "ua-rebuild",
+   "iso": [
+    "UA"
+   ],
+   "region_ko": "우크라이나",
+   "region_en": "Ukraine",
+   "horizon": "3–36m",
+   "title_ko": "우크라이나 에너지망·교량 신속 복구 패키지",
+   "title_en": "Ukraine rapid energy-grid and bridge recovery package",
+   "idea_ko": "휴전 협상 진전에 대비해 모듈형 변전 설비·ESS·조립식 교량을 묶은 신속 복구 패키지를 미리 설계하고 재건 기금 공고에 맞춰 제안.",
+   "idea_en": "Pre-design modular substations, storage and prefabricated bridges as a rapid package aligned with reconstruction-fund calls.",
+   "basis": [
+    {
+     "v": "ok",
+     "ko": "젤렌스키 대통령이 현 전선 동결 휴전을 검토할 수 있다고 밝혔다.",
+     "en": "President Zelensky said he could consider a ceasefire on current lines."
+    },
+    {
+     "v": "single",
+     "ko": "미·러·우 3자 협상이 11월 10일 전후 재개될 수 있다는 크렘린 입장.",
+     "en": "Kremlin says trilateral talks could resume around 10 Nov."
+    }
+   ],
+   "roles_ko": [
+    "전력기기·ESS 기업",
+    "건설·강구조 기업",
+    "수출금융(수은·K-SURE)",
+    "대학 전기·토목공학과"
+   ],
+   "roles_en": [
+    "Power equipment & storage",
+    "Construction & steel structures",
+    "Export finance",
+    "University electrical / civil engineering"
+   ],
+   "buyers_ko": "EBRD·World Bank 재건 사업, 우크라이나 정부 재건청",
+   "buyers_en": "EBRD / World Bank reconstruction, Ukrainian recovery agencies"
+  },
+  {
+   "id": "base-resilience",
+   "iso": [
+    "US",
+    "KR",
+    "JP"
+   ],
+   "region_ko": "미국·동맹국",
+   "region_en": "US & allies",
+   "horizon": "6–36m",
+   "title_ko": "공공·군 시설 에너지 자립(마이크로그리드) 솔루션",
+   "title_en": "Energy resilience (microgrids) for public and defence sites",
+   "idea_ko": "장기 정전·사이버 공격에 대비한 마이크로그리드·ESS·EMP 보호 설계를 동맹국 공공시설·병원·데이터센터에 맞춰 패키지화.",
+   "idea_en": "Package microgrids, storage and EMP protection for allied public sites, hospitals and data centres facing long outages or cyber attacks.",
+   "basis": [
+    {
+     "v": "part",
+     "ko": "미 국방부 FORTRESS 계획: 주요 기지 최대 90일 자립 목표(90일 수치는 단일 출처).",
+     "en": "US DoD FORTRESS: major bases up to 90 days self-sufficient (90-day figure single-source)."
+    },
+    {
+     "v": "ok",
+     "ko": "케이프코드 우주군기지 발전·마이크로그리드 1억 3,190만 달러 계약.",
+     "en": "$131.9M power/microgrid contract at Cape Cod Space Force Station."
+    }
+   ],
+   "roles_ko": [
+    "ESS·인버터 기업",
+    "전력 IT·보안 기업",
+    "EPC",
+    "대학 에너지공학과"
+   ],
+   "roles_en": [
+    "Storage & inverters",
+    "Grid IT & cybersecurity",
+    "EPC",
+    "University energy engineering"
+   ],
+   "buyers_ko": "미 육군 공병단 ERCIP, 동맹국 국방·공공기관",
+   "buyers_en": "USACE ERCIP, allied defence and public agencies"
+  },
+  {
+   "id": "prep-edu",
+   "iso": [
+    "GB",
+    "NL",
+    "IE",
+    "JP",
+    "KR"
+   ],
+   "region_ko": "유럽·일본·한국",
+   "region_en": "Europe, Japan, Korea",
+   "horizon": "3–12m",
+   "title_ko": "국민 비상대비 교육·키트 공공조달",
+   "title_en": "Civil-preparedness education and kit procurement",
+   "idea_ko": "각국 정부의 72시간~1주 비축 캠페인에 맞춰 지자체·학교용 대비 교육 콘텐츠(온라인)와 표준 비상 키트를 공급.",
+   "idea_en": "Supply online preparedness curricula and standard kits to municipalities and schools in line with national 72-hour to one-week campaigns.",
+   "basis": [
+    {
+     "v": "ok",
+     "ko": "영국 'Be Ready' 72시간 캠페인(10/22), 네덜란드 Denk Vooruit 새 캠페인(10/12), 아일랜드 전 가구 안내서(9월).",
+     "en": "UK 'Be Ready' (22 Oct), Dutch Denk Vooruit campaign (12 Oct), Irish household booklet (Sep)."
+    },
+    {
+     "v": "ok",
+     "ko": "일본 방재청 11월 2일 출범.",
+     "en": "Japan's Disaster Management Agency launches 2 Nov."
+    }
+   ],
+   "roles_ko": [
+    "에듀테크 기업",
+    "생활용품 제조사",
+    "대학 재난안전·교육학과",
+    "청소년 교육 단체"
+   ],
+   "roles_en": [
+    "Edtech",
+    "Consumer-goods makers",
+    "University disaster-safety / education",
+    "Youth education groups"
+   ],
+   "buyers_ko": "각국 지자체·교육청, 방재 기관",
+   "buyers_en": "Municipalities, education offices, disaster agencies"
+  },
+  {
+   "id": "drone-detect",
+   "iso": [
+    "US",
+    "GB",
+    "DE",
+    "PL"
+   ],
+   "region_ko": "미국·유럽",
+   "region_en": "US & Europe",
+   "horizon": "6–24m",
+   "title_ko": "민간 핵심기반시설 드론 탐지·경보 서비스",
+   "title_en": "Drone detection and alerting for civilian critical infrastructure",
+   "idea_ko": "공항·발전소·항만의 드론 침입을 탐지해 관제에 알리는 센서·소프트웨어 서비스(무력화 장비 제외, 탐지·경보 중심).",
+   "idea_en": "Sensor and software services detecting drone incursions at airports, plants and ports and alerting operators (detection only, no defeat systems).",
+   "basis": [
+    {
+     "v": "ok",
+     "ko": "미 육군·JIATF-401 국내 드론 방어 계약 최대 41억 5천만 달러, 10개사.",
+     "en": "US Army / JIATF-401 domestic counter-drone contracts, up to $4.15B, 10 firms."
+    }
+   ],
+   "roles_ko": [
+    "레이더·RF 센서 기업",
+    "영상 AI 기업",
+    "대학 전자공학과"
+   ],
+   "roles_en": [
+    "Radar / RF sensors",
+    "Vision AI",
+    "University electronics"
+   ],
+   "buyers_ko": "공항공사·발전사·항만공사, 국토안보 기관",
+   "buyers_en": "Airport, power and port operators; homeland-security agencies"
+  },
+  {
+   "id": "jp-dma",
+   "iso": [
+    "JP"
+   ],
+   "region_ko": "일본",
+   "region_en": "Japan",
+   "horizon": "6–18m",
+   "title_ko": "방재청 출범에 맞춘 피난소 운영·재난 데이터 플랫폼",
+   "title_en": "Shelter operations and disaster-data platform for Japan's new agency",
+   "idea_ko": "피난소 수용 현황·물자 재고·요배려자 관리를 실시간으로 보는 클라우드 플랫폼을 지자체 대상으로 제안.",
+   "idea_en": "Cloud platform for real-time shelter capacity, supplies and vulnerable-person tracking for municipalities.",
+   "basis": [
+    {
+     "v": "ok",
+     "ko": "일본 방재청 2026년 11월 2일 출범, 설치법 7월 제정.",
+     "en": "Agency launches 2 Nov 2026; founding law enacted in July."
+    }
+   ],
+   "roles_ko": [
+    "공공 SaaS 기업",
+    "GIS 기업",
+    "일본 협약 대학"
+   ],
+   "roles_en": [
+    "Public-sector SaaS",
+    "GIS",
+    "Partner Japanese university"
+   ],
+   "buyers_ko": "일본 지자체, 방재청",
+   "buyers_en": "Japanese municipalities, the new agency"
+  },
+  {
+   "id": "barmm",
+   "iso": [
+    "PH"
+   ],
+   "region_ko": "필리핀 방사모로(BARMM)",
+   "region_en": "Bangsamoro (BARMM), Philippines",
+   "horizon": "6–36m",
+   "title_ko": "방사모로 평화·개발 디지털 행정",
+   "title_en": "Bangsamoro peace-and-development digital government",
+   "idea_ko": "새 자치정부 출범 초기에 필요한 전자 결재·주민 서비스·예산 집행 투명성 시스템을 JICA·ODA 재원과 연계해 제안.",
+   "idea_en": "E-approval, citizen services and budget-transparency systems for the new autonomous government, linked to JICA / ODA funding.",
+   "basis": [
+    {
+     "v": "ok",
+     "ko": "방사모로 의회가 10월 30일 새 수석장관을 선출했다(51대 27).",
+     "en": "The Bangsamoro parliament elected a new Chief Minister on 30 Oct (51–27)."
+    },
+    {
+     "v": "single",
+     "ko": "JICA 방사모로 지원 사업(2026–2029) 진행.",
+     "en": "JICA Bangsamoro support programme (2026–2029) under way."
+    }
+   ],
+   "roles_ko": [
+    "전자정부 기업",
+    "현지 협약 대학",
+    "KOICA 연계 기관"
+   ],
+   "roles_en": [
+    "E-government firms",
+    "Partner local university",
+    "KOICA-linked institutions"
+   ],
+   "buyers_ko": "BARMM 정부, JICA, KOICA",
+   "buyers_en": "BARMM government, JICA, KOICA"
+  },
+  {
+   "id": "youth-lab",
+   "iso": [
+    "KR"
+   ],
+   "region_ko": "한국·전 세계",
+   "region_en": "Korea & global",
+   "horizon": "상시 (ongoing)",
+   "title_ko": "청년·대학생 국제개발 프로젝트 챌린지",
+   "title_en": "Youth & student international-development project challenge",
+   "idea_ko": "대학생·청년 팀이 레이더 데이터로 국가별 사업 제안서를 만들고, 협약 대학 교수·기업 멘토가 온라인으로 평가해 우수 제안을 컨소시엄 실제 과제로 연결.",
+   "idea_en": "Student and young-adult teams draft country proposals from radar data; partner professors and company mentors judge online and promote the best into real consortium projects.",
+   "basis": [
+    {
+     "v": "official",
+     "ko": "GOV RADAR 무료 회원은 누구나 같은 조건 (만 19세 미만은 열람·학습 전용), 대학은 UNI 기관 코드로 참여.",
+     "en": "GOV RADAR FREE is the same for everyone (under-19s read and learn only); universities join with a UNI institution code."
+    }
+   ],
+   "roles_ko": [
+    "대학 국제개발·국제통상학과",
+    "기업 멘토",
+    "청소년 교육 단체"
+   ],
+   "roles_en": [
+    "University development / trade departments",
+    "Company mentors",
+    "Youth education groups"
+   ],
+   "buyers_ko": "대학·지자체 청년 사업, 기업 CSR",
+   "buyers_en": "University and municipal youth programmes, corporate CSR",
+   "horizon_en": "Ongoing"
+  }
  ]
 }
