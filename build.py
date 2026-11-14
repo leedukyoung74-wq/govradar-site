@@ -384,6 +384,14 @@ MDBI = [("WB","World Bank","세계은행","https://projects.worldbank.org/en/pro
  ("AIIB","AIIB","아시아인프라투자은행","https://www.aiib.org/en/opportunities/business/project-procurement/index.html",["aiib","아시아인프라투자은행"]),
  ("UNGM","UN Global Marketplace","UN 조달 (UNGM)","https://www.ungm.org",["ungm","undp","unicef","unops","유엔","unido"]),
  ("KR","Korea EDCF · KOICA","한국 EDCF·KOICA","",["edcf","koica","수출입은행","대외경제협력기금","코이카"])]
+ORGL = {"WB": ("wb.svg", "https://www.worldbank.org", "World Bank Group", "세계은행그룹"),
+ "ADB": ("adb.svg", "https://www.adb.org", "Asian Development Bank", "아시아개발은행"),
+ "AfDB": ("afdb.svg", "https://www.afdb.org", "African Development Bank", "아프리카개발은행"),
+ "IDB": ("idb.svg", "https://www.iadb.org", "Inter-American Development Bank", "미주개발은행"),
+ "EBRD": ("ebrd.png", "https://www.ebrd.com", "EBRD", "유럽부흥개발은행"),
+ "AIIB": ("aiib.svg", "https://www.aiib.org", "AIIB", "아시아인프라투자은행"),
+ "UNGM": ("un.svg", "https://www.un.org", "United Nations", "유엔(UN)"),
+ "KR": ("koica.png", "https://www.koica.go.kr", "KOICA", "한국국제협력단(KOICA)")}
 _HAN = re.compile(r"[가-힣]")
 def _lv(xe, x, keys, en):
     for k in keys:
@@ -429,13 +437,15 @@ def guide_page(iso, L):
 def mdb_page(L):
     en = L != "ko"; items = mdb_items()
     t_ = "Tenders & deadlines — governments and development banks" if en else "입찰·마감 보드 — 각국 정부와 개발은행"
-    inst = "".join(f'<a class="card" href="{e(b[3])}" target="_blank" rel="noopener"><h3>{e(b[1] if en else b[2])} ↗</h3></a>' for b in MDBI if b[3])
+    inst = "".join(f'<a class="orgp" href="{e(b[3])}" target="_blank" rel="noopener"><span class="ot"><img src="/assets/org-{ORGL[b[0]][0]}" alt="{e(b[1])} logo" loading="lazy"></span><span class="on"><b>{e(b[1] if en else b[2])}</b><small>{e(b[3].split("/")[2])}</small><em>{"Open procurement portal ↗" if en else "조달 포털 열기 ↗"}</em></span></a>' for b in MDBI if b[3])
+    wall = "".join(f'<a class="orgw" href="{e(ORGL[k][1])}" target="_blank" rel="noopener" title="{e(ORGL[k][2] if en else ORGL[k][3])}"><img src="/assets/org-{ORGL[k][0]}" alt="{e(ORGL[k][2])} logo" loading="lazy"><span>{e(ORGL[k][2] if en else ORGL[k][3])}</span></a>' for k in ORGL)
+    credit = ("Logos: Wikimedia Commons (public domain; KOICA logo CC BY-SA 3.0). Each logo is the trademark of its institution and is shown only to identify it; it does not imply any partnership with GOV RADAR." if en else "로고 출처: 위키미디어 공용(퍼블릭 도메인, KOICA 로고는 CC BY-SA 3.0). 각 로고는 해당 기관의 상표이며 기관을 알아보기 쉽게 하려고 표시합니다. GOV RADAR와의 제휴를 뜻하지 않습니다.")
     rows = "".join(f'<div class="card"><p class="note"><a href="{url(L,x["iso"])}">{flag(x["iso"])} {e(nm(x["iso"],L))}</a> · {e(x["b"][1] if en else x["b"][2])}</p><h3>{e((x["xe"].get("title") if en else None) or x["x"].get("title",""))}</h3><p class="note">{e(" · ".join(str(v) for v in [_lv(x["xe"], x["x"], ("buyer", "agency"), en), _lv(x["xe"], x["x"], ("value", "amount"), en), x["x"].get("deadline")] if v))}</p>{f"<a href={chr(34)}{e(x[chr(120)][chr(117)+chr(114)+chr(108)])}{chr(34)} target=_blank rel=noopener>{chr(8599)}</a>" if str(x["x"].get("url","")).startswith("https://") else ""}</div>' for x in items)
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1></div></section>
 <div class="in stock"><h2 id="deadlines">{"Open tenders by deadline" if en else "마감일 순 열린 입찰"}</h2><p class="note">{"Choose your field. Deadlines are taken from the original notices; always check the notice before bidding." if en else "분야를 고르세요. 마감일은 원문 공고 기준이며, 입찰 전 반드시 원문을 확인하세요."} <a href="{P3.paylink(L, "fit")}">{"Partnership consultation (free) →" if en else "프로젝트 파트너십 무료 상담 →"}</a> · <a href="/{L}/pricing/?p=fit#order">{"Fit review ₩100,000 →" if en else "공고 1건 적합도 검토 10만 원 →"}</a></p>{P3.deadline_board(L, C3())}
 <h2 id="past">{P3.pt("h_mdb", L)}</h2>{P3.past_board(L, C3())}
-<h2>{"Development banks and UN agencies" if en else "개발은행·국제기구"}</h2><p class="summary">{"Lender-financed projects follow the lender's procurement rules and are more open to foreign firms. Start by registering on each institution's portal." if en else "차관 사업은 해당 기관의 조달 규정을 따라 외국 기업에 상대적으로 열려 있습니다. 기관별 포털 등록부터 시작하세요."}</p>
-<h2>{"Institution portals" if en else "기관별 조달 포털"}</h2><div class="cards">{inst}</div>
+<h2>{"Development banks and UN agencies" if en else "개발은행·국제기구"}</h2><p class="summary">{"Lender-financed projects follow the lender's procurement rules and are more open to foreign firms. Start by registering on each institution's portal." if en else "차관 사업은 해당 기관의 조달 규정을 따라 외국 기업에 상대적으로 열려 있습니다. 기관별 포털 등록부터 시작하세요."}</p><div class="orgwall">{wall}</div>
+<h2>{"Institution portals" if en else "기관별 조달 포털"}</h2><div class="orgps">{inst}</div><p class="note orgc">{e(credit)}</p>
 <h2>{"Projects in the radar" if en else "레이더에 잡힌 사업"} ({len(items)})</h2><div class="cards">{rows or '<p class="note">—</p>'}</div></div>"""
     return head(L, t_ + " · GOV RADAR", t_, f"/{L}/mdb/", {l: f"/{l}/mdb/" for l in LANGS}) + body + foot(L)
 
