@@ -52,9 +52,9 @@ NAV = {
  "en": [('#map', 'Countries'), ('mdb/', 'Tenders'), ('solutions/', 'Go global'), ('conflict/', 'World watch'), ('@hazards', 'Hazard map'), ('ready/', 'Preparedness'), ('pricing/', 'Pricing')],
  "es": [('#map', 'Países'), ('mdb/', 'Licitaciones'), ('solutions/', 'Expansión'), ('conflict/', 'Situación mundial'), ('@hazards', 'Mapa de riesgos'), ('ready/', 'Preparación'), ('pricing/', 'Precios')],
  "fr": [('#map', 'Pays'), ('mdb/', "Appels d'offres"), ('solutions/', "S'implanter"), ('conflict/', 'Veille mondiale'), ('@hazards', 'Carte des risques'), ('ready/', 'Préparation'), ('pricing/', 'Tarifs')],
- "ar": [('#map', 'الدول'), ('mdb/', 'المناقصات'), ('solutions/', 'التوسع'), ('conflict/', 'الوضع العالمي'), ('@hazards', 'خريطة المخاطر'), ('ready/', 'الاستعداد'), ('pricing/', 'الأسعار')],
- "vi": [('#map', 'Quốc gia'), ('mdb/', 'Đấu thầu'), ('solutions/', 'Mở rộng'), ('conflict/', 'Tình hình thế giới'), ('@hazards', 'Bản đồ hiểm họa'), ('ready/', 'Phòng bị'), ('pricing/', 'Bảng giá')],
- "id": [('#map', 'Negara'), ('mdb/', 'Tender'), ('solutions/', 'Ekspansi'), ('conflict/', 'Situasi dunia'), ('@hazards', 'Peta bahaya'), ('ready/', 'Kesiapsiagaan'), ('pricing/', 'Harga')],
+ "ar": [('#map', 'الدول'), ('mdb/', 'المناقصات'), ('solutions/', 'التوسع الدولي'), ('conflict/', 'الوضع العالمي'), ('@hazards', 'خريطة المخاطر'), ('ready/', 'الاستعداد'), ('pricing/', 'الأسعار')],
+ "vi": [('#map', 'Quốc gia'), ('mdb/', 'Đấu thầu'), ('solutions/', 'Ra quốc tế'), ('conflict/', 'Tình hình'), ('@hazards', 'Bản đồ thảm họa'), ('ready/', 'Phòng chống'), ('pricing/', 'Bảng giá')],
+ "id": [('#map', 'Negara'), ('mdb/', 'Tender'), ('solutions/', 'Ekspansi global'), ('conflict/', 'Situasi dunia'), ('@hazards', 'Peta bahaya'), ('ready/', 'Kesiapsiagaan'), ('pricing/', 'Harga')],
 }
 MENU = {"ko":"메뉴","en":"Menu","es":"Menú","fr":"Menu","ar":"القائمة","vi":"Menu","id":"Menu"}
 PREP_T = {  # prep-bar chip names for languages without full content

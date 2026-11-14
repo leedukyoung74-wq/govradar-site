@@ -7,20 +7,20 @@ LBL = {
  "map":       {"ko":"세계 지도","en":"World map","es":"Mapa mundial","fr":"Carte du monde","ar":"خريطة العالم","vi":"Bản đồ thế giới","id":"Peta dunia"},
  "list":      {"ko":"전체 국가","en":"All countries","es":"Todos los países","fr":"Tous les pays","ar":"كل الدول","vi":"Tất cả quốc gia","id":"Semua negara"},
  "mdb":       {"ko":"입찰·사업","en":"Tenders","es":"Licitaciones","fr":"Appels d'offres","ar":"المناقصات","vi":"Đấu thầu","id":"Tender"},
- "projects":  {"ko":"프로젝트 랩","en":"Project lab","es":"Laboratorio de proyectos","fr":"Labo projets","ar":"مختبر المشاريع","vi":"Phòng dự án","id":"Lab proyek"},
- "consortium":{"ko":"컨소시엄","en":"Consortium","es":"Consorcio","fr":"Consortium","ar":"الاتحاد","vi":"Liên danh","id":"Konsorsium"},
+ "projects":  {"ko":"프로젝트 랩","en":"Project lab","es":"Laboratorio de proyectos","fr":"Labo projets","ar":"مختبر المشاريع","vi":"Xưởng dự án","id":"Lab proyek"},
+ "consortium":{"ko":"컨소시엄","en":"Consortium","es":"Consorcio","fr":"Consortium","ar":"الكونسورتيوم","vi":"Liên danh","id":"Konsorsium"},
  "experts":   {"ko":"전문가 참여","en":"Experts","es":"Expertos","fr":"Experts","ar":"الخبراء","vi":"Chuyên gia","id":"Pakar"},
  "partners":  {"ko":"협력 참여","en":"Partners","es":"Socios","fr":"Partenaires","ar":"الشركاء","vi":"Đối tác","id":"Mitra"},
  "notices":   {"ko":"공지","en":"Notices","es":"Avisos","fr":"Annonces","ar":"إعلانات","vi":"Thông báo","id":"Pengumuman"},
- "solutions": {"ko":"진출 지원","en":"Go global","es":"Expansión","fr":"S'implanter","ar":"التوسع","vi":"Mở rộng","id":"Ekspansi"},
+ "solutions": {"ko":"진출 지원","en":"Go global","es":"Expansión","fr":"S'implanter","ar":"التوسع الدولي","vi":"Ra quốc tế","id":"Ekspansi global"},
  "gcsme":     {"ko":"GCSME","en":"GCSME","es":"GCSME","fr":"GCSME","ar":"GCSME","vi":"GCSME","id":"GCSME"},
  "request":   {"ko":"분석 의뢰","en":"Request analysis","es":"Solicitar análisis","fr":"Demander une analyse","ar":"طلب تحليل","vi":"Yêu cầu phân tích","id":"Minta analisis"},
  "sample":    {"ko":"결과물 샘플","en":"Samples","es":"Ejemplos","fr":"Exemples","ar":"نماذج","vi":"Mẫu","id":"Contoh"},
  "contracts": {"ko":"계약서","en":"Contracts","es":"Contratos","fr":"Contrats","ar":"العقود","vi":"Hợp đồng","id":"Kontrak"},
- "conflict":  {"ko":"세계 상황","en":"World watch","es":"Situación mundial","fr":"Veille mondiale","ar":"الوضع العالمي","vi":"Tình hình thế giới","id":"Situasi dunia"},
- "hazards":   {"ko":"재난 지도","en":"Hazard map","es":"Mapa de riesgos","fr":"Carte des risques","ar":"خريطة المخاطر","vi":"Bản đồ hiểm họa","id":"Peta bahaya"},
- "ready":     {"ko":"재난 대비","en":"Preparedness","es":"Preparación","fr":"Préparation","ar":"الاستعداد","vi":"Phòng bị","id":"Kesiapsiagaan"},
- "prepare":   {"ko":"비축 키트","en":"Stockpile kit","es":"Kit de reservas","fr":"Kit de réserves","ar":"حقيبة الطوارئ","vi":"Bộ dự trữ","id":"Kit persediaan"},
+ "conflict":  {"ko":"세계 상황","en":"World watch","es":"Situación mundial","fr":"Veille mondiale","ar":"الوضع العالمي","vi":"Tình hình","id":"Situasi dunia"},
+ "hazards":   {"ko":"재난 지도","en":"Hazard map","es":"Mapa de riesgos","fr":"Carte des risques","ar":"خريطة المخاطر","vi":"Bản đồ thảm họa","id":"Peta bahaya"},
+ "ready":     {"ko":"재난 대비","en":"Preparedness","es":"Preparación","fr":"Préparation","ar":"الاستعداد","vi":"Phòng chống thiên tai","id":"Kesiapsiagaan"},
+ "prepare":   {"ko":"비축 키트","en":"Stockpile kit","es":"Kit de reservas","fr":"Kit de réserves","ar":"حقيبة الطوارئ","vi":"Túi dự phòng khẩn cấp","id":"Kit persediaan"},
  "signals":   {"ko":"표지·풍자","en":"","es":"","fr":"","ar":"","vi":"","id":""},
  "pricing":   {"ko":"요금·회원","en":"Pricing","es":"Precios","fr":"Tarifs","ar":"الأسعار","vi":"Bảng giá","id":"Harga"},
  "member":    {"ko":"회원 자료","en":"Member area","es":"Área de socios","fr":"Espace membre","ar":"منطقة الأعضاء","vi":"Khu thành viên","id":"Area anggota"},
@@ -84,8 +84,8 @@ def gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU):
 .gvh .gbur{display:none;width:40px;height:40px;border:1px solid var(--gl);border-radius:8px;background:var(--gp);padding:10px 9px;flex-direction:column;justify-content:space-between;cursor:pointer}
 .gvh .gbur span{display:block;height:2px;background:var(--gi);border-radius:2px}
 .gvh .subnav{background:#0b0b0b;border-bottom:1px solid #2a2a28}
-@media (max-width:1080px){.gvh .glinks a{padding:8px 7px;font-size:13.5px}}
-@media (max-width:920px){.gvh .glinks{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;background:var(--gb);border-bottom:1px solid var(--gl);padding:8px 16px 16px;box-shadow:0 18px 30px rgba(0,0,0,.18)}
+@media (max-width:1240px){.gvh .glinks a{padding:8px 6px;font-size:13px}}
+@media (max-width:1020px){.gvh .glinks{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;background:var(--gb);border-bottom:1px solid var(--gl);padding:8px 16px 16px;box-shadow:0 18px 30px rgba(0,0,0,.18)}
  .gvh .glinks.open{display:flex}.gvh .glinks a{font-size:16px;padding:13px 6px;border-bottom:1px solid var(--gl);border-radius:0;color:var(--gi)}
  .gvh .gbur{display:flex}.gvh select{max-width:96px}.gvh .gr{margin-left:auto}}
 """
@@ -135,9 +135,9 @@ def _short(t):
     for sep in (" — ", " – ", ": ", " · "):
         if sep in t and len(t) > 16: t = t.split(sep)[0]
     t = _re.sub(r"\s*\(.*?\)\s*$", "", t)
-    return t if len(t) <= 22 else t[:21].rstrip() + "…"
+    return t
 
-def toc_post(html):
+def toc_post(html, path=None):
     """Replace the sibling sub bar with this page's own headings (2+), adding ids to h2 that lack one."""
     a = html.find("<!--SUBNAV-->"); b = html.find("<!--/SUBNAV-->")
     if a < 0 or b < 0: return html
@@ -162,5 +162,72 @@ def toc_post(html):
         a = html.find("<!--SUBNAV-->"); b = html.find("<!--/SUBNAV-->")
     if len(links) < 2:
         return html.replace("<!--SUBNAV-->", "").replace("<!--/SUBNAV-->", "")
+    m_ = _re.match(r"^/([a-z]{2})/legal/([a-z]+)/index\.html$", path or "")
+    if m_ and m_.group(1) in LEGAL:
+        L_ = m_.group(1)
+        a2 = "".join(f'<a href="/{L_}/legal/{k}/"{" aria-current=\"page\"" if k == m_.group(2) else ""}>{_e(t)}</a>' for k, t in zip(LEGAL_KEYS, LEGAL[L_]))
+        return html[:a] + f'<nav class="subnav" aria-label="sub"><div class="in">{a2}</div></nav>' + html[b + len("<!--/SUBNAV-->"):]
+    labs = page_labels(path, len(links), [t for _, t in links])
+    links = [(h_, labs[i]) for i, (h_, _) in enumerate(links)]
     nav = '<nav class="subnav toc" aria-label="contents"><div class="in">' + "".join(f'<a href="{_e(h_)}">{_e(t)}</a>' for h_, t in links) + "</div></nav>"
     return html[:a] + nav + html[b + len("<!--/SUBNAV-->"):]
+
+# ---- hand-written, natural short labels for each page's contents bar, by language -------------
+def _sp(s): return [x.strip() for x in s.split("|")]
+PAGE_TOC = {
+ "": {"ko":_sp("세계 지도|마감 입찰|제안할 사업|결과물 샘플|지금 세계 상황|재난 16가지|재난 대비센터|AI와 다른 점|이용 범위|이용 고객|행사 일정"),
+      "en":_sp("World map|Closing soon|Opportunities|Sample report|World now|16 hazards|Preparedness|Why not just AI|What you can see|Who uses it|Trade fairs"),
+      "es":_sp("Mapa|Cierres próximos|Oportunidades|Informe de muestra|Situación actual|16 riesgos|Preparación|¿Por qué no una IA?|Qué puede ver|Quién lo usa|Ferias"),
+      "fr":_sp("Carte|Clôtures proches|Opportunités|Exemple de rapport|Situation actuelle|16 risques|Préparation|Pourquoi pas une IA ?|Ce que vous voyez|Qui l'utilise|Salons"),
+      "ar":_sp("الخريطة|تُغلق قريبًا|الفرص|نموذج تقرير|الوضع الآن|16 خطرًا|الاستعداد|لماذا لا يكفي الذكاء الاصطناعي|ما يمكنك رؤيته|من يستخدمه|المعارض"),
+      "vi":_sp("Bản đồ|Sắp đóng thầu|Cơ hội|Báo cáo mẫu|Tình hình hiện nay|16 loại thảm họa|Phòng chống thiên tai|Khác gì hỏi AI|Xem được gì|Ai đang dùng|Hội chợ"),
+      "id":_sp("Peta|Segera ditutup|Peluang|Contoh laporan|Situasi terkini|16 bahaya|Kesiapsiagaan|Mengapa bukan AI|Yang bisa dilihat|Siapa penggunanya|Pameran")},
+ "mdb": {"ko":_sp("열린 입찰|지난 입찰·반복 수요|개발은행·국제기구|조달 포털|레이더 사업"),
+      "en":_sp("Open tenders|Past & recurring|Development banks|Procurement portals|Tracked projects"),
+      "es":_sp("Licitaciones abiertas|Anteriores y recurrentes|Bancos de desarrollo|Portales de compras|Proyectos detectados"),
+      "fr":_sp("Appels ouverts|Passés et récurrents|Banques de développement|Portails d'achats|Projets suivis"),
+      "ar":_sp("المناقصات المفتوحة|السابقة والمتكررة|بنوك التنمية|بوابات المشتريات|المشاريع المرصودة"),
+      "vi":_sp("Gói thầu đang mở|Đã qua & lặp lại|Ngân hàng phát triển|Cổng mua sắm|Dự án theo dõi"),
+      "id":_sp("Tender terbuka|Lalu & berulang|Bank pembangunan|Portal pengadaan|Proyek terpantau")},
+ "solutions": {"ko":_sp("이용 고객|분야별 사업|함께 일하는 방법"),"en":_sp("Who uses it|Sectors|How we work"),"es":_sp("Quién lo usa|Sectores|Cómo trabajamos"),
+      "fr":_sp("Qui l'utilise|Secteurs|Notre méthode"),"ar":_sp("من يستخدمه|القطاعات|طريقة عملنا"),"vi":_sp("Ai đang dùng|Lĩnh vực|Cách hợp tác"),"id":_sp("Siapa penggunanya|Sektor|Cara kerja kami")},
+ "conflict": {"ko":_sp("지금 세계 상황|상세 내용|대비 시나리오|각국 대비 정책|주장 판정|출처"),"en":_sp("Now|Details|Scenarios|National policies|Claims checked|Sources"),
+      "es":_sp("Ahora|Detalles|Escenarios|Políticas nacionales|Bulos verificados|Fuentes"),"fr":_sp("Maintenant|Détails|Scénarios|Politiques nationales|Rumeurs vérifiées|Sources"),
+      "ar":_sp("الآن|التفاصيل|السيناريوهات|السياسات الوطنية|ادعاءات تم التحقق منها|المصادر"),"vi":_sp("Hiện nay|Chi tiết|Kịch bản|Chính sách các nước|Kiểm chứng tin đồn|Nguồn"),
+      "id":_sp("Saat ini|Rincian|Skenario|Kebijakan nasional|Cek klaim|Sumber")},
+ "prepare": {"ko":_sp("필수품 목록|비축 수량|실제 제품|꼭 지킬 것|출처"),"en":_sp("Essentials|Quantities|Products|Safety first|Sources"),"es":_sp("Lo esencial|Cantidades|Productos|Seguridad|Fuentes"),"fr":_sp("L'essentiel|Quantités|Produits|Sécurité|Sources"),
+      "ar":_sp("الأساسيات|الكميات|المنتجات|السلامة أولًا|المصادر"),"vi":_sp("Đồ thiết yếu|Số lượng|Sản phẩm|An toàn|Nguồn"),"id":_sp("Barang penting|Jumlah|Produk|Keselamatan|Sumber")},
+ "pricing": {"ko":_sp("회원 비교|주문 상품|진행 순서|신청서"),"en":_sp("Plans|Order now|How it works|Order form"),"es":_sp("Planes|Pedir ahora|Cómo funciona|Formulario"),
+      "fr":_sp("Formules|Commander|Déroulement|Formulaire"),"ar":_sp("الخطط|اطلب الآن|كيف يتم الطلب|نموذج الطلب"),"vi":_sp("Gói dịch vụ|Đặt ngay|Quy trình|Mẫu đăng ký"),"id":_sp("Paket|Pesan sekarang|Cara kerja|Formulir")},
+ "request": {"en":_sp("1. Choose|2. Details|3. Send"),"es":_sp("1. Elegir|2. Datos|3. Enviar"),"fr":_sp("1. Choisir|2. Détails|3. Envoyer"),"ar":_sp("1. اختر|2. التفاصيل|3. أرسل"),
+      "vi":_sp("1. Chọn|2. Thông tin|3. Gửi"),"id":_sp("1. Pilih|2. Rincian|3. Kirim")},
+ "sample": {"en":_sp("Summary|Priorities|Budgets|Opportunities|Tenders|Korean support|Risks|Next steps|Sources"),"es":_sp("Resumen|Prioridades|Presupuestos|Oportunidades|Licitaciones|Apoyo coreano|Riesgos|Próximos pasos|Fuentes"),
+      "fr":_sp("Résumé|Priorités|Budgets|Opportunités|Appels d'offres|Soutien coréen|Risques|Prochaines étapes|Sources"),"ar":_sp("الملخص|الأولويات|الميزانيات|الفرص|المناقصات|الدعم الكوري|المخاطر|الخطوات التالية|المصادر"),
+      "vi":_sp("Tóm tắt|Ưu tiên|Ngân sách|Cơ hội|Đấu thầu|Hỗ trợ Hàn Quốc|Rủi ro|Bước tiếp theo|Nguồn"),"id":_sp("Ringkasan|Prioritas|Anggaran|Peluang|Tender|Dukungan Korea|Risiko|Langkah berikut|Sumber")},
+ "consortium": {"en":_sp("Who joins|How it works|Terms|Register"),"es":_sp("Quién participa|Cómo funciona|Condiciones|Inscribirse"),"fr":_sp("Qui participe|Fonctionnement|Conditions|S'inscrire"),
+      "ar":_sp("من يشارك|كيف يعمل|الشروط|سجّل اهتمامك"),"vi":_sp("Ai tham gia|Cách hoạt động|Điều kiện|Đăng ký"),"id":_sp("Siapa ikut|Cara kerja|Ketentuan|Daftar")},
+ "experts": {"en":_sp("How it works|Rates|Payment|Apply"),"es":_sp("Cómo funciona|Tarifas|Pagos|Solicitar"),"fr":_sp("Fonctionnement|Tarifs|Paiement|Postuler"),
+      "ar":_sp("كيف يعمل|الأجور|الدفع|قدّم طلبك"),"vi":_sp("Cách hoạt động|Thù lao|Thanh toán|Đăng ký"),"id":_sp("Cara kerja|Tarif|Pembayaran|Daftar")},
+ "contracts": {"ko":_sp("멤버십 계약|CONNECT 계약|컨소시엄 의향서|비밀유지 계약|대학·기관 계약|계약 요청"),"en":_sp("Membership|CONNECT intro|Consortium|NDA|Universities|Request"),"es":_sp("Membresía|Presentación CONNECT|Consorcio|Confidencialidad|Universidades|Solicitar"),
+      "fr":_sp("Adhésion|Mise en relation|Consortium|Confidentialité|Universités|Demander"),"ar":_sp("العضوية|تعريف CONNECT|الكونسورتيوم|عدم الإفصاح|الجامعات|اطلب عقدًا"),
+      "vi":_sp("Hội viên|Giới thiệu CONNECT|Liên danh|Bảo mật|Đại học|Yêu cầu"),"id":_sp("Keanggotaan|Perkenalan CONNECT|Konsorsium|Kerahasiaan|Universitas|Minta kontrak")},
+}
+LEGAL = {"ko":_sp("이용약관|개인정보 처리방침|환불 규정|면책 고지"),"en":_sp("Terms|Privacy|Refunds|Disclaimer"),"es":_sp("Términos|Privacidad|Reembolsos|Aviso legal"),
+ "fr":_sp("Conditions|Confidentialité|Remboursements|Avertissement"),"ar":_sp("الشروط|الخصوصية|الاسترداد|إخلاء المسؤولية"),"vi":_sp("Điều khoản|Quyền riêng tư|Hoàn tiền|Miễn trừ"),"id":_sp("Ketentuan|Privasi|Pengembalian dana|Penafian")}
+LEGAL_KEYS = ["terms", "privacy", "refund", "disclaimer"]
+# country pages: fix the two headings that read badly when cut
+CTRY = {"glance": {"ko":"한눈에 보기","en":"At a glance","es":"De un vistazo","fr":"En bref","ar":"لمحة سريعة","vi":"Tổng quan","id":"Sekilas"},
+        "kr": {"ko":"한국 기업 기회","en":"For Korean firms","es":"Para empresas coreanas","fr":"Pour les entreprises coréennes","ar":"للشركات الكورية","vi":"Cho doanh nghiệp Hàn","id":"Untuk perusahaan Korea"}}
+
+def page_labels(path, n, auto):
+    m = _re.match(r"^/([a-z]{2})/(.*?)/?index\.html$", path or "")
+    if not m: return auto
+    L, pg = m.group(1), m.group(2).strip("/")
+    t = (PAGE_TOC.get(pg) or {}).get(L)
+    if t and len(t) == n: return t
+    if pg.count("/") == 0 and pg and pg not in PAGE_TOC and pg not in SEG2G and pg not in ("verify", "embed", "feeds", "region") and n >= 6:   # country / region pages
+        out = list(auto)
+        if out: out[0] = CTRY["glance"][L] if L in CTRY["glance"] else out[0]
+        if len(out) > 1 and (out[1].startswith("What a Korean") or out[1].startswith("한국 기업이")): out[1] = CTRY["kr"].get(L, out[1])
+        return [x.replace("…", "") for x in out]
+    return [x for x in auto]

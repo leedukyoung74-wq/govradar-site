@@ -815,7 +815,7 @@ def build():
             import urllib.request, urllib.parse
             urllib.request.urlretrieve("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/" + urllib.parse.quote(fn) + ".woff", dst)
         except Exception as ex: print("font download skipped (CDN fallback used):", fn, ex)
-    W = lambda p, s: (os.makedirs(os.path.dirname(OUT + p), exist_ok=True), open(OUT + p, "w", encoding="utf8").write(_toc_post(s) if p.endswith(".html") else s))
+    W = lambda p, s: (os.makedirs(os.path.dirname(OUT + p), exist_ok=True), open(OUT + p, "w", encoding="utf8").write(_toc_post(s, p) if p.endswith(".html") else s))
     urls = []
     for L in LANGS:
         W(f"/{L}/index.html", home(L)); urls.append((f"/{L}/", {l: f"/{l}/" for l in LANGS}))
