@@ -7,10 +7,10 @@ from html import escape as e
 K = {
  "ko": dict(
   t="회원 분석 의뢰", lede="결과물의 범위가 정해진 네 가지 의뢰부터 받습니다. 보내기 전에 받게 될 결과물, 한도 차감, 처리 기준을 먼저 보여 드립니다.",
-  who="대상: 유료 멤버십(BUILD M1 이상) 회원. 아직 회원이 아니어도 보내실 수 있으며, 이 경우 견적을 먼저 이메일로 안내합니다.",
+  who="대상: 분석 회원(월 19,800원). 매달 2건까지 포함됩니다. 회원이 아니거나 2건을 넘으면 건당 견적을 먼저 이메일로 보내 드리고, 동의하신 뒤에 시작합니다.",
   pick="1. 의뢰 고르기", fill="2. 필요한 정보만 입력", send="3. 확인하고 보내기",
   out="받는 결과물", need="필요한 정보", rule="처리 기준",
-  limit="한도: 월 의뢰 한도는 시범 운영에서 실제 처리 시간과 비용을 잰 뒤 정합니다. 시범 기간에는 접수 후 한도 차감 여부를 이메일로 먼저 알려 드리고, 동의하신 뒤에 분석을 시작합니다.",
+  limit="한도: 분석 회원은 매달 2건(매월 1일 새로 시작). 결과는 접수 확인 후 5영업일 안에 이메일로 보내고, 같은 의뢰에 대한 보완 질문 1회는 추가 차감 없이 답합니다. 요금표의 '입찰 적합도 판정(건당 10만 원)'은 서류 목록·컨소시엄 구성안·참여자 구성까지 들어가는 상세판이고, 여기의 회원 의뢰는 참가 가능 여부와 부족한 조건을 정리하는 빠른 검토입니다.",
   rule_all="접수 확인은 1영업일 안에 이메일로 보냅니다. 결과물에는 결론·근거·확인하지 못한 점·다음 할 일을 함께 적습니다. 분석이 실패하면 무한히 다시 돌리지 않고, 실패 사유를 알려 드리며 그 의뢰는 한도에서 빼지 않습니다.",
   email="이메일", name="이름 또는 담당자", org="회사·단체명 (선택)", country="관심 국가", code="회원 코드 (있으면)",
   agree="개인정보 수집·이용(의뢰 처리 목적, 처리 후 1년 보관)에 동의합니다", btn="의뢰 보내기", sending="보내는 중…",
@@ -28,10 +28,10 @@ K = {
   ]),
  "en": dict(
   t="Member analysis requests", lede="We start with four requests whose output is fixed in advance. Before you send, you see what you will receive, how it counts against your limit, and how it is handled.",
-  who="For paid members (BUILD M1 and above). You can send one before joining; we will email a quote first.",
+  who="For analysis members (KRW 19,800 a month): two requests a month are included. Non-members and extra requests get a quote by email first, and we start only after you agree.",
   pick="1. Choose a request", fill="2. Give only what is needed", send="3. Check and send",
   out="You receive", need="We need", rule="Handling",
-  limit="Limit: the monthly request limit will be set after the pilot measures real handling time and cost. During the pilot we email you first whether a request counts against a limit, and start only after you agree.",
+  limit="Limit: two requests a month for analysis members (resets on the 1st). Results arrive by email within five business days of confirmation, and one follow-up question on the same request is answered at no extra count. The per-tender 'fit assessment' (KRW 100,000) on the pricing page is the detailed version with document list, consortium plan and team; member requests are a quick check of eligibility and gaps.",
   rule_all="We confirm receipt by email within one business day. Every result states the conclusion, the evidence, what could not be confirmed and the next step. A failed analysis is not retried endlessly; we tell you why and it does not count against your limit.",
   email="Email", name="Name or contact person", org="Company or organisation (optional)", country="Country of interest", code="Member code (if any)",
   agree="I agree to the collection and use of my details to handle this request (kept for one year)", btn="Send request", sending="Sending…",
