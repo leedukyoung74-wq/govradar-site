@@ -11,9 +11,12 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Botswana](https://radar.wmm-hoa.com/en/botswana/): After contractions in 2024 and 2025 driven by weak diamond demand, Botswana targets 3.1% growth in 2026 and is shifting from state-led to private, export-led gr
 - [Burkina Faso](https://radar.wmm-hoa.com/en/burkina-faso/): Captain Traoré's government approved a 2027 draft budget on 8 October with revenue of CFAF 4.2tn and spending of CFAF 4.8tn (about $8.2bn, +22.5%). In line with
 - [Cameroon](https://radar.wmm-hoa.com/en/cameroon/): The 2026 budget rose 14% to CFAF 8,816.4 billion, pairing fiscal consolidation with SND30 delivery amid a high debt-distress rating. The President returned in A
+- [Chad](https://radar.wmm-hoa.com/en/chad/): In his 2027 budget guidance, President Mahamat Idriss Déby demanded a break with routine budgets and a 'transformation' for 7.3% growth. Aligned with the 'Chad 
+- [Congo](https://radar.wmm-hoa.com/en/congo/): The Republic of Congo's 2027 budget (resources CFAF 3.12tn, spending CFAF 2.64tn) went to parliament on 29 October. It assumes $71 oil and 112 million barrels o
 - [DR Congo](https://radar.wmm-hoa.com/en/dr-congo/): PM Suminwa presented the 2027 draft budget (about USD 24.8bn) to the National Assembly on 29 Oct 2026, prioritising security, jobs and infrastructure amid confl
 - [Côte d'Ivoire](https://radar.wmm-hoa.com/en/cote-d-ivoire/): Ouattara was re-elected in October 2025 and his party won a majority in December's legislative elections; in January 2026 PM Mambé was reappointed and the presi
 - [Egypt](https://radar.wmm-hoa.com/en/egypt/): Egypt kept Prime Minister Madbouly in a February 2026 reshuffle that replaced the planning, investment and ICT ministers. The FY2026/27 budget approved in June 
+- [Equatorial Guinea](https://radar.wmm-hoa.com/en/equatorial-guinea/): The 2027 budget is CFAF 1.12tn (about $1.9bn), smaller than in 2026. Oil revenue is expected to fall about 12.5% from 2025 because of ageing fields and temporar
 - [Ethiopia](https://radar.wmm-hoa.com/en/ethiopia/): Abiy Ahmed began a new five-year term in October 2026 after his Prosperity Party won 438 of 547 seats in the June election, and a 22-minister cabinet was approv
 - [Gabon](https://radar.wmm-hoa.com/en/gabon/): After an 11 October reshuffle, President Oligui Nguema pressed for results in the 2027 budget and set six pillars: water and power access, entrepreneurship, you
 - [Ghana](https://radar.wmm-hoa.com/en/ghana/): Ghana is holding on to post-IMF-programme price and fiscal stability while using its 'Big Push' infrastructure drive and 24-hour economy policy to lift growth a
@@ -35,6 +38,8 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Seychelles](https://radar.wmm-hoa.com/en/seychelles/): President Herminie, who beat incumbent Ramkalawan 52.7% to 47.3% in the October 2025 run-off, is prioritising housing, land reclamation and digitalisation. The 
 - [Sierra Leone](https://radar.wmm-hoa.com/en/sierra-leone/): Sierra Leone's 2026 budget of NLe30.3bn (after the supplementary) focuses on education, infrastructure, health and the flagship Feed Salone agriculture programm
 - [South Africa](https://radar.wmm-hoa.com/en/south-africa/): In its 21 Oct 2026 Medium-Term Budget Policy Statement, the Treasury cut the 2026 growth forecast to 1.2% and set a path to shrink the deficit from 4.3% of GDP 
+- [South Sudan](https://radar.wmm-hoa.com/en/south-sudan/): South Sudan has restarted oil exports through Sudan's pipeline, but its fiscal crisis continues. Civil servants are owed 8-13 months or more of pay (World Bank)
+- [Sudan](https://radar.wmm-hoa.com/en/sudan/): Sudan's army (SAF, General Burhan) and the Rapid Support Forces (RSF, Dagalo) have been at war since April 2023. The RSF took El Fasher in October 2025 and hold
 - [Tanzania](https://radar.wmm-hoa.com/en/tanzania/): Tanzania's first budget under Vision 2050 and the Fourth Five-Year Plan (2026/27–2030/31) pushes rail and power infrastructure and higher domestic revenue. It a
 - [Togo](https://radar.wmm-hoa.com/en/togo/): The government of Council President Faure Gnassingbé approved a 2027 budget of CFAF 2.68tn (-2.5%) on 22 October, citing global uncertainty and tighter financin
 - [Tunisia](https://radar.wmm-hoa.com/en/tunisia/): The 2027 draft budget of TND68.9bn (+8.4% on 2026), with a TND14.6bn deficit and a 3.1% growth target, is before parliament. As year two of the 2026-2030 plan, 
@@ -193,9 +198,12 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [보츠와나](https://radar.wmm-hoa.com/ko/botswana/)
 - [부르키나파소](https://radar.wmm-hoa.com/ko/burkina-faso/)
 - [카메룬](https://radar.wmm-hoa.com/ko/cameroon/)
+- [차드](https://radar.wmm-hoa.com/ko/chad/)
+- [콩고](https://radar.wmm-hoa.com/ko/congo/)
 - [콩고민주공화국](https://radar.wmm-hoa.com/ko/dr-congo/)
 - [코트디부아르](https://radar.wmm-hoa.com/ko/cote-d-ivoire/)
 - [이집트](https://radar.wmm-hoa.com/ko/egypt/)
+- [적도기니](https://radar.wmm-hoa.com/ko/equatorial-guinea/)
 - [에티오피아](https://radar.wmm-hoa.com/ko/ethiopia/)
 - [가봉](https://radar.wmm-hoa.com/ko/gabon/)
 - [가나](https://radar.wmm-hoa.com/ko/ghana/)
@@ -217,6 +225,8 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [세이셸](https://radar.wmm-hoa.com/ko/seychelles/)
 - [시에라리온](https://radar.wmm-hoa.com/ko/sierra-leone/)
 - [남아프리카공화국](https://radar.wmm-hoa.com/ko/south-africa/)
+- [남수단](https://radar.wmm-hoa.com/ko/south-sudan/)
+- [수단](https://radar.wmm-hoa.com/ko/sudan/)
 - [탄자니아](https://radar.wmm-hoa.com/ko/tanzania/)
 - [토고](https://radar.wmm-hoa.com/ko/togo/)
 - [튀니지](https://radar.wmm-hoa.com/ko/tunisia/)
