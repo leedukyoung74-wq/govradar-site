@@ -163,11 +163,11 @@ def prepbar(L):
 <div class="preppanel" id="preppanel" hidden><div class="in"><div>{panels}</div><div><p class="note">{e(tx(L,"prep_src"))}</p><ul class="src">{src}</ul><button class="btn sm" id="pp-x">×</button></div></div></div>'''
 
 FOOTCOLS = {
- "ko": [("서비스", [("#map", "나라 찾기"), ("mdb/", "입찰·사업"), ("conflict/", "세계 상황판"), ("prepare/", "위기 대비 키트"), ("pricing/", "요금·회원"), ("member/", "분석 회원 열람"), ("sample/", "샘플 브리프")]),
+ "ko": [("서비스", [("#map", "나라 찾기"), ("mdb/", "입찰·사업"), ("conflict/", "세계 상황판"), ("ready/", "재난 대비센터"), ("prepare/", "가정 비축 키트"), ("pricing/", "요금·회원"), ("member/", "분석 회원 열람"), ("sample/", "샘플 브리프")]),
         ("함께하기", [("solutions/", "진출 지원"), ("pricing/?p=partner#order", "프로젝트 파트너십"), ("notices/", "본사 프로젝트"), ("gcsme/", "GCSME 회원"), ("partners/", "파트너 프로그램"), ("individuals/", "개인 참여")]),
         ("믿고 쓰는 법", [("how/", "서비스 진행 방식"), ("verify/", "검증 원칙"), ("contracts/", "계약서"), ("feeds/", "업종별 피드(RSS)"), ("embed/", "레이더 넣기")]),
         ("약관", [("legal/terms/", "이용약관"), ("legal/privacy/", "개인정보 처리방침"), ("legal/refund/", "환불 정책"), ("legal/disclaimer/", "면책 안내")])],
- "en": [("Service", [("#map", "Countries"), ("mdb/", "Tenders"), ("conflict/", "World watch"), ("prepare/", "Preparedness kit"), ("pricing/", "Pricing"), ("member/", "Member access"), ("sample/", "Sample brief")]),
+ "en": [("Service", [("#map", "Countries"), ("mdb/", "Tenders"), ("conflict/", "World watch"), ("ready/", "Preparedness centre"), ("prepare/", "Stockpile kit"), ("pricing/", "Pricing"), ("member/", "Member access"), ("sample/", "Sample brief")]),
         ("Work with us", [("solutions/", "Go global"), ("pricing/?p=partner#order", "Project partnership"), ("notices/", "HQ projects"), ("gcsme/", "GCSME members"), ("partners/", "Partner programme"), ("individuals/", "For individuals")]),
         ("Trust", [("how/", "How it works"), ("verify/", "Verification principles"), ("contracts/", "Contracts"), ("feeds/", "Sector feeds (RSS)"), ("embed/", "Embed the radar")]),
         ("Legal", [("legal/terms/", "Terms"), ("legal/privacy/", "Privacy"), ("legal/refund/", "Refunds"), ("legal/disclaimer/", "Disclaimer")])],
@@ -409,7 +409,7 @@ def conflict_page(L):
 <h2>{"National preparedness policies — fact-checked" if en else "각국 대비 정책 — 사실 확인"}</h2><ul>{prep}</ul>
 <h2>{"Circulating claims — verdicts" if en else "떠도는 주장 판정"}</h2><ul>{claims}</ul>
 <div class="card" style="border-left:4px solid #b54708"><p class="note">{"WEEKLY · ANALYSIS MEMBERS" if en else "주간 · 분석 회원"}</p><h3>{"Hormuz & Middle East risk brief" if en else "호르무즈·중동 리스크 브리프"}</h3><p><b>{e(ME["week"])}</b> — {e(ME["headline_en"] if en else ME["headline_ko"])}</p><p class="note">{"Full indicators (oil, transit, insurance), item-by-item verdicts and the weekly action checklist are for analysis members." if en else "유가·통항·보험 지표, 항목별 검증 판정, 이번 주 할 일 체크리스트 전체는 분석 회원에게 제공합니다."}</p><p><a class="btn pri" href="{P3.paylink(L, "risk")}">{"Analysis member · ₩19,800/mo →" if en else "분석 회원 월 19,800원으로 보기 →"}</a></p></div>
-<p><a class="btn" href="/{L}/prepare/">{"Home stockpile kit →" if en else "가정 비축 키트 →"}</a> <a class="btn" href="/{L}/verify/">{"Verification policy" if en else "검증 원칙"}</a></p>
+<p><a class="btn" href="/{L}/ready/">{"Preparedness centre →" if en else "재난 대비센터 →"}</a> <a class="btn" href="/{L}/prepare/">{"Home stockpile kit →" if en else "가정 비축 키트 →"}</a> <a class="btn" href="/{L}/verify/">{"Verification policy" if en else "검증 원칙"}</a></p>
 <h2>{"Sources" if en else "출처"}</h2><ol class="src">{srcs}</ol></div>"""
     jl = ld({"@context": "https://schema.org", "@type": "WebPage", "name": t_, "inLanguage": L, "dateModified": C["updated"], "publisher": ORG})
     return head(L, t_ + " · GOV RADAR", (C["summary_en"] if en else C["summary_ko"])[:155], f"/{L}/conflict/", {l: f"/{l}/conflict/" for l in LANGS}, jl + VCSS + JSVM + '<script src="/assets/hotmap.js" defer></script>') + body + foot(L)
@@ -428,6 +428,14 @@ def about_page(L):
     jl = ld({"@context": "https://schema.org", "@type": "AboutPage", "name": a["h"], "inLanguage": L, "publisher": ORG, "description": a["lede"]})
     return head(L, a["h"] + " · GOV RADAR", a["lede"][:150], f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}, jl + GB.CSS) + sec_ + foot(L)
 
+def ready_page(L):
+    import pages_ready as PR
+    ko = L == "ko"
+    t_ = "재난 대비센터 — 우리 집·우리 단체 맞춤 준비" if ko else "Preparedness centre — plans for your household and organisation"
+    d_ = ("공식기관 지침을 바탕으로 재난별 행동, 가족 맞춤 30·60·90일·1년 계획, 물·식량·전원 계산기, 재고 교체표, 대피·연락카드를 제공합니다." if ko
+          else "Actions by hazard, 30/60/90-day and 1-year household plans, water, food and power calculators, stock sheet and contact card — based on official guidance.")
+    return head(L, t_ + " · GOV RADAR", d_, f"/{L}/ready/", {l: f"/{l}/ready/" for l in LANGS}) + PR.body(L) + foot(L)
+
 def stock_page(L):
     en = L != "ko"; k = (lambda x, a: x[a + "_en"] if en else x[a + "_ko"]); nmk = (lambda x: x["en"] if en else x["ko"])
     pri = {"must": "Essential", "rec": "Recommended", "if": "If applicable"} if en else {"must": "필수", "rec": "권장", "if": "해당 시 필수"}
@@ -441,7 +449,7 @@ def stock_page(L):
     from urllib.parse import quote
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(H['t'])}</h1></div></section>
 <div class="in stock">
-<blockquote class="summary">{e(STK['giles']['en' if en else 'ko'])}<br><small class="note">{e(STK['giles']['note_en' if en else 'note_ko'])}</small></blockquote>
+<p class="cta"><a class="btn pri" href="/{L}/ready/">{"Open the preparedness centre — plan, calculators, contact card →" if en else "재난 대비센터 열기 — 맞춤 계획·계산기·연락카드 →"}</a></p><blockquote class="summary">{e(STK['giles']['en' if en else 'ko'])}<br><small class="note">{e(STK['giles']['note_en' if en else 'note_ko'])}</small></blockquote>
 <div class="cards">{''.join(f'<div class="card"><h3>{e(nmk(x))}</h3><p>{e(k(x,"p"))}</p></div>' for x in STK['stages'])}</div>
 <h2>{e(H['cat'])}</h2><div class="cards">{''.join(f'<div class="card"><h3>{e(nmk(c))} <span class="st-pri {c["pri"]}">{pri[c["pri"]]}</span></h3><p>{e(k(c,"items"))}</p></div>' for c in STK['cats'])}</div>
 <h2>{e(H['q'])}</h2><table class="qt">{''.join(f'<tr><td>{e(nmk(q))}</td><td><b>{e(qv(q))}</b></td></tr>' for q in STK['qty'])}</table>
@@ -678,6 +686,7 @@ def build():
                 W(f"/{L}/{BY[_g]['slug']}/guide/index.html", guide_page(_g, L)); urls.append((f"{url(L,_g)}guide/", {l: f"{url(l,_g)}guide/" for l in LANGS}))
         W(f"/{L}/about/index.html", about_page(L)); urls.append((f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}))
         W(f"/{L}/prepare/index.html", stock_page(L)); urls.append((f"/{L}/prepare/", {l: f"/{l}/prepare/" for l in LANGS}))
+        W(f"/{L}/ready/index.html", ready_page(L)); urls.append((f"/{L}/ready/", {l: f"/{l}/ready/" for l in LANGS}))
         W(f"/{L}/feeds/index.html", feeds_page(L)); W(f"/{L}/embed/index.html", embed_page(L)); W(f"/{L}/account/index.html", account_page(L))
         for c in META:
             W(f"/{L}/{c['slug']}/index.html", country_page(c["iso"], L))
@@ -741,7 +750,7 @@ def build():
         lm = (DATA.get(iso) or {}).get("updated", TODAY) if iso else TODAY
         sm.append(f"<url><loc>{BASE}{p}</loc><lastmod>{lm}</lastmod>" + "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{BASE}{a}"/>' for l, a in alts.items()) + "</url>")
     sm.append("</urlset>"); W("/sitemap.xml", "".join(sm))
-    W("/_redirects", "".join(f"/{p}  /ko/{p}/  301\n/{p}/  /ko/{p}/  301\n" for p in ["about","conflict","verify","prepare","mdb","feeds","embed","account","consortium","projects","contracts","experts","solutions","pricing","notices","individuals","unlock","gcsme","partners"]))
+    W("/_redirects", "".join(f"/{p}  /ko/{p}/  301\n/{p}/  /ko/{p}/  301\n" for p in ["about","conflict","verify","prepare","ready","mdb","feeds","embed","account","consortium","projects","contracts","experts","solutions","pricing","notices","individuals","unlock","gcsme","partners"]))
     try:
         from PIL import Image
         im = Image.open(os.path.join(OUT, "assets", "mark.png")).convert("RGBA"); im.save(os.path.join(OUT, "favicon.ico"), sizes=[(16,16),(32,32),(48,48)])
