@@ -290,8 +290,8 @@ TIER_ROWS = [  # ko, en, free, member, partner, inst
     ("193개국 지도·정부 과제·사업·위험", "Map, priorities, projects and risk for 193 countries", "✓", "✓", "✓", "✓"),
     ("열린 입찰 전체 (발주처·마감일·원문 링크)", "All open tenders (buyer, deadline, notice link)", "✓", "✓", "✓", "✓"),
     ("유망 사업의 이유·대상 바이어 (AI 분석 + 사람 검수)", "Why-now and target buyers (AI analysis, human-reviewed)", "주 1건", "전체", "전체", "전체"),
-    ("관심 나라 주간 요약·마감 D-7 알림 (매주 월요일 이메일)", "Weekly summary and D-7 deadline alerts (Monday email)", "—", "10개국", "무제한", "무제한"),
-    ("호르무즈·중동 리스크 주간 브리프", "Weekly Hormuz & Middle East risk brief", "—", "✓", "✓", "✓"),
+    ("관심 나라 주간 요약·마감 임박 알림 (이메일, 담당자 검수 후 발송)", "Weekly summary and closing-soon alerts (email, sent after staff review)", "—", "10개국", "무제한", "무제한"),
+    ("호르무즈·중동 리스크 브리프 (중요한 변화가 있을 때)", "Hormuz & Middle East risk brief (when there is a significant change)", "—", "✓", "✓", "✓"),
     ("월 1회 해외 정부사업 설명회·파트너 매칭 모임", "Monthly briefing and partner-matching meet-up", "✓ (사전 신청)", "✓ 우선 좌석", "✓", "✓"),
     ("입찰 적합도 판정·프로젝트 랩 참여자 구성", "Tender fit verdicts and Project Lab participant line-ups", "—", "건당 10만 원", "포함", "분기 브리프"),
     ("파트너 연결·컨소시엄·현지 등록·제안서 동행", "Partner introductions, consortium, local registration and proposal support", "—", "—", "✓", "상담"),
@@ -299,8 +299,8 @@ TIER_ROWS = [  # ko, en, free, member, partner, inst
 ]
 NEED = {  # what was clicked -> the tier that unlocks it
     "biz": ("member", "유망 사업의 이유·대상 바이어 전체", "every why-now and target buyer"),
-    "alerts": ("member", "관심 나라 주간 요약·마감 알림 (매주 월요일 이메일)", "a weekly Monday summary and deadline alerts"),
-    "risk": ("member", "중동 리스크 주간 브리프", "the weekly Middle East risk brief"),
+    "alerts": ("member", "관심 나라 주간 요약·마감 임박 알림 (이메일)", "a weekly summary and closing-soon alerts"),
+    "risk": ("member", "중동 리스크 브리프 (중요한 변화 시)", "the Middle East risk brief when things change"),
     "fit": ("partner", "입찰 적합도 판정", "tender fit verdicts"),
     "lab": ("partner", "프로젝트 랩 참여자 구성·재원 후보", "Project Lab participants and funders"),
     "tenders": ("member", "관심 분야 입찰 알림", "tender alerts for your field"),
@@ -341,11 +341,11 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
       "이달의 주요 정부 사업·입찰을 함께 보고, 같은 나라·분야를 노리는 기업·전문가와 직접 만나는 자리입니다. 프로젝트 파트너십 상담도 현장에서 받습니다.",
       "We walk through this month's key government programmes and tenders, and you meet companies and experts targeting the same countries and sectors. Partnership consultations are available on site.", "city"),
      ("member", "분석 회원", "Analysis membership", "월 19,800원 · 연 198,000원 (VAT 포함, 자동갱신 없음)", "₩19,800/month · ₩198,000/year (VAT incl., no auto-renewal)",
-      "정보는 무료입니다. 분석 회원은 AI가 분석하고 사람이 검수한 '왜 지금인지·누가 살 사람인지'를 모든 나라에서 보고, 관심 나라 10곳의 주간 요약과 마감 D-7 알림, 중동 리스크 주간 브리프를 매주 월요일 이메일로 받습니다. 설명회 우선 좌석도 드립니다.",
-      "The data is free. Analysis members see the AI-analysed, human-reviewed why-now and target buyers for every country, and get a Monday email with a summary and D-7 deadline alerts for 10 countries plus the weekly Middle East risk brief. Priority seats at the meet-ups too.", "earth"),
+      "정보는 무료입니다. 분석 회원은 AI가 분석하고 사람이 검수한 '왜 지금인지·누가 살 사람인지'를 모든 나라에서 보고, 관심 나라 10곳의 주간 요약과 마감 임박 알림을 이메일로 받고(담당자 검수 후 발송), 중동 정세에 중요한 변화가 있으면 리스크 브리프를 받습니다. 설명회 우선 좌석도 드립니다.",
+      "The data is free. Analysis members see the AI-analysed, human-reviewed why-now and target buyers for every country, get a weekly email summary with closing-soon alerts for 10 countries (sent after staff review), and a Middle East risk brief when there is a significant change. Priority seats at the meet-ups too.", "earth"),
      ("brief", "국가 진출 브리프", "Market-entry brief", "300,000원부터 (VAT 별도, 신청 당일 견적)", "From ₩300,000 (VAT excl., quote the same day)",
-      "한 나라에 대해: 정부 우선 과제와 예산, 지금 열린 입찰, 쓸 수 있는 한국 지원제도, 위험·제재, 권장 진입 경로와 다음 행동. 고객 업종에 맞추고 모든 수치에 출처를 붙입니다. 접수 후 5영업일.",
-      "For one country, tailored to your sector: priorities and budgets, open tenders, Korean support you can use, risks and sanctions, a recommended entry route and next steps. Every figure is sourced. Five business days.", "site"),
+      "한 나라에 대해: 정부 우선 과제와 예산, 지금 열린 입찰, 쓸 수 있는 한국 지원제도, 위험·제재, 권장 진입 경로와 다음 행동. 고객 업종에 맞추고 모든 수치에 출처를 붙입니다. 납기는 견적 때 확정합니다(보통 5~10영업일).",
+      "For one country, tailored to your sector: priorities and budgets, open tenders, Korean support you can use, risks and sanctions, a recommended entry route and next steps. Every figure is sourced. Turnaround is confirmed with the quote (usually 5–10 business days).", "site"),
      ("fit", "입찰 적합도 검토", "Tender fit review", "100,000원 (공고 1건, VAT 별도)", "₩100,000 per tender (VAT excl.)",
       "공고 1건에 대해: 참여 자격, 필요 서류, 현지 파트너 필요 여부, 일정, 참여 권장 여부를 원문 공고와 대조해 사람이 판단합니다. 영업일 3일.",
       "For one tender: eligibility, required documents, need for a local partner, timeline and a go/no-go recommendation, judged by a person against the original notice. Three business days.", "sign"),
@@ -532,7 +532,7 @@ HOW_STEPS = [
  ("2", "신청", "Request", "요금 페이지에서 등급이나 상품을 고르고 신청서를 보냅니다. 업종·관심 나라·필요한 것을 적어 주실수록 정확해집니다.", "Pick a plan or product on the pricing page and send the form. The more you tell us about your sector, countries and needs, the sharper the result."),
  ("3", "견적·확인 (영업일 1일)", "Quote (1 business day)", "영업일 1일 안에 견적서와 진행 일정을 이메일로 보냅니다. 기업은 전자세금계산서, 기관은 견적서·사업자등록증·통장 사본을 함께 드립니다.", "Within one business day we email a quote and schedule. Companies get an e-tax invoice; public bodies also get business registration and bank details."),
  ("4", "입금·시작 (영업일 1일)", "Payment & start (1 business day)", "입금을 확인하면 영업일 1일 안에 회원 권한을 열고 환영 메일을 보냅니다. 맞춤 작업은 착수 질문지 5문항을 함께 보냅니다.", "Within one business day of payment we activate your access and send a welcome email. Custom work starts with a 5-question kick-off form."),
- ("5", "받기", "Receive", "멤버십은 매주 월요일 관심 나라 요약을 이메일로 받습니다(현재 담당자 검수 후 발송). 브리프는 영업일 5일, 입찰 적합도 검토는 영업일 3일 안에 드립니다.", "Members get a Monday email summary for their countries (currently sent after staff review). Briefs arrive within 5 business days, tender fit reviews within 3."),
+ ("5", "받기", "Receive", "멤버십은 관심 나라 요약을 이메일로 받습니다(현재 담당자 검수 후 발송, 주 1회 목표). 브리프와 입찰 적합도 검토의 납기는 견적 때 확정합니다(보통 브리프 5~10영업일, 적합도 검토 3~5영업일).", "Members get an email summary for their countries (sent after staff review, aiming for once a week). Turnaround for briefs and tender fit reviews is confirmed with the quote (usually 5–10 business days for briefs, 3–5 for fit reviews)."),
  ("6", "수정·질문", "Revisions & questions", "맞춤 보고서는 받은 날부터 7일 안에 1회 무료로 고쳐 드립니다. 질문은 이메일로 영업일 1일 안에 답합니다.", "One free revision within 7 days of delivery for custom reports. Email questions are answered within one business day."),
  ("7", "점검", "Check-in", "시작 30일째에 만족도 3문항과 다음 단계(입찰·파트너·지원제도) 제안을 보냅니다. 기관 고객은 분기마다 온라인 점검 회의를 합니다.", "On day 30 we send a 3-question survey and next-step suggestions (tenders, partners, support schemes). Institutional clients get a quarterly online review."),
 ]
@@ -546,7 +546,7 @@ PROMISES = [
 ]
 WHO_GETS = [
  ("무료 회원", "Free", ["193개국 정부 과제·사업·위험", "열린 입찰 전체 (발주처·마감일·원문)", "유망 사업 이번 주 공개 1건", "월 1회 설명회 (사전 신청)"], ["Priorities, projects and risk for 193 countries", "Every open tender with buyer, deadline and link", "One fully opened opportunity a week", "Monthly meet-up (registration)"]),
- ("분석 회원 · 월 19,800원", "Analysis member · ₩19,800/mo", ["모든 나라 유망 사업의 이유·대상 바이어", "관심 나라 10곳 주간 요약·마감 D-7 알림 (월요일 이메일)", "중동 리스크 주간 브리프, 설명회 우선 좌석"], ["Why-now and target buyers for every country", "Monday email: 10-country summary and D-7 alerts", "Weekly Middle East brief, priority meet-up seats"]),
+ ("분석 회원 · 월 19,800원", "Analysis member · ₩19,800/mo", ["모든 나라 유망 사업의 이유·대상 바이어", "관심 나라 10곳 주간 요약·마감 임박 알림 (이메일)", "중동 리스크 브리프(중요한 변화 시), 설명회 우선 좌석"], ["Why-now and target buyers for every country", "Weekly email: 10-country summary and closing-soon alerts", "Middle East brief on significant change, priority meet-up seats"]),
  ("프로젝트 파트너십 · 상담 후 결정", "Project partnership · after consultation", ["첫 상담 무료 (온라인 또는 서울 30분)", "파트너·컨소시엄 연결, 현지 등록·서류·제안서 동행", "성과 중심 보수 (성공보수)"], ["First 30-minute consultation free", "Partner and consortium introductions, registration, documents and proposal", "Fees weighted toward success"]),
  ("기관 라이선스 · 연 300만~990만 원", "Institutional · ₩3M–9.9M/yr", ["착수 회의와 담당자 교육", "정기 브리프, 회원사 대상 설명회", "견적서·세금계산서·사업자 서류 일괄"], ["Kick-off meeting and staff training", "Regular briefs and briefings for your member firms", "Quote, tax invoice and company documents in one pack"]),
 ]
@@ -665,8 +665,8 @@ def unlock_page(L, C):
 # ---------------------------------------------------------------- GCSME members (/L/gcsme/) — alternative A
 def gcsme_page(L, C):
     ko = L == "ko"
-    rows = [("Analysis membership", "US$15/mo", "월 19,800원 → 회원가 약 20% 할인", "All why-now & target buyers, Monday alerts for 10 countries"),
-            ("Market-entry brief", "from US$220", "300,000원부터 → 회원가", "One country, human-reviewed, 5 business days"),
+    rows = [("Analysis membership", "US$15/mo", "월 19,800원 → 회원가 약 20% 할인", "All why-now & target buyers, weekly alerts for 10 countries"),
+            ("Market-entry brief", "from US$220", "300,000원부터 → 회원가", "One country, human-reviewed, turnaround confirmed with the quote"),
             ("Project partnership", "free first call", "첫 상담 무료 · 비용은 상담 후 결정", "Introductions to Korean partners and consortia; fees agreed after the first call")]
     tr = "".join(f"<tr><th>{a}</th><td><b>{b}</b></td><td>{c if ko else d}</td></tr>" for a, b, c, d in rows)
     body = f"""<section class="phero short">{img("hand", "", 1800, 700, "bg", True)}<div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p>
@@ -741,8 +741,8 @@ ACCESS = [
   ["How to sell to each government (registration, local-partner rules)", "All past Korean wins", "Detailed tender eligibility (revenue, track record, certificates, consortium)", "Save countries and keep your own tender list"],
   "", "무료 가입", "Sign up free", "signup"),
  ("member", "분석 회원", "Analysis member", "월 19,800원", "₩19,800/mo",
-  ["모든 나라의 '왜 지금·누가 살 사람·근거' 전체", "월요일 맞춤 이메일: 관심 10개국 요약·마감 D-7 알림", "중동 리스크 주간 브리프", "회원에게 맞는 본사 프로젝트 개인 안내·설명회 우선 좌석"],
-  ["Why-now, target buyers and basis for every country", "Monday email: 10-country summary and D-7 deadline alerts", "Weekly Middle East risk brief", "Personal invitations to matching HQ projects, priority meet-up seats"],
+  ["모든 나라의 '왜 지금·누가 살 사람·근거' 전체", "주간 맞춤 이메일: 관심 10개국 요약·마감 임박 알림", "중동 리스크 브리프 (중요한 변화 시)", "회원에게 맞는 본사 프로젝트 개인 안내·설명회 우선 좌석"],
+  ["Why-now, target buyers and basis for every country", "Weekly email: 10-country summary and closing-soon alerts", "Middle East risk brief (on significant change)", "Personal invitations to matching HQ projects, priority meet-up seats"],
   "pricing/?p=member#order", "분석 회원 신청", "Become a member", ""),
  ("order", "주문형 · 사람이 함께", "On request · with a person", "상담 후", "After a call",
   ["국가 진출 브리프 30만 원부터", "입찰 적합도 검토 10만 원", "프로젝트 파트너십: 첫 상담 무료, 착수금·성공보수는 상담 후 결정"],

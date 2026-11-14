@@ -340,7 +340,7 @@ def country_page(iso, L):
     same = [x for x in META if x["r"] == c["r"] and x["iso"] != iso and done(x["iso"])][:12]
     if c.get("reg"): same = [BY[x["iso"]] for x in REGS if x["iso"] != iso][:12]
     side = f"""<aside class="side">
-<div class="box"><b>{"이 나라 진출 브리프" if L=="ko" else "Market-entry brief for this country"}</b><p class="note">{"정부 과제·입찰·한국 지원·위험을 사람이 검수해 5영업일 안에 보내 드립니다." if L=="ko" else "Priorities, tenders, Korean support and risks, reviewed by a person and delivered within five business days."}</p><a class="btn pri" href="/{L}/pricing/?p=brief&c={e(name)}#order">{"견적 요청" if L=="ko" else "Request a quote"}</a></div>
+<div class="box"><b>{"이 나라 진출 브리프" if L=="ko" else "Market-entry brief for this country"}</b><p class="note">{"정부 과제·입찰·한국 지원·위험을 사람이 검수해 보내 드립니다. 납기는 견적 때 안내합니다(보통 5~10영업일)." if L=="ko" else "Priorities, tenders, Korean support and risks, reviewed by a person. Turnaround is confirmed with the quote (usually 5–10 business days)."}</p><a class="btn pri" href="/{L}/pricing/?p=brief&c={e(name)}#order">{"견적 요청" if L=="ko" else "Request a quote"}</a></div>
 <div class="box"><b>{e(t['alert_cta'])}</b><button class="btn member" data-act="follow" data-iso="{iso}">{e(t['cta_join'])}</button></div>
 <div class="box"><b>{e(t['more_cty'])}</b><div class="mini">{''.join(f'<a href="{url(L,x["iso"])}">{flag(x["iso"])} {e(nm(x["iso"],L))}</a>' for x in same)}</div></div>
 
@@ -760,7 +760,7 @@ def account_page(L):
 <label>{lab('보유 인증 (쉼표로)','Certifications (comma-separated)')}<input name="certs"></label>
 <fieldset><legend>{lab('알림 받는 방법','Alert channels')}</legend>
 <label class="chk"><input type="checkbox" name="alert_email" checked> {lab('이메일 (새 기회·마감 D-7/D-3)','Email (new opportunities, D-7/D-3 deadlines)')}</label>
-<p class="note">{lab('유료 회원은 매주 월요일 관심 나라 요약과 마감 임박 입찰을 이메일로 받습니다. 카카오톡·Slack 알림은 준비 중입니다.','Paid members get a Monday email with their countries and tenders closing soon. KakaoTalk and Slack alerts are coming later.')}</p>
+<p class="note">{lab('유료 회원은 관심 나라 요약과 마감 임박 입찰을 이메일로 받습니다(담당자 검수 후 발송, 주 1회 목표). 카카오톡·Slack 알림은 준비 중입니다.','Paid members get an email with their countries and tenders closing soon (sent after staff review, aiming for once a week). KakaoTalk and Slack alerts are coming later.')}</p>
 <label class="chk"><input type="checkbox" name="marketing_consent"> {lab('[선택] 맞춤 사업 기회·행사 등 광고성 정보 수신에 동의합니다 (언제든 철회 가능)','[Optional] I agree to receive promotional information about matching opportunities and events (withdraw any time)')}</label>
 </fieldset>
 <button class="btn pri" type="submit">{lab('저장','Save')}</button><p class="note" id="acct-msg"></p></form></div></section>""" + foot(L)
