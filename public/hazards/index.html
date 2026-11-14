@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="세계 재난·분쟁 16가지를 움직이는 레이더 화면과 나라별 지도로 봅니다 — GOV RADAR">
+<link rel="icon" href="/favicon.ico">
+<title>GOV RADAR 재난 한눈에 보기</title>
+<style>
+@font-face{font-family:"WMM Nexon";font-weight:300;font-display:swap;src:local("NEXON Lv1 Gothic OTF Light"),url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:400;font-display:swap;src:local("NEXON Lv1 Gothic OTF"),url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:700;font-display:swap;src:local("NEXON Lv1 Gothic OTF Bold"),url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff")}
+:root{--bg:#F5F5F2;--panel:#fff;--panel2:#EDEDEA;--ink:#0B0B0B;--muted:#5C5C5A;--line:#D7D7D3;--sea:#E7EEEC;--land:#D3D9D7;--edge:#fff;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4;--s6:#008300;--s7:#6250d6;--s8:#e34948;
+--f:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+--emo:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0A0A0A;--panel:#141414;--panel2:#1C1C1C;--ink:#F2F2EF;--muted:#A3A39F;--line:#2B2B2A;--sea:#101615;--land:#2C3432;--edge:#0A0A0A;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#0ca30c;--s7:#9085e9;--s8:#e66767;color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f);-webkit-font-smoothing:antialiased}
+button,input,select,table{font-family:var(--f)}
+a{color:inherit}
+.in{max-width:1200px;margin:0 auto;padding:0 24px}
+@media (max-width:640px){.in{padding:0 16px}body{font-size:16px}}
+header.top{background:#0A0A0A;color:#F2F2EF}
+header.top .in{display:flex;align-items:center;gap:20px;height:64px}
+header.top img{height:36px;width:auto;display:block}
+header.top nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+header.top nav a{text-decoration:none;color:#F2F2EF;white-space:nowrap}
+header.top nav a:hover{text-decoration:underline}
+.lang{background:#F2F2EF;color:#0A0A0A;border:0;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer}
+@media (max-width:760px){header.top nav{display:none}.lang{margin-left:auto}}
+.hero{padding:72px 0 40px}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.12;font-weight:700;margin:0 0 20px;letter-spacing:-.01em;max-width:16em}
+h2{font-size:clamp(26px,3.6vw,40px);line-height:1.2;font-weight:700;margin:0 0 12px;max-width:22em}
+h3{font-size:20px;font-weight:700;margin:0 0 8px}
+.lede{font-size:clamp(17px,2vw,21px);max-width:38em;margin:0}
+.sub{color:var(--muted);font-weight:300;font-size:15px;max-width:52em;margin:0}
+section{padding:60px 0}
+section.alt{background:var(--panel)}
+@media (min-width:900px){section{padding:96px 0}.hero{padding:104px 0 56px}}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px}
+.kp b{display:block;font-size:clamp(26px,3.6vw,46px);line-height:1.1;font-weight:700;white-space:nowrap}
+.kp span{display:block;color:var(--muted);font-size:15px;margin-top:6px}
+.kp .e{font-family:var(--emo);font-size:.8em}
+@media (max-width:760px){.kp{grid-template-columns:1fr 1fr;gap:24px}}
+.e{font-family:var(--emo);font-style:normal}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 16px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--panel2);color:var(--ink);border:0;border-radius:999px;padding:8px 14px;font-size:15px;cursor:pointer;line-height:1.2}
+section.alt .chip{background:var(--bg)}
+.chip i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.chip[aria-pressed=false]{opacity:.38}
+.chip.on,.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.seg{display:inline-flex;background:var(--panel2);border-radius:999px;padding:4px;gap:2px}
+section.alt .seg{background:var(--bg)}
+.seg button{border:0;background:transparent;color:var(--ink);border-radius:999px;padding:8px 16px;font-size:15px;font-weight:700;cursor:pointer}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--f);fill:var(--muted);font-size:12px}
+svg text.e{font-family:var(--emo);fill:var(--ink)}
+svg text.k{fill:var(--ink);font-weight:700}
+.wide{min-width:820px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.hm{border-collapse:separate;border-spacing:2px;font-size:13px;min-width:980px;width:100%;margin-top:28px}
+table.hm th{font-weight:400;color:var(--muted);text-align:center;padding:4px 0;white-space:nowrap}
+table.hm th.r{text-align:left;color:var(--ink);font-weight:700;font-size:15px;padding-right:12px;position:sticky;left:0;background:var(--bg);z-index:1}
+section.alt table.hm th.r{background:var(--panel)}
+table.hm td{text-align:center;padding:7px 0;border-radius:4px;min-width:30px;font-variant-numeric:tabular-nums}
+table.hm tr.tot td{font-weight:700}
+.mapwrap{background:var(--sea);border-radius:14px;overflow:hidden;position:relative}
+.mapwrap svg{overflow:hidden}
+.cty{stroke:var(--edge);stroke-width:.5;cursor:pointer;transition:opacity .15s}
+.cty:hover{opacity:.72}
+.mk{cursor:pointer}
+.lg{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;color:var(--muted);font-size:14px;margin-top:14px}
+.lg span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.lg i{width:22px;height:12px;border-radius:3px;display:inline-block}
+.cv{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;margin-top:40px;align-items:start}
+@media (max-width:860px){.cv{grid-template-columns:1fr;gap:24px}}
+.cv h3{font-size:clamp(26px,3.4vw,38px);margin-bottom:4px}
+.big{font-size:clamp(30px,4vw,46px);font-weight:700;line-height:1.1;margin:14px 0 2px}
+.bars{margin:22px 0 0;padding:0;list-style:none}
+.bars li{display:grid;grid-template-columns:150px 1fr 76px;gap:10px;align-items:center;padding:5px 0;font-size:15px}
+.bars .t{white-space:nowrap}.bars .v{text-align:right;padding-right:4px;font-variant-numeric:tabular-nums}
+.bars .b{height:12px;border-radius:0 4px 4px 0;min-width:2px}
+@media (max-width:480px){.bars li{grid-template-columns:118px 1fr 64px}}
+.evl{list-style:none;margin:10px 0 0;padding:0;font-size:15px}
+.evl li{padding:6px 0;display:flex;gap:10px}
+.evl small{color:var(--muted);font-weight:300;display:block}
+.back{margin-top:22px;border:0;background:var(--ink);color:var(--bg);border-radius:999px;padding:10px 18px;font-weight:700;font-size:15px;cursor:pointer}
+.sel{border:0;background:var(--panel2);color:var(--ink);border-radius:999px;padding:9px 14px;font-size:15px;max-width:220px}
+section.alt .sel{background:var(--bg)}
+.apk{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 32px;margin-top:40px}
+@media (max-width:860px){.apk{grid-template-columns:1fr 1fr}}
+.apk b{display:block;font-size:clamp(24px,3vw,34px);line-height:1.15}
+.apk span{display:block;font-size:15px}
+.apk small{display:block;color:var(--muted);font-weight:300;font-size:14px}
+.fact{background:var(--ink);color:var(--bg);border-radius:14px;padding:28px 32px;margin-top:36px;font-size:clamp(17px,2vw,21px);max-width:52em}
+.fact b{font-weight:700}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);padding:10px 12px;border-radius:8px;font-size:13px;line-height:1.5;max-width:280px;z-index:9;opacity:0;transition:opacity .1s}
+#tip b{font-size:14px}#tip .e{margin-right:4px}
+.src{color:var(--muted);font-weight:300;font-size:14px;margin-top:20px;max-width:60em}
+footer{background:#0A0A0A;color:#F2F2EF;padding:64px 0}
+footer .n{font-size:clamp(26px,4vw,44px);font-weight:700;line-height:1.15;margin:0 0 12px}
+footer p{margin:4px 0;font-weight:300;font-size:15px;color:#BDBDB8}
+footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-bottom:20px}
+/* ---- animated hazard clips ---- */
+.lg .chip{padding:5px 11px;font-size:13px}.lg .chip[aria-pressed=false]{opacity:.5}
+.fkbox{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:10px 28px;align-items:start;margin-top:22px}
+.fkbox .hzc{grid-row:span 2}.fkbox .back{justify-self:start;margin-top:0}
+@media (max-width:640px){.fkbox{grid-template-columns:1fr}.fkbox .hzc{grid-row:auto}}
+
+.hzg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin-top:28px}
+.hzc{margin:0;display:flex;flex-direction:column;gap:10px}
+.hzc-v{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:radial-gradient(120% 90% at 50% 50%,#14202a 0%,#0a0f14 60%,#06090c 100%);isolation:isolate}
+.hzc-bg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.hzc-bg.space{background:radial-gradient(120% 100% at 80% 80%,#0d1730 0%,#04060d 70%)}
+.hzbg-land{fill:#303945;stroke:#0b0e12;stroke-width:.5}
+.hzbg-hl{fill:#743226;stroke:#ff8b6b;stroke-width:1}
+.hzc-sw{position:absolute;z-index:2;left:50%;top:50%;width:260%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;background:conic-gradient(from 0deg,rgba(80,255,190,0) 0deg,rgba(80,255,190,0) 300deg,rgba(80,255,190,.34) 350deg,rgba(170,255,225,.8) 360deg);-webkit-mask:radial-gradient(circle,#000 0 40%,transparent 41%);mask:radial-gradient(circle,#000 0 40%,transparent 41%);animation:hzspin 4.2s linear infinite;mix-blend-mode:screen}
+.hzc-rg{position:absolute;z-index:2;inset:0;pointer-events:none;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 38px,rgba(120,255,200,.16) 39px 40px)}
+.hzc-v::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(transparent 49.6%,rgba(120,255,200,.10) 50%,transparent 50.4%),linear-gradient(90deg,transparent 49.6%,rgba(120,255,200,.10) 50%,transparent 50.4%)}
+@keyframes hzspin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hzfx{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
+.hzfx svg{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+.hzc-tag{position:absolute;z-index:5;left:10px;top:10px;font:700 13px/1.2 var(--f);color:#fff;background:rgba(0,0,0,.62);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 10px}
+.hzc-now{position:absolute;z-index:5;right:10px;top:10px;font:700 12px/1.2 var(--f);color:#fff;background:#c62828;border-radius:999px;padding:4px 9px;animation:hznow 1.6s ease-in-out infinite}
+@keyframes hznow{50%{opacity:.55}}
+.hzc figcaption{font-size:15px;line-height:1.5;display:flex;flex-direction:column;gap:2px}
+.hzc figcaption b{font-weight:700}
+.hzc figcaption span{color:var(--muted);font-weight:300;font-size:14px}
+.hzc figcaption .nw{color:#c62828;font-weight:400}
+@media (prefers-color-scheme:dark){.hzc figcaption .nw{color:#ff8a80}}
+.hzc-wrap{}#chz{margin-top:8px}.hzsub{margin:44px 0 0;font-size:20px;font-weight:700}
+.hzsub+.sub{margin-top:4px}
+@media (max-width:600px){.hzg{grid-template-columns:1fr 1fr;gap:12px}.hzc-tag{font-size:11px;padding:3px 7px;left:6px;top:6px}.hzc-now{font-size:10px;right:6px;top:6px}.hzc figcaption{font-size:13px}.hzc figcaption span{font-size:12px}}
+@media (max-width:380px){.hzg{grid-template-columns:1fr}}
+/* flood */
+.fl-rise{animation:flrise 5s ease-in-out infinite}
+.fl-w1{fill:rgba(60,150,255,.55);animation:flx 3s linear infinite}.fl-w2{fill:rgba(30,110,230,.6);animation:flx 2.2s linear infinite reverse}
+@keyframes flx{to{transform:translateX(80px)}}@keyframes flrise{0%,100%{transform:translateY(18px)}50%{transform:translateY(-8px)}}
+.rain line{stroke:rgba(170,210,255,.75);stroke-width:1.2;animation:rain .7s linear infinite}
+@keyframes rain{from{transform:translate(0,-10px)}to{transform:translate(-14px,110px)}}
+/* storm */
+.ty-spin{transform-origin:0 0;animation:tyspin 2.4s linear infinite}
+.ty-spin path{fill:rgba(235,245,255,.82);stroke:none}.ty-spin .ty-arm{fill:none;stroke:rgba(235,245,255,.55);stroke-width:5;stroke-linecap:round}
+.ty-eye{fill:#0a0f14;stroke:rgba(255,255,255,.7);stroke-width:1}
+@keyframes tyspin{to{transform:rotate(-360deg)}}
+.wind path{fill:none;stroke:rgba(200,230,255,.45);stroke-width:1.4;stroke-linecap:round;stroke-dasharray:24 140;animation:wind 1.8s linear infinite}
+@keyframes wind{from{stroke-dashoffset:160}to{stroke-dashoffset:0}}
+/* tsunami */
+.ts-move{animation:tsmove 4s cubic-bezier(.4,0,.6,1) infinite}
+.ts-body{fill:rgba(40,130,230,.78)}.ts-foam{fill:none;stroke:#eaf6ff;stroke-width:3;stroke-linecap:round}
+.ts-shore{fill:#5b4a3a}
+@keyframes tsmove{0%{transform:translateX(-40px) scaleY(.6);opacity:0}15%{opacity:1}70%{transform:translateX(150px) scaleY(1.15);opacity:1}100%{transform:translateX(190px) scaleY(1);opacity:0}}
+/* earthquake */
+.hz-quake .hzc-bg{animation:qkshake .5s steps(2) infinite}
+.qk-line{fill:none;stroke:#ffb347;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-dasharray:300;animation:qkdraw 2.2s linear infinite}
+@keyframes qkdraw{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+@keyframes qkshake{0%{transform:translate(1.5px,-1px)}50%{transform:translate(-1.5px,1px)}100%{transform:translate(1px,1.5px)}}
+.qk-r{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border:2px solid rgba(255,120,70,.9);border-radius:50%;animation:qkring 2.4s ease-out infinite}
+.qk-r.r2{animation-delay:.8s}.qk-r.r3{animation-delay:1.6s}
+@keyframes qkring{from{transform:scale(.3);opacity:1}to{transform:scale(6);opacity:0}}
+/* landslide */
+.ls-hill{fill:#4a3b2e}.ls-scar{fill:none;stroke:#8a6a4a;stroke-width:3;stroke-linecap:round;stroke-dasharray:4 3}
+.ls-rock polygon{fill:#b08a62;stroke:#2a1e14;stroke-width:.6}
+.ls-rock{animation:lsroll 2.7s cubic-bezier(.5,0,.9,.6) infinite;opacity:0}
+@keyframes lsroll{0%{transform:translate(14px,20px) rotate(0);opacity:0}8%{opacity:1}50%{transform:translate(78px,48px) rotate(360deg)}90%{opacity:1}100%{transform:translate(140px,84px) rotate(760deg);opacity:0}}
+.ls-dust{fill:rgba(190,160,120,.4);transform-box:fill-box;transform-origin:center;animation:lsdust 2.7s ease-out infinite;opacity:0}
+@keyframes lsdust{0%{transform:scale(.3);opacity:0}30%{opacity:.8}100%{transform:scale(1.8) translateY(-6px);opacity:0}}
+/* wildfire + flames */
+.tree{fill:#1f3a24}
+.fi-f{fill:rgba(255,120,30,.9);transform-box:fill-box;transform-origin:50% 100%;animation:fiflick .6s ease-in-out infinite alternate}
+.fi-f:nth-child(2n){fill:rgba(255,200,60,.9)}
+@keyframes fiflick{from{transform:scaleY(.8) skewX(-4deg)}to{transform:scaleY(1.18) skewX(5deg)}}
+.fi-e{fill:#ffcc66;animation:fiember 2.4s linear infinite}
+@keyframes fiember{from{transform:translateY(0);opacity:1}to{transform:translateY(-60px) translateX(8px);opacity:0}}
+/* urban fire */
+.bld rect{fill:#1b222b;stroke:#3a4552;stroke-width:.6}
+.win rect{fill:#ffb347;animation:winf 1.1s ease-in-out infinite alternate}
+@keyframes winf{from{fill:#ffcf5a;opacity:1}to{fill:#ff6a28;opacity:.55}}
+.sm circle{fill:rgba(160,160,165,.5);transform-box:fill-box;transform-origin:center;animation:smoke 3.2s ease-out infinite;opacity:0}
+@keyframes smoke{0%{transform:translateY(0) scale(.5);opacity:0}25%{opacity:.75}100%{transform:translate(14px,-46px) scale(1.9);opacity:0}}
+.truck{animation:truck 6s linear infinite}.truck rect{fill:#d6332b}.truck circle{fill:#111}.truck .siren{fill:#4da3ff;animation:siren .4s steps(2) infinite}
+@keyframes truck{0%{transform:translateX(0)}60%,100%{transform:translateX(70px)}}
+@keyframes siren{50%{fill:#ff3b30}}
+/* drought / heat */
+.sun{fill:#ffb020;animation:sunp 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center;filter:drop-shadow(0 0 6px rgba(255,170,40,.8))}
+@keyframes sunp{50%{transform:scale(1.12)}}
+.sun-r{animation:spinr 9s linear infinite}.sun-r line{stroke:#ffc040;stroke-width:2;stroke-linecap:round}
+@keyframes spinr{to{transform:rotate(360deg)}}
+.dr-ground{fill:#7a5a36}
+.crack path{fill:none;stroke:#2a1a0c;stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:90;animation:crack 3.6s ease-in-out infinite}
+@keyframes crack{0%{stroke-dashoffset:90}60%,100%{stroke-dashoffset:0}}
+.shim path{fill:none;stroke:rgba(255,220,160,.55);stroke-width:1.2;animation:shim 2.2s ease-in infinite;opacity:0}
+@keyframes shim{0%{transform:translateY(0);opacity:0}30%{opacity:.9}100%{transform:translateY(-18px);opacity:0}}
+.dr-plant{fill:none;stroke:#9a8a4a;stroke-width:1.4;stroke-linecap:round}
+.th-tube{fill:rgba(255,255,255,.15);stroke:rgba(255,255,255,.7);stroke-width:1}.th-bulb{fill:#e0332b}
+.th-lv{fill:#e0332b;transform-box:fill-box;transform-origin:50% 100%;animation:thlv 4s ease-in-out infinite}
+@keyframes thlv{0%,100%{transform:scaleY(.2);fill:#4da3ff}50%{transform:scaleY(1);fill:#e0332b}}
+.fl{animation:snow 3.2s linear infinite;opacity:0}.fl path{stroke:#e6f3ff;stroke-width:1;stroke-linecap:round}
+@keyframes snow{0%{transform:translate(0,-6px);opacity:0}10%{opacity:1}100%{transform:translate(-8px,104px);opacity:.4}}
+/* volcano */
+.vo-m{fill:#3d2b22;stroke:#1b120d}.vo-lava{fill:#ff5a1f;animation:volava 1.2s ease-in-out infinite alternate}
+@keyframes volava{from{opacity:.7}to{opacity:1;filter:drop-shadow(0 0 4px #ff7a2f)}}
+.vo-p{fill:#ff8c2a;animation:vobomb 1.6s ease-out infinite}
+@keyframes vobomb{0%{transform:translate(0,0);opacity:1}60%{transform:translate(var(--dx),-38px)}100%{transform:translate(calc(var(--dx)*1.5),-10px);opacity:0}}
+.vo-smoke{fill:rgba(200,200,200,.45);transform-box:fill-box;transform-origin:30% 100%;animation:vosmoke 3.5s ease-in-out infinite}
+@keyframes vosmoke{0%{transform:scale(.6) translateY(10px);opacity:0}40%{opacity:.8}100%{transform:scale(1.3) translateY(-14px);opacity:0}}
+/* comet / meteor impact */
+.st{fill:#fff;animation:twinkle 2.4s ease-in-out infinite}@keyframes twinkle{50%{opacity:.25}}
+.co-move{animation:comove 4.5s linear infinite}
+.co-head{fill:#fff;filter:drop-shadow(0 0 5px #9fd0ff)}.co-tail{fill:rgba(160,210,255,.55)}
+@keyframes comove{0%{transform:translate(-20px,-10px);opacity:1}80%{transform:translate(118px,64px);opacity:1}82%,100%{transform:translate(120px,66px);opacity:0}}
+.earth{fill:#2a6fd6;stroke:#9fd0ff;stroke-width:1.2;filter:drop-shadow(0 0 6px rgba(80,160,255,.7))}
+.im-flash{fill:#fff3c0;transform-box:fill-box;transform-origin:center;animation:imf 4.5s linear infinite;opacity:0}
+@keyframes imf{0%,80%{transform:scale(.2);opacity:0}84%{opacity:1;transform:scale(2.4)}100%{transform:scale(4);opacity:0}}
+/* war */
+.msl path{fill:none;stroke:#ffd07a;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:14 200;animation:msl 3.3s linear infinite;opacity:0}
+@keyframes msl{0%{stroke-dashoffset:150;opacity:1}30%{stroke-dashoffset:0;opacity:1}31%,100%{opacity:0}}
+.boom{transform-box:fill-box;transform-origin:center;animation:boom 3.3s ease-out infinite;opacity:0}
+.boom circle{fill:rgba(255,120,40,.85)}.boom .b2{fill:#fff1b0}
+@keyframes boom{0%,4%{transform:scale(.2);opacity:0}8%{opacity:1;transform:scale(1)}30%{transform:scale(2.4);opacity:0}100%{opacity:0}}
+.xh{animation:xh 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.xh circle,.xh line{fill:none;stroke:#ff4d3a;stroke-width:1.4}
+@keyframes xh{50%{transform:scale(.86)}}
+/* people */
+.pp circle,.pp path,.pr circle,.pr path{fill:#dfe6ee}
+.eA .pp circle,.eA .pp path{fill:#f0b25a}.eB .pp circle,.eB .pp path{fill:#7fb6ff}
+.eA{animation:eA 2.2s ease-in-out infinite}.eB{animation:eB 2.2s ease-in-out infinite}
+@keyframes eA{50%{transform:translateX(16px)}}@keyframes eB{50%{transform:translateX(-16px)}}
+.pp{animation:bob .55s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-2px)}}
+.eb{stroke:rgba(255,255,255,.35);stroke-width:1;stroke-dasharray:3 3}
+.spark{transform-box:fill-box;transform-origin:center;animation:spark 1.1s ease-out infinite;opacity:0}
+.spark path{stroke:#ffd24a;stroke-width:1.6;stroke-linecap:round}
+@keyframes spark{0%,40%{transform:scale(.2);opacity:0}55%{opacity:1;transform:scale(1)}100%{transform:scale(1.5);opacity:0}}
+/* protest */
+.pr{animation:pr .7s ease-in-out infinite alternate}
+@keyframes pr{to{transform:translateY(-5px)}}
+.stick{stroke:#c7cdd4;stroke-width:1.2}.plac{fill:#fff;stroke:#c62828;stroke-width:1.4}
+.mega path{fill:#ffd24a}.mega .mw{fill:none;stroke:#ffd24a;stroke-width:1.4;stroke-linecap:round;animation:mw 1s ease-out infinite;opacity:0}
+@keyframes mw{0%{opacity:0;transform:translateX(-2px)}30%{opacity:1}100%{opacity:0;transform:translateX(6px)}}
+/* riot */
+.pl{animation:pl .5s steps(2) infinite}.pl.r{fill:#ff3b30}.pl.b{fill:#2f7bff;animation-delay:.25s}
+@keyframes pl{50%{opacity:.15}}
+.car path{fill:#2b3138;stroke:#59636e;stroke-width:.8}.car circle{fill:#0d0f12}
+.thr circle{fill:#ffcf5a}
+.thr{animation:thr 2.1s linear infinite;opacity:0}
+@keyframes thr{0%{transform:translate(28px,76px);opacity:1}25%{transform:translate(54px,44px)}50%{transform:translate(80px,40px)}75%{transform:translate(98px,58px);opacity:1}80%,100%{transform:translate(104px,76px);opacity:0}}
+.shield rect{fill:rgba(120,170,230,.55);stroke:#a8c8ef;stroke-width:.8}
+/* epidemic */
+.vi-g circle{fill:rgba(140,230,120,.35);stroke:#9ef08a;stroke-width:1.4}.vi-g line{stroke:#9ef08a;stroke-width:1.4;stroke-linecap:round}
+.vi-g{animation:vipulse 2.2s ease-in-out infinite}
+.vi-r{animation:spinr 12s linear infinite}
+@keyframes vipulse{0%,100%{opacity:.55}50%{opacity:1}}
+/* keep moving when the OS asks for reduced motion, just slower */
+@media (prefers-reduced-motion:reduce){.hzc-v *{animation-duration:6s!important}.hz-quake .hzc-bg{animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+<a id="home" href="/ko/"><img src="logo-h.webp" alt="GOV RADAR"></a>
+<nav><a href="#years" data-i="nav1"></a><a href="#map" data-i="nav2"></a><a href="#types" data-i="nav4"></a><a href="#apophis" data-i="nav3"></a></nav>
+<button class="lang" id="lang">English</button>
+</div></header>
+
+<main>
+<div class="hero"><div class="in">
+<h1 data-i="h1"></h1>
+<p class="lede" data-i="lede"></p>
+<div class="kp" id="kp"></div>
+</div></div>
+
+<section class="alt" id="years"><div class="in">
+<h2 data-i="y_h"></h2>
+<p class="sub" data-i="y_s"></p>
+<div class="ctl" id="ylegend"></div>
+<div class="scroll"><div id="ychart" class="wide"></div></div>
+<div class="scroll"><table class="hm" id="hm"></table></div>
+<p class="src" data-i="y_src"></p>
+</div></section>
+
+<section id="map"><div class="in">
+<h2 data-i="m_h"></h2>
+<p class="sub" data-i="m_s"></p>
+<div class="ctl">
+<div class="seg" id="mode"><button data-m="cum" aria-pressed="true" data-i="m_cum"></button><button data-m="live" aria-pressed="false" data-i="m_live"></button></div>
+<select class="sel" id="csel" aria-label="country"></select>
+</div>
+<div class="mapwrap"><svg id="wmap" viewBox="0 0 1200 600" role="img" aria-label="world disaster map"></svg></div>
+<div class="lg" id="mlg"></div>
+<div id="fkv"></div>
+<div class="cv" id="cv" hidden>
+<div><div class="mapwrap"><svg id="cmap" viewBox="0 0 640 480"></svg></div></div>
+<div id="cinfo"></div>
+</div>
+<div id="chz" hidden></div>
+<p class="src" data-i="m_src"></p>
+</div></section>
+
+<section id="types"><div class="in">
+<h2 data-i="t_h"></h2>
+<p class="sub" data-i="t_s"></p>
+<div class="hzg" id="hzall"></div>
+<p class="src" data-i="t_src"></p>
+</div></section>
+<section class="alt" id="apophis"><div class="in">
+<h2 data-i="a_h"></h2>
+<p class="sub" data-i="a_s"></p>
+<div class="fact" data-i="a_fact"></div>
+<div class="scroll" style="margin-top:44px"><div id="achart" class="wide"></div></div>
+<div class="apk" id="apk"></div>
+<p class="src" data-i="a_src"></p>
+</div></section>
+</main>
+
+<footer><div class="in">
+<img src="emblem.png" alt="WMM">
+<p class="n">WORLD MAKING MEMBERS</p>
+<p data-i="f1"></p>
+<p>73036396@naver.com</p>
+</div></footer>
+<div id="tip"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script src="data.js"></script>
+<script src="world.js"></script>
+<script src="hz.js"></script>
+<script src="hzfx.js"></script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="bgW" viewBox="0 0 640 400"></symbol><symbol id="bgC" viewBox="0 0 640 400"></symbol></defs></svg>
+<script>
+(function(){
+var D=window.DZ,lang=(new URLSearchParams(location.search).get('l')||'ko')==='ko'?'ko':'en';
+var TY=D.types;
+var EM={'Flood':'🌧️','Extreme weather':'🌀','Earthquake':'🏚️','Landslide':'⛰️','Wildfire':'🔥','Drought':'🏜️','Extreme temperature':'🌡️','Volcanic activity':'🌋','Tsunami':'🌊'};
+var NM={ko:{'Flood':'홍수','Extreme weather':'태풍·폭풍','Earthquake':'지진·해일','Landslide':'산사태','Wildfire':'산불','Drought':'가뭄','Extreme temperature':'폭염·한파','Volcanic activity':'화산','Tsunami':'해일'},
+en:{'Flood':'Flood','Extreme weather':'Storm','Earthquake':'Quake · tsunami','Landslide':'Landslide','Wildfire':'Wildfire','Drought':'Drought','Extreme temperature':'Heat · cold','Volcanic activity':'Volcano','Tsunami':'Tsunami'}};
+var COL={};TY.forEach(function(t,i){COL[t]='var(--s'+(i+1)+')'});
+var T={ko:{
+nav1:'연도별 재난',nav4:'재난 종류',fk_n:'기록이 있는 나라 {n}곳 — 지도에 진하게 표시',fk_all:'모든 나라 공통 위험',fk_tip:'색칠된 나라를 누르면 그 나라의 재난·분쟁 화면이 모두 열립니다. 같은 종류 버튼을 다시 누르면 원래 지도로 돌아갑니다.',fk_x:'전체 지도 보기',
+t_h:'재난·분쟁 16가지를 움직이는 화면으로',
+t_s:'자연재해부터 전쟁·시위까지 겹치는 종류는 하나로 묶었습니다. 위 지도에서 나라를 누르면 그 나라에 기록이 있는 종류만 골라 같은 화면으로 보여 줍니다.',
+t_src:'그림은 이해를 돕는 설명용 애니메이션이며 실제 촬영 영상이 아닙니다. 나라별 기록 출처: 자연재해 EM-DAT/Our World in Data(2000–2025 사망), 해일 NOAA 국립환경정보센터(2000–2025 피해 기록 지점), 전쟁·집단 분쟁 UCDP/Our World in Data(2000–2025 사망), 시위·폭동 Mass Mobilization Project(하버드 데이터버스, 2000–2020, 미국 미포함), 지금 진행 중 항목은 GOV RADAR 상황판({u} 기준).',
+c_h:'이 나라에서 기록된 재난·분쟁',c_s:'2000년 이후 공식 기록이 있는 종류만 골랐습니다. 빨간 표시는 지금 진행 중인 일입니다.',c_cm:'모든 나라 공통으로 대비할 위험',c_cs:'나라를 가리지 않고 일어날 수 있어 함께 보여 줍니다.',c_none:'2000년 이후 이 나라에 기록된 큰 재난·분쟁은 없습니다.',
+now:'지금',d_n:'2000–2025 사망 {n}명',s_em:'EM-DAT · 2000–2025',d_ts:'피해 기록 지점 {n}곳',s_ts:'NOAA · 2000–2025',d_war:'무력충돌 사망 {n}명',s_war:'UCDP · 2000–2025',d_eth:'집단 간 충돌 사망 {n}명',s_eth:'UCDP 비국가 충돌 · 2000–2025',d_pr:'정부 대상 시위 {n}건',s_pr:'Mass Mobilization · 2000–2020',d_ri:'폭력이 동반된 시위 {n}건',s_ri:'Mass Mobilization · 2000–2020',d_live:'최근 발생',s_live:'실시간 관측',
+cm_fire:'건물·공장 화재',cm_epi:'새 감염병 유행',cm_imp:'아포피스 2029년 근접 · 충돌 위험 없음(NASA)',
+g:{flood:'큰비·강물 범람으로 마을이 잠깁니다',storm:'강한 바람과 폭우가 한꺼번에 옵니다',quake:'땅이 흔들려 건물이 무너집니다',tsunami:'지진·화산이 만든 큰 파도가 해안을 덮칩니다',landslide:'비탈의 흙과 돌이 쏟아져 내립니다',wildfire:'숲과 들에 불이 번집니다',fire:'건물·공장·시장에서 난 불',drought:'비가 오지 않아 땅과 작물이 마릅니다',temp:'극심한 더위나 추위가 며칠씩 이어집니다',volcano:'용암·화산재·가스가 분출합니다',impact:'소행성·혜성이 지구에 떨어지는 경우',war:'국가가 무력으로 싸우는 전쟁·내전',ethnic:'민족·종교·무장집단끼리 벌이는 충돌',protest:'정부를 향한 대규모 집회',riot:'방화·투석 등 폭력이 동반된 소요',epidemic:'감염병이 빠르게 퍼집니다'},
+nav2:'세계·나라별 지도',nav3:'아포피스',
+h1:'세계 재난을 한 화면에서 봅니다',
+lede:'2000년부터 2025년까지 해마다 어떤 재난이 몇 건 났는지, 어느 나라가 가장 크게 다쳤는지, 소행성 아포피스가 언제 얼마나 가까이 오는지를 공식 관측·통계 자료로 정리했습니다.',
+k1:'2025년 기록된 자연재해',k2:'2025년 가장 잦았던 재난',k3:'2000–2025 재난 사망자',k4:'아포피스 최근접일',
+y_h:'해마다 어떤 재난이 몇 건 났나',
+y_s:'재난 종류를 누르면 켜고 끌 수 있습니다. 막대에 마우스를 올리면 그해 건수가 나옵니다. 아래 표는 같은 숫자를 종류별로 보여 줍니다.',
+y_src:'출처: EM-DAT(벨기에 루뱅대 CRED) 자료를 Our World in Data가 가공. 사망 10명 이상·피해 100명 이상·비상사태 선포·국제 지원 요청 중 하나에 해당하는 재난만 기록됩니다. 해일은 EM-DAT에서 지진에 포함됩니다. 2000년 이전은 기록이 불완전해 뺐습니다.',
+tot:'합계',cnt:'건',
+m_h:'어느 나라가 어떤 재난에 가장 크게 다쳤나',
+m_s:'색이 진할수록 2000–2025년 재난 사망자가 많은 나라입니다. 나라 위 그림은 그 나라에서 사망자가 가장 많았던 재난 종류입니다. 나라를 누르면 나라별 지도가 열립니다.',
+m_cum:'누적 피해 2000–2025',m_live:'지금 일어나는 재난',
+m_src:'출처: 누적 사망자는 EM-DAT / Our World in Data. 진행 중 재난은 USGS(규모 5.8 이상 지진·해일 경보), NASA EONET(산불·화산·폭풍, 산불은 미국 자료 비중이 큼), GDACS(주황·적색 경보)의 {d} 기준 자료이며, 사이트에 연결되면 접속할 때마다 새로 불러옵니다.',
+pick:'나라 선택',nodata:'기록된 사망자 없음',deaths:'명',dsum:'2000–2025년 재난 사망자',dtop:'가장 큰 피해',liveh:'지금 이 나라에서 진행 중',livenone:'현재 표시할 주요 재난 없음',back:'세계 지도로 돌아가기',yrs:'연도별 사망자',
+a_h:'아포피스는 언제 얼마나 가까이 오나',
+a_s:'아포피스(99942 Apophis)는 지름 약 340m의 소행성입니다. 혜성이 아닙니다. 점은 접근 시점과 거리이고, 세로 선은 계산상 오차 범위입니다. 아래로 갈수록 지구에 가깝습니다.',
+a_fact:'<b>2029년 4월 14일 오전 6시 46분(한국시간)</b>, 아포피스가 지구 중심에서 약 3만 8천 km 거리를 지나갑니다. 정지궤도 위성보다 안쪽입니다. NASA는 2021년 레이더 관측으로 <b>앞으로 100년 이상 충돌 위험이 없다</b>고 발표했습니다.',
+a_src:'출처: NASA/JPL 소천체 데이터베이스 근접 접근 자료(궤도 해 220), NASA 2021년 3월 발표. 거리는 지구 중심 기준입니다. 2029년 이후 궤도는 지구 중력으로 바뀌므로 먼 미래일수록 오차가 큽니다.',
+moon:'달 거리 38만 km',geo:'정지궤도 4.2만 km',earth:'지구에서의 거리',ld:'달 거리의 {x}배',km:'km',mkm:'만 km',
+f1:'월드메이킹멤버스 주식회사 · GOV RADAR',snap:'{d} 기준',livenow:'실시간'},
+en:{
+nav1:'By year',nav4:'Hazard types',fk_n:'{n} countries with a record — shaded on the map',fk_all:'A risk for every country',fk_tip:'Tap a shaded country to open all of its hazard clips. Tap the type again to return to the full map.',fk_x:'Show full map',
+t_h:'Sixteen hazards, shown in motion',
+t_s:'Overlapping kinds are merged into one, from natural disasters to war and unrest. Tap a country on the map above to see only the kinds recorded there, on the same screen.',
+t_src:'These are explanatory animations, not real footage. Country records: natural disasters EM-DAT / Our World in Data (deaths 2000–2025), tsunami NOAA NCEI (damaging run-up sites 2000–2025), war and communal conflict UCDP / Our World in Data (deaths 2000–2025), protests and riots Mass Mobilization Project (Harvard Dataverse, 2000–2020, US not covered); ongoing items from the GOV RADAR board as of {u}.',
+c_h:'Hazards recorded in this country',c_s:'Only kinds with an official record since 2000. Red marks something happening now.',c_cm:'Risks every country should prepare for',c_cs:'Shown for all countries because they can happen anywhere.',c_none:'No major disaster or conflict recorded here since 2000.',
+now:'Now',d_n:'{n} deaths, 2000–2025',s_em:'EM-DAT · 2000–2025',d_ts:'{n} damaging run-up sites',s_ts:'NOAA · 2000–2025',d_war:'{n} armed-conflict deaths',s_war:'UCDP · 2000–2025',d_eth:'{n} deaths in communal fighting',s_eth:'UCDP non-state · 2000–2025',d_pr:'{n} anti-government protests',s_pr:'Mass Mobilization · 2000–2020',d_ri:'{n} protests with violence',s_ri:'Mass Mobilization · 2000–2020',d_live:'Recent event',s_live:'Live observation',
+cm_fire:'Building and factory fires',cm_epi:'A new outbreak',cm_imp:'Apophis passes in 2029 · no impact risk (NASA)',
+g:{flood:'Heavy rain and rivers flood towns',storm:'Strong wind and heavy rain together',quake:'The ground shakes and buildings fall',tsunami:'Waves from a quake or eruption hit the coast',landslide:'Soil and rock slide down a slope',wildfire:'Fire spreads through forest and grassland',fire:'Fires in buildings, factories and markets',drought:'No rain, dry land and failed crops',temp:'Extreme heat or cold lasting days',volcano:'Lava, ash and gas erupt',impact:'An asteroid or comet hits Earth',war:'States fighting a war or civil war',ethnic:'Ethnic, religious or armed groups fighting each other',protest:'Mass rallies aimed at the government',riot:'Unrest with arson or stone-throwing',epidemic:'An infectious disease spreads fast'},
+nav2:'World & country maps',nav3:'Apophis',
+h1:'The world’s disasters on one screen',
+lede:'How many disasters of each kind were recorded every year from 2000 to 2025, which countries were hit hardest, and when asteroid Apophis comes close, compiled from official observation and statistics sources.',
+k1:'Natural disasters recorded in 2025',k2:'Most frequent type in 2025',k3:'Disaster deaths, 2000–2025',k4:'Apophis closest approach',
+y_h:'What happened each year, and how often',
+y_s:'Tap a disaster type to switch it on or off. Hover a bar for that year’s counts. The table below shows the same numbers by type.',
+y_src:'Source: EM-DAT (CRED, UCLouvain), processed by Our World in Data. A disaster is recorded when it causes 10+ deaths, affects 100+ people, or triggers an emergency declaration or a call for international aid. EM-DAT counts tsunamis under earthquakes. Years before 2000 are left out because records are incomplete.',
+tot:'Total',cnt:'',
+m_h:'Which countries were hit hardest, and by what',
+m_s:'Darker countries had more disaster deaths in 2000–2025. The symbol on a country is its deadliest disaster type. Tap a country to open its own map.',
+m_cum:'Cumulative impact 2000–2025',m_live:'Happening now',
+m_src:'Sources: cumulative deaths from EM-DAT / Our World in Data. Ongoing events from USGS (M5.8+ earthquakes, tsunami flags), NASA EONET (wildfires, volcanoes, storms; wildfire reports skew to the US) and GDACS (orange and red alerts) as of {d}; once connected to the site they reload on every visit.',
+pick:'Choose a country',nodata:'No recorded deaths',deaths:'',dsum:'Disaster deaths, 2000–2025',dtop:'Deadliest type',liveh:'Ongoing in this country',livenone:'No major event to show right now',back:'Back to world map',yrs:'Deaths by year',
+a_h:'When Apophis comes close, and how close',
+a_s:'Apophis (99942) is an asteroid about 340 m across, not a comet. Each dot is an approach and its distance; the vertical line is the computed uncertainty. Lower means closer to Earth.',
+a_fact:'<b>On 13 April 2029 at 21:46 UTC</b> Apophis passes about 38,000 km from Earth’s centre, inside the ring of geostationary satellites. After radar observations in 2021, NASA said there is <b>no impact risk for at least 100 years</b>.',
+a_src:'Sources: NASA/JPL Small-Body Database close-approach data (orbit solution 220); NASA statement, March 2021. Distances are from Earth’s centre. Earth’s gravity changes the orbit in 2029, so uncertainty grows for later dates.',
+moon:'Moon 384,000 km',geo:'Geostationary 42,000 km',earth:'Distance from Earth',ld:'{x}× lunar distance',km:'km',mkm:'M km',
+f1:'World Making Members Co., Ltd. · GOV RADAR',snap:'as of {d}',livenow:'live'}};
+function tr(k){return T[lang][k]||k}
+var HZ=window.HZ||{c:{},now:{},upd:''};
+function nf(n){return n.toLocaleString(lang==='ko'?'ko-KR':'en-US')}
+var rn; function cname(c){try{rn=rn&&rn.l===lang?rn:Object.assign(new Intl.DisplayNames([lang],{type:'region'}),{l:lang});return rn.of(c.a2)||c.en}catch(e){return c.en}}
+function flag(a2){return a2.replace(/./g,function(ch){return String.fromCodePoint(127397+ch.charCodeAt(0))})}
+var tip=document.getElementById('tip');
+function showTip(ev,html){tip.innerHTML=html;tip.style.opacity=1;var x=ev.clientX+14,y=ev.clientY+14,w=tip.offsetWidth,h=tip.offsetHeight;if(x+w>innerWidth-8)x=ev.clientX-w-14;if(y+h>innerHeight-8)y=ev.clientY-h-14;tip.style.left=Math.max(8,x)+'px';tip.style.top=Math.max(8,y)+'px'}
+function hideTip(){tip.style.opacity=0}
+function bind(sel,html){sel.on('mousemove',function(ev,d){showTip(ev,html(d))}).on('mouseleave',hideTip).on('touchstart',function(ev,d){var t=ev.touches[0];showTip(t,html(d))},{passive:true})}
+
+/* ---------- KPIs ---------- */
+function kpis(){
+ var li=D.years.length-1,top=TY.slice().sort(function(a,b){return D.yearly[b][li]-D.yearly[a][li]})[0];
+ var deaths=d3.sum(D.worldDeaths);
+ var h='<div><b>'+nf(D.total[li])+'</b><span>'+tr('k1')+'</span></div>'+
+ '<div><b><i class="e">'+EM[top]+'</i> '+NM[lang][top]+'</b><span>'+tr('k2')+' · '+nf(D.yearly[top][li])+tr('cnt')+'</span></div>'+
+ '<div><b>'+(lang==='ko'?nf(Math.round(deaths/10000))+'만 명':(deaths/1e6).toFixed(2)+'M')+'</b><span>'+tr('k3')+'</span></div>'+
+ '<div><b>2029.4.13</b><span><i class="e">☄️</i> '+tr('k4')+'</span></div>';
+ document.getElementById('kp').innerHTML=h}
+
+/* ---------- yearly stacked bars ---------- */
+var on={};TY.forEach(function(t){on[t]=true});
+function legend(){
+ var el=d3.select('#ylegend');el.html('');
+ TY.forEach(function(t){el.append('button').attr('class','chip').attr('aria-pressed',on[t]).html('<i style="background:'+COL[t]+'"></i><span class="e">'+EM[t]+'</span>'+NM[lang][t])
+  .on('click',function(){on[t]=!on[t];if(!TY.some(function(x){return on[x]}))on[t]=true;legend();ychart()})})}
+function ychart(){
+ var W=1200,H=420,m={t:16,r:8,b:30,l:44},box=d3.select('#ychart');box.html('');
+ var svg=box.append('svg').attr('viewBox','0 0 '+W+' '+H);
+ var act=TY.filter(function(t){return on[t]});
+ var rows=D.years.map(function(y,i){var o={y:y,i:i};act.forEach(function(t){o[t]=D.yearly[t][i]});return o});
+ var st=d3.stack().keys(act)(rows);
+ var x=d3.scaleBand().domain(D.years).range([m.l,W-m.r]).padding(.22);
+ var max=d3.max(rows,function(r){return d3.sum(act,function(t){return r[t]})});
+ var y=d3.scaleLinear().domain([0,max]).nice(5).range([H-m.b,m.t]);
+ svg.append('g').selectAll('line').data(y.ticks(5)).join('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',y).attr('y2',y).attr('stroke','var(--line)').attr('stroke-width',function(d){return d?0.7:1.2});
+ svg.append('g').selectAll('text').data(y.ticks(5)).join('text').attr('x',m.l-8).attr('y',function(d){return y(d)+4}).attr('text-anchor','end').text(function(d){return d});
+ svg.append('g').selectAll('text').data(D.years).join('text').attr('x',function(d){return x(d)+x.bandwidth()/2}).attr('y',H-8).attr('text-anchor','middle').text(function(d){return false?'':("'"+String(d).slice(2))});
+ var g=svg.append('g');
+ st.forEach(function(s){g.append('g').attr('fill',COL[s.key]).selectAll('rect').data(s).join('rect').attr('x',function(d){return x(d.data.y)}).attr('width',x.bandwidth())
+  .attr('y',function(d){return y(d[1])+1}).attr('height',function(d){return Math.max(0,y(d[0])-y(d[1])-2)}).attr('rx',2)});
+ var hit=svg.append('g').selectAll('rect').data(rows).join('rect').attr('x',function(d){return x(d.y)-x.step()*.11}).attr('width',x.step()).attr('y',m.t).attr('height',H-m.b-m.t).attr('fill','transparent');
+ bind(hit,function(d){var s=d3.sum(act,function(t){return d[t]});return '<b>'+d.y+' · '+nf(s)+tr('cnt')+'</b><br>'+act.slice().sort(function(a,b){return d[b]-d[a]}).map(function(t){return '<span class="e">'+EM[t]+'</span>'+NM[lang][t]+' '+nf(d[t])}).join('<br>')});
+}
+function heat(){
+ var tb=d3.select('#hm');tb.html('');
+ var hr=tb.append('tr');hr.append('th').attr('class','r');D.years.forEach(function(y){hr.append('th').text("'"+String(y).slice(2))});
+ TY.forEach(function(t){var mx=d3.max(D.yearly[t]),r=tb.append('tr');r.append('th').attr('class','r').html('<span class="e">'+EM[t]+'</span> '+NM[lang][t]);
+  D.yearly[t].forEach(function(v){var a=v/mx;r.append('td').text(v).style('background','color-mix(in srgb,var(--ink) '+Math.round(a*82+4)+'%,transparent)').style('color',a>.52?'var(--bg)':'var(--ink)')})});
+ var r=tb.append('tr').attr('class','tot');r.append('th').attr('class','r').text(tr('tot'));D.total.forEach(function(v){r.append('td').text(v)})}
+
+/* ---------- maps ---------- */
+var feats=topojson.feature(TOPO,TOPO.objects.countries).features.filter(function(f){return f.id!=='010'});
+var BINS=[100,1000,10000,50000],RAMP=['#F4DDCF','#EBB899','#DD8C66','#C4583A','#8F2A1C'];
+function tot(c){return c?d3.sum(c.by):0}
+function topType(c){var i=d3.maxIndex(c.by);return TY[i]}
+function fillOf(f){var c=D.countries[f.id];if(!c)return 'var(--land)';var v=tot(c),b=0;while(b<4&&v>=BINS[b])b++;return RAMP[b]}
+function mainPoly(f){if(f.geometry.type!=='MultiPolygon')return f;var best=null,ba=0;f.geometry.coordinates.forEach(function(p){var a=d3.geoArea({type:'Polygon',coordinates:p});if(a>ba){ba=a;best=p}});return {type:'Feature',geometry:{type:'Polygon',coordinates:best}}}
+var mode='cum',live=D.live.slice(),liveLabel=null,sel=null;
+var proj=d3.geoNaturalEarth1().fitExtent([[6,6],[1194,594]],{type:'Sphere'}),path=d3.geoPath(proj);
+function ctyTip(f){var c=D.countries[f.id];if(!c)return '<b>'+(f.properties.name||'')+'</b><br>'+tr('nodata');var t=topType(c);return '<b>'+flag(c.a2)+' '+cname(c)+'</b><br>'+tr('dsum')+' '+nf(tot(c))+tr('deaths')+'<br><span class="e">'+EM[t]+'</span>'+tr('dtop')+': '+NM[lang][t]}
+function evTip(d){return '<b><span class="e">'+EM[d.k]+'</span>'+NM[lang][d.k]+'</b><br>'+d.n+'<br>'+d.d+' · '+d.s}
+function wmap(){
+ var svg=d3.select('#wmap');svg.html('');
+ var g=svg.append('g');
+ var p=g.selectAll('path').data(feats).join('path').attr('class','cty').attr('d',path).attr('fill',function(f){return fk&&mode==='cum'?(kindsOf(f.id)[fk]?'#C4583A':'var(--land)'):mode==='cum'?fillOf(f):'var(--land)'}).on('click',function(ev,f){openC(f.id)});
+ bind(p,ctyTip);
+ if(mode==='cum'){
+  var lab=fk?[]:feats.filter(function(f){var c=D.countries[f.id];return c&&tot(c)>=1000});
+  g.selectAll('text').data(lab).join('text').attr('class','e').attr('text-anchor','middle').attr('pointer-events','none')
+   .attr('transform',function(f){var c=path.centroid(mainPoly(f));return 'translate('+c[0]+','+(c[1]+5)+')'})
+   .attr('font-size',function(f){var v=tot(D.countries[f.id]);return v>=50000?20:v>=10000?16:12}).text(function(f){return EM[topType(D.countries[f.id])]});
+ }else{
+  var mk=g.selectAll('g.mk').data(live).join('g').attr('class','mk').attr('transform',function(d){var c=proj([d.x,d.y]);return 'translate('+c[0]+','+c[1]+')'});
+  mk.append('circle').attr('r',10).attr('fill','var(--panel)').attr('stroke','var(--ink)').attr('stroke-width',.8);
+  mk.append('text').attr('class','e').attr('text-anchor','middle').attr('y',4.5).attr('font-size',12).text(function(d){return EM[d.k]});
+  bind(mk,evTip);
+ }
+ var lg=d3.select('#mlg');lg.html('');
+ if(mode==='cum'){var lb=['< 100','100+','1,000+','10,000+','50,000+'];RAMP.forEach(function(c,i){lg.append('span').html('<i style="background:'+c+'"></i>'+lb[i]+(i===4?' '+(lang==='ko'?'명':'deaths'):''))});
+  hzLegend(lg)}
+ else{var ks={};live.forEach(function(d){ks[d.k]=(ks[d.k]||0)+1});Object.keys(ks).forEach(function(k){lg.append('span').html('<b class="e">'+EM[k]+'</b>'+NM[lang][k]+' '+ks[k])});
+  lg.append('span').text(liveLabel?tr('livenow'):tr('snap').replace('{d}',D.snap))}
+}
+function csel(){
+ var s=d3.select('#csel');s.html('');s.append('option').attr('value','').text(tr('pick'));
+ Object.keys(D.countries).map(function(id){return {id:id,n:cname(D.countries[id])}}).sort(function(a,b){return a.n.localeCompare(b.n,lang)}).forEach(function(o){s.append('option').attr('value',o.id).text(o.n)});
+ s.property('value',sel||'');s.on('change',function(){if(this.value)openC(this.value);else closeC()})}
+function closeC(){sel=null;document.getElementById('cv').hidden=true;document.getElementById('chz').hidden=true;d3.select('#csel').property('value','')}
+function openC(id){
+ var f=feats.find(function(x){return x.id===id});if(!f)return;sel=id;
+ var c=D.countries[id],cv=document.getElementById('cv');cv.hidden=false;d3.select('#csel').property('value',c?id:'');
+ var mp=mainPoly(f),cen=d3.geoCentroid(mp),W=640,H=480;
+ var pr=d3.geoMercator().rotate([-cen[0],0]).fitExtent([[40,40],[W-40,H-40]],Math.abs(cen[1])>62?mp:f),pa=d3.geoPath(pr);
+ var b=pa.bounds(f);if(b[1][0]-b[0][0]>W*1.5)pr.fitExtent([[40,40],[W-40,H-40]],mp);
+ var svg=d3.select('#cmap');svg.html('');
+ svg.append('g').selectAll('path').data(feats.filter(function(x){return x.id!==id})).join('path').attr('d',pa).attr('fill','var(--land)').attr('stroke','var(--edge)').attr('stroke-width',.6).attr('opacity',.7);
+ svg.append('path').datum(f).attr('d',pa).attr('fill',c?fillOf(f):'var(--land)').attr('stroke','var(--ink)').attr('stroke-width',1.2);
+ var here=live.filter(function(d){return d3.geoContains(f,[d.x,d.y])});
+ var near=live.filter(function(d){var p=pr([d.x,d.y]);return p&&p[0]>0&&p[0]<W&&p[1]>0&&p[1]<H});
+ if(c){var cc=pa.centroid(mp);svg.append('text').attr('class','e').attr('text-anchor','middle').attr('x',cc[0]).attr('y',cc[1]+14).attr('font-size',40).attr('pointer-events','none').text(EM[topType(c)])}
+ var mk=svg.append('g').selectAll('g').data(near).join('g').attr('class','mk').attr('transform',function(d){var p=pr([d.x,d.y]);return 'translate('+p[0]+','+p[1]+')'});
+ mk.append('circle').attr('r',12).attr('fill','var(--panel)').attr('stroke','var(--ink)').attr('stroke-width',1);
+ mk.append('text').attr('class','e').attr('text-anchor','middle').attr('y',5).attr('font-size',14).text(function(d){return EM[d.k]});bind(mk,evTip);
+ var h='<h3>'+(c?flag(c.a2)+' '+cname(c):(f.properties.name||''))+'</h3>';
+ if(c){var mx=d3.max(c.by);h+='<p class="sub">'+tr('dsum')+'</p><p class="big">'+nf(tot(c))+(lang==='ko'?'명':'')+'</p><ul class="bars">'+
+  TY.map(function(t,i){return {t:t,v:c.by[i]}}).filter(function(o){return o.v>0}).sort(function(a,b){return b.v-a.v}).map(function(o){return '<li><span class="t"><span class="e">'+EM[o.t]+'</span> '+NM[lang][o.t]+'</span><span><span class="b" style="display:block;width:'+Math.max(1,o.v/mx*100)+'%;background:'+COL[o.t]+'"></span></span><span class="v">'+nf(o.v)+'</span></li>'}).join('')+'</ul>';
+  var ym=d3.max(c.yr)||1;h+='<p class="sub" style="margin-top:26px">'+tr('yrs')+'</p><svg viewBox="0 -12 260 76" style="max-width:420px;margin-top:8px">'+c.yr.map(function(v,i){var hh=v?Math.max(1.5,v/ym*50):0;return '<rect x="'+(i*10)+'" y="'+(52-hh)+'" width="8" height="'+hh+'" rx="1.5" fill="var(--ink)"><title>'+D.years[i]+': '+nf(v)+'</title></rect>'}).join('')+'<text x="0" y="63" font-size="9">2000</text><text x="252" y="63" font-size="9" text-anchor="end">2025</text><text x="'+(d3.maxIndex(c.yr)*10+4)+'" y="-3" font-size="9" text-anchor="middle" class="k">'+D.years[d3.maxIndex(c.yr)]+'</text></svg>'}
+ else h+='<p class="sub">'+tr('nodata')+'</p>';
+ h+='<p class="sub" style="margin-top:26px">'+tr('liveh')+'</p>';
+ h+=here.length?'<ul class="evl">'+here.slice(0,8).map(function(d){return '<li><span class="e">'+EM[d.k]+'</span><span>'+d.n+'<small>'+d.d+' · '+d.s+'</small></span></li>'}).join('')+'</ul>':'<p style="margin:6px 0 0;font-size:15px">'+tr('livenone')+'</p>';
+ h+='<button class="back" id="bk">'+tr('back')+'</button>';
+ document.getElementById('cinfo').innerHTML=h;hzCountry(id,f,here);document.getElementById('bk').onclick=function(){closeC();document.getElementById('map').scrollIntoView()};
+ if(cv.getBoundingClientRect().top>innerHeight*.7)cv.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+d3.selectAll('#mode button').on('click',function(){mode=this.dataset.m;d3.selectAll('#mode button').attr('aria-pressed',function(){return this.dataset.m===mode});wmap()});
+
+
+
+/* ---------- all 16 kinds on the world map ---------- */
+var fk=null,COMMON={fire:1,impact:1};
+var KIND_EM={flood:'🌧️',storm:'🌀',quake:'🏚️',tsunami:'🌊',landslide:'⛰️',wildfire:'🔥',fire:'🏢',drought:'🏜️',temp:'🌡️',volcano:'🌋',impact:'☄️',war:'⚔️',ethnic:'👥',protest:'📢',riot:'🧱',epidemic:'🦠'};
+function kindsOf(id){var o={},c=D.countries[id],h=HZ.c[id]||{},nw=HZ.now[id]||{};
+ if(c)TY.forEach(function(t,i){if(c.by[i]>0)o[NK[t]]=1});
+ ['tsunami','war','ethnic','protest','riot'].forEach(function(k){if(h[k])o[k]=1});
+ if(nw.war||nw.tension||nw.conflict)o.war=1;['epidemic','quake','volcano','storm','flood','wildfire'].forEach(function(k){if(nw[k])o[k]=1});
+ live.forEach(function(e){var k=NK[e.k];if(k&&!o[k]){var f=feats.find(function(x){return x.id===id});if(f&&d3.geoContains(f,[e.x,e.y]))o[k]=1}});
+ if(fk&&COMMON[fk])o[fk]=1;return o}
+function hzLegend(lg){
+ lg.append('span').html('&nbsp;');
+ X.K.forEach(function(k){lg.append('button').attr('class','chip'+(fk===k?' on':'')).attr('aria-pressed',fk?fk===k:true).html('<span class="e">'+KIND_EM[k]+'</span>'+X.NM[lang][k])
+  .on('click',function(){fk=fk===k?null:k;wmap()})});
+ var v=document.getElementById('fkv');if(!fk){v.innerHTML='';return}
+ var n=feats.filter(function(f){return kindsOf(f.id)[fk]}).length;
+ v.innerHTML='<div class="fkbox">'+X.card(fk,'bgW',X.NM[lang][fk],T[lang].g[fk],COMMON[fk]?tr('fk_all'):tr('fk_n').replace('{n}',n))+'<p class="sub">'+tr('fk_tip')+'</p><button class="back" id="fkx">'+tr('fk_x')+'</button></div>';
+ document.getElementById('fkx').onclick=function(){fk=null;wmap()}}
+
+/* ---------- animated hazard clips ---------- */
+var X=window.HZFX,NK={'Flood':'flood','Extreme weather':'storm','Earthquake':'quake','Landslide':'landslide','Wildfire':'wildfire','Drought':'drought','Extreme temperature':'temp','Volcanic activity':'volcano','Tsunami':'tsunami'};
+function bgWorld(){var pr=d3.geoNaturalEarth1().fitExtent([[0,10],[640,390]],{type:'Sphere'}),pa=d3.geoPath(pr);
+ document.getElementById('bgW').innerHTML=feats.map(function(f){return '<path class="hzbg-land" d="'+pa(f)+'"/>'}).join('')}
+function bgCountry(f){var mp=mainPoly(f),cen=d3.geoCentroid(mp);
+ var pr=d3.geoMercator().rotate([-cen[0],0]).fitExtent([[190,110],[450,290]],Math.abs(cen[1])>62?mp:f),pa=d3.geoPath(pr);
+ var b=pa.bounds(f);if(b[1][0]-b[0][0]>640)pr.fitExtent([[190,110],[450,290]],mp);
+ document.getElementById('bgC').innerHTML=feats.filter(function(x){return x.id!==f.id}).map(function(x){var d=pa(x);return d?'<path class="hzbg-land" d="'+d+'"/>':''}).join('')+'<path class="hzbg-hl" d="'+pa(f)+'"/>'}
+function hzGallery(){var g=T[lang].g;document.getElementById('hzall').innerHTML=X.K.map(function(k){return X.card(k,'bgW',X.NM[lang][k],g[k],'')}).join('')}
+function nowTxt(o){return o?(lang==='ko'?(o.ko||o.en):(o.en||o.ko)):''}
+function hzCountry(id,f,here){
+ bgCountry(f);
+ var c=D.countries[id],h=HZ.c[id]||{},nw=HZ.now[id]||{},it={},F=function(s,n){return s.replace('{n}',nf(n))};
+ if(c)TY.forEach(function(t,i){if(c.by[i]>0)it[NK[t]]={d:F(tr('d_n'),c.by[i]),s:tr('s_em')}});
+ if(h.tsunami)it.tsunami={d:F(tr('d_ts'),h.tsunami),s:tr('s_ts')};
+ if(h.war)it.war={d:F(tr('d_war'),h.war),s:tr('s_war')};
+ if(h.ethnic)it.ethnic={d:F(tr('d_eth'),h.ethnic),s:tr('s_eth')};
+ if(h.protest)it.protest={d:F(tr('d_pr'),h.protest),s:tr('s_pr')};
+ if(h.riot)it.riot={d:F(tr('d_ri'),h.riot),s:tr('s_ri')};
+ here.forEach(function(e){var k=NK[e.k];if(!k)return;it[k]=it[k]||{d:tr('d_live'),s:tr('s_live')};it[k].now=it[k].now||e.n+' · '+e.d});
+ var nk={war:nw.war||nw.tension||nw.conflict,epidemic:nw.epidemic,quake:nw.quake,volcano:nw.volcano,storm:nw.storm,flood:nw.flood,wildfire:nw.wildfire};
+ Object.keys(nk).forEach(function(k){if(!nk[k])return;it[k]=it[k]||{d:tr('d_live'),s:'GOV RADAR · '+HZ.upd};it[k].now=nowTxt(nk[k])});
+ var ks=X.K.filter(function(k){return it[k]}).sort(function(a,b){return (it[b].now?1:0)-(it[a].now?1:0)});
+ var cm=[['fire',tr('cm_fire')],['epidemic',tr('cm_epi')],['impact',tr('cm_imp')]].filter(function(x){return !it[x[0]]});
+ var nm=c?cname(c):(f.properties.name||'');
+ var html='<h3 class="hzsub">'+(c?flag(c.a2)+' ':'')+nm+' · '+tr('c_h')+'</h3><p class="sub">'+(ks.length?tr('c_s'):tr('c_none'))+'</p>';
+ html+='<div class="hzg">'+ks.map(function(k){var o=it[k];return X.card(k,'bgC',X.NM[lang][k],o.d,o.s,o.now,tr('now'))}).join('')+'</div>';
+ if(cm.length)html+='<h3 class="hzsub">'+tr('c_cm')+'</h3><p class="sub">'+tr('c_cs')+'</p><div class="hzg">'+cm.map(function(x){return X.card(x[0],'bgC',X.NM[lang][x[0]],x[1],'')}).join('')+'</div>';
+ var el=document.getElementById('chz');el.innerHTML=html;el.hidden=false}
+
+/* ---------- Apophis ---------- */
+function apo(){
+ var A=D.apophis.map(function(a){return Object.assign({},a,{t:new Date(a.d+"T00:00:00Z")})});
+ var W=1200,H=440,m={t:20,r:24,b:34,l:20},box=d3.select('#achart');box.html('');
+ var svg=box.append('svg').attr('viewBox','0 0 '+W+' '+H);
+ var x=d3.scaleTime().domain([new Date('2026-01-01'),new Date('2120-01-01')]).range([m.l,W-m.r]);
+ var y=d3.scaleLog().domain([2e4,1.2e8]).range([H-m.b,m.t]).clamp(true);
+ [[384400,tr('moon')],[42164,tr('geo')]].forEach(function(r){svg.append('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',y(r[0])).attr('y2',y(r[0])).attr('stroke','var(--muted)').attr('stroke-dasharray','3 4').attr('stroke-width',1);
+  svg.append('text').attr('x',W-m.r).attr('y',y(r[0])-6).attr('text-anchor','end').text(r[1])});
+ svg.append('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',H-m.b).attr('y2',H-m.b).attr('stroke','var(--ink)').attr('stroke-width',1.5);
+ svg.append('g').selectAll('text').data(d3.range(2030,2121,10)).join('text').attr('x',function(d){return x(new Date(d+'-01-01'))}).attr('y',H-10).attr('text-anchor','middle').text(function(d){return d});
+ svg.append('text').attr('x',m.l).attr('y',m.t).text(lang==='ko'?'↑ 지구에서 멀다 · ↓ 가깝다':'↑ farther from Earth · ↓ closer');
+ var g=svg.append('g').selectAll('g').data(A).join('g');
+ g.append('line').attr('x1',function(d){return x(d.t)}).attr('x2',function(d){return x(d.t)}).attr('y1',function(d){return y(d.min)}).attr('y2',function(d){return y(d.max)}).attr('stroke','var(--ink)').attr('stroke-width',2).attr('opacity',.45);
+ var key=function(d){return d.km<1.6e7};
+ g.append('circle').attr('cx',function(d){return x(d.t)}).attr('cy',function(d){return y(d.km)}).attr('r',function(d){return d.km<1e5?9:key(d)?6:4}).attr('fill',function(d){return d.km<1e5?'var(--s8)':key(d)?'var(--ink)':'var(--muted)'}).attr('stroke','var(--panel)').attr('stroke-width',2);
+ g.filter(key).append('text').attr('class','k').attr('x',function(d){return x(d.t)+(d.km<1e5?16:0)}).attr('y',function(d){return y(d.km)+(d.km<1e5?5:20)}).attr('text-anchor',function(d){return d.km<1e5?'start':'middle'}).attr('font-size',function(d){return d.km<1e5?16:12})
+  .text(function(d){return d.km<1e5?('☄️ '+d.d.replace(/-/g,'.')+' · '+nf(d.km)+' km'):d.d.slice(0,4)});
+ var hit=g.append('circle').attr('cx',function(d){return x(d.t)}).attr('cy',function(d){return y(d.km)}).attr('r',14).attr('fill','transparent');
+ bind(hit,function(d){return '<b>☄️ '+d.d+'</b><br>'+nf(d.km)+' km<br>'+tr('ld').replace('{x}',(d.km/384400).toFixed(d.km<4e5?2:1))+'<br>'+(lang==='ko'?'오차 범위 ':'range ')+nf(d.min)+' – '+nf(d.max)+' km'});
+ var k=d3.select('#apk');k.html('');
+ A.filter(key).forEach(function(d){var dist=d.km<1e6?nf(d.km)+' km':(lang==='ko'?nf(Math.round(d.km/1e4))+tr('mkm'):(d.km/1e6).toFixed(1)+tr('mkm'));
+  k.append('div').html('<b>'+d.d.slice(0,4)+'</b><span>'+d.d.slice(5).replace('-','.')+' · '+dist+'</span><small>'+tr('ld').replace('{x}',(d.km/384400).toFixed(d.km<4e5?2:1))+'</small>')});
+}
+
+/* ---------- i18n + live refresh ---------- */
+function render(){
+ document.documentElement.lang=lang;document.title=lang==='ko'?'GOV RADAR 재난 한눈에 보기':'GOV RADAR Disaster Overview';
+ document.querySelectorAll('[data-i]').forEach(function(el){el.innerHTML=tr(el.dataset.i).replace('{d}',D.snap).replace('{u}',HZ.upd)});
+ document.getElementById('lang').textContent=lang==='ko'?'English':'한국어';document.getElementById('home').href=lang==='ko'?'/ko/':'/en/';try{history.replaceState(null,'',lang==='ko'?location.pathname:location.pathname+'?l=en')}catch(e){}
+ kpis();legend();ychart();heat();csel();wmap();hzGallery();apo();if(sel)openC(sel)}
+document.getElementById('lang').onclick=function(){lang=lang==='ko'?'en':'ko';render()};
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(ychart,200)});
+addEventListener('scroll',hideTip,{passive:true});
+bgWorld();render();
+/* live data: works on the public site, silently skipped where outside requests are blocked */
+(function(){
+ if(!window.fetch)return;
+ Promise.all([fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson').then(function(r){return r.json()}),
+  fetch('https://eonet.gsfc.nasa.gov/api/v3/events?status=open&days=45&limit=400').then(function(r){return r.json()})]).then(function(res){
+  var L=[];res[0].features.forEach(function(f){var p=f.properties;if(p.mag>=5.8||p.tsunami)L.push({k:p.tsunami?'Tsunami':'Earthquake',x:f.geometry.coordinates[0],y:f.geometry.coordinates[1],n:'M'+p.mag.toFixed(1)+' '+p.place,d:new Date(p.time).toISOString().slice(0,10),s:'USGS'})});
+  var cat={wildfires:'Wildfire',volcanoes:'Volcanic activity',severeStorms:'Extreme weather',floods:'Flood',landslides:'Landslide',drought:'Drought'},wf=[];
+  res[1].events.forEach(function(e){var k=cat[e.categories[0].id],g=e.geometry[e.geometry.length-1];if(!k||g.type!=='Point')return;var it={k:k,x:g.coordinates[0],y:g.coordinates[1],n:e.title,d:g.date.slice(0,10),s:'NASA EONET',m:g.magnitudeValue||0};(k==='Wildfire'?wf:L).push(it)});
+  wf.sort(function(a,b){return b.m-a.m});L=L.concat(wf.slice(0,24));
+  if(L.length){live=L.concat(D.live.filter(function(d){return d.s.indexOf('GDACS')===0}));liveLabel=true;if(mode==='live')wmap();if(sel)openC(sel)}
+ }).catch(function(){});
+})();
+})();
+</script>
+</body>
+</html>

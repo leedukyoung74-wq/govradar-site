@@ -154,9 +154,9 @@ small,figcaption,caption,.note,.meta,.crumb,.alt,.eb,.kpis span,.byline,.corp,.r
 @media (max-width:600px){.fband img{width:120px;height:120px}}
 
 /* ---------- 2026-10-31: header, per-language type, sign-in ---------- */
-html[lang=en] body,html[lang=es] body,html[lang=fr] body,html[lang=id] body,html[lang=en] :is(button,input,select,textarea),html[lang=es] :is(button,input,select,textarea),html[lang=fr] :is(button,input,select,textarea),html[lang=id] :is(button,input,select,textarea){font-family:"Plus Jakarta Sans","WMM Nexon",system-ui,sans-serif}
-html[lang=vi] body,html[lang=vi] :is(button,input,select,textarea){font-family:"Be Vietnam Pro","WMM Nexon",system-ui,sans-serif}
-html[lang=ar] body,html[lang=ar] :is(button,input,select,textarea){font-family:"IBM Plex Sans Arabic","WMM Nexon",system-ui,sans-serif}
+html[lang=en] body,html[lang=es] body,html[lang=fr] body,html[lang=id] body,html[lang=en] :is(button,input,select,textarea),html[lang=es] :is(button,input,select,textarea),html[lang=fr] :is(button,input,select,textarea),html[lang=id] :is(button,input,select,textarea){font-family:"WMM Nexon","NEXON Lv1 Gothic",system-ui,sans-serif}
+html[lang=vi] body,html[lang=vi] :is(button,input,select,textarea){font-family:"WMM Nexon","NEXON Lv1 Gothic","Be Vietnam Pro",system-ui,sans-serif}
+html[lang=ar] body,html[lang=ar] :is(button,input,select,textarea){font-family:"WMM Nexon","NEXON Lv1 Gothic","IBM Plex Sans Arabic",system-ui,sans-serif}
 html[lang=ar] h1,html[lang=ar] h2{letter-spacing:0}
 html:is([lang=en],[lang=es],[lang=fr],[lang=id],[lang=vi]) h1{letter-spacing:-.025em;font-weight:800}
 .nav .in{gap:14px}
