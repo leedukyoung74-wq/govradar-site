@@ -536,3 +536,155 @@ em.nb{display:inline-block;font-style:normal;font-size:11px;font-weight:700;colo
 .rd-band h2{color:#fff;font-size:clamp(26px,3vw,36px);font-weight:700;margin:40px 0 12px}.rd-band p{color:#e2e8f3;font-size:17px;line-height:1.7}
 .rd-band-a{display:block;line-height:0;align-self:end}.rd-band-a svg{width:100%;height:auto;display:block}
 @media (max-width:800px){.rd-band-g{grid-template-columns:1fr;gap:8px}.rd-band h2{margin-top:32px}}
+
+/* official feed + delay notice */
+.lb-stale{background:#fff4e5;border-left:3px solid #b54708;padding:10px 14px;margin:10px 0;font-size:14.5px;line-height:1.55}
+.lb-card li a{word-break:break-word}
+
+/* ---- animated hazard clips ---- */
+.hzg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin-top:28px}
+.hzc{margin:0;display:flex;flex-direction:column;gap:10px}
+.hzc-v{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:radial-gradient(120% 90% at 50% 50%,#14202a 0%,#0a0f14 60%,#06090c 100%);isolation:isolate}
+.hzc-bg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.hzc-bg.space{background:radial-gradient(120% 100% at 80% 80%,#0d1730 0%,#04060d 70%)}
+.hzbg-land{fill:#303945;stroke:#0b0e12;stroke-width:.5}
+.hzbg-hl{fill:#743226;stroke:#ff8b6b;stroke-width:1}
+.hzc-sw{position:absolute;z-index:2;left:50%;top:50%;width:260%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;background:conic-gradient(from 0deg,rgba(80,255,190,0) 0deg,rgba(80,255,190,0) 300deg,rgba(80,255,190,.34) 350deg,rgba(170,255,225,.8) 360deg);-webkit-mask:radial-gradient(circle,#000 0 40%,transparent 41%);mask:radial-gradient(circle,#000 0 40%,transparent 41%);animation:hzspin 4.2s linear infinite;mix-blend-mode:screen}
+.hzc-rg{position:absolute;z-index:2;inset:0;pointer-events:none;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 38px,rgba(120,255,200,.16) 39px 40px)}
+.hzc-v::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(transparent 49.6%,rgba(120,255,200,.10) 50%,transparent 50.4%),linear-gradient(90deg,transparent 49.6%,rgba(120,255,200,.10) 50%,transparent 50.4%)}
+@keyframes hzspin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hzfx{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
+.hzfx svg{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+.hzc-tag{position:absolute;z-index:5;left:10px;top:10px;font:700 13px/1.2 var(--f);color:#fff;background:rgba(0,0,0,.62);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 10px}
+.hzc-now{position:absolute;z-index:5;right:10px;top:10px;font:700 12px/1.2 var(--f);color:#fff;background:#c62828;border-radius:999px;padding:4px 9px;animation:hznow 1.6s ease-in-out infinite}
+@keyframes hznow{50%{opacity:.55}}
+.hzc figcaption{font-size:15px;line-height:1.5;display:flex;flex-direction:column;gap:2px}
+.hzc figcaption b{font-weight:700}
+.hzc figcaption span{color:var(--muted);font-weight:300;font-size:14px}
+.hzc figcaption .nw{color:#c62828;font-weight:400}
+@media (prefers-color-scheme:dark){.hzc figcaption .nw{color:#ff8a80}}
+.hzsub{margin:44px 0 0;font-size:20px;font-weight:700}
+.hzsub+.sub{margin-top:4px}
+@media (max-width:600px){.hzg{grid-template-columns:1fr 1fr;gap:12px}.hzc-tag{font-size:11px;padding:3px 7px;left:6px;top:6px}.hzc-now{font-size:10px;right:6px;top:6px}.hzc figcaption{font-size:13px}.hzc figcaption span{font-size:12px}}
+@media (max-width:380px){.hzg{grid-template-columns:1fr}}
+/* flood */
+.hzfx .fl-rise{animation:flrise 5s ease-in-out infinite}
+.hzfx .fl-w1{fill:rgba(60,150,255,.55);animation:flx 3s linear infinite}.hzfx .fl-w2{fill:rgba(30,110,230,.6);animation:flx 2.2s linear infinite reverse}
+@keyframes flx{to{transform:translateX(80px)}}@keyframes flrise{0%,100%{transform:translateY(18px)}50%{transform:translateY(-8px)}}
+.hzfx .rain line{stroke:rgba(170,210,255,.75);stroke-width:1.2;animation:rain .7s linear infinite}
+@keyframes rain{from{transform:translate(0,-10px)}to{transform:translate(-14px,110px)}}
+/* storm */
+.hzfx .ty-spin{transform-origin:0 0;animation:tyspin 2.4s linear infinite}
+.hzfx .ty-spin path{fill:rgba(235,245,255,.82);stroke:none}.hzfx .ty-spin .ty-arm{fill:none;stroke:rgba(235,245,255,.55);stroke-width:5;stroke-linecap:round}
+.hzfx .ty-eye{fill:#0a0f14;stroke:rgba(255,255,255,.7);stroke-width:1}
+@keyframes tyspin{to{transform:rotate(-360deg)}}
+.hzfx .wind path{fill:none;stroke:rgba(200,230,255,.45);stroke-width:1.4;stroke-linecap:round;stroke-dasharray:24 140;animation:wind 1.8s linear infinite}
+@keyframes wind{from{stroke-dashoffset:160}to{stroke-dashoffset:0}}
+/* tsunami */
+.hzfx .ts-move{animation:tsmove 4s cubic-bezier(.4,0,.6,1) infinite}
+.hzfx .ts-body{fill:rgba(40,130,230,.78)}.hzfx .ts-foam{fill:none;stroke:#eaf6ff;stroke-width:3;stroke-linecap:round}
+.ts-shore{fill:#5b4a3a}
+@keyframes tsmove{0%{transform:translateX(-40px) scaleY(.6);opacity:0}15%{opacity:1}70%{transform:translateX(150px) scaleY(1.15);opacity:1}100%{transform:translateX(190px) scaleY(1);opacity:0}}
+/* earthquake */
+.hz-quake .hzc-bg{animation:qkshake .5s steps(2) infinite}
+.hzfx .qk-line{fill:none;stroke:#ffb347;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-dasharray:300;animation:qkdraw 2.2s linear infinite}
+@keyframes qkdraw{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+@keyframes qkshake{0%{transform:translate(1.5px,-1px)}50%{transform:translate(-1.5px,1px)}100%{transform:translate(1px,1.5px)}}
+.hzfx .qk-r{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border:2px solid rgba(255,120,70,.9);border-radius:50%;animation:qkring 2.4s ease-out infinite}
+.hzfx .qk-r.r2{animation-delay:.8s}.hzfx .qk-r.r3{animation-delay:1.6s}
+@keyframes qkring{from{transform:scale(.3);opacity:1}to{transform:scale(6);opacity:0}}
+/* landslide */
+.ls-hill{fill:#4a3b2e}.ls-scar{fill:none;stroke:#8a6a4a;stroke-width:3;stroke-linecap:round;stroke-dasharray:4 3}
+.ls-rock polygon{fill:#b08a62;stroke:#2a1e14;stroke-width:.6}
+.ls-rock{animation:lsroll 2.7s cubic-bezier(.5,0,.9,.6) infinite;opacity:0}
+@keyframes lsroll{0%{transform:translate(14px,20px) rotate(0);opacity:0}8%{opacity:1}50%{transform:translate(78px,48px) rotate(360deg)}90%{opacity:1}100%{transform:translate(140px,84px) rotate(760deg);opacity:0}}
+.ls-dust{fill:rgba(190,160,120,.4);transform-box:fill-box;transform-origin:center;animation:lsdust 2.7s ease-out infinite;opacity:0}
+@keyframes lsdust{0%{transform:scale(.3);opacity:0}30%{opacity:.8}100%{transform:scale(1.8) translateY(-6px);opacity:0}}
+/* wildfire + flames */
+.hzfx .tree{fill:#1f3a24}
+.hzfx .fi-f{fill:rgba(255,120,30,.9);transform-box:fill-box;transform-origin:50% 100%;animation:fiflick .6s ease-in-out infinite alternate}
+.hzfx .fi-f:nth-child(2n){fill:rgba(255,200,60,.9)}
+@keyframes fiflick{from{transform:scaleY(.8) skewX(-4deg)}to{transform:scaleY(1.18) skewX(5deg)}}
+.hzfx .fi-e{fill:#ffcc66;animation:fiember 2.4s linear infinite}
+@keyframes fiember{from{transform:translateY(0);opacity:1}to{transform:translateY(-60px) translateX(8px);opacity:0}}
+/* urban fire */
+.hzfx .bld rect{fill:#1b222b;stroke:#3a4552;stroke-width:.6}
+.hzfx .win rect{fill:#ffb347;animation:winf 1.1s ease-in-out infinite alternate}
+@keyframes winf{from{fill:#ffcf5a;opacity:1}to{fill:#ff6a28;opacity:.55}}
+.hzfx .sm circle{fill:rgba(160,160,165,.5);transform-box:fill-box;transform-origin:center;animation:smoke 3.2s ease-out infinite;opacity:0}
+@keyframes smoke{0%{transform:translateY(0) scale(.5);opacity:0}25%{opacity:.75}100%{transform:translate(14px,-46px) scale(1.9);opacity:0}}
+.hzfx .truck{animation:truck 6s linear infinite}.hzfx .truck rect{fill:#d6332b}.hzfx .truck circle{fill:#111}.hzfx .truck .siren{fill:#4da3ff;animation:siren .4s steps(2) infinite}
+@keyframes truck{0%{transform:translateX(0)}60%,100%{transform:translateX(70px)}}
+@keyframes siren{50%{fill:#ff3b30}}
+/* drought / heat */
+.hzfx .sun{fill:#ffb020;animation:sunp 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center;filter:drop-shadow(0 0 6px rgba(255,170,40,.8))}
+@keyframes sunp{50%{transform:scale(1.12)}}
+.sun-r{animation:spinr 9s linear infinite}.sun-r line{stroke:#ffc040;stroke-width:2;stroke-linecap:round}
+@keyframes spinr{to{transform:rotate(360deg)}}
+.dr-ground{fill:#7a5a36}
+.hzfx .crack path{fill:none;stroke:#2a1a0c;stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:90;animation:crack 3.6s ease-in-out infinite}
+@keyframes crack{0%{stroke-dashoffset:90}60%,100%{stroke-dashoffset:0}}
+.hzfx .shim path{fill:none;stroke:rgba(255,220,160,.55);stroke-width:1.2;animation:shim 2.2s ease-in infinite;opacity:0}
+@keyframes shim{0%{transform:translateY(0);opacity:0}30%{opacity:.9}100%{transform:translateY(-18px);opacity:0}}
+.dr-plant{fill:none;stroke:#9a8a4a;stroke-width:1.4;stroke-linecap:round}
+.th-tube{fill:rgba(255,255,255,.15);stroke:rgba(255,255,255,.7);stroke-width:1}.th-bulb{fill:#e0332b}
+.th-lv{fill:#e0332b;transform-box:fill-box;transform-origin:50% 100%;animation:thlv 4s ease-in-out infinite}
+@keyframes thlv{0%,100%{transform:scaleY(.2);fill:#4da3ff}50%{transform:scaleY(1);fill:#e0332b}}
+.hzfx .fl{animation:snow 3.2s linear infinite;opacity:0}.hzfx .fl path{stroke:#e6f3ff;stroke-width:1;stroke-linecap:round}
+@keyframes snow{0%{transform:translate(0,-6px);opacity:0}10%{opacity:1}100%{transform:translate(-8px,104px);opacity:.4}}
+/* volcano */
+.hzfx .vo-m{fill:#3d2b22;stroke:#1b120d}.hzfx .vo-lava{fill:#ff5a1f;animation:volava 1.2s ease-in-out infinite alternate}
+@keyframes volava{from{opacity:.7}to{opacity:1;filter:drop-shadow(0 0 4px #ff7a2f)}}
+.hzfx .vo-p{fill:#ff8c2a;animation:vobomb 1.6s ease-out infinite}
+@keyframes vobomb{0%{transform:translate(0,0);opacity:1}60%{transform:translate(var(--dx),-38px)}100%{transform:translate(calc(var(--dx)*1.5),-10px);opacity:0}}
+.hzfx .vo-smoke{fill:rgba(200,200,200,.45);transform-box:fill-box;transform-origin:30% 100%;animation:vosmoke 3.5s ease-in-out infinite}
+@keyframes vosmoke{0%{transform:scale(.6) translateY(10px);opacity:0}40%{opacity:.8}100%{transform:scale(1.3) translateY(-14px);opacity:0}}
+/* comet / meteor impact */
+.hzfx .st{fill:#fff;animation:twinkle 2.4s ease-in-out infinite}@keyframes twinkle{50%{opacity:.25}}
+.hzfx .co-move{animation:comove 4.5s linear infinite}
+.hzfx .co-head{fill:#fff;filter:drop-shadow(0 0 5px #9fd0ff)}.hzfx .co-tail{fill:rgba(160,210,255,.55)}
+@keyframes comove{0%{transform:translate(-20px,-10px);opacity:1}80%{transform:translate(118px,64px);opacity:1}82%,100%{transform:translate(120px,66px);opacity:0}}
+.hzfx .earth{fill:#2a6fd6;stroke:#9fd0ff;stroke-width:1.2;filter:drop-shadow(0 0 6px rgba(80,160,255,.7))}
+.im-flash{fill:#fff3c0;transform-box:fill-box;transform-origin:center;animation:imf 4.5s linear infinite;opacity:0}
+@keyframes imf{0%,80%{transform:scale(.2);opacity:0}84%{opacity:1;transform:scale(2.4)}100%{transform:scale(4);opacity:0}}
+/* war */
+.hzfx .msl path{fill:none;stroke:#ffd07a;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:14 200;animation:msl 3.3s linear infinite;opacity:0}
+@keyframes msl{0%{stroke-dashoffset:150;opacity:1}30%{stroke-dashoffset:0;opacity:1}31%,100%{opacity:0}}
+.hzfx .boom{transform-box:fill-box;transform-origin:center;animation:boom 3.3s ease-out infinite;opacity:0}
+.hzfx .boom circle{fill:rgba(255,120,40,.85)}.hzfx .boom .b2{fill:#fff1b0}
+@keyframes boom{0%,4%{transform:scale(.2);opacity:0}8%{opacity:1;transform:scale(1)}30%{transform:scale(2.4);opacity:0}100%{opacity:0}}
+.hzfx .xh{animation:xh 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.hzfx .xh circle,.hzfx .xh line{fill:none;stroke:#ff4d3a;stroke-width:1.4}
+@keyframes xh{50%{transform:scale(.86)}}
+/* people */
+.hzfx .pp circle,.hzfx .pp path,.hzfx .pr circle,.hzfx .pr path{fill:#dfe6ee}
+.hzfx .eA .pp circle,.hzfx .eA .pp path{fill:#f0b25a}.hzfx .eB .pp circle,.hzfx .eB .pp path{fill:#7fb6ff}
+.hzfx .eA{animation:eA 2.2s ease-in-out infinite}.hzfx .eB{animation:eB 2.2s ease-in-out infinite}
+@keyframes eA{50%{transform:translateX(16px)}}@keyframes eB{50%{transform:translateX(-16px)}}
+.hzfx .pp{animation:bob .55s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-2px)}}
+.hzfx .eb{stroke:rgba(255,255,255,.35);stroke-width:1;stroke-dasharray:3 3}
+.hzfx .spark{transform-box:fill-box;transform-origin:center;animation:spark 1.1s ease-out infinite;opacity:0}
+.hzfx .spark path{stroke:#ffd24a;stroke-width:1.6;stroke-linecap:round}
+@keyframes spark{0%,40%{transform:scale(.2);opacity:0}55%{opacity:1;transform:scale(1)}100%{transform:scale(1.5);opacity:0}}
+/* protest */
+.hzfx .pr{animation:pr .7s ease-in-out infinite alternate}
+@keyframes pr{to{transform:translateY(-5px)}}
+.stick{stroke:#c7cdd4;stroke-width:1.2}.plac{fill:#fff;stroke:#c62828;stroke-width:1.4}
+.hzfx .mega path{fill:#ffd24a}.hzfx .mega .mw{fill:none;stroke:#ffd24a;stroke-width:1.4;stroke-linecap:round;animation:mw 1s ease-out infinite;opacity:0}
+@keyframes mw{0%{opacity:0;transform:translateX(-2px)}30%{opacity:1}100%{opacity:0;transform:translateX(6px)}}
+/* riot */
+.hzfx .pl{animation:pl .5s steps(2) infinite}.hzfx .pl.r{fill:#ff3b30}.hzfx .pl.b{fill:#2f7bff;animation-delay:.25s}
+@keyframes pl{50%{opacity:.15}}
+.hzfx .car path{fill:#2b3138;stroke:#59636e;stroke-width:.8}.hzfx .car circle{fill:#0d0f12}
+.hzfx .thr circle{fill:#ffcf5a}
+.hzfx .thr{animation:thr 2.1s linear infinite;opacity:0}
+@keyframes thr{0%{transform:translate(28px,76px);opacity:1}25%{transform:translate(54px,44px)}50%{transform:translate(80px,40px)}75%{transform:translate(98px,58px);opacity:1}80%,100%{transform:translate(104px,76px);opacity:0}}
+.hzfx .shield rect{fill:rgba(120,170,230,.55);stroke:#a8c8ef;stroke-width:.8}
+/* epidemic */
+.hzfx .vi-g circle{fill:rgba(140,230,120,.35);stroke:#9ef08a;stroke-width:1.4}.hzfx .vi-g line{stroke:#9ef08a;stroke-width:1.4;stroke-linecap:round}
+.hzfx .vi-g{animation:vipulse 2.2s ease-in-out infinite}
+.hzfx .vi-r{animation:spinr 12s linear infinite}
+@keyframes vipulse{0%,100%{opacity:.55}50%{opacity:1}}
+/* keep moving when the OS asks for reduced motion, just slower */
+@media (prefers-reduced-motion:reduce){.hzc-v *{animation-duration:6s!important}.hz-quake .hzc-bg{animation:none!important}}
