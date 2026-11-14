@@ -381,3 +381,8 @@ window.gvLang = function (sel) {
   q.form.addEventListener("submit", function () { run(); var a = out.querySelector("a"); if (a) location.href = a.getAttribute("href"); });
   document.addEventListener("click", function (e) { if (!e.target.closest(".hs")) out.hidden = true; });
 })();
+/* map search: picking a suggested country opens it */
+(function () { var q = document.getElementById("q"); if (!q) return;
+  q.addEventListener("change", function () { var v = q.value.trim(); if (!v) return;
+    var a = [].slice.call(document.querySelectorAll("#grid a.flag")).filter(function (x) { var s = x.querySelector("span"); return s && s.textContent.trim() === v; })[0];
+    if (a) location.href = a.getAttribute("href"); }); })();
