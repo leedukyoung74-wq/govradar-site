@@ -18,7 +18,7 @@ th{font-weight:700;background:#f0f0ee;position:sticky;top:0}tr.new td:first-chil
 .links a{display:inline-block;margin:4px 10px 4px 0}
 </style></head><body><main>
 <div id="gate" hidden><h1>운영자 전체 화면</h1><p class="cap">대표 전용 코드를 넣으면 이 브라우저에서는 다음부터 자동으로 열립니다.</p>
-<input id="code" placeholder="운영자 코드" autocomplete="off"><button id="go">열기</button><p id="err" class="ng"></p></div>
+<input id="code" type="password" placeholder="운영자 코드" autocomplete="off" onkeydown="if(event.key==='Enter')document.getElementById('go').click()"><button id="go">열기</button><p id="err" class="ng"></p></div>
 <div id="app" hidden></div>
 </main>
 <script>
@@ -51,11 +51,11 @@ function render(d){
   document.getElementById("out").onclick=function(){ls("gv_owner",null);location.reload()};
 }
 async function start(code){
-  try{var d=await open_(code);ls("gv_owner",code);ls("gv_code",code);document.getElementById("gate").hidden=true;render(d);if(location.hash)history.replaceState(null,"",location.pathname)}
+  try{var d=await open_(code);ls("gv_owner",code);if(d.mcode)ls("gv_code",d.mcode);document.getElementById("gate").hidden=true;render(d);if(location.hash)history.replaceState(null,"",location.pathname)}
   catch(e){document.getElementById("gate").hidden=false;document.getElementById("err").textContent="코드가 맞지 않거나 자료를 불러오지 못했습니다."}
 }
-var c=(location.hash||"").slice(1)||ls("gv_owner");
-document.getElementById("go").onclick=function(){start(document.getElementById("code").value.trim().toUpperCase())};
+var c=decodeURIComponent((location.hash||"").slice(1))||ls("gv_owner");
+document.getElementById("go").onclick=function(){start(document.getElementById("code").value.trim())};
 if(c)start(c);else document.getElementById("gate").hidden=false;
 })();
 </script></body></html>
