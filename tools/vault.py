@@ -1,11 +1,11 @@
 """Encrypted carry-over of non-public working files between sessions (scheduled runs start fresh).
-pack:   export/ + private/members.json + private/tasks.json -> data_branch/m/vault.json (AES-GCM, master key)
+pack:   export/ + private/members.json + private/tasks.json + private/foresight_country.json -> data_branch/m/vault.json (AES-GCM, master key)
 unpack: data_branch/m/vault.json -> files (needs private/master.key)"""
 import base64, io, json, os, secrets, sys, tarfile
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEY = os.path.join(ROOT, "private", "master.key"); OUT = os.path.join(ROOT, "data_branch", "m", "vault.json")
-ITEMS = ["export", "private/members.json", "private/tasks.json"]
+ITEMS = ["export", "private/members.json", "private/tasks.json", "private/foresight_country.json"]
 k = lambda: AESGCM(base64.b64decode(open(KEY).read().strip()))
 def pack():
     bio = io.BytesIO()

@@ -42,11 +42,13 @@ def snapshot():
     rdone = {os.path.basename(f)[:-5] for f in glob.glob(os.path.join(ROOT, "export", "regions", "*.json"))}
     regs = [{"ko": r["ko"], "p": nm(r["parent"]), "done": r["iso"] in rdone} for r in REGS]
     tasks = json.load(open(TASKS, encoding="utf8")) if os.path.exists(TASKS) else []
+    FC = os.path.join(ROOT, "private", "foresight_country.json")
+    fc = json.load(open(FC, encoding="utf8")) if os.path.exists(FC) else None
     return {"at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "sum": {"countries": len(done), "regions": sum(r["done"] for r in regs), "open": len(op), "new": sum(1 for x in op if x.get("new")),
                     "hot": sum(1 for x in op if (datetime.date.fromisoformat(x["dl"]) - datetime.date.fromisoformat(TODAY)).days <= 15),
                     "past": sum(p["n"] for p in past), "biz": sum(len(d.get("biz") or []) for d in D.values())},
-            "open": [tr(x) for x in op], "past": past, "stale": stale, "regions": regs, "tasks": tasks}
+            "open": [tr(x) for x in op], "past": past, "stale": stale, "regions": regs, "tasks": tasks, "fc": fc}
 
 def owner_code(pw=None):
     """Owner passphrase opens the owner screen (case-sensitive, used as typed).
