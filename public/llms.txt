@@ -152,6 +152,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Canada](https://radar.wmm-hoa.com/en/canada/): Ahead of its second federal budget on November 5, the Carney government says it will balance the operating budget while expanding capital and infrastructure spe
 - [United States](https://radar.wmm-hoa.com/en/united-states/): FY2027 is running on a continuing resolution (P.L. 119-103) that expires December 11. Ahead of the November 3 midterms, the administration is pushing AI and sci
 - [Mexico](https://radar.wmm-hoa.com/en/mexico/): On 15 October the Chamber of Deputies passed the 2027 Revenue Law, with MXN 10.6 trillion in revenue and MXN 1.7 trillion in new borrowing; the spending budget 
+- [Antigua and Barbuda](https://radar.wmm-hoa.com/en/antigua-and-barbuda/): Prime Minister Gaston Browne framed the 2026 budget as 'People-Centered Growth and Development', raising spending on education, health, housing and infrastructu
 - [Argentina](https://radar.wmm-hoa.com/en/argentina/): The Milei government filed its 2027 budget on 15 September 2026, assuming 4% growth, 18% inflation and a fourth straight fiscal surplus. It passed a labor refor
 - [Bahamas](https://radar.wmm-hoa.com/en/bahamas/): PM Davis's PLP won 33 of 41 seats (unofficial) in the 12 May 2026 snap election, the first back-to-back term in about 30 years. The FY2026/27 budget projects a 
 - [Barbados](https://radar.wmm-hoa.com/en/barbados/): PM Mottley's BLP won all 30 seats in the 11 February 2026 election for a third term. The 2026-27 estimates put spending at BDS$5.88bn with a deficit of 4.0% of 
@@ -162,9 +163,11 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Colombia](https://radar.wmm-hoa.com/en/colombia/): The De la Espriella government, in office since August 2026, campaigns on a hard line on security and spending cuts. Congress passed a COP 634.95 trn 2027 budge
 - [Costa Rica](https://radar.wmm-hoa.com/en/costa-rica/): The Fernández government is focused on tough security policy and state reform, with former president Rodrigo Chaves serving as Minister of the Presidency and Fi
 - [Cuba](https://radar.wmm-hoa.com/en/cuba/): The government is pursuing an economic programme of 176 'transformation' measures, but frequent blackouts and food shortages persist. President Díaz-Canel said 
+- [Dominica](https://radar.wmm-hoa.com/en/dominica/): Prime Minister Roosevelt Skerrit set 2026 as the year to complete major projects: the international airport, geothermal power, a cable car, and port and marina 
 - [Dominican Republic](https://radar.wmm-hoa.com/en/dominican-republic/): The Abinader government aims for investment grade by 2028, and Fitch upgraded the sovereign to BB on 2026-11-03. Public investment goes mostly to transport such
 - [Ecuador](https://radar.wmm-hoa.com/en/ecuador/): The Noboa government is pursuing a security crackdown and fiscal consolidation under an IMF programme, citing a 2026 S&P upgrade and rising FDI. El Niño reconst
 - [El Salvador](https://radar.wmm-hoa.com/en/el-salvador/): The Bukele government passed the 2nd and 3rd reviews of its IMF Extended Fund Facility (about $1.4bn) in October, unlocking $138m. Growth is better than expecte
+- [Grenada](https://radar.wmm-hoa.com/en/grenada/): Prime Minister Dickon Mitchell's government presented a record EC$1.96 billion budget for 2026 ('Towards Vision 75'). Capital spending is EC$370.4 million, with
 - [Guatemala](https://radar.wmm-hoa.com/en/guatemala/): Without a congressional majority, the Arévalo government stresses anti-corruption and stronger institutions ahead of the 2027-06-27 general election. A Q192bn 2
 - [Guyana](https://radar.wmm-hoa.com/en/guyana/): Guyana's 2026 budget of GY$1.558 trillion (about US$7.5bn) is 307% larger than in 2021, with large allocations to roads and bridges, education, health, housing 
 - [Haiti](https://radar.wmm-hoa.com/en/haiti/): Haiti has not held elections for over a decade; with the presidency vacant, unelected Prime Minister Alix Didier Fils-Aimé leads the administration. The elector
@@ -174,6 +177,9 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Panama](https://radar.wmm-hoa.com/en/panama/): The Mulino government is cutting the fiscal deficit and defending investment grade, with 36% of the US$35.1bn 2027 budget going to public investment. The Canal 
 - [Paraguay](https://radar.wmm-hoa.com/en/paraguay/): The collapse of digital lender ueno bank led the Senate to remove President Santiago Peña on 6 Nov 2026, and Vice President Pedro Alliana was sworn in. Containi
 - [Peru](https://radar.wmm-hoa.com/en/peru/): The Fujimori government presented its 2026-2031 plan to Congress in August 2026, built on security, disaster preparedness, human development, productivity and r
+- [Saint Kitts and Nevis](https://radar.wmm-hoa.com/en/saint-kitts-and-nevis/): Prime Minister Terrance Drew's government is pursuing its 'Sustainable Island State' agenda with an EC$1.075 billion budget for 2026. Jobs, investment and clima
+- [Saint Lucia](https://radar.wmm-hoa.com/en/saint-lucia/): Prime Minister Philip Pierre, re-elected in a landslide in December 2025, presented the 'Consolidating Our Gains: Prospering in Uncertain Times' budget on 21 Ap
+- [Saint Vincent and the Grenadines](https://radar.wmm-hoa.com/en/saint-vincent-and-the-grenadines/): The New Democratic Party won the November 2025 election and Godwin Friday became prime minister. Saying it inherited debt of 113% of GDP, the government set thr
 - [Suriname](https://radar.wmm-hoa.com/en/suriname/): In her 30 September annual address, President Jennifer Geerlings-Simons presented the 2027 draft budget (revenue SRD 70.1bn, spending SRD 80.9bn, deficit 4% of 
 - [Trinidad and Tobago](https://radar.wmm-hoa.com/en/trinidad-and-tobago/): The FY2027 budget plans TT$63.37bn of spending against TT$59.73bn of revenue, cutting the deficit to 2.1% of GDP through measures such as capping loss relief an
 - [Uruguay](https://radar.wmm-hoa.com/en/uruguay/): The Orsi government's five-year budget law aims to cut the deficit gradually, mainly through revenue, while prioritising child poverty and security. Growth is m
@@ -356,6 +362,7 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [캐나다](https://radar.wmm-hoa.com/ko/canada/)
 - [미국](https://radar.wmm-hoa.com/ko/united-states/)
 - [멕시코](https://radar.wmm-hoa.com/ko/mexico/)
+- [앤티가 바부다](https://radar.wmm-hoa.com/ko/antigua-and-barbuda/)
 - [아르헨티나](https://radar.wmm-hoa.com/ko/argentina/)
 - [바하마](https://radar.wmm-hoa.com/ko/bahamas/)
 - [바베이도스](https://radar.wmm-hoa.com/ko/barbados/)
@@ -366,9 +373,11 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [콜롬비아](https://radar.wmm-hoa.com/ko/colombia/)
 - [코스타리카](https://radar.wmm-hoa.com/ko/costa-rica/)
 - [쿠바](https://radar.wmm-hoa.com/ko/cuba/)
+- [도미니카 연방](https://radar.wmm-hoa.com/ko/dominica/)
 - [도미니카 공화국](https://radar.wmm-hoa.com/ko/dominican-republic/)
 - [에콰도르](https://radar.wmm-hoa.com/ko/ecuador/)
 - [엘살바도르](https://radar.wmm-hoa.com/ko/el-salvador/)
+- [그레나다](https://radar.wmm-hoa.com/ko/grenada/)
 - [과테말라](https://radar.wmm-hoa.com/ko/guatemala/)
 - [가이아나](https://radar.wmm-hoa.com/ko/guyana/)
 - [아이티](https://radar.wmm-hoa.com/ko/haiti/)
@@ -378,6 +387,9 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [파나마](https://radar.wmm-hoa.com/ko/panama/)
 - [파라과이](https://radar.wmm-hoa.com/ko/paraguay/)
 - [페루](https://radar.wmm-hoa.com/ko/peru/)
+- [세인트키츠 네비스](https://radar.wmm-hoa.com/ko/saint-kitts-and-nevis/)
+- [세인트루시아](https://radar.wmm-hoa.com/ko/saint-lucia/)
+- [세인트빈센트 그레나딘](https://radar.wmm-hoa.com/ko/saint-vincent-and-the-grenadines/)
 - [수리남](https://radar.wmm-hoa.com/ko/suriname/)
 - [트리니다드 토바고](https://radar.wmm-hoa.com/ko/trinidad-and-tobago/)
 - [우루과이](https://radar.wmm-hoa.com/ko/uruguay/)
