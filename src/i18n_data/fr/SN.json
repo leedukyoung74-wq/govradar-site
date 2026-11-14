@@ -1,0 +1,31 @@
+{
+ "summary": "Le président Faye a limogé le Premier ministre Ousmane Sonko en mai 2026 et nommé l'économiste Ahmadou Al Aminou Lo ; Sonko, devenu président de l'Assemblée, s'oppose désormais à l'exécutif. La dette cachée a fait chuter les notes à CC (S&P) et Ca (Moody's), et un accord technique FEC de 2,2 Md USD avec le FMI conclu en septembre attend l'approbation du Conseil, en parallèle de la restructuration de la dette.",
+ "leader": "Président Bassirou Diomaye Faye (chef de l'État) / Premier ministre Ahmadou Al Aminou Lo (nommé en mai 2026)",
+ "agenda": [
+  "Obtenir l'approbation du Conseil du FMI pour la FEC de 2,2 Md USD",
+  "Plan de traitement de la dette dans le Cadre commun du G20",
+  "Rationaliser les dépenses, maîtriser la masse salariale et fermer des agences coûteuses tout en augmentant les dépenses sociales",
+  "Renégocier une trentaine de contrats miniers",
+  "Adopter en 2027 une stratégie de recettes à moyen terme"
+ ],
+ "needs": [
+  "Supervision renforcée de la dette, du Trésor et des entreprises publiques (conditions du programme FMI)",
+  "Administration fiscale numérique pour accroître les recettes (estimation)",
+  "Infrastructures rurales d'énergie et d'eau (renouvelables, irrigation)",
+  "Systèmes de filets sociaux avec transferts monétaires mieux ciblés"
+ ],
+ "biz": [
+  {
+   "title": "Conseil informatique en finances publiques et gestion de la dette"
+  },
+  {
+   "title": "Packs ruraux de solaire, petite irrigation et stockage frigorifique"
+  },
+  {
+   "title": "Systèmes de bénéficiaires et de paiements électroniques des filets sociaux"
+  },
+  {
+   "title": "Pilotes (PoC) d'IA et de startups numériques"
+  }
+ ]
+}

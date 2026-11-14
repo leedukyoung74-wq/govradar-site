@@ -1,0 +1,26 @@
+{
+ "summary": "Le gouvernement du président Wadagni a adopté le 7 octobre un projet de budget 2027 de 4 757 Md FCFA (environ 8,1 Md USD, +14,7 %). Il vise 7,5 % de croissance et un déficit d'au plus 2,8 % du PIB, avec cinq priorités : agriculture moderne, industrie, tourisme, technologie et capital humain. Il a aussi adopté un programme d'action 2026-2033.",
+ "leader": "Président Romuald Wadagni (chef de l'État et du gouvernement, investi en 2026)",
+ "agenda": [
+  "Budget 2027 de 8,1 Md USD (+14,7 %), croissance de 7,5 %",
+  "Agriculture moderne et développement industriel",
+  "Tourisme et culture",
+  "Technologie et transformation numérique",
+  "Éducation, santé, protection sociale, énergie et eau",
+  "Programme d'action du gouvernement 2026-2033"
+ ],
+ "needs": [
+  "Équipements de transformation agricole",
+  "Infrastructures électriques et hydrauliques",
+  "Écoles, hôpitaux et infrastructures sociales (nouvelle unité)",
+  "Sécurité dans le nord"
+ ],
+ "biz": [
+  {
+   "title": "Équipements de transformation agricole et zones industrielles"
+  },
+  {
+   "title": "Travaux et équipements d'infrastructures sociales"
+  }
+ ]
+}

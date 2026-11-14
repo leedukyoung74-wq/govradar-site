@@ -1,0 +1,31 @@
+{
+ "summary": "Presiden Faye memberhentikan PM Ousmane Sonko pada Mei 2026 dan mengangkat ekonom Ahmadou Al Aminou Lo; Sonko menjadi ketua Majelis dan kini beroposisi terhadap eksekutif. Masalah utang tersembunyi menurunkan peringkat ke CC (S&P) dan Ca (Moody's), dan kesepakatan tingkat staf ECF IMF senilai US$2,2 miliar yang dicapai September menunggu persetujuan Dewan bersama restrukturisasi utang.",
+ "leader": "Presiden Bassirou Diomaye Faye (kepala negara) / Perdana Menteri Ahmadou Al Aminou Lo (diangkat Mei 2026)",
+ "agenda": [
+  "Mendapatkan persetujuan Dewan IMF atas ECF US$2,2 miliar",
+  "Rencana penanganan utang di bawah Kerangka Bersama G20",
+  "Rasionalisasi belanja, pengendalian belanja pegawai, penutupan lembaga mahal sambil menaikkan belanja sosial",
+  "Merundingkan ulang sekitar 30 kontrak tambang",
+  "Mengadopsi strategi pendapatan jangka menengah pada 2027"
+ ],
+ "needs": [
+  "Pengawasan utang, perbendaharaan, dan BUMN yang lebih kuat (syarat program IMF)",
+  "Administrasi pajak digital untuk menaikkan pendapatan (perkiraan)",
+  "Infrastruktur energi dan air perdesaan (energi terbarukan, irigasi)",
+  "Sistem jaring pengaman sosial dengan bantuan tunai yang lebih tepat sasaran"
+ ],
+ "biz": [
+  {
+   "title": "Konsultasi TI keuangan publik dan manajemen utang"
+  },
+  {
+   "title": "Paket surya, irigasi kecil, dan penyimpanan dingin perdesaan"
+  },
+  {
+   "title": "Sistem penerima manfaat dan pembayaran elektronik jaring pengaman sosial"
+  },
+  {
+   "title": "Uji coba (PoC) AI dan startup digital"
+  }
+ ]
+}

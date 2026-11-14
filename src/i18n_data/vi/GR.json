@@ -1,0 +1,28 @@
+{
+ "summary": "Trước bầu cử mùa xuân 2027, chính phủ Mitsotakis trình dự thảo ngân sách 2027 với tăng trưởng khoảng 2% và thặng dư cơ bản trên 3% GDP. Nợ dự kiến giảm xuống dưới 130% GDP.",
+ "leader": "Tổng thống Konstantinos Tasoulas; Thủ tướng Kyriakos Mitsotakis",
+ "agenda": [
+  "Ngân sách 2027: thặng dư cơ bản trên 3% GDP, nợ dưới 130%",
+  "Giảm chi phí năng lượng và nhà ở (2,2 tỷ EUR mới)",
+  "Chương trình Đầu tư Công 7 tỷ EUR và tăng đầu tư",
+  "Chương trình nhà ở 'Nhà tôi III' (2 tỷ EUR) và cải tạo nhà cũ",
+  "Công cụ tài chính mới 1,5 tỷ EUR cho doanh nghiệp nhỏ và vừa",
+  "Tổng tuyển cử dự kiến mùa xuân (tháng 5) 2027"
+ ],
+ "needs": [
+  "Năng lực xây dựng và kỹ thuật để thực hiện chương trình đầu tư 7 tỷ EUR",
+  "Nguồn cung nhà ở và cải tạo năng lượng cho nhà cũ",
+  "Công nghệ điện và hiệu quả năng lượng để giảm chi phí (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Vật liệu và thiết bị cải tạo năng lượng nhà cũ"
+  },
+  {
+   "title": "EPC và thiết bị cho hạ tầng công"
+  },
+  {
+   "title": "Hiệu quả năng lượng và quản lý năng lượng gia đình"
+  }
+ ]
+}

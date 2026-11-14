@@ -1,0 +1,31 @@
+{
+ "summary": "El proyecto de presupuesto 2027 de 68.900 millones de dinares (+8,4% sobre 2026), con un déficit de 14.600 millones y una meta de crecimiento del 3,1%, está ante el parlamento. Como segundo año del plan 2026-2030, busca reducir la dependencia del endeudamiento y prioriza la política social, el agua, la alimentación y la transición energética.",
+ "leader": "Presidente Kais Saied (jefe de Estado) / Primera ministra Sarra Zaafrani Zenzri (desde mar 2025)",
+ "agenda": [
+  "Aplicar el plan de desarrollo 2026-2030 (equilibrio regional, política social)",
+  "Soberanía hídrica y alimentaria (desalinización, reutilización de aguas residuales)",
+  "Transición energética y digital, incluida la IA",
+  "Reforma y gobernanza de las empresas públicas",
+  "Menos endeudamiento externo y más ingresos internos"
+ ],
+ "needs": [
+  "Infraestructura de desalinización y gestión del agua",
+  "Energías renovables y eficiencia energética",
+  "Digitalización de la administración tributaria y aduanera (citada en el presupuesto)",
+  "Consultoría en gobernanza de empresas públicas (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Digitalización tributaria y aduanera y analítica antifraude"
+  },
+  {
+   "title": "Equipos de desalinización y reutilización de aguas residuales"
+  },
+  {
+   "title": "Proyectos de renovables y eficiencia energética"
+  },
+  {
+   "title": "Digitalización de servicios públicos e IA"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "summary": "Partai Demokrat Baru memenangi pemilu November 2025 dan Godwin Friday menjadi perdana menteri. Menyatakan mewarisi utang 113% PDB, pemerintah menetapkan tiga pilar (stabilitas fiskal, restrukturisasi utang, dan pertumbuhan berbasis investasi swasta) serta aturan fiskal baru. Pemerintah bergabung dengan bank pembangunan CAF untuk refinansiasi lebih murah dan mengumumkan proyek desalinasi dan penyimpanan air sekitar US$50 juta yang didukung Dana Iklim Hijau.",
+ "leader": "Perdana Menteri Godwin Friday (Partai Demokrat Baru, sejak Nov 2025)",
+ "agenda": [
+  "Stabilitas fiskal dan restrukturisasi utang (113% PDB)",
+  "Aturan fiskal baru",
+  "Pertumbuhan berbasis investasi swasta (pariwisata, infrastruktur, perikanan)",
+  "Proyek ketahanan iklim dan keamanan air sekitar US$50 juta",
+  "Perluasan energi terbarukan"
+ ],
+ "needs": [
+  "Desalinasi dan penyimpanan air",
+  "Energi terbarukan",
+  "Infrastruktur pariwisata"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan desalinasi dan penyediaan air"
+  },
+  {
+   "title": "Surya dan penyimpanan energi"
+  }
+ ]
+}

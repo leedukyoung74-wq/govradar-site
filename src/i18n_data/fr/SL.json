@@ -1,0 +1,31 @@
+{
+ "summary": "Le budget 2026 de la Sierra Leone, de 30,3 Md NLe (après la loi rectificative), met l'accent sur l'éducation, les infrastructures, la santé et le programme agricole phare Feed Salone. Après la fermeture du détroit d'Ormuz en février 2026 qui a fait grimper le pétrole, la rectificative de juillet a abaissé les prévisions de recettes, relevé les subventions au carburant et à l'électricité et ramené la croissance à 4,0 %.",
+ "leader": "Président Julius Maada Bio (chef de l'État et du gouvernement)",
+ "agenda": [
+  "Feed Salone : production agricole, accès aux marchés et agro-entrepreneuriat des jeunes (priorité « Big Five »)",
+  "Meilleurs services d'éducation et de santé",
+  "Diversification vers l'agriculture, la pêche, les mines, le tourisme, les renouvelables et l'économie numérique",
+  "Lutte contre les drogues comme le kush",
+  "Réformes électorales de l'Accord tripartite avant les élections de 2028"
+ ],
+ "needs": [
+  "Mécanisation, irrigation, stockage et transformation dans les zones Feed Salone",
+  "Extension du transport et de la distribution et électricité plus fiable",
+  "Renouvelables pour alléger le coût des subventions après le choc pétrolier (estimation)",
+  "Chaîne du froid et infrastructures de transformation dans les ports de pêche"
+ ],
+ "biz": [
+  {
+   "title": "Packs de mécanisation agricole, de meunerie et de stockage"
+  },
+  {
+   "title": "Équipements de transport/distribution et exploitation du réseau"
+  },
+  {
+   "title": "Solaire hors réseau et mini-réseaux"
+  },
+  {
+   "title": "Chambres froides et équipements de transformation du poisson"
+  }
+ ]
+}

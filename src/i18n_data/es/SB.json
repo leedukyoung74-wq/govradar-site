@@ -1,0 +1,24 @@
+{
+ "summary": "El Gobierno de Unidad Nacional y Transformación (GNUT) del primer ministro Jeremiah Manele aprobó un presupuesto de 5.600 millones de dólares salomonenses para 2026. Calificó 2026 como año de ejecución, con prioridad en la disciplina fiscal, el apoyo a sectores productivos y de recursos, la conclusión de proyectos de infraestructura y servicios en marcha y la reforma institucional. El gobierno comprometió entre 50 y 100 millones en gasto de desarrollo.",
+ "leader": "Primer ministro Jeremiah Manele (Gobierno de Unidad Nacional y Transformación)",
+ "agenda": [
+  "Presupuesto 2026 de 5.600 millones",
+  "Disciplina fiscal",
+  "Apoyo a sectores productivos y de recursos",
+  "Terminar proyectos de infraestructura y servicios",
+  "Reforma institucional"
+ ],
+ "needs": [
+  "Infraestructura vial y portuaria",
+  "Procesamiento agrícola y pesquero",
+  "Electrificación (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de procesamiento agrícola y pesquero"
+  },
+  {
+   "title": "Construcción y equipos de infraestructura"
+  }
+ ]
+}

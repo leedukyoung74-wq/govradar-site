@@ -1,0 +1,31 @@
+{
+ "summary": "Tras la caída del gabinete de Siliņa por una disputa sobre drones, la coalición de cuatro partidos de Kulbergs asumió en mayo de 2026. Tras las elecciones del 3 de octubre, el presidente volvió a proponer a Kulbergs, que prevé presentar un nuevo gabinete antes del 18 de noviembre.",
+ "leader": "Primer ministro Andris Kulbergs (Lista Unida, desde el 28 may 2026; en funciones tras las elecciones de octubre, propuesto de nuevo el 4 nov) / Presidente Edgars Rinkēvičs",
+ "agenda": [
+  "Seguridad fronteriza, económica y energética",
+  "Apoyo continuo a Ucrania y medidas para debilitar y aislar a Rusia",
+  "Operación VILKATIS en la frontera oriental (hasta el 31 dic 2026)",
+  "Asegurar la financiación de Rail Baltica y una supervisión más estricta",
+  "Ley de inmigración más estricta (permisos de residencia de ciudadanos rusos y bielorrusos)"
+ ],
+ "needs": [
+  "Ciberseguridad para control industrial y equipos remotos (tras ataques)",
+  "Construcción y supervisión de Rail Baltica; modernización de señalización y control ferroviario",
+  "Equipos de transporte público como autobuses de bajas emisiones y sistemas eléctricos de tranvía",
+  "Vigilancia fronteriza y equipos antidrones (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Ciberseguridad OT y de control industrial"
+  },
+  {
+   "title": "Suministro de autobuses de bajas emisiones"
+  },
+  {
+   "title": "Señalización ferroviaria y control de despacho"
+  },
+  {
+   "title": "Transformadores y rectificadores"
+  }
+ ]
+}

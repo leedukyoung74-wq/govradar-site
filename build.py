@@ -252,7 +252,10 @@ def country_page(iso, L):
             return f'<a class="card locked" data-mi="{i}" data-iso="{iso}" href="{P3.paylink(L, "biz", iso)}"><h3>{e(b.get("title"))}</h3><p class="note">🔒 {"이유·대상 바이어 — 분석 회원 월 19,800원" if L=="ko" else "Why-now and buyers — analysis member ₩19,800/mo"}</p></a>'
         body.append(sec("biz", t["biz"], (f'<div class="cards">{"".join(bz(b, i) for i, b in enumerate(bzs))}</div>' + (lockbox(L, iso, len(bzs) - 1) if len(bzs) > 1 else "")) if bzs else ""))
         def td(x):
-            return f'<li><b>{e(x.get("title"))}</b><span class="note"> · {e(x.get("buyer",""))}{" · "+e(t["deadline"])+" "+e(x.get("deadline")) if x.get("deadline") else ""}</span> <button class="btn xs member" data-act="watch" data-iso="{iso}" data-title="{e(x.get("title"))}" data-deadline="{e(x.get("deadline",""))}">{e(t["watch"])}</button></li>'
+            _dl = str(x.get("deadline") or ""); _past = bool(re.match(r"\d{4}-\d{2}-\d{2}$", _dl)) and _dl < TODAY; _new = P3._is_new(x, TODAY) and not _past
+            _hot = (not _past) and bool(re.match(r"\d{4}-\d{2}-\d{2}$", _dl)) and (datetime.date.fromisoformat(_dl) - datetime.date.fromisoformat(TODAY)).days <= 15
+            _mk = ("📁 " + P3.pt("closed", L) + " · ") if _past else ""
+            return f'<li class="{"tpast" if _past else ("thot" if _hot else "")}{" tnew" if _new else ""}">{_mk}<b>{e(x.get("title"))}</b>{P3.NB(L) if _new else ""}<span class="note"> · {e(x.get("buyer",""))}{" · "+e(t["deadline"])+" "+e(x.get("deadline")) if x.get("deadline") else ""}</span> <button class="btn xs member" data-act="watch" data-iso="{iso}" data-title="{e(x.get("title"))}" data-deadline="{e(x.get("deadline",""))}">{e(t["watch"])}</button></li>'
         tds = [x for x in (G(d, "tenders", L) or []) if x]
         body.append(sec("tenders", t["tenders"], ("<ul>" + "".join(td(x) for x in tds) + "</ul>") if tds else ""))
         def oda(x): return f'<li><b>{e(x.get("title"))}</b><span class="note"> · {e(" · ".join(str(v) for v in [x.get("program"), x.get("stage"), x.get("amount")] if v))}</span></li>'
@@ -348,6 +351,7 @@ def mdb_page(L):
     rows = "".join(f'<div class="card"><p class="note"><a href="{url(L,x["iso"])}">{flag(x["iso"])} {e(nm(x["iso"],L))}</a> · {e(x["b"][1] if en else x["b"][2])}</p><h3>{e((x["xe"].get("title") if en else None) or x["x"].get("title",""))}</h3><p class="note">{e(" · ".join(str(v) for v in [x["x"].get("buyer") or x["x"].get("agency"), x["x"].get("value") or x["x"].get("amount"), x["x"].get("deadline")] if v))}</p>{f"<a href={chr(34)}{e(x[chr(120)][chr(117)+chr(114)+chr(108)])}{chr(34)} target=_blank rel=noopener>{chr(8599)}</a>" if str(x["x"].get("url","")).startswith("https://") else ""}</div>' for x in items)
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1></div></section>
 <div class="in stock"><h2 id="deadlines">{"Open tenders by deadline" if en else "마감일 순 열린 입찰"}</h2><p class="note">{"Choose your field. Deadlines are taken from the original notices; always check the notice before bidding." if en else "분야를 고르세요. 마감일은 원문 공고 기준이며, 입찰 전 반드시 원문을 확인하세요."} <a href="{P3.paylink(L, "fit")}">{"Partnership consultation (free) →" if en else "프로젝트 파트너십 무료 상담 →"}</a> · <a href="/{L}/pricing/?p=fit#order">{"Fit review ₩100,000 →" if en else "공고 1건 적합도 검토 10만 원 →"}</a></p>{P3.deadline_board(L, C3())}
+<h2 id="past">{P3.pt("h_mdb", L)}</h2>{P3.past_board(L, C3())}
 <h2>{"Development banks and UN agencies" if en else "개발은행·국제기구"}</h2><p class="summary">{"Lender-financed projects follow the lender's procurement rules and are more open to foreign firms. Start by registering on each institution's portal." if en else "차관 사업은 해당 기관의 조달 규정을 따라 외국 기업에 상대적으로 열려 있습니다. 기관별 포털 등록부터 시작하세요."}</p>
 <h2>{"Institution portals" if en else "기관별 조달 포털"}</h2><div class="cards">{inst}</div>
 <h2>{"Projects in the radar" if en else "레이더에 잡힌 사업"} ({len(items)})</h2><div class="cards">{rows or '<p class="note">—</p>'}</div></div>"""
@@ -504,6 +508,15 @@ def C3():
 
 P3._NM = lambda iso, L: nm(iso, L)
 
+RG_H = {"es": "Regiones autónomas y especiales", "fr": "Régions autonomes et à statut spécial", "ar": "المناطق ذات الحكم الذاتي والخاصة", "vi": "Vùng tự trị và đặc biệt", "id": "Wilayah otonom dan khusus"}
+RG_P = {"es": "Regiones con parlamento, presupuesto y leyes propias, que lanzan proyectos y licitaciones aparte del gobierno nacional.", "fr": "Régions dotées de leur propre parlement, budget et lois, qui lancent projets et appels d'offres séparément du gouvernement national.", "ar": "مناطق لها برلمان وميزانية وقوانين خاصة، وتطرح مشاريع ومناقصات بمعزل عن الحكومة المركزية.", "vi": "Các vùng có nghị viện, ngân sách và luật riêng, tự triển khai dự án và đấu thầu tách khỏi chính phủ trung ương.", "id": "Wilayah dengan parlemen, anggaran, dan hukum sendiri yang menjalankan proyek dan tender terpisah dari pemerintah pusat."}
+def region_block(L):
+    rt = tx(L, "rgt"); nd = sum(done(x["iso"]) for x in REGS)
+    cards = "".join(f'<a class="flag {"done" if done(x["iso"]) else ""}" data-n="{e((nm(x["iso"],L)+" "+x["en"]+" "+x["ko"]).lower())}" href="{url(L,x["iso"])}">{flag(x["parent"])}<span>{e(nm(x["iso"],L).split(" (")[0])}<small>{e(nm(x["parent"],L))} · {e(rt.get(x["type"], x["type"]))}</small></span></a>'
+                    for x in sorted(REGS, key=lambda x: (nm(x["parent"], L), nm(x["iso"], L))))
+    h = RG_H.get(L) or tx(L, "rg_h"); para = RG_P.get(L) or tx(L, "rg_p")
+    return f'<h3 class="regh" id="regions">{e(h)} <small>{nd}/{len(REGS)}</small></h3><p class="note">{e(para)}</p><div class="grid regs">{cards}</div>'
+
 def home(L):
     t = T[L]; path = f"/{L}/"; alts = {l: f"/{l}/" for l in LANGS}
     n_done = sum(done(i) for i in BY if not is_reg(i)); n_t = sum(len(DATA.get(i, {}).get("tenders") or []) for i in BY)
@@ -529,8 +542,8 @@ def home(L):
 <section class="band" id="map"><div class="in"><h2>{e(t['map_h'])}</h2>
 <div class="mapbox"><div id="wmap" data-lang="{L}"></div></div>
 <div class="filters"><input id="q" type="search" placeholder="{e(t['search'])}" aria-label="{e(t['search'])}"><button class="chip on" data-r="ALL">{e(t['all'])}</button>{regions}</div>
-<div class="grid" id="grid">{grid}</div></div></section>
-<section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=8, home=True)}<p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
+<div class="grid" id="grid">{grid}</div>{region_block(L)}</div></section>
+<section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=8, home=True)}<h3 class="regh">{P3.pt("h_home", L)}</h3>{P3.past_board(L, C3(), home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
 <section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a></p></div></section>
 {P3.edge_html(L)}{P3.access_html(L)}

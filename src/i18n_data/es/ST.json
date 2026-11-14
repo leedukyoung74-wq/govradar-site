@@ -1,0 +1,20 @@
+{
+ "summary": "En las elecciones del 27 de septiembre de 2026 el opositor MLSTP-PSD obtuvo 24 de 55 escaños y el gobernante ADI 23, dejando un parlamento sin mayoría. La coalición MCI-PS/PUN, con seis escaños, tiene la llave, y el presidente Vila Nova nombrará al primer ministro según los resultados. La abstención fue récord, del 62,9%.",
+ "leader": "Presidente Carlos Vila Nova / primer ministro por nombrar (tras las elecciones de sep 2026)",
+ "agenda": [
+  "Formar coalición y nombrar primer ministro",
+  "Acabar con la escasez eléctrica (estimación)",
+  "Gestión fiscal y de deuda (estimación)",
+  "Turismo y agricultura (cacao) (estimación)"
+ ],
+ "needs": [
+  "Generación (cortes frecuentes) (estimación)",
+  "Puerto y aeropuerto",
+  "Agua potable"
+ ],
+ "biz": [
+  {
+   "title": "Equipos solares y de generación"
+  }
+ ]
+}

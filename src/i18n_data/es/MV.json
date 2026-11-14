@@ -1,0 +1,32 @@
+{
+ "summary": "El gobierno presentó el 29 oct 2026 un presupuesto 2027 de 59.700 millones de rufiyas, 4.500 millones menos que este año, pero el déficit se amplía al 7,3% del PIB y la deuda pública directa se proyecta en el 117% del PIB.",
+ "leader": "Presidente Mohamed Muizzu (jefe de Estado y de gobierno)",
+ "agenda": [
+  "Aliviar la carga de la deuda y estabilidad fiscal (déficit inferior al 5% del PIB en 2028)",
+  "Completar el 70% de los proyectos de inversión pública en curso (PSIP)",
+  "Más vivienda, incluido un plan de préstamos para la primera vivienda",
+  "Servicios de salud más sólidos",
+  "Sin subidas de impuestos en 2027",
+  "Bases para alcanzar el estatus de país desarrollado en 2040"
+ ],
+ "needs": [
+  "Gestión de la deuda y transparencia fiscal",
+  "Finalización y supervisión de proyectos de inversión pública en las islas",
+  "Oferta y financiación de vivienda",
+  "Ampliación de los servicios de salud"
+ ],
+ "biz": [
+  {
+   "title": "Sistema de seguimiento físico y financiero del PSIP"
+  },
+  {
+   "title": "Analítica de ingresos y eficiencia tributaria (datos del GST)"
+  },
+  {
+   "title": "Digitalización de la gestión sanitaria y los datos médicos"
+  },
+  {
+   "title": "Plataforma de solicitud y evaluación de préstamos hipotecarios"
+  }
+ ]
+}

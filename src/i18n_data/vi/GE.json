@@ -1,0 +1,28 @@
+{
+ "summary": "Ngân sách 2026 giả định tăng trưởng 5% và chính phủ kỳ vọng nền kinh tế đạt 114 tỷ lari năm 2026 (tăng trưởng 2025: 7,5%). Vốn vay ADB và Ngân hàng Thế giới tài trợ đường vành đai Tbilisi, đường sắt và đường bộ Hành lang xuyên Caspi (Trung tâm) và hệ thống nước nông thôn.",
+ "leader": "Thủ tướng Irakli Kobakhidze (Giấc mơ Gruzia)",
+ "agenda": [
+  "Nâng cấp đường sắt và đường bộ Hành lang xuyên Caspi (Trung tâm)",
+  "Mạng lưới đường do các định chế tài chính quốc tế tài trợ (vành đai Tbilisi, Batumi-Sarpi)",
+  "Xây dựng lại hệ thống nước nông thôn",
+  "Hợp tác với Azerbaijan về thương mại, hải quan và hành lang năng lượng xanh",
+  "Chống tham nhũng và cải cách Bộ Kinh tế cùng doanh nghiệp nhà nước"
+ ],
+ "needs": [
+  "Năng lực thi công và giám sát đường cho dự án ADB/Ngân hàng Thế giới",
+  "Đầu máy điện và trạm biến áp cho điện khí hóa đường sắt",
+  "Thiết kế, xây dựng và vận hành hệ thống nước nông thôn",
+  "Logistics số cho biên giới và hải quan (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Thi công và giám sát dự án đường ADB/Ngân hàng Thế giới"
+  },
+  {
+   "title": "Đầu máy điện và thiết bị trạm biến áp"
+  },
+  {
+   "title": "Thiết kế cấp nước nông thôn và thiết bị xử lý"
+  }
+ ]
+}

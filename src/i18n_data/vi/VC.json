@@ -1,0 +1,24 @@
+{
+ "summary": "Đảng Dân chủ Mới thắng bầu cử tháng 11/2025 và Godwin Friday trở thành thủ tướng. Cho rằng đã thừa hưởng nợ 113% GDP, chính phủ đặt ba trụ cột (ổn định tài khóa, tái cơ cấu nợ, tăng trưởng nhờ đầu tư tư nhân) và quy tắc tài khóa mới. Chính phủ gia nhập ngân hàng phát triển CAF để đảo nợ với điều kiện rẻ hơn và công bố dự án khử mặn, trữ nước khoảng 50 triệu USD do Quỹ Khí hậu Xanh hỗ trợ.",
+ "leader": "Thủ tướng Godwin Friday (Đảng Dân chủ Mới, từ 11/2025)",
+ "agenda": [
+  "Ổn định tài khóa và tái cơ cấu nợ (113% GDP)",
+  "Quy tắc tài khóa mới",
+  "Tăng trưởng nhờ đầu tư tư nhân (du lịch, hạ tầng, thủy sản)",
+  "Dự án chống chịu khí hậu và an ninh nước khoảng 50 triệu USD",
+  "Mở rộng năng lượng tái tạo"
+ ],
+ "needs": [
+  "Khử mặn và trữ nước",
+  "Năng lượng tái tạo",
+  "Hạ tầng du lịch"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị khử mặn và cấp nước"
+  },
+  {
+   "title": "Điện mặt trời và lưu trữ năng lượng"
+  }
+ ]
+}

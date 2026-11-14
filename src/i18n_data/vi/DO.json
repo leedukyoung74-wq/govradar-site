@@ -1,0 +1,28 @@
+{
+ "summary": "Chính phủ Abinader đặt mục tiêu hạng đầu tư vào năm 2028, và Fitch nâng hạng tín nhiệm quốc gia lên BB ngày 3/11/2026. Đầu tư công chủ yếu dành cho giao thông như đường và metro, trong khi tổn thất và trợ giá ngành điện đè nặng ngân sách.",
+ "leader": "Tổng thống Luis Abinader (nguyên thủ kiêm đứng đầu chính phủ, nhiệm kỳ hai đến 16/8/2028)",
+ "agenda": [
+  "Hạng đầu tư vào 2028 và củng cố tài khóa",
+  "Mục tiêu 2036: tăng gấp đôi GDP, tạo 1,7 triệu việc làm, xóa nghèo cùng cực",
+  "Tăng đầu tư hạ tầng giao thông (đường, metro)",
+  "Giảm tổn thất phân phối điện và gánh nặng trợ giá",
+  "Kiểm soát di cư và hợp tác chống ma túy với Mỹ"
+ ],
+ "needs": [
+  "Đo đếm và hiện đại hóa lưới điện để giảm tổn thất (44,1% điện mua vào)",
+  "Thiết kế, giám sát và quản lý dự án đường và metro",
+  "Mở rộng cơ sở thuế và quản lý tài khóa hiệu quả hơn (trả lãi chiếm 21,9% thu)",
+  "Hạ tầng kết nối du lịch và logistics (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Đồng hồ thông minh và tự động hóa phân phối để giảm tổn thất"
+  },
+  {
+   "title": "Hệ thống đường sắt đô thị và tư vấn vận hành"
+  },
+  {
+   "title": "Giải pháp số cho thuế và tài chính công"
+  }
+ ]
+}

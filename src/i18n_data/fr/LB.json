@@ -1,0 +1,24 @@
+{
+ "summary": "Le gouvernement Salam a adopté le 1er octobre un projet de budget 2027 de 6,87 Md USD (+14,2 %). La Banque mondiale prévoit une contraction de 6,4 % en 2026 et le Premier ministre estime que le coût de deux guerres avec Israël pourrait dépasser 27 Md USD. Plus de 250 000 personnes restent déplacées et 91 000 logements ont été détruits ou endommagés. Des réformes financières sont en cours en vue d'un programme du FMI.",
+ "leader": "Président Joseph Aoun / Premier ministre Nawaf Salam",
+ "agenda": [
+  "Budget 2027 de 6,87 Md USD : stabilité, pas de gros déficit",
+  "Passer de la gestion des déplacés au retour et au relèvement",
+  "Réforme bancaire et du secret bancaire (recommandations du FMI)",
+  "Répartir les pertes financières (loi sur le trou financier)",
+  "Monopole de l'État sur les armes (armes du Hezbollah)"
+ ],
+ "needs": [
+  "Reconstruire logements, électricité et eau endommagés",
+  "Renforcer les finances publiques et l'administration fiscale",
+  "Reconstruire le système bancaire et financier"
+ ],
+ "biz": [
+  {
+   "title": "Projets de relèvement financés par les bailleurs (logement, électricité, eau)"
+  },
+  {
+   "title": "Numérisation fiscale et des finances publiques"
+  }
+ ]
+}

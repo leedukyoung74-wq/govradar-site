@@ -1,0 +1,30 @@
+{
+ "summary": "Chính phủ Hassan củng cố tài khóa theo Tầm nhìn Hiện đại hóa Kinh tế và Lộ trình Hiện đại hóa Khu vực Công. Ngân sách 2026 nhắm thâm hụt 4,6% GDP với 1,6 tỷ JD chi đầu tư; ngân sách 2027 được soạn trên cơ sở cắt 15% chi thường xuyên của các bộ.",
+ "leader": "Quốc vương Abdullah II (nguyên thủ quốc gia) / Thủ tướng Jafar Hassan (từ 9/2024, cải tổ 8/2026)",
+ "agenda": [
+  "Thực hiện Tầm nhìn Hiện đại hóa Kinh tế",
+  "Lộ trình Hiện đại hóa Khu vực Công và ngân sách theo kết quả",
+  "Chuyển đổi số, tự động hóa dịch vụ và an ninh mạng",
+  "Kinh tế xanh và mục tiêu khí hậu",
+  "Giảm thâm hụt và cắt 15% chi thường xuyên (2027)"
+ ],
+ "needs": [
+  "Tự động hóa dịch vụ công và năng lực an ninh mạng",
+  "Công cụ ngân sách theo kết quả và hiệu quả chi tiêu (ước tính)",
+  "Thiết kế dự án kinh tế xanh và giảm phát thải (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Tư vấn tự động hóa dịch vụ chính phủ và chuyển đổi số"
+  },
+  {
+   "title": "Đánh giá và giám sát an ninh mạng cho cơ quan công"
+  },
+  {
+   "title": "Hệ thống ngân sách theo kết quả và quản lý KPI"
+  },
+  {
+   "title": "Tự động hóa bằng AI công việc hành chính công"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "summary": "Le projet de budget 2027 prévoit 728,3 Md soms de recettes pour 695,8 Md de dépenses (hors actifs financiers), soit un excédent de 32,5 Md, avec une forte hausse de la protection sociale. La centrale hydroélectrique Kambarata-1 et le chemin de fer Chine-Kirghizistan-Ouzbékistan sont les projets stratégiques phares, et une présidentielle aura lieu le 27 janvier 2027.",
+ "leader": "Président Sadyr Japarov (chef de l'État, à nouveau candidat le 27 janv. 2027) / Président du Cabinet des ministres Adylbek Kasymaliev",
+ "agenda": [
+  "Sécurité énergétique, autour de la centrale Kambarata-1",
+  "Chemin de fer Chine-Kirghizistan-Ouzbékistan et connectivité logistique",
+  "Plus de petite hydraulique, d'éolien et de solaire (36 petites centrales prévues en 2026-27)",
+  "Protection sociale élargie avec maintien d'un excédent budgétaire",
+  "Programme national de développement à l'horizon 2030"
+ ],
+ "needs": [
+  "Conception et supervision de grandes centrales hydroélectriques et du transport d'électricité",
+  "Numérisation ferroviaire et logistique (transport multimodal)",
+  "Systèmes de gestion du Fonds social et de l'assurance maladie (estimation)",
+  "Équipements renouvelables de petite et moyenne taille (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Gestion (PMC) et supervision de projets hydroélectriques"
+  },
+  {
+   "title": "Plateforme numérique de logistique et de douane"
+  },
+  {
+   "title": "Systèmes informatiques du Fonds social et de l'assurance maladie"
+  },
+  {
+   "title": "Automatisation par IA et e-administration pour l'administration publique"
+  }
+ ]
+}

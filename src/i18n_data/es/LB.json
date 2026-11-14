@@ -1,0 +1,24 @@
+{
+ "summary": "El gabinete de Salam aprobó el 1 de octubre un proyecto de presupuesto 2027 de 6.870 millones de USD (+14,2%). El Banco Mundial prevé una contracción del 6,4% en 2026 y el primer ministro dijo que el costo de dos guerras con Israel podría superar los 27.000 millones. Más de 250.000 personas siguen desplazadas y 91.000 viviendas fueron destruidas o dañadas. Avanzan reformas financieras para un programa del FMI.",
+ "leader": "Presidente Joseph Aoun / Primer ministro Nawaf Salam",
+ "agenda": [
+  "Presupuesto 2027 de 6.870 millones: estabilidad y sin gran déficit",
+  "Pasar de gestionar el desplazamiento al retorno y la recuperación",
+  "Reforma bancaria y del secreto bancario (recomendaciones del FMI)",
+  "Definir quién asume las pérdidas financieras (ley de brecha financiera)",
+  "Monopolio estatal de las armas (armas de Hezbolá)"
+ ],
+ "needs": [
+  "Reconstruir viviendas, electricidad y agua dañadas por la guerra",
+  "Fortalecer las finanzas públicas y la administración tributaria",
+  "Reconstruir el sistema bancario y financiero"
+ ],
+ "biz": [
+  {
+   "title": "Proyectos de recuperación con fondos de donantes (vivienda, electricidad, agua)"
+  },
+  {
+   "title": "Digitalización tributaria y de finanzas públicas"
+  }
+ ]
+}

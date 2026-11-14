@@ -1,0 +1,24 @@
+{
+ "summary": "Chính phủ Tổng thống Doumbouya dự kiến thâm hụt 2027 tăng nhẹ lên 2,5% GDP để tiếp tục đầu tư trường học, bệnh viện và đường sá. Ngân sách điều chỉnh 2026 là 7,7 tỷ USD (+5,8%), và Guinea muốn thu hút 200 tỷ USD để xây nền kinh tế ngoài khai khoáng, dựa vào quặng sắt Simandou. Thu ngân sách tăng khoảng 50% năm 2025.",
+ "leader": "Tổng thống Mamadi Doumbouya / Bộ trưởng Tài chính-Kinh tế Mariama Ciré Sylla",
+ "agenda": [
+  "Đầu tư công vào trường học, bệnh viện, đường (vay trong nước 4.600 tỷ franc)",
+  "Đa dạng hóa ngoài khai khoáng nhờ Simandou (mục tiêu 200 tỷ USD)",
+  "Tiếp tục tăng thu",
+  "Nghiên cứu khả thi cho dự án bị hoãn",
+  "Quản lý chi phí tài khóa khi giữ giá nhiên liệu cố định"
+ ],
+ "needs": [
+  "Logistics đường sắt, cảng, đường bộ",
+  "Xây trường học, bệnh viện",
+  "Tăng cung cấp điện (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Xây dựng và trang bị bệnh viện, trường học"
+  },
+  {
+   "title": "Logistics và thiết bị gắn với khai khoáng"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "summary": "Tras las elecciones de marzo de 2026, el gobierno de centroderecha de Janša asumió en junio con la promesa de bajar impuestos, reducir la burocracia y mantener el déficit por debajo del 3%. Sus proyectos de presupuesto 2027-28 de octubre priorizan la inversión y una absorción más rápida de fondos de la UE.",
+ "leader": "Primer ministro Janez Janša (aprobado en junio de 2026, cuarto mandato) / Presidenta Nataša Pirc Musar",
+ "agenda": [
+  "Déficit por debajo del 3% del PIB, sin nuevos impuestos",
+  "Menos burocracia y reasignar personal público a salud, cuidados y policía; referéndum consultivo previsto",
+  "Más inversión, más financiación per cápita a municipios y uso más rápido de fondos de la UE",
+  "Gasto en defensa elevado al 2,03% del PIB (presupuesto revisado 2026)",
+  "Seguir preparando JEK2 (nueva unidad nuclear de Krško)"
+ ],
+ "needs": [
+  "Capacidad de gestión de proyectos y digital para acelerar la absorción de fondos UE/PRR (estimación)",
+  "Automatización administrativa y gobierno electrónico para apoyar la desburocratización (estimación)",
+  "Oportunidades en la cadena de suministro del proyecto nuclear JEK2",
+  "Renovación de equipos médicos en centros de salud y hospitales (muchos avisos en TED)"
+ ],
+ "biz": [
+  {
+   "title": "Cadena de suministro nuclear de JEK2 (componentes, construcción)"
+  },
+  {
+   "title": "Licitaciones de imagen dental y médica (CBCT, rayos X)"
+  },
+  {
+   "title": "Digitalización y automatización de la administración pública"
+  },
+  {
+   "title": "Equipos de distribución (barras BT, transformadores)"
+  }
+ ]
+}

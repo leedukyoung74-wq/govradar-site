@@ -1,0 +1,34 @@
+{
+ "summary": "Le président Rahmon dirige le pays depuis des décennies, le Premier ministre Rassoulzoda conduisant le gouvernement. La centrale de Rogoun domine les dépenses publiques et, au sommet Corée-Asie centrale de septembre 2026 à Séoul, les deux pays ont élevé leurs relations au rang de partenariat global et signé 17 accords et protocoles.",
+ "leader": "Président Emomali Rahmon (également chef du gouvernement) / Premier ministre Kokhir Rassoulzoda",
+ "agenda": [
+  "Accélérer la construction de Rogoun et les exportations d'électricité",
+  "Élargir l'assiette fiscale, apurer les arriérés et échanger les données numériquement",
+  "Substitution aux importations et hausse de la production nationale",
+  "Liaisons ferroviaires, de transport et logistiques ; coopération sur les minerais critiques (antimoine)",
+  "Modernisation de l'irrigation et de l'approvisionnement en eau"
+ ],
+ "needs": [
+  "Équipements hydroélectriques et extension du réseau (Rogoun et au-delà)",
+  "Stations de pompage d'irrigation, conduites et SIG de l'eau",
+  "Numérisation publique et financière (échange de données fiscales, SIG de la garantie des dépôts)",
+  "Modernisation ferroviaire et logistique (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Équipements de transport/distribution et EPC de postes électriques"
+  },
+  {
+   "title": "Pompes d'irrigation et équipements de traitement de l'eau"
+  },
+  {
+   "title": "E-administration et systèmes d'information financière"
+  },
+  {
+   "title": "Coopération ferroviaire et logistique"
+  },
+  {
+   "title": "Chaîne d'approvisionnement en minerais critiques (antimoine)"
+  }
+ ]
+}

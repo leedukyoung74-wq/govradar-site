@@ -1,0 +1,20 @@
+{
+ "summary": "El gobierno reconocido (Consejo de Liderazgo Presidencial, presidido por Rashad al Alimi) lanzó el 5 de octubre la operación 'Amanecer de Yemen' con apoyo aéreo de la coalición saudí, mientras los hutíes tomaron el puerto de Moca y sitiaron Taiz. Más de 323.000 personas se han desplazado desde agosto y unas 800.000 en Taiz están aisladas. Los hutíes vuelven a atacar aeropuertos e instalaciones petroleras saudíes.",
+ "leader": "Rashad al Alimi, presidente del Consejo de Liderazgo Presidencial (gobierno reconocido) / los hutíes controlan Saná desde 2014",
+ "agenda": [
+  "Operación militar contra los hutíes ('Amanecer de Yemen', desde el 5 oct 2026)",
+  "Levantar el cerco de Taiz y abrir el acceso humanitario",
+  "Remodelación del gabinete (3 nov 2026)",
+  "Finanzas públicas y estabilidad de la moneda (estimación)"
+ ],
+ "needs": [
+  "Ayuda urgente médica, de combustible y alimentos",
+  "Apoyo a hospitales (40% de los de Taiz cerrados)",
+  "Reparación de emergencia de agua y electricidad"
+ ],
+ "biz": [
+  {
+   "title": "Suministros médicos y de agua mediante compras de organismos internacionales"
+  }
+ ]
+}

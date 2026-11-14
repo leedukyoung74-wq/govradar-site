@@ -1,0 +1,20 @@
+{
+ "summary": "Tras el golpe militar del 26 de noviembre de 2025, el general Horta Inta-A asumió como presidente de transición por un año, y el primer ministro civil Ilídio Vieira Té dirige el gobierno. Una nueva constitución se aprobó el 30 de agosto de 2026 y las elecciones presidenciales y legislativas están fijadas para el 6 de diciembre de 2026. El FMI prevé que el déficit 2026 baje al 4,2% del PIB. Las exportaciones dependen del anacardo.",
+ "leader": "General Horta Inta-A (presidente de transición) / Primer ministro Ilídio Vieira Té",
+ "agenda": [
+  "Elecciones presidenciales y legislativas del 6 dic 2026",
+  "Aplicar la nueva constitución (referéndum del 30 ago 2026)",
+  "Reducir el déficit al 4,2% del PIB",
+  "Gestionar las exportaciones de anacardo"
+ ],
+ "needs": [
+  "Procesamiento de anacardo",
+  "Suministro eléctrico",
+  "Salud básica"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de procesamiento de anacardo"
+  }
+ ]
+}

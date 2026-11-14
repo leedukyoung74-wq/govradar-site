@@ -1,0 +1,28 @@
+{
+ "summary": "El colapso del banco digital ueno llevó al Senado a destituir al presidente Santiago Peña el 6 nov 2026, y el vicepresidente Pedro Alliana asumió. Contener el impacto sobre los fondos jubilatorios públicos y aprobar el presupuesto 2027 son las tareas inmediatas del nuevo gobierno.",
+ "leader": "Presidente Pedro Alliana (asumió desde la vicepresidencia tras la destitución de Santiago Peña por juicio político del Senado el 6 nov 2026; mandato hasta el 15 ago 2028)",
+ "agenda": [
+  "Resolución de ueno bank y recuperación de depósitos y fondos públicos",
+  "Afrontar la crisis financiera del IPS y el abastecimiento de medicamentos",
+  "Revisión legislativa del presupuesto 2027 con más gasto en salud",
+  "Restablecer la estabilidad y la confianza inversora tras el cambio de gobierno",
+  "Preparación ante El Niño y controles contra el contrabando"
+ ],
+ "needs": [
+  "Mayor supervisión financiera y gestión de fondos públicos",
+  "Operación hospitalaria del IPS y compras de medicamentos más eficientes",
+  "Más centros de salud y suministro de medicamentos",
+  "Supervisión de la ejecución de obras públicas durante la transición (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Consultoría en supervisión financiera y monitoreo de riesgo bancario"
+  },
+  {
+   "title": "Sistemas de información hospitalaria y compras de medicamentos del IPS"
+  },
+  {
+   "title": "Suministro de equipos médicos y fármacos"
+  }
+ ]
+}

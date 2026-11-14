@@ -1,0 +1,27 @@
+{
+ "summary": "En su mensaje anual del 30 de septiembre, la presidenta Jennifer Geerlings-Simons presentó el presupuesto 2027 (ingresos 70.100 millones de SRD, gastos 80.900 millones, déficit del 4% del PIB). Calificó 2027 como año de preparación antes del petróleo costa afuera de 2028, con una Ley de Contenido Local y una base tributaria más amplia (oro, madera, pesca). La deuda pública es del 100,4% del PIB.",
+ "leader": "Presidenta Jennifer Geerlings-Simons (jefa de Estado y de gobierno)",
+ "agenda": [
+  "Preparar el petróleo costa afuera (GranMorgu de TotalEnergies) para 2028",
+  "Ley de Contenido Local al parlamento en 2027",
+  "Ampliar la base tributaria y mejorar la recaudación, sin subir tasas",
+  "Reducir la deuda desde el 100,4% del PIB",
+  "Transición a gas y solar para acabar con los apagones"
+ ],
+ "needs": [
+  "Capacidad local de servicios para la cadena petrolera y gasífera",
+  "Generación a gas y solar y red eléctrica",
+  "Administración tributaria digital"
+ ],
+ "biz": [
+  {
+   "title": "Servicios locales y equipos para el desarrollo petrolero"
+  },
+  {
+   "title": "Generación a gas y solar y equipos de red"
+  },
+  {
+   "title": "Sistemas tributarios y de recaudación"
+  }
+ ]
+}

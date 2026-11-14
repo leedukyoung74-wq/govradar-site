@@ -1,0 +1,28 @@
+{
+ "summary": "Anggaran 2026 mengasumsikan pertumbuhan 5% dan pemerintah memperkirakan ekonomi mencapai GEL 114 miliar pada 2026 (pertumbuhan 2025: 7,5%). Pinjaman ADB dan Bank Dunia mendanai jalan lingkar Tbilisi, rel dan jalan Koridor Trans-Kaspia (Tengah), serta sistem air perdesaan.",
+ "leader": "Perdana Menteri Irakli Kobakhidze (Georgian Dream)",
+ "agenda": [
+  "Meningkatkan rel dan jalan Koridor Trans-Kaspia (Tengah)",
+  "Jaringan jalan yang didanai lembaga keuangan internasional (lingkar Tbilisi, Batumi-Sarpi)",
+  "Membangun kembali sistem air perdesaan",
+  "Kerja sama dengan Azerbaijan di bidang perdagangan, kepabeanan, dan koridor energi hijau",
+  "Antikorupsi dan reformasi Kementerian Ekonomi serta BUMN"
+ ],
+ "needs": [
+  "Kapasitas konstruksi dan supervisi jalan untuk proyek ADB/Bank Dunia",
+  "Lokomotif listrik dan gardu induk untuk elektrifikasi rel",
+  "Desain, konstruksi, dan operasi sistem air perdesaan",
+  "Logistik digital perbatasan dan kepabeanan (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Konstruksi dan supervisi proyek jalan ADB/Bank Dunia"
+  },
+  {
+   "title": "Lokomotif listrik dan peralatan gardu induk"
+  },
+  {
+   "title": "Desain air perdesaan dan peralatan pengolahan"
+  }
+ ]
+}

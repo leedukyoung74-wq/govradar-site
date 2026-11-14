@@ -1,0 +1,31 @@
+{
+ "summary": "Sau bầu cử tháng 3/2026, chính phủ cánh hữu của Janša nhậm chức tháng 6, cam kết giảm thuế, giảm thủ tục hành chính và giữ thâm hụt dưới 3%. Dự thảo ngân sách 2027-28 trình tháng 10 ưu tiên đầu tư và giải ngân nhanh vốn EU.",
+ "leader": "Thủ tướng Janez Janša (được phê chuẩn 6/2026, nhiệm kỳ thứ tư) / Tổng thống Nataša Pirc Musar",
+ "agenda": [
+  "Giữ thâm hụt dưới 3% GDP, không thêm thuế mới",
+  "Giảm thủ tục và điều chuyển công chức sang y tế, chăm sóc và cảnh sát; dự kiến trưng cầu ý dân tham vấn",
+  "Tăng đầu tư, tăng ngân sách bình quân đầu người cho địa phương, giải ngân vốn EU nhanh hơn",
+  "Nâng chi quốc phòng lên 2,03% GDP (ngân sách điều chỉnh 2026)",
+  "Tiếp tục chuẩn bị JEK2 (tổ máy hạt nhân mới Krško)"
+ ],
+ "needs": [
+  "Năng lực quản lý dự án và số hóa để giải ngân nhanh vốn EU/RRP (ước tính)",
+  "Tự động hóa hành chính và chính phủ điện tử hỗ trợ giảm thủ tục (ước tính)",
+  "Cơ hội chuỗi cung ứng quanh dự án hạt nhân JEK2",
+  "Đổi mới thiết bị y tế tại trung tâm y tế và bệnh viện (nhiều thông báo trên TED)"
+ ],
+ "biz": [
+  {
+   "title": "Chuỗi cung ứng hạt nhân JEK2 (linh kiện, xây dựng)"
+  },
+  {
+   "title": "Gói thầu chẩn đoán hình ảnh nha khoa và y tế (CBCT, X-quang)"
+  },
+  {
+   "title": "Số hóa và tự động hóa hành chính công"
+  },
+  {
+   "title": "Thiết bị phân phối điện (thanh cái hạ áp, máy biến áp)"
+  }
+ ]
+}

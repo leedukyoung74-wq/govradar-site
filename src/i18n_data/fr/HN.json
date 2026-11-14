@@ -1,0 +1,25 @@
+{
+ "summary": "Le budget 2026 du président Nasry Asfura, de 444,3 Md HNL, a été adopté en avril. Il renforce la santé (nouveaux hôpitaux), l'éducation (rénovation des écoles, repas) et la sécurité, concentre 48,2 Md d'investissement public (4,4 % du PIB) sur l'énergie et les routes et limite le déficit à 1,0 % du PIB.",
+ "leader": "Président Nasry Asfura (chef de l'État et du gouvernement, depuis janv. 2026)",
+ "agenda": [
+  "Investissement public de 48,2 Md HNL (4,4 % du PIB) : énergie et routes",
+  "Santé : nouveaux hôpitaux à Tegucigalpa, San Pedro Sula et ailleurs",
+  "Éducation : 3,7 Md HNL de plus pour les écoles et repas",
+  "Plus de moyens pour la sécurité et la défense",
+  "Déficit de 1,0 % du PIB (loi de responsabilité budgétaire)",
+  "Transferts aux communes de 5,8 % à 7,3 %"
+ ],
+ "needs": [
+  "Production, réseau électrique et connectivité routière",
+  "Construction d'hôpitaux et équipements médicaux",
+  "Rénovation des écoles"
+ ],
+ "biz": [
+  {
+   "title": "Construction d'hôpitaux et équipements médicaux"
+  },
+  {
+   "title": "Travaux d'énergie et de routes"
+  }
+ ]
+}

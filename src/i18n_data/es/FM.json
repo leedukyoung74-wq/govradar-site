@@ -1,0 +1,25 @@
+{
+ "summary": "En su primera reunión ejecutiva de 2026, la administración del presidente Wesley Simina y el vicepresidente Aren Palik trató la preparación legislativa, el avance de infraestructuras, el presupuesto, la ampliación del correo a islas exteriores, las alianzas internacionales y la respuesta al derrame de petróleo en Chuuk. Impulsa la planificación espacial marina, firmó un Plan Nacional de Inversión Agrícola, sigue el Plan Estratégico de Desarrollo 2024–2043 y reafirmó la cooperación del Pacto con EE. UU.",
+ "leader": "Presidente Wesley Simina",
+ "agenda": [
+  "Plan Estratégico de Desarrollo 2024–2043",
+  "Planificación espacial marina",
+  "Plan Nacional de Inversión Agrícola",
+  "Más servicios en islas exteriores (correo, etc.)",
+  "Respuesta al derrame de petróleo en Chuuk",
+  "Cooperación del Pacto con EE. UU."
+ ],
+ "needs": [
+  "Infraestructura (puertos, carreteras)",
+  "Agricultura y producción de alimentos",
+  "Gestión del medio marino"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de producción y procesamiento agrícola"
+  },
+  {
+   "title": "Equipos de respuesta y vigilancia de contaminación marina"
+  }
+ ]
+}

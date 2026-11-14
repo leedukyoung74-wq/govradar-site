@@ -1,0 +1,27 @@
+{
+ "summary": "La ley de presupuesto quinquenal del gobierno de Orsi busca reducir gradualmente el déficit, sobre todo por la vía de los ingresos, priorizando la pobreza infantil y la seguridad. El crecimiento es moderado, en torno al 2%, y el país mantiene el grado de inversión.",
+ "leader": "Presidente Yamandú Orsi (jefe de Estado y de gobierno desde el 1 de marzo de 2025, Frente Amplio)",
+ "agenda": [
+  "Reducción gradual de un déficit superior al 4% del PIB y ajustes tributarios",
+  "Transferencias unificadas y mayores para reducir la pobreza infantil un 25%",
+  "Seguridad (300 policías más en el Ministerio del Interior)",
+  "Reasignación de fondos educativos",
+  "Revisión de contratos anteriores (agua de Arazatí, patrulleros de la Armada)"
+ ],
+ "needs": [
+  "Equipos y sistemas de seguridad contra el crimen organizado (estimación)",
+  "Infraestructura hídrica como fuentes alternativas",
+  "Digitalización administrativa para unificar las transferencias sociales (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Sistema integrado de gestión de transferencias sociales"
+  },
+  {
+   "title": "Videoanalítica y mando y control policial"
+  },
+  {
+   "title": "Tecnología de tratamiento de agua y gestión de fugas"
+  }
+ ]
+}

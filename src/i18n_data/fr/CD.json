@@ -1,0 +1,31 @@
+{
+ "summary": "La Première ministre Suminwa a présenté le 29 octobre 2026 à l'Assemblée nationale le projet de budget 2027 (environ 24,8 Md USD), qui privilégie la sécurité, l'emploi et les infrastructures sur fond de conflit dans l'Est.",
+ "leader": "Président Félix Tshisekedi (chef de l'État) / Première ministre Judith Suminwa Tuluka (cheffe du gouvernement)",
+ "agenda": [
+  "Programme d'action 2024-2028 : emploi et pouvoir d'achat, défense et sécurité, aménagement du territoire et infrastructures, services sociaux de base, gouvernance et finances publiques, environnement",
+  "Répondre au conflit dans l'Est et construire la paix (CIRGL et diplomatie régionale)",
+  "Accroître les recettes intérieures et améliorer la gestion des finances publiques",
+  "Ouvrir l'économie via les corridors orientaux comme Dar es Salaam",
+  "Développer routes, électricité et eau potable"
+ ],
+ "needs": [
+  "Conception routière, supervision des travaux et gestion environnementale et sociale (PACT de la Banque mondiale, avis de la Cellule infrastructures)",
+  "Référentiels emplois et compétences pour le secrétariat TIC du gouvernement",
+  "Meilleure mobilisation des recettes intérieures et gestion des finances publiques",
+  "Achats sanitaires et humanitaires dans les provinces de l'Est touchées par le conflit (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Conseil en référentiels emplois et compétences TIC de l'État"
+  },
+  {
+   "title": "Gestion environnementale et sociale et appui PMO aux projets routiers"
+  },
+  {
+   "title": "Numérisation des recettes et de l'exécution budgétaire"
+  },
+  {
+   "title": "Outils de communication et de données pour les urgences sanitaires"
+  }
+ ]
+}

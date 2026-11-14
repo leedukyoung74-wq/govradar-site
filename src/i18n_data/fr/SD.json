@@ -1,0 +1,20 @@
+{
+ "summary": "L'armée soudanaise (FAS, général Burhan) et les Forces de soutien rapide (FSR, Dagalo) sont en guerre depuis avril 2023. Les FSR ont pris El Fasher en octobre 2025 et contrôlent tout le Darfour. Environ 12 millions de personnes sont déplacées, 33,7 millions ont besoin d'aide et la famine est confirmée dans deux zones. Les pourparlers de cessez-le-feu sont restés bloqués en 2026.",
+ "leader": "Général Abdel Fattah al-Burhan, président du Conseil de souveraineté (armée) / Premier ministre Kamil Idris (gouvernement de Port-Soudan)",
+ "agenda": [
+  "Poursuivre la guerre et reprendre du territoire",
+  "Accès humanitaire et lutte contre la famine",
+  "Maintenir l'administration depuis Port-Soudan",
+  "Préparer la reconstruction (estimation)"
+ ],
+ "needs": [
+  "Aide urgente : nourriture, soins, eau",
+  "Choléra, dengue et autres épidémies",
+  "Abris pour les déplacés"
+ ],
+ "biz": [
+  {
+   "title": "Fournitures humanitaires via les achats des agences internationales"
+  }
+ ]
+}

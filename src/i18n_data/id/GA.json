@@ -1,0 +1,24 @@
+{
+ "summary": "Setelah perombakan kabinet 11 Oktober, Presiden Oligui Nguema menuntut hasil dalam anggaran 2027 dan menetapkan enam pilar: akses air dan listrik, kewirausahaan, lapangan kerja pemuda, infrastruktur, sumber daya manusia, dan tata kelola. Ia mendorong pembangunan jalan dan memberi kontraktor tenggat 2030.",
+ "leader": "Presiden Brice Clotaire Oligui Nguema (kepala negara dan pemerintahan)",
+ "agenda": [
+  "Perluasan akses air dan listrik",
+  "Lapangan kerja pemuda dan kewirausahaan",
+  "Jalan dan infrastruktur (tenggat 2030)",
+  "SDM di bidang kesehatan dan pendidikan",
+  "Reformasi tata kelola"
+ ],
+ "needs": [
+  "Peralatan air dan pembangkit",
+  "Peralatan dan pekerjaan jalan",
+  "Fasilitas kesehatan dan pendidikan"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan dan pekerjaan konstruksi jalan"
+  },
+  {
+   "title": "Peralatan pengolahan air dan pembangkit"
+  }
+ ]
+}

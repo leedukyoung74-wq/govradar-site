@@ -1,0 +1,24 @@
+{
+ "summary": "Le gouvernement du capitaine Traoré a adopté le 8 octobre un avant-projet de budget 2027 avec 4 200 Md FCFA de recettes et 4 800 Md FCFA de dépenses (environ 8,2 Md USD, +22,5 %). Aligné sur le plan national 2026-2030 « RELANCE », il privilégie l'agriculture, l'industrialisation, la défense et les services sociaux de base. La prévision de croissance 2026 a été relevée à 6 %.",
+ "leader": "Capitaine Ibrahim Traoré (président de la transition) / Premier ministre Rimtalba Jean Emmanuel Ouédraogo",
+ "agenda": [
+  "Dépenses 2027 de 4 800 Md FCFA (+22,5 %)",
+  "Agriculture et agro-industrialisation",
+  "Défense et sécurité",
+  "Services sociaux de base (santé, éducation, eau)",
+  "Plan national de développement 2026-2030 (Plan RELANCE)"
+ ],
+ "needs": [
+  "Machines agricoles, irrigation et transformation",
+  "Électricité solaire et autres (estimation)",
+  "Équipements de santé et d'eau"
+ ],
+ "biz": [
+  {
+   "title": "Machines agricoles et équipements de transformation"
+  },
+  {
+   "title": "Solaire et mini-réseaux"
+  }
+ ]
+}

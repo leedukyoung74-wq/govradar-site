@@ -1,0 +1,25 @@
+{
+ "summary": "Le projet de budget 2027 du gouvernement Ortega-Murillo prévoit 195,1 Md NIO de recettes (+13,6 %) et 168,2 Md de dépenses, soit un excédent de 2,8 % du PIB (septième année d'excédent). Environ 70 Md vont à la santé, l'éducation et les transports, avec priorité à l'aéroport de Punta Huete, au port de Bluefields, au revêtement routier et aux hôpitaux.",
+ "leader": "Coprésidents Daniel Ortega et Rosario Murillo",
+ "agenda": [
+  "Excédent 2027 de 2,8 % du PIB et hausse des recettes",
+  "Reconstruction et extension de l'aéroport de Punta Huete (4,28 Md)",
+  "Port de Bluefields (3,33 Md)",
+  "Revêtement routier et réfection des routes communales",
+  "Hôpitaux (Managua Est, Bluefields, neurochirurgie et oncologie)",
+  "Élections générales de 2027"
+ ],
+ "needs": [
+  "Construction et équipements d'aéroport et de port",
+  "Engins et matériaux de revêtement routier",
+  "Équipements médicaux hospitaliers"
+ ],
+ "biz": [
+  {
+   "title": "Équipements médicaux pour hôpitaux"
+  },
+  {
+   "title": "Équipements routiers et portuaires"
+  }
+ ]
+}

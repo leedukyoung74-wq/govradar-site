@@ -1,0 +1,28 @@
+{
+ "summary": "Le gouvernement Abinader vise la catégorie investissement d'ici 2028, et Fitch a relevé la note souveraine à BB le 03-11-2026. L'investissement public va surtout aux transports (routes, métro), tandis que les pertes et subventions électriques pèsent sur le budget.",
+ "leader": "Président Luis Abinader (chef de l'État et du gouvernement, second mandat jusqu'au 16-08-2028)",
+ "agenda": [
+  "Catégorie investissement d'ici 2028 et consolidation budgétaire",
+  "Objectifs 2036 : doubler le PIB, créer 1,7 million d'emplois, éradiquer l'extrême pauvreté",
+  "Plus d'investissement dans les infrastructures de transport (routes, métro)",
+  "Réduire les pertes de distribution électrique et le poids des subventions",
+  "Contrôle migratoire et coopération antidrogue avec les États-Unis"
+ ],
+ "needs": [
+  "Comptage et modernisation du réseau pour réduire les pertes (44,1 % de l'électricité achetée)",
+  "Conception, supervision et gestion de projets routiers et de métro",
+  "Assiette fiscale élargie et gestion budgétaire plus efficace (les intérêts absorbent 21,9 % des recettes)",
+  "Infrastructures reliant tourisme et logistique (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Compteurs intelligents et automatisation de la distribution contre les pertes"
+  },
+  {
+   "title": "Systèmes ferroviaires urbains et conseil en exploitation"
+  },
+  {
+   "title": "Solutions numériques fiscales et de finances publiques"
+  }
+ ]
+}

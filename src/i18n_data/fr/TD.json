@@ -1,0 +1,25 @@
+{
+ "summary": "Dans sa lettre de cadrage du budget 2027, le président Mahamat Idriss Déby exige une rupture avec les budgets de reconduction et une « transformation » pour 7,3 % de croissance. Aligné sur le plan « Tchad Connexion 2030 » et la feuille de route (12 chantiers, 100 actions), il ouvre la production et la distribution d'électricité des grandes villes au privé et soutient abattoirs modernes, chaînes du froid, prospection minière et État numérique. Le Tchad accueille de nombreux réfugiés soudanais.",
+ "leader": "Président Mahamat Idriss Déby Itno / Premier ministre Allamaye Halina",
+ "agenda": [
+  "Croissance de 7,3 % en 2027 par la production et la transformation",
+  "Ouverture de l'électricité des grandes villes au privé",
+  "Élevage : abattoirs modernes et chaînes du froid (export de bétail sur pied interdit dès 2028)",
+  "Prospection géologique renforcée",
+  "Exemption de visa pour les passeports africains (janv. 2027) et tourisme",
+  "Digitalisation de l'État"
+ ],
+ "needs": [
+  "Production et distribution d'électricité privées",
+  "Équipements d'abattoirs et chaîne du froid",
+  "Eau et santé dans les zones d'accueil des réfugiés soudanais"
+ ],
+ "biz": [
+  {
+   "title": "Participation privée à la production et distribution d'électricité"
+  },
+  {
+   "title": "Équipements d'abattoirs et chaîne du froid"
+  }
+ ]
+}

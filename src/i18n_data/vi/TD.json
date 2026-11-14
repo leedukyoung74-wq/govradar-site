@@ -1,0 +1,25 @@
+{
+ "summary": "Trong chỉ đạo ngân sách 2027, Tổng thống Mahamat Idriss Déby yêu cầu chấm dứt ngân sách theo lối mòn và 'chuyển đổi' để tăng trưởng 7,3%. Theo kế hoạch 'Chad Connexion 2030' và lộ trình 12 công trình, 100 hành động, chính phủ mở cửa phát điện và phân phối điện ở các thành phố lớn cho tư nhân, thúc đẩy lò mổ hiện đại, chuỗi lạnh, thăm dò khoáng sản và chính phủ số. Chad đang tiếp nhận nhiều người tị nạn Sudan.",
+ "leader": "Tổng thống Mahamat Idriss Déby Itno / Thủ tướng Allamaye Halina",
+ "agenda": [
+  "Tăng trưởng 7,3% năm 2027 nhờ sản xuất và chế biến",
+  "Mở cửa điện ở các thành phố lớn cho tư nhân",
+  "Chăn nuôi: lò mổ hiện đại và chuỗi lạnh (cấm xuất khẩu gia súc sống từ 2028)",
+  "Tăng cường thăm dò địa chất",
+  "Miễn thị thực cho hộ chiếu châu Phi (1/2027) và du lịch",
+  "Chính phủ số"
+ ],
+ "needs": [
+  "Phát điện và phân phối điện tư nhân",
+  "Thiết bị lò mổ và chuỗi lạnh",
+  "Nước và y tế ở vùng tiếp nhận người tị nạn Sudan"
+ ],
+ "biz": [
+  {
+   "title": "Tham gia tư nhân vào phát điện và phân phối điện"
+  },
+  {
+   "title": "Thiết bị lò mổ và chuỗi lạnh"
+  }
+ ]
+}

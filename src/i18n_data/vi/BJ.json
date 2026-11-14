@@ -1,0 +1,26 @@
+{
+ "summary": "Chính phủ Tổng thống Wadagni thông qua dự thảo ngân sách 2027 ngày 7/10 với 4.757 tỷ franc CFA (khoảng 8,1 tỷ USD, +14,7%). Mục tiêu tăng trưởng 7,5%, thâm hụt tối đa 2,8% GDP, với năm ưu tiên: nông nghiệp hiện đại, công nghiệp, du lịch, công nghệ và vốn con người. Chính phủ cũng thông qua chương trình hành động 2026-2033.",
+ "leader": "Tổng thống Romuald Wadagni (nguyên thủ kiêm đứng đầu chính phủ, nhậm chức 2026)",
+ "agenda": [
+  "Ngân sách 2027 8,1 tỷ USD (+14,7%), tăng trưởng 7,5%",
+  "Hiện đại hóa nông nghiệp và phát triển công nghiệp",
+  "Du lịch và văn hóa",
+  "Công nghệ và chuyển đổi số",
+  "Giáo dục, y tế, an sinh, năng lượng và nước",
+  "Chương trình hành động 2026-2033"
+ ],
+ "needs": [
+  "Thiết bị chế biến nông sản",
+  "Hạ tầng điện và nước",
+  "Trường học, bệnh viện và hạ tầng xã hội (đơn vị mới)",
+  "An ninh ở miền bắc"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị chế biến nông sản và khu công nghiệp"
+  },
+  {
+   "title": "Thi công và thiết bị hạ tầng xã hội"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "summary": "L'effondrement de la banque numérique ueno a conduit le Sénat à destituer le président Santiago Peña le 6 nov. 2026, et le vice-président Pedro Alliana a prêté serment. Contenir les répercussions sur les caisses de retraite publiques et adopter le budget 2027 sont les tâches immédiates du nouveau gouvernement.",
+ "leader": "Président Pedro Alliana (successeur depuis la vice-présidence après la destitution de Santiago Peña par le Sénat le 6 nov. 2026 ; mandat jusqu'au 15 août 2028)",
+ "agenda": [
+  "Résolution d'ueno bank et récupération des dépôts et des fonds publics",
+  "Faire face à la crise de financement de l'IPS et à l'approvisionnement en médicaments",
+  "Examen parlementaire du budget 2027 avec plus de dépenses de santé",
+  "Rétablir la stabilité et la confiance des investisseurs après le changement de gouvernement",
+  "Préparation à El Niño et contrôles anticontrebande"
+ ],
+ "needs": [
+  "Supervision financière renforcée et gestion des fonds publics",
+  "Fonctionnement hospitalier de l'IPS et achats de médicaments plus efficaces",
+  "Plus d'établissements de santé et d'approvisionnement en médicaments",
+  "Suivi de l'exécution des travaux publics pendant la transition (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Conseil en supervision financière et surveillance des risques bancaires"
+  },
+  {
+   "title": "Systèmes d'information hospitaliers et d'achat de médicaments de l'IPS"
+  },
+  {
+   "title": "Fourniture d'équipements médicaux et de médicaments"
+  }
+ ]
+}

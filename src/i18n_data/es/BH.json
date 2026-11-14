@@ -1,0 +1,31 @@
+{
+ "summary": "El presupuesto bienal 2025-26 prevé un gasto de 8.900 millones de dinares frente a 6.400 millones de ingresos, un déficit de ~2.500 millones, con intereses cercanos a un cuarto del gasto. El conflicto con Irán de 2026 y las perturbaciones en Ormuz llevaron a Moody's a una perspectiva negativa, mientras el gobierno impulsa reformas fiscales como subir tarifas de combustible, electricidad y agua.",
+ "leader": "Rey Hamad bin Isa Al Jalifa (jefe de Estado) / Príncipe heredero y primer ministro Salman bin Hamad Al Jalifa",
+ "agenda": [
+  "Equilibrio fiscal y gestión de la deuda (reformas tarifarias)",
+  "Infraestructura: autopista Rey Faisal, ampliación de la Ciudad Industrial Salman",
+  "Desempeño del gobierno digital (Sijilat, Tawasul, Benayat)",
+  "Mejores resultados en educación y formación profesional",
+  "Seguridad y estabilidad económica ante el conflicto regional"
+ ],
+ "needs": [
+  "Construcción y gestión de proyectos de carreteras, puentes y zonas industriales",
+  "Modernización de los sistemas de gobierno digital",
+  "Eficiencia del gasto público bajo presión fiscal (estimación)",
+  "Resiliencia de la logística y el suministro energético ante el conflicto (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Diseño de ampliación de zonas industriales y soluciones de parque inteligente"
+  },
+  {
+   "title": "ITS y gestión del tráfico en autopistas"
+  },
+  {
+   "title": "Análisis y mejora del desempeño del gobierno electrónico"
+  },
+  {
+   "title": "Suministro a empresas estatales de energía y servicios"
+  }
+ ]
+}

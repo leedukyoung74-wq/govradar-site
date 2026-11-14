@@ -1,0 +1,24 @@
+{
+ "summary": "En abril de 2026, la Cámara de Representantes del este y el Alto Consejo de Estado del oeste acordaron el primer presupuesto unificado en 13 años, de 190.000 millones de dinares (unos 30.000 millones de USD). Asigna 40.000 millones al desarrollo y 12.000 millones a la Corporación Nacional del Petróleo; un comité conjunto supervisado por el banco central fija las prioridades. Las fuerzas de Haftar controlan los principales campos y terminales.",
+ "leader": "Primer ministro Abdul Hamid Dbeibah (Gobierno de Unidad Nacional, Trípoli) / el este está en manos del Ejército Nacional Libio de Jalifa Haftar",
+ "agenda": [
+  "Ejecutar el presupuesto unificado de 190.000 millones de dinares (salarios 73.000, subsidios 37.000, desarrollo 40.000)",
+  "Proyectos de desarrollo nacionales (comité conjunto, supervisión del banco central)",
+  "Más producción petrolera (12.000 millones para la NOC)",
+  "Estabilidad fiscal y fin de la división este-oeste",
+  "Preparar elecciones (sin fecha)"
+ ],
+ "needs": [
+  "Diseño y construcción de proyectos de electricidad, agua y carreteras",
+  "Mantenimiento y equipos de petróleo y gas para elevar la producción",
+  "Sistemas de gestión de finanzas públicas (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "EPC de energía, redes e infraestructura urbana"
+  },
+  {
+   "title": "Mantenimiento y suministro de equipos de petróleo y gas"
+  }
+ ]
+}

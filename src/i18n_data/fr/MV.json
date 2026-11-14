@@ -1,0 +1,32 @@
+{
+ "summary": "Le gouvernement a présenté le 29 oct. 2026 un budget 2027 de 59,7 Md MVR, inférieur de 4,5 Md à cette année, mais le déficit se creuse à 7,3 % du PIB et la dette publique directe devrait atteindre 117 % du PIB.",
+ "leader": "Président Mohamed Muizzu (chef de l'État et du gouvernement)",
+ "agenda": [
+  "Alléger le fardeau de la dette et stabilité budgétaire (déficit sous 5 % du PIB d'ici 2028)",
+  "Achever 70 % des projets d'investissement public en cours (PSIP)",
+  "Plus de logements, dont un dispositif de prêt pour un premier logement",
+  "Services de santé renforcés",
+  "Pas de hausse d'impôts en 2027",
+  "Jeter les bases du statut de pays développé d'ici 2040"
+ ],
+ "needs": [
+  "Gestion de la dette et transparence budgétaire",
+  "Achèvement et suivi des projets d'investissement public dans les îles",
+  "Offre et financement du logement",
+  "Extension des services de santé"
+ ],
+ "biz": [
+  {
+   "title": "Système de suivi physique et financier du PSIP"
+  },
+  {
+   "title": "Analyse des recettes et efficacité fiscale (données de TVA/GST)"
+  },
+  {
+   "title": "Numérisation de la gestion sanitaire et des données médicales"
+  },
+  {
+   "title": "Plateforme de demande et d'évaluation des prêts immobiliers"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "summary": "Dự thảo ngân sách 2027 trị giá 68,9 tỷ dinar (+8,4% so với 2026), thâm hụt 14,6 tỷ và mục tiêu tăng trưởng 3,1%, đang được quốc hội xem xét. Là năm thứ hai của kế hoạch 2026-2030, ngân sách nhằm giảm phụ thuộc vay nợ và ưu tiên chính sách xã hội, nước, lương thực và chuyển đổi năng lượng.",
+ "leader": "Tổng thống Kais Saied (nguyên thủ quốc gia) / Thủ tướng Sarra Zaafrani Zenzri (từ 3/2025)",
+ "agenda": [
+  "Thực hiện kế hoạch phát triển 2026-2030 (cân bằng vùng, chính sách xã hội)",
+  "Chủ quyền nước và lương thực (khử mặn, tái sử dụng nước thải)",
+  "Chuyển đổi năng lượng và số, bao gồm AI",
+  "Cải cách và quản trị doanh nghiệp nhà nước",
+  "Giảm vay nước ngoài, tăng thu trong nước"
+ ],
+ "needs": [
+  "Hạ tầng khử mặn và quản lý nước",
+  "Năng lượng tái tạo và hiệu quả năng lượng",
+  "Số hóa quản lý thuế và hải quan (nêu trong ngân sách)",
+  "Tư vấn quản trị doanh nghiệp nhà nước (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Số hóa thuế, hải quan và phân tích chống gian lận"
+  },
+  {
+   "title": "Thiết bị khử mặn và tái sử dụng nước thải"
+  },
+  {
+   "title": "Dự án năng lượng tái tạo và hiệu quả năng lượng"
+  },
+  {
+   "title": "Số hóa dịch vụ công và AI"
+  }
+ ]
+}

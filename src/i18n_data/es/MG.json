@@ -1,0 +1,26 @@
+{
+ "summary": "El gobierno de transición del coronel Randrianirina presentó su proyecto de presupuesto 2027. Prevé que el crecimiento pase del 4,1% en 2026 al 5,1% en 2027 y prioriza reflotar la empresa Jirama, reducir los cortes de luz, las renovables, carreteras, agricultura, educación y salud. También financia un referéndum constitucional y una elección presidencial en 2027.",
+ "leader": "Presidente Michael Randrianirina (transición, toma militar en oct 2025) / Primer ministro Herintsalama Rajaonarivelo",
+ "agenda": [
+  "Reflotar Jirama (electricidad y agua) y reducir cortes",
+  "Renovables y redes más sólidas",
+  "Inversión en carreteras, agricultura, educación y salud",
+  "Mejor recaudación tributaria y aduanera y lucha contra el fraude",
+  "Referéndum constitucional y elección presidencial de 2027",
+  "Prepararse para El Niño y otros riesgos climáticos"
+ ],
+ "needs": [
+  "Generación, solar y reparación de redes",
+  "Reparación de carreteras",
+  "Riego y procesamiento agrícola",
+  "Sistemas aduaneros y tributarios"
+ ],
+ "biz": [
+  {
+   "title": "Equipos solares, de generación y de red"
+  },
+  {
+   "title": "Digitalización aduanera y tributaria"
+  }
+ ]
+}

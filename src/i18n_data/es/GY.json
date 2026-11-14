@@ -1,0 +1,31 @@
+{
+ "summary": "El presupuesto 2026 de Guyana, de 1,558 billones de GY$ (unos 7.500 millones de USD), es un 307% mayor que en 2021, con grandes partidas para carreteras y puentes, educación, salud, vivienda y energía. Los ingresos petroleros financian el proyecto Gas-to-Energy y el crecimiento no petrolero.",
+ "leader": "Presidente Mohamed Irfaan Ali (jefe de Estado y de gobierno, reelegido sep 2025); Primer ministro Mark Phillips",
+ "agenda": [
+  "Inversión social y en infraestructura financiada con petróleo (Fondo de Recursos Naturales)",
+  "Proyecto Gas-to-Energy para reducir a la mitad el costo de la electricidad",
+  "Carreteras y puentes (196.100 millones de GY$) y vivienda",
+  "Alivio del costo de vida con transferencias y mayor umbral del impuesto sobre la renta",
+  "Crecimiento no petrolero (agricultura, manufactura, turismo) y digitalización 'país inteligente'"
+ ],
+ "needs": [
+  "Capacidad de gestión y construcción para carreteras, puentes y vivienda",
+  "Equipos de generación y red, y operadores para la Fase II de Gas-to-Energy",
+  "Gestión financiera pública y de compras para un presupuesto en rápido crecimiento (estimación)",
+  "Equipamiento médico y TIC educativas al ampliarse las instalaciones (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de generación/red y consultoría de operación del sistema"
+  },
+  {
+   "title": "PMO y supervisión de proyectos de carreteras y puentes"
+  },
+  {
+   "title": "Construcción modular y tecnología de programación para vivienda masiva"
+  },
+  {
+   "title": "Equipos hospitalarios y sistemas de información hospitalaria"
+  }
+ ]
+}

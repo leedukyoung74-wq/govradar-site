@@ -1,0 +1,24 @@
+{
+ "summary": "Le projet de budget 2027 du gouvernement Frostadóttir transforme un déficit de 28,1 Md ISK en 2026 en excédent de 4,7 Md en 2027, mettant fin à une longue série de déficits. Il dégage 34,1 Md de recettes grâce à une taxe accrue sur les établissements financiers, au taux normal de TVA pour les lagons géothermiques et à une nouvelle redevance sur les sites touristiques publics.",
+ "leader": "Première ministre Kristrún Frostadóttir / Présidente Halla Tómasdóttir",
+ "agenda": [
+  "Retour à l'excédent en 2027 (4,7 Md ISK)",
+  "Taxe sur les établissements financiers de 0,145 % à 0,254 %",
+  "Tourisme : redevance sur les sites publics",
+  "Prolongation de la contribution d'infrastructure de Reykjanes jusqu'à fin 2027",
+  "Stabilité des prix"
+ ],
+ "needs": [
+  "Systèmes de gestion et de perception sur les sites touristiques",
+  "Industries géothermiques et renouvelables (estimation)",
+  "Infrastructures face aux risques volcaniques de Reykjanes"
+ ],
+ "biz": [
+  {
+   "title": "Billetterie et perception numériques sur les sites touristiques"
+  },
+  {
+   "title": "Géothermie et partenariats pour centres de données"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "summary": "Runtuhnya bank digital ueno membuat Senat memberhentikan Presiden Santiago Peña pada 6 Nov 2026, dan Wakil Presiden Pedro Alliana dilantik. Membendung dampak terhadap dana pensiun publik dan mengesahkan anggaran 2027 adalah tugas mendesak pemerintahan baru.",
+ "leader": "Presiden Pedro Alliana (naik dari wakil presiden setelah Senat memakzulkan Presiden Santiago Peña pada 6 Nov 2026; masa jabatan berakhir 15 Agu 2028)",
+ "agenda": [
+  "Penyelesaian ueno bank serta pemulihan simpanan dan dana publik",
+  "Menangani krisis pendanaan jaminan sosial IPS dan pasokan obat",
+  "Pembahasan anggaran 2027 di Kongres dengan belanja kesehatan lebih tinggi",
+  "Memulihkan stabilitas dan kepercayaan investor setelah pergantian pemerintahan",
+  "Kesiapsiagaan El Niño dan pengendalian penyelundupan"
+ ],
+ "needs": [
+  "Pengawasan keuangan dan pengelolaan dana publik yang lebih kuat",
+  "Operasi rumah sakit IPS dan pengadaan obat yang lebih efisien",
+  "Lebih banyak fasilitas kesehatan dan pasokan obat",
+  "Pengawasan pelaksanaan pekerjaan umum selama transisi (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Konsultasi pengawasan keuangan dan pemantauan risiko bank"
+  },
+  {
+   "title": "Sistem informasi rumah sakit dan pengadaan obat IPS"
+  },
+  {
+   "title": "Pasokan peralatan medis dan farmasi"
+  }
+ ]
+}

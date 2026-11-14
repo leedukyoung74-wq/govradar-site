@@ -1,0 +1,20 @@
+{
+ "summary": "El gobierno de Lukashenko elaboró el presupuesto y las previsiones de 2027 en torno al plan quinquenal 2026-2030. El gabinete del primer ministro Turchin prioriza construir hasta 5.000 km de carreteras al año, más vivienda de alquiler, acelerar grandes inversiones y crédito regional (turismo, robótica, alimentos). Siguen las sanciones de la UE, EE. UU. y Reino Unido.",
+ "leader": "Presidente Alexandr Lukashenko / Primer ministro Aleksandr Turchin",
+ "agenda": [
+  "Cumplir las metas del plan quinquenal 2026-2030",
+  "Construir hasta 5.000 km de carreteras al año",
+  "Más vivienda de alquiler",
+  "Acelerar grandes proyectos de inversión (Decreto n.º 266)",
+  "Crédito regional a la inversión (turismo, robótica, lácteos, cárnicos)"
+ ],
+ "needs": [
+  "Equipos y materiales de construcción vial",
+  "Automatización y robótica manufacturera (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Negocio nuevo restringido — revisión de sanciones obligatoria"
+  }
+ ]
+}

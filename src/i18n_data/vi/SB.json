@@ -1,0 +1,24 @@
+{
+ "summary": "Chính phủ Đoàn kết Dân tộc và Chuyển đổi (GNUT) của Thủ tướng Jeremiah Manele thông qua ngân sách 2026 trị giá 5,6 tỷ đô la Solomon. Thủ tướng gọi 2026 là năm thực thi, ưu tiên kỷ luật tài khóa, hỗ trợ ngành sản xuất và tài nguyên, hoàn thành dự án hạ tầng, dịch vụ đang triển khai và cải cách thể chế. Chính phủ cam kết chi phát triển 50–100 triệu.",
+ "leader": "Thủ tướng Jeremiah Manele (Chính phủ Đoàn kết Dân tộc và Chuyển đổi)",
+ "agenda": [
+  "Ngân sách 2026 5,6 tỷ",
+  "Kỷ luật tài khóa",
+  "Hỗ trợ ngành sản xuất và tài nguyên",
+  "Hoàn thành dự án hạ tầng, dịch vụ",
+  "Cải cách thể chế"
+ ],
+ "needs": [
+  "Hạ tầng đường bộ và cảng",
+  "Chế biến nông sản, thủy sản",
+  "Điện khí hóa (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị chế biến nông sản, thủy sản"
+  },
+  {
+   "title": "Thi công và thiết bị hạ tầng"
+  }
+ ]
+}

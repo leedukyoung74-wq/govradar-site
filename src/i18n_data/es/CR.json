@@ -1,0 +1,28 @@
+{
+ "summary": "El gobierno de Fernández se centra en una política de seguridad dura y la reforma del Estado, con el expresidente Rodrigo Chaves como ministro de la Presidencia y Hacienda. El presupuesto 2027 de ¢12,4 billones pasó el primer debate y la adhesión al CPTPP se archivó el 28-10-2026.",
+ "leader": "Presidenta Laura Fernández Delgado (jefa de Estado y de gobierno, asumió el 08-05-2026, mandato 2026-2030)",
+ "agenda": [
+  "Combate al crimen organizado y seguridad (nueva megacárcel, cooperación de seguridad con EE. UU.)",
+  "Cinco reformas constitucionales (límites a la aprobación legislativa de préstamos externos y tope de deuda, mandato más corto del Contralor, etc.)",
+  "Proyecto de impuesto del 15% a intereses, dividendos, alquileres y ganancias de capital del exterior",
+  "Estrategia comercial de TLC bilaterales tras archivar el CPTPP (respuesta al arancel del 12,5% de EE. UU.)",
+  "Infraestructura vial como la ampliación de la Ruta 1 (San José-San Ramón)"
+ ],
+ "needs": [
+  "Tecnología de seguridad, penitenciaria y de vigilancia contra el crimen organizado",
+  "Ampliación vial y gestión del tráfico (cámaras y radares cada 1,5 km previstos en la Ruta 1)",
+  "Base tributaria más amplia y administración tributaria moderna (70% de empresas fiscalizadas incumplen)",
+  "Diversificar mercados de exportación tras el arancel del 12,5% de EE. UU. (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Sistemas ITS y de gestión del tráfico vial"
+  },
+  {
+   "title": "Soluciones penitenciarias y de seguridad pública"
+  },
+  {
+   "title": "Digitalización y analítica de la administración tributaria"
+  }
+ ]
+}

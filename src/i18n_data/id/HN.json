@@ -1,0 +1,25 @@
+{
+ "summary": "Anggaran 2026 Presiden Nasry Asfura sebesar HNL 444,3 miliar disahkan pada April. Anggaran menambah dana kesehatan (rumah sakit baru), pendidikan (perbaikan sekolah, makan siswa), dan keamanan, memusatkan HNL 48,2 miliar investasi publik (4,4% PDB) pada energi dan jalan, serta membatasi defisit 1,0% PDB.",
+ "leader": "Presiden Nasry Asfura (kepala negara dan pemerintahan, sejak Jan 2026)",
+ "agenda": [
+  "Investasi publik HNL 48,2 miliar (4,4% PDB): energi dan jalan",
+  "Kesehatan: rumah sakit baru di Tegucigalpa, San Pedro Sula, dan wilayah lain",
+  "Pendidikan: tambahan HNL 3,7 miliar untuk sekolah dan makan siswa",
+  "Dana keamanan dan pertahanan lebih besar",
+  "Defisit 1,0% PDB (UU Tanggung Jawab Fiskal)",
+  "Transfer ke pemda naik dari 5,8% ke 7,3%"
+ ],
+ "needs": [
+  "Pembangkit, jaringan listrik, dan konektivitas jalan",
+  "Pembangunan rumah sakit dan peralatan medis",
+  "Perbaikan fasilitas sekolah"
+ ],
+ "biz": [
+  {
+   "title": "Pembangunan rumah sakit dan pasokan peralatan medis"
+  },
+  {
+   "title": "Pekerjaan energi dan jalan"
+  }
+ ]
+}

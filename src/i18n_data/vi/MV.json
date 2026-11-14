@@ -1,0 +1,32 @@
+{
+ "summary": "Chính phủ trình ngân sách 2027 trị giá 59,7 tỷ rufiyaa ngày 29/10/2026, thấp hơn năm nay 4,5 tỷ, nhưng thâm hụt tăng lên 7,3% GDP và nợ trực tiếp của chính phủ dự kiến 117% GDP.",
+ "leader": "Tổng thống Mohamed Muizzu (nguyên thủ kiêm đứng đầu chính phủ)",
+ "agenda": [
+  "Giảm gánh nặng nợ và ổn định tài khóa (thâm hụt dưới 5% GDP vào 2028)",
+  "Hoàn thành 70% dự án đầu tư công đang triển khai (PSIP)",
+  "Thêm nhà ở, gồm chương trình vay mua nhà lần đầu",
+  "Tăng cường dịch vụ y tế",
+  "Không tăng thuế năm 2027",
+  "Đặt nền móng trở thành nước phát triển vào 2040"
+ ],
+ "needs": [
+  "Quản lý nợ và minh bạch tài khóa",
+  "Hoàn thành và giám sát dự án đầu tư công tại các đảo",
+  "Cung ứng và tài chính nhà ở",
+  "Mở rộng dịch vụ y tế"
+ ],
+ "biz": [
+  {
+   "title": "Hệ thống theo dõi tiến độ vật lý và tài chính PSIP"
+  },
+  {
+   "title": "Phân tích nguồn thu và hiệu quả thuế (dữ liệu GST)"
+  },
+  {
+   "title": "Số hóa quản lý y tế và dữ liệu y khoa"
+  },
+  {
+   "title": "Nền tảng nộp và thẩm định hồ sơ vay mua nhà"
+  }
+ ]
+}

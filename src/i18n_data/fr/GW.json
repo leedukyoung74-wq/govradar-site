@@ -1,0 +1,20 @@
+{
+ "summary": "Après le coup d'État du 26 novembre 2025, le général Horta Inta-A est devenu président de transition pour un an, et le Premier ministre civil Ilídio Vieira Té dirige le gouvernement. Une nouvelle constitution a été adoptée le 30 août 2026 et les élections présidentielle et législatives sont fixées au 6 décembre 2026. Le FMI prévoit un déficit ramené à 4,2 % du PIB en 2026. Les exportations dépendent de la noix de cajou.",
+ "leader": "Général Horta Inta-A (président de transition) / Premier ministre Ilídio Vieira Té",
+ "agenda": [
+  "Élections présidentielle et législatives du 6 déc. 2026",
+  "Appliquer la nouvelle constitution (référendum du 30 août 2026)",
+  "Ramener le déficit à 4,2 % du PIB",
+  "Gérer les exportations de cajou"
+ ],
+ "needs": [
+  "Transformation du cajou",
+  "Électricité",
+  "Soins de base"
+ ],
+ "biz": [
+  {
+   "title": "Équipements de transformation du cajou"
+  }
+ ]
+}

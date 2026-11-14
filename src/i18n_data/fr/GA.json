@@ -1,0 +1,24 @@
+{
+ "summary": "Après le remaniement du 11 octobre, le président Oligui Nguema a exigé des résultats dans le budget 2027 et fixé six piliers : accès à l'eau et à l'électricité, entrepreneuriat, emploi des jeunes, infrastructures, capital humain et gouvernance. Il pousse fortement les routes et a donné aux entreprises une échéance en 2030.",
+ "leader": "Président Brice Clotaire Oligui Nguema (chef de l'État et du gouvernement)",
+ "agenda": [
+  "Accès accru à l'eau et à l'électricité",
+  "Emploi des jeunes et entrepreneuriat",
+  "Routes et infrastructures (échéance 2030)",
+  "Capital humain : santé et éducation",
+  "Réforme de la gouvernance"
+ ],
+ "needs": [
+  "Équipements d'eau et de production électrique",
+  "Engins et travaux routiers",
+  "Équipements de santé et d'éducation"
+ ],
+ "biz": [
+  {
+   "title": "Engins et travaux de construction routière"
+  },
+  {
+   "title": "Équipements de traitement de l'eau et de production"
+  }
+ ]
+}

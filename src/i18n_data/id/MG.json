@@ -1,0 +1,26 @@
+{
+ "summary": "Pemerintahan transisi pimpinan Kolonel Randrianirina mengajukan RUU anggaran 2027. Anggaran menargetkan pertumbuhan naik dari 4,1% pada 2026 ke 5,1% pada 2027 dan memprioritaskan pemulihan perusahaan listrik-air Jirama, pengurangan pemadaman, energi terbarukan, jalan, pertanian, pendidikan, dan kesehatan. Anggaran juga mendanai referendum konstitusi dan pemilu presiden 2027.",
+ "leader": "Presiden Michael Randrianirina (transisi, pengambilalihan militer Okt 2025) / Perdana Menteri Herintsalama Rajaonarivelo",
+ "agenda": [
+  "Memulihkan Jirama (listrik dan air) dan mengurangi pemadaman",
+  "Energi terbarukan dan jaringan lebih kuat",
+  "Investasi jalan, pertanian, pendidikan, dan kesehatan",
+  "Penagihan pajak dan bea cukai lebih baik serta antikecurangan",
+  "Referendum konstitusi dan pemilu presiden 2027",
+  "Persiapan El Niño dan risiko iklim lain"
+ ],
+ "needs": [
+  "Pembangkit, surya, dan perbaikan jaringan",
+  "Perbaikan jalan",
+  "Irigasi dan pengolahan pertanian",
+  "Sistem bea cukai dan pajak"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan surya, pembangkit, dan jaringan"
+  },
+  {
+   "title": "Digitalisasi bea cukai dan pajak"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "summary": "Avant les élections du printemps 2027, le gouvernement Mitsotakis a déposé un projet de budget 2027 tablant sur environ 2 % de croissance et un excédent primaire supérieur à 3 % du PIB. La dette devrait passer sous 130 % du PIB.",
+ "leader": "Président Konstantinos Tasoulas ; Premier ministre Kyriakos Mitsotakis",
+ "agenda": [
+  "Budget 2027 : excédent primaire supérieur à 3 % du PIB, dette sous 130 %",
+  "Allègement des coûts de l'énergie et du logement (2,2 Md EUR nouveaux)",
+  "Programme d'investissement public de 7 Md EUR et hausse de l'investissement",
+  "Programme de logement « Mon Toit III » (2 Md EUR) et rénovation des logements anciens",
+  "Nouvel outil de financement des PME de 1,5 Md EUR",
+  "Élections législatives prévues au printemps (mai) 2027"
+ ],
+ "needs": [
+  "Capacités de construction et d'ingénierie pour exécuter le programme d'investissement de 7 Md EUR",
+  "Offre de logements et rénovation énergétique des logements anciens",
+  "Technologies électriques et d'efficacité énergétique pour alléger les coûts (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Matériaux et équipements pour la rénovation énergétique des logements anciens"
+  },
+  {
+   "title": "EPC et équipements pour les infrastructures publiques"
+  },
+  {
+   "title": "Efficacité énergétique et gestion de l'énergie domestique"
+  }
+ ]
+}

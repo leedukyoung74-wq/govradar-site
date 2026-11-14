@@ -1,0 +1,24 @@
+{
+ "summary": "Le président David Adeang veut réduire la dépendance à l'aide et stimuler la croissance autour de quatre piliers : diversification économique, développement social, infrastructures et résilience climatique. Une réforme constitutionnelle de 2026 a créé le premier poste de vice-président et le pays a officiellement pris le nom de Naeoro. Résoudre les retards des projets de port, de dragage et de solaire soutenus par la BAsD est une priorité.",
+ "leader": "Président David Adeang",
+ "agenda": [
+  "Moins de dépendance à l'aide, stratégie de croissance",
+  "Diversification, infrastructures et résilience climatique",
+  "Achever le port et le dragage",
+  "Projets d'énergie solaire",
+  "Changement de nom et réforme constitutionnelle (premier vice-président)"
+ ],
+ "needs": [
+  "Dragage et construction portuaire",
+  "Solaire et stockage",
+  "Dessalement (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Solaire et stockage d'énergie"
+  },
+  {
+   "title": "Équipements et travaux portuaires et de dragage"
+  }
+ ]
+}

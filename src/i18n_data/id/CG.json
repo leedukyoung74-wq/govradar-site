@@ -1,0 +1,24 @@
+{
+ "summary": "Anggaran 2027 Republik Kongo (sumber daya CFAF 3,12 triliun, belanja CFAF 2,64 triliun) diajukan ke parlemen pada 29 Oktober. Anggaran mengasumsikan minyak US$71 dan produksi 112 juta barel, serta mengalokasikan CFAF 680 miliar investasi publik untuk energi, transportasi, pertanian, dan infrastruktur sosial. Utang publik ditargetkan turun dari 88,6% ke 80,9% PDB, dan pembiayaan luar bergantung pada kesepakatan dengan IMF.",
+ "leader": "Presiden Denis Sassou Nguesso / Perdana Menteri Anatole Collinet Makosso",
+ "agenda": [
+  "Surplus 2027 dan konsolidasi fiskal",
+  "Investasi publik CFAF 680 miliar: energi, transportasi, pertanian, infrastruktur sosial",
+  "Reformasi pajak dan bea cukai",
+  "Melunasi utang domestik kepada pelaku usaha",
+  "Negosiasi program IMF"
+ ],
+ "needs": [
+  "Pembangkit dan jaringan listrik",
+  "Jalan dan transportasi",
+  "Produksi dan pengolahan pertanian"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan pembangkit dan jaringan"
+  },
+  {
+   "title": "Peralatan jalan dan transportasi"
+  }
+ ]
+}

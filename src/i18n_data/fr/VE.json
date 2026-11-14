@@ -1,0 +1,24 @@
+{
+ "summary": "Après l'éviction de Maduro par une opération américaine en janvier 2026, la présidente par intérim Delcy Rodríguez ouvre le secteur pétrolier et améliore les relations avec les États-Unis. Un règlement de juillet a ouvert l'exploration, la production, le transport et la vente du brut au privé, et la production est remontée à environ 1,2 million de barils par jour au deuxième trimestre. Le FMI prévoit 5,0 % de croissance et 467,9 % d'inflation moyenne en 2026.",
+ "leader": "Présidente par intérim Delcy Rodríguez (investie le 5 janvier 2026)",
+ "agenda": [
+  "Ouvrir l'industrie pétrolière aux investissements privés et étrangers (règlement de juillet 2026)",
+  "Relancer la production de brut et les exportations vers les États-Unis",
+  "Renouer avec le FMI et la Banque mondiale ; préparer la restructuration de la dette",
+  "Reprise des statistiques officielles (mai 2026)",
+  "Normaliser les relations avec les États-Unis"
+ ],
+ "needs": [
+  "Remise en état des champs pétroliers, raffineries et réseaux électriques vieillissants",
+  "Stabilisation du réseau et maintenance des centrales (estimation)",
+  "Reconstruire les systèmes budgétaire, statistique et de la banque centrale (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Pièces et équipements pour réparer champs et raffineries (dans le cadre des licences)"
+  },
+  {
+   "title": "Maintenance de la production et des réseaux électriques"
+  }
+ ]
+}

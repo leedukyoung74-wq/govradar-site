@@ -1,0 +1,20 @@
+{
+ "summary": "Haiti tidak menggelar pemilu selama lebih dari satu dekade; dengan kursi presiden kosong, PM tak terpilih Alix Didier Fils-Aimé memimpin pemerintahan. Komisi pemilu menetapkan putaran pertama 18 Juli dan putaran kedua 4 Oktober. Pasukan Penumpasan Geng yang didukung PBB dan lebih dari 2.000 tentara El Salvador beroperasi; polisi merebut kembali stadion nasional pada 13 November setelah dua tahun.",
+ "leader": "Perdana Menteri Alix Didier Fils-Aimé (pemerintahan transisi tak terpilih; kursi presiden kosong)",
+ "agenda": [
+  "Menumpas geng dan memulihkan keamanan (GSF dan pasukan asing)",
+  "Menggelar pemilu (putaran pertama 18 Jul, kedua 4 Okt; pendaftaran hingga 20 Mei 2027)",
+  "Bantuan kemanusiaan dan pengungsi",
+  "Memperbaiki jalan, jembatan, dan infrastruktur"
+ ],
+ "needs": [
+  "Pasokan kemanusiaan: keamanan, medis, pangan",
+  "Memulihkan listrik dan air",
+  "Sistem manajemen pemilu"
+ ],
+ "biz": [
+  {
+   "title": "Pasokan kemanusiaan lewat pengadaan lembaga internasional"
+  }
+ ]
+}

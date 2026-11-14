@@ -1,0 +1,28 @@
+{
+ "summary": "Antes de las elecciones de la primavera de 2027, el gobierno de Mitsotakis presentó un proyecto de presupuesto 2027 con un crecimiento de ~2% y un superávit primario superior al 3% del PIB. Se prevé que la deuda baje del 130% del PIB.",
+ "leader": "Presidente Konstantinos Tasoulas; Primer ministro Kyriakos Mitsotakis",
+ "agenda": [
+  "Presupuesto 2027: superávit primario superior al 3% del PIB, deuda por debajo del 130%",
+  "Alivio de los costos de energía y vivienda (2.200 millones de EUR nuevos)",
+  "Programa de Inversión Pública de 7.000 millones de EUR y más inversión",
+  "Programa de vivienda 'Mi Casa III' (2.000 millones de EUR) y renovación de viviendas antiguas",
+  "Nuevo instrumento de financiación para pymes de 1.500 millones de EUR",
+  "Elecciones generales previstas para la primavera (mayo) de 2027"
+ ],
+ "needs": [
+  "Capacidad de construcción e ingeniería para ejecutar el programa de inversión de 7.000 millones de EUR",
+  "Oferta de vivienda y renovación energética de viviendas antiguas",
+  "Tecnología eléctrica y de eficiencia energética para aliviar costos (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Materiales y equipos para la renovación energética de viviendas antiguas"
+  },
+  {
+   "title": "EPC y equipos para infraestructura pública"
+  },
+  {
+   "title": "Eficiencia energética y gestión energética del hogar"
+  }
+ ]
+}

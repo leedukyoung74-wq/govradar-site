@@ -1,0 +1,24 @@
+{
+ "summary": "En avril 2026, la Chambre des représentants (est) et le Haut Conseil d'État (ouest) ont adopté le premier budget unifié depuis 13 ans, de 190 Md LYD (environ 30 Md USD). Il prévoit 40 Md pour le développement et 12 Md pour la Compagnie nationale du pétrole, un comité conjoint sous supervision de la banque centrale fixant les priorités. Les forces de Haftar contrôlent les principaux champs et terminaux.",
+ "leader": "Premier ministre Abdel Hamid Dbeibah (Gouvernement d'union nationale, Tripoli) / l'est est tenu par l'Armée nationale libyenne de Khalifa Haftar",
+ "agenda": [
+  "Exécuter le budget unifié de 190 Md LYD (salaires 73 Md, subventions 37 Md, développement 40 Md)",
+  "Projets de développement nationaux (comité conjoint, supervision de la banque centrale)",
+  "Hausse de la production pétrolière (12 Md pour la NOC)",
+  "Stabilité budgétaire et fin de la division est-ouest",
+  "Préparer des élections (sans date)"
+ ],
+ "needs": [
+  "Conception et construction de projets d'électricité, d'eau et de routes",
+  "Maintenance et équipements pétroliers et gaziers pour augmenter la production",
+  "Systèmes de gestion des finances publiques (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "EPC énergie, réseaux et infrastructures urbaines"
+  },
+  {
+   "title": "Maintenance et fourniture d'équipements pétroliers et gaziers"
+  }
+ ]
+}

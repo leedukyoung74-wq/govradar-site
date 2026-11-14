@@ -1,0 +1,24 @@
+{
+ "summary": "Tras la remodelación del 11 de octubre, el presidente Oligui Nguema exigió resultados en el presupuesto 2027 y fijó seis ejes: acceso al agua y la electricidad, emprendimiento, empleo juvenil, infraestructura, capital humano y gobernanza. Impulsa con fuerza las carreteras y fijó a las constructoras el plazo de 2030.",
+ "leader": "Presidente Brice Clotaire Oligui Nguema (jefe de Estado y de gobierno)",
+ "agenda": [
+  "Más acceso al agua y la electricidad",
+  "Empleo juvenil y emprendimiento",
+  "Carreteras e infraestructura (plazo 2030)",
+  "Capital humano en salud y educación",
+  "Reforma de la gobernanza"
+ ],
+ "needs": [
+  "Equipos de agua y generación",
+  "Equipos y obras viales",
+  "Instalaciones de salud y educación"
+ ],
+ "biz": [
+  {
+   "title": "Equipos y obras de construcción vial"
+  },
+  {
+   "title": "Equipos de tratamiento de agua y generación"
+  }
+ ]
+}

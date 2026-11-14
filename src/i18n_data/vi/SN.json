@@ -1,0 +1,31 @@
+{
+ "summary": "Tổng thống Faye cách chức Thủ tướng Ousmane Sonko tháng 5/2026 và bổ nhiệm nhà kinh tế Ahmadou Al Aminou Lo; Sonko trở thành Chủ tịch Quốc hội và nay đối lập với hành pháp. Vấn đề nợ ẩn khiến hạng tín nhiệm rơi xuống CC (S&P) và Ca (Moody's), và thỏa thuận cấp chuyên viên ECF 2,2 tỷ USD với IMF đạt được tháng 9 đang chờ Hội đồng phê duyệt cùng với tái cơ cấu nợ.",
+ "leader": "Tổng thống Bassirou Diomaye Faye (nguyên thủ quốc gia) / Thủ tướng Ahmadou Al Aminou Lo (bổ nhiệm 5/2026)",
+ "agenda": [
+  "Được Hội đồng IMF phê duyệt khoản ECF 2,2 tỷ USD",
+  "Kế hoạch xử lý nợ theo Khuôn khổ Chung G20",
+  "Hợp lý hóa chi tiêu, kiểm soát quỹ lương, đóng các cơ quan tốn kém đồng thời tăng chi xã hội",
+  "Đàm phán lại khoảng 30 hợp đồng khai khoáng",
+  "Thông qua chiến lược thu trung hạn năm 2027"
+ ],
+ "needs": [
+  "Tăng cường giám sát nợ, kho bạc và doanh nghiệp nhà nước (điều kiện chương trình IMF)",
+  "Quản lý thuế số để tăng thu (ước tính)",
+  "Hạ tầng năng lượng và nước nông thôn (tái tạo, thủy lợi)",
+  "Hệ thống lưới an sinh với chuyển tiền mặt đúng đối tượng hơn"
+ ],
+ "biz": [
+  {
+   "title": "Tư vấn CNTT tài chính công và quản lý nợ"
+  },
+  {
+   "title": "Gói điện mặt trời, thủy lợi nhỏ và kho lạnh nông thôn"
+  },
+  {
+   "title": "Hệ thống người thụ hưởng và thanh toán điện tử an sinh xã hội"
+  },
+  {
+   "title": "Thí điểm (PoC) AI và startup số"
+  }
+ ]
+}

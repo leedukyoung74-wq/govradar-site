@@ -1,0 +1,24 @@
+{
+ "summary": "Presiden Ahmed al-Sharaa mengatakan di Sidang Umum PBB pada September bahwa pencabutan sanksi membuka 'fase kebangkitan baru' dalam rekonstruksi dan investasi. Pemerintah menyatakan kelompok bersenjata nonnegara sudah di bawah kendalinya dan lebih dari 3,5 juta pengungsi telah kembali. Kebutuhan listrik, perumahan, dan infrastruktur sangat besar.",
+ "leader": "Presiden Ahmed al-Sharaa (pemerintahan transisi)",
+ "agenda": [
+  "Rekonstruksi dan investasi setelah pencabutan sanksi",
+  "Memulihkan aparat keamanan dan mengintegrasikan kelompok bersenjata",
+  "Pemulangan pengungsi (lebih dari 3,5 juta)",
+  "Keadilan transisional dan pencarian orang hilang",
+  "Memberantas penyelundupan narkoba dan perdagangan manusia lintas batas"
+ ],
+ "needs": [
+  "Pembangkitan dan transmisi listrik serta pasokan BBM",
+  "Membangun kembali perumahan, air, dan jalan",
+  "Membangun kembali telekomunikasi dan sistem keuangan (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan untuk membangun kembali pembangkit dan jaringan listrik"
+  },
+  {
+   "title": "Material untuk membangun kembali perumahan dan infrastruktur"
+  }
+ ]
+}

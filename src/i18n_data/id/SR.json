@@ -1,0 +1,27 @@
+{
+ "summary": "Dalam pidato tahunan 30 September, Presiden Jennifer Geerlings-Simons menyampaikan rancangan anggaran 2027 (pendapatan SRD 70,1 miliar, belanja SRD 80,9 miliar, defisit 4% PDB). Ia menyebut 2027 tahun persiapan sebelum minyak lepas pantai mulai 2028, dengan UU Kandungan Lokal dan basis pajak lebih luas (emas, kayu, perikanan). Utang publik 100,4% PDB.",
+ "leader": "Presiden Jennifer Geerlings-Simons (kepala negara dan pemerintahan)",
+ "agenda": [
+  "Persiapan minyak lepas pantai (GranMorgu TotalEnergies) pada 2028",
+  "UU Kandungan Lokal ke parlemen pada 2027",
+  "Basis pajak lebih luas dan penagihan lebih baik tanpa menaikkan tarif",
+  "Menurunkan utang dari 100,4% PDB",
+  "Beralih ke gas dan surya untuk mengakhiri pemadaman"
+ ],
+ "needs": [
+  "Kapasitas layanan lokal untuk rantai pasok migas",
+  "Pembangkit gas dan surya serta jaringan",
+  "Administrasi pajak digital"
+ ],
+ "biz": [
+  {
+   "title": "Layanan dan peralatan lokal untuk pengembangan minyak"
+  },
+  {
+   "title": "Pembangkit gas dan surya serta peralatan jaringan"
+  },
+  {
+   "title": "Sistem pajak dan penagihan"
+  }
+ ]
+}

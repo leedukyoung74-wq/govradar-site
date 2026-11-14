@@ -1,0 +1,24 @@
+{
+ "summary": "Le budget 2026/27 de l'Eswatini atteint un record de 36,9 Md E (+4,3 Md), ciblant pauvreté et chômage avec 5,2 % de croissance. Les 7,8 Md d'investissement financent l'irrigation LUSIP II, des bâtiments industriels, des routes (MR14, MR21), la réserve stratégique de pétrole, le barrage de Mpakeni et le Centre international de conventions. L'éducation reçoit 6,4 Md (+16,7 %).",
+ "leader": "Roi Mswati III / Premier ministre Russell Mmiso Dlamini / Ministre des Finances Neal Rijkenberg",
+ "agenda": [
+  "Budget 2026/27 de 36,9 Md E (record)",
+  "Investissement 7,8 Md : LUSIP II, routes, barrages, bâtiments industriels",
+  "Éducation 6,4 Md (+16,7 %)",
+  "Lutter contre pauvreté et chômage, croissance 5,2 %",
+  "Réserve stratégique de pétrole"
+ ],
+ "needs": [
+  "Irrigation, barrages et eau",
+  "Construction routière",
+  "Bâtiments industriels"
+ ],
+ "biz": [
+  {
+   "title": "Équipements et sous-traitance pour irrigation et barrages"
+  },
+  {
+   "title": "Engins de construction routière"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "summary": "Ngân sách 2026 của Sierra Leone trị giá 30,3 tỷ leone (sau bổ sung) tập trung vào giáo dục, hạ tầng, y tế và chương trình nông nghiệp chủ lực Feed Salone. Sau khi eo biển Hormuz đóng cửa tháng 2/2026 đẩy giá dầu tăng, ngân sách bổ sung tháng 7 hạ dự báo thu, tăng trợ giá nhiên liệu và điện, và hạ tăng trưởng xuống 4,0%.",
+ "leader": "Tổng thống Julius Maada Bio (nguyên thủ kiêm đứng đầu chính phủ)",
+ "agenda": [
+  "Feed Salone: sản lượng nông nghiệp, tiếp cận thị trường và khởi nghiệp nông nghiệp của thanh niên (ưu tiên 'Big Five')",
+  "Cải thiện dịch vụ giáo dục và y tế",
+  "Đa dạng hóa sang nông nghiệp, thủy sản, khai khoáng, du lịch, năng lượng tái tạo và kinh tế số",
+  "Trấn áp ma túy như kush",
+  "Cải cách bầu cử theo Thỏa thuận Ba bên trước bầu cử 2028"
+ ],
+ "needs": [
+  "Cơ giới hóa, thủy lợi, kho bãi và chế biến tại các vùng Feed Salone",
+  "Mở rộng truyền tải, phân phối và cấp điện ổn định hơn",
+  "Năng lượng tái tạo để giảm chi phí trợ giá sau cú sốc dầu (ước tính)",
+  "Chuỗi lạnh và hạ tầng chế biến tại cảng cá"
+ ],
+ "biz": [
+  {
+   "title": "Gói cơ giới hóa nông nghiệp, xay xát và kho bãi"
+  },
+  {
+   "title": "Thiết bị truyền tải/phân phối và vận hành lưới điện"
+  },
+  {
+   "title": "Điện mặt trời ngoài lưới và lưới điện mini"
+  },
+  {
+   "title": "Kho lạnh và thiết bị chế biến cá"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "summary": "Presiden Boakai mengajukan rancangan anggaran 2027 sebesar US$1,538 miliar (+27%) ke parlemen pada 6 November. Bertema percepatan Agenda ARREST untuk Pembangunan Inklusif, anggaran menambah kesehatan, pendidikan, perlindungan sosial, pemuda, investasi publik, dan infrastruktur.",
+ "leader": "Presiden Joseph Boakai (kepala negara dan pemerintahan)",
+ "agenda": [
+  "Anggaran 2027 US$1,538 miliar (+27%)",
+  "Mempercepat Agenda ARREST (pertanian, jalan, supremasi hukum, pendidikan, sanitasi, pariwisata)",
+  "Kesehatan, pendidikan, dan perlindungan sosial lebih besar",
+  "Pemberdayaan pemuda dan perempuan",
+  "Program investasi publik"
+ ],
+ "needs": [
+  "Pengaspalan dan pemeliharaan jalan",
+  "Pasokan listrik lebih besar",
+  "Rumah sakit dan sekolah",
+  "Produksi pertanian"
+ ],
+ "biz": [
+  {
+   "title": "Pekerjaan jalan dan infrastruktur"
+  },
+  {
+   "title": "Peralatan rumah sakit dan sekolah"
+  }
+ ]
+}

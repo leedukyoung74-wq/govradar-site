@@ -1,0 +1,31 @@
+{
+ "summary": "El presidente Faye destituyó al primer ministro Ousmane Sonko en mayo de 2026 y nombró al economista Ahmadou Al Aminou Lo; Sonko pasó a presidir la Asamblea y ahora se opone al Ejecutivo. La deuda oculta llevó las calificaciones a CC (S&P) y Ca (Moody's), y un acuerdo técnico ECF de 2.200 millones de USD con el FMI alcanzado en septiembre espera la aprobación del Directorio junto con la reestructuración de la deuda.",
+ "leader": "Presidente Bassirou Diomaye Faye (jefe de Estado) / Primer ministro Ahmadou Al Aminou Lo (nombrado en mayo de 2026)",
+ "agenda": [
+  "Obtener la aprobación del Directorio del FMI para el ECF de 2.200 millones de USD",
+  "Plan de tratamiento de la deuda en el Marco Común del G20",
+  "Racionalizar el gasto, controlar la masa salarial y cerrar agencias costosas, aumentando el gasto social",
+  "Renegociar unos 30 contratos mineros",
+  "Adoptar en 2027 una estrategia de ingresos a mediano plazo"
+ ],
+ "needs": [
+  "Mayor supervisión de la deuda, el tesoro y las empresas públicas (condiciones del programa del FMI)",
+  "Administración tributaria digital para aumentar ingresos (estimación)",
+  "Infraestructura rural de energía y agua (renovables, riego)",
+  "Sistemas de redes de protección social con transferencias mejor focalizadas"
+ ],
+ "biz": [
+  {
+   "title": "Consultoría TI en finanzas públicas y gestión de la deuda"
+  },
+  {
+   "title": "Paquetes rurales de solar, pequeño riego y almacenamiento en frío"
+  },
+  {
+   "title": "Sistemas de beneficiarios y pagos electrónicos de protección social"
+  },
+  {
+   "title": "Pilotos (PoC) de IA y startups digitales"
+  }
+ ]
+}

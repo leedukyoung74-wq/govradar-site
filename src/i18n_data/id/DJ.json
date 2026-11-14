@@ -1,0 +1,24 @@
+{
+ "summary": "Presiden Ismaïl Omar Guelleh memenangi masa jabatan keenam pada pemilu 2026 (97,8%, satu sumber). Dalam rapat kabinet pertama September, ia menempatkan keamanan dan perdamaian sebagai prioritas utama dan berjanji mendiversifikasi ke industri ringan, layanan digital, pariwisata, energi terbarukan, dan perikanan, serta mendigitalkan administrasi dan mereformasi keuangan publik. Pelabuhan dan pangkalan militer di jalur Laut Merah menopang ekonomi.",
+ "leader": "Presiden Ismaïl Omar Guelleh (sejak 1999; masa jabatan keenam 2026)",
+ "agenda": [
+  "Keamanan, perdamaian, dan perlindungan perbatasan serta infrastruktur vital",
+  "Diversifikasi: industri ringan, layanan digital, pariwisata, energi terbarukan, perikanan",
+  "Digitalisasi prosedur dan integrasi sistem pemerintah",
+  "Pengendalian belanja dan reformasi keuangan publik",
+  "Pendidikan, pelatihan, dan kesehatan"
+ ],
+ "needs": [
+  "Integrasi sistem e-government",
+  "Energi terbarukan (surya, panas bumi, angin)",
+  "Logistik pelabuhan (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "E-government dan interoperabilitas sistem"
+  },
+  {
+   "title": "Peralatan energi terbarukan"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "summary": "El PAICV ganó las legislativas del 17 de mayo de 2026 y Francisco Carvalho asumió como primer ministro (también ministro de Finanzas) en junio. El presupuesto 2027 es de 101.700 millones de escudos (unos 1.000 millones de USD), financiado en un 78% con recursos internos y con un crecimiento previsto del 5,6% (FMI: 5,0%). Incluye salud gratuita, educación, nuevas carreras y salarios públicos y pasajes interinsulares más baratos.",
+ "leader": "Primer ministro Francisco Carvalho (PAICV, desde junio 2026; también ministro de Finanzas)",
+ "agenda": [
+  "Presupuesto 2027 de 101.700 millones de escudos, crecimiento del 5,6%",
+  "Salud gratuita y educación",
+  "Nuevos planes de carrera y salarios públicos",
+  "Viajes interinsulares más baratos (ferri 500, vuelos 5.000 escudos desde enero 2027)",
+  "Diversificar una economía dependiente del turismo"
+ ],
+ "needs": [
+  "Conexiones marítimas y aéreas entre islas",
+  "Renovables y desalinización (estimación)",
+  "Administración digital (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Ferris interinsulares y equipos portuarios"
+  },
+  {
+   "title": "Renovables y desalinización"
+  }
+ ]
+}

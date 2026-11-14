@@ -1,0 +1,27 @@
+{
+ "summary": "Luật ngân sách 5 năm của chính phủ Orsi nhắm giảm dần thâm hụt, chủ yếu qua tăng thu, đồng thời ưu tiên nghèo đói trẻ em và an ninh. Tăng trưởng vừa phải khoảng 2% và quốc gia giữ hạng tín nhiệm đầu tư.",
+ "leader": "Tổng thống Yamandú Orsi (nguyên thủ kiêm đứng đầu chính phủ từ 1/3/2025, Frente Amplio)",
+ "agenda": [
+  "Giảm dần thâm hụt trên 4% GDP và điều chỉnh thuế",
+  "Hợp nhất và tăng chuyển tiền mặt để giảm 25% nghèo đói trẻ em",
+  "An ninh (thêm 300 cảnh sát cho Bộ Nội vụ)",
+  "Phân bổ lại kinh phí giáo dục",
+  "Rà soát hợp đồng cũ (cấp nước Arazatí, tàu tuần tra hải quân)"
+ ],
+ "needs": [
+  "Thiết bị và hệ thống an ninh chống tội phạm có tổ chức (ước tính)",
+  "Hạ tầng nước như nguồn nước thay thế",
+  "Số hóa hành chính để hợp nhất chuyển tiền xã hội (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Hệ thống quản lý tích hợp chuyển tiền xã hội"
+  },
+  {
+   "title": "Phân tích video và chỉ huy-điều hành cho cảnh sát"
+  },
+  {
+   "title": "Công nghệ xử lý nước và quản lý rò rỉ"
+  }
+ ]
+}

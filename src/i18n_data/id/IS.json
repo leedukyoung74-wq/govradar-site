@@ -1,0 +1,24 @@
+{
+ "summary": "Rancangan anggaran 2027 pemerintahan Frostadóttir mengubah defisit ISK 28,1 miliar pada 2026 menjadi surplus ISK 4,7 miliar pada 2027, mengakhiri defisit bertahun-tahun. Pendapatan naik ISK 34,1 miliar lewat pajak lembaga keuangan yang lebih tinggi, PPN standar untuk laguna panas bumi, dan pungutan baru di situs wisata milik negara.",
+ "leader": "Perdana Menteri Kristrún Frostadóttir / Presiden Halla Tómasdóttir",
+ "agenda": [
+  "Kembali surplus pada 2027 (ISK 4,7 miliar)",
+  "Pajak lembaga keuangan naik dari 0,145% ke 0,254%",
+  "Pariwisata: pungutan sumber daya di situs milik negara",
+  "Pungutan infrastruktur Reykjanes diperpanjang hingga akhir 2027",
+  "Stabilitas harga"
+ ],
+ "needs": [
+  "Sistem pengelolaan dan penarikan pungutan situs wisata",
+  "Industri berbasis panas bumi dan energi terbarukan (perkiraan)",
+  "Infrastruktur menghadapi risiko gunung api Reykjanes"
+ ],
+ "biz": [
+  {
+   "title": "Sistem digital tiket dan pungutan situs wisata"
+  },
+  {
+   "title": "Teknologi panas bumi dan kemitraan pusat data"
+  }
+ ]
+}

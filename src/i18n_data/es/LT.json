@@ -1,0 +1,31 @@
+{
+ "summary": "Tras la dimisión de la primera ministra Ruginienė, el líder socialdemócrata Sinkevičius formó un gobierno de coalición en julio de 2026. El proyecto de presupuesto 2027 mantiene la defensa en unos 4.800 millones de EUR (~5% del PIB) y sube las pensiones, ampliando el déficit al 3,8% del PIB.",
+ "leader": "Primer ministro Mindaugas Sinkevičius (desde el 14 jul 2026, socialdemócratas) / Presidente Gitanas Nausėda",
+ "agenda": [
+  "Defensa al 5-6% del PIB (2026-2030), con prioridad a defensa aérea, antidrones y la Línea de Defensa Báltica",
+  "Prepararse para acoger la brigada alemana y crear una división del ejército",
+  "Pensiones más altas y menos pobreza en la vejez",
+  "Desarrollo regional, menos esperas hospitalarias y comidas gratuitas en primaria",
+  "Completar Rail Baltica para 2033 y ampliar el Fondo Estatal de Carreteras"
+ ],
+ "needs": [
+  "Sistemas de defensa aérea y antidrones (incluida defensa antiaérea con cañones de 30-40 mm)",
+  "Infraestructura militar para la brigada alemana y la nueva división (estimación)",
+  "Capacidad de adquisición de terrenos, construcción y supervisión para Rail Baltica",
+  "Renovación de equipos médicos en hospitales regionales (muchos avisos en TED)"
+ ],
+ "biz": [
+  {
+   "title": "Sistemas coreanos de defensa antiaérea con cañones y antidrones"
+  },
+  {
+   "title": "Licitaciones de ecógrafos y equipos de urgencias"
+  },
+  {
+   "title": "Sistemas de gestión del tráfico y billetaje electrónico"
+  },
+  {
+   "title": "Subcontratación y materiales para la construcción de Rail Baltica"
+  }
+ ]
+}

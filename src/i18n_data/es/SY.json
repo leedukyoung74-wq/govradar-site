@@ -1,0 +1,24 @@
+{
+ "summary": "El presidente Ahmed al Sharaa dijo en la Asamblea General de la ONU en septiembre que el levantamiento de sanciones abrió una 'nueva fase de renacimiento' en reconstrucción e inversión. El gobierno afirma que los grupos armados no estatales están bajo su control y que más de 3,5 millones de desplazados y refugiados han regresado. Las necesidades de electricidad, vivienda e infraestructura son enormes.",
+ "leader": "Presidente Ahmed al Sharaa (gobierno de transición)",
+ "agenda": [
+  "Reconstrucción e inversión tras el alivio de sanciones",
+  "Restablecer los cuerpos de seguridad e integrar grupos armados",
+  "Retorno de desplazados y refugiados (más de 3,5 millones)",
+  "Justicia transicional y búsqueda de desaparecidos",
+  "Combatir el narcotráfico y la trata transfronterizos"
+ ],
+ "needs": [
+  "Generación y transmisión eléctrica y suministro de combustible",
+  "Reconstrucción de viviendas, agua y carreteras",
+  "Reconstruir telecomunicaciones y sistema financiero (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Equipos para reconstruir la generación y las redes eléctricas"
+  },
+  {
+   "title": "Materiales para reconstruir viviendas e infraestructura"
+  }
+ ]
+}

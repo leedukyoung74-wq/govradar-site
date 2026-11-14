@@ -1,0 +1,24 @@
+{
+ "summary": "En las elecciones del 4 de octubre de 2026 (participación del 42%), el SDA se impuso en la Federación y el SNSD en la República Srpska, y siguen las negociaciones de coalición. Bosnia ya perdió 108 millones de euros de los 976,6 millones del Plan de Crecimiento de la UE y podría perder 373 millones más si no hace las reformas antes de diciembre. En junio entró en la lista gris del GAFI.",
+ "leader": "Presidencia tripartita y Consejo de Ministros (coalición en formación tras las elecciones de oct 2026)",
+ "agenda": [
+  "Cumplir las reformas del Plan de Crecimiento de la UE (plazo en diciembre)",
+  "Salir de la lista gris del GAFI (antilavado)",
+  "Consolidación fiscal (el FMI aconseja empezar en 2027)",
+  "Responder a los costos energéticos y al ajuste en frontera por carbono de la UE",
+  "Formar gobierno tras las elecciones"
+ ],
+ "needs": [
+  "Sistemas antilavado y de supervisión financiera",
+  "Infraestructura energética envejecida y transición verde",
+  "Mejor gestión de las finanzas públicas"
+ ],
+ "biz": [
+  {
+   "title": "Regtech para antilavado y supervisión financiera"
+  },
+  {
+   "title": "Equipos de eficiencia energética y renovables"
+  }
+ ]
+}

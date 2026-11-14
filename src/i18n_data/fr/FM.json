@@ -1,0 +1,25 @@
+{
+ "summary": "Lors de sa première réunion exécutive de 2026, l'administration du président Wesley Simina et du vice-président Aren Palik a examiné la préparation législative, l'avancement des infrastructures, le budget, l'extension du service postal aux îles périphériques, les partenariats internationaux et la réponse à la marée noire de Chuuk. Elle avance la planification spatiale marine, a signé un Plan national d'investissement agricole, suit le Plan de développement stratégique 2024–2043 et a réaffirmé la coopération du Compact avec les États-Unis.",
+ "leader": "Président Wesley Simina",
+ "agenda": [
+  "Plan de développement stratégique 2024–2043",
+  "Planification spatiale marine",
+  "Plan national d'investissement agricole",
+  "Services étendus aux îles périphériques (poste, etc.)",
+  "Réponse à la marée noire de Chuuk",
+  "Coopération du Compact avec les États-Unis"
+ ],
+ "needs": [
+  "Infrastructures (ports, routes)",
+  "Agriculture et production alimentaire",
+  "Gestion du milieu marin"
+ ],
+ "biz": [
+  {
+   "title": "Équipements de production et transformation agricoles"
+  },
+  {
+   "title": "Équipements de lutte et de surveillance de la pollution marine"
+  }
+ ]
+}

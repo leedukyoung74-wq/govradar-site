@@ -1,0 +1,20 @@
+{
+ "summary": "Le gouvernement du président Azali Assoumani a relevé le gazole de 46 % et l'essence de 35 % le 9 mai après la flambée du pétrole liée à la guerre d'Iran de 2026, puis suspendu la hausse le 16 mai face à des manifestations meurtrières (source unique). Avec son plan « Comores émergentes 2030 », il soutient les infrastructures, le tourisme et l'économie bleue.",
+ "leader": "Président Azali Assoumani (chef de l'État et du gouvernement)",
+ "agenda": [
+  "Plan « Comores émergentes 2030 »",
+  "Stabilité des prix du carburant et pouvoir d'achat",
+  "Infrastructures électriques et portuaires",
+  "Tourisme et économie bleue (pêche)"
+ ],
+ "needs": [
+  "Production électrique et efficacité",
+  "Ports et routes",
+  "Transformation du poisson"
+ ],
+ "biz": [
+  {
+   "title": "Solaire et petite production"
+  }
+ ]
+}

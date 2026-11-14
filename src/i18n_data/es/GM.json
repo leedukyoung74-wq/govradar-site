@@ -1,0 +1,21 @@
+{
+ "summary": "El parlamento gambiano aprobó el 27 de octubre el presupuesto 2027 de 48.600 millones de dalasis (unos 667 millones de USD). El servicio de la deuda absorbe el 33,3%, más que educación y salud juntas. Educación recibe 6.130 millones y salud 4.110 millones, con 1.000 millones para subsidios eléctricos. El presidente Barrow se inscribió para un tercer mandato en las presidenciales de diciembre (5 de diciembre, fuente única).",
+ "leader": "Presidente Adama Barrow (jefe de Estado y de gobierno)",
+ "agenda": [
+  "Presupuesto 2027 de 48.600 millones de dalasis",
+  "Servicio de la deuda (un tercio del presupuesto)",
+  "Educación y salud",
+  "Subsidios eléctricos y energía",
+  "Presidenciales dic 2026; legislativas 10 abr 2027"
+ ],
+ "needs": [
+  "Generación y redes",
+  "Escuelas y hospitales",
+  "Gestión de la deuda"
+ ],
+ "biz": [
+  {
+   "title": "Equipos eléctricos y solares"
+  }
+ ]
+}

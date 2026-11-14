@@ -1,0 +1,24 @@
+{
+ "summary": "La presidenta Hilda Heine declaró el 26 de marzo de 2026 una emergencia económica de 90 días por el alza del combustible y los precios debida al conflicto en Oriente Medio. Las medidas incluyen ahorro energético, límites al uso de vehículos oficiales y congelación de aumentos salariales, contrataciones y compras de vehículos. Alrededor del 60% del presupuesto depende de las subvenciones estadounidenses del Pacto de Libre Asociación (COFA), y el país importa gran parte de sus alimentos, combustible y materiales.",
+ "leader": "Presidenta Hilda Heine",
+ "agenda": [
+  "Respuesta a la emergencia económica (mar. 2026, 90 días)",
+  "Ahorro energético y menor gasto en combustible",
+  "Congelación de salarios y contrataciones públicas",
+  "Flexibilidad local para priorizar proyectos COFA",
+  "Gestión del fondo fiduciario (1.300 millones de USD)"
+ ],
+ "needs": [
+  "Sustitución de combustible (solar, almacenamiento)",
+  "Sustitución de alimentos importados",
+  "Infraestructura ante la subida del mar"
+ ],
+ "biz": [
+  {
+   "title": "Solar y almacenamiento energético"
+  },
+  {
+   "title": "Protección costera e infraestructura de adaptación"
+  }
+ ]
+}

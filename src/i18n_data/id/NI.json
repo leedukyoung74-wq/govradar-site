@@ -1,0 +1,25 @@
+{
+ "summary": "Rancangan anggaran 2027 pemerintahan Ortega-Murillo memproyeksikan pendapatan NIO 195,1 miliar (+13,6%) dan belanja NIO 168,2 miliar, surplus 2,8% PDB (tahun ketujuh berturut-turut). Sekitar NIO 70 miliar untuk kesehatan, pendidikan, dan transportasi, dengan prioritas bandara Punta Huete, pelabuhan Bluefields, pengaspalan jalan, dan rumah sakit.",
+ "leader": "Ko-presiden Daniel Ortega dan Rosario Murillo",
+ "agenda": [
+  "Surplus 2027 sebesar 2,8% PDB, pendapatan lebih tinggi",
+  "Pembangunan ulang dan perluasan bandara Punta Huete (NIO 4,28 miliar)",
+  "Pelabuhan Bluefields (NIO 3,33 miliar)",
+  "Pengaspalan dan perbaikan jalan antarkota",
+  "Rumah sakit (Managua Timur, Bluefields, pusat bedah saraf dan onkologi)",
+  "Pemilu umum 2027"
+ ],
+ "needs": [
+  "Konstruksi dan peralatan bandara dan pelabuhan",
+  "Peralatan dan material pengaspalan",
+  "Peralatan medis rumah sakit"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan medis untuk rumah sakit"
+  },
+  {
+   "title": "Peralatan jalan dan pelabuhan"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "summary": "Le projet de budget 2027 de 68,9 Md TND (+8,4 % par rapport à 2026), avec un déficit de 14,6 Md TND et un objectif de croissance de 3,1 %, est devant le Parlement. Deuxième année du plan 2026-2030, il vise à réduire la dépendance à l'emprunt et privilégie la politique sociale, l'eau, l'alimentation et la transition énergétique.",
+ "leader": "Président Kaïs Saïed (chef de l'État) / Première ministre Sarra Zaafrani Zenzri (depuis mars 2025)",
+ "agenda": [
+  "Mise en œuvre du plan de développement 2026-2030 (équilibre régional, politique sociale)",
+  "Souveraineté hydrique et alimentaire (dessalement, réutilisation des eaux usées)",
+  "Transition énergétique et numérique, y compris l'IA",
+  "Réforme et gouvernance des entreprises publiques",
+  "Moins d'emprunt extérieur, plus de recettes intérieures"
+ ],
+ "needs": [
+  "Infrastructures de dessalement et de gestion de l'eau",
+  "Énergies renouvelables et efficacité énergétique",
+  "Numérisation des administrations fiscale et douanière (citée dans le budget)",
+  "Conseil en gouvernance des entreprises publiques (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Numérisation fiscale et douanière et analytique antifraude"
+  },
+  {
+   "title": "Équipements de dessalement et de réutilisation des eaux usées"
+  },
+  {
+   "title": "Projets d'énergies renouvelables et d'efficacité énergétique"
+  },
+  {
+   "title": "Numérisation des services publics et IA"
+  }
+ ]
+}

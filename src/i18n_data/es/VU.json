@@ -1,0 +1,24 @@
+{
+ "summary": "En febrero de 2026 el primer ministro Jotham Napat afirmó que 'seguir como siempre ya no es seguro' y fijó como objetivo central la transformación económica, centrada en economía, salud y educación. Las metas del Plan Nacional de Desarrollo Sostenible se concretarán para 2030, 50.º aniversario de la independencia. Se destinan 2.000 millones de vatu de fondos climáticos a carreteras resilientes en Malekula (obras previstas desde 2028), y el Banco Mundial aporta unos 3.000 millones de vatu para reforzar el ministerio de Pesca.",
+ "leader": "Primer ministro Jotham Napat",
+ "agenda": [
+  "Transformación económica (economía, salud, educación)",
+  "Metas concretas del NSDP para 2030 (50.º aniversario)",
+  "Carreteras resilientes en Malekula (2.000 M vatu)",
+  "Capacidad del ministerio de Pesca (Banco Mundial, ~3.000 M vatu)",
+  "Aprovechar la base energética y de telecomunicaciones"
+ ],
+ "needs": [
+  "Carreteras resilientes al clima",
+  "Procesamiento y gestión pesquera",
+  "Renovables (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Construcción y equipos de carreteras resilientes"
+  },
+  {
+   "title": "Sistemas de gestión y procesamiento pesquero"
+  }
+ ]
+}

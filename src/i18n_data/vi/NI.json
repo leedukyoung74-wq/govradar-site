@@ -1,0 +1,25 @@
+{
+ "summary": "Dự thảo ngân sách 2027 của chính quyền Ortega-Murillo dự kiến thu 195,1 tỷ córdoba (+13,6%) và chi 168,2 tỷ, thặng dư 2,8% GDP (năm thứ bảy liên tiếp). Khoảng 70 tỷ dành cho y tế, giáo dục và giao thông, ưu tiên sân bay Punta Huete, cảng Bluefields, rải nhựa đường và bệnh viện.",
+ "leader": "Đồng Tổng thống Daniel Ortega và Rosario Murillo",
+ "agenda": [
+  "Thặng dư 2027 2,8% GDP, tăng thu",
+  "Tái thiết, mở rộng sân bay quốc tế Punta Huete (4,28 tỷ)",
+  "Cảng Bluefields (3,33 tỷ)",
+  "Rải nhựa và sửa đường liên xã",
+  "Bệnh viện (Bệnh viện Đông Managua, Bluefields, trung tâm thần kinh và ung bướu)",
+  "Tổng tuyển cử 2027"
+ ],
+ "needs": [
+  "Thi công và thiết bị sân bay, cảng",
+  "Thiết bị và vật liệu rải nhựa đường",
+  "Thiết bị y tế bệnh viện"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị y tế cho bệnh viện"
+  },
+  {
+   "title": "Thiết bị đường bộ và cảng"
+  }
+ ]
+}

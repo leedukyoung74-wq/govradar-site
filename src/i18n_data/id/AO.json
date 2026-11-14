@@ -1,0 +1,28 @@
+{
+ "summary": "Dewan Menteri yang dipimpin Presiden Lourenço menyetujui anggaran 2027 sebesar AOA 37,34 triliun pada 27 Oktober 2026; parlemen memberikan suara pada 12 November. Dengan asumsi minyak US$71 dan pertumbuhan sekitar 5,5%, anggaran memprioritaskan jalan, energi, air, dan pendidikan, dengan ruang fiskal sempit menjelang pemilu 2027.",
+ "leader": "Presiden João Lourenço (kepala negara dan pemerintahan)",
+ "agenda": [
+  "Anggaran 2027 bertema 'kehati-hatian keuangan'",
+  "Investasi publik di transportasi jalan, energi, dan air",
+  "Program pendidikan 'Sekolahku, Masa Depanku'",
+  "Pertumbuhan nonmigas dalam Rencana Pembangunan Nasional",
+  "Melanjutkan penurunan inflasi"
+ ],
+ "needs": [
+  "Pembangunan dan pemeliharaan jalan serta infrastruktur transportasi",
+  "Perluasan pasokan listrik dan air",
+  "Fasilitas sekolah dan peralatan pendidikan",
+  "Diversifikasi pendapatan dan manajemen utang (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan konstruksi dan pemeliharaan jalan dan jembatan"
+  },
+  {
+   "title": "Peralatan dan EPC listrik dan air"
+  },
+  {
+   "title": "Solusi pendidikan digital untuk sekolah"
+  }
+ ]
+}

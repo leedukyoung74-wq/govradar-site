@@ -328,3 +328,10 @@ window.gvLang = function (sel) {
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply); else apply();
   window.addEventListener("storage", apply); setInterval(apply, 4000);
 })();
+/* owner shortcut: shown on every page only in a browser that opened the owner screen */
+(function () {
+  try { if (!localStorage.getItem("gv_owner") || location.pathname.indexOf("/owner/") === 0) return; } catch (e) { return; }
+  var a = document.createElement("a"); a.href = "/owner/"; a.textContent = "운영자 화면";
+  a.setAttribute("style", "position:fixed;right:14px;bottom:14px;z-index:9999;background:#1d2b4f;color:#fff;font-weight:700;font-size:13px;padding:9px 14px;border-radius:20px;box-shadow:0 2px 8px rgba(0,0,0,.25);text-decoration:none");
+  document.body.appendChild(a);
+})();

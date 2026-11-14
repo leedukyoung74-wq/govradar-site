@@ -1,0 +1,30 @@
+{
+ "summary": "El gobierno de Hassan aplica consolidación fiscal en el marco de la Visión de Modernización Económica y la Hoja de Ruta de Modernización del Sector Público. El presupuesto 2026 apunta a un déficit del 4,6% del PIB con 1.600 millones de JD de gasto de capital; el de 2027 se elabora con un recorte del 15% en gastos operativos de los ministerios.",
+ "leader": "Rey Abdalá II (jefe de Estado) / Primer ministro Jafar Hassan (desde sep 2024, remodelado ago 2026)",
+ "agenda": [
+  "Aplicar la Visión de Modernización Económica",
+  "Hoja de Ruta de Modernización del Sector Público y presupuesto por resultados",
+  "Transformación digital, automatización de servicios y ciberseguridad",
+  "Economía verde y objetivos climáticos",
+  "Menor déficit y recorte del 15% en gastos operativos (2027)"
+ ],
+ "needs": [
+  "Automatización de servicios públicos y capacidad en ciberseguridad",
+  "Herramientas de presupuesto por resultados y eficiencia del gasto (estimación)",
+  "Diseño de proyectos de economía verde y reducción de emisiones (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Consultoría en automatización de servicios públicos y transformación digital"
+  },
+  {
+   "title": "Evaluación y monitoreo de ciberseguridad para entidades públicas"
+  },
+  {
+   "title": "Sistema de presupuesto por resultados y gestión de KPI"
+  },
+  {
+   "title": "Automatización con IA del back-office público"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "summary": "El proyecto de presupuesto 2027 del gobierno Ortega-Murillo prevé ingresos de 195.100 millones de córdobas (+13,6%) y gastos de 168.200 millones, con un superávit del 2,8% del PIB (séptimo año consecutivo). Unos 70.000 millones van a salud, educación y transporte, con prioridad para el aeropuerto de Punta Huete, el puerto de Bluefields, la pavimentación y hospitales.",
+ "leader": "Copresidentes Daniel Ortega y Rosario Murillo",
+ "agenda": [
+  "Superávit 2027 del 2,8% del PIB y más recaudación",
+  "Reconstrucción y ampliación del aeropuerto de Punta Huete (4.280 millones)",
+  "Puerto de Bluefields (3.330 millones)",
+  "Pavimentación y rehabilitación de caminos municipales",
+  "Hospitales (Hospital Oriental de Managua, Bluefields, neurocirugía y oncología)",
+  "Elecciones generales de 2027"
+ ],
+ "needs": [
+  "Construcción y equipos para aeropuerto y puerto",
+  "Equipos y materiales de pavimentación",
+  "Equipos médicos hospitalarios"
+ ],
+ "biz": [
+  {
+   "title": "Equipos médicos para hospitales"
+  },
+  {
+   "title": "Equipos viales y portuarios"
+  }
+ ]
+}

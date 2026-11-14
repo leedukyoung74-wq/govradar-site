@@ -1,0 +1,20 @@
+{
+ "summary": "El gobierno del presidente Azali Assoumani subió el diésel un 46% y la gasolina un 35% el 9 de mayo tras el alza del petróleo por la guerra de Irán de 2026, y suspendió la subida el 16 de mayo tras protestas y muertes (fuente única). Con su plan 'Comoras emergentes 2030' impulsa infraestructura, turismo y economía azul.",
+ "leader": "Presidente Azali Assoumani (jefe de Estado y de gobierno)",
+ "agenda": [
+  "Plan 'Comoras emergentes 2030'",
+  "Estabilidad del precio del combustible y medios de vida",
+  "Infraestructura eléctrica y portuaria",
+  "Turismo y economía azul (pesca)"
+ ],
+ "needs": [
+  "Generación y eficiencia del combustible",
+  "Puertos y carreteras",
+  "Procesamiento de pescado"
+ ],
+ "biz": [
+  {
+   "title": "Solar y generación a pequeña escala"
+  }
+ ]
+}

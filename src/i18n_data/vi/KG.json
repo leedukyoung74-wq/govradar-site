@@ -1,0 +1,31 @@
+{
+ "summary": "Dự thảo ngân sách 2027 dự kiến thu 728,3 tỷ som so với chi 695,8 tỷ (không gồm tài sản tài chính), thặng dư 32,5 tỷ, với mức tăng lớn cho bảo trợ xã hội. Thủy điện Kambarata-1 và đường sắt Trung Quốc-Kyrgyzstan-Uzbekistan là các dự án chiến lược chủ lực, và bầu cử tổng thống diễn ra ngày 27/1/2027.",
+ "leader": "Tổng thống Sadyr Japarov (nguyên thủ quốc gia, tái tranh cử 27/1/2027) / Chủ tịch Nội các Adylbek Kasymaliev",
+ "agenda": [
+  "An ninh năng lượng, dẫn đầu là thủy điện Kambarata-1",
+  "Đường sắt Trung Quốc-Kyrgyzstan-Uzbekistan và kết nối logistics",
+  "Thêm thủy điện nhỏ, điện gió và mặt trời (36 thủy điện nhỏ dự kiến 2026-27)",
+  "Mở rộng bảo trợ xã hội đồng thời giữ thặng dư tài khóa",
+  "Chương trình Phát triển Quốc gia đến 2030"
+ ],
+ "needs": [
+  "Thiết kế và giám sát thủy điện lớn và truyền tải",
+  "Số hóa đường sắt và logistics (vận tải đa phương thức)",
+  "Hệ thống quản lý Quỹ Xã hội và quỹ bảo hiểm y tế (ước tính)",
+  "Thiết bị tái tạo quy mô nhỏ và vừa (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Quản lý dự án thủy điện (PMC) và giám sát"
+  },
+  {
+   "title": "Nền tảng logistics và hải quan số"
+  },
+  {
+   "title": "Hệ thống CNTT Quỹ Xã hội và bảo hiểm y tế"
+  },
+  {
+   "title": "Tự động hóa AI và chính phủ điện tử cho hành chính công"
+  }
+ ]
+}

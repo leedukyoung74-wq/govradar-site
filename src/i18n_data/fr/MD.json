@@ -1,0 +1,25 @@
+{
+ "summary": "Le 22 juillet 2026, un gouvernement dirigé par le technocrate sans parti Vasile Tofan a pris ses fonctions avec le programme « Économie européenne, État efficace », visant la signature d'un traité d'adhésion à l'UE fin 2028 et une préparation complète en 2030. Ses cinq priorités : croissance, adhésion, État efficace, sécurité et justice, niveau de vie.",
+ "leader": "Présidente Maia Sandu / Premier ministre Vasile Tofan (depuis le 22 juil. 2026)",
+ "agenda": [
+  "Signer le traité d'adhésion à l'UE fin 2028",
+  "Croissance économique et investissement",
+  "Administration efficace et responsable",
+  "Réforme de la sécurité et de la justice",
+  "Niveau de vie et sécurité énergétique"
+ ],
+ "needs": [
+  "Sécurité énergétique : interconnexion, stockage, efficacité",
+  "Routes et infrastructures locales",
+  "E-administration et efficacité administrative",
+  "Modernisation agricole"
+ ],
+ "biz": [
+  {
+   "title": "Interconnexion électrique et stockage d'énergie"
+  },
+  {
+   "title": "Solutions d'e-administration et d'efficacité administrative"
+  }
+ ]
+}

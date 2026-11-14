@@ -1,0 +1,31 @@
+{
+ "summary": "Rancangan anggaran 2027 sebesar TND68,9 miliar (+8,4% dari 2026), dengan defisit TND14,6 miliar dan target pertumbuhan 3,1%, sedang dibahas parlemen. Sebagai tahun kedua rencana 2026-2030, anggaran ini bertujuan mengurangi ketergantungan pada pinjaman dan memprioritaskan kebijakan sosial, air, pangan, dan transisi energi.",
+ "leader": "Presiden Kais Saied (kepala negara) / Perdana Menteri Sarra Zaafrani Zenzri (sejak Mar 2025)",
+ "agenda": [
+  "Melaksanakan rencana pembangunan 2026-2030 (keseimbangan wilayah, kebijakan sosial)",
+  "Kedaulatan air dan pangan (desalinasi, penggunaan ulang air limbah)",
+  "Transisi energi dan digital, termasuk AI",
+  "Reformasi dan tata kelola BUMN",
+  "Mengurangi pinjaman luar negeri, menambah pendapatan domestik"
+ ],
+ "needs": [
+  "Infrastruktur desalinasi dan pengelolaan air",
+  "Energi terbarukan dan efisiensi energi",
+  "Digitalisasi administrasi pajak dan bea cukai (disebut dalam anggaran)",
+  "Konsultasi tata kelola BUMN (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Digitalisasi pajak dan bea cukai serta analitik antikecurangan"
+  },
+  {
+   "title": "Peralatan desalinasi dan penggunaan ulang air limbah"
+  },
+  {
+   "title": "Proyek energi terbarukan dan efisiensi energi"
+  },
+  {
+   "title": "Digitalisasi layanan publik dan AI"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "summary": "Après 20 ans de pouvoir du MAS, le gouvernement Paz supprime les subventions aux carburants et stabilise l'économie sous programme du FMI, mais il n'a pas de majorité au Parlement et est en conflit avec son vice-président. Le boliviano a perdu une grande partie de sa valeur en un an.",
+ "leader": "Président Rodrigo Paz Pereira (chef de l'État et du gouvernement depuis le 8 nov. 2025, Parti démocrate-chrétien)",
+ "agenda": [
+  "Fin des subventions aux carburants et stabilisation budgétaire",
+  "Programme du FMI et taux de change de marché",
+  "Attirer des prêts extérieurs et offrir une sécurité juridique aux investisseurs",
+  "Restauration de l'Amazonie et finance climatique",
+  "État de droit, y compris la tentative d'arrestation d'Evo Morales"
+ ],
+ "needs": [
+  "Efficacité énergétique et carburants alternatifs après la réforme des prix",
+  "Réforme des entreprises publiques et systèmes de gestion des finances publiques",
+  "Projets climatiques comme la restauration amazonienne et la lutte contre les incendies",
+  "Diversification des exportations face à la pénurie de dollars (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Conseil en restructuration et gestion financière des entreprises publiques"
+  },
+  {
+   "title": "Technologies de restauration amazonienne et de surveillance des incendies"
+  },
+  {
+   "title": "Équipements de diagnostic pour les maladies sensibles au climat"
+  }
+ ]
+}

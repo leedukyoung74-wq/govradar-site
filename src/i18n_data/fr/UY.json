@@ -1,0 +1,27 @@
+{
+ "summary": "La loi budgétaire quinquennale du gouvernement Orsi vise une réduction progressive du déficit, surtout par les recettes, en donnant la priorité à la pauvreté infantile et à la sécurité. La croissance est modérée, autour de 2 %, et le pays conserve sa notation d'investissement.",
+ "leader": "Président Yamandú Orsi (chef de l'État et du gouvernement depuis le 1er mars 2025, Frente Amplio)",
+ "agenda": [
+  "Réduction progressive d'un déficit de plus de 4 % du PIB et ajustements fiscaux",
+  "Transferts monétaires unifiés et accrus pour réduire la pauvreté infantile de 25 %",
+  "Sécurité (300 policiers de plus au ministère de l'Intérieur)",
+  "Réaffectation des crédits de l'éducation",
+  "Révision de contrats passés (eau d'Arazatí, patrouilleurs de la marine)"
+ ],
+ "needs": [
+  "Équipements et systèmes de sécurité contre le crime organisé (estimation)",
+  "Infrastructures hydriques comme des sources alternatives",
+  "Numérisation administrative pour unifier les transferts sociaux (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Système intégré de gestion des transferts sociaux"
+  },
+  {
+   "title": "Vidéo-analytique et commandement-contrôle policier"
+  },
+  {
+   "title": "Technologies de traitement de l'eau et de gestion des fuites"
+  }
+ ]
+}

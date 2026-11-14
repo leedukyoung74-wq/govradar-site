@@ -1,0 +1,28 @@
+{
+ "summary": "El Consejo de Ministros presidido por Lourenço aprobó el 27 de octubre de 2026 un presupuesto 2027 de 37,34 billones de kwanzas; el parlamento lo vota el 12 de noviembre. Basado en petróleo a 71 USD y un crecimiento de ~5,5%, prioriza carreteras, energía, agua y educación, con poco margen fiscal antes de las elecciones de 2027.",
+ "leader": "Presidente João Lourenço (jefe de Estado y de gobierno)",
+ "agenda": [
+  "Presupuesto 2027 bajo el lema de 'prudencia financiera'",
+  "Inversión pública en carreteras, energía y agua",
+  "Programa educativo 'Mi Escuela, Mi Futuro'",
+  "Crecimiento no petrolero dentro del Plan Nacional de Desarrollo",
+  "Continuar la desinflación"
+ ],
+ "needs": [
+  "Construcción y mantenimiento de carreteras e infraestructura de transporte",
+  "Ampliar el suministro de electricidad y agua",
+  "Instalaciones escolares y equipamiento educativo",
+  "Diversificación de ingresos y gestión de la deuda (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de construcción y mantenimiento de carreteras y puentes"
+  },
+  {
+   "title": "Equipos y EPC de energía y agua"
+  },
+  {
+   "title": "Soluciones de educación digital para escuelas"
+  }
+ ]
+}

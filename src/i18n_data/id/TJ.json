@@ -1,0 +1,34 @@
+{
+ "summary": "Presiden Rahmon telah berkuasa selama beberapa dekade, dengan PM Rasulzoda memimpin kabinet. PLTA Rogun mendominasi belanja negara, dan pada KTT Korea-Asia Tengah September 2026 di Seoul kedua negara meningkatkan hubungan menjadi kemitraan komprehensif serta menandatangani 17 perjanjian dan MoU.",
+ "leader": "Presiden Emomali Rahmon (juga kepala pemerintahan) / Perdana Menteri Kokhir Rasulzoda",
+ "agenda": [
+  "Mempercepat pembangunan Rogun dan ekspor listrik",
+  "Memperluas basis pajak, melunasi tunggakan, dan pertukaran data digital",
+  "Substitusi impor dan peningkatan produksi dalam negeri",
+  "Konektivitas rel, transportasi, dan logistik; kerja sama mineral kritis (antimon)",
+  "Peningkatan irigasi dan penyediaan air"
+ ],
+ "needs": [
+  "Peralatan PLTA dan perluasan jaringan (Rogun dan lainnya)",
+  "Stasiun pompa irigasi, pipa, dan MIS air",
+  "Digitalisasi pemerintahan dan keuangan (pertukaran data pajak, MIS penjaminan simpanan)",
+  "Modernisasi rel dan logistik (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan transmisi/distribusi dan EPC gardu induk"
+  },
+  {
+   "title": "Pompa irigasi dan peralatan pengolahan air"
+  },
+  {
+   "title": "E-government dan sistem informasi keuangan"
+  },
+  {
+   "title": "Kerja sama rel dan logistik"
+  },
+  {
+   "title": "Rantai pasok mineral kritis (antimon)"
+  }
+ ]
+}

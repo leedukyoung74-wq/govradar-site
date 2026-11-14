@@ -1,0 +1,21 @@
+{
+ "summary": "Parlemen Gambia mengesahkan anggaran 2027 sebesar D48,6 miliar (sekitar US$667 juta) pada 27 Oktober. Pembayaran utang menyerap 33,3%, lebih besar dari pendidikan dan kesehatan digabung. Pendidikan mendapat D6,13 miliar dan kesehatan D4,11 miliar, dengan D1 miliar subsidi tarif listrik. Presiden Barrow mendaftar untuk masa jabatan ketiga dalam pemilu presiden Desember (5 Desember, satu sumber).",
+ "leader": "Presiden Adama Barrow (kepala negara dan pemerintahan)",
+ "agenda": [
+  "Anggaran 2027 D48,6 miliar",
+  "Pembayaran utang (sepertiga anggaran)",
+  "Pendidikan dan kesehatan",
+  "Subsidi tarif listrik dan energi",
+  "Pemilu presiden Des 2026; pemilu parlemen 10 Apr 2027"
+ ],
+ "needs": [
+  "Pembangkit dan jaringan",
+  "Sekolah dan rumah sakit",
+  "Manajemen utang"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan listrik dan surya"
+  }
+ ]
+}

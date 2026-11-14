@@ -1,0 +1,28 @@
+{
+ "summary": "Le budget 2027 du gouvernement Gusmão, de 2,57 Md USD, a franchi le premier vote parlementaire le 11 novembre. Axé sur la résilience et la diversification, il prévoit 535 M USD d'investissement public et vise à réduire la dépendance au pétrole. Le Timor-Leste a rejoint l'ASEAN en 2025 et prépare sa présidence de 2029.",
+ "leader": "Premier ministre Xanana Gusmão / Président José Ramos-Horta",
+ "agenda": [
+  "Budget 2027 de 2,57 Md USD, diversification économique",
+  "Investissement public 535 M USD (506 M en projets d'équipement)",
+  "Infrastructures, agriculture, tourisme, santé, éducation, protection sociale",
+  "Plus de recettes intérieures et dépense efficace",
+  "Préparer la présidence de l'ASEAN en 2029"
+ ],
+ "needs": [
+  "Infrastructures routières, électriques et hydrauliques",
+  "Productivité et distribution agricoles",
+  "Infrastructures touristiques",
+  "Administration fiscale pour réduire la dépendance au fonds pétrolier (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Travaux de routes, d'eau et d'électricité"
+  },
+  {
+   "title": "Développement agricole et touristique"
+  },
+  {
+   "title": "Systèmes de réunions et d'administration pour la présidence de l'ASEAN"
+  }
+ ]
+}

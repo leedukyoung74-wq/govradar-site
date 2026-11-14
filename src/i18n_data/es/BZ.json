@@ -1,0 +1,24 @@
+{
+ "summary": "El presupuesto 2026/27 del primer ministro Briceño gasta 1.900 millones de dólares beliceños (+12,7%) con un gasto de capital récord de 606,8 millones (32%). Lo clave son mejoras viales como la autopista George Price, ampliar el seguro nacional de salud a Cayo, un hospital en San Pedro financiado por Taiwán y más educación secundaria gratuita. La deuda bajó al 66,6% del PIB.",
+ "leader": "Primer ministro John Briceño (jefe de gobierno)",
+ "agenda": [
+  "Gasto de capital récord de 606,8 millones",
+  "Mejoras viales (autopista George Price y otras)",
+  "Seguro Nacional de Salud ampliado a Cayo (57 millones)",
+  "Secundaria prácticamente gratuita (más del 60% beneficiado)",
+  "Deuda por debajo del 50% del PIB en 2030"
+ ],
+ "needs": [
+  "Construcción de carreteras y puentes",
+  "Construcción de hospitales y equipos médicos",
+  "Instalaciones escolares y programas educativos"
+ ],
+ "biz": [
+  {
+   "title": "Obras viales y de puentes y equipos"
+  },
+  {
+   "title": "Equipos médicos hospitalarios"
+  }
+ ]
+}

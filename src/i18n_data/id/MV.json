@@ -1,0 +1,32 @@
+{
+ "summary": "Pemerintah mengajukan anggaran 2027 sebesar MVR 59,7 miliar pada 29 Okt 2026, MVR 4,5 miliar lebih rendah dari tahun ini, tetapi defisit melebar ke 7,3% PDB dan utang langsung pemerintah diproyeksikan 117% PDB.",
+ "leader": "Presiden Mohamed Muizzu (kepala negara dan pemerintahan)",
+ "agenda": [
+  "Meringankan beban utang dan stabilitas fiskal (defisit di bawah 5% PDB pada 2028)",
+  "Menyelesaikan 70% proyek investasi publik yang berjalan (PSIP)",
+  "Lebih banyak perumahan, termasuk skema kredit rumah pertama",
+  "Layanan kesehatan yang lebih kuat",
+  "Tanpa kenaikan pajak pada 2027",
+  "Meletakkan dasar status negara maju pada 2040"
+ ],
+ "needs": [
+  "Manajemen utang dan transparansi fiskal",
+  "Penyelesaian dan pengawasan proyek investasi publik di pulau-pulau",
+  "Pasokan dan pembiayaan perumahan",
+  "Perluasan layanan kesehatan"
+ ],
+ "biz": [
+  {
+   "title": "Sistem pemantauan kemajuan fisik dan keuangan PSIP"
+  },
+  {
+   "title": "Analitik pendapatan dan efisiensi pajak (data GST)"
+  },
+  {
+   "title": "Digitalisasi administrasi kesehatan dan data medis"
+  },
+  {
+   "title": "Platform pengajuan dan penilaian kredit perumahan"
+  }
+ ]
+}

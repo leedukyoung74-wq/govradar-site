@@ -1,0 +1,25 @@
+{
+ "summary": "Le Premier ministre Roosevelt Skerrit a fait de 2026 l'année de l'achèvement des grands projets : aéroport international, géothermie, téléphérique et extension du port et de la marina. La réforme de l'éducation, le logement des plus vulnérables, l'économie bleue et de nouvelles attractions touristiques sont aussi prioritaires. Le programme de citoyenneté par investissement (CBI), source majeure de recettes, aura de nouvelles exigences, et les exonérations de TVA et de droits sur les denrées de base ont été prolongées.",
+ "leader": "Premier ministre Roosevelt Skerrit (Parti travailliste de la Dominique)",
+ "agenda": [
+  "Achever l'aéroport international",
+  "Développement géothermique",
+  "Téléphérique, port et marina",
+  "Grande réforme de l'éducation",
+  "Logement des plus vulnérables",
+  "Normes CBI renforcées"
+ ],
+ "needs": [
+  "Équipements aéroportuaires et portuaires",
+  "Équipements géothermiques et renouvelables",
+  "Construction de logements"
+ ],
+ "biz": [
+  {
+   "title": "Équipements et ingénierie de centrale géothermique"
+  },
+  {
+   "title": "Équipements aéroportuaires et portuaires"
+  }
+ ]
+}

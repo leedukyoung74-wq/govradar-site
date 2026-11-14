@@ -1,0 +1,24 @@
+{
+ "summary": "Chính phủ Bukele vượt qua đợt rà soát thứ 2 và 3 của khoản EFF với IMF (khoảng 1,4 tỷ USD) vào tháng 10 và nhận 138 triệu USD. Tăng trưởng tốt hơn dự kiến (4,5% năm 2026), ví điện tử nhà nước Chivo đã chuyển cho tư nhân và không mua thêm bitcoin. Việc ghi nhận khoảng 2,3 tỷ USD lãi chưa trả cho quỹ hưu trí sẽ làm thâm hụt 2027 tăng.",
+ "leader": "Tổng thống Nayib Bukele (nguyên thủ kiêm đứng đầu chính phủ)",
+ "agenda": [
+  "Thực hiện chương trình IMF: quản lý thu, kiềm chế chi, tăng đệm thanh khoản",
+  "Cải cách lương hưu và công vụ",
+  "Quản lý nợ công (dự kiến 89,2% GDP năm 2027)",
+  "Duy trì chính sách an ninh",
+  "Bầu cử quốc hội 2027"
+ ],
+ "needs": [
+  "Hệ thống thuế, kho bạc và quản lý nợ",
+  "Giám sát tài chính (hợp tác xã, tổ chức công)",
+  "Hạ tầng du lịch và logistics (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Giải pháp số cho thuế và kho bạc"
+  },
+  {
+   "title": "Giám sát tài chính và regtech"
+  }
+ ]
+}

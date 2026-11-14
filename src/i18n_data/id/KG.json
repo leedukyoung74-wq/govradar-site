@@ -1,0 +1,31 @@
+{
+ "summary": "Rancangan anggaran 2027 merencanakan pendapatan KGS728,3 miliar dan belanja KGS695,8 miliar (di luar aset keuangan), surplus KGS32,5 miliar, dengan kenaikan besar untuk perlindungan sosial. PLTA Kambarata-1 dan jalur kereta China-Kirgistan-Uzbekistan adalah proyek strategis utama, dan pemilu presiden digelar 27 Jan 2027.",
+ "leader": "Presiden Sadyr Japarov (kepala negara, mencalonkan diri lagi 27 Jan 2027) / Ketua Kabinet Menteri Adylbek Kasymaliev",
+ "agenda": [
+  "Ketahanan energi, dipimpin PLTA Kambarata-1",
+  "Jalur kereta China-Kirgistan-Uzbekistan dan konektivitas logistik",
+  "Lebih banyak PLTA kecil, angin, dan surya (36 PLTA kecil direncanakan 2026-27)",
+  "Perlindungan sosial lebih luas sambil menjaga surplus fiskal",
+  "Program Pembangunan Nasional hingga 2030"
+ ],
+ "needs": [
+  "Desain dan supervisi PLTA besar dan transmisi",
+  "Digitalisasi rel dan logistik (transportasi multimoda)",
+  "Sistem manajemen Dana Sosial dan dana asuransi kesehatan (perkiraan)",
+  "Peralatan energi terbarukan skala kecil dan menengah (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Manajemen proyek PLTA (PMC) dan supervisi"
+  },
+  {
+   "title": "Platform logistik dan kepabeanan digital"
+  },
+  {
+   "title": "Sistem TI Dana Sosial dan asuransi kesehatan"
+  },
+  {
+   "title": "Otomasi AI dan e-government untuk administrasi publik"
+  }
+ ]
+}

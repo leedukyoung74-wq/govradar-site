@@ -1,0 +1,24 @@
+{
+ "summary": "El gobierno del primer ministro Terrance Drew impulsa su agenda de 'Estado Insular Sostenible' con un presupuesto de 1.075 millones de dólares del Caribe Oriental para 2026. Empleo, inversión y resiliencia climática son los pilares, con construcción, turismo, comercio, transporte y comunicaciones, finanzas y agricultura como sectores de crecimiento. También amplía la producción agrícola para la seguridad alimentaria, refuerza las capacidades digitales del funcionariado y apoya a los nacionales que regresan.",
+ "leader": "Primer ministro Terrance Drew (Partido Laborista de San Cristóbal y Nieves)",
+ "agenda": [
+  "Agenda de 'Estado Insular Sostenible'",
+  "Presupuesto de 1.075 millones (empleo, inversión, resiliencia climática)",
+  "Seguridad alimentaria y producción agrícola",
+  "Transformación digital del sector público",
+  "Centros de salud resilientes al clima (estimación)"
+ ],
+ "needs": [
+  "Renovables (geotermia, solar) (estimación)",
+  "Agricultura inteligente",
+  "Administración digital"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de agricultura inteligente y producción de alimentos"
+  },
+  {
+   "title": "Soluciones de transformación digital pública"
+  }
+ ]
+}

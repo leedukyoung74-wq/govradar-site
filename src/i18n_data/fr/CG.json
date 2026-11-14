@@ -1,0 +1,24 @@
+{
+ "summary": "Le budget 2027 du Congo (ressources 3 120 Md FCFA, dépenses 2 640 Md) a été présenté au Parlement le 29 octobre. Il suppose un baril à 71 USD et 112 millions de barils produits, et consacre 680 Md d'investissement public à l'énergie, aux transports, à l'agriculture et aux infrastructures sociales. La dette doit passer de 88,6 % à 80,9 % du PIB, et les financements extérieurs dépendent d'un accord avec le FMI.",
+ "leader": "Président Denis Sassou Nguesso / Premier ministre Anatole Collinet Makosso",
+ "agenda": [
+  "Excédent 2027 et assainissement budgétaire",
+  "Investissement public de 680 Md FCFA : énergie, transports, agriculture, infrastructures sociales",
+  "Réformes fiscales et douanières",
+  "Apurement de la dette intérieure envers les entreprises",
+  "Négociation d'un programme avec le FMI"
+ ],
+ "needs": [
+  "Production et réseaux électriques",
+  "Routes et transports",
+  "Production et transformation agricoles"
+ ],
+ "biz": [
+  {
+   "title": "Équipements de production et de réseau"
+  },
+  {
+   "title": "Équipements routiers et de transport"
+  }
+ ]
+}

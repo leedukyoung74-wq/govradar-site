@@ -1,0 +1,20 @@
+{
+ "summary": "Setelah kudeta militer 26 November 2025, Jenderal Horta Inta-A menjadi presiden transisi selama setahun, dan PM sipil Ilídio Vieira Té menjalankan pemerintahan. Konstitusi baru disahkan pada 30 Agustus 2026 dan pemilu presiden serta legislatif dijadwalkan 6 Desember 2026. IMF memperkirakan defisit 2026 turun ke 4,2% PDB. Ekspor bergantung pada kacang mete.",
+ "leader": "Jenderal Horta Inta-A (presiden transisi) / Perdana Menteri Ilídio Vieira Té",
+ "agenda": [
+  "Pemilu presiden dan legislatif 6 Des 2026",
+  "Menerapkan konstitusi baru (referendum 30 Agu 2026)",
+  "Menekan defisit ke 4,2% PDB",
+  "Mengelola ekspor mete"
+ ],
+ "needs": [
+  "Pengolahan mete",
+  "Pasokan listrik",
+  "Kesehatan dasar"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan pengolahan mete"
+  }
+ ]
+}

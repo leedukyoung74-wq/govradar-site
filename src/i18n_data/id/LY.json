@@ -1,0 +1,24 @@
+{
+ "summary": "Pada April 2026, Dewan Perwakilan di timur dan Dewan Tinggi Negara di barat menyepakati anggaran terpadu pertama dalam 13 tahun sebesar LYD 190 miliar (sekitar US$30 miliar). Anggaran mengalokasikan LYD 40 miliar untuk pembangunan dan LYD 12 miliar untuk Perusahaan Minyak Nasional, dengan prioritas pembangunan ditetapkan komite bersama di bawah pengawasan bank sentral. Pasukan Haftar menguasai ladang dan terminal ekspor utama.",
+ "leader": "Perdana Menteri Abdul Hamid Dbeibah (Pemerintah Persatuan Nasional, Tripoli) / wilayah timur dikuasai Tentara Nasional Libya pimpinan Khalifa Haftar",
+ "agenda": [
+  "Menjalankan anggaran terpadu LYD 190 miliar (gaji 73, subsidi 37, pembangunan 40)",
+  "Proyek pembangunan nasional (komite bersama, pengawasan bank sentral)",
+  "Produksi minyak lebih tinggi (LYD 12 miliar untuk NOC)",
+  "Stabilitas fiskal dan mengakhiri perpecahan timur-barat",
+  "Menyiapkan pemilu (belum ada tanggal)"
+ ],
+ "needs": [
+  "Desain dan konstruksi proyek listrik, air, dan jalan",
+  "Pemeliharaan dan peralatan migas untuk menaikkan produksi",
+  "Sistem manajemen keuangan publik (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "EPC listrik, jaringan, dan infrastruktur perkotaan"
+  },
+  {
+   "title": "Pemeliharaan dan pasokan peralatan migas"
+  }
+ ]
+}

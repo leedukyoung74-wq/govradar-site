@@ -1,0 +1,28 @@
+{
+ "summary": "Pemerintahan Abinader menargetkan peringkat layak investasi pada 2028, dan Fitch menaikkan peringkat negara menjadi BB pada 03-11-2026. Investasi publik sebagian besar untuk transportasi seperti jalan dan metro, sementara kerugian dan subsidi listrik membebani anggaran.",
+ "leader": "Presiden Luis Abinader (kepala negara dan pemerintahan, masa jabatan kedua berakhir 16-08-2028)",
+ "agenda": [
+  "Peringkat layak investasi pada 2028 dan konsolidasi fiskal",
+  "Target 2036: PDB dua kali lipat, 1,7 juta lapangan kerja, menghapus kemiskinan ekstrem",
+  "Investasi infrastruktur transportasi yang lebih besar (jalan, metro)",
+  "Menekan kerugian distribusi listrik dan beban subsidi",
+  "Penegakan migrasi dan kerja sama antinarkoba dengan AS"
+ ],
+ "needs": [
+  "Pemeteran dan modernisasi jaringan untuk menekan kerugian (44,1% listrik yang dibeli)",
+  "Desain, supervisi, dan manajemen proyek jalan dan metro",
+  "Basis pajak lebih luas dan pengelolaan fiskal lebih efisien (bunga menyerap 21,9% pendapatan)",
+  "Infrastruktur penghubung pariwisata dan logistik (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Meter pintar dan otomasi distribusi untuk menekan kerugian"
+  },
+  {
+   "title": "Sistem kereta perkotaan dan konsultasi operasi"
+  },
+  {
+   "title": "Solusi digital pajak dan keuangan publik"
+  }
+ ]
+}

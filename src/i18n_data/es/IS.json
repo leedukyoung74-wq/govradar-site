@@ -1,0 +1,24 @@
+{
+ "summary": "El proyecto de presupuesto 2027 del gobierno de Frostadóttir convierte un déficit de 28.100 millones de coronas en 2026 en un superávit de 4.700 millones en 2027, poniendo fin a años de déficit. Recauda 34.100 millones más con un impuesto mayor a las entidades financieras, IVA general para las lagunas geotermales y una nueva tasa en sitios turísticos estatales.",
+ "leader": "Primera ministra Kristrún Frostadóttir / Presidenta Halla Tómasdóttir",
+ "agenda": [
+  "Volver al superávit en 2027 (4.700 millones de coronas)",
+  "Impuesto a entidades financieras del 0,145% al 0,254%",
+  "Turismo: tasa por recursos en sitios estatales",
+  "Cargo de infraestructura de Reykjanes prorrogado hasta fines de 2027",
+  "Estabilidad de precios"
+ ],
+ "needs": [
+  "Sistemas de gestión y cobro en sitios turísticos",
+  "Industrias basadas en geotermia y renovables (estimación)",
+  "Infraestructura frente a los riesgos volcánicos de Reykjanes"
+ ],
+ "biz": [
+  {
+   "title": "Sistemas digitales de entrada y cobro en sitios turísticos"
+  },
+  {
+   "title": "Tecnología geotérmica y alianzas para centros de datos"
+  }
+ ]
+}

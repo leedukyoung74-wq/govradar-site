@@ -1,0 +1,31 @@
+{
+ "summary": "Setelah kabinet Siliņa jatuh akibat sengketa drone, koalisi empat partai pimpinan Kulbergs menjabat pada Mei 2026. Setelah pemilu 3 Oktober, presiden kembali mencalonkan Kulbergs, yang berencana mengajukan kabinet baru paling lambat 18 November.",
+ "leader": "Perdana Menteri Andris Kulbergs (United List, sejak 28 Mei 2026; tetap menjabat setelah pemilu Oktober, dicalonkan kembali 4 Nov) / Presiden Edgars Rinkēvičs",
+ "agenda": [
+  "Keamanan perbatasan, ekonomi, dan energi",
+  "Dukungan berkelanjutan untuk Ukraina dan langkah melemahkan serta mengisolasi Rusia",
+  "Operasi perbatasan timur VILKATIS (hingga 31 Des 2026)",
+  "Mengamankan pendanaan Rail Baltica dan pengawasan proyek lebih ketat",
+  "UU imigrasi lebih ketat (izin tinggal warga Rusia dan Belarus)"
+ ],
+ "needs": [
+  "Keamanan siber untuk kendali industri dan peralatan jarak jauh (setelah serangan)",
+  "Konstruksi dan supervisi Rail Baltica; peningkatan persinyalan dan kendali rel",
+  "Peralatan transportasi umum seperti bus rendah emisi dan sistem daya trem",
+  "Pengawasan perbatasan dan peralatan antidrone (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Keamanan siber OT dan kendali industri"
+  },
+  {
+   "title": "Pasokan bus rendah emisi"
+  },
+  {
+   "title": "Persinyalan rel dan kendali perjalanan"
+  },
+  {
+   "title": "Trafo dan penyearah"
+  }
+ ]
+}

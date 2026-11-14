@@ -1,0 +1,31 @@
+{
+ "summary": "El presupuesto 2026 de Sierra Leona, de 30.300 millones de leones (tras el suplementario), se centra en educación, infraestructura, salud y el programa agrícola insignia Feed Salone. Tras el cierre del estrecho de Ormuz en febrero de 2026, que encareció el petróleo, el suplementario de julio recortó las previsiones de ingresos, aumentó los subsidios a combustibles y electricidad y bajó el crecimiento al 4,0%.",
+ "leader": "Presidente Julius Maada Bio (jefe de Estado y de gobierno)",
+ "agenda": [
+  "Feed Salone: producción agrícola, acceso a mercados y agronegocios juveniles (insignia 'Big Five')",
+  "Mejores servicios de educación y salud",
+  "Diversificación hacia agricultura, pesca, minería, turismo, renovables y economía digital",
+  "Combate a drogas como el kush",
+  "Reformas electorales del Acuerdo Tripartito antes de las elecciones de 2028"
+ ],
+ "needs": [
+  "Mecanización, riego, almacenamiento y procesamiento en las zonas de Feed Salone",
+  "Ampliación de transmisión y distribución y electricidad más fiable",
+  "Renovables para aliviar el costo de los subsidios tras el shock petrolero (estimación)",
+  "Cadena de frío y procesamiento en puertos pesqueros"
+ ],
+ "biz": [
+  {
+   "title": "Paquetes de mecanización agrícola, molienda y almacenamiento"
+  },
+  {
+   "title": "Equipos de transmisión/distribución y operación de red"
+  },
+  {
+   "title": "Solar aislada y minirredes"
+  },
+  {
+   "title": "Cámaras frigoríficas y equipos de procesamiento de pescado"
+  }
+ ]
+}

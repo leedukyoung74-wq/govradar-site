@@ -1,0 +1,28 @@
+{
+ "summary": "Le gouvernement Fernández mise sur une politique de sécurité ferme et la réforme de l'État, l'ancien président Rodrigo Chaves étant ministre de la Présidence et des Finances. Le budget 2027 de 12 400 milliards de colóns a passé le premier débat et l'adhésion au CPTPP a été mise de côté le 28-10-2026.",
+ "leader": "Présidente Laura Fernández Delgado (cheffe de l'État et du gouvernement, entrée en fonction le 08-05-2026, mandat 2026-2030)",
+ "agenda": [
+  "Lutte contre le crime organisé et sécurité (nouvelle méga-prison, coopération sécuritaire avec les États-Unis)",
+  "Cinq réformes constitutionnelles (limites à l'approbation parlementaire des prêts extérieurs et plafond de dette, mandat plus court du Contrôleur, etc.)",
+  "Projet de taxe de 15 % sur les intérêts, dividendes, loyers et plus-values de l'étranger",
+  "Stratégie commerciale d'ALE bilatéraux après l'abandon du CPTPP (réponse au droit de douane américain de 12,5 %)",
+  "Infrastructures routières comme l'élargissement de la Route 1 (San José-San Ramón)"
+ ],
+ "needs": [
+  "Technologies de sécurité, pénitentiaires et de surveillance contre le crime organisé",
+  "Élargissement routier et gestion du trafic (caméras et radars tous les 1,5 km prévus sur la Route 1)",
+  "Assiette fiscale élargie et administration fiscale modernisée (70 % des entreprises contrôlées en infraction)",
+  "Diversification des marchés d'exportation après le droit de douane américain de 12,5 % (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Systèmes ITS et de gestion du trafic routier"
+  },
+  {
+   "title": "Solutions pénitentiaires et de sécurité publique"
+  },
+  {
+   "title": "Numérisation et analytique de l'administration fiscale"
+  }
+ ]
+}

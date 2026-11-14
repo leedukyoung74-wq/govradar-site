@@ -1,0 +1,25 @@
+{
+ "summary": "El presupuesto 2026 del presidente Nasry Asfura, de 444.300 millones de lempiras, fue aprobado en abril. Aumenta salud (nuevos hospitales), educación (rehabilitación de escuelas y alimentación) y seguridad, concentra 48.200 millones de inversión pública (4,4% del PIB) en energía y carreteras y limita el déficit al 1,0% del PIB.",
+ "leader": "Presidente Nasry Asfura (jefe de Estado y de gobierno, desde enero de 2026)",
+ "agenda": [
+  "Inversión pública de 48.200 millones de lempiras (4,4% del PIB): energía y carreteras",
+  "Salud: nuevos hospitales en Tegucigalpa, San Pedro Sula y otras regiones",
+  "Educación: 3.700 millones más para escuelas y alimentación",
+  "Más recursos para seguridad y defensa",
+  "Déficit del 1,0% del PIB (Ley de Responsabilidad Fiscal)",
+  "Transferencias municipales del 5,8% al 7,3%"
+ ],
+ "needs": [
+  "Generación, red eléctrica y conectividad vial",
+  "Construcción de hospitales y equipos médicos",
+  "Mejora de instalaciones escolares"
+ ],
+ "biz": [
+  {
+   "title": "Construcción de hospitales y equipos médicos"
+  },
+  {
+   "title": "Obras de energía y carreteras"
+  }
+ ]
+}

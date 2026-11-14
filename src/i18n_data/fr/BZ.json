@@ -1,0 +1,24 @@
+{
+ "summary": "Le budget 2026/27 du Premier ministre Briceño dépense 1,9 Md BZ$ (+12,7 %) avec un investissement record de 606,8 M (32 %). Les priorités : routes (dont l'autoroute George Price), extension de l'assurance maladie nationale à Cayo, un hôpital à San Pedro financé par Taïwan et un secondaire quasi gratuit. La dette est tombée à 66,6 % du PIB.",
+ "leader": "Premier ministre John Briceño (chef du gouvernement)",
+ "agenda": [
+  "Investissement record de 606,8 M BZ$",
+  "Modernisation routière (autoroute George Price et autres)",
+  "Assurance maladie nationale étendue à Cayo (57 M)",
+  "Secondaire quasi gratuit (plus de 60 % de bénéficiaires)",
+  "Dette sous 50 % du PIB d'ici 2030"
+ ],
+ "needs": [
+  "Construction de routes et de ponts",
+  "Construction d'hôpitaux et équipements médicaux",
+  "Équipements scolaires et programmes éducatifs"
+ ],
+ "biz": [
+  {
+   "title": "Travaux et équipements routiers et de ponts"
+  },
+  {
+   "title": "Équipements médicaux hospitaliers"
+  }
+ ]
+}

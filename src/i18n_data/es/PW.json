@@ -1,0 +1,24 @@
+{
+ "summary": "En su discurso sobre el estado de la República del 23 de julio de 2026, el presidente Surangel Whipps Jr. destacó la recuperación tras la pandemia con el lema 'disciplina antes que negación, reforma antes que demora'. El aumento de la recaudación y los superávits financiaron más asistencia social y salarios públicos, pero el servicio de la deuda y la reforma de pensiones siguen pendientes. Pidió 'redimensionar' el santuario marino nacional por la caída de la pesca de atún, y el presupuesto 2027 prioriza salud, educación, seguridad, agricultura y reducción de deuda.",
+ "leader": "Presidente Surangel Whipps Jr.",
+ "agenda": [
+  "Presupuesto 2027 (salud, educación, seguridad, agricultura, deuda)",
+  "Redimensionar el santuario marino nacional",
+  "Reforma de la seguridad social y pensiones",
+  "Lucha antidroga y control fronterizo",
+  "Apoyo a la agricultura y la acuicultura"
+ ],
+ "needs": [
+  "Tecnología acuícola y agrícola",
+  "Instalaciones escolares",
+  "Alivio del alto costo eléctrico (subsidios)"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de acuicultura y agricultura inteligente"
+  },
+  {
+   "title": "Solar y eficiencia eléctrica"
+  }
+ ]
+}

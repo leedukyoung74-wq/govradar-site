@@ -1,0 +1,25 @@
+{
+ "summary": "El primer ministro Feleti Teo celebró la declaración de la Asamblea General de la ONU que afirma la continuidad de la condición de Estado y de los límites marítimos pese a la subida del mar, pero recalcó que Tuvalu debe proteger su territorio por sí mismo. El proyecto emblemático de adaptación costera (TCAP) ha construido 1.300 m de protección costera y 15,5 ha de tierra ganada al mar libre de inundaciones. Tras una crisis eléctrica a inicios de 2026, el gobierno destinó 5 millones de dólares australianos a mejorar la red, y coorganiza la cumbre de líderes previa a la COP31.",
+ "leader": "Primer ministro Feleti Teo",
+ "agenda": [
+  "Ampliar el proyecto de adaptación costera (TCAP)",
+  "Asegurar la condición de Estado y los límites marítimos (declaración ONU)",
+  "Mejora de la red eléctrica (5 M AUD)",
+  "Marco nacional de movilidad climática",
+  "Alerta temprana y preparación ante desastres",
+  "Coorganizar la cumbre previa a la COP31"
+ ],
+ "needs": [
+  "Protección costera y relleno",
+  "Red eléctrica y renovables",
+  "Sistemas de alerta temprana"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de red, solar y almacenamiento"
+  },
+  {
+   "title": "Ingeniería de protección costera y relleno"
+  }
+ ]
+}

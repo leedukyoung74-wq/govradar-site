@@ -1,0 +1,24 @@
+{
+ "summary": "Le Nouveau Parti démocrate a remporté les élections de novembre 2025 et Godwin Friday est devenu Premier ministre. Disant avoir hérité d'une dette de 113 % du PIB, le gouvernement a fixé trois piliers (stabilité budgétaire, restructuration de la dette, croissance tirée par l'investissement privé) et de nouvelles règles budgétaires. Il a rejoint la banque de développement CAF pour refinancer à moindre coût et annoncé un projet de dessalement et de stockage d'eau d'environ 50 M USD soutenu par le Fonds vert pour le climat.",
+ "leader": "Premier ministre Godwin Friday (Nouveau Parti démocrate, depuis nov. 2025)",
+ "agenda": [
+  "Stabilité budgétaire et restructuration de la dette (113 % du PIB)",
+  "Nouvelles règles budgétaires",
+  "Croissance par l'investissement privé (tourisme, infrastructures, pêche)",
+  "Projet résilience climatique et sécurité de l'eau d'environ 50 M USD",
+  "Développer les renouvelables"
+ ],
+ "needs": [
+  "Dessalement et stockage d'eau",
+  "Énergies renouvelables",
+  "Infrastructures touristiques"
+ ],
+ "biz": [
+  {
+   "title": "Équipements de dessalement et d'adduction d'eau"
+  },
+  {
+   "title": "Solaire et stockage d'énergie"
+  }
+ ]
+}

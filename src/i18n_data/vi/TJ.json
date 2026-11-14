@@ -1,0 +1,34 @@
+{
+ "summary": "Tổng thống Rahmon cầm quyền nhiều thập kỷ, Thủ tướng Rasulzoda điều hành nội các. Thủy điện Rogun chi phối chi tiêu nhà nước, và tại hội nghị thượng đỉnh Hàn Quốc-Trung Á ở Seoul tháng 9/2026, hai nước nâng quan hệ lên đối tác toàn diện và ký 17 hiệp định, biên bản ghi nhớ.",
+ "leader": "Tổng thống Emomali Rahmon (kiêm đứng đầu chính phủ) / Thủ tướng Kokhir Rasulzoda",
+ "agenda": [
+  "Đẩy nhanh xây dựng Rogun và xuất khẩu điện",
+  "Mở rộng cơ sở thuế, xử lý nợ đọng và trao đổi dữ liệu số",
+  "Thay thế nhập khẩu và tăng sản xuất trong nước",
+  "Kết nối đường sắt, vận tải, logistics; hợp tác khoáng sản thiết yếu (antimon)",
+  "Nâng cấp thủy lợi và cấp nước"
+ ],
+ "needs": [
+  "Thiết bị thủy điện và mở rộng lưới (Rogun và các dự án khác)",
+  "Trạm bơm thủy lợi, đường ống và MIS ngành nước",
+  "Số hóa chính phủ và tài chính (trao đổi dữ liệu thuế, MIS bảo hiểm tiền gửi)",
+  "Hiện đại hóa đường sắt và logistics (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị truyền tải/phân phối và EPC trạm biến áp"
+  },
+  {
+   "title": "Bơm thủy lợi và thiết bị xử lý nước"
+  },
+  {
+   "title": "Chính phủ điện tử và hệ thống thông tin tài chính"
+  },
+  {
+   "title": "Hợp tác đường sắt và logistics"
+  },
+  {
+   "title": "Chuỗi cung ứng khoáng sản thiết yếu (antimon)"
+  }
+ ]
+}

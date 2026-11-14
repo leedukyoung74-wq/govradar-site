@@ -1,0 +1,24 @@
+{
+ "summary": "Sau cải tổ nội các ngày 11/10, Tổng thống Oligui Nguema yêu cầu kết quả trong ngân sách 2027 và đặt sáu trụ cột: tiếp cận nước và điện, khởi nghiệp, việc làm thanh niên, hạ tầng, vốn con người và quản trị. Ông thúc mạnh làm đường và đặt hạn hoàn thành năm 2030 cho các nhà thầu.",
+ "leader": "Tổng thống Brice Clotaire Oligui Nguema (nguyên thủ kiêm đứng đầu chính phủ)",
+ "agenda": [
+  "Mở rộng tiếp cận nước và điện",
+  "Việc làm thanh niên và khởi nghiệp",
+  "Đường sá và hạ tầng (hạn 2030)",
+  "Vốn con người: y tế và giáo dục",
+  "Cải cách quản trị"
+ ],
+ "needs": [
+  "Thiết bị cấp nước và phát điện",
+  "Thiết bị và thi công đường",
+  "Cơ sở y tế và giáo dục"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị và thi công đường bộ"
+  },
+  {
+   "title": "Thiết bị xử lý nước và phát điện"
+  }
+ ]
+}

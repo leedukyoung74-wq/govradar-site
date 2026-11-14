@@ -1,0 +1,25 @@
+{
+ "summary": "Ngân sách 2026 của Tổng thống Nasry Asfura trị giá 444,3 tỷ lempira được thông qua tháng 4. Ngân sách tăng chi y tế (bệnh viện mới), giáo dục (sửa trường, bữa ăn) và an ninh, tập trung 48,2 tỷ đầu tư công (4,4% GDP) vào năng lượng và đường sá, giữ thâm hụt ở 1,0% GDP.",
+ "leader": "Tổng thống Nasry Asfura (nguyên thủ kiêm đứng đầu chính phủ, từ 1/2026)",
+ "agenda": [
+  "Đầu tư công 48,2 tỷ lempira (4,4% GDP): năng lượng và đường",
+  "Y tế: bệnh viện mới ở Tegucigalpa, San Pedro Sula và nơi khác",
+  "Giáo dục: thêm 3,7 tỷ cho trường học và bữa ăn",
+  "Tăng chi an ninh, quốc phòng",
+  "Thâm hụt 1,0% GDP (Luật Trách nhiệm Tài khóa)",
+  "Chuyển giao cho địa phương từ 5,8% lên 7,3%"
+ ],
+ "needs": [
+  "Phát điện, lưới điện và kết nối đường bộ",
+  "Xây bệnh viện và thiết bị y tế",
+  "Cải tạo cơ sở trường học"
+ ],
+ "biz": [
+  {
+   "title": "Xây bệnh viện và cung cấp thiết bị y tế"
+  },
+  {
+   "title": "Công trình năng lượng và đường bộ"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "summary": "Le président Ismaïl Omar Guelleh a remporté un sixième mandat en 2026 (97,8 %, source unique). Au premier Conseil des ministres de septembre, il a placé la sécurité et la paix en tête et promis de diversifier vers l'industrie légère, les services numériques, le tourisme, les renouvelables et la pêche, tout en numérisant l'administration et en réformant les finances publiques. Les ports et bases militaires sur la route de la mer Rouge structurent l'économie.",
+ "leader": "Président Ismaïl Omar Guelleh (depuis 1999 ; sixième mandat en 2026)",
+ "agenda": [
+  "Sécurité, paix et protection des frontières et infrastructures vitales",
+  "Diversifier : industrie légère, services numériques, tourisme, renouvelables, pêche",
+  "Numériser les démarches et interconnecter les systèmes de l'État",
+  "Maîtriser les dépenses et réformer les finances publiques",
+  "Éducation, formation et santé"
+ ],
+ "needs": [
+  "Intégration des systèmes d'e-administration",
+  "Renouvelables (solaire, géothermie, éolien)",
+  "Logistique portuaire (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "E-administration et interopérabilité des systèmes"
+  },
+  {
+   "title": "Équipements d'énergies renouvelables"
+  }
+ ]
+}

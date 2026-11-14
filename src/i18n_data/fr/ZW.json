@@ -1,0 +1,29 @@
+{
+ "summary": "Le ministre des Finances Mthuli Ncube vise pour 2027 une croissance de 3,5 % et un déficit inférieur à 3 % du PIB. Les recettes ont dépassé les dépenses de janvier à septembre 2026, et le budget suit la deuxième Stratégie nationale de développement (NDS2) et la Vision 2030, en misant sur les infrastructures, le logement, l'agriculture et le numérique.",
+ "leader": "Président Emmerson Mnangagwa (chef de l'État et du gouvernement)",
+ "agenda": [
+  "Croissance de 3,5 % en 2027, déficit sous 3 % du PIB",
+  "NDS2 et Vision 2030 (revenu intermédiaire supérieur en 2030)",
+  "Investissements dans les infrastructures, le logement, l'énergie et les transports",
+  "Productivité agricole, sécurité alimentaire et résilience climatique",
+  "Transformation numérique, science et technologie",
+  "Décentralisation et protection sociale"
+ ],
+ "needs": [
+  "Plus de production et de transport d'électricité (pénuries)",
+  "Routes, transports et logement",
+  "Mécanisation agricole et irrigation (estimation)",
+  "Administration numérique et systèmes fiscaux (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Équipements solaires, de production et de réseau"
+  },
+  {
+   "title": "Packs de machines agricoles et d'irrigation"
+  },
+  {
+   "title": "Traitement des minerais et équipements miniers"
+  }
+ ]
+}

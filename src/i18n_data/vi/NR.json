@@ -1,0 +1,24 @@
+{
+ "summary": "Tổng thống David Adeang muốn giảm phụ thuộc viện trợ và thúc đẩy tăng trưởng với bốn trụ cột: đa dạng hóa kinh tế, phát triển xã hội, hạ tầng và chống chịu khí hậu. Cải cách hiến pháp năm 2026 lập chức phó tổng thống đầu tiên và nước này chính thức đổi tên thành Naeoro. Giải quyết chậm trễ của các dự án cảng, nạo vét và điện mặt trời do ADB hỗ trợ là vấn đề cấp bách.",
+ "leader": "Tổng thống David Adeang",
+ "agenda": [
+  "Giảm phụ thuộc viện trợ, chiến lược tăng trưởng",
+  "Đa dạng hóa, hạ tầng và chống chịu khí hậu",
+  "Hoàn thành cảng và nạo vét",
+  "Dự án điện mặt trời",
+  "Đổi tên nước và cải cách hiến pháp (phó tổng thống đầu tiên)"
+ ],
+ "needs": [
+  "Nạo vét và xây dựng cảng",
+  "Điện mặt trời và lưu trữ",
+  "Khử mặn (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Điện mặt trời và lưu trữ năng lượng"
+  },
+  {
+   "title": "Thiết bị và thi công cảng, nạo vét"
+  }
+ ]
+}

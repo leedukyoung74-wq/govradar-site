@@ -1,0 +1,24 @@
+{
+ "summary": "Ngân sách 2027 của Cộng hòa Congo (nguồn thu 3.120 tỷ, chi 2.640 tỷ franc CFA) được trình quốc hội ngày 29/10. Ngân sách giả định giá dầu 71 USD, sản lượng 112 triệu thùng và dành 680 tỷ franc đầu tư công cho năng lượng, giao thông, nông nghiệp và hạ tầng xã hội. Nợ công dự kiến giảm từ 88,6% xuống 80,9% GDP, và vốn bên ngoài phụ thuộc thỏa thuận với IMF.",
+ "leader": "Tổng thống Denis Sassou Nguesso / Thủ tướng Anatole Collinet Makosso",
+ "agenda": [
+  "Thặng dư 2027 và củng cố tài khóa",
+  "Đầu tư công 680 tỷ franc: năng lượng, giao thông, nông nghiệp, hạ tầng xã hội",
+  "Cải cách thuế và hải quan",
+  "Trả nợ trong nước cho doanh nghiệp",
+  "Đàm phán chương trình IMF"
+ ],
+ "needs": [
+  "Phát điện và lưới điện",
+  "Đường sá và giao thông",
+  "Sản xuất, chế biến nông sản"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị phát điện và lưới điện"
+  },
+  {
+   "title": "Thiết bị đường bộ và giao thông"
+  }
+ ]
+}

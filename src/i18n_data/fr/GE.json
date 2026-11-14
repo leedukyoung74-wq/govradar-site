@@ -1,0 +1,28 @@
+{
+ "summary": "Le budget 2026 table sur 5 % de croissance et le gouvernement attend une économie de 114 Md GEL en 2026 (croissance 2025 : 7,5 %). Des prêts de la BAsD et de la Banque mondiale financent le contournement de Tbilissi, le rail et les routes du corridor transcaspien (médian) et des réseaux d'eau ruraux.",
+ "leader": "Premier ministre Irakli Kobakhidze (Rêve géorgien)",
+ "agenda": [
+  "Moderniser le rail et les routes du corridor transcaspien (médian)",
+  "Réseau routier financé par les IFI (contournement de Tbilissi, Batoumi-Sarpi)",
+  "Reconstruire les réseaux d'eau ruraux",
+  "Coopération avec l'Azerbaïdjan sur le commerce, les douanes et le corridor d'énergie verte",
+  "Lutte anticorruption et réforme du ministère de l'Économie et des entreprises publiques"
+ ],
+ "needs": [
+  "Capacités de construction et de supervision routières pour les projets BAsD/Banque mondiale",
+  "Locomotives électriques et sous-stations pour l'électrification ferroviaire",
+  "Conception, construction et exploitation des réseaux d'eau ruraux",
+  "Logistique numérique des frontières et des douanes (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Construction et supervision de projets routiers BAsD/Banque mondiale"
+  },
+  {
+   "title": "Locomotives électriques et équipements de sous-station"
+  },
+  {
+   "title": "Conception d'eau rurale et équipements de traitement"
+  }
+ ]
+}

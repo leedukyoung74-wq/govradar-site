@@ -82,8 +82,140 @@ def all_tenders(DATA, BY, today):
             dl = str(t.get("deadline") or "")
             if not re.match(r"\d{4}-\d{2}-\d{2}$", dl) or dl < today: continue
             te = en[i] if i < len(en) and isinstance(en[i], dict) else {}
-            out.append({"iso": iso, "t": t, "te": te, "dl": dl, "sec": classify(t.get("title", "") + " " + t.get("buyer", ""))})
+            out.append({"iso": iso, "t": t, "te": te, "dl": dl, "new": _is_new(t, today), "sec": classify(t.get("title", "") + " " + t.get("buyer", ""))})
     return sorted(out, key=lambda x: x["dl"])
+
+def _is_new(t, today, days=7):
+    a = str(t.get("added") or "")
+    if not re.match(r"\d{4}-\d{2}-\d{2}$", a): return False
+    import datetime as _dt
+    return (_dt.date.fromisoformat(today) - _dt.date.fromisoformat(a)).days <= days
+
+def past_tenders(DATA, today):
+    out = []
+    for iso, d in DATA.items():
+        en = (d.get("en") or {}).get("tenders") or []
+        for i, t in enumerate(d.get("tenders") or []):
+            if not isinstance(t, dict): continue
+            dl = str(t.get("deadline") or "")
+            if not re.match(r"\d{4}-\d{2}-\d{2}$", dl) or dl >= today: continue
+            te = en[i] if i < len(en) and isinstance(en[i], dict) else {}
+            out.append({"iso": iso, "t": t, "te": te, "dl": dl, "sec": classify(t.get("title", "") + " " + t.get("buyer", "") + " " + str(te.get("title", "")))})
+    return sorted(out, key=lambda x: x["dl"], reverse=True)
+
+# feasibility-study preparation per field (what to have ready before the next round of the same kind of tender)
+PREP = {
+ "digital": (["발주처의 기존 시스템·데이터 현황(레거시, 연동 대상) 정리", "현지 개인정보·데이터 주권 규정과 클라우드 허용 여부 확인", "유지보수·현지 인력 교육까지 포함한 총소유비용(TCO) 산정", "유사 전자정부 납품 실적(한국 사례) 영문 레퍼런스 준비"],
+             ["Map the buyer's existing systems and data (legacy, integrations)", "Check local data-protection and cloud rules", "Total cost of ownership including maintenance and local training", "English references for similar e-government deliveries"]),
+ "energy": (["부지·일사량/풍황·계통 연계 용량 자료 확보", "전력구매계약(PPA) 구조와 요금·보조금 체계 확인", "ESS 포함 시 안전·인증 기준(현지/IEC) 정리", "개발은행 재원 조건(현지조달 비율, 환경사회 기준) 검토"],
+            ["Site, resource and grid-connection data", "PPA structure, tariffs and subsidies", "Safety and certification rules for storage (local/IEC)", "Development-bank finance terms (local content, E&S standards)"]),
+ "health": (["병상·장비 수요와 기존 장비 사용 현황 조사", "현지 의료기기 등록·인허가 절차와 기간 확인", "보건정보시스템(HIS)·표준(HL7/FHIR) 연동 범위", "운영·정비 인력 교육과 부품 공급 계획"],
+            ["Demand for beds/equipment and what is in use", "Local medical-device registration and timelines", "Health information system scope and standards (HL7/FHIR)", "Training and spare-parts plan"]),
+ "water": (["수량·수질 기초 데이터와 기존 시설 노후도 조사", "요금 체계와 운영비 회수(O&M) 구조 확인", "환경·사회 영향평가(ESIA) 요구 수준 확인", "운영 단계(DBO·위탁운영) 참여 가능성 검토"],
+           ["Baseline flow/quality data and condition of existing assets", "Tariffs and how operating costs are recovered", "Required environmental and social impact assessment", "Whether design-build-operate or O&M contracts follow"]),
+ "infra": (["교통량·수요 예측과 노선·부지 대안 비교", "용지 보상·이주(RAP) 리스크 확인", "현지 시공 파트너와 자재·장비 조달 경로", "공기·물가 변동 조항과 보증 요건 검토"],
+           ["Traffic/demand forecasts and route or site options", "Land acquisition and resettlement risk", "Local construction partners and supply routes", "Schedule, price-adjustment and guarantee terms"]),
+ "edu": (["대상 기관·인원과 현행 교육과정 진단", "교원 연수·콘텐츠 현지어화 범위", "기자재 유지관리와 인터넷 환경 확인", "성과지표(이수율·취업률) 설계"],
+         ["Target institutions, learners and current curricula", "Teacher training and localisation scope", "Equipment upkeep and connectivity", "Outcome indicators (completion, employment)"]),
+ "trade": (["물류 경로·통관 절차와 소요 시간 조사", "현지 유통·조달 파트너 후보 확보", "원산지·인증·관세 요건 정리", "공급 안정성(재고·납기) 계획"],
+           ["Logistics routes, customs steps and lead times", "Local distribution or procurement partners", "Origin, certification and tariff requirements", "Supply reliability (stock, delivery times)"]),
+}
+PREP_DEF = (["발주처 과거 공고·낙찰 결과 수집", "현지 파트너와 컨소시엄 구성 검토", "예산 출처(정부·개발은행)와 재원 조건 확인", "다음 공고 예상 시기 추적"],
+            ["Collect the buyer's past notices and awards", "Consider a consortium with a local partner", "Check the budget source and finance terms", "Track when the next round is expected"])
+
+# ---- strings for the new/imminent/past tender features, all site languages
+PT = {
+ "new": {"ko": "신규", "en": "NEW", "es": "NUEVO", "fr": "NOUVEAU", "ar": "جديد", "vi": "MỚI", "id": "BARU"},
+ "lg_new": {"ko": "신규 — 최근 7일 안에 올라온 공고", "en": "New — posted in the last 7 days", "es": "Nuevo: publicado en los últimos 7 días", "fr": "Nouveau : publié ces 7 derniers jours", "ar": "جديد: نُشر خلال آخر 7 أيام", "vi": "Mới: đăng trong 7 ngày qua", "id": "Baru: terbit dalam 7 hari terakhir"},
+ "lg_hot": {"ko": "마감 임박 — D-15 이내", "en": "Closing soon — 15 days or less", "es": "Cierra pronto: 15 días o menos", "fr": "Clôture proche : 15 jours ou moins", "ar": "يغلق قريبًا: 15 يومًا أو أقل", "vi": "Sắp đóng: còn 15 ngày trở xuống", "id": "Segera tutup: 15 hari atau kurang"},
+ "closed": {"ko": "마감", "en": "Closed", "es": "Cerrada", "fr": "Clôturé", "ar": "مغلقة", "vi": "Đã đóng", "id": "Ditutup"},
+ "cnt": {"ko": "지난 입찰 {0}건 · {1}개국", "en": "{0} past tenders · {1} countries", "es": "{0} licitaciones pasadas · {1} países", "fr": "{0} appels d'offres passés · {1} pays", "ar": "{0} مناقصة سابقة · {1} دولة", "vi": "{0} gói thầu đã qua · {1} quốc gia", "id": "{0} tender lalu · {1} negara"},
+ "multi": {"ko": "여러 나라 반복 수요", "en": "Recurring across countries", "es": "Se repite en varios países", "fr": "Récurrent dans plusieurs pays", "ar": "متكرر في عدة دول", "vi": "Lặp lại ở nhiều nước", "id": "Berulang di banyak negara"},
+ "prep": {"ko": "다음 공고 대비 타당성 준비", "en": "Feasibility prep for the next round", "es": "Preparar la viabilidad para la próxima ronda", "fr": "Préparer la faisabilité pour le prochain appel", "ar": "إعداد دراسة الجدوى للجولة القادمة", "vi": "Chuẩn bị khả thi cho đợt tiếp theo", "id": "Persiapan kelayakan untuk putaran berikutnya"},
+ "note": {"ko": "마감이 지난 공고입니다(📁). 같은 분야가 여러 나라에서 반복되면(🔁) 다음 공고가 나올 가능성이 높으니 타당성 자료를 미리 준비하세요.",
+          "en": "These notices have closed (📁). When the same field recurs in several countries (🔁), another round is likely, so prepare the feasibility material early.",
+          "es": "Estos avisos ya cerraron (📁). Si el mismo sector se repite en varios países (🔁), es probable otra ronda: prepare el estudio de viabilidad con antelación.",
+          "fr": "Ces avis sont clos (📁). Quand un même secteur revient dans plusieurs pays (🔁), un nouvel appel est probable : préparez la faisabilité à l'avance.",
+          "ar": "هذه الإعلانات أُغلقت (📁). عندما يتكرر القطاع نفسه في عدة دول (🔁) فالجولة التالية مرجحة، فجهّز مواد الجدوى مبكرًا.",
+          "vi": "Các thông báo này đã đóng (📁). Khi cùng một lĩnh vực lặp lại ở nhiều nước (🔁), khả năng có đợt mới cao, hãy chuẩn bị tài liệu khả thi sớm.",
+          "id": "Pengumuman ini sudah ditutup (📁). Jika bidang yang sama berulang di beberapa negara (🔁), putaran berikutnya kemungkinan besar ada, jadi siapkan bahan kelayakan lebih awal."},
+ "h_mdb": {"ko": "⌛ 지난 입찰과 여러 나라 반복 수요", "en": "⌛ Past tenders and recurring needs", "es": "⌛ Licitaciones pasadas y necesidades recurrentes", "fr": "⌛ Appels d'offres passés et besoins récurrents", "ar": "⌛ المناقصات السابقة والاحتياجات المتكررة", "vi": "⌛ Gói thầu đã qua và nhu cầu lặp lại", "id": "⌛ Tender lalu dan kebutuhan berulang"},
+ "h_home": {"ko": "⌛ 지난 입찰에서 보이는 반복 수요", "en": "⌛ Recurring needs in past tenders", "es": "⌛ Necesidades recurrentes en licitaciones pasadas", "fr": "⌛ Besoins récurrents dans les appels passés", "ar": "⌛ احتياجات متكررة في المناقصات السابقة", "vi": "⌛ Nhu cầu lặp lại trong các gói thầu đã qua", "id": "⌛ Kebutuhan berulang dari tender lalu"},
+ "all": {"ko": "지난 입찰·타당성 준비 전체", "en": "All past tenders & feasibility prep", "es": "Todas las licitaciones pasadas y la preparación", "fr": "Tous les appels passés et la préparation", "ar": "كل المناقصات السابقة وإعداد الجدوى", "vi": "Tất cả gói thầu đã qua và chuẩn bị khả thi", "id": "Semua tender lalu & persiapan kelayakan"},
+ "other": {"ko": "기타", "en": "Other", "es": "Otros", "fr": "Autres", "ar": "أخرى", "vi": "Khác", "id": "Lainnya"},
+}
+def pt(k, L): return PT[k].get(L) or PT[k]["en"]
+
+PREP_X = {
+ "digital": {"es": ["Mapear sistemas y datos existentes del comprador", "Revisar normas locales de datos y nube", "Costo total de propiedad con mantenimiento y capacitación", "Referencias en inglés de proyectos de gobierno digital"],
+             "fr": ["Cartographier les systèmes et données existants", "Vérifier les règles locales sur les données et le cloud", "Coût total de possession avec maintenance et formation", "Références en anglais de projets d'e-gouvernement"],
+             "ar": ["حصر الأنظمة والبيانات الحالية لدى الجهة", "مراجعة قواعد حماية البيانات والحوسبة السحابية", "التكلفة الإجمالية للملكية مع الصيانة والتدريب", "مراجع بالإنجليزية لمشاريع حكومة إلكترونية مشابهة"],
+             "vi": ["Rà soát hệ thống, dữ liệu hiện có của bên mời thầu", "Kiểm tra quy định dữ liệu và điện toán đám mây", "Tổng chi phí sở hữu gồm bảo trì và đào tạo", "Hồ sơ tham chiếu tiếng Anh về chính phủ điện tử"],
+             "id": ["Petakan sistem dan data pembeli saat ini", "Periksa aturan data dan cloud setempat", "Total biaya kepemilikan termasuk pemeliharaan dan pelatihan", "Referensi berbahasa Inggris proyek e-government serupa"]},
+ "energy": {"es": ["Datos de sitio, recurso y conexión a red", "Estructura del PPA, tarifas y subsidios", "Normas de seguridad y certificación del almacenamiento", "Condiciones del banco de desarrollo (contenido local, salvaguardas)"],
+            "fr": ["Données de site, de ressource et de raccordement", "Structure du PPA, tarifs et subventions", "Règles de sécurité et de certification du stockage", "Conditions du bailleur (contenu local, normes E&S)"],
+            "ar": ["بيانات الموقع والمورد والربط بالشبكة", "هيكل اتفاقية شراء الطاقة والتعرفة والدعم", "قواعد السلامة والاعتماد للتخزين", "شروط بنك التنمية (المحتوى المحلي والمعايير البيئية والاجتماعية)"],
+            "vi": ["Dữ liệu địa điểm, tài nguyên và đấu nối lưới", "Cơ cấu PPA, giá điện và trợ giá", "Quy chuẩn an toàn, chứng nhận cho lưu trữ", "Điều kiện vốn ngân hàng phát triển (nội địa hóa, môi trường xã hội)"],
+            "id": ["Data lokasi, sumber daya, dan sambungan jaringan", "Struktur PPA, tarif, dan subsidi", "Aturan keselamatan dan sertifikasi penyimpanan", "Syarat bank pembangunan (konten lokal, standar L&S)"]},
+ "health": {"es": ["Demanda de camas y equipos y lo que está en uso", "Registro local de dispositivos médicos y plazos", "Alcance del sistema de información sanitaria (HL7/FHIR)", "Plan de capacitación y repuestos"],
+            "fr": ["Besoins en lits et équipements, existant", "Enregistrement local des dispositifs médicaux et délais", "Périmètre du système d'information sanitaire (HL7/FHIR)", "Plan de formation et de pièces détachées"],
+            "ar": ["الطلب على الأسرّة والأجهزة والموجود منها", "تسجيل الأجهزة الطبية محليًا ومدده", "نطاق نظام المعلومات الصحية (HL7/FHIR)", "خطة التدريب وقطع الغيار"],
+            "vi": ["Nhu cầu giường bệnh, thiết bị và hiện trạng sử dụng", "Thủ tục, thời gian đăng ký thiết bị y tế", "Phạm vi hệ thống thông tin y tế (HL7/FHIR)", "Kế hoạch đào tạo và phụ tùng"],
+            "id": ["Kebutuhan tempat tidur dan alat serta yang sudah dipakai", "Registrasi alat kesehatan setempat dan waktunya", "Cakupan sistem informasi kesehatan (HL7/FHIR)", "Rencana pelatihan dan suku cadang"]},
+ "water": {"es": ["Datos base de caudal y calidad y estado de activos", "Tarifas y recuperación de costos de operación", "Evaluación de impacto ambiental y social requerida", "Si siguen contratos de diseño-construcción-operación"],
+           "fr": ["Données de base débit/qualité et état des ouvrages", "Tarifs et recouvrement des coûts d'exploitation", "Étude d'impact environnemental et social requise", "Suite possible en conception-construction-exploitation"],
+           "ar": ["بيانات أساسية للتدفق والجودة وحالة المنشآت", "التعرفة واسترداد تكاليف التشغيل", "متطلبات تقييم الأثر البيئي والاجتماعي", "إمكانية عقود التصميم والبناء والتشغيل لاحقًا"],
+           "vi": ["Dữ liệu nền lưu lượng, chất lượng và hiện trạng công trình", "Giá nước và cơ chế thu hồi chi phí vận hành", "Yêu cầu đánh giá tác động môi trường xã hội", "Khả năng có hợp đồng thiết kế-xây dựng-vận hành"],
+           "id": ["Data dasar debit, kualitas, dan kondisi aset", "Tarif dan pemulihan biaya operasi", "Kajian dampak lingkungan dan sosial yang diminta", "Kemungkinan kontrak rancang-bangun-operasi"]},
+ "infra": {"es": ["Previsión de demanda y alternativas de trazado o sitio", "Riesgo de adquisición de tierras y reasentamiento", "Socios locales de construcción y suministro", "Plazos, reajuste de precios y garantías"],
+           "fr": ["Prévisions de trafic et variantes de tracé ou de site", "Risque foncier et de réinstallation", "Partenaires locaux de construction et approvisionnement", "Délais, révision des prix et garanties"],
+           "ar": ["توقعات الطلب وبدائل المسار أو الموقع", "مخاطر الاستملاك وإعادة التوطين", "شركاء البناء المحليون ومسارات التوريد", "الجدول الزمني وتعديل الأسعار والضمانات"],
+           "vi": ["Dự báo nhu cầu, phương án tuyến hoặc địa điểm", "Rủi ro thu hồi đất và tái định cư", "Đối tác thi công địa phương và nguồn vật tư", "Tiến độ, điều chỉnh giá và bảo lãnh"],
+           "id": ["Proyeksi permintaan dan alternatif trase atau lokasi", "Risiko pengadaan tanah dan pemukiman kembali", "Mitra konstruksi lokal dan jalur pasokan", "Jadwal, penyesuaian harga, dan jaminan"]},
+ "edu": {"es": ["Instituciones, alumnos y planes de estudio actuales", "Formación docente y localización de contenidos", "Mantenimiento de equipos y conectividad", "Indicadores de resultados (finalización, empleo)"],
+         "fr": ["Établissements, apprenants et programmes actuels", "Formation des enseignants et localisation", "Entretien des équipements et connectivité", "Indicateurs de résultats (réussite, emploi)"],
+         "ar": ["المؤسسات والمتعلمون والمناهج الحالية", "تدريب المعلمين وتوطين المحتوى", "صيانة الأجهزة والاتصال بالإنترنت", "مؤشرات النتائج (الإكمال والتوظيف)"],
+         "vi": ["Cơ sở, người học và chương trình hiện hành", "Đào tạo giáo viên và bản địa hóa nội dung", "Bảo trì thiết bị và kết nối mạng", "Chỉ số kết quả (hoàn thành, việc làm)"],
+         "id": ["Lembaga, peserta didik, dan kurikulum saat ini", "Pelatihan guru dan lokalisasi konten", "Pemeliharaan peralatan dan konektivitas", "Indikator hasil (kelulusan, kerja)"]},
+ "trade": {"es": ["Rutas logísticas, aduanas y plazos", "Socios locales de distribución o compras", "Origen, certificación y aranceles", "Fiabilidad del suministro (stock, entregas)"],
+           "fr": ["Itinéraires logistiques, douanes et délais", "Partenaires locaux de distribution", "Origine, certification et droits de douane", "Fiabilité d'approvisionnement (stock, délais)"],
+           "ar": ["مسارات الإمداد والجمارك والمدد", "شركاء التوزيع أو الشراء المحليون", "متطلبات المنشأ والاعتماد والرسوم", "موثوقية التوريد (المخزون ومواعيد التسليم)"],
+           "vi": ["Tuyến logistics, thủ tục hải quan và thời gian", "Đối tác phân phối, mua sắm địa phương", "Yêu cầu xuất xứ, chứng nhận, thuế quan", "Độ ổn định nguồn cung (tồn kho, giao hàng)"],
+           "id": ["Rute logistik, kepabeanan, dan waktu", "Mitra distribusi atau pengadaan lokal", "Syarat asal barang, sertifikasi, dan tarif", "Keandalan pasokan (stok, pengiriman)"]},
+ "_def": {"es": ["Reunir avisos y adjudicaciones anteriores del comprador", "Valorar un consorcio con un socio local", "Verificar la fuente del presupuesto y sus condiciones", "Seguir cuándo se espera la próxima ronda"],
+          "fr": ["Rassembler les avis et attributions passés de l'acheteur", "Envisager un consortium avec un partenaire local", "Vérifier l'origine du budget et ses conditions", "Suivre la date probable du prochain appel"],
+          "ar": ["جمع الإعلانات والترسيات السابقة للجهة", "دراسة تحالف مع شريك محلي", "التحقق من مصدر الميزانية وشروط التمويل", "متابعة الموعد المتوقع للجولة القادمة"],
+          "vi": ["Thu thập thông báo và kết quả trúng thầu trước đây", "Cân nhắc liên danh với đối tác địa phương", "Kiểm tra nguồn ngân sách và điều kiện vốn", "Theo dõi thời điểm dự kiến của đợt tới"],
+          "id": ["Kumpulkan pengumuman dan pemenang tender sebelumnya", "Pertimbangkan konsorsium dengan mitra lokal", "Periksa sumber anggaran dan syarat pendanaan", "Pantau kapan putaran berikutnya diperkirakan"]},
+}
+def prep_list(k, L):
+    if L in ("ko", "en"): return PREP.get(k, PREP_DEF)[0 if L == "ko" else 1]
+    return (PREP_X.get(k) or PREP_X["_def"]).get(L) or PREP.get(k, PREP_DEF)[1]
+
+SECT_L = {}
+def past_groups(C):
+    P = past_tenders(C["DATA"], C["TODAY"]); g = {}
+    for x in P:
+        for s in (x["sec"] or ["other"]): g.setdefault(s, []).append(x)
+    order = sorted(g, key=lambda k: (-len({x["iso"] for x in g[k]}), -len(g[k])))
+    return [(k, g[k]) for k in order]
+
+def past_board(L, C, home=False):
+    """Expired tenders grouped by field; fields seen in two or more countries come first, with a feasibility checklist."""
+    ko = L == "ko"; e = C["e"]; G = past_groups(C)
+    if not G: return ""
+    names = {k: (nk, ne) for k, nk, ne, *_ in SECT}
+    if home: G = [(k, xs) for k, xs in G if len({x["iso"] for x in xs}) >= 2][:4]
+    cards = []
+    for k, xs in G:
+        cs = sorted({x["iso"] for x in xs}); multi = len(cs) >= 2
+        flags = " ".join(C["flag"](i) for i in cs[:14]) + (f" +{len(cs)-14}" if len(cs) > 14 else "")
+        ex = "".join('<li>📁 <span class="note">' + x["dl"] + "</span> " + C["flag"](x["iso"]) + " " + e(((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))[:90]) + "</li>" for x in xs[:(3 if home else 6)])
+        tag = (" · 🔁 " + pt("multi", L)) if multi else ""
+        det = "" if home else ('<details><summary>📋 ' + pt("prep", L) + "</summary><ol>" + "".join("<li>" + e(p) + "</li>" for p in prep_list(k, L)) + "</ol></details>")
+        nm_ = pt("other", L) if k == "other" else (names[k][0] if ko else (SECT_L.get(L, {}).get(k) or names[k][1]))
+        cards.append(f'<div class="card past{" multi" if multi else ""}"><p class="note">⌛ {pt("cnt", L).format(len(xs), len(cs))}{tag}</p><h3>{e(nm_)}</h3><p class="flags">{flags}</p><ul class="pl">{ex}</ul>{det}</div>')
+    return '<p class="note">' + pt("note", L) + '</p><div class="grid pastg">' + "".join(cards) + "</div>"
 
 # ---------------------------------------------------------------- segments
 SEG = [
@@ -253,6 +385,7 @@ document.addEventListener("click",function(ev){{var a=ev.target.closest("[data-p
                      f"/{L}/pricing/", {l: f"/{l}/pricing/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
 
 # ---------------------------------------------------------------- deadline board (top of /L/mdb/)
+NB = lambda L: '<em class="nb">' + pt("new", L if isinstance(L, str) else ("ko" if L else "en")) + "</em>"
 def deadline_board(L, C, limit=None, home=False):
     ko = L == "ko"; e = C["e"]; T = all_tenders(C["DATA"], C["BY"], C["TODAY"])
     if limit: T = T[:limit]
@@ -267,14 +400,15 @@ def deadline_board(L, C, limit=None, home=False):
 <a class="tt" href="{paylink(L, "tenders", x["iso"])}"><span class="cn">{C["flag"](x["iso"])} {e(C["nm"](x["iso"], L))}</span><b>{e(tt[:38])}…</b><small>{"발주처·마감일·원문 링크 — BUILD M1 월 49,000원부터" if ko else "Buyer, deadline and notice link — from BUILD M1 ₩49,000/mo"}</small></a>
 <a class="src" href="{paylink(L, "tenders", x["iso"])}">{"🔒 보기" if ko else "🔒 Unlock"}</a></li>'''
     nlk = len(T) - len([i for i in range(len(T)) if i in free])
-    rows = "".join(lockrow(x) if i not in free else f'''<li data-s="{" ".join(x["sec"]) or "other"}" data-dl="{x["dl"]}"><span class="dd" data-dl="{x["dl"]}">{x["dl"][5:].replace("-", "/")}</span>
+    rows = "".join(lockrow(x) if i not in free else f'''<li class="{"new" if x.get("new") else ""}" data-s="{" ".join(x["sec"]) or "other"}" data-dl="{x["dl"]}"><span class="dd" data-dl="{x["dl"]}">{x["dl"][5:].replace("-", "/")}{NB(L) if x.get("new") else ""}</span>
 <span class="tt"><a href="{C["url"](L, x["iso"])}#tenders">{C["flag"](x["iso"])} {e(C["nm"](x["iso"], L))}</a><b>{e((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))}</b><small>{e(x["t"].get("buyer", ""))}</small></span>
 {f'<a class="src" href="{e(x["t"]["url"])}" target="_blank" rel="noopener nofollow">{"원문" if ko else "Notice"} ↗</a>' if str(x["t"].get("url", "")).startswith("https://") else ""}</li>''' for i, x in enumerate(T))
     chips = "" if home else (f'<div class="filters dlf"><button class="chip on" data-s="all">{"전체" if ko else "All"}</button>' + "".join(f'<button class="chip" data-s="{k}">{nk if ko else ne}</button>' for k, nk, ne, *_ in SECT) + "</div>")
-    js = '''<script>(function(){var t=new Date();t.setHours(0,0,0,0);document.querySelectorAll(".dl .dd").forEach(function(s){var d=new Date(s.dataset.dl+"T00:00:00"),n=Math.round((d-t)/864e5);if(n<0){s.closest("li").remove();return}if(s.closest(".lk"))return;s.insertAdjacentHTML("beforeend","<i>D-"+(n||"day")+"</i>");if(n<=7)s.classList.add("soon")});
+    js = '''<script>(function(){var t=new Date();t.setHours(0,0,0,0);document.querySelectorAll(".dl .dd").forEach(function(s){var d=new Date(s.dataset.dl+"T00:00:00"),n=Math.round((d-t)/864e5);if(n<0){s.closest("li").remove();return}if(s.closest(".lk"))return;s.insertAdjacentHTML("beforeend","<i>D-"+(n||"day")+"</i>");if(n<=15){s.classList.add("soon");s.closest("li").classList.add("hot")}});
 var cs=document.querySelectorAll(".dlf .chip");function f(k){cs.forEach(function(c){c.classList.toggle("on",c.dataset.s===k)});document.querySelectorAll(".dl li").forEach(function(li){li.hidden=!(k==="all"||li.dataset.s.split(" ").indexOf(k)>=0)})}
 cs.forEach(function(c){c.addEventListener("click",function(){f(c.dataset.s)})});var q=new URLSearchParams(location.search).get("s");if(q&&cs.length)f(q);})();</script>'''
-    return f'{chips}<ul class="dl">{rows or "<li>—</li>"}</ul>' + (tier_cta(L, "tenders", "", nlk) if nlk else "") + js
+    leg = '<p class="dleg"><span class="lg-new">' + pt("lg_new", L) + '</span><span class="lg-hot">' + pt("lg_hot", L) + "</span></p>"
+    return f'{chips}{leg}<ul class="dl">{rows or "<li>—</li>"}</ul>' + (tier_cta(L, "tenders", "", nlk) if nlk else "") + js
 
 # ---------------------------------------------------------------- country "what you can do now" box
 def next_box(iso, L, C, d):

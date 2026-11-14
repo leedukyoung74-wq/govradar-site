@@ -1,0 +1,25 @@
+{
+ "summary": "Le Premier ministre Feleti Teo a salué la déclaration de l'Assemblée générale de l'ONU affirmant la continuité de l'État et des frontières maritimes malgré la montée des eaux, tout en soulignant que Tuvalu doit protéger seul son territoire. Le projet phare d'adaptation côtière (TCAP) a construit 1 300 m de protection du littoral et 15,5 ha de terres remblayées hors d'eau. Après une crise électrique début 2026, le gouvernement a consacré 5 M AUD à la modernisation du réseau, et il coorganise le sommet des dirigeants pré-COP31.",
+ "leader": "Premier ministre Feleti Teo",
+ "agenda": [
+  "Étendre le projet d'adaptation côtière (TCAP)",
+  "Garantir l'État et les frontières maritimes (déclaration ONU)",
+  "Modernisation du réseau (5 M AUD)",
+  "Cadre national de mobilité climatique",
+  "Alerte précoce et préparation aux catastrophes",
+  "Coorganiser le sommet pré-COP31"
+ ],
+ "needs": [
+  "Protection côtière et remblaiement",
+  "Réseau électrique et renouvelables",
+  "Systèmes d'alerte précoce"
+ ],
+ "biz": [
+  {
+   "title": "Équipements de réseau, solaire et stockage"
+  },
+  {
+   "title": "Ingénierie de protection côtière et de remblaiement"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "summary": "Dans son discours annuel du 30 septembre, la présidente Jennifer Geerlings-Simons a présenté le budget 2027 (recettes 70,1 Md SRD, dépenses 80,9 Md, déficit 4 % du PIB). Elle a qualifié 2027 d'année de préparation avant le pétrole offshore de 2028, avec une loi sur le contenu local et une assiette fiscale élargie (or, bois, pêche). La dette publique atteint 100,4 % du PIB.",
+ "leader": "Présidente Jennifer Geerlings-Simons (cheffe de l'État et du gouvernement)",
+ "agenda": [
+  "Préparer le pétrole offshore (GranMorgu de TotalEnergies) pour 2028",
+  "Loi sur le contenu local au Parlement en 2027",
+  "Élargir l'assiette et mieux percevoir, sans hausse des taux",
+  "Réduire la dette de 100,4 % du PIB",
+  "Passage au gaz et au solaire pour mettre fin aux coupures"
+ ],
+ "needs": [
+  "Capacités locales de services pour la filière pétrole et gaz",
+  "Production gaz et solaire et réseau",
+  "Administration fiscale numérique"
+ ],
+ "biz": [
+  {
+   "title": "Services locaux et équipements pour le développement pétrolier"
+  },
+  {
+   "title": "Production gaz et solaire et équipements de réseau"
+  },
+  {
+   "title": "Systèmes fiscaux et de recouvrement"
+  }
+ ]
+}

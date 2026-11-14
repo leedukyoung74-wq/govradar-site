@@ -1,0 +1,31 @@
+{
+ "summary": "PM Suminwa menyampaikan rancangan anggaran 2027 (sekitar US$24,8 miliar) ke Majelis Nasional pada 29 Okt 2026, dengan prioritas keamanan, lapangan kerja, dan infrastruktur di tengah konflik di wilayah timur.",
+ "leader": "Presiden Félix Tshisekedi (kepala negara) / Perdana Menteri Judith Suminwa Tuluka (kepala pemerintahan)",
+ "agenda": [
+  "Program aksi pemerintah 2024-2028: lapangan kerja dan daya beli, pertahanan dan keamanan, tata ruang dan infrastruktur, layanan sosial dasar, tata kelola dan keuangan publik, lingkungan",
+  "Menangani konflik di timur dan membangun perdamaian (ICGLR dan diplomasi kawasan)",
+  "Meningkatkan pendapatan domestik dan memperbaiki manajemen keuangan publik",
+  "Membuka ekonomi melalui koridor timur seperti Dar es Salaam",
+  "Memperluas jalan, listrik, dan air minum"
+ ],
+ "needs": [
+  "Desain jalan, supervisi pekerjaan, dan pengelolaan lingkungan-sosial (PACT Bank Dunia, pengumuman Sel Infrastruktur)",
+  "Kerangka jabatan dan keterampilan untuk sekretariat TIK pemerintah",
+  "Penerimaan domestik dan manajemen keuangan publik yang lebih baik",
+  "Pengadaan kesehatan dan kemanusiaan di provinsi timur yang terdampak konflik (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Konsultasi kerangka jabatan dan keterampilan TIK pemerintah"
+  },
+  {
+   "title": "Pengelolaan lingkungan-sosial dan dukungan PMO proyek jalan"
+  },
+  {
+   "title": "Digitalisasi pendapatan dan pelaksanaan anggaran"
+  },
+  {
+   "title": "Alat komunikasi dan data untuk darurat kesehatan"
+  }
+ ]
+}

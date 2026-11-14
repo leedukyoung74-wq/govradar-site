@@ -1,0 +1,30 @@
+{
+ "summary": "Pemerintahan Hassan menjalankan konsolidasi fiskal di bawah Visi Modernisasi Ekonomi dan Peta Jalan Modernisasi Sektor Publik. Anggaran 2026 menargetkan defisit 4,6% PDB dengan belanja modal JD1,6 miliar; anggaran 2027 disusun dengan pemangkasan 15% biaya operasional kementerian.",
+ "leader": "Raja Abdullah II (kepala negara) / Perdana Menteri Jafar Hassan (sejak Sep 2024, reshuffle Agu 2026)",
+ "agenda": [
+  "Melaksanakan Visi Modernisasi Ekonomi",
+  "Peta Jalan Modernisasi Sektor Publik dan penganggaran berbasis hasil",
+  "Transformasi digital, otomasi layanan, dan keamanan siber",
+  "Ekonomi hijau dan target iklim",
+  "Defisit lebih rendah dan pemangkasan biaya operasional 15% (2027)"
+ ],
+ "needs": [
+  "Otomasi layanan publik dan kapasitas keamanan siber",
+  "Alat penganggaran berbasis hasil dan efisiensi belanja (perkiraan)",
+  "Desain proyek ekonomi hijau dan pengurangan emisi (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Konsultasi otomasi layanan pemerintah dan transformasi digital"
+  },
+  {
+   "title": "Penilaian dan pemantauan keamanan siber untuk lembaga publik"
+  },
+  {
+   "title": "Sistem penganggaran berbasis hasil dan manajemen KPI"
+  },
+  {
+   "title": "Otomasi AI untuk pekerjaan back-office publik"
+  }
+ ]
+}

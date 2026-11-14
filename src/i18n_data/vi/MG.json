@@ -1,0 +1,26 @@
+{
+ "summary": "Chính quyền chuyển tiếp do Đại tá Randrianirina đứng đầu đã trình dự luật ngân sách 2027. Mục tiêu tăng trưởng từ 4,1% năm 2026 lên 5,1% năm 2027, ưu tiên phục hồi công ty điện nước Jirama, giảm cắt điện, năng lượng tái tạo, đường sá, nông nghiệp, giáo dục và y tế. Ngân sách cũng cấp kinh phí trưng cầu hiến pháp và bầu cử tổng thống 2027.",
+ "leader": "Tổng thống Michael Randrianirina (chuyển tiếp, quân đội nắm quyền 10/2025) / Thủ tướng Herintsalama Rajaonarivelo",
+ "agenda": [
+  "Phục hồi Jirama (điện, nước) và giảm cắt điện",
+  "Năng lượng tái tạo và lưới điện mạnh hơn",
+  "Đầu tư đường, nông nghiệp, giáo dục, y tế",
+  "Tăng thu thuế, hải quan và chống gian lận",
+  "Trưng cầu hiến pháp và bầu cử tổng thống 2027",
+  "Chuẩn bị ứng phó El Niño và rủi ro khí hậu"
+ ],
+ "needs": [
+  "Phát điện, mặt trời và sửa lưới điện",
+  "Sửa chữa đường",
+  "Thủy lợi và chế biến nông sản",
+  "Hệ thống hải quan và thuế"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị điện mặt trời, phát điện và lưới điện"
+  },
+  {
+   "title": "Số hóa hải quan và thuế"
+  }
+ ]
+}

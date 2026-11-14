@@ -1,0 +1,21 @@
+{
+ "summary": "Quốc hội Gambia thông qua ngân sách 2027 trị giá 48,6 tỷ dalasi (khoảng 667 triệu USD) ngày 27/10. Trả nợ chiếm 33,3%, nhiều hơn giáo dục và y tế cộng lại. Giáo dục được 6,13 tỷ, y tế 4,11 tỷ, cùng 1 tỷ trợ giá điện. Tổng thống Barrow đã đăng ký tranh cử nhiệm kỳ ba trong bầu cử tổng thống tháng 12 (ngày 5/12, một nguồn).",
+ "leader": "Tổng thống Adama Barrow (nguyên thủ kiêm đứng đầu chính phủ)",
+ "agenda": [
+  "Ngân sách 2027 48,6 tỷ dalasi",
+  "Trả nợ (một phần ba ngân sách)",
+  "Giáo dục và y tế",
+  "Trợ giá điện và năng lượng",
+  "Bầu cử tổng thống 12/2026; bầu cử quốc hội 10/4/2027"
+ ],
+ "needs": [
+  "Phát điện và lưới điện",
+  "Trường học và bệnh viện",
+  "Quản lý nợ"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị điện và điện mặt trời"
+  }
+ ]
+}

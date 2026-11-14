@@ -1,0 +1,26 @@
+{
+ "summary": "Pemerintahan Presiden Ghazouani menyetujui anggaran 2027 pada 21 Oktober (pendapatan MRU 152,1 miliar, belanja MRU 145,9 miliar) dengan surplus sekitar US$155 juta. Dengan asumsi pertumbuhan 5,0%, anggaran memprioritaskan kawasan pelabuhan Nouadhibou (pelabuhan laut dalam, MRU 39,6 miliar 2026-2029), air dan sanitasi, tahap kedua pembangunan kota Nouakchott, dan bantuan sosial. Ekspor gas dari ladang GTA yang dibagi dengan Senegal naik 16% pada kuartal III.",
+ "leader": "Presiden Mohamed Ould Cheikh El Ghazouani / Perdana Menteri Mokhtar Ould Djay",
+ "agenda": [
+  "Surplus 2027 (sekitar US$155 juta), pertumbuhan 5,0%",
+  "Kawasan pelabuhan Nouadhibou (pelabuhan laut dalam)",
+  "Air dan sanitasi MRU 4,63 miliar",
+  "Pembangunan kota Nouakchott tahap kedua MRU 11,59 miliar",
+  "Bantuan sosial lebih besar (program Aoun)",
+  "Ekspor gas (GTA) dan bijih besi"
+ ],
+ "needs": [
+  "Konstruksi dan peralatan pelabuhan",
+  "Penyediaan air dan desalinasi",
+  "Infrastruktur perkotaan",
+  "Fondasi hidrogen hijau (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Pelabuhan laut dalam Nouadhibou dan peralatan pelabuhan"
+  },
+  {
+   "title": "Peralatan air dan desalinasi"
+  }
+ ]
+}

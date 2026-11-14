@@ -1,0 +1,20 @@
+{
+ "summary": "Dalam pemilu 27 September 2026, oposisi MLSTP-PSD meraih 24 dari 55 kursi dan partai berkuasa ADI 23, tanpa mayoritas. Koalisi MCI-PS/PUN dengan enam kursi menjadi penentu, dan Presiden Vila Nova akan menunjuk perdana menteri berdasarkan hasil. Angka golput mencapai rekor 62,9%.",
+ "leader": "Presiden Carlos Vila Nova / perdana menteri belum ditunjuk (setelah pemilu Sep 2026)",
+ "agenda": [
+  "Membentuk koalisi dan menunjuk perdana menteri",
+  "Mengakhiri kekurangan listrik (perkiraan)",
+  "Pengelolaan fiskal dan utang (perkiraan)",
+  "Pariwisata dan pertanian (kakao) (perkiraan)"
+ ],
+ "needs": [
+  "Pembangkit (sering padam) (perkiraan)",
+  "Pelabuhan dan bandara",
+  "Air minum"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan surya dan pembangkit"
+  }
+ ]
+}

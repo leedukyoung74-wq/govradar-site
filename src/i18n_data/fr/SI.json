@@ -1,0 +1,31 @@
+{
+ "summary": "Après les élections de mars 2026, le gouvernement de centre droit de Janša a pris ses fonctions en juin en promettant des baisses d'impôts, moins de bureaucratie et un déficit sous 3 %. Ses projets de budget 2027-28 d'octobre privilégient l'investissement et une absorption plus rapide des fonds européens.",
+ "leader": "Premier ministre Janez Janša (investi en juin 2026, quatrième mandat) / Présidente Nataša Pirc Musar",
+ "agenda": [
+  "Déficit sous 3 % du PIB, sans nouveaux impôts",
+  "Moins de bureaucratie et redéploiement d'agents publics vers la santé, les soins et la police ; référendum consultatif prévu",
+  "Plus d'investissement, financement par habitant accru pour les communes, utilisation plus rapide des fonds européens",
+  "Dépenses de défense portées à 2,03 % du PIB (budget rectificatif 2026)",
+  "Poursuite de la préparation de JEK2 (nouveau réacteur de Krško)"
+ ],
+ "needs": [
+  "Capacités de gestion de projets et numériques pour accélérer l'absorption des fonds UE/PRR (estimation)",
+  "Automatisation administrative et e-administration pour accompagner la débureaucratisation (estimation)",
+  "Ouvertures dans la chaîne d'approvisionnement du projet nucléaire JEK2",
+  "Renouvellement des équipements médicaux des centres de santé et hôpitaux (nombreux avis TED)"
+ ],
+ "biz": [
+  {
+   "title": "Chaîne d'approvisionnement nucléaire JEK2 (composants, construction)"
+  },
+  {
+   "title": "Appels d'offres d'imagerie dentaire et médicale (CBCT, radiographie)"
+  },
+  {
+   "title": "Numérisation et automatisation de l'administration publique"
+  },
+  {
+   "title": "Équipements de distribution (jeux de barres BT, transformateurs)"
+  }
+ ]
+}

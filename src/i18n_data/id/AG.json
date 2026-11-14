@@ -1,0 +1,24 @@
+{
+ "summary": "Perdana Menteri Gaston Browne mengusung anggaran 2026 bertema 'Pertumbuhan dan Pembangunan Berpusat pada Rakyat', menaikkan belanja pendidikan, kesehatan, perumahan, dan infrastruktur. Ia melaporkan surplus primer 254,9 juta dolar Karibia Timur dan utang 61,4% PDB. Pendidikan mendapat porsi terbesar, disertai rencana 120 rumah, 300 bidang tanah, dan kampanye kepatuhan pajak.",
+ "leader": "Perdana Menteri Gaston Browne (Partai Buruh Antigua dan Barbuda)",
+ "agenda": [
+  "Anggaran pertumbuhan berpusat pada rakyat (pendidikan terbesar)",
+  "120 rumah dan 300 bidang tanah",
+  "Kampanye kepatuhan pajak",
+  "Dorongan pembangunan Barbuda",
+  "Menjaga pertumbuhan berbasis pariwisata dan konstruksi"
+ ],
+ "needs": [
+  "Material dan konstruksi perumahan",
+  "Infrastruktur pariwisata",
+  "Energi terbarukan dan desalinasi (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Material dan rumah modular untuk perumahan publik"
+  },
+  {
+   "title": "Surya dan penyimpanan"
+  }
+ ]
+}

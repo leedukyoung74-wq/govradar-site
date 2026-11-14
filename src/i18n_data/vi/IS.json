@@ -1,0 +1,24 @@
+{
+ "summary": "Dự thảo ngân sách 2027 của chính phủ Frostadóttir chuyển mức thâm hụt 28,1 tỷ krona năm 2026 thành thặng dư 4,7 tỷ năm 2027, chấm dứt chuỗi năm thâm hụt. Ngân sách tăng thu 34,1 tỷ nhờ nâng thuế tổ chức tài chính, áp VAT chuẩn cho hồ địa nhiệt và thu phí mới tại các điểm du lịch nhà nước.",
+ "leader": "Thủ tướng Kristrún Frostadóttir / Tổng thống Halla Tómasdóttir",
+ "agenda": [
+  "Trở lại thặng dư năm 2027 (4,7 tỷ krona)",
+  "Thuế tổ chức tài chính từ 0,145% lên 0,254%",
+  "Du lịch: phí tài nguyên tại điểm tham quan nhà nước",
+  "Gia hạn phí hạ tầng Reykjanes đến cuối 2027",
+  "Ổn định giá cả"
+ ],
+ "needs": [
+  "Hệ thống quản lý và thu phí điểm du lịch",
+  "Ngành dựa trên địa nhiệt và tái tạo (ước tính)",
+  "Hạ tầng ứng phó núi lửa Reykjanes"
+ ],
+ "biz": [
+  {
+   "title": "Hệ thống số vé vào cửa và thu phí điểm du lịch"
+  },
+  {
+   "title": "Công nghệ địa nhiệt và hợp tác trung tâm dữ liệu"
+  }
+ ]
+}

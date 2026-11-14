@@ -1,0 +1,32 @@
+{
+ "summary": "Le PLP du Premier ministre Davis a remporté 33 des 41 sièges (non officiel) aux élections anticipées du 12 mai 2026, premier mandat consécutif depuis environ 30 ans. Le budget 2026/27 prévoit un excédent de 223 M USD (1,2 % du PIB) et se concentre sur la transition énergétique, la santé et le coût de la vie.",
+ "leader": "Premier ministre Philip Davis (PLP, réélu en mai 2026) / Chef de l'État le roi Charles III",
+ "agenda": [
+  "Coût de la vie : TVA supprimée sur les aliments non préparés (depuis le 1er avr. 2026), factures d'électricité réduites",
+  "Transition énergétique : 70 MW d'alimentation à quai à Arawak Cay, PPA de 60 MW solaires + 10 MWh de batteries",
+  "Santé : nouvel hôpital à New Providence, cliniques dans les Family Islands",
+  "Logement abordable et compétences (Upskill Bahamas, 25 000 places d'ici 2031) (source unique)",
+  "Administration numérique : Sand Dollar pour les paiements publics, loi sur la gouvernance de l'IA",
+  "Relance de Grand Bahama : rachat de la compagnie d'électricité et consultation sur le cadre futur"
+ ],
+ "needs": [
+  "Solaire, stockage et gaz pour réduire le coût de l'électricité",
+  "Nouvel hôpital, cliniques insulaires et équipements médicaux",
+  "Numérisation de l'administration et cybersécurité",
+  "Ponts et drainage résilients au climat (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Participation IPP ou fourniture d'équipements solaire+ESS"
+  },
+  {
+   "title": "Intégration e-administration et paiements numériques"
+  },
+  {
+   "title": "Conception hospitalière et lot d'équipements médicaux"
+  },
+  {
+   "title": "Plateforme de formation et d'e-learning"
+  }
+ ]
+}

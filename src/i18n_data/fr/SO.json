@@ -1,0 +1,21 @@
+{
+ "summary": "Le gouvernement somalien a adopté le 27 octobre un projet de budget 2027 de 1,26 Md USD, en baisse de 9,2 % par rapport à 2026. En 2026, les dons (environ 880 M USD) représentaient près du double des recettes intérieures (480 M) et les dépenses courantes comme les salaires absorbaient 84,5 %. Le gouvernement annonce des élections en 2027, mais les tensions entre l'État fédéral et les États et la menace des Chabab restent fortes.",
+ "leader": "Président Hassan Cheikh Mohamoud / Gouvernement fédéral (cabinet du Premier ministre)",
+ "agenda": [
+  "Budget 2027 de 1,26 Md USD (réduit)",
+  "Préparer les élections de 2027",
+  "Lutter contre les Chabab et améliorer la sécurité",
+  "Augmenter les recettes intérieures (6,3 % du PIB)",
+  "Sécuriser l'aide des bailleurs"
+ ],
+ "needs": [
+  "Sécurité et services de base",
+  "Réponse à la sécheresse et eau",
+  "Infrastructures portuaires et routières (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Projets financés par les bailleurs (eau, santé)"
+  }
+ ]
+}

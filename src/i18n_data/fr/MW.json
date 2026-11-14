@@ -1,0 +1,29 @@
+{
+ "summary": "Le budget 2026/27 du Malawi, de 10 978 Md MWK (environ 6,8 Md USD), adopté le 24 mars 2026, accorde la plus grande part à l'agriculture avec 971,3 Md. Avec une croissance de 2,3 % et une inflation de 21,9 % selon la Banque mondiale, la pénurie de devises et la lourde dette fragilisent les hypothèses budgétaires.",
+ "leader": "Président Peter Mutharika (chef de l'État et du gouvernement, revenu après l'élection de sept. 2025) ; Vice-présidente Jane Ansah",
+ "agenda": [
+  "Stabilité macroéconomique : moins d'inflation et de pénuries de carburant et de devises",
+  "Sécurité alimentaire et hausse de la production agricole (double culture, excédent exportable)",
+  "Investissements dans les mines, l'énergie, les routes et le rail pour réduire les coûts des entreprises",
+  "Lutte anticorruption et restauration de la confiance dans les institutions",
+  "Fonds de développement des circonscriptions (5 Md MWK/an) et prêts bonifiés pour les femmes et les jeunes",
+  "Renouvellement de la carte d'identité et portefeuille d'identité numérique"
+ ],
+ "needs": [
+  "Infrastructures d'irrigation, de stockage et de distribution alimentaire",
+  "Croissance des exportations (mines, agriculture) pour atténuer la pénurie de devises",
+  "Entretien routier et gestion des recettes de péage",
+  "Identité numérique et contrôle de la paie pour éliminer les emplois fictifs (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Packs d'irrigation à petite échelle et de mécanisation agricole"
+  },
+  {
+   "title": "Portefeuille d'identité numérique et systèmes d'émission de cartes"
+  },
+  {
+   "title": "Assainissement de la paie et des données RH publiques (détection des emplois fictifs)"
+  }
+ ]
+}

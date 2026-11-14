@@ -1,0 +1,26 @@
+{
+ "summary": "Le gouvernement de transition du colonel Randrianirina a déposé son projet de loi de finances 2027. Il vise une croissance passant de 4,1 % en 2026 à 5,1 % en 2027 et privilégie le redressement de la Jirama, la baisse des délestages, les renouvelables, les routes, l'agriculture, l'éducation et la santé. Il finance aussi un référendum constitutionnel et une présidentielle en 2027.",
+ "leader": "Président Michaël Randrianirina (transition, prise de pouvoir militaire en oct. 2025) / Premier ministre Herintsalama Rajaonarivelo",
+ "agenda": [
+  "Redresser la Jirama (électricité et eau) et réduire les délestages",
+  "Renouvelables et réseaux renforcés",
+  "Investir dans routes, agriculture, éducation et santé",
+  "Meilleure collecte fiscale et douanière, lutte antifraude",
+  "Référendum constitutionnel et présidentielle 2027",
+  "Préparer El Niño et autres risques climatiques"
+ ],
+ "needs": [
+  "Production, solaire et réparation des réseaux",
+  "Réfection routière",
+  "Irrigation et transformation agricoles",
+  "Systèmes douaniers et fiscaux"
+ ],
+ "biz": [
+  {
+   "title": "Équipements solaires, de production et de réseau"
+  },
+  {
+   "title": "Numérisation douanière et fiscale"
+  }
+ ]
+}

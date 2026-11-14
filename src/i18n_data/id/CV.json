@@ -1,0 +1,24 @@
+{
+ "summary": "PAICV memenangi pemilu legislatif 17 Mei 2026 dan Francisco Carvalho menjadi perdana menteri (merangkap menteri keuangan) pada Juni. Anggaran 2027 sebesar 101,7 miliar escudo (sekitar US$1 miliar), 78% dari sumber domestik, dengan asumsi pertumbuhan 5,6% (IMF: 5,0%). Anggaran mencakup layanan kesehatan gratis, pendidikan, jenjang karier dan gaji ASN baru, serta tarif antarpulau yang lebih murah.",
+ "leader": "Perdana Menteri Francisco Carvalho (PAICV, sejak Juni 2026; merangkap menteri keuangan)",
+ "agenda": [
+  "Anggaran 2027 101,7 miliar escudo, pertumbuhan 5,6%",
+  "Kesehatan gratis dan pendidikan",
+  "Rencana karier dan gaji ASN baru",
+  "Perjalanan antarpulau lebih murah (feri 500, pesawat 5.000 escudo mulai Jan 2027)",
+  "Diversifikasi ekonomi yang bergantung pariwisata"
+ ],
+ "needs": [
+  "Konektivitas laut dan udara antarpulau",
+  "Energi terbarukan dan desalinasi (perkiraan)",
+  "Administrasi digital (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Feri antarpulau dan peralatan pelabuhan"
+  },
+  {
+   "title": "Energi terbarukan dan desalinasi"
+  }
+ ]
+}

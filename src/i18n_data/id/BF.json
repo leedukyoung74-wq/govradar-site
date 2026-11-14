@@ -1,0 +1,24 @@
+{
+ "summary": "Pemerintahan Kapten Traoré menyetujui rancangan anggaran 2027 pada 8 Oktober dengan pendapatan CFAF 4,2 triliun dan belanja CFAF 4,8 triliun (sekitar US$8,2 miliar, +22,5%). Sejalan dengan rencana nasional 2026-2030 'RELANCE', anggaran memprioritaskan pertanian, industrialisasi, pertahanan, dan layanan sosial dasar. Proyeksi pertumbuhan 2026 dinaikkan ke 6%.",
+ "leader": "Kapten Ibrahim Traoré (presiden transisi) / Perdana Menteri Rimtalba Jean Emmanuel Ouédraogo",
+ "agenda": [
+  "Belanja 2027 CFAF 4,8 triliun (+22,5%)",
+  "Pertanian dan agroindustri",
+  "Pertahanan dan keamanan",
+  "Layanan sosial dasar (kesehatan, pendidikan, air)",
+  "Rencana Pembangunan Nasional 2026-2030 (Plan RELANCE)"
+ ],
+ "needs": [
+  "Mesin pertanian, irigasi, dan pengolahan",
+  "Pasokan listrik surya dan lainnya (perkiraan)",
+  "Fasilitas kesehatan dan air"
+ ],
+ "biz": [
+  {
+   "title": "Mesin pertanian dan peralatan pengolahan"
+  },
+  {
+   "title": "Surya dan mini-grid"
+  }
+ ]
+}

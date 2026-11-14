@@ -1,0 +1,29 @@
+{
+ "summary": "Bộ trưởng Tài chính Mthuli Ncube đặt mục tiêu tăng trưởng 3,5% năm 2027 và thâm hụt dưới 3% GDP. Thu vượt chi trong 9 tháng đầu 2026, và ngân sách bám theo Chiến lược Phát triển Quốc gia lần hai (NDS2) và Tầm nhìn 2030, tập trung hạ tầng, nhà ở, nông nghiệp và chuyển đổi số.",
+ "leader": "Tổng thống Emmerson Mnangagwa (nguyên thủ kiêm đứng đầu chính phủ)",
+ "agenda": [
+  "Tăng trưởng 3,5% năm 2027, thâm hụt dưới 3% GDP",
+  "NDS2 và Tầm nhìn 2030 (thu nhập trung bình cao vào 2030)",
+  "Đầu tư hạ tầng, nhà ở, điện và giao thông",
+  "Năng suất nông nghiệp, an ninh lương thực, chống chịu khí hậu",
+  "Chuyển đổi số, khoa học và công nghệ",
+  "Phân quyền và an sinh xã hội"
+ ],
+ "needs": [
+  "Tăng phát điện và truyền tải (thiếu điện)",
+  "Đường sá, giao thông và nhà ở",
+  "Cơ giới hóa nông nghiệp và thủy lợi (ước tính)",
+  "Chính phủ số và hệ thống thuế (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị điện mặt trời, phát điện và lưới điện"
+  },
+  {
+   "title": "Gói máy nông nghiệp và thủy lợi"
+  },
+  {
+   "title": "Chế biến khoáng sản và thiết bị khai mỏ"
+  }
+ ]
+}

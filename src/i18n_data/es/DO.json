@@ -1,0 +1,28 @@
+{
+ "summary": "El gobierno de Abinader aspira al grado de inversión para 2028, y Fitch elevó la calificación soberana a BB el 03-11-2026. La inversión pública va sobre todo al transporte, como carreteras y metro, mientras las pérdidas y subsidios eléctricos pesan sobre el presupuesto.",
+ "leader": "Presidente Luis Abinader (jefe de Estado y de gobierno, segundo mandato hasta el 16-08-2028)",
+ "agenda": [
+  "Grado de inversión para 2028 y consolidación fiscal",
+  "Metas a 2036: duplicar el PIB, crear 1,7 millones de empleos y acabar con la pobreza extrema",
+  "Más inversión en infraestructura de transporte (carreteras, metro)",
+  "Reducir las pérdidas de distribución eléctrica y la carga de subsidios",
+  "Control migratorio y cooperación antidrogas con EE. UU."
+ ],
+ "needs": [
+  "Medición y modernización de la red para reducir pérdidas (44,1% de la energía comprada)",
+  "Diseño, supervisión y gestión de proyectos de carreteras y metro",
+  "Base tributaria más amplia y gestión fiscal más eficiente (los intereses absorben el 21,9% de los ingresos)",
+  "Infraestructura que conecte turismo y logística (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Medición inteligente y automatización de la distribución para reducir pérdidas"
+  },
+  {
+   "title": "Sistemas ferroviarios urbanos y consultoría de operación"
+  },
+  {
+   "title": "Soluciones digitales tributarias y de finanzas públicas"
+  }
+ ]
+}

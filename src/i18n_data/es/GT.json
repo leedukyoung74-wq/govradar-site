@@ -1,0 +1,28 @@
+{
+ "summary": "Sin mayoría en el Congreso, el gobierno de Arévalo prioriza la lucha anticorrupción y el fortalecimiento institucional antes de las elecciones generales del 27-06-2027. Un proyecto de presupuesto 2027 de Q192.000 millones está en su fase final en el Congreso y los gremios empresariales se oponen al mayor endeudamiento.",
+ "leader": "Presidente Bernardo Arévalo (jefe de Estado y de gobierno, mandato 2024-01 a 2028-01)",
+ "agenda": [
+  "Anticorrupción e instituciones democráticas más sólidas",
+  "Más gasto en infraestructura (13% del presupuesto 2027, Q24.900 millones)",
+  "Mejoras de aeropuertos y seguridad aérea (préstamo de 250 millones de USD del Banco Mundial)",
+  "Ampliación de la red de transmisión (licitación PET-4 en preparación) y ley de ventanilla única de permisos",
+  "Seguridad pública y gestión de las elecciones de 2027"
+ ],
+ "needs": [
+  "Ampliación de la transmisión y permisos más rápidos (la demanda crece 6-7% anual y la infraestructura de transmisión 1,5%)",
+  "Sistemas modernos de navegación aeroportuaria y control del tráfico aéreo",
+  "Seguridad vial e infraestructura de transporte (accidentes frecuentes en la autopista Palín-Escuintla)",
+  "Seguridad alimentaria y gestión de desastres en zonas expuestas al clima (temas tratados con KOICA)"
+ ],
+ "biz": [
+  {
+   "title": "Sistemas de navegación, vigilancia y control aeroportuario"
+  },
+  {
+   "title": "EPC y gestión de proyectos de transmisión y subestaciones"
+  },
+  {
+   "title": "Soluciones satelitales y de datos para pronóstico y alerta temprana de desastres"
+  }
+ ]
+}

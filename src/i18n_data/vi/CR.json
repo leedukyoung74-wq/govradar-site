@@ -1,0 +1,28 @@
+{
+ "summary": "Chính phủ Fernández tập trung vào chính sách an ninh cứng rắn và cải cách nhà nước, với cựu tổng thống Rodrigo Chaves giữ chức Bộ trưởng Phủ Tổng thống kiêm Tài chính. Ngân sách 2027 trị giá 12.400 tỷ colón đã qua vòng thảo luận đầu, và việc gia nhập CPTPP bị gác lại ngày 28/10/2026.",
+ "leader": "Tổng thống Laura Fernández Delgado (nguyên thủ kiêm đứng đầu chính phủ, nhậm chức 8/5/2026, nhiệm kỳ 2026-2030)",
+ "agenda": [
+  "Trấn áp tội phạm có tổ chức và an ninh (siêu nhà tù mới, hợp tác an ninh với Mỹ)",
+  "Năm cải cách hiến pháp (giới hạn quốc hội phê duyệt vay nước ngoài và trần nợ, rút ngắn nhiệm kỳ Tổng Kiểm toán…)",
+  "Dự luật thuế 15% với lãi, cổ tức, tiền thuê và lãi vốn từ nước ngoài",
+  "Chiến lược FTA song phương sau khi gác CPTPP (ứng phó thuế quan 12,5% của Mỹ)",
+  "Hạ tầng đường như mở rộng Quốc lộ 1 (San José-San Ramón)"
+ ],
+ "needs": [
+  "Công nghệ an ninh, trại giam và giám sát chống tội phạm có tổ chức",
+  "Mở rộng đường và quản lý giao thông (camera, radar mỗi 1,5 km trên Quốc lộ 1)",
+  "Mở rộng cơ sở thuế và hiện đại hóa quản lý thuế (70% doanh nghiệp được kiểm tra vi phạm)",
+  "Đa dạng hóa thị trường xuất khẩu sau thuế 12,5% của Mỹ (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Hệ thống ITS và quản lý giao thông đường bộ"
+  },
+  {
+   "title": "Giải pháp trại giam và an ninh công cộng"
+  },
+  {
+   "title": "Số hóa và phân tích quản lý thuế"
+  }
+ ]
+}

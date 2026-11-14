@@ -1,0 +1,31 @@
+{
+ "summary": "Setelah pemilu Maret 2026, pemerintahan kanan Janša menjabat pada Juni dengan janji memotong pajak, mengurangi birokrasi, dan menjaga defisit di bawah 3%. Rancangan anggaran 2027-28 yang diajukan Oktober memprioritaskan investasi dan penyerapan dana UE yang lebih cepat.",
+ "leader": "Perdana Menteri Janez Janša (disetujui Juni 2026, masa jabatan keempat) / Presiden Nataša Pirc Musar",
+ "agenda": [
+  "Defisit di bawah 3% PDB, tanpa pajak baru",
+  "Memangkas birokrasi dan memindahkan pegawai publik ke kesehatan, perawatan, dan kepolisian; referendum konsultatif direncanakan",
+  "Investasi lebih besar, dana per kapita lebih tinggi bagi kota, penyerapan dana UE lebih cepat",
+  "Belanja pertahanan naik ke 2,03% PDB (anggaran revisi 2026)",
+  "Melanjutkan persiapan JEK2 (unit nuklir baru Krško)"
+ ],
+ "needs": [
+  "Kapasitas manajemen proyek dan digital untuk mempercepat penyerapan dana UE/RRP (perkiraan)",
+  "Otomasi administrasi dan e-government untuk mendukung debirokratisasi (perkiraan)",
+  "Peluang rantai pasok di sekitar proyek nuklir JEK2",
+  "Pembaruan peralatan medis di puskesmas dan rumah sakit (banyak pengumuman TED)"
+ ],
+ "biz": [
+  {
+   "title": "Rantai pasok nuklir JEK2 (komponen, konstruksi)"
+  },
+  {
+   "title": "Tender pencitraan gigi dan medis (CBCT, sinar-X)"
+  },
+  {
+   "title": "Digitalisasi dan otomasi administrasi publik"
+  },
+  {
+   "title": "Peralatan distribusi (busbar tegangan rendah, trafo)"
+  }
+ ]
+}

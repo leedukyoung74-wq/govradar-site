@@ -1,0 +1,20 @@
+{
+ "summary": "Sau cuộc đảo chính ngày 26/11/2025, Tướng Horta Inta-A trở thành tổng thống chuyển tiếp nhiệm kỳ một năm, còn Thủ tướng dân sự Ilídio Vieira Té điều hành chính phủ. Hiến pháp mới được thông qua ngày 30/8/2026 và bầu cử tổng thống, quốc hội được ấn định ngày 6/12/2026. IMF dự kiến thâm hụt 2026 giảm còn 4,2% GDP. Xuất khẩu phụ thuộc hạt điều.",
+ "leader": "Tướng Horta Inta-A (tổng thống chuyển tiếp) / Thủ tướng Ilídio Vieira Té",
+ "agenda": [
+  "Bầu cử tổng thống và quốc hội ngày 6/12/2026",
+  "Thực thi hiến pháp mới (trưng cầu 30/8/2026)",
+  "Giảm thâm hụt xuống 4,2% GDP",
+  "Quản lý xuất khẩu hạt điều"
+ ],
+ "needs": [
+  "Chế biến hạt điều",
+  "Cung cấp điện",
+  "Y tế cơ bản"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị chế biến hạt điều"
+  }
+ ]
+}

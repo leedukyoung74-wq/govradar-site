@@ -1,0 +1,31 @@
+{
+ "summary": "El proyecto de presupuesto 2027 prevé ingresos de 728.300 millones de som frente a gastos de 695.800 millones (sin activos financieros), un superávit de 32.500 millones, con un fuerte aumento de la protección social. La central hidroeléctrica Kambarata-1 y el ferrocarril China-Kirguistán-Uzbekistán son los proyectos estratégicos insignia, y hay elecciones presidenciales el 27 de enero de 2027.",
+ "leader": "Presidente Sadyr Japárov (jefe de Estado, candidato de nuevo el 27 ene 2027) / Presidente del Consejo de Ministros Adylbek Kasymaliev",
+ "agenda": [
+  "Seguridad energética, encabezada por la hidroeléctrica Kambarata-1",
+  "Ferrocarril China-Kirguistán-Uzbekistán y conectividad logística",
+  "Más minihidráulica, eólica y solar (36 pequeñas centrales previstas en 2026-27)",
+  "Ampliar la protección social manteniendo superávit fiscal",
+  "Programa Nacional de Desarrollo a 2030"
+ ],
+ "needs": [
+  "Diseño y supervisión de grandes hidroeléctricas y transmisión",
+  "Digitalización ferroviaria y logística (transporte multimodal)",
+  "Sistemas de gestión del Fondo Social y del seguro de salud (estimación)",
+  "Equipos renovables de pequeña y mediana escala (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Gestión (PMC) y supervisión de proyectos hidroeléctricos"
+  },
+  {
+   "title": "Plataforma digital de logística y aduanas"
+  },
+  {
+   "title": "Sistemas TI del Fondo Social y del seguro de salud"
+  },
+  {
+   "title": "Automatización con IA y gobierno electrónico para la administración"
+  }
+ ]
+}

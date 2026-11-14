@@ -1,0 +1,24 @@
+{
+ "summary": "Le président Ahmed al-Charaa a déclaré à l'Assemblée générale de l'ONU en septembre que la levée des sanctions ouvre une « nouvelle phase de renouveau » pour la reconstruction et l'investissement. Le gouvernement affirme contrôler les groupes armés non étatiques et que plus de 3,5 millions de déplacés et réfugiés sont rentrés. Les besoins en électricité, logement et infrastructures sont immenses.",
+ "leader": "Président Ahmed al-Charaa (gouvernement de transition)",
+ "agenda": [
+  "Reconstruction et investissement après la levée des sanctions",
+  "Rétablir les forces de sécurité et intégrer les groupes armés",
+  "Retour des déplacés et réfugiés (plus de 3,5 millions)",
+  "Justice transitionnelle et recherche des disparus",
+  "Lutte contre les trafics transfrontaliers de drogue et d'êtres humains"
+ ],
+ "needs": [
+  "Production et transport d'électricité et approvisionnement en carburant",
+  "Reconstruire logements, eau et routes",
+  "Reconstruire télécoms et système financier (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Équipements pour reconstruire la production et les réseaux électriques"
+  },
+  {
+   "title": "Matériaux pour reconstruire logements et infrastructures"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "summary": "El presupuesto 2027 de la República del Congo (recursos 3,12 billones y gastos 2,64 billones de francos CFA) llegó al parlamento el 29 de octubre. Supone petróleo a 71 USD y 112 millones de barriles, y destina 680.000 millones de inversión pública a energía, transporte, agricultura e infraestructura social. La deuda debe bajar del 88,6% al 80,9% del PIB, y la financiación externa depende de un acuerdo con el FMI.",
+ "leader": "Presidente Denis Sassou Nguesso / Primer ministro Anatole Collinet Makosso",
+ "agenda": [
+  "Superávit 2027 y consolidación fiscal",
+  "Inversión pública de 680.000 millones: energía, transporte, agricultura, infraestructura social",
+  "Reforma tributaria y aduanera",
+  "Pagar la deuda interna con empresas",
+  "Negociación de un programa con el FMI"
+ ],
+ "needs": [
+  "Generación y redes eléctricas",
+  "Carreteras y transporte",
+  "Producción y procesamiento agrícola"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de generación y redes"
+  },
+  {
+   "title": "Equipos viales y de transporte"
+  }
+ ]
+}

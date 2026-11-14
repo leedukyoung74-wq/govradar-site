@@ -1,0 +1,24 @@
+{
+ "summary": "Le PAICV a remporté les législatives du 17 mai 2026 et Francisco Carvalho est devenu Premier ministre (et ministre des Finances) en juin. Le budget 2027 s'élève à 101,7 Md d'escudos (environ 1 Md USD), financé à 78 % par des ressources intérieures, avec une croissance prévue de 5,6 % (FMI : 5,0 %). Il prévoit la gratuité des soins, l'éducation, de nouvelles grilles de carrière et de salaires publics et des trajets inter-îles moins chers.",
+ "leader": "Premier ministre Francisco Carvalho (PAICV, depuis juin 2026 ; aussi ministre des Finances)",
+ "agenda": [
+  "Budget 2027 de 101,7 Md d'escudos, croissance 5,6 %",
+  "Soins gratuits et éducation",
+  "Nouveaux plans de carrière et de rémunération publics",
+  "Trajets inter-îles moins chers (ferry 500, vols 5 000 escudos dès janv. 2027)",
+  "Diversifier une économie dépendante du tourisme"
+ ],
+ "needs": [
+  "Liaisons maritimes et aériennes inter-îles",
+  "Renouvelables et dessalement (estimation)",
+  "Administration numérique (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Ferries inter-îles et équipements portuaires"
+  },
+  {
+   "title": "Renouvelables et dessalement"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "summary": "Le gouvernement du président Ghazouani a adopté le 21 octobre le budget 2027 (recettes 152,1 Md MRU, dépenses 145,9 Md), soit un excédent d'environ 155 M USD. Sur une hypothèse de 5,0 % de croissance, il privilégie la zone portuaire de Nouadhibou (port en eau profonde, 39,6 Md sur 2026-2029), l'eau et l'assainissement, la deuxième phase urbaine de Nouakchott et l'aide sociale. Les exportations de gaz du champ GTA, partagé avec le Sénégal, ont progressé de 16 % au troisième trimestre.",
+ "leader": "Président Mohamed Ould Cheikh El Ghazouani / Premier ministre Mokhtar Ould Djay",
+ "agenda": [
+  "Excédent 2027 (environ 155 M USD), croissance 5,0 %",
+  "Zone portuaire de Nouadhibou (port en eau profonde)",
+  "Eau et assainissement : 4,63 Md MRU",
+  "Aménagement urbain de Nouakchott, phase deux : 11,59 Md",
+  "Plus d'aide sociale (programme Aoun)",
+  "Exportations de gaz (GTA) et de fer"
+ ],
+ "needs": [
+  "Construction et équipements portuaires",
+  "Adduction d'eau et dessalement",
+  "Infrastructures urbaines",
+  "Bases pour l'hydrogène vert (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Port en eau profonde de Nouadhibou et équipements portuaires"
+  },
+  {
+   "title": "Équipements d'eau et de dessalement"
+  }
+ ]
+}

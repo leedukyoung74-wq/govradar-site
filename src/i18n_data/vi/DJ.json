@@ -1,0 +1,24 @@
+{
+ "summary": "Tổng thống Ismaïl Omar Guelleh thắng nhiệm kỳ thứ sáu trong bầu cử 2026 (97,8%, một nguồn). Tại cuộc họp nội các đầu tiên tháng 9, ông đặt an ninh và hòa bình lên hàng đầu, cam kết đa dạng hóa sang công nghiệp nhẹ, dịch vụ số, du lịch, năng lượng tái tạo và thủy sản, đồng thời số hóa hành chính và cải cách tài chính công. Cảng biển và căn cứ quân sự trên tuyến Biển Đỏ là trụ cột kinh tế.",
+ "leader": "Tổng thống Ismaïl Omar Guelleh (từ 1999; nhiệm kỳ thứ sáu năm 2026)",
+ "agenda": [
+  "An ninh, hòa bình, bảo vệ biên giới và hạ tầng trọng yếu",
+  "Đa dạng hóa: công nghiệp nhẹ, dịch vụ số, du lịch, năng lượng tái tạo, thủy sản",
+  "Số hóa thủ tục và kết nối hệ thống nhà nước",
+  "Kiểm soát chi tiêu, cải cách tài chính công",
+  "Giáo dục, đào tạo và y tế"
+ ],
+ "needs": [
+  "Tích hợp hệ thống chính phủ điện tử",
+  "Năng lượng tái tạo (mặt trời, địa nhiệt, gió)",
+  "Logistics cảng (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Chính phủ điện tử và liên thông hệ thống"
+  },
+  {
+   "title": "Thiết bị năng lượng tái tạo"
+  }
+ ]
+}

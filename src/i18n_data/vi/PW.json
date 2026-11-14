@@ -1,0 +1,24 @@
+{
+ "summary": "Trong Thông điệp Quốc gia ngày 23/7/2026, Tổng thống Surangel Whipps Jr. nhấn mạnh sự phục hồi sau đại dịch với phương châm 'kỷ luật thay vì phủ nhận, cải cách thay vì trì hoãn'. Thu thuế tăng và thặng dư giúp tăng trợ cấp xã hội và lương công, nhưng chi trả nợ và cải cách hưu trí vẫn là thách thức. Ông kêu gọi 'điều chỉnh quy mô' khu bảo tồn biển quốc gia do sản lượng cá ngừ giảm, và ngân sách 2027 ưu tiên y tế, giáo dục, an ninh, nông nghiệp và giảm nợ.",
+ "leader": "Tổng thống Surangel Whipps Jr.",
+ "agenda": [
+  "Ngân sách 2027 (y tế, giáo dục, an ninh, nông nghiệp, giảm nợ)",
+  "Điều chỉnh khu bảo tồn biển quốc gia",
+  "Cải cách an sinh xã hội và hưu trí",
+  "Chống ma túy và kiểm soát biên giới",
+  "Hỗ trợ nông nghiệp và nuôi trồng thủy sản"
+ ],
+ "needs": [
+  "Công nghệ nuôi trồng thủy sản, nông nghiệp",
+  "Cơ sở trường học",
+  "Giảm gánh nặng giá điện cao (trợ giá)"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị nuôi trồng thủy sản, nông nghiệp thông minh"
+  },
+  {
+   "title": "Điện mặt trời và hiệu quả điện năng"
+  }
+ ]
+}

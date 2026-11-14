@@ -1,0 +1,24 @@
+{
+ "summary": "Dans son discours sur l'état de la République du 23 juillet 2026, le président Surangel Whipps Jr. a souligné la reprise post-pandémie sous la devise « la discipline plutôt que le déni, la réforme plutôt que l'attente ». La hausse des recettes et les excédents ont financé plus d'aide sociale et de salaires publics, mais le service de la dette et la réforme des retraites restent à traiter. Il a demandé de « redimensionner » le sanctuaire marin national en raison de la baisse des prises de thon, et le budget 2027 privilégie santé, éducation, sécurité, agriculture et désendettement.",
+ "leader": "Président Surangel Whipps Jr.",
+ "agenda": [
+  "Budget 2027 (santé, éducation, sécurité, agriculture, dette)",
+  "Redimensionner le sanctuaire marin national",
+  "Réforme de la sécurité sociale et des retraites",
+  "Lutte antidrogue et contrôle des frontières",
+  "Soutien à l'agriculture et à l'aquaculture"
+ ],
+ "needs": [
+  "Technologies aquacoles et agricoles",
+  "Équipements scolaires",
+  "Allègement du coût élevé de l'électricité (subventions)"
+ ],
+ "biz": [
+  {
+   "title": "Équipements d'aquaculture et d'agriculture intelligente"
+  },
+  {
+   "title": "Solaire et efficacité électrique"
+  }
+ ]
+}

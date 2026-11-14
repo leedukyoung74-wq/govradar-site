@@ -1,0 +1,24 @@
+{
+ "summary": "Anggaran 2026/27 PM Briceño membelanjakan BZ$1,9 miliar (+12,7%) dengan belanja modal rekor BZ$606,8 juta (32%). Fokusnya peningkatan jalan seperti Jalan Raya George Price, perluasan asuransi kesehatan nasional ke Cayo, rumah sakit San Pedro yang didanai Taiwan, dan pendidikan menengah gratis yang lebih luas. Utang turun ke 66,6% PDB.",
+ "leader": "Perdana Menteri John Briceño (kepala pemerintahan)",
+ "agenda": [
+  "Belanja modal rekor BZ$606,8 juta",
+  "Peningkatan jalan (Jalan Raya George Price dan lainnya)",
+  "Asuransi Kesehatan Nasional diperluas ke Cayo (BZ$57 juta)",
+  "Pendidikan menengah praktis gratis (lebih dari 60% penerima)",
+  "Utang di bawah 50% PDB pada 2030"
+ ],
+ "needs": [
+  "Konstruksi jalan dan jembatan",
+  "Pembangunan rumah sakit dan peralatan medis",
+  "Fasilitas sekolah dan program pendidikan"
+ ],
+ "biz": [
+  {
+   "title": "Pekerjaan dan peralatan jalan serta jembatan"
+  },
+  {
+   "title": "Peralatan medis rumah sakit"
+  }
+ ]
+}

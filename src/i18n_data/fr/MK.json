@@ -1,0 +1,24 @@
+{
+ "summary": "Le projet de budget 2027 du gouvernement Mickoski prévoit 440,4 Md MKD de dépenses (environ 7,2 Md EUR, +4,8 %) et un déficit de 3,5 % du PIB. Il consacre 40,8 Md à l'investissement, 220,8 Md aux retraites et transferts sociaux et 2 % du PIB à la défense ; les chantiers d'infrastructure en cours sont estimés à environ 10 Md EUR.",
+ "leader": "Premier ministre Hristijan Mickoski / Présidente Gordana Siljanovska-Davkova / Ministre des Finances Gordana Dimitrieska-Kochoska",
+ "agenda": [
+  "Dépenses 2027 de 7,2 Md EUR, déficit 3,5 %, assainissement progressif",
+  "Investissement de 40,8 Md MKD",
+  "Plus de transferts sociaux, retraites +4,8 %",
+  "Défense à 2 % du PIB et obligations OTAN",
+  "Progrès dans l'adhésion à l'UE"
+ ],
+ "needs": [
+  "Construction et supervision des corridors autoroutiers et ferroviaires",
+  "Équipements pour la transition énergétique (estimation)",
+  "Services publics numériques (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Sous-traitance et matériaux pour autoroutes et routes"
+  },
+  {
+   "title": "Solutions de services publics numériques"
+  }
+ ]
+}

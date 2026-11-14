@@ -1,0 +1,24 @@
+{
+ "summary": "Le Premier ministre Gaston Browne a présenté le budget 2026 sous le thème « Croissance et développement centrés sur la population », avec davantage de dépenses pour l'éducation, la santé, le logement et les infrastructures. Il a annoncé un excédent primaire de 254,9 millions de dollars des Caraïbes orientales et une dette de 61,4 % du PIB. L'éducation reçoit la plus grosse part, et 120 logements, 300 parcelles et une campagne de conformité fiscale sont prévus.",
+ "leader": "Premier ministre Gaston Browne (Parti travailliste d'Antigua-et-Barbuda)",
+ "agenda": [
+  "Budget de croissance centré sur la population (éducation en tête)",
+  "120 logements et 300 parcelles",
+  "Campagne de conformité fiscale",
+  "Développement de Barbuda",
+  "Croissance portée par le tourisme et la construction"
+ ],
+ "needs": [
+  "Matériaux et construction de logements",
+  "Infrastructures touristiques",
+  "Renouvelables et dessalement (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Matériaux et maisons modulaires pour le logement public"
+  },
+  {
+   "title": "Solaire et stockage"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "summary": "Trong bầu cử ngày 27/9/2026, phe đối lập MLSTP-PSD giành 24/55 ghế và đảng cầm quyền ADI 23 ghế, không bên nào quá bán. Liên minh MCI-PS/PUN với sáu ghế giữ lá phiếu quyết định, và Tổng thống Vila Nova sẽ bổ nhiệm thủ tướng dựa trên kết quả. Tỷ lệ không đi bầu kỷ lục 62,9%.",
+ "leader": "Tổng thống Carlos Vila Nova / đang chờ bổ nhiệm thủ tướng (sau bầu cử 9/2026)",
+ "agenda": [
+  "Lập liên minh và bổ nhiệm thủ tướng",
+  "Chấm dứt thiếu điện (ước tính)",
+  "Quản lý tài khóa và nợ (ước tính)",
+  "Du lịch và nông nghiệp (ca cao) (ước tính)"
+ ],
+ "needs": [
+  "Phát điện (mất điện thường xuyên) (ước tính)",
+  "Cảng và sân bay",
+  "Nước sạch"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị điện mặt trời và phát điện"
+  }
+ ]
+}

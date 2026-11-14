@@ -1,0 +1,21 @@
+{
+ "summary": "El gabinete somalí aprobó el 27 de octubre un proyecto de presupuesto 2027 de 1.260 millones de USD, un 9,2% menos que en 2026. En 2026 las donaciones (unos 880 millones) casi duplicaban los ingresos internos (480 millones) y los gastos corrientes como salarios absorbían el 84,5%. El gobierno anunció elecciones en 2027, pero las tensiones federales y la amenaza de al Shabab son altas.",
+ "leader": "Presidente Hassan Sheikh Mohamud / Gobierno Federal (gabinete del primer ministro)",
+ "agenda": [
+  "Presupuesto 2027 de 1.260 millones (menor)",
+  "Preparar las elecciones de 2027",
+  "Combatir a al Shabab y mejorar la seguridad",
+  "Elevar los ingresos internos (6,3% del PIB)",
+  "Asegurar el apoyo de donantes"
+ ],
+ "needs": [
+  "Seguridad y servicios básicos",
+  "Respuesta a la sequía y agua",
+  "Infraestructura portuaria y vial (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Proyectos financiados por donantes (agua, salud)"
+  }
+ ]
+}

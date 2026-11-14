@@ -1,0 +1,24 @@
+{
+ "summary": "En février 2026, le Premier ministre Jotham Napat a déclaré que « faire comme d'habitude n'est plus sûr » et a fixé comme objectif central la transformation économique, axée sur l'économie, la santé et l'éducation. Les cibles du Plan national de développement durable seront précisées d'ici 2030, 50e anniversaire de l'indépendance. 2 Md de vatu de fonds climatiques sont réservés à des routes résilientes à Malekula (travaux prévus à partir de 2028), et la Banque mondiale apporte environ 3 Md de vatu pour renforcer le ministère de la Pêche.",
+ "leader": "Premier ministre Jotham Napat",
+ "agenda": [
+  "Transformation économique (économie, santé, éducation)",
+  "Cibles concrètes du NSDP d'ici 2030 (50e anniversaire)",
+  "Routes résilientes de Malekula (2 Md vatu)",
+  "Capacités du ministère de la Pêche (Banque mondiale, ~3 Md vatu)",
+  "S'appuyer sur l'énergie et les télécoms"
+ ],
+ "needs": [
+  "Routes résilientes au climat",
+  "Transformation et gestion de la pêche",
+  "Renouvelables (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Construction et équipements de routes résilientes"
+  },
+  {
+   "title": "Systèmes de gestion et de transformation de la pêche"
+  }
+ ]
+}

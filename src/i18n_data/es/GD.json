@@ -1,0 +1,24 @@
+{
+ "summary": "El gobierno del primer ministro Dickon Mitchell presentó un presupuesto récord de 1.960 millones de dólares del Caribe Oriental para 2026 ('Hacia la Visión 75'). El gasto de capital es de 370,4 millones, con un nuevo Fondo de Vivienda de 50 millones, una Agencia de Empoderamiento Juvenil y 'puntos verdes' para residuos orgánicos. Creará un regulador de petróleo y gas, buscará cerrar acuerdos de exploración en 12 meses y negociará límites marítimos con Venezuela y San Vicente y las Granadinas.",
+ "leader": "Primer ministro Dickon Mitchell (Congreso Nacional Democrático)",
+ "agenda": [
+  "Presupuesto de 1.960 millones ('Visión 75')",
+  "Regulador de petróleo y gas y acuerdos de exploración",
+  "Fondo de Vivienda de 50 millones",
+  "Agencia de Empoderamiento Juvenil",
+  "Negociación de límites marítimos (Venezuela, SVG)"
+ ],
+ "needs": [
+  "Construcción de viviendas",
+  "Valorización de residuos",
+  "Capacidad de regulación energética y evaluación ambiental"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de tratamiento y compostaje de residuos orgánicos"
+  },
+  {
+   "title": "Materiales y viviendas modulares"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "summary": "Tổng thống Ahmed al-Sharaa phát biểu tại Đại hội đồng LHQ tháng 9 rằng việc dỡ bỏ trừng phạt đã mở ra 'giai đoạn hồi sinh mới' về tái thiết và đầu tư. Chính phủ cho biết các nhóm vũ trang phi nhà nước đã nằm dưới sự kiểm soát và hơn 3,5 triệu người sơ tán, tị nạn đã trở về. Nhu cầu điện, nhà ở và hạ tầng rất lớn.",
+ "leader": "Tổng thống Ahmed al-Sharaa (chính phủ chuyển tiếp)",
+ "agenda": [
+  "Tái thiết và thu hút đầu tư sau khi dỡ trừng phạt",
+  "Khôi phục lực lượng an ninh, sáp nhập nhóm vũ trang",
+  "Đưa người sơ tán, tị nạn trở về (hơn 3,5 triệu)",
+  "Công lý chuyển tiếp và tìm người mất tích",
+  "Chống buôn ma túy, buôn người xuyên biên giới"
+ ],
+ "needs": [
+  "Phát điện, truyền tải và cung cấp nhiên liệu",
+  "Xây lại nhà ở, nước và đường",
+  "Tái thiết viễn thông và hệ thống tài chính (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị tái thiết phát điện và lưới điện"
+  },
+  {
+   "title": "Vật liệu tái thiết nhà ở và hạ tầng"
+  }
+ ]
+}

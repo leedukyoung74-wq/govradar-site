@@ -1,0 +1,20 @@
+{
+ "summary": "Aux élections du 27 septembre 2026, le MLSTP-PSD (opposition) a obtenu 24 sièges sur 55 et l'ADI au pouvoir 23, sans majorité. La coalition MCI-PS/PUN, avec six sièges, est faiseuse de roi, et le président Vila Nova nommera le Premier ministre au vu des résultats. L'abstention a atteint un record de 62,9 %.",
+ "leader": "Président Carlos Vila Nova / Premier ministre à nommer (après les élections de sept. 2026)",
+ "agenda": [
+  "Former une coalition et nommer un Premier ministre",
+  "Mettre fin aux pénuries d'électricité (estimation)",
+  "Gestion budgétaire et de la dette (estimation)",
+  "Tourisme et agriculture (cacao) (estimation)"
+ ],
+ "needs": [
+  "Production électrique (coupures fréquentes) (estimation)",
+  "Port et aéroport",
+  "Eau potable"
+ ],
+ "biz": [
+  {
+   "title": "Équipements solaires et de production"
+  }
+ ]
+}

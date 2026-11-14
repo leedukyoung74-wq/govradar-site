@@ -1,0 +1,25 @@
+{
+ "summary": "Tại cuộc họp điều hành đầu tiên năm 2026, chính quyền Tổng thống Wesley Simina và Phó Tổng thống Aren Palik bàn về chuẩn bị lập pháp, tiến độ hạ tầng, ngân sách, mở rộng bưu chính tới đảo xa, đối tác quốc tế và ứng phó sự cố tràn dầu ở Chuuk. Chính quyền thúc đẩy quy hoạch không gian biển, ký Kế hoạch Đầu tư Nông nghiệp Quốc gia, thực hiện Kế hoạch Phát triển Chiến lược 2024–2043 và tái khẳng định hợp tác Hiệp ước với Mỹ.",
+ "leader": "Tổng thống Wesley Simina",
+ "agenda": [
+  "Kế hoạch Phát triển Chiến lược 2024–2043",
+  "Quy hoạch không gian biển",
+  "Kế hoạch Đầu tư Nông nghiệp Quốc gia",
+  "Mở rộng dịch vụ đảo xa (bưu chính...)",
+  "Ứng phó tràn dầu ở Chuuk",
+  "Hợp tác Hiệp ước với Mỹ"
+ ],
+ "needs": [
+  "Hạ tầng (cảng, đường)",
+  "Nông nghiệp và sản xuất lương thực",
+  "Quản lý môi trường biển"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị sản xuất, chế biến nông nghiệp"
+  },
+  {
+   "title": "Thiết bị ứng phó, giám sát ô nhiễm biển"
+  }
+ ]
+}

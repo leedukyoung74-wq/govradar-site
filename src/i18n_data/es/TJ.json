@@ -1,0 +1,34 @@
+{
+ "summary": "El presidente Rahmon gobierna desde hace décadas, con el primer ministro Rasulzoda al frente del gabinete. La hidroeléctrica de Rogún domina el gasto público, y en la cumbre Corea-Asia Central de septiembre de 2026 en Seúl ambos países elevaron sus lazos a asociación integral y firmaron 17 acuerdos y memorandos.",
+ "leader": "Presidente Emomali Rahmon (también jefe de gobierno) / Primer ministro Kokhir Rasulzoda",
+ "agenda": [
+  "Acelerar la construcción de Rogún y las exportaciones eléctricas",
+  "Ampliar la base tributaria, saldar atrasos e intercambio digital de datos",
+  "Sustitución de importaciones y más producción nacional",
+  "Conexiones ferroviarias, de transporte y logística; cooperación en minerales críticos (antimonio)",
+  "Mejoras de riego y abastecimiento de agua"
+ ],
+ "needs": [
+  "Equipos hidroeléctricos y ampliación de la red (Rogún y más allá)",
+  "Estaciones de bombeo de riego, tuberías y MIS hídrico",
+  "Digitalización gubernamental y financiera (intercambio de datos fiscales, MIS del seguro de depósitos)",
+  "Modernización ferroviaria y logística (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Equipos de transmisión/distribución y EPC de subestaciones"
+  },
+  {
+   "title": "Bombas de riego y equipos de tratamiento de agua"
+  },
+  {
+   "title": "Gobierno electrónico y sistemas de información financiera"
+  },
+  {
+   "title": "Cooperación ferroviaria y logística"
+  },
+  {
+   "title": "Cadena de suministro de minerales críticos (antimonio)"
+  }
+ ]
+}

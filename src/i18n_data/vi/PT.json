@@ -1,0 +1,32 @@
+{
+ "summary": "Chính phủ thiểu số trung hữu của Montenegro đã trình ngân sách 2027, dự kiến được thông qua nhờ phe Xã hội bỏ phiếu trắng. Ngân sách kết hợp thặng dư nhỏ, nợ giảm với cắt giảm thuế và tăng chi quốc phòng.",
+ "leader": "Tổng thống António José Seguro (nhậm chức từ 9/3/2026); Thủ tướng Luís Montenegro",
+ "agenda": [
+  "Ngân sách 2027: thặng dư 0,1% GDP, nợ giảm còn 84,5%",
+  "Giảm thuế doanh nghiệp từ 19% xuống 18% (2027) và 17% (2028); tiếp tục giảm thuế thu nhập",
+  "Quốc phòng 2,15% GDP, dùng quỹ SAFE của EU",
+  "Tăng nguồn cung nhà ở; giữ bảo lãnh mua nhà đầu tiên và miễn thuế cho người trẻ",
+  "Đầu tư tiếp tục qua Portugal 2030 và ngân sách nhà nước sau khi RRP kết thúc",
+  "Chương trình phục hồi và chống chịu sau bão (PTRR)"
+ ],
+ "needs": [
+  "Cấp vốn và hoàn thành đầu tư công dở dang sau khi RRP kết thúc",
+  "Tăng mua sắm thiết bị và bảo trì quốc phòng (gắn với SAFE của EU)",
+  "Công nghệ xây dựng và nhà ở mô-đun để tăng cung (ước tính)",
+  "Chính phủ số và ứng dụng AI (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Linh kiện quốc phòng và hợp tác bảo trì"
+  },
+  {
+   "title": "Công nghệ xây dựng mô-đun và nhà ở công"
+  },
+  {
+   "title": "Chống chịu thiên tai và gia cố lưới điện ở vùng bị bão"
+  },
+  {
+   "title": "Giải pháp AI và chính phủ số"
+  }
+ ]
+}

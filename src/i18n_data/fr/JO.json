@@ -1,0 +1,30 @@
+{
+ "summary": "Le gouvernement Hassan mène un assainissement budgétaire dans le cadre de la Vision de modernisation économique et de la Feuille de route de modernisation du secteur public. Le budget 2026 vise un déficit de 4,6 % du PIB avec 1,6 Md JD d'investissement ; celui de 2027 est préparé avec une baisse de 15 % des frais de fonctionnement des ministères.",
+ "leader": "Roi Abdallah II (chef de l'État) / Premier ministre Jafar Hassan (depuis sept. 2024, remanié en août 2026)",
+ "agenda": [
+  "Mise en œuvre de la Vision de modernisation économique",
+  "Feuille de route de modernisation du secteur public et budgétisation axée sur les résultats",
+  "Transformation numérique, automatisation des services et cybersécurité",
+  "Économie verte et objectifs climatiques",
+  "Déficit réduit et baisse de 15 % des frais de fonctionnement (2027)"
+ ],
+ "needs": [
+  "Automatisation des services publics et capacités en cybersécurité",
+  "Outils de budgétisation axée sur les résultats et d'efficacité de la dépense (estimation)",
+  "Conception de projets d'économie verte et de réduction des émissions (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Conseil en automatisation des services publics et transformation numérique"
+  },
+  {
+   "title": "Évaluation et surveillance de la cybersécurité des organismes publics"
+  },
+  {
+   "title": "Système de budgétisation par résultats et de gestion des KPI"
+  },
+  {
+   "title": "Automatisation par IA des fonctions support publiques"
+  }
+ ]
+}

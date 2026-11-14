@@ -1,0 +1,24 @@
+{
+ "summary": "El gobierno del presidente Doumbouya prevé un déficit 2027 algo mayor, del 2,5% del PIB, para seguir invirtiendo en escuelas, hospitales y carreteras. El presupuesto rectificado 2026 fue de 7.700 millones de USD (+5,8%), y Guinea busca 200.000 millones de inversión para construir una economía más allá de la minería, apoyándose en el hierro de Simandou. Los ingresos subieron cerca del 50% en 2025.",
+ "leader": "Presidente Mamadi Doumbouya / Ministra de Finanzas y Economía Mariama Ciré Sylla",
+ "agenda": [
+  "Inversión pública en escuelas, hospitales y carreteras (préstamo interno de 4,6 billones de francos)",
+  "Diversificar más allá de la minería con Simandou (meta de 200.000 millones)",
+  "Seguir elevando la recaudación",
+  "Estudios de viabilidad para proyectos aplazados",
+  "Gestionar el costo fiscal de los precios fijos del combustible"
+ ],
+ "needs": [
+  "Logística ferroviaria, portuaria y vial",
+  "Construcción de escuelas y hospitales",
+  "Más suministro eléctrico (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Construcción y equipamiento de hospitales y escuelas"
+  },
+  {
+   "title": "Logística y equipos ligados a la minería"
+  }
+ ]
+}

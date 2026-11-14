@@ -1,0 +1,24 @@
+{
+ "summary": "La présidente Hilda Heine a déclaré le 26 mars 2026 un état d'urgence économique de 90 jours face à la flambée des carburants et des prix liée au conflit au Moyen-Orient. Les mesures comprennent des économies d'énergie, la limitation des véhicules officiels et le gel des hausses de salaire, des recrutements et des achats de véhicules. Environ 60 % du budget dépend des subventions américaines du Compact de libre association (COFA), et le pays importe l'essentiel de sa nourriture, de son carburant et de ses matériaux.",
+ "leader": "Présidente Hilda Heine",
+ "agenda": [
+  "Réponse à l'urgence économique (mars 2026, 90 jours)",
+  "Économies d'énergie et de carburant",
+  "Gel des salaires et recrutements publics",
+  "Flexibilité locale dans les projets COFA",
+  "Gestion du fonds fiduciaire (1,3 Md USD)"
+ ],
+ "needs": [
+  "Substitution au carburant (solaire, stockage)",
+  "Substitution aux importations alimentaires",
+  "Infrastructures face à la montée des eaux"
+ ],
+ "biz": [
+  {
+   "title": "Solaire et stockage d'énergie"
+  },
+  {
+   "title": "Protection côtière et infrastructures d'adaptation"
+  }
+ ]
+}

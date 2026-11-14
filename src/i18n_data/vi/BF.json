@@ -1,0 +1,24 @@
+{
+ "summary": "Chính phủ Đại úy Traoré thông qua dự thảo ngân sách 2027 ngày 8/10 với thu 4.200 tỷ và chi 4.800 tỷ franc CFA (khoảng 8,2 tỷ USD, +22,5%). Bám theo kế hoạch quốc gia 2026-2030 'RELANCE', ngân sách ưu tiên nông nghiệp, công nghiệp hóa, quốc phòng và dịch vụ xã hội cơ bản. Dự báo tăng trưởng 2026 được nâng lên 6%.",
+ "leader": "Đại úy Ibrahim Traoré (tổng thống chuyển tiếp) / Thủ tướng Rimtalba Jean Emmanuel Ouédraogo",
+ "agenda": [
+  "Chi 2027 4.800 tỷ franc CFA (+22,5%)",
+  "Nông nghiệp và công nghiệp chế biến nông sản",
+  "Quốc phòng và an ninh",
+  "Dịch vụ xã hội cơ bản (y tế, giáo dục, nước)",
+  "Kế hoạch Phát triển Quốc gia 2026-2030 (RELANCE)"
+ ],
+ "needs": [
+  "Máy nông nghiệp, thủy lợi và chế biến",
+  "Cung cấp điện mặt trời và khác (ước tính)",
+  "Cơ sở y tế và nước"
+ ],
+ "biz": [
+  {
+   "title": "Máy nông nghiệp và thiết bị chế biến"
+  },
+  {
+   "title": "Điện mặt trời và lưới điện mini"
+  }
+ ]
+}

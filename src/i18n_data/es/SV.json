@@ -1,0 +1,24 @@
+{
+ "summary": "El gobierno de Bukele superó en octubre la segunda y tercera revisión de su Servicio Ampliado del FMI (unos 1.400 millones de USD) y recibió 138 millones. El crecimiento supera lo previsto (4,5% en 2026), la billetera estatal Chivo pasó a un operador privado y no habrá más compras de bitcoin. Reconocer unos 2.300 millones de intereses impagos a fondos de pensiones ampliará el déficit de 2027.",
+ "leader": "Presidente Nayib Bukele (jefe de Estado y de gobierno)",
+ "agenda": [
+  "Cumplir el programa del FMI: administración tributaria, contención del gasto, colchones de liquidez",
+  "Reforma de pensiones y del servicio civil",
+  "Gestión de la deuda pública (89,2% del PIB proyectado en 2027)",
+  "Mantener la política de seguridad",
+  "Elecciones legislativas de 2027"
+ ],
+ "needs": [
+  "Sistemas tributarios, de tesorería y de deuda",
+  "Supervisión financiera (cooperativas, instituciones públicas)",
+  "Infraestructura turística y logística (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Soluciones digitales tributarias y de tesorería"
+  },
+  {
+   "title": "Supervisión financiera y regtech"
+  }
+ ]
+}

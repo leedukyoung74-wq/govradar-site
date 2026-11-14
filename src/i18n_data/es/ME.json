@@ -1,0 +1,20 @@
+{
+ "summary": "El gobierno del primer ministro Spajić aspira a cerrar las negociaciones en 2026, firmar el tratado en 2027 e ingresar a la UE en 2028 ('miembro 28 en el 28'). Los 33 capítulos están abiertos y 18 cerrados provisionalmente. Sus reformas 'Euro Model' buscan frenar la emigración y elevar el nivel de vida.",
+ "leader": "Primer ministro Milojko Spajić / Presidente Jakov Milatović",
+ "agenda": [
+  "Cerrar negociaciones (2026), firmar el tratado (2027) e ingresar (2028)",
+  "Completar los 15 capítulos restantes",
+  "Reformas 'Euro Model': frenar la emigración y elevar el nivel de vida",
+  "Preparar la financiación de la UE 2028-2034"
+ ],
+ "needs": [
+  "Administración y digitalización con estándares UE (estimación)",
+  "Infraestructura de transporte y energía (estimación)",
+  "Infraestructura turística (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Gobierno electrónico y sistemas de datos con estándares UE"
+  }
+ ]
+}

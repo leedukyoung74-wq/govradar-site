@@ -1,0 +1,28 @@
+{
+ "summary": "Le budget 2027 du gouvernement Rama dépasse 10 Md EUR de dépenses et fixe trois priorités : protection sociale, stabilité budgétaire, et investissement avec adhésion à l'UE. Il vise 201,5 Md ALL d'investissement public (6,9 % du PIB), un déficit de 2,3 % et une dette de 52,4 %, et veut boucler les négociations techniques avec l'UE d'ici décembre 2027.",
+ "leader": "Premier ministre Edi Rama (chef du gouvernement) / Ministre des Finances Petrit Malaj",
+ "agenda": [
+  "Accélérer l'adhésion à l'UE (négociations techniques bouclées en déc. 2027)",
+  "Investissement public de 201,5 Md ALL (6,9 % du PIB)",
+  "Infrastructures et énergie : 75,4 Md ALL",
+  "Plus de protection sociale, dont une prime de retraite doublée",
+  "Stabilité budgétaire : déficit 2,3 %, dette 52,4 %",
+  "Soutien agricole de 5,3 Md ALL"
+ ],
+ "needs": [
+  "Conception et construction de routes et d'infrastructures énergétiques",
+  "Administration numérique aux normes de l'UE (estimation)",
+  "Modernisation agricole et distribution"
+ ],
+ "biz": [
+  {
+   "title": "Travaux publics d'infrastructures et d'énergie"
+  },
+  {
+   "title": "E-administration et systèmes administratifs aux normes UE"
+  },
+  {
+   "title": "Machines agricoles et agriculture intelligente"
+  }
+ ]
+}

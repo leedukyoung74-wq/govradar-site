@@ -1,0 +1,28 @@
+{
+ "summary": "El presupuesto 2026 supone un crecimiento del 5% y el gobierno espera que la economía alcance 114.000 millones de GEL en 2026 (crecimiento 2025: 7,5%). Préstamos del BAsD y el Banco Mundial financian la circunvalación de Tiflis, el ferrocarril y carreteras del Corredor Transcaspio (Medio) y sistemas de agua rurales.",
+ "leader": "Primer ministro Irakli Kobakhidze (Sueño Georgiano)",
+ "agenda": [
+  "Modernizar el ferrocarril y las carreteras del Corredor Transcaspio (Medio)",
+  "Red vial financiada por IFI (circunvalación de Tiflis, Batumi-Sarpi)",
+  "Reconstruir los sistemas de agua rurales",
+  "Cooperación con Azerbaiyán en comercio, aduanas y corredor de energía verde",
+  "Anticorrupción y reforma del Ministerio de Economía y las empresas estatales"
+ ],
+ "needs": [
+  "Capacidad de construcción y supervisión vial para proyectos del BAsD/Banco Mundial",
+  "Locomotoras eléctricas y subestaciones para la electrificación ferroviaria",
+  "Diseño, construcción y operación de sistemas de agua rurales",
+  "Logística digital de fronteras y aduanas (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Construcción y supervisión en proyectos viales del BAsD/Banco Mundial"
+  },
+  {
+   "title": "Locomotoras eléctricas y equipos de subestación"
+  },
+  {
+   "title": "Diseño de agua rural y equipos de tratamiento"
+  }
+ ]
+}

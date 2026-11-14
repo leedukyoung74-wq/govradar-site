@@ -1,0 +1,21 @@
+{
+ "summary": "Le Parlement gambien a adopté le 27 octobre le budget 2027 de 48,6 Md dalasis (environ 667 M USD). Le service de la dette en absorbe 33,3 %, plus que l'éducation et la santé réunies. L'éducation reçoit 6,13 Md et la santé 4,11 Md, avec 1 Md de subventions tarifaires d'électricité. Le président Barrow s'est porté candidat à un troisième mandat pour la présidentielle de décembre (5 décembre, source unique).",
+ "leader": "Président Adama Barrow (chef de l'État et du gouvernement)",
+ "agenda": [
+  "Budget 2027 de 48,6 Md dalasis",
+  "Service de la dette (un tiers du budget)",
+  "Éducation et santé",
+  "Subventions à l'électricité et énergie",
+  "Présidentielle déc. 2026 ; législatives 10 avr. 2027"
+ ],
+ "needs": [
+  "Production et réseaux",
+  "Écoles et hôpitaux",
+  "Gestion de la dette"
+ ],
+ "biz": [
+  {
+   "title": "Équipements électriques et solaires"
+  }
+ ]
+}

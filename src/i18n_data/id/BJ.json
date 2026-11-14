@@ -1,0 +1,26 @@
+{
+ "summary": "Pemerintahan Presiden Wadagni menyetujui rancangan anggaran 2027 sebesar CFAF 4.757 miliar (sekitar US$8,1 miliar, +14,7%) pada 7 Oktober. Anggaran menargetkan pertumbuhan 7,5% dan defisit maksimal 2,8% PDB dengan lima prioritas: pertanian modern, industri, pariwisata, teknologi, dan SDM. Pemerintah juga mengadopsi program aksi 2026-2033.",
+ "leader": "Presiden Romuald Wadagni (kepala negara dan pemerintahan, menjabat 2026)",
+ "agenda": [
+  "Anggaran 2027 US$8,1 miliar (+14,7%), pertumbuhan 7,5%",
+  "Pertanian modern dan pembangunan industri",
+  "Pariwisata dan budaya",
+  "Teknologi dan transformasi digital",
+  "Pendidikan, kesehatan, perlindungan sosial, energi, dan air",
+  "Program aksi pemerintah 2026-2033"
+ ],
+ "needs": [
+  "Peralatan pengolahan hasil pertanian",
+  "Infrastruktur listrik dan air",
+  "Sekolah, rumah sakit, dan infrastruktur sosial (unit baru)",
+  "Keamanan di wilayah utara"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan pengolahan pertanian dan kawasan industri"
+  },
+  {
+   "title": "Pekerjaan dan peralatan infrastruktur sosial"
+  }
+ ]
+}

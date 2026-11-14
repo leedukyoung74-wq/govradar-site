@@ -1,0 +1,27 @@
+{
+ "summary": "Trong thông điệp thường niên ngày 30/9, Tổng thống Jennifer Geerlings-Simons trình dự thảo ngân sách 2027 (thu 70,1 tỷ, chi 80,9 tỷ đô la Suriname, thâm hụt 4% GDP). Bà gọi 2027 là năm chuẩn bị trước khi khai thác dầu ngoài khơi năm 2028, với Luật Nội địa hóa và mở rộng cơ sở thuế (vàng, gỗ, thủy sản). Nợ công ở mức 100,4% GDP.",
+ "leader": "Tổng thống Jennifer Geerlings-Simons (nguyên thủ kiêm đứng đầu chính phủ)",
+ "agenda": [
+  "Chuẩn bị khai thác dầu ngoài khơi (GranMorgu của TotalEnergies) năm 2028",
+  "Trình Luật Nội địa hóa lên quốc hội năm 2027",
+  "Mở rộng cơ sở thuế, tăng thu mà không tăng thuế suất",
+  "Giảm nợ từ 100,4% GDP",
+  "Chuyển sang khí và điện mặt trời để chấm dứt mất điện"
+ ],
+ "needs": [
+  "Năng lực dịch vụ nội địa cho chuỗi dầu khí",
+  "Phát điện bằng khí, mặt trời và lưới điện",
+  "Quản lý thuế số"
+ ],
+ "biz": [
+  {
+   "title": "Dịch vụ và thiết bị nội địa cho phát triển dầu khí"
+  },
+  {
+   "title": "Phát điện khí, mặt trời và thiết bị lưới điện"
+  },
+  {
+   "title": "Hệ thống thuế và thu ngân sách"
+  }
+ ]
+}

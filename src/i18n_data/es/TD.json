@@ -1,0 +1,25 @@
+{
+ "summary": "En sus orientaciones para el presupuesto 2027, el presidente Mahamat Idriss Déby exigió romper con los presupuestos de rutina y una 'transformación' para crecer un 7,3%. En línea con el plan 'Chad Connexion 2030' y la hoja de ruta de 12 obras y 100 acciones, abre la generación y distribución eléctrica de las grandes ciudades a privados e impulsa mataderos modernos, cadenas de frío, exploración minera y gobierno digital. Chad acoge a muchos refugiados sudaneses.",
+ "leader": "Presidente Mahamat Idriss Déby Itno / Primer ministro Allamaye Halina",
+ "agenda": [
+  "Crecimiento del 7,3% en 2027 con producción y transformación",
+  "Abrir la electricidad de las grandes ciudades a privados",
+  "Transformación ganadera: mataderos y cadenas de frío (exportación de ganado en pie prohibida desde 2028)",
+  "Más exploración geológica",
+  "Exención de visado para pasaportes africanos (enero 2027) y turismo",
+  "Gobierno digital"
+ ],
+ "needs": [
+  "Generación y distribución eléctrica privada",
+  "Equipos de mataderos y cadena de frío",
+  "Agua y salud en zonas que acogen refugiados sudaneses"
+ ],
+ "biz": [
+  {
+   "title": "Participación privada en generación y distribución eléctrica"
+  },
+  {
+   "title": "Equipos de mataderos y cadena de frío"
+  }
+ ]
+}

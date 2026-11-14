@@ -1,0 +1,26 @@
+{
+ "summary": "El gobierno del presidente Ghazouani aprobó el 21 de octubre el presupuesto 2027 (ingresos 152.100 millones de uguiyas, gastos 145.900 millones), con un superávit de unos 155 millones de USD. Con un crecimiento del 5,0%, prioriza la región portuaria de Nuadibú (puerto de aguas profundas, 39.600 millones en 2026-2029), agua y saneamiento, la segunda fase urbana de Nuakchot y apoyo social. Las exportaciones de gas del campo GTA, compartido con Senegal, subieron un 16% en el tercer trimestre.",
+ "leader": "Presidente Mohamed Ould Cheikh El Ghazouani / Primer ministro Mokhtar Ould Djay",
+ "agenda": [
+  "Superávit 2027 (unos 155 millones de USD), crecimiento del 5,0%",
+  "Región portuaria de Nuadibú (puerto de aguas profundas)",
+  "Agua y saneamiento: 4.630 millones de uguiyas",
+  "Desarrollo urbano de Nuakchot, segunda fase: 11.590 millones",
+  "Más apoyo social (programa Aoun)",
+  "Exportaciones de gas (GTA) y hierro"
+ ],
+ "needs": [
+  "Construcción y equipos portuarios",
+  "Abastecimiento de agua y desalinización",
+  "Infraestructura urbana",
+  "Bases para el hidrógeno verde (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Puerto de aguas profundas de Nuadibú y equipos portuarios"
+  },
+  {
+   "title": "Equipos de agua y desalinización"
+  }
+ ]
+}

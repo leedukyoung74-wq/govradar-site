@@ -1,0 +1,24 @@
+{
+ "summary": "Tras la salida de Maduro por una operación estadounidense en enero de 2026, la presidenta encargada Delcy Rodríguez abre el sector petrolero y mejora las relaciones con EE. UU. Un reglamento de julio abrió la exploración, producción, transporte y venta de crudo a privados, y la producción se recuperó a unos 1,2 millones de barriles diarios en el segundo trimestre. El FMI prevé un crecimiento del 5,0% y una inflación media del 467,9% en 2026.",
+ "leader": "Presidenta encargada Delcy Rodríguez (juró el 5 de enero de 2026)",
+ "agenda": [
+  "Abrir la industria petrolera a la inversión privada y extranjera (reglamento de julio de 2026)",
+  "Recuperar la producción de crudo y aumentar las exportaciones a EE. UU.",
+  "Restablecer relaciones con el FMI y el Banco Mundial; preparar la reestructuración de la deuda",
+  "Reanudar las estadísticas oficiales (mayo de 2026)",
+  "Normalizar las relaciones con EE. UU."
+ ],
+ "needs": [
+  "Reparación de campos petroleros, refinerías y redes eléctricas envejecidas",
+  "Estabilización de la red y mantenimiento de centrales (estimación)",
+  "Reconstruir los sistemas fiscal, estadístico y del banco central (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Repuestos y equipos para reparar campos y refinerías (dentro de las licencias de sanciones)"
+  },
+  {
+   "title": "Mantenimiento de generación y redes eléctricas"
+  }
+ ]
+}

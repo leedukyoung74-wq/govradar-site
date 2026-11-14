@@ -1,0 +1,25 @@
+{
+ "summary": "Thủ tướng Roosevelt Skerrit coi 2026 là năm hoàn thành các dự án lớn: sân bay quốc tế, địa nhiệt, cáp treo và mở rộng cảng, bến du thuyền. Cải cách giáo dục, nhà ở cho người yếu thế, kinh tế biển và điểm du lịch mới cũng là ưu tiên. Chương trình quốc tịch theo đầu tư (CBI), nguồn thu lớn, sẽ có yêu cầu mới, và miễn VAT, thuế nhập khẩu cho thực phẩm thiết yếu được gia hạn.",
+ "leader": "Thủ tướng Roosevelt Skerrit (Đảng Lao động Dominica)",
+ "agenda": [
+  "Hoàn thành sân bay quốc tế",
+  "Phát triển địa nhiệt",
+  "Cáp treo, cảng và bến du thuyền",
+  "Cải cách giáo dục toàn diện",
+  "Nhà ở cho người yếu thế",
+  "Siết tiêu chuẩn CBI"
+ ],
+ "needs": [
+  "Thiết bị sân bay và cảng",
+  "Thiết bị địa nhiệt và tái tạo",
+  "Xây dựng nhà ở"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị, kỹ thuật nhà máy địa nhiệt"
+  },
+  {
+   "title": "Thiết bị sân bay và cảng"
+  }
+ ]
+}

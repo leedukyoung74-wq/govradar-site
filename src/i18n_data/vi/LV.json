@@ -1,0 +1,31 @@
+{
+ "summary": "Sau khi nội các Siliņa sụp đổ vì tranh cãi về UAV, liên minh bốn đảng của Kulbergs nhậm chức tháng 5/2026. Sau bầu cử ngày 3/10, tổng thống tiếp tục đề cử Kulbergs, người dự kiến trình nội các mới trước ngày 18/11.",
+ "leader": "Thủ tướng Andris Kulbergs (Danh sách Thống nhất, từ 28/5/2026; tiếp tục sau bầu cử tháng 10, được đề cử lại 4/11) / Tổng thống Edgars Rinkēvičs",
+ "agenda": [
+  "An ninh biên giới, kinh tế và năng lượng",
+  "Tiếp tục hỗ trợ Ukraine và các biện pháp làm suy yếu, cô lập Nga",
+  "Chiến dịch VILKATIS ở biên giới phía đông (đến 31/12/2026)",
+  "Bảo đảm vốn cho Rail Baltica và giám sát dự án chặt hơn",
+  "Siết luật nhập cư (giấy phép cư trú của công dân Nga và Belarus)"
+ ],
+ "needs": [
+  "An ninh mạng cho hệ thống điều khiển công nghiệp và thiết bị từ xa (sau các vụ tấn công)",
+  "Thi công và giám sát Rail Baltica; nâng cấp tín hiệu và điều khiển đường sắt",
+  "Thiết bị giao thông công cộng như xe buýt phát thải thấp và hệ thống cấp điện tàu điện",
+  "Giám sát biên giới và thiết bị chống UAV (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "An ninh mạng OT và điều khiển công nghiệp"
+  },
+  {
+   "title": "Cung cấp xe buýt phát thải thấp"
+  },
+  {
+   "title": "Tín hiệu đường sắt và điều độ"
+  },
+  {
+   "title": "Máy biến áp và bộ chỉnh lưu"
+  }
+ ]
+}

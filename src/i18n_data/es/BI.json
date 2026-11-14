@@ -1,0 +1,21 @@
+{
+ "summary": "El parlamento de Burundi aprobó el 13 de junio el presupuesto 2026/27 de 7,02 billones de francos burundeses (unos 2.350 millones de USD, +33,5%). Prioriza infraestructura, apoyo a sectores clave y mejores servicios públicos. La inflación fue del 20,8% en mayo, la escasez de divisas es crónica y el acceso eléctrico ronda el 26%.",
+ "leader": "Presidente Évariste Ndayishimiye",
+ "agenda": [
+  "Presupuesto 2026/27 de 7,02 billones (+33,5%)",
+  "Inversión en infraestructura",
+  "Exportaciones mineras y agrícolas (café, té, aguacate)",
+  "Base tributaria más amplia (ingresos internos 4,22 billones)",
+  "Reforma del presupuesto por programas"
+ ],
+ "needs": [
+  "Generación y redes (acceso del 26%)",
+  "Procesamiento exportador para obtener divisas",
+  "Logística vial"
+ ],
+ "biz": [
+  {
+   "title": "Pequeñas hidroeléctricas y generación solar"
+  }
+ ]
+}

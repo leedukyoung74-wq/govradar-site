@@ -1,0 +1,28 @@
+{
+ "summary": "Sans majorité au Congrès, le gouvernement Arévalo met l'accent sur la lutte anticorruption et le renforcement des institutions avant les élections générales du 27-06-2027. Un projet de budget 2027 de 192 Md de quetzals est en phase finale au Congrès, et le patronat s'oppose à la hausse de l'endettement.",
+ "leader": "Président Bernardo Arévalo (chef de l'État et du gouvernement, mandat 2024-01 à 2028-01)",
+ "agenda": [
+  "Lutte anticorruption et institutions démocratiques plus solides",
+  "Plus de dépenses d'infrastructure (13 % du budget 2027, 24,9 Md Q)",
+  "Modernisation des aéroports et de la sécurité aérienne (prêt de 250 M USD de la Banque mondiale)",
+  "Extension du réseau de transport d'électricité (appel d'offres PET-4 en préparation) et projet de guichet unique des permis",
+  "Sécurité publique et organisation des élections de 2027"
+ ],
+ "needs": [
+  "Extension du transport d'électricité et permis plus rapides (demande +6-7 %/an, infrastructures de transport +1,5 %)",
+  "Systèmes modernes de navigation aéroportuaire et de contrôle aérien",
+  "Sécurité routière et infrastructures de transport (accidents fréquents sur l'autoroute Palín-Escuintla)",
+  "Sécurité alimentaire et gestion des catastrophes dans les zones exposées au climat (sujets discutés avec la KOICA)"
+ ],
+ "biz": [
+  {
+   "title": "Systèmes de navigation, surveillance et contrôle aéroportuaires"
+  },
+  {
+   "title": "EPC et gestion de projets de lignes et postes électriques"
+  },
+  {
+   "title": "Solutions satellitaires et de données pour la prévision et l'alerte précoce des catastrophes"
+  }
+ ]
+}

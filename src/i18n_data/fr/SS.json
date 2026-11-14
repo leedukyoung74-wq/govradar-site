@@ -1,0 +1,20 @@
+{
+ "summary": "Le Soudan du Sud a repris ses exportations de pétrole via l'oléoduc soudanais, mais la crise budgétaire persiste. Les fonctionnaires ont 8 à 13 mois ou plus de salaires impayés (Banque mondiale) et l'inflation moyenne a atteint 234 % sur l'exercice 2025. Le président Kiir a fixé les premières élections générales au 22 décembre 2026, mais l'opposition proteste car le premier vice-président Machar est jugé pour trahison.",
+ "leader": "Président Salva Kiir Mayardit",
+ "agenda": [
+  "Organiser les élections du 22 déc. 2026",
+  "Reprendre les exportations de pétrole et redresser les finances",
+  "Payer les arriérés de salaires",
+  "Appliquer l'accord de paix"
+ ],
+ "needs": [
+  "Aide alimentaire et sanitaire",
+  "Infrastructures de base : routes et électricité",
+  "Gestion des finances publiques"
+ ],
+ "biz": [
+  {
+   "title": "Fournitures humanitaires via les achats des agences internationales"
+  }
+ ]
+}

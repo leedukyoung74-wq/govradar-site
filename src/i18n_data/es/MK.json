@@ -1,0 +1,24 @@
+{
+ "summary": "El proyecto de presupuesto 2027 del gobierno de Mickoski prevé un gasto de 440.400 millones de denares (unos 7.200 millones de euros, +4,8%) y un déficit del 3,5% del PIB. Destina 40.800 millones a inversión de capital, 220.800 millones a pensiones y transferencias sociales y el 2% del PIB a defensa; los proyectos de infraestructura en curso suman unos 10.000 millones de euros.",
+ "leader": "Primer ministro Hristijan Mickoski / Presidenta Gordana Siljanovska-Davkova / Ministra de Finanzas Gordana Dimitrieska-Kochoska",
+ "agenda": [
+  "Gasto 2027 de 7.200 millones de euros, déficit del 3,5%, consolidación gradual",
+  "Inversión de capital de 40.800 millones de denares",
+  "Más transferencias sociales, con pensiones un 4,8% más altas",
+  "Defensa al 2% del PIB y obligaciones con la OTAN",
+  "Avances en la adhesión a la UE"
+ ],
+ "needs": [
+  "Construcción y supervisión de corredores de autopistas y ferrocarril",
+  "Equipos para la transición energética (estimación)",
+  "Servicios públicos digitales (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Subcontratación y materiales para autopistas y carreteras"
+  },
+  {
+   "title": "Soluciones de servicios públicos digitales"
+  }
+ ]
+}

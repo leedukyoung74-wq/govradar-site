@@ -1,0 +1,25 @@
+{
+ "summary": "Dalam rapat eksekutif pertama 2026, pemerintahan Presiden Wesley Simina dan Wakil Presiden Aren Palik membahas kesiapan legislasi, kemajuan infrastruktur, anggaran, perluasan layanan pos ke pulau terluar, kemitraan internasional, dan penanganan tumpahan minyak di Chuuk. Pemerintah memajukan perencanaan ruang laut, menandatangani Rencana Investasi Pertanian Nasional, menjalankan Rencana Pembangunan Strategis 2024–2043, dan menegaskan kerja sama Compact dengan AS.",
+ "leader": "Presiden Wesley Simina",
+ "agenda": [
+  "Rencana Pembangunan Strategis 2024–2043",
+  "Perencanaan ruang laut",
+  "Rencana Investasi Pertanian Nasional",
+  "Perluasan layanan pulau terluar (pos, dll.)",
+  "Penanganan tumpahan minyak Chuuk",
+  "Kerja sama Compact dengan AS"
+ ],
+ "needs": [
+  "Infrastruktur (pelabuhan, jalan)",
+  "Pertanian dan produksi pangan",
+  "Pengelolaan lingkungan laut"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan produksi dan pengolahan pertanian"
+  },
+  {
+   "title": "Peralatan penanganan dan pemantauan pencemaran laut"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "summary": "Tháng 2/2026, Thủ tướng Jotham Napat nói 'làm như cũ không còn an toàn' và đặt chuyển đổi kinh tế, tập trung vào kinh tế, y tế và giáo dục, làm mục tiêu cốt lõi. Các mục tiêu của Kế hoạch Phát triển Bền vững Quốc gia sẽ được cụ thể hóa đến năm 2030, kỷ niệm 50 năm độc lập. 2 tỷ vatu quỹ khí hậu dành cho đường chống chịu ở Malekula (dự kiến khởi công từ 2028), và Ngân hàng Thế giới cấp khoảng 3 tỷ vatu tăng cường Bộ Thủy sản.",
+ "leader": "Thủ tướng Jotham Napat",
+ "agenda": [
+  "Chuyển đổi kinh tế (kinh tế, y tế, giáo dục)",
+  "Mục tiêu NSDP cụ thể đến 2030 (50 năm độc lập)",
+  "Đường chống chịu Malekula (2 tỷ vatu)",
+  "Năng lực Bộ Thủy sản (WB, khoảng 3 tỷ vatu)",
+  "Tận dụng nền tảng năng lượng và viễn thông"
+ ],
+ "needs": [
+  "Đường chống chịu khí hậu",
+  "Chế biến và quản lý thủy sản",
+  "Năng lượng tái tạo (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Thi công và thiết bị đường chống chịu"
+  },
+  {
+   "title": "Hệ thống quản lý, chế biến thủy sản"
+  }
+ ]
+}

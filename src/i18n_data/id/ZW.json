@@ -1,0 +1,29 @@
+{
+ "summary": "Menteri Keuangan Mthuli Ncube menargetkan pertumbuhan 3,5% pada 2027 dan defisit di bawah 3% PDB. Pendapatan melampaui belanja pada Januari-September 2026, dan anggaran mengikuti Strategi Pembangunan Nasional kedua (NDS2) dan Visi 2030 dengan fokus pada infrastruktur, perumahan, pertanian, dan transformasi digital.",
+ "leader": "Presiden Emmerson Mnangagwa (kepala negara dan pemerintahan)",
+ "agenda": [
+  "Pertumbuhan 3,5% pada 2027, defisit di bawah 3% PDB",
+  "NDS2 dan Visi 2030 (pendapatan menengah atas pada 2030)",
+  "Investasi infrastruktur, perumahan, listrik, dan transportasi",
+  "Produktivitas pertanian, ketahanan pangan, dan ketahanan iklim",
+  "Transformasi digital, sains, dan teknologi",
+  "Desentralisasi dan perlindungan sosial"
+ ],
+ "needs": [
+  "Tambahan pembangkitan dan transmisi listrik (kekurangan daya)",
+  "Jalan, transportasi, dan perumahan",
+  "Mekanisasi pertanian dan irigasi (perkiraan)",
+  "Pemerintahan digital dan sistem pajak (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Peralatan surya, pembangkit, dan jaringan"
+  },
+  {
+   "title": "Paket mesin pertanian dan irigasi"
+  },
+  {
+   "title": "Pengolahan mineral dan peralatan tambang"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "summary": "Hội đồng Bộ trưởng do Tổng thống Lourenço chủ trì đã thông qua ngân sách 2027 trị giá 37.340 tỷ kwanza ngày 27/10/2026; Quốc hội bỏ phiếu ngày 12/11. Dựa trên giá dầu 71 USD và tăng trưởng khoảng 5,5%, ngân sách ưu tiên đường sá, năng lượng, nước và giáo dục, với dư địa tài khóa hẹp trước bầu cử 2027.",
+ "leader": "Tổng thống João Lourenço (nguyên thủ quốc gia kiêm đứng đầu chính phủ)",
+ "agenda": [
+  "Ngân sách 2027 theo tinh thần 'thận trọng tài chính'",
+  "Đầu tư công vào giao thông đường bộ, năng lượng và nước",
+  "Chương trình giáo dục 'Trường tôi, Tương lai tôi'",
+  "Tăng trưởng ngoài dầu mỏ trong Kế hoạch Phát triển Quốc gia",
+  "Tiếp tục giảm lạm phát"
+ ],
+ "needs": [
+  "Xây dựng và bảo trì đường sá, hạ tầng giao thông",
+  "Mở rộng cấp điện và cấp nước",
+  "Cơ sở trường học và thiết bị giáo dục",
+  "Đa dạng hóa nguồn thu và quản lý nợ (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Thiết bị xây dựng và bảo trì đường, cầu"
+  },
+  {
+   "title": "Thiết bị và EPC điện, nước"
+  },
+  {
+   "title": "Giải pháp giáo dục số cho trường học"
+  }
+ ]
+}

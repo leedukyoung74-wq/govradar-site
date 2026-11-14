@@ -1,0 +1,32 @@
+{
+ "summary": "El gobierno minoritario de centroderecha de Montenegro presentó el presupuesto 2027, que se espera apruebe con la abstención socialista. Combina un pequeño superávit y deuda en descenso con rebajas fiscales y más gasto en defensa.",
+ "leader": "Presidente António José Seguro (en el cargo desde el 9 mar 2026); Primer ministro Luís Montenegro",
+ "agenda": [
+  "Presupuesto 2027: superávit del 0,1% del PIB, deuda bajando al 84,5%",
+  "Rebaja del impuesto de sociedades del 19% al 18% (2027) y 17% (2028); más rebajas del IRPF",
+  "Defensa al 2,15% del PIB, con fondos SAFE de la UE",
+  "Más oferta de vivienda; se mantienen la garantía de primera vivienda y exenciones para jóvenes",
+  "La inversión continúa vía Portugal 2030 y presupuesto estatal tras el fin del PRR",
+  "Programa de recuperación y resiliencia ante tormentas (PTRR)"
+ ],
+ "needs": [
+  "Financiar y ejecutar la inversión pública pendiente tras el fin del PRR",
+  "Mayores compras de equipos y mantenimiento de defensa (vinculadas al SAFE de la UE)",
+  "Tecnología constructiva y vivienda modular para ampliar la oferta (estimación)",
+  "Gobierno digital y adopción de IA (estimación)"
+ ],
+ "biz": [
+  {
+   "title": "Componentes de defensa y cooperación en mantenimiento"
+  },
+  {
+   "title": "Tecnología de construcción modular y vivienda pública"
+  },
+  {
+   "title": "Resiliencia ante desastres y refuerzo de la red en zonas afectadas por tormentas"
+  },
+  {
+   "title": "Soluciones de IA y gobierno digital"
+  }
+ ]
+}

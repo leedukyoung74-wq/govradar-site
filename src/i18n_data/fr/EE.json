@@ -1,0 +1,31 @@
+{
+ "summary": "La coalition Réforme-Eesti 200 de Michal maintient la défense au-dessus de 5 % du PIB et une ligne de baisses d'impôts avant les élections de mars 2027. L'achat du Chunmoo de Hanwha et les investissements associés ont rapidement renforcé les liens de défense avec la Corée.",
+ "leader": "Premier ministre Kristen Michal (depuis le 23 juil. 2024 ; coalition Parti de la réforme-Eesti 200)",
+ "agenda": [
+  "Défense à 5 %+ du PIB : défense aérienne, drones, guerre électronique, cyber",
+  "Maintenir l'impôt sur le revenu à 22 % et réduire la pression fiscale (36,6 % à 35,2 %)",
+  "Parcs d'industrie de défense et production locale de munitions",
+  "Financer l'achèvement de Rail Baltic d'ici 2030 et des routes à quatre voies",
+  "Accélérer le développement européen de l'IA (Tallinn Digital Summit)"
+ ],
+ "needs": [
+  "Défense aérienne, drones, guerre électronique et production de munitions",
+  "Solutions d'e-administration et de cybersécurité (grands marchés ESTDEV)",
+  "Renouvellement des équipements de radiothérapie et d'imagerie hospitalière",
+  "Infrastructures de défense civile comme la planification d'abris (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Chaîne d'approvisionnement et MRO de défense autour du Chunmoo et du K9"
+  },
+  {
+   "title": "Marchés d'e-administration et de cybersécurité"
+  },
+  {
+   "title": "Scanner de radiothérapie et imagerie médicale"
+  },
+  {
+   "title": "Partenariat de développement du portail public eesti.ee"
+  }
+ ]
+}

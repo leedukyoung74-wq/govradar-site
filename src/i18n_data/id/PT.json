@@ -1,0 +1,32 @@
+{
+ "summary": "Pemerintahan minoritas kanan-tengah Montenegro telah mengajukan anggaran 2027, yang diperkirakan lolos dengan abstainnya Partai Sosialis. Anggaran memadukan surplus kecil dan utang yang turun dengan pemotongan pajak serta kenaikan belanja pertahanan.",
+ "leader": "Presiden António José Seguro (menjabat sejak 9 Mar 2026); Perdana Menteri Luís Montenegro",
+ "agenda": [
+  "Anggaran 2027: surplus 0,1% PDB, utang turun ke 84,5%",
+  "Pajak korporasi turun dari 19% ke 18% (2027) dan 17% (2028); pemotongan pajak penghasilan lanjutan",
+  "Pertahanan 2,15% PDB, memakai dana SAFE UE",
+  "Pasokan perumahan lebih banyak; jaminan rumah pertama dan pembebasan pajak bagi pemuda dipertahankan",
+  "Investasi berlanjut lewat Portugal 2030 dan APBN setelah RRP berakhir",
+  "Program pemulihan dan ketahanan pascabadai (PTRR)"
+ ],
+ "needs": [
+  "Pendanaan dan penyelesaian investasi publik yang belum rampung setelah RRP berakhir",
+  "Pengadaan peralatan dan pemeliharaan pertahanan yang lebih besar (terkait SAFE UE)",
+  "Teknologi konstruksi dan rumah modular untuk pasokan perumahan (perkiraan)",
+  "Pemerintahan digital dan adopsi AI (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Komponen pertahanan dan kerja sama pemeliharaan"
+  },
+  {
+   "title": "Teknologi konstruksi modular dan perumahan publik"
+  },
+  {
+   "title": "Ketahanan bencana dan penguatan jaringan di wilayah terdampak badai"
+  },
+  {
+   "title": "Solusi AI dan pemerintahan digital"
+  }
+ ]
+}

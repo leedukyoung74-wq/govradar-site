@@ -1,0 +1,28 @@
+{
+ "summary": "El presupuesto 2027 del gobierno de Rama supera los 10.000 millones de euros y fija tres prioridades: bienestar, estabilidad fiscal e inversión con adhesión a la UE. Prevé inversión pública de 201.500 millones de lek (6,9% del PIB), déficit del 2,3% y deuda del 52,4%, y busca cerrar las negociaciones técnicas con la UE en diciembre de 2027.",
+ "leader": "Primer ministro Edi Rama (jefe de gobierno) / Ministro de Finanzas Petrit Malaj",
+ "agenda": [
+  "Acelerar la adhesión a la UE (negociaciones técnicas cerradas en dic 2027)",
+  "Inversión pública de 201.500 millones de lek (6,9% del PIB)",
+  "Infraestructura y energía: 75.400 millones de lek",
+  "Más bienestar, incluido el doble bono para pensionistas",
+  "Estabilidad fiscal: déficit 2,3%, deuda 52,4%",
+  "Apoyo agrícola de 5.300 millones de lek"
+ ],
+ "needs": [
+  "Diseño y construcción de carreteras e infraestructura energética",
+  "Administración digital con estándares de la UE (estimación)",
+  "Modernización y distribución agrícola"
+ ],
+ "biz": [
+  {
+   "title": "Obras públicas de infraestructura y energía"
+  },
+  {
+   "title": "Gobierno electrónico y sistemas administrativos con estándares UE"
+  },
+  {
+   "title": "Maquinaria agrícola y agricultura inteligente"
+  }
+ ]
+}

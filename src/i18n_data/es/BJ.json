@@ -1,0 +1,26 @@
+{
+ "summary": "El gobierno del presidente Wadagni aprobó el 7 de octubre un proyecto de presupuesto 2027 de 4,757 billones de francos CFA (unos 8.100 millones de USD, +14,7%). Prevé un crecimiento del 7,5% y un déficit de hasta el 2,8% del PIB, con cinco prioridades: agricultura moderna, industria, turismo, tecnología y capital humano. También adoptó un programa de acción 2026-2033.",
+ "leader": "Presidente Romuald Wadagni (jefe de Estado y de gobierno, asumió en 2026)",
+ "agenda": [
+  "Presupuesto 2027 de 8.100 millones de USD (+14,7%), crecimiento del 7,5%",
+  "Agricultura moderna y desarrollo industrial",
+  "Turismo y cultura",
+  "Tecnología y transformación digital",
+  "Educación, salud, protección social, energía y agua",
+  "Programa de acción del gobierno 2026-2033"
+ ],
+ "needs": [
+  "Equipos de agroprocesamiento",
+  "Infraestructura eléctrica y de agua",
+  "Escuelas, hospitales e infraestructura social (nueva unidad)",
+  "Seguridad en el norte"
+ ],
+ "biz": [
+  {
+   "title": "Equipos para agroprocesamiento y zonas industriales"
+  },
+  {
+   "title": "Obras y equipos de infraestructura social"
+  }
+ ]
+}

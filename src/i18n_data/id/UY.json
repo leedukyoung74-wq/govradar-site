@@ -1,0 +1,27 @@
+{
+ "summary": "UU anggaran lima tahun pemerintahan Orsi bertujuan menurunkan defisit secara bertahap, terutama lewat pendapatan, sambil memprioritaskan kemiskinan anak dan keamanan. Pertumbuhan moderat sekitar 2% dan negara ini mempertahankan peringkat layak investasi.",
+ "leader": "Presiden Yamandú Orsi (kepala negara dan pemerintahan sejak 1 Maret 2025, Frente Amplio)",
+ "agenda": [
+  "Penurunan bertahap defisit di atas 4% PDB dan penyesuaian pajak",
+  "Bantuan tunai terpadu dan lebih besar untuk memangkas kemiskinan anak 25%",
+  "Keamanan (tambahan 300 polisi di Kementerian Dalam Negeri)",
+  "Realokasi dana pendidikan",
+  "Peninjauan kontrak lama (air Arazatí, kapal patroli angkatan laut)"
+ ],
+ "needs": [
+  "Peralatan dan sistem keamanan melawan kejahatan terorganisasi (perkiraan)",
+  "Infrastruktur air seperti sumber alternatif",
+  "Digitalisasi administrasi untuk menyatukan bantuan sosial (perkiraan)"
+ ],
+ "biz": [
+  {
+   "title": "Sistem manajemen terpadu bantuan tunai sosial"
+  },
+  {
+   "title": "Analitik video dan komando-kendali kepolisian"
+  },
+  {
+   "title": "Teknologi pengolahan air dan manajemen kebocoran"
+  }
+ ]
+}

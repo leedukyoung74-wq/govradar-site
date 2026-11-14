@@ -1,0 +1,24 @@
+{
+ "summary": "Le gouvernement du président Doumbouya prévoit un déficit 2027 légèrement plus élevé, à 2,5 % du PIB, pour poursuivre les investissements dans les écoles, hôpitaux et routes. Le budget rectifié 2026 atteignait 7,7 Md USD (+5,8 %), et la Guinée cherche 200 Md USD d'investissements pour bâtir une économie au-delà des mines, en s'appuyant sur le fer de Simandou. Les recettes ont bondi d'environ 50 % en 2025.",
+ "leader": "Président Mamadi Doumbouya / Ministre des Finances et de l'Économie Mariama Ciré Sylla",
+ "agenda": [
+  "Investissements dans écoles, hôpitaux et routes (emprunt intérieur de 4 600 Md GNF)",
+  "Diversifier au-delà des mines avec Simandou (objectif 200 Md USD)",
+  "Continuer d'accroître les recettes",
+  "Études de faisabilité des projets reportés",
+  "Gérer le coût budgétaire des prix fixes du carburant"
+ ],
+ "needs": [
+  "Logistique ferroviaire, portuaire et routière",
+  "Construction d'écoles et d'hôpitaux",
+  "Plus d'électricité (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Construction et équipement d'hôpitaux et d'écoles"
+  },
+  {
+   "title": "Logistique et équipements liés aux mines"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "summary": "El presidente Touadéra logró un tercer mandato con mayoría absoluta en las elecciones presidenciales, legislativas y locales del 28 de diciembre de 2025 (las primeras municipales desde 1988). La seguridad mejoró en el oeste y el centro pero sigue mal en el noreste y sureste, y siguen llegando refugiados sudaneses. Más de 1.200 combatientes se desarmaron desde julio de 2025, mientras la misión de la ONU MINUSCA sufre falta de fondos.",
+ "leader": "Presidente Faustin-Archange Touadéra (tercer mandato)",
+ "agenda": [
+  "Desarme, desmovilización y reforma del sector de seguridad",
+  "Aplicar el acuerdo de paz de 2019 (disolver grupos armados)",
+  "Traspasar tareas de MINUSCA a instituciones nacionales",
+  "Atender a refugiados sudaneses",
+  "Consolidar el gobierno local (nuevos concejos)"
+ ],
+ "needs": [
+  "Capacidad de seguridad y administración",
+  "Infraestructura básica vial y eléctrica",
+  "Ayuda sanitaria y alimentaria"
+ ],
+ "biz": [
+  {
+   "title": "Proyectos financiados por donantes (salud, agua)"
+  }
+ ]
+}

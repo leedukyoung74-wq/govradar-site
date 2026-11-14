@@ -1,0 +1,31 @@
+{
+ "summary": "Setelah PM Ruginienė mengundurkan diri, pemimpin Sosial Demokrat Sinkevičius membentuk pemerintahan koalisi pada Juli 2026. Rancangan anggaran 2027 mempertahankan belanja pertahanan sekitar EUR 4,8 miliar (sekitar 5% PDB) sambil menaikkan pensiun, sehingga defisit melebar ke 3,8% PDB.",
+ "leader": "Perdana Menteri Mindaugas Sinkevičius (sejak 14 Jul 2026, Sosial Demokrat) / Presiden Gitanas Nausėda",
+ "agenda": [
+  "Pertahanan 5-6% PDB (2026-2030), prioritas pertahanan udara, antidrone, dan Garis Pertahanan Baltik",
+  "Bersiap menampung brigade Jerman dan membentuk divisi angkatan darat",
+  "Pensiun lebih tinggi dan kemiskinan lansia lebih rendah",
+  "Pembangunan daerah, antrean rumah sakit lebih singkat, makan gratis di SD",
+  "Menuntaskan Rail Baltica pada 2033 dan memperluas Dana Jalan Negara"
+ ],
+ "needs": [
+  "Sistem pertahanan udara dan antidrone (termasuk pertahanan udara berbasis meriam 30-40mm)",
+  "Infrastruktur militer untuk brigade Jerman dan divisi baru (perkiraan)",
+  "Kapasitas pembebasan lahan, konstruksi, dan supervisi untuk Rail Baltica",
+  "Peningkatan peralatan medis di rumah sakit daerah (banyak pengumuman TED)"
+ ],
+ "biz": [
+  {
+   "title": "Sistem pertahanan udara berbasis meriam dan antidrone Korea"
+  },
+  {
+   "title": "Tender USG dan peralatan gawat darurat"
+  },
+  {
+   "title": "Sistem manajemen lalu lintas dan e-ticketing"
+  },
+  {
+   "title": "Subkontrak dan material konstruksi Rail Baltica"
+  }
+ ]
+}

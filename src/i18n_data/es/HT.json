@@ -1,0 +1,20 @@
+{
+ "summary": "Haití no celebra elecciones desde hace más de una década; con la presidencia vacante, el primer ministro no electo Alix Didier Fils-Aimé dirige la administración. El consejo electoral fijó la primera vuelta para el 18 de julio y la segunda para el 4 de octubre. Operan una Fuerza de Supresión de Pandillas respaldada por la ONU y más de 2.000 soldados salvadoreños; el 13 de noviembre la policía recuperó el estadio nacional tras dos años.",
+ "leader": "Primer ministro Alix Didier Fils-Aimé (administración de transición no electa; presidencia vacante)",
+ "agenda": [
+  "Reprimir a las pandillas y restablecer la seguridad (GSF y tropas extranjeras)",
+  "Celebrar elecciones (primera vuelta 18 jul, segunda 4 oct; registro hasta el 20 may 2027)",
+  "Ayuda humanitaria y desplazados",
+  "Reparar carreteras, puentes e infraestructura"
+ ],
+ "needs": [
+  "Suministros humanitarios: seguridad, medicinas, alimentos",
+  "Restablecer electricidad y agua",
+  "Sistemas de gestión electoral"
+ ],
+ "biz": [
+  {
+   "title": "Suministros humanitarios mediante compras de organismos internacionales"
+  }
+ ]
+}

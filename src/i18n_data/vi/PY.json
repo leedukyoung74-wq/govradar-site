@@ -1,0 +1,28 @@
+{
+ "summary": "Sự sụp đổ của ngân hàng số ueno khiến Thượng viện phế truất Tổng thống Santiago Peña ngày 6/11/2026, và Phó Tổng thống Pedro Alliana tuyên thệ nhậm chức. Kiềm chế tác động lên các quỹ hưu trí công và thông qua ngân sách 2027 là nhiệm vụ trước mắt của chính phủ mới.",
+ "leader": "Tổng thống Pedro Alliana (kế nhiệm từ chức phó tổng thống sau khi Thượng viện phế truất Santiago Peña ngày 6/11/2026; nhiệm kỳ đến 15/8/2028)",
+ "agenda": [
+  "Xử lý ueno bank và thu hồi tiền gửi, quỹ công",
+  "Giải quyết khủng hoảng tài chính IPS và cung ứng thuốc",
+  "Quốc hội xem xét ngân sách 2027 với chi y tế cao hơn",
+  "Khôi phục ổn định và niềm tin nhà đầu tư sau thay đổi chính phủ",
+  "Chuẩn bị ứng phó El Niño và kiểm soát buôn lậu"
+ ],
+ "needs": [
+  "Tăng cường giám sát tài chính và quản lý quỹ công",
+  "Vận hành bệnh viện IPS và mua thuốc hiệu quả hơn",
+  "Thêm cơ sở y tế và cung ứng thuốc",
+  "Giám sát thực hiện công trình công trong giai đoạn chuyển tiếp (ước tính)"
+ ],
+ "biz": [
+  {
+   "title": "Tư vấn giám sát tài chính và theo dõi rủi ro ngân hàng"
+  },
+  {
+   "title": "Hệ thống thông tin bệnh viện và mua thuốc của IPS"
+  },
+  {
+   "title": "Cung cấp thiết bị y tế và dược phẩm"
+  }
+ ]
+}

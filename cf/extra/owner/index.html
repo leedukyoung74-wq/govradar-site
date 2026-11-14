@@ -1,0 +1,61 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>GOV RADAR 운영자 전체 화면</title>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+body{background:var(--bg,#f7f7f5)}main{max-width:1180px;margin:0 auto;padding:20px 16px 60px}
+h1{font-weight:700;margin:4px 0}h2{font-weight:700;margin:28px 0 10px}.cap{font-weight:300;color:#666;font-size:13px}
+.kp{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.kp div{background:#fff;border:1px solid #ddd;border-radius:10px;padding:12px}
+.kp b{display:block;font-size:26px;font-weight:700}.kp .bl b{color:#1a5fd0}.kp .rd b{color:#c62828}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14px}th,td{border-bottom:1px solid #eee;padding:7px 6px;text-align:left;vertical-align:top}
+th{font-weight:700;background:#f0f0ee;position:sticky;top:0}tr.new td:first-child{box-shadow:inset 4px 0 0 #1a5fd0}tr.hot td{color:#c62828}tr.hot td a{color:#c62828}
+.nb{font-size:11px;font-weight:700;color:#fff;background:#1a5fd0;border-radius:4px;padding:1px 6px;margin-left:4px}
+.tw{max-height:70vh;overflow:auto;border:1px solid #ddd;border-radius:10px}
+.pc{background:#fff;border:1px dashed #bbb;border-radius:10px;padding:12px;margin:10px 0}.pc.m{border:1px solid #8a5a00}
+.pc ul{margin:6px 0;padding-left:18px;font-size:13px}.ok{color:#1b7f3b}.ng{color:#c62828}
+#gate{max-width:420px;margin:12vh auto;background:#fff;border:1px solid #ddd;border-radius:12px;padding:24px}
+#gate input{width:100%;padding:10px;font-size:16px;margin:10px 0}#gate button,.btn2{padding:10px 16px;font-weight:700;border:0;border-radius:8px;background:#1d2b4f;color:#fff;cursor:pointer}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.links a{display:inline-block;margin:4px 10px 4px 0}
+</style></head><body><main>
+<div id="gate" hidden><h1>운영자 전체 화면</h1><p class="cap">대표 전용 코드를 넣으면 이 브라우저에서는 다음부터 자동으로 열립니다.</p>
+<input id="code" placeholder="운영자 코드" autocomplete="off"><button id="go">열기</button><p id="err" class="ng"></p></div>
+<div id="app" hidden></div>
+</main>
+<script>
+(function(){
+var U="https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/m/o.json";
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
+function b(s){var r=atob(s),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+async function open_(code){
+  var j=await (await fetch(U+"?t="+Date.now(),{cache:"no-store"})).json();
+  var k=await crypto.subtle.importKey("raw",new TextEncoder().encode("owner:"+code),"PBKDF2",false,["deriveKey"]);
+  var key=await crypto.subtle.deriveKey({name:"PBKDF2",salt:b(j.s),iterations:j.iter,hash:"SHA-256"},k,{name:"AES-GCM",length:256},false,["decrypt"]);
+  var p=await crypto.subtle.decrypt({name:"AES-GCM",iv:b(j.iv)},key,b(j.c));
+  return JSON.parse(new TextDecoder().decode(p));
+}
+function render(d){
+  var s=d.sum,h=[];
+  h.push('<div class="bar"><div><h1>GOV RADAR 운영자 전체 화면</h1><p class="cap">기준 '+esc(d.at)+' · 대표만 볼 수 있는 화면 · 이 브라우저에 저장됨</p></div><div><a class="btn2" href="/ko/">사이트로</a> <button class="btn2" id="out">이 브라우저에서 잠그기</button></div></div>');
+  h.push('<div class="kp"><div><b>'+s.countries+'/193</b>조사 국가</div><div><b>'+s.regions+'/23</b>자치·특별 지역</div><div><b>'+s.open+'</b>열린 입찰</div><div class="bl"><b>'+s.new+'</b>신규(7일)</div><div class="rd"><b>'+s.hot+'</b>마감 임박(D-15)</div><div><b>'+s.past+'</b>지난 입찰</div><div><b>'+s.biz+'</b>사업 기회</div></div>');
+  h.push('<h2>열린 입찰 전체 <span class="cap">파랑=신규, 빨강=D-15 이내</span></h2><div class="tw"><table><tr><th>마감</th><th>D</th><th>국가</th><th>공고</th><th>발주처</th><th>출처</th></tr>');
+  d.open.forEach(function(x){h.push('<tr class="'+(x.new?"new ":"")+(x.hot?"hot":"")+'"><td>'+x.dl+(x.new?'<span class="nb">신규</span>':'')+'</td><td>D-'+(x.d||"day")+'</td><td>'+esc(x.c)+'</td><td><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.ko)+'</a>'+(x.ko!==x.orig?'<br><span class="cap">'+esc(x.orig)+'</span>':'')+'</td><td>'+esc(x.buyer)+'</td><td class="cap">'+esc(x.src)+'</td></tr>')});
+  h.push('</table></div>');
+  h.push('<h2>⌛ 지난 입찰 · 🔁 여러 나라 반복 수요 · 📋 타당성 준비</h2>');
+  d.past.forEach(function(g){h.push('<div class="pc'+(g.multi?" m":"")+'"><b>'+esc(g.sec)+'</b> — 지난 입찰 '+g.n+'건 · '+g.countries.length+'개국'+(g.multi?' · 🔁 반복 수요':'')+'<p class="cap">'+esc(g.countries.join(", "))+'</p><details><summary>📁 지난 공고 '+g.items.length+'건</summary><ul>'+g.items.map(function(i){return '<li>📁 '+i.dl+' · '+esc(i.c)+' · '+(i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener">'+esc(i.ko)+'</a>':esc(i.ko))+'</li>'}).join("")+'</ul></details><details open><summary>📋 다음 공고 대비 타당성 준비</summary><ol>'+g.prep.map(function(p){return '<li>'+esc(p)+'</li>'}).join("")+'</ol></details></div>')});
+  h.push('<h2>업데이트가 오래된 국가 (먼저 갱신할 곳)</h2><div class="tw" style="max-height:40vh"><table><tr><th>국가</th><th>마지막 갱신</th></tr>'+d.stale.map(function(x){return '<tr><td>'+esc(x.c)+'</td><td>'+esc(x.u||"—")+'</td></tr>'}).join("")+'</table></div>');
+  h.push('<h2>자치·특별 지역</h2><p>'+d.regions.map(function(r){return (r.done?'<span class="ok">●</span> ':'<span class="cap">○</span> ')+esc(r.ko)+' <span class="cap">('+esc(r.p)+')</span>'}).join(" · ")+'</p>');
+  h.push('<h2>자동 작업 상태</h2><table><tr><th>작업</th><th>상태</th></tr>'+d.tasks.map(function(t){return '<tr><td>'+esc(t.n)+'</td><td class="'+(t.s==="정상"?"ok":"ng")+'">'+(t.on?"켜짐":"꺼짐")+' · '+esc(t.s)+'</td></tr>'}).join("")+'</table>');
+  h.push('<h2>바로가기</h2><p class="links"><a href="/ko/mdb/">입찰·마감 보드</a><a href="/ko/mdb/#past">지난 입찰·타당성</a><a href="/ko/">홈</a><a href="/pay/">결제(준비 중)</a><a href="https://dash.cloudflare.com/" target="_blank" rel="noopener">Cloudflare</a><a href="https://app.netlify.com/projects/wmm-govradar/forms" target="_blank" rel="noopener">신청서(Netlify)</a><a href="https://github.com/leedukyoung74-wq/govradar-site" target="_blank" rel="noopener">GitHub</a></p>');
+  var a=document.getElementById("app");a.innerHTML=h.join("");a.hidden=false;
+  document.getElementById("out").onclick=function(){ls("gv_owner",null);location.reload()};
+}
+async function start(code){
+  try{var d=await open_(code);ls("gv_owner",code);ls("gv_code",code);document.getElementById("gate").hidden=true;render(d);if(location.hash)history.replaceState(null,"",location.pathname)}
+  catch(e){document.getElementById("gate").hidden=false;document.getElementById("err").textContent="코드가 맞지 않거나 자료를 불러오지 못했습니다."}
+}
+var c=(location.hash||"").slice(1)||ls("gv_owner");
+document.getElementById("go").onclick=function(){start(document.getElementById("code").value.trim().toUpperCase())};
+if(c)start(c);else document.getElementById("gate").hidden=false;
+})();
+</script></body></html>

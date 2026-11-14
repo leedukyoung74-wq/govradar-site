@@ -1,0 +1,32 @@
+{
+ "summary": "Le gouvernement minoritaire de centre droit de Montenegro a déposé le budget 2027, qui devrait passer grâce à l'abstention des socialistes. Il associe un léger excédent et une dette en baisse à des baisses d'impôts et à des dépenses de défense accrues.",
+ "leader": "Président António José Seguro (en fonction depuis le 9 mars 2026) ; Premier ministre Luís Montenegro",
+ "agenda": [
+  "Budget 2027 : excédent de 0,1 % du PIB, dette ramenée à 84,5 %",
+  "Baisse de l'IS de 19 % à 18 % (2027) puis 17 % (2028) ; nouvelles baisses de l'impôt sur le revenu",
+  "Défense à 2,15 % du PIB, avec les fonds SAFE de l'UE",
+  "Plus d'offre de logements ; maintien de la garantie premier logement et des exonérations pour les jeunes",
+  "L'investissement se poursuit via Portugal 2030 et le budget de l'État après la fin du PRR",
+  "Programme de relèvement et de résilience après les tempêtes (PTRR)"
+ ],
+ "needs": [
+  "Financer et réaliser les investissements publics inachevés après la fin du PRR",
+  "Achats accrus d'équipements et de maintenance de défense (liés au SAFE de l'UE)",
+  "Technologies de construction et logement modulaire pour l'offre de logements (estimation)",
+  "Administration numérique et adoption de l'IA (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Composants de défense et coopération en maintenance"
+  },
+  {
+   "title": "Technologies de construction modulaire et logement public"
+  },
+  {
+   "title": "Résilience aux catastrophes et renforcement du réseau dans les zones touchées par les tempêtes"
+  },
+  {
+   "title": "Solutions d'IA et d'administration numérique"
+  }
+ ]
+}

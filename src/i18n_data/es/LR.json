@@ -1,0 +1,25 @@
+{
+ "summary": "El presidente Boakai presentó el 6 de noviembre al Legislativo un proyecto de presupuesto 2027 de 1.538 millones de USD (+27%). Bajo el lema de acelerar la Agenda ARREST para el Desarrollo Inclusivo, aumenta salud, educación, protección social, juventud, inversión pública e infraestructura.",
+ "leader": "Presidente Joseph Boakai (jefe de Estado y de gobierno)",
+ "agenda": [
+  "Presupuesto 2027 de 1.538 millones (+27%)",
+  "Acelerar la Agenda ARREST (agricultura, carreteras, Estado de derecho, educación, saneamiento, turismo)",
+  "Más salud, educación y protección social",
+  "Empoderamiento juvenil y de mujeres",
+  "Programas de inversión pública"
+ ],
+ "needs": [
+  "Pavimentación y mantenimiento vial",
+  "Más suministro eléctrico",
+  "Hospitales y escuelas",
+  "Producción agrícola"
+ ],
+ "biz": [
+  {
+   "title": "Obras viales e infraestructura"
+  },
+  {
+   "title": "Equipos para hospitales y escuelas"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "summary": "Haïti n'a pas organisé d'élections depuis plus de dix ans ; en l'absence de président, le Premier ministre non élu Alix Didier Fils-Aimé dirige l'administration. Le conseil électoral a fixé le premier tour au 18 juillet et le second au 4 octobre. Une Force de répression des gangs soutenue par l'ONU et plus de 2 000 soldats salvadoriens sont déployés ; la police a repris le stade national le 13 novembre après deux ans.",
+ "leader": "Premier ministre Alix Didier Fils-Aimé (administration de transition non élue ; présidence vacante)",
+ "agenda": [
+  "Réprimer les gangs et rétablir la sécurité (GSF et troupes étrangères)",
+  "Organiser les élections (1er tour 18 juil., 2nd tour 4 oct. ; inscription jusqu'au 20 mai 2027)",
+  "Aide humanitaire et déplacés",
+  "Réparer routes, ponts et infrastructures"
+ ],
+ "needs": [
+  "Fournitures humanitaires : sécurité, soins, alimentation",
+  "Rétablir l'électricité et l'eau",
+  "Systèmes de gestion électorale"
+ ],
+ "biz": [
+  {
+   "title": "Fournitures humanitaires via les achats des agences internationales"
+  }
+ ]
+}

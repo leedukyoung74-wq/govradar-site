@@ -1,0 +1,31 @@
+{
+ "summary": "Contrat civil a obtenu la majorité avec 49,8 % aux élections de juin 2026 et Pachinian a entamé un troisième mandat. Le projet de budget 2027 prévoit 4 072 milliards de drams de dépenses, le secteur social en étant le premier poste.",
+ "leader": "Premier ministre Nikol Pachinian (chef du gouvernement, reconduit le 2 août 2026) / Président Vahagn Khatchatourian (chef de l'État)",
+ "agenda": [
+  "Consolider la paix avec l'Azerbaïdjan",
+  "Réduire la dépendance à la Russie et diversifier les partenaires",
+  "Normaliser les relations avec la Turquie",
+  "Hausse des dépenses de protection sociale et de retraites",
+  "Croissance prévue de 5,8 % en 2027"
+ ],
+ "needs": [
+  "Administration plus efficace de la sécurité sociale et des retraites (estimation)",
+  "Gestion des services de santé fondés sur l'assurance",
+  "Coopération sur les corridors de transport et de logistique (discussions avec le Kazakhstan et la BAsD)",
+  "Sécurité aérienne et capacités opérationnelles (discussions avec l'OACI) (estimation)"
+ ],
+ "biz": [
+  {
+   "title": "Automatisation par IA de la gestion des prestations et retraites"
+  },
+  {
+   "title": "Plateforme de données pour les demandes et contrôles d'assurance santé"
+  },
+  {
+   "title": "Conseil sur les projets financés par la BAsD"
+  },
+  {
+   "title": "Appui PMO aux corridors de transport et de logistique"
+  }
+ ]
+}

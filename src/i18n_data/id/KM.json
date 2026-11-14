@@ -1,0 +1,20 @@
+{
+ "summary": "Pemerintahan Presiden Azali Assoumani menaikkan harga solar 46% dan bensin 35% pada 9 Mei setelah harga minyak melonjak akibat perang Iran 2026, lalu menangguhkan kenaikan pada 16 Mei setelah protes yang menelan korban (satu sumber). Lewat rencana 'Komoro Berkembang 2030', pemerintah mendorong infrastruktur, pariwisata, dan ekonomi biru.",
+ "leader": "Presiden Azali Assoumani (kepala negara dan pemerintahan)",
+ "agenda": [
+  "Rencana 'Komoro Berkembang 2030'",
+  "Stabilitas harga BBM dan penghidupan",
+  "Infrastruktur listrik dan pelabuhan",
+  "Pariwisata dan ekonomi biru (perikanan)"
+ ],
+ "needs": [
+  "Pembangkit dan efisiensi BBM",
+  "Pelabuhan dan jalan",
+  "Pengolahan ikan"
+ ],
+ "biz": [
+  {
+   "title": "Surya dan pembangkit skala kecil"
+  }
+ ]
+}

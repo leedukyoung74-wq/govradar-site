@@ -1,0 +1,24 @@
+{
+ "summary": "El gobierno del capitán Traoré aprobó el 8 de octubre un proyecto de presupuesto 2027 con ingresos de 4,2 billones de francos CFA y gastos de 4,8 billones (unos 8.200 millones de USD, +22,5%). En línea con el plan nacional 2026-2030 'RELANCE', prioriza agricultura, industrialización, defensa y servicios sociales básicos. La previsión de crecimiento 2026 subió al 6%.",
+ "leader": "Capitán Ibrahim Traoré (presidente de transición) / Primer ministro Rimtalba Jean Emmanuel Ouédraogo",
+ "agenda": [
+  "Gasto 2027 de 4,8 billones de francos CFA (+22,5%)",
+  "Agricultura e industrialización agroalimentaria",
+  "Defensa y seguridad",
+  "Servicios sociales básicos (salud, educación, agua)",
+  "Plan Nacional de Desarrollo 2026-2030 (Plan RELANCE)"
+ ],
+ "needs": [
+  "Maquinaria agrícola, riego y procesamiento",
+  "Suministro eléctrico solar y otros (estimación)",
+  "Instalaciones de salud y agua"
+ ],
+ "biz": [
+  {
+   "title": "Maquinaria agrícola y equipos de procesamiento"
+  },
+  {
+   "title": "Solar y minirredes"
+  }
+ ]
+}
