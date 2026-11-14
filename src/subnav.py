@@ -21,7 +21,7 @@ LBL = {
  "hazards":   {"ko":"재난 지도","en":"Hazard map","es":"Mapa de riesgos","fr":"Carte des risques","ar":"خريطة المخاطر","vi":"Bản đồ thảm họa","id":"Peta bahaya"},
  "ready":     {"ko":"재난 대비","en":"Preparedness","es":"Preparación","fr":"Préparation","ar":"الاستعداد","vi":"Phòng chống thiên tai","id":"Kesiapsiagaan"},
  "prepare":   {"ko":"비축 키트","en":"Stockpile kit","es":"Kit de reservas","fr":"Kit de réserves","ar":"حقيبة الطوارئ","vi":"Túi dự phòng khẩn cấp","id":"Kit persediaan"},
- "signals":   {"ko":"표지·풍자","en":"","es":"","fr":"","ar":"","vi":"","id":""},
+ "signals":   {"ko":"표지·풍자","en":"Covers & satire","es":"Portadas y sátira","fr":"Couvertures et satire","ar":"الأغلفة والسخرية","vi":"Bìa báo & châm biếm","id":"Sampul & satire"},
  "pricing":   {"ko":"요금·회원","en":"Pricing","es":"Precios","fr":"Tarifs","ar":"الأسعار","vi":"Bảng giá","id":"Harga"},
  "member":    {"ko":"회원 자료","en":"Member area","es":"Área de socios","fr":"Espace membre","ar":"منطقة الأعضاء","vi":"Khu thành viên","id":"Area anggota"},
  "account":   {"ko":"내 계정","en":"My account","es":"Mi cuenta","fr":"Mon compte","ar":"حسابي","vi":"Tài khoản","id":"Akun saya"},
@@ -44,7 +44,7 @@ def href(L, k):
     if k == "map": return f"/{L}/#map"
     if k == "list": return f"/{L}/#gwrap"
     if k == "hazards": return "/hazards/" if L == "ko" else f"/hazards/?l={L}"
-    if k == "signals": return "/signals/"
+    if k == "signals": return "/signals/" if L == "ko" else f"/signals/{L}/"
     if k == "legal": return f"/{L}/legal/terms/"
     return f"/{L}/{k}/"
 
@@ -65,7 +65,7 @@ def gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU):
     data = {"nav": {}, "sub": {}, "lang": LANG_NAME, "short": LANG_SHORT,
             "login": {L: AT[L]["login"] for L in LANG_NAME}, "menu": MENU}
     for L in LANG_NAME:
-        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else "/signals/" if p == "@signals" else f"/{L}/{p}", lbl, p] for p, lbl in NAV[L]]
+        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else f"/signals/{L}/") if p == "@signals" else f"/{L}/{p}", lbl, p] for p, lbl in NAV[L]]
         data["sub"][L] = {g: [[k, h, t] for k, h, t in items(L, g)] for g in GROUPS}
     css = r"""
 .gvh,.gvh *{box-sizing:border-box}
@@ -88,6 +88,7 @@ def gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU):
 @media (max-width:1020px){.gvh .glinks{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;background:var(--gb);border-bottom:1px solid var(--gl);padding:8px 16px 16px;box-shadow:0 18px 30px rgba(0,0,0,.18)}
  .gvh .glinks.open{display:flex}.gvh .glinks a{font-size:16px;padding:13px 6px;border-bottom:1px solid var(--gl);border-radius:0;color:var(--gi)}
  .gvh .gbur{display:flex}.gvh select{max-width:96px}.gvh .gr{margin-left:auto}}
+@media (max-width:480px){.gvh .gtop .gin{gap:8px}.gvh .gbrand img{width:92px;height:34px}.gvh select{max-width:78px;padding:6px 4px}.gvh .glog{padding:6px 8px;font-size:12px}.gvh .gr{gap:6px}}
 """
     js = r"""(function(){var D=__DATA__;
 var s=document.currentScript,L=s.getAttribute("data-l")||"ko";if(L==="auto")L=new URLSearchParams(location.search).get("l")||"ko";var G=s.getAttribute("data-g")||"world",A=s.getAttribute("data-a")||"";
@@ -105,7 +106,7 @@ var b=document.getElementById("gvhb"),n=document.getElementById("gvhl");b.onclic
 __SPY__"""
     return js.replace("__SPY__", SPYJS).replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__CSS__", json.dumps(css)).replace("__SUBCSS__", json.dumps(SUBCSS))
 
-SPYJS = '(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var box=n.querySelector(".in")||n,A=[].slice.call(n.querySelectorAll(\'a[href^="#"]\'));if(!A.length)return;\nvar S=A.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)))}),cur=-1,lock=0,vis={};\nfunction mark(k){if(k===cur)return;cur=k;A.forEach(function(a,i){if(i===k)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")});var a=A[k];if(a){var l=a.offsetLeft-(box.clientWidth-a.offsetWidth)/2;box.scrollTo({left:Math.max(0,l),behavior:"smooth"})}}\nA.forEach(function(a,i){a.addEventListener("click",function(ev){var s=S[i];if(!s||s.offsetParent===null)return;ev.preventDefault();lock=Date.now()+900;mark(i);var y=s.getBoundingClientRect().top+scrollY-118;scrollTo({top:y,behavior:"smooth"});try{history.replaceState(null,"",a.getAttribute("href"))}catch(e){}})});\nif(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[S.indexOf(e.target)]=e.isIntersecting});if(Date.now()<lock)return;var k=-1;for(var i=0;i<S.length;i++)if(vis[i]){k=i;break}if(k<0){var y=scrollY+130;S.forEach(function(s,i){if(s&&s.getBoundingClientRect().top+scrollY<=y)k=i})}if(k>=0)mark(k)},{rootMargin:"-118px 0px -55% 0px"});S.forEach(function(s){if(s)io.observe(s)});}\nif(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();'
+SPYJS = '(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var box=n.querySelector(".in")||n,A=[].slice.call(n.querySelectorAll(\'a[href^="#"]\'));if(!A.length)return;\nvar S=A.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)))}),cur=-1,lock=0,vis={};\nfunction mark(k){if(k===cur)return;cur=k;A.forEach(function(a,i){if(i===k)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")});var a=A[k];if(a){var l=a.offsetLeft-(box.clientWidth-a.offsetWidth)/2;box.scrollTo({left:Math.max(0,l),behavior:"smooth"})}}\nA.forEach(function(a,i){a.addEventListener("click",function(ev){var s=S[i];if(!s||s.offsetParent===null)return;ev.preventDefault();lock=Date.now()+900;mark(i);var y=s.getBoundingClientRect().top+scrollY-118;scrollTo({top:y,behavior:"smooth"});try{history.replaceState(null,"",a.getAttribute("href"))}catch(e){}})});\nif(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[S.indexOf(e.target)]=e.isIntersecting});if(Date.now()<lock)return;var k=-1;for(var i=0;i<S.length;i++)if(vis[i]){k=i;break}if(k<0){var y=scrollY+130;S.forEach(function(s,i){if(s&&s.offsetParent!==null&&s.getBoundingClientRect().top+scrollY<=y)k=i})}if(k>=0)mark(k)},{rootMargin:"-118px 0px -55% 0px"});S.forEach(function(s){if(s)io.observe(s)});}\nif(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();'
 SUBCSS = """.subnav{position:sticky;top:60px;z-index:19;background:#0b0b0b;border-bottom:1px solid #2a2a28}
 .subnav .in{display:flex;gap:4px;height:44px;align-items:center;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
 .subnav .in::-webkit-scrollbar{display:none}
