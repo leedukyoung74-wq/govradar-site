@@ -260,6 +260,30 @@ window.gvLang = function (sel) {
     asteroid: '<svg viewBox="0 0 160 100">' + Array.apply(null, Array(18)).map(function (_, i) { return '<circle class="st" r="' + (i % 3 ? .6 : 1) + '" cx="' + ((i * 37) % 160) + '" cy="' + ((i * 23) % 100) + '" style="animation-delay:' + (i % 6) * .4 + 's"/>'; }).join("") + '<g class="co-move"><path class="co-tail" d="M0 0 L-70 -26 L-66 -18 Z"/><circle class="co-head" r="4"/></g><circle class="earth" cx="128" cy="78" r="16"/></svg>'
   };
   FX.tsunami += ""; FX.war = '<i class="qk-r"></i><i class="qk-r r2"></i>';
+  /* official agency feed (no AI) + delay notice: each source shows its own last success time */
+  var OT = { ko: ["공식 기관 발표 원문", "기관이 직접 낸 경보·발표를 자동으로 모았습니다. 번역·요약하지 않은 원문입니다.", "요약 갱신 지연", "아래 요약은 {d} 기준입니다. 최신 경보는 공식 기관 원문을 확인하세요.", "마지막 수집", "수집 지연", "우주 날씨"],
+    en: ["Official agency feeds", "Alerts and notices collected automatically from the agencies themselves, unedited.", "Summary update delayed", "The summary below is as of {d}. Check the official feeds for the latest alerts.", "Last collected", "Delayed", "Space weather"],
+    es: ["Avisos oficiales de las agencias", "Alertas recogidas automáticamente de las propias agencias, sin editar.", "Resumen con retraso", "El resumen es del {d}. Consulte los avisos oficiales para lo más reciente.", "Última recogida", "Con retraso", "Clima espacial"],
+    fr: ["Flux officiels des agences", "Alertes collectées automatiquement auprès des agences, sans modification.", "Mise à jour du résumé retardée", "Le résumé date du {d}. Consultez les flux officiels pour les dernières alertes.", "Dernière collecte", "En retard", "Météo spatiale"],
+    ar: ["النشرات الرسمية للجهات", "تنبيهات تُجمع تلقائيًا من الجهات نفسها دون تعديل.", "تأخر تحديث الملخص", "الملخص بتاريخ {d}. راجع النشرات الرسمية لأحدث التنبيهات.", "آخر جمع", "متأخر", "طقس الفضاء"],
+    vi: ["Bản tin chính thức của các cơ quan", "Cảnh báo được thu thập tự động từ chính các cơ quan, không chỉnh sửa.", "Bản tóm tắt cập nhật chậm", "Bản tóm tắt tính đến {d}. Xem bản tin chính thức để biết cảnh báo mới nhất.", "Thu thập lần cuối", "Chậm", "Thời tiết không gian"],
+    id: ["Umpan resmi lembaga", "Peringatan dikumpulkan otomatis dari lembaga itu sendiri, tanpa diubah.", "Pembaruan ringkasan tertunda", "Ringkasan per {d}. Periksa umpan resmi untuk peringatan terbaru.", "Terakhir dikumpulkan", "Tertunda", "Cuaca antariksa"] };
+  function offBoard(b, d, home) {
+    var o = OT[L] || OT.en, body = b.querySelector(".lb-body");
+    var ck = new Date((d.checked || d.updated || "").replace("T", " ").replace(/-/g, "/") + " GMT+0900");
+    if (!isNaN(ck) && (Date.now() - ck) > 36 * 3600 * 1000) body.insertAdjacentHTML("afterbegin", '<p class="lb-stale"><b>⏳ ' + o[2] + "</b> · " + esc(o[3].replace("{d}", (d.checked || d.updated || "").slice(0, 10))) + "</p>");
+    if (home) return;
+    fetch(RAW + "official.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (f) {
+      var S = { usgs: "USGS", gdacs: "GDACS", eonet: "NASA EONET", who: "WHO", cneos: "NASA JPL" }, rows = "";
+      Object.keys(S).forEach(function (k) {
+        var st = f.sources[k] || {}, it = (f.items[k] || []).slice(0, 6); if (!it.length && st.ok) return;
+        rows += '<div class="lb-card"><p><b>' + S[k] + '</b> <small class="note">' + (st.ok ? o[4] + " " + esc((st.last_ok || "").replace("T", " ")) : "⏳ " + o[5] + " · " + o[4] + " " + esc((st.last_ok || "—").replace("T", " "))) + "</small></p><ul>" +
+          it.map(function (x) { return "<li>" + (x.lvl ? '<span class="lv ' + (x.lvl === "red" ? "war" : "watch") + '">' + x.lvl.toUpperCase() + "</span> " : "") + (x.iso ? flag(x.iso) + " " : "") + (x.url ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.t) + "</a>" : esc(x.t)) + ' <small class="note">' + esc(x.date || "") + "</small></li>"; }).join("") + "</ul></div>";
+      });
+      if (f.space) rows += '<div class="lb-card"><p><b>NOAA SWPC</b> <small class="note">' + o[6] + '</small></p><p><a href="' + esc(f.space.url) + '" target="_blank" rel="noopener">' + esc(f.space.r + " · " + f.space.s + " · " + f.space.g) + "</a></p></div>";
+      body.insertAdjacentHTML("beforeend", '<h3 id="official">' + o[0] + '</h3><p class="note">' + o[1] + '</p><div class="lb-grid">' + rows + "</div>");
+    }).catch(function () {});
+  }
   function hzCard(x, cn, label, home) {
     var k = x.kind, map = x.iso ? '<div class="hotmap hzmap" data-focus="' + esc(x.iso) + '" data-hl="' + esc(x.iso) + '" data-pts="[]"></div>' : '<div class="hzmap space"></div>';
     return '<div class="lb-hz hz-' + k + '"><div class="hz-vis">' + map + '<div class="hzfx">' + (FX[k] || FX.quake) + '</div><span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (window.__gvT && window.__gvT.ne || "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
@@ -299,6 +323,7 @@ window.gvLang = function (sel) {
               ["conflict", "disaster", "epidemic"].filter(function (k) { return c[k]; }).map(function (k) { return (ko ? c[k].ko : (c[k].en.length ? c[k].en : c[k].ko)).map(function (s) { return "<li><small class=\"note\">" + t.c[k] + "</small> " + esc(ko ? s : tr(s)) + "</li>"; }).join(""); }).join("") + "</ul></div>";
           }).join("") + "</div>";
         b.querySelector(".lb-body").innerHTML = h;
+        offBoard(b, d, home);
         var draw = function () { b.querySelectorAll(".hzmap:not(.space)").forEach(function (m) { if (window.gvHotmap) window.gvHotmap(m); }); };
         if (window.jsVectorMap) draw(); else window.addEventListener("load", draw);
       });
