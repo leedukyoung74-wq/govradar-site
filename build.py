@@ -156,9 +156,16 @@ FONTLINK = {
  "vi": "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap",
 }
 # en/es/fr/id use the house font (WMM Nexon) only; vi/ar keep a fallback for glyphs Nexon lacks
+from subnav import subnav as _subnav, gvhdr_js as _gvhdr_js, SUBCSS as _SUBCSS, group_of as _group_of
 def navhtml(L):
     items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l=en"}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/signals/">{e(lbl)}</a>' if p == "@signals" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
     return items
+def navhtml_act(L, path):
+    g, _ = _group_of(path)
+    key = {"biz": "mdb/", "go": "solutions/", "world": "conflict/", "member": "pricing/", "map": "#map"}[g]
+    seg = (path.strip("/").split("/") + ["", ""])[1]
+    if seg in ("ready", "prepare"): key = "ready/"
+    return navhtml(L).replace(f'href="/{L}/{key}"', f'href="/{L}/{key}" aria-current="page"', 1)
 def head(L, title, desc, path, alt_paths, extra=""):
     t = T[L]
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{p}">' for l, p in alt_paths.items())
@@ -176,11 +183,11 @@ def head(L, title, desc, path, alt_paths, extra=""):
 {extra}</head><body>
 <header class="nav"><div class="in">
 <a class="brand" href="/{L}/"><img src="/assets/logo-h.webp" alt="GOV RADAR" width="132" height="44"></a>
-<nav class="links" id="navlinks">{navhtml(L)}</nav>
+<nav class="links" id="navlinks">{navhtml_act(L, path)}</nav>
 <div class="navr"><label class="langw"><span class="lcode">{LANG_SHORT[L]}</span><select class="langsel" aria-label="{e(t['lang'])}" onchange="gvLang(this)">{''.join(f'<option value="{e(p)}" data-l="{l}" {"selected" if l==L else ""}>{LANG_NAME[l]}</option>' for l,p in alt_paths.items())}</select></label>
 <button class="btn sm" id="loginbtn">{e(AT[L]['login'])}</button>
 <button class="burger" id="burger" aria-label="{e(MENU[L])}" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button></div>
-</div></header>{prepbar(L) if path.endswith("/prepare/") else ""}<main>"""
+</div></header>{_subnav(L, path)}{prepbar(L) if path.endswith("/prepare/") else ""}<main>"""
 
 def prepbar(L):
     lk = "ko" if L == "ko" else "en"
@@ -858,6 +865,7 @@ def build():
     W("/data/regions.json", json.dumps([{"code": x["iso"], "parent": x["parent"], "type": x["type"], "slug": BY[x["iso"]]["slug"], "done": done(x["iso"]), "ko": x["ko"], "en": x["en"]} for x in REGS], ensure_ascii=False))
     hz = os.path.join(ROOT, "export", "hazards.json")
     W("/data/hazards.json", open(hz, encoding="utf8").read() if os.path.exists(hz) else "{}")
+    W("/assets/gvhdr.js", _gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU))
     oi = []
     for iso, d in DATA.items():
         if not done(iso): continue

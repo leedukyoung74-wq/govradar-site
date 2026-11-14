@@ -260,11 +260,7 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 </style>
 </head>
 <body>
-<header class="top"><div class="in">
-<a id="home" href="/ko/"><img src="logo-h.webp" alt="GOV RADAR"></a>
-<nav><a href="#years" data-i="nav1"></a><a href="#map" data-i="nav2"></a><a href="#types" data-i="nav4"></a><a href="#apophis" data-i="nav3"></a></nav>
-<button class="lang" id="lang">English</button>
-</div></header>
+<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/hazards/":"/hazards/?l="+l};</script><script src="/assets/gvhdr.js" data-l="auto" data-g="world" data-a="hazards"></script>
 
 <main>
 <div class="hero"><div class="in">
@@ -591,9 +587,9 @@ function apo(){
 function render(){
  document.documentElement.lang=lang;document.title=lang==='ko'?'GOV RADAR 재난 한눈에 보기':'GOV RADAR Disaster Overview';
  document.querySelectorAll('[data-i]').forEach(function(el){el.innerHTML=tr(el.dataset.i).replace('{d}',D.snap).replace('{u}',HZ.upd)});
- document.getElementById('lang').textContent=lang==='ko'?'English':'한국어';document.getElementById('home').href=lang==='ko'?'/ko/':'/en/';try{history.replaceState(null,'',lang==='ko'?location.pathname:location.pathname+'?l=en')}catch(e){}
+ var _lb=document.getElementById('lang');if(_lb)_lb.textContent=lang==='ko'?'English':'한국어';var _hm=document.getElementById('home');if(_hm)_hm.href=lang==='ko'?'/ko/':'/en/';
  kpis();legend();ychart();heat();csel();wmap();hzGallery();apo();if(sel)openC(sel)}
-document.getElementById('lang').onclick=function(){lang=lang==='ko'?'en':'ko';render()};
+if(document.getElementById('lang'))document.getElementById('lang').onclick=function(){lang=lang==='ko'?'en':'ko';render()};
 var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(ychart,200)});
 addEventListener('scroll',hideTip,{passive:true});
 bgWorld();render();
