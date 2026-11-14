@@ -186,8 +186,18 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [Venezuela](https://radar.wmm-hoa.com/en/venezuela/): After Maduro was removed by a US operation in January 2026, Acting President Delcy Rodríguez is opening the oil sector and improving ties with the US. A July re
 - [Australia](https://radar.wmm-hoa.com/en/australia/): In its second term, the Albanese Labor government is focused on housing supply, cost-of-living relief and fuel security. The 2026-27 Budget reforms tax settings
 - [Fiji](https://radar.wmm-hoa.com/en/fiji/): Fiji holds a national referendum on 9 December 2026, with the general election expected between late December 2026 and early February 2027. It hosted Pre-COP31 
+- [Kiribati](https://radar.wmm-hoa.com/en/kiribati/): President Taneti Maamau's 2026 budget, themed 'Vision to Value – Advancing Development Through Action', builds on the Kiribati Development Plan 2024–2027 and th
+- [Marshall Islands](https://radar.wmm-hoa.com/en/marshall-islands/): President Hilda Heine declared a 90-day state of economic emergency on 26 March 2026 as Middle East conflict drove up fuel and consumer prices. Measures include
+- [Micronesia](https://radar.wmm-hoa.com/en/micronesia/): At its first executive meeting of 2026, President Wesley Simina and Vice President Aren Palik's administration discussed legislative readiness, infrastructure p
+- [Nauru](https://radar.wmm-hoa.com/en/nauru/): President David Adeang aims to cut aid dependence and drive growth on four pillars: economic diversification, social development, infrastructure and climate res
 - [New Zealand](https://radar.wmm-hoa.com/en/new-zealand/): The Luxon coalition is concentrating a tight budget on health, infrastructure and vocational training, with the 7 November 2026 election the key uncertainty. A 
+- [Palau](https://radar.wmm-hoa.com/en/palau/): In his 23 July 2026 State of the Republic address, President Surangel Whipps Jr. stressed recovery from the pandemic under the motto 'discipline over denial, re
 - [Papua New Guinea](https://radar.wmm-hoa.com/en/papua-new-guinea/): A 2026 supplementary budget redirects funds to fuel price relief, El Niño response and 2027 election preparations, with a balanced budget targeted for 2027. The
+- [Samoa](https://radar.wmm-hoa.com/en/samoa/): The FAST party won the August 2025 snap election and La'auli Leuatea Schmidt became prime minister. The 2025/26 budget of ST$1.24 billion projects a deficit of 
+- [Solomon Islands](https://radar.wmm-hoa.com/en/solomon-islands/): Prime Minister Jeremiah Manele's Government of National Unity and Transformation (GNUT) passed a SBD$5.6 billion budget for 2026. He called 2026 a year of imple
+- [Tonga](https://radar.wmm-hoa.com/en/tonga/): Prime Minister Lord Fakafanua, who took office after the November 2025 election and also acts as finance minister, passed a T$949.4 million 2026/27 budget brand
+- [Tuvalu](https://radar.wmm-hoa.com/en/tuvalu/): Prime Minister Feleti Teo welcomed a UN General Assembly declaration affirming that statehood and maritime boundaries continue despite sea-level rise, but stres
+- [Vanuatu](https://radar.wmm-hoa.com/en/vanuatu/): In February 2026 Prime Minister Jotham Napat said 'business as usual is no longer safe' and set economic transformation, centred on the economy, health and educ
 
 ## Autonomous & special regions
 - [Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)](https://radar.wmm-hoa.com/en/philippines/bangsamoro-autonomous-region-in-muslim-mindanao/) — Philippines: The Muslim autonomous region of Mindanao, Philippines. It held its first parliamentary election in September 2026, and the parliament seated on 30 October chose
@@ -396,5 +406,15 @@ Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME
 - [베네수엘라](https://radar.wmm-hoa.com/ko/venezuela/)
 - [호주](https://radar.wmm-hoa.com/ko/australia/)
 - [피지](https://radar.wmm-hoa.com/ko/fiji/)
+- [키리바시](https://radar.wmm-hoa.com/ko/kiribati/)
+- [마셜 제도](https://radar.wmm-hoa.com/ko/marshall-islands/)
+- [미크로네시아](https://radar.wmm-hoa.com/ko/micronesia/)
+- [나우루](https://radar.wmm-hoa.com/ko/nauru/)
 - [뉴질랜드](https://radar.wmm-hoa.com/ko/new-zealand/)
+- [팔라우](https://radar.wmm-hoa.com/ko/palau/)
 - [파푸아뉴기니](https://radar.wmm-hoa.com/ko/papua-new-guinea/)
+- [사모아](https://radar.wmm-hoa.com/ko/samoa/)
+- [솔로몬 제도](https://radar.wmm-hoa.com/ko/solomon-islands/)
+- [통가](https://radar.wmm-hoa.com/ko/tonga/)
+- [투발루](https://radar.wmm-hoa.com/ko/tuvalu/)
+- [바누아투](https://radar.wmm-hoa.com/ko/vanuatu/)
