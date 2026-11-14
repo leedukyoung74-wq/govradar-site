@@ -501,11 +501,38 @@ PZ = {"ko": [("사업과 입찰 기회를 찾습니다", "나라·산업 선택 
  "ar": [("ابحث عن فرص الأعمال والمناقصات", "الدولة والقطاع ← الفرص المفتوحة ← شروط المشاركة"), ("جهّز أسرتي لمواجهة المخاطر", "المنطقة والخطر ← ما تفعله الآن وخطة"), ("ابحث عن شركاء للمنتجات والتقنية", "تصفّح الطلبات أو انشرها ← شارك وقدّم عرضًا")],
  "vi": [("Tìm cơ hội kinh doanh và gói thầu", "Quốc gia, ngành → cơ hội đang mở → điều kiện tham gia"), ("Chuẩn bị cho gia đình trước rủi ro", "Khu vực, hiểm họa → việc cần làm ngay và kế hoạch"), ("Tìm đối tác sản phẩm và công nghệ", "Xem hoặc đăng yêu cầu → tham gia và đề xuất")],
  "id": [("Cari peluang bisnis dan tender", "Negara dan industri → peluang terbuka → syarat ikut"), ("Siapkan keluarga menghadapi risiko", "Wilayah dan bahaya → yang dilakukan sekarang dan rencana"), ("Cari mitra produk dan teknologi", "Lihat atau pasang permintaan → ikut dan ajukan")]}
+HS = {"ko": ("나라·업종·키워드로 찾기", "예: 베트남, 태양광, 병원", "찾기", "업종으로 바로 보기"),
+ "en": ("Search by country, industry or keyword", "e.g. Vietnam, solar, hospital", "Search", "Jump to an industry"),
+ "es": ("Buscar por país, sector o palabra", "p. ej. Vietnam, solar, hospital", "Buscar", "Ir a un sector"),
+ "fr": ("Chercher par pays, secteur ou mot-clé", "ex. Vietnam, solaire, hôpital", "Chercher", "Aller à un secteur"),
+ "ar": ("ابحث بالدولة أو القطاع أو كلمة", "مثال: فيتنام، طاقة شمسية، مستشفى", "بحث", "انتقل إلى قطاع"),
+ "vi": ("Tìm theo quốc gia, ngành hoặc từ khóa", "vd: Việt Nam, điện mặt trời, bệnh viện", "Tìm", "Xem theo ngành"),
+ "id": ("Cari menurut negara, industri atau kata kunci", "mis. Vietnam, surya, rumah sakit", "Cari", "Langsung ke industri")}
+GM = {"ko": ("193개국 전체 목록 펼치기", "목록 접기"), "en": ("Show all 193 countries", "Collapse list"), "es": ("Ver los 193 países", "Contraer"), "fr": ("Voir les 193 pays", "Réduire"),
+ "ar": ("عرض الدول الـ193", "طي القائمة"), "vi": ("Xem đủ 193 quốc gia", "Thu gọn"), "id": ("Lihat semua 193 negara", "Ciutkan")}
+def hsearch(L):
+    a, ph, b, ind = HS.get(L) or HS["en"]
+    chips = "".join(f'<a class="hs-c" href="/{L}/mdb/?s={k}#deadlines">{e(nk if L == "ko" else ne)}</a>' for k, nk, ne, *_ in P3.SECT)
+    return f'''<form class="hs" role="search" onsubmit="return false"><label class="hs-l" for="hsq">{e(a)}</label><div class="hs-r"><input id="hsq" type="search" autocomplete="off" placeholder="{e(ph)}"><button type="submit" class="hs-b">{e(b)}</button></div><div class="hs-out" id="hsout" hidden></div></form>
+<p class="hs-ind"><span>{e(ind)}</span>{chips}</p>'''
+SB = {"ko": ("돈을 내기 전에, 받게 될 결과물을 먼저 보세요", "실제로 주문하면 이런 국가 진출 브리프를 업종에 맞춰 받습니다. 남아프리카 한 나라는 회원 전용 내용까지 모두 열어 두었습니다.", ["정부 핵심 과제와 예산이 붙은 사업", "유망 사업마다 이유와 대상 바이어", "출처와 기준일, 확인하지 못한 점"], "샘플 브리프 전체 보기", "분석 의뢰하기"),
+ "en": ("See what you get before you pay", "Order a brief and you receive one like this, tailored to your industry. South Africa is fully open, member-only parts included.", ["Government priorities and funded projects", "Why each opportunity fits, and who buys", "Sources, dates and what could not be confirmed"], "Open the full sample brief", "Request an analysis"),
+ "es": ("Vea lo que recibirá antes de pagar", "Al pedir un informe recibe uno como este, adaptado a su sector. Sudáfrica está abierta por completo, incluida la parte para miembros.", ["Prioridades del gobierno y proyectos con presupuesto", "Por qué encaja cada oportunidad y quién compra", "Fuentes, fechas y lo que no se pudo confirmar"], "Ver el informe de muestra", "Solicitar un análisis"),
+ "fr": ("Voyez ce que vous recevrez avant de payer", "En commandant, vous recevez une note comme celle-ci, adaptée à votre secteur. L'Afrique du Sud est entièrement ouverte, partie membres comprise.", ["Priorités du gouvernement et projets financés", "Pourquoi chaque opportunité convient, et qui achète", "Sources, dates et points non confirmés"], "Voir la note exemple", "Demander une analyse"),
+ "ar": ("اطّلع على ما ستحصل عليه قبل الدفع", "عند الطلب تحصل على موجز مثل هذا مُكيّف لقطاعك. جنوب أفريقيا مفتوحة بالكامل بما فيها الأجزاء الخاصة بالأعضاء.", ["أولويات الحكومة والمشاريع الممولة", "لماذا تناسبك كل فرصة ومن يشتري", "المصادر والتواريخ وما لم يتأكد"], "افتح الموجز النموذجي", "اطلب تحليلًا"),
+ "vi": ("Xem trước kết quả bạn nhận được trước khi trả tiền", "Khi đặt hàng, bạn nhận bản tóm tắt như thế này, theo đúng ngành của bạn. Nam Phi được mở toàn bộ, kể cả phần dành cho hội viên.", ["Ưu tiên của chính phủ và dự án có ngân sách", "Vì sao từng cơ hội phù hợp và ai là người mua", "Nguồn, ngày và điều chưa xác nhận được"], "Xem bản mẫu đầy đủ", "Yêu cầu phân tích"),
+ "id": ("Lihat dulu hasilnya sebelum membayar", "Saat memesan Anda menerima ringkasan seperti ini, disesuaikan dengan industri Anda. Afrika Selatan dibuka penuh, termasuk bagian anggota.", ["Prioritas pemerintah dan proyek berdana", "Mengapa tiap peluang cocok dan siapa pembelinya", "Sumber, tanggal dan hal yang belum terkonfirmasi"], "Buka contoh ringkasan", "Minta analisis")}
+def sample_band(L):
+    h, p_, pts, b1, b2 = SB.get(L) or SB["en"]
+    im = "sample-ko.webp" if L == "ko" else "sample-en.webp"
+    return f'''<section class="band sbnd"><div class="in sbnd-g"><div><h2>{e(h)}</h2><p class="sbnd-p">{e(p_)}</p><ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul><p class="cta"><a class="btn pri" href="/{L}/sample/">{e(b1)}</a> <a class="btn" href="/{L}/request/">{e(b2)}</a></p></div>
+<a class="sbnd-img" href="/{L}/sample/"><img src="/assets/{im}" alt="{e(b1)}" width="1290" height="1530" loading="lazy"></a></div></section>'''
+
 def purpose3(L):
     xs = PZ.get(L) or PZ["en"]
     hrefs = [f"/{L}/mdb/", f"/{L}/ready/", f"/{L}/consortium/"]
     ic = ["📑", "🛡️", "🤝"]
-    return '<div class="pz">' + "".join(f'<a class="pz-b" href="{h}"><i>{i}</i><b>{e(t)}</b><span>{e(d)}</span></a>' for (t, d), h, i in zip(xs, hrefs, ic)) + "</div>"
+    return '<div class="pz">' + "".join(f'<a class="pz-b" href="{h}"><b>{e(t)} →</b><span>{e(d)}</span></a>' for (t, d), h, i in zip(xs, hrefs, ic)) + "</div>"
 
 def ready_band(L):
     import ready_art as ART
@@ -618,7 +645,7 @@ def home(L):
                    for c in sorted(META, key=lambda c: nm(c["iso"], L)))
     lk = "ko" if L == "ko" else "en"
     board = "".join(f'<a class="opp{"" if j < 6 else " lk"}" href="{url(L,o["iso"])+"#biz" if j < 6 else P3.paylink(L, "biz", o["iso"])}"><span class="who">{flag(o["iso"])} {e(nm(o["iso"],L))}{" <i class=fit>"+e(t["fit"])+"</i>" if o["fit"]=="high" else ""}</span><b>{e(o[lk])}</b><span class="note">{e(o["why_"+lk][:120]) if j < 6 else ("🔒 이유·대상 바이어 — 분석 회원 월 19,800원" if L=="ko" else "🔒 Why-now & buyers — analysis member ₩19,800/mo")}</span></a>' for j, o in enumerate(O[:24]))
-    evs = events()[:12]
+    evs = events()[:4]
     evh = "".join(f'<a class="ev" href="{url(L,x["iso"])}#events"><span class="d">{e(x.get("date","")[5:].replace("-","/"))}</span><span>{flag(x["iso"])} <b>{e(x.get("title_en") if L!="ko" and x.get("title_en") else x.get("title"))}</b><br><span class="note">{e(_evo(x, L))}</span></span></a>' for x in evs) or f'<p class="note">—</p>'
     plans = "".join(f'<div class="plan{" mid" if a.startswith("BUILD M2") else ""}"><span class="tier">{e(a)}</span><b class="price">{e(b)}</b><p>{e(c)}</p></div>' for i, (a, b, c) in enumerate(PLANS[L]))
     jl = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "GOV RADAR", "url": BASE + "/", "inLanguage": L, "publisher": ORG, "description": t["desc_home"]})
@@ -626,7 +653,7 @@ def home(L):
 <section class="hero"><div class="in"><div>
 <p class="eb"><i class="live"></i>{({"ko":"193개국 추적 · {n}개국 심층 조사","es":"193 gobiernos seguidos · {n} analizados a fondo","fr":"193 gouvernements suivis · {n} étudiés en détail","ar":"نتابع 193 حكومة · {n} مدروسة بعمق","vi":"Theo dõi 193 chính phủ · {n} nước nghiên cứu sâu","id":"Memantau 193 pemerintah · {n} diteliti mendalam"}.get(L,"Tracking 193 governments · {n} researched in depth")).replace("{n}",str(n_done))}</p>
 <h1>{e(t['tagline']).replace('정부가 ','정부가<br>',1)}</h1><p class="lede">{e(t['lede']).replace('모았습니다. ','모았습니다.<br>',1)}</p>
-{purpose3(L)}<p class="pz-sub"><a href="#map">{e(t['cta_map'])}</a> · <button class="lnk" data-act="join">{e(t['cta_join'])}</button></p>
+{hsearch(L)}{purpose3(L)}
 <p class="byline"><img src="/assets/emblem.png" alt="" width="24" height="24">WORLD MAKING MEMBERS × GCSME</p></div>
 <a class="hradar" href="#map" aria-label="GOV RADAR"><span class="hp"></span><span class="hp p2"></span><img src="/assets/govradar-logo.webp" alt="GOV RADAR" width="640" height="709"><span class="hsw"></span><span class="hbl b1"></span><span class="hbl b2"></span><span class="hbl b3"></span><span class="hbl b4"></span>{"".join(f'<span class="htg t{i+1}">{x}</span>' for i, x in enumerate((["🇻🇳 정부 사업", "🇰🇪 입찰 마감 D-7", "🇸🇦 ODA", "🌐 세계은행 공고"] if L=="ko" else ["🇻🇳 Programmes", "🇰🇪 Tender D-7", "🇸🇦 Aid projects", "🌐 World Bank"])))}</a>
 <div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b>{n_t}</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span></div><div><b>{e(last[5:].replace('-','/') or '—')}</b><span>{e(t['k_last'])}</span></div></div>
@@ -634,9 +661,10 @@ def home(L):
 <section class="band" id="map"><div class="in"><h2>{e(t['map_h'])}</h2>
 <div class="mapbox"><div id="wmap" data-lang="{L}"></div></div>
 <div class="filters"><input id="q" type="search" placeholder="{e(t['search'])}" aria-label="{e(t['search'])}"><button class="chip on" data-r="ALL">{e(t['all'])}</button>{regions}</div>
-<div class="grid" id="grid">{grid}</div>{region_block(L)}</div></section>
-<section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=8, home=True)}<h3 class="regh">{P3.pt("h_home", L)}</h3>{P3.past_board(L, C3(), home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
+<div class="gwrap" id="gwrap"><div class="grid" id="grid">{grid}</div></div><p class="cta"><button class="btn" type="button" id="gmore" data-a="{e(GM.get(L, GM['en'])[0])}" data-b="{e(GM.get(L, GM['en'])[1])}">{e(GM.get(L, GM['en'])[0])}</button></p>{region_block(L)}</div></section>
+<section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=6, home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
+{sample_band(L)}
 <section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a> {hz_link(L)}</p></div></section>
 {hz_band(L)}
 {ready_band(L)}
