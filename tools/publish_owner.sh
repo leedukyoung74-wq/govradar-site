@@ -6,7 +6,7 @@ python3 tools/member.py encrypt >/dev/null
 python3 tools/owner.py >/dev/null
 python3 tools/vault.py pack >/dev/null
 cd data_branch && git fetch -q origin data && git rebase -q --autostash origin/data 2>/dev/null || true
-git add m
+git add m feeds
 if git diff --cached --quiet; then echo "data 변경 없음"; exit 0; fi
 git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -qm "Member data, owner snapshot, vault $(date +%F)
 

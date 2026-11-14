@@ -1,0 +1,28 @@
+name: Daily tender feed (no AI)
+on:
+  schedule:
+    - cron: "10 21 * * *"   # 06:10 Asia/Seoul every day
+  push:
+    branches: [src]
+    paths: [".github/workflows/tenders.yml", "tools/feed_tenders.py"]
+permissions:
+  contents: write
+concurrency: { group: tender-feed, cancel-in-progress: false }
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: src }
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data_branch }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python tools/feed_tenders.py
+      - name: Publish to data branch
+        run: |
+          cd data_branch
+          git add feeds
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Tender feed $(date -u +%F)"
+          git push origin HEAD:data
