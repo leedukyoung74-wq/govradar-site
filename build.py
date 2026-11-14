@@ -155,7 +155,7 @@ FONTLINK = {
  "ar": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap",
  "vi": "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap",
 }
-for _l in ("en", "es", "fr", "id"): FONTLINK[_l] = "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+# en/es/fr/id use the house font (WMM Nexon) only; vi/ar keep a fallback for glyphs Nexon lacks
 def navhtml(L):
     items = "".join(f'<a href="/{L}/{p}">{e(lbl)}</a>' for p, lbl in NAV[L])
     return items
@@ -445,7 +445,7 @@ def conflict_page(L):
     claims = "".join(f'<li>{vbh(p["v"],en)}“{e(p["en"] if en else p["ko"])}”<br><small class="note">{e(p["note_en"] if en else p["note_ko"])}</small></li>' for p in C["claims"])
     srcs = "".join(f'<li><a href="{e(z["u"])}" target="_blank" rel="noopener">{e(_stl(z["t"], z["u"], L))}</a> <small class="note">T{z["tier"]}</small></li>' for z in S)
     body = f"""<section class="chero img-cf"><div class="in cfhero"><div><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1><p class="lede">{"Wars and conflicts (US DoD, JCS, CENTCOM, NATO, EU), earthquakes, tsunamis, typhoons, floods, wildfires, volcanoes, outbreaks and near-Earth asteroids (USGS, GDACS, WHO, NASA) — cross-checked with wire services and specialist press." if en else "전쟁·분쟁(미 국방부·합참·CENTCOM·NATO·EU)과 지진·쓰나미·태풍·홍수·산불·화산·감염병·소행성(USGS·GDACS·WHO·NASA) 발표를 통신사·전문매체와 교차 확인합니다."}</p></div>{hotmap("WORLD", "IR,UA,KP,TW,LB", WORLDPTS)}</div></section>
-<div class="in stock">{liveboard(L)}<h2 style="margin-top:40px">{"Detail with sources" if en else "출처가 달린 상세 내용"}</h2><blockquote class="summary cfh"><b>{"As of" if en else "기준일"} {e(C["updated"])}</b> · {e(C["summary_en"] if en else C["summary_ko"])}<br><small class="note">{e(C["advice_en"] if en else C["advice_ko"])}</small></blockquote>
+<div class="in stock">{liveboard(L)}<p class="cta">{hz_link(L)}</p><h2 style="margin-top:40px">{"Detail with sources" if en else "출처가 달린 상세 내용"}</h2><blockquote class="summary cfh"><b>{"As of" if en else "기준일"} {e(C["updated"])}</b> · {e(C["summary_en"] if en else C["summary_ko"])}<br><small class="note">{e(C["advice_en"] if en else C["advice_ko"])}</small></blockquote>
 <div class="cards c2">{cards}</div>
 {scen_html(L)}
 <h2>{"National preparedness policies — fact-checked" if en else "각국 대비 정책 — 사실 확인"}</h2><ul>{prep}</ul>
@@ -477,10 +477,14 @@ RB = {"ko": ("재난 대비센터", "지금 위험할 때 할 일, 우리 집 30
       "ar": ("مركز الاستعداد", "ما تفعله عند الخطر، وخطة منزلية لـ30/60/90 يومًا وعام كامل، وحاسبات للماء والطعام والطاقة، وبطاقة اتصال عائلية — مجانًا وبناءً على الإرشادات الرسمية.", "افتح مركز الاستعداد"),
       "vi": ("Trung tâm phòng bị", "Việc cần làm khi gặp nguy hiểm, kế hoạch gia đình 30/60/90 ngày và 1 năm, công cụ tính nước, thức ăn và điện, thẻ liên lạc gia đình — miễn phí, dựa trên hướng dẫn chính thức.", "Mở trung tâm phòng bị"),
       "id": ("Pusat kesiapsiagaan", "Yang dilakukan saat bahaya, rencana rumah tangga 30/60/90 hari dan 1 tahun, kalkulator air, makanan, dan listrik, serta kartu kontak keluarga — gratis dan berdasarkan panduan resmi.", "Buka pusat kesiapsiagaan")}
+HZL_T = {"ko": "재난·분쟁 16가지 세계 지도로 보기", "en": "16 hazards on the world map", "es": "16 riesgos en el mapa mundial", "fr": "16 risques sur la carte du monde", "ar": "16 خطرًا على خريطة العالم", "vi": "16 loại hiểm họa trên bản đồ thế giới", "id": "16 bahaya di peta dunia"}
+def hz_link(L, cls="btn"):
+    return f'<a class="{cls}" href="/hazards/{"" if L == "ko" else "?l=en"}">{e(HZL_T.get(L) or HZL_T["en"])} →</a>'
+
 def ready_band(L):
     import ready_art as ART
     h, p_, b = RB.get(L) or RB["en"]
-    return f'''<section class="rd-band"><div class="in rd-band-g"><div><h2>{e(h)}</h2><p>{e(p_)}</p><p><a class="rd-btn" href="/{L}/ready/">{e(b)} →</a></p></div><a class="rd-band-a" href="/{L}/ready/" aria-label="{e(h)}">{ART.hero()}</a></div></section>'''
+    return f'''<section class="rd-band"><div class="in rd-band-g"><div><h2>{e(h)}</h2><p>{e(p_)}</p><p><a class="rd-btn" href="/{L}/ready/">{e(b)} →</a> {hz_link(L, "rd-btn light")}</p></div><a class="rd-band-a" href="/{L}/ready/" aria-label="{e(h)}">{ART.hero()}</a></div></section>'''
 
 def ready_page(L):
     import pages_ready as PR
@@ -607,7 +611,7 @@ def home(L):
 <div class="grid" id="grid">{grid}</div>{region_block(L)}</div></section>
 <section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=8, home=True)}<h3 class="regh">{P3.pt("h_home", L)}</h3>{P3.past_board(L, C3(), home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
-<section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a></p></div></section>
+<section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a> {hz_link(L)}</p></div></section>
 {ready_band(L)}
 {P3.edge_html(L)}{P3.access_html(L)}
 <section class="band segband"><div class="in"><h2>{"이런 분들이 여기서 사업을 만듭니다" if L=="ko" else "Who does business here"}</h2>{P3.segments_html(L, L=="ko")}<p class="cta"><a class="btn pri" href="/{L}/solutions/">{"분야별로 무엇을 얻는지 보기" if L=="ko" else "See what each sector offers"}</a> <a class="btn" href="/{L}/individuals/">{"개인으로 참여하기" if L=="ko" else "Join as an individual"}</a> <a class="btn" href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a></p></div></section>
