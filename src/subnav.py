@@ -95,15 +95,17 @@ if(!D.nav[L])L="en";
 function e(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 var st=document.createElement("style");st.textContent=__CSS__+__SUBCSS__;document.head.appendChild(st);
 var nav=D.nav[L].map(function(x){var cur=(A==="hazards"&&x[2]==="@hazards")||(A==="signals"&&x[2]==="@signals")||(G==="world"&&x[2]==="conflict/"&&!A);return'<a href="'+e(x[0])+'"'+(cur?' aria-current="page"':'')+'>'+e(x[1])+'</a>'}).join("");
-var sub=(D.sub[L][G]||[]).map(function(x){return'<a href="'+e(x[1])+'"'+(x[0]===A?' aria-current="page"':'')+'>'+e(x[2])+'</a>'}).join("");
+var CS=window.GVH_SUB?window.GVH_SUB(L):null;var sub=CS?CS.map(function(x){return'<a href="'+e(x[0])+'">'+e(x[1])+'</a>'}).join(""):(D.sub[L][G]||[]).map(function(x){return'<a href="'+e(x[1])+'"'+(x[0]===A?' aria-current="page"':'')+'>'+e(x[2])+'</a>'}).join("");
 var opts=Object.keys(D.lang).map(function(l){return'<option value="'+l+'"'+(l===L?' selected':'')+'>'+e(D.lang[l])+'</option>'}).join("");
-var h='<div class="gvh" id="gvh"><div class="gtop"><div class="gin"><a class="gbrand" href="/'+L+'/"><img src="/assets/logo-h.webp" alt="GOV RADAR" width="120" height="40"></a><nav class="glinks" id="gvhl">'+nav+'</nav><div class="gr"><select aria-label="Language" id="gvhs">'+opts+'</select><a class="glog" href="/'+L+'/account/">'+e(D.login[L])+'</a><button class="gbur" id="gvhb" aria-label="'+e(D.menu[L])+'" aria-expanded="false"><span></span><span></span><span></span></button></div></div></div><nav class="subnav"><div class="in">'+sub+'</div></nav></div>';
+var h='<div class="gvh" id="gvh"><div class="gtop"><div class="gin"><a class="gbrand" href="/'+L+'/"><img src="/assets/logo-h.webp" alt="GOV RADAR" width="120" height="40"></a><nav class="glinks" id="gvhl">'+nav+'</nav><div class="gr"><select aria-label="Language" id="gvhs">'+opts+'</select><a class="glog" href="/'+L+'/account/">'+e(D.login[L])+'</a><button class="gbur" id="gvhb" aria-label="'+e(D.menu[L])+'" aria-expanded="false"><span></span><span></span><span></span></button></div></div></div><nav class="subnav'+(CS?' toc':'')+'"><div class="in">'+sub+'</div></nav></div>';
 document.write(h);
 document.getElementById("gvhs").onchange=function(){var l=this.value,u=window.GVH_LANG_URL?window.GVH_LANG_URL(l):("/"+l+"/");location.href=u};
 var b=document.getElementById("gvhb"),n=document.getElementById("gvhl");b.onclick=function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)};
-})();"""
-    return js.replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__CSS__", json.dumps(css)).replace("__SUBCSS__", json.dumps(SUBCSS))
+})();
+__SPY__"""
+    return js.replace("__SPY__", SPYJS).replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__CSS__", json.dumps(css)).replace("__SUBCSS__", json.dumps(SUBCSS))
 
+SPYJS = '(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var A=[].slice.call(n.querySelectorAll(\'a[href^="#"]\')),S=A.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))});\nfunction up(){var y=scrollY+130,k=-1;S.forEach(function(s,i){if(s&&s.offsetParent!==null&&s.getBoundingClientRect().top+scrollY<=y)k=i});A.forEach(function(a,i){if(i===k){if(!a.hasAttribute("aria-current")){a.setAttribute("aria-current","true");a.scrollIntoView({block:"nearest",inline:"center"})}}else a.removeAttribute("aria-current")})}\nvar t;addEventListener("scroll",function(){if(!t)t=requestAnimationFrame(function(){t=0;up()})},{passive:true});up();}\nif(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();'
 SUBCSS = """.subnav{position:sticky;top:60px;z-index:19;background:#0b0b0b;border-bottom:1px solid #2a2a28}
 .subnav .in{display:flex;gap:4px;height:44px;align-items:center;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
 .subnav .in::-webkit-scrollbar{display:none}
@@ -112,3 +114,53 @@ SUBCSS = """.subnav{position:sticky;top:60px;z-index:19;background:#0b0b0b;borde
 .subnav a[aria-current]{color:#0b0b0b;background:#E3CC96;font-weight:700}
 .gvh .subnav{position:static}
 """
+
+# ---- in-page table of contents as the second bar -------------------------------------------
+import re as _re
+SHORT = {
+ "나라를 누르면 그 나라 정부의 모든 것이 열립니다": "세계 지도", "돈을 내기 전에, 받게 될 결과물을 먼저 보세요": "결과물 샘플",
+ "AI에게 물어보는 것과 무엇이 다른가": "AI와 다른 점", "무엇을 어디까지 볼 수 있나": "이용 범위", "이런 분들이 여기서 사업을 만듭니다": "이용 고객",
+ "재난·분쟁 16가지를 움직이는 지도로": "재난 16가지", "전시회·무역사절단 일정": "행사 일정", "마감이 다가오는 입찰": "마감 입찰",
+ "지금 제안할 수 있는 사업": "제안할 사업", "마감일 순 열린 입찰": "열린 입찰", "지난 입찰과 여러 나라 반복 수요": "지난 입찰·반복 수요",
+ "개발은행·국제기구": "개발은행·국제기구", "기관별 조달 포털": "조달 포털", "레이더에 잡힌 분야별 사업": "분야별 사업", "함께 일하는 방법": "함께 일하는 방법",
+ "출처가 달린 상세 내용": "상세 내용", "국가별 대비 시나리오 (가정)": "대비 시나리오", "각국 대비 정책 — 사실 확인": "각국 대비 정책",
+ "떠도는 주장 판정": "주장 판정", "무료·분석 회원·파트너십 비교": "회원 비교", "지금 주문할 수 있는 것": "주문 상품", "주문하면 이렇게 진행됩니다": "진행 순서",
+}
+def _short(t):
+    t = _re.sub(r"<[^>]+>", "", t); t = _h.unescape(t).replace("⌛", "").strip()
+    if t in SHORT: return SHORT[t]
+    if t.endswith(" 한눈에 보기"): return "한눈에 보기"
+    if t.lower().endswith(" at a glance"): return "At a glance"
+    t = _re.sub(r"\s*\(\d+\)\s*$", "", t)
+    for sep in (" — ", " – ", ": ", " · "):
+        if sep in t and len(t) > 16: t = t.split(sep)[0]
+    t = _re.sub(r"\s*\(.*?\)\s*$", "", t)
+    return t if len(t) <= 22 else t[:21].rstrip() + "…"
+
+def toc_post(html):
+    """Replace the sibling sub bar with this page's own headings (2+), adding ids to h2 that lack one."""
+    a = html.find("<!--SUBNAV-->"); b = html.find("<!--/SUBNAV-->")
+    if a < 0 or b < 0: return html
+    m0 = html.find("<main>"); body = html[m0:] if m0 >= 0 else ""
+    rd = _re.search(r'<nav class="rd-nav"[^>]*><div class="rd-in">(.*?)</div></nav>', body, _re.S)
+    links = []
+    if rd:
+        links = [(h_, _re.sub("<[^>]+>", "", t)) for h_, t in _re.findall(r'<a href="(#[^"]+)">(.*?)</a>', rd.group(1))]
+    else:
+        n = [0]
+        def addid(m):
+            tag, inner = m.group(1), m.group(2)
+            idm = _re.search(r'\bid="([^"]+)"', tag)
+            if idm: hid = idm.group(1)
+            else:
+                n[0] += 1; hid = f"s{n[0]}"; tag = tag[:-1] + f' id="{hid}">'
+            if "data-notoc" not in tag and _re.sub(r"<[^>]+>", "", inner).strip():
+                links.append(("#" + hid, _short(inner)))
+            return tag + inner + "</h2>"
+        body2 = _re.sub(r"(<h2\b[^>]*>)(.*?)</h2>", addid, body, flags=_re.S)
+        if len(links) >= 2: html = html[:m0] + body2
+        a = html.find("<!--SUBNAV-->"); b = html.find("<!--/SUBNAV-->")
+    if len(links) < 2:
+        return html.replace("<!--SUBNAV-->", "").replace("<!--/SUBNAV-->", "")
+    nav = '<nav class="subnav toc" aria-label="contents"><div class="in">' + "".join(f'<a href="{_e(h_)}">{_e(t)}</a>' for h_, t in links) + "</div></nav>"
+    return html[:a] + nav + html[b + len("<!--/SUBNAV-->"):]

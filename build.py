@@ -156,7 +156,7 @@ FONTLINK = {
  "vi": "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap",
 }
 # en/es/fr/id use the house font (WMM Nexon) only; vi/ar keep a fallback for glyphs Nexon lacks
-from subnav import subnav as _subnav, gvhdr_js as _gvhdr_js, SUBCSS as _SUBCSS, group_of as _group_of
+from subnav import toc_post as _toc_post, subnav as _subnav, gvhdr_js as _gvhdr_js, SUBCSS as _SUBCSS, group_of as _group_of
 def navhtml(L):
     items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l=en"}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/signals/">{e(lbl)}</a>' if p == "@signals" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
     return items
@@ -187,7 +187,7 @@ def head(L, title, desc, path, alt_paths, extra=""):
 <div class="navr"><label class="langw"><span class="lcode">{LANG_SHORT[L]}</span><select class="langsel" aria-label="{e(t['lang'])}" onchange="gvLang(this)">{''.join(f'<option value="{e(p)}" data-l="{l}" {"selected" if l==L else ""}>{LANG_NAME[l]}</option>' for l,p in alt_paths.items())}</select></label>
 <button class="btn sm" id="loginbtn">{e(AT[L]['login'])}</button>
 <button class="burger" id="burger" aria-label="{e(MENU[L])}" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button></div>
-</div></header>{_subnav(L, path)}{prepbar(L) if path.endswith("/prepare/") else ""}<main>"""
+</div></header><!--SUBNAV-->{_subnav(L, path)}<!--/SUBNAV-->{prepbar(L) if path.endswith("/prepare/") else ""}<main>"""
 
 def prepbar(L):
     lk = "ko" if L == "ko" else "en"
@@ -815,7 +815,7 @@ def build():
             import urllib.request, urllib.parse
             urllib.request.urlretrieve("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/" + urllib.parse.quote(fn) + ".woff", dst)
         except Exception as ex: print("font download skipped (CDN fallback used):", fn, ex)
-    W = lambda p, s: (os.makedirs(os.path.dirname(OUT + p), exist_ok=True), open(OUT + p, "w", encoding="utf8").write(s))
+    W = lambda p, s: (os.makedirs(os.path.dirname(OUT + p), exist_ok=True), open(OUT + p, "w", encoding="utf8").write(_toc_post(s) if p.endswith(".html") else s))
     urls = []
     for L in LANGS:
         W(f"/{L}/index.html", home(L)); urls.append((f"/{L}/", {l: f"/{l}/" for l in LANGS}))

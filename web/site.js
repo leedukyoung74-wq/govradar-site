@@ -422,3 +422,9 @@ window.gvLang = function (sel) {
   rv.forEach(function (el, i) { if (el.closest(".hero")) return; el.classList.add("rv"); el.style.transitionDelay = (el.matches(".hzc,.lb-hz,.opp,.gl-nw") ? (i % 4) * 70 : 0) + "ms"; io.observe(el); });
   nums.forEach(function (el) { io.observe(el); });
 })();
+
+/* second bar: highlight the section in view */
+(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var A=[].slice.call(n.querySelectorAll('a[href^="#"]')),S=A.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))});
+function up(){var y=scrollY+130,k=-1;S.forEach(function(s,i){if(s&&s.offsetParent!==null&&s.getBoundingClientRect().top+scrollY<=y)k=i});A.forEach(function(a,i){if(i===k){if(!a.hasAttribute("aria-current")){a.setAttribute("aria-current","true");a.scrollIntoView({block:"nearest",inline:"center"})}}else a.removeAttribute("aria-current")})}
+var t;addEventListener("scroll",function(){if(!t)t=requestAnimationFrame(function(){t=0;up()})},{passive:true});up();}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();
