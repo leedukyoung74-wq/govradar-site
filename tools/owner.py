@@ -48,21 +48,22 @@ def snapshot():
                     "past": sum(p["n"] for p in past), "biz": sum(len(d.get("biz") or []) for d in D.values())},
             "open": [tr(x) for x in op], "past": past, "stale": stale, "regions": regs, "tasks": tasks}
 
-def owner_code(code=None):
-    m = M._members(); e = "owner@govradar.local"
-    if code: pass
-    elif e in m: code = m[e]["code"]
-    else: code = "-".join(secrets.token_hex(2).upper() for _ in range(6))
-    m[e] = {"code": code, "exp": "2099-12-31", "added": m.get(e, {}).get("added", TODAY), "owner": True}
-    M._save_members(m); M.write_keys(); return code
+def owner_code(pw=None):
+    """Owner passphrase opens the owner screen (case-sensitive, used as typed).
+    A separate hex member code (site-wide member unlock) is kept in the same entry and handed over inside the snapshot."""
+    m = M._members(); e = "owner@govradar.local"; ent = m.get(e, {})
+    mcode = ent.get("code") or "-".join(secrets.token_hex(2).upper() for _ in range(6))
+    pw = (pw or ent.get("owner_pass") or mcode).strip()
+    m[e] = {"code": mcode, "exp": "2099-12-31", "added": ent.get("added", TODAY), "owner": True, "owner_pass": pw}
+    M._save_members(m); M.write_keys(); return pw, mcode
 
 def main():
-    code = owner_code(sys.argv[1] if len(sys.argv) > 1 else None)
+    code, mcode = owner_code(sys.argv[1] if len(sys.argv) > 1 else None)
     salt = secrets.token_bytes(16); iv = secrets.token_bytes(12)
     k = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=salt, iterations=ITER).derive(("owner:" + code).encode())
-    ct = AESGCM(k).encrypt(iv, json.dumps(snapshot(), ensure_ascii=False).encode(), None)
+    ct = AESGCM(k).encrypt(iv, json.dumps(dict(snapshot(), mcode=mcode), ensure_ascii=False).encode(), None)
     os.makedirs(os.path.join(M.OUT, "m"), exist_ok=True)
     json.dump({"v": 1, "iter": ITER, "s": b64(salt), "iv": b64(iv), "c": b64(ct)}, open(os.path.join(M.OUT, "m", "o.json"), "w"))
-    print("owner link: https://radar.wmm-hoa.com/owner/#" + code)
+    print("owner screen updated: https://radar.wmm-hoa.com/owner/")
 
 if __name__ == "__main__": main()

@@ -531,3 +531,8 @@ em.nb{display:inline-block;font-style:normal;font-size:11px;font-weight:700;colo
 @media (max-width:900px){.rd-hero-g,.rd-two,.rd-bag,.rd-hz{grid-template-columns:1fr}.rd-hero-g{gap:8px}.rd-status{grid-template-columns:1fr 1fr}.rd-pers{grid-template-columns:1fr 1fr}.rd-g3,.rd-g4{grid-template-columns:1fr 1fr}.rd-g6{grid-template-columns:1fr 1fr}.rd-srcl{columns:1}.rd-sec{padding:64px 0}}
 @media (max-width:560px){.rd-in{padding:0 16px}.rd-status,.rd-pers,.rd-g2,.rd-g3,.rd-g4{grid-template-columns:1fr}.rd-tl label{grid-template-columns:24px 1fr}.rd-when{grid-column:2}.rd-task{grid-column:2}.rd-cardp dl{grid-template-columns:1fr}.rd-t{font-size:14px}}
 @media print{header,footer,.rd-nav,.rd-hero,.rd-video,#setup,#calc,#stock form,#hazards,#org,#help,#sources,.prepbar,.rd-btn,#now{display:none!important}.rd-sec{padding:16px 0}body.print-card main>*:not(#card){display:none!important}body.print-card #card form,body.print-card #card .rd-two>div:first-child{display:none!important}}
+
+.rd-band{background:#1d2b4f;color:#fff;padding:0}.rd-band-g{display:grid;grid-template-columns:5fr 6fr;gap:40px;align-items:center}
+.rd-band h2{color:#fff;font-size:clamp(26px,3vw,36px);font-weight:700;margin:40px 0 12px}.rd-band p{color:#e2e8f3;font-size:17px;line-height:1.7}
+.rd-band-a{display:block;line-height:0;align-self:end}.rd-band-a svg{width:100%;height:auto;display:block}
+@media (max-width:800px){.rd-band-g{grid-template-columns:1fr;gap:8px}.rd-band h2{margin-top:32px}}

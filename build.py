@@ -470,6 +470,18 @@ def about_page(L):
     jl = ld({"@context": "https://schema.org", "@type": "AboutPage", "name": a["h"], "inLanguage": L, "publisher": ORG, "description": a["lede"]})
     return head(L, a["h"] + " · GOV RADAR", a["lede"][:150], f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}, jl + GB.CSS) + sec_ + foot(L)
 
+RB = {"ko": ("재난 대비센터", "지금 위험할 때 할 일, 우리 집 30·60·90일·1년 준비 계획, 물·식량·전원 계산기, 가족 대피·연락카드를 한 곳에서. 공식기관 지침 기반이며 무료입니다.", "재난 대비센터 열기"),
+      "en": ("Preparedness centre", "What to do when danger strikes, a 30/60/90-day and 1-year home plan, water, food and power calculators, and a family contact card — free and based on official guidance.", "Open the preparedness centre"),
+      "es": ("Centro de preparación", "Qué hacer ante un peligro, un plan para el hogar de 30/60/90 días y 1 año, calculadoras de agua, comida y energía, y una tarjeta de contacto familiar — gratis y basado en guías oficiales.", "Abrir el centro de preparación"),
+      "fr": ("Centre de préparation", "Que faire face au danger, un plan pour le foyer à 30/60/90 jours et 1 an, des calculateurs d'eau, de nourriture et d'énergie, et une carte de contact familiale — gratuit et fondé sur les consignes officielles.", "Ouvrir le centre de préparation"),
+      "ar": ("مركز الاستعداد", "ما تفعله عند الخطر، وخطة منزلية لـ30/60/90 يومًا وعام كامل، وحاسبات للماء والطعام والطاقة، وبطاقة اتصال عائلية — مجانًا وبناءً على الإرشادات الرسمية.", "افتح مركز الاستعداد"),
+      "vi": ("Trung tâm phòng bị", "Việc cần làm khi gặp nguy hiểm, kế hoạch gia đình 30/60/90 ngày và 1 năm, công cụ tính nước, thức ăn và điện, thẻ liên lạc gia đình — miễn phí, dựa trên hướng dẫn chính thức.", "Mở trung tâm phòng bị"),
+      "id": ("Pusat kesiapsiagaan", "Yang dilakukan saat bahaya, rencana rumah tangga 30/60/90 hari dan 1 tahun, kalkulator air, makanan, dan listrik, serta kartu kontak keluarga — gratis dan berdasarkan panduan resmi.", "Buka pusat kesiapsiagaan")}
+def ready_band(L):
+    import ready_art as ART
+    h, p_, b = RB.get(L) or RB["en"]
+    return f'''<section class="rd-band"><div class="in rd-band-g"><div><h2>{e(h)}</h2><p>{e(p_)}</p><p><a class="rd-btn" href="/{L}/ready/">{e(b)} →</a></p></div><a class="rd-band-a" href="/{L}/ready/" aria-label="{e(h)}">{ART.hero()}</a></div></section>'''
+
 def ready_page(L):
     import pages_ready as PR
     ko = L == "ko"
@@ -596,6 +608,7 @@ def home(L):
 <section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=8, home=True)}<h3 class="regh">{P3.pt("h_home", L)}</h3>{P3.past_board(L, C3(), home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
 <section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a></p></div></section>
+{ready_band(L)}
 {P3.edge_html(L)}{P3.access_html(L)}
 <section class="band segband"><div class="in"><h2>{"이런 분들이 여기서 사업을 만듭니다" if L=="ko" else "Who does business here"}</h2>{P3.segments_html(L, L=="ko")}<p class="cta"><a class="btn pri" href="/{L}/solutions/">{"분야별로 무엇을 얻는지 보기" if L=="ko" else "See what each sector offers"}</a> <a class="btn" href="/{L}/individuals/">{"개인으로 참여하기" if L=="ko" else "Join as an individual"}</a> <a class="btn" href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a></p></div></section>
 <section class="band" id="events"><div class="in"><h2>{e(t['ev_h'])}</h2><div class="evs">{evh}</div></div></section>
