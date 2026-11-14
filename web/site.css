@@ -859,3 +859,14 @@ html{scroll-padding-top:116px}
 @media (max-width:900px){.orgwall{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:520px){.orgwall{grid-template-columns:repeat(2,1fr)}.orgw{min-height:130px;padding:18px 10px 12px}.orgw img{height:60px}.orgp .ot{height:120px}}
 .dl li,.dl .tt,.dl .tt b{min-width:0;overflow-wrap:anywhere}
+/* conflict page: full list + unrest */
+.actw{overflow-x:auto;margin:10px 0 6px;border:1px solid var(--line);border-radius:10px}
+.act{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.act th,.act td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.act thead th{background:var(--panel2);font-size:12px;color:var(--muted);position:sticky;top:0}
+.act th:nth-child(n+2),.act td:nth-child(n+2){white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.act tr.acg th{background:var(--ink);color:var(--bg);font-size:14px;padding:10px 12px}
+.act tr.acg small{font-weight:400;opacity:.75}
+.acf{display:inline-flex;gap:3px;margin-right:8px;vertical-align:-2px}
+.cards.urs{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.urc{border-left-color:#b54708}.urc h3{font-size:16px}

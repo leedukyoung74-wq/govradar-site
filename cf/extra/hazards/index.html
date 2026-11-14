@@ -282,7 +282,7 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 </style>
 </head>
 <body>
-<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/hazards/":"/hazards/?l="+l};window.GVH_SUB=function(l){var k=l==="ko";return[["#trend",k?"장기 추세 1950~":"Trends since 1950"],["#years",k?"연도별 재난":"By year"],["#map",k?"세계 지도":"World map"],["#types",k?"16가지 재난":"16 hazards"],["#apophis",k?"소행성":"Asteroids"]]};</script><script src="/assets/gvhdr.js" data-l="auto" data-g="world" data-a="hazards"></script>
+<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/hazards/":"/hazards/?l="+l};window.GVH_SUB=function(l){var k=l==="ko";return[["#kp",k?"한눈에":"At a glance"],["#trend",k?"장기 추세":"Long-term trends"],["#tr-emdat",k?"재난 건수":"Disasters"],["#tr-conf",k?"무력분쟁 수":"Conflicts"],["#tr-q7",k?"규모 7 이상 지진":"M7+ quakes"],["#tr-ts",k?"쓰나미":"Tsunamis"],["#tr-temp",k?"지구 기온":"Temperature"],["#tr-co2",k?"이산화탄소":"CO₂"],["#years",k?"연도별 재난":"By year"],["#map",k?"나라별 피해 지도":"Country map"],["#types",k?"16가지 재난":"16 hazards"],["#apophis",k?"소행성 아포피스":"Asteroid Apophis"]]};</script><script src="/assets/gvhdr.js" data-l="auto" data-g="world" data-a="hazards"></script>
 
 <main>
 <div class="hero"><div class="in">
@@ -663,7 +663,7 @@ var g=document.getElementById('tr-grid');
 P.forEach(function(p){var v=T.s[p.k].v,dec=p.dec||0,last=null,li=-1;for(var i=v.length-1;i>=0;i--)if(v[i]!=null){last=v[i];li=i;break}
  var first=null,fi=0;for(i=0;i<v.length;i++)if(v[i]!=null){first=v[i];fi=i;break}
  var a50=avg(v,Y[fi],Y[fi]+9),a10=avg(v,2016,2025);
- var el=document.createElement('div');el.className='tr-c';
+ var el=document.createElement('div');el.className='tr-c';el.id='tr-'+p.k;
  el.innerHTML='<h3>'+p.t[ko?0:1]+'</h3><p class="who">'+p.w[ko?0:1]+'</p><div class="kv"><div><b>'+fmt(last,dec)+' '+p.u[ko?0:1]+'</b>'+Y[li]+(ko?'년':'')+'</div><div><b>'+fmt(a50,dec)+'</b>'+(ko?Y[fi]+'~'+(Y[fi]+9)+'년 평균':Y[fi]+'–'+(Y[fi]+9)+' avg')+'</div><div><b>'+fmt(a10,dec)+'</b>'+(ko?'2016~2025년 평균':'2016–2025 avg')+'</div></div><div class="ch"></div><p class="cap">'+(ko?'출처: ':'Source: ')+p.l.map(function(x){return'<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>'}).join(' · ')+'</p>';
  g.appendChild(el);draw(el.querySelector('.ch'),p,v,dec)});
 function draw(box,p,v,dec){var W=560,H=230,m={t:10,r:10,b:24,l:40};

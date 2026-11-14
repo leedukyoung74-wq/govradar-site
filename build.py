@@ -482,6 +482,27 @@ def liveboard(L, mode="full"):
           "en": ("World situation now — wars, conflicts, natural disasters & outbreaks, verified facts only", "Official agency feeds collected daily · summary updated twice a week (Mon, Thu) · the time shown below is the actual last check · only facts confirmed by 2+ independent sources or an official statement")}.get(L) or ("World situation now — wars, conflicts, natural disasters & outbreaks, verified facts only", "Official agency feeds collected daily · summary updated twice a week (Mon, Thu) · the time shown below is the actual last check · only facts confirmed by 2+ independent sources or an official statement")
     return (f'<div class="liveboard" data-mode="{mode}" data-names=\'{e(json.dumps(names, ensure_ascii=False))}\'>'
             f'<h2>{e(hd[0])}</h2><p class="note">{e(hd[1])} · <a href="/{L}/conflict/#official">{"공식 기관 원문 바로 보기 →" if L == "ko" else "Latest official alerts →"}</a></p><div class="lb-body"><p class="note">…</p></div></div>')
+LVN = {"war": ("큰 전쟁", "Major wars", "올해·작년 교전 사망 1만 명 이상"), "minor": ("작은 전쟁", "Minor wars", "1천~9,999명"),
+       "conflict": ("무력분쟁", "Armed conflicts", "100~999명"), "skirmish": ("국지 충돌", "Skirmishes and clashes", "100명 미만")}
+def allconf_html(L):
+    en = L != "ko"; C = CONF; S = C["sources"]; A = C.get("all_conflicts"); U = C.get("unrest")
+    if not A: return ""
+    lk = lambda i: f'<a href="{e(S[i]["u"])}" target="_blank" rel="noopener">[{i+1}]</a>'
+    rows = ""
+    for lv, (k, en_, dn) in LVN.items():
+        its = [x for x in A["items"] if x["level"] == lv]
+        if not its: continue
+        rows += f'<tr class="acg"><th colspan="4">{e(en_ if en else k)} · {len(its)}{"" if en else "건"} <small>({e(dn) if not en else {"war":"10,000+ combat deaths in current or previous year","minor":"1,000–9,999","conflict":"100–999","skirmish":"under 100"}[lv]})</small></th></tr>'
+        rows += "".join(f'<tr><td><span class="acf">{"".join(flag(i) for i in x["iso"][:5])}</span>{e(x["en"] if en else x["ko"])}</td><td>{e(x["start"])}</td><td>{e(x["d25"])}</td><td><b>{e(x["d26"])}</b></td></tr>' for x in its)
+    n = len(A["items"])
+    h = (f'<h2 id="all-conflicts">{"All ongoing armed conflicts" if en else "지금 진행 중인 무력분쟁 전체"} ({n})</h2>'
+         f'<p class="note">{e(A["note_en"] if en else A["note_ko"])} {"As of" if en else "기준"} {e(A["asof"])} · {"Source" if en else "출처"} {lk(A["src"])}</p>'
+         f'<div class="actw"><table class="act"><thead><tr><th>{"Conflict" if en else "분쟁"}</th><th>{"Since" if en else "시작"}</th><th>{"Deaths 2025" if en else "2025년 사망"}</th><th>{"Deaths 2026" if en else "2026년 사망"}</th></tr></thead><tbody>{rows}</tbody></table></div>')
+    if U:
+        cards = "".join(f'<div class="card urc"><h3>{flag(x["iso"])} {e(x["en"] if en else x["ko"])}</h3><p class="note">{e(x["when_en"] if en else x["when_ko"])}</p><p>{e(x["text_en"] if en else x["text_ko"])} <span class="sref">{"".join(lk(i) for i in x["src"])}</span></p></div>' for x in U["items"])
+        h += (f'<h2 id="unrest">{"Riots and mass unrest" if en else "폭동·대규모 시위"} ({len(U["items"])})</h2>'
+              f'<p class="note">{e(U["note_en"] if en else U["note_ko"])}</p><div class="cards urs">{cards}</div>')
+    return h
 def conflict_page(L):
     en = L != "ko"; C = CONF; S = C["sources"]
     sr = lambda a: '<span class="sref">' + "".join(f'<a href="{e(S[i]["u"])}" target="_blank" rel="noopener">[{i+1}]</a>' for i in (a or []) if i < len(S)) + "</span>"
@@ -497,6 +518,7 @@ def conflict_page(L):
     body = f"""<section class="chero img-cf"><div class="in cfhero"><div><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1><p class="lede">{"Wars and conflicts (US DoD, JCS, CENTCOM, NATO, EU), earthquakes, tsunamis, typhoons, floods, wildfires, volcanoes, outbreaks and near-Earth asteroids (USGS, GDACS, WHO, NASA) — cross-checked with wire services and specialist press." if en else "전쟁·분쟁(미 국방부·합참·CENTCOM·NATO·EU)과 지진·쓰나미·태풍·홍수·산불·화산·감염병·소행성(USGS·GDACS·WHO·NASA) 발표를 통신사·전문매체와 교차 확인합니다."}</p></div>{hotmap("WORLD", "IR,UA,KP,TW,LB", WORLDPTS)}</div></section>
 <div class="in stock">{liveboard(L)}<p class="cta">{hz_link(L)}</p><h2 style="margin-top:40px">{"Detail with sources" if en else "출처가 달린 상세 내용"}</h2><blockquote class="summary cfh"><b>{"As of" if en else "기준일"} {e(C["updated"])}</b> · {e(C["summary_en"] if en else C["summary_ko"])}<br><small class="note">{e(C["advice_en"] if en else C["advice_ko"])}</small></blockquote>
 <div class="cards c2">{cards}</div>
+{allconf_html(L)}
 {scen_html(L)}
 <h2>{"National preparedness policies — fact-checked" if en else "각국 대비 정책 — 사실 확인"}</h2><ul>{prep}</ul>
 <h2>{"Circulating claims — verdicts" if en else "떠도는 주장 판정"}</h2><ul>{claims}</ul>

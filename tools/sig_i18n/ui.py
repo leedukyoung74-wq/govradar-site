@@ -190,6 +190,20 @@ R = [
 ("@latest","Latest update (as of 9 November 2026)","Última actualización (a 9 de noviembre de 2026)","Dernière mise à jour (au 9 novembre 2026)","آخر تحديث (حتى 9 نوفمبر 2026)","Cập nhật mới nhất (tính đến 9/11/2026)","Pembaruan terbaru (per 9 November 2026)"),
 ("@extra_h","Other ‘they predicted it’ claims that keep circulating","Otras afirmaciones de ‘lo predijeron’ que siguen circulando","Autres affirmations « ils l’avaient prévu » qui circulent encore","ادعاءات أخرى متداولة بأنهم «توقعوا ذلك»","Những lời đồn ‘đã đoán trúng’ khác vẫn lan truyền","Klaim ‘sudah meramalkan’ lain yang terus beredar"),
 ("@extra_p","Claims about events before 2015, or with no year.","Afirmaciones sobre hechos anteriores a 2015 o sin año.","Affirmations portant sur des faits antérieurs à 2015 ou sans date.","ادعاءات عن أحداث قبل 2015 أو بلا سنة محددة.","Các lời đồn về sự kiện trước 2015 hoặc không rõ năm.","Klaim tentang peristiwa sebelum 2015 atau tanpa tahun."),
+("\"7인 한눈에\"","\"Seven at a glance\"","\"Los siete\"","\"Les sept\"","\"السبعة في لمحة\"","\"7 người tóm tắt\"","\"Tujuh sekilas\""),
+("\"인물별 연표\"","\"Timelines\"","\"Cronologías\"","\"Chronologies\"","\"التسلسل الزمني\"","\"Niên biểu\"","\"Kronologi\""),
+("\"연도별 비교\"","\"Year by year\"","\"Año por año\"","\"Année par année\"","\"عامًا بعد عام\"","\"Theo năm\"","\"Per tahun\""),
+("\"주제별 겹쳐 보기\"","\"Overlaps\"","\"Coincidencias\"","\"Recoupements\"","\"التقاطعات\"","\"Chồng lớp\"","\"Tumpang tindih\""),
+("\"한국 관련\"","\"Korea\"","\"Corea\"","\"Corée\"","\"كوريا\"","\"Hàn Quốc\"","\"Korea\""),
+("\"주제별 요지\"","\"By theme\"","\"Por tema\"","\"Par thème\"","\"حسب الموضوع\"","\"Theo chủ đề\"","\"Per tema\""),
+("\"맞는 점·엇갈리는 점\"","\"Agree / differ\"","\"Coinciden / difieren\"","\"Accords / écarts\"","\"الاتفاق والاختلاف\"","\"Giống / khác\"","\"Sama / beda\""),
+("\"가상 시나리오\"","\"Scenarios\"","\"Escenarios\"","\"Scénarios\"","\"السيناريوهات\"","\"Kịch bản\"","\"Skenario\""),
+("\"실제 준비\"","\"Preparation\"","\"Preparación\"","\"Préparation\"","\"الاستعداد\"","\"Chuẩn bị\"","\"Persiapan\""),
+("\"읽는 법\"","\"How to read\"","\"Cómo leer\"","\"Mode d’emploi\"","\"طريقة القراءة\"","\"Cách đọc\"","\"Cara membaca\""),
+("\"발언 인용\"","\"Quotes\"","\"Citas\"","\"Citations\"","\"اقتباسات\"","\"Trích dẫn\"","\"Kutipan\""),
+("\"사업에 쓰는 법\"","\"For business\"","\"Para negocios\"","\"Pour les affaires\"","\"للأعمال\"","\"Cho kinh doanh\"","\"Untuk bisnis\""),
+("\"참고한 사이트\"","\"Sources\"","\"Fuentes\"","\"Sources\"","\"المصادر\"","\"Nguồn\"","\"Sumber\""),
+("\"그 밖의 주장\"","\"Other claims\"","\"Otras afirmaciones\"","\"Autres affirmations\"","\"ادعاءات أخرى\"","\"Lời đồn khác\"","\"Klaim lain\""),
 ]
 LANGS = ["en", "es", "fr", "ar", "vi", "id"]
 UI = {L: {r[0]: r[i + 1] for r in R} for i, L in enumerate(LANGS)}
