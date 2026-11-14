@@ -257,10 +257,32 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 @keyframes vipulse{0%,100%{opacity:.55}50%{opacity:1}}
 /* keep moving when the OS asks for reduced motion, just slower */
 @media (prefers-reduced-motion:reduce){.hzc-v *{animation-duration:6s!important}.hz-quake .hzc-bg{animation:none!important}}
+#trend .tr-eb{font-size:13px;letter-spacing:6px;color:var(--muted);margin:0 0 8px}
+.tr-cmp{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 10px}
+.tr-ctl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.tr-ctl button{font:inherit;font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.tr-ctl button i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.tr-ctl button[aria-pressed=true]{color:var(--ink);border-color:var(--ink)}
+.tr-note{font-size:13px;color:var(--muted);margin:6px 0 0}
+.tr-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.tr-c{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px;display:flex;flex-direction:column}
+.tr-c h3{font-size:17px;margin:0;line-height:1.35}
+.tr-c .who{font-size:12.5px;color:var(--muted);margin:2px 0 10px}
+.tr-c .kv{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:6px}
+.tr-c .kv div{font-size:12.5px;color:var(--muted)}.tr-c .kv b{display:block;font-size:22px;color:var(--ink);font-weight:700;line-height:1.2}
+.tr-c .ch{position:relative}
+.tr-c .ch svg{width:100%;height:auto;display:block}
+.tr-c .ln{fill:none;stroke-width:1.2;opacity:.55}.tr-c .ma{fill:none;stroke-width:2.6}.tr-c .ar{opacity:.12}
+.tr-c .ax text,#tr-idx .ax text{fill:var(--muted);font-size:11px}.tr-c .ax line,.tr-c .ax path,#tr-idx .ax line,#tr-idx .ax path{stroke:var(--line)}
+.tr-c .cap{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+.tr-c .cap a{color:inherit}
+.tr-tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;padding:4px 8px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-120%)}
+#tr-idx svg{width:100%;height:auto;display:block}
+@media (max-width:760px){.tr-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/hazards/":"/hazards/?l="+l};</script><script src="/assets/gvhdr.js" data-l="auto" data-g="world" data-a="hazards"></script>
+<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/hazards/":"/hazards/?l="+l};window.GVH_SUB=function(l){var k=l==="ko";return[["#trend",k?"장기 추세 1950~":"Trends since 1950"],["#years",k?"연도별 재난":"By year"],["#map",k?"세계 지도":"World map"],["#types",k?"16가지 재난":"16 hazards"],["#apophis",k?"소행성":"Asteroids"]]};</script><script src="/assets/gvhdr.js" data-l="auto" data-g="world" data-a="hazards"></script>
 
 <main>
 <div class="hero"><div class="in">
@@ -268,6 +290,15 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 <p class="lede" data-i="lede"></p>
 <div class="kp" id="kp"></div>
 </div></div>
+
+<section id="trend"><div class="in">
+<p class="tr-eb">1950 — 2025</p>
+<h2 id="tr-h"></h2>
+<p class="sub" id="tr-s"></p>
+<div class="tr-cmp"><div class="tr-ctl" id="tr-ctl"></div><div id="tr-idx"></div><p class="tr-note" id="tr-in"></p></div>
+<div class="tr-grid" id="tr-grid"></div>
+<p class="src" id="tr-cav"></p>
+</div></section>
 
 <section class="alt" id="years"><div class="in">
 <h2 data-i="y_h"></h2>
@@ -606,6 +637,73 @@ bgWorld();render();
  }).catch(function(){});
 })();
 })();
+</script>
+<script src="trend.js"></script>
+<script>
+(function(){var T=window.TR;if(!T||!window.d3)return;var ko=(typeof lang==='undefined'?'ko':lang)==='ko';
+var X={
+ h:['1950년부터 75년, 기록은 어떻게 변했나','75 years of records, 1950–2025'],
+ s:['공식 기관 6곳이 공개한 연도별 숫자를 곡선으로 놓았습니다. 옅은 선은 해마다의 값, 진한 선은 10년 이동평균입니다. 그래프에 마우스를 올리거나 누르면 그해 값이 나옵니다.','Yearly numbers published by six official sources. The thin line is each year, the thick line a 10-year moving average. Hover or tap a chart for that year.'],
+ in:['같은 축 비교: 각 곡선의 1951~1980년 평균을 100으로 놓고 5년 이동평균으로 다시 그렸습니다. 기온은 단위가 달라 아래 개별 그래프에서만 봅니다. 버튼을 눌러 곡선을 켜고 끌 수 있습니다.','Same-axis view: each series re-based so its 1951–1980 average = 100 (5-year moving average). Temperature appears in its own panel only. Tap a button to switch a line on or off.'],
+ cav:['읽을 때 주의: EM-DAT의 재난 건수 증가에는 실제 증가뿐 아니라 1980~90년대 이후 보고·집계 체계가 넓어진 영향이 함께 들어 있습니다(EM-DAT 설명). 같은 기간 규모 7 이상 지진 수는 뚜렷한 증가 추세가 없습니다. 2025년 값은 집계가 이어지고 있어 바뀔 수 있습니다.','Note: part of the rise in EM-DAT counts reflects wider reporting since the 1980s–90s, not only more events (per EM-DAT). Magnitude-7+ earthquakes show no clear upward trend over the same period. 2025 values may still be revised.']};
+var t=function(k){return X[k][ko?0:1]};
+document.getElementById('tr-h').textContent=t('h');document.getElementById('tr-s').textContent=t('s');document.getElementById('tr-in').textContent=t('in');document.getElementById('tr-cav').textContent=t('cav');
+var P=[
+ {k:'emdat',c:'#e8590c',u:['건','events'],t:['기록된 자연재해 건수 (전 세계)','Recorded natural disasters (world)'],w:['EM-DAT · 루뱅대 CRED (Our World in Data 가공)','EM-DAT · CRED, UCLouvain (via Our World in Data)'],l:[['EM-DAT','https://www.emdat.be/'],['Our World in Data','https://ourworldindata.org/natural-disasters']]},
+ {k:'conf',c:'#c2412d',u:['건','conflicts'],t:['진행 중인 국가 간·국가 내 무력 분쟁 수','Ongoing state-based armed conflicts'],w:['UCDP · 웁살라대 분쟁자료 프로그램','UCDP · Uppsala Conflict Data Program'],l:[['UCDP','https://ucdp.uu.se/'],['Our World in Data','https://ourworldindata.org/grapher/number-of-state-based-conflicts']]},
+ {k:'q7',c:'#2a78d6',u:['회','quakes'],t:['규모 7.0 이상 지진 수','Earthquakes of magnitude 7.0+'],w:['USGS 미국 지질조사국 지진 목록','USGS Earthquake Catalog'],l:[['USGS','https://earthquake.usgs.gov/earthquakes/search/']],x:'q6',xt:['규모 6.0 이상','M6.0+']},
+ {k:'ts',c:'#1baf7a',u:['건','events'],t:['확인된 해일(쓰나미) 건수','Confirmed tsunami events'],w:['NOAA NCEI 세계 역사 해일 데이터베이스(확실·유력 등급)','NOAA NCEI Global Historical Tsunami Database (definite/probable)'],l:[['NOAA NCEI','https://www.ngdc.noaa.gov/hazard/tsu_db.shtml']]},
+ {k:'temp',c:'#d6336c',u:['℃','°C'],t:['지구 평균기온 변화 (1951~1980년 대비)','Global temperature anomaly (vs 1951–1980)'],w:['NASA GISS 지표 기온 분석(GISTEMP v4)','NASA GISS Surface Temperature Analysis (GISTEMP v4)'],l:[['NASA GISS','https://data.giss.nasa.gov/gistemp/']],dec:2},
+ {k:'co2',c:'#6250d6',u:['ppm','ppm'],t:['대기 중 이산화탄소 농도 (마우나로아)','Atmospheric CO₂ (Mauna Loa)'],w:['NOAA 지구감시연구소(GML)','NOAA Global Monitoring Laboratory'],l:[['NOAA GML','https://gml.noaa.gov/ccgg/trends/']],dec:1}];
+var Y=T.years;
+function ma(v,n){return v.map(function(_,i){var s=0,c=0;for(var j=Math.max(0,i-n+1);j<=i;j++)if(v[j]!=null){s+=v[j];c++}return c>=Math.min(n,i+1)*0.6?s/c:null})}
+function avg(v,a,b){var s=0,c=0;Y.forEach(function(y,i){if(y>=a&&y<=b&&v[i]!=null){s+=v[i];c++}});return c?s/c:null}
+function fmt(x,d){return x==null?'—':(d?x.toFixed(d):Math.round(x).toLocaleString())}
+var g=document.getElementById('tr-grid');
+P.forEach(function(p){var v=T.s[p.k].v,dec=p.dec||0,last=null,li=-1;for(var i=v.length-1;i>=0;i--)if(v[i]!=null){last=v[i];li=i;break}
+ var first=null,fi=0;for(i=0;i<v.length;i++)if(v[i]!=null){first=v[i];fi=i;break}
+ var a50=avg(v,Y[fi],Y[fi]+9),a10=avg(v,2016,2025);
+ var el=document.createElement('div');el.className='tr-c';
+ el.innerHTML='<h3>'+p.t[ko?0:1]+'</h3><p class="who">'+p.w[ko?0:1]+'</p><div class="kv"><div><b>'+fmt(last,dec)+' '+p.u[ko?0:1]+'</b>'+Y[li]+(ko?'년':'')+'</div><div><b>'+fmt(a50,dec)+'</b>'+(ko?Y[fi]+'~'+(Y[fi]+9)+'년 평균':Y[fi]+'–'+(Y[fi]+9)+' avg')+'</div><div><b>'+fmt(a10,dec)+'</b>'+(ko?'2016~2025년 평균':'2016–2025 avg')+'</div></div><div class="ch"></div><p class="cap">'+(ko?'출처: ':'Source: ')+p.l.map(function(x){return'<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>'}).join(' · ')+'</p>';
+ g.appendChild(el);draw(el.querySelector('.ch'),p,v,dec)});
+function draw(box,p,v,dec){var W=560,H=230,m={t:10,r:10,b:24,l:40};
+ var x=d3.scaleLinear().domain([1950,2025]).range([m.l,W-m.r]);
+ var ex=p.x?T.s[p.x].v:null;var vals=v.concat(ex||[]).filter(function(z){return z!=null});
+ var lo=d3.min(vals),hi=d3.max(vals);var y=d3.scaleLinear().domain([p.k==='temp'?lo-0.1:(p.k==='co2'?lo-5:0),hi*1.05]).nice().range([H-m.b,m.t]);
+ var s=d3.select(box).append('svg').attr('viewBox','0 0 '+W+' '+H);
+ s.append('g').attr('class','ax').attr('transform','translate(0,'+(H-m.b)+')').call(d3.axisBottom(x).tickValues([1950,1960,1970,1980,1990,2000,2010,2020]).tickFormat(d3.format('d')).tickSizeOuter(0));
+ s.append('g').attr('class','ax').attr('transform','translate('+m.l+',0)').call(d3.axisLeft(y).ticks(5).tickSizeOuter(0));
+ var pts=Y.map(function(yy,i){return[yy,v[i]]}).filter(function(d){return d[1]!=null});
+ var L=d3.line().x(function(d){return x(d[0])}).y(function(d){return y(d[1])});
+ if(p.k==='temp')s.append('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',y(0)).attr('y2',y(0)).attr('stroke','var(--line)');
+ if(ex){var ep=Y.map(function(yy,i){return[yy,ex[i]]});s.append('path').attr('d',L(ep)).attr('class','ln').attr('stroke','#9DB8E0').attr('stroke-dasharray','3 3');
+  s.append('text').attr('x',W-m.r).attr('y',y(ex[ex.length-1])-6).attr('text-anchor','end').attr('font-size',11).attr('fill','var(--muted)').text(p.xt[ko?0:1])}
+ s.append('path').attr('class','ar').attr('fill',p.c).attr('d',d3.area().x(function(d){return x(d[0])}).y0(y.range()[0]).y1(function(d){return y(d[1])})(pts));
+ s.append('path').attr('class','ln').attr('stroke',p.c).attr('d',L(pts));
+ var mv=ma(v,10);s.append('path').attr('class','ma').attr('stroke',p.c).attr('d',L(Y.map(function(yy,i){return[yy,mv[i]]}).filter(function(d){return d[1]!=null})));
+ var tip=d3.select(box).append('div').attr('class','tr-tip').style('display','none');var dot=s.append('circle').attr('r',4).attr('fill',p.c).style('display','none');
+ s.append('rect').attr('x',m.l).attr('y',m.t).attr('width',W-m.l-m.r).attr('height',H-m.t-m.b).attr('fill','transparent')
+  .on('mousemove touchstart',function(ev){var pt=d3.pointer(ev.touches?ev.touches[0]:ev,this),yy=Math.round(x.invert(pt[0])),i=yy-1950;if(i<0||i>=Y.length||v[i]==null)return;
+   dot.style('display',null).attr('cx',x(yy)).attr('cy',y(v[i]));var r=box.getBoundingClientRect(),sc=r.width/W;
+   tip.style('display',null).style('left',(x(yy)*sc)+'px').style('top',(y(v[i])*sc)+'px').text(yy+' · '+fmt(v[i],dec)+' '+p.u[ko?0:1]+(ex&&ex[i]!=null?' · '+p.xt[ko?0:1]+' '+ex[i]:''))})
+  .on('mouseleave',function(){tip.style('display','none');dot.style('display','none')})}
+/* index chart */
+var IX=P.filter(function(p){return p.k!=='temp'}),on={};IX.forEach(function(p){on[p.k]=true});
+var ctl=document.getElementById('tr-ctl');
+function idx(){var W=1160,H=320,m={t:12,r:12,b:26,l:46},box=d3.select('#tr-idx');box.html('');
+ var S=IX.filter(function(p){return on[p.k]}).map(function(p){var v=T.s[p.k].v,b=avg(v,1951,1980)||avg(v,1959,1980);return{p:p,d:ma(v,5).map(function(z,i){return[Y[i],z==null?null:z/b*100]}).filter(function(d){return d[1]!=null})}});
+ var hi=d3.max(S,function(s){return d3.max(s.d,function(d){return d[1]})})||200;
+ var x=d3.scaleLinear().domain([1950,2025]).range([m.l,W-m.r]),y=d3.scaleLinear().domain([0,hi*1.05]).nice().range([H-m.b,m.t]);
+ var s=box.append('svg').attr('viewBox','0 0 '+W+' '+H);
+ s.append('g').attr('class','ax').attr('transform','translate(0,'+(H-m.b)+')').call(d3.axisBottom(x).ticks(8).tickFormat(d3.format('d')).tickSizeOuter(0));
+ s.append('g').attr('class','ax').attr('transform','translate('+m.l+',0)').call(d3.axisLeft(y).ticks(6).tickSizeOuter(0));
+ s.append('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',y(100)).attr('y2',y(100)).attr('stroke','var(--muted)').attr('stroke-dasharray','4 4');
+ S.forEach(function(q){s.append('path').attr('fill','none').attr('stroke',q.p.c).attr('stroke-width',2.6).attr('d',d3.line().curve(d3.curveMonotoneX).x(function(d){return x(d[0])}).y(function(d){return y(d[1])})(q.d));
+  var e=q.d[q.d.length-1];s.append('text').attr('x',x(e[0])-4).attr('y',y(e[1])-6).attr('text-anchor','end').attr('font-size',12).attr('font-weight',700).attr('fill',q.p.c).text(Math.round(e[1]))})}
+ctl.innerHTML=IX.map(function(p){return'<button aria-pressed="true" data-k="'+p.k+'"><i style="background:'+p.c+'"></i>'+p.t[ko?0:1].replace(/ \(.*\)$/,'')+'</button>'}).join('');
+ctl.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;var k=b.dataset.k;on[k]=!on[k];if(!IX.some(function(p){return on[p.k]}))on[k]=true;b.setAttribute('aria-pressed',on[k]);idx()};
+idx();})();
+
 </script>
 </body>
 </html>

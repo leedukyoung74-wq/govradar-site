@@ -28,7 +28,7 @@ header.top nav a{font-weight:400;color:var(--soft);margin-left:18px;font-size:15
 .hair{width:96px;height:1px;background:var(--gold);margin:28px 0}
 .notice{margin-top:28px;border:1px solid #4A3E26;background:#15120C;padding:18px 22px;max-width:860px;font-size:15px;color:var(--soft)}
 .notice b{color:var(--gold2)}
-.tabs{position:sticky;top:104px;z-index:5;background:rgba(11,11,10,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.tabs{display:none;position:sticky;top:104px;z-index:5;background:rgba(11,11,10,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 .tabs .wrap{display:flex;gap:6px;overflow-x:auto}
 .tabs button{font:inherit;font-size:15px;background:none;border:0;color:var(--muted);padding:16px 14px;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap}
 .tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--gold)}
@@ -133,7 +133,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;font-size:13px;color
 </style>
 </head>
 <body>
-<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/signals/":"/"+l+"/conflict/"};</script><script src="/assets/gvhdr.js" data-l="ko" data-g="world" data-a="signals"></script>
+<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/signals/":"/"+l+"/conflict/"};window.GVH_SUB=function(){return[["#eco","이코노미스트 표지"],["#simp","심슨 가족 '예측'설"],["#p7","7인 전망 시나리오"],["#how","읽는 법·출처"]]};</script><script src="/assets/gvhdr.js" data-l="ko" data-g="world" data-a="signals"></script>
 
 <section class="hero"><div class="wrap">
 <p class="eb">COVERS &amp; SATIRE · 2015 — 2026</p>
@@ -247,5 +247,8 @@ h+='<div class="notice" style="margin:30px 0 50px"><b>어느 쪽이 맞든 쓸�
 document.getElementById("p7").innerHTML=h;})();
 
 </script>
+<script>(function(){var tabs=document.querySelectorAll("[role=tab]");function go(t){var b=document.querySelector('[role=tab][data-t="'+t+'"]');if(!b)return;b.click();document.querySelectorAll('.gvh .subnav a').forEach(function(a){if(a.getAttribute("href")==="#"+t)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")});}
+document.querySelectorAll('.gvh .subnav a').forEach(function(a){a.addEventListener("click",function(ev){ev.preventDefault();var t=a.getAttribute("href").slice(1);history.replaceState(null,"","#"+t);go(t);scrollTo({top:0,behavior:"smooth"})})});
+go((location.hash||"#eco").slice(1));})();</script>
 </body>
 </html>
