@@ -28,6 +28,13 @@ def page(L, sub, s):
     opts = "".join(f'<option value="{"/welcome/" if l == "ko" else "/welcome/" + l + "/"}{sub}"{" selected" if l == L else ""}>{NAMES[l]}</option>' for l in LANGS)
     sel = f'<select aria-label="Language" onchange="location.href=this.value" style="min-height: 32px; border: 1px solid rgba(255,255,255,.5); border-radius: 16px; background: #0b1f3a; color: #ffffff; padding: 0 10px; font: inherit; font-size: 13px">{opts}</select>'
     s, n = EN_PILL.subn(sel, s)
+    t = re.search(r"<title>(.*?)</title>", s).group(1); dsc = re.search(r'<meta name="description" content="([^"]*)"', s).group(1)
+    url = "https://radar.wmm-hoa.com" + base + sub
+    t = "GOV RADAR" if sub == "" else (t if "GOV RADAR" in t else t + " · GOV RADAR")
+    og = (f'<meta property="og:type" content="website"><meta property="og:site_name" content="GOV RADAR"><meta property="og:title" content="{t}"><meta property="og:description" content="{dsc}">'
+          f'<meta property="og:url" content="{url}"><meta property="og:image" content="https://radar.wmm-hoa.com/assets/og-govradar.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+          f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://radar.wmm-hoa.com/assets/og-govradar.jpg">')
+    s = s.replace('<link rel="icon" href="/assets/govradar-logo.webp">', og + '<link rel="icon" href="/assets/mark.png">', 1)
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="https://radar.wmm-hoa.com{"/welcome/" if l == "ko" else "/welcome/" + l + "/"}{sub}">' for l in LANGS)
     s = s.replace('<link rel="icon"', alts + '<link rel="icon"', 1)
     return s
