@@ -8,7 +8,8 @@ sys.path.insert(0, os.path.join(ROOT, "tools", "sig_i18n"))
 import en_main, en_p7, en_p7d
 from ui import UI, COUNT
 SIG = os.path.join(ROOT, "cf", "extra", "signals")
-LANGS = ["en", "es", "fr", "ar", "vi", "id"]
+LANGS = ["en"]  # signals content exists in Korean and English only
+REDIRECT = ["es", "fr", "ar", "vi", "id"]
 HANGUL = re.compile(r"[가-힣]")
 
 def jsobj(path):
@@ -107,6 +108,9 @@ def main():
             bad.append((L, lines[:8]))
         os.makedirs(os.path.join(SIG, L), exist_ok=True)
         open(os.path.join(SIG, L, "index.html"), "w", encoding="utf-8").write(h)
+    for L in REDIRECT:  # no content in these languages: send to the English page
+        os.makedirs(os.path.join(SIG, L), exist_ok=True)
+        open(os.path.join(SIG, L, "index.html"), "w", encoding="utf-8").write('<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/signals/en/"><link rel="canonical" href="https://radar.wmm-hoa.com/signals/en/"><script>location.replace("/signals/en/"+location.hash)</script><a href="/signals/en/">English</a>')
     if bad:
         for L, lines in bad:
             print("[signals_i18n] Korean text left in", L, *lines, sep="\n  ")

@@ -158,7 +158,7 @@ FONTLINK = {
 # en/es/fr/id use the house font (WMM Nexon) only; vi/ar keep a fallback for glyphs Nexon lacks
 from subnav import toc_post as _toc_post, subnav as _subnav, gvhdr_js as _gvhdr_js, SUBCSS as _SUBCSS, group_of as _group_of
 def navhtml(L):
-    items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l="+L}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/signals/{"" if L == "ko" else L+"/"}">{e(lbl)}</a>' if p == "@signals" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
+    items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l="+L}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/signals/{"" if L == "ko" else "en/"}">{e(lbl)}</a>' if p == "@signals" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
     return items
 def navhtml_act(L, path):
     g, _ = _group_of(path)
@@ -748,7 +748,7 @@ def home(L):
 <section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=6, home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 <section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
 {sample_band(L)}
-<section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a> {hz_link(L)}{' <a class="btn" href="/signals/">이코노미스트 표지·심슨·7인 전망 읽기 →</a>' if L=="ko" else f' <a class="btn" href="/signals/{L}/">Economist covers, Simpsons claims &amp; seven outlooks →</a>'}</p></div></section>
+<section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a> {hz_link(L)}{' <a class="btn" href="/signals/">이코노미스트 표지·심슨·7인 전망 읽기 →</a>' if L=="ko" else f' <a class="btn" href="/signals/en/">Economist covers, Simpsons claims &amp; seven outlooks →</a>'}</p></div></section>
 {hz_band(L)}
 {ready_band(L)}
 {P3.edge_html(L)}{P3.access_html(L)}
