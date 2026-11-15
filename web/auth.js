@@ -35,7 +35,7 @@
   async function signup(email, password, data) { return j("/signup", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ email, password, data }) }); }
   async function recover(email) { return j("/recover", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ email }) }); }
   async function update(attrs) { const t = await token(); const user = await j("/user", { method: "PUT", headers: { "content-type": "application/json", authorization: "Bearer " + t }, body: JSON.stringify(attrs) }); save({ ...S, user }); return user; }
-  function logout() { const t = S && S.access_token; save(null); if (t) fetch(API + "/logout", { method: "POST", headers: { authorization: "Bearer " + t } }).catch(() => {}); }
+  function logout() { const t = S && S.access_token; save(null); try { sessionStorage.removeItem("gv_k"); sessionStorage.removeItem("gv_grade"); } catch (e) {} if (t) fetch(API + "/logout", { method: "POST", headers: { authorization: "Bearer " + t } }).catch(() => {}); }
   function roles() { return (S && S.user && S.user.app_metadata && S.user.app_metadata.roles) || []; }
   function tier() { const r = roles().map(x => String(x).toLowerCase()); for (const k of ["admin", "m5", "m4", "m3", "m2", "uni", "m1", "edu", "youth"]) if (r.includes(k)) return k; return S ? "free" : null; }
   function has(min) { const order = { free: 0, youth: 1, edu: 1, m1: 1, uni: 2, m2: 2, m3: 3, m4: 4, m5: 5, admin: 9 }; const t = tier(); return t ? (order[t] || 0) >= (order[min] || 0) : false; }

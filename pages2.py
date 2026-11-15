@@ -78,15 +78,15 @@ LEGAL = {
  },
  "refund": {
   "ko": ("환불 정책", [
-   ("청약철회 (7일)", "유료 멤버십은 결제일로부터 7일 안에, 유료 기능(알림 설정 외의 유료 자료 열람·AI 생성·다운로드)을 쓰지 않았다면 전액 환불합니다."),
-   ("이용 후 해지", "이용을 시작한 뒤에는 다음 결제일 전까지 해지할 수 있고, 남은 기간까지 이용할 수 있습니다. 연간 요금은 이용한 달을 월 요금으로 계산해 뺀 금액을 환불합니다."),
+   ("열람 시작과 청약철회 제한", "유료 멤버십은 결제(또는 등급 부여) 즉시 회원 전용 분석의 열람이 시작되는 디지털 콘텐츠입니다. 결제 전에 이 사실을 알리고 동의를 받으며, 열람이 시작된 뒤에는 청약철회(환불)가 제한됩니다(전자상거래법 제17조 제2항 제5호). 결제 후 7일 안에 회원 전용 분석을 한 번도 열람하지 않았다면 전액 환불합니다."),
+   ("이용 후 해지", "월 요금은 환불하지 않으며, 다음 결제일 전까지 해지하면 다음 달부터 결제되지 않고 남은 기간까지 이용할 수 있습니다. 연간 요금은 관련 법령에 따라 이용한 달을 월 요금으로 계산해 뺀 금액을 환불합니다."),
    ("디지털 자료", "이미 받은 보고서·계약서 서식 등 디지털 자료는 열람 또는 다운로드 후에는 청약철회가 제한됩니다(전자상거래법 제17조 제2항). 회사는 구매 전에 이 사실을 표시합니다."),
    ("맞춤 보고서·검토", "국가 진출 브리프·입찰 적합도 검토 같은 맞춤 작업은 작업을 시작하기 전까지 전액 환불하고, 작업을 시작한 뒤에는 진행한 만큼을 뺀 금액을 환불합니다. 완성본을 받은 뒤에는 디지털 자료 규정을 따릅니다."),
    ("서비스 문제", "회사 사정으로 서비스를 연속 72시간 이상 쓰지 못했다면 그 기간만큼 이용 기간을 연장하거나 환불합니다."),
    ("신청 방법", "73036396@naver.com으로 가입 이메일과 결제일을 보내 주세요. 영업일 3일 안에 처리합니다.")]),
   "en": ("Refund Policy", [
-   ("7-day withdrawal", "Full refund within 7 days of payment if paid features (premium content, AI generation, downloads) were not used."),
-   ("Cancelling after use", "Cancel any time before the next billing date and keep access until then. Annual plans are refunded minus used months at the monthly rate."),
+   ("Access starts at once; withdrawal limited", "Paid membership is digital content: member-only analysis opens as soon as you pay (or your grade is granted). We tell you this and ask for your consent before payment, and once access has started the right of withdrawal (refund) no longer applies (Korean E-Commerce Act Art. 17(2)(5)). If you have not opened any member-only analysis within 7 days of payment, we refund in full."),
+   ("Cancelling after use", "Monthly fees are not refunded; cancel before the next billing date to stop future charges and keep access until then. Annual plans are refunded, as the law requires, minus the months used at the monthly rate."),
    ("Digital materials", "Reports and templates already opened or downloaded cannot be withdrawn (Korean E-Commerce Act Art. 17(2)); this is shown before purchase."),
    ("Custom reports and reviews", "Custom work such as market-entry briefs and tender fit reviews is fully refundable until work starts; after that, we refund the balance minus work done. Once delivered, the digital-materials rule applies."),
    ("Outages", "If the Service is unavailable for 72+ consecutive hours due to us, we extend or refund that period."),
