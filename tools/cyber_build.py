@@ -3,6 +3,7 @@
 import os, sys, json, html
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import cyber_data as C
+import alerts_build as AB
 OUT = os.path.join(HERE, "..", "cf", "extra", "cyber")
 E = lambda s: html.escape(str(s), quote=True)
 BASE = "https://radar.wmm-hoa.com"
@@ -220,6 +221,7 @@ def page(L):
 <section class="s alt" id="now"><div class="wrap"><h2>{E(t["nh"])}</h2><p class="lede">{E(t["nl"])}</p><div class="flt" id="flt">{flt}</div><div id="evs">{evs}</div></div></section>
 <section class="s" id="hist"><div class="wrap"><h2>{E(t["hh"])}</h2><p class="lede">{E(t["hl"])}</p><div class="hist">{hist}</div></div></section>
 <section class="s alt" id="chain"><div class="wrap"><h2>{E(t["ch"])}</h2><p class="lede">{E(t["cl"])}</p><div class="chw">{chain_svg(i)}</div></div></section>
+<section class="s" id="alerts"><div class="wrap">{AB.strip(L)}</div></section>
 <section class="s" id="rumor"><div class="wrap"><h2>{E(t["rh"])}</h2><p class="lede">{E(t["rl"])}</p><div class="rm">{rumor}</div></div></section>
 <section class="s alt" id="prep"><div class="wrap"><h2>{E(t["ph"])}</h2><p class="lede">{E(t["pl"])}</p>
 <div class="areas">{prep}</div>

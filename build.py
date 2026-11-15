@@ -540,7 +540,7 @@ def conflict_page(L):
 <p><a class="btn" href="/{L}/ready/">{"Preparedness centre →" if en else "재난 대비센터 →"}</a> <a class="btn" href="/{L}/prepare/">{"Home stockpile kit →" if en else "가정 비축 키트 →"}</a> <a class="btn" href="/{L}/verify/">{"Verification policy" if en else "검증 원칙"}</a></p>
 <h2>{"Sources" if en else "출처"}</h2><ol class="src">{srcs}</ol></div>"""
     jl = ld({"@context": "https://schema.org", "@type": "WebPage", "name": t_, "inLanguage": L, "dateModified": C["updated"], "publisher": ORG})
-    return head(L, t_ + " · GOV RADAR", (C["summary_en"] if en else C["summary_ko"])[:155], f"/{L}/conflict/", {l: f"/{l}/conflict/" for l in LANGS}, jl + VCSS + JSVM + '<script src="/assets/hotmap.js" defer></script>') + body + foot(L)
+    return head(L, t_ + " · GOV RADAR", (C["summary_en"] if en else C["summary_ko"])[:155], f"/{L}/conflict/", {l: f"/{l}/conflict/" for l in LANGS}, jl + VCSS + JSVM + '<script src="/assets/hotmap.js" defer></script>') + body + f'<section class="band" id="alerts"><div class="in">{AB.strip("ko" if L=="ko" else "en")}</div></section>' + foot(L)
 def verify_page(L):
     en = L != "ko"; t_ = "How GOV RADAR verifies information" if en else "GOV RADAR는 정보를 이렇게 검증합니다"
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(t_)}</h1></div></section>
@@ -735,6 +735,7 @@ def mlock(L, f, sid, parts, wrap=("<ul>", "</ul>"), n=FREE_N):
 # ---- cyber issues (tools/cyber_data.py; page built by tools/cyber_build.py at /cyber/) ----
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import cyber_data as CY
+import alerts_build as AB
 CYB_T = {"ko": ("사이버 공격 — 지금 주목할 사건", "실제 공격과 단순 장애를 구분해 정리했습니다. 유형 12가지, 역대 사건, 가정·기업·정부 준비 사항은 사이버 공격 페이지에 있습니다.", "사이버 공격 전체 보기 →", "이 나라 관련 사이버 사건"),
  "en": ("Cyberattacks — incidents to watch", "Real attacks are separated from plain outages. Twelve kinds of attack, landmark cases and preparation steps are on the cyberattack page.", "See the full cyberattack page →", "Cyber incidents involving this country"),
  "es": ("Ciberataques — incidentes a vigilar", "Separamos ataques reales de simples fallos. Tipos, casos históricos y preparación en la página de ciberataques (en inglés).", "Ver la página completa →", "Incidentes cibernéticos de este país"),

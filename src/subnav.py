@@ -20,6 +20,7 @@ LBL = {
  "conflict":  {"ko":"세계 상황","en":"World watch","es":"Situación mundial","fr":"Veille mondiale","ar":"الوضع العالمي","vi":"Tình hình","id":"Situasi dunia"},
  "hazards":   {"ko":"재난 지도","en":"Hazard map","es":"Mapa de riesgos","fr":"Carte des risques","ar":"خريطة المخاطر","vi":"Bản đồ thảm họa","id":"Peta bahaya"},
  "cyber":     {"ko":"사이버 공격","en":"Cyberattacks","es":"Ciberataques","fr":"Cyberattaques","ar":"الهجمات السيبرانية","vi":"Tấn công mạng","id":"Serangan siber"},
+ "alerts":    {"ko":"각국 대비 권고","en":"Government advice","es":"Avisos de gobiernos","fr":"Consignes des États","ar":"توصيات الحكومات","vi":"Khuyến cáo các nước","id":"Imbauan pemerintah"},
  "ready":     {"ko":"재난 대비","en":"Preparedness","es":"Preparación","fr":"Préparation","ar":"الاستعداد","vi":"Phòng chống thiên tai","id":"Kesiapsiagaan"},
  "prepare":   {"ko":"비축 키트","en":"Stockpile kit","es":"Kit de reservas","fr":"Kit de réserves","ar":"حقيبة الطوارئ","vi":"Túi dự phòng khẩn cấp","id":"Kit persediaan"},
  "signals":   {"ko":"표지·풍자","en":"Covers & satire","es":"Portadas y sátira","fr":"Couvertures et satire","ar":"الأغلفة والسخرية","vi":"Bìa báo & châm biếm","id":"Sampul & satire"},
@@ -33,7 +34,7 @@ GROUPS = {
  "map":    ["map", "list", "sample", "request", "notices"],
  "biz":    ["mdb", "projects", "consortium", "experts", "partners", "notices"],
  "go":     ["solutions", "gcsme", "request", "sample", "contracts"],
- "world":  ["conflict", "hazards", "cyber", "ready", "prepare", "signals"],
+ "world":  ["conflict", "hazards", "cyber", "alerts", "ready", "prepare", "signals"],
  "member": ["pricing", "member", "account", "request", "about", "legal"],
 }
 SEG2G = {"mdb":"biz","projects":"biz","consortium":"biz","experts":"biz","partners":"biz","notices":"biz",
@@ -47,6 +48,7 @@ def href(L, k):
     if k == "hazards": return "/hazards/" if L == "ko" else f"/hazards/?l={L}"
     if k == "signals": return "/signals/" if L == "ko" else "/signals/en/"
     if k == "cyber": return "/cyber/" if L == "ko" else "/cyber/en/"
+    if k == "alerts": return "/alerts/" if L == "ko" else "/alerts/en/"
     if k == "legal": return f"/{L}/legal/terms/"
     return f"/{L}/{k}/"
 
