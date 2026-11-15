@@ -122,7 +122,7 @@ import re as _re
 SHORT = {
  "나라를 누르면 그 나라 정부의 모든 것이 열립니다": "세계 지도", "돈을 내기 전에, 받게 될 결과물을 먼저 보세요": "결과물 샘플",
  "AI에게 물어보는 것과 무엇이 다른가": "AI와 다른 점", "무엇을 어디까지 볼 수 있나": "이용 범위", "이런 분들이 여기서 사업을 만듭니다": "이용 고객",
- "재난·분쟁 16가지를 움직이는 지도로": "재난 16가지", "전시회·무역사절단 일정": "행사 일정", "마감이 다가오는 입찰": "마감 입찰",
+ "재난·분쟁·사이버 공격 17가지를 움직이는 화면으로": "재난 17가지", "전시회·무역사절단 일정": "행사 일정", "마감이 다가오는 입찰": "마감 입찰",
  "지금 제안할 수 있는 사업": "제안할 사업", "마감일 순 열린 입찰": "열린 입찰", "지난 입찰과 여러 나라 반복 수요": "지난 입찰·반복 수요",
  "개발은행·국제기구": "개발은행·국제기구", "기관별 조달 포털": "조달 포털", "레이더에 잡힌 분야별 사업": "분야별 사업", "함께 일하는 방법": "함께 일하는 방법",
  "출처가 달린 상세 내용": "상세 내용", "국가별 대비 시나리오 (가정)": "대비 시나리오", "각국 대비 정책 — 사실 확인": "각국 대비 정책",
@@ -181,13 +181,13 @@ def toc_post(html, path=None):
 # ---- hand-written, natural short labels for each page's contents bar, by language -------------
 def _sp(s): return [x.strip() for x in s.split("|")]
 PAGE_TOC = {
- "": {"ko":_sp("세계 지도|마감 입찰|제안할 사업|결과물 샘플|지금 세계 상황|재난 16가지|재난 대비센터|AI와 다른 점|이용 범위|이용 고객|행사 일정"),
-      "en":_sp("World map|Closing soon|Opportunities|Sample report|World now|16 hazards|Preparedness|Why not just AI|What you can see|Who uses it|Trade fairs"),
-      "es":_sp("Mapa|Cierres próximos|Oportunidades|Informe de muestra|Situación actual|16 riesgos|Preparación|¿Por qué no una IA?|Qué puede ver|Quién lo usa|Ferias"),
-      "fr":_sp("Carte|Clôtures proches|Opportunités|Exemple de rapport|Situation actuelle|16 risques|Préparation|Pourquoi pas une IA ?|Ce que vous voyez|Qui l'utilise|Salons"),
-      "ar":_sp("الخريطة|تُغلق قريبًا|الفرص|نموذج تقرير|الوضع الآن|16 خطرًا|الاستعداد|لماذا لا يكفي الذكاء الاصطناعي|ما يمكنك رؤيته|من يستخدمه|المعارض"),
-      "vi":_sp("Bản đồ|Sắp đóng thầu|Cơ hội|Báo cáo mẫu|Tình hình hiện nay|16 loại thảm họa|Phòng chống thiên tai|Khác gì hỏi AI|Xem được gì|Ai đang dùng|Hội chợ"),
-      "id":_sp("Peta|Segera ditutup|Peluang|Contoh laporan|Situasi terkini|16 bahaya|Kesiapsiagaan|Mengapa bukan AI|Yang bisa dilihat|Siapa penggunanya|Pameran")},
+ "": {"ko":_sp("세계 지도|마감 입찰|제안할 사업|결과물 샘플|지금 세계 상황|재난 17가지|재난 대비센터|AI와 다른 점|이용 범위|이용 고객|행사 일정"),
+      "en":_sp("World map|Closing soon|Opportunities|Sample report|World now|17 hazards|Preparedness|Why not just AI|What you can see|Who uses it|Trade fairs"),
+      "es":_sp("Mapa|Cierres próximos|Oportunidades|Informe de muestra|Situación actual|17 riesgos|Preparación|¿Por qué no una IA?|Qué puede ver|Quién lo usa|Ferias"),
+      "fr":_sp("Carte|Clôtures proches|Opportunités|Exemple de rapport|Situation actuelle|17 risques|Préparation|Pourquoi pas une IA ?|Ce que vous voyez|Qui l'utilise|Salons"),
+      "ar":_sp("الخريطة|تُغلق قريبًا|الفرص|نموذج تقرير|الوضع الآن|17 خطرًا|الاستعداد|لماذا لا يكفي الذكاء الاصطناعي|ما يمكنك رؤيته|من يستخدمه|المعارض"),
+      "vi":_sp("Bản đồ|Sắp đóng thầu|Cơ hội|Báo cáo mẫu|Tình hình hiện nay|17 loại thảm họa|Phòng chống thiên tai|Khác gì hỏi AI|Xem được gì|Ai đang dùng|Hội chợ"),
+      "id":_sp("Peta|Segera ditutup|Peluang|Contoh laporan|Situasi terkini|17 bahaya|Kesiapsiagaan|Mengapa bukan AI|Yang bisa dilihat|Siapa penggunanya|Pameran")},
  "mdb": {"ko":_sp("열린 입찰|지난 입찰·반복 수요|개발은행·국제기구|조달 포털|레이더 사업"),
       "en":_sp("Open tenders|Past & recurring|Development banks|Procurement portals|Tracked projects"),
       "es":_sp("Licitaciones abiertas|Anteriores y recurrentes|Bancos de desarrollo|Portales de compras|Proyectos detectados"),
