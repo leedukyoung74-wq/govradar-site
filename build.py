@@ -568,8 +568,8 @@ HZL_T = {"ko": "재난·분쟁 16가지 세계 지도로 보기", "en": "16 haza
 def hz_link(L, cls="btn"):
     return f'<a class="{cls}" href="/hazards/{"" if L == "ko" else "?l=en"}">{e(HZL_T.get(L) or HZL_T["en"])} →</a>'
 
-HZB_T = {"ko": ("재난·분쟁 16가지를 움직이는 지도로", "홍수·지진·산불부터 전쟁·시위·감염병까지. 나라를 누르면 그 나라에 기록된 재난·분쟁만 모아 보여 줍니다."),
- "en": ("Sixteen hazards, in motion on the world map", "From floods, quakes and wildfires to war, protest and epidemics. Tap a country to see only what has been recorded there."),
+HZB_T = {"ko": ("재난·분쟁·사이버 공격 17가지를 움직이는 화면으로", "홍수·지진·산불부터 전쟁·시위·감염병, 사이버 공격까지. 나라를 누르면 그 나라에 기록된 재난·분쟁만 모아 보여 줍니다."),
+ "en": ("Seventeen hazards, in motion", "From floods, quakes and wildfires to war, protest, epidemics and cyberattacks. Tap a country to see only what has been recorded there."),
  "es": ("Dieciséis riesgos, en movimiento sobre el mapa", "De inundaciones, terremotos e incendios a guerras, protestas y epidemias. Toque un país para ver solo lo registrado allí."),
  "fr": ("Seize risques, en mouvement sur la carte", "Inondations, séismes et feux de forêt, mais aussi guerres, manifestations et épidémies. Touchez un pays pour voir ce qui y a été enregistré."),
  "ar": ("ستة عشر خطرًا متحركًا على خريطة العالم", "من الفيضانات والزلازل والحرائق إلى الحروب والاحتجاجات والأوبئة. اضغط على دولة لترى ما سُجّل فيها فقط."),
@@ -579,7 +579,7 @@ def hz_band(L):
     h, p_ = HZB_T.get(L) or HZB_T["en"]
     lang = L if L in ("ko", "es", "fr", "ar", "vi", "id") else "en"
     return f'''<section class="band" id="hz16"><div class="in"><h2>{e(h)}</h2><p class="note" style="font-size:15px;max-width:46em">{e(p_)}</p><div class="hzg" id="hz16g" data-l="{lang}"></div><p class="cta">{hz_link(L)}</p></div></section>
-<script src="/hazards/hzfx.js" defer></script><script>addEventListener("DOMContentLoaded",function(){{var g=document.getElementById("hz16g"),X=window.HZFX;if(!g||!X)return;var l=g.dataset.l,N=X.NM[l]||X.NM.en;g.innerHTML=["flood","storm","quake","tsunami","wildfire","volcano","war","protest"].map(function(k){{return X.card(k,"none",N[k],"","")}}).join("")}});</script>'''
+<script src="/hazards/hzfx.js" defer></script><script src="/hazards/hzfx2.js" defer></script><script>addEventListener("DOMContentLoaded",function(){{var g=document.getElementById("hz16g"),X=window.HZFX;if(!g||!X)return;var l=g.dataset.l,N=X.NM[l]||X.NM.en;g.innerHTML=["flood","storm","quake","tsunami","wildfire","volcano","war","cyber"].map(function(k){{return X.card(k,"none",N[k],"","")}}).join("")}});</script>'''
 
 PZ = {"ko": [("사업과 입찰 기회를 찾습니다", "나라·산업 선택 → 진행 중 기회 → 참가 조건"), ("나와 가족의 위험에 대비합니다", "지역·재난 선택 → 지금 할 일과 준비 계획"), ("협력 참여 신청", "컨소시엄·협력 관심 등록 → 맞는 상대를 찾아 연락")],
  "en": [("Find business and tender opportunities", "Country and industry → open opportunities → entry conditions"), ("Prepare my family for risks", "Area and hazard → what to do now and a plan"), ("Apply to join a partnership", "Register interest in a consortium → we match and contact you")],
