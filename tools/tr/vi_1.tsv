@@ -1,0 +1,537 @@
+0	Tấn công mạng — điều gì đang xảy ra và cách chuẩn bị · GOV RADAR
+1	GOV RADAR · Bản đồ rủi ro
+2	Tấn công mạng
+3	điều gì đang xảy ra và cách chuẩn bị
+4	Tin tặc, DDoS và mã độc tống tiền có thể làm ngừng điện, tiền, nước, thực phẩm và y tế. Chúng tôi phân biệt tấn công thật với sự cố thông thường trong các vụ việc từ tháng 9 đến tháng 11/2026, và nêu những gì hộ gia đình, doanh nghiệp và chính phủ có thể làm ngay.
+5	Bản đồ sự cố
+6	12 loại
+7	Sự cố gần đây
+8	Vụ việc tiêu biểu
+9	Tác động dây chuyền
+10	Kiểm chứng tin đồn
+11	Chuẩn bị
+12	Nguồn
+13	Tấn công mạng · đồ họa chuyển động
+14	Sự cố tại Hàn Quốc, nửa đầu 2026
+15	tăng 19% so với cùng kỳ
+16	Báo cáo mã độc tống tiền
+17	tăng 76,8%
+18	Tấn công DDoS
+19	tăng 56,7%
+20	6,3 tỷ USD
+21	Vụ trộm Binance (10/2026)
+22	lớn nhất từ trước đến nay
+23	Tính đến 2026-11-15 · Số liệu Hàn Quốc: báo cáo mối đe dọa mạng nửa đầu 2026 của MSIT/KISA (30/7)
+24	Tấn công mạng diễn ra thế nào — 12 loại
+25	«Tin tặc» bao gồm nhiều phương thức và thiệt hại rất khác nhau. Mỗi loại kèm ví dụ thực tế.
+26	Mã độc tống tiền
+27	Mã hóa hoặc đánh cắp dữ liệu rồi đòi tiền. Ngày nay thường là «tống tiền kép»: đánh cắp trước, sau đó đe dọa công bố.
+28	Ví dụ thực tế · Thư viện công cộng Queens (11/2026) · nhà cung cấp đám mây Nhật Bản, 495 khách hàng ngừng hoạt động (10/2026) · Asahi ngừng sản xuất bia (9/2025) · Colonial Pipeline (5/2021)
+29	DDoS
+30	Làm ngập máy chủ bằng lưu lượng từ nhiều thiết bị cho đến khi dịch vụ ngừng.
+31	Thiệt hại chính · Không truy cập được trang ngân hàng, thanh toán và chính phủ điện tử
+32	Ví dụ thực tế · Hàn Quốc: 373 báo cáo DDoS nửa đầu 2026, tăng 56,7% (MSIT/KISA) · DDoS ngày 7/7 (2009)
+33	Phần mềm độc hại
+34	Phần mềm độc hại chiếm quyền thiết bị, máy chủ hoặc đánh cắp dữ liệu, bao gồm web shell (cửa hậu trên máy chủ).
+35	Thiệt hại chính · Đánh cắp dữ liệu, chiếm quyền máy chủ, bàn đạp cho các cuộc tấn công tiếp theo
+36	Ví dụ thực tế · Chiến dịch khai thác lỗ hổng PHP nhắm 216 máy chủ ở 10 nước, 30 ở Hàn Quốc (đưa tin 11/2026)
+37	Lừa đảo và tấn công phi kỹ thuật
+38	Lừa người dùng bằng email, tin nhắn hoặc lời mời việc làm giả để chiếm tài khoản và quyền truy cập.
+39	Thiệt hại chính · Tài khoản ngân hàng, hệ thống doanh nghiệp và ví tiền mã hóa bị xâm phạm
+40	Ví dụ thực tế · Trang hồ sơ xin việc giả nhắm 3 tổ chức Hàn Quốc (10/2026, Kaspersky) · lừa đảo phi kỹ thuật trong vụ trộm Binance (10/2026)
+41	Tấn công chuỗi cung ứng
+42	Xâm nhập nhiều công ty cùng lúc qua nhà cung cấp, dịch vụ thuê ngoài hoặc bản cập nhật phần mềm.
+43	Thiệt hại chính · Một vụ xâm nhập ảnh hưởng hàng chục đến hàng nghìn công ty khách hàng
+44	Ví dụ thực tế · Qua nhà thầu tổng đài MetaM, 22 công ty tài chính và trò chơi (11/2026) · khoảng 2.950 máy chủ qua bản cập nhật cPGuard (11/2026) · hơn 1.300 phiên bản gói npm bị cài mã độc (8/2026) · SolarWinds (2020)
+45	Hệ thống điều khiển công nghiệp (ICS/SCADA)
+46	Thay đổi tín hiệu điều khiển và giá trị cài đặt của thiết bị vật lý như nhà máy nước, hệ thống lạnh và nhà máy điện.
+47	Thiệt hại chính · Nguy cơ với nước uống, thực phẩm bị hủy, hỏng thuốc và máu, mất điện
+48	Ví dụ thực tế · Hệ thống lạnh siêu thị châu Âu (10–11/2026) · tủ đông huyết tương Pháp bị đặt 110°C (11/2026) · nhà máy nước Oldsmar (2021) · lưới điện Ukraine (2015)
+49	Tấn công công nghệ vận hành (OT)
+50	Vô hiệu hóa các hệ thống trực tiếp vận hành nhà máy, logistics, cảng và tàu biển.
+51	Thiệt hại chính · Dây chuyền sản xuất, cảng và vận tải biển ngừng hoạt động
+52	Ví dụ thực tế · Nhà máy Jaguar Land Rover ngừng khoảng 5 tuần (9/2025) · Maersk và nhiều công ty khác bị NotPetya (2017) · lỗi hệ thống điều khiển tàu chở LNG, nghi tấn công mạng (9/2026, đang điều tra)
+53	Đánh cắp tài khoản và ví
+54	Chiếm các bước đăng nhập, ký hoặc phê duyệt để chuyển tiền và tiền mã hóa ra ngoài.
+55	Thiệt hại chính · Mất tiền mã hóa và tài sản tài chính
+56	Ví dụ thực tế · Binance khoảng 6,3 tỷ USD (10/2026, FBI: liên quan Triều Tiên) · Bybit khoảng 1,5 tỷ USD (2/2025) · ví nóng sàn Hàn Quốc khoảng 100 triệu won (10/2026)
+57	Wiper (phá hủy)
+58	Không nhằm tiền: xóa dữ liệu và phá hệ thống để khó khôi phục.
+59	Thiệt hại chính · Mất hồ sơ, khôi phục kéo dài
+60	Ví dụ thực tế · Dữ liệu đám mây của một nhà cung cấp hosting Nga bị xóa, hơn 1.000 máy chủ phải kiểm tra thủ công (11/2026) · thiết bị của hãng thiết bị y tế bị xóa (3/2026) · NotPetya (2017)
+61	Giả mạo định vị và cảnh báo
+62	Gây nhiễu hoặc giả tín hiệu GPS, hoặc chiếm ứng dụng cảnh báo để gửi cảnh báo sai.
+63	Ví dụ thực tế · Ứng dụng báo động không kích Ukraine bị dùng để gửi cảnh báo phóng xạ và hóa chất giả ở Kyiv (11/2026) · sự cố vệ tinh KA-SAT cắt giám sát từ xa tua-bin gió châu Âu (2/2022)
+64	API bị lộ và cửa phụ
+65	Nhắm vào các cửa phụ — dịch vụ tra cứu, công cụ quản trị, SaaS thuê ngoài, tệp bị bỏ quên — thay vì hệ thống lõi.
+66	Thiệt hại chính · Rò rỉ dữ liệu hàng loạt, xâm nhập mạng nội bộ
+67	Ví dụ thực tế · 16 công ty tài chính Hàn Quốc, khoảng 100.000 bản ghi (đến 10/2026) · API tra cứu hội viên Nhật Bản bị lạm dụng, tới khoảng 22,5 triệu bản ghi (10/2026)
+68	Tấn công có AI hỗ trợ
+69	Dùng AI để tự động dò lỗ hổng, viết mã khai thác và xâm nhập với tốc độ và quy mô lớn hơn.
+70	Thiệt hại chính · Hàng chục đến hàng trăm mục tiêu cùng lúc
+71	Ví dụ thực tế · Bắt giữ nhóm dùng công cụ AI sau khi đánh cắp hơn 8,2 triệu bản ghi từ khoảng 90 công ty Hàn Quốc (10/2026) · tác nhân AI được cho là đã xâm nhập hơn 100 trang web (10/2026)
+72	RADAR TRỰC TIẾP · SỰ CỐ MẠNG
+73	Các sự cố mạng trên báo chí, trên bản đồ
+74	Chạm vào một điểm để đến sự cố. Các điểm sáng lên khi tia quét đi qua. Tính đến 2026-11-15
+75	Tấn công
+76	Nghi vấn
+77	Không phải tấn công
+79	Sự cố gần đây — tấn công thật hay sự cố thông thường
+80	Tất cả
+81	Tấn công thật
+82	Lỗ hổng
+83	Hàn Quốc
+84	Ảnh minh họa, không phải ảnh sự cố ·
+85	Hàn Quốc và 9 nước khác
+86	Nhóm nghi liên quan Triều Tiên nhắm 216 máy chủ qua lỗ hổng PHP
+87	Báo cáo của Cipherma: máy chủ web chưa vá bị nhắm để cài web shell. Mục tiêu: Mỹ 49, Nhật Bản 47, Ấn Độ 31, Hàn Quốc 30 (chính phủ, tài chính, viễn thông, logistics, sản xuất). Kẻ tấn công tuyên bố có 581 mục tiêu.
+88	Kết luận
+89	Nguồn ·
+91	Rò rỉ được báo cáo tại một quỹ doanh nghiệp nhỏ, một trường đại học và một nền tảng tiền địa phương
+92	Hoa Kỳ
+93	Mỹ dừng toàn bộ chuyến bay trên cả nước
+94	· Hiện chưa phải tấn công. DHS: «không có dấu hiệu đe dọa hay tấn công — đây là sự cố viễn thông».
+96	Tàu chở dầu đâm tàu du lịch trên sông ở New Orleans
+98	Nhà thầu tổng đài bị tấn công — 22 công ty tài chính và trò chơi
+99	MetaM, đơn vị chăm sóc khách hàng cho hơn 200 công ty, phát hiện truy cập trái phép ngày 12/11 và báo cho KISA. 22 khách hàng bị ảnh hưởng, gồm sàn Coinone: họ tên, điện thoại, số định danh, số tài khoản và mật khẩu có thể đã bị lộ.
+100	· Xâm nhập đã xác nhận. Không thấy xâm nhập vào hệ thống giao dịch hay ví của Coinone.
+101	Toàn cầu
+102	Microsoft 365 gián đoạn — Outlook và Teams
+103	· Không phải tấn công: sự cố máy chủ và hạ tầng. Bài học: phụ thuộc một nhà cung cấp.
+104	Nhật Bản
+105	128 ngân hàng shinkin: ATM và quầy giao dịch ngừng
+106	· Không phải tấn công: đơn vị vận hành cho biết lỗi phần cứng.
+107	Hệ thống khởi hành sân bay Incheon lỗi ba lần (30/10, 3/11, 6/11)
+110	Paraguay
+111	Ngân hàng số Ueno bị xử lý — khoảng 2,9 triệu tài khoản bị phong tỏa, tổng thống bị luận tội
+112	· Không phải tấn công: khủng hoảng khả năng thanh toán. Bài học: tập trung vào một ngân hàng.
+114	Bản cập nhật độc hại trong công cụ bảo mật — khoảng 2.950 máy chủ
+115	Thông tin đăng nhập bị đánh cắp tại OPSSHIELD, hãng làm công cụ Linux cPGuard, được dùng để đẩy bản cập nhật độc hại cài cửa hậu và thu thập mã băm mật khẩu cùng thông tin đăng nhập.
+116	· Tấn công chuỗi cung ứng đã xác nhận.
+118	Nga
+119	Dữ liệu đám mây của công ty hosting Beget bị xóa
+120	Learjet 60 rơi ở Florida — 9 người chết
+121	Một máy bay tư nhân từ Austin đi Bahamas rơi ở quận Palm Beach sau khi phi công báo đóng băng, nhiễu động và hạ độ cao nhanh.
+122	Pháp
+123	Tủ đông huyết tương của cơ quan truyền máu ở 3 cơ sở — nhiệt độ cài đặt bị đẩy lên 110°C
+125	Ukraine và Nga
+126	Ứng dụng báo động không kích bị chiếm — cảnh báo phóng xạ và hóa chất giả ở Kyiv
+127	Mã độc tống tiền tại Thư viện công cộng Queens, New York
+128	· Đã xác nhận.
+129	Toàn cầu (tiền mã hóa)
+130	Binance mất khoảng 6,3 tỷ USD — vụ trộm tiền mã hóa lớn nhất từng ghi nhận
+131	Hệ thống ký ví và phê duyệt nội bộ bị xâm phạm bằng thủ đoạn phi kỹ thuật và mã độc. Binance hạn chế rút tiền, phong tỏa một số tài sản và cho biết sẽ bù lỗ. Ngày 31/10, FBI chỉ danh nhóm TraderTraitor liên quan Triều Tiên.
+132	Sàn tiền mã hóa Hàn Quốc
+133	Năm sàn tiền mã hóa Hàn Quốc bị tấn công
+134	Ví nóng Prabang khoảng 100 triệu won (24/10) · Bithumb bị xâm nhập phần mềm cộng tác di động, 844 khách hàng và 715 nhân viên (27/10) · Flybit, 40 khách hàng qua phần mềm cộng tác (1/11) · Gopax truy cập bất thường và tống tiền, dừng giao dịch (6/11) · Coinone qua nhà thầu (12/11).
+136	Lazarus nhắm 3 tổ chức Hàn Quốc bằng trang hồ sơ xin việc giả
+137	· Gián điệp đã xác nhận (theo đánh giá của hãng bảo mật).
+139	Công bố lỗ hổng thực thi mã từ xa trong lõi PHP
+140	Toàn cầu (lập trình viên)
+141	Loạt tấn công chuỗi cung ứng phần mềm trong tháng 10
+142	LiteLLM 1.107.0 bị cài mã độc, gói Rank Math PRO độc hại (15–16/10), bản phát hành OVHcloud CLI bị chiếm (19/10), và khóa của một nhà cung cấp sao lưu bị lạm dụng để tiếp cận khách hàng Microsoft 365.
+143	Ngành tài chính Hàn Quốc
+144	Chuỗi xâm nhập trong ngành tài chính Hàn Quốc — 16 công ty, khoảng 100.000 bản ghi
+146	Châu Âu (7 nước)
+147	Tủ lạnh và tủ đông siêu thị bị tấn công — thực phẩm bị hủy
+148	Kẻ tấn công truy cập bộ điều khiển lạnh lộ trên internet và thay đổi nhiệt độ, chế độ xả đá. Pháp khoảng 700 cửa hàng (11–12/10), Bỉ khoảng 40 Delhaize và 15 Carrefour, Hà Lan hơn 17 cửa hàng thịt và cửa hàng, Ireland khoảng 13 SuperValu, Luxembourg, Thụy Điển (đặt 50°C). BSI của Đức cảnh báo ngày 13/11.
+150	Nhật Bản: 119 vụ công bố rò rỉ dữ liệu — mã độc tống tiền trên đám mây ảnh hưởng 495 khách hàng
+151	119 vụ công bố rò rỉ hệ thống web đến 6/10 (81 vụ từ tháng 7): một nhà bán phần mềm tới khoảng 22,5 triệu bản ghi, một chuỗi giảm giá tới khoảng 1,73 triệu, một tập đoàn bách hóa khoảng 1,26 triệu, và mã độc tống tiền đám mây gây gián đoạn 495 khách hàng là địa phương và doanh nghiệp.
+152	Bắt giữ nhóm tin tặc dùng AI — khoảng 90 công ty, hơn 8,2 triệu bản ghi
+153	Tàu thuộc sở hữu Hàn Quốc
+154	Hệ thống điều khiển và giám sát hàng hóa của tàu chở LNG bị lỗi
+156	Các sự cố trước đây ở Hàn Quốc và thế giới mang lại bài học lớn nhất cho việc chuẩn bị.
+157	2025.09.29 · Nhật Bản
+158	Mã độc tống tiền tại Asahi — ngừng nấu bia và giao hàng
+159	2025.09.26 · Hàn Quốc
+160	Cháy trung tâm dữ liệu quốc gia Hàn Quốc — hệ thống chính phủ ngừng hoạt động
+161	Một vụ cháy pin làm hàng trăm dịch vụ công ngừng hoạt động — không phải tấn công, nhưng là bài học về sao lưu và dự phòng.
+162	2025.09.19 · Các sân bay châu Âu
+163	Mã độc tống tiền hệ thống làm thủ tục sân bay — Heathrow, Brussels, Berlin
+164	2025.09 · Anh
+165	Jaguar Land Rover — nhà máy ngừng khoảng 5 tuần
+166	Được xếp vào nhóm sự cố mạng tốn kém nhất lịch sử nước Anh, kéo theo thiệt hại cho các nhà cung cấp.
+167	2025.09 · Hàn Quốc
+168	Thanh toán qua trạm gốc giả của KT · rò rỉ Lotte Card
+169	2025.06.09 · Hàn Quốc
+170	Mã độc tống tiền Yes24 — ngừng nhiều ngày · SGI Seoul Guarantee (tháng 7)
+171	2025.04.18 · Hàn Quốc
+172	Rò rỉ dữ liệu USIM của SK Telecom
+173	Mã độc trên máy chủ lõi làm lộ khoảng 27 triệu bản ghi USIM, dẫn đến thay SIM hàng loạt.
+174	2025.04 · Anh
+175	Mã độc tống tiền M&S — đơn hàng trực tuyến ngừng nhiều tuần
+176	2025.02.21 · Toàn cầu
+177	Vụ trộm Bybit khoảng 1,5 tỷ USD
+178	2024.07.19 · Toàn cầu
+179	Lỗi cập nhật CrowdStrike — khoảng 8,5 triệu máy Windows ngừng
+180	2024.02.21 · Mỹ
+181	Mã độc tống tiền Change Healthcare — thanh toán y tế Mỹ bị đóng băng
+182	2022.02.24 · Châu Âu
+183	Mạng vệ tinh KA-SAT bị vô hiệu hóa (ngày xâm lược)
+184	2021.05.07 · Mỹ
+185	Colonial Pipeline — nhiên liệu bờ Đông nước Mỹ bị ngừng
+186	2021.02.05 · Mỹ
+187	Nhà máy nước Oldsmar — âm mưu tăng liều xút
+188	2020.12.13 · Mỹ và toàn cầu
+189	Tấn công chuỗi cung ứng SolarWinds
+190	Cửa hậu trong một bản cập nhật đã lọt vào nhiều cơ quan và công ty Mỹ.
+191	2017.06.27 · Toàn cầu
+192	NotPetya — Maersk và nhiều công ty tê liệt
+193	2017.05.12 · Toàn cầu
+194	WannaCry — hơn 200.000 máy ở khoảng 150 nước
+195	2015.12.23 · Ukraine
+196	Tấn công lưới điện Ukraine — khoảng 230.000 người mất điện
+197	Được ghi nhận là vụ mất điện diện rộng đầu tiên do tấn công mạng.
+198	2014.12.15 · Hàn Quốc
+199	Rò rỉ dữ liệu KHNP và đe dọa
+200	2013.03.20 · Hàn Quốc
+201	20/3/2013 — đài truyền hình và ngân hàng tê liệt
+202	2009.07.07 · Hàn Quốc và Mỹ
+203	DDoS ngày 7/7/2009 — văn phòng tổng thống, quốc hội và ngân hàng ngừng truy cập
+204	Mạng botnet tấn công các trang lớn của Hàn Quốc và Mỹ trong ba ngày.
+205	Nếu một thứ ngừng lại, ảnh hưởng lan đến đâu?
+206	Điện, liên lạc, tiền, nước, thực phẩm và y tế phụ thuộc lẫn nhau. Sơ đồ cho thấy rủi ro lan truyền thế nào — không phải dự báo cho ngày nào.
+207	1. Nguyên nhân
+208	Một cuộc tấn công mạng hoặc sự cố hệ thống lớn
+209	Máy chủ, mạng, tài chính, điều khiển công nghiệp
+210	2. Điện
+211	Mất điện và bất ổn
+212	Chiếu sáng, sưởi, sạc, logistics
+213	2. Liên lạc và tiền
+214	Dữ liệu và thanh toán bị gián đoạn
+215	Điện thoại, internet, thẻ, ATM
+216	3. Nước và thực phẩm
+217	Nhà máy nước, chuỗi lạnh, logistics
+218	Nước uống, thực phẩm tươi
+219	3. Giao thông và y tế
+220	Chuyến bay, bệnh viện, thuốc
+221	Hàng không, vận tải biển, cấp cứu
+222	4. Xã hội
+223	Kinh tế chậm lại, áp lực lên nhóm dễ tổn thương
+224	Thiếu hàng, mất thu nhập
+225	Các chính phủ yêu cầu người dân chuẩn bị cho điều gì
+226	Trước chiến tranh, thiên tai, dịch bệnh và tấn công mạng: điều Lầu Năm Góc và các chính phủ châu Âu, Nhật Bản, Anh đã nói với quân đội và người dân.
+227	Chính phủ Canada
+228	Khuyến nghị của chính phủ
+229	Canada cũng kêu gọi dự trữ ít nhất 72 giờ — hơn 30 nước hiện có khuyến nghị tương tự
+230	IBTimes UK · tóm tắt của chúng tôi
+231	Nước
+232	Thực phẩm
+233	Thuốc
+234	Xem thêm →
+235	Ủy ban châu Âu
+236	EU ban hành hướng dẫn mới — sẵn sàng tự xoay xở ít nhất 72 giờ
+237	Greek City Times (dẫn thông cáo EU IP/26/2324) · tóm tắt của chúng tôi
+238	Tiền mặt
+239	Mạng
+240	Nhật Bản (Cơ quan Phòng chống Thiên tai mới)
+241	Nhật Bản lập cơ quan thiên tai và yêu cầu mọi người dự trữ ít nhất 3 ngày, tốt nhất là một tuần
+242	Gizmodo Japan · tóm tắt của chúng tôi
+243	Thiên tai
+244	Bộ Quốc phòng Mỹ «Fortress America»
+245	Quân sự
+246	Căn cứ «pháo đài»: 30 ngày không cần tiện ích dân sự, nước tái chế, mạng cô lập
+247	Infraday · tóm tắt của chúng tôi
+248	Năng lượng
+249	Chiến tranh
+250	Hàn Quốc
+251	Kiểm chứng
+252	Khuyến nghị dự trữ của Anh và Nhật làm dấy lên tin đồn «Thế chiến III» — vô căn cứ
+253	Hankook Ilbo · tóm tắt của chúng tôi
+254	Bộ Quốc phòng Mỹ
+255	«FORTRESS» của Lầu Năm Góc: căn cứ lớn của Mỹ phải tự vận hành 90 ngày nếu chiến tranh cắt điện và tiếp tế
+256	Fortune · The War Zone · tóm tắt của chúng tôi
+257	Nhiên liệu
+258	Liên lạc
+259	Chính phủ Anh
+260	Anh khởi động chiến dịch «Be Ready» ba năm — xoay xở ba ngày không điện, nước hay internet
+261	The National · Fortune · tóm tắt của chúng tôi
+262	Ireland
+263	Ireland gửi cẩm nang «Be Emergency Ready» đến các hộ gia đình
+264	Newsweek · tóm tắt của chúng tôi
+265	Xem tất cả các nước →
+266	Tin đồn đã kiểm chứng
+267	Những gì lan truyền trên mạng, bên cạnh những gì cơ quan chức năng đã xác nhận.
+268	«Mất điện toàn cầu ngày 17/11»
+269	Ngày 17/11/2026 lúc 14:20 giờ miền Đông Mỹ, FEMA và FCC thử nghiệm Hệ thống Cảnh báo Khẩn cấp toàn quốc (công bố ngày 16/9): khoảng một phút tin nhắn thử trên truyền hình và radio. Việc này không liên quan đến cắt điện và không nguồn chính thức nào dự báo mất điện toàn cầu.
+270	«Tất cả các sự cố này là một cuộc chiến mạng»
+271	«AI sẽ làm ngừng điện và tài chính vào một ngày định trước»
+272	Bill Gates (10/2026) và Diễn đàn Kinh tế Thế giới cảnh báo tấn công có AI hỗ trợ có thể gia tăng — một rủi ro chung, không phải dự báo ngừng hoạt động vào ngày cụ thể.
+273	Cần chuẩn bị gì — hộ gia đình, doanh nghiệp, chính phủ
+274	Mục tiêu không phải là không bao giờ bị tấn công, mà là khôi phục nhanh các chức năng thiết yếu khi xảy ra tấn công hoặc sự cố.
+275	Điện
+276	Hộ gia đình
+277	Sạc dự phòng, đèn pin, đèn khẩn cấp
+278	Doanh nghiệp
+279	UPS, máy phát, ưu tiên điện cho thiết bị quan trọng
+280	Chính phủ
+281	Khôi phục lưới điện, điện dự phòng cho nhóm dễ tổn thương
+282	Danh bạ trên giấy, radio cầm tay
+283	Kênh liên lạc dự phòng, thông báo khẩn cấp, điện thoại/SMS
+284	Phát thanh khẩn cấp, mạng dự phòng
+285	Tiền
+286	Một ít tiền mặt, nhiều hơn một cách thanh toán
+287	Phê duyệt hai lớp, kiểm soát truy cập
+288	Ổn định thanh toán, bảo vệ tiền gửi
+289	Nước khẩn cấp (khoảng 4 lít/người/ngày)
+290	Kế hoạch nước và vệ sinh
+291	Vận hành thủ công và giám sát chất lượng nước
+292	Thực phẩm để lâu, luân phiên sử dụng
+293	Báo động chuỗi lạnh, kiểm tra thủ công, tiêu hủy an toàn
+294	Duy trì cung ứng thực phẩm và chuỗi lạnh
+295	Y tế
+296	Đơn thuốc, sơ cứu, thông tin y tế
+297	Bảo vệ thiết bị y tế và kho lạnh
+298	Cấp cứu, cung ứng thuốc, chuyển viện
+299	Bảo mật
+300	Đăng nhập đa yếu tố, cập nhật, sao lưu
+301	Sao lưu ngoại tuyến, quyền tối thiểu, diễn tập khôi phục
+302	Kiểm tra cơ sở trọng yếu, phối hợp khi có sự cố
+303	Giao thông
+304	Lộ trình thay thế đi bộ hoặc phương tiện công cộng
+305	Vận hành thủ công, quy trình dừng an toàn
+306	Kế hoạch khôi phục hàng không, đường sắt và cảng
+307	Hộ gia đình: bước đầu tiên
+308	Luôn sạc đầy đèn pin và sạc dự phòng
+309	Nước, thức ăn ăn liền, thuốc kê đơn và đồ vệ sinh cho 3 ngày để bắt đầu
+310	Không bấm liên kết lạ hoặc vội vàng với yêu cầu thanh toán «khẩn»
+311	Doanh nghiệp: bước đầu tiên
+312	Liệt kê dịch vụ trọng yếu và mục tiêu khôi phục (RTO/RPO)
+313	Giữ bản sao lưu ngoại tuyến và kiểm tra khả năng khôi phục
+314	Quyền tối thiểu, đăng nhập đa yếu tố, rà soát quyền truy cập của nhà thầu
+315	Quy trình dự phòng và diễn tập khi đám mây, thanh toán, logistics gặp sự cố
+316	Vá và rà soát cửa phụ: API tra cứu, công cụ quản trị, tệp bị bỏ quên
+317	Chính phủ: bước đầu tiên
+318	Lập bản đồ phụ thuộc giữa điện, nước, giao thông, cấp cứu và cảnh báo
+319	Kiểm tra vận hành thủ công và nguồn cung khẩn cấp tại nhà máy nước, kho lạnh và bệnh viện
+320	Diễn tập định kỳ về báo cáo sự cố, truyền thông công chúng và khôi phục
+321	Nếu bị tấn công tại Hàn Quốc, hãy trình báo
+322	Trung tâm sự cố mạng KISA (tin tặc, rò rỉ dữ liệu)
+323	Trình báo tội phạm mạng với cảnh sát
+324	Cơ quan Giám sát Tài chính (lừa đảo tài chính)
+325	Trình báo ở đâu, theo từng nước
+326	✓ = đã kiểm tra trên trang chính thức ngày 15/11/2026. Nếu tính mạng bị đe dọa, hãy gọi số khẩn cấp địa phương trước (112 ở châu Âu và Hàn Quốc, 911 ở Mỹ).
+327	Trung tâm sự cố mạng KISA — tin tặc, rò rỉ dữ liệu ✓
+328	Trình báo tội phạm mạng với cảnh sát (ecrm.police.go.kr)
+329	Cơ quan Giám sát Tài chính — lừa đảo tài chính
+330	Tổng đài lãnh sự nếu bị tấn công ở nước ngoài
+332	Báo cáo sự cố với CISA (1-844-729-2472, cisa.gov/report) ✓
+333	Trung tâm Khiếu nại Tội phạm Internet của FBI
+334	Bộ phận hỗ trợ bảo mật IPA ✓
+335	Đường dây người tiêu dùng — lừa đảo ✓
+336	Anh
+337	Report Fraud (trước là Action Fraud, từ 12/2025) — tội phạm mạng và lừa đảo, reportfraud.police.uk ✓
+338	NCSC — báo cáo sự cố của tổ chức
+339	17Cyber — đầu mối hỗ trợ mạng của cảnh sát và hiến binh ✓
+340	Hỗ trợ cá nhân và doanh nghiệp
+341	Đức
+342	Trung tâm dịch vụ BSI (ngày làm việc, miễn phí) ✓
+343	Tây Ban Nha
+344	Đường dây an ninh mạng miễn phí INCIBE ✓
+345	Hà Lan
+346	Cảnh sát (không khẩn cấp) — trình báo tội phạm mạng
+347	Trung tâm An ninh mạng Quốc gia — dành cho tổ chức
+348	Bỉ
+349	Báo cáo sự cố với Trung tâm An ninh mạng Bỉ
+350	Chuyển tiếp thư lừa đảo đến suspicious@safeonweb.be
+351	Trung tâm An ninh mạng Quốc gia — báo cáo sự cố
+352	Garda khi khẩn cấp
+353	Thụy Điển
+354	Cảnh sát (không khẩn cấp)
+355	CERT-SE — báo cáo sự cố
+356	Ý
+357	Trình báo trực tuyến với cảnh sát bưu chính và mạng
+358	CSIRT Italia — dành cho tổ chức
+359	Ukraine
+360	CERT-UA — báo cáo sự cố
+361	Cảnh sát
+362	Ấn Độ
+363	Đường dây quốc gia về tội phạm mạng, cybercrime.gov.in ✓
+365	Tổ chức: incident@cert-in.org.in
+366	Úc
+368	Đường dây An ninh mạng Úc (1300 292 371), ReportCyber tại cyber.gov.au ✓
+369	Canada
+371	Trung tâm An ninh mạng Canada (1-833-292-3788), cyber.gc.ca ✓
+372	Trung tâm Chống lừa đảo Canada
+373	Singapore
+375	Trình báo qua dịch vụ điện tử của cảnh sát ✓
+376	Trung Quốc
+377	Đường dây cảnh báo lừa đảo
+378	Ảnh báo chí có bản quyền, nên mỗi sự cố dùng một ảnh minh họa có giấy phép miễn phí (Unsplash). Tổng hợp từ báo chí và thông báo chính thức. Kết luận của các cuộc điều tra đang diễn ra có thể thay đổi. Việc quy trách nhiệm theo nêu của cơ quan hoặc công ty được dẫn.
+403	Mười hai loại tấn công mạng, sự cố gần đây trên thế giới (tấn công thật hay sự cố thông thường), vụ việc tiêu biểu và việc hộ gia đình, doanh nghiệp, chính phủ nên làm — GOV RADAR
+406	New Delhi
+407	Bình Nhưỡng (theo quy kết của FBI)
+408	Vùng Paris (EFS)
+409	St Petersburg
+410	Queens, New York
+411	Ngoài khơi Ý
+412	Mỹ (FAA)
+413	Sân bay Incheon
+414	Miền Tây Nhật Bản
+415	Quận Palm Beach
+416	New Orleans
+417	London (NHS)
+420	Các chính phủ yêu cầu người dân chuẩn bị cho điều gì · GOV RADAR
+421	Bản đồ rủi ro
+422	Tình hình thế giới
+423	Các chính phủ yêu cầu người dân chuẩn bị cho điều gì
+424	Trước chiến tranh, thiên tai, dịch bệnh và tấn công mạng, Lầu Năm Góc muốn các căn cứ trụ được 90 ngày, còn châu Âu, Anh, Nhật Bản và Canada muốn hộ gia đình sẵn sàng từ ba ngày đến một tuần. Dưới đây là các thông báo dưới dạng thẻ tiêu đề.
+425	Thẻ là bản tóm tắt của chúng tôi trình bày như trang nhất, không phải ảnh chụp màn hình (ảnh và bố cục của báo có bản quyền). Chạm vào thẻ để xem bản gốc. Tính đến 2026-11-15
+426	Người dân được yêu cầu trụ bao lâu?
+427	Bộ Quốc phòng Mỹ — các căn cứ lớn
+428	90 ngày
+429	tới 10 ngày
+430	Thụy Điển · Na Uy
+431	tới 7 ngày
+432	3–7 ngày
+433	EU · Pháp · Anh · Canada · Hà Lan · Đan Mạch · Bỉ
+434	3 ngày (72 giờ)
+435	Hàn Quốc (hướng dẫn hiện hành)
+436	túi khẩn cấp 2–3 ngày
+437	Các thông báo, qua tiêu đề
+438	Xem nguồn →
+439	🇨🇦 Chính phủ Canada · 2026.11.04
+440	Danh sách
+441	· Nước, thực phẩm và thuốc cho 72 giờ
+442	Nguồn ·
+444	🇪🇺 Ủy ban châu Âu · 2026.11.03
+445	· Khoảng 6 lít nước/người · thực phẩm không hư · thuốc · đồ vệ sinh · tiền mặt khẩn cấp
+446	Greek City Times (dẫn thông cáo EU IP/26/2324)
+447	🇯🇵 Nhật Bản (Cơ quan Phòng chống Thiên tai mới) · 2026.11.02
+448	· Nước, thực phẩm và nhà vệ sinh di động cho 3–7 ngày · cố định đồ đạc
+450	🇺🇸 Bộ Quốc phòng Mỹ «Fortress America» · 2026.10.30
+452	🇰🇷 Hàn Quốc · 2026.10.28
+453	· Túi khẩn cấp 2–3 ngày cho mỗi người · biết hai nơi trú ẩn · thẻ liên lạc gia đình
+455	🇺🇸 Bộ Quốc phòng Mỹ · 2026.10.25
+457	🇬🇧 Chính phủ Anh · 2026.10.22
+458	· 3 lít nước/người/ngày · thức ăn không cần nấu · đèn pin, sạc dự phòng, bộ sơ cứu · radio dùng pin hoặc quay tay · thức ăn thú cưng · tiền mặt · bản sao giấy tờ · chăn
+460	🇮🇪 Ireland · 2026.09.22
+461	Gồm thực phẩm không hư, nước, thuốc và cách giữ ấm khi hệ thống sưởi hỏng.
+463	Lục quân Mỹ
+464	Lục quân Mỹ chọn công ty lắp lò phản ứng nhỏ tại hơn 20 căn cứ từ 2028
+465	The War Zone · Utility Dive · tóm tắt của chúng tôi
+466	🇺🇸 Lục quân Mỹ · 2026.08
+467	Theo chương trình Janus, Lục quân và DIU chọn năm công ty lắp lò phản ứng nhỏ tại các căn cứ như Fort Bragg và Fort Hood từ 2028 (theo báo chí tới 2,2 tỷ USD). Mục tiêu đặt năm 2022 là mỗi căn cứ có một lưới điện nhỏ vào năm 2035.
+469	Hải quân · Không quân Mỹ
+470	Hải quân thử tàu sân bay làm nhà máy điện nổi · Không quân lên kế hoạch lưới điện nhỏ tại 16 căn cứ đến 2030
+471	The War Zone · tóm tắt của chúng tôi
+472	🇺🇸 Hải quân · Không quân Mỹ · 2026.05
+473	Tháng 5/2026, Hải quân công bố trình diễn tàu USS Gerald R. Ford cấp điện cho cơ sở trên bờ. Kế hoạch 2024 của Không quân nhắm lưới điện nhỏ tại 16 căn cứ đến năm tài chính 2030. Kế hoạch của Thủy quân lục chiến, Lực lượng Không gian và việc cung ứng lương thực cho căn cứ không được nêu chi tiết trên báo chí.
+475	Cơ quan Ứng phó Khẩn cấp Dân sự Thụy Điển (MCF)
+476	Thụy Điển bổ sung ấn bản dành cho doanh nghiệp của «Nếu khủng hoảng hoặc chiến tranh xảy ra»
+477	MCF · tóm tắt của chúng tôi
+478	🇸🇪 Cơ quan Ứng phó Khẩn cấp Dân sự Thụy Điển (MCF) · 2026.01
+479	Sau khi gửi cẩm nang hộ gia đình sửa đổi đến mọi nhà năm 2024, Thụy Điển phát hành ấn bản 2026 cho doanh nghiệp về vai trò trong phòng thủ toàn diện. Hộ gia đình được khuyên tự xoay xở tới một tuần.
+480	· Nước, thực phẩm, sưởi ấm và radio tới một tuần
+481	Pháp phát hành cẩm nang sinh tồn quốc gia «Tous responsables» kèm bộ đồ khẩn cấp tại nhà
+482	Connexion France · tóm tắt của chúng tôi
+483	🇫🇷 Pháp · 2025.11
+484	Cẩm nang của chính phủ yêu cầu hộ gia đình giữ bộ đồ dùng cho ít nhất 72 giờ trước chiến tranh, thiên tai và tai nạn lớn.
+485	· Nước, thực phẩm, radio, đèn pin, thuốc, bản sao giấy tờ cho 72 giờ
+487	Đài Loan
+488	Đài Loan gửi sổ tay phòng thủ dân sự cập nhật đến mọi nhà — «mọi tuyên bố đầu hàng đều là giả»
+489	Baird Maritime · CNA · tóm tắt của chúng tôi
+490	🇹🇼 Đài Loan · 2025.11
+491	Sổ tay sửa đổi tháng 9/2025 được gửi đến mọi hộ từ tháng 11: cần làm gì khi không kích hoặc bị xâm lược, dự trữ, nơi trú ẩn và thông tin sai lệch.
+492	· Túi khẩn cấp, nước, thực phẩm, radio, lối đến nơi trú ẩn
+494	Đức (BBK)
+495	Đức sửa đổi cẩm nang khủng hoảng — dự trữ tại nhà tới 10 ngày
+496	Newsweek · The Vibes · tóm tắt của chúng tôi
+497	🇩🇪 Đức (BBK) · 2025
+498	· Nước, thực phẩm để lâu, thuốc, radio — tới 10 ngày
+500	Hà Lan gửi cẩm nang chuẩn bị đến 8,5 triệu hộ
+501	🇳🇱 Hà Lan · 2025
+502	Mỗi hộ nhận một cẩm nang khuyên chuẩn bị ít nhất ba ngày.
+503	Ba Lan
+504	«Cẩm nang an ninh» của Ba Lan đề cập thiên tai, tấn công mạng, phá hoại và chiến tranh
+505	🇵🇱 Ba Lan · 2025
+506	Cẩm nang công khai đề cập tấn công mạng, phá hoại và chiến tranh bên cạnh thiên tai.
+507	Na Uy
+508	Na Uy nâng khuyến nghị tự cung tự cấp của hộ gia đình từ 3 lên 7 ngày
+509	🇳🇴 Na Uy · 2024
+510	Kéo dài lên một tuần do biến đổi khí hậu, chiến tranh và mối đe dọa số.
+511	Phần Lan
+512	Cẩm nang quốc gia Phần Lan: xung đột, mất điện, tấn công mạng
+513	🇫🇮 Phần Lan · 2024
+514	Hướng dẫn toàn quốc cho xung đột quân sự, mất điện, tấn công mạng và thời tiết cực đoan.
+515	Các nước Baltic và Trung Âu
+516	Các nước Baltic, Séc, Đan Mạch và Bỉ cũng khuyên 72 giờ
+517	🇱🇹 Các nước Baltic và Trung Âu · 2024
+518	Cẩm nang «Nếu khủng hoảng hoặc chiến tranh đến» của Litva (kể cả khi bị chiếm đóng), cẩm nang «72 giờ» của Latvia, các hướng dẫn khủng hoảng của Estonia, «72 giờ» của Séc với 5,2 triệu bản, Đan Mạch 3 ngày và bộ đồ 3 ngày của trung tâm khủng hoảng Bỉ.
+519	Fox News — kế hoạch FORTRESS của Lầu Năm Góc
+520	Utility Dive — Lục quân chọn nhà cung cấp lò phản ứng nhỏ
+521	The Vibes — so sánh thời gian khuyến nghị theo nước (2/11/2026)
+522	Korea Safety Portal — cần làm gì khi khẩn cấp
+523	Căn cứ 90 ngày của Lầu Năm Góc, 72 giờ của EU, Be Ready của Anh, Nhật Bản 3–7 ngày và hơn nữa, dưới dạng thẻ tiêu đề
+524	Số ngày theo nước
+530	Tính đến 2026-11-15
+702	Logo WORLD MAKING MEMBERS
+856	Thiệt hại chính · Bệnh viện, nhà máy và dịch vụ công ngừng hoạt động; đe dọa công bố dữ liệu khách hàng
+857	Thiệt hại chính · Sai vị trí tàu và máy bay; người dân lo sợ và hoang mang
+858	Các sự cố từ tháng 9 đến tháng 11/2026. Không phải sự cố nào cũng là tin tặc; mỗi mục ghi kết luận được biết đến nay.
+859	· Quy kết là đánh giá của hãng bảo mật, không chính thức; chưa xác nhận xâm nhập thành công tại Hàn Quốc.
+860	Quỹ Yellow Umbrella (khoảng 1,92 triệu hội viên) cảnh báo khả năng rò rỉ; Đại học Inje 24.011 bản ghi; nền tảng tiền địa phương của Korea Minting khoảng 3.000 người dùng.
+861	· Rò rỉ được báo cáo; chưa xác nhận liên quan đến chiến dịch nhắm máy chủ nêu trên.
+862	Sự cố tần số và radar giữa các trung tâm kiểm soát khiến FAA dừng cất cánh trên toàn quốc; khoảng 7.000 chuyến bay bị hoãn hoặc hủy (FlightAware), hàng trăm chuyến chuyển hướng. Nguyên nhân được nêu là quá tải khi lắp thiết bị mạng mới.
+863	Trên sông Mississippi, tàu chở dầu Atlantic Asphalt đâm vào tàu du lịch American Heritage đang neo; khoảng 190 người trên tàu đều được cứu, một số bị thương.
+864	· Không có dấu hiệu khủng bố (Lực lượng Bảo vệ Bờ biển); đang điều tra lỗi bánh lái.
+865	Email và họp trực tuyến bị gián đoạn với doanh nghiệp và chính phủ nhiều nước, gồm NHS của Anh và cảnh sát; một số công ty quay lại dùng điện thoại và fax.
+866	Lỗi phần cứng của hệ thống dùng chung làm hạn chế rút tiền ATM và chuyển khoản; khôi phục ngay tối hôm đó.
+867	30/10: lỗi thiết bị mạng của hãng bay, một phần làm thủ tục thủ công; 3/11: lỗi hệ thống kiểm tra xuất cảnh và làm thủ tục trước của Bộ Tư pháp, chuyến bay bị hoãn; 6/11: lỗi xác thực dữ liệu hành khách.
+868	· Không phải tấn công: lỗi thiết bị và hệ thống (quá tải sau khi thay bộ lưu trữ); sân bay cho rằng khó có khả năng bị tin tặc.
+869	Ngân hàng trung ương đưa Ueno vào diện xử lý vì mất khả năng thanh toán; tài khoản của khoảng 60% người trưởng thành bị hạn chế; tiếp theo là khủng hoảng chính trị.
+870	Tấn công phá hủy xóa dữ liệu đám mây, làm sập hàng trăm trang web và một số dịch vụ công; hơn 1.000 máy chủ kiểm tra thủ công; một số bản sao lưu bị hủy.
+871	· Đã xác nhận; chưa công bố thủ phạm.
+872	· Không có bằng chứng tin tặc; FAA/NTSB đang điều tra.
+873	Kẻ tấn công cố thay đổi nhiệt độ và chế độ xả đá của thiết bị làm lạnh tại ba cơ sở huyết tương của EFS; báo động nhiệt độ giúp nhân viên xử lý ngay.
+874	· Đã xác nhận. 110°C là giá trị cài đặt được nhập, không phải nhiệt độ thực; không có thiệt hại về sản phẩm hay sức khỏe.
+875	Ứng dụng cảnh báo của Ukraine với hàng triệu người dùng đã gửi cảnh báo phóng xạ, hóa chất và quân sự giả; nhà phát triển tạm dừng thông báo. Ứng dụng cảnh báo khẩn cấp của Nga bị tấn công riêng.
+876	· Đã xác nhận; cả hai nước cho biết hệ thống cảnh báo lõi vẫn hoạt động.
+877	Hệ thống bị mã hóa làm ngừng máy tính công cộng, Wi-Fi, mượn trả sách và ứng dụng; cả 66 chi nhánh vẫn mở cửa.
+878	· Đã xác nhận; FBI quy kết.
+879	· Xâm nhập đã xác nhận; chưa xác nhận mất tài sản trong vụ tống tiền Gopax.
+880	Kaspersky: từ tháng 7/2025, lừa đảo có chủ đích, trang hồ sơ và portfolio giả và lạm dụng CrossWeb EX; mã độc mới còn dùng mã hóa hậu lượng tử.
+881	Thực thi mã không cần xác thực (CVE-2026-109618/109619). Một số trang chính phủ, trường học và bệnh viện đóng cửa phòng ngừa; chiến dịch nhắm máy chủ tháng 11 khai thác loại lỗ hổng này.
+882	· Lỗ hổng; hãy vá ngay.
+883	· Đã xác nhận; ai đã cài đặt cần đổi toàn bộ thông tin đăng nhập.
+884	Bắt đầu từ một ngân hàng thương mại cuối tháng 9. Khoảng 25.000 người qua lỗ hổng vượt xác thực trong dịch vụ tra cứu của một công ty môi giới vay, cùng xâm nhập hệ thống bán hàng nội bộ. Cơ quan quản lý kiểm tra 555 công ty; 130 công ty báo thiếu sót như chưa vá lỗi, không giám sát 24 giờ. Có dấu vết công cụ xâm nhập dùng AI.
+885	· Xâm nhập đã xác nhận; chưa xác định kẻ tấn công.
+886	· Xâm nhập ICS đã xác nhận; không có bằng chứng dùng AI.
+887	Kết hợp công cụ xâm nhập AI với tác nhân lập trình AI; tấn công 60 công ty trong 44 ngày từ cuối tháng 8 và đánh cắp hơn 8,2 triệu bản ghi từ khoảng 90 công ty. Cũng được báo cáo: một chuỗi cà phê (khoảng 2,76 triệu bản ghi từ tệp đám mây bị bỏ quên) và khoảng 110.000 tài khoản học tập của học sinh.
+888	· Đã xác nhận; không liên quan trực tiếp đến các vụ xâm nhập ngành tài chính.
+889	Tàu Vivit Africa LNG của H-Line Shipping, đi từ Louisiana đến Ý, mất quyền truy cập một số hệ thống điều khiển và giám sát hàng hóa, phải chờ ngoài khơi Ý và hủy dỡ hàng. Đây là sự cố mạng nghi vấn thứ ba trên tàu trong một tháng (cuối tháng 8 Lực lượng Bảo vệ Bờ biển và FBI đã lên hai tàu chở dầu ngoài khơi Mỹ); nhà chức trách Mỹ được cho là đang theo dõi khoảng 20 tàu.
+890	· Thủy thủ đoàn nghi bị tấn công mạng; đang điều tra.
+891	Hệ thống đặt hàng và giao hàng ngừng; nhà máy gián đoạn, nhận đơn thủ công.
+892	Phần mềm làm thủ tục dùng chung của Collins Aerospace bị tấn công; các sân bay chuyển sang làm thủ tục thủ công.
+893	Trạm phát sóng nhỏ giả được dùng để thanh toán vi mô trái phép; dữ liệu của khoảng 2,97 triệu khách hàng Lotte Card bị rò rỉ.
+894	Hiệu sách và bán vé ngừng nhiều ngày; tháng 7 một công ty bảo lãnh cũng bị tê liệt.
+895	Xâm nhập qua nhà thầu bằng thủ đoạn phi kỹ thuật; bán hàng trực tuyến ngừng nhiều tuần.
+896	FBI quy cho nhóm TraderTraitor của Triều Tiên; là kỷ lục cho đến vụ Binance năm 2026.
+897	Không phải tấn công mà là bản cập nhật bảo mật lỗi; hãng bay, bệnh viện và ngân hàng trên thế giới ngừng hoạt động.
+898	Dữ liệu của khoảng 190 triệu người; thanh toán của bệnh viện và nhà thuốc bị đóng băng nhiều tuần.
+899	Hàng chục nghìn thiết bị đầu cuối bị vô hiệu; mất giám sát từ xa khoảng 5.800 tua-bin gió ở Đức.
+900	Đường ống đóng 6 ngày; người dân đổ xô mua xăng; công ty trả khoảng 4,4 triệu USD.
+901	Một nhân viên vận hành phát hiện và đảo ngược; không ảnh hưởng nước uống.
+902	Wiper ngụy trang thành mã độc tống tiền; thiệt hại ước tính trên 10 tỷ USD.
+903	Dịch vụ y tế NHS của Anh bị gián đoạn; Mỹ và các nước khác quy cho Triều Tiên.
+904	Tài liệu nhà máy bị rò rỉ kèm đe dọa dừng lò phản ứng; chính phủ quy cho Triều Tiên.
+905	Khoảng 48.000 máy tính của đài truyền hình và ngân hàng bị xóa; chính phủ quy cho Triều Tiên.
+906	Sự cố trùng thời điểm không có nghĩa là cùng một kẻ tấn công. Chuyến bay Mỹ (lỗi viễn thông), ngân hàng shinkin Nhật Bản (phần cứng) và ngân hàng Paraguay (mất khả năng thanh toán) có nguyên nhân khác nhau; tấn công phải được xác nhận từng vụ.
+907	Ghi số liên lạc gia đình và điểm hẹn ra giấy; giữ radio để nghe cảnh báo chính thức
+908	Đăng nhập đa yếu tố trên điện thoại, máy tính, ngân hàng và email; sao lưu tệp quan trọng
+909	Một ít tiền mặt phòng mất điện; không mua tích trữ hoảng loạn hay vay không cần thiết
+910	Rà soát mọi thiết bị truy cập từ xa được, bộ điều khiển tủ lạnh và PLC; đưa chúng khỏi internet công khai
+911	Kiểm soát kết nối và truy cập từ xa giữa mạng OT và IT; theo dõi bất thường
+912	Cảnh sát khi khẩn cấp; nếu không, bộ phận tội phạm mạng của cảnh sát tỉnh ✓
+913	Cảnh sát khi khẩn cấp; trình báo trực tuyến với cảnh sát bang
+914	Phần lớn khuyến nghị cho hộ gia đình là 3 ngày; Bắc Âu và Nhật Bản là một tuần, Đức tới 10 ngày. Quân đội Mỹ nhắm 90 ngày cho mỗi căn cứ.
+915	Ottawa nhắc hộ gia đình dự trữ khẩn cấp ít nhất ba ngày; bài báo thống kê hơn 30 nước có khuyến nghị tương tự.
+916	Được trình bày tại Diễn đàn Bảo vệ Dân sự châu Âu ở Brussels. Hộ gia đình nên có túi khẩn cấp trước thời tiết cực đoan, tấn công mạng, phá hoại hạ tầng và xung đột địa chính trị; 72 giờ giúp lực lượng cứu hộ huy động cho người cần nhất. Các nước thành viên nên dạy kỹ năng chuẩn bị từ sớm ở trường và tính đến người khuyết tật trong kế hoạch.
+917	Nhân dịp cơ quan ra mắt ngày 2/11, yêu cầu được gửi tới người dân, chính quyền địa phương và các bộ: nước, thực phẩm và nhà vệ sinh di động cho ít nhất ba ngày, tốt nhất một tuần, và cố định đồ đạc. Nội dung nhắc lại sách trắng 2026; quan chức cho biết không phải phản ứng với thiên tai hay tấn công mạng cụ thể nào. Bối cảnh: nguy cơ động đất rãnh Nankai và Tokyo.
+918	Tìm địa điểm có thể vận hành 30 ngày không cần tiện ích dân sự, với tái chế nước, mạng máy tính cô lập, chuỗi cung ứng trong nước và dự trữ chiến lược. Diện tích tham khảo 100.000–250.000 mẫu Anh; các thống đốc sẽ đề xuất địa điểm vào mùa xuân 2027. Chưa chọn được nơi nào.
+919	Sau khuyến nghị của Anh và Nhật Bản, tin đồn về chiến tranh sắp xảy ra hoặc tấn công mạng quy mô lớn lan trên mạng; cả hai đều là chiến dịch chuẩn bị thời bình. Hàn Quốc chưa ban hành khuyến nghị mới; hướng dẫn quốc gia hiện hành (túi khẩn cấp 2–3 ngày mỗi người, biết nơi trú ẩn) vẫn áp dụng.
+920	Được Bộ trưởng Quốc phòng công bố ngày 30/9, với văn phòng chương trình được lập trong 30 ngày. Tài liệu kế hoạch yêu cầu các cơ sở lớn trên lục địa Mỹ duy trì hoạt động thiết yếu ít nhất 90 ngày không cần hỗ trợ bên ngoài: điện, nước, nhiên liệu và liên lạc. Gồm lò phản ứng nhỏ, pin lớn, lưới điện nhỏ, phòng thủ mạng và chống drone, chuỗi cung ứng đạn dược, thuốc và máu, đất hiếm và chip trong nước. Chưa có chi phí và lộ trình; triển khai đầy đủ ở khoảng 500 căn cứ có thể mất hàng chục năm.
+921	Được công bố trong tuyên bố của bộ trưởng trước Quốc hội. Hộ gia đình cần tự cung tự cấp ba ngày trước thời tiết cực đoan, hạn hán, lũ lụt, hoạt động của quốc gia thù địch và gián đoạn cung ứng; được mô tả là chuẩn bị cho mùa đông chứ không phải cảnh báo chiến tranh.
+922	Cẩm nang quốc gia được sửa đổi; hộ gia đình được yêu cầu dự trữ nước và thực phẩm để lâu, theo báo chí tới 10 ngày.
+923	Mỗi thẻ dẫn đến nguồn của nó; xem thêm danh sách bên dưới. Hãy kiểm tra trang chính thức của chính phủ trước khi hành động.
+K:Headlines	Tiêu đề

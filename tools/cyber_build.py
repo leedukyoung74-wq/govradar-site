@@ -251,7 +251,7 @@ def page(L):
 <meta property="og:title" content="{E(t["title"])}"><meta property="og:description" content="{E(t["desc"])}"><meta property="og:image" content="{BASE}/assets/og-govradar.jpg"><meta property="og:url" content="{BASE}{path}">
 <link rel="icon" href="/assets/mark.png"><style>{CSS}</style></head>
 <body>
-<script>window.GVH_LANG_URL=function(l){{return l==="ko"?"/cyber/":"/cyber/en/"}};window.GVH_SUB=function(){{return {sub}}};</script><script src="/assets/gvhdr.js" data-l="{L}" data-g="world" data-a="cyber"></script>
+<script>window.GVH_LANG_URL=function(l){{return l==="ko"?"/cyber/":"/cyber/"+l+"/"}};window.GVH_SUB=function(){{return {sub}}};</script><script src="/assets/gvhdr.js" data-l="{L}" data-g="world" data-a="cyber"></script>
 <section class="hero"><div class="wrap"><div class="in"><div>
 <p class="crumb"><a href="/hazards/">GOV RADAR · {E(t["crumb"])}</a> · <a href="{other}">{E(t["other"])}</a></p>
 <h1>{t["h1"]}</h1><p class="lead">{E(t["lead"])}</p>

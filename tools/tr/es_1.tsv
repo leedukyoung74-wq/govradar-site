@@ -1,0 +1,538 @@
+0	Ciberataques — qué está pasando y cómo prepararse · GOV RADAR
+1	GOV RADAR · Mapa de riesgos
+2	Ciberataques
+3	qué está pasando y cómo prepararse
+4	El hackeo, los ataques DDoS y el ransomware pueden detener la electricidad, el dinero, el agua, los alimentos y la sanidad. Separamos los ataques reales de las simples averías en los incidentes de septiembre a noviembre de 2026 y explicamos lo que hogares, empresas y gobiernos pueden hacer ya.
+5	Mapa de incidentes
+6	12 tipos
+7	Incidentes recientes
+8	Casos históricos
+9	Efectos en cadena
+10	Verificación de rumores
+11	Preparación
+12	Fuentes
+13	Ciberataque · gráfico animado
+14	Incidentes en Corea, 1.er semestre 2026
+15	+19 % interanual
+16	Denuncias de ransomware
+17	+76,8 %
+18	Ataques DDoS
+19	+56,7 %
+20	6.300 M$
+21	Robo a Binance (oct. 2026)
+22	el mayor de la historia
+23	A 2026-11-15 · Cifras de Corea: informe de ciberamenazas del 1.er semestre 2026 del MSIT/KISA (30 jul.)
+24	Cómo se producen los ciberataques — 12 tipos
+25	«Hackeo» abarca métodos y daños muy distintos. Cada tipo incluye casos reales.
+26	Ransomware
+27	Cifra o roba datos y exige un pago. Hoy suele ser «doble extorsión»: primero roba y luego amenaza con publicar.
+28	Casos reales · Biblioteca Pública de Queens (nov. 2026) · proveedor de nube japonés, 495 clientes caídos (oct. 2026) · parada de Asahi (sep. 2025) · Colonial Pipeline (may. 2021)
+29	DDoS
+30	Inunda un servidor con tráfico de muchos dispositivos hasta que el servicio se detiene.
+31	Daño principal · Webs de banca, pagos y administración electrónica inaccesibles
+32	Casos reales · Corea: 373 denuncias de DDoS en el 1.er semestre 2026, +56,7 % (MSIT/KISA) · DDoS del 7 de julio (2009)
+33	Malware
+34	Software malicioso que toma el control de dispositivos o servidores o roba datos, incluidas las web shells (puertas traseras en servidores).
+35	Daño principal · Robo de datos, toma de servidores, punto de apoyo para más ataques
+36	Casos reales · Campaña que explota un fallo de PHP contra 216 servidores en 10 países, 30 en Corea (noticia de nov. 2026)
+37	Phishing e ingeniería social
+38	Engaña a las personas con correos, mensajes u ofertas de empleo falsos para que entreguen cuentas y accesos.
+39	Daño principal · Cuentas bancarias, sistemas corporativos y monederos de criptomonedas comprometidos
+40	Casos reales · Webs de currículos falsos contra 3 organizaciones coreanas (oct. 2026, Kaspersky) · ingeniería social en el robo a Binance (oct. 2026)
+41	Ataque a la cadena de suministro
+42	Entra en muchas empresas a la vez a través de un proveedor, un servicio externalizado o una actualización de software.
+43	Daño principal · Una sola brecha afecta a decenas o miles de empresas cliente
+44	Casos reales · A través del centro de llamadas MetaM, 22 empresas financieras y de juego (nov. 2026) · ~2.950 servidores vía una actualización de cPGuard (nov. 2026) · más de 1.300 versiones de paquetes npm envenenadas (ago. 2026) · SolarWinds (2020)
+45	Sistemas de control industrial (ICS/SCADA)
+46	Cambia las señales de control y los valores de consigna de equipos físicos como plantas de agua, refrigeración y centrales eléctricas.
+47	Daño principal · Riesgo para el agua potable, alimentos desechados, daños a medicamentos y sangre, apagones
+48	Casos reales · Refrigeración de supermercados europeos (oct.–nov. 2026) · congeladores de plasma franceses fijados a 110 °C (nov. 2026) · planta de agua de Oldsmar (2021) · red eléctrica ucraniana (2015)
+49	Ataque a tecnología operativa (OT)
+50	Inutiliza los sistemas que hacen funcionar fábricas, logística, puertos y buques.
+51	Daño principal · Líneas de producción, puertos y transporte marítimo detenidos
+52	Casos reales · Plantas de Jaguar Land Rover paradas ~5 semanas (sep. 2025) · Maersk y otras afectadas por NotPetya (2017) · fallo del sistema de control de un metanero, se sospecha ciberataque (sep. 2026, en investigación)
+53	Robo de cuentas y monederos
+54	Se apodera de los pasos de inicio de sesión, firma o aprobación para sacar dinero y criptomonedas.
+55	Daño principal · Pérdida de criptomonedas y activos financieros
+56	Casos reales · Binance ~6.300 M$ (oct. 2026, FBI: vinculado a Corea del Norte) · Bybit ~1.500 M$ (feb. 2025) · monedero caliente de un exchange coreano ~100 M₩ (oct. 2026)
+57	Wiper (destructivo)
+58	No busca dinero: borra datos y destruye sistemas para que cueste restaurarlos.
+59	Daño principal · Pérdida de registros, recuperación larga
+60	Casos reales · Datos en la nube de un hosting ruso borrados, más de 1.000 servidores revisados a mano (nov. 2026) · dispositivos de un fabricante médico borrados (mar. 2026) · NotPetya (2017)
+61	Suplantación de navegación y alertas
+62	Interfiere o falsifica señales GPS, o toma apps de alerta para enviar avisos falsos.
+63	Casos reales · La app ucraniana de alerta aérea envió falsas alertas radiológicas y químicas en Kiev (nov. 2026) · la caída del satélite KA-SAT cortó la monitorización remota de aerogeneradores europeos (feb. 2022)
+64	API expuestas y puertas laterales
+65	Ataca las puertas laterales — servicios de consulta, herramientas de administración, SaaS externalizado, archivos olvidados — en lugar del sistema central.
+66	Daño principal · Fugas masivas de datos, entrada en redes internas
+67	Casos reales · 16 entidades financieras coreanas, ~100.000 registros (a oct. 2026) · abuso de una API japonesa de consulta de socios, hasta ~22,5 M de registros (oct. 2026)
+68	Ataques asistidos por IA
+69	Usa la IA para automatizar la búsqueda de vulnerabilidades, la creación de exploits y la intrusión con más velocidad y escala.
+70	Daño principal · Decenas o cientos de objetivos a la vez
+71	Casos reales · Detenido un grupo que usaba IA tras robar más de 8,2 M de registros a ~90 empresas coreanas (oct. 2026) · agentes de IA habrían vulnerado más de 100 webs (oct. 2026)
+72	RADAR EN VIVO · CIBERINCIDENTES
+73	Ciberincidentes de las noticias, en el mapa
+74	Toque un punto para ir al incidente. Los puntos brillan al pasar el barrido. A 2026-11-15
+75	Ataque
+76	Sospecha
+77	No es un ataque
+79	Incidentes recientes — ataques reales frente a simples averías
+80	Todos
+81	Ataques reales
+82	Vulnerabilidad
+83	Corea
+84	Imagen relacionada, no del incidente ·
+85	Corea y otros 9 países
+86	Grupo presuntamente vinculado a Corea del Norte ataca 216 servidores mediante un fallo de PHP
+87	Informe de Cipherma: servidores web sin parchear atacados para instalar web shells. Objetivos: EE. UU. 49, Japón 47, India 31, Corea 30 (gobierno, finanzas, telecomunicaciones, logística, industria). Los atacantes afirman tener 581 objetivos.
+88	Veredicto
+89	Fuentes ·
+91	Fugas denunciadas en un fondo para pymes, una universidad y una plataforma de moneda local
+92	Estados Unidos
+93	Parada total de vuelos en EE. UU.
+94	· No es un ataque por ahora. DHS: «ningún indicio de amenaza o ataque — una avería de telecomunicaciones».
+96	Un petrolero choca con un barco fluvial en Nueva Orleans
+98	Hackeado un centro de llamadas subcontratado — 22 empresas financieras y de juego
+99	MetaM, que gestiona la atención al cliente de más de 200 empresas, detectó un acceso no autorizado el 12 de nov. y lo comunicó a KISA. 22 clientes afectados, entre ellos el exchange Coinone: nombres, teléfonos, números de identidad, de cuenta y contraseñas posiblemente expuestos.
+100	· Brecha confirmada. No se halló intrusión en los sistemas de negociación ni de monederos de Coinone.
+101	Global
+102	Caída de Microsoft 365 — Outlook y Teams
+103	· No es un ataque: problemas de servidores e infraestructura. Lección: dependencia de un solo proveedor.
+104	Japón
+105	128 cajas shinkin: caída de cajeros y ventanillas
+106	· No es un ataque: el operador habla de un fallo de hardware.
+107	Los sistemas de salida del aeropuerto de Incheon fallan tres veces (30 oct., 3 y 6 nov.)
+110	Paraguay
+111	Banco digital Ueno intervenido — ~2,9 M de cuentas congeladas, presidente destituido
+112	· No es un ataque: crisis de solvencia. Lección: concentración en un solo banco.
+114	Actualización maliciosa en una herramienta de seguridad — ~2.950 servidores
+115	Credenciales robadas en OPSSHIELD, fabricante de la herramienta Linux cPGuard, se usaron para distribuir una actualización maliciosa que instaló una puerta trasera y recopiló hashes de contraseñas y credenciales.
+116	· Ataque a la cadena de suministro confirmado.
+118	Rusia
+119	Borrados los datos en la nube de la empresa de hosting Beget
+120	Accidente de un Learjet 60 en Florida — 9 muertos
+121	Un avión privado de Austin a Bahamas se estrelló en el condado de Palm Beach tras informar el piloto de hielo, turbulencias y un descenso rápido.
+122	Francia
+123	Congeladores de plasma del servicio de sangre en 3 sedes — consigna llevada a 110 °C
+125	Ucrania y Rusia
+126	App de alerta aérea secuestrada — falsas alertas radiológicas y químicas en Kiev
+127	Ransomware en la Biblioteca Pública de Queens, Nueva York
+128	· Confirmado.
+129	Global (cripto)
+130	Binance pierde ~6.300 M$ — el mayor robo de criptomonedas registrado
+131	Sistemas internos de firma de monederos y aprobación comprometidos con ingeniería social y malware. Binance limitó los retiros, congeló algunos activos y dijo que cubriría las pérdidas. El 31 de oct. el FBI señaló al grupo TraderTraitor, vinculado a Corea del Norte.
+132	Exchanges de criptomonedas coreanos
+133	Cinco exchanges coreanos atacados
+134	Monedero caliente de Prabang ~100 M₩ (24 oct.) · brecha en el groupware móvil de Bithumb, 844 clientes y 715 empleados (27 oct.) · Flybit, 40 clientes vía groupware (1 nov.) · Gopax, acceso anómalo y extorsión, negociación detenida (6 nov.) · Coinone vía subcontratista (12 nov.).
+136	Lazarus ataca a 3 organizaciones coreanas con webs de currículos falsos
+137	· Espionaje confirmado (atribución del proveedor de seguridad).
+139	Revelados fallos de ejecución remota de código en el núcleo de PHP
+140	Global (desarrolladores)
+141	Una serie de ataques a la cadena de suministro de software en octubre
+142	LiteLLM 1.107.0 envenenado, paquetes maliciosos de Rank Math PRO (15–16 oct.), versiones secuestradas de OVHcloud CLI (19 oct.) y la clave de un proveedor de copias de seguridad usada para llegar a clientes de Microsoft 365.
+143	Sector financiero coreano
+144	Cadena de brechas en las finanzas coreanas — 16 entidades, ~100.000 registros
+146	Europa (7 países)
+147	Neveras y congeladores de supermercados hackeados — alimentos tirados
+148	Los atacantes accedieron a controladores de refrigeración expuestos en internet y cambiaron la temperatura y el desescarche. Francia ~700 tiendas (11–12 oct.), Bélgica ~40 Delhaize y ~15 Carrefour, Países Bajos más de 17 carnicerías y tiendas, Irlanda ~13 SuperValu, Luxemburgo, Suecia (fijado en 50 °C). El BSI alemán alertó el 13 de nov.
+150	Japón: 119 avisos de fuga de datos — ransomware en la nube afecta a 495 clientes
+151	119 avisos de fugas en sistemas web hasta el 6 de oct. (81 desde julio): una tienda de software hasta ~22,5 M de registros, una cadena de descuento hasta ~1,73 M, un grupo de grandes almacenes ~1,26 M y ransomware en la nube que afectó a 495 clientes municipales y empresariales.
+152	Detenida una red de hackeo asistida por IA — ~90 empresas, más de 8,2 M de registros
+153	Buque de propiedad coreana
+154	Fallan los sistemas de control y vigilancia de carga de un metanero
+156	Incidentes pasados en Corea y en el mundo con las mayores lecciones para prepararse.
+157	2025.09.29 · Japón
+158	Ransomware en Asahi — elaboración y envíos detenidos
+159	2025.09.26 · Corea
+160	Incendio en el centro de datos nacional de Corea — sistemas del gobierno caídos
+161	Un incendio de baterías dejó sin servicio cientos de servicios públicos — no fue un ataque, pero sí una lección de copias de seguridad y redundancia.
+162	2025.09.19 · Aeropuertos europeos
+163	Ransomware en la facturación de aeropuertos — Heathrow, Bruselas, Berlín
+164	2025.09 · Reino Unido
+165	Jaguar Land Rover — plantas paradas ~5 semanas
+166	Considerado uno de los ciberincidentes más costosos de la historia británica, con daños en cadena a los proveedores.
+167	2025.09 · Corea
+168	Pagos mediante estaciones base falsas en KT · brecha en Lotte Card
+169	2025.06.09 · Corea
+170	Ransomware en Yes24 — días sin servicio · SGI Seoul Guarantee (julio)
+171	2025.04.18 · Corea
+172	Brecha de datos USIM en SK Telecom
+173	Malware en servidores centrales filtró ~27 M de registros USIM y obligó a cambiar masivamente las SIM.
+174	2025.04 · Reino Unido
+175	Ransomware en M&S — pedidos en línea detenidos durante semanas
+176	2025.02.21 · Global
+177	Robo a Bybit de ~1.500 M$
+178	2024.07.19 · Global
+179	Error de actualización de CrowdStrike — ~8,5 M de equipos Windows caídos
+180	2024.02.21 · EE. UU.
+181	Ransomware en Change Healthcare — pagos médicos de EE. UU. congelados
+182	2022.02.24 · Europa
+183	Red satelital KA-SAT inutilizada (día de la invasión)
+184	2021.05.07 · EE. UU.
+185	Colonial Pipeline — combustible detenido en la costa este de EE. UU.
+186	2021.02.05 · EE. UU.
+187	Planta de agua de Oldsmar — intento de subir la dosis de sosa
+188	2020.12.13 · EE. UU. y mundo
+189	Ataque a la cadena de suministro de SolarWinds
+190	Una puerta trasera en una actualización llegó a muchas agencias y empresas de EE. UU.
+191	2017.06.27 · Global
+192	NotPetya — Maersk y otras paralizadas
+193	2017.05.12 · Global
+194	WannaCry — más de 200.000 equipos en ~150 países
+195	2015.12.23 · Ucrania
+196	Ataque a la red eléctrica ucraniana — ~230.000 personas sin luz
+197	Registrado como el primer gran apagón causado por un ciberataque.
+198	2014.12.15 · Corea
+199	Fuga de datos de KHNP y amenazas
+200	2013.03.20 · Corea
+201	20 de marzo de 2013 — cadenas de televisión y bancos paralizados
+202	2009.07.07 · Corea y EE. UU.
+203	DDoS del 7 de julio de 2009 — presidencia, parlamento y bancos fuera de línea
+204	Botnets atacaron las principales webs coreanas y estadounidenses durante tres días.
+205	Si algo se detiene, ¿hasta dónde llega?
+206	La electricidad, las comunicaciones, el dinero, el agua, los alimentos y la sanidad dependen unos de otros. Esto muestra cómo se propaga el riesgo — no es una previsión para ninguna fecha.
+207	1. Detonante
+208	Un ciberataque o un gran fallo de sistemas
+209	Servidores, redes, finanzas, control industrial
+210	2. Electricidad
+211	Cortes e inestabilidad
+212	Luz, calefacción, carga, logística
+213	2. Comunicaciones y dinero
+214	Datos y pagos interrumpidos
+215	Teléfonos, internet, tarjetas, cajeros
+216	3. Agua y alimentos
+217	Plantas de agua, cadena de frío, logística
+218	Agua potable, alimentos frescos
+219	3. Transporte y salud
+220	Vuelos, hospitales, medicamentos
+221	Aviación, transporte marítimo, urgencias
+222	4. Sociedad
+223	Desaceleración económica, presión sobre los vulnerables
+224	Escasez, pérdida de ingresos
+225	Para qué piden los gobiernos que se prepare la población
+226	Ante guerras, catástrofes, epidemias y ciberataques: lo que el Pentágono y los gobiernos de Europa, Japón y el Reino Unido han dicho a las tropas y a la población.
+227	Gobierno de Canadá
+228	Consejo del gobierno
+229	Canadá también pide provisiones para al menos 72 horas — más de 30 países dan ya consejos similares
+230	IBTimes UK · nuestro resumen
+231	Agua
+232	Alimentos
+233	Medicinas
+234	Leer más →
+235	Comisión Europea
+236	La UE publica nuevas pautas — estar listos para valerse solos al menos 72 horas
+237	Greek City Times (cita el comunicado de la UE IP/26/2324) · nuestro resumen
+238	Efectivo
+239	Ciber
+240	Japón (nueva Agencia de Prevención de Desastres)
+241	Japón crea una agencia de desastres y pide a todos provisiones para al menos 3 días, idealmente una semana
+242	Gizmodo Japan · nuestro resumen
+243	Desastres
+244	Departamento de Defensa de EE. UU. «Fortress America»
+245	Militar
+246	Bases «fortaleza»: 30 días sin servicios civiles, agua reciclada, redes aisladas
+247	Infraday · nuestro resumen
+248	Energía
+249	Guerra
+250	Corea del Sur
+251	Verificación
+252	Los consejos de acopio de Reino Unido y Japón desatan rumores de «Tercera Guerra Mundial» — infundados
+253	Hankook Ilbo · nuestro resumen
+254	Departamento de Defensa de EE. UU.
+255	«FORTRESS» del Pentágono: grandes bases de EE. UU. funcionarán 90 días por sí solas si la guerra corta la luz y el suministro
+256	Fortune · The War Zone · nuestro resumen
+257	Combustible
+258	Comunicaciones
+259	Gobierno británico
+260	El Reino Unido lanza la campaña «Be Ready» de tres años — arreglárselas tres días sin luz, agua ni internet
+261	The National · Fortune · nuestro resumen
+262	Irlanda
+263	Irlanda envía a los hogares el folleto «Be Emergency Ready»
+264	Newsweek · nuestro resumen
+265	Ver todos los países →
+266	Rumores verificados
+267	Lo que circula en internet junto a lo que han confirmado las autoridades.
+268	«Apagón mundial el 17 de noviembre»
+269	El 17 de nov. de 2026 a las 14:20 (hora del este de EE. UU.), FEMA y la FCC realizan una prueba nacional del Sistema de Alerta de Emergencia (anunciada el 16 de sep.): cerca de un minuto de mensajes de prueba en TV y radio. No tiene nada que ver con cortar la luz, y ninguna fuente oficial prevé un apagón mundial.
+270	«Todas estas averías son una sola ciberguerra»
+271	«La IA apagará la electricidad y las finanzas en una fecha fija»
+272	Bill Gates (oct. 2026) y el Foro Económico Mundial advirtieron de que los ataques asistidos por IA pueden aumentar — un riesgo general, no una previsión de apagón en una fecha concreta.
+273	Qué preparar — hogares, empresas, gobiernos
+274	El objetivo no es no ser atacado nunca, sino restablecer rápido las funciones esenciales cuando ocurra un ataque o una avería.
+275	Electricidad
+276	Hogares
+277	Baterías externas, linternas, luces de emergencia
+278	Empresas
+279	SAI, generadores, prioridad eléctrica para equipos críticos
+280	Gobierno
+281	Restablecimiento de la red, energía de respaldo para los vulnerables
+282	Lista de contactos en papel, radio portátil
+283	Contacto alternativo, avisos de emergencia, teléfono/SMS
+284	Emisiones de emergencia, redes redundantes
+285	Dinero
+286	Algo de efectivo, más de un medio de pago
+287	Doble aprobación, control de accesos
+288	Estabilidad de pagos, protección de depósitos
+289	Agua de emergencia (~4 L por persona y día)
+290	Plan de agua y saneamiento
+291	Operación manual y control de calidad del agua
+292	Alimentos no perecederos, con rotación
+293	Alarmas de cadena de frío, revisiones manuales, eliminación segura
+294	Continuidad del suministro de alimentos y de la cadena de frío
+295	Salud
+296	Recetas, primeros auxilios, información médica
+297	Proteger equipos médicos y almacenamiento en frío
+298	Urgencias, suministro de medicamentos, traslados
+299	Seguridad
+300	Inicio de sesión multifactor, actualizaciones, copias de seguridad
+301	Copias sin conexión, mínimo privilegio, simulacros de recuperación
+302	Revisión de instalaciones críticas, cooperación ante incidentes
+303	Transporte
+304	Rutas alternativas a pie o en transporte público
+305	Operación manual, procedimientos de parada segura
+306	Planes de recuperación aérea, ferroviaria y portuaria
+307	Hogares: primeros pasos
+308	Mantenga cargadas linternas y baterías externas
+309	Agua, comida lista para comer, medicamentos recetados e higiene para 3 días, para empezar
+310	No toque enlaces desconocidos ni se precipite ante pagos «urgentes»
+311	Empresas: primeros pasos
+312	Enumere los servicios críticos y los objetivos de recuperación (RTO/RPO)
+313	Guarde copias sin conexión y compruebe que se restauran
+314	Mínimo privilegio, inicio de sesión multifactor, revise los accesos de subcontratistas
+315	Procedimientos alternativos y simulacros ante caídas de la nube, los pagos y la logística
+316	Parchee y revise las puertas laterales: API de consulta, herramientas de administración, archivos olvidados
+317	Gobierno: primeros pasos
+318	Mapee las dependencias entre electricidad, agua, transporte, urgencias y alertas
+319	Compruebe la operación manual y el suministro de emergencia en plantas de agua, almacenes frigoríficos y hospitales
+320	Simulacros periódicos de notificación de incidentes, comunicación pública y recuperación
+321	Si sufre un ataque en Corea, denúncielo
+322	Centro de incidentes de KISA (hackeo, fugas de datos)
+323	Denuncias de ciberdelitos a la policía
+324	Servicio de Supervisión Financiera (fraude financiero)
+325	Dónde denunciar, por país
+326	✓ = comprobado en webs oficiales el 15 de nov. de 2026. Si hay vidas en riesgo, llame primero al número de emergencias local (112 en Europa y Corea, 911 en EE. UU.).
+327	Centro de incidentes de KISA — hackeo, fugas de datos ✓
+328	Denuncias de ciberdelitos a la policía (ecrm.police.go.kr)
+329	Servicio de Supervisión Financiera — fraude financiero
+330	Centro de atención consular si sufre un ataque en el extranjero
+332	Notificación de incidentes a CISA (1-844-729-2472, cisa.gov/report) ✓
+333	Centro de Denuncias de Delitos en Internet del FBI
+334	Servicio de ayuda en seguridad de IPA ✓
+335	Línea del consumidor — estafas ✓
+336	Reino Unido
+337	Report Fraud (antes Action Fraud, desde dic. 2025) — ciberdelito y fraude, reportfraud.police.uk ✓
+338	NCSC — notificación de incidentes de organizaciones
+339	17Cyber — ventanilla única de ciberayuda de policía y gendarmería ✓
+340	Ayuda a particulares y empresas
+341	Alemania
+342	Centro de servicio del BSI (días laborables, gratis) ✓
+343	España
+344	Línea gratuita de ciberseguridad de INCIBE ✓
+345	Países Bajos
+346	Policía, número no urgente — denuncias de ciberdelitos
+347	Centro Nacional de Ciberseguridad — organizaciones
+348	Bélgica
+349	Notificación de incidentes al Centro de Ciberseguridad de Bélgica
+350	Reenvíe el phishing a suspicious@safeonweb.be
+351	Centro Nacional de Ciberseguridad — notificación de incidentes
+352	Garda en caso de emergencia
+353	Suecia
+354	Policía, número no urgente
+355	CERT-SE — notificación de incidentes
+356	Italia
+357	Denuncias en línea a la policía postal y cibernética
+358	CSIRT Italia — organizaciones
+359	Ucrania
+360	CERT-UA — notificación de incidentes
+361	Policía
+362	India
+363	Línea nacional contra el ciberdelito, cybercrime.gov.in ✓
+365	Organizaciones: incident@cert-in.org.in
+366	Australia
+368	Línea australiana de ciberseguridad (1300 292 371), ReportCyber en cyber.gov.au ✓
+369	Canadá
+371	Centro Canadiense de Ciberseguridad (1-833-292-3788), cyber.gc.ca ✓
+372	Centro Canadiense Antifraude
+373	Singapur
+375	Denuncia en los servicios electrónicos de la policía ✓
+376	China
+377	Línea de alerta antifraude
+378	Las fotos de prensa tienen derechos de autor, así que cada incidente muestra una imagen relacionada con licencia libre (Unsplash). Elaborado a partir de informaciones públicas y declaraciones oficiales. Las conclusiones de investigaciones abiertas pueden cambiar. Las atribuciones son las que da el organismo o la empresa citados.
+402	GOV RADAR · WORLD MAKING MEMBERS (WMM) · 73036396@naver.com
+403	Doce tipos de ciberataque, incidentes recientes en el mundo (ataques reales frente a averías), casos históricos y qué deben hacer hogares, empresas y gobiernos — GOV RADAR
+406	Nueva Delhi
+407	Pionyang (atribución del FBI)
+408	Región de París (EFS)
+409	San Petersburgo
+410	Queens, Nueva York
+411	Frente a Italia
+412	EE. UU. (FAA)
+413	Aeropuerto de Incheon
+414	Oeste de Japón
+415	Condado de Palm Beach
+416	Nueva Orleans
+417	Londres (NHS)
+420	Para qué piden los gobiernos que se prepare la población · GOV RADAR
+421	Mapa de riesgos
+422	Situación mundial
+423	Para qué piden los gobiernos que se prepare la población
+424	Ante guerras, catástrofes, epidemias y ciberataques, el Pentágono quiere bases capaces de aguantar 90 días, y Europa, el Reino Unido, Japón y Canadá quieren hogares preparados para entre tres días y una semana. Aquí están los anuncios como tarjetas de titulares.
+425	Las tarjetas son resúmenes propios con aspecto de portada, no capturas (las fotos y maquetas de los medios tienen derechos de autor). Toque una tarjeta para ver el original. A 2026-11-15
+426	¿Cuánto tiempo se pide aguantar?
+427	Defensa de EE. UU. — grandes bases
+428	90 días
+429	hasta 10 días
+430	Suecia · Noruega
+431	hasta 7 días
+432	3–7 días
+433	UE · Francia · Reino Unido · Canadá · Países Bajos · Dinamarca · Bélgica
+434	3 días (72 h)
+435	Corea (pauta existente)
+436	mochila de 2–3 días
+437	Los anuncios, en titulares
+438	Ver la fuente →
+439	🇨🇦 Gobierno de Canadá · 2026.11.04
+440	Lista
+441	· 72 horas de agua, comida y medicinas
+442	Fuente ·
+444	🇪🇺 Comisión Europea · 2026.11.03
+445	· ~6 L de agua por persona · comida no perecedera · medicinas · higiene · efectivo de emergencia
+446	Greek City Times (cita el comunicado de la UE IP/26/2324)
+447	🇯🇵 Japón (nueva Agencia de Prevención de Desastres) · 2026.11.02
+448	· Agua, comida y aseos portátiles para 3–7 días · fijar los muebles
+450	🇺🇸 Defensa de EE. UU. «Fortress America» · 2026.10.30
+452	🇰🇷 Corea del Sur · 2026.10.28
+453	· Mochila de 2–3 días por persona · conocer dos refugios · tarjeta de contacto familiar
+455	🇺🇸 Departamento de Defensa de EE. UU. · 2026.10.25
+457	🇬🇧 Gobierno británico · 2026.10.22
+458	· 3 L de agua por persona y día · comida sin cocinar · linterna, batería externa, botiquín · radio de pilas o de manivela · comida para mascotas · efectivo · copias de documentos · mantas
+460	🇮🇪 Irlanda · 2026.09.22
+461	Trata de comida no perecedera, agua, medicinas y formas de mantener el calor si falla la calefacción.
+463	Ejército de EE. UU.
+464	El Ejército de EE. UU. elige empresas para microrreactores en más de 20 bases desde 2028
+465	The War Zone · Utility Dive · nuestro resumen
+466	🇺🇸 Ejército de EE. UU. · 2026.08
+467	Con el programa Janus, el Ejército y la DIU eligieron cinco empresas para instalar microrreactores en bases como Fort Bragg y Fort Hood desde 2028 (hasta 2.200 M$, según la prensa). Un objetivo de 2022 prevé una microrred en cada base para 2035.
+469	Armada · Fuerza Aérea de EE. UU.
+470	La Armada prueba un portaaviones como central eléctrica flotante · la Fuerza Aérea planea microrredes en 16 bases para 2030
+471	The War Zone · nuestro resumen
+472	🇺🇸 Armada · Fuerza Aérea de EE. UU. · 2026.05
+473	En mayo de 2026 la Armada anunció una demostración del USS Gerald R. Ford dando electricidad a instalaciones en tierra. El plan de 2024 de la Fuerza Aérea prevé microrredes en 16 bases para el año fiscal 2030. Los planes de los Marines y la Fuerza Espacial, y el abastecimiento de alimentos de las bases, no se detallan en la prensa.
+475	Agencia Sueca de Contingencias Civiles (MCF)
+476	Suecia añade una edición para empresas de «Si llega la crisis o la guerra»
+477	MCF · nuestro resumen
+478	🇸🇪 Agencia Sueca de Contingencias Civiles (MCF) · 2026.01
+479	Tras enviar en 2024 el folleto revisado a todos los hogares, Suecia publicó una edición de 2026 para empresas sobre su papel en la defensa total. Se aconseja a los hogares arreglárselas hasta una semana.
+480	· Agua, comida, calor y radio hasta una semana
+481	Francia publica la guía nacional de supervivencia «Tous responsables» con un kit de emergencia doméstico
+482	Connexion France · nuestro resumen
+483	🇫🇷 Francia · 2025.11
+484	Guía oficial que pide a los hogares tener un kit para al menos 72 horas ante guerras, catástrofes naturales y grandes accidentes.
+485	· Agua, comida, radio, linterna, medicinas y copias de documentos para 72 horas
+487	Taiwán
+488	Taiwán envía a todos los hogares su manual de defensa civil actualizado — «cualquier anuncio de rendición es falso»
+489	Baird Maritime · CNA · nuestro resumen
+490	🇹🇼 Taiwán · 2025.11
+491	El manual revisado en septiembre de 2025 llegó a todos los hogares desde noviembre: qué hacer en bombardeos o una invasión, provisiones, refugios y desinformación.
+492	· Mochila, agua, comida, radio, rutas a refugios
+494	Alemania (BBK)
+495	Alemania revisa su guía de crisis — hasta 10 días de provisiones en casa
+496	Newsweek · The Vibes · nuestro resumen
+497	🇩🇪 Alemania (BBK) · 2025
+498	· Agua, comida de larga duración, medicinas, radio — hasta 10 días
+500	Países Bajos envía un folleto de preparación a 8,5 millones de hogares
+501	🇳🇱 Países Bajos · 2025
+502	Cada hogar recibió un folleto que aconseja prepararse para al menos tres días.
+503	Polonia
+504	La «Guía de seguridad» de Polonia trata desastres, ciberataques, sabotajes y guerra
+505	🇵🇱 Polonia · 2025
+506	La guía pública aborda ciberataques, sabotajes y guerra junto a las catástrofes naturales.
+507	Noruega
+508	Noruega amplía su consejo de autosuficiencia en el hogar de 3 a 7 días
+509	🇳🇴 Noruega · 2024
+510	Ampliado a una semana por el cambio climático, la guerra y las amenazas digitales.
+511	Finlandia
+512	La guía nacional finlandesa: conflicto, apagones, ciberataques
+513	🇫🇮 Finlandia · 2024
+514	Pautas nacionales para conflictos militares, cortes de luz, ciberataques y fenómenos extremos.
+515	Bálticos y Europa central
+516	Los bálticos, Chequia, Dinamarca y Bélgica también aconsejan 72 horas
+517	🇱🇹 Bálticos y Europa central · 2024
+518	«Si llega la crisis o la guerra» de Lituania (incluida la ocupación), el folleto «72 horas» de Letonia, las guías de crisis de Estonia, «72 horas» de Chequia con 5,2 millones de ejemplares, Dinamarca 3 días y los kits de 3 días del centro de crisis belga.
+519	Fox News — plan FORTRESS del Pentágono
+520	Utility Dive — el Ejército elige proveedores de microrreactores
+521	The Vibes — periodos aconsejados por país (2 nov. 2026)
+522	Korea Safety Portal — qué hacer en una emergencia
+523	Bases de 90 días del Pentágono, 72 horas de la UE, Be Ready británico, Japón 3–7 días y más, como tarjetas de titulares
+524	Días por país
+530	A 2026-11-15
+702	Logotipo de WORLD MAKING MEMBERS
+856	Daño principal · Hospitales, fábricas y servicios públicos detenidos; amenaza de publicar datos de clientes
+857	Daño principal · Errores de posición de barcos y aviones; miedo y confusión pública
+858	Incidentes de septiembre a noviembre de 2026. No toda avería es un hackeo; cada caso lleva el veredicto conocido hasta ahora.
+859	· La atribución es una valoración del proveedor, no oficial; no se ha confirmado el éxito dentro de Corea.
+860	El fondo Yellow Umbrella (~1,92 M de socios) avisó de una posible fuga; Universidad Inje, 24.011 registros; plataforma de moneda local de Korea Minting, ~3.000 usuarios.
+861	· Fugas denunciadas; sin vínculo confirmado con la campaña de servidores anterior.
+862	Fallos de frecuencia y radar entre centros de control llevaron a la FAA a detener las salidas en todo el país; ~7.000 vuelos retrasados o cancelados (FlightAware) y cientos desviados. Se citó una sobrecarga durante trabajos en nuevos equipos de red.
+863	En el Misisipi, el petrolero Atlantic Asphalt chocó con el barco fluvial amarrado American Heritage; las ~190 personas a bordo fueron rescatadas, varias heridas.
+864	· Ningún indicio de terrorismo (Guardia Costera); se investiga un fallo de gobierno.
+865	Correo y videoconferencias interrumpidos para empresas y gobiernos de muchos países, incluidos el NHS británico y la policía; algunas empresas volvieron al teléfono y el fax.
+866	Un fallo de hardware del sistema compartido limitó los retiros en cajeros y las transferencias; se restableció esa misma tarde.
+867	30 oct.: fallo de equipos de red de las aerolíneas, parte de la facturación a mano; 3 nov.: fallo del sistema de control de salida y prechequeo del Ministerio de Justicia, salidas retrasadas; 6 nov.: error de validación de datos de pasajeros.
+868	· No es un ataque: errores de equipos y sistemas (sobrecarga tras cambiar el almacenamiento); el aeropuerto ve improbable un hackeo.
+869	El banco central intervino Ueno por insolvencia; se restringieron las cuentas de ~60 % de los adultos; siguió una crisis política.
+870	Un ataque destructivo borró datos en la nube y tumbó cientos de webs y algunos servicios públicos; más de 1.000 servidores revisados a mano; algunas copias destruidas.
+871	· Confirmado; sin atribución anunciada.
+872	· Sin pruebas de hackeo; la FAA y la NTSB investigan.
+873	Los atacantes intentaron cambiar la temperatura y el desescarche de equipos de frío en tres sedes de plasma de la EFS; las alarmas de temperatura permitieron actuar enseguida.
+874	· Confirmado. 110 °C fue la consigna introducida, no una temperatura real; sin daños a productos ni a la salud.
+875	La app de alertas ucraniana, usada por millones, envió falsas alertas radiológicas, químicas y militares; los desarrolladores pausaron las notificaciones. La app rusa de alertas de emergencia fue atacada por separado.
+876	· Confirmado; ambos países dicen que los sistemas de alerta principales siguieron funcionando.
+877	Los sistemas cifrados dejaron sin servicio los PC públicos, el wifi, el préstamo y la app; las 66 sedes siguieron abiertas.
+878	· Confirmado; atribución del FBI.
+879	· Brechas confirmadas; no se ha confirmado robo de activos en la extorsión a Gopax.
+880	Kaspersky: desde julio de 2025, spear-phishing, webs falsas de currículos y portafolios y abuso de CrossWeb EX; el nuevo malware usa incluso cifrado poscuántico.
+881	Ejecución de código sin autenticación (CVE-2026-109618/109619). Algunas webs de gobierno, escuelas y hospitales cerraron por precaución; la campaña de servidores de noviembre explota este tipo de fallo.
+882	· Vulnerabilidad; parchee ya.
+883	· Confirmado; quien los haya instalado debe cambiar todas sus credenciales.
+884	Empezó en un banco comercial a finales de septiembre. ~25.000 personas a través de un fallo de autenticación en un servicio de consulta de un intermediario de préstamos, además de una intrusión en un sistema de ventas interno. Los supervisores revisaron 555 entidades; 130 declararon carencias como parches pendientes o falta de vigilancia 24 h. Rastros de una herramienta de intrusión con IA.
+885	· Brechas confirmadas; atacante no identificado.
+886	· Intrusión ICS confirmada; sin pruebas de uso de IA.
+887	Combinó una herramienta de intrusión con IA y un agente de programación con IA; atacó 60 empresas en 44 días desde finales de agosto y robó más de 8,2 M de registros de ~90 compañías. También se informó de una cadena de cafeterías (~2,76 M de registros de un archivo olvidado en la nube) y ~110.000 cuentas escolares.
+888	· Confirmado; sin vínculo directo con las brechas del sector financiero.
+889	El Vivit Africa LNG de H-Line Shipping, de Luisiana a Italia, perdió acceso a parte de sus sistemas de control y vigilancia de carga, esperó frente a Italia y renunció a descargar. Fue el tercer ciberincidente sospechoso en un buque en un mes (Guardia Costera y FBI abordaron dos petroleros frente a EE. UU. a finales de agosto); las autoridades de EE. UU. vigilarían unos 20 buques.
+890	· La tripulación sospechó un ciberataque; en investigación.
+891	Sistemas de pedidos y envíos caídos; plantas afectadas, pedidos a mano.
+892	El software compartido de facturación de Collins Aerospace fue atacado; los aeropuertos volvieron a la facturación manual.
+893	Femtoceldas falsas usadas para micropagos no autorizados; se filtraron datos de ~2,97 M de clientes de Lotte Card.
+894	Librería y venta de entradas caídas varios días; en julio una aseguradora de garantías también quedó paralizada.
+895	Entraron por un subcontratista con ingeniería social; las ventas en línea se detuvieron semanas.
+896	El FBI lo atribuyó al TraderTraitor norcoreano; fue el récord hasta Binance en 2026.
+897	No fue un ataque sino una actualización de seguridad defectuosa; aerolíneas, hospitales y bancos se detuvieron en todo el mundo.
+898	Datos de ~190 M de personas; facturación de hospitales y farmacias congelada durante semanas.
+899	Decenas de miles de terminales inutilizados; se perdió la monitorización remota de ~5.800 aerogeneradores alemanes.
+900	Oleoducto cerrado 6 días; compras de pánico en gasolineras; la empresa pagó ~4,4 M$.
+901	Un operador lo detectó y lo revirtió; sin daños al agua potable.
+902	Un wiper disfrazado de ransomware; daños estimados en más de 10.000 M$.
+903	Atención del NHS británico interrumpida; EE. UU. y otros lo atribuyeron a Corea del Norte.
+904	Documentos de centrales filtrados con amenazas de parar reactores; el gobierno culpó a Corea del Norte.
+905	~48.000 PC de televisiones y bancos borrados; el gobierno culpó a Corea del Norte.
+906	Que las averías coincidan en el tiempo no significa un solo atacante. Los vuelos de EE. UU. (fallo de telecomunicaciones), las cajas shinkin de Japón (hardware) y el banco de Paraguay (insolvencia) tienen causas distintas; los ataques deben confirmarse caso por caso.
+907	Anote en papel los contactos familiares y puntos de encuentro; tenga una radio para los avisos oficiales
+908	Inicio de sesión multifactor en teléfono, ordenador, banco y correo; copia de seguridad de archivos clave
+909	Algo de efectivo para cortes; sin compras de pánico ni préstamos innecesarios
+910	Revise todo dispositivo accesible a distancia, controladores de neveras y PLC; sáquelos de internet abierto
+911	Controle los enlaces y el acceso remoto entre redes OT e IT; vigile las anomalías
+912	Policía en emergencias; si no, las unidades de ciberdelito de la policía prefectural ✓
+913	Policía en emergencias; denuncia en línea a la policía del Land
+914	La mayoría de los consejos a hogares son 3 días; los nórdicos y Japón dicen una semana, Alemania hasta 10 días. El ejército de EE. UU. apunta a 90 días por base.
+915	Ottawa recordó a los hogares tener provisiones de emergencia para al menos tres días; el informe cuenta más de 30 países con consejos similares.
+916	Presentado en el Foro Europeo de Protección Civil en Bruselas. Los hogares deben tener una mochila de emergencia ante fenómenos extremos, ciberataques, sabotajes de infraestructuras y conflictos geopolíticos; 72 horas permiten a los servicios de emergencia movilizarse para los más necesitados. Los Estados miembros deben enseñar preparación desde la escuela y tener en cuenta a las personas con discapacidad.
+917	Coincidiendo con la creación de la agencia el 2 de nov., la petición va a ciudadanos, gobiernos locales y ministerios: agua, comida y aseos portátiles para al menos tres días, idealmente una semana, y muebles fijados. Reitera el libro blanco de 2026; las autoridades dicen que no responde a ningún desastre o ciberataque concreto. Contexto: riesgo de terremoto en la fosa de Nankai y en Tokio.
+918	Busca emplazamientos capaces de funcionar 30 días sin servicios civiles, con reciclaje de agua, redes informáticas aisladas, cadenas de suministro nacionales y reservas estratégicas. Superficie orientativa de 100.000–250.000 acres; los gobernadores presentarán terrenos en la primavera de 2027. Aún no se ha elegido ninguno.
+919	Tras los avisos de Reino Unido y Japón, circularon rumores de guerra inminente o de un gran ciberataque; ambos son campañas de preparación en tiempos de paz. Corea no ha emitido consejos nuevos; sigue vigente la pauta nacional (mochila de 2–3 días por persona, conocer su refugio).
+920	Presentado por el secretario de Defensa el 30 de sep., con una oficina de programa a crear en 30 días. Los documentos piden que las grandes instalaciones en territorio continental mantengan las operaciones esenciales al menos 90 días sin apoyo exterior: electricidad, agua, combustible y comunicaciones. Incluye microrreactores, grandes baterías, microrredes, defensa cibernética y antidrones, cadenas de suministro de munición, medicinas y sangre, y tierras raras y chips nacionales. Sin coste ni calendario aún; aplicarlo en ~500 bases podría llevar décadas.
+921	Anunciado en una declaración ministerial al Parlamento. Los hogares deben ser autosuficientes tres días ante fenómenos extremos, sequías, inundaciones, actividad de estados hostiles y cortes de suministro; presentado como preparación invernal y no como alerta de guerra.
+922	Se revisó la guía nacional; se pide a los hogares almacenar agua y comida de larga duración, hasta 10 días según la prensa.
+923	Cada tarjeta enlaza a su fuente; vea también la lista de abajo. Consulte las webs oficiales del gobierno antes de actuar.
+K:Headlines	Titulares

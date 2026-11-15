@@ -1,0 +1,537 @@
+0	Serangan siber — apa yang terjadi dan cara bersiap · GOV RADAR
+1	GOV RADAR · Peta bencana
+2	Serangan siber
+3	apa yang terjadi dan cara bersiap
+4	Peretasan, DDoS, dan ransomware dapat menghentikan listrik, uang, air, pangan, dan layanan kesehatan. Kami memisahkan serangan nyata dari gangguan biasa pada insiden September hingga November 2026, dan menjelaskan apa yang bisa dilakukan rumah tangga, perusahaan, dan pemerintah sekarang.
+5	Peta insiden
+6	12 jenis
+7	Insiden terbaru
+8	Kasus penting
+9	Efek berantai
+10	Cek rumor
+11	Persiapan
+12	Sumber
+13	Serangan siber · grafik bergerak
+14	Insiden di Korea, semester I 2026
+15	naik 19% dari tahun lalu
+16	Laporan ransomware
+17	naik 76,8%
+18	Serangan DDoS
+19	naik 56,7%
+20	US$6,3 miliar
+21	Pencurian Binance (Okt 2026)
+22	terbesar sepanjang sejarah
+23	Per 2026-11-15 · Angka Korea: laporan ancaman siber semester I 2026 dari MSIT/KISA (30 Juli)
+24	Bagaimana serangan siber terjadi — 12 jenis
+25	«Peretasan» mencakup cara dan kerugian yang sangat berbeda. Setiap jenis disertai kasus nyata.
+26	Ransomware
+27	Mengenkripsi atau mencuri data lalu meminta tebusan. Kini sering berupa «pemerasan ganda»: dicuri dulu, lalu diancam dipublikasikan.
+28	Kasus nyata · Perpustakaan Umum Queens (Nov 2026) · penyedia cloud Jepang, 495 klien lumpuh (Okt 2026) · produksi Asahi terhenti (Sep 2025) · Colonial Pipeline (Mei 2021)
+29	DDoS
+30	Membanjiri server dengan lalu lintas dari banyak perangkat hingga layanan berhenti.
+31	Kerugian utama · Situs perbankan, pembayaran, dan e-government tidak bisa diakses
+32	Kasus nyata · Korea: 373 laporan DDoS pada semester I 2026, naik 56,7% (MSIT/KISA) · DDoS 7 Juli (2009)
+33	Malware
+34	Perangkat lunak jahat yang mengambil alih perangkat atau server atau mencuri data, termasuk web shell (pintu belakang server).
+35	Kerugian utama · Pencurian data, pengambilalihan server, pijakan untuk serangan lanjutan
+36	Kasus nyata · Kampanye celah PHP yang menyasar 216 server di 10 negara, 30 di Korea (dilaporkan Nov 2026)
+37	Phishing dan rekayasa sosial
+38	Menipu orang dengan email, pesan, atau tawaran kerja palsu agar menyerahkan akun dan akses.
+39	Kerugian utama · Rekening bank, sistem perusahaan, dan dompet kripto dibobol
+40	Kasus nyata · Situs CV palsu terhadap 3 organisasi Korea (Okt 2026, Kaspersky) · rekayasa sosial dalam pencurian Binance (Okt 2026)
+41	Serangan rantai pasok
+42	Masuk ke banyak perusahaan sekaligus melalui pemasok, layanan alih daya, atau pembaruan perangkat lunak.
+43	Kerugian utama · Satu pembobolan mengenai puluhan hingga ribuan perusahaan klien
+44	Kasus nyata · Lewat kontraktor pusat panggilan MetaM, 22 perusahaan keuangan dan gim (Nov 2026) · ~2.950 server lewat pembaruan cPGuard (Nov 2026) · lebih dari 1.300 versi paket npm disusupi (Agu 2026) · SolarWinds (2020)
+45	Sistem kendali industri (ICS/SCADA)
+46	Mengubah sinyal kendali dan nilai setelan peralatan fisik seperti instalasi air, pendingin, dan pembangkit listrik.
+47	Kerugian utama · Risiko air minum, makanan terbuang, obat dan darah rusak, listrik padam
+48	Kasus nyata · Pendingin supermarket Eropa (Okt–Nov 2026) · freezer plasma Prancis disetel 110°C (Nov 2026) · instalasi air Oldsmar (2021) · jaringan listrik Ukraina (2015)
+49	Serangan teknologi operasional (OT)
+50	Melumpuhkan sistem yang benar-benar menjalankan pabrik, logistik, pelabuhan, dan kapal.
+51	Kerugian utama · Lini produksi, pelabuhan, dan pelayaran berhenti
+52	Kasus nyata · Pabrik Jaguar Land Rover berhenti ~5 minggu (Sep 2025) · Maersk dan lainnya terkena NotPetya (2017) · gangguan sistem kendali kapal LNG, diduga serangan siber (Sep 2026, sedang diselidiki)
+53	Pencurian akun dan dompet
+54	Mengambil alih langkah login, penandatanganan, atau persetujuan untuk memindahkan uang dan kripto keluar.
+55	Kerugian utama · Hilangnya kripto dan aset keuangan
+56	Kasus nyata · Binance ~US$6,3 miliar (Okt 2026, FBI: terkait Korea Utara) · Bybit ~US$1,5 miliar (Feb 2025) · hot wallet bursa Korea ~₩100 juta (Okt 2026)
+57	Wiper (merusak)
+58	Bukan soal uang: menghapus data dan merusak sistem agar sulit dipulihkan.
+59	Kerugian utama · Hilangnya catatan, pemulihan lama
+60	Kasus nyata · Data cloud penyedia hosting Rusia dihapus, lebih dari 1.000 server diperiksa manual (Nov 2026) · perangkat produsen alat medis dihapus (Mar 2026) · NotPetya (2017)
+61	Pemalsuan navigasi dan peringatan
+62	Mengacaukan atau memalsukan sinyal GPS, atau mengambil alih aplikasi peringatan untuk mengirim peringatan palsu.
+63	Kasus nyata · Aplikasi peringatan udara Ukraina dipakai untuk mengirim peringatan radiasi dan kimia palsu di Kyiv (Nov 2026) · gangguan satelit KA-SAT memutus pemantauan jarak jauh turbin angin Eropa (Feb 2022)
+64	API terbuka dan pintu samping
+65	Menyasar pintu samping — layanan pencarian, alat admin, SaaS alih daya, berkas terlupakan — bukan sistem inti.
+66	Kerugian utama · Kebocoran data massal, masuk ke jaringan internal
+67	Kasus nyata · 16 perusahaan keuangan Korea, ~100.000 data (per Okt 2026) · API pencarian anggota di Jepang disalahgunakan, hingga ~22,5 juta data (Okt 2026)
+68	Serangan berbantuan AI
+69	Memakai AI untuk mengotomatiskan pemindaian celah, penulisan eksploit, dan penyusupan dengan kecepatan dan skala lebih besar.
+70	Kerugian utama · Puluhan hingga ratusan sasaran sekaligus
+71	Kasus nyata · Kelompok pengguna alat AI ditangkap setelah mencuri lebih dari 8,2 juta data dari ~90 perusahaan Korea (Okt 2026) · agen AI dilaporkan membobol lebih dari 100 situs (Okt 2026)
+72	RADAR LANGSUNG · INSIDEN SIBER
+73	Insiden siber di berita, di peta
+74	Ketuk titik untuk menuju insiden. Titik menyala saat sapuan lewat. Per 2026-11-15
+75	Serangan
+76	Diduga
+77	Bukan serangan
+79	Insiden terbaru — serangan nyata vs gangguan biasa
+80	Semua
+81	Serangan nyata
+82	Celah keamanan
+83	Korea
+84	Gambar terkait, bukan dari insiden ·
+85	Korea dan 9 negara lain
+86	Kelompok terduga terkait Korea Utara menyasar 216 server lewat celah PHP
+87	Laporan Cipherma: server web yang belum ditambal disasar untuk dipasangi web shell. Sasaran: AS 49, Jepang 47, India 31, Korea 30 (pemerintahan, keuangan, telekomunikasi, logistik, manufaktur). Penyerang mengklaim 581 sasaran.
+88	Kesimpulan
+89	Sumber ·
+91	Kebocoran dilaporkan di dana usaha kecil, sebuah universitas, dan platform mata uang lokal
+92	Amerika Serikat
+93	Penghentian penerbangan nasional di AS
+94	· Sejauh ini bukan serangan. DHS: «tidak ada indikasi ancaman atau serangan — gangguan telekomunikasi».
+96	Kapal tanker menabrak kapal wisata sungai di New Orleans
+98	Kontraktor pusat panggilan diretas — 22 perusahaan keuangan dan gim
+99	MetaM, pengelola layanan pelanggan lebih dari 200 perusahaan, mendeteksi akses tanpa izin pada 12 Nov dan melapor ke KISA. 22 klien terdampak, termasuk bursa Coinone: nama, telepon, nomor identitas, nomor rekening, dan kata sandi mungkin terungkap.
+100	· Pembobolan terkonfirmasi. Tidak ditemukan penyusupan ke sistem perdagangan atau dompet Coinone sendiri.
+101	Global
+102	Gangguan Microsoft 365 — Outlook dan Teams
+103	· Bukan serangan: masalah server dan infrastruktur. Pelajaran: ketergantungan pada satu vendor.
+104	Jepang
+105	128 bank shinkin: gangguan ATM dan loket
+106	· Bukan serangan: operator menyebut kerusakan perangkat keras.
+107	Sistem keberangkatan Bandara Incheon gagal tiga kali (30 Okt, 3 Nov, 6 Nov)
+110	Paraguay
+111	Bank digital Ueno dilikuidasi — ~2,9 juta rekening dibekukan, presiden dimakzulkan
+112	· Bukan serangan: krisis solvabilitas. Pelajaran: konsentrasi pada satu bank.
+114	Pembaruan berbahaya pada alat keamanan — ~2.950 server
+115	Kredensial curian di OPSSHIELD, pembuat alat Linux cPGuard, dipakai untuk mendorong pembaruan berbahaya yang memasang pintu belakang dan mengumpulkan hash kata sandi serta kredensial.
+116	· Serangan rantai pasok terkonfirmasi.
+118	Rusia
+119	Data cloud perusahaan hosting Beget dihapus
+120	Learjet 60 jatuh di Florida — 9 tewas
+121	Jet pribadi dari Austin ke Bahama jatuh di Palm Beach County setelah pilot melaporkan es, turbulensi, dan penurunan cepat.
+122	Prancis
+123	Freezer plasma layanan darah di 3 lokasi — setelan dinaikkan ke 110°C
+125	Ukraina dan Rusia
+126	Aplikasi peringatan udara dibajak — peringatan radiasi dan kimia palsu di Kyiv
+127	Ransomware di Perpustakaan Umum Queens, New York
+128	· Terkonfirmasi.
+129	Global (kripto)
+130	Binance kehilangan ~US$6,3 miliar — pencurian kripto terbesar yang tercatat
+131	Sistem internal penandatanganan dompet dan persetujuan dibobol dengan rekayasa sosial dan malware. Binance membatasi penarikan, membekukan sebagian aset, dan menyatakan akan menanggung kerugian. Pada 31 Okt FBI menyebut TraderTraitor yang terkait Korea Utara.
+132	Bursa kripto Korea
+133	Lima bursa kripto Korea diserang
+134	Hot wallet Prabang ~₩100 juta (24 Okt) · pembobolan groupware seluler Bithumb, 844 nasabah dan 715 staf (27 Okt) · Flybit, 40 nasabah lewat groupware (1 Nov) · Gopax akses tidak wajar dan pemerasan, perdagangan dihentikan (6 Nov) · Coinone lewat kontraktor (12 Nov).
+136	Lazarus menyasar 3 organisasi Korea dengan situs CV palsu
+137	· Spionase terkonfirmasi (atribusi vendor keamanan).
+139	Celah eksekusi kode jarak jauh di inti PHP diungkap
+140	Global (pengembang)
+141	Rangkaian serangan rantai pasok perangkat lunak pada Oktober
+142	LiteLLM 1.107.0 disusupi, paket Rank Math PRO berbahaya (15–16 Okt), rilis OVHcloud CLI dibajak (19 Okt), dan kunci vendor cadangan disalahgunakan untuk menjangkau pelanggan Microsoft 365.
+143	Sektor keuangan Korea
+144	Rentetan pembobolan di keuangan Korea — 16 perusahaan, ~100.000 data
+146	Eropa (7 negara)
+147	Kulkas dan freezer supermarket diretas — makanan dibuang
+148	Penyerang menjangkau pengendali pendingin yang terbuka di internet dan mengubah suhu serta pencairan es. Prancis ~700 toko (11–12 Okt), Belgia ~40 Delhaize dan ~15 Carrefour, Belanda lebih dari 17 toko daging dan toko, Irlandia ~13 SuperValu, Luksemburg, Swedia (disetel 50°C). BSI Jerman memperingatkan pada 13 Nov.
+150	Jepang: 119 pengungkapan kebocoran data — ransomware cloud mengenai 495 klien
+151	119 pengungkapan kebocoran sistem web hingga 6 Okt (81 sejak Juli): peritel perangkat lunak hingga ~22,5 juta data, jaringan toko diskon hingga ~1,73 juta, grup department store ~1,26 juta, dan ransomware cloud yang mengganggu 495 klien pemerintah daerah dan perusahaan.
+152	Jaringan peretas berbantuan AI ditangkap — ~90 perusahaan, lebih dari 8,2 juta data
+153	Kapal milik Korea
+154	Sistem kendali dan pemantauan muatan kapal LNG gagal
+156	Insiden masa lalu di Korea dan dunia dengan pelajaran terbesar untuk persiapan.
+157	2025.09.29 · Jepang
+158	Ransomware Asahi — produksi dan pengiriman berhenti
+159	2025.09.26 · Korea
+160	Kebakaran pusat data nasional Korea — sistem pemerintah lumpuh
+161	Kebakaran baterai membuat ratusan layanan pemerintah mati — bukan serangan, tetapi pelajaran tentang cadangan dan redundansi.
+162	2025.09.19 · Bandara Eropa
+163	Ransomware sistem check-in bandara — Heathrow, Brussel, Berlin
+164	2025.09 · Inggris
+165	Jaguar Land Rover — pabrik berhenti ~5 minggu
+166	Tergolong insiden siber termahal dalam sejarah Inggris, dengan kerugian berantai bagi pemasok.
+167	2025.09 · Korea
+168	Pembayaran lewat BTS palsu di KT · pembobolan Lotte Card
+169	2025.06.09 · Korea
+170	Ransomware Yes24 — mati beberapa hari · SGI Seoul Guarantee (Juli)
+171	2025.04.18 · Korea
+172	Kebocoran data USIM SK Telecom
+173	Malware di server inti membocorkan ~27 juta data USIM sehingga memicu penggantian SIM massal.
+174	2025.04 · Inggris
+175	Ransomware M&S — pesanan daring berhenti berminggu-minggu
+176	2025.02.21 · Global
+177	Pencurian Bybit ~US$1,5 miliar
+178	2024.07.19 · Global
+179	Kesalahan pembaruan CrowdStrike — ~8,5 juta komputer Windows mati
+180	2024.02.21 · AS
+181	Ransomware Change Healthcare — pembayaran medis AS membeku
+182	2022.02.24 · Eropa
+183	Jaringan satelit KA-SAT lumpuh (hari invasi)
+184	2021.05.07 · AS
+185	Colonial Pipeline — pasokan BBM Pantai Timur AS terhenti
+186	2021.02.05 · AS
+187	Instalasi air Oldsmar — upaya menaikkan dosis soda api
+188	2020.12.13 · AS dan global
+189	Serangan rantai pasok SolarWinds
+190	Pintu belakang dalam pembaruan menjangkau banyak lembaga dan perusahaan AS.
+191	2017.06.27 · Global
+192	NotPetya — Maersk dan lainnya lumpuh
+193	2017.05.12 · Global
+194	WannaCry — lebih dari 200.000 mesin di ~150 negara
+195	2015.12.23 · Ukraina
+196	Serangan jaringan listrik Ukraina — ~230.000 kehilangan listrik
+197	Tercatat sebagai pemadaman besar pertama akibat serangan siber.
+198	2014.12.15 · Korea
+199	Kebocoran data KHNP dan ancaman
+200	2013.03.20 · Korea
+201	20 Maret 2013 — stasiun TV dan bank lumpuh
+202	2009.07.07 · Korea dan AS
+203	DDoS 7 Juli 2009 — kantor presiden, parlemen, dan bank tidak bisa diakses
+204	Botnet menyerang situs-situs besar Korea dan AS selama tiga hari.
+205	Jika satu hal berhenti, seberapa jauh dampaknya menyebar?
+206	Listrik, komunikasi, uang, air, pangan, dan kesehatan saling bergantung. Ini menunjukkan bagaimana risiko menyebar — bukan ramalan untuk tanggal tertentu.
+207	1. Pemicu
+208	Serangan siber atau kegagalan sistem besar
+209	Server, jaringan, keuangan, kendali industri
+210	2. Listrik
+211	Pemadaman dan ketidakstabilan
+212	Penerangan, pemanas, pengisian daya, logistik
+213	2. Komunikasi dan uang
+214	Data dan pembayaran terganggu
+215	Telepon, internet, kartu, ATM
+216	3. Air dan pangan
+217	Instalasi air, rantai dingin, logistik
+218	Air minum, makanan segar
+219	3. Transportasi dan kesehatan
+220	Penerbangan, rumah sakit, obat-obatan
+221	Udara, pelayaran, layanan gawat darurat
+222	4. Masyarakat
+223	Perlambatan ekonomi, tekanan bagi kelompok rentan
+224	Kelangkaan, kehilangan pendapatan
+225	Apa yang diminta pemerintah untuk dipersiapkan warga
+226	Menghadapi perang, bencana, wabah, dan serangan siber: apa yang dikatakan Pentagon dan pemerintah di Eropa, Jepang, dan Inggris kepada tentara dan masyarakat.
+227	Pemerintah Kanada
+228	Imbauan pemerintah
+229	Kanada juga meminta persediaan setidaknya 72 jam — lebih dari 30 negara kini memberi imbauan serupa
+230	IBTimes UK · ringkasan kami
+231	Air
+232	Pangan
+233	Obat
+234	Baca selengkapnya →
+235	Komisi Eropa
+236	UE menerbitkan panduan baru — siap bertahan sendiri setidaknya 72 jam
+237	Greek City Times (mengutip siaran pers UE IP/26/2324) · ringkasan kami
+238	Uang tunai
+239	Siber
+240	Jepang (Badan Pencegahan Bencana baru)
+241	Jepang membentuk badan bencana dan meminta semua orang menyiapkan persediaan minimal 3 hari, idealnya seminggu
+242	Gizmodo Japan · ringkasan kami
+243	Bencana
+244	Kemenhan AS «Fortress America»
+245	Militer
+246	Lokasi pangkalan «benteng»: 30 hari tanpa utilitas sipil, air daur ulang, jaringan terisolasi
+247	Infraday · ringkasan kami
+248	Energi
+249	Perang
+250	Korea Selatan
+251	Cek fakta
+252	Imbauan menimbun dari Inggris dan Jepang memicu rumor «Perang Dunia III» — tidak berdasar
+253	Hankook Ilbo · ringkasan kami
+254	Departemen Pertahanan AS
+255	«FORTRESS» Pentagon: pangkalan utama AS harus bisa beroperasi 90 hari sendiri jika perang memutus listrik dan pasokan
+256	Fortune · The War Zone · ringkasan kami
+257	BBM
+258	Komunikasi
+259	Pemerintah Inggris
+260	Inggris memulai kampanye «Be Ready» tiga tahun — bertahan tiga hari tanpa listrik, air, atau internet
+261	The National · Fortune · ringkasan kami
+262	Irlandia
+263	Irlandia mengirim buklet «Be Emergency Ready» ke rumah-rumah
+264	Newsweek · ringkasan kami
+265	Lihat semua negara →
+266	Rumor yang diperiksa
+267	Apa yang beredar di internet di samping apa yang dikonfirmasi pejabat.
+268	«Pemadaman listrik global pada 17 November»
+269	Pada 17 Nov 2026 pukul 14.20 waktu AS bagian timur, FEMA dan FCC menggelar uji Sistem Peringatan Darurat nasional (diumumkan 16 Sep): sekitar satu menit pesan uji di TV dan radio. Ini tidak terkait pemutusan listrik, dan tidak ada sumber resmi yang memperkirakan pemadaman global.
+270	«Semua gangguan ini adalah satu perang siber»
+271	«AI akan mematikan listrik dan keuangan pada tanggal tertentu»
+272	Bill Gates (Okt 2026) dan Forum Ekonomi Dunia memperingatkan bahwa serangan berbantuan AI bisa meningkat — risiko umum, bukan ramalan pemadaman pada tanggal tertentu.
+273	Apa yang perlu disiapkan — rumah tangga, perusahaan, pemerintah
+274	Tujuannya bukan tidak pernah diserang, tetapi memulihkan fungsi penting dengan cepat saat serangan atau gangguan terjadi.
+275	Listrik
+276	Rumah tangga
+277	Power bank, senter, lampu darurat
+278	Perusahaan
+279	UPS, genset, prioritas listrik untuk perangkat penting
+280	Pemerintah
+281	Pemulihan jaringan, listrik cadangan untuk kelompok rentan
+282	Daftar kontak di kertas, radio portabel
+283	Kontak cadangan, pemberitahuan darurat, telepon/SMS
+284	Siaran darurat, jaringan cadangan
+285	Uang
+286	Sedikit uang tunai, lebih dari satu cara bayar
+287	Persetujuan ganda, kontrol akses
+288	Stabilitas pembayaran, perlindungan simpanan
+289	Air darurat (~4 L per orang per hari)
+290	Rencana air dan sanitasi
+291	Operasi manual dan pemantauan kualitas air
+292	Makanan tahan lama, dirotasi
+293	Alarm rantai dingin, pemeriksaan manual, pembuangan aman
+294	Kelangsungan pasokan pangan dan rantai dingin
+295	Kesehatan
+296	Resep obat, P3K, informasi medis
+297	Lindungi alat medis dan penyimpanan dingin
+298	Gawat darurat, pasokan obat, rujukan
+299	Keamanan
+300	Login multifaktor, pembaruan, cadangan
+301	Cadangan offline, hak akses minimum, latihan pemulihan
+302	Pemeriksaan lokasi kritis, kerja sama saat insiden
+303	Transportasi
+304	Rute alternatif jalan kaki atau angkutan umum
+305	Operasi manual, prosedur penghentian aman
+306	Rencana pemulihan udara, kereta, dan pelabuhan
+307	Rumah tangga: langkah pertama
+308	Jaga senter dan power bank tetap terisi
+309	Air, makanan siap santap, obat resep, dan perlengkapan kebersihan untuk 3 hari sebagai awal
+310	Jangan klik tautan asing atau terburu-buru memenuhi permintaan bayar «mendesak»
+311	Perusahaan: langkah pertama
+312	Daftar layanan kritis dan target pemulihan (RTO/RPO)
+313	Simpan cadangan offline dan uji pemulihannya
+314	Hak akses minimum, login multifaktor, tinjau akses kontraktor
+315	Prosedur cadangan dan latihan untuk gangguan cloud, pembayaran, dan logistik
+316	Tambal dan tinjau pintu samping: API pencarian, alat admin, berkas terlupakan
+317	Pemerintah: langkah pertama
+318	Petakan ketergantungan antara listrik, air, transportasi, gawat darurat, dan peringatan
+319	Periksa operasi manual dan pasokan darurat di instalasi air, gudang pendingin, dan rumah sakit
+320	Latihan rutin pelaporan insiden, komunikasi publik, dan pemulihan
+321	Jika diserang di Korea, laporkan
+322	Pusat insiden siber KISA (peretasan, kebocoran data)
+323	Laporan kejahatan siber ke polisi
+324	Financial Supervisory Service (penipuan keuangan)
+325	Ke mana melapor, per negara
+326	✓ = diperiksa di situs resmi pada 15 Nov 2026. Jika nyawa terancam, hubungi dulu nomor darurat setempat (112 di Eropa dan Korea, 911 di AS).
+327	Pusat insiden siber KISA — peretasan, kebocoran data ✓
+328	Laporan kejahatan siber ke polisi (ecrm.police.go.kr)
+329	Financial Supervisory Service — penipuan keuangan
+330	Pusat panggilan konsuler jika diserang di luar negeri
+332	Pelaporan insiden CISA (1-844-729-2472, cisa.gov/report) ✓
+333	Pusat Pengaduan Kejahatan Internet FBI
+334	Meja bantuan keamanan IPA ✓
+335	Layanan konsumen — penipuan ✓
+336	Inggris
+337	Report Fraud (dulu Action Fraud, sejak Des 2025) — kejahatan siber dan penipuan, reportfraud.police.uk ✓
+338	NCSC — pelaporan insiden organisasi
+339	17Cyber — layanan satu pintu siber polisi dan gendarmerie ✓
+340	Bantuan untuk individu dan perusahaan
+341	Jerman
+342	Pusat layanan BSI (hari kerja, gratis) ✓
+343	Spanyol
+344	Saluran keamanan siber gratis INCIBE ✓
+345	Belanda
+346	Polisi nondarurat — laporan kejahatan siber
+347	Pusat Keamanan Siber Nasional — organisasi
+348	Belgia
+349	Pelaporan insiden ke Centre for Cybersecurity Belgium
+350	Teruskan phishing ke suspicious@safeonweb.be
+351	Pusat Keamanan Siber Nasional — pelaporan insiden
+352	Garda saat darurat
+353	Swedia
+354	Polisi nondarurat
+355	CERT-SE — pelaporan insiden
+356	Italia
+357	Laporan daring ke polisi pos dan siber
+358	CSIRT Italia — organisasi
+359	Ukraina
+360	CERT-UA — pelaporan insiden
+361	Polisi
+362	India
+363	Saluran nasional kejahatan siber, cybercrime.gov.in ✓
+365	Organisasi: incident@cert-in.org.in
+366	Australia
+368	Saluran Keamanan Siber Australia (1300 292 371), ReportCyber di cyber.gov.au ✓
+369	Kanada
+371	Canadian Centre for Cyber Security (1-833-292-3788), cyber.gc.ca ✓
+372	Pusat Antipenipuan Kanada
+373	Singapura
+375	Laporan lewat layanan elektronik polisi ✓
+376	Tiongkok
+377	Saluran peringatan antipenipuan
+378	Foto berita dilindungi hak cipta, jadi setiap insiden menampilkan gambar terkait berlisensi bebas (Unsplash). Disusun dari laporan publik dan pernyataan resmi. Kesimpulan penyelidikan yang masih berjalan bisa berubah. Atribusi sesuai pernyataan lembaga atau perusahaan yang disebut.
+403	Dua belas jenis serangan siber, insiden terbaru di dunia (serangan nyata vs gangguan biasa), kasus penting, dan apa yang perlu dilakukan rumah tangga, perusahaan, dan pemerintah — GOV RADAR
+406	New Delhi
+407	Pyongyang (atribusi FBI)
+408	Wilayah Paris (EFS)
+409	St Petersburg
+410	Queens, New York
+411	Lepas pantai Italia
+412	AS (FAA)
+413	Bandara Incheon
+414	Jepang bagian barat
+415	Palm Beach County
+416	New Orleans
+417	London (NHS)
+420	Apa yang diminta pemerintah untuk dipersiapkan warga · GOV RADAR
+421	Peta bencana
+422	Situasi dunia
+423	Apa yang diminta pemerintah untuk dipersiapkan warga
+424	Menghadapi perang, bencana, wabah, dan serangan siber, Pentagon ingin pangkalan yang mampu bertahan 90 hari, sementara Eropa, Inggris, Jepang, dan Kanada ingin rumah tangga siap untuk tiga hari hingga seminggu. Berikut pengumuman-pengumuman itu dalam bentuk kartu judul.
+425	Kartu ini ringkasan kami sendiri bergaya halaman depan, bukan tangkapan layar (foto dan tata letak media dilindungi hak cipta). Ketuk kartu untuk sumber aslinya. Per 2026-11-15
+426	Berapa lama warga diminta bertahan?
+427	Kemenhan AS — pangkalan utama
+428	90 hari
+429	hingga 10 hari
+430	Swedia · Norwegia
+431	hingga 7 hari
+432	3–7 hari
+433	UE · Prancis · Inggris · Kanada · Belanda · Denmark · Belgia
+434	3 hari (72 jam)
+435	Korea (pedoman yang ada)
+436	tas darurat 2–3 hari
+437	Pengumuman, dalam judul berita
+438	Lihat sumber →
+439	🇨🇦 Pemerintah Kanada · 2026.11.04
+440	Daftar periksa
+441	· Air, makanan, dan obat untuk 72 jam
+442	Sumber ·
+444	🇪🇺 Komisi Eropa · 2026.11.03
+445	· ~6 L air per orang · makanan tahan lama · obat · perlengkapan kebersihan · uang tunai darurat
+446	Greek City Times (mengutip siaran pers UE IP/26/2324)
+447	🇯🇵 Jepang (Badan Pencegahan Bencana baru) · 2026.11.02
+448	· Air, makanan, dan toilet portabel untuk 3–7 hari · kencangkan perabot
+450	🇺🇸 Kemenhan AS «Fortress America» · 2026.10.30
+452	🇰🇷 Korea Selatan · 2026.10.28
+453	· Tas darurat 2–3 hari per orang · ketahui dua tempat berlindung · kartu kontak keluarga
+455	🇺🇸 Departemen Pertahanan AS · 2026.10.25
+457	🇬🇧 Pemerintah Inggris · 2026.10.22
+458	· 3 L air per orang per hari · makanan tanpa masak · senter, power bank, P3K · radio baterai atau engkol · makanan hewan peliharaan · uang tunai · salinan dokumen · selimut
+460	🇮🇪 Irlandia · 2026.09.22
+461	Membahas makanan tahan lama, air, obat, dan cara tetap hangat jika pemanas mati.
+463	Angkatan Darat AS
+464	Angkatan Darat AS memilih perusahaan untuk mikroreaktor di lebih dari 20 pangkalan mulai 2028
+465	The War Zone · Utility Dive · ringkasan kami
+466	🇺🇸 Angkatan Darat AS · 2026.08
+467	Lewat program Janus, Angkatan Darat dan DIU memilih lima perusahaan untuk memasang mikroreaktor di pangkalan seperti Fort Bragg dan Fort Hood mulai 2028 (dilaporkan hingga US$2,2 miliar). Target 2022 menghendaki microgrid di setiap pangkalan pada 2035.
+469	Angkatan Laut · Angkatan Udara AS
+470	Angkatan Laut menguji kapal induk sebagai pembangkit listrik terapung · Angkatan Udara merencanakan microgrid di 16 pangkalan pada 2030
+471	The War Zone · ringkasan kami
+472	🇺🇸 Angkatan Laut · Angkatan Udara AS · 2026.05
+473	Pada Mei 2026 Angkatan Laut mengumumkan demonstrasi USS Gerald R. Ford memasok listrik ke fasilitas di darat. Rencana Angkatan Udara 2024 menargetkan microgrid di 16 pangkalan pada tahun anggaran 2030. Rencana Korps Marinir, Angkatan Luar Angkasa, dan urusan pangan pangkalan tidak dirinci dalam pemberitaan.
+475	Badan Kontingensi Sipil Swedia (MCF)
+476	Swedia menambah edisi bisnis «Jika krisis atau perang datang»
+477	MCF · ringkasan kami
+478	🇸🇪 Badan Kontingensi Sipil Swedia (MCF) · 2026.01
+479	Setelah mengirim brosur rumah tangga yang direvisi ke setiap rumah pada 2024, Swedia menerbitkan edisi 2026 untuk bisnis tentang peran mereka dalam pertahanan total. Rumah tangga disarankan bisa bertahan hingga seminggu.
+480	· Air, makanan, pemanas, dan radio hingga seminggu
+481	Prancis menerbitkan panduan bertahan hidup nasional «Tous responsables» dengan tas darurat rumah
+482	Connexion France · ringkasan kami
+483	🇫🇷 Prancis · 2025.11
+484	Panduan pemerintah yang meminta rumah tangga menyiapkan perlengkapan untuk setidaknya 72 jam menghadapi perang, bencana alam, dan kecelakaan besar.
+485	· Air, makanan, radio, senter, obat, salinan dokumen untuk 72 jam
+487	Taiwan
+488	Taiwan mengirim buku panduan pertahanan sipil terbaru ke setiap rumah — «setiap klaim menyerah adalah palsu»
+489	Baird Maritime · CNA · ringkasan kami
+490	🇹🇼 Taiwan · 2025.11
+491	Buku panduan yang direvisi September 2025 dibagikan ke semua rumah tangga sejak November: apa yang dilakukan saat serangan udara atau invasi, persediaan, tempat berlindung, dan disinformasi.
+492	· Tas darurat, air, makanan, radio, rute ke tempat berlindung
+494	Jerman (BBK)
+495	Jerman merevisi panduan krisis — persediaan rumah hingga 10 hari
+496	Newsweek · The Vibes · ringkasan kami
+497	🇩🇪 Jerman (BBK) · 2025
+498	· Air, makanan tahan lama, obat, radio — hingga 10 hari
+500	Belanda mengirim buklet kesiapsiagaan ke 8,5 juta rumah
+501	🇳🇱 Belanda · 2025
+502	Setiap rumah tangga menerima buklet yang menyarankan persiapan setidaknya tiga hari.
+503	Polandia
+504	«Panduan Keamanan» Polandia mencakup bencana, serangan siber, sabotase, dan perang
+505	🇵🇱 Polandia · 2025
+506	Panduan publik ini membahas serangan siber, sabotase, dan perang di samping bencana alam.
+507	Norwegia
+508	Norwegia menaikkan imbauan kemandirian rumah tangga dari 3 menjadi 7 hari
+509	🇳🇴 Norwegia · 2024
+510	Diperpanjang menjadi seminggu dengan alasan perubahan iklim, perang, dan ancaman digital.
+511	Finlandia
+512	Panduan nasional Finlandia: konflik, pemadaman listrik, serangan siber
+513	🇫🇮 Finlandia · 2024
+514	Pedoman nasional untuk konflik militer, listrik padam, serangan siber, dan cuaca ekstrem.
+515	Negara Baltik dan Eropa Tengah
+516	Negara Baltik, Ceko, Denmark, dan Belgia juga menyarankan 72 jam
+517	🇱🇹 Negara Baltik dan Eropa Tengah · 2024
+518	Panduan Lituania «Jika krisis atau perang datang» (termasuk pendudukan), buklet «72 jam» Latvia, panduan krisis Estonia, «72 jam» Ceko sebanyak 5,2 juta eksemplar, Denmark 3 hari, dan tas 3 hari dari pusat krisis Belgia.
+519	Fox News — rencana FORTRESS Pentagon
+520	Utility Dive — Angkatan Darat memilih vendor mikroreaktor
+521	The Vibes — perbandingan masa imbauan per negara (2 Nov 2026)
+522	Korea Safety Portal — apa yang dilakukan saat darurat
+523	Pangkalan 90 hari Pentagon, 72 jam UE, Be Ready Inggris, Jepang 3–7 hari, dan lainnya, sebagai kartu judul
+524	Hari per negara
+530	Per 2026-11-15
+702	Logo WORLD MAKING MEMBERS
+856	Kerugian utama · Rumah sakit, pabrik, dan layanan publik berhenti; ancaman membuka data pelanggan
+857	Kerugian utama · Kesalahan posisi kapal dan pesawat; ketakutan dan kebingungan publik
+858	Insiden September hingga November 2026. Tidak setiap gangguan adalah peretasan; setiap butir memuat kesimpulan yang diketahui sejauh ini.
+859	· Atribusi adalah penilaian vendor, bukan resmi; keberhasilan di Korea belum terkonfirmasi.
+860	Dana Yellow Umbrella (~1,92 juta anggota) memperingatkan kemungkinan kebocoran; Universitas Inje 24.011 data; platform mata uang lokal Korea Minting ~3.000 pengguna.
+861	· Kebocoran dilaporkan; belum ada kaitan terkonfirmasi dengan kampanye server di atas.
+862	Gangguan frekuensi dan radar antar pusat kendali membuat FAA menghentikan keberangkatan secara nasional; ~7.000 penerbangan tertunda atau batal (FlightAware), ratusan dialihkan. Disebutkan kelebihan beban saat pemasangan peralatan jaringan baru.
+863	Di Sungai Mississippi, tanker Atlantic Asphalt menabrak kapal wisata sungai American Heritage yang sedang tertambat; ~190 orang di kapal semua diselamatkan, beberapa terluka.
+864	· Tidak ada tanda terorisme (Penjaga Pantai); kerusakan kemudi sedang diselidiki.
+865	Email dan rapat video terganggu bagi perusahaan dan pemerintah di banyak negara, termasuk NHS Inggris dan polisi; sebagian perusahaan kembali memakai telepon dan faks.
+866	Kerusakan perangkat keras sistem bersama membatasi penarikan ATM dan transfer; pulih malam itu juga.
+867	30 Okt: kerusakan peralatan jaringan maskapai, sebagian check-in manual; 3 Nov: gangguan sistem pemeriksaan keberangkatan dan pra-pemeriksaan Kementerian Kehakiman, keberangkatan tertunda; 6 Nov: kesalahan validasi data penumpang.
+868	· Bukan serangan: kesalahan peralatan dan sistem (kelebihan beban setelah penggantian penyimpanan); bandara menilai peretasan tidak mungkin.
+869	Bank sentral menempatkan Ueno dalam resolusi karena insolvensi; rekening ~60% orang dewasa dibatasi; krisis politik menyusul.
+870	Serangan perusak menghapus data cloud, melumpuhkan ratusan situs dan sebagian layanan publik; lebih dari 1.000 server diperiksa manual; sebagian cadangan hancur.
+871	· Terkonfirmasi; belum ada atribusi.
+872	· Tidak ada bukti peretasan; FAA/NTSB menyelidiki.
+873	Penyerang mencoba mengubah setelan suhu dan pencairan es pada unit pendingin di tiga lokasi plasma EFS; alarm suhu membuat staf segera bertindak.
+874	· Terkonfirmasi. 110°C adalah setelan yang dimasukkan, bukan suhu sebenarnya; tidak ada kerusakan produk atau kesehatan.
+875	Aplikasi peringatan Ukraina yang dipakai jutaan orang mengirim peringatan radiasi, kimia, dan militer palsu; pengembang menghentikan notifikasi. Aplikasi peringatan darurat Rusia diserang secara terpisah.
+876	· Terkonfirmasi; kedua negara menyatakan sistem peringatan inti tetap berjalan.
+877	Sistem yang terenkripsi melumpuhkan PC umum, Wi-Fi, peminjaman, dan aplikasi; ke-66 cabang tetap buka.
+878	· Terkonfirmasi; atribusi FBI.
+879	· Pembobolan terkonfirmasi; tidak ada pencurian aset yang terkonfirmasi dari pemerasan Gopax.
+880	Kaspersky: sejak Juli 2025, spear-phishing, situs CV dan portofolio palsu, serta penyalahgunaan CrossWeb EX; malware barunya bahkan memakai enkripsi pascakuantum.
+881	Eksekusi kode tanpa autentikasi (CVE-2026-109618/109619). Sebagian situs pemerintah, sekolah, dan rumah sakit ditutup sebagai pencegahan; kampanye server November mengeksploitasi jenis celah ini.
+882	· Celah keamanan; segera tambal.
+883	· Terkonfirmasi; siapa pun yang memasangnya harus mengganti semua kredensial.
+884	Bermula di sebuah bank umum pada akhir September. ~25.000 orang lewat celah lolos autentikasi di layanan pencarian milik pialang pinjaman, ditambah penyusupan ke sistem penjualan staf. Regulator memeriksa 555 perusahaan; 130 melaporkan kekurangan seperti tambalan yang belum dipasang dan tanpa pemantauan 24 jam. Ditemukan jejak alat penyusupan AI.
+885	· Pembobolan terkonfirmasi; penyerang belum teridentifikasi.
+886	· Penyusupan ICS terkonfirmasi; tidak ada bukti AI digunakan.
+887	Menggabungkan alat penyusupan AI dengan agen pemrograman AI; menyerang 60 perusahaan selama 44 hari sejak akhir Agustus dan mencuri lebih dari 8,2 juta data dari ~90 perusahaan. Juga dilaporkan: jaringan kafe (~2,76 juta data dari berkas cloud yang terlupakan) dan ~110.000 akun belajar sekolah.
+888	· Terkonfirmasi; tidak ada kaitan langsung dengan pembobolan sektor keuangan.
+889	Kapal Vivit Africa LNG milik H-Line Shipping yang berlayar dari Louisiana ke Italia kehilangan akses ke sebagian sistem kendali dan pemantauan muatan, menunggu di lepas pantai Italia, lalu membatalkan bongkar muat. Ini insiden siber kapal ketiga yang dicurigai dalam sebulan (Penjaga Pantai dan FBI menaiki dua tanker di lepas pantai AS akhir Agustus); otoritas AS dilaporkan mengawasi sekitar 20 kapal.
+890	· Awak menduga serangan siber; sedang diselidiki.
+891	Sistem pemesanan dan pengiriman mati; pabrik terganggu, pesanan dicatat manual.
+892	Perangkat lunak check-in bersama Collins Aerospace diserang; bandara kembali ke check-in manual.
+893	Femtocell palsu dipakai untuk pembayaran mikro tanpa izin; data ~2,97 juta pelanggan Lotte Card bocor.
+894	Toko buku dan penjualan tiket mati beberapa hari; pada Juli sebuah perusahaan asuransi penjaminan juga lumpuh.
+895	Masuk lewat kontraktor dengan rekayasa sosial; penjualan daring berhenti berminggu-minggu.
+896	FBI mengaitkannya dengan TraderTraitor Korea Utara; rekor hingga Binance pada 2026.
+897	Bukan serangan tetapi pembaruan keamanan yang rusak; maskapai, rumah sakit, dan bank di seluruh dunia berhenti.
+898	Data ~190 juta orang; tagihan rumah sakit dan apotek membeku berminggu-minggu.
+899	Puluhan ribu terminal rusak permanen; pemantauan jarak jauh ~5.800 turbin angin Jerman hilang.
+900	Pipa ditutup 6 hari; pembelian panik di SPBU; perusahaan membayar ~US$4,4 juta.
+901	Seorang operator melihatnya dan membatalkannya; air minum tidak terdampak.
+902	Wiper yang menyamar sebagai ransomware; kerugian diperkirakan lebih dari US$10 miliar.
+903	Layanan NHS Inggris terganggu; AS dan negara lain mengaitkannya dengan Korea Utara.
+904	Dokumen pembangkit bocor disertai ancaman menghentikan reaktor; pemerintah menyalahkan Korea Utara.
+905	~48.000 PC di stasiun TV dan bank dihapus; pemerintah menyalahkan Korea Utara.
+906	Gangguan yang terjadi berdekatan tidak berarti satu penyerang. Penerbangan AS (gangguan telekomunikasi), bank shinkin Jepang (perangkat keras), dan bank Paraguay (insolvensi) punya penyebab berbeda; serangan harus dikonfirmasi kasus per kasus.
+907	Tulis kontak keluarga dan titik kumpul di kertas; simpan radio untuk peringatan resmi
+908	Login multifaktor di ponsel, komputer, bank, dan email; cadangkan berkas penting
+909	Sedikit uang tunai untuk saat padam; jangan membeli karena panik atau berutang tanpa perlu
+910	Periksa setiap perangkat yang bisa diakses dari jauh, pengendali kulkas, dan PLC; jauhkan dari internet terbuka
+911	Kendalikan koneksi dan akses jarak jauh antara jaringan OT dan IT; awasi anomali
+912	Polisi saat darurat; selain itu meja kejahatan siber kepolisian prefektur ✓
+913	Polisi saat darurat; laporan daring ke polisi negara bagian
+914	Sebagian besar imbauan rumah tangga 3 hari; negara Nordik dan Jepang menyebut seminggu, Jerman hingga 10 hari. Militer AS menargetkan 90 hari per pangkalan.
+915	Ottawa mengingatkan rumah tangga menyimpan persediaan darurat setidaknya tiga hari; laporan itu mencatat lebih dari 30 negara memberi imbauan serupa.
+916	Dipaparkan di Forum Perlindungan Sipil Eropa di Brussel. Rumah tangga perlu menyiapkan tas darurat menghadapi cuaca ekstrem, serangan siber, sabotase infrastruktur, dan konflik geopolitik; 72 jam memberi waktu bagi layanan darurat untuk membantu yang paling membutuhkan. Negara anggota perlu mengajarkan kesiapsiagaan sejak sekolah dini dan melibatkan penyandang disabilitas dalam rencana.
+917	Bertepatan dengan peluncuran badan itu pada 2 Nov, permintaan ditujukan kepada warga, pemerintah daerah, dan kementerian: air, makanan, dan toilet portabel untuk setidaknya tiga hari, idealnya seminggu, serta perabot dikencangkan. Ini menegaskan buku putih 2026; pejabat mengatakan bukan respons atas bencana atau serangan siber tertentu. Latar belakang: risiko gempa Palung Nankai dan Tokyo.
+918	Mencari lokasi yang mampu beroperasi 30 hari tanpa utilitas sipil, dengan daur ulang air, jaringan komputer terisolasi, rantai pasok domestik, dan cadangan strategis. Pedoman luas 100.000–250.000 acre; para gubernur akan mengajukan lokasi pada musim semi 2027. Belum ada yang dipilih.
+919	Setelah imbauan Inggris dan Jepang, rumor perang yang akan segera terjadi atau serangan siber besar beredar di internet; keduanya kampanye kesiapsiagaan masa damai. Korea belum mengeluarkan imbauan baru; pedoman nasional yang ada (tas darurat 2–3 hari per orang, ketahui tempat berlindung) tetap berlaku.
+920	Diumumkan Menteri Pertahanan pada 30 Sep, dengan kantor program dibentuk dalam 30 hari. Dokumen perencanaan meminta instalasi utama di daratan AS menjaga operasi penting setidaknya 90 hari tanpa dukungan luar: listrik, air, BBM, dan komunikasi. Mencakup mikroreaktor, baterai besar, microgrid, pertahanan siber dan antidrone, rantai pasok amunisi, obat, dan darah, serta logam tanah jarang dan cip dalam negeri. Belum ada biaya atau jadwal; penerapan penuh di ~500 pangkalan bisa memakan puluhan tahun.
+921	Diumumkan dalam pernyataan menteri di Parlemen. Rumah tangga perlu mandiri selama tiga hari menghadapi cuaca ekstrem, kekeringan, banjir, aktivitas negara musuh, dan gangguan pasokan; disebut sebagai persiapan musim dingin, bukan peringatan perang.
+922	Panduan nasional direvisi; rumah tangga diminta menyimpan air dan makanan tahan lama, hingga 10 hari menurut laporan.
+923	Setiap kartu tertaut ke sumbernya; lihat juga daftar di bawah. Periksa situs resmi pemerintah sebelum bertindak.
+K:Headlines	Judul berita

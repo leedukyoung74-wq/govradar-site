@@ -33,7 +33,7 @@ for L in OWN:
         target = "/en/" + ("" if rel == "." else rel.replace(os.sep, "/") + "/")
         if not os.path.exists(os.path.join(root, "en", "" if rel == "." else rel, "index.html")): continue
         h = open(p, encoding="utf-8").read()
-        if "http-equiv=\"refresh\"" in h: continue
+        if "http-equiv=\"refresh\"" in h or 'name="gv-tr"' in h: continue
         r = 1.0 if rel in FORCE else share(h, L)
         if r > 0.4:
             out.append((L, rel, round(r, 2)))

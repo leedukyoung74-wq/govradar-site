@@ -96,7 +96,7 @@ def page(L):
 <link rel="alternate" hreflang="ko" href="{BASE}/alerts/"><link rel="alternate" hreflang="en" href="{BASE}/alerts/en/">
 <meta property="og:title" content="{E(T["title"])}"><meta property="og:description" content="{E(T["desc"])}"><meta property="og:image" content="{BASE}/assets/og-govradar.jpg">
 <link rel="icon" href="/assets/mark.png"><style>{CSS}{CARD_CSS}</style></head><body>
-<script>window.GVH_LANG_URL=function(l){{return l==="ko"?"/alerts/":"/alerts/en/"}};window.GVH_SUB=function(){{return {sub}}};</script><script src="/assets/gvhdr.js" data-l="{L}" data-g="world" data-a="alerts"></script>
+<script>window.GVH_LANG_URL=function(l){{return l==="ko"?"/alerts/":"/alerts/"+l+"/"}};window.GVH_SUB=function(){{return {sub}}};</script><script src="/assets/gvhdr.js" data-l="{L}" data-g="world" data-a="alerts"></script>
 <section class="hero"><div class="wrap"><p class="crumb"><a href="/cyber/{"" if ko else "en/"}">{"사이버 공격" if ko else "Cyberattacks"}</a> · <a href="/hazards/">{"재난 지도" if ko else "Hazard map"}</a> · <a href="/{L}/conflict/">{"세계 상황" if ko else "World watch"}</a> · <a href="{"/alerts/en/" if ko else "/alerts/"}">{"English" if ko else "한국어"}</a></p>
 <h1>{"각국 정부의 대비 권고" if ko else "What governments tell people to prepare for"}</h1>
 <p>{"전쟁·분쟁, 자연재해, 감염병, 사이버 공격에 공통으로 — 미국 국방부는 기지가 90일 스스로 버티도록, 유럽·영국·일본·캐나다는 가정이 3일~1주일 버티도록 준비하라고 했습니다. 각국 발표와 보도를 헤드라인 카드로 모았습니다." if ko else "Across war, disasters, epidemics and cyberattacks, the Pentagon wants bases able to hold out 90 days, and Europe, the UK, Japan and Canada want households ready for three days to a week. Here are the announcements as headline cards."}</p>

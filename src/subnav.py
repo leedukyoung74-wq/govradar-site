@@ -47,8 +47,8 @@ def href(L, k):
     if k == "list": return f"/{L}/#gwrap"
     if k == "hazards": return "/hazards/" if L == "ko" else f"/hazards/?l={L}"
     if k == "signals": return "/signals/" if L == "ko" else "/signals/en/"
-    if k == "cyber": return "/cyber/" if L == "ko" else "/cyber/en/"
-    if k == "alerts": return "/alerts/" if L == "ko" else "/alerts/en/"
+    if k == "cyber": return "/cyber/" if L == "ko" else f"/cyber/{L}/"
+    if k == "alerts": return "/alerts/" if L == "ko" else f"/alerts/{L}/"
     if k == "legal": return f"/{L}/legal/terms/"
     return f"/{L}/{k}/"
 
@@ -69,7 +69,7 @@ def gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU):
     data = {"nav": {}, "sub": {}, "lang": LANG_NAME, "short": LANG_SHORT,
             "login": {L: AT[L]["login"] for L in LANG_NAME}, "menu": MENU}
     for L in LANG_NAME:
-        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else "/signals/en/") if p == "@signals" else ("/cyber/" if L == "ko" else "/cyber/en/") if p == "@cyber" else f"/{L}/{p}", lbl, p] for p, lbl in NAV[L]]
+        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else "/signals/en/") if p == "@signals" else ("/cyber/" if L == "ko" else f"/cyber/{L}/") if p == "@cyber" else f"/{L}/{p}", lbl, p] for p, lbl in NAV[L]]
         data["sub"][L] = {g: [[k, h, t] for k, h, t in items(L, g)] for g in GROUPS}
     css = r"""
 .gvh,.gvh *{box-sizing:border-box}

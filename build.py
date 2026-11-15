@@ -748,7 +748,7 @@ CYB_T = {"ko": ("사이버 공격 — 지금 주목할 사건", "실제 공격�
  "vi": ("Tấn công mạng — sự cố đáng chú ý", "Chúng tôi tách tấn công thật khỏi sự cố thông thường. Các loại tấn công, vụ việc lớn và cách chuẩn bị có trên trang tấn công mạng (tiếng Anh).", "Xem toàn bộ trang →", "Sự cố mạng liên quan đến quốc gia này"),
  "id": ("Serangan siber — insiden yang perlu dicermati", "Kami memisahkan serangan nyata dari gangguan biasa. Jenis serangan, kasus besar dan langkah persiapan ada di halaman serangan siber (bahasa Inggris).", "Lihat halaman lengkap →", "Insiden siber terkait negara ini")}
 CYV = {"ko": {"atk": "실제 공격", "susp": "조사 중·의심", "no": "공격 아님", "vuln": "취약점"}, "en": {"atk": "Attack", "susp": "Suspected", "no": "Not an attack", "vuln": "Vulnerability"}}
-def cy_url(L): return "/cyber/" if L == "ko" else "/cyber/en/"
+def cy_url(L): return "/cyber/" if L == "ko" else f"/cyber/{L}/"
 def cy_item(L, r):
     i = 0 if L == "ko" else 1; v = CYV["ko" if L == "ko" else "en"]
     return (f'<li><span class="cyb {r[3]}">{e(v[r[3]])}</span> <span class="note">{e(r[0].replace("-", "."))} · {e(r[1][i])}</span><br><b>{e(r[5][i])}</b>'

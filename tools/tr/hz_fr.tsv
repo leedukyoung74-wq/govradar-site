@@ -1,0 +1,104 @@
+0	Les catastrophes du monde sur un seul écran
+1	Combien de catastrophes de chaque type ont été enregistrées chaque année de 2000 à 2025, quels pays ont été les plus touchés et quand l'astéroïde Apophis s'approche, d'après des sources officielles d'observation et de statistique.
+2	Catastrophes naturelles enregistrées en 2025
+3	Tempête
+4	Type le plus fréquent en 2025 · 153
+5	Morts dues aux catastrophes, 2000–2025
+6	Approche la plus proche d'Apophis
+7	75 ans de données, 1950–2025
+8	Chiffres annuels publiés par six sources officielles. La ligne fine correspond à chaque année, la ligne épaisse à la moyenne mobile sur 10 ans. Survolez ou touchez un graphique pour voir l'année.
+9	Catastrophes naturelles enregistrées
+10	Conflits armés étatiques en cours
+11	Séismes de magnitude 7,0+
+12	Tsunamis confirmés
+13	CO₂ atmosphérique
+14	Vue sur un même axe : chaque série est rebasée pour que sa moyenne 1951–1980 = 100 (moyenne mobile sur 5 ans). La température n'apparaît que dans son propre panneau. Touchez un bouton pour afficher ou masquer une courbe.
+15	Catastrophes naturelles enregistrées (monde)
+17	407 événements
+18	moyenne 1950–1959
+19	moyenne 2016–2025
+20	Source :
+24	65 conflits
+27	16 séismes
+30	24 événements
+32	Anomalie de température mondiale (par rapport à 1951–1980)
+35	CO₂ atmosphérique (Mauna Loa)
+38	moyenne 1959–1968
+40	Remarque : une partie de la hausse des décomptes EM-DAT reflète un meilleur recensement depuis les années 1980–90, et pas seulement davantage d'événements (selon EM-DAT). Les séismes de magnitude 7+ ne montrent pas de tendance nette à la hausse sur la même période. Les valeurs 2025 peuvent encore être révisées.
+41	Ce qui s'est passé chaque année, et à quelle fréquence
+42	Touchez un type de catastrophe pour l'afficher ou le masquer. Survolez une barre pour voir les chiffres de l'année. Le tableau ci-dessous donne les mêmes chiffres par type.
+43	Inondation
+44	Séisme · tsunami
+45	Glissement de terrain
+46	Feu de forêt
+47	Sécheresse
+48	Chaleur · froid
+49	Volcan
+50	Total
+51	Source : EM-DAT (CRED, UCLouvain), traité par Our World in Data. Une catastrophe est enregistrée si elle fait au moins 10 morts, touche au moins 100 personnes ou entraîne une déclaration d'urgence ou un appel à l'aide internationale. EM-DAT classe les tsunamis avec les séismes. Les années avant 2000 sont exclues car les données sont incomplètes.
+52	Quels pays ont été les plus touchés, et par quoi
+53	Les pays plus foncés ont eu plus de morts dues aux catastrophes en 2000–2025. Le symbole d'un pays indique son type de catastrophe le plus meurtrier. Touchez un pays pour ouvrir sa carte.
+54	Impact cumulé 2000–2025
+55	En cours
+56	Choisir un pays
+236	50 000+ morts
+237	Typhon · tempête
+238	Séisme
+239	Tsunami
+240	Incendie urbain
+241	Vague de chaleur · de froid
+242	Impact de comète · météorite
+243	Conflit ethnique · communautaire
+244	Manifestation
+245	Émeute
+246	Épidémie
+247	Sources : morts cumulées d'EM-DAT / Our World in Data. Événements en cours de l'USGS (séismes M5,8+, alertes tsunami), de NASA EONET (feux, volcans, tempêtes ; les feux sont surtout signalés aux États-Unis) et du GDACS (alertes orange et rouges) au 2026-11-14 ; une fois reliés au site, ils se rechargent à chaque visite.
+248	Dix-sept aléas, en mouvement
+249	Les types qui se recoupent sont regroupés, des catastrophes naturelles à la guerre et aux troubles. Touchez un pays sur la carte ci-dessus pour ne voir que les types qui y ont été enregistrés, sur le même écran.
+250	Pluies intenses et rivières inondent les villes
+251	Vent fort et fortes pluies ensemble
+252	Le sol tremble et les bâtiments s'effondrent
+253	Des vagues dues à un séisme ou une éruption frappent la côte
+254	Terre et roches glissent le long d'une pente
+255	Le feu se propage dans les forêts et les prairies
+256	Incendies dans des bâtiments, usines et marchés
+257	Pas de pluie, terres sèches et récoltes perdues
+258	Chaleur ou froid extrêmes pendant des jours
+259	Éruption de lave, de cendres et de gaz
+260	Un astéroïde ou une comète percute la Terre
+261	États en guerre ou guerre civile
+262	Groupes ethniques, religieux ou armés qui s'affrontent
+263	Rassemblements de masse contre le gouvernement
+264	Troubles avec incendies ou jets de pierres
+265	Une maladie infectieuse se propage vite
+266	Cyberattaque
+267	Piratage, DDoS et rançongiciels coupent l'électricité, la finance et les réseaux
+268	Cyberattaques — types, incidents récents et préparation →
+269	Ce sont des animations explicatives, pas des images réelles. Données par pays : catastrophes naturelles EM-DAT / Our World in Data (morts 2000–2025), tsunamis NOAA NCEI (sites touchés 2000–2025), guerre et conflits communautaires UCDP / Our World in Data (morts 2000–2025), manifestations et émeutes Mass Mobilization Project (Harvard Dataverse, 2000–2020, hors États-Unis) ; éléments en cours du tableau GOV RADAR au 2026-11-09.
+282	Quand Apophis s'approche, et à quelle distance
+283	Apophis (99942) est un astéroïde d'environ 340 m, pas une comète. Chaque point est une approche et sa distance ; la ligne verticale est l'incertitude calculée. Plus bas signifie plus près de la Terre.
+284	Le 13 avril 2029 à 21 h 46 UTC
+285	Apophis passera à environ 38 000 km du centre de la Terre, à l'intérieur de l'anneau des satellites géostationnaires. Après les observations radar de 2021, la NASA a indiqué qu'il n'y a
+286	aucun risque d'impact pendant au moins 100 ans
+287	Lune 384 000 km
+288	Géostationnaire 42 000 km
+289	↑ plus loin de la Terre · ↓ plus près
+307	Les distances sont des valeurs calculées par la NASA/JPL depuis le centre de la Terre. L'échelle est logarithmique, donc les distances proches sont agrandies. La bande rouge indique l'incertitude.
+308	Sources : données d'approche de la NASA/JPL Small-Body Database (solution orbitale 220) ; déclaration de la NASA, mars 2021. Distances depuis le centre de la Terre. La gravité terrestre modifie l'orbite en 2029, d'où une incertitude croissante pour les dates suivantes.
+313	Langue
+314	Menu
+315	pays
+316	carte mondiale des catastrophes
+317	animation des approches d'Apophis
+K:@lunar	× distance Terre-Lune
+K:At a glance	En un coup d'œil
+K:Long-term trends	Tendances longues
+K:Disasters	Catastrophes
+K:Conflicts	Conflits
+K:M7+ quakes	Séismes M7+
+K:Tsunamis	Tsunamis
+K:Temperature	Température
+K:By year	Par année
+K:Country map	Carte par pays
+K:17 hazards	17 aléas
+K:Asteroid Apophis	Astéroïde Apophis

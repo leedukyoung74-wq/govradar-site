@@ -1,0 +1,104 @@
+0	Los desastres del mundo en una pantalla
+1	Cuántos desastres de cada tipo se registraron cada año de 2000 a 2025, qué países sufrieron más y cuándo se acerca el asteroide Apophis, a partir de fuentes oficiales de observación y estadística.
+2	Desastres naturales registrados en 2025
+3	Tormenta
+4	Tipo más frecuente en 2025 · 153
+5	Muertes por desastres, 2000–2025
+6	Máximo acercamiento de Apophis
+7	75 años de registros, 1950–2025
+8	Cifras anuales publicadas por seis fuentes oficiales. La línea fina es cada año; la gruesa, la media móvil de 10 años. Pase el cursor o toque un gráfico para ver ese año.
+9	Desastres naturales registrados
+10	Conflictos armados estatales en curso
+11	Terremotos de magnitud 7,0+
+12	Tsunamis confirmados
+13	CO₂ atmosférico
+14	Vista en el mismo eje: cada serie rebasada para que su media de 1951–1980 = 100 (media móvil de 5 años). La temperatura aparece solo en su propio panel. Toque un botón para mostrar u ocultar una línea.
+15	Desastres naturales registrados (mundo)
+17	407 eventos
+18	media 1950–1959
+19	media 2016–2025
+20	Fuente:
+24	65 conflictos
+27	16 terremotos
+30	24 eventos
+32	Anomalía de la temperatura global (frente a 1951–1980)
+35	CO₂ atmosférico (Mauna Loa)
+38	media 1959–1968
+40	Nota: parte del aumento en los recuentos de EM-DAT refleja un registro más amplio desde los años 80–90, no solo más eventos (según EM-DAT). Los terremotos de magnitud 7+ no muestran una tendencia clara al alza en el mismo periodo. Los valores de 2025 aún pueden revisarse.
+41	Qué pasó cada año y con qué frecuencia
+42	Toque un tipo de desastre para mostrarlo u ocultarlo. Pase el cursor sobre una barra para ver las cifras de ese año. La tabla inferior muestra las mismas cifras por tipo.
+43	Inundación
+44	Terremoto · tsunami
+45	Deslizamiento
+46	Incendio forestal
+47	Sequía
+48	Calor · frío
+49	Volcán
+50	Total
+51	Fuente: EM-DAT (CRED, UCLouvain), procesado por Our World in Data. Se registra un desastre cuando causa 10 o más muertes, afecta a 100 o más personas o provoca una declaración de emergencia o una petición de ayuda internacional. EM-DAT cuenta los tsunamis dentro de los terremotos. Se omiten los años anteriores a 2000 porque los registros están incompletos.
+52	Qué países sufrieron más, y por qué
+53	Los países más oscuros tuvieron más muertes por desastres en 2000–2025. El símbolo de cada país es su tipo de desastre más mortífero. Toque un país para abrir su propio mapa.
+54	Impacto acumulado 2000–2025
+55	Ocurriendo ahora
+56	Elija un país
+236	50.000+ muertes
+237	Tifón · tormenta
+238	Terremoto
+239	Tsunami
+240	Incendio urbano
+241	Ola de calor · frío
+242	Impacto de cometa · meteorito
+243	Conflicto étnico · comunitario
+244	Protesta
+245	Disturbios
+246	Epidemia
+247	Fuentes: muertes acumuladas de EM-DAT / Our World in Data. Eventos en curso de USGS (terremotos M5,8+, avisos de tsunami), NASA EONET (incendios, volcanes, tormentas; los incendios se concentran en EE. UU.) y GDACS (alertas naranja y roja) a 2026-11-14; una vez conectados al sitio se recargan en cada visita.
+248	Diecisiete amenazas, en movimiento
+249	Los tipos que se solapan se fusionan en uno, de los desastres naturales a la guerra y los disturbios. Toque un país en el mapa de arriba para ver solo los tipos registrados allí, en la misma pantalla.
+250	Lluvias intensas y ríos inundan ciudades
+251	Viento fuerte y lluvia intensa a la vez
+252	La tierra tiembla y caen edificios
+253	Olas de un terremoto o erupción golpean la costa
+254	Tierra y rocas se deslizan por una ladera
+255	El fuego se extiende por bosques y pastizales
+256	Incendios en edificios, fábricas y mercados
+257	Sin lluvia, tierra seca y cosechas perdidas
+258	Calor o frío extremo durante días
+259	Erupción de lava, ceniza y gases
+260	Un asteroide o cometa impacta en la Tierra
+261	Estados en guerra o guerra civil
+262	Grupos étnicos, religiosos o armados enfrentados
+263	Concentraciones masivas contra el gobierno
+264	Disturbios con incendios o lanzamiento de piedras
+265	Una enfermedad infecciosa se propaga rápido
+266	Ciberataque
+267	Hackeo, DDoS y ransomware detienen la electricidad, las finanzas y las redes
+268	Ciberataques — tipos, incidentes recientes y preparación →
+269	Son animaciones explicativas, no imágenes reales. Registros por país: desastres naturales EM-DAT / Our World in Data (muertes 2000–2025), tsunamis NOAA NCEI (lugares con daños 2000–2025), guerra y conflicto comunitario UCDP / Our World in Data (muertes 2000–2025), protestas y disturbios Mass Mobilization Project (Harvard Dataverse, 2000–2020, sin EE. UU.); casos en curso del panel de GOV RADAR a 2026-11-09.
+282	Cuándo se acerca Apophis, y cuánto
+283	Apophis (99942) es un asteroide de unos 340 m, no un cometa. Cada punto es un acercamiento y su distancia; la línea vertical es la incertidumbre calculada. Más abajo significa más cerca de la Tierra.
+284	El 13 de abril de 2029 a las 21:46 UTC
+285	Apophis pasará a unos 38.000 km del centro de la Tierra, dentro del anillo de satélites geoestacionarios. Tras las observaciones de radar de 2021, la NASA dijo que no hay
+286	ningún riesgo de impacto durante al menos 100 años
+287	Luna 384.000 km
+288	Geoestacionario 42.000 km
+289	↑ más lejos de la Tierra · ↓ más cerca
+307	Las distancias son valores calculados por NASA/JPL desde el centro de la Tierra. La vista usa escala logarítmica, así que las distancias cercanas se amplían. La banda roja es el margen de incertidumbre.
+308	Fuentes: datos de acercamientos de la NASA/JPL Small-Body Database (solución orbital 220); comunicado de la NASA, marzo de 2021. Distancias desde el centro de la Tierra. La gravedad terrestre cambia la órbita en 2029, por lo que la incertidumbre crece para fechas posteriores.
+313	Idioma
+314	Menú
+315	país
+316	mapa mundial de desastres
+317	animación de los acercamientos de Apophis
+K:@lunar	× distancia lunar
+K:At a glance	De un vistazo
+K:Long-term trends	Tendencias a largo plazo
+K:Disasters	Desastres
+K:Conflicts	Conflictos
+K:M7+ quakes	Terremotos M7+
+K:Tsunamis	Tsunamis
+K:Temperature	Temperatura
+K:By year	Por año
+K:Country map	Mapa por país
+K:17 hazards	17 amenazas
+K:Asteroid Apophis	Asteroide Apophis

@@ -6,6 +6,8 @@ python3 tools/signals_i18n.py || exit 1
 python3 tools/welcome_i18n/build.py || exit 1
 python3 tools/alerts_build.py || exit 1
 python3 tools/cyber_build.py || exit 1
+python3 tools/i18n_build.py || exit 1
+python3 tools/hz_i18n.py || exit 1
 python3 tools/cf_variant.py dist cf/public
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public
