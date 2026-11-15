@@ -16,7 +16,7 @@ CARD_CSS = '''
 .hls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .hl{position:relative;display:flex;flex-direction:column;background:#f4efe4;color:#16130f;border-radius:6px;overflow:hidden;text-decoration:none;min-width:0;box-shadow:0 10px 30px rgba(0,0,0,.35);font-family:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo",sans-serif}
 .hl .mast{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 14px;border-bottom:3px double #16130f;font-size:12px;letter-spacing:.4px}
-.hl .mast b{font-size:13px;letter-spacing:1.5px}.hl .mast .fl{font-size:22px;line-height:1}
+.hl .mast b{font-size:13px;letter-spacing:.5px}.hl .hlf{font-size:20px;line-height:1;flex:none}.hl .mast .fl{font-size:22px;line-height:1}
 .hl .grp{align-self:flex-start;margin:12px 14px 0;font-size:11px;font-weight:700;color:#fff;background:var(--gc);border-radius:3px;padding:3px 7px}
 .hl h3{font-size:21px;line-height:1.32;margin:8px 14px 10px;font-weight:700;letter-spacing:-.3px;color:#16130f}
 .hl .by{margin:0 14px;font-size:12.5px;color:#5b5346;border-top:1px solid #cfc6b4;padding-top:8px}
@@ -37,7 +37,7 @@ def card(it, L, href=None):
     d, iso, who, outlet, url, hd, body, lst, tags, grp = it
     tg = "".join(f"<span>{E(A.TAGS[t][i])}</span>" for t in tags[:5])
     return (f'<a class="hl" href="{E(href or url)}" {"" if href else "target=_blank rel=\"noopener nofollow\""} style="--gc:{GC[grp]}">'
-            f'<div class="mast"><span class="fl">{flag(iso)}</span><b>{E(who[i])}</b><span>{dfmt(d)}</span></div><span class="grp">{E(GL[grp][i])}</span>'
+            f'<div class="mast"><span class="hlf">{flag(iso)}</span><b>{E(who[i])}</b><span>{dfmt(d)}</span></div><span class="grp">{E(GL[grp][i])}</span>'
             f'<h3>{E(hd[i])}</h3><p class="by">{E(oname(outlet, L))}{" · 요약" if L=="ko" else " · our summary"}</p><div class="tg">{tg}</div>'
             f'<span class="go">{("원문 보기 →" if L=="ko" else "Read the source →") if not href else ("전체 보기 →" if L=="ko" else "Read more →")}</span></a>')
 
