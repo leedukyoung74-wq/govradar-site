@@ -870,3 +870,4 @@ html{scroll-padding-top:116px}
 .acf{display:inline-flex;gap:3px;margin-right:8px;vertical-align:-2px}
 .cards.urs{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .urc{border-left-color:#b54708}.urc h3{font-size:16px}
+@media (max-width:600px){.folder summary{flex-wrap:wrap;gap:4px 10px}.folder summary b{flex:1 1 100%}.bd{white-space:normal}}
