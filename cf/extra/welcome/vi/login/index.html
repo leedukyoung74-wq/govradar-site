@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Đăng nhập</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Đăng nhập để mở toàn bộ GOV RADAR."><link rel="alternate" hreflang="ko" href="https://radar.wmm-hoa.com/welcome/login/"><link rel="alternate" hreflang="en" href="https://radar.wmm-hoa.com/welcome/en/login/"><link rel="alternate" hreflang="es" href="https://radar.wmm-hoa.com/welcome/es/login/"><link rel="alternate" hreflang="fr" href="https://radar.wmm-hoa.com/welcome/fr/login/"><link rel="alternate" hreflang="ar" href="https://radar.wmm-hoa.com/welcome/ar/login/"><link rel="alternate" hreflang="vi" href="https://radar.wmm-hoa.com/welcome/vi/login/"><link rel="alternate" hreflang="id" href="https://radar.wmm-hoa.com/welcome/id/login/"><link rel="icon" href="/assets/govradar-logo.webp"><link rel="canonical" href="https://radar.wmm-hoa.com/welcome/vi/login/">
+</head>
+<body>
+
+
+<style>
+@font-face{font-family:"WMM Nexon";font-weight:300;src:url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:400;src:url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:700;src:url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff")}
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.8}
+.lp{background:linear-gradient(rgba(30,79,184,.82),rgba(11,31,58,.9)),url("/assets/c-sa.webp") center/cover no-repeat}
+</style>
+
+<div style="font-family: 'WMM Nexon', 'Apple SD Gothic Neo', sans-serif; color: #1a1d23; background: #ffffff; min-width: 0">
+
+<header style="background: #0b1f3a; color: #ffffff">
+<nav aria-label="Menu chính" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 40px">
+<a href="/welcome/vi/" style="display: flex; align-items: center"><img src="/assets/logo-h-lg.webp" alt="GOV RADAR" style="height: 44px; width: auto"></a>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 34px; font-size: 15px; flex: 1 1 auto; justify-content: center">
+<a href="/welcome/vi/about/">Giới thiệu</a><a href="/welcome/vi/services/">Dịch vụ</a><a href="/welcome/vi/country/">Báo cáo quốc gia</a><a href="/welcome/vi/services/#situation">Tình hình thế giới</a><a href="/welcome/vi/membership/">Thành viên</a><a href="/welcome/vi/membership/#support">Hỗ trợ</a>
+</div>
+<a href="/welcome/vi/login/" style="font-size: 13px; background: #1e4fb8; padding: 8px 16px">Đăng nhập</a>
+</nav>
+</header>
+
+<section style="display: flex; flex-wrap: wrap; min-height: 560px">
+<div class="lp" style="flex: 1 1 420px; color: #ffffff; padding: 72px clamp(24px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center">
+<p style="margin: 0; font-size: 15px; opacity: .85">MEMBER LOGIN</p>
+<h1 style="margin: 12px 0 0; font-size: 40px; line-height: 1.35; font-weight: 700">Đăng nhập để mở<br>toàn bộ GOV RADAR<br></h1>
+<p style="margin: 20px 0 0; font-size: 16px; line-height: 1.8; max-width: 440px; opacity: .92">Đây là trang giới thiệu công khai. Sau khi đăng nhập, bạn chuyển sang trang GOV RADAR đầy đủ (bản đồ, báo cáo quốc gia, gói thầu, bảng tình hình) và thấy nội dung theo hạng của mình.</p>
+</div>
+<form id="wlogin" style="flex: 1 1 420px; min-width: 0; padding: 72px clamp(24px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center; gap: 16px; max-width: 560px">
+<h2 style="margin: 0 0 6px; font-size: 28px">Đăng nhập</h2>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">Email<input name="email" type="email" required autocomplete="email" autofocus style="min-height: 48px; border: 1px solid #c9cdd3; padding: 0 14px; font: inherit"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">Mật khẩu<input name="password" type="password" required autocomplete="current-password" style="min-height: 48px; border: 1px solid #c9cdd3; padding: 0 14px; font: inherit"></label>
+<button type="submit" style="min-height: 52px; background: #0b1f3a; color: #ffffff; border: 0; font: inherit; font-size: 16px; font-weight: 700">Đăng nhập → vào GOV RADAR</button>
+<p style="margin: 4px 0 0; font-size: 14px; color: #4b515c">Lần đầu đến đây? <a href="/vi/?auth=signup" style="color: #1e4fb8; font-weight: 700">Đăng ký miễn phí (M0)</a> · <a href="/vi/?auth=reset" style="color: #4b515c">Quên mật khẩu</a></p><p id="wmsg" role="status" style="margin: 0; font-size: 14px; color: #b3261e"></p>
+</form>
+</section>
+
+<section style="background: #f2f3f5; padding: 90px 24px">
+<div style="max-width: 1100px; margin: 0 auto">
+<h2 style="margin: 0; font-size: 32px; font-weight: 400; text-align: center">Sau khi đăng nhập</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 40px">
+<div style="background: #ffffff; padding: 26px"><p style="margin: 0; font-size: 28px; font-weight: 300; color: #1e4fb8">1</p><b style="display: block; margin-top: 8px; font-size: 17px">Trang giới thiệu</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #4b515c">Các trang công khai này. Ai cũng xem được.</p></div>
+<div style="background: #ffffff; padding: 26px"><p style="margin: 0; font-size: 28px; font-weight: 300; color: #1e4fb8">2</p><b style="display: block; margin-top: 8px; font-size: 17px">Đăng nhập · đăng ký miễn phí</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #4b515c">Đăng ký sẽ nhận hạng M0 và vào thẳng trang.</p></div>
+<div style="background: #ffffff; padding: 26px"><p style="margin: 0; font-size: 28px; font-weight: 300; color: #1e4fb8">3</p><b style="display: block; margin-top: 8px; font-size: 17px">Thanh toán · www.wmm-hoa.com</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #4b515c">Hạng M1 trở lên thanh toán trên trang WMM.</p></div>
+<div style="background: #0b1f3a; color: #ffffff; padding: 26px"><p style="margin: 0; font-size: 28px; font-weight: 300; color: #8fb4ff">4</p><b style="display: block; margin-top: 8px; font-size: 17px">Trang GOV RADAR đầy đủ</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; opacity: .9">Các màn hình của hạng đã thanh toán sẽ mở.</p></div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1100px; margin: 0 auto; padding: 90px 24px 100px">
+<h2 style="margin: 0 0 28px; font-size: 32px; font-weight: 400; text-align: center">Mỗi hạng mở những gì trên trang</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 720px; border-collapse: collapse; font-size: 15px; line-height: 1.6">
+<thead><tr style="border-top: 2px solid #0b1f3a; background: #f7f8fa"><th style="text-align: left; padding: 15px; width: 150px">Hạng</th><th style="text-align: left; padding: 15px; width: 140px">Mức phí</th><th style="text-align: left; padding: 15px">Nội dung mới được mở</th></tr></thead>
+<tbody>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M0</b> Mở</td><td style="padding: 15px">Miễn phí</td><td style="padding: 15px">Bản đồ thế giới và tóm tắt quốc gia, bảng tình hình thế giới, trung tâm phòng bị, lịch hội chợ</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6; background: #eef3fc"><td style="padding: 15px"><b>M1</b> Thành viên phân tích</td><td style="padding: 15px">₩19.800/tháng</td><td style="padding: 15px">Báo cáo quốc gia đầy đủ (lý do và người mua mục tiêu), điều kiện gói thầu, 2 yêu cầu phân tích mỗi tháng</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M2</b> Chuyên nghiệp</td><td style="padding: 15px">₩149.000/tháng</td><td style="padding: 15px">+ Cảnh báo quốc gia và hạn gói thầu, hỗ trợ tài liệu tiếng Anh</td></tr>
+<tr><td colspan="3" style="border-top: 2px dashed #d32f2f; padding: 12px 15px; color: #c62828; font-weight: 700">Từ M3, tư cách thành viên cần xét duyệt: bạn tham gia sau khi được xét duyệt, và có thể bắt đầu trao đổi với nhà đầu tư ngay trong thời gian xét duyệt.</td></tr><tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M3</b> Doanh nghiệp</td><td style="padding: 15px">₩390.000/tháng</td><td style="padding: 15px">+ Danh sách đối tác CONNECT, tư vấn ưu tiên, trao đổi với nhà đầu tư (từ khi xét duyệt)</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M4</b> Gói thâm nhập</td><td style="padding: 15px">từ ₩1,9 triệu</td><td style="padding: 15px">+ PROJECT ROOM, báo cáo kiểm chứng thị trường 6 tuần, trao đổi với nhà đầu tư</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M5</b> Hỗ trợ đấu thầu</td><td style="padding: 15px">3–5% giá trị hợp đồng</td><td style="padding: 15px">+ Tiến độ hồ sơ thầu và liên danh, trao đổi với nhà đầu tư</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 16px 0 0; font-size: 13px; line-height: 1.7; color: #5b616c">Mức phí là đề xuất v2.0; không bảo đảm đầu tư, hợp đồng hay doanh thu. Thanh toán thẻ sẽ mở khi kết nối cổng thanh toán; trước đó: báo giá → chuyển khoản → cấp hạng sau khi xác nhận.</p>
+</section>
+
+<footer style="background: #2b2e33; color: #b7bbc2; padding: 26px 24px; text-align: center; font-size: 12px; line-height: 1.9">
+WORLD MAKING MEMBERS Co., Ltd. (WMM) · Liên hệ 73036396@naver.com · Ảnh: Riyadh B.alotaby (CC BY-SA 4.0), Wikimedia Commons
+</footer>
+</div>
+
+<script>window.RADAR_LANG="vi";</script><script src="/assets/config.js"></script><script src="/assets/auth.js"></script>
+<script>try{if(localStorage.getItem("wmm.auth.v1"))location.replace("/vi/")}catch(e){}</script><script>(function(){var f=document.getElementById('wlogin'),m=document.getElementById('wmsg');f.addEventListener('submit',function(e){e.preventDefault();if(!window.WMMAuth){m.textContent='Vui lòng thử lại sau giây lát.';return}m.textContent='Đang kiểm tra…';
+WMMAuth.login(f.email.value.trim(),f.password.value).then(function(){location.href='/vi/?stay=1'}).catch(function(){m.textContent='Vui lòng kiểm tra email hoặc mật khẩu.'})})})();</script></body>
+</html>

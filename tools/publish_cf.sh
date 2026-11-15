@@ -3,6 +3,7 @@
 set -e
 cd /home/claude/site
 python3 tools/signals_i18n.py || exit 1
+python3 tools/welcome_i18n/build.py || exit 1
 python3 tools/cf_variant.py dist cf/public
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public

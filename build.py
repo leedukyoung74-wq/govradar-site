@@ -865,7 +865,7 @@ def build():
     W = lambda p, s: (os.makedirs(os.path.dirname(OUT + p), exist_ok=True), open(OUT + p, "w", encoding="utf8").write(_toc_post(s, p) if p.endswith(".html") else s))
     urls = []
     for L in LANGS:
-        W(f"/{L}/index.html", home(L).replace("<head>", "<head>" + _GATE, 1) if L == "ko" else home(L)); urls.append((f"/{L}/", {l: f"/{l}/" for l in LANGS}))
+        W(f"/{L}/index.html", home(L).replace("<head>", "<head>" + _GATE.replace('"/welcome/"', '"/welcome/' + ("" if L == "ko" else L + "/") + '"'), 1)); urls.append((f"/{L}/", {l: f"/{l}/" for l in LANGS}))
         W(f"/{L}/mdb/index.html", mdb_page(L)); urls.append((f"/{L}/mdb/", {l: f"/{l}/mdb/" for l in LANGS}))
         W(f"/{L}/conflict/index.html", conflict_page(L)); urls.append((f"/{L}/conflict/", {l: f"/{l}/conflict/" for l in LANGS}))
         W(f"/{L}/verify/index.html", verify_page(L));
