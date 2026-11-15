@@ -32,7 +32,7 @@ def build_p7():
 def build_p7d():
     ko = jsobj(os.path.join(SIG, "p7d.js"))
     out = dict(ko)
-    for k in ("D", "KR", "KRNOTE", "TH", "AGREE", "FUT", "FUTSRC", "PREP", "AVOID", "PREPSRC", "LATEST"):
+    for k in ("D", "KR", "KRNOTE", "TH", "AGREE", "FUT", "FUTSRC", "PREP", "AVOID", "PREPSRC", "LATEST", "DOS"):
         if hasattr(en_p7d, k): out[k] = getattr(en_p7d, k)
     return out
 

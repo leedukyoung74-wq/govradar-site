@@ -114,3 +114,199 @@ PREP=[["Step 1","Find two civil-defence shelters near home and work (Safety Step
 AVOID=["Taking out loans, buying land, putting everything into gold or silver, or moving home on the strength of one outlook (followers of the 2013 silver and dinar forecast reportedly lost money)","Refusing vaccines or treatment because of an outlook","Panic buying; running generators or charcoal indoors in closed rooms","Spreading sensational titles (such as 'war in spring 2027') without checking the source"]
 PREPSRC=[["Korea Safety (emergency actions)","https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=stateOfEmergency&menuSn=4"],["Korea Safety (emergency supplies)","https://safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=preparationEmcSuply&menuSn=4"],["CDC: emergency water supply","https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html"],["Ministry of the Interior: Safety Stepping Stone","https://mois.go.kr/frt/sub/a06/b11/safetyStep/screen.do"]]
 LATEST=["As of 9 November 2026: right after the election JZ said 'late 2026 to 2027 is the most unstable period', followed by a temporary lull and a turning point in 2028 (from the episode description).","After the midterms BB posted videos titled 'Trump lost, what now?' and 'How many times were we warned he would lose the midterms?', but their content was not seen.","In the same period none of the seven was found making new statements about Korea or North Korea. 'Not found' does not mean 'never said'.","Actual situation: Democrats were reported to have won both houses in the 3 November midterms, and no large-scale unrest was reported in early November."]
+
+# 2026-11-15: rows from the 25 Oct 2026 dossiers (positions match the Korean file) and the per-person detail blocks
+D['JZ'].insert(3, ["22 Oct 2026", "Interview: resilience in a crisis, calm instead of fear", "A", "Not a prediction", "na"])
+D['JZ'].insert(11, ["Late 2025", "Year-end broadcast: 2026 economy and great-power relations, food, water and transport. 'Refuge' meant a state of mind, not buying land or a bunker", "A", "2026 under way", "fut"])
+D['JZ'].insert(19, ["2024", "Interview: urged listeners to re-check every outlook they hear", "A", "Not a prediction", "na"])
+D['SSS'].insert(0, ["1 Jan 2025", "New-year message: a day of great trial is near; prepare faithfully", "A", "No timing given — cannot be judged", "na"])
+D['SSS'].insert(0, ["1 Jan 2026", "New-year message: spreading values, warning against self-centredness. No war date", "A", "Not a prediction", "na"])
+D['SSS'].insert(9, ["c. Dec 2011", "A scene: if the US helps divide Jerusalem, a great crisis will hit the US (third-party transcript)", "C", "Conditional — cannot be judged", "na"])
+D['TA'].insert(7, ["1 Jan 2024", "Talk on building self-reliance in 2024 (posted on another channel)", "B", "Not a prediction", "na"])
+D['NJ'].insert(4, ["Oct 2013", "Preparedness booklet (original exists)", "A", "Not a prediction", "na"])
+D['NJ'].insert(0, ["Dec 2022–Sep 2024", "Three re-posts of earlier manuscripts (Dec 2022, Mar 2023, Sep 2024) — not new statements", "A", "Not a prediction", "na"])
+D['BB'].insert(16, ["29 Jun 2023", "On his official channel, describes scenes he says he saw on 6 Jul 2014 — social turmoil and tighter control", "A", "Cannot be verified", "na"])
+D['KZ'].insert(1, ["2024", "Talk: live boldly and with discernment in uncertain times", "A", "Not a prediction", "na"])
+DOS = {
+"L": {
+"t": "In detail — from the research dossiers of 25 October 2026",
+"ok": "Confirmed from the original sources",
+"unv": "Claims that are not verified",
+"mix": "Easy to confuse",
+"use": "What is actually useful (adjusted for Korea)",
+"foot": "Summaries based on public originals and official post descriptions. Not every video was checked sentence by sentence; for supplies and evacuation, government and public-health guidance comes first."
+},
+"P": {
+"TA": {
+"sum": "An outlook centred on a combined shortage around 2030. Since 2023 he has spoken of a 'seven-year preparation period' and urges financial, food and community self-reliance before 2030. Broadcasts in August–September 2026 covered military flashpoints and Korea.",
+"ok": [
+"His official channel and website repeatedly present the 2030 shortage outlook and a 'build self-reliance' programme",
+"Five financial steps in a 29 Feb 2024 media interview: career transition, understanding land and real assets, understanding debt and the financial system, preparing now rather than waiting for a big war, building self-reliance",
+"4 Sep 2026 video: tensions in the US–Israel–Iran–Saudi arena, the Balkans and Türkiye, Russia–Norway and the Pacific. Key image: 'build a protective system, keep your own judgement, strengthen income and organisation'",
+"11 Aug 2026 broadcast for Korea: Seoul, the Korean Air 801 and Jeju Air accidents, leadership and the peninsula, posed as questions"
+],
+"unv": [
+"A global shortage in 2030 — cannot be verified",
+"'A world war has already begun' — his reading of escalation, not an official classification",
+"Future events involving Korea — posed as questions, with no date for any attack or war"
+],
+"mix": [
+"A video posted on another channel in June 2025 says in its description it was 'first aired in 2023'. It is not a new 2025 statement",
+"'Self-reliance base' is a metaphor for a community with resources and skills, not a specific plot of land or refuge. Joining a particular group or paid course is not required"
+],
+"use": [
+"Order: shelter and family contacts → a 2–3 day go-bag → 7–14 days of home supplies → financial slack and local cooperation",
+"Check how automation affects your work and learn transferable skills",
+"Basic preparedness before expensive land or equipment",
+"Do not quit a job or take loans for farmland because of one outlook"
+]
+},
+"SSS": {
+"sum": "The core message is to prepare for growing pressure on communities. New-year messages in 2025 and 2026 dealt with a time of crisis and restoring values; a separate broadcast series reads the Israel–Iran conflict through his own lens.",
+"ok": [
+"2020 official letter: says meetings to prepare were held in seven countries after a message received on 15 Jun 2019",
+"1 Jan 2025 new-year message: a day of great trial is near, prepare faithfully (official video chapters confirmed)",
+"1 Jan 2026 new-year message: spreading values, warning against self-centredness. No war date",
+"Titles and descriptions of broadcasts on Middle East conflict and global pressure (no posting dates; full text not verified)"
+],
+"unv": [
+"Around Dec 2011: 'if the US helps divide Jerusalem, a great crisis will come' — third-party transcript, original not found",
+"2014: hint of a Russian attack on the US — third-party re-quote, no proof it came true",
+"2020 as 'the year of preparation', hardship from 2021 — year-level wording that cannot be tested"
+],
+"mix": [
+"Linking Middle East conflict to symbolic imagery is interpretation, not military intelligence about any operation or launch date",
+"Some videos have no date or full transcript on the official site, so no quotes were invented and no dates asserted"
+],
+"use": [
+"Do not set evacuation dates, emigration timing or asset sales from these records",
+"Assign four community roles: alerts and information, family contact, transport and medical help, water/food and vulnerable households",
+"Keep donations under open accounting; check any unofficial channel pressing for urgent giving",
+"Avoid extreme fasting, stopping treatment, isolation and borrowing to donate"
+]
+},
+"JZ": {
+"sum": "A regular broadcaster who reads world affairs and economic and technological change through his own lens. In 2026 he repeatedly raised Iran, social unrest and grid and supply-chain worries, while stressing calm and discernment over fear.",
+"ok": [
+"War and Middle East: remarks on military tension, US–Russia–China dynamics and Middle East crisis confirmed — timing of events unconfirmed",
+"Water and food: mentions wider disputes over water, food and farm distribution in 2026 — no personal stockpile quantities given",
+"Cyber and power: warnings of possible cyberattacks and grid failures",
+"Economy and AI: financial shocks and industrial change",
+"A timeline: 2027 conflict, water, food and AI upheaval / 2028 social and technological turning point / 2029 technology and geopolitics shift"
+],
+"unv": [
+"Start dates for a world war or epidemic — no basis to confirm",
+"'It came true' in video descriptions is the producer's claim, not independent verification",
+"Outside political claims and recordings in the 21 Oct 2026 broadcast — need fact-checking"
+],
+"mix": [
+"'Refuge' in the late-2025 broadcast referred to a state of mind, not advice to buy land or a bunker",
+"A storehouse business run by a similarly named stockpiling group has no confirmed link to him",
+"Guests' explanations in interviews are not his own statements",
+"In a 2024 broadcast he himself urged listeners to re-check every outlook they hear"
+],
+"use": [
+"Use 2027–2029 only as points to reassess risk, never as investment or relocation dates",
+"For outages, network failures and payment disruption: radio, power bank, small cash, paper contact list",
+"Keep key documents as encrypted copies plus paper copies in separate places; two-factor login and offline backups",
+"Back up client contacts, contracts and accounts; decide in advance when work stops in a power cut"
+]
+},
+"NJ": {
+"sum": "Died on 1 Sep 2019. Every video or article since then is a re-release of earlier material. The core of his verifiable writing is less about predicting crises than about cutting debt, simplifying life and helping the community.",
+"ok": [
+"Article written around 2008 (re-posted 2023): get out of debt and streamline life, stay flexible, be as self-reliant as you can, do not dwell only on fear",
+"Dreams from the 1990s on (re-posted 2022): unstable banks, pensions, currency and public finances, rising disaster costs, more relief and medical work",
+"An October 2013 preparedness booklet exists in original form (sentence-level checking limited)",
+"2017 talk: in economic turmoil, people will appear who help their neighbours (no year given)"
+],
+"unv": [
+"Collapse of the whole economic system — not an established fact",
+"Scenes he said he saw — cannot be independently verified"
+],
+"mix": [
+"A recent upload date does not mean a new statement. Posts from Dec 2022, Mar 2023 and Sep 2024 are all re-posted earlier manuscripts",
+"'War' and 'battle' often refer to inner struggle, so titles alone should not be read as military forecasts",
+"Paid audio and full books were not reviewed"
+],
+"use": [
+"Check high-interest debt, cash flow and automatic payments",
+"Emergency fund, income sources and record backups",
+"Do not cancel shares, deposits or insurance or take loans because of these writings",
+"Set up a contact list and support plan for vulnerable households"
+]
+},
+"KZ": {
+"sum": "The most concrete material is the 12-item family preparedness list on his official website — but it is presented as a plan made by an acquaintance, a former US Marine, not by him. His official statement gives no date for any war or crisis.",
+"ok": [
+"Family preparedness, 12 items: 1 cash 2 gold and silver 3 water (about 3.8 L per person per day, at least 7 days) 4 portable water filter 5 at least 30 days of emergency food 6 extra grain and processed food 7 shelter, reunion and route-home plan 8 first-aid kit 9 chargers 10 two-way radios 11 self-defence 12 a go-bag for each person",
+"The official statement says it does not reject medicine or science",
+"Official broadcasts: beware false signs and exaggerated information; in confusion, judge carefully instead of reacting in fear",
+"2024 talk: live boldly and with discernment in uncertain times"
+],
+"unv": [
+"Any claim that he fixed a country, year or start date for a war or crisis — not found",
+"Contents of the paid seven-part plan — not reviewed",
+"Details of the 2026 outlook — behind a paywall"
+],
+"mix": [
+"The list should not be treated as his own message (it was made by an acquaintance)",
+"Reading 'it's coming' style titles as world-war forecasts is a mistake",
+"Do not merge the other six people's statements into his"
+],
+"use": [
+"The handgun and precious-metal suggestions do not fit Korean law or household budgets. In Korea, obeying the law, sheltering and reporting come first",
+"Check Korean certification and frequencies for two-way radios",
+"Thirty days of water for four people is 480 L — heavy and bulky. Build up 3 → 7 → 14 → 30 days",
+"A water filter cannot remove all chemical or radioactive contamination"
+]
+},
+"JG": {
+"sum": "His core advice: 1 stay alert to war, economic and food risks 2 prepare with a plan but avoid hoarding and fear 3 keep calm judgement 4 build a community that helps neighbours in need. There is no basis that war must break out at any particular time.",
+"ok": [
+"2022 book excerpt: five problems of an ancient famine — food shortage, weaker money, lost livelihoods, lost land and homes, migration — linked to today",
+"2022 broadcaster interview: you can buy what you need ahead of time but he opposes panic buying; preparation extends to helping neighbours",
+"Interviews in late 2024–early 2025: warned that the Gaza and Ukraine conflicts could widen",
+"Official video titles and dates confirmed: 7 Apr 2025 recession preparation, 23 Jun 2025 signs of US–Iran–Israel war, 3 Nov 2025 store up and save, 15 Dec 2025 outlook for 2026, 7 Sep 2026 energy crisis and war, 12 Oct 2026 a large-scale movement"
+],
+"unv": [
+"When a war starts, or that a major crisis is certain — not verified",
+"Extreme titles on third-party channels — must be told apart from the official channel",
+"12 Oct 2026 broadcast — title only; content and dates cannot be asserted"
+],
+"mix": [
+"Similarly named unofficial channels exist; tell them apart from the official one",
+"Where transcripts are incomplete, no detailed quotes or minute timestamps were made up"
+],
+"use": [
+"Home supplies: 3 days first, then 7 days as circumstances allow",
+"Drinking water about 4 L per person per day: for 3 days, 1 person 12 L · 2 people 24 L · 4 people 48 L",
+"One go-bag per person; keep the 7-day water at home, spread out, not in the bag",
+"When prices of essentials rise, buy to a plan and use first-in, first-out"
+]
+},
+"BB": {
+"sum": "He talks mainly about wider war, economic collapse and epidemics. His August 2024 remarks include concrete advice: stock food, water and cash and rotate them. His 2026 world-war scenario and a possible 2027 epidemic are his own claims, not verified facts.",
+"ok": [
+"10 Aug 2024 remarks (transcript): as you can afford, 1–2 weeks of food, several weeks of bottled water, some small cash, storage away from damp and heat, eat before expiry and restock",
+"29 Jun 2023 official channel: describes scenes he says he saw on 6 Jul 2014 (the date is his own account)",
+"2026 videos: 27 Aug wider Russian war, epidemic, cashless society / 30 Aug two paths, war or peace / 5 Oct his reading of a Russian epidemic report / 14 Oct worry about an autumn-2027 epidemic (timing uncertain)"
+],
+"unv": [
+"The 2026 world-war scenario — not government or military information",
+"A 2027 pandemic — not a medical forecast; he has moved the timing several times",
+"Much 2025–2026 content passed through third-party summary sites — no guarantee the summaries match the originals"
+],
+"mix": [
+"Short re-edited clips, anonymous posts and extreme titles are not used as evidence",
+"Mentions of barter and fuel economy do not mean you must buy precious metals or change your car"
+],
+"use": [
+"Order: shelter and contacts → water and shelf-stable food for 3 days → prescriptions and first aid → light, communications and power → expand to 7–14 days → debt and cash flow → caring for neighbours",
+"Keep only a little cash in small notes; converting everything to cash makes no sense",
+"First-in, first-out with a stock list",
+"Do not avoid vaccines, medicines or doctors because of this outlook"
+]
+}
+}
+}

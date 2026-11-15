@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/welcome/"+(l==="ko"?"":l+"/"))})();</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="The Economist’s year-end covers and the Simpsons ‘prediction’ claims, year by year from 2015 to 2026, with popular interpretations and fact-checks side by side — GOV RADAR">
@@ -39,6 +39,8 @@ header.top nav a{font-weight:400;color:var(--soft);margin-left:18px;font-size:15
 .yr{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--line)}
 .yr .y{font-weight:300;font-size:48px;line-height:1;color:var(--gold2)}
 .yr .y small{display:block;font-size:13px;letter-spacing:2px;color:var(--muted);margin-top:10px}
+.yr .y{white-space:nowrap;overflow-wrap:normal;word-break:keep-all;align-self:start}.yr .y small{font-size:11px;letter-spacing:1px;white-space:nowrap}
+@media (min-width:761px){.yr:not(.eco){grid-template-columns:150px minmax(0,1fr)}}
 .yr h3{font-weight:700;font-size:21px;color:var(--ink);line-height:1.4}
 .yr .sub{color:var(--muted);font-size:14px;margin:4px 0 16px}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
@@ -196,6 +198,10 @@ main{overflow-wrap:anywhere}
  .pc{min-width:0}
 }
 @media (max-width:480px){.pz{grid-template-columns:1fr!important}.pc{min-height:0!important}}
+.dos{margin:4px 0 18px;padding:18px 18px 14px;border-left:3px solid var(--pc);background:rgba(127,127,127,.06);border-radius:6px}.dosh{font-weight:700;margin:0 0 8px;color:var(--ink)}.doss{margin:0 0 14px;line-height:1.65}
+.dosg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 22px}.dq{min-width:0}.dq b{display:block;font-size:14px;margin-bottom:4px}.dq ul{margin:0;padding-left:18px}.dq li{margin:3px 0;line-height:1.55;font-size:15px}
+.dq-ok b{color:#6fbf73}.dq-unv b{color:#ef6b6b}.dq-mix b{color:#f0a94a}.dq-use b{color:var(--ink)}.dosf{font-size:13px;color:var(--muted);margin:12px 0 0}
+@media(max-width:760px){.dosg{grid-template-columns:1fr}.dos{padding:14px 12px}}
 </style>
 <link rel="alternate" hreflang="ko" href="https://radar.wmm-hoa.com/signals/"><link rel="alternate" hreflang="en" href="https://radar.wmm-hoa.com/signals/en/"></head>
 <body>
@@ -206,7 +212,7 @@ main{overflow-wrap:anywhere}
 <h1>Covers and satire:<br>how people read them</h1>
 <p class="lead">The covers of The Economist’s year-end issue, ‘The World in / The World Ahead’, and the Simpsons scenes said to have ‘called it in advance’, collected year by year. Popular interpretations from well-known sites sit beside fact-check results.</p>
 <div class="hair"></div>
-<div class="notice"><b>Please read first.</b> This section is reference material summarising interpretations that went viral. It is not evidence about the future. The Economist’s editors say each picture on the cover links directly to an article in that issue. For copyright reasons we do not show the cover images; descriptions and links to the originals are given instead.</div>
+<div class="notice" role="note" style="border:2px solid var(--gold2);margin-bottom:12px"><b>Not official material — personal opinion.</b> This section is not an official GOV RADAR analysis or government or international-organisation material. It collects the operator’s personal views and publicly circulating interpretations. It has no connection with The Economist, the makers of The Simpsons or the people mentioned, and should not be used as a basis for investment, business or policy decisions.</div><div class="notice"><b>Please read first.</b> This section is reference material summarising interpretations that went viral. It is not evidence about the future. The Economist’s editors say each picture on the cover links directly to an article in that issue. For copyright reasons we do not show the cover images; descriptions and links to the originals are given instead.</div>
 </div></section>
 
 <div class="tabs"><div class="wrap" role="tablist">
@@ -236,7 +242,7 @@ main{overflow-wrap:anywhere}
 </section>
 </main>
 
-<footer><div class="wrap">GOV RADAR · WORLD MAKING MEMBERS (WMM) · Contact 73036396@naver.com<br>The interpretation summaries on this page set out each source’s claims and are not GOV RADAR’s opinion. The Economist and The Simpsons are trademarks of their respective owners.</div></footer>
+<footer><div class="wrap">GOV RADAR · WORLD MAKING MEMBERS (WMM) · Contact 73036396@naver.com<br>The interpretation summaries on this page set out each source’s claims and are not GOV RADAR’s opinion. The Economist and The Simpsons are trademarks of their respective owners.</div></footer><div style="background: #0a0a0a; display: flex; justify-content: center; align-items: center; padding: 40px 16px 44px"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><img src="/assets/wmm-logo-white.png" alt="WORLD MAKING MEMBERS" width="150" height="150" style="display: block; width: 150px; height: 150px"></a></div>
 
 <script>
 var V={ok:["ok","● Matches an article theme"],mid:["mid","◐ Fitted after the event"],no:["no","○ No evidence found"],fake:["fake","✕ Edited or fake"]};
@@ -320,13 +326,15 @@ document.getElementById("p7").innerHTML=h;})();
 var COL={},NM={};B.P.forEach(function(p){COL[p.i]=p.col;NM[p.i]=p});
 var VL={ok:"Matched",mid:"Partly matched",no:"Did not happen / unconfirmed",fut:"Future / in progress",na:"Not judged / pending"};
 function E(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function dos(i){var X=D.DOS,q=X&&X.P[i];if(!q)return"";function ul(k){return q[k]&&q[k].length?'<div class="dq dq-'+k+'"><b>'+E(X.L[k])+'</b><ul>'+q[k].map(function(x){return"<li>"+E(x)+"</li>"}).join("")+"</ul></div>":""}
+ return'<div class="dos"><p class="dosh">'+E(X.L.t)+'</p><p class="doss">'+E(q.sum)+'</p><div class="dosg">'+ul("ok")+ul("unv")+ul("mix")+ul("use")+'</div><p class="dosf">'+E(X.L.foot)+'</p></div>'}
 function lk(a){return a.map(function(x){return'<a href="'+E(x[1])+'" target="_blank" rel="noopener nofollow">'+E(x[0])+'</a>'}).join(" · ")}
 /* 1. latest + per-person chronology, after the persona cards */
 var h='<div class="notice" style="margin:6px 0 0"><b>Latest update (as of 9 November 2026)</b><ul class="ag" style="margin:8px 0 0;padding-left:18px">'+D.LATEST.map(function(x){return"<li>"+E(x)+"</li>"}).join("")+'</ul></div>';
 h+='<h3 class="sh" id="p7-chron">Detailed timeline by person — every statement and result</h3><p>Tap a person to open the confirmed statements, newest first. Source grades: A the person’s own official text · B media interviews and articles · C third-party transcripts and summaries. Sensational titles of unclear origin (D) are left out.</p>';
 h+=B.P.map(function(p){var L=D.D[p.i]||[];var c={ok:0,mid:0,no:0,fut:0};L.forEach(function(r){if(c[r[4]]!=null)c[r[4]]++});
  return'<details class="dt" id="d-'+p.i+'" style="--pc:'+p.col+'"><summary><span class="mono">'+p.i+'</span><span><b>'+E(p.th)+'</b><small>'+E(p.c)+' · '+E(p.when)+' · Korea mentioned: '+E(p.kr)+'</small></span><span class="cnt">'+L.length+' statements · matched '+c.ok+' · partly '+c.mid+' · missed '+c.no+' · future '+c.fut+'</span></summary>'+
- '<div class="dhead"><span>When</span><span>What was said</span><span>Confirmed result</span><span>Grade</span></div>'+
+ dos(p.i)+'<div class="dhead"><span>When</span><span>What was said</span><span>Confirmed result</span><span>Grade</span></div>'+
  L.map(function(r){return'<div class="dr"><div class="dd">'+E(r[0])+'</div><div class="ds">'+E(r[1])+'</div><div class="dres v-'+r[4]+'"><small style="display:block;font-size:11px;letter-spacing:1px;color:var(--muted)">'+VL[r[4]]+'</small>'+E(r[3])+'</div><div class="dg">'+E(r[2])+'</div></div>'}).join("")+'</details>'}).join("");
 var pz=root.querySelector(".pz");if(pz)pz.insertAdjacentHTML("afterend",h);
 root.querySelectorAll(".pz .pc").forEach(function(a){var i=a.getAttribute("href").replace("#p-","");a.setAttribute("href","#d-"+i);a.addEventListener("click",function(){var d=document.getElementById("d-"+i);if(d)d.open=true})});
