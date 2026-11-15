@@ -350,7 +350,7 @@ def wmm_ladder(L):
     b = "WMM 멤버십 가입·결제 (www.wmm-hoa.com) →" if ko else "Join and pay for WMM membership (www.wmm-hoa.com) →"
     return (f'<section class="band" id="wmm-membership"><div class="in"><h2>{h}</h2><p class="note">{n}</p>'
             f'<div class="tscroll"><table class="tiers">{li}</table></div>'
-            f'<p class="cta"><a class="btn pri" href="{WMM_MS}{"?lang=ko" if ko else "?lang=en"}" target="_blank" rel="noopener">{b}</a></p></div></section>')
+            f'<p class="cta"><a class="btn pri" href="{WMM_MS}{"?lang=ko" if ko else "?lang=en"}" target="_blank" rel="noopener">{b}</a> <a class="btn" href="/{L}/membership/">{"멤버십 등급·혜택 자세히 보기" if ko else "Membership grades & benefits in detail"}</a></p></div></section>')
 def pricing_page(L, C, PLANS, PLAN_NOTE):
     ko = L == "ko"; e = C["e"]
     offers = [
@@ -780,3 +780,96 @@ def access_html(L):
     h = "무엇을 어디까지 볼 수 있나" if ko else "What you can see, and when"
     p = "정보는 무료입니다. 가입하면 실무 자료가, 회원이면 분석이 열리고, 실제 사업은 사람이 함께 갑니다." if ko else "The data is free. Sign up for the working details, become a member for the analysis, and do real deals with a person alongside you."
     return f'<section class="band" id="access"><div class="in"><h2>{h}</h2><p class="note">{p}</p><div class="accs">{"".join(cols)}</div></div></section>'
+
+# ---------------------------------------------------------------- WMM membership introduction (from the owner's deck v2.0, 2026-11-15)
+def membership_page(L, C):
+    ko = L == "ko"; T = lambda k, en: k if ko else en
+    css = ('<style>.mtr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}'
+           '.mtr>div,.mpr>div,.mfc>div{background:var(--card,#fff);padding:22px;border-radius:6px}'
+           '.mtr b{display:block;font-size:13px;letter-spacing:.5px;opacity:.7}.mtr h3{margin:6px 0 8px}'
+           '.mpr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}.mpr h3{margin:0 0 6px;font-size:18px}'
+           '.mfc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}.mfc strong{display:block;font-size:40px;line-height:1.1}'
+           '.mstep{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:20px}.mstep>div{border-top:3px solid currentColor;padding-top:10px}'
+           '.mac{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:20px}.mac h3{font-size:17px;margin:0 0 8px}'
+           '.mdoor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px}.mdoor>a{display:block;padding:24px;border-radius:6px;background:var(--card,#fff);color:inherit;text-decoration:none}'
+           '.tiers td,.tiers th{text-align:left}.mac>div,.mtr>div,.mpr>div,.mfc>div,.mstep>div{min-width:0}.mac .tiers{min-width:0}'
+           '@media(max-width:760px){.mtr,.mpr,.mfc,.mac,.mdoor{grid-template-columns:1fr}.mstep{grid-template-columns:1fr 1fr}}</style>')
+    tracks = [("EXPLORE · " + T("탐색", "Explore"), "M0 — M1", T("세계 정부 아젠다와 입찰을 보고, 우리 회사에 맞는 나라를 고릅니다.", "Read government agendas and tenders and choose the countries that fit your company.")),
+              ("BUILD · " + T("준비", "Build"), "M2 — M3", T("서류와 검증을 갖추고, 상대를 만날 수 있는 회사로 준비합니다.", "Get your documents and validation ready so you can meet counterparts.")),
+              ("EXECUTE · " + T("실행", "Execute"), "M4 — M5", T("특정 국가 프로젝트와 공공 수주를 실제로 추진합니다.", "Carry out a country project or a public contract bid for real."))]
+    tiers = ([("M0 OPEN · 오픈", "처음 둘러보는 기업", "공개 레이더·국가 브리핑 열람", "무료"),
+              ("M1 MEMBER · 분석 회원", "정보를 꾸준히 보는 기업", "레이더 전체 + 분석 의뢰 월 2건", "월 19,800원"),
+              ("M2 PRO · 프로", "진출을 준비하는 기업", "관심 국가 알림·영문 서류 지원", "월 149,000원"),
+              ("M3 BUSINESS · 비즈니스", "검증을 마친 기업", "상대 연결 준비·우선 상담", "월 390,000원"),
+              ("M4 PROJECT · 진출 패키지", "특정 국가 진출 실행", "6주 시장 검증·현지 일정 조율", "190만 원부터"),
+              ("M5 STRATEGIC · 수주 대행", "공공·대형 수주 추진", "입찰 준비부터 계약까지 동행", "수주액 3~5%"),
+              ("FC FOUNDING CIRCLE", "초기 10곳 한정 초청", "CONNECT 50% 할인·운영 자문 참여", "별도 협의")] if ko else
+             [("M0 OPEN", "Companies taking a first look", "Public radar and country briefings", "Free"),
+              ("M1 MEMBER · Analysis", "Companies following the data", "Full radar + 2 analysis requests a month", "₩19,800/month"),
+              ("M2 PRO", "Companies preparing to enter", "Country alerts, English document support", "₩149,000/month"),
+              ("M3 BUSINESS", "Companies that have validated", "Counterpart preparation, priority consultation", "₩390,000/month"),
+              ("M4 PROJECT · Entry package", "Entering a specific country", "6-week market validation, local scheduling", "from ₩1.9M"),
+              ("M5 STRATEGIC · Bid support", "Public or large contracts", "With you from bid preparation to contract", "3–5% of contract value"),
+              ("FC FOUNDING CIRCLE", "First 10 companies, by invitation", "50% off CONNECT, input on operations", "By agreement")])
+    trows = "".join(f"<tr><th>{a}</th><td>{b}</td><td>{c}</td><td><b>{d}</b></td></tr>" for a, b, c, d in tiers)
+    thead = T("<tr><th>등급</th><th>이런 기업에게</th><th>핵심 혜택</th><th>요금</th></tr>", "<tr><th>Grade</th><th>For</th><th>Key benefits</th><th>Price</th></tr>")
+    adds = ([("M1", "정보", "레이더 전체 열람과 회원 분석 의뢰"), ("M2", "준비", "관심 국가 알림, 영문 서류 지원"), ("M3", "연결 준비", "상대 후보 정리와 우선 상담"),
+             ("M4", "실행", "6주 시장 검증과 현지 일정"), ("M5", "수주", "입찰 준비부터 계약까지 동행")] if ko else
+            [("M1", "Information", "Full radar and member analysis requests"), ("M2", "Preparation", "Country alerts, English documents"), ("M3", "Connection-ready", "Counterpart shortlist, priority consultation"),
+             ("M4", "Execution", "6-week market validation and local scheduling"), ("M5", "Contracts", "From bid preparation to contract")])
+    steps = "".join(f"<div><b>{a}</b><h3 style='font-size:16px;margin:4px 0'>{b}</h3><p class='note'>{c}</p></div>" for a, b, c in adds)
+    alc = [("CONNECT · " + T("연결", "Connect"), [(T("후보 숏리스트", "Candidate shortlist"), T("150만 원", "₩1.5M")), (T("소개·첫 미팅", "Introduction & first meeting"), T("300만 원", "₩3M")), (T("90일 스프린트", "90-day sprint"), T("1,200만 원부터", "from ₩12M")), (T("성공보수", "Success fee"), "3~5%")]),
+           ("TRANSLATE · " + T("번역", "Translate"), [(T("전문 번역", "Professional translation"), T("쪽당 3.5만 원", "₩35,000/page")), (T("원어민 검수", "Native review"), T("39만 원", "₩390,000")), (T("번역 패키지", "Translation package"), T("129만 원", "₩1.29M"))]),
+           ("CHECK · " + T("판정", "Check"), [(T("입찰 적합도 판정", "Tender fit assessment"), T("건당 10만 원", "₩100,000 each"))])]
+    alch = "".join(f"<div><h3>{h}</h3><div class='tscroll'><table class='tiers'>" + "".join(f"<tr><th>{a}</th><td><b>{b}</b></td></tr>" for a, b in rows) + "</table></div></div>" for h, rows in alc)
+    journey = ([("무료 가입", "M0로 레이더와 브리핑을 둘러봅니다."), ("관심 등록", "관심 국가와 업종을 고릅니다."), ("구독 선택", "M1~M3 중 고르고 첫 달은 무료입니다."),
+                ("회사 확인", "사업자 정보와 자료를 확인합니다."), ("프로젝트 상담", "M4 범위와 견적을 정합니다."), ("실행", "검증·연결·수주를 함께 진행합니다.")] if ko else
+               [("Free sign-up", "Browse the radar and briefings as M0."), ("Register interests", "Choose countries and sectors."), ("Choose a plan", "Pick M1–M3; the first month is free."),
+                ("Company check", "We confirm your business details and materials."), ("Project consultation", "Agree M4 scope and quote."), ("Execution", "Validation, connection and bids, together.")])
+    jr = "".join(f"<li><b>{a}</b> — {b}</li>" for a, b in journey)
+    fc = [("50%", T("CONNECT 할인", "off CONNECT"), T("파운딩 고객 10곳 한정", "First 10 founding clients only")),
+          (T("1개월", "1 month"), T("구독 무료", "free subscription"), T("BUILD 구독 첫 달", "First month of a BUILD plan")),
+          (T("2개월", "2 months"), T("연간 결제 혜택", "annual-plan bonus"), T("연간 결제 시 무료 기간", "Free months when paying annually"))]
+    fch = "".join(f"<div><strong>{a}</strong><b>{b}</b><p class='note'>{c}</p></div>" for a, b, c in fc)
+    pr = ([("성과를 보장하지 않습니다", "수주, 계약, 매출은 기업과 상대의 결정입니다. 우리는 준비와 과정을 돕습니다."),
+           ("공공기관 접근권을 팔지 않습니다", "정부·발주기관과의 특별한 관계를 상품으로 내세우지 않습니다."),
+           ("양쪽이 동의한 소개만 합니다", "소개는 두 회사가 모두 동의한 뒤에만 진행합니다."),
+           ("모든 결제는 세금계산서로", "정해진 요금표와 견적서대로 받고 세금계산서를 발행합니다.")] if ko else
+          [("We do not guarantee results", "Contracts and sales are decided by you and your counterpart. We help with preparation and process."),
+           ("We do not sell access", "We never market special relationships with governments or buyers as a product."),
+           ("Introductions only with consent", "We introduce two companies only after both agree."),
+           ("Every payment is invoiced", "We charge by the published price list and quote, and issue a tax invoice.")])
+    prh = "".join(f"<div><h3>{a}</h3><p>{b}</p></div>" for a, b in pr)
+    hs = "?lang=ko" if ko else "?lang=en"
+    body = f'''{css}<section class="phero short">{img("sign", "", 1800, 700, "bg", True)}<div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a> › <a href="/{L}/pricing/">{T("주문·요금", "Pricing")}</a></p>
+<h1>{T("WMM 멤버십 — 사업의 시작부터 실행까지, 하나의 팀으로", "WMM Membership — from first look to execution, as one team")}</h1>
+<p class="lede">{T("한국 기업의 해외 진출을 진단부터 실행까지 함께합니다. 진출 진단, 영문 서류, 6주 시장 검증, 교육·브리핑을 하나의 멤버십으로 묶었습니다.", "We work with Korean companies from diagnosis to execution abroad: entry diagnosis, English documents, 6-week market validation, and training and briefings in one membership.")}</p>
+<p class="cta"><a class="btn pri" href="https://www.wmm-hoa.com/membership/{hs}" target="_blank" rel="noopener">{T("가입·결제는 www.wmm-hoa.com →", "Join and pay at www.wmm-hoa.com →")}</a></p></div></section>
+<section class="band"><div class="in"><h2>{T("해외 진출은 대개 세 곳에서 멈춥니다", "Going abroad usually stalls in three places")}</h2>
+<div class="mpr" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div><h3>{T("정보가 흩어져 있다", "Information is scattered")}</h3><p>{T("정부 정책, 입찰, 제재, 재난 소식이 나라마다 다른 곳에 있습니다.", "Policies, tenders, sanctions and disaster news sit in different places for each country.")}</p></div>
+<div><h3>{T("순서를 알기 어렵다", "The order is unclear")}</h3><p>{T("무엇부터 준비하고 얼마를 써야 할지 판단할 기준이 부족합니다.", "There is little to go on for what to prepare first and how much to spend.")}</p></div>
+<div><h3>{T("연결이 닿지 않는다", "Connections are hard to reach")}</h3><p>{T("믿을 만한 현지 상대를 만나기까지 시간과 비용이 큽니다.", "Meeting a trustworthy local counterpart takes time and money.")}</p></div></div></div></section>
+<section class="band alt"><div class="in"><h2>{T("하나의 멤버십, 세 개의 트랙", "One membership, three tracks")}</h2><p class="note">{T("지금 있는 자리에서 시작해, 준비가 되는 만큼 다음 단계로 올라갑니다.", "Start where you are and move up as you get ready.")}</p>
+<div class="mtr">{"".join(f"<div><b>{b}</b><h3>{a}</h3><p>{c}</p></div>" for a, b, c in tracks)}</div></div></section>
+<section class="band" id="tiers"><div class="in"><h2>{T("멤버십 등급 v2.0", "Membership grades v2.0")}</h2>
+<div class="tscroll"><table class="tiers">{thead}{trows}</table></div>
+<p class="note">{T("M1은 GOV RADAR 분석 회원(월 19,800원)과 같은 등급입니다. 부가세 별도, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩19,800/month). VAT excluded; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed.")}</p>
+<h3 style="margin-top:34px">{T("한 단계 오를 때마다 더해지는 것", "What each level adds")}</h3><div class="mstep">{steps}</div></div></section>
+<section class="band alt"><div class="in"><h2>{T("멤버십으로 쓰는 두 개의 창구", "Two doors, one membership")}</h2><div class="mdoor">
+<a href="/{L}/"><b>radar.wmm-hoa.com · GOV RADAR</b><p>{T("세계 정부 아젠다, 공공 입찰, 제재 동향, 재난 대비 정보를 나라별로 모아 보여 줍니다. 분석 의뢰와 입찰 적합도 판정도 여기서 신청합니다.", "Government agendas, public tenders, sanctions and disaster preparedness by country. Analysis requests and tender fit assessments are ordered here.")}</p></a>
+<a href="https://www.wmm-hoa.com/{hs}" target="_blank" rel="noopener"><b>www.wmm-hoa.com · WMM</b><p>{T("글로벌 진출 진단, 영문 서류, 6주 시장 검증, 교육·웨비나, 국가 브리핑을 안내합니다. 멤버십 가입·결제와 프로젝트 상담은 이곳에서 합니다.", "Entry diagnosis, English documents, 6-week market validation, training, webinars and country briefings. Membership sign-up, payment and project consultations happen here.")}</p></a></div>
+<p class="note">{T("두 사이트를 하나의 회원 계정으로 쓰도록 연결하는 작업을 준비하고 있습니다.", "We are preparing to link both sites to a single member account.")}</p></div></section>
+<section class="band"><div class="in"><h2>{T("필요할 때만 더하는 별도 상품", "Add-ons when you need them")}</h2><div class="mac">{alch}</div>
+<p class="note">{T("회원 분석 의뢰는 참고용 정리이고, 판정은 특정 입찰 참여 여부를 검토하는 별도 상품입니다. 부가세 별도. 상세 범위와 일정은 견적서에 적어 드립니다.", "Member analysis requests are reference summaries; the fit assessment is a separate product reviewing whether to bid on a specific tender. VAT excluded. Scope and timing are set out in the quote.")}</p></div></section>
+<section class="band alt"><div class="in"><h2>{T("가입부터 실행까지의 흐름", "From sign-up to execution")}</h2><ol class="flow">{jr}</ol></div></section>
+<section class="band"><div class="in"><h2>{T("FOUNDING CIRCLE — 시작하는 기업을 위한 혜택", "Founding Circle — for early companies")}</h2><div class="mfc">{fch}</div>
+<p class="note">{T("CONNECT 50% 할인은 파운딩 고객 10곳에만 적용되며, 선정 기준과 기간은 신청 후 안내합니다.", "The 50% CONNECT discount applies to 10 founding clients only; criteria and period are shared after you apply.")}</p></div></section>
+<section class="band alt"><div class="in"><h2>{T("우리가 약속하지 않는 것", "What we do not promise")}</h2><div class="mpr">{prh}</div></div></section>
+<section class="band"><div class="in"><h2>{T("멤버십은 아이들의 피아노 수업으로도 이어집니다", "Membership also funds piano lessons for children")}</h2>
+<p>{T("멤버십 수익의 일부는 WMM 자폐 아동 피아노·힐링 지원 프로그램에 쓰입니다. 적립 비율과 사용 내역은 기준서에 따라 정리해 공개합니다.", "Part of membership revenue goes to the WMM piano and healing programme for autistic children. The share set aside and how it is spent will be published under a written standard.")}</p></div></section>
+<section class="band alt"><div class="in"><h2>{T("무료 가입으로 시작해 보세요", "Start with a free sign-up")}</h2>
+<p class="cta"><a class="btn pri" href="https://www.wmm-hoa.com/membership/{hs}" target="_blank" rel="noopener">{T("WMM 멤버십 가입·결제 →", "Join WMM membership →")}</a> <a class="btn" href="/{L}/pricing/">{T("GOV RADAR 요금 보기", "GOV RADAR pricing")}</a></p>
+<p class="note">{T("문의", "Contact")} 73036396@naver.com · {T("월드메이킹멤버스(WMM)", "WORLD MAKING MEMBERS (WMM)")}</p></div></section>'''
+    return C["head"](L, T("WMM 멤버십", "WMM Membership") + " · GOV RADAR",
+                     T("WMM 멤버십 M0–M5: 정보 탐색부터 서류 준비, 시장 검증, 공공 수주까지. 가입·결제는 wmm-hoa.com.", "WMM membership M0–M5: from information to documents, market validation and public contracts. Join at wmm-hoa.com."),
+                     f"/{L}/membership/", {l: f"/{l}/membership/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)

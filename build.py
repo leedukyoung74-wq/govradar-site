@@ -871,6 +871,7 @@ def build():
         W(f"/{L}/individuals/index.html", P3.individuals_page(L, C3())); urls.append((f"/{L}/individuals/", {l: f"/{l}/individuals/" for l in LANGS}))
         W(f"/{L}/notices/index.html", P3.notices_page(L, C3())); urls.append((f"/{L}/notices/", {l: f"/{l}/notices/" for l in LANGS}))
         W(f"/{L}/solutions/index.html", P3.solutions_page(L, C3())); urls.append((f"/{L}/solutions/", {l: f"/{l}/solutions/" for l in LANGS}))
+        W(f"/{L}/membership/index.html", P3.membership_page(L, C3())); urls.append((f"/{L}/membership/", {l: f"/{l}/membership/" for l in LANGS}))
         W(f"/{L}/pricing/index.html", P3.pricing_page(L, C3(), PLANS, PLAN_NOTE)); urls.append((f"/{L}/pricing/", {l: f"/{l}/pricing/" for l in LANGS}))
         W(f"/{L}/projects/index.html", P2.projects_page(L, head, foot, e, LANGS, flag, vbh)); urls.append((f"/{L}/projects/", {l: f"/{l}/projects/" for l in LANGS}))
         W(f"/{L}/experts/index.html", P2.experts_page(L, head, foot, e, LANGS)); urls.append((f"/{L}/experts/", {l: f"/{l}/experts/" for l in LANGS}))
