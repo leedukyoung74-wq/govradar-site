@@ -786,13 +786,13 @@ def access_html(L):
     return f'<section class="band" id="access"><div class="in"><h2>{h}</h2><p class="note">{p}</p><div class="accs">{"".join(cols)}</div></div></section>'
 
 REVIEW = {
- "ko": "M3부터 심사 등급 — 심사를 거쳐 가입하며, 심사가 진행되는 동안 투자자와의 협의도 함께 시작할 수 있습니다.",
- "en": "From M3, membership is by review — you join after a review, and investor discussions can start while the review is under way.",
- "es": "Desde M3, la membresía requiere evaluación: se accede tras una revisión y las conversaciones con inversores pueden empezar mientras la revisión está en curso.",
- "fr": "À partir de M3, l’adhésion se fait sur examen : vous rejoignez après un examen, et les échanges avec des investisseurs peuvent commencer pendant l’examen.",
- "ar": "ابتداءً من M3 تكون العضوية بعد مراجعة: تنضم بعد المراجعة، ويمكن بدء النقاش مع المستثمرين أثناء المراجعة.",
- "vi": "Từ M3, tư cách thành viên cần xét duyệt: bạn tham gia sau khi được xét duyệt, và có thể bắt đầu trao đổi với nhà đầu tư ngay trong thời gian xét duyệt.",
- "id": "Mulai M3, keanggotaan melalui peninjauan: Anda bergabung setelah ditinjau, dan pembicaraan dengan investor dapat dimulai selama peninjauan berlangsung.",
+ "ko": "M2부터 심사 등급 — 심사를 거쳐 가입하며, M3부터는 심사가 진행되는 동안 투자자와의 협의도 함께 시작할 수 있습니다.",
+ "en": "From M2, membership is by review — you join after a review, and from M3 investor discussions can start while the review is under way.",
+ "es": "Desde M2, la membresía requiere evaluación: se accede tras una revisión y, desde M3, las conversaciones con inversores pueden empezar mientras la revisión está en curso.",
+ "fr": "À partir de M2, l’adhésion se fait sur examen : vous rejoignez après un examen et, dès M3, les échanges avec des investisseurs peuvent commencer pendant l’examen.",
+ "ar": "ابتداءً من M2 تكون العضوية بعد مراجعة: تنضم بعد المراجعة، وابتداءً من M3 يمكن بدء النقاش مع المستثمرين أثناء المراجعة.",
+ "vi": "Từ M2, tư cách thành viên cần xét duyệt: bạn tham gia sau khi được xét duyệt, và từ M3 có thể bắt đầu trao đổi với nhà đầu tư ngay trong thời gian xét duyệt.",
+ "id": "Mulai M2, keanggotaan melalui peninjauan: Anda bergabung setelah ditinjau, dan mulai M3 pembicaraan dengan investor dapat dimulai selama peninjauan berlangsung.",
 }
 def review_row(L, cols):
     return (f'<tr class="rvw"><td colspan="{cols}" style="border-top:2px dashed #d32f2f;border-bottom:0;padding:12px 15px;color:#c62828;font-weight:700;text-align:start">'
@@ -863,11 +863,11 @@ MS_LUX = ("<style>"
  "</style>")
 MROWS = {
  "ko": [("earth", "193개국 정부가 지금 무엇을 사려 하는지", "EXPLORE · M0–M1", "나라별 정부 과제·예산·입찰을 한곳에서 보고, 사람이 검수한 분석으로 우리 회사에 맞는 나라를 고릅니다."),
-        ("sign", "상대를 만날 수 있는 회사로 준비합니다", "BUILD · M2–M3", "영문 회사소개서·제안서·사업계획을 함께 만들고, M3부터는 심사를 거쳐 투자자 협의까지 준비합니다."),
+        ("sign", "상대를 만날 수 있는 회사로 준비합니다", "BUILD · M2–M3", "M2부터 심사를 거쳐 가입하고, 영문 회사소개서·제안서·사업계획을 함께 만듭니다. M3부터는 투자자 협의까지 준비합니다."),
         ("hand", "현지 파트너와 실제 프로젝트를 움직입니다", "EXECUTE · M4–M5", "6주 시장 검증, 현지 일정 조율, 컨소시엄 구성과 공공 입찰 준비부터 계약까지 동행합니다."),
         ("piano", "멤버십은 아이들의 피아노 수업으로도 이어집니다", "WMM 선행사업", "멤버십 수익의 일부는 자폐 아동 피아노·힐링 지원 프로그램에 쓰이고, 사용 내역은 기준서에 따라 공개합니다.")],
  "en": [("earth", "What 193 governments want to buy now", "EXPLORE · M0–M1", "See each country's priorities, budgets and tenders in one place, and choose the countries that fit you with human-reviewed analysis."),
-        ("sign", "Get ready to meet counterparts", "BUILD · M2–M3", "We build your English company profile, proposals and business plan with you; from M3, after review, we prepare investor discussions too."),
+        ("sign", "Get ready to meet counterparts", "BUILD · M2–M3", "From M2 you join after a review, and we build your English company profile, proposals and business plan with you; from M3 we prepare investor discussions too."),
         ("hand", "Move a real project with local partners", "EXECUTE · M4–M5", "Six-week market validation, local scheduling, consortium building, and support from bid preparation to contract."),
         ("piano", "Membership also funds piano lessons for children", "WMM giving programme", "Part of membership revenue supports a piano and healing programme for autistic children; spending is reported under a published standard.")],
 }
@@ -877,7 +877,7 @@ def membership_page(L, C):
     if L in MS_TX:
         X = MS_TX[L]
         rows = "".join(f"<tr><th>{a}</th><td>{b}</td><td>{c}</td><td><b>{d}</b></td></tr>" for a, b, c, d in X["rows"])
-        _r = rows.split("</tr>"); rows = "</tr>".join(_r[:3]) + "</tr>" + review_row(L, 4) + "</tr>".join(_r[3:])
+        _r = rows.split("</tr>"); rows = "</tr>".join(_r[:2]) + "</tr>" + review_row(L, 4) + "</tr>".join(_r[2:])
         hd = "<tr>" + "".join(f"<th>{h}</th>" for h in X["head"]) + "</tr>"
         body = (f'<style>.tiers td,.tiers th{{text-align:start}}</style>{MS_LUX}<section class="mlux"><div class="in"><div><h1>{X["h"]}</h1><p class="lede">{X["lede"]}</p>'
                 f'<p class="cta"><a class="btn gold" href="https://www.wmm-hoa.com/membership/" target="_blank" rel="noopener">{X["btn"]}</a></p></div>'
@@ -913,7 +913,7 @@ def membership_page(L, C):
               ("M5 STRATEGIC · Bid support", "Public or large contracts", "With you from bid preparation to contract, investor discussions", "3–5% of contract value"),
               ("FC FOUNDING CIRCLE", "First 10 companies, by invitation", "50% off CONNECT, input on operations", "By agreement")])
     trows = "".join(f"<tr><th>{a}</th><td>{b}</td><td>{c}</td><td><b>{d}</b></td></tr>" for a, b, c, d in tiers)
-    _r = trows.split("</tr>"); trows = "</tr>".join(_r[:3]) + "</tr>" + review_row(L, 4) + "</tr>".join(_r[3:])
+    _r = trows.split("</tr>"); trows = "</tr>".join(_r[:2]) + "</tr>" + review_row(L, 4) + "</tr>".join(_r[2:])
     thead = T("<tr><th>등급</th><th>이런 기업에게</th><th>핵심 혜택</th><th>요금</th></tr>", "<tr><th>Grade</th><th>For</th><th>Key benefits</th><th>Price</th></tr>")
     adds = ([("M1", "정보", "레이더 전체 열람과 회원 분석 의뢰"), ("M2", "준비", "관심 국가 알림, 영문 서류 지원"), ("M3", "연결 준비", "상대 후보 정리와 우선 상담"),
              ("M4", "실행", "6주 시장 검증과 현지 일정"), ("M5", "수주", "입찰 준비부터 계약까지 동행")] if ko else
@@ -949,7 +949,7 @@ def membership_page(L, C):
 <p class="cta"><a class="btn gold" href="https://www.wmm-hoa.com/membership/{hs}" target="_blank" rel="noopener">{T("멤버십 가입하기", "Join the membership")}</a> <a class="btn ghost" href="#ladder">{T("등급 살펴보기", "See the grades")}</a></p></div>
 <figure><img src="/assets/wmm-card.webp" alt="{T("WMM 멤버십 카드", "WMM membership card")}" width="1408" height="768" fetchpriority="high"><figcaption>{T("콘셉트 이미지", "Concept image")}</figcaption></figure></div></section>
 <section class="mlux-ladder" id="ladder"><div class="in"><h2>{T("등급마다 열리는 문이 다릅니다", "Each grade opens a different door")}</h2>
-<div class="lad">{"".join(f'<div class="g{" top" if k >= 3 else ""}"><b>{a}</b><h3>{b}</h3><p>{c}</p><strong>{d}</strong></div>' + (f'<div class="mrv">{REVIEW["ko" if ko else "en"]}</div>' if k == 2 else "") for k, (a, b, c, d) in enumerate(tiers[:6]))}</div></div></section>
+<div class="lad">{"".join(f'<div class="g{" top" if k >= 2 else ""}"><b>{a}</b><h3>{b}</h3><p>{c}</p><strong>{d}</strong></div>' + (f'<div class="mrv">{REVIEW["ko" if ko else "en"]}</div>' if k == 1 else "") for k, (a, b, c, d) in enumerate(tiers[:6]))}</div></div></section>
 <section class="mlux-rows">{"".join(f'<div class="mrow{" rev" if n % 2 else ""}">{img(ph, "", 1200, 800)}<div><b>{t2}</b><h2>{t1}</h2><p>{t3}</p></div></div>' for n, (ph, t1, t2, t3) in enumerate(MROWS[L if ko else "en"]))}</section>
 <section class="band"><div class="in"><h2>{T("해외 진출은 대개 세 곳에서 멈춥니다", "Going abroad usually stalls in three places")}</h2>
 <div class="mpr" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div><h3>{T("정보가 흩어져 있다", "Information is scattered")}</h3><p>{T("정부 정책, 입찰, 제재, 재난 소식이 나라마다 다른 곳에 있습니다.", "Policies, tenders, sanctions and disaster news sit in different places for each country.")}</p></div>
