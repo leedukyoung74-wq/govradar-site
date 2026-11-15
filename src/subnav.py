@@ -89,6 +89,7 @@ def gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU):
  .gvh .glinks.open{display:flex}.gvh .glinks a{font-size:16px;padding:13px 6px;border-bottom:1px solid var(--gl);border-radius:0;color:var(--gi)}
  .gvh .gbur{display:flex}.gvh select{max-width:96px}.gvh .gr{margin-left:auto}}
 @media (max-width:480px){.gvh .gtop .gin{gap:8px}.gvh .gbrand img{width:92px;height:34px}.gvh select{max-width:78px;padding:6px 4px}.gvh .glog{padding:6px 8px;font-size:12px}.gvh .gr{gap:6px}}
+@media (max-width:400px){.gvh .gtop .gin{gap:6px;padding:0 10px}.gvh .gbrand img{width:76px;height:30px}.gvh select{max-width:64px;font-size:12px}.gvh .glog{padding:5px 7px;font-size:11.5px}.gvh .gbur{width:36px;height:36px;padding:9px 8px}.gvh .gr{gap:5px;min-width:0}}
 """
     js = r"""(function(){var D=__DATA__;
 var s=document.currentScript,L=s.getAttribute("data-l")||"ko";if(L==="auto")L=new URLSearchParams(location.search).get("l")||"ko";var G=s.getAttribute("data-g")||"world",A=s.getAttribute("data-a")||"";

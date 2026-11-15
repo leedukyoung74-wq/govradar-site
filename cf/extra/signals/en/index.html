@@ -166,6 +166,36 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;font-size:13px;color
 [hidden]{display:none!important}
 @media (max-width:760px){.yr{grid-template-columns:1fr;gap:10px}.yr .y{font-size:38px}.grid3,.guide{grid-template-columns:1fr}header.top nav{display:none}}
 @media (prefers-reduced-motion:no-preference){.yr{animation:rise .7s both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}}
+
+/* phone layout fixes */
+main{overflow-wrap:anywhere}
+.yr>*,.grid3>*,.box,.claim,.cl,.tri>*,.vs>*,.dr>*,.fut>*,.ps,.bz>*{min-width:0}
+.legend{flex-wrap:wrap}
+@media (max-width:760px){
+ .wrap{padding-left:16px;padding-right:16px}
+ .yr{grid-template-columns:minmax(0,1fr)!important}
+ .dt summary{flex-wrap:wrap;gap:10px 12px;padding:14px}
+ .dt summary .mono{width:40px;height:40px;flex:0 0 40px;font-size:14px}
+ .dt summary>span:nth-of-type(2){flex:1 1 0;min-width:0}
+ .dt summary b{font-size:15.5px;line-height:1.45;display:block}
+ .dt summary .cnt{order:3;flex:1 1 100%;margin-left:0;white-space:normal;font-size:12.5px;padding-inline-start:52px}
+ .dt summary::after{order:2;margin-left:0}
+ .dr>div{padding:8px 12px}
+ table.mx,table.tht,table.srcs,table.prep{display:block;overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+ .tl7 .row,.tri,.fut,.krl,.pz,.grid3,.guide{min-width:0;max-width:100%}
+ .pz{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .claim .h{flex-direction:column;align-items:flex-start;gap:6px}
+ .claim .h .b{align-self:flex-start}
+ table.mx>tbody,table.mx>thead{display:table;min-width:620px;width:100%}
+ table.tht>tbody{display:table;min-width:520px;width:100%}
+ .mx td:first-child,.mx th:first-child{min-width:150px}
+ .mx th{white-space:nowrap}
+ .verdict{flex-wrap:wrap;gap:6px}
+ .b{white-space:normal;max-width:100%}
+ .verdict>span:not(.b){flex:1 1 100%}
+ .pc{min-width:0}
+}
+@media (max-width:480px){.pz{grid-template-columns:1fr!important}.pc{min-height:0!important}}
 </style>
 <link rel="alternate" hreflang="ko" href="https://radar.wmm-hoa.com/signals/"><link rel="alternate" hreflang="en" href="https://radar.wmm-hoa.com/signals/en/"><link rel="alternate" hreflang="es" href="https://radar.wmm-hoa.com/signals/es/"><link rel="alternate" hreflang="fr" href="https://radar.wmm-hoa.com/signals/fr/"><link rel="alternate" hreflang="ar" href="https://radar.wmm-hoa.com/signals/ar/"><link rel="alternate" hreflang="vi" href="https://radar.wmm-hoa.com/signals/vi/"><link rel="alternate" hreflang="id" href="https://radar.wmm-hoa.com/signals/id/"></head>
 <body>
