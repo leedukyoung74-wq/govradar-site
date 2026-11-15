@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>로그인과 등급별 이동</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="로그인하면 GOV RADAR 전체 화면으로 이동합니다."><link rel="icon" href="/assets/govradar-logo.webp"><link rel="canonical" href="https://radar.wmm-hoa.com/welcome/login/">
+</head>
+<body>
+
+
+<style>
+@font-face{font-family:"WMM Nexon";font-weight:300;src:url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:400;src:url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:700;src:url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff")}
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.8}
+.lp{background:linear-gradient(rgba(30,79,184,.82),rgba(11,31,58,.9)),url("/assets/c-sa.webp") center/cover no-repeat}
+</style>
+
+<div style="font-family: 'WMM Nexon', 'Apple SD Gothic Neo', sans-serif; color: #1a1d23; background: #ffffff; min-width: 0">
+
+<header style="background: #0b1f3a; color: #ffffff">
+<nav aria-label="주 메뉴" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 40px">
+<a href="/welcome/" style="display: flex; align-items: center"><img src="/assets/logo-h-lg.webp" alt="GOV RADAR" style="height: 44px; width: auto"></a>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 34px; font-size: 15px; flex: 1 1 auto; justify-content: center">
+<a href="/welcome/about/">레이더 소개</a><a href="/welcome/services/">서비스 분야</a><a href="/welcome/country/">국가 리포트</a><a href="/welcome/services/#situation">세계 상황판</a><a href="/welcome/membership/">멤버십</a><a href="/welcome/membership/#support">고객센터</a>
+</div>
+<a href="/welcome/login/" style="font-size: 13px; background: #1e4fb8; padding: 8px 16px">로그인</a>
+</nav>
+</header>
+
+<section style="display: flex; flex-wrap: wrap; min-height: 560px">
+<div class="lp" style="flex: 1 1 420px; color: #ffffff; padding: 72px clamp(24px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center">
+<p style="margin: 0; font-size: 15px; opacity: .85">MEMBER LOGIN</p>
+<h1 style="margin: 12px 0 0; font-size: 40px; line-height: 1.35; font-weight: 700">로그인하면<br>GOV RADAR 전체 화면으로<br>이동합니다</h1>
+<p style="margin: 20px 0 0; font-size: 16px; line-height: 1.8; max-width: 440px; opacity: .92">지금 보시는 화면은 로그인 전 소개 화면입니다. 로그인하면 기존 GOV RADAR 사이트(지도·국가 리포트·입찰·상황판)로 넘어가고, 내 등급에 맞는 내용이 열립니다.</p>
+</div>
+<form id="wlogin" style="flex: 1 1 420px; min-width: 0; padding: 72px clamp(24px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center; gap: 16px; max-width: 560px">
+<h2 style="margin: 0 0 6px; font-size: 28px">로그인</h2>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">이메일<input name="email" type="email" required autocomplete="email" style="min-height: 48px; border: 1px solid #c9cdd3; padding: 0 14px; font: inherit"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">비밀번호<input name="password" type="password" required autocomplete="current-password" style="min-height: 48px; border: 1px solid #c9cdd3; padding: 0 14px; font: inherit"></label>
+<button type="submit" style="min-height: 52px; background: #0b1f3a; color: #ffffff; border: 0; font: inherit; font-size: 16px; font-weight: 700">로그인 → GOV RADAR로 이동</button>
+<p style="margin: 4px 0 0; font-size: 14px; color: #4b515c">처음이신가요? <a href="/ko/?auth=signup" style="color: #1e4fb8; font-weight: 700">무료 가입(M0)</a> · <a href="/ko/?auth=reset" style="color: #4b515c">비밀번호 찾기</a></p><p id="wmsg" role="status" style="margin: 0; font-size: 14px; color: #b3261e"></p>
+</form>
+</section>
+
+<section style="background: #f2f3f5; padding: 90px 24px">
+<div style="max-width: 1100px; margin: 0 auto">
+<h2 style="margin: 0; font-size: 32px; font-weight: 400; text-align: center">로그인 후 흐름</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 40px">
+<div style="background: #ffffff; padding: 26px"><p style="margin: 0; font-size: 28px; font-weight: 300; color: #1e4fb8">1</p><b style="display: block; margin-top: 8px; font-size: 17px">소개 화면</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #4b515c">이 시안의 메인·서브 화면. 누구나 봅니다.</p></div>
+<div style="background: #ffffff; padding: 26px"><p style="margin: 0; font-size: 28px; font-weight: 300; color: #1e4fb8">2</p><b style="display: block; margin-top: 8px; font-size: 17px">로그인 · 무료 가입</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #4b515c">가입하면 M0. 기존 사이트로 바로 이동합니다.</p></div>
+<div style="background: #ffffff; padding: 26px"><p style="margin: 0; font-size: 28px; font-weight: 300; color: #1e4fb8">3</p><b style="display: block; margin-top: 8px; font-size: 17px">결제 · www.wmm-hoa.com</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #4b515c">M1 이상은 WMM 홈페이지에서 결제합니다.</p></div>
+<div style="background: #0b1f3a; color: #ffffff; padding: 26px"><p style="margin: 0; font-size: 28px; font-weight: 300; color: #8fb4ff">4</p><b style="display: block; margin-top: 8px; font-size: 17px">기존 GOV RADAR 사이트</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; opacity: .9">결제한 등급의 화면이 열립니다.</p></div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1100px; margin: 0 auto; padding: 90px 24px 100px">
+<h2 style="margin: 0 0 28px; font-size: 32px; font-weight: 400; text-align: center">등급별로 열리는 화면 (기존 사이트)</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 720px; border-collapse: collapse; font-size: 15px; line-height: 1.6">
+<thead><tr style="border-top: 2px solid #0b1f3a; background: #f7f8fa"><th style="text-align: left; padding: 15px; width: 150px">등급</th><th style="text-align: left; padding: 15px; width: 140px">요금</th><th style="text-align: left; padding: 15px">기존 사이트에서 새로 열리는 것</th></tr></thead>
+<tbody>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M0</b> 오픈</td><td style="padding: 15px">무료</td><td style="padding: 15px">세계 지도·국가 요약, 세계 상황판, 재난 대비센터, 전시회 일정</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6; background: #eef3fc"><td style="padding: 15px"><b>M1</b> 분석 회원</td><td style="padding: 15px">월 19,800원</td><td style="padding: 15px">국가 리포트 전체(유망 비즈니스의 이유·대상 바이어), 입찰 자격 요건, 분석 의뢰 월 2건</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M2</b> 프로</td><td style="padding: 15px">월 149,000원</td><td style="padding: 15px">+ 관심 국가·입찰 마감 알림, 영문 서류 지원</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M3</b> 비즈니스</td><td style="padding: 15px">월 390,000원</td><td style="padding: 15px">+ CONNECT 상대 후보 정리, 우선 상담</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M4</b> 진출 패키지</td><td style="padding: 15px">190만 원부터</td><td style="padding: 15px">+ PROJECT ROOM(프로젝트 전용 화면), 6주 시장 검증 보고서</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M5</b> 수주 대행</td><td style="padding: 15px">수주액 3~5%</td><td style="padding: 15px">+ 입찰 제안서·컨소시엄 진행 현황</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 16px 0 0; font-size: 13px; line-height: 1.7; color: #5b616c">요금은 v2.0 안입니다. 카드 결제는 결제 키 연결 후 열리며, 그 전에는 견적 → 계좌이체 → 대표 확인 후 등급을 부여합니다.</p>
+</section>
+
+<footer style="background: #2b2e33; color: #b7bbc2; padding: 26px 24px; text-align: center; font-size: 12px; line-height: 1.9">
+월드메이킹멤버스 주식회사(WMM) · 문의 73036396@naver.com · 사진: 리야드 B.alotaby(CC BY-SA 4.0), Wikimedia Commons
+</footer>
+</div>
+
+<script>window.RADAR_LANG="ko";</script><script src="/assets/config.js"></script><script src="/assets/auth.js"></script>
+<script>(function(){var f=document.getElementById('wlogin'),m=document.getElementById('wmsg');f.addEventListener('submit',function(e){e.preventDefault();if(!window.WMMAuth){m.textContent='잠시 후 다시 시도해 주세요.';return}m.textContent='확인 중…';
+WMMAuth.login(f.email.value.trim(),f.password.value).then(function(){location.href='/ko/'}).catch(function(){m.textContent='이메일 또는 비밀번호를 확인해 주세요.'})})})();</script></body>
+</html>

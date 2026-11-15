@@ -729,6 +729,7 @@ def region_block(L):
     h = RG_H.get(L) or tx(L, "rg_h"); para = RG_P.get(L) or tx(L, "rg_p")
     return f'<h3 class="regh" id="regions">{e(h)} <small>{nd}/{len(REGS)}</small></h3><p class="note">{e(para)}</p><div class="grid regs">{cards}</div>'
 
+_GATE = """<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}location.replace("/welcome/"+location.hash)})();</script>"""
 def home(L):
     t = T[L]; path = f"/{L}/"; alts = {l: f"/{l}/" for l in LANGS}
     n_done = sum(done(i) for i in BY if not is_reg(i)); n_t = sum(len(DATA.get(i, {}).get("tenders") or []) for i in BY)
@@ -864,7 +865,7 @@ def build():
     W = lambda p, s: (os.makedirs(os.path.dirname(OUT + p), exist_ok=True), open(OUT + p, "w", encoding="utf8").write(_toc_post(s, p) if p.endswith(".html") else s))
     urls = []
     for L in LANGS:
-        W(f"/{L}/index.html", home(L)); urls.append((f"/{L}/", {l: f"/{l}/" for l in LANGS}))
+        W(f"/{L}/index.html", home(L).replace("<head>", "<head>" + _GATE, 1) if L == "ko" else home(L)); urls.append((f"/{L}/", {l: f"/{l}/" for l in LANGS}))
         W(f"/{L}/mdb/index.html", mdb_page(L)); urls.append((f"/{L}/mdb/", {l: f"/{l}/mdb/" for l in LANGS}))
         W(f"/{L}/conflict/index.html", conflict_page(L)); urls.append((f"/{L}/conflict/", {l: f"/{l}/conflict/" for l in LANGS}))
         W(f"/{L}/verify/index.html", verify_page(L));
