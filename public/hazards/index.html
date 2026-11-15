@@ -279,6 +279,16 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 .tr-tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;padding:4px 8px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-120%)}
 #tr-idx svg{width:100%;height:auto;display:block}
 @media (max-width:760px){.tr-grid{grid-template-columns:1fr}}
+.apv{margin-top:40px;background:#04070f;border-radius:14px;overflow:hidden;color:#e8eef8}
+.apv canvas{display:block;width:100%;aspect-ratio:16/8}
+@media(max-width:760px){.apv canvas{aspect-ratio:4/4.6}}
+.apctl{display:flex;gap:10px;align-items:center;padding:10px 14px 4px;flex-wrap:wrap}
+.apctl>button{background:#c9a45c;color:#04070f;border:0;border-radius:999px;width:34px;height:34px;font:700 13px/1 var(--f);cursor:pointer;flex:none}
+.apyrs{display:flex;gap:6px;flex-wrap:wrap}
+.apyrs button{width:auto;height:auto;min-width:0;background:rgba(255,255,255,.08);color:#e8eef8;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:5px 11px;font:600 13px/1 var(--f);cursor:pointer}
+.apyrs button.on{background:#e8eef8;color:#04070f}
+.apyrs button.c29{border-color:#ff8a65}
+.apnote{margin:0;padding:6px 14px 14px;font-size:13px;color:#9aa8bd}
 </style>
 </head>
 <body>
@@ -339,6 +349,7 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 <div class="fact" data-i="a_fact"></div>
 <div class="scroll" style="margin-top:44px"><div id="achart" class="wide"></div></div>
 <div class="apk" id="apk"></div>
+<div class="apv" id="apv"><canvas id="apcv" aria-label="Apophis close approaches animation"></canvas><div class="apctl"><button type="button" id="applay">❚❚</button><div class="apyrs" id="apyrs"></div></div><p class="apnote" id="apnote"></p></div>
 <p class="src" data-i="a_src"></p>
 </div></section>
 </main>
@@ -616,12 +627,59 @@ function apo(){
   k.append('div').html('<b>'+d.d.slice(0,4)+'</b><span>'+d.d.slice(5).replace('-','.')+' · '+dist+'</span><small>'+tr('ld').replace('{x}',(d.km/384400).toFixed(d.km<4e5?2:1))+'</small>')});
 }
 
+
+/* ---------- Apophis motion: real JPL distances, year by year (2026-11-15) ---------- */
+function apoVid(){
+ var cv=document.getElementById('apcv');if(!cv)return;var ko=lang==='ko';
+ var EV=D.apophis.filter(function(a){return a.km<1.6e7}).map(function(a){return a});
+ var st=window._apv||(window._apv={i:0,t0:performance.now()/1000,play:true,stars:null});st.ev=EV;
+ document.getElementById('apnote').textContent=ko?'거리는 NASA/JPL 실제 계산값(지구 중심 기준)입니다. 화면은 로그 눈금이라 가까운 거리일수록 크게 보입니다. 붉은 띠는 계산 오차 범위입니다.':'Distances are NASA/JPL computed values from Earth’s centre. The view uses a log scale, so nearer distances are magnified. The red band is the uncertainty range.';
+ var yb=document.getElementById('apyrs');yb.innerHTML=EV.map(function(e,i){return '<button type="button" data-i="'+i+'"'+(e.km<1e5?' class="c29"':'')+'>'+e.d.slice(0,4)+'</button>'}).join('');
+ yb.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;st.i=+b.dataset.i;st.t0=performance.now()/1000;draw()};
+ var pb=document.getElementById('applay');pb.onclick=function(){st.play=!st.play;pb.textContent=st.play?'❚❚':'▶';if(st.play){st.t0=performance.now()/1000-(st.pt||0)}};
+ function dur(e){return e.km<1e5?10:5}
+ function f(km,R){var a=Math.log10(6371),b=Math.log10(1.2e8);return R*.07+(Math.log10(Math.max(km,6371))-a)/(b-a)*R*.93}
+ function draw(){
+  var r=cv.getBoundingClientRect();if(!r.width)return;var dpr=Math.min(2,devicePixelRatio||1);if(cv.width!==Math.round(r.width*dpr)){cv.width=Math.round(r.width*dpr);cv.height=Math.round(r.height*dpr);st.stars=null}
+  var g=cv.getContext('2d'),w=r.width,h=r.height;g.setTransform(dpr,0,0,dpr,0,0);
+  var now=performance.now()/1000,e=EV[st.i],T=dur(e),u=st.play?(now-st.t0):(st.pt||0);st.pt=u;if(u>T){st.i=(st.i+1)%EV.length;st.t0=now;u=0;e=EV[st.i];T=dur(e)}var p=u/T;
+  [].forEach.call(yb.children,function(b,i){b.classList.toggle('on',i===st.i)});
+  g.fillStyle='#04070f';g.fillRect(0,0,w,h);
+  if(!st.stars){st.stars=[];for(var i=0;i<160;i++)st.stars.push([Math.random()*w,Math.random()*h,Math.random()])}
+  st.stars.forEach(function(s){g.fillStyle='rgba(220,230,255,'+(.25+.6*Math.abs(Math.sin(now*(.5+s[2])+s[2]*9)))*(.3+s[2]*.7)+')';g.fillRect(s[0],s[1],s[2]>.85?1.6:1,s[2]>.85?1.6:1)});
+  var sm=w<640,cx=sm?w*.5:w*.62,cy=sm?h*.64:h*.55,R=sm?Math.min(w*.5,h*.36):Math.min(w*.55,h*.62)*1.05;
+  function ring(km,col,dash,lab){var rr=f(km,R);g.strokeStyle=col;g.setLineDash(dash);g.lineWidth=1;g.beginPath();g.arc(cx,cy,rr,0,Math.PI*2);g.stroke();g.setLineDash([]);if(lab){g.fillStyle=col;g.font='600 11px '+getComputedStyle(document.body).fontFamily;g.textAlign='center';g.fillText(lab,cx,cy-rr-5)}}
+  var band=[f(e.min,R),f(e.max,R)];g.fillStyle='rgba(255,90,70,.12)';g.beginPath();g.arc(cx,cy,band[1]+.5,0,Math.PI*2);g.arc(cx,cy,Math.max(1,band[0]-.5),0,Math.PI*2,true);g.fill();
+  ring(42164,'rgba(110,220,255,.7)',[3,4],ko?'정지궤도 위성 (지구 중심 4.2만 km)':'Geostationary satellites (42,164 km)');
+  ring(384400,'rgba(200,205,220,.55)',[2,5],ko?'달 궤도 (38.4만 km)':'Moon orbit (384,400 km)');
+  ring(1e6,'rgba(200,205,220,.18)',[1,6],sm?'':(ko?'100만 km':'1 million km'));ring(1e7,'rgba(200,205,220,.18)',[1,6],sm?'':(ko?'1,000만 km':'10 million km'));
+  var ma=now*.15,mr=f(384400,R);g.fillStyle='#cfd3dc';g.beginPath();g.arc(cx+Math.cos(ma)*mr,cy+Math.sin(ma)*mr,3.2,0,Math.PI*2);g.fill();
+  var er=f(6371,R),eg=g.createRadialGradient(cx-er*.3,cy-er*.3,1,cx,cy,er);eg.addColorStop(0,'#7cc4ff');eg.addColorStop(.6,'#1f5fb8');eg.addColorStop(1,'#0a2350');
+  g.shadowColor='rgba(90,170,255,.9)';g.shadowBlur=18;g.fillStyle=eg;g.beginPath();g.arc(cx,cy,er,0,Math.PI*2);g.fill();g.shadowBlur=0;
+  var ang=-2.25+st.i*.7,dmin=e.km,span=dmin*4.5+3e5,s=(p-.5)*2*span,dist=Math.sqrt(s*s+dmin*dmin),th=ang+Math.atan2(s,dmin);
+  var trail=[];for(var k=0;k<=40;k++){var q=Math.max(0,p-k*.006),ss=(q-.5)*2*span,dd=Math.sqrt(ss*ss+dmin*dmin),tt=ang+Math.atan2(ss,dmin);trail.push([cx+Math.cos(tt)*f(dd,R),cy+Math.sin(tt)*f(dd,R)])}
+  g.lineCap='round';for(k=1;k<trail.length;k++){g.strokeStyle='rgba(255,170,90,'+(1-k/40)*.8+')';g.lineWidth=2.4*(1-k/40)+.4;g.beginPath();g.moveTo(trail[k-1][0],trail[k-1][1]);g.lineTo(trail[k][0],trail[k][1]);g.stroke()}
+  var ax=cx+Math.cos(th)*f(dist,R),ay=cy+Math.sin(th)*f(dist,R);var ag=g.createRadialGradient(ax,ay,0,ax,ay,14);ag.addColorStop(0,'rgba(255,235,200,1)');ag.addColorStop(1,'rgba(255,160,80,0)');g.fillStyle=ag;g.fillRect(ax-14,ay-14,28,28);g.fillStyle='#fff';g.beginPath();g.arc(ax,ay,2.4,0,Math.PI*2);g.fill();
+  var near=Math.exp(-Math.pow((p-.5)/.12,2));if(near>.05){var mxp=cx+Math.cos(ang)*f(dmin,R),myp=cy+Math.sin(ang)*f(dmin,R);g.globalAlpha=near;g.strokeStyle='rgba(255,220,180,.8)';g.setLineDash([2,3]);g.beginPath();g.moveTo(cx,cy);g.lineTo(mxp,myp);g.stroke();g.setLineDash([]);g.globalAlpha=1}
+  var ff=getComputedStyle(document.body).fontFamily,x0=Math.max(16,w*.04),y0=Math.max(36,h*.13);g.textAlign='left';
+  g.fillStyle='#c9a45c';g.font='700 '+Math.round(Math.max(30,w*.06))+'px '+ff;g.fillText(e.d.slice(0,4),x0,y0);
+  g.fillStyle='#e8eef8';g.font='600 '+Math.round(Math.max(13,w*.016))+'px '+ff;var lh=Math.max(18,w*.024);
+  g.fillText((ko?'최근접 ':'Closest ')+e.d.replace(/-/g,'.')+' '+e.t+' UTC',x0,y0+lh*1.2);
+  g.font='700 '+Math.round(Math.max(16,w*.024))+'px '+ff;g.fillStyle=e.km<1e5?'#ff9a6a':'#ffffff';g.fillText(nf(e.km)+' km',x0,y0+lh*2.5);
+  g.font='400 '+Math.round(Math.max(12,w*.014))+'px '+ff;g.fillStyle='#b8c4d6';g.fillText(tr('ld').replace('{x}',(e.km/384400).toFixed(e.km<4e5?2:1)),x0,y0+lh*3.5);
+  if(!sm)g.fillText((ko?'오차 범위 ':'Range ')+nf(e.min)+' – '+nf(e.max)+' km',x0,y0+lh*4.4);
+  if(e.km<1e5&&!sm){g.fillStyle='#ffcf9e';g.fillText(ko?'정지궤도 위성보다 안쪽 · 맨눈으로 보일 수 있는 거리':'Inside the geostationary ring · may be visible to the naked eye',x0,y0+lh*5.4)}
+  var by=h-14,bx0=x0,bx1=w-x0;g.strokeStyle='rgba(255,255,255,.15)';g.lineWidth=2;g.beginPath();g.moveTo(bx0,by);g.lineTo(bx1,by);g.stroke();
+  var tot=EV.reduce(function(a,b){return a+dur(b)},0),acc=EV.slice(0,st.i).reduce(function(a,b){return a+dur(b)},0)+u;g.strokeStyle='#c9a45c';g.beginPath();g.moveTo(bx0,by);g.lineTo(bx0+(bx1-bx0)*acc/tot,by);g.stroke();
+ }
+ if(!st.loop){st.loop=1;(function L(){draw();requestAnimationFrame(L)})()}
+}
 /* ---------- i18n + live refresh ---------- */
 function render(){
  document.documentElement.lang=lang;document.title=lang==='ko'?'GOV RADAR 재난 한눈에 보기':'GOV RADAR Disaster Overview';
  document.querySelectorAll('[data-i]').forEach(function(el){el.innerHTML=tr(el.dataset.i).replace('{d}',D.snap).replace('{u}',HZ.upd)});
  var _lb=document.getElementById('lang');if(_lb)_lb.textContent=lang==='ko'?'English':'한국어';var _hm=document.getElementById('home');if(_hm)_hm.href=lang==='ko'?'/ko/':'/en/';
- kpis();legend();ychart();heat();csel();wmap();hzGallery();apo();if(sel)openC(sel)}
+ kpis();legend();ychart();heat();csel();wmap();hzGallery();apo();apoVid();if(sel)openC(sel)}
 if(document.getElementById('lang'))document.getElementById('lang').onclick=function(){lang=lang==='ko'?'en':'ko';render()};
 var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(ychart,200)});
 addEventListener('scroll',hideTip,{passive:true});
