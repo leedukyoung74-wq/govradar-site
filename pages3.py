@@ -331,6 +331,26 @@ def tier_table(L):
     sign = "".join(f'<td data-t="{i}">' + ("" if i == "free" else f'<a class="btn sm{" pri" if i == "partner" else ""}" href="?t={i}#order" data-pick="{i}">{lab[i][0] if ko else lab[i][1]}</a>') + "</td>" for i, *_ in TIERS)
     return f'<div class="tscroll"><table class="tiers"><thead><tr><th></th>{head}</tr></thead><tbody>{rows}<tr><th></th>{sign}</tr></tbody></table></div>'
 
+WMM_MS = "https://www.wmm-hoa.com/membership/"
+def wmm_ladder(L):
+    """GOV RADAR -> WMM membership: one shared ladder; upper grades join and pay on wmm-hoa.com."""
+    ko = L == "ko"
+    rows = ([("GOV RADAR 무료 · M0", "정보 열람", "193개국 정부 사업·입찰·위험 정보를 누구나 봅니다."),
+             ("분석 회원 · 공통 입문 등급", "월 19,800원", "유망 사업의 이유·대상 바이어, 관심 나라 알림. WMM 멤버십의 공통 입문 단계입니다."),
+             ("WMM 멤버십 M1–M3", "오프라인 사업자료", "고른 나라·사업으로 회사소개서·제안서·사업계획 같은 실제 사업자료를 함께 만듭니다."),
+             ("WMM 멤버십 M4–M5", "메인 프로젝트 구축", "파트너·컨소시엄을 꾸려 실제 프로젝트를 구축하고 실행까지 함께 갑니다.")] if ko else
+            [("GOV RADAR free · M0", "Open information", "Anyone can read programmes, tenders and risk for 193 countries."),
+             ("Analysis member · shared entry grade", "₩19,800/month", "Why-now, target buyers and alerts for your countries. The common entry step of WMM membership."),
+             ("WMM membership M1–M3", "Offline business materials", "We build real materials with you for the chosen country and deal: company profile, proposal, business plan."),
+             ("WMM membership M4–M5", "Main project build", "We form partners and a consortium and build and run the actual project with you.")])
+    li = "".join(f'<tr><th>{a}</th><td><b>{b}</b></td><td style="text-align:left">{c}</td></tr>' for a, b, c in rows)
+    h = "정보에서 실제 프로젝트까지 — WMM 멤버십 등급" if ko else "From information to a real project — WMM membership grades"
+    n = ("GOV RADAR와 WMM 멤버십은 같은 등급 체계를 씁니다. 상위 등급(M1–M5)의 가입·결제는 WMM 홈페이지에서 합니다." if ko else
+         "GOV RADAR and WMM membership share one grade system. Upper grades (M1–M5) are joined and paid for on the WMM website.")
+    b = "WMM 멤버십 가입·결제 (www.wmm-hoa.com) →" if ko else "Join and pay for WMM membership (www.wmm-hoa.com) →"
+    return (f'<section class="band" id="wmm-membership"><div class="in"><h2>{h}</h2><p class="note">{n}</p>'
+            f'<div class="tscroll"><table class="tiers">{li}</table></div>'
+            f'<p class="cta"><a class="btn pri" href="{WMM_MS}{"?lang=ko" if ko else "?lang=en"}" target="_blank" rel="noopener">{b}</a></p></div></section>')
 def pricing_page(L, C, PLANS, PLAN_NOTE):
     ko = L == "ko"; e = C["e"]
     offers = [
@@ -365,7 +385,7 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
 <p class="lede">{"정보는 누구나 무료로 봅니다. 분석·알림은 합리적인 월 19,800원에, 실제 사업은 직접 만나 프로젝트 파트너십으로 함께합니다. 카드 결제를 열기 전까지는 견적·계좌이체로 받고, 자동갱신은 하지 않습니다." if ko else "Anyone can browse the data for free. Analysis and alerts cost a fair ₩19,800/month, and real deals are done in person through a project partnership. Until card payment opens, we take orders by quote and bank transfer, with no auto-renewal."}</p></div></section>
 <section class="band" id="tier"><div class="in"><div class="needban" id="needban" hidden></div><p class="cta" style="margin:0 0 18px"><a class="btn pri" href="/{L}/request/">{"회원 분석 의뢰 4가지 — 범위·한도·처리 기준 보고 보내기 →" if ko else "Member analysis requests — see scope, limit and handling before you send →"}</a></p><p class="note" style="margin:-8px 0 18px">{"분석 회원은 회원 의뢰(빠른 검토)를 매달 2건 포함합니다. 아래 표의 '입찰 적합도 판정(건당 10만 원)'은 서류 목록·컨소시엄 구성안까지 들어가는 상세판으로, 회원 포함 의뢰와 별개입니다." if ko else "Analysis members get two member requests (quick checks) a month. The per-tender fit assessment (KRW 100,000) below is a separate, detailed product with document list and consortium plan."}</p>
 <h2>{"무료·분석 회원·파트너십 비교" if ko else "Free, analysis membership and partnership"}</h2><p class="note"><a href="/{L}/how/">{"신청 후 진행 순서·납기·고객 약속 보기 →" if ko else "How it works: steps, turnaround and our promises →"}</a></p><p class="note">{"정보(정부 사업·입찰 전체·위험)는 모두 무료입니다. 돈은 AI 분석과 알림(분석 회원 월 19,800원), 사람이 하는 판단(적합도·브리프), 그리고 직접 만나 함께하는 프로젝트 파트너십에서 받습니다." if ko else "All data — programmes, every tender, risk — is free. We charge for AI analysis and alerts (₩19,800/month), human judgement (fit reviews, briefs) and in-person project partnerships."}</p>{tier_table(L)}</div></section>
-<section class="band"><div class="in"><h2>{"지금 주문할 수 있는 것" if ko else "Available now"}</h2><div class="offers">{orows}</div></div></section>
+{wmm_ladder(L)}<section class="band"><div class="in"><h2>{"지금 주문할 수 있는 것" if ko else "Available now"}</h2><div class="offers">{orows}</div></div></section>
 <section class="band alt"><div class="in"><h2>{"주문하면 이렇게 진행됩니다" if ko else "How an order works"}</h2><ol class="flow">{"".join(f"<li>{x}</li>" for x in steps)}</ol></div></section>
 <section class="band alt" id="order"><div class="in narrow"><h2>{"신청서" if ko else "Request form"}</h2>
 <form class="cform" name="order" method="POST" data-netlify="true" netlify-honeypot="hp" action="/{L}/thanks/"><input type="hidden" name="form-name" value="order"><p hidden><input name="hp"></p><input type="hidden" name="lang" value="{L}">
