@@ -40,4 +40,5 @@ for L in OWN:
             if not dry:
                 open(p, "w", encoding="utf-8").write(f'<!doctype html><html lang="{L}"><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url={target}"><link rel="canonical" href="https://radar.wmm-hoa.com{target}"><script>location.replace("{target}"+location.search+location.hash)</script><a href="{target}">English</a></html>')
 print("lang_guard:", len(out), "pages sent to English", "(dry run)" if dry else "")
-for x in out[:400]: print(" ", *x)
+if "--list" in sys.argv:
+    for x in out: print(" ", *x)
