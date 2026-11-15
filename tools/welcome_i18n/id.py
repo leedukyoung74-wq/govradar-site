@@ -64,7 +64,7 @@ T = {
 157: "Lihat agenda pemerintah dan tender, lalu pilih negara yang cocok untuk perusahaan Anda.", 158: "Persiapkan",
 159: "Siapkan materi bisnis seperti profil perusahaan dan proposal, dan bersiap bertemu mitra.", 160: "Jalankan",
 161: "Bentuk mitra dan konsorsium, lalu jalankan proyek utama atau tender publik.", 162: "Tingkat dan harga", 163: "Tingkat", 164: "Manfaat utama",
-165: "Terbuka", 166: "Radar publik dan ringkasan negara", 167: "Gratis", 168: "Anggota analisis", 169: "Radar lengkap + 2 permintaan analisis per bulan · tingkat awal bersama",
+165: "Terbuka", 166: "Peta, ringkasan dan papan situasi · beberapa item pertama program, tender dan acara", 167: "Gratis", 168: "Anggota analisis", 169: "Semua daftar lengkap + 2 permintaan analisis per bulan · tingkat awal bersama",
 170: "₩19.800/bulan", 171: "Pro", 172: "Peringatan negara · dukungan dokumen bahasa Inggris", 173: "₩149.000/bulan",
 174: "Mulai M3, keanggotaan melalui peninjauan: Anda bergabung setelah ditinjau, dan pembicaraan dengan investor dapat dimulai selama peninjauan berlangsung.",
 175: "Bisnis", 176: "Persiapan mitra · konsultasi prioritas · pembicaraan dengan investor (sejak peninjauan)", 177: "₩390.000/bulan",

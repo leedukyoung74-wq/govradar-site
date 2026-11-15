@@ -64,7 +64,7 @@ T = {
 157: "Read government agendas and tenders and choose the countries that fit your company.", 158: "Build",
 159: "Prepare offline business materials such as a company profile and proposal, and get ready to meet counterparts.", 160: "Execute",
 161: "Form partners and a consortium and carry out a main project or a public contract bid.", 162: "Grades and prices", 163: "Grade", 164: "Key benefits",
-165: "Open", 166: "Public radar and country briefings", 167: "Free", 168: "Analysis member", 169: "Full radar + 2 analysis requests a month · common entry grade",
+165: "Open", 166: "Map, summaries and situation board · first items of programmes, tenders and events", 167: "Free", 168: "Analysis member", 169: "Every list in full + 2 analysis requests a month · common entry grade",
 170: "₩19,800/month", 171: "Pro", 172: "Country alerts · English document support", 173: "₩149,000/month",
 174: "From M3, membership is by review — you join after a review, and investor discussions can start while the review is under way.",
 175: "Business", 176: "Counterpart preparation · priority consultation · investor discussions (from review)", 177: "₩390,000/month",

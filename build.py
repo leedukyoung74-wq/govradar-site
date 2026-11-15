@@ -980,7 +980,7 @@ def build():
     W("/index.html", f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOV RADAR — 193 governments</title>
 <meta name="description" content="{e(T['en']['desc_home'])}"><link rel="canonical" href="{BASE}/en/">{''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}/{l}/">' for l in LANGS)}<link rel="alternate" hreflang="x-default" href="{BASE}/en/">
 <meta property="og:image" content="{BASE}/assets/og.jpg"><link rel="icon" href="/assets/mark.png">
-<script>var n=(navigator.language||"en").slice(0,2).toLowerCase(),L={json.dumps(LANGS)};location.replace("/"+(L.indexOf(n)>=0?n:"en")+"/"+location.hash);</script>
+<script>var n=(navigator.language||"en").slice(0,2).toLowerCase(),L={json.dumps(LANGS)},l=L.indexOf(n)>=0?n:"en",h=location.hash,m=0;try{{m=localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code")}}catch(e){{}}if(/access_token|confirmation_token|recovery_token|invite_token|error=/.test(h))m=1;location.replace(m?"/"+l+"/"+h:(l==="ko"?"/welcome/":"/welcome/"+l+"/"));</script>
 <style>body{{background:#0a0a0a;color:#f2f2ef;font-family:system-ui;display:grid;place-items:center;min-height:100vh;margin:0}}a{{color:#f2f2ef;margin:0 8px}}</style></head>
 <body><div><h1>GOV RADAR</h1>{''.join(f'<a href="/{l}/">{LANG_NAME[l]}</a>' for l in LANGS)}</div></body></html>""")
     W("/404.html", home("en").replace("<title>", "<title>404 · ", 1))

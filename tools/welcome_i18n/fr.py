@@ -64,7 +64,7 @@ T = {
 157: "Consultez agendas gouvernementaux et appels d’offres, et choisissez les pays adaptés à votre entreprise.", 158: "Préparer",
 159: "Préparez vos supports (présentation d’entreprise, proposition) et soyez prêt à rencontrer des partenaires.", 160: "Exécuter",
 161: "Constituez partenaires et consortium et menez un projet principal ou un appel d’offres public.", 162: "Niveaux et tarifs", 163: "Niveau", 164: "Avantages clés",
-165: "Ouvert", 166: "Radar public et fiches pays", 167: "Gratuit", 168: "Membre analyse", 169: "Radar complet + 2 demandes d’analyse par mois · niveau d’entrée commun",
+165: "Ouvert", 166: "Carte, synthèses et tableau de situation · premiers éléments des programmes, appels d’offres et événements", 167: "Gratuit", 168: "Membre analyse", 169: "Toutes les listes complètes + 2 demandes d’analyse par mois · niveau d’entrée commun",
 170: "19 800 ₩/mois", 171: "Pro", 172: "Alertes pays · aide aux documents en anglais", 173: "149 000 ₩/mois",
 174: "À partir de M3, l’adhésion se fait sur examen : vous rejoignez après un examen, et les échanges avec des investisseurs peuvent commencer pendant l’examen.",
 175: "Affaires", 176: "Préparation des contreparties · consultation prioritaire · échanges avec des investisseurs (dès l’examen)", 177: "390 000 ₩/mois",

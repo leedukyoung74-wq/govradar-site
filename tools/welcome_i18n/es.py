@@ -64,7 +64,7 @@ T = {
 157: "Lea agendas de gobiernos y licitaciones y elija los países que encajan con su empresa.", 158: "Preparar",
 159: "Prepare materiales de negocio como el perfil de empresa y la propuesta, y alístese para reunirse con contrapartes.", 160: "Ejecutar",
 161: "Forme socios y consorcios y lleve a cabo un proyecto principal o una licitación pública.", 162: "Niveles y precios", 163: "Nivel", 164: "Beneficios clave",
-165: "Abierto", 166: "Radar público y fichas de país", 167: "Gratis", 168: "Miembro de análisis", 169: "Radar completo + 2 solicitudes de análisis al mes · nivel de entrada común",
+165: "Abierto", 166: "Mapa, resúmenes y panel de situación · primeros elementos de programas, licitaciones y eventos", 167: "Gratis", 168: "Miembro de análisis", 169: "Todas las listas completas + 2 solicitudes de análisis al mes · nivel de entrada común",
 170: "₩19.800/mes", 171: "Pro", 172: "Alertas por país · apoyo con documentos en inglés", 173: "₩149.000/mes",
 174: "Desde M3, la membresía requiere evaluación: se accede tras una revisión y las conversaciones con inversores pueden empezar mientras la revisión está en curso.",
 175: "Empresa", 176: "Preparación de contrapartes · consulta prioritaria · conversaciones con inversores (desde la revisión)", 177: "₩390.000/mes",

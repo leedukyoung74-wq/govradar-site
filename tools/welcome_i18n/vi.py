@@ -64,7 +64,7 @@ T = {
 157: "Xem chương trình nghị sự của chính phủ và gói thầu, chọn những nước phù hợp với doanh nghiệp.", 158: "Chuẩn bị",
 159: "Chuẩn bị tài liệu kinh doanh như hồ sơ công ty, đề xuất và sẵn sàng gặp đối tác.", 160: "Triển khai",
 161: "Kết hợp đối tác, liên danh và thực hiện dự án chính hoặc gói thầu công.", 162: "Hạng và mức phí", 163: "Hạng", 164: "Quyền lợi chính",
-165: "Mở", 166: "Radar công khai và tóm tắt quốc gia", 167: "Miễn phí", 168: "Thành viên phân tích", 169: "Toàn bộ radar + 2 yêu cầu phân tích mỗi tháng · hạng khởi đầu chung",
+165: "Mở", 166: "Bản đồ, tóm tắt và bảng tình hình · vài mục đầu của dự án, đấu thầu và sự kiện", 167: "Miễn phí", 168: "Thành viên phân tích", 169: "Toàn bộ danh sách + 2 yêu cầu phân tích mỗi tháng · hạng khởi đầu chung",
 170: "₩19.800/tháng", 171: "Chuyên nghiệp", 172: "Cảnh báo quốc gia · hỗ trợ tài liệu tiếng Anh", 173: "₩149.000/tháng",
 174: "Từ M3, tư cách thành viên cần xét duyệt: bạn tham gia sau khi được xét duyệt, và có thể bắt đầu trao đổi với nhà đầu tư ngay trong thời gian xét duyệt.",
 175: "Doanh nghiệp", 176: "Chuẩn bị đối tác · tư vấn ưu tiên · trao đổi với nhà đầu tư (từ khi xét duyệt)", 177: "₩390.000/tháng",
