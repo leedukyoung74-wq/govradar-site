@@ -266,3 +266,25 @@ PH = {"srv": ("photo-1762163516269-3c143e04175c", "server-rack-with-blinking-gre
       "board": ("photo-1490430657723-4d607c1503fc", "a-low-angle-shot-of-a-departure-board-at-an-airport-9qQTUYm4ss4")}
 REC_PH = ["srv", "lap", "rack", "btc", "atm", "lap", "lap", "btc", "shop", "blood", "rack", "srv", "lap", "lap", "rack", "lap", "srv", "ship", "tower", "lap", "board", "atm", "atm", "tower", "ship"]
 assert len(REC_PH) == len(REC)
+
+# Where to report, by country (checked 2026-11-15 against official sites where marked ✓). (iso, name(ko,en), [(contact, desc(ko,en))])
+CALLW = [
+ ("KR", ("대한민국", "South Korea"), [("118", ("KISA 인터넷침해대응센터 — 해킹·개인정보 침해 ✓", "KISA cyber incident centre — hacking, data breaches ✓")), ("182", ("경찰청 사이버범죄 신고·상담 (ecrm.police.go.kr)", "Police cybercrime reports (ecrm.police.go.kr)")), ("1332", ("금융감독원 — 금융 피해·보이스피싱", "Financial Supervisory Service — financial fraud")), ("+82-2-3210-0404", ("해외에서 피해 시 외교부 영사콜센터", "Consular call centre if you are hit abroad"))]),
+ ("US", ("미국", "United States"), [("1-844-SAY-CISA", ("CISA 사이버 사고 신고 (1-844-729-2472, cisa.gov/report) ✓", "CISA incident reporting (1-844-729-2472, cisa.gov/report) ✓")), ("ic3.gov", ("FBI 인터넷범죄신고센터 — 개인·기업 피해", "FBI Internet Crime Complaint Center"))]),
+ ("JP", ("일본", "Japan"), [("110", ("긴급 시 경찰. 비긴급은 도도부현 경찰 사이버범죄 상담창구 ✓", "Police in an emergency; otherwise prefectural police cybercrime desks ✓")), ("03-5978-7509", ("IPA 정보보안 안심상담창구 ✓", "IPA security help desk ✓")), ("188", ("소비자 핫라인 — 사기·소비자 피해 ✓", "Consumer hotline — scams ✓"))]),
+ ("GB", ("영국", "United Kingdom"), [("0300 123 2040", ("Report Fraud (구 Action Fraud, 2025.12 변경) — 사이버범죄·사기, reportfraud.police.uk ✓", "Report Fraud (formerly Action Fraud, from Dec 2025) — cybercrime and fraud, reportfraud.police.uk ✓")), ("report.ncsc.gov.uk", ("NCSC — 기관 사이버 사고 신고", "NCSC — organisational incident reporting"))]),
+ ("FR", ("프랑스", "France"), [("17cyber.gouv.fr", ("17Cyber — 경찰·헌병대 통합 사이버 피해 신고·지원 ✓", "17Cyber — police and gendarmerie one-stop cyber help ✓")), ("cybermalveillance.gouv.fr", ("개인·기업 피해 지원", "Help for individuals and firms"))]),
+ ("DE", ("독일", "Germany"), [("0800 274 1000", ("BSI 서비스센터 (평일, 무료) ✓", "BSI service centre (weekdays, free) ✓")), ("110", ("긴급 시 경찰. 각 주 경찰 온라인 신고 가능", "Police emergency; state police online reporting"))]),
+ ("ES", ("스페인", "Spain"), [("017", ("INCIBE 사이버보안 무료 상담 ✓", "INCIBE free cybersecurity helpline ✓"))]),
+ ("NL", ("네덜란드", "Netherlands"), [("0900-8844", ("경찰 비긴급 번호 — 사이버범죄 신고", "Police non-emergency — cybercrime reports")), ("ncsc.nl", ("국가사이버보안센터 — 기관 신고", "National Cyber Security Centre — organisations"))]),
+ ("BE", ("벨기에", "Belgium"), [("ccb.belgium.be", ("사이버보안센터(CCB) 사고 신고", "Centre for Cybersecurity Belgium incident reporting")), ("safeonweb.be", ("피싱 메일 신고: suspicious@safeonweb.be", "Forward phishing to suspicious@safeonweb.be"))]),
+ ("IE", ("아일랜드", "Ireland"), [("ncsc.gov.ie", ("국가사이버보안센터 — 기관 사고 신고", "National Cyber Security Centre — incident reporting")), ("112 / 999", ("긴급 시 경찰(Garda)", "Garda in an emergency"))]),
+ ("SE", ("스웨덴", "Sweden"), [("114 14", ("경찰 비긴급 번호", "Police non-emergency")), ("cert.se", ("CERT-SE — 사고 신고", "CERT-SE — incident reporting"))]),
+ ("IT", ("이탈리아", "Italy"), [("commissariatodips.it", ("우정·사이버 경찰 온라인 신고", "Postal and cyber police online reports")), ("csirt.gov.it", ("CSIRT Italia — 기관 사고 신고", "CSIRT Italia — organisations"))]),
+ ("UA", ("우크라이나", "Ukraine"), [("cert.gov.ua", ("CERT-UA — 사이버 사고 신고", "CERT-UA — incident reporting")), ("102", ("경찰", "Police"))]),
+ ("IN", ("인도", "India"), [("1930", ("국가 사이버범죄 신고 헬프라인, cybercrime.gov.in ✓", "National cybercrime helpline, cybercrime.gov.in ✓")), ("CERT-In", ("기관 사고 신고: incident@cert-in.org.in", "Organisations: incident@cert-in.org.in"))]),
+ ("AU", ("호주", "Australia"), [("1300 CYBER1", ("호주 사이버보안 핫라인 (1300 292 371), cyber.gov.au ReportCyber ✓", "Australian Cyber Security Hotline (1300 292 371), ReportCyber at cyber.gov.au ✓"))]),
+ ("CA", ("캐나다", "Canada"), [("1-833-CYBER-88", ("캐나다 사이버보안센터 (1-833-292-3788), cyber.gc.ca ✓", "Canadian Centre for Cyber Security (1-833-292-3788), cyber.gc.ca ✓")), ("1-888-495-8501", ("캐나다 사기방지센터", "Canadian Anti-Fraud Centre"))]),
+ ("SG", ("싱가포르", "Singapore"), [("go.gov.sg/csa-cyber-aid", ("SingCERT 사이버 지원 도구 ✓", "SingCERT Cyber Aid ✓")), ("police.gov.sg", ("경찰 온라인 신고(e-services) ✓", "Police e-services report ✓"))]),
+ ("CN", ("중국", "China"), [("110", ("경찰", "Police")), ("96110", ("반사기(사기 예방) 경고 전화", "Anti-fraud warning line"))]),
+]
