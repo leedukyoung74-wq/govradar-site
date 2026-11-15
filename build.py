@@ -176,11 +176,12 @@ def navhtml_act(L, path):
     seg = (path.strip("/").split("/") + ["", ""])[1]
     if seg in ("ready", "prepare"): key = "ready/"
     return navhtml(L).replace(f'href="/{L}/{key}"', f'href="/{L}/{key}" aria-current="page"', 1)
+_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/welcome/"+(l==="ko"?"":l+"/"))})();</script>"""
 def head(L, title, desc, path, alt_paths, extra=""):
     t = T[L]
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{p}">' for l, p in alt_paths.items())
     alts += f'<link rel="alternate" hreflang="x-default" href="{BASE}{alt_paths.get("en", path)}">'
-    return f"""<!doctype html><html lang="{L}" dir="{'rtl' if L in RTL else 'ltr'}"><head>
+    return f"""<!doctype html><html lang="{L}" dir="{'rtl' if L in RTL else 'ltr'}"><head>{_GATE}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{BASE}{path}">{alts}
@@ -239,6 +240,7 @@ def foot(L):
 <label id="auth-pw-w">{e(AT[L]['pw'])}<input id="authp" type="password" minlength="8" autocomplete="current-password"></label>
 <label id="auth-age-w" hidden>{e(AT[L]['age'])}<select id="auth-age">{''.join(f'<option value="{k}">{e(v)}</option>' for k,v in AT[L]['age_opts'])}</select></label>
 <label class="chk" id="auth-terms-w" hidden><input type="checkbox" id="auth-terms"> <span>{AT[L]['terms']}</span></label>
+<label class="chk" id="auth-mkt-w" hidden><input type="checkbox" id="auth-mkt"> <span>{e(AT[L]['mkt'])}</span></label>
 <button class="btn pri" type="submit" id="auth-sub">{e(AT[L]['login'])}</button>
 <p class="note" id="authmsg" aria-live="polite"></p><p class="note" id="auth-sw"></p></form></div></div>
 <script>window.RADAR_LANG="{L}";window.RADAR_T={json.dumps(dict(members_only=t['members_only'],rl=t['rl'],ask_soon=AT[L]['ask_soon']),ensure_ascii=False)};window.RADAR_AT={json.dumps({k:v for k,v in AT[L].items() if k not in ("terms","age_opts")},ensure_ascii=False)};</script>
@@ -729,7 +731,6 @@ def region_block(L):
     h = RG_H.get(L) or tx(L, "rg_h"); para = RG_P.get(L) or tx(L, "rg_p")
     return f'<h3 class="regh" id="regions">{e(h)} <small>{nd}/{len(REGS)}</small></h3><p class="note">{e(para)}</p><div class="grid regs">{cards}</div>'
 
-_GATE = """<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}location.replace("/welcome/"+location.hash)})();</script>"""
 def home(L):
     t = T[L]; path = f"/{L}/"; alts = {l: f"/{l}/" for l in LANGS}
     n_done = sum(done(i) for i in BY if not is_reg(i)); n_t = sum(len(DATA.get(i, {}).get("tenders") or []) for i in BY)
@@ -865,7 +866,7 @@ def build():
     W = lambda p, s: (os.makedirs(os.path.dirname(OUT + p), exist_ok=True), open(OUT + p, "w", encoding="utf8").write(_toc_post(s, p) if p.endswith(".html") else s))
     urls = []
     for L in LANGS:
-        W(f"/{L}/index.html", home(L).replace("<head>", "<head>" + _GATE.replace('"/welcome/"', '"/welcome/' + ("" if L == "ko" else L + "/") + '"'), 1)); urls.append((f"/{L}/", {l: f"/{l}/" for l in LANGS}))
+        W(f"/{L}/index.html", home(L)); urls.append((f"/{L}/", {l: f"/{l}/" for l in LANGS}))
         W(f"/{L}/mdb/index.html", mdb_page(L)); urls.append((f"/{L}/mdb/", {l: f"/{l}/mdb/" for l in LANGS}))
         W(f"/{L}/conflict/index.html", conflict_page(L)); urls.append((f"/{L}/conflict/", {l: f"/{l}/conflict/" for l in LANGS}))
         W(f"/{L}/verify/index.html", verify_page(L));

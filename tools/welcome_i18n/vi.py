@@ -88,4 +88,5 @@ T = {
 225: "WORLD MAKING MEMBERS Co., Ltd. (WMM) · Liên hệ 73036396@naver.com · Ảnh: Riyadh B.alotaby (CC BY-SA 4.0), Wikimedia Commons",
 227: "Đăng nhập để mở toàn bộ GOV RADAR.", 228: "Vui lòng thử lại sau giây lát.", 229: "Đang kiểm tra…", 230: "Vui lòng kiểm tra email hoặc mật khẩu.",
 231: "Tiếp tục với Google", 232: "hoặc đăng nhập bằng email",
+233: "Khi tiếp tục với Google, bạn đồng ý với Điều khoản và Chính sách quyền riêng tư.", 234: "Xem chính sách quyền riêng tư",
 }

@@ -52,7 +52,7 @@ LEGAL = {
  },
  "privacy": {
   "ko": ("개인정보 처리방침", [
-   ("1. 수집 항목", "필수: 이메일, 비밀번호(암호화 저장), 연령대, 약관 동의 일시. 선택: 이름·기관명, 회사 정보(업종·매출 구간·업력·인증), 알림 수단(이메일), 광고성 정보 수신 동의. 컨소시엄·문의 양식: 이름, 기관, 직함, 이메일, 국가, 관심 분야."),
+   ("1. 수집 항목", "필수: 이메일, 비밀번호(암호화 저장), 연령대, 약관 동의 일시. 선택: 이름·기관명, 회사 정보(업종·매출 구간·업력·인증), 알림 수단(이메일), 광고성 정보 수신 동의(선택 — 동의한 경우에만 소식·홍보 메일을 보내며 언제든 철회할 수 있음). Google로 가입·로그인하는 경우 Google이 제공하는 이름, 이메일, 프로필 사진을 받습니다. 컨소시엄·문의 양식: 이름, 기관, 직함, 이메일, 국가, 관심 분야."),
    ("2. 이용 목적", "회원 식별과 로그인, 멤버십 제공, 맞춤 알림, 컨소시엄 연결과 온라인 협의, 문의 응대, 부정 이용 방지, 법령상 의무 이행."),
    ("3. 보유 기간", "회원 탈퇴 시 지체 없이 파기합니다. 다만 전자상거래법에 따라 계약·청약철회 기록 5년, 대금결제·재화 공급 기록 5년, 소비자 불만·분쟁 처리 기록 3년, 통신비밀보호법에 따른 접속 기록 3개월은 보관합니다."),
    ("4. 제3자 제공", "법령에 근거가 있거나 이용자가 동의한 경우 외에는 제3자에게 제공하지 않습니다. 컨소시엄 연결은 양측이 동의한 범위의 정보만 상대방에게 전달합니다."),
@@ -64,7 +64,7 @@ LEGAL = {
    ("10. 개인정보 보호책임자", "월드메이킹멤버스 주식회사 대표이사 이덕영 · 73036396@naver.com. 침해 신고: 개인정보침해신고센터(privacy.kisa.or.kr, 118), 개인정보분쟁조정위원회(kopico.go.kr)."),
    ("시행일", f"{UPDATED}")]),
   "en": ("Privacy Policy", [
-   ("1. What we collect", "Required: email, password (stored hashed), age group, time of consent. Optional: name or organisation, company details, alert channels (email, mobile for KakaoTalk, Slack/Teams webhooks), marketing consent. Consortium/contact forms: name, organisation, title, email, country, interests."),
+   ("1. What we collect", "Required: email, password (stored hashed), age group, time of consent. Optional: name or organisation, company details, alert channels (email, mobile for KakaoTalk, Slack/Teams webhooks), marketing consent (optional — we send news and promotional email only if you agree, and you can withdraw at any time). If you sign up or log in with Google, we receive the name, email and profile photo Google provides. Consortium/contact forms: name, organisation, title, email, country, interests."),
    ("2. Why", "Sign-in, memberships, tailored alerts, consortium introductions and online discussion, support, abuse prevention, legal obligations."),
    ("3. Retention", "Deleted on account closure, except records Korean law requires us to keep (contracts and payments 5 years, complaints 3 years, access logs 3 months)."),
    ("4. Sharing", "Not shared except by law or with your consent. Consortium introductions share only what both sides agreed to."),

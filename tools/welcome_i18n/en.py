@@ -88,4 +88,5 @@ T = {
 225: "WORLD MAKING MEMBERS Co., Ltd. (WMM) · Contact 73036396@naver.com · Photo: Riyadh B.alotaby (CC BY-SA 4.0), Wikimedia Commons",
 227: "Log in to open the full GOV RADAR.", 228: "Please try again in a moment.", 229: "Checking…", 230: "Please check your email or password.",
 231: "Continue with Google", 232: "or log in with email",
+233: "By continuing with Google you agree to the Terms and Privacy Policy.", 234: "View privacy policy",
 }

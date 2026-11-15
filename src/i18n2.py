@@ -85,3 +85,16 @@ PLANS = {
 }
 for _l in ("es","fr","ar","vi","id"): PLANS[_l] = PLANS["en"]
 PLAN_NOTE = {"ko":"VAT 별도 · 학생 할인 등급은 없고 무료가 누구에게나 같습니다 · 언제든 해지 가능 (환불 정책 참고)","en":"VAT excluded · no student tier: FREE is the same for everyone · cancel any time (see refund policy)"}
+
+# 2026-11-15 대표 지시: 홍보·광고 메일은 별도 동의(선택)
+_MKT = {
+ "ko": ("WMM·GOV RADAR의 소식·홍보·광고 메일 수신에 동의합니다 (선택) — 언제든 거부할 수 있습니다", "소식·홍보·광고 메일을 받으시겠어요? (선택, 언제든 바꿀 수 있습니다)", "받겠습니다", "받지 않겠습니다", "선택을 저장했습니다"),
+ "en": ("I agree to receive news and promotional emails from WMM and GOV RADAR (optional) — you can opt out any time", "Would you like to receive news and promotional emails? (optional, you can change this any time)", "Yes, send them", "No thanks", "Your choice is saved"),
+ "es": ("Acepto recibir noticias y correos promocionales de WMM y GOV RADAR (opcional); puedo darme de baja en cualquier momento", "¿Desea recibir noticias y correos promocionales? (opcional, puede cambiarlo cuando quiera)", "Sí, enviarlos", "No, gracias", "Se guardó su elección"),
+ "fr": ("J’accepte de recevoir des actualités et e-mails promotionnels de WMM et GOV RADAR (facultatif) ; désinscription possible à tout moment", "Souhaitez-vous recevoir des actualités et e-mails promotionnels ? (facultatif, modifiable à tout moment)", "Oui, merci", "Non merci", "Votre choix est enregistré"),
+ "ar": ("أوافق على تلقي الأخبار ورسائل البريد الترويجية من WMM وGOV RADAR (اختياري)، ويمكنني إلغاء الاشتراك في أي وقت", "هل ترغب في تلقي الأخبار والرسائل الترويجية؟ (اختياري، ويمكنك التغيير في أي وقت)", "نعم، أرسلوها", "لا، شكرًا", "تم حفظ اختيارك"),
+ "vi": ("Tôi đồng ý nhận tin tức và email quảng bá từ WMM và GOV RADAR (không bắt buộc); có thể hủy bất cứ lúc nào", "Bạn có muốn nhận tin tức và email quảng bá không? (không bắt buộc, có thể đổi bất cứ lúc nào)", "Có, hãy gửi", "Không, cảm ơn", "Đã lưu lựa chọn của bạn"),
+ "id": ("Saya setuju menerima kabar dan email promosi dari WMM dan GOV RADAR (opsional); bisa berhenti kapan saja", "Ingin menerima kabar dan email promosi? (opsional, bisa diubah kapan saja)", "Ya, kirimkan", "Tidak, terima kasih", "Pilihan Anda tersimpan"),
+}
+for _l, _v in _MKT.items():
+    AT[_l] = dict(AT[_l]); AT[_l].update(mkt=_v[0], mkt_q=_v[1], mkt_yes=_v[2], mkt_no=_v[3], mkt_saved=_v[4])
