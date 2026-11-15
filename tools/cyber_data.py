@@ -252,3 +252,17 @@ SRC = [
  ("FCC — 2026년 11월 17일 전국 비상경보 시험 공지 (DA 26-989)", "https://docs.fcc.gov/public/attachments/DA-26-989A1.txt"),
  ("CISA — 올즈마 정수장 침해 권고 (AA21-042A)", "https://www.cisa.gov/news-events/alerts/2021/02/11/compromise-us-water-treatment-facility"),
 ]
+
+# Free-licence related photos (Unsplash License) — not photos of the incidents themselves.
+PH = {"srv": ("photo-1762163516269-3c143e04175c", "server-rack-with-blinking-green-lights-VHmBX7FnXw0"),
+      "rack": ("photo-1584169417032-d34e8d805e8b", "server-room-aisle-with-metal-equipment-racks-lVZjvw-u9V8"),
+      "lap": ("photo-1542762933-ab3502717ce7", "turned-on-black-laptop-1TFbqhRlCCc"),
+      "btc": ("photo-1644924735973-0ba06d83268e", "a-golden-bit-coin-sitting-on-top-of-a-table-z0gszFk1tYk"),
+      "atm": ("photo-1539622287262-61e066a2c534", "grayscale-photo-of-atm-machine-9f7s4aLatpw"),
+      "shop": ("photo-1604719312566-8912e9227c6a", "grocery-store-aisle-with-stocked-shelves-ivfp_yxZuYQ"),
+      "blood": ("photo-1683791895200-201c0c40310f", "blood-bag-in-clinical-setting-0ZZo5o00o80"),
+      "ship": ("photo-1560134025-a119c071bf16", "a-large-cargo-ship-in-the-middle-of-the-ocean-EHt9VrQnUc8"),
+      "tower": ("photo-1782999236858-32f90b3f121e", "modern-airport-control-tower-with-a-radar-dome-WGyw9o5wZDA"),
+      "board": ("photo-1490430657723-4d607c1503fc", "a-low-angle-shot-of-a-departure-board-at-an-airport-9qQTUYm4ss4")}
+REC_PH = ["srv", "lap", "rack", "btc", "atm", "lap", "lap", "btc", "shop", "blood", "rack", "srv", "lap", "lap", "rack", "lap", "srv", "ship", "tower", "lap", "board", "atm", "atm", "tower", "ship"]
+assert len(REC_PH) == len(REC)

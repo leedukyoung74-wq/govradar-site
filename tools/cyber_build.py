@@ -40,7 +40,8 @@ h2{color:var(--ink);font-size:clamp(26px,3.4vw,40px);line-height:1.25;font-weigh
 .flt{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .flt button{font:600 14px/1 var(--f);color:var(--soft);background:var(--p2);border:1px solid var(--line);border-radius:999px;padding:9px 14px;cursor:pointer}
 .flt button[aria-pressed=true]{background:var(--ink);color:#05080e;border-color:var(--ink)}
-.ev{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;padding:24px 0;border-top:1px solid var(--line)}
+.ev{display:grid;grid-template-columns:220px 130px minmax(0,1fr);gap:22px;padding:24px 0;border-top:1px solid var(--line)}
+.pic{margin:0;min-width:0}.pic img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:8px;filter:saturate(.9)}.pic figcaption{font-size:11.5px;color:var(--muted);margin-top:5px}.pic figcaption a{color:var(--muted)}
 .ev .d{color:var(--muted);font-size:14px}.ev .d b{display:block;color:var(--ink);font-size:17px}
 .ev h3{color:#fff;font-size:20px;line-height:1.35;margin:6px 0 8px}
 .ev p{margin:0 0 8px;font-size:16px}.ev .j{font-size:15px;color:var(--ink)}.ev .sr{font-size:13px;color:var(--muted)}
@@ -58,13 +59,13 @@ table.pp{width:100%;border-collapse:collapse;font-size:15px}table.pp th,table.pp
 .call{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}.call div{background:#1a0f13;border-radius:10px;padding:20px}.call b{display:block;color:#fff;font-size:36px;line-height:1}.call span{font-size:15px}
 .src li{font-size:14px;margin:4px 0}
 footer{border-top:1px solid var(--line);padding:30px 0;font-size:14px;color:var(--muted)}
-@media(max-width:900px){.hero .in{grid-template-columns:1fr}.kinds,.rm,.todo,.call{grid-template-columns:1fr}.hist{grid-template-columns:1fr}.chain{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.ev{grid-template-columns:1fr;gap:6px}section.s{padding:56px 0}}
+@media(max-width:900px){.hero .in{grid-template-columns:1fr}.kinds,.rm,.todo,.call{grid-template-columns:1fr}.hist{grid-template-columns:1fr}.chain{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.ev{grid-template-columns:1fr;gap:8px}.pic img{aspect-ratio:16/8}section.s{padding:56px 0}}
 '''
 
 T = {
  "ko": dict(title="사이버 공격 — 지금 세계에서 일어나는 일과 준비 · GOV RADAR", desc="사이버 공격 12가지 유형, 2026년 9~11월 국내외 사건(실제 공격과 단순 장애 구분), 역대 주요 사건, 한국 가정·기업·정부의 준비 사항 — GOV RADAR",
    crumb="재난 지도", h1="사이버 공격<br>지금 세계에서 일어나는 일과 준비", lead="해킹·디도스·랜섬웨어가 전력·금융·식수·식량·의료까지 멈출 수 있습니다. 2026년 9~11월 국내외 사건을 실제 공격과 단순 장애로 나눠 보여 주고, 가정·기업·정부가 지금 할 일을 정리했습니다.",
-   cap="사이버 공격 · 모션 그래픽", upd="기준일", j=[("kinds","공격 유형 12가지"),("now","최근 사건"),("hist","역대 주요 사건"),("chain","연쇄 피해"),("rumor","소문 확인"),("prep","준비 사항"),("src","출처")],
+   cap="사이버 공격 · 모션 그래픽", rel="관련 이미지(사건 현장 사진 아님)", upd="기준일", j=[("kinds","공격 유형 12가지"),("now","최근 사건"),("hist","역대 주요 사건"),("chain","연쇄 피해"),("rumor","소문 확인"),("prep","준비 사항"),("src","출처")],
    kh="사이버 공격은 어떻게 일어나나 — 12가지 유형", kl="같은 '해킹'이라도 수법과 피해가 다릅니다. 유형마다 실제로 일어난 사례를 함께 붙였습니다.", dmg="주요 피해", ex="실제 사례",
    nh="최근 사건 — 실제 공격과 단순 장애를 구분해서", nl="2026년 9~11월 국내외 사건입니다. 장애가 났다고 모두 해킹은 아닙니다. 사건마다 지금까지 확인된 판정을 붙였습니다.",
    f=[("all","전체"),("atk","실제 공격"),("susp","조사 중·의심"),("no","공격 아님"),("vuln","취약점"),("KR","한국 관련")],
@@ -74,11 +75,11 @@ T = {
    rh="돌고 있는 소문, 사실은", rl="인터넷에 퍼진 주장과 공식 확인 내용을 나란히 놓았습니다.",
    ph="지금 준비할 것 — 가정·기업·정부", pl="공격을 안 당하는 것보다, 당하거나 장애가 나도 필수 기능을 빨리 되살리는 것이 핵심입니다.", pth=["분야","개인·가정","기업·기관","정부·지자체"],
    tp="개인·가정 먼저 할 일", tb="기업·기관 먼저 할 일", tg="정부·지자체 먼저 할 일", callh="피해를 입었다면 바로 신고",
-   sh="출처", sn="이 페이지는 공개 보도와 기관 발표를 바탕으로 정리했습니다. 조사 중인 사건은 결론이 바뀔 수 있습니다. 배후 귀속은 발표 기관의 판단을 그대로 옮겼습니다.",
+   sh="출처", sn="사건 사진은 언론사 저작권 때문에 싣지 않고, 내용과 관련된 무료 라이선스(Unsplash) 이미지를 넣었습니다. 이 페이지는 공개 보도와 기관 발표를 바탕으로 정리했습니다. 조사 중인 사건은 결론이 바뀔 수 있습니다. 배후 귀속은 발표 기관의 판단을 그대로 옮겼습니다.",
    foot="GOV RADAR · 월드메이킹멤버스(WMM) · 문의 73036396@naver.com", other="English"),
  "en": dict(title="Cyberattacks — what is happening now and how to prepare · GOV RADAR", desc="Twelve kinds of cyberattack, recent incidents worldwide (real attacks vs plain outages), landmark cases and what households, companies and governments should do — GOV RADAR",
    crumb="Hazard map", h1="Cyberattacks<br>what is happening, and how to prepare", lead="Hacking, DDoS and ransomware can stop power, money, water, food and healthcare. We separate real attacks from plain outages in incidents from September to November 2026, and set out what households, companies and governments can do now.",
-   cap="Cyberattack · motion graphic", upd="As of", j=[("kinds","12 kinds"),("now","Recent incidents"),("hist","Landmark cases"),("chain","Knock-on effects"),("rumor","Rumour check"),("prep","Preparation"),("src","Sources")],
+   cap="Cyberattack · motion graphic", rel="Related image, not the incident", upd="As of", j=[("kinds","12 kinds"),("now","Recent incidents"),("hist","Landmark cases"),("chain","Knock-on effects"),("rumor","Rumour check"),("prep","Preparation"),("src","Sources")],
    kh="How cyberattacks happen — 12 kinds", kl="'Hacking' covers very different methods and harms. Each kind comes with real cases.", dmg="Main harm", ex="Real cases",
    nh="Recent incidents — real attacks vs plain outages", nl="Incidents from September to November 2026. Not every outage is a hack; each item carries the verdict known so far.",
    f=[("all","All"),("atk","Real attacks"),("susp","Suspected"),("no","Not an attack"),("vuln","Vulnerability"),("KR","Korea")],
@@ -88,7 +89,7 @@ T = {
    rh="Rumours, checked", rl="What is circulating online beside what officials have confirmed.",
    ph="What to prepare — households, companies, governments", pl="The goal is not to never be hit, but to restore essential functions quickly when an attack or outage happens.", pth=["Area","Households","Companies","Government"],
    tp="Households: first steps", tb="Companies: first steps", tg="Government: first steps", callh="If you are hit in Korea, report it",
-   sh="Sources", sn="Compiled from public reporting and official statements. Conclusions on open investigations may change. Attributions are as stated by the named agency or company.",
+   sh="Sources", sn="News photos are copyrighted, so each incident shows a related free-licence (Unsplash) image instead. Compiled from public reporting and official statements. Conclusions on open investigations may change. Attributions are as stated by the named agency or company.",
    foot="GOV RADAR · WORLD MAKING MEMBERS (WMM) · 73036396@naver.com", other="한국어")}
 
 def page(L):
@@ -101,8 +102,11 @@ def page(L):
     evs = ""
     for r in rec:
         d, reg, isos, v, ty, tt, wh, jd, sx = r
+        pk = C.REC_PH[C.REC.index(r)]; pid, slug = C.PH[pk]
+        pic = (f'<figure class="pic"><img src="https://images.unsplash.com/{pid}?auto=format&fit=crop&w=480&h=320&q=70" srcset="https://images.unsplash.com/{pid}?auto=format&fit=crop&w=480&h=320&q=70 480w, https://images.unsplash.com/{pid}?auto=format&fit=crop&w=960&h=640&q=70 960w" sizes="(max-width:900px) 100vw, 220px" alt="" loading="lazy" referrerpolicy="no-referrer">'
+               f'<figcaption>{E(t["rel"])} · <a href="https://unsplash.com/photos/{slug}" target="_blank" rel="noopener">Unsplash</a></figcaption></figure>')
         srcs = " · ".join(f'<a href="{E(C.SRC[n-1][1])}" target="_blank" rel="noopener nofollow">{E(C.SRC[n-1][0].split(" — ")[0])}</a>' for n in sx)
-        evs += (f'<article class="ev" data-v="{v}" data-iso="{" ".join(isos)}"><div class="d"><b>{dfmt(d)}</b>{E(reg[i])}</div><div>'
+        evs += (f'<article class="ev" data-v="{v}" data-iso="{" ".join(isos)}">{pic}<div class="d"><b>{dfmt(d)}</b>{E(reg[i])}</div><div>'
                 f'<span class="bd {v}">{E(t["v"][v])}</span>' + (f'<span class="bd ty">{E(TN.get(ty, ""))}</span>' if ty else "") +
                 f'<h3>{E(tt[i])}</h3><p>{E(wh[i])}</p><p class="j"><b>{E(t["jl"])}</b> · {E(jd[i])}</p><p class="sr">{E(t["sl"])} · {srcs}</p></div></article>')
     hist = "".join(f'<div class="hi"><span class="bd {v}">{E(t["v"][v])}</span><span class="d">{dfmt(d)} · {E(reg[i])}</span><br><b>{E(tt[i])}</b><p>{E(nt[i])}</p></div>' for d, reg, v, ty, tt, nt in C.HIST)
