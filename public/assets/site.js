@@ -208,6 +208,16 @@ window.gvLang = function (sel) {
   }
   async function run() {
     var page = /\/member\/$/.test(location.pathname), st = document.getElementById("mstate");
+    if (!ls("gv_code") && !(page && location.hash.length > 5)) {
+      try {
+        var sess = JSON.parse(ls("wmm.auth.v1") || "null");
+        if (sess && sess.access_token && !ss("gv_k")) {
+          var mr = await fetch("/mkey", { headers: { authorization: "Bearer " + sess.access_token }, cache: "no-store" });
+          if (mr.ok) { var mj = await mr.json(); if (mj.k) { ss("gv_k", mj.k); ss("gv_grade", mj.grade || "m1"); } }
+        }
+        if (ss("gv_k")) { var K0 = await crypto.subtle.importKey("raw", b64d(ss("gv_k")), "AES-GCM", false, ["decrypt"]); await unlockCountry(K0); if (page) say(ko ? "로그인한 회원 등급(" + (ss("gv_grade") || "M1").toUpperCase() + ")으로 분석이 자동으로 열렸습니다." : "Analysis unlocked automatically for your member grade (" + (ss("gv_grade") || "M1").toUpperCase() + ")."); return; }
+      } catch (e) {}
+    }
     var code = norm(page && location.hash.length > 5 ? decodeURIComponent(location.hash.slice(1)) : ls("gv_code"));
     function say(t) { if (st) st.textContent = t; }
     if (page) {
