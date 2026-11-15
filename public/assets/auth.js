@@ -65,7 +65,7 @@
     if (off) { $("#authsoon").textContent = tt("not_enabled"); return; }
     const sign = MODE === "signup", reset = MODE === "reset", newpw = MODE === "newpw" || MODE === "invite";
     $("#auth-h").textContent = tt(sign ? "signup" : reset ? "reset" : newpw ? "newpw" : "login");
-    $("#auth-name-w").hidden = !sign; $("#auth-age-w").hidden = !sign; $("#auth-terms-w").hidden = !sign;
+    $("#auth-name-w").hidden = !sign; $("#auth-age-w").hidden = !sign; $("#auth-terms-w").hidden = !sign; const mw = $("#auth-mkt-w"); if (mw) mw.hidden = !sign;
     $("#auth-email-w").hidden = newpw; $("#auth-pw-w").hidden = reset;
     $("#auth-sub").textContent = tt(sign ? "signup" : reset ? "send_reset" : newpw ? "save_pw" : "login");
     $("#auth-sw").innerHTML = sign ? `<a href="#" data-am="login">${tt("have_acct")}</a>` : reset || newpw ? `<a href="#" data-am="login">${tt("back")}</a>` : `<a href="#" data-am="signup">${tt("no_acct")}</a> · <a href="#" data-am="reset">${tt("forgot")}</a>`;
@@ -87,7 +87,7 @@
           if (!$("#auth-terms").checked) throw new Error(tt("need_terms"));
           const age = $("#auth-age").value; if (age === "u14") throw new Error(tt("u14"));
           if (pw.length < 8) throw new Error(tt("pw_short"));
-          const r = await signup(em, pw, { full_name: $("#authn").value.trim(), lang: L, age_band: age, terms_at: new Date().toISOString() });
+          const r = await signup(em, pw, { full_name: $("#authn").value.trim(), lang: L, age_band: age, terms_at: new Date().toISOString(), marketing: !!($("#auth-mkt") && $("#auth-mkt").checked), marketing_at: new Date().toISOString() });
           if (r && r.confirmed_at) { await login(em, pw); msg.textContent = tt("welcome"); setTimeout(close, 900); } else msg.textContent = tt("check_mail");
         } else if (MODE === "reset") { await recover(em); msg.textContent = tt("reset_sent"); }
         else if (MODE === "newpw") { if (pw.length < 8) throw new Error(tt("pw_short")); await update({ password: pw }); msg.textContent = tt("pw_saved"); setTimeout(close, 900); }
@@ -107,10 +107,23 @@
     document.querySelectorAll("[data-tier-min]").forEach(x => { const ok = has(x.dataset.tierMin); x.classList.toggle("unlocked", ok); });
   }
 
+  function askMkt() {
+    if (!S || !S.user || document.getElementById("mktask")) return;
+    const md = S.user.user_metadata || {}; if (typeof md.marketing === "boolean") return;
+    const b = document.createElement("div"); b.id = "mktask"; b.setAttribute("role", "dialog"); b.setAttribute("aria-label", tt("mkt_q"));
+    b.style.cssText = "position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;background:#0b1f3a;color:#fff;padding:18px 20px;border-radius:8px;z-index:9999;box-shadow:0 8px 30px rgba(0,0,0,.35);font-size:15px;line-height:1.6";
+    const p = document.createElement("p"); p.style.margin = "0 0 12px"; p.textContent = tt("mkt_q"); b.appendChild(p);
+    const row = document.createElement("div"); row.style.cssText = "display:flex;flex-wrap:wrap;gap:8px";
+    [["mkt_yes", true, "#1e4fb8"], ["mkt_no", false, "transparent"]].forEach(([k, v, bg]) => { const x = document.createElement("button"); x.type = "button"; x.textContent = tt(k);
+      x.style.cssText = "min-height:44px;padding:0 18px;border:1px solid #fff;background:" + bg + ";color:#fff;font:inherit;font-weight:700;cursor:pointer";
+      x.onclick = async () => { try { await update({ data: { marketing: v, marketing_at: new Date().toISOString() } }); toast(tt("mkt_saved")); } catch (e) { toast(e.message); } b.remove(); }; row.appendChild(x); });
+    b.appendChild(row); document.body.appendChild(b);
+  }
+  subs.push(() => setTimeout(askMkt, 600));
   window.WMMAuth = { get session() { return S; }, user: () => S && S.user, token, login, signup, logout, update, tier, has, open, settings, onChange: f => subs.push(f) };
   load(); subs.push(paint);
   document.addEventListener("DOMContentLoaded", () => {
-    wire(); paint(); hash();
+    wire(); paint(); hash(); setTimeout(askMkt, 1200);
     const b = $("#loginbtn"); if (b) b.addEventListener("click", () => { if (S) location.href = `/${L}/account/`; else open("login"); });
     document.addEventListener("click", e => { const a = e.target.closest("[data-auth]"); if (a) { e.preventDefault(); if (S && a.dataset.auth === "signup") location.href = `/${L}/account/`; else open(a.dataset.auth); } });
     if (S && Date.now() > S.expires_at - 60000) refresh().then(paint);
