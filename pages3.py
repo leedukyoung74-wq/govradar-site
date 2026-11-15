@@ -875,6 +875,39 @@ def membership_page(L, C):
                      f"/{L}/membership/", {l: f"/{l}/membership/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
 
 # ---------------------------------------------------------------- WMM emergency kits (owner's product images, 2026-11-15)
+KIT_TX = {
+"es": dict(h="Kits de emergencia WMM — GO72 · HOME3 · CAR24", p="Una mochila para salir, una caja para casa y una bolsa para el coche: tres kits para tres situaciones.", alt="Contenido de GO72, HOME3 y CAR24",
+  k=[("Mochila de supervivencia personal · 1 persona, 2–3 días","Mochila impermeable de 28 L, linterna frontal LED, batería externa de 10.000 mAh, radio portátil, manta térmica, poncho, silbato, funda impermeable para documentos, kit de higiene y mascarillas, kit de apósitos y vendas, tentempiés, tarjeta de contacto y guía, embalaje e inspección (13 artículos)"),
+     ("Kit de emergencia para el hogar · 2 personas, 3 días","24 L de agua (2 L × 12), 18 comidas no perecederas, radio a pilas, 2 luces LED, 2 baterías externas, kit de higiene de emergencia, 2 mantas, caja de almacenamiento y guía (8 artículos)"),
+     ("Kit de emergencia para el coche · 24 horas","Funda resistente al calor, chaleco reflectante, linterna, kit de primeros auxilios e higiene, manta y lámina térmica, tarjeta de contacto y silbato (6 artículos)")],
+  g=["HOME3 · 24 L de agua · 18 comidas · radio a pilas","GO72 · mochila de 28 L · linterna frontal · batería externa","Radio portátil · manta térmica · poncho","Silbato · funda para documentos · kit de higiene","Kit de apósitos · tentempiés · tarjeta de contacto · embalaje inspeccionado","HOME3 · 2 luces LED · 2 baterías externas · kit de higiene","HOME3 · 2 mantas · caja de almacenamiento y guía","CAR24 · funda resistente al calor · chaleco reflectante · linterna","CAR24 · botiquín · manta · tarjeta de contacto y silbato"],
+  n="Las imágenes son conceptuales. El contenido es orientativo antes del lanzamiento y puede cambiar. Pedidos para grupos: 73036396@naver.com"),
+"fr": dict(h="Kits d’urgence WMM — GO72 · HOME3 · CAR24", p="Un sac à emporter, une boîte pour la maison et un sac pour la voiture : trois kits pour trois situations.", alt="Contenu de GO72, HOME3 et CAR24",
+  k=[("Sac de survie individuel · 1 personne, 2–3 jours","Sac à dos étanche 28 L, lampe frontale LED, batterie externe 10 000 mAh, radio portable, couverture de survie, poncho, sifflet, pochette étanche pour documents, kit hygiène et masques, kit pansements, en-cas, carte de contact et guide, emballage et contrôle (13 articles)"),
+     ("Kit d’urgence pour la maison · 2 personnes, 3 jours","24 L d’eau (2 L × 12), 18 repas longue conservation, radio à piles, 2 lampes LED, 2 batteries externes, kit hygiène d’urgence, 2 couvertures, boîte de rangement et guide (8 articles)"),
+     ("Kit d’urgence pour la voiture · 24 heures","Pochette résistante à la chaleur, gilet réfléchissant, lampe torche, trousse de secours et d’hygiène, couverture et feuille de survie, carte de contact et sifflet (6 articles)")],
+  g=["HOME3 · 24 L d’eau · 18 repas · radio à piles","GO72 · sac à dos 28 L · lampe frontale · batterie externe","Radio portable · couverture de survie · poncho","Sifflet · pochette à documents · kit hygiène","Kit pansements · en-cas · carte de contact · emballage contrôlé","HOME3 · 2 lampes LED · 2 batteries externes · kit hygiène","HOME3 · 2 couvertures · boîte de rangement et guide","CAR24 · pochette résistante à la chaleur · gilet réfléchissant · lampe torche","CAR24 · trousse de secours · couverture · carte de contact et sifflet"],
+  n="Images conceptuelles. Le contenu est indicatif avant le lancement et peut changer. Commandes groupées : 73036396@naver.com"),
+"ar": dict(h="حقائب الطوارئ من WMM — GO72 · HOME3 · CAR24", p="حقيبة ظهر للخروج، وصندوق للمنزل، وحقيبة للسيارة: ثلاث حقائب لثلاثة مواقف.", alt="محتويات GO72 وHOME3 وCAR24",
+  k=[("حقيبة نجاة شخصية · شخص واحد، 2–3 أيام","حقيبة ظهر مقاومة للماء 28 لترًا، مصباح رأس LED، بطارية متنقلة 10,000 مللي أمبير، راديو محمول، بطانية حرارية، معطف مطر، صفارة، حافظة وثائق مقاومة للماء، عدة نظافة وكمامات، عدة ضمادات، وجبات خفيفة، بطاقة اتصال ودليل، تغليف وفحص (13 قطعة)"),
+     ("حقيبة طوارئ منزلية · شخصان، 3 أيام","24 لترًا من الماء (2 لتر × 12)، 18 وجبة لا تحتاج تبريدًا، راديو بالبطاريات، مصباحا LED، بطاريتان متنقلتان، عدة نظافة للطوارئ، بطانيتان، صندوق تخزين ودليل (8 قطع)"),
+     ("حقيبة طوارئ للسيارة · 24 ساعة","حافظة مقاومة للحرارة، سترة عاكسة، مصباح يدوي، عدة إسعافات ونظافة، بطانية وغطاء حراري، بطاقة اتصال وصفارة (6 قطع)")],
+  g=["HOME3 · ماء 24 لترًا · 18 وجبة · راديو بالبطاريات","GO72 · حقيبة ظهر 28 لترًا · مصباح رأس · بطارية متنقلة","راديو محمول · بطانية حرارية · معطف مطر","صفارة · حافظة وثائق · عدة نظافة","عدة ضمادات · وجبات خفيفة · بطاقة اتصال · تغليف مفحوص","HOME3 · مصباحا LED · بطاريتان متنقلتان · عدة نظافة","HOME3 · بطانيتان · صندوق تخزين ودليل","CAR24 · حافظة مقاومة للحرارة · سترة عاكسة · مصباح يدوي","CAR24 · عدة إسعافات · بطانية · بطاقة اتصال وصفارة"],
+  n="الصور تصورية. المحتويات إرشادية قبل الإطلاق وقد تتغير. الطلبات الجماعية: 73036396@naver.com"),
+"vi": dict(h="Bộ dụng cụ khẩn cấp WMM — GO72 · HOME3 · CAR24", p="Ba lô mang theo, hộp để ở nhà và túi để trên xe: ba bộ cho ba tình huống.", alt="Thành phần của GO72, HOME3 và CAR24",
+  k=[("Ba lô sinh tồn cá nhân · 1 người, 2–3 ngày","Ba lô chống nước 28 L, đèn pin đội đầu LED, sạc dự phòng 10.000 mAh, radio cầm tay, chăn giữ nhiệt, áo mưa, còi, túi đựng giấy tờ chống nước, bộ vệ sinh và khẩu trang, bộ băng gạc, đồ ăn nhẹ, thẻ liên lạc và hướng dẫn, đóng gói và kiểm tra (13 món)"),
+     ("Bộ khẩn cấp gia đình · 2 người, 3 ngày","24 L nước (2 L × 12), 18 bữa ăn bảo quản thường, radio dùng pin, 2 đèn LED, 2 sạc dự phòng, bộ vệ sinh khẩn cấp, 2 chăn, hộp đựng và hướng dẫn (8 món)"),
+     ("Bộ khẩn cấp cho ô tô · 24 giờ","Túi chịu nhiệt, áo phản quang, đèn pin, bộ sơ cứu và vệ sinh, chăn và tấm giữ nhiệt, thẻ liên lạc và còi (6 món)")],
+  g=["HOME3 · 24 L nước · 18 bữa ăn · radio dùng pin","GO72 · ba lô 28 L · đèn đội đầu · sạc dự phòng","Radio cầm tay · chăn giữ nhiệt · áo mưa","Còi · túi giấy tờ · bộ vệ sinh","Bộ băng gạc · đồ ăn nhẹ · thẻ liên lạc · đóng gói đã kiểm tra","HOME3 · 2 đèn LED · 2 sạc dự phòng · bộ vệ sinh","HOME3 · 2 chăn · hộp đựng và hướng dẫn","CAR24 · túi chịu nhiệt · áo phản quang · đèn pin","CAR24 · bộ sơ cứu · chăn · thẻ liên lạc và còi"],
+  n="Hình ảnh mang tính minh họa. Thành phần là thông tin trước khi ra mắt và có thể thay đổi. Đặt hàng số lượng lớn: 73036396@naver.com"),
+"id": dict(h="Kit darurat WMM — GO72 · HOME3 · CAR24", p="Tas punggung untuk dibawa pergi, kotak untuk rumah, dan tas untuk mobil: tiga kit untuk tiga situasi.", alt="Isi GO72, HOME3, dan CAR24",
+  k=[("Tas bertahan hidup pribadi · 1 orang, 2–3 hari","Tas punggung tahan air 28 L, senter kepala LED, power bank 10.000 mAh, radio portabel, selimut termal, jas hujan ponco, peluit, kantong dokumen tahan air, paket kebersihan dan masker, paket perban, camilan, kartu kontak dan panduan, pengemasan dan pemeriksaan (13 item)"),
+     ("Kit darurat rumah · 2 orang, 3 hari","Air 24 L (2 L × 12), 18 porsi makanan tahan simpan, radio baterai, 2 lampu LED, 2 power bank, paket kebersihan darurat, 2 selimut, kotak penyimpanan dan panduan (8 item)"),
+     ("Kit darurat mobil · 24 jam","Kantong tahan panas, rompi reflektif, senter, paket P3K dan kebersihan, selimut dan lembar termal, kartu kontak dan peluit (6 item)")],
+  g=["HOME3 · air 24 L · 18 porsi makanan · radio baterai","GO72 · tas 28 L · senter kepala · power bank","Radio portabel · selimut termal · ponco","Peluit · kantong dokumen · paket kebersihan","Paket perban · camilan · kartu kontak · kemasan terperiksa","HOME3 · 2 lampu LED · 2 power bank · paket kebersihan","HOME3 · 2 selimut · kotak penyimpanan dan panduan","CAR24 · kantong tahan panas · rompi reflektif · senter","CAR24 · paket P3K · selimut · kartu kontak dan peluit"],
+  n="Gambar bersifat konsep. Isi merupakan panduan sebelum peluncuran dan dapat berubah. Pemesanan dalam jumlah besar: 73036396@naver.com"),
+}
+
 def wmm_kits(L):
     ko = L == "ko"; T = lambda a, b: a if ko else b
     kits = [("GO72", T("개인 생존배낭 · 1인 2~3일", "Personal survival pack · 1 person, 2–3 days"),
@@ -886,6 +919,8 @@ def wmm_kits(L):
             ("CAR24", T("차량용 비상 키트 · 24시간", "Car emergency kit · 24 hours"),
              T("내열 보관 파우치, 반사 조끼, 손전등, 구급·위생 소형팩, 담요·보온포, 연락카드·호루라기 (6종)",
                "Heat-resistant storage pouch, reflective vest, flashlight, first-aid & hygiene kit, blanket & thermal sheet, contact card & whistle (6 items)"))]
+    X = KIT_TX.get(L)
+    if X: kits = [(kits[i][0], X['k'][i][0], X['k'][i][1]) for i in range(3)]
     kc = "".join(f'<div class="wk-k"><b>{a}</b><span>{b}</span><p>{c}</p></div>' for a, b, c in kits)
     gal = [("kit-home3", T("HOME3 · 생수 24L · 상온 식량 18끼 · 건전지 라디오", "HOME3 · 24L water · 18 meals · battery radio")),
            ("kit-go72-a", T("GO72 · 28L 방수 백팩 · LED 헤드랜턴 · 보조배터리", "GO72 · 28L backpack · headlamp · power bank")),
@@ -896,6 +931,7 @@ def wmm_kits(L):
            ("kit-home3-c", T("HOME3 · 방한담요 2개 · 수납함·설명서", "HOME3 · 2 blankets · storage box & guide")),
            ("kit-car24-a", T("CAR24 · 내열 파우치 · 반사 조끼 · 손전등", "CAR24 · heat-resistant pouch · reflective vest · flashlight")),
            ("kit-car24-b", T("CAR24 · 구급·위생팩 · 담요·보온포 · 연락카드·호루라기", "CAR24 · first-aid pack · blanket · contact card & whistle"))]
+    if X: gal = [(gal[i][0], X['g'][i]) for i in range(9)]
     gh = "".join(f'<figure><img src="/assets/{f}.webp" alt="{c}" width="1200" height="675" loading="lazy" decoding="async"><figcaption>{c}</figcaption></figure>' for f, c in gal)
     css = ('<style>.wk-main{width:100%;height:auto;display:block;border-radius:6px;margin:18px 0 6px}'
            '.wk-ks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}'
@@ -903,6 +939,7 @@ def wmm_kits(L):
            '.wk-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}.wk-g figure{margin:0;min-width:0}.wk-g img{width:100%;height:auto;display:block;border-radius:6px}.wk-g figcaption{font-size:13px;margin-top:6px;opacity:.8}'
            '.wk-n{font-size:13px;opacity:.75}'
            '@media(max-width:900px){.wk-ks,.wk-g{grid-template-columns:1fr 1fr}}@media(max-width:560px){.wk-ks,.wk-g{grid-template-columns:1fr}}</style>')
+    if X: T = lambda a, b, _m={"WMM 비상 키트 — GO72 · HOME3 · CAR24": X["h"], "들고 나가는 배낭, 집에 두는 상자, 차에 싣는 가방. 상황에 맞춰 세 가지로 준비했습니다.": X["p"], "GO72·HOME3·CAR24 구성품": X["alt"], "사진은 콘셉트 이미지입니다. 구성은 출시 전 안내용이며 바뀔 수 있습니다. 단체 주문 문의: 73036396@naver.com": X["n"]}: _m.get(a, b)
     return (css + f'<h2>{T("WMM 비상 키트 — GO72 · HOME3 · CAR24", "WMM emergency kits — GO72 · HOME3 · CAR24")}</h2>'
             f'<p>{T("들고 나가는 배낭, 집에 두는 상자, 차에 싣는 가방. 상황에 맞춰 세 가지로 준비했습니다.", "A pack to grab, a box for home and a bag for the car — three kits for three situations.")}</p>'
             f'<img class="wk-main" src="/assets/kit-overview.webp" alt="{T("GO72·HOME3·CAR24 구성품", "GO72, HOME3 and CAR24 contents")}" width="1600" height="900" loading="lazy" decoding="async">'
