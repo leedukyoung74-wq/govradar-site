@@ -87,4 +87,5 @@ T = {
 224: "Prices are the v2.0 proposal; we do not guarantee investment, contracts or sales. Card payment opens once payments are connected; until then: quote → bank transfer → grade granted after confirmation.",
 225: "WORLD MAKING MEMBERS Co., Ltd. (WMM) · Contact 73036396@naver.com · Photo: Riyadh B.alotaby (CC BY-SA 4.0), Wikimedia Commons",
 227: "Log in to open the full GOV RADAR.", 228: "Please try again in a moment.", 229: "Checking…", 230: "Please check your email or password.",
+231: "Continue with Google", 232: "or log in with email",
 }

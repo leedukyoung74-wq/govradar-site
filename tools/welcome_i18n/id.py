@@ -87,4 +87,5 @@ T = {
 224: "Harga adalah usulan v2.0; investasi, kontrak, dan penjualan tidak dijamin. Pembayaran kartu dibuka setelah pembayaran terhubung; sebelumnya: penawaran → transfer bank → tingkat diberikan setelah konfirmasi.",
 225: "WORLD MAKING MEMBERS Co., Ltd. (WMM) · Kontak 73036396@naver.com · Foto: Riyadh B.alotaby (CC BY-SA 4.0), Wikimedia Commons",
 227: "Masuk untuk membuka GOV RADAR lengkap.", 228: "Silakan coba lagi sebentar lagi.", 229: "Memeriksa…", 230: "Periksa email atau kata sandi Anda.",
+231: "Lanjutkan dengan Google", 232: "atau masuk dengan email",
 }

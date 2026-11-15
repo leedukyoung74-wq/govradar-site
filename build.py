@@ -729,7 +729,7 @@ def region_block(L):
     h = RG_H.get(L) or tx(L, "rg_h"); para = RG_P.get(L) or tx(L, "rg_p")
     return f'<h3 class="regh" id="regions">{e(h)} <small>{nd}/{len(REGS)}</small></h3><p class="note">{e(para)}</p><div class="grid regs">{cards}</div>'
 
-_GATE = """<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}location.replace("/welcome/"+location.hash)})();</script>"""
+_GATE = """<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}location.replace("/welcome/"+location.hash)})();</script>"""
 def home(L):
     t = T[L]; path = f"/{L}/"; alts = {l: f"/{l}/" for l in LANGS}
     n_done = sum(done(i) for i in BY if not is_reg(i)); n_t = sum(len(DATA.get(i, {}).get("tenders") or []) for i in BY)
@@ -950,7 +950,7 @@ def build():
     W("/index.html", f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOV RADAR — 193 governments</title>
 <meta name="description" content="{e(T['en']['desc_home'])}"><link rel="canonical" href="{BASE}/en/">{''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}/{l}/">' for l in LANGS)}<link rel="alternate" hreflang="x-default" href="{BASE}/en/">
 <meta property="og:image" content="{BASE}/assets/og.jpg"><link rel="icon" href="/assets/mark.png">
-<script>var n=(navigator.language||"en").slice(0,2).toLowerCase(),L={json.dumps(LANGS)};location.replace("/"+(L.indexOf(n)>=0?n:"en")+"/");</script>
+<script>var n=(navigator.language||"en").slice(0,2).toLowerCase(),L={json.dumps(LANGS)};location.replace("/"+(L.indexOf(n)>=0?n:"en")+"/"+location.hash);</script>
 <style>body{{background:#0a0a0a;color:#f2f2ef;font-family:system-ui;display:grid;place-items:center;min-height:100vh;margin:0}}a{{color:#f2f2ef;margin:0 8px}}</style></head>
 <body><div><h1>GOV RADAR</h1>{''.join(f'<a href="/{l}/">{LANG_NAME[l]}</a>' for l in LANGS)}</div></body></html>""")
     W("/404.html", home("en").replace("<title>", "<title>404 · ", 1))

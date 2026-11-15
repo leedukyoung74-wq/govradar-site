@@ -87,4 +87,5 @@ T = {
 224: "Los precios son la propuesta v2.0; no garantizamos inversión, contratos ni ventas. El pago con tarjeta se abrirá cuando se conecten los pagos; hasta entonces: presupuesto → transferencia → nivel asignado tras la confirmación.",
 225: "WORLD MAKING MEMBERS Co., Ltd. (WMM) · Contacto 73036396@naver.com · Foto: Riad B.alotaby (CC BY-SA 4.0), Wikimedia Commons",
 227: "Inicie sesión para abrir GOV RADAR completo.", 228: "Inténtelo de nuevo en un momento.", 229: "Comprobando…", 230: "Revise su correo o contraseña.",
+231: "Continuar con Google", 232: "o inicie sesión con su correo",
 }

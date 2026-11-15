@@ -87,4 +87,5 @@ T = {
 224: "Mức phí là đề xuất v2.0; không bảo đảm đầu tư, hợp đồng hay doanh thu. Thanh toán thẻ sẽ mở khi kết nối cổng thanh toán; trước đó: báo giá → chuyển khoản → cấp hạng sau khi xác nhận.",
 225: "WORLD MAKING MEMBERS Co., Ltd. (WMM) · Liên hệ 73036396@naver.com · Ảnh: Riyadh B.alotaby (CC BY-SA 4.0), Wikimedia Commons",
 227: "Đăng nhập để mở toàn bộ GOV RADAR.", 228: "Vui lòng thử lại sau giây lát.", 229: "Đang kiểm tra…", 230: "Vui lòng kiểm tra email hoặc mật khẩu.",
+231: "Tiếp tục với Google", 232: "hoặc đăng nhập bằng email",
 }
