@@ -41,7 +41,7 @@
     g.save(); g.strokeStyle = "rgba(200,230,255,.55)"; g.lineWidth = 1; var L = 10, m = 6;
     [[m, m, 1, 1], [w - m, m, -1, 1], [m, h - m, 1, -1], [w - m, h - m, -1, -1]].forEach(function (c) { g.beginPath(); g.moveTo(c[0], c[1] + L * c[3]); g.lineTo(c[0], c[1]); g.lineTo(c[0] + L * c[2], c[1]); g.stroke(); });
     var s = Math.floor(t) % 3600, tc = "T+" + ("0" + Math.floor(s / 60)).slice(-2) + ":" + ("0" + s % 60).slice(-2) + ":" + ("0" + Math.floor((t % 1) * 30)).slice(-2);
-    g.fillStyle = "rgba(0,0,0,.5)"; g.fillRect(8, h - 20, 64, 13); g.fillRect(w - 76, h - 20, 68, 13); g.font = "600 9px ui-monospace,Menlo,Consolas,monospace"; g.fillStyle = "rgba(210,235,255,.8)"; g.textAlign = "right"; g.fillText(tc, w - 12, h - 11);
+    var sm = w < 240; g.fillStyle = "rgba(0,0,0,.5)"; g.fillRect(8, h - 20, sm ? 48 : 64, 13); if (!sm) g.fillRect(w - 76, h - 20, 68, 13); g.font = "600 " + (sm ? 8 : 9) + "px ui-monospace,Menlo,Consolas,monospace"; g.fillStyle = "rgba(210,235,255,.8)"; g.textAlign = "right"; if (!sm) g.fillText(tc, w - 12, h - 11);
     g.textAlign = "left"; g.fillStyle = accent || "rgba(120,255,200,.85)"; g.fillText("● " + CODE[k] + "-" + (X.G.indexOf(k) + 1 < 10 ? "0" : "") + (X.G.indexOf(k) + 1), 12, h - 11);
     var sy = (t * 40) % (h + 40) - 20; var gr = g.createLinearGradient(0, sy - 18, 0, sy + 2); gr.addColorStop(0, "rgba(140,220,255,0)"); gr.addColorStop(1, "rgba(140,220,255,.06)"); g.fillStyle = gr; g.fillRect(0, sy - 18, w, 20);
     g.restore();
