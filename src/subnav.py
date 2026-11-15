@@ -145,6 +145,10 @@ def toc_post(html, path=None):
     m0 = html.find("<main>"); body = html[m0:] if m0 >= 0 else ""
     rd = _re.search(r'<nav class="rd-nav"[^>]*><div class="rd-in">(.*?)</div></nav>', body, _re.S)
     links = []
+    dt = _re.findall(r'<[a-z0-9]+\b[^>]*\bid="([^"]+)"[^>]*\bdata-toc="([^"]+)"', body)
+    if len(dt) >= 2:
+        nav = '<nav class="subnav toc" aria-label="contents"><div class="in">' + "".join(f'<a href="#{_e(i)}">{_e(_h.unescape(t))}</a>' for i, t in dt) + "</div></nav>"
+        return html[:a] + nav + html[b + len("<!--/SUBNAV-->"):]
     if rd:
         links = [(h_, _h.unescape(_re.sub("<[^>]+>", "", t))) for h_, t in _re.findall(r'<a href="(#[^"]+)">(.*?)</a>', rd.group(1))]
     else:

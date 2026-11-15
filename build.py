@@ -458,9 +458,9 @@ def vbh(v, en):
     return f'<span class="vb" style="color:{VBC[x["c"]]}" title="{e(x["d_en"] if en else x["d_ko"])}">{e(x["en"] if en else x["ko"])}</span>'
 def policy_html(en):
     r = VPOL["rules_en" if en else "rules_ko"]
-    return (f'<h2>{"Verification policy" if en else "GOV RADAR 검증 원칙"}</h2><ol>' + "".join(f"<li>{e(x)}</li>" for x in r) + "</ol>"
-            + '<ul class="src">' + "".join(f'<li><b>T{x["n"]}</b> {e(x["en"] if en else x["ko"])}</li>' for x in VPOL["tiers"]) + "</ul>"
-            + '<p class="vleg">' + "".join(f'{vbh(k,en)} {e(VPOL["verdicts"][k]["d_en"] if en else VPOL["verdicts"][k]["d_ko"])}<br>' for k in VPOL["verdicts"] if k != "unv") + "</p>")
+    return (f'<h2 id="v-rules" data-toc="{"Rules" if en else "검증 원칙"}">{"Verification policy" if en else "GOV RADAR 검증 원칙"}</h2><ol>' + "".join(f"<li>{e(x)}</li>" for x in r) + "</ol>"
+            + f'<ul class="src" id="v-tiers" data-toc="{"Source tiers" if en else "출처 등급"}">' + "".join(f'<li><b>T{x["n"]}</b> {e(x["en"] if en else x["ko"])}</li>' for x in VPOL["tiers"]) + "</ul>"
+            + f'<p class="vleg" id="v-verdicts" data-toc="{"Verdict labels" if en else "판정 표시"}">' + "".join(f'{vbh(k,en)} {e(VPOL["verdicts"][k]["d_en"] if en else VPOL["verdicts"][k]["d_ko"])}<br>' for k in VPOL["verdicts"] if k != "unv") + "</p>")
 VCSS = "<style>.vb{display:inline-block;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;margin-right:6px;border:1px solid;white-space:nowrap}.cfh{border-left:4px solid #b42318}.sref a{font-size:11px;margin-left:3px}.vleg{line-height:2;font-size:13px}</style>"
 GEO = {"iran": dict(focus="IR,OM,AE,SA,QA,KW,IQ,BH", hl="IR", pts=[[26.57, 56.25]]),
        "ukraine": dict(focus="UA,BY,MD,RO", hl="UA", pts=[[48.0, 37.8]]),
@@ -536,10 +536,13 @@ def verify_page(L):
 import gen_build_section as GB
 import pages2 as P2
 import pages3 as P3
+ABOUT_TOC = {'ko': ('구축 현황', '구축된 기능', '로드맵', '회사 정보'), 'en': ('Status', 'What is built', 'Roadmap', 'Company'), 'es': ('Estado', 'Funciones', 'Hoja de ruta', 'Empresa'), 'fr': ('État', 'Fonctions', 'Feuille de route', 'Société'), 'ar': ('الحالة', 'ما تم بناؤه', 'خارطة الطريق', 'الشركة'), 'vi': ('Hiện trạng', 'Đã xây dựng', 'Lộ trình', 'Công ty'), 'id': ('Status', 'Yang sudah dibangun', 'Peta jalan', 'Perusahaan')}
 def about_page(L):
     lk = "ko" if L == "ko" else "en"; a = GB.A[lk]
     sec_ = GB.section(lk).replace(GB.BASE + f"/{lk}/", f"/{L}/").replace('<h2 class="grb-h">', '<h1 class="grb-h">', 1).replace('</h2><p class="grb-p">', '</h1><p class="grb-p">', 1)
     jl = ld({"@context": "https://schema.org", "@type": "AboutPage", "name": a["h"], "inLanguage": L, "publisher": ORG, "description": a["lede"]})
+    tl = ABOUT_TOC.get(L) or ABOUT_TOC["en"]
+    sec_ = sec_.replace('<div class="grb-top">', f'<div class="grb-top" id="about-top" data-toc="{tl[0]}">', 1).replace('<div class="grb-mods">', f'<div class="grb-mods" id="about-built" data-toc="{tl[1]}">', 1).replace('<div class="grb-road">', f'<div class="grb-road" id="about-road" data-toc="{tl[2]}">', 1)
     return head(L, a["h"] + " · GOV RADAR", a["lede"][:150], f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}, jl + GB.CSS) + sec_ + foot(L)
 
 RB = {"ko": ("재난 대비센터", "지금 위험할 때 할 일, 우리 집 30·60·90일·1년 준비 계획, 물·식량·전원 계산기, 가족 대피·연락카드를 한 곳에서. 공식기관 지침 기반이며 무료입니다.", "재난 대비센터 열기"),

@@ -4,6 +4,7 @@ set -e
 cd /home/claude/site
 python3 tools/signals_i18n.py || exit 1
 python3 tools/cf_variant.py dist cf/public
+python3 tools/asset_version.py cf/public
 cd /home/claude/govradar-live
 git fetch -q origin live && git reset -q --soft origin/live
 rm -rf public functions && cp -a /home/claude/site/cf/public /home/claude/site/cf/functions .
