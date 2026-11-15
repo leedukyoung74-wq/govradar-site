@@ -55,12 +55,37 @@ h2{color:var(--ink);font-size:clamp(26px,3.4vw,40px);line-height:1.25;font-weigh
 .rm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.rm div{background:var(--p2);border-radius:10px;padding:22px;min-width:0}.rm h3{color:#fff;font-size:18px;margin:0 0 10px}.rm p{font-size:15.5px;margin:0}
 table.pp{width:100%;border-collapse:collapse;font-size:15px}table.pp th,table.pp td{text-align:left;padding:12px 10px;border-top:1px solid var(--line);vertical-align:top}table.pp th{color:var(--ink)}table.pp thead th{color:var(--muted);font-weight:400;font-size:14px}
 .tsc{overflow-x:auto}
-.todo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}.todo div{min-width:0}.todo h3{color:#fff;font-size:19px;margin:0 0 10px}.todo ol{padding-left:20px;margin:0}.todo li{margin:6px 0;font-size:15.5px}
+.todo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}.todo ol{padding-left:20px;margin:0}.todo li{margin:6px 0;font-size:15.5px}
 .call{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}.call div{background:#1a0f13;border-radius:10px;padding:20px}.call b{display:block;color:#fff;font-size:36px;line-height:1}.call span{font-size:15px}
 .src li{font-size:14px;margin:4px 0}
 footer{border-top:1px solid var(--line);padding:30px 0;font-size:14px;color:var(--muted)}
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ar{background:var(--p2);border-radius:12px;padding:22px 20px;min-width:0;border-top:3px solid var(--c)}
+.ar .ic{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:14px;color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent);margin-bottom:12px}
+.ar h3{color:#fff;font-size:21px;margin:0 0 12px}.ar dl{margin:0}.ar dt{font-size:12.5px;font-weight:700;color:var(--c);margin-top:10px;letter-spacing:.3px}.ar dd{margin:2px 0 0;font-size:15px;color:var(--soft)}
+.td{min-width:0;background:var(--p2);border-radius:12px;overflow:hidden}.td figure{margin:0;position:relative}.td img{display:block;width:100%;aspect-ratio:12/7;object-fit:cover}
+.td figure span{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;color:#fff;font-weight:700;font-size:20px;background:linear-gradient(transparent,rgba(0,0,0,.82))}
+.td ol{padding:16px 18px 0 38px;margin:0}.td .cr{font-size:11.5px;padding:8px 18px 14px;margin:0}.td .cr a{color:var(--muted)}
+@media(max-width:1000px){.areas{grid-template-columns:1fr 1fr}}@media(max-width:560px){.areas{grid-template-columns:1fr}}
 @media(max-width:900px){.hero .in{grid-template-columns:1fr}.kinds,.rm,.todo,.call{grid-template-columns:1fr}.hist{grid-template-columns:1fr}.chain{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.ev{grid-template-columns:1fr;gap:8px}.pic img{aspect-ratio:16/8}section.s{padding:56px 0}}
 '''
+
+ICO = {  # original line icons, 24x24
+ 0: ("#ffcf4a", '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>'),
+ 1: ("#5fd8ff", '<path d="M12 12v9M8 21h8"/><circle cx="12" cy="10" r="2"/><path d="M8.5 6.5a5 5 0 0 0 0 7M15.5 6.5a5 5 0 0 1 0 7M5.6 3.6a9 9 0 0 0 0 12.8M18.4 3.6a9 9 0 0 1 0 12.8"/>'),
+ 2: ("#59d6a4", '<rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/>'),
+ 3: ("#6fb6ff", '<path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/><path d="M9 14.5a3 3 0 0 0 3 3"/>'),
+ 4: ("#f2b24a", '<path d="M4 11h16v2a8 8 0 0 1-16 0z"/><path d="M8 7c0-1.5 1-2 1-3.5M12 7c0-1.5 1-2 1-3.5M16 7c0-1.5 1-2 1-3.5"/>'),
+ 5: ("#ff6b7a", '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M12 10.5v6M9 13.5h6"/>'),
+ 6: ("#b58cff", '<path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10 11V9.5a2 2 0 0 1 4 0V11"/>'),
+ 7: ("#8fe0c8", '<rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 11h16M8 21l2-4M16 21l-2-4"/><circle cx="8.5" cy="14" r="1"/><circle cx="15.5" cy="14" r="1"/>'),
+}
+def ico(i):
+    c, d = ICO[i]
+    return f'<span class="ic" style="--c:{c}"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{d}</svg></span>'
+TPH = {"p": ("photo-1685342654383-584d56907425", "a-flashlight-sitting-on-the-floor-of-a-room-XCnqwORjlWg"),
+       "b": ("photo-1774600134168-b9ebd714e4e1", "team-collaborating-on-laptops-in-modern-office-N3Bf0ArT5J0"),
+       "g": ("photo-1700049775359-6f53cd16114e", "a-room-filled-with-lots-of-desks-covered-in-monitors-5ma_XqDCiG4")}
 
 T = {
  "ko": dict(title="사이버 공격 — 지금 세계에서 일어나는 일과 준비 · GOV RADAR", desc="사이버 공격 12가지 유형, 2026년 9~11월 국내외 사건(실제 공격과 단순 장애 구분), 역대 주요 사건, 한국 가정·기업·정부의 준비 사항 — GOV RADAR",
@@ -113,8 +138,9 @@ def page(L):
     stats = "".join(f'<div><b>{E(n if L=="ko" else n.replace("63억 달러","$6.3bn"))}</b><span>{E(a[i])}</span><small>{E(b[i])}</small></div>' for n, a, b in C.STATS)
     chain = "".join(f'<div><b>{E(a[i])}</b><h3>{E(b[i])}</h3><p>{E(c[i])}</p></div>' for a, b, c in C.CHAIN)
     rumor = "".join(f'<div><h3>{E(a[i])}</h3><p>{E(b[i])}</p></div>' for a, b in C.RUMOR)
-    prep = "".join(f'<tr><th>{E(a[i])}</th><td>{E(b[i])}</td><td>{E(c[i])}</td><td>{E(d[i])}</td></tr>' for a, b, c, d in C.PREP)
-    todo = "".join(f'<div><h3>{E(t[h])}</h3><ol>' + "".join(f"<li>{E(x[i])}</li>" for x in C.TODO[k]) + "</ol></div>" for k, h in (("p", "tp"), ("b", "tb"), ("g", "tg")))
+    who = t["pth"][1:]
+    prep = "".join(f'<div class="ar" style="--c:{ICO[n][0]}">{ico(n)}<h3>{E(a[i])}</h3><dl><dt>{E(who[0])}</dt><dd>{E(b[i])}</dd><dt>{E(who[1])}</dt><dd>{E(c[i])}</dd><dt>{E(who[2])}</dt><dd>{E(d[i])}</dd></dl></div>' for n, (a, b, c, d) in enumerate(C.PREP))
+    todo = "".join(f'<div class="td"><figure><img src="https://images.unsplash.com/{TPH[k][0]}?auto=format&fit=crop&w=720&h=420&q=70" alt="" loading="lazy" referrerpolicy="no-referrer"><span>{E(t[h])}</span></figure><ol>' + "".join(f"<li>{E(x[i])}</li>" for x in C.TODO[k]) + f'</ol><p class="cr"><a href="https://unsplash.com/photos/{TPH[k][1]}" target="_blank" rel="noopener">Unsplash</a></p></div>' for k, h in (("p", "tp"), ("b", "tb"), ("g", "tg")))
     call = "".join(f'<div><b>{n}</b><span>{E(d[i])}</span></div>' for n, d in C.CALL)
     seen = set(); src = ""
     for n, u in C.SRC:
@@ -147,7 +173,7 @@ def page(L):
 <section class="s alt" id="chain"><div class="wrap"><h2>{E(t["ch"])}</h2><p class="lede">{E(t["cl"])}</p><div class="chain">{chain}</div></div></section>
 <section class="s" id="rumor"><div class="wrap"><h2>{E(t["rh"])}</h2><p class="lede">{E(t["rl"])}</p><div class="rm">{rumor}</div></div></section>
 <section class="s alt" id="prep"><div class="wrap"><h2>{E(t["ph"])}</h2><p class="lede">{E(t["pl"])}</p>
-<div class="tsc"><table class="pp"><thead><tr>{"".join(f"<th>{E(x)}</th>" for x in t["pth"])}</tr></thead><tbody>{prep}</tbody></table></div>
+<div class="areas">{prep}</div>
 <div class="todo">{todo}</div><h3 style="color:#fff;font-size:20px;margin:48px 0 0">{E(t["callh"])}</h3><div class="call" style="margin-top:16px">{call}</div></div></section>
 <section class="s" id="src"><div class="wrap"><h2>{E(t["sh"])}</h2><p class="lede" style="font-size:15px">{E(t["sn"])}</p><ol class="src">{src}</ol></div></section>
 <footer><div class="wrap">{E(t["foot"])}</div></footer><div style="background:#0a0a0a;display:flex;justify-content:center;align-items:center;padding:40px 16px 44px"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><img src="/assets/wmm-logo-white.png" alt="WORLD MAKING MEMBERS" width="150" height="150" style="display:block;width:150px;height:150px"></a></div>
