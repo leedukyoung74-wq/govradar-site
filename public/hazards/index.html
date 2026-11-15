@@ -398,7 +398,7 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="bgW" viewBox="0 0 640 400"></symbol><symbol id="bgC" viewBox="0 0 640 400"></symbol></defs></svg>
 <script>
 (function(){
-var D=window.DZ,lang=(new URLSearchParams(location.search).get('l')||'ko')==='ko'?'ko':'en';
+var _ul=(new URLSearchParams(location.search).get('l')||'ko');if(['ko','en','es','fr','ar','vi','id'].indexOf(_ul)<0)_ul='en';var D=window.DZ,lang=_ul==='ko'?'ko':'en';
 var TY=D.types;
 var EM={'Flood':'🌧️','Extreme weather':'🌀','Earthquake':'🏚️','Landslide':'⛰️','Wildfire':'🔥','Drought':'🏜️','Extreme temperature':'🌡️','Volcanic activity':'🌋','Tsunami':'🌊'};
 var NM={ko:{'Flood':'홍수','Extreme weather':'태풍·폭풍','Earthquake':'지진·해일','Landslide':'산사태','Wildfire':'산불','Drought':'가뭄','Extreme temperature':'폭염·한파','Volcanic activity':'화산','Tsunami':'해일'},
@@ -463,7 +463,7 @@ f1:'World Making Members Co., Ltd. · GOV RADAR',snap:'as of {d}',livenow:'live'
 function tr(k){return T[lang][k]||k}
 var HZ=window.HZ||{c:{},now:{},upd:''};
 function nf(n){return n.toLocaleString(lang==='ko'?'ko-KR':'en-US')}
-var rn; function cname(c){try{rn=rn&&rn.l===lang?rn:Object.assign(new Intl.DisplayNames([lang],{type:'region'}),{l:lang});return rn.of(c.a2)||c.en}catch(e){return c.en}}
+var rn; function cname(c){try{rn=rn&&rn.l===_ul?rn:Object.assign(new Intl.DisplayNames([_ul],{type:'region'}),{l:_ul});return rn.of(c.a2)||c.en}catch(e){return c.en}}
 function flag(a2){return a2.replace(/./g,function(ch){return String.fromCodePoint(127397+ch.charCodeAt(0))})}
 var tip=document.getElementById('tip');
 function showTip(ev,html){tip.innerHTML=html;tip.style.opacity=1;var x=ev.clientX+14,y=ev.clientY+14,w=tip.offsetWidth,h=tip.offsetHeight;if(x+w>innerWidth-8)x=ev.clientX-w-14;if(y+h>innerHeight-8)y=ev.clientY-h-14;tip.style.left=Math.max(8,x)+'px';tip.style.top=Math.max(8,y)+'px'}
@@ -703,7 +703,7 @@ function apoVid(){
 }
 /* ---------- i18n + live refresh ---------- */
 function render(){
- document.documentElement.lang=lang;document.title=lang==='ko'?'GOV RADAR 재난 한눈에 보기':'GOV RADAR Disaster Overview';
+ document.documentElement.lang=_ul;if(_ul==='ar')document.documentElement.dir='rtl';document.title=lang==='ko'?'GOV RADAR 재난 한눈에 보기':'GOV RADAR Disaster Overview';
  document.querySelectorAll('[data-i]').forEach(function(el){el.innerHTML=tr(el.dataset.i).replace('{d}',D.snap).replace('{u}',HZ.upd)});
  var _lb=document.getElementById('lang');if(_lb)_lb.textContent=lang==='ko'?'English':'한국어';var _hm=document.getElementById('home');if(_hm)_hm.href=lang==='ko'?'/ko/':'/en/';
  kpis();legend();ychart();heat();csel();wmap();hzGallery();apo();apoVid();var _cl=document.getElementById('cylink');if(_cl){_cl.href=lang==='ko'?'/cyber/':'/cyber/en/';_cl.textContent=lang==='ko'?'사이버 공격 — 유형·최근 사건·준비 사항 보기 →':'Cyberattacks — kinds, recent incidents and preparation →'}document.querySelectorAll('[data-al]').forEach(function(e){e.hidden=(e.dataset.al==='ko')!==(lang==='ko')});if(sel)openC(sel)}
@@ -792,5 +792,11 @@ ctl.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;var k=b.
 idx();})();
 
 </script>
+<script>(function(){var L=(new URLSearchParams(location.search).get('l')||'ko');if(['es','fr','ar','vi','id'].indexOf(L)<0)return;
+function tx(root){var D=window.HZTR;if(!D||!root)return;var w=document.createTreeWalker(root,4),n,a=[];while(n=w.nextNode())a.push(n);
+a.forEach(function(n){var p=n.parentNode;if(!p||/^(SCRIPT|STYLE)$/.test(p.nodeName))return;var t=n.nodeValue,s=t.trim();if(!s)return;var v=D[s];if(!v){var m=s.match(/^([\d.]+)× lunar distance$/);if(m&&D['@lunar'])v=m[1]+D['@lunar']}if(v&&v!==s)n.nodeValue=t.replace(s,v)});
+if(root.querySelectorAll)root.querySelectorAll('[title],[aria-label],[alt],[placeholder]').forEach(function(e){['title','aria-label','alt','placeholder'].forEach(function(k){var v=e.getAttribute(k);if(v&&D[v.trim()])e.setAttribute(k,D[v.trim()])})})}
+var sc=document.createElement('script');sc.src='/hazards/tr-'+L+'.js?v=1';sc.onload=function(){tx(document.body);new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(x){if(x.nodeType===3){var p=x.parentNode;if(p)tx(p)}else if(x.nodeType===1)tx(x)})})}).observe(document.body,{childList:true,subtree:true})};document.head.appendChild(sc)})();</script>
+<style>html[dir=rtl] body{text-align:right}html[dir=rtl] svg,html[dir=rtl] canvas{direction:ltr}</style>
 </body>
 </html>
