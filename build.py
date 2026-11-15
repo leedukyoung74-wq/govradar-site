@@ -651,6 +651,7 @@ def stock_page(L):
     CN = {c["id"]: nmk(c) for c in STK["cats"]}
     from urllib.parse import quote
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{e(H['t'])}</h1></div></section>
+<section class="band" id="wmm-kits"><div class="in">{P3.wmm_kits(L)}</div></section>
 <div class="in stock">
 <p class="cta"><a class="btn pri" href="/{L}/ready/">{"Open the preparedness centre — plan, calculators, contact card →" if en else "재난 대비센터 열기 — 맞춤 계획·계산기·연락카드 →"}</a></p><blockquote class="summary">{e(STK['giles']['en' if en else 'ko'])}<br><small class="note">{e(STK['giles']['note_en' if en else 'note_ko'])}</small></blockquote>
 <div class="cards">{''.join(f'<div class="card"><h3>{e(nmk(x))}</h3><p>{e(k(x,"p"))}</p></div>' for x in STK['stages'])}</div>

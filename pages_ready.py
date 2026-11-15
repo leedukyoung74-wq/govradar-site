@@ -120,6 +120,8 @@ def body(L):
 <div class="rd-tw"><table class="rd-t"><thead><tr><th>{t("물품", "Item")}</th><th>{t("수량", "Qty")}</th><th>{t("금액", "Amount")}</th><th>{t("기한", "Expiry")}</th><th>{t("위치", "Location")}</th><th></th></tr></thead><tbody id="st-body"></tbody></table></div>
 <p class="note">{t("정전된 냉장고는 문을 닫아 두면 약 4시간, 가득 찬 냉동고는 48시간, 절반은 24시간이 기준입니다. 직접 받은 물은 6개월마다 바꿉니다.", "A closed fridge keeps food about 4 hours in an outage; a full freezer 48 hours, half-full 24. Replace self-stored water every 6 months.")} {src([3, 5])}</p>
 </div></section>''')
+    import pages3 as _P3
+    out.append(f'''<section class="rd-sec rd-alt" id="kits"><div class="rd-in">{_P3.wmm_kits(L)}</div></section>''')
     # CARD
     cf = lambda k, lab: f'<label>{e(lab)}<input data-c="{k}"></label>'
     out.append(f'''<section class="rd-sec rd-alt" id="card"><div class="rd-in rd-two">

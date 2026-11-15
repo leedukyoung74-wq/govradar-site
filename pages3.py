@@ -873,3 +873,38 @@ def membership_page(L, C):
     return C["head"](L, T("WMM 멤버십", "WMM Membership") + " · GOV RADAR",
                      T("WMM 멤버십 M0–M5: 정보 탐색부터 서류 준비, 시장 검증, 공공 수주까지. 가입·결제는 wmm-hoa.com.", "WMM membership M0–M5: from information to documents, market validation and public contracts. Join at wmm-hoa.com."),
                      f"/{L}/membership/", {l: f"/{l}/membership/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
+
+# ---------------------------------------------------------------- WMM emergency kits (owner's product images, 2026-11-15)
+def wmm_kits(L):
+    ko = L == "ko"; T = lambda a, b: a if ko else b
+    kits = [("GO72", T("개인 생존배낭 · 1인 2~3일", "Personal survival pack · 1 person, 2–3 days"),
+             T("28L 방수형 백팩, LED 헤드랜턴, 보조배터리 10,000mAh, 휴대형 라디오, 보온 은박포, 우의, 호루라기, 방수 서류 파우치, 위생·마스크 팩, 기본 드레싱/밴드 팩, 간식·식량 소량, 연락카드·가이드, 패키징·검수 (13종)",
+               "28L waterproof backpack, LED headlamp, 10,000mAh power bank, portable radio, thermal blanket, poncho, whistle, waterproof document pouch, hygiene & mask pack, dressing & bandage pack, snacks, contact card & guide, packing & inspection (13 items)")),
+            ("HOME3", T("가정용 대비 키트 · 2인 3일", "Home emergency kit · 2 people, 3 days"),
+             T("생수 24L(2L×12), 상온 식량 18끼, 건전지 라디오, LED 조명 2종, 보조배터리 2종, 응급 위생팩, 방한담요 2개, 수납함·설명서 (8종)",
+               "24L water (2L × 12), 18 shelf-stable meals, battery radio, 2 LED lights, 2 power banks, emergency hygiene pack, 2 warm blankets, storage box & guide (8 items)")),
+            ("CAR24", T("차량용 비상 키트 · 24시간", "Car emergency kit · 24 hours"),
+             T("내열 보관 파우치, 반사 조끼, 손전등, 구급·위생 소형팩, 담요·보온포, 연락카드·호루라기 (6종)",
+               "Heat-resistant storage pouch, reflective vest, flashlight, first-aid & hygiene kit, blanket & thermal sheet, contact card & whistle (6 items)"))]
+    kc = "".join(f'<div class="wk-k"><b>{a}</b><span>{b}</span><p>{c}</p></div>' for a, b, c in kits)
+    gal = [("kit-home3", T("HOME3 · 생수 24L · 상온 식량 18끼 · 건전지 라디오", "HOME3 · 24L water · 18 meals · battery radio")),
+           ("kit-go72-a", T("GO72 · 28L 방수 백팩 · LED 헤드랜턴 · 보조배터리", "GO72 · 28L backpack · headlamp · power bank")),
+           ("kit-go72-b", T("휴대형 라디오 · 보온 은박포 · 우의", "Portable radio · thermal blanket · poncho")),
+           ("kit-go72-c", T("호루라기 · 방수 서류 파우치 · 위생·마스크 팩", "Whistle · document pouch · hygiene pack")),
+           ("kit-go72-d", T("드레싱/밴드 팩 · 간식·식량 · 연락카드·가이드 · 검수 포장", "Dressing pack · snacks · contact card · inspected packing")),
+           ("kit-home3-b", T("HOME3 · LED 조명 2종 · 보조배터리 2종 · 응급 위생팩", "HOME3 · 2 LED lights · 2 power banks · hygiene pack")),
+           ("kit-home3-c", T("HOME3 · 방한담요 2개 · 수납함·설명서", "HOME3 · 2 blankets · storage box & guide")),
+           ("kit-car24-a", T("CAR24 · 내열 파우치 · 반사 조끼 · 손전등", "CAR24 · heat-resistant pouch · reflective vest · flashlight")),
+           ("kit-car24-b", T("CAR24 · 구급·위생팩 · 담요·보온포 · 연락카드·호루라기", "CAR24 · first-aid pack · blanket · contact card & whistle"))]
+    gh = "".join(f'<figure><img src="/assets/{f}.webp" alt="{c}" width="1200" height="675" loading="lazy" decoding="async"><figcaption>{c}</figcaption></figure>' for f, c in gal)
+    css = ('<style>.wk-main{width:100%;height:auto;display:block;border-radius:6px;margin:18px 0 6px}'
+           '.wk-ks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}'
+           '.wk-k{background:#fff;color:#111;padding:20px;border-radius:6px;min-width:0}.wk-k b{display:block;font-size:26px;line-height:1.1}.wk-k span{display:block;font-weight:700;margin:6px 0 8px}.wk-k p{margin:0;font-size:14.5px;line-height:1.6}'
+           '.wk-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}.wk-g figure{margin:0;min-width:0}.wk-g img{width:100%;height:auto;display:block;border-radius:6px}.wk-g figcaption{font-size:13px;margin-top:6px;opacity:.8}'
+           '.wk-n{font-size:13px;opacity:.75}'
+           '@media(max-width:900px){.wk-ks,.wk-g{grid-template-columns:1fr 1fr}}@media(max-width:560px){.wk-ks,.wk-g{grid-template-columns:1fr}}</style>')
+    return (css + f'<h2>{T("WMM 비상 키트 — GO72 · HOME3 · CAR24", "WMM emergency kits — GO72 · HOME3 · CAR24")}</h2>'
+            f'<p>{T("들고 나가는 배낭, 집에 두는 상자, 차에 싣는 가방. 상황에 맞춰 세 가지로 준비했습니다.", "A pack to grab, a box for home and a bag for the car — three kits for three situations.")}</p>'
+            f'<img class="wk-main" src="/assets/kit-all.webp" alt="{T("GO72·HOME3·CAR24 구성품과 구성품별 가격", "GO72, HOME3 and CAR24 contents and item prices")}" width="1600" height="900" loading="lazy" decoding="async">'
+            f'<div class="wk-ks">{kc}</div><div class="wk-g">{gh}</div>'
+            f'<p class="wk-n">{T("사진은 콘셉트 이미지입니다. 구성과 가격은 출시 전 안내용이며 바뀔 수 있습니다. 구매·단체 주문 문의: 73036396@naver.com", "Images are concept images. Contents and prices are pre-launch guidance and may change. Orders and bulk enquiries: 73036396@naver.com")}</p>')
