@@ -309,14 +309,14 @@ def country_page(iso, L):
             rs = tx(L, "rs")
             body.append(sec("status", tx(L, "rg_stat"), "".join(f'<div class="kv"><span>{e(rs[k])}</span><span>{e(" · ".join(st[k]) if isinstance(st[k], list) else st[k])}</span></div>' for k in rs if st.get(k))))
         body.append(sec("leader", t["leader"], f"<p>{e(G(d,'leader',L))}</p>" if G(d,'leader',L) else ""))
-        body.append(sec("agenda", t["agenda"], lst(G(d, "agenda", L), lambda x: f"<li>{e(x)}</li>")))
+        body.append(sec("agenda", t["agenda"], mlock(L, iso, "agenda", [f"<li>{e(x)}</li>" for x in (G(d, "agenda", L) or []) if x], n=3)))
         def pj(p):
             p = p if isinstance(p, dict) else {"title": p}
             kv = "".join(f'<div class="kv"><span>{e(t[k])}</span><span>{e(p.get(k))}</span></div>' for k in ("ministry", "budget", "status") if p.get(k))
             link = f'<a href="{e(p["url"])}" rel="nofollow noopener" target="_blank">{e(t["sources"])}</a>' if str(p.get("url","")).startswith("https://") else ""
             return f'<details class="folder"><summary><b>{e(p.get("title"))}</b>{f"<span class=bd>{e(p.get(chr(98)+chr(117)+chr(100)+chr(103)+chr(101)+chr(116)))}</span>" if p.get("budget") else ""}</summary><div class="fb">{f"<p>{e(p.get(chr(100)+chr(101)+chr(116)+chr(97)+chr(105)+chr(108)))}</p>" if p.get("detail") else ""}{kv}{link}</div></details>'
         pjs = G(d, "projects", L) or []
-        body.append(sec("projects", t["projects"], "".join(pj(p) for p in pjs)))
+        body.append(sec("projects", t["projects"], mlock(L, iso, "projects", [pj(p) for p in pjs], ("", ""))))
         bzs = G(d, "biz", L) or [{"title": x} for x in (d.get("items") or [])]
         pi = pub_idx(len(bzs))
         def bz(b, i):
@@ -331,15 +331,15 @@ def country_page(iso, L):
             _mk = ("📁 " + P3.pt("closed", L) + " · ") if _past else ""
             return f'<li class="{"tpast" if _past else ("thot" if _hot else "")}{" tnew" if _new else ""}">{_mk}<b>{e(x.get("title"))}</b>{P3.NB(L) if _new else ""}<span class="note"> · {e(x.get("buyer",""))}{" · "+e(t["deadline"])+" "+e(x.get("deadline")) if x.get("deadline") else ""}</span> <button class="btn xs member" data-act="watch" data-iso="{iso}" data-title="{e(x.get("title"))}" data-deadline="{e(x.get("deadline",""))}">{e(t["watch"])}</button></li>'
         tds = [x for x in (G(d, "tenders", L) or []) if x]
-        body.append(sec("tenders", t["tenders"], ("<ul>" + "".join(td(x) for x in tds) + "</ul>") if tds else ""))
+        body.append(sec("tenders", t["tenders"], mlock(L, iso, "tenders", [td(x) for x in tds])))
         def oda(x): return f'<li><b>{e(x.get("title"))}</b><span class="note"> · {e(" · ".join(str(v) for v in [x.get("program"), x.get("stage"), x.get("amount")] if v))}</span></li>'
-        body.append(sec("oda", t["oda"], lst(G(d, "oda", L), oda)))
+        body.append(sec("oda", t["oda"], mlock(L, iso, "oda", [oda(x) for x in (G(d, "oda", L) or []) if x])))
         def kw(x): return f'<li><b>{e(x.get("company"))}</b> — {e(x.get("title"))} <span class="note">{e(" · ".join(str(v) for v in [x.get("year"), x.get("value")] if v))}</span></li>'
-        _kw = lst(G(d, "krwins", L), kw); body.append(sec("krwins", t["krwins"], f'<div class="sgate">{_kw}</div>' if _kw else ""))
+        _kw = mlock(L, iso, "krwins", [kw(x) for x in (G(d, "krwins", L) or []) if x]); body.append(sec("krwins", t["krwins"], f'<div class="sgate">{_kw}</div>' if _kw else ""))
         def ks(x): return f'<li><b>{e(x.get("title"))}</b><span class="note"> · {e(x.get("org",""))}</span>{" — "+e(x.get("detail")) if x.get("detail") else ""}</li>'
-        body.append(sec("krsupport", t["krsupport"], lst(G(d, "krsupport", L), ks)))
+        body.append(sec("krsupport", t["krsupport"], mlock(L, iso, "krsupport", [ks(x) for x in (G(d, "krsupport", L) or []) if x])))
         g = G(d, "gov", L) or {}
-        gn = lst(g.get("notices"), lambda x: f"<li>{e(x)}</li>")
+        gn = mlock(L, iso, "gov", [f"<li>{e(x)}</li>" for x in (g.get("notices") or []) if x])
         gl = f'<p><a href="{e((d.get("gov") or {}).get("url"))}" target="_blank" rel="noopener nofollow">{e(g.get("title") or (d.get("gov") or {}).get("title"))}</a></p>' if str((d.get("gov") or {}).get("url", "")).startswith("https://") else ""
         body.append(sec("gov", t["gov"], gl + gn))
     # risk/econ/sanctions always (risk exists for all)
@@ -709,6 +709,27 @@ def hotband(L):
         g = GEO.get(h["id"]) or dict(focus=h["iso"], hl=h["iso"], pts=[])
         items += f'<a href="/{L}/conflict/">{hotmap(g["focus"], g["hl"], g["pts"])}<span><span class="lv {h["level"]}">{ {"war":"WAR" if en else "전쟁","tension":"TENSION" if en else "긴장","watch":"WATCH" if en else "경계"}.get(h["level"],"") }</span> {e(h["en"] if en else h["ko"])}</span></a>'
     return f'<section class="hotband"><div class="in"><h2>{"Hot zones now — verified" if en else "지금 주목할 분쟁 지역 — 검증된 사실만"}</h2><p class="note">{e(CONF["updated"])} · <a href="/{L}/conflict/" style="color:inherit">{"Open conflict watch →" if en else "분쟁 상황판 열기 →"}</a></p><div class="hgrid">{items}</div></div></section>'
+# ---- M0 teaser: first FREE_N items public, the rest encrypted for M1+ (private/m/<L>/<file>.json "more")
+FREE_N = 2
+MORE = {}
+MLK = {"ko": ("나머지 {n}건은 M1 분석 회원부터 볼 수 있습니다", "멤버십 보기"),
+       "en": ("{n} more — available from M1 membership", "See membership"),
+       "es": ("{n} más — disponible desde la membresía M1", "Ver membresía"),
+       "fr": ("{n} de plus — accessible dès l'adhésion M1", "Voir l'adhésion"),
+       "ar": ("{n} إضافية — متاحة من عضوية M1", "عرض العضوية"),
+       "vi": ("Thêm {n} mục — dành cho thành viên M1 trở lên", "Xem gói thành viên"),
+       "id": ("{n} lainnya — tersedia mulai keanggotaan M1", "Lihat keanggotaan")}
+def mlock(L, f, sid, parts, wrap=("<ul>", "</ul>"), n=FREE_N):
+    parts = [x for x in parts if x]
+    if not parts: return ""
+    h = wrap[0] + "".join(parts[:n]) + wrap[1]
+    rest = parts[n:]
+    if rest:
+        MORE.setdefault((L, f), {})[sid] = wrap[0] + "".join(rest) + wrap[1]
+        a, b = MLK.get(L, MLK["en"])
+        h += f'<div class="mlock" data-sec="{sid}" data-f="{f}"><span>🔒 {e(a.format(n=len(rest)))}</span> <a href="/{L}/membership/">{e(b)}</a></div>'
+    return h
+
 WEEK = datetime.date.fromisoformat(TODAY).isocalendar()[1]
 def pub_idx(n): return (WEEK % n) if n else 0   # which business opportunity shows its WHY publicly this week
 def lockbox(L, iso, n):
@@ -741,7 +762,7 @@ def home(L):
     lk = "ko" if L == "ko" else "en"
     board = "".join(f'<a class="opp{"" if j < 6 else " lk"}" href="{url(L,o["iso"])+"#biz" if j < 6 else P3.paylink(L, "biz", o["iso"])}"><span class="who">{flag(o["iso"])} {e(nm(o["iso"],L))}{" <i class=fit>"+e(t["fit"])+"</i>" if o["fit"]=="high" else ""}</span><b>{e(o[lk])}</b><span class="note">{e(o["why_"+lk][:120]) if j < 6 else ("🔒 이유·대상 바이어 — 분석 회원 월 19,800원" if L=="ko" else "🔒 Why-now & buyers — analysis member ₩19,800/mo")}</span></a>' for j, o in enumerate(O[:24]))
     evs = events()[:12]
-    evh = "".join(f'<a class="ev" href="{e(x["url"]) if x.get("url") else url(L,x["iso"])}"{' target="_blank" rel="noopener"' if x.get("url") else ""}><span class="d">{e(x.get("date","")[5:].replace("-","/"))}</span><span>{flag(x["iso"])} <b>{e(x.get("title_en") if L!="ko" and x.get("title_en") else x.get("title"))}</b><br><span class="note">{e(_evo(x, L))}</span></span></a>' for x in evs) or f'<p class="note">—</p>'
+    evh = mlock(L, "_home", "events", [f'<a class="ev" href="{e(x["url"]) if x.get("url") else url(L,x["iso"])}"{' target="_blank" rel="noopener"' if x.get("url") else ""}><span class="d">{e(x.get("date","")[5:].replace("-","/"))}</span><span>{flag(x["iso"])} <b>{e(x.get("title_en") if L!="ko" and x.get("title_en") else x.get("title"))}</b><br><span class="note">{e(_evo(x, L))}</span></span></a>' for x in evs], ('<div class="evs">', "</div>"), n=3) or '<p class="note">—</p>'
     plans = "".join(f'<div class="plan{" mid" if a.startswith("BUILD M2") else ""}"><span class="tier">{e(a)}</span><b class="price">{e(b)}</b><p>{e(c)}</p></div>' for i, (a, b, c) in enumerate(PLANS[L]))
     jl = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "GOV RADAR", "url": BASE + "/", "inLanguage": L, "publisher": ORG, "description": t["desc_home"]})
     return head(L, t["title_home"], t["desc_home"], path, alts, jl + JSVM + '<script src="/assets/hotmap.js" defer></script>') + f"""
@@ -766,7 +787,7 @@ def home(L):
 {ready_band(L)}
 {P3.edge_html(L)}{P3.access_html(L)}
 <section class="band segband"><div class="in"><h2>{"이런 분들이 여기서 사업을 만듭니다" if L=="ko" else "Who does business here"}</h2>{P3.segments_html(L, L=="ko")}<p class="cta"><a class="btn pri" href="/{L}/solutions/">{"분야별로 무엇을 얻는지 보기" if L=="ko" else "See what each sector offers"}</a> <a class="btn" href="/{L}/individuals/">{"개인으로 참여하기" if L=="ko" else "Join as an individual"}</a> <a class="btn" href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a></p></div></section>
-<section class="band" id="events"><div class="in"><h2>{e(t['ev_h'])}</h2><div class="evs">{evh}</div></div></section>
+<section class="band" id="events"><div class="in"><h2>{e(t['ev_h'])}</h2>{evh}</div></section>
 
 """ + foot(L)
 
@@ -935,6 +956,11 @@ def build():
                 if isinstance(o, list): return [_strip(v) for v in o]
                 return o
             c = _strip(d)
+            _subs = [c] + [v for v in ([c.get("en")] + list((c.get("i18n") or {}).values())) if isinstance(v, dict)]
+            for _x in _subs:
+                for _k, _n in (("agenda", 3), ("projects", 2), ("tenders", 2), ("oda", 2), ("krwins", 2), ("krsupport", 2)):
+                    if isinstance(_x.get(_k), list): _x[_k] = _x[_k][:_n]
+                if isinstance(_x.get("gov"), dict) and isinstance(_x["gov"].get("notices"), list): _x["gov"]["notices"] = _x["gov"]["notices"][:2]
             W(f"/data/c/{iso}.json", json.dumps({"iso": iso, "name": BY[iso]["en"], **c}, ensure_ascii=False))
     # member-only analysis (why-now, target buyers, basis) -> private/m/<L>/<ISO>.json, encrypted later by tools/member.py
     _pm = os.path.join(ROOT, "private", "m")
@@ -944,8 +970,11 @@ def build():
             if not done(iso): continue
             _b = [x if isinstance(x, dict) else {"title": x} for x in (G(d, "biz", _L) or [])]
             _o = {"iso": iso, "biz": [{k: x.get(k) for k in ("title", "why", "target", "basis") if x.get(k)} for x in _b]}
-            if any(len(x) > 1 for x in _o["biz"]):
+            if (_L, iso) in MORE: _o["more"] = MORE[(_L, iso)]
+            if any(len(x) > 1 for x in _o["biz"]) or "more" in _o:
                 with open(os.path.join(_pm, _L, iso + ".json"), "w", encoding="utf8") as _f: json.dump(_o, _f, ensure_ascii=False)
+        if (_L, "_home") in MORE:
+            with open(os.path.join(_pm, _L, "_home.json"), "w", encoding="utf8") as _f: json.dump({"more": MORE[(_L, "_home")]}, _f, ensure_ascii=False)
     W("/widget/index.html", widget()); W("/embed.js", embed_js())
     # root: language pick
     W("/index.html", f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOV RADAR — 193 governments</title>

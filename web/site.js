@@ -195,9 +195,11 @@ window.gvLang = function (sel) {
   }
   function esc(s) { var d = document.createElement("div"); d.textContent = s || ""; return d.innerHTML; }
   async function unlockCountry(K) {
-    var cards = document.querySelectorAll("a.card.locked[data-mi]");
-    if (!cards.length) return;
-    var data = await dec(K, L + "/" + cards[0].getAttribute("data-iso") + ".json");
+    var cards = document.querySelectorAll("a.card.locked[data-mi]"), locks = document.querySelectorAll(".mlock[data-f]");
+    var f = cards.length ? cards[0].getAttribute("data-iso") : (locks.length ? locks[0].getAttribute("data-f") : "");
+    if (!f) return;
+    var data = await dec(K, L + "/" + f + ".json");
+    locks.forEach(function (x) { var h = data.more && data.more[x.getAttribute("data-sec")]; if (h) { var t = document.createElement("template"); t.innerHTML = h; x.replaceWith(t.content); } });
     cards.forEach(function (a) {
       var b = data.biz[+a.getAttribute("data-mi")]; if (!b) return;
       var div = document.createElement("div"); div.className = "card";
