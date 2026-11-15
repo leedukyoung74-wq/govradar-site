@@ -83,7 +83,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;font-size:14px;color:var(
 .nt .ni{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;color:var(--c);background:color-mix(in srgb,var(--c) 18%,transparent);margin-bottom:6px}
 .nt em{font-style:normal;font-size:12.5px;font-weight:700;color:var(--c)}.nt b{color:#fff;font-size:17px;line-height:1.3}.nt small{font-size:13px;color:var(--muted);line-height:1.4}
 @media(max-width:760px){.chs.h{display:none}.chs.v{display:block}.chw{padding:10px}}
-@media(prefers-reduced-motion:reduce){.chs .lf,.chs .np{animation:none}.chs .dot{display:none}}
+@media(prefers-reduced-motion:reduce){.chs .lf,.chs .np,.chs .dot{animation-duration:6s}}
 .cmap{background:#020807;border-top:1px solid #0f2a24;padding:56px 0 40px}.cm-wrap{max-width:1600px;margin:0 auto;padding:0 20px}
 .cm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:18px}.cm-eb{font-size:12px;letter-spacing:4px;color:#3fe0a8;margin:0 0 6px}.cmap h2{margin:0 0 8px}.cm-sub{font-size:15px;color:#8fb3a8;margin:0}
 .cm-lg{display:flex;flex-wrap:wrap;gap:8px}.cm-lg button{font:600 14px/1 var(--f);color:#d6efe7;background:#08201b;border:1px solid #1d4a3f;border-radius:999px;padding:9px 13px;cursor:pointer;display:inline-flex;gap:7px;align-items:center}
@@ -300,7 +300,7 @@ function vis(){{var n=0;g.classed("off",function(p){{var o=!ON[p.v];if(!o)n++;re
 document.querySelectorAll(".cm-lg button").forEach(function(b){{b.onclick=function(){{var k=b.dataset.k;ON[k]=ON[k]?0:1;if(k==="no")ON.vuln=ON.no;b.setAttribute("aria-pressed",!!ON[k]);vis()}}}});
 if(innerWidth<760){{var xs=P.map(function(p){{return p.X}}),ys=P.map(function(p){{return p.Y}}),x0=Math.min.apply(null,xs)-60,x1=Math.max.apply(null,xs)+60,y0=Math.min.apply(null,ys)-60,y1=Math.max.apply(null,ys)+60;svg.attr("viewBox",x0+" "+y0+" "+(x1-x0)+" "+(y1-y0))}}
 var sw=document.getElementById("cmsw"),t0=performance.now(),RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
-function loop(ms){{var a=((ms-t0)/1000*60)%360;sw.style.transform="translate(-50%,-50%) rotate("+a+"deg)";g.classed("fl",function(p){{var d=(a-p.A+360)%360;return d<28}});if(!RM)requestAnimationFrame(loop)}}requestAnimationFrame(loop);
+function loop(ms){{var a=((ms-t0)/1000*(RM?30:60))%360;sw.style.transform="translate(-50%,-50%) rotate("+a+"deg)";g.classed("fl",function(p){{var d=(a-p.A+360)%360;return d<28}});requestAnimationFrame(loop)}}requestAnimationFrame(loop);
 }})();</script>
 <script>(function(){{var b=document.querySelectorAll("#flt button"),ev=document.querySelectorAll("#evs .ev");b.forEach(function(x){{x.onclick=function(){{var f=x.dataset.f;b.forEach(function(y){{y.setAttribute("aria-pressed",y===x)}});ev.forEach(function(e){{var ok=f==="all"||(f==="KR"?(" "+e.dataset.iso+" ").indexOf(" KR ")>=0:e.dataset.v===f);e.style.display=ok?"":"none"}})}}}})}})();</script>
 </body></html>'''
