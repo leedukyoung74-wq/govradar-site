@@ -23,6 +23,8 @@ def page(L, sub, s):
         s = s.replace('href="/welcome/', f'href="{base}').replace(f'href="{base}en/', 'href="/en/')
         s = s.replace('https://radar.wmm-hoa.com/welcome/', f'https://radar.wmm-hoa.com{base}')
         s = s.replace("/ko/", f"/{L}/").replace('window.RADAR_LANG="ko"', f'window.RADAR_LANG="{L}"')
+        if L == "vi":
+            s = s.replace("</head>", '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;700&display=swap"><style>body *,body{font-family:"Be Vietnam Pro","WMM Nexon",sans-serif!important}</style></head>', 1)
     opts = "".join(f'<option value="{"/welcome/" if l == "ko" else "/welcome/" + l + "/"}{sub}"{" selected" if l == L else ""}>{NAMES[l]}</option>' for l in LANGS)
     sel = f'<select aria-label="Language" onchange="location.href=this.value" style="min-height: 32px; border: 1px solid rgba(255,255,255,.5); border-radius: 16px; background: #0b1f3a; color: #ffffff; padding: 0 10px; font: inherit; font-size: 13px">{opts}</select>'
     s, n = EN_PILL.subn(sel, s)
