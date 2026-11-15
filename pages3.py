@@ -347,6 +347,7 @@ def wmm_ladder(L):
     h = "정보에서 실제 프로젝트까지 — WMM 멤버십 등급" if ko else "From information to a real project — WMM membership grades"
     n = ("GOV RADAR와 WMM 멤버십은 같은 등급 체계를 씁니다. 상위 등급(M1–M5)의 가입·결제는 WMM 홈페이지에서 합니다." if ko else
          "GOV RADAR and WMM membership share one grade system. Upper grades (M1–M5) are joined and paid for on the WMM website.")
+    n += f'</p><p class="note" style="color:#c62828;font-weight:700;border-top:2px dashed #d32f2f;padding-top:10px">{REVIEW["ko" if ko else "en"]}' 
     b = "WMM 멤버십 가입·결제 (www.wmm-hoa.com) →" if ko else "Join and pay for WMM membership (www.wmm-hoa.com) →"
     return (f'<section class="band" id="wmm-membership"><div class="in"><h2>{h}</h2><p class="note">{n}</p>'
             f'<div class="tscroll"><table class="tiers">{li}</table></div>'
@@ -781,9 +782,79 @@ def access_html(L):
     p = "정보는 무료입니다. 가입하면 실무 자료가, 회원이면 분석이 열리고, 실제 사업은 사람이 함께 갑니다." if ko else "The data is free. Sign up for the working details, become a member for the analysis, and do real deals with a person alongside you."
     return f'<section class="band" id="access"><div class="in"><h2>{h}</h2><p class="note">{p}</p><div class="accs">{"".join(cols)}</div></div></section>'
 
+REVIEW = {
+ "ko": "M3부터 심사 등급 — 심사를 거쳐 가입하며, 심사가 진행되는 동안 투자자와의 협의도 함께 시작할 수 있습니다.",
+ "en": "From M3, membership is by review — you join after a review, and investor discussions can start while the review is under way.",
+ "es": "Desde M3, la membresía requiere evaluación: se accede tras una revisión y las conversaciones con inversores pueden empezar mientras la revisión está en curso.",
+ "fr": "À partir de M3, l’adhésion se fait sur examen : vous rejoignez après un examen, et les échanges avec des investisseurs peuvent commencer pendant l’examen.",
+ "ar": "ابتداءً من M3 تكون العضوية بعد مراجعة: تنضم بعد المراجعة، ويمكن بدء النقاش مع المستثمرين أثناء المراجعة.",
+ "vi": "Từ M3, tư cách thành viên cần xét duyệt: bạn tham gia sau khi được xét duyệt, và có thể bắt đầu trao đổi với nhà đầu tư ngay trong thời gian xét duyệt.",
+ "id": "Mulai M3, keanggotaan melalui peninjauan: Anda bergabung setelah ditinjau, dan pembicaraan dengan investor dapat dimulai selama peninjauan berlangsung.",
+}
+def review_row(L, cols):
+    return (f'<tr class="rvw"><td colspan="{cols}" style="border-top:2px dashed #d32f2f;border-bottom:0;padding:12px 15px;color:#c62828;font-weight:700;text-align:start">'
+            f'{REVIEW[L]}</td></tr>')
+MS_TX = {
+ "es": dict(t="Membresía WMM", h="Membresía WMM — de la primera mirada a la ejecución", lede="Acompañamos a las empresas en su salida al exterior, desde el diagnóstico hasta la ejecución.", tbl="Niveles y precios",
+   head=("Nivel", "Para", "Beneficios clave", "Precio"),
+   rows=[("M0 OPEN", "Empresas que dan un primer vistazo", "Radar público y fichas de país", "Gratis"),
+         ("M1 MEMBER", "Empresas que siguen los datos", "Radar completo + 2 solicitudes de análisis al mes", "₩19.800/mes"),
+         ("M2 PRO", "Empresas que preparan su entrada", "Alertas por país, apoyo con documentos en inglés", "₩149.000/mes"),
+         ("M3 BUSINESS", "Empresas ya validadas", "Preparación de contrapartes, consulta prioritaria, conversaciones con inversores (desde la revisión)", "₩390.000/mes"),
+         ("M4 PROJECT", "Entrada en un país concreto", "Validación de mercado de 6 semanas, agenda local, conversaciones con inversores", "desde ₩1,9 M"),
+         ("M5 STRATEGIC", "Contratos públicos o grandes", "Desde la preparación de la oferta hasta el contrato, conversaciones con inversores", "3–5 % del contrato")],
+   note="IVA no incluido · Propuesta v2.0, se confirmará. No garantizamos inversión, contratos ni ventas.", btn="Unirse y pagar en www.wmm-hoa.com →", c="Contacto"),
+ "fr": dict(t="Adhésion WMM", h="Adhésion WMM — du premier regard à l’exécution", lede="Nous accompagnons les entreprises à l’international, du diagnostic à l’exécution.", tbl="Niveaux et tarifs",
+   head=("Niveau", "Pour", "Avantages clés", "Tarif"),
+   rows=[("M0 OPEN", "Entreprises qui découvrent", "Radar public et fiches pays", "Gratuit"),
+         ("M1 MEMBER", "Entreprises qui suivent les données", "Radar complet + 2 demandes d’analyse par mois", "19 800 ₩/mois"),
+         ("M2 PRO", "Entreprises qui préparent leur entrée", "Alertes pays, aide aux documents en anglais", "149 000 ₩/mois"),
+         ("M3 BUSINESS", "Entreprises validées", "Préparation des contreparties, consultation prioritaire, échanges avec des investisseurs (dès l’examen)", "390 000 ₩/mois"),
+         ("M4 PROJECT", "Entrée dans un pays précis", "Validation de marché en 6 semaines, agenda local, échanges avec des investisseurs", "à partir de 1,9 M₩"),
+         ("M5 STRATEGIC", "Marchés publics ou grands contrats", "De la préparation de l’offre au contrat, échanges avec des investisseurs", "3–5 % du contrat")],
+   note="TVA non comprise · Proposition v2.0, à confirmer. Nous ne garantissons ni investissement, ni contrat, ni chiffre d’affaires.", btn="Adhérer et payer sur www.wmm-hoa.com →", c="Contact"),
+ "ar": dict(t="عضوية WMM", h="عضوية WMM — من النظرة الأولى إلى التنفيذ", lede="نرافق الشركات في توسعها الخارجي من التشخيص حتى التنفيذ.", tbl="المستويات والأسعار",
+   head=("المستوى", "لمن", "المزايا الأساسية", "السعر"),
+   rows=[("M0 OPEN", "شركات تلقي نظرة أولى", "الرادار العام وملخصات الدول", "مجاني"),
+         ("M1 MEMBER", "شركات تتابع البيانات", "الرادار كاملًا + طلبا تحليل شهريًا", "19,800 وون/شهريًا"),
+         ("M2 PRO", "شركات تستعد للدخول", "تنبيهات الدول، دعم المستندات بالإنجليزية", "149,000 وون/شهريًا"),
+         ("M3 BUSINESS", "شركات اجتازت التحقق", "التحضير للشركاء، استشارة ذات أولوية، نقاش مع المستثمرين (منذ بدء المراجعة)", "390,000 وون/شهريًا"),
+         ("M4 PROJECT", "دخول دولة محددة", "تحقق من السوق خلال 6 أسابيع، جدولة محلية، نقاش مع المستثمرين", "من 1.9 مليون وون"),
+         ("M5 STRATEGIC", "عقود عامة أو كبيرة", "من إعداد العطاء حتى العقد، نقاش مع المستثمرين", "3–5% من قيمة العقد")],
+   note="غير شامل ضريبة القيمة المضافة · مقترح v2.0 وسيتم تأكيده. لا نضمن الاستثمار أو العقود أو المبيعات.", btn="الانضمام والدفع عبر www.wmm-hoa.com ←", c="التواصل"),
+ "vi": dict(t="Thành viên WMM", h="Thành viên WMM — từ tìm hiểu đến triển khai", lede="Chúng tôi đồng hành cùng doanh nghiệp ra nước ngoài, từ chẩn đoán đến triển khai.", tbl="Hạng và mức phí",
+   head=("Hạng", "Dành cho", "Quyền lợi chính", "Mức phí"),
+   rows=[("M0 OPEN", "Doanh nghiệp mới tìm hiểu", "Radar công khai và tóm tắt quốc gia", "Miễn phí"),
+         ("M1 MEMBER", "Doanh nghiệp theo dõi dữ liệu", "Toàn bộ radar + 2 yêu cầu phân tích mỗi tháng", "₩19.800/tháng"),
+         ("M2 PRO", "Doanh nghiệp chuẩn bị gia nhập", "Cảnh báo theo quốc gia, hỗ trợ tài liệu tiếng Anh", "₩149.000/tháng"),
+         ("M3 BUSINESS", "Doanh nghiệp đã được xác minh", "Chuẩn bị đối tác, tư vấn ưu tiên, trao đổi với nhà đầu tư (từ khi xét duyệt)", "₩390.000/tháng"),
+         ("M4 PROJECT", "Gia nhập một quốc gia cụ thể", "Kiểm chứng thị trường 6 tuần, sắp xếp lịch tại chỗ, trao đổi với nhà đầu tư", "từ ₩1,9 triệu"),
+         ("M5 STRATEGIC", "Hợp đồng công hoặc quy mô lớn", "Từ chuẩn bị hồ sơ thầu đến ký hợp đồng, trao đổi với nhà đầu tư", "3–5% giá trị hợp đồng")],
+   note="Chưa gồm VAT · Đề xuất v2.0, sẽ được xác nhận. Chúng tôi không bảo đảm đầu tư, hợp đồng hay doanh thu.", btn="Tham gia và thanh toán tại www.wmm-hoa.com →", c="Liên hệ"),
+ "id": dict(t="Keanggotaan WMM", h="Keanggotaan WMM — dari melihat pertama hingga eksekusi", lede="Kami mendampingi perusahaan ke luar negeri, dari diagnosis hingga eksekusi.", tbl="Tingkat dan harga",
+   head=("Tingkat", "Untuk", "Manfaat utama", "Harga"),
+   rows=[("M0 OPEN", "Perusahaan yang baru melihat", "Radar publik dan ringkasan negara", "Gratis"),
+         ("M1 MEMBER", "Perusahaan yang mengikuti data", "Radar lengkap + 2 permintaan analisis per bulan", "₩19.800/bulan"),
+         ("M2 PRO", "Perusahaan yang bersiap masuk", "Peringatan negara, dukungan dokumen bahasa Inggris", "₩149.000/bulan"),
+         ("M3 BUSINESS", "Perusahaan yang sudah tervalidasi", "Persiapan mitra, konsultasi prioritas, pembicaraan dengan investor (sejak peninjauan)", "₩390.000/bulan"),
+         ("M4 PROJECT", "Masuk ke negara tertentu", "Validasi pasar 6 minggu, penjadwalan lokal, pembicaraan dengan investor", "mulai ₩1,9 juta"),
+         ("M5 STRATEGIC", "Kontrak publik atau besar", "Dari persiapan tender hingga kontrak, pembicaraan dengan investor", "3–5% nilai kontrak")],
+   note="Belum termasuk PPN · Usulan v2.0, akan dikonfirmasi. Kami tidak menjamin investasi, kontrak, atau penjualan.", btn="Bergabung dan bayar di www.wmm-hoa.com →", c="Kontak"),
+}
+
 # ---------------------------------------------------------------- WMM membership introduction (from the owner's deck v2.0, 2026-11-15)
 def membership_page(L, C):
     ko = L == "ko"; T = lambda k, en: k if ko else en
+    if L in MS_TX:
+        X = MS_TX[L]
+        rows = "".join(f"<tr><th>{a}</th><td>{b}</td><td>{c}</td><td><b>{d}</b></td></tr>" for a, b, c, d in X["rows"])
+        _r = rows.split("</tr>"); rows = "</tr>".join(_r[:3]) + "</tr>" + review_row(L, 4) + "</tr>".join(_r[3:])
+        hd = "<tr>" + "".join(f"<th>{h}</th>" for h in X["head"]) + "</tr>"
+        body = (f'<style>.tiers td,.tiers th{{text-align:start}}</style><section class="phero short">{img("sign", "", 1800, 700, "bg", True)}<div class="in"><h1>{X["h"]}</h1><p class="lede">{X["lede"]}</p>'
+                f'<p class="cta"><a class="btn pri" href="https://www.wmm-hoa.com/membership/" target="_blank" rel="noopener">{X["btn"]}</a></p></div></section>'
+                f'<section class="band" id="tiers"><div class="in"><h2>{X["tbl"]}</h2><div class="tscroll"><table class="tiers">{hd}{rows}</table></div><p class="note">{X["note"]}</p>'
+                f'<p class="note">{X["c"]} · 73036396@naver.com · WORLD MAKING MEMBERS (WMM)</p></div></section>')
+        return C["head"](L, X["t"] + " · GOV RADAR", X["lede"], f"/{L}/membership/", {l: f"/{l}/membership/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
     css = ('<style>.mtr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}'
            '.mtr>div,.mpr>div,.mfc>div{background:var(--card,#fff);padding:22px;border-radius:6px}'
            '.mtr b{display:block;font-size:13px;letter-spacing:.5px;opacity:.7}.mtr h3{margin:6px 0 8px}'
@@ -800,18 +871,19 @@ def membership_page(L, C):
     tiers = ([("M0 OPEN · 오픈", "처음 둘러보는 기업", "공개 레이더·국가 브리핑 열람", "무료"),
               ("M1 MEMBER · 분석 회원", "정보를 꾸준히 보는 기업", "레이더 전체 + 분석 의뢰 월 2건", "월 19,800원"),
               ("M2 PRO · 프로", "진출을 준비하는 기업", "관심 국가 알림·영문 서류 지원", "월 149,000원"),
-              ("M3 BUSINESS · 비즈니스", "검증을 마친 기업", "상대 연결 준비·우선 상담", "월 390,000원"),
-              ("M4 PROJECT · 진출 패키지", "특정 국가 진출 실행", "6주 시장 검증·현지 일정 조율", "190만 원부터"),
-              ("M5 STRATEGIC · 수주 대행", "공공·대형 수주 추진", "입찰 준비부터 계약까지 동행", "수주액 3~5%"),
+              ("M3 BUSINESS · 비즈니스", "검증을 마친 기업", "상대 연결 준비·우선 상담·투자자 협의(심사 중부터)", "월 390,000원"),
+              ("M4 PROJECT · 진출 패키지", "특정 국가 진출 실행", "6주 시장 검증·현지 일정 조율·투자자 협의", "190만 원부터"),
+              ("M5 STRATEGIC · 수주 대행", "공공·대형 수주 추진", "입찰 준비부터 계약까지 동행·투자자 협의", "수주액 3~5%"),
               ("FC FOUNDING CIRCLE", "초기 10곳 한정 초청", "CONNECT 50% 할인·운영 자문 참여", "별도 협의")] if ko else
              [("M0 OPEN", "Companies taking a first look", "Public radar and country briefings", "Free"),
               ("M1 MEMBER · Analysis", "Companies following the data", "Full radar + 2 analysis requests a month", "₩19,800/month"),
               ("M2 PRO", "Companies preparing to enter", "Country alerts, English document support", "₩149,000/month"),
-              ("M3 BUSINESS", "Companies that have validated", "Counterpart preparation, priority consultation", "₩390,000/month"),
-              ("M4 PROJECT · Entry package", "Entering a specific country", "6-week market validation, local scheduling", "from ₩1.9M"),
-              ("M5 STRATEGIC · Bid support", "Public or large contracts", "With you from bid preparation to contract", "3–5% of contract value"),
+              ("M3 BUSINESS", "Companies that have validated", "Counterpart preparation, priority consultation, investor discussions (from review)", "₩390,000/month"),
+              ("M4 PROJECT · Entry package", "Entering a specific country", "6-week market validation, local scheduling, investor discussions", "from ₩1.9M"),
+              ("M5 STRATEGIC · Bid support", "Public or large contracts", "With you from bid preparation to contract, investor discussions", "3–5% of contract value"),
               ("FC FOUNDING CIRCLE", "First 10 companies, by invitation", "50% off CONNECT, input on operations", "By agreement")])
     trows = "".join(f"<tr><th>{a}</th><td>{b}</td><td>{c}</td><td><b>{d}</b></td></tr>" for a, b, c, d in tiers)
+    _r = trows.split("</tr>"); trows = "</tr>".join(_r[:3]) + "</tr>" + review_row(L, 4) + "</tr>".join(_r[3:])
     thead = T("<tr><th>등급</th><th>이런 기업에게</th><th>핵심 혜택</th><th>요금</th></tr>", "<tr><th>Grade</th><th>For</th><th>Key benefits</th><th>Price</th></tr>")
     adds = ([("M1", "정보", "레이더 전체 열람과 회원 분석 의뢰"), ("M2", "준비", "관심 국가 알림, 영문 서류 지원"), ("M3", "연결 준비", "상대 후보 정리와 우선 상담"),
              ("M4", "실행", "6주 시장 검증과 현지 일정"), ("M5", "수주", "입찰 준비부터 계약까지 동행")] if ko else
@@ -853,7 +925,7 @@ def membership_page(L, C):
 <div class="mtr">{"".join(f"<div><b>{b}</b><h3>{a}</h3><p>{c}</p></div>" for a, b, c in tracks)}</div></div></section>
 <section class="band" id="tiers"><div class="in"><h2>{T("멤버십 등급 v2.0", "Membership grades v2.0")}</h2>
 <div class="tscroll"><table class="tiers">{thead}{trows}</table></div>
-<p class="note">{T("M1은 GOV RADAR 분석 회원(월 19,800원)과 같은 등급입니다. 부가세 별도, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩19,800/month). VAT excluded; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed.")}</p>
+<p class="note">{T("M1은 GOV RADAR 분석 회원(월 19,800원)과 같은 등급입니다. 부가세 별도, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다. 투자 유치·계약·매출을 보장하지 않습니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩19,800/month). VAT excluded; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed. We do not guarantee investment, contracts or sales.")}</p>
 <h3 style="margin-top:34px">{T("한 단계 오를 때마다 더해지는 것", "What each level adds")}</h3><div class="mstep">{steps}</div></div></section>
 <section class="band alt"><div class="in"><h2>{T("멤버십으로 쓰는 두 개의 창구", "Two doors, one membership")}</h2><div class="mdoor">
 <a href="/{L}/"><b>radar.wmm-hoa.com · GOV RADAR</b><p>{T("세계 정부 아젠다, 공공 입찰, 제재 동향, 재난 대비 정보를 나라별로 모아 보여 줍니다. 분석 의뢰와 입찰 적합도 판정도 여기서 신청합니다.", "Government agendas, public tenders, sanctions and disaster preparedness by country. Analysis requests and tender fit assessments are ordered here.")}</p></a>
