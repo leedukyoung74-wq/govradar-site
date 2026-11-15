@@ -39,6 +39,8 @@ header.top nav a{font-weight:400;color:var(--soft);margin-left:18px;font-size:15
 .yr{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--line)}
 .yr .y{font-weight:300;font-size:48px;line-height:1;color:var(--gold2)}
 .yr .y small{display:block;font-size:13px;letter-spacing:2px;color:var(--muted);margin-top:10px}
+.yr .y{white-space:nowrap;overflow-wrap:normal;word-break:keep-all;align-self:start}.yr .y small{font-size:11px;letter-spacing:1px;white-space:nowrap}
+@media (min-width:761px){.yr:not(.eco){grid-template-columns:150px minmax(0,1fr)}}
 .yr h3{font-weight:700;font-size:21px;color:var(--ink);line-height:1.4}
 .yr .sub{color:var(--muted);font-size:14px;margin:4px 0 16px}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
