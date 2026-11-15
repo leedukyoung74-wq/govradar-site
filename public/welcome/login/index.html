@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.8}
 </div>
 <form id="wlogin" style="flex: 1 1 420px; min-width: 0; padding: 72px clamp(24px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center; gap: 16px; max-width: 560px">
 <h2 style="margin: 0 0 6px; font-size: 28px">로그인</h2>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">이메일<input name="email" type="email" required autocomplete="email" style="min-height: 48px; border: 1px solid #c9cdd3; padding: 0 14px; font: inherit"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">이메일<input name="email" type="email" required autocomplete="email" autofocus style="min-height: 48px; border: 1px solid #c9cdd3; padding: 0 14px; font: inherit"></label>
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">비밀번호<input name="password" type="password" required autocomplete="current-password" style="min-height: 48px; border: 1px solid #c9cdd3; padding: 0 14px; font: inherit"></label>
 <button type="submit" style="min-height: 52px; background: #0b1f3a; color: #ffffff; border: 0; font: inherit; font-size: 16px; font-weight: 700">로그인 → GOV RADAR로 이동</button>
 <p style="margin: 4px 0 0; font-size: 14px; color: #4b515c">처음이신가요? <a href="/ko/?auth=signup" style="color: #1e4fb8; font-weight: 700">무료 가입(M0)</a> · <a href="/ko/?auth=reset" style="color: #4b515c">비밀번호 찾기</a></p><p id="wmsg" role="status" style="margin: 0; font-size: 14px; color: #b3261e"></p>
@@ -65,13 +65,13 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.8}
 <tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M0</b> 오픈</td><td style="padding: 15px">무료</td><td style="padding: 15px">세계 지도·국가 요약, 세계 상황판, 재난 대비센터, 전시회 일정</td></tr>
 <tr style="border-bottom: 1px solid #dfe2e6; background: #eef3fc"><td style="padding: 15px"><b>M1</b> 분석 회원</td><td style="padding: 15px">월 19,800원</td><td style="padding: 15px">국가 리포트 전체(유망 비즈니스의 이유·대상 바이어), 입찰 자격 요건, 분석 의뢰 월 2건</td></tr>
 <tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M2</b> 프로</td><td style="padding: 15px">월 149,000원</td><td style="padding: 15px">+ 관심 국가·입찰 마감 알림, 영문 서류 지원</td></tr>
-<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M3</b> 비즈니스</td><td style="padding: 15px">월 390,000원</td><td style="padding: 15px">+ CONNECT 상대 후보 정리, 우선 상담</td></tr>
-<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M4</b> 진출 패키지</td><td style="padding: 15px">190만 원부터</td><td style="padding: 15px">+ PROJECT ROOM(프로젝트 전용 화면), 6주 시장 검증 보고서</td></tr>
-<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M5</b> 수주 대행</td><td style="padding: 15px">수주액 3~5%</td><td style="padding: 15px">+ 입찰 제안서·컨소시엄 진행 현황</td></tr>
+<tr><td colspan="3" style="border-top: 2px dashed #d32f2f; padding: 12px 15px; color: #c62828; font-weight: 700">M3부터 심사 등급 — 심사를 거쳐 가입하며, 심사가 진행되는 동안 투자자와의 협의도 함께 시작할 수 있습니다.</td></tr><tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M3</b> 비즈니스</td><td style="padding: 15px">월 390,000원</td><td style="padding: 15px">+ CONNECT 상대 후보 정리, 우선 상담, 투자자 협의(심사 중부터)</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M4</b> 진출 패키지</td><td style="padding: 15px">190만 원부터</td><td style="padding: 15px">+ PROJECT ROOM(프로젝트 전용 화면), 6주 시장 검증 보고서, 투자자 협의</td></tr>
+<tr style="border-bottom: 1px solid #dfe2e6"><td style="padding: 15px"><b>M5</b> 수주 대행</td><td style="padding: 15px">수주액 3~5%</td><td style="padding: 15px">+ 입찰 제안서·컨소시엄 진행 현황, 투자자 협의</td></tr>
 </tbody>
 </table>
 </div>
-<p style="margin: 16px 0 0; font-size: 13px; line-height: 1.7; color: #5b616c">요금은 v2.0 안입니다. 카드 결제는 결제 키 연결 후 열리며, 그 전에는 견적 → 계좌이체 → 대표 확인 후 등급을 부여합니다.</p>
+<p style="margin: 16px 0 0; font-size: 13px; line-height: 1.7; color: #5b616c">요금은 v2.0 안이며 투자 유치·계약·매출을 보장하지 않습니다. 카드 결제는 결제 키 연결 후 열리며, 그 전에는 견적 → 계좌이체 → 대표 확인 후 등급을 부여합니다.</p>
 </section>
 
 <footer style="background: #2b2e33; color: #b7bbc2; padding: 26px 24px; text-align: center; font-size: 12px; line-height: 1.9">
@@ -80,6 +80,6 @@ a{color:inherit;text-decoration:none}a:hover{opacity:.8}
 </div>
 
 <script>window.RADAR_LANG="ko";</script><script src="/assets/config.js?v=78d078d7"></script><script src="/assets/auth.js?v=04e55ea3"></script>
-<script>(function(){var f=document.getElementById('wlogin'),m=document.getElementById('wmsg');f.addEventListener('submit',function(e){e.preventDefault();if(!window.WMMAuth){m.textContent='잠시 후 다시 시도해 주세요.';return}m.textContent='확인 중…';
-WMMAuth.login(f.email.value.trim(),f.password.value).then(function(){location.href='/ko/'}).catch(function(){m.textContent='이메일 또는 비밀번호를 확인해 주세요.'})})})();</script></body>
+<script>try{if(localStorage.getItem("wmm.auth.v1"))location.replace("/ko/")}catch(e){}</script><script>(function(){var f=document.getElementById('wlogin'),m=document.getElementById('wmsg');f.addEventListener('submit',function(e){e.preventDefault();if(!window.WMMAuth){m.textContent='잠시 후 다시 시도해 주세요.';return}m.textContent='확인 중…';
+WMMAuth.login(f.email.value.trim(),f.password.value).then(function(){location.href='/ko/?stay=1'}).catch(function(){m.textContent='이메일 또는 비밀번호를 확인해 주세요.'})})})();</script></body>
 </html>
