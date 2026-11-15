@@ -326,7 +326,7 @@ def country_page(iso, L):
             b = b if isinstance(b, dict) else {"title": b}
             if i == pi:
                 return f'<div class="card"><p class="note">{"이번 주 공개" if L=="ko" else "Open this week"}</p><h3>{e(b.get("title"))}</h3>{f"<p>{e(b.get(chr(119)+chr(104)+chr(121)))}</p>" if b.get("why") else ""}{f"<p class=note>{e(b.get(chr(116)+chr(97)+chr(114)+chr(103)+chr(101)+chr(116)))}</p>" if b.get("target") else ""}</div>'
-            return f'<a class="card locked" data-mi="{i}" data-iso="{iso}" href="{P3.paylink(L, "biz", iso)}"><h3>{e(b.get("title"))}</h3><p class="note">🔒 {"이유·대상 바이어 — 분석 회원 월 19,800원" if L=="ko" else "Why-now and buyers — analysis member ₩19,800/mo"}</p></a>'
+            return f'<a class="card locked" data-mi="{i}" data-iso="{iso}" href="{P3.paylink(L, "biz", iso)}"><h3>{e(b.get("title"))}</h3><p class="note">🔒 {ux("lockcard", L)}</p></a>'
         body.append(sec("biz", t["biz"], (f'<div class="cards">{"".join(bz(b, i) for i, b in enumerate(bzs))}</div>' + (lockbox(L, iso, len(bzs) - 1) if len(bzs) > 1 else "")) if bzs else ""))
         def td(x):
             _dl = str(x.get("deadline") or ""); _past = bool(re.match(r"\d{4}-\d{2}-\d{2}$", _dl)) and _dl < TODAY; _new = P3._is_new(x, TODAY) and not _past
@@ -364,7 +364,7 @@ def country_page(iso, L):
     same = [x for x in META if x["r"] == c["r"] and x["iso"] != iso and done(x["iso"])][:12]
     if c.get("reg"): same = [BY[x["iso"]] for x in REGS if x["iso"] != iso][:12]
     side = f"""<aside class="side">
-<div class="box"><b>{"이 나라 진출 브리프" if L=="ko" else "Market-entry brief for this country"}</b><p class="note">{"정부 과제·입찰·한국 지원·위험을 사람이 검수해 보내 드립니다. 납기는 견적 때 안내합니다(보통 5~10영업일)." if L=="ko" else "Priorities, tenders, Korean support and risks, reviewed by a person. Turnaround is confirmed with the quote (usually 5–10 business days)."}</p><a class="btn pri" href="/{L}/pricing/?p=brief&c={e(name)}#order">{"견적 요청" if L=="ko" else "Request a quote"}</a></div>
+<div class="box"><b>{ux("briefh", L)}</b><p class="note">{ux("briefn", L)}</p><a class="btn pri" href="/{L}/pricing/?p=brief&c={e(name)}#order">{ux("briefb", L)}</a></div>
 <div class="box"><b>{e(t['alert_cta'])}</b><button class="btn member" data-act="follow" data-iso="{iso}">{e(t['cta_join'])}</button></div>
 <div class="box"><b>{e(t['more_cty'])}</b><div class="mini">{''.join(f'<a href="{url(L,x["iso"])}">{flag(x["iso"])} {e(nm(x["iso"],L))}</a>' for x in same)}</div></div>
 
@@ -496,9 +496,9 @@ def liveboard(L, mode="full"):
     names = {iso: [nm(iso, L), BY[iso]["slug"]] for iso in BY if not BY[iso].get("reg")}
     names.setdefault("TW", [{"ko": "대만", "es": "Taiwán", "fr": "Taïwan", "ar": "تايوان", "vi": "Đài Loan", "id": "Taiwan"}.get(L, "Taiwan"), ""])
     hd = {"ko": ("지금 세계 상황 — 전쟁·분쟁·자연재해·감염병, 확인된 사실만", "공식 기관 원문은 매일 자동 수집 · 요약은 주 2회(월·목) 갱신 · 아래 기준 시각이 실제 마지막 확인 시각입니다 · 2곳 이상 독립 출처 또는 공식 발표만 싣습니다"),
-          "en": ("World situation now — wars, conflicts, natural disasters & outbreaks, verified facts only", "Official agency feeds collected daily · summary updated twice a week (Mon, Thu) · the time shown below is the actual last check · only facts confirmed by 2+ independent sources or an official statement")}.get(L) or ("World situation now — wars, conflicts, natural disasters & outbreaks, verified facts only", "Official agency feeds collected daily · summary updated twice a week (Mon, Thu) · the time shown below is the actual last check · only facts confirmed by 2+ independent sources or an official statement")
+          "en": ("World situation now — wars, conflicts, natural disasters & outbreaks, verified facts only", "Official agency feeds collected daily · summary updated twice a week (Mon, Thu) · the time shown below is the actual last check · only facts confirmed by 2+ independent sources or an official statement"), **UX["lbh"]}.get(L) or ("World situation now — wars, conflicts, natural disasters & outbreaks, verified facts only", "Official agency feeds collected daily · summary updated twice a week (Mon, Thu) · the time shown below is the actual last check · only facts confirmed by 2+ independent sources or an official statement")
     return (f'<div class="liveboard" data-mode="{mode}" data-names=\'{e(json.dumps(names, ensure_ascii=False))}\'>'
-            f'<h2>{e(hd[0])}</h2><p class="note">{e(hd[1])} · <a href="/{L}/conflict/#official">{"공식 기관 원문 바로 보기 →" if L == "ko" else "Latest official alerts →"}</a></p><div class="lb-body"><p class="note">…</p></div></div>')
+            f'<h2>{e(hd[0])}</h2><p class="note">{e(hd[1])} · <a href="/{L}/conflict/#official">{ux("lbo", L)}</a></p><div class="lb-body"><p class="note">…</p></div></div>')
 LVN = {"war": ("큰 전쟁", "Major wars", "올해·작년 교전 사망 1만 명 이상"), "minor": ("작은 전쟁", "Minor wars", "1천~9,999명"),
        "conflict": ("무력분쟁", "Armed conflicts", "100~999명"), "skirmish": ("국지 충돌", "Skirmishes and clashes", "100명 미만")}
 def allconf_html(L):
@@ -765,13 +765,30 @@ def cyber_country(L, iso):
     t = CYB_T.get(L) or CYB_T["en"]
     return CY_CSS + f'<ul class="cyl">{"".join(cy_item(L, r) for r in rs)}</ul><p><a href="{cy_url(L)}">{e(t[2])}</a></p>'
 
+UX = {
+ "lockcard": {"ko": "이유·대상 바이어 — 분석 회원 월 19,800원", "en": "Why-now and buyers — analysis member ₩19,800/mo", "es": "Por qué ahora y compradores — miembro de análisis ₩19.800/mes", "fr": "Pourquoi maintenant et acheteurs — membre analyse 19 800 ₩/mois", "ar": "لماذا الآن والمشترون — عضوية التحليل 19,800 وون شهريًا", "vi": "Vì sao lúc này và người mua — hội viên phân tích ₩19.800/tháng", "id": "Alasan dan pembeli — anggota analisis ₩19.800/bulan"},
+ "lockhead": {"ko": "나머지 {n}건의 이유·대상 바이어", "en": "Why-now and target buyers for the other {n}", "es": "Por qué ahora y compradores para los otros {n}", "fr": "Pourquoi maintenant et acheteurs cibles pour les {n} autres", "ar": "لماذا الآن والمشترون المستهدفون لـ {n} المتبقية", "vi": "Vì sao lúc này và người mua cho {n} mục còn lại", "id": "Alasan dan target pembeli untuk {n} lainnya"},
+ "locknote": {"ko": "무료 회원은 매월 3개국까지 사람이 검수한 요약을 이메일로 받습니다(24시간 안 발송). BUILD 회원은 제한 없이 받습니다.", "en": "Free members get a human-reviewed summary by email for up to 3 countries a month (sent within 24h). BUILD members get them all.", "es": "Los miembros gratuitos reciben por correo un resumen revisado por una persona de hasta 3 países al mes (en 24 h). Los miembros BUILD, todos.", "fr": "Les membres gratuits reçoivent par e-mail un résumé vérifié par une personne pour 3 pays par mois (sous 24 h). Les membres BUILD, tous.", "ar": "يتلقى الأعضاء المجانيون ملخصًا يراجعه شخص لما يصل إلى 3 دول شهريًا عبر البريد (خلال 24 ساعة). أعضاء BUILD يتلقونها كلها.", "vi": "Hội viên miễn phí nhận bản tóm tắt do người kiểm duyệt qua email, tối đa 3 nước mỗi tháng (gửi trong 24 giờ). Hội viên BUILD nhận tất cả.", "id": "Anggota gratis menerima ringkasan yang ditinjau manusia lewat email untuk maksimal 3 negara per bulan (dalam 24 jam). Anggota BUILD menerima semuanya."},
+ "lockbtn": {"ko": "분석 회원 월 19,800원으로 전체 보기", "en": "See all — analysis member ₩19,800/mo", "es": "Ver todo — miembro de análisis ₩19.800/mes", "fr": "Tout voir — membre analyse 19 800 ₩/mois", "ar": "عرض الكل — عضوية التحليل 19,800 وون شهريًا", "vi": "Xem tất cả — hội viên phân tích ₩19.800/tháng", "id": "Lihat semua — anggota analisis ₩19.800/bulan"},
+ "lockfree": {"ko": "무료로 3개국 요약 받기", "en": "Get 3 countries free", "es": "3 países gratis", "fr": "3 pays gratuits", "ar": "3 دول مجانًا", "vi": "Nhận miễn phí 3 nước", "id": "Gratis 3 negara"},
+ "briefh": {"ko": "이 나라 진출 브리프", "en": "Market-entry brief for this country", "es": "Informe de entrada a este país", "fr": "Note d'entrée sur ce marché", "ar": "موجز دخول سوق هذا البلد", "vi": "Bản tóm tắt thâm nhập thị trường nước này", "id": "Ringkasan masuk pasar negara ini"},
+ "briefn": {"ko": "정부 과제·입찰·한국 지원·위험을 사람이 검수해 보내 드립니다. 납기는 견적 때 안내합니다(보통 5~10영업일).", "en": "Priorities, tenders, Korean support and risks, reviewed by a person. Turnaround is confirmed with the quote (usually 5–10 business days).", "es": "Prioridades, licitaciones, apoyo coreano y riesgos, revisados por una persona. El plazo se confirma con el presupuesto (normalmente 5–10 días hábiles).", "fr": "Priorités, appels d'offres, soutiens coréens et risques, vérifiés par une personne. Délai confirmé avec le devis (en général 5 à 10 jours ouvrés).", "ar": "الأولويات والمناقصات والدعم الكوري والمخاطر، يراجعها شخص. تُحدَّد مدة التسليم مع عرض السعر (عادة 5–10 أيام عمل).", "vi": "Ưu tiên, gói thầu, hỗ trợ của Hàn Quốc và rủi ro, do người kiểm duyệt. Thời gian giao được xác nhận khi báo giá (thường 5–10 ngày làm việc).", "id": "Prioritas, tender, dukungan Korea, dan risiko, ditinjau manusia. Waktu pengerjaan dikonfirmasi saat penawaran (biasanya 5–10 hari kerja)."},
+ "briefb": {"ko": "견적 요청", "en": "Request a quote", "es": "Pedir presupuesto", "fr": "Demander un devis", "ar": "اطلب عرض سعر", "vi": "Yêu cầu báo giá", "id": "Minta penawaran"},
+ "lbh": {"es": ("Situación mundial ahora — guerras, conflictos, desastres naturales y brotes, solo hechos verificados", "Fuentes oficiales recogidas a diario · resumen actualizado dos veces por semana (lun., jue.) · la hora indicada es la última revisión real · solo hechos confirmados por 2+ fuentes independientes o un comunicado oficial"),
+         "fr": ("Situation mondiale — guerres, conflits, catastrophes naturelles et épidémies, faits vérifiés uniquement", "Sources officielles collectées chaque jour · résumé mis à jour deux fois par semaine (lun., jeu.) · l'heure indiquée est la dernière vérification réelle · uniquement des faits confirmés par 2 sources indépendantes ou plus, ou un communiqué officiel"),
+         "ar": ("الوضع العالمي الآن — حروب ونزاعات وكوارث طبيعية وأوبئة، حقائق مؤكدة فقط", "تُجمع المصادر الرسمية يوميًا · يُحدَّث الملخص مرتين أسبوعيًا (الاثنين والخميس) · الوقت أدناه هو آخر تحقق فعلي · نعرض فقط ما أكده مصدران مستقلان أو بيان رسمي"),
+         "vi": ("Tình hình thế giới — chiến tranh, xung đột, thiên tai và dịch bệnh, chỉ sự thật đã kiểm chứng", "Nguồn chính thức thu thập hằng ngày · tóm tắt cập nhật hai lần mỗi tuần (thứ Hai, thứ Năm) · thời điểm bên dưới là lần kiểm tra thực tế gần nhất · chỉ đăng thông tin được 2 nguồn độc lập trở lên hoặc thông báo chính thức xác nhận"),
+         "id": ("Situasi dunia kini — perang, konflik, bencana alam dan wabah, hanya fakta terverifikasi", "Sumber resmi dikumpulkan setiap hari · ringkasan diperbarui dua kali seminggu (Senin, Kamis) · waktu di bawah adalah pemeriksaan terakhir sebenarnya · hanya fakta yang dikonfirmasi 2+ sumber independen atau pernyataan resmi")},
+ "lbo": {"ko": "공식 기관 원문 바로 보기 →", "en": "Latest official alerts →", "es": "Últimas alertas oficiales →", "fr": "Dernières alertes officielles →", "ar": "أحدث التنبيهات الرسمية ←", "vi": "Cảnh báo chính thức mới nhất →", "id": "Peringatan resmi terbaru →"},
+}
+def ux(k, L, **kw): return UX[k].get(L, UX[k]["en"]).format(**kw)
 WEEK = datetime.date.fromisoformat(TODAY).isocalendar()[1]
 def pub_idx(n): return (WEEK % n) if n else 0   # which business opportunity shows its WHY publicly this week
 def lockbox(L, iso, n):
     ko = L == "ko"
-    return (f'<div class="lockbox"><b>{"나머지 "+str(n)+"건의 이유·대상 바이어" if ko else f"Why-now and target buyers for the other {n}"}</b>'
-            f'<p class="note">{"무료 회원은 매월 3개국까지 사람이 검수한 요약을 이메일로 받습니다(24시간 안 발송). BUILD 회원은 제한 없이 받습니다." if ko else "Free members get a human-reviewed summary by email for up to 3 countries a month (sent within 24h). BUILD members get them all."}</p>'
-            f'<p class="cta"><a class="btn pri" href="{P3.paylink(L, "biz", iso)}">{"분석 회원 월 19,800원으로 전체 보기" if ko else "See all — analysis member ₩19,800/mo"}</a> <a class="btn" href="/{L}/unlock/?c={iso}">{"무료로 3개국 요약 받기" if ko else "Get 3 countries free"}</a></p></div>')
+    return (f'<div class="lockbox"><b>{ux("lockhead", L, n=n)}</b>'
+            f'<p class="note">{ux("locknote", L)}</p>'
+            f'<p class="cta"><a class="btn pri" href="{P3.paylink(L, "biz", iso)}">{ux("lockbtn", L)}</a> <a class="btn" href="/{L}/unlock/?c={iso}">{ux("lockfree", L)}</a></p></div>')
 
 def C3():
     return dict(e=e, head=head, foot=foot, url=url, flag=flag, nm=nm, DATA=DATA, BY=BY, LANGS=LANGS, TODAY=TODAY, G=G, stl=_stl)
