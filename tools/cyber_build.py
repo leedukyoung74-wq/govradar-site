@@ -111,6 +111,23 @@ ICO = {  # original line icons, 24x24
  6: ("#b58cff", '<path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10 11V9.5a2 2 0 0 1 4 0V11"/>'),
  7: ("#8fe0c8", '<rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 11h16M8 21l2-4M16 21l-2-4"/><circle cx="8.5" cy="14" r="1"/><circle cx="15.5" cy="14" r="1"/>'),
 }
+SRC_EN = ["Kukmin Ilbo — North Korean hackers hit 30 servers in Korea (15 Nov 2026)", "Kukmin Ilbo — same article (Metaem, Coinone)",
+ "Seoul Shinmun — five exchanges' history of hacks (15 Nov 2026)", "AhnLab ASEC — major breaches in Korea and abroad, October 2026",
+ "Secucenter — Black October 2026 incident list", "Al Jazeera — FBI blames North Korea for $6.3bn Binance theft (1 Nov 2026)",
+ "BleepingComputer — FBI links $6.3bn Binance heist to North Korea", "BleepingComputer — attack on European supermarket refrigeration",
+ "Help Net Security — attacks on French, Belgian and Dutch grocers (12 Oct 2026)", "BleepingComputer — attack on French blood agency cooling systems",
+ "Check Point Research — threat report, 9 Nov 2026", "Secucenter — Mr. Max (Japan) and other October incidents",
+ "Secucenter — October supply-chain attacks and PHP flaw", "The Next Web — Vivit Africa LNG: third suspected ship cyber case in a month (18 Sep 2026)",
+ "MPR News — FAA nationwide ground stop (13 Nov 2026)", "FAA — statement on the nationwide ground stop",
+ "WSVN — Microsoft 365 major outage restored", "SBS Biz — Justice Ministry departure screening system outage",
+ "Korea Times — Incheon Airport network outage and crisis response", "Nippon.com — outage at 128 western Japan credit unions (6 Nov 2026)",
+ "Al Jazeera — collapse of Paraguay's Ueno bank (6 Nov 2026)", "Al Jazeera — Florida Learjet crash kills 9 (2 Nov 2026)",
+ "ABC News — everyone rescued from New Orleans riverboat (13 Nov 2026)", "MTN — 1,236 breaches in H1 2026 (Science Ministry, KISA)",
+ "FCC — national emergency alert test on 17 Nov 2026 (DA 26-989)", "CISA — Oldsmar water plant intrusion advisory (AA21-042A)"]
+def sname(n, L):
+    if L == "ko": return C.SRC[n][0]
+    return SRC_EN[n] if n < len(SRC_EN) else C.SRC[n][0]
+
 def ico(i):
     c, d = ICO[i]
     return f'<span class="ic" style="--c:{c}"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{d}</svg></span>'
@@ -202,7 +219,7 @@ def page(L):
         pk = C.REC_PH[C.REC.index(r)]; pid, slug = C.PH[pk]
         pic = (f'<figure class="pic"><img src="https://images.unsplash.com/{pid}?auto=format&fit=crop&w=480&h=320&q=70" srcset="https://images.unsplash.com/{pid}?auto=format&fit=crop&w=480&h=320&q=70 480w, https://images.unsplash.com/{pid}?auto=format&fit=crop&w=960&h=640&q=70 960w" sizes="(max-width:900px) 100vw, 220px" alt="" loading="lazy" referrerpolicy="no-referrer">'
                f'<figcaption>{E(t["rel"])} · <a href="https://unsplash.com/photos/{slug}" target="_blank" rel="noopener">Unsplash</a></figcaption></figure>')
-        srcs = " · ".join(f'<a href="{E(C.SRC[n-1][1])}" target="_blank" rel="noopener nofollow">{E(C.SRC[n-1][0].split(" — ")[0])}</a>' for n in sx)
+        srcs = " · ".join(f'<a href="{E(C.SRC[n-1][1])}" target="_blank" rel="noopener nofollow">{E(sname(n-1, L).split(" — ")[0])}</a>' for n in sx)
         evs += (f'<article class="ev" id="ev-{C.REC.index(r)}" data-v="{v}" data-iso="{" ".join(isos)}">{pic}<div class="d"><b>{dfmt(d)}</b>{E(reg[i])}</div><div>'
                 f'<span class="bd {v}">{E(t["v"][v])}</span>' + (f'<span class="bd ty">{E(TN.get(ty, ""))}</span>' if ty else "") +
                 f'<h3>{E(tt[i])}</h3><p>{E(wh[i])}</p><p class="j"><b>{E(t["jl"])}</b> · {E(jd[i])}</p><p class="sr">{E(t["sl"])} · {srcs}</p></div></article>')
@@ -217,9 +234,9 @@ def page(L):
     def flag(iso): return "".join(chr(0x1F1E6 + ord(ch) - 65) for ch in iso)
     callw = "".join(f'<div class="cw"><h4><span class="fl">{flag(iso)}</span>{E(nm[i])}</h4><ul>' + "".join(f'<li><b>{E(n)}</b><span>{E(d[i])}</span></li>' for n, d in es) + "</ul></div>" for iso, nm, es in C.CALLW)
     seen = set(); src = ""
-    for n, u in C.SRC:
+    for k, (n, u) in enumerate(C.SRC):
         if u in seen: continue
-        seen.add(u); src += f'<li><a href="{E(u)}" target="_blank" rel="noopener nofollow">{E(n)}</a></li>'
+        seen.add(u); src += f'<li><a href="{E(u)}" target="_blank" rel="noopener nofollow">{E(sname(k, L))}</a></li>'
     flt = "".join(f'<button type="button" data-f="{k}" aria-pressed="{"true" if k=="all" else "false"}">{E(n)}</button>' for k, n in t["f"])
     jump = "".join(f'<a href="#{k}">{E(n)}</a>' for k, n in t["j"])
     other = "/cyber/en/" if L == "ko" else "/cyber/"

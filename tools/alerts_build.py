@@ -27,14 +27,19 @@ CARD_CSS = '''
 @media(max-width:1000px){.hls{grid-template-columns:1fr 1fr}}@media(max-width:600px){.hls{grid-template-columns:1fr}.hlstrip{grid-auto-columns:82%}}
 '''
 
+OUT_EN = {"Greek City Times (EU 보도자료 IP/26/2324 인용)": "Greek City Times (citing EU press release IP/26/2324)", "한국일보": "Hankook Ilbo"}
+SRC_EN = {"Fox News — 국방부 FORTRESS 계획": "Fox News — Pentagon FORTRESS plan", "Utility Dive — 육군 소형 원자로 업체 선정": "Utility Dive — Army picks micro-reactor vendors",
+          "The Vibes — 나라별 권고 기간 비교 (2026.11.2)": "The Vibes — advice periods compared by country (2 Nov 2026)", "국민재난안전포털 — 비상시 국민행동요령": "Korea Safety Portal — what to do in an emergency"}
+def oname(o, L): return o if L == "ko" else OUT_EN.get(o, o)
+
 def card(it, L, href=None):
     i = 0 if L == "ko" else 1
     d, iso, who, outlet, url, hd, body, lst, tags, grp = it
     tg = "".join(f"<span>{E(A.TAGS[t][i])}</span>" for t in tags[:5])
     return (f'<a class="hl" href="{E(href or url)}" {"" if href else "target=_blank rel=\"noopener nofollow\""} style="--gc:{GC[grp]}">'
             f'<div class="mast"><span class="fl">{flag(iso)}</span><b>{E(who[i])}</b><span>{dfmt(d)}</span></div><span class="grp">{E(GL[grp][i])}</span>'
-            f'<h3>{E(hd[i])}</h3><p class="by">{E(outlet)}{" · 요약" if L=="ko" else " · our summary"}</p><div class="tg">{tg}</div>'
-            f'<span class="go">{"원문 보기 →" if not href else ("전체 보기 →" if L=="ko" else "Read more →")}</span></a>')
+            f'<h3>{E(hd[i])}</h3><p class="by">{E(oname(outlet, L))}{" · 요약" if L=="ko" else " · our summary"}</p><div class="tg">{tg}</div>'
+            f'<span class="go">{("원문 보기 →" if L=="ko" else "Read the source →") if not href else ("전체 보기 →" if L=="ko" else "Read more →")}</span></a>')
 
 def items_sorted(): return sorted(A.ITEMS, key=lambda x: x[0], reverse=True)
 
@@ -83,8 +88,8 @@ def page(L):
         d, iso, who, outlet, url, hd, body, lst, tags, grp = it
         its += (f'<article class="it" id="a-{d}-{iso}" data-g="{grp}" data-t="{" ".join(tags)}">{card(it, L)}<div class="tx"><h4>{flag(iso)} {E(who[i])} · {dfmt(d)}</h4><p>{E(body[i])}</p>'
                 + (f'<div class="ls"><b>{"준비 목록" if ko else "Checklist"}</b> · {E(lst[i])}</div>' if lst else "") +
-                f'<p class="src">{"출처" if ko else "Source"} · <a href="{E(url)}" target="_blank" rel="noopener nofollow">{E(outlet)}</a></p></div></article>')
-    extra = "".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener nofollow">{E(n)}</a></li>' for n, u in A.SRC_EXTRA)
+                f'<p class="src">{"출처" if ko else "Source"} · <a href="{E(url)}" target="_blank" rel="noopener nofollow">{E(oname(outlet, L))}</a></p></div></article>')
+    extra = "".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener nofollow">{E(n if ko else SRC_EN.get(n, n))}</a></li>' for n, u in A.SRC_EXTRA)
     sub = json.dumps([["#days", "나라별 기간" if ko else "Days by country"], ["#list", "헤드라인" if ko else "Headlines"], ["#src", "출처" if ko else "Sources"]], ensure_ascii=False)
     return f'''<!DOCTYPE html><html lang="{L}"><head>{GATE}<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(T["title"])}</title><meta name="description" content="{E(T["desc"])}"><link rel="canonical" href="{BASE}{path}">
@@ -105,7 +110,7 @@ def page(L):
 
 def patch_hazards():
     p = os.path.join(HERE, "..", "cf", "extra", "hazards", "index.html"); s = open(p, encoding="utf8").read()
-    block = f'<!--ALERTS--><section class="alt" id="alerts"><div class="in">{strip("ko")}</div></section><!--/ALERTS-->'
+    block = f'<!--ALERTS--><style>[data-al][hidden]{{display:none!important}}</style><section class="alt" id="alerts"><div class="in" data-al="ko">{strip("ko")}</div><div class="in" data-al="en" hidden>{strip("en")}</div></section><!--/ALERTS-->'
     if "<!--ALERTS-->" in s: s = re.sub(r"<!--ALERTS-->.*?<!--/ALERTS-->", lambda m: block, s, flags=re.S)
     else: s = s.replace('<section class="alt" id="apophis">', block + '\n<section class="alt" id="apophis">', 1)
     open(p, "w", encoding="utf8").write(s)

@@ -142,6 +142,7 @@ def _stl(title, url, L):
     """Source title for the viewer; Korean-only titles show the site's domain on non-Korean pages."""
     title = str(title or url or "")
     if L != "ko" and _HANG.search(title):
+        if title in STE.T: return STE.T[title]
         from urllib.parse import urlparse
         h = urlparse(str(url or "")).netloc.replace("www.", "")
         return h or title
@@ -276,7 +277,9 @@ def glance(iso, L, d, name):
             + f'<p class="gl-a">{e(g[10])} {e(d.get("updated") or "—")}</p></div>')
     srcs = [x for x in (d.get("sources") or []) if isinstance(x, dict) and str(x.get("url", "")).startswith("http")][:4]
     def card(x):
-        tt = x.get("title") or ""; m = re.split(r"\s[–—-]\s", tt, maxsplit=1)
+        tt = x.get("title") or ""
+        if L != "ko" and re.search("[가-힣]", tt): tt = STE.T.get(tt) or re.sub(r"^https?://(www\.)?([^/]+).*$", r"\2", x["url"])
+        m = re.split(r"\s[–—-]\s", tt, maxsplit=1)
         pub, head_ = (m[0], m[1]) if len(m) == 2 else (re.sub(r"^https?://(www\.)?([^/]+).*$", r"\2", x["url"]), tt)
         return f'<a class="gl-nw" href="{e(x["url"])}" target="_blank" rel="noopener nofollow"><i>{e(pub[:1].upper())}</i><span><small>{e(pub)}</small><b>{e(head_)}</b><em>{e(g[9])} ↗</em></span></a>'
     news = (f'<div class="gl-news"><p class="gl-k">{e(g[3])}</p>' + "".join(card(x) for x in srcs) + '</div>') if srcs else ""
@@ -376,7 +379,7 @@ def country_page(iso, L):
     phc = (f'<p class="phc">{e(PHC.get(L, PHC["en"]))}: {e(ph.get("place",""))} · <a href="{e(ph["page"])}" target="_blank" rel="noopener nofollow">{e(ph["artist"])}</a> · {e(ph["license"])} · Wikimedia Commons</p>') if ph else ""
     hero = f"""<section class="chero"><div class="in">
 <p class="crumb"><a href="/{L}/">GOV RADAR</a> / {e(t['regions'][c['r']])}{(' / <a href="'+url(L,c['parent'])+'">'+e(nm(c['parent'],L))+'</a> / '+e(tx(L,'rgt')[c['type']])) if c.get('reg') else ''}</p>
-<div class="ct">{flag(iso, 'big')}<div><h1>{e(name)}</h1><p class="alt">{e(c['en'] if L!='en' else c['ko'])} · {iso}{' · Commonwealth' if c.get('cw') else ''}</p></div></div>
+<div class="ct">{flag(iso, 'big')}<div><h1>{e(name)}</h1><p class="alt">{(e(c['en']) + ' · ') if L not in ('en','ko') else (e(c['en']) + ' · ' if L=='ko' else '')}{iso}{' · Commonwealth' if c.get('cw') else ''}</p></div></div>
 <p class="meta">{e(t['updated'])} {e(d.get('updated','—'))}{(' · '+e(t['asof'])+' '+e(_asof(d, L))) if _asof(d, L) else ''}{f" · <span class=lvl data-l={lv}>{e(t['rl'][lv])}</span>" if lv else ''}</p>
 </div></section>"""
     return head(L, title, desc, path, alts, jl + crumbs) + hero + f'<div class="in cgrid"><article>{"".join(body)}</article>{side}</div>' + foot(L)
@@ -735,6 +738,7 @@ def mlock(L, f, sid, parts, wrap=("<ul>", "</ul>"), n=FREE_N):
 # ---- cyber issues (tools/cyber_data.py; page built by tools/cyber_build.py at /cyber/) ----
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import cyber_data as CY
+import src_title_en as STE
 import alerts_build as AB
 CYB_T = {"ko": ("사이버 공격 — 지금 주목할 사건", "실제 공격과 단순 장애를 구분해 정리했습니다. 유형 12가지, 역대 사건, 가정·기업·정부 준비 사항은 사이버 공격 페이지에 있습니다.", "사이버 공격 전체 보기 →", "이 나라 관련 사이버 사건"),
  "en": ("Cyberattacks — incidents to watch", "Real attacks are separated from plain outages. Twelve kinds of attack, landmark cases and preparation steps are on the cyberattack page.", "See the full cyberattack page →", "Cyber incidents involving this country"),
