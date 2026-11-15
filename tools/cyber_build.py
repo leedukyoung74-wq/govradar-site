@@ -84,6 +84,20 @@ footer{border-top:1px solid var(--line);padding:30px 0;font-size:14px;color:var(
 .nt em{font-style:normal;font-size:12.5px;font-weight:700;color:var(--c)}.nt b{color:#fff;font-size:17px;line-height:1.3}.nt small{font-size:13px;color:var(--muted);line-height:1.4}
 @media(max-width:760px){.chs.h{display:none}.chs.v{display:block}.chw{padding:10px}}
 @media(prefers-reduced-motion:reduce){.chs .lf,.chs .np{animation:none}.chs .dot{display:none}}
+.cmap{background:#020807;border-top:1px solid #0f2a24;padding:56px 0 40px}.cm-wrap{max-width:1600px;margin:0 auto;padding:0 20px}
+.cm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:18px}.cm-eb{font-size:12px;letter-spacing:4px;color:#3fe0a8;margin:0 0 6px}.cmap h2{margin:0 0 8px}.cm-sub{font-size:15px;color:#8fb3a8;margin:0}
+.cm-lg{display:flex;flex-wrap:wrap;gap:8px}.cm-lg button{font:600 14px/1 var(--f);color:#d6efe7;background:#08201b;border:1px solid #1d4a3f;border-radius:999px;padding:9px 13px;cursor:pointer;display:inline-flex;gap:7px;align-items:center}
+.cm-lg button[aria-pressed=false]{opacity:.45}.cm-lg i{width:11px;height:11px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}.cm-lg b{color:#fff}
+.cm-box{position:relative;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#0b2a24 0%,#04110e 62%,#020807 100%);box-shadow:0 0 0 1px #12382f inset,0 30px 80px rgba(0,0,0,.6)}
+#cmsvg{display:block;width:100%;height:auto;max-height:calc(100vh - 180px)}#cmsvg .land{fill:#123b33;stroke:#2c7a68;stroke-width:.6}#cmsvg .land.hit{fill:#1d5a4c;stroke:#49c9a3}
+#cmsvg .grat{fill:none;stroke:#1a4a3f;stroke-width:.5;opacity:.6}#cmsvg .ring{fill:none;stroke:#2fd59c;stroke-opacity:.16}#cmsvg .axis{stroke:#2fd59c;stroke-opacity:.12}
+.pt circle.c{stroke:#fff;stroke-width:1.2}.pt .p1,.pt .p2{fill:none;stroke-width:1.6;transform-box:fill-box;transform-origin:center;animation:cmp 2.4s ease-out infinite}.pt .p2{animation-delay:1.2s}
+@keyframes cmp{0%{transform:scale(.4);opacity:.95}100%{transform:scale(3.4);opacity:0}}.pt{cursor:pointer;transition:opacity .3s}.pt.off{display:none}.pt.fl circle.c{filter:url(#glow)}.pt.fl .c{r:9}
+.pt text.nn{font:700 12px var(--f);fill:#fff;stroke:none;opacity:1}.pt text.lb{font:600 13px var(--f);fill:#e9fff7;paint-order:stroke;stroke:#020807;stroke-width:3px;pointer-events:none;opacity:0;transition:opacity .4s}.pt.fl text.lb,.pt:hover text.lb{opacity:1}
+.cm-sw{position:absolute;left:50%;top:50%;width:160%;aspect-ratio:1;transform:translate(-50%,-50%) rotate(0deg);border-radius:50%;pointer-events:none;background:conic-gradient(from 0deg,rgba(63,224,168,0) 0deg,rgba(63,224,168,0) 300deg,rgba(63,224,168,.22) 352deg,rgba(150,255,215,.55) 360deg);mix-blend-mode:screen}
+.cm-tip{position:absolute;z-index:5;max-width:280px;background:rgba(2,12,10,.94);border:1px solid #2c7a68;border-radius:10px;padding:10px 12px;font-size:13.5px;color:#d6efe7;pointer-events:none}.cm-tip b{display:block;color:#fff;font-size:14.5px;margin:2px 0}
+.cm-hud{position:absolute;right:14px;top:12px;display:flex;gap:14px;font:600 11px ui-monospace,Menlo,monospace;color:#5ff0bd;letter-spacing:1px}
+@media(max-width:760px){.cmap{padding:40px 0 28px}.cm-box{border-radius:12px}.pt text.lb{font-size:24px}.pt text.nn{font-size:16px}}
 @media(max-width:900px){.hero .in{grid-template-columns:1fr}.kinds,.rm,.todo,.call{grid-template-columns:1fr}.hist{grid-template-columns:1fr}.chain{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.ev{grid-template-columns:1fr;gap:8px}.pic img{aspect-ratio:16/8}section.s{padding:56px 0}}
 '''
 
@@ -135,10 +149,20 @@ def chain_svg(i):
     vt = f'<svg class="chs v" viewBox="0 0 {W2} {Y[5]+h2+4}" role="img" aria-label="cascade">{L2}{N2}</svg>'
     return hz + vt
 
+def map_data(i):
+    pts = []
+    for n, r in enumerate(C.REC):
+        for lo, la, pk, pe in C.REC_PTS[n]:
+            pts.append({"x": lo, "y": la, "v": r[3], "p": (pk, pe)[i], "t": r[5][i], "d": r[0].replace("-", "."), "e": n})
+    for n, h in enumerate(C.HIST):
+        for lo, la, pk, pe in C.HIST_PTS[n]:
+            pts.append({"x": lo, "y": la, "v": "hist", "p": (pk, pe)[i], "t": h[4][i], "d": h[0].replace("-", "."), "e": -1})
+    return json.dumps(pts, ensure_ascii=False)
+
 T = {
  "ko": dict(title="사이버 공격 — 지금 세계에서 일어나는 일과 준비 · GOV RADAR", desc="사이버 공격 12가지 유형, 2026년 9~11월 국내외 사건(실제 공격과 단순 장애 구분), 역대 주요 사건, 한국 가정·기업·정부의 준비 사항 — GOV RADAR",
    crumb="재난 지도", h1="사이버 공격<br>지금 세계에서 일어나는 일과 준비", lead="해킹·디도스·랜섬웨어가 전력·금융·식수·식량·의료까지 멈출 수 있습니다. 2026년 9~11월 국내외 사건을 실제 공격과 단순 장애로 나눠 보여 주고, 가정·기업·정부가 지금 할 일을 정리했습니다.",
-   cap="사이버 공격 · 모션 그래픽", rel="관련 이미지(사건 현장 사진 아님)", upd="기준일", j=[("kinds","공격 유형 12가지"),("now","최근 사건"),("hist","역대 주요 사건"),("chain","연쇄 피해"),("rumor","소문 확인"),("prep","준비 사항"),("src","출처")],
+   cap="사이버 공격 · 모션 그래픽", rel="관련 이미지(사건 현장 사진 아님)", upd="기준일", j=[("map","사건 지도"),("kinds","공격 유형 12가지"),("now","최근 사건"),("hist","역대 주요 사건"),("chain","연쇄 피해"),("rumor","소문 확인"),("prep","준비 사항"),("src","출처")],
    kh="사이버 공격은 어떻게 일어나나 — 12가지 유형", kl="같은 '해킹'이라도 수법과 피해가 다릅니다. 유형마다 실제로 일어난 사례를 함께 붙였습니다.", dmg="주요 피해", ex="실제 사례",
    nh="최근 사건 — 실제 공격과 단순 장애를 구분해서", nl="2026년 9~11월 국내외 사건입니다. 장애가 났다고 모두 해킹은 아닙니다. 사건마다 지금까지 확인된 판정을 붙였습니다.",
    f=[("all","전체"),("atk","실제 공격"),("susp","조사 중·의심"),("no","공격 아님"),("vuln","취약점"),("KR","한국 관련")],
@@ -152,7 +176,7 @@ T = {
    foot="GOV RADAR · 월드메이킹멤버스(WMM) · 문의 73036396@naver.com", other="English"),
  "en": dict(title="Cyberattacks — what is happening now and how to prepare · GOV RADAR", desc="Twelve kinds of cyberattack, recent incidents worldwide (real attacks vs plain outages), landmark cases and what households, companies and governments should do — GOV RADAR",
    crumb="Hazard map", h1="Cyberattacks<br>what is happening, and how to prepare", lead="Hacking, DDoS and ransomware can stop power, money, water, food and healthcare. We separate real attacks from plain outages in incidents from September to November 2026, and set out what households, companies and governments can do now.",
-   cap="Cyberattack · motion graphic", rel="Related image, not the incident", upd="As of", j=[("kinds","12 kinds"),("now","Recent incidents"),("hist","Landmark cases"),("chain","Knock-on effects"),("rumor","Rumour check"),("prep","Preparation"),("src","Sources")],
+   cap="Cyberattack · motion graphic", rel="Related image, not the incident", upd="As of", j=[("map","Incident map"),("kinds","12 kinds"),("now","Recent incidents"),("hist","Landmark cases"),("chain","Knock-on effects"),("rumor","Rumour check"),("prep","Preparation"),("src","Sources")],
    kh="How cyberattacks happen — 12 kinds", kl="'Hacking' covers very different methods and harms. Each kind comes with real cases.", dmg="Main harm", ex="Real cases",
    nh="Recent incidents — real attacks vs plain outages", nl="Incidents from September to November 2026. Not every outage is a hack; each item carries the verdict known so far.",
    f=[("all","All"),("atk","Real attacks"),("susp","Suspected"),("no","Not an attack"),("vuln","Vulnerability"),("KR","Korea")],
@@ -179,7 +203,7 @@ def page(L):
         pic = (f'<figure class="pic"><img src="https://images.unsplash.com/{pid}?auto=format&fit=crop&w=480&h=320&q=70" srcset="https://images.unsplash.com/{pid}?auto=format&fit=crop&w=480&h=320&q=70 480w, https://images.unsplash.com/{pid}?auto=format&fit=crop&w=960&h=640&q=70 960w" sizes="(max-width:900px) 100vw, 220px" alt="" loading="lazy" referrerpolicy="no-referrer">'
                f'<figcaption>{E(t["rel"])} · <a href="https://unsplash.com/photos/{slug}" target="_blank" rel="noopener">Unsplash</a></figcaption></figure>')
         srcs = " · ".join(f'<a href="{E(C.SRC[n-1][1])}" target="_blank" rel="noopener nofollow">{E(C.SRC[n-1][0].split(" — ")[0])}</a>' for n in sx)
-        evs += (f'<article class="ev" data-v="{v}" data-iso="{" ".join(isos)}">{pic}<div class="d"><b>{dfmt(d)}</b>{E(reg[i])}</div><div>'
+        evs += (f'<article class="ev" id="ev-{C.REC.index(r)}" data-v="{v}" data-iso="{" ".join(isos)}">{pic}<div class="d"><b>{dfmt(d)}</b>{E(reg[i])}</div><div>'
                 f'<span class="bd {v}">{E(t["v"][v])}</span>' + (f'<span class="bd ty">{E(TN.get(ty, ""))}</span>' if ty else "") +
                 f'<h3>{E(tt[i])}</h3><p>{E(wh[i])}</p><p class="j"><b>{E(t["jl"])}</b> · {E(jd[i])}</p><p class="sr">{E(t["sl"])} · {srcs}</p></div></article>')
     hist = "".join(f'<div class="hi"><span class="bd {v}">{E(t["v"][v])}</span><span class="d">{dfmt(d)} · {E(reg[i])}</span><br><b>{E(tt[i])}</b><p>{E(nt[i])}</p></div>' for d, reg, v, ty, tt, nt in C.HIST)
@@ -218,6 +242,10 @@ def page(L):
 <div class="mv"><canvas class="hzcv" data-k="cyber" aria-hidden="true"></canvas><span class="cap">{E(t["cap"])}</span></div></div>
 <div class="stats">{stats}</div><p style="font-size:13px;color:var(--muted);margin-top:14px">{E(t["upd"])} {C.UPDATED} · {"국내 통계: 과학기술정보통신부·KISA 2026년 상반기 사이버위협 동향(7월 30일)" if L=="ko" else "Korean figures: MSIT/KISA H1 2026 cyber-threat report (30 Jul)"}</p></div></section>
 <section class="s" id="kinds"><div class="wrap"><h2>{E(t["kh"])}</h2><p class="lede">{E(t["kl"])}</p><div class="kinds">{kinds}</div></div></section>
+<section class="cmap" id="map"><div class="cm-wrap"><div class="cm-head"><div><p class="cm-eb">LIVE RADAR · CYBER INCIDENTS</p><h2>{"뉴스에 나온 사이버 사건, 세계 지도로" if L=="ko" else "Cyber incidents in the news, on the map"}</h2>
+<p class="cm-sub">{"점을 누르면 아래 사건 설명으로 이동합니다. 레이더가 지나갈 때 지점이 밝아집니다. 기준일 " if L=="ko" else "Tap a point to jump to the incident. Points flare as the sweep passes. As of "}{C.UPDATED}</p></div>
+<div class="cm-lg"><button type="button" data-k="atk" aria-pressed="true"><i style="--c:#ff4d5e"></i>{t["v"]["atk"]} <b id="n-atk"></b></button><button type="button" data-k="susp" aria-pressed="true"><i style="--c:#ffb238"></i>{t["v"]["susp"]} <b id="n-susp"></b></button><button type="button" data-k="no" aria-pressed="true"><i style="--c:#59c7ff"></i>{t["v"]["no"]} <b id="n-no"></b></button><button type="button" data-k="hist" aria-pressed="false"><i style="--c:#d9b45f"></i>{"역대 주요 사건" if L=="ko" else "Landmark cases"} <b id="n-hist"></b></button></div></div>
+<div class="cm-box" id="cmbox"><svg id="cmsvg" viewBox="0 0 1600 760" preserveAspectRatio="xMidYMid meet" aria-label="map"></svg><div class="cm-sw" id="cmsw"></div><div class="cm-tip" id="cmtip" hidden></div><div class="cm-hud"><span>● SWEEP</span><span id="cmcnt"></span></div></div></div></section>
 <section class="s alt" id="now"><div class="wrap"><h2>{E(t["nh"])}</h2><p class="lede">{E(t["nl"])}</p><div class="flt" id="flt">{flt}</div><div id="evs">{evs}</div></div></section>
 <section class="s" id="hist"><div class="wrap"><h2>{E(t["hh"])}</h2><p class="lede">{E(t["hl"])}</p><div class="hist">{hist}</div></div></section>
 <section class="s alt" id="chain"><div class="wrap"><h2>{E(t["ch"])}</h2><p class="lede">{E(t["cl"])}</p><div class="chw">{chain_svg(i)}</div></div></section>
@@ -230,6 +258,33 @@ def page(L):
 <section class="s" id="src"><div class="wrap"><h2>{E(t["sh"])}</h2><p class="lede" style="font-size:15px">{E(t["sn"])}</p><ol class="src">{src}</ol></div></section>
 <footer><div class="wrap">{E(t["foot"])}</div></footer><div style="background:#0a0a0a;display:flex;justify-content:center;align-items:center;padding:40px 16px 44px"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><img src="/assets/wmm-logo-white.png" alt="WORLD MAKING MEMBERS" width="150" height="150" style="display:block;width:150px;height:150px"></a></div>
 <script src="/hazards/hzfx.js"></script><script src="/hazards/hzfx2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script><script src="/hazards/world.js"></script>
+<script>(function(){{var P={map_data(i)},C={{atk:"#ff4d5e",susp:"#ffb238",no:"#59c7ff",vuln:"#b58cff",hist:"#d9b45f"}},ON={{atk:1,susp:1,no:1,vuln:1,hist:0}};
+if(!window.d3||!window.TOPO)return;var W=1600,H=760,svg=d3.select("#cmsvg"),pr=d3.geoNaturalEarth1().fitExtent([[10,10],[W-10,H-10]],{{type:"Sphere"}}),pa=d3.geoPath(pr);
+svg.append("defs").html('<filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>');
+svg.append("path").attr("class","grat").attr("d",pa(d3.geoGraticule10()));
+var fs=topojson.feature(TOPO,TOPO.objects.countries).features.filter(function(f){{return f.id!=="010"}});
+var hit={{}};P.forEach(function(p){{fs.forEach(function(f){{if(!hit[f.id]&&d3.geoContains(f,[p.x,p.y]))hit[f.id]=1}})}});
+svg.append("g").selectAll("path").data(fs).join("path").attr("class",function(f){{return "land"+(hit[f.id]?" hit":"")}}).attr("d",pa);
+var cx=W/2,cy=H/2;for(var r=120;r<900;r+=120)svg.append("circle").attr("class","ring").attr("cx",cx).attr("cy",cy).attr("r",r);
+svg.append("line").attr("class","axis").attr("x1",0).attr("x2",W).attr("y1",cy).attr("y2",cy);svg.append("line").attr("class","axis").attr("y1",0).attr("y2",H).attr("x1",cx).attr("x2",cx);
+var cnt={{atk:0,susp:0,no:0,hist:0}},grp={{}},Q=[];P.forEach(function(p){{cnt[p.v]=(cnt[p.v]||0)+1;var k=p.x+","+p.y+","+(p.v==="vuln"?"no":p.v);if(!grp[k]){{grp[k]={{x:p.x,y:p.y,v:p.v,p:p.p,d:p.d,e:p.e,items:[]}};Q.push(grp[k])}}grp[k].items.push(p)}});
+var vo={{atk:0,susp:1,no:2,vuln:3,hist:4}},sk={{}};Q.forEach(function(q){{var xy=pr([q.x,q.y]),k2=q.x+","+q.y,n=sk[k2]||0;sk[k2]=n+1;q.X=xy[0]+n*16;q.Y=xy[1]-n*10;q.A=(Math.atan2(q.Y-cy,q.X-cx)*180/Math.PI+90+360)%360;q.n=q.items.length}});P=Q.sort(function(a,b){{return vo[b.v]-vo[a.v]}});
+for(var k in cnt){{var el=document.getElementById("n-"+k);if(el)el.textContent=cnt[k]}}
+var g=svg.append("g").selectAll("g").data(P).join("g").attr("class",function(p){{return "pt v-"+p.v+(ON[p.v]?"":" off")}}).attr("transform",function(p){{return "translate("+p.X+","+p.Y+")"}});
+g.append("circle").attr("class","p1").attr("r",8).attr("stroke",function(p){{return C[p.v]}});g.append("circle").attr("class","p2").attr("r",8).attr("stroke",function(p){{return C[p.v]}});
+g.append("circle").attr("class","c").attr("r",function(p){{return p.v==="hist"?5:(p.n>1?11:6.5)}}).attr("fill",function(p){{return C[p.v]}});
+g.filter(function(p){{return p.n>1}}).append("text").attr("class","nn").attr("text-anchor","middle").attr("y",4.5).text(function(p){{return p.n}});
+g.append("text").attr("class","lb").attr("x",function(p){{return p.n>1?16:12}}).attr("y",4).text(function(p){{return p.p+(p.n>1?" · "+p.n+"{"건" if L=="ko" else ""}":"")}});
+var tip=document.getElementById("cmtip"),box=document.getElementById("cmbox");
+g.on("mouseenter",function(ev,p){{tip.hidden=false;tip.innerHTML="<span>"+p.p+"</span>"+p.items.slice(0,6).map(function(x){{return "<b>"+x.d+" · "+x.t.replace(/</g,"&lt;")+"</b>"}}).join("")+(p.items.length>6?"<span>+"+(p.items.length-6)+"</span>":"")}}).on("mousemove",function(ev){{var b=box.getBoundingClientRect();tip.style.left=Math.min(b.width-290,ev.clientX-b.left+14)+"px";tip.style.top=(ev.clientY-b.top+14)+"px"}}).on("mouseleave",function(){{tip.hidden=true}})
+ .on("click",function(ev,p){{if(p.e<0){{location.hash="#hist";return}}var a=document.getElementById("ev-"+p.e);if(!a)return;a.style.display="";a.scrollIntoView({{behavior:"smooth",block:"start"}});a.animate([{{background:"rgba(255,77,94,.18)"}},{{background:"transparent"}}],{{duration:1800}})}});
+function vis(){{var n=0;g.classed("off",function(p){{var o=!ON[p.v];if(!o)n++;return o}});document.getElementById("cmcnt").textContent=n+" {"POINTS" if L=="en" else "지점"}"}}vis();
+document.querySelectorAll(".cm-lg button").forEach(function(b){{b.onclick=function(){{var k=b.dataset.k;ON[k]=ON[k]?0:1;if(k==="no")ON.vuln=ON.no;b.setAttribute("aria-pressed",!!ON[k]);vis()}}}});
+if(innerWidth<760){{var xs=P.map(function(p){{return p.X}}),ys=P.map(function(p){{return p.Y}}),x0=Math.min.apply(null,xs)-60,x1=Math.max.apply(null,xs)+60,y0=Math.min.apply(null,ys)-60,y1=Math.max.apply(null,ys)+60;svg.attr("viewBox",x0+" "+y0+" "+(x1-x0)+" "+(y1-y0))}}
+var sw=document.getElementById("cmsw"),t0=performance.now(),RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function loop(ms){{var a=((ms-t0)/1000*60)%360;sw.style.transform="translate(-50%,-50%) rotate("+a+"deg)";g.classed("fl",function(p){{var d=(a-p.A+360)%360;return d<28}});if(!RM)requestAnimationFrame(loop)}}requestAnimationFrame(loop);
+}})();</script>
 <script>(function(){{var b=document.querySelectorAll("#flt button"),ev=document.querySelectorAll("#evs .ev");b.forEach(function(x){{x.onclick=function(){{var f=x.dataset.f;b.forEach(function(y){{y.setAttribute("aria-pressed",y===x)}});ev.forEach(function(e){{var ok=f==="all"||(f==="KR"?(" "+e.dataset.iso+" ").indexOf(" KR ")>=0:e.dataset.v===f);e.style.display=ok?"":"none"}})}}}})}})();</script>
 </body></html>'''
 

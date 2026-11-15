@@ -288,3 +288,33 @@ CALLW = [
  ("SG", ("싱가포르", "Singapore"), [("go.gov.sg/csa-cyber-aid", ("SingCERT 사이버 지원 도구 ✓", "SingCERT Cyber Aid ✓")), ("police.gov.sg", ("경찰 온라인 신고(e-services) ✓", "Police e-services report ✓"))]),
  ("CN", ("중국", "China"), [("110", ("경찰", "Police")), ("96110", ("반사기(사기 예방) 경고 전화", "Anti-fraud warning line"))]),
 ]
+
+# Map points (lon, lat, place ko, place en) per REC entry, same order as REC. [] = global, no single location.
+SEO = (126.98, 37.57, "서울", "Seoul")
+REC_PTS = [
+ [SEO, (-77.04, 38.90, "미국", "US"), (139.69, 35.69, "도쿄", "Tokyo"), (77.21, 28.61, "뉴델리", "New Delhi")],
+ [SEO], [SEO, (128.88, 35.23, "김해(인제대)", "Gimhae"), (127.38, 36.35, "대전(조폐공사)", "Daejeon")], [SEO], [SEO], [SEO], [SEO],
+ [(125.75, 39.03, "평양 (FBI 지목)", "Pyongyang (FBI attribution)")],
+ [(2.35, 48.86, "프랑스", "France"), (4.35, 50.85, "벨기에", "Belgium"), (4.90, 52.37, "네덜란드", "Netherlands"), (-6.26, 53.35, "아일랜드", "Ireland"), (6.13, 49.61, "룩셈부르크", "Luxembourg"), (18.07, 59.33, "스웨덴", "Sweden")],
+ [(2.36, 48.92, "파리권(EFS)", "Paris area (EFS)")],
+ [(30.32, 59.94, "상트페테르부르크", "St Petersburg")],
+ [],
+ [(30.52, 50.45, "키이우", "Kyiv"), (37.62, 55.75, "모스크바", "Moscow")],
+ [(-73.79, 40.73, "뉴욕 퀸즈", "Queens, NY")],
+ [(139.69, 35.69, "도쿄", "Tokyo")],
+ [], [],
+ [(12.60, 45.10, "이탈리아 앞바다", "Off Italy"), (-93.30, 29.80, "루이지애나", "Louisiana")],
+ [(-77.04, 38.90, "미국 전역(FAA)", "US (FAA)")],
+ [(-122.12, 47.67, "레드먼드", "Redmond"), (-0.13, 51.50, "런던", "London")],
+ [(126.44, 37.46, "인천공항", "Incheon Airport")],
+ [(135.50, 34.69, "서일본", "Western Japan")],
+ [(-57.58, -25.26, "아순시온", "Asunción")],
+ [(-80.20, 26.60, "팜비치카운티", "Palm Beach County")],
+ [(-90.07, 29.95, "뉴올리언스", "New Orleans")],
+]
+assert len(REC_PTS) == len(REC)
+HIST_PTS = [[(139.69, 35.69, "도쿄", "Tokyo")], [(127.38, 36.35, "대전", "Daejeon")], [(-0.45, 51.47, "히스로", "Heathrow"), (4.48, 50.90, "브뤼셀", "Brussels"), (13.50, 52.36, "베를린", "Berlin")],
+ [(-1.51, 52.41, "코번트리", "Coventry")], [SEO], [SEO], [SEO], [(-0.13, 51.50, "런던", "London")], [(55.27, 25.20, "두바이", "Dubai")], [(-97.74, 30.27, "오스틴", "Austin")],
+ [(-86.78, 36.16, "내슈빌", "Nashville")], [(10.0, 51.0, "독일", "Germany")], [(-84.39, 33.75, "애틀랜타", "Atlanta")], [(-82.66, 28.03, "올즈마", "Oldsmar")], [(-97.74, 30.27, "오스틴", "Austin")],
+ [(30.52, 50.45, "키이우", "Kyiv")], [(-0.13, 51.50, "런던(NHS)", "London (NHS)")], [(24.71, 48.92, "이바노프란키우스크", "Ivano-Frankivsk")], [(129.21, 35.86, "경주", "Gyeongju")], [SEO], [SEO]]
+assert len(HIST_PTS) == len(HIST)
