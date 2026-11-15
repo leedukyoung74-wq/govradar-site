@@ -1,0 +1,146 @@
+{
+ "_note": "대표 지시 2026-11-15: 전시회·무역사절단 일정 보강. 공식 공고·주최사 발표로 확인한 것만. 빌드 때 국가 데이터의 events에 합쳐짐(같은 제목은 건너뜀).",
+ "items": [
+  {
+   "iso": "DE",
+   "title": "메디카 2026 (MEDICA, 의료기기 전시회)",
+   "title_en": "MEDICA 2026 (medical technology fair)",
+   "date": "2026-11-16",
+   "end": "2026-11-19",
+   "org": "현지 주최",
+   "type": "fair",
+   "city": "뒤셀도르프",
+   "url": "https://www.ilt.fraunhofer.de/en/fairs-and-events/fairs/2026/medica-2026.html",
+   "city_en": "Düsseldorf"
+  },
+  {
+   "iso": "AE",
+   "title": "빅5 글로벌 2026 (Big 5 Global, 건설 전시회)",
+   "title_en": "Big 5 Global 2026 (construction)",
+   "date": "2026-11-23",
+   "end": "2026-11-26",
+   "org": "현지 주최",
+   "type": "fair",
+   "city": "두바이",
+   "url": "https://www.big5global.com/?p=64246",
+   "city_en": "Dubai"
+  },
+  {
+   "iso": "KR",
+   "title": "2027 세계시장 진출전략 설명회 (신청 12/1 마감)",
+   "title_en": "KOTRA 2027 World Market Entry Strategy Briefing (apply by 1 Dec)",
+   "date": "2026-12-08",
+   "org": "KOTRA",
+   "type": "forum",
+   "city": "서울",
+   "url": "https://kotra.or.kr/upload/2026/10/29/BM202610290000113516_0.pdf",
+   "city_en": "Seoul"
+  },
+  {
+   "iso": "KR",
+   "title": "2027 글로벌 통상환경 전망과 대응전략 설명회",
+   "title_en": "KOTRA 2027 Global Trade Outlook Briefing",
+   "date": "2026-12-09",
+   "org": "KOTRA",
+   "type": "forum",
+   "city": "서울",
+   "url": "https://kotra.or.kr/upload/2026/11/04/BM202611040000114010_0.pdf",
+   "city_en": "Seoul"
+  },
+  {
+   "iso": "US",
+   "title": "CES 2027 통합한국관 (라스베이거스 소비재 전자 전시회)",
+   "title_en": "CES 2027 — Korea Pavilion (Las Vegas)",
+   "date": "2027-01-06",
+   "end": "2027-01-09",
+   "org": "KOTRA",
+   "type": "fair",
+   "city": "라스베이거스",
+   "url": "https://kotra.or.kr/upload/2026/08/13/BM202608130000105947_0.pdf",
+   "city_en": "Las Vegas"
+  },
+  {
+   "iso": "KR",
+   "title": "CES 2027 연계 AI 혁신포럼·수출투자 상담회 (신청 11/25 마감)",
+   "title_en": "KOTRA AI Innovation Forum linked to CES 2027 — export & investment meetings (apply by 25 Nov)",
+   "date": "2027-01-20",
+   "org": "KOTRA",
+   "type": "meet",
+   "city": "서울",
+   "url": "https://kotra.or.kr/upload/2026/11/06/BM202611060000114391_0.pdf",
+   "city_en": "Seoul"
+  },
+  {
+   "iso": "FR",
+   "title": "텍스월드 파리 2027 S/S 한국관 (섬유)",
+   "title_en": "Texworld Paris 2027 S/S — Korea Pavilion (textiles)",
+   "date": "2027-01-25",
+   "end": "2027-01-27",
+   "org": "KOTRA",
+   "type": "fair",
+   "city": "파리",
+   "url": "https://kotra.or.kr/upload/2026/10/12/BM202610120000111630_0.pdf",
+   "city_en": "Paris"
+  },
+  {
+   "iso": "AE",
+   "title": "월드 헬스 엑스포 두바이 2027 (의료)",
+   "title_en": "World Health Expo Dubai 2027 (healthcare)",
+   "date": "2027-01-25",
+   "end": "2027-01-28",
+   "org": "현지 주최",
+   "type": "fair",
+   "city": "두바이",
+   "url": "https://www.worldhealthexpo.com/events/healthcare/dubai/overview/general-event-faqs/",
+   "city_en": "Dubai"
+  },
+  {
+   "iso": "ES",
+   "title": "MWC 2027 한국관 (바르셀로나 정보통신 전시회)",
+   "title_en": "MWC Barcelona 2027 — Korea Pavilion",
+   "date": "2027-03-01",
+   "end": "2027-03-04",
+   "org": "KOTRA",
+   "type": "fair",
+   "city": "바르셀로나",
+   "url": "https://kotra.or.kr/upload/2026/08/11/BM202608110000105749_0.pdf",
+   "city_en": "Barcelona"
+  },
+  {
+   "iso": "AE",
+   "title": "걸프푸드 2027 (식품·음료 전시회)",
+   "title_en": "Gulfood 2027 (food & beverage)",
+   "date": "2027-03-15",
+   "end": "2027-03-19",
+   "org": "현지 주최",
+   "type": "fair",
+   "city": "두바이",
+   "url": "https://www.portugalglobal.pt/noticias/2026/outubro/gulfood-2027-reune-industria-alimentar-global-no-dubai/",
+   "city_en": "Dubai"
+  },
+  {
+   "iso": "US",
+   "title": "세미콘 웨스트 2027 한국관 (피닉스 반도체 전시회)",
+   "title_en": "SEMICON West 2027 — Korea Pavilion (Phoenix)",
+   "date": "2027-03-30",
+   "end": "2027-04-01",
+   "org": "KOTRA",
+   "type": "fair",
+   "city": "피닉스",
+   "url": "https://kotra.or.kr/upload/2026/09/18/BM202609180000109795_0.pdf",
+   "city_en": "Phoenix"
+  },
+  {
+   "iso": "DE",
+   "title": "하노버 산업전시회 2027 한국관 (기계·로봇, 모집 11/17 마감)",
+   "title_en": "Hannover Messe 2027 — Korea Pavilion (machinery & robotics, apply by 17 Nov)",
+   "date": "2027-04-05",
+   "end": "2027-04-08",
+   "org": "KOTRA",
+   "type": "fair",
+   "city": "하노버",
+   "url": "https://kotra.or.kr/upload/2026/11/04/BM202611040000114026_0.pdf",
+   "city_en": "Hannover"
+  }
+ ]
+}

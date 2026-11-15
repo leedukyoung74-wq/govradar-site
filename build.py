@@ -43,6 +43,16 @@ DATA = {}
 for f in glob.glob(os.path.join(ROOT, "export", "countries", "*.json")):
     j = json.load(open(f, encoding="utf8")); d = j.get("data", j); iso = j.get("id") or os.path.basename(f)[:2]
     if iso in BY: DATA[iso] = d
+# Owner-requested event list (src/events_extra.json), merged so the country rotation cannot overwrite it
+for _x in json.load(open(os.path.join(ROOT, "src", "events_extra.json"), encoding="utf8"))["items"]:
+    _x = dict(_x); _iso = _x.pop("iso"); _cen = _x.pop("city_en", None)
+    if _iso not in BY: continue
+    _d = DATA.setdefault(_iso, {})
+    _evs = _d.setdefault("events", [])
+    if any((v.get("title") == _x["title"]) for v in _evs if isinstance(v, dict)): continue
+    _evs.append(_x)
+    if isinstance(_d.get("en"), dict) and isinstance(_d["en"].get("events"), list):
+        _d["en"]["events"].append({**_x, "title": _x.get("title_en") or _x["title"], "org": {"현지 주최": "Local organiser"}.get(_x["org"], _x["org"]), "city": _cen or _x.get("city")})
 
 # Korean pages: show Korean names for tender titles, buyers and agencies kept in the original language.
 # The English (and other-language) pages keep the original, so copy it into d["en"] first when missing.
@@ -727,7 +737,7 @@ def home(L):
                    for c in sorted(META, key=lambda c: nm(c["iso"], L)))
     lk = "ko" if L == "ko" else "en"
     board = "".join(f'<a class="opp{"" if j < 6 else " lk"}" href="{url(L,o["iso"])+"#biz" if j < 6 else P3.paylink(L, "biz", o["iso"])}"><span class="who">{flag(o["iso"])} {e(nm(o["iso"],L))}{" <i class=fit>"+e(t["fit"])+"</i>" if o["fit"]=="high" else ""}</span><b>{e(o[lk])}</b><span class="note">{e(o["why_"+lk][:120]) if j < 6 else ("🔒 이유·대상 바이어 — 분석 회원 월 19,800원" if L=="ko" else "🔒 Why-now & buyers — analysis member ₩19,800/mo")}</span></a>' for j, o in enumerate(O[:24]))
-    evs = events()[:4]
+    evs = events()[:12]
     evh = "".join(f'<a class="ev" href="{url(L,x["iso"])}#events"><span class="d">{e(x.get("date","")[5:].replace("-","/"))}</span><span>{flag(x["iso"])} <b>{e(x.get("title_en") if L!="ko" and x.get("title_en") else x.get("title"))}</b><br><span class="note">{e(_evo(x, L))}</span></span></a>' for x in evs) or f'<p class="note">—</p>'
     plans = "".join(f'<div class="plan{" mid" if a.startswith("BUILD M2") else ""}"><span class="tier">{e(a)}</span><b class="price">{e(b)}</b><p>{e(c)}</p></div>' for i, (a, b, c) in enumerate(PLANS[L]))
     jl = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "GOV RADAR", "url": BASE + "/", "inLanguage": L, "publisher": ORG, "description": t["desc_home"]})
