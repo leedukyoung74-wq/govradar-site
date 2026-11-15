@@ -905,6 +905,6 @@ def wmm_kits(L):
            '@media(max-width:900px){.wk-ks,.wk-g{grid-template-columns:1fr 1fr}}@media(max-width:560px){.wk-ks,.wk-g{grid-template-columns:1fr}}</style>')
     return (css + f'<h2>{T("WMM 비상 키트 — GO72 · HOME3 · CAR24", "WMM emergency kits — GO72 · HOME3 · CAR24")}</h2>'
             f'<p>{T("들고 나가는 배낭, 집에 두는 상자, 차에 싣는 가방. 상황에 맞춰 세 가지로 준비했습니다.", "A pack to grab, a box for home and a bag for the car — three kits for three situations.")}</p>'
-            f'<img class="wk-main" src="/assets/kit-all.webp" alt="{T("GO72·HOME3·CAR24 구성품", "GO72, HOME3 and CAR24 contents")}" width="1600" height="900" loading="lazy" decoding="async">'
+            f'<img class="wk-main" src="/assets/kit-overview.webp" alt="{T("GO72·HOME3·CAR24 구성품", "GO72, HOME3 and CAR24 contents")}" width="1600" height="900" loading="lazy" decoding="async">'
             f'<div class="wk-ks">{kc}</div><div class="wk-g">{gh}</div>'
             f'<p class="wk-n">{T("사진은 콘셉트 이미지입니다. 구성은 출시 전 안내용이며 바뀔 수 있습니다. 단체 주문 문의: 73036396@naver.com", "Images are concept images. Contents are pre-launch guidance and may change. Bulk enquiries: 73036396@naver.com")}</p>')
