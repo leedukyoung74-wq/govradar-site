@@ -19,6 +19,7 @@ LBL = {
  "contracts": {"ko":"계약서","en":"Contracts","es":"Contratos","fr":"Contrats","ar":"العقود","vi":"Hợp đồng","id":"Kontrak"},
  "conflict":  {"ko":"세계 상황","en":"World watch","es":"Situación mundial","fr":"Veille mondiale","ar":"الوضع العالمي","vi":"Tình hình","id":"Situasi dunia"},
  "hazards":   {"ko":"재난 지도","en":"Hazard map","es":"Mapa de riesgos","fr":"Carte des risques","ar":"خريطة المخاطر","vi":"Bản đồ thảm họa","id":"Peta bahaya"},
+ "cyber":     {"ko":"사이버 공격","en":"Cyberattacks","es":"Ciberataques","fr":"Cyberattaques","ar":"الهجمات السيبرانية","vi":"Tấn công mạng","id":"Serangan siber"},
  "ready":     {"ko":"재난 대비","en":"Preparedness","es":"Preparación","fr":"Préparation","ar":"الاستعداد","vi":"Phòng chống thiên tai","id":"Kesiapsiagaan"},
  "prepare":   {"ko":"비축 키트","en":"Stockpile kit","es":"Kit de reservas","fr":"Kit de réserves","ar":"حقيبة الطوارئ","vi":"Túi dự phòng khẩn cấp","id":"Kit persediaan"},
  "signals":   {"ko":"표지·풍자","en":"Covers & satire","es":"Portadas y sátira","fr":"Couvertures et satire","ar":"الأغلفة والسخرية","vi":"Bìa báo & châm biếm","id":"Sampul & satire"},
@@ -32,7 +33,7 @@ GROUPS = {
  "map":    ["map", "list", "sample", "request", "notices"],
  "biz":    ["mdb", "projects", "consortium", "experts", "partners", "notices"],
  "go":     ["solutions", "gcsme", "request", "sample", "contracts"],
- "world":  ["conflict", "hazards", "ready", "prepare", "signals"],
+ "world":  ["conflict", "hazards", "cyber", "ready", "prepare", "signals"],
  "member": ["pricing", "member", "account", "request", "about", "legal"],
 }
 SEG2G = {"mdb":"biz","projects":"biz","consortium":"biz","experts":"biz","partners":"biz","notices":"biz",
@@ -45,6 +46,7 @@ def href(L, k):
     if k == "list": return f"/{L}/#gwrap"
     if k == "hazards": return "/hazards/" if L == "ko" else f"/hazards/?l={L}"
     if k == "signals": return "/signals/" if L == "ko" else "/signals/en/"
+    if k == "cyber": return "/cyber/" if L == "ko" else "/cyber/en/"
     if k == "legal": return f"/{L}/legal/terms/"
     return f"/{L}/{k}/"
 
@@ -65,7 +67,7 @@ def gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU):
     data = {"nav": {}, "sub": {}, "lang": LANG_NAME, "short": LANG_SHORT,
             "login": {L: AT[L]["login"] for L in LANG_NAME}, "menu": MENU}
     for L in LANG_NAME:
-        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else "/signals/en/") if p == "@signals" else f"/{L}/{p}", lbl, p] for p, lbl in NAV[L]]
+        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else "/signals/en/") if p == "@signals" else ("/cyber/" if L == "ko" else "/cyber/en/") if p == "@cyber" else f"/{L}/{p}", lbl, p] for p, lbl in NAV[L]]
         data["sub"][L] = {g: [[k, h, t] for k, h, t in items(L, g)] for g in GROUPS}
     css = r"""
 .gvh,.gvh *{box-sizing:border-box}
@@ -96,7 +98,7 @@ var s=document.currentScript,L=s.getAttribute("data-l")||"ko";if(L==="auto")L=ne
 if(!D.nav[L])L="en";
 function e(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 var st=document.createElement("style");st.textContent=__CSS__+__SUBCSS__;document.head.appendChild(st);
-var nav=D.nav[L].map(function(x){var cur=(A==="hazards"&&x[2]==="@hazards")||(A==="signals"&&x[2]==="@signals")||(G==="world"&&x[2]==="conflict/"&&!A);return'<a href="'+e(x[0])+'"'+(cur?' aria-current="page"':'')+'>'+e(x[1])+'</a>'}).join("");
+var nav=D.nav[L].map(function(x){var cur=(A==="hazards"&&x[2]==="@hazards")||(A==="signals"&&x[2]==="@signals")||(A==="cyber"&&x[2]==="@cyber")||(G==="world"&&x[2]==="conflict/"&&!A);return'<a href="'+e(x[0])+'"'+(cur?' aria-current="page"':'')+'>'+e(x[1])+'</a>'}).join("");
 var CS=window.GVH_SUB?window.GVH_SUB(L):null;var sub=CS?CS.map(function(x){return'<a href="'+e(x[0])+'">'+e(x[1])+'</a>'}).join(""):(D.sub[L][G]||[]).map(function(x){return'<a href="'+e(x[1])+'"'+(x[0]===A?' aria-current="page"':'')+'>'+e(x[2])+'</a>'}).join("");
 var opts=Object.keys(D.lang).map(function(l){return'<option value="'+l+'"'+(l===L?' selected':'')+'>'+e(D.lang[l])+'</option>'}).join("");
 var h='<div class="gvh" id="gvh"><div class="gtop"><div class="gin"><a class="gbrand" href="/'+L+'/"><img src="/assets/logo-h.webp" alt="GOV RADAR" width="120" height="40"></a><nav class="glinks" id="gvhl">'+nav+'</nav><div class="gr"><select aria-label="Language" id="gvhs">'+opts+'</select><a class="glog" href="/'+L+'/account/">'+e(D.login[L])+'</a><button class="gbur" id="gvhb" aria-label="'+e(D.menu[L])+'" aria-expanded="false"><span></span><span></span><span></span></button></div></div></div><nav class="subnav'+(CS?' toc':'')+'"><div class="in">'+sub+'</div></nav></div>';

@@ -340,7 +340,7 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 <section id="types"><div class="in">
 <h2 data-i="t_h"></h2>
 <p class="sub" data-i="t_s"></p>
-<div class="hzg" id="hzall"></div>
+<div class="hzg" id="hzall"></div><p style="margin-top:22px"><a id="cylink" href="/cyber/" style="display:inline-block;background:#0b0f19;color:#fff;border-radius:999px;padding:10px 18px;text-decoration:none;font-weight:700">사이버 공격 — 유형·최근 사건·준비 사항 보기 →</a></p>
 <p class="src" data-i="t_src"></p>
 </div></section>
 <section class="alt" id="apophis"><div class="in">
@@ -679,7 +679,7 @@ function render(){
  document.documentElement.lang=lang;document.title=lang==='ko'?'GOV RADAR 재난 한눈에 보기':'GOV RADAR Disaster Overview';
  document.querySelectorAll('[data-i]').forEach(function(el){el.innerHTML=tr(el.dataset.i).replace('{d}',D.snap).replace('{u}',HZ.upd)});
  var _lb=document.getElementById('lang');if(_lb)_lb.textContent=lang==='ko'?'English':'한국어';var _hm=document.getElementById('home');if(_hm)_hm.href=lang==='ko'?'/ko/':'/en/';
- kpis();legend();ychart();heat();csel();wmap();hzGallery();apo();apoVid();if(sel)openC(sel)}
+ kpis();legend();ychart();heat();csel();wmap();hzGallery();apo();apoVid();var _cl=document.getElementById('cylink');if(_cl){_cl.href=lang==='ko'?'/cyber/':'/cyber/en/';_cl.textContent=lang==='ko'?'사이버 공격 — 유형·최근 사건·준비 사항 보기 →':'Cyberattacks — kinds, recent incidents and preparation →'}if(sel)openC(sel)}
 if(document.getElementById('lang'))document.getElementById('lang').onclick=function(){lang=lang==='ko'?'en':'ko';render()};
 var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(ychart,200)});
 addEventListener('scroll',hideTip,{passive:true});

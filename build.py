@@ -168,7 +168,7 @@ FONTLINK = {
 # en/es/fr/id use the house font (WMM Nexon) only; vi/ar keep a fallback for glyphs Nexon lacks
 from subnav import toc_post as _toc_post, subnav as _subnav, gvhdr_js as _gvhdr_js, SUBCSS as _SUBCSS, group_of as _group_of
 def navhtml(L):
-    items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l="+L}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/signals/{"" if L == "ko" else "en/"}">{e(lbl)}</a>' if p == "@signals" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
+    items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l="+L}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/signals/{"" if L == "ko" else "en/"}">{e(lbl)}</a>' if p == "@signals" else f'<a href="/cyber/{"" if L == "ko" else "en/"}">{e(lbl)}</a>' if p == "@cyber" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
     return items
 def navhtml_act(L, path):
     g, _ = _group_of(path)
@@ -342,6 +342,8 @@ def country_page(iso, L):
         gn = mlock(L, iso, "gov", [f"<li>{e(x)}</li>" for x in (g.get("notices") or []) if x])
         gl = f'<p><a href="{e((d.get("gov") or {}).get("url"))}" target="_blank" rel="noopener nofollow">{e(g.get("title") or (d.get("gov") or {}).get("title"))}</a></p>' if str((d.get("gov") or {}).get("url", "")).startswith("https://") else ""
         body.append(sec("gov", t["gov"], gl + gn))
+    _cy = cyber_country(L, iso)
+    if _cy: body.append(sec("cyber", (CYB_T.get(L) or CYB_T["en"])[3], _cy))
     # risk/econ/sanctions always (risk exists for all)
     if r:
         cols = "".join(f'<div><b>{lab}</b><p>{e(" · ".join(r.get(k) or []) or "—")}</p></div>' for k, lab in (("disaster", "🌪"), ("conflict", "⚔"), ("epidemic", "🦠")))
@@ -730,6 +732,34 @@ def mlock(L, f, sid, parts, wrap=("<ul>", "</ul>"), n=FREE_N):
         h += f'<div class="mlock" data-sec="{sid}" data-f="{f}"><span>🔒 {e(a.format(n=len(rest)))}</span> <a href="/{L}/membership/">{e(b)}</a></div>'
     return h
 
+# ---- cyber issues (tools/cyber_data.py; page built by tools/cyber_build.py at /cyber/) ----
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+import cyber_data as CY
+CYB_T = {"ko": ("사이버 공격 — 지금 주목할 사건", "실제 공격과 단순 장애를 구분해 정리했습니다. 유형 12가지, 역대 사건, 가정·기업·정부 준비 사항은 사이버 공격 페이지에 있습니다.", "사이버 공격 전체 보기 →", "이 나라 관련 사이버 사건"),
+ "en": ("Cyberattacks — incidents to watch", "Real attacks are separated from plain outages. Twelve kinds of attack, landmark cases and preparation steps are on the cyberattack page.", "See the full cyberattack page →", "Cyber incidents involving this country"),
+ "es": ("Ciberataques — incidentes a vigilar", "Separamos ataques reales de simples fallos. Tipos, casos históricos y preparación en la página de ciberataques (en inglés).", "Ver la página completa →", "Incidentes cibernéticos de este país"),
+ "fr": ("Cyberattaques — incidents à suivre", "Nous distinguons les vraies attaques des simples pannes. Types, cas marquants et préparation sur la page cyberattaques (en anglais).", "Voir la page complète →", "Incidents cyber concernant ce pays"),
+ "ar": ("الهجمات السيبرانية — حوادث تستحق المتابعة", "نفصل الهجمات الحقيقية عن الأعطال العادية. الأنواع والحالات البارزة وخطوات الاستعداد في صفحة الهجمات السيبرانية (بالإنجليزية).", "عرض الصفحة كاملة ←", "حوادث سيبرانية تخص هذه الدولة"),
+ "vi": ("Tấn công mạng — sự cố đáng chú ý", "Chúng tôi tách tấn công thật khỏi sự cố thông thường. Các loại tấn công, vụ việc lớn và cách chuẩn bị có trên trang tấn công mạng (tiếng Anh).", "Xem toàn bộ trang →", "Sự cố mạng liên quan đến quốc gia này"),
+ "id": ("Serangan siber — insiden yang perlu dicermati", "Kami memisahkan serangan nyata dari gangguan biasa. Jenis serangan, kasus besar dan langkah persiapan ada di halaman serangan siber (bahasa Inggris).", "Lihat halaman lengkap →", "Insiden siber terkait negara ini")}
+CYV = {"ko": {"atk": "실제 공격", "susp": "조사 중·의심", "no": "공격 아님", "vuln": "취약점"}, "en": {"atk": "Attack", "susp": "Suspected", "no": "Not an attack", "vuln": "Vulnerability"}}
+def cy_url(L): return "/cyber/" if L == "ko" else "/cyber/en/"
+def cy_item(L, r):
+    i = 0 if L == "ko" else 1; v = CYV["ko" if L == "ko" else "en"]
+    return (f'<li><span class="cyb {r[3]}">{e(v[r[3]])}</span> <span class="note">{e(r[0].replace("-", "."))} · {e(r[1][i])}</span><br><b>{e(r[5][i])}</b>'
+            f'<span class="note"> — {e(r[7][i])}</span></li>')
+CY_CSS = '<style>.cyb{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 8px}.cyb.atk{background:#fde3e6;color:#b3261e}.cyb.susp{background:#fff1d6;color:#8a5a00}.cyb.no{background:#e9edf2;color:#44505e}.cyb.vuln{background:#e1f3fb;color:#0b6a8a}ul.cyl{list-style:none;padding:0;margin:18px 0 0}ul.cyl li{padding:14px 0;border-top:1px solid rgba(0,0,0,.08)}</style>'
+def cyber_band(L):
+    h, p_, more, _ = CYB_T.get(L) or CYB_T["en"]
+    rec = sorted([r for r in CY.REC if r[3] != "vuln"], key=lambda r: r[0], reverse=True)[:6]
+    return (f'{CY_CSS}<section class="band" id="cyber"><div class="in"><h2>{e(h)}</h2><p class="note" style="font-size:15px;max-width:46em">{e(p_)}</p>'
+            f'<ul class="cyl">{"".join(cy_item(L, r) for r in rec)}</ul><p class="cta"><a class="btn pri" href="{cy_url(L)}">{e(more)}</a></p></div></section>')
+def cyber_country(L, iso):
+    rs = sorted([r for r in CY.REC if iso in r[2]], key=lambda r: r[0], reverse=True)
+    if not rs: return ""
+    t = CYB_T.get(L) or CYB_T["en"]
+    return CY_CSS + f'<ul class="cyl">{"".join(cy_item(L, r) for r in rs)}</ul><p><a href="{cy_url(L)}">{e(t[2])}</a></p>'
+
 WEEK = datetime.date.fromisoformat(TODAY).isocalendar()[1]
 def pub_idx(n): return (WEEK % n) if n else 0   # which business opportunity shows its WHY publicly this week
 def lockbox(L, iso, n):
@@ -784,6 +814,7 @@ def home(L):
 {sample_band(L)}
 <section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a> {hz_link(L)}{' <a class="btn" href="/signals/">이코노미스트 표지·심슨·7인 전망 읽기 →</a>' if L=="ko" else f' <a class="btn" href="/signals/en/">Economist covers, Simpsons claims &amp; seven outlooks →</a>'}</p></div></section>
 {hz_band(L)}
+{cyber_band(L)}
 {ready_band(L)}
 {P3.edge_html(L)}{P3.access_html(L)}
 <section class="band segband"><div class="in"><h2>{"이런 분들이 여기서 사업을 만듭니다" if L=="ko" else "Who does business here"}</h2>{P3.segments_html(L, L=="ko")}<p class="cta"><a class="btn pri" href="/{L}/solutions/">{"분야별로 무엇을 얻는지 보기" if L=="ko" else "See what each sector offers"}</a> <a class="btn" href="/{L}/individuals/">{"개인으로 참여하기" if L=="ko" else "Join as an individual"}</a> <a class="btn" href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a></p></div></section>
