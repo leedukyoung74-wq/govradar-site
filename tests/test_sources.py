@@ -260,3 +260,13 @@ class LinkAndRecord(unittest.TestCase):
 
     def test_temporary_errors_are_unknown(self):
         for c in (429, 503, "TimeoutError"): self.assertEqual(self.j(c)["link"], "unknown")
+
+
+class OfficialGate(unittest.TestCase):
+    def test_official_all_failed_blocks(self):
+        o = {"sources": {k: {"ok": False} for k in ("usgs", "gdacs", "eonet", "who", "cneos", "swpc")}, "items": {}}
+        self.assertTrue(any("official" in b for b in QG.check({"tenders.json": feed(300), "hz/official.json": o}, {})))
+
+    def test_official_partial_ok_passes(self):
+        o = {"sources": {"usgs": {"ok": True}, "gdacs": {"ok": False}}, "items": {"usgs": []}}
+        self.assertEqual(QG.check({"tenders.json": feed(300), "hz/official.json": o}, {}), [])
