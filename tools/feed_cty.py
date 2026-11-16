@@ -43,6 +43,7 @@ def main():
     # site-wide summary for the about page radar and counters
     gaps = []
     for x in t.get("items", []):
+        if x.get("source") != "World Bank": continue  # only WB has a long first-seen history
         try: gaps.append((datetime.date.fromisoformat(x["deadline"]) - datetime.date.fromisoformat(x["added"])).days)
         except Exception: pass
     gaps.sort()

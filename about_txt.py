@@ -389,3 +389,24 @@ K["id"] = dict(
  f_b2="Konsultasi kemitraan gratis", credit="Foto",
  toc=["Tentang", "Mengapa sekarang", "Tahapan", "90 hari", "Harga", "Perusahaan"],
 )
+
+# data sources after adding EU TED and UK Find a Tender (2026-11-16)
+_SRC = {
+ "ko": ([("열린 입찰 공고", "세계은행 조달 API · EU 조달공보(TED) API · 영국 Find a Tender API", "매일 자동"), ("공고 전 사업 · 낙찰 결과", "세계은행 프로젝트·조달 공개 API", "매일 자동")],
+        "UN 조달 포털(UNGM)·아시아개발은행·아프리카개발은행은 자동 수집 창구를 열어 두지 않아 입찰·마감 보드에서 원문 링크로 안내합니다. 방위사업청 해외입찰정보는 연결을 준비하고 있습니다."),
+ "en": ([("Open tender notices", "World Bank API · EU TED API · UK Find a Tender API", "Daily, automatic"), ("Pre-tender projects · awards", "World Bank projects and procurement open APIs", "Daily, automatic")],
+        "UNGM, the Asian Development Bank and the African Development Bank offer no channel for automatic collection, so the tender board links to their originals. Korea's DAPA overseas tender feed is being connected."),
+ "es": ([("Anuncios de licitación abiertos", "API del Banco Mundial · API TED de la UE · API Find a Tender (Reino Unido)", "Diaria, automática"), ("Proyectos previos · adjudicaciones", "API abiertas de proyectos y adquisiciones del Banco Mundial", "Diaria, automática")],
+        "UNGM, el Banco Asiático de Desarrollo y el Banco Africano de Desarrollo no ofrecen un canal de recopilación automática; el tablero enlaza a sus originales. Se está conectando la fuente de licitaciones de DAPA (Corea)."),
+ "fr": ([("Avis d'appels d'offres ouverts", "API Banque mondiale · API TED (UE) · API Find a Tender (Royaume-Uni)", "Quotidienne, automatique"), ("Projets en amont · attributions", "API ouvertes de projets et marchés de la Banque mondiale", "Quotidienne, automatique")],
+        "UNGM, la Banque asiatique de développement et la Banque africaine de développement n'offrent pas de canal de collecte automatique ; le tableau renvoie à leurs originaux. Le flux d'appels d'offres de la DAPA (Corée) est en cours de connexion."),
+ "ar": ([("إعلانات المناقصات المفتوحة", "واجهة البنك الدولي · واجهة TED الأوروبية · واجهة Find a Tender البريطانية", "يومي، تلقائي"), ("المشاريع قبل الطرح · الترسيات", "واجهات البنك الدولي المفتوحة للمشاريع والمشتريات", "يومي، تلقائي")],
+        "لا توفر UNGM وبنك التنمية الآسيوي وبنك التنمية الأفريقي قناة للجمع التلقائي، لذا تربط لوحة المناقصات بإعلاناتها الأصلية. يجري ربط مصدر مناقصات DAPA الكورية."),
+ "vi": ([("Thông báo mời thầu đang mở", "API Ngân hàng Thế giới · API TED của EU · API Find a Tender của Anh", "Hằng ngày, tự động"), ("Dự án trước đấu thầu · trao thầu", "API mở về dự án và mua sắm của Ngân hàng Thế giới", "Hằng ngày, tự động")],
+        "UNGM, Ngân hàng Phát triển châu Á và Ngân hàng Phát triển châu Phi không mở kênh thu thập tự động, nên bảng thầu dẫn link tới bản gốc. Nguồn thầu nước ngoài của DAPA (Hàn Quốc) đang được kết nối."),
+ "id": ([("Pengumuman tender terbuka", "API Bank Dunia · API TED Uni Eropa · API Find a Tender Inggris", "Harian, otomatis"), ("Proyek pra-tender · pemenang", "API terbuka proyek dan pengadaan Bank Dunia", "Harian, otomatis")],
+        "UNGM, Bank Pembangunan Asia, dan Bank Pembangunan Afrika tidak menyediakan kanal pengumpulan otomatis, sehingga papan tender menautkan ke aslinya. Sumber tender luar negeri DAPA (Korea) sedang dihubungkan."),
+}
+for _L, (_rows, _note) in _SRC.items():
+    K[_L]["srcs"] = _rows + K[_L]["srcs"][1:]
+    K[_L]["src_note"] = _note

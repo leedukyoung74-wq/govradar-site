@@ -5,6 +5,7 @@ Sources: World Bank procurement notices API (search.worldbank.org/api/v2/procnot
 Rules: keep notices whose deadline is 3+ days away; skip contract awards and individual-consultant posts;
 remember the first-seen date ("added") so the board can mark new ones in blue."""
 import datetime, json, os, re, sys, unicodedata, urllib.request, urllib.parse
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); sys.path.insert(0, ROOT)
 OUT = os.path.join(ROOT, "data_branch", "feeds", "tenders.json")
 TODAY = datetime.date.today(); MIN_DL = (TODAY + datetime.timedelta(days=3)).isoformat()
@@ -77,9 +78,15 @@ def main():
     if os.path.exists(OUT):
         try: prev = {x["url"]: x for x in json.load(open(OUT, encoding="utf8")).get("items", [])}
         except Exception: prev = {}
+    import feed_more as FM
     items, seen = [], set()
-    for src in (worldbank,):
-        for x in src():
+    for src in (worldbank, FM.ted, FM.uk, FM.dapa):
+        try: got = src()
+        except Exception as ex: print(src.__name__, "crashed:", ex); got = []
+        if not got:  # a source that failed today keeps its still-open notices from yesterday
+            nm_ = {"worldbank": "World Bank", "ted": "EU TED", "uk": "UK Find a Tender", "dapa": "DAPA (Korea)"}[src.__name__]
+            got = [dict(x) for x in prev.values() if x.get("source") == nm_ and x.get("deadline", "") >= MIN_DL]
+        for x in got:
             if x["url"] in seen: continue
             seen.add(x["url"])
             x["added"] = (prev.get(x["url"]) or {}).get("added") or TODAY.isoformat()
@@ -90,7 +97,7 @@ def main():
     if not items: items = [x for x in prev.values() if x.get("deadline", "") >= MIN_DL]
     items.sort(key=lambda x: x["deadline"])
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    json.dump({"updated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "count": len(items), "items": items[:600]}, open(OUT, "w", encoding="utf8"), ensure_ascii=False)
+    json.dump({"updated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "count": len(items), "items": items[:2500]}, open(OUT, "w", encoding="utf8"), ensure_ascii=False)
     print("tenders", len(items), "countries", len({x["iso"] for x in items}))
 
 if __name__ == "__main__": main()
