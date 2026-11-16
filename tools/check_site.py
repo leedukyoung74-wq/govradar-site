@@ -8,6 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://radar.wmm-hoa.com"
 RAW = "https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/"
 UA = {"User-Agent": "Mozilla/5.0 (GOV RADAR site check; 73036396@naver.com)"}
+MAX_AGE_HOURS = 30  # the daily run is at 06:10 KST; older than this means a missed run
 BOARD_FIELDS = ["iso", "title", "buyer", "deadline", "url", "source", "slug", "n", "added", "sec", "pg"]
 
 def get(url):
@@ -37,11 +38,13 @@ def main(out):
         res["local"] = {"items": len(items), "missing_fields": {k: v for k, v in missing.items() if v}, "sources": sorted({x["source"] for x in items})}
     except Exception as ex:
         res["local"] = {"error": type(ex).__name__}
-    ok = all(p["status"] == 200 and p["reads_feed"] for p in res["pages"]) and all(v["status"] == 200 and (v["count"] or 0) > 0 for v in res["feeds"].values()) \
+    for v in res["feeds"].values(): v["fresh"] = v["age_hours"] is not None and v["age_hours"] <= MAX_AGE_HOURS
+    ok = all(p["status"] == 200 and p["reads_feed"] for p in res["pages"]) and all(v["status"] == 200 and (v["count"] or 0) > 0 and v["fresh"] for v in res["feeds"].values()) \
          and not res["local"].get("missing_fields") and not res["local"].get("error")
     res["result"] = "PASS" if ok else "FAIL"
     os.makedirs(os.path.dirname(out), exist_ok=True); json.dump(res, open(out, "w", encoding="utf8"), ensure_ascii=False, indent=1)
     print(json.dumps(res, ensure_ascii=False, indent=1)); return ok
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch", "feeds", "site_check.json"))
+    if not main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch", "feeds", "site_check.json")):
+        print("FAIL: a public page does not load the feeds, a feed is empty or older than", MAX_AGE_HOURS, "hours, or the new feed misses board fields"); sys.exit(1)

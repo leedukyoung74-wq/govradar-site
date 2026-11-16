@@ -36,15 +36,25 @@ jobs:
         run: python tools/feed_intel.py || echo "intel feed failed; keeping yesterday's files"
       - if: inputs.task == 'daily'
         run: python tools/feed_cty.py || echo "country files failed"
-      - name: Cross-check sample notices against official records
-        if: inputs.task == 'daily'
-        run: python tools/verify_samples.py 4 || echo "sample check could not finish"
-      - name: Check the public site still points at the data feeds
-        if: inputs.task == 'daily'
-        run: python tools/check_site.py data_branch/feeds/site_check.json || echo "site check failed"
       - name: Weekly source registry check
         if: inputs.task == 'sources'
         run: python tools/probe_sources.py data_branch/feeds/sources_registry.json
+      - name: Publish to data branch
+        if: ${{ !inputs.dry_run }}
+        run: |
+          cd data_branch
+          git add feeds
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Feed ${{ inputs.task }} $(date -u +%FT%H:%MZ)"
+          git push origin HEAD:data
+      # Checks run AFTER publishing so a flaky outside page cannot stop the daily update, but they are strict:
+      # any mismatch, broken link, unreadable page or stale site feed marks this run FAILED (red) for follow-up.
+      - name: Cross-check sample notices against official records (strict)
+        if: inputs.task == 'daily'
+        run: python tools/verify_samples.py 4
+      - name: Check the public site reads fresh feeds (strict; stale = FAIL)
+        if: inputs.task == 'daily' && always()
+        run: python tools/check_site.py data_branch/feeds/site_check.json
       - name: Keep the outputs of this run
         if: always()
         uses: actions/upload-artifact@v4
@@ -58,11 +68,3 @@ jobs:
             data_branch/feeds/sources_registry.json
           if-no-files-found: ignore
           retention-days: 30
-      - name: Publish to data branch
-        if: ${{ !inputs.dry_run }}
-        run: |
-          cd data_branch
-          git add feeds
-          if git diff --cached --quiet; then echo "no change"; exit 0; fi
-          git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Feed ${{ inputs.task }} $(date -u +%FT%H:%MZ)"
-          git push origin HEAD:data

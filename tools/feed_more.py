@@ -38,19 +38,28 @@ def mask(text):
         if v: s = s.replace(v, "***").replace(urllib.parse.quote(v, safe=""), "***")
     return s
 
-def _post(src, url, body):
+def _retry(src, fn, tries=3):
+    """One logical request = up to 3 attempts (timeouts, connection errors, HTTP 429/5xx), 5 s then 15 s apart.
+    It counts as failed only if every attempt fails; retries are noted in the source status."""
+    import time
     stat(src)["requests"] += 1
-    try:
+    for i in range(tries):
+        try: return fn()
+        except Exception as ex:
+            code = getattr(ex, "code", None)
+            retryable = code is None or code == 429 or code >= 500
+            if i < tries - 1 and retryable:
+                stat(src)["notes"].append(mask(f"retry {i + 1}: {type(ex).__name__}: {ex}")[:160]); time.sleep(5 if i == 0 else 15); continue
+            stat(src)["failed"] += 1; stat(src)["notes"].append(mask(f"{type(ex).__name__}: {ex}")[:160]); raise
+def _post(src, url, body):
+    def f():
         req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={**UA, "Content-Type": "application/json"})
         with urllib.request.urlopen(req, timeout=90) as r: return json.loads(r.read().decode("utf8", "replace"))
-    except Exception as ex:
-        stat(src)["failed"] += 1; stat(src)["notes"].append(mask(f"{type(ex).__name__}: {ex}")[:160]); raise
+    return _retry(src, f)
 def _get(src, url):
-    stat(src)["requests"] += 1
-    try:
+    def f():
         with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90) as r: return r.read().decode("utf8", "replace")
-    except Exception as ex:
-        stat(src)["failed"] += 1; stat(src)["notes"].append(mask(f"{type(ex).__name__}: {ex}")[:160]); raise
+    return _retry(src, f)
 def _first(v):
     if isinstance(v, dict):
         for k in ("eng", "ENG", "en"):

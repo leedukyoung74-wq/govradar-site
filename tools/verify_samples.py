@@ -69,3 +69,5 @@ if __name__ == "__main__":
         print(r["source"], "|", r["sid"], "|", r["url_status"], "| title", r["title_ok"], "| deadline", r["deadline_ok"], "| buyer", r["buyer_ok"])
     ok = [r for r in rows if str(r["url_status"]).startswith("2") and r["title_ok"] is not False and r["deadline_ok"] is not False]
     print(f"checked {len(rows)}, passed {len(ok)}")
+    if not rows or len(ok) < len(rows):
+        print("FAIL: some sampled notices did not match their official record or the link did not open"); sys.exit(1)

@@ -143,3 +143,24 @@ class NoKeys(unittest.TestCase):
         finally:
             for k, v in saved.items():
                 if v: os.environ[k] = v
+
+
+class Retry(unittest.TestCase):
+    def test_timeout_then_success_is_not_a_failure(self):
+        import time
+        FM.STATS.clear(); calls = {"n": 0}; real = time.sleep; time.sleep = lambda s: None
+        def flaky():
+            calls["n"] += 1
+            if calls["n"] < 2: raise TimeoutError("The read operation timed out")
+            return "ok"
+        try: self.assertEqual(FM._retry("T", flaky), "ok")
+        finally: time.sleep = real
+        self.assertEqual(FM.stat("T")["failed"], 0); self.assertEqual(FM.stat("T")["requests"], 1)
+
+    def test_http_404_is_not_retried(self):
+        import urllib.error
+        FM.STATS.clear(); calls = {"n": 0}
+        def nf():
+            calls["n"] += 1; raise urllib.error.HTTPError("u", 404, "nf", {}, None)
+        with self.assertRaises(Exception): FM._retry("T", nf)
+        self.assertEqual(calls["n"], 1); self.assertEqual(FM.stat("T")["failed"], 1)
