@@ -42,7 +42,7 @@ def check(new, old, now=None):
     for x in items: new_src[x["source"]] = new_src.get(x["source"], 0) + 1
     for s_, n_ in old_src.items():
         if n_ >= 20 and new_src.get(s_, 0) == 0: bad.append(f"source '{s_}' went from {n_} notices to 0")
-    for f, minimum in (("awards.json", 100), ("pipeline.json", 100)):
+    for f, minimum in (("awards.json", 100), ("pipeline.json", 100), ("active.json", 1000)):
         j = new.get(f)
         if j is None: continue
         n_ = len(j.get("items") or [])
@@ -86,6 +86,7 @@ if __name__ == "__main__":
     names = ["tenders.json", "awards.json", "pipeline.json", "cty/_summary.json"]
     new = {k: load(os.path.join(d, "feeds", k)) for k in names}
     old = {k: published(k, d) for k in names}
+    if os.path.exists(os.path.join(d, "feeds", "active.json")): new["active.json"] = load(os.path.join(d, "feeds", "active.json"))
     if os.path.exists(os.path.join(d, "feeds", "sanctions.json")): new["sanctions.json"] = load(os.path.join(d, "feeds", "sanctions.json"))
     if os.path.exists(os.path.join(d, "feeds", "econ.json")): new["econ.json"] = load(os.path.join(d, "feeds", "econ.json"))
     if os.path.exists(os.path.join(d, "hz", "official.json")): new["hz/official.json"] = load(os.path.join(d, "hz", "official.json"))
