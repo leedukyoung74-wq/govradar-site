@@ -57,7 +57,7 @@ function $(i){return document.getElementById(i)}
 fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/cty/JO.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
 $("ci-t").textContent=d.t.n;$("ci-p").textContent=d.p.n;$("ci-a").textContent=d.a.n;
 if(d.p.usd)$("ci-pu").textContent=U(d.p.usd);var v=d.v||{n:0,usd:0,items:[]};$("ci-v").textContent=v.n;if(v.usd)$("ci-vu").textContent=U(v.usd);
-$("ci-vl").innerHTML=v.items.length?v.items.map(function(x){return'<li dir="auto"><a href="'+E(x.url)+'" target="_blank" rel="noopener">'+E(x.title)+'</a><small>'+U(x.usd)+(x.close?" · "+S[17]+" "+E(x.close):"")+(x.sec&&x.sec.length?" · "+E(x.sec.join(", ")):"")+'</small></li>'}).join(""):'<li>—</li>';
+$("ci-vl").innerHTML=v.items.length?v.items.map(function(x){return'<li dir="auto"><a href="'+E(x.url)+'" target="_blank" rel="noopener">'+E(x.title)+'</a><small>'+U(x.usd)+(x.close&&x.close>=new Date().toISOString().slice(0,10)?" · "+S[17]+" "+E(x.close):"")+(x.sec&&x.sec.length?" · "+E(x.sec.join(", ")):"")+'</small></li>'}).join(""):'<li>—</li>';
 if(d.a.n)$("ci-al").textContent=d.a.local+" "+S[5]+(d.a.kr?" · "+S[14]+" "+d.a.kr:"");
 $("ci-pl").innerHTML=d.p.items.length?d.p.items.map(function(x){return'<li dir="auto"><a href="'+E(x.url)+'" target="_blank" rel="noopener">'+E(x.title)+'</a><small>'+U(x.usd)+(x.sec&&x.sec.length?" · "+E(x.sec.join(", ")):"")+'</small></li>'}).join(""):'<li>—</li>';
 $("ci-al2").innerHTML=d.a.items.length?d.a.items.map(function(x){return'<li dir="auto"><a href="'+E(x.url)+'" target="_blank" rel="noopener">'+E(x.title)+'</a><small>'+E(x.date)+" · "+E(x.winner)+" ("+E(x.wctry)+")"+(x.usd?" · ≈ "+U(x.usd):"")+'</small></li>'}).join(""):'<li>—</li>';
