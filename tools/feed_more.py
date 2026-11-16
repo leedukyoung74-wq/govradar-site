@@ -237,7 +237,10 @@ def prozorro():
         if not d or str(d[-1].get("dateModified", ""))[:10] < stop: break
         url = (j.get("next_page") or {}).get("uri")
         if not url: break
-    todo = [x for x in cands if x["id"] not in cache][:400]
+    # re-check a cached tender when Prozorro says it changed since we read it (deadline extended, title edited);
+    # changed ones go first, then new candidates, 400 detail calls at most per run
+    changed = [x for x in cands if x["id"] in cache and str(x.get("dateModified") or "") > str(cache[x["id"]].get("mod") or "")]
+    todo = (changed + [x for x in cands if x["id"] not in cache])[:400]
     import concurrent.futures as cf
     # bounded: detail calls get one 30 s attempt each, and the batch stops after 20 failures or 8 minutes,
     # so a Prozorro outage can never push the whole daily job past its time limit
@@ -254,12 +257,15 @@ def prozorro():
         v = t.get("value") or {}
         cache[t["id"]] = {"amt": v.get("amount") or 0, "cur": v.get("currency", "UAH"), "dl": str((t.get("tenderPeriod") or {}).get("endDate") or ""),
                           "title": str(t.get("title_en") or t.get("title") or "")[:220], "buyer": str((t.get("procuringEntity") or {}).get("name") or "")[:160],
-                          "tid": t.get("tenderID"), "pid": t.get("id"), "pmt": t.get("procurementMethodType"), "cat": t.get("mainProcurementCategory")}
+                          "tid": t.get("tenderID"), "pid": t.get("id"), "pmt": t.get("procurementMethodType"), "cat": t.get("mainProcurementCategory"),
+                          "mod": str(t.get("dateModified") or "")}
     out = []
     for x in cands:
         c = cache.get(x["id"])
         if not c: drop(S, "not-checked-yet"); continue
         if c["amt"] * EUR.get(c["cur"], .022) < 1e6: drop(S, "below-size"); continue
+        dl = str((x.get("tenderPeriod") or {}).get("endDate") or "") or c["dl"]   # today's list wins over the cached detail
+        if dl != c["dl"]: c["dl"] = dl; st_ = stat(S); st_["deadline_updated"] = st_.get("deadline_updated", 0) + 1
         out.append({"iso": "UA", "title": c["title"], "buyer": c["buyer"], "deadline": c["dl"][:10], "deadline_at": c["dl"],
                     "url": f"https://prozorro.gov.ua/tender/{c['tid']}", "sid": c["tid"], "pid": c.get("pid") or "", "source": S, "type": "Tender notice", "project": "",
                     "pm": "", "pmn": str(c.get("pmt") or "")[:60], "pg": {"works": "CW", "goods": "GO", "services": "NC"}.get(c.get("cat"), ""),
@@ -269,7 +275,7 @@ def prozorro():
     try:
         os.makedirs(FEEDS, exist_ok=True); json.dump(cache, open(cache_p, "w", encoding="utf8"), ensure_ascii=False)
     except Exception: pass
-    st = stat(S); st["candidates"] = len(cands); st["checked_now"] = len(todo); st["unchecked"] = sum(1 for x in cands if x["id"] not in cache)
+    st = stat(S); st["candidates"] = len(cands); st["checked_now"] = len(todo); st["rechecked_changed"] = min(len(changed), 400); st["unchecked"] = sum(1 for x in cands if x["id"] not in cache)
     out.sort(key=lambda x: -float(x["est"] or 0))
     for _ in out[60:]: drop(S, "source-cap")
     return out[:60]
