@@ -1,0 +1,11 @@
+# Proves the scheduled job works end to end on this branch without publishing anything.
+name: Feeds dry run (no publish)
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  daily:
+    uses: ./.github/workflows/feeds.yml
+    with: { task: daily, code_ref: "${{ github.head_ref || github.ref_name }}", dry_run: true }

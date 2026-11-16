@@ -1,0 +1,10 @@
+# Weekly source registry check — by hand here; the weekly TIMER belongs on main (ops/main-branch/schedule.yml).
+name: Source registry check (no AI)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    uses: ./.github/workflows/feeds.yml
+    with: { task: sources, code_ref: src, dry_run: false }
