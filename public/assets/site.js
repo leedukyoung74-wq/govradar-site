@@ -105,6 +105,11 @@
     window.__liveQuake = true;
     const q = j.features.sort((a, b) => b.properties.mag - a.properties.mag).slice(0, 8);
     list("quake", q, f => { const p = f.properties, d = new Date(p.time); return `<li><b>M${p.mag.toFixed(1)}</b> ${esc(p.place || "")} <span class="note">${d.toISOString().slice(5, 10)}</span>${p.tsunami ? " 🌊" : ""} <a href="${esc(p.url)}" target="_blank" rel="noopener">↗</a></li>`; });
+    // counts of strong quakes in the same 7-day window
+    const n6 = j.features.filter(f => f.properties.mag >= 6).length, n7 = j.features.filter(f => f.properties.mag >= 7).length;
+    const QL = { ko: ["7일간 규모 6.0 이상", "7.0 이상", "회"], en: ["Past 7 days: M6.0+", "M7.0+", ""], es: ["Últimos 7 días: M6,0+", "M7,0+", ""], fr: ["7 derniers jours : M6,0+", "M7,0+", ""],
+      ar: ["آخر 7 أيام: بقوة 6.0+", "7.0+", ""], vi: ["7 ngày qua: từ 6,0 độ", "từ 7,0 độ", " trận"], id: ["7 hari terakhir: M6,0+", "M7,0+", ""] }[document.documentElement.lang] || ["Past 7 days: M6.0+", "M7.0+", ""];
+    const qc = card("quake"); if (qc) qc.insertAdjacentHTML("afterbegin", `<p class="qcount">${esc(QL[0])} <b>${n6}${esc(QL[2])}</b> · ${esc(QL[1])} <b>${n7}${esc(QL[2])}</b></p>`);
     tick(q);
   }).catch(() => {});
   // NOAA SWPC scales + Kp
@@ -125,6 +130,19 @@
     if (!lh) return; const iso = lh.dataset.iso, out = [];
     ["quake", "tsunami", "volcano", "storm", "weather", "fire", "epidemic"].forEach(k => (HZ[k] || []).forEach(x => { if (x && x.iso === iso) out.push(k === "quake" ? `<li><b>M${esc(x.mag)}</b> ${esc(x.place || "")} <span class="note">${esc(x.date || "")}</span></li>` : item(x)); }));
     if (out.length) { lh.querySelector("ul").innerHTML = out.join(""); lh.hidden = false; }
+    // this country's earthquakes in the past 30 days (USGS place names end with the country name)
+    const en = lh.dataset.en; if (!en) return;
+    fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson").then(r => r.json()).then(j => {
+      const mine = j.features.filter(f => new RegExp("(^|, )(" + en + ")$", "i").test(f.properties.place || ""));
+      const n = mine.length, n6 = mine.filter(f => f.properties.mag >= 6).length, n7 = mine.filter(f => f.properties.mag >= 7).length;
+      const QL = { ko: ["최근 30일 이 나라 지진: 규모 4.5 이상", "6.0 이상", "7.0 이상", "회"], en: ["This country, past 30 days: M4.5+", "M6.0+", "M7.0+", ""],
+        es: ["Este país, últimos 30 días: M4,5+", "M6,0+", "M7,0+", ""], fr: ["Ce pays, 30 derniers jours : M4,5+", "M6,0+", "M7,0+", ""],
+        ar: ["هذا البلد خلال آخر 30 يومًا: بقوة 4.5+", "6.0+", "7.0+", ""], vi: ["Quốc gia này, 30 ngày qua: từ 4,5 độ", "từ 6,0 độ", "từ 7,0 độ", " trận"],
+        id: ["Negara ini, 30 hari terakhir: M4,5+", "M6,0+", "M7,0+", ""] }[document.documentElement.lang] || ["This country, past 30 days: M4.5+", "M6.0+", "M7.0+", ""];
+      if (!n && lh.hidden) return;
+      lh.querySelector("h2").insertAdjacentHTML("afterend", `<p class="qcount">${esc(QL[0])} <b>${n}${esc(QL[3])}</b> · ${esc(QL[1])} <b>${n6}${esc(QL[3])}</b> · ${esc(QL[2])} <b>${n7}${esc(QL[3])}</b> <span class="note">(USGS)</span></p>`);
+      lh.hidden = false;
+    }).catch(() => {});
   }
 })();
 
