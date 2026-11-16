@@ -5,8 +5,17 @@
   var X = window.HZFX; if (!X) return;
   var NMC = { ko: "사이버 공격", en: "Cyberattack", es: "Ciberataque", fr: "Cyberattaque", ar: "هجوم سيبراني", vi: "Tấn công mạng", id: "Serangan siber" };
   for (var l in X.NM) X.NM[l].cyber = NMC[l] || NMC.en;
-  X.G = X.K.concat(["cyber"]);                       // gallery list (cyber has no disaster dataset, so it stays off the data map)
-  var CODE = { flood: "FLD", storm: "STM", quake: "EQK", tsunami: "TSU", landslide: "LSD", wildfire: "WLF", fire: "FIR", drought: "DRT", temp: "TMP", volcano: "VOL", impact: "IMP", war: "WAR", ethnic: "ETH", protest: "PRT", riot: "RIO", epidemic: "EPI", cyber: "CYB" };
+  // 2026-11-17: heat wave, cold wave and snow, long power outage (gallery), radioactive fallout (preparedness centre only)
+  var NMX = { ko: { heat: "폭염", cold: "한파·대설", outage: "장기 정전", radiation: "핵·방사성 낙진" },
+    en: { heat: "Heatwave", cold: "Cold wave · heavy snow", outage: "Long power outage", radiation: "Nuclear · radioactive fallout" },
+    es: { heat: "Ola de calor", cold: "Ola de frío · nevada", outage: "Apagón prolongado", radiation: "Nuclear · lluvia radiactiva" },
+    fr: { heat: "Canicule", cold: "Vague de froid · neige", outage: "Panne de courant prolongée", radiation: "Nucléaire · retombées radioactives" },
+    ar: { heat: "موجة حر", cold: "موجة برد · ثلوج كثيفة", outage: "انقطاع طويل للكهرباء", radiation: "نووي · غبار مشع" },
+    vi: { heat: "Nắng nóng", cold: "Rét đậm · tuyết lớn", outage: "Mất điện kéo dài", radiation: "Hạt nhân · bụi phóng xạ" },
+    id: { heat: "Gelombang panas", cold: "Gelombang dingin · salju lebat", outage: "Pemadaman listrik panjang", radiation: "Nuklir · debu radioaktif" } };
+  for (l in X.NM) { var nx = NMX[l] || NMX.en; for (var kk in nx) X.NM[l][kk] = nx[kk]; }
+  X.G = X.K.concat(["cyber", "heat", "cold", "outage"]);   // gallery list (these have no disaster dataset, so they stay off the data map)
+  var CODE = { flood: "FLD", storm: "STM", quake: "EQK", tsunami: "TSU", landslide: "LSD", wildfire: "WLF", fire: "FIR", drought: "DRT", temp: "TMP", volcano: "VOL", impact: "IMP", war: "WAR", ethnic: "ETH", protest: "PRT", riot: "RIO", epidemic: "EPI", cyber: "CYB", heat: "HEA", cold: "CLD", outage: "PWR", radiation: "RAD" };
 
   var css = ".hzc-v canvas.hzcv{position:absolute;inset:0;width:100%;height:100%;z-index:4;display:block}" +
     ".hzc-v.v2 .hzc-sw{opacity:.35}.hzc-v.v2 .hzc-rg{opacity:.45}.hzc-v.v2::after{opacity:.5}" +
@@ -226,6 +235,51 @@
       var bw = 54, bx = 12, by = h - 76; g.fillStyle = "rgba(0,0,0,.45)"; g.fillRect(bx - 4, by + 18, bw + 8, 30); g.font = "600 8px ui-monospace,Menlo,Consolas,monospace"; g.fillStyle = atk ? "#ff8a96" : "#7fffd0"; g.fillText(atk ? "TRAFFIC ▲ ANOMALY" : "TRAFFIC NORMAL", bx, by + 28);
       for (i = 0; i < 12; i++) { var v = .25 + .2 * n1(t * 2 + i) + (atk ? .5 * ai * (i / 12) : 0); g.fillStyle = atk && i > 6 ? "rgba(255,90,100,.9)" : "rgba(90,230,200,.8)"; g.fillRect(bx + i * 4.6, by + 44 - v * 14, 3.2, v * 14); }
       if (atk && Math.random() < .18) { var sy = Math.random() * h, sh = 4 + Math.random() * 10, img; try { img = g.getImageData(0, sy * S.dpr, w * S.dpr, sh * S.dpr); g.putImageData(img, (Math.random() - .5) * 14 * S.dpr, sy * S.dpr); } catch (e) {} g.fillStyle = "rgba(255,40,80,.12)"; g.fillRect(0, sy, w, sh); } } };
+
+
+  /* ---------- 2026-11-17 scenes: heat, cold, outage, radiation ---------- */
+  SC.heat = { init: function (S) { var r = S.r; S.B = skyline(r, S.w, S.h * .8, 0, S.h * .14, S.h * .46); S.H = []; for (var i = 0; i < 26; i++) S.H.push([r() * S.w, r(), .4 + r() * .6]); },
+    draw: function (g, S, t, dt) { var w = S.w, h = S.h, cx = w * .72, cy = h * .26, p = .5 + .5 * Math.sin(t * 1.3);
+      sky(g, w, h, "rgba(70,24,6,.75)", "rgba(20,6,2,.9)"); radial(g, cx, cy, w * .7, [255, 120, 30], .30 + .08 * p); radial(g, cx, cy, h * .22, [255, 200, 90], .9);
+      glow(g, "rgba(255,170,60,.9)", 14); g.fillStyle = "rgba(255,226,150,.95)"; g.beginPath(); g.arc(cx, cy, h * .085 + p * 2, 0, TAU); g.fill(); noGlow(g);
+      g.strokeStyle = "rgba(255,190,90,.35)"; g.lineWidth = 2; for (var k = 0; k < 12; k++) { var a = k / 12 * TAU + t * .12, r0 = h * .12, r1 = h * (.17 + .02 * Math.sin(t * 2 + k)); g.beginPath(); g.moveTo(cx + Math.cos(a) * r0, cy + Math.sin(a) * r0); g.lineTo(cx + Math.cos(a) * r1, cy + Math.sin(a) * r1); g.stroke(); }
+      drawSky(g, S.B, "#1c0d07", [255, 200, 120], t, false); g.fillStyle = "rgba(30,12,6,.95)"; g.fillRect(0, h * .8, w, h * .2);
+      g.lineWidth = 1.2; S.H.forEach(function (q) { q[1] -= dt * .12 * q[2]; if (q[1] < 0) { q[1] = 1; q[0] = Math.random() * w; } var y0 = h * (.45 + q[1] * .4); g.strokeStyle = rgba([255, 200, 140], .25 * Math.sin(q[1] * Math.PI)); g.beginPath();
+        for (var y = 0; y < 28; y += 2) { var xx = q[0] + Math.sin(y * .45 + t * 4 + q[2] * 9) * 3; y ? g.lineTo(xx, y0 - y) : g.moveTo(xx, y0 - y); } g.stroke(); });
+      var bx = w * .1, by = h * .2, bh = h * .5, lv = .72 + .12 * Math.sin(t * .6); g.fillStyle = "rgba(255,255,255,.12)"; g.fillRect(bx, by, 8, bh);
+      var gr = g.createLinearGradient(0, by + bh, 0, by); gr.addColorStop(0, "rgba(255,200,60,.95)"); gr.addColorStop(1, "rgba(230,40,30,.95)"); g.fillStyle = gr; g.fillRect(bx + 1, by + bh * (1 - lv), 6, bh * lv);
+      g.beginPath(); g.arc(bx + 4, by + bh + 8, 9, 0, TAU); g.fillStyle = "rgba(235,60,30,.95)"; g.fill(); } };
+
+  SC.cold = { init: function (S) { var r = S.r; S.B = skyline(r, S.w, S.h * .78, 0, S.h * .1, S.h * .34); S.F = []; for (var i = 0; i < 220; i++) S.F.push([r() * S.w, r() * S.h, .4 + r() * 1.2, r() * TAU]); S.acc = 0; },
+    draw: function (g, S, t, dt) { var w = S.w, h = S.h, gust = .5 + .5 * Math.sin(t * .7);
+      sky(g, w, h, "rgba(10,24,48,.85)", "rgba(30,52,82,.9)"); radial(g, w * .2, h * .15, w * .5, [150, 200, 255], .18);
+      drawSky(g, S.B, "#0e1c30", [255, 220, 160], t, false);
+      g.fillStyle = "rgba(235,244,255,.9)"; S.B.forEach(function (b) { g.fillRect(b[0], b[1] - 2, b[2], 3); });
+      S.acc = Math.min(h * .07, S.acc + dt * 1.2); g.fillStyle = "rgba(225,238,252,.95)"; g.beginPath(); g.moveTo(0, h); for (var x = 0; x <= w; x += 6) g.lineTo(x, h * .78 - S.acc * (.7 + .3 * Math.sin(x * .03))); g.lineTo(w, h); g.fill();
+      g.strokeStyle = "rgba(200,225,255,.25)"; g.lineWidth = 1; for (var k = 0; k < 5; k++) { var yy = h * (.2 + k * .12), xo = ((t * 120 * (1 + gust) + k * 90) % (w + 160)) - 160; g.beginPath(); g.moveTo(xo, yy); g.bezierCurveTo(xo + 40, yy - 6, xo + 80, yy + 6, xo + 140, yy); g.stroke(); }
+      g.fillStyle = "rgba(255,255,255,.9)"; S.F.forEach(function (f) { f[1] += dt * 26 * f[2]; f[0] += dt * (18 + 50 * gust) * f[2] + Math.sin(t * 2 + f[3]) * .3; if (f[1] > h) { f[1] = -4; f[0] = Math.random() * w - 40; } if (f[0] > w + 4) f[0] = -4; g.globalAlpha = .4 + .5 * (f[2] / 1.6); g.beginPath(); g.arc(f[0], f[1], f[2], 0, TAU); g.fill(); }); g.globalAlpha = 1;
+      var cx = w * .86, cy = h * .2, s = h * .07; glow(g, "rgba(170,220,255,.9)", 8); g.strokeStyle = "rgba(210,236,255,.9)"; g.lineWidth = 1.6; for (k = 0; k < 6; k++) { var a = k * TAU / 6 + t * .2; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(a) * s, cy + Math.sin(a) * s); g.stroke(); } noGlow(g); } };
+
+  SC.outage = { init: function (S) { var r = S.r; S.B = skyline(r, S.w, S.h * .82, 0, S.h * .16, S.h * .5); S.spark = 0; },
+    draw: function (g, S, t, dt) { var w = S.w, h = S.h, cyc = (t % 9) / 9, front = cyc < .5 ? cyc * 2 : 1, back = cyc > .75 ? (cyc - .75) * 4 : 0;
+      sky(g, w, h, "rgba(4,8,16,.9)", "rgba(10,14,26,.95)");
+      S.B.forEach(function (b) { var dark = (b[0] / w) < front && (b[0] / w) >= back; g.fillStyle = dark ? "#05080f" : "#0f1a2c"; g.fillRect(b[0], b[1], b[2], b[3]);
+        if (!dark) for (var yy = b[1] + 4; yy < b[1] + b[3] - 3; yy += 5) for (var xx = b[0] + 2; xx < b[0] + b[2] - 2; xx += 4) { if (((xx * 7 + yy * 13 + (b[4] * 100 | 0)) % 5) < 2) { g.fillStyle = "rgba(255,214,140,.6)"; g.fillRect(xx, yy, 1.6, 2); } } });
+      var fx = front * w; if (front < 1) { g.strokeStyle = "rgba(140,200,255,.5)"; g.lineWidth = 1; g.beginPath(); g.moveTo(fx, h * .1); g.lineTo(fx, h * .82); g.stroke(); }
+      g.strokeStyle = "rgba(160,170,190,.6)"; g.lineWidth = 1.4; var px = [w * .08, w * .38, w * .68, w * .98]; px.forEach(function (x) { g.beginPath(); g.moveTo(x, h * .82); g.lineTo(x - 8, h * .34); g.lineTo(x + 8, h * .34); g.closePath(); g.stroke(); g.beginPath(); g.moveTo(x - 14, h * .37); g.lineTo(x + 14, h * .37); g.stroke(); });
+      g.beginPath(); for (var i = 0; i < 3; i++) { g.moveTo(px[i] + 14, h * .37); g.quadraticCurveTo((px[i] + px[i + 1]) / 2, h * .45, px[i + 1] - 14, h * .37); } g.stroke();
+      if (Math.sin(t * 5.3) > .96 || (cyc > .02 && cyc < .05)) { var sx = px[1] + 14, sy = h * .37; glow(g, "rgba(150,200,255,1)", 16); g.strokeStyle = "rgba(220,240,255,.95)"; g.lineWidth = 2; g.beginPath(); g.moveTo(sx, sy); for (i = 1; i < 5; i++) g.lineTo(sx + (Math.random() - .5) * 18, sy + i * 6); g.stroke(); noGlow(g); }
+      var lx = w * (.3 + .25 * Math.sin(t * .8)), ly = h * .7; var gr = g.createRadialGradient(lx, ly, 0, lx, ly, h * .16); gr.addColorStop(0, "rgba(255,240,200,.35)"); gr.addColorStop(1, "rgba(255,240,200,0)"); g.fillStyle = gr; g.beginPath(); g.moveTo(lx, ly); g.arc(lx, ly, h * .16, -2.1, -1.0); g.closePath(); g.fill();
+      g.fillStyle = "rgba(255,248,220,.95)"; g.fillRect(lx - 2, ly - 1, 4, 3); } };
+
+  SC.radiation = { init: function (S) { var r = S.r; S.P = []; for (var i = 0; i < 160; i++) S.P.push([r() * S.w, r() * S.h, .3 + r() * .8]); },
+    draw: function (g, S, t, dt) { var w = S.w, h = S.h, cx = w * .5, base = h * .82;
+      sky(g, w, h, "rgba(26,28,16,.85)", "rgba(10,12,8,.95)"); radial(g, w * .5, h * .05, w * .8, [200, 210, 120], .12);
+      g.fillStyle = "rgba(210,220,150,.55)"; S.P.forEach(function (p) { p[1] += dt * 14 * p[2]; p[0] += Math.sin(t + p[2] * 9) * .15; if (p[1] > base) { p[1] = -3; p[0] = Math.random() * w; } g.globalAlpha = .25 + .5 * p[2]; g.fillRect(p[0], p[1], 1.6 * p[2] + .6, 1.6 * p[2] + .6); }); g.globalAlpha = 1;
+      g.fillStyle = "#1a1e14"; g.fillRect(0, base, w, h - base); g.fillStyle = "#2c3324"; g.fillRect(cx - w * .22, base - h * .36, w * .44, h * .36); g.fillStyle = "#3a4230"; g.fillRect(cx - w * .24, base - h * .38, w * .48, h * .04);
+      g.fillStyle = "rgba(255,226,150,.85)"; g.fillRect(cx - w * .05, base - h * .14, w * .1, h * .14); radial(g, cx, base - h * .07, w * .12, [255, 220, 140], .25);
+      for (var k = 0; k < 3; k++) { var ph = ((t * .5 + k / 3) % 1); g.strokeStyle = rgba([210, 240, 90], .55 * (1 - ph)); g.lineWidth = 1.5; g.beginPath(); g.arc(w * .14, h * .22, 6 + ph * h * .14, 0, TAU); g.stroke(); }
+      g.fillStyle = "rgba(210,240,90,.95)"; g.beginPath(); g.arc(w * .14, h * .22, 4, 0, TAU); g.fill(); } };
 
   /* ---------- runtime ---------- */
   var live = [], RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
