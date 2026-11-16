@@ -310,6 +310,7 @@ def country_page(iso, L):
     else:
         body.append(f'<p class="summary">{e(summ)}</p>')
         body.append(glance(iso, L, d, name))
+        body.append(P3.cty_econ(iso, L))
         body.append(P3.next_box(iso, L, C3(), d))
         body.append(P3.cty_intel(iso, L))
         st = G(d, "status", L)
@@ -574,22 +575,39 @@ RB = {"ko": ("재난 대비센터", "지금 위험할 때 할 일, 우리 집 30
       "ar": ("مركز الاستعداد", "ما تفعله عند الخطر، وخطة منزلية لـ30/60/90 يومًا وعام كامل، وحاسبات للماء والطعام والطاقة، وبطاقة اتصال عائلية — مجانًا وبناءً على الإرشادات الرسمية.", "افتح مركز الاستعداد"),
       "vi": ("Trung tâm phòng bị", "Việc cần làm khi gặp nguy hiểm, kế hoạch gia đình 30/60/90 ngày và 1 năm, công cụ tính nước, thức ăn và điện, thẻ liên lạc gia đình — miễn phí, dựa trên hướng dẫn chính thức.", "Mở trung tâm phòng bị"),
       "id": ("Pusat kesiapsiagaan", "Yang dilakukan saat bahaya, rencana rumah tangga 30/60/90 hari dan 1 tahun, kalkulator air, makanan, dan listrik, serta kartu kontak keluarga — gratis dan berdasarkan panduan resmi.", "Buka pusat kesiapsiagaan")}
-HZL_T = {"ko": "재난·분쟁 16가지 세계 지도로 보기", "en": "16 hazards on the world map", "es": "16 riesgos en el mapa mundial", "fr": "16 risques sur la carte du monde", "ar": "16 خطرًا على خريطة العالم", "vi": "16 loại hiểm họa trên bản đồ thế giới", "id": "16 bahaya di peta dunia"}
+HZL_T = {"ko": "재난·분쟁 17가지 세계 지도로 보기", "en": "17 hazards on the world map", "es": "17 riesgos en el mapa mundial", "fr": "17 risques sur la carte du monde", "ar": "17 خطرًا على خريطة العالم", "vi": "17 loại hiểm họa trên bản đồ thế giới", "id": "17 bahaya di peta dunia"}
 def hz_link(L, cls="btn"):
     return f'<a class="{cls}" href="/hazards/{"" if L == "ko" else "?l=en"}">{e(HZL_T.get(L) or HZL_T["en"])} →</a>'
 
 HZB_T = {"ko": ("재난·분쟁·사이버 공격 17가지를 움직이는 화면으로", "홍수·지진·산불부터 전쟁·시위·감염병, 사이버 공격까지. 나라를 누르면 그 나라에 기록된 재난·분쟁만 모아 보여 줍니다."),
  "en": ("Seventeen hazards, in motion", "From floods, quakes and wildfires to war, protest, epidemics and cyberattacks. Tap a country to see only what has been recorded there."),
- "es": ("Dieciséis riesgos, en movimiento sobre el mapa", "De inundaciones, terremotos e incendios a guerras, protestas y epidemias. Toque un país para ver solo lo registrado allí."),
- "fr": ("Seize risques, en mouvement sur la carte", "Inondations, séismes et feux de forêt, mais aussi guerres, manifestations et épidémies. Touchez un pays pour voir ce qui y a été enregistré."),
- "ar": ("ستة عشر خطرًا متحركًا على خريطة العالم", "من الفيضانات والزلازل والحرائق إلى الحروب والاحتجاجات والأوبئة. اضغط على دولة لترى ما سُجّل فيها فقط."),
- "vi": ("Mười sáu loại hiểm họa chuyển động trên bản đồ", "Từ lũ lụt, động đất, cháy rừng đến chiến tranh, biểu tình và dịch bệnh. Chạm vào một quốc gia để xem những gì đã ghi nhận ở đó."),
- "id": ("Enam belas bahaya bergerak di peta dunia", "Dari banjir, gempa dan kebakaran hutan hingga perang, unjuk rasa dan wabah. Ketuk sebuah negara untuk melihat yang tercatat di sana.")}
+ "es": ("Diecisiete riesgos, en movimiento", "De inundaciones, terremotos e incendios a guerras, protestas epidemias y ciberataques. Toque un país para ver solo lo registrado allí."),
+ "fr": ("Dix-sept risques, en mouvement", "Inondations, séismes et feux de forêt, mais aussi guerres, manifestations épidémies et cyberattaques. Touchez un pays pour voir ce qui y a été enregistré."),
+ "ar": ("سبعة عشر خطرًا في حركة", "من الفيضانات والزلازل والحرائق إلى الحروب والاحتجاجات والأوبئة والهجمات السيبرانية. اضغط على دولة لترى ما سُجّل فيها فقط."),
+ "vi": ("Mười bảy loại hiểm họa chuyển động", "Từ lũ lụt, động đất, cháy rừng đến chiến tranh, biểu tình dịch bệnh và tấn công mạng. Chạm vào một quốc gia để xem những gì đã ghi nhận ở đó."),
+ "id": ("Tujuh belas bahaya yang bergerak", "Dari banjir, gempa dan kebakaran hutan hingga perang, unjuk rasa wabah, serta serangan siber. Ketuk sebuah negara untuk melihat yang tercatat di sana.")}
+HZP = {"ko": ("재생", "일시정지", "이 재난 세계 지도에서 보기"), "en": ("Play", "Pause", "See this on the world map"), "es": ("Reproducir", "Pausa", "Verlo en el mapa mundial"),
+ "fr": ("Lecture", "Pause", "Voir sur la carte du monde"), "ar": ("تشغيل", "إيقاف مؤقت", "شاهده على خريطة العالم"), "vi": ("Phát", "Tạm dừng", "Xem trên bản đồ thế giới"), "id": ("Putar", "Jeda", "Lihat di peta dunia")}
 def hz_band(L):
     h, p_ = HZB_T.get(L) or HZB_T["en"]
+    pl, pa, mp = HZP.get(L) or HZP["en"]
     lang = L if L in ("ko", "es", "fr", "ar", "vi", "id") else "en"
-    return f'''<section class="band" id="hz16"><div class="in"><h2>{e(h)}</h2><p class="note" style="font-size:15px;max-width:46em">{e(p_)}</p><div class="hzg" id="hz16g" data-l="{lang}"></div><p class="cta">{hz_link(L)}</p></div></section>
-<script src="/hazards/hzfx.js" defer></script><script src="/hazards/hzfx2.js" defer></script><script>addEventListener("DOMContentLoaded",function(){{var g=document.getElementById("hz16g"),X=window.HZFX;if(!g||!X)return;var l=g.dataset.l,N=X.NM[l]||X.NM.en;g.innerHTML=["flood","storm","quake","tsunami","wildfire","volcano","war","cyber"].map(function(k){{return X.card(k,"none",N[k],"","")}}).join("")}});</script>'''
+    href = f'/hazards/{"" if L == "ko" else "?l=en"}'
+    return f'''<section class="band hzst" id="hz16"><div class="in"><h2>{e(h)}</h2><p class="note" style="font-size:15px;max-width:46em">{e(p_)}</p>
+<div class="hzs" id="hzs" data-l="{lang}"><div class="hzs-stage" id="hzss"></div><div class="hzs-bar"><button type="button" class="hzs-pp" id="hzspp" aria-label="{e(pa)}" data-pl="{e(pl)}" data-pa="{e(pa)}">❚❚</button><b class="hzs-nm" id="hzsnm"></b><span class="hzs-pr" id="hzspr"></span><a class="hzs-go" href="{href}">{e(mp)} →</a></div>
+<div class="hzs-th" id="hzsth" role="tablist"></div></div><p class="cta">{hz_link(L)}</p></div></section>
+<style>.hzst .hzs{{margin-top:26px}}.hzs-stage{{position:relative;aspect-ratio:16/7;border-radius:14px;overflow:hidden;background:#05090f}}.hzs-stage .hzc{{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .6s}}.hzs-stage .hzc.on{{opacity:1;visibility:visible}}.hzs-stage .hzc-v{{height:100%;aspect-ratio:auto!important;border-radius:0}}.hzs-stage .hzc-tag{{font-size:clamp(20px,3vw,40px)!important;padding:10px 18px!important}}
+.hzs-bar{{display:flex;align-items:center;gap:14px;margin:12px 0 18px;flex-wrap:wrap}}.hzs-pp{{width:40px;height:40px;border-radius:50%;border:1px solid var(--line,#ccd);background:none;color:inherit;font:inherit;font-size:13px;cursor:pointer}}.hzs-nm{{font-size:20px}}.hzs-pr{{flex:1;min-width:120px;height:3px;background:rgba(127,127,127,.25);position:relative;border-radius:2px;overflow:hidden}}.hzs-pr i{{position:absolute;left:0;top:0;bottom:0;background:currentColor;width:0}}.hzs-go{{font-size:15px}}
+.hzs-th{{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}}.hzs-th button{{all:unset;cursor:pointer;display:block;border-radius:10px;overflow:hidden;outline:2px solid transparent;outline-offset:2px;transition:outline-color .2s,transform .2s}}.hzs-th button:hover{{transform:translateY(-2px)}}.hzs-th button[aria-selected=true]{{outline-color:#3b82f6}}.hzs-th .hzc{{margin:0}}.hzs-th .hzc-tag{{font-size:13px!important}}
+@media(max-width:760px){{.hzs-stage{{aspect-ratio:4/3}}.hzs-th{{grid-template-columns:repeat(3,1fr);gap:6px}}.hzs-th .hzc-tag{{font-size:11px!important;padding:3px 6px!important}}.hzs-nm{{font-size:17px}}.hzs-go{{flex-basis:100%}}}}</style>
+<script src="/hazards/hzfx.js" defer></script><script src="/hazards/hzfx2.js" defer></script><script>addEventListener("DOMContentLoaded",function(){{var w=document.getElementById("hzs"),X=window.HZFX;if(!w||!X)return;var l=w.dataset.l,N=X.NM[l]||X.NM.en,G=X.G||X.K,st=document.getElementById("hzss"),th=document.getElementById("hzsth"),nm=document.getElementById("hzsnm"),pp=document.getElementById("hzspp"),pr=document.getElementById("hzspr");
+st.innerHTML=G.map(function(k){{return X.card(k,"none",N[k],"","")}}).join("");th.innerHTML=G.map(function(k,i){{return'<button type="button" role="tab" data-i="'+i+'" aria-label="'+N[k]+'">'+X.card(k,"none",N[k],"","")+'</button>'}}).join("");pr.innerHTML="<i></i>";
+var F=st.children,B=th.children,cur=-1,run=!matchMedia("(prefers-reduced-motion: reduce)").matches,t0=0,D=7000,bar=pr.firstChild;
+function show(i){{if(cur>=0){{F[cur].classList.remove("on");B[cur].setAttribute("aria-selected","false")}}cur=(i+G.length)%G.length;F[cur].classList.add("on");B[cur].setAttribute("aria-selected","true");nm.textContent=N[G[cur]];t0=performance.now()}}
+function tick(t){{if(run){{var f=(t-t0)/D;if(f>=1){{show(cur+1);f=0}}bar.style.width=(f*100)+"%"}}requestAnimationFrame(tick)}}
+function setRun(r){{run=r;pp.textContent=r?"❚❚":"▶";pp.setAttribute("aria-label",r?pp.dataset.pa:pp.dataset.pl);if(r)t0=performance.now()-parseFloat(bar.style.width||0)/100*D}}
+th.addEventListener("click",function(ev){{var b=ev.target.closest("button");if(!b)return;show(+b.dataset.i);bar.style.width="0"}});pp.addEventListener("click",function(){{setRun(!run)}});
+show(0);setRun(run);requestAnimationFrame(tick)}});</script>'''
 
 PZ = {"ko": [("사업과 입찰 기회를 찾습니다", "나라·산업 선택 → 진행 중 기회 → 참가 조건"), ("나와 가족의 위험에 대비합니다", "지역·재난 선택 → 지금 할 일과 준비 계획"), ("협력 참여 신청", "컨소시엄·협력 관심 등록 → 맞는 상대를 찾아 연락")],
  "en": [("Find business and tender opportunities", "Country and industry → open opportunities → entry conditions"), ("Prepare my family for risks", "Area and hazard → what to do now and a plan"), ("Apply to join a partnership", "Register interest in a consortium → we match and contact you")],

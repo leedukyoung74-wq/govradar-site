@@ -881,3 +881,5 @@ html{scroll-padding-top:116px}
 .nav.compact .burger{display:flex}.nav.compact .navr{margin-inline-start:auto}
 
 .qcount{margin:0 0 8px;font-size:13.5px}.qcount b{font-size:15px}
+
+/* bigger flags 2026-11-16 */.flag{gap:12px;padding:10px 12px}.flag .fi{width:44px;height:33px;line-height:33px;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.1)}.fi.big{width:168px;line-height:126px;border-radius:10px}.who .fi,.mini .fi{width:28px;line-height:21px;border-radius:3px}@media(max-width:760px){.fi.big{width:112px;line-height:84px}.flag .fi{width:36px;height:27px;line-height:27px}}

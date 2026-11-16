@@ -1102,3 +1102,36 @@ $("ci-pl").innerHTML=d.p.items.length?d.p.items.map(function(x){{return'<li dir=
 $("ci-al2").innerHTML=d.a.items.length?d.a.items.map(function(x){{return'<li dir="auto"><a href="'+E(x.url)+'" target="_blank" rel="noopener">'+E(x.title)+'</a><small>'+E(x.date)+" · "+E(x.winner)+" ("+E(x.wctry)+")"+(x.usd?" · ≈ "+U(x.usd):"")+'</small></li>'}}).join(""):'<li>—</li>';
 $("ci-src").textContent=S[12]+" "+String(d.updated).slice(0,10);
 }}).catch(function(){{sec.querySelector(".cist").remove();sec.querySelector(".cicols").remove();sec.querySelector(".note").textContent=S[9];}});}})();</script>'''
+
+
+# Country "at a glance" economy strip — reads data/feeds/econ.json (World Bank + exchange rates, collected daily, no AI)
+EC = {
+ "ko": ["한눈에 보는 경제·환율", "인구", "국내총생산(GDP)", "1인당 GDP", "경제성장률", "물가상승률", "통화·환율", "경제 지표는 세계은행이 발표한 가장 최근 연도 값이고, 환율은 매일 갱신합니다.", "출처: 세계은행 Open Data(CC BY 4.0) · 환율 Exchange Rate API · 갱신", "년", "이 나라 경제 지표를 지금 불러오지 못했습니다."],
+ "en": ["Economy and exchange rate at a glance", "Population", "GDP", "GDP per capita", "Real GDP growth", "Inflation (CPI)", "Currency", "Indicators are the latest year published by the World Bank; exchange rates are refreshed daily.", "Sources: World Bank Open Data (CC BY 4.0) · Rates by Exchange Rate API · updated", "", "Economic indicators for this country could not be loaded right now."],
+ "es": ["Economía y tipo de cambio de un vistazo", "Población", "PIB", "PIB per cápita", "Crecimiento del PIB real", "Inflación (IPC)", "Moneda", "Los indicadores son del último año publicado por el Banco Mundial; los tipos de cambio se actualizan a diario.", "Fuentes: Banco Mundial Open Data (CC BY 4.0) · tipos de Exchange Rate API · actualizado", "", "No se pudieron cargar ahora los indicadores de este país."],
+ "fr": ["Économie et taux de change en un coup d'œil", "Population", "PIB", "PIB par habitant", "Croissance du PIB réel", "Inflation (IPC)", "Monnaie", "Les indicateurs sont ceux de la dernière année publiée par la Banque mondiale ; les taux de change sont mis à jour chaque jour.", "Sources : Banque mondiale Open Data (CC BY 4.0) · taux Exchange Rate API · mis à jour", "", "Les indicateurs de ce pays n'ont pas pu être chargés pour le moment."],
+ "ar": ["الاقتصاد وسعر الصرف في لمحة", "السكان", "الناتج المحلي الإجمالي", "نصيب الفرد من الناتج", "نمو الناتج الحقيقي", "التضخم (مؤشر الأسعار)", "العملة", "المؤشرات لأحدث سنة نشرها البنك الدولي، وأسعار الصرف تُحدَّث يوميًا.", "المصادر: بيانات البنك الدولي المفتوحة (CC BY 4.0) · أسعار Exchange Rate API · آخر تحديث", "", "تعذّر تحميل المؤشرات الاقتصادية لهذا البلد الآن."],
+ "vi": ["Kinh tế và tỷ giá trong nháy mắt", "Dân số", "GDP", "GDP bình quân đầu người", "Tăng trưởng GDP thực", "Lạm phát (CPI)", "Tiền tệ", "Chỉ số là năm gần nhất do Ngân hàng Thế giới công bố; tỷ giá được cập nhật hằng ngày.", "Nguồn: Ngân hàng Thế giới Open Data (CC BY 4.0) · tỷ giá Exchange Rate API · cập nhật", "", "Hiện chưa tải được chỉ số kinh tế của nước này."],
+ "id": ["Ekonomi dan kurs sekilas", "Penduduk", "PDB", "PDB per kapita", "Pertumbuhan PDB riil", "Inflasi (IHK)", "Mata uang", "Indikator adalah tahun terbaru yang diterbitkan Bank Dunia; kurs diperbarui setiap hari.", "Sumber: Bank Dunia Open Data (CC BY 4.0) · kurs Exchange Rate API · diperbarui", "", "Indikator ekonomi negara ini belum dapat dimuat sekarang."],
+}
+def cty_econ(iso, L):
+    s = EC.get(L) or EC["en"]; S = _json.dumps(s, ensure_ascii=False)
+    cells = "".join(f'<div><b id="ec-{k}">–</b><span>{s[i]}</span><small id="ec-{k}y"></small></div>' for i, k in ((1, "pop"), (2, "gdp"), (3, "pc"), (4, "gr"), (5, "cpi"), (6, "fx")))
+    return f'''<section class="ec" id="econ" data-iso="{iso}"><h2>{s[0]}</h2><p class="note">{s[7]}</p><div class="ecg">{cells}</div><p class="fine" id="ec-src"></p></section>
+<style>.ec{{margin:40px 0}}.ecg{{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}}.ecg div{{background:var(--bg2,#f3f5f8);padding:16px;border-radius:10px}}.ecg b{{display:block;font-size:26px;line-height:1.15;word-break:keep-all}}.ecg span{{display:block;font-size:14px;margin-top:2px}}.ecg small{{display:block;font-size:13px;opacity:.75;margin-top:4px}}@media(max-width:760px){{.ecg{{grid-template-columns:1fr 1fr;gap:8px}}.ecg div{{padding:12px 10px}}.ecg b{{font-size:20px}}.ecg span{{font-size:12px}}}}</style>
+<script>(function(){{var S={S},L="{L}",I="{iso}",sec=document.getElementById("econ");if(!sec)return;
+function $(i){{return document.getElementById(i)}}
+var loc=L==="ar"?"ar-u-nu-latn":L;
+function C(v,cur){{try{{return new Intl.NumberFormat(loc,cur?{{style:"currency",currency:"USD",notation:"compact",maximumFractionDigits:1}}:{{notation:"compact",maximumFractionDigits:1}}).format(v)}}catch(e){{return String(Math.round(v))}}}}
+function N(v,d){{try{{return new Intl.NumberFormat(loc,{{maximumFractionDigits:d}}).format(v)}}catch(e){{return String(v)}}}}
+function Y(a){{return a&&a[1]?a[1]+S[9]:""}}
+fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/econ.json",{{cache:"no-store"}}).then(function(r){{if(!r.ok)throw 0;return r.json()}}).then(function(j){{
+var d=(j.c||{{}})[I];if(!d||!(d.gdp||d.pop||d.usd))throw 0;
+if(d.pop){{$("ec-pop").textContent=C(d.pop[0]);$("ec-popy").textContent=Y(d.pop)}}
+if(d.gdp){{$("ec-gdp").textContent=C(d.gdp[0],1);$("ec-gdpy").textContent=Y(d.gdp)}}
+if(d.pc){{$("ec-pc").textContent=C(d.pc[0],1);$("ec-pcy").textContent=Y(d.pc)}}
+if(d.gr){{$("ec-gr").textContent=(d.gr[0]>0?"+":"")+N(d.gr[0],1)+"%";$("ec-gry").textContent=Y(d.gr)}}
+if(d.cpi){{$("ec-cpi").textContent=N(d.cpi[0],1)+"%";$("ec-cpiy").textContent=Y(d.cpi)}}
+if(d.cur){{$("ec-fx").textContent=d.cur;var t=[];if(d.cur!=="USD"&&d.usd)t.push("1 USD = "+N(d.usd,d.usd<10?3:1)+" "+d.cur);if(d.cur!=="KRW"&&d.krw)t.push("1 "+d.cur+" = "+N(d.krw,d.krw<10?3:1)+" KRW");$("ec-fxy").textContent=t.join(" · ")}}
+var fx=(j.src||{{}}).fx||{{}};$("ec-src").textContent=S[8]+" "+String(fx.at||j.updated).slice(0,10)+(fx.ok===false?" (!)":"");
+}}).catch(function(){{sec.querySelector(".ecg").remove();sec.querySelector(".note").textContent=S[10];}});}})();</script>'''

@@ -270,3 +270,23 @@ class OfficialGate(unittest.TestCase):
     def test_official_partial_ok_passes(self):
         o = {"sources": {"usgs": {"ok": True}, "gdacs": {"ok": False}}, "items": {"usgs": []}}
         self.assertEqual(QG.check({"tenders.json": feed(300), "hz/official.json": o}, {}), [])
+
+
+class Econ(unittest.TestCase):
+    def setUp(self):
+        import feed_econ as FE; self.FE = FE
+
+    def test_aggregates_skipped_and_values_kept(self):
+        j = [{}, [{"countryiso3code": "AFE", "date": "2025", "value": 1.0}, {"countryiso3code": "KOR", "date": "2025", "value": 36227.4},
+                  {"countryiso3code": "NGA", "date": "2024", "value": None}]]
+        self.assertEqual(self.FE.parse_wb(j), {"KR": [36227.0, "2025"]})
+
+    def test_bad_fx_answer_raises(self):
+        with self.assertRaises(ValueError): self.FE.parse_fx({"result": "error"})
+
+    def test_gate(self):
+        good = {"c": {f"C{i}": {"gdp": [1, "2025"], "usd": 2} for i in range(160)} | {"KR": {"gdp": [1, "2025"], "usd": 1336}}, "src": {"fx": {"ok": True}}}
+        self.assertEqual(QG.check({"tenders.json": feed(300), "econ.json": good}, {}), [])
+        bad = {"c": {"KR": {"gdp": [1, "2025"], "usd": 1.3}}, "src": {"fx": {"ok": False}}}
+        b = QG.check({"tenders.json": feed(300), "econ.json": bad}, {})
+        self.assertEqual(len([x for x in b if "econ" in x]), 4)

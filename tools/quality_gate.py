@@ -55,6 +55,17 @@ def check(new, old, now=None):
         srcs = o.get("sources") or {}
         if not srcs or not isinstance(o.get("items"), dict): bad.append("hz/official.json unreadable")
         elif sum(1 for v in srcs.values() if v.get("ok")) == 0: bad.append("hz/official.json: no agency answered (all 6 failed)")
+    ec = new.get("econ.json")
+    if ec is not None:
+        cc = ec.get("c") if isinstance(ec, dict) else None
+        if not isinstance(cc, dict): bad.append("econ.json unreadable")
+        else:
+            n_gdp = sum(1 for v in cc.values() if v.get("gdp")); n_fx = sum(1 for v in cc.values() if v.get("usd"))
+            if n_gdp < 150: bad.append(f"econ.json: only {n_gdp} countries with GDP (minimum 150)")
+            if n_fx < 120: bad.append(f"econ.json: only {n_fx} countries with an exchange rate (minimum 120)")
+            if not any((v or {}).get("ok") for v in (ec.get("src") or {}).values()): bad.append("econ.json: no source answered")
+            kr = (cc.get("KR") or {}).get("usd") or 0
+            if kr and not 500 < kr < 5000: bad.append(f"econ.json: USD/KRW {kr} looks wrong")
     return bad
 
 def published(path, d):
@@ -67,6 +78,7 @@ if __name__ == "__main__":
     names = ["tenders.json", "awards.json", "pipeline.json", "cty/_summary.json"]
     new = {k: load(os.path.join(d, "feeds", k)) for k in names}
     old = {k: published(k, d) for k in names}
+    if os.path.exists(os.path.join(d, "feeds", "econ.json")): new["econ.json"] = load(os.path.join(d, "feeds", "econ.json"))
     if os.path.exists(os.path.join(d, "hz", "official.json")): new["hz/official.json"] = load(os.path.join(d, "hz", "official.json"))
     bad = check(new, old)
     print(json.dumps({"result": "FAIL" if bad else "PASS", "problems": bad,

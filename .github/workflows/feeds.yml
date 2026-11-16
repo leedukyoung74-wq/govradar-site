@@ -39,6 +39,9 @@ jobs:
       - name: Official situation feed (USGS, GDACS, NASA EONET, WHO, NASA JPL, NOAA) — no AI
         if: inputs.task == 'daily'
         run: python tools/feed_official.py || echo "official feed partly failed; failed agencies keep their last good items"
+      - name: Country economy feed (World Bank indicators, exchange rates) — no AI
+        if: inputs.task == 'daily'
+        run: python tools/feed_econ.py || echo "economy feed failed; keeping the last good values"
       - name: Weekly source registry check
         if: inputs.task == 'sources'
         run: python tools/probe_sources.py data_branch/feeds/sources_registry.json
