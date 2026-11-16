@@ -56,7 +56,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -136,7 +136,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -156,7 +156,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -176,7 +176,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "403",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -216,7 +216,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -276,7 +276,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -336,7 +336,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -356,7 +356,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "503",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -396,7 +396,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -416,7 +416,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -436,7 +436,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -456,7 +456,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -496,7 +496,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -536,7 +536,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -556,7 +556,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -576,7 +576,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -676,7 +676,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -696,7 +696,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -716,7 +716,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -836,7 +836,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -896,7 +896,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -936,7 +936,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "403",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -976,7 +976,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -996,7 +996,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1036,7 +1036,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1076,7 +1076,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1096,7 +1096,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1156,7 +1156,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1176,7 +1176,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1256,7 +1256,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1356,7 +1356,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1436,7 +1436,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1476,7 +1476,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1496,7 +1496,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1516,7 +1516,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "403",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1536,7 +1536,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1616,7 +1616,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1636,7 +1636,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1656,7 +1656,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "RemoteDisconnected",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1676,7 +1676,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1696,7 +1696,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1716,7 +1716,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1776,7 +1776,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1796,7 +1796,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "403",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1816,7 +1816,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1836,7 +1836,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1856,7 +1856,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1896,7 +1896,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1956,7 +1956,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -1996,7 +1996,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2036,7 +2036,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2136,7 +2136,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2276,7 +2276,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2296,7 +2296,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2336,7 +2336,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2456,7 +2456,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2516,7 +2516,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2556,7 +2556,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2616,7 +2616,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2656,7 +2656,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "TimeoutError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2696,7 +2696,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2716,7 +2716,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2756,7 +2756,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2796,7 +2796,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2816,7 +2816,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "403",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2836,7 +2836,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2856,7 +2856,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2896,7 +2896,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -2956,7 +2956,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3036,7 +3036,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "404",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3076,7 +3076,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3116,7 +3116,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3176,7 +3176,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3216,7 +3216,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3256,7 +3256,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3276,7 +3276,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3356,7 +3356,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3376,7 +3376,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3396,7 +3396,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3416,7 +3416,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3436,7 +3436,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3476,7 +3476,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3536,7 +3536,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3556,7 +3556,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3596,7 +3596,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3616,7 +3616,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3676,7 +3676,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3716,7 +3716,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3756,7 +3756,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3776,7 +3776,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3796,7 +3796,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3816,7 +3816,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3856,7 +3856,7 @@
   "collect": "UNKNOWN",
   "note": "Sell to State directory candidate (2026-06-30); URL from WMM brief 2026-11-16",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3876,7 +3876,7 @@
   "collect": "PASS",
   "note": "Connected (feed_tenders.worldbank)",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3896,7 +3896,7 @@
   "collect": "PASS",
   "note": "Connected (feed_intel.pipeline)",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3916,7 +3916,7 @@
   "collect": "PASS",
   "note": "Connected (feed_intel.awards)",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3936,7 +3936,7 @@
   "collect": "PASS",
   "note": "Connected (feed_more.ted)",
   "url_status": "405",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3956,7 +3956,7 @@
   "collect": "PASS",
   "note": "Connected (feed_more.uk)",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -3974,9 +3974,9 @@
   "login_captcha": "UNKNOWN",
   "frequency": "daily",
   "collect": "PASS",
-  "note": "Connected in review branch (feed_more.ukcf)",
+  "note": "Connected in review branch (feed_more.ukcf); notice URL = uuid part of release id, checked against live notice pages",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4014,9 +4014,9 @@
   "login_captcha": "UNKNOWN",
   "frequency": "daily",
   "collect": "PASS",
-  "note": "Connected in review branch (feed_more.prozorro); titles in Ukrainian",
+  "note": "Connected in review branch (feed_more.prozorro); up to 400 new detail checks per run with a cache, unchecked count reported in sources_status.json; titles in Ukrainian",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4036,7 +4036,7 @@
   "collect": "UNKNOWN",
   "note": "Code ready; key application under review (about 5 days)",
   "url_status": "400",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4056,7 +4056,7 @@
   "collect": "UNKNOWN",
   "note": "Code ready; needs a free SAM.gov API key",
   "url_status": "404",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4076,7 +4076,7 @@
   "collect": "UNKNOWN",
   "note": "Reachable; awards not tenders — candidate for award analysis",
   "url_status": "403",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4116,7 +4116,7 @@
   "collect": "FAIL",
   "note": "HTTP 403 to automated requests",
   "url_status": "403",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4316,7 +4316,7 @@
   "collect": "UNKNOWN",
   "note": "",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4376,7 +4376,7 @@
   "collect": "UNKNOWN",
   "note": "Regional candidate from WMM brief §05",
   "url_status": "403",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4416,7 +4416,7 @@
   "collect": "UNKNOWN",
   "note": "Regional candidate from WMM brief §05",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4436,7 +4436,7 @@
   "collect": "UNKNOWN",
   "note": "Regional candidate from WMM brief §05",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4456,7 +4456,7 @@
   "collect": "UNKNOWN",
   "note": "Regional candidate from WMM brief §05",
   "url_status": "200",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4496,7 +4496,7 @@
   "collect": "UNKNOWN",
   "note": "Regional candidate from WMM brief §05",
   "url_status": "404",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {
@@ -4596,7 +4596,7 @@
   "collect": "UNKNOWN",
   "note": "Regional candidate from WMM brief §05",
   "url_status": "URLError",
-  "robots": "none",
+  "robots": "unknown",
   "checked": "2026-11-16"
  },
  {

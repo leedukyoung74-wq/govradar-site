@@ -1,0 +1,55 @@
+# PROPOSED for the DEFAULT branch (main) — not active until the owner approves copying it to main/.github/workflows/.
+# Why: GitHub runs `schedule` triggers only from workflow files on the default branch. main has no workflows, so the
+# daily cron in src/.github/workflows/tenders.yml has never fired (every run so far was a push event).
+# This file only holds the timers; the collector code is always checked out from the src branch.
+name: Scheduled feeds (runs src code)
+on:
+  schedule:
+    - cron: "10 21 * * *"    # daily 06:10 KST — tenders, awards, pipeline, country files
+    - cron: "40 22 * * 0"    # Monday 07:40 KST — source registry check
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: feeds, cancel-in-progress: false }
+jobs:
+  daily:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '10 21 * * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: src }
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data_branch }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python tools/feed_tenders.py
+        env: { DAPA_KEY: "${{ secrets.DAPA_KEY }}", SAM_KEY: "${{ secrets.SAM_KEY }}" }
+      - run: python tools/feed_intel.py || echo "intel feed failed; keeping yesterday's files"
+      - run: python tools/feed_cty.py || echo "country files failed"
+      - name: Publish to data branch
+        run: |
+          cd data_branch
+          git add feeds
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Scheduled feed $(date -u +%FT%H:%MZ)"
+          git push origin HEAD:data
+  weekly-sources:
+    if: github.event.schedule == '40 22 * * 0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: src }
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data_branch }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python tools/probe_sources.py data_branch/feeds/sources_registry.json
+      - name: Publish to data branch
+        run: |
+          cd data_branch
+          git add feeds/sources_registry.json
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Source check $(date -u +%F)"
+          git push origin HEAD:data

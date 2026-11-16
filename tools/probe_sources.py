@@ -18,7 +18,9 @@ def robots(url):
     try:
         req = urllib.request.Request(f"{p.scheme}://{p.netloc}/robots.txt", headers={"User-Agent": UA})
         with urllib.request.urlopen(req, timeout=15) as r: rp.parse(r.read().decode("utf8", "replace").splitlines())
-    except Exception: return "none"
+    except urllib.error.HTTPError as ex:
+        return "no-robots-file" if ex.code == 404 else "unknown"  # an unreadable robots.txt is NOT permission
+    except Exception: return "unknown"
     return "allowed" if rp.can_fetch(UA, url) else "disallowed"
 
 def check(s):

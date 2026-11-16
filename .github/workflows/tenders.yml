@@ -1,5 +1,6 @@
 name: Daily tender feed (no AI)
 on:
+  workflow_dispatch:
   schedule:
     - cron: "10 21 * * *"   # 06:10 Asia/Seoul every day
   push:

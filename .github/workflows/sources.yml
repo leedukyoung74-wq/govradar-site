@@ -10,6 +10,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with: { ref: src }
       - uses: actions/checkout@v4
         with: { ref: data, path: data_branch }
       - uses: actions/setup-python@v5
