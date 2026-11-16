@@ -6,7 +6,7 @@ SRC = os.path.join(ROOT, "tools", "welcome_src"); OUT = os.path.join(ROOT, "cf",
 KEYS = json.load(open(os.path.join(HERE, "keys.json"), encoding="utf-8"))
 LANGS = ["ko", "en", "es", "fr", "ar", "vi", "id"]
 NAMES = {"ko": "한국어", "en": "English", "es": "Español", "fr": "Français", "ar": "العربية", "vi": "Tiếng Việt", "id": "Bahasa Indonesia"}
-SUBS = ["", "about/", "services/", "country/", "membership/", "login/"]
+SUBS = ["", "about/", "services/", "country/", "projects/", "membership/", "login/"]
 SKIP = {49, 226}
 HANGUL = re.compile(r"[가-힣]")
 EN_PILL = re.compile(r'<a href="/en/" style="border: 1px solid rgba\(255,255,255,\.5\); border-radius: 20px; padding: 3px 12px(?:; font-size: 13px)?">EN</a>')
