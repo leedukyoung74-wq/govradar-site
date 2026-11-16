@@ -149,9 +149,16 @@ STALE_MAX_H, VERIFY_CAP = 48, 40
 def _key(x): return (x.get("source"), x.get("sid") or x.get("url"))
 
 def carry(nm_, got, state, prev, now, stamp, lookup, budget):
-    """Returns (items to add, counts). lookup(x) -> (title, deadline_date, buyer) or ("UNAVAILABLE", ...)."""
+    """Returns (items to add, counts). lookup(x) -> verify_samples.official_record(x) (dict).
+    Verification grades kept on each item ("verify"):
+      search  — returned by today's official search
+      full    — re-read by id: publisher status ACTIVE + exact deadline instant with offset, still ahead
+      date    — re-read by id: status ACTIVE but the publisher gives a date without a time zone (World Bank): open, "time not given"
+      partial — re-read but status not given (TED) or not readable: NOT confirmed -> stale
+    Cancelled / withdrawn / closed at the publisher -> dropped at once. The official deadline always replaces ours, so a
+    same-day change of time (earlier or later) is applied."""
     import deadline as DL
-    c = {"carried_verified": 0, "carried_stale": 0, "dropped_unverified": 0, "dropped_closed": 0, "verify_lookups": 0}
+    c = {"carried_verified": 0, "carried_stale": 0, "dropped_unverified": 0, "dropped_closed": 0, "dropped_cancelled": 0, "verify_lookups": 0}
     if not (state in ("ERROR", "PARTIAL", "EMPTY_SUCCESS") or nm_ in WINDOWED): return [], c
     have = {_key(x) for x in got} | {x.get("url") for x in got}
     out = []
@@ -159,24 +166,39 @@ def carry(nm_, got, state, prev, now, stamp, lookup, budget):
     for x in prev.values():
         if x.get("source") != nm_ or _key(x) in have or x.get("url") in have: continue
         if not DL.is_open(x, now): c["dropped_closed"] += 1; continue
-        x = dict(x); t = d = None
+        x = dict(x); r = None
         if budget[0] > 0:
             budget[0] -= 1; c["verify_lookups"] += 1
-            try: t, d, _ = lookup(x)
-            except Exception: t = "UNAVAILABLE"
-        if t and t != "UNAVAILABLE" and d and norm(t) == norm(x.get("title")):
-            if d != x.get("deadline"):                    # official deadline moved: take it (date only — time unknown)
-                x["deadline"] = x["deadline_at"] = d
-                if not DL.is_open(x, now): c["dropped_closed"] += 1; continue
-            x.update(last_verified_at=stamp, verify="official"); x.pop("stale", None); x.pop("stale_since", None)
-            out.append(x); c["carried_verified"] += 1; continue
+            try: r = lookup(x)
+            except Exception: r = None
+        if r and r.get("ok") and norm(r.get("title")) == norm(x.get("title")):
+            if r.get("status") in ("CANCELLED", "CLOSED"): c["dropped_cancelled"] += 1; continue
+            if r.get("status") == "ACTIVE":
+                y = dict(x, deadline_at=r["deadline_at"], deadline=r["deadline_at"][:10])   # official time wins, same day too
+                if not DL.is_open(y, now): c["dropped_closed"] += 1; continue
+                y.update(last_verified_at=r.get("checked_at") or stamp, verify="full" if r.get("timed") else "date", official_status=r.get("status_raw"))
+                y.pop("stale", None); y.pop("stale_since", None)
+                out.append(y); c["carried_verified"] += 1; continue
+        # not confirmed (unreadable, rate limited, title differs, status not given): stale, never a normal open notice
         since = x.get("stale_since") or stamp
         try: age_h = (now - datetime.datetime.strptime(since, "%Y-%m-%dT%H:%MZ").replace(tzinfo=datetime.timezone.utc)).total_seconds() / 3600
         except ValueError: age_h = 0
         if age_h >= STALE_MAX_H: c["dropped_unverified"] += 1; continue
-        x.update(stale=True, stale_since=since, verify="pending"); x.setdefault("last_verified_at", x.get("added", ""))
+        x.update(stale=True, stale_since=since, verify="partial")
+        x["last_verified_at"] = x.get("last_verified_at", "")      # the last real check, never the first-seen date
         out.append(x); c["carried_stale"] += 1
     return out, c
+
+def all_empty_fallback(prev, now, stamp):
+    """Every source returned nothing (or failed): keep yesterday's still-valid notices so the site is not blanked, but ALL as
+    stale (shown with "verification delayed", out of counts and alerts). Invalid or closed notices are never restored.
+    The quality gate still sees the drop in fresh notices."""
+    keep = []
+    for x in prev.values():
+        if valid(x, now): continue          # valid() returns a reason when the notice is NOT valid (closed, bad date, …)
+        y = dict(x, stale=True, stale_since=x.get("stale_since") or stamp, verify="partial"); y["last_verified_at"] = x.get("last_verified_at", "")
+        keep.append(y)
+    return keep
 
 def main():
     import feed_more as FM
@@ -199,7 +221,7 @@ def main():
         state = classify_state(FM.stat(nm_))
         for x in got:   # seen in today's official search = verified now
             x["last_verified_at"] = stamp; x["verify"] = "search"
-        extra, cc = carry(nm_, got, state, prev, now, stamp, VS.official, budget)
+        extra, cc = carry(nm_, got, state, prev, now, stamp, VS.official_record, budget)
         got = got + extra
         groups.append((nm_, got)); FM.stat(nm_)["state"] = state; FM.stat(nm_).update(cc)
         FM.stat(nm_)["carried_from_yesterday"] = cc["carried_verified"] + cc["carried_stale"]
@@ -214,7 +236,9 @@ def main():
         if st["state"] in ("SUCCESS", "EMPTY_SUCCESS", "PARTIAL"): st["last_success"] = stamp
         else: st["last_success"] = (status.get(nm_) or {}).get("last_success", "")
         status[nm_] = st
-    if not items: items = [x for x in prev.values() if not valid(x, now)]
+    if not any(x.get("verify") == "search" for x in items):   # no source answered with a single notice today
+        items = all_empty_fallback(prev, now, stamp)
+        for st in status.values(): st.setdefault("notes", []).append("all sources empty: yesterday's valid notices kept as stale")
     items.sort(key=lambda x: x["deadline"])
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump({"updated": stamp, "count": len(items), "items": items[:3000]}, open(OUT, "w", encoding="utf8"), ensure_ascii=False)

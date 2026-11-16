@@ -38,7 +38,9 @@ var GRDL = window.GRDL || (function () {
   function label(i, L, stale) {
     var t = T[L] || T.en;
     if (i.state === "unknown") return t[6];
-    if (stale) return t[7] + " " + String(stale).replace("T", " ").slice(0, 16) + " UTC · " + t[8];
+    if (stale) return /^\d{4}-\d\d-\d\dT\d\d:\d\d/.test(String(stale))
+      ? t[7] + " " + String(stale).replace("T", " ").slice(0, 16) + " UTC · " + t[8]
+      : t[7].split(" · ")[0] + " · " + t[8];   // never checked since it went stale: no time shown, no first-seen date
     if (!i.open) return t[3];
     var s = t[0] + " " + i.src;
     if (!i.timed) return s + " · " + t[1];

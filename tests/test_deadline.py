@@ -52,6 +52,8 @@ class Browser(unittest.TestCase):
           GRDL.info('','2026-11-27',n).state,GRDL.info('','2026-11-01',n).state,GRDL.info('','',n).state,GRDL.label(GRDL.info('','',n),'ko'),
           GRDL.label(GRDL.info('2026-11-27T17:00:00Z','',n),'en','2026-11-19T06:10Z')]))""")
         self.assertEqual(r[:4], ["open", "date_only", "closed", "unknown"]); self.assertIn("마감일 미확인", r[4]); self.assertIn("verification delayed", r[5])
+        r2 = self.run_js("console.log(JSON.stringify(GRDL.label(GRDL.info('2026-11-27T17:00:00Z','',Date.parse('2026-11-20T00:00:00Z')),'en','-')))")
+        self.assertEqual(r2, "verification delayed · check the notice")
 
     def test_open_page_drops_row_at_deadline(self):
         # a row closing 1 s from now disappears on the next sweep, while the page stays open

@@ -387,28 +387,67 @@ class ContractsFinderRecord(unittest.TestCase):
 
 
 class OpenCatalogue(unittest.TestCase):
-    """What happens to yesterday's notices that today's search did not return (ChatGPT PR #12 review §3)."""
+    """Notices missing from today's search are re-read by id (ChatGPT PR #12 reviews §3 and 297ba85 §2)."""
     NOW = datetime.datetime(2026, 11, 20, 0, 0, tzinfo=datetime.timezone.utc); STAMP = "2026-11-20T00:00Z"
 
     def prev(self, **kw):
         x = {"source": "UK Contracts Finder", "sid": "ocds-1", "url": "https://cf/1", "title": "Catering tender", "deadline": "2026-12-02",
-             "deadline_at": "2026-12-02T12:00:00Z", "added": "2026-11-10", "iso": "GB", "buyer": "Trust"}
+             "deadline_at": "2026-12-02T17:00:00Z", "added": "2026-11-10", "iso": "GB", "buyer": "Trust"}
         x.update(kw); return {x["url"]: x}
 
-    def run_(self, prev, state="EMPTY_SUCCESS", got=(), lookup=None, budget=40, src="UK Contracts Finder"):
-        return FT.carry(src, list(got), state, prev, self.NOW, self.STAMP, lookup or (lambda x: ("UNAVAILABLE", "UNAVAILABLE", None)), [budget])
+    @staticmethod
+    def rec(status="active", dl="2026-12-02T17:00:00Z", title="Catering tender", ok=True, why=""):
+        import verify_samples as VS
+        return {"ok": ok, "id": "ocds-1", "title": title, "deadline_at": dl, "timed": "T" in dl, "status": VS.norm_status(status),
+                "status_raw": status, "buyer": "Trust", "checked_at": "2026-11-20T00:00Z", "why": why}
 
-    def test_empty_success_old_but_open_notice_is_reverified_and_kept(self):
-        out, c = self.run_(self.prev(), lookup=lambda x: ("Catering tender", "2026-12-02", "Trust"))
-        self.assertEqual(len(out), 1); self.assertEqual(out[0]["verify"], "official"); self.assertNotIn("stale", out[0])
-        self.assertEqual(out[0]["added"], "2026-11-10")   # first-seen date kept -> never counted as new
-        self.assertEqual(c["carried_verified"], 1)
+    def run_(self, prev, state="EMPTY_SUCCESS", got=(), lookup=None, budget=40, src="UK Contracts Finder", now=None):
+        return FT.carry(src, list(got), state, prev, now or self.NOW, self.STAMP, lookup or (lambda x: self.rec(ok=False, why="HTTP 200, not OCDS JSON")), [budget])
 
-    def test_unconfirmable_is_stale_not_open(self):
+    def test_active_old_but_open_notice_is_kept_with_full_grade(self):
+        out, c = self.run_(self.prev(), lookup=lambda x: self.rec())
+        self.assertEqual(out[0]["verify"], "full"); self.assertNotIn("stale", out[0]); self.assertEqual(out[0]["added"], "2026-11-10")
+        self.assertEqual(out[0]["last_verified_at"], "2026-11-20T00:00Z"); self.assertEqual(c["carried_verified"], 1)
+
+    def test_same_day_deadline_moved_earlier_is_applied(self):
+        out, _ = self.run_(self.prev(), lookup=lambda x: self.rec(dl="2026-12-02T10:00:00Z"))
+        self.assertEqual(out[0]["deadline_at"], "2026-12-02T10:00:00Z")
+        # and if the earlier time has already passed, the notice is dropped instead of showing open until 17:00
+        late = datetime.datetime(2026, 12, 2, 12, 0, tzinfo=datetime.timezone.utc)
+        out, c = self.run_(self.prev(), lookup=lambda x: self.rec(dl="2026-12-02T10:00:00Z"), now=late)
+        self.assertEqual(out, []); self.assertEqual(c["dropped_closed"], 1)
+
+    def test_same_day_deadline_moved_later_is_applied(self):
+        out, _ = self.run_(self.prev(), lookup=lambda x: self.rec(dl="2026-12-02T23:00:00+01:00"))
+        self.assertEqual(out[0]["deadline_at"], "2026-12-02T23:00:00+01:00")
+
+    def test_cancelled_withdrawn_or_closed_at_publisher_is_dropped(self):
+        for st in ("cancelled", "withdrawn", "unsuccessful", "complete"):
+            out, c = self.run_(self.prev(), lookup=lambda x, st=st: self.rec(status=st))
+            self.assertEqual(out, [], st); self.assertEqual(c["dropped_cancelled"], 1, st)
+
+    def test_status_not_given_is_never_confirmed_open(self):
+        out, c = self.run_(self.prev(source="EU TED"), src="EU TED", lookup=lambda x: self.rec(status=None))   # TED gives no status
+        self.assertTrue(out[0]["stale"]); self.assertEqual(out[0]["verify"], "partial"); self.assertEqual(c["carried_verified"], 0)
+
+    def test_world_bank_date_without_zone_is_date_grade(self):
+        out, _ = self.run_(self.prev(source="World Bank", deadline_at="2026-12-02"), src="World Bank", lookup=lambda x: self.rec(status="Published", dl="2026-12-02"))
+        self.assertEqual(out[0]["verify"], "date"); self.assertEqual(out[0]["deadline_at"], "2026-12-02")
+
+    def test_unconfirmable_is_stale_and_keeps_real_last_check(self):
         out, c = self.run_(self.prev())
-        self.assertTrue(out[0]["stale"]); self.assertEqual(out[0]["stale_since"], self.STAMP); self.assertEqual(c["carried_stale"], 1)
+        self.assertTrue(out[0]["stale"]); self.assertEqual(out[0]["stale_since"], self.STAMP)
+        self.assertEqual(out[0]["last_verified_at"], "")                       # NOT the first-seen date
+        out, _ = self.run_(self.prev(last_verified_at="2026-11-18T06:10Z"))
+        self.assertEqual(out[0]["last_verified_at"], "2026-11-18T06:10Z")
         import deadline as DL
-        self.assertFalse(DL.is_listed_open(out[0], self.NOW))   # shown with a label, not counted / alerted
+        self.assertFalse(DL.is_listed_open(out[0], self.NOW))
+
+    def test_title_mismatch_and_rate_limit_are_not_confirmations(self):
+        out, _ = self.run_(self.prev(), lookup=lambda x: self.rec(title="Something else"))
+        self.assertTrue(out[0]["stale"])
+        out, _ = self.run_(self.prev(), lookup=lambda x: self.rec(ok=False, why="rate limited (429)"))
+        self.assertTrue(out[0]["stale"])
 
     def test_stale_dropped_after_48_hours(self):
         out, c = self.run_(self.prev(stale=True, stale_since="2026-11-17T23:00Z"))
@@ -419,15 +458,6 @@ class OpenCatalogue(unittest.TestCase):
     def test_closed_notice_never_carried(self):
         out, c = self.run_(self.prev(deadline="2026-11-19", deadline_at="2026-11-19T12:00:00Z"))
         self.assertEqual(out, []); self.assertEqual(c["dropped_closed"], 1)
-
-    def test_deadline_extension_taken_from_official_record(self):
-        out, _ = self.run_(self.prev(), lookup=lambda x: ("Catering tender", "2026-12-09", "Trust"))
-        self.assertEqual(out[0]["deadline"], "2026-12-09")
-
-    def test_repeated_error_and_rate_limit_stay_unknown(self):
-        for st in ("ERROR", "PARTIAL"):
-            out, c = self.run_(self.prev(), state=st, lookup=lambda x: ("UNAVAILABLE", "UNAVAILABLE", None))
-            self.assertTrue(out[0]["stale"])
 
     def test_notice_in_todays_search_is_not_duplicated(self):
         p = self.prev(); out, _ = self.run_(p, state="SUCCESS", got=[dict(list(p.values())[0])])
@@ -440,5 +470,39 @@ class OpenCatalogue(unittest.TestCase):
     def test_lookup_budget(self):
         p = {}
         for i in range(3): p.update(self.prev(sid=f"ocds-{i}", url=f"https://cf/{i}"))
-        out, c = self.run_(p, lookup=lambda x: ("Catering tender", "2026-12-02", "T"), budget=1)
+        out, c = self.run_(p, lookup=lambda x: self.rec(), budget=1)
         self.assertEqual((c["verify_lookups"], c["carried_verified"], c["carried_stale"]), (1, 1, 2))
+
+
+class AllSourcesEmpty(unittest.TestCase):
+    """Fallback when every source returns nothing: only VALID notices come back, and only as stale."""
+    def test_valid_restored_as_stale_invalid_and_closed_not_restored(self):
+        now = datetime.datetime.now(datetime.timezone.utc); stamp = now.strftime("%Y-%m-%dT%H:%MZ")
+        ok = item(sid="A", url="https://x/a"); ok["last_verified_at"] = "2026-11-16T11:14Z"
+        closed = item(sid="B", url="https://x/b", deadline=(now.date() - datetime.timedelta(days=2)).isoformat())
+        closed["deadline_at"] = closed["deadline"]
+        bad = item(sid="C", url="https://x/c", deadline="2026-02-31"); bad["deadline_at"] = "2026-02-31"
+        notitle = item(sid="D", url="https://x/d", title="")
+        out = FT.all_empty_fallback({x["url"]: x for x in (ok, closed, bad, notitle)}, now, stamp)
+        self.assertEqual([x["sid"] for x in out], ["A"])
+        self.assertTrue(out[0]["stale"]); self.assertEqual(out[0]["last_verified_at"], "2026-11-16T11:14Z")
+        import deadline as DL
+        self.assertFalse(DL.is_listed_open(out[0], now))
+
+
+class OfficialRecord(unittest.TestCase):
+    def test_status_mapping(self):
+        import verify_samples as VS
+        for raw, want in [("active", "ACTIVE"), ("active.tendering", "ACTIVE"), ("Published", "ACTIVE"), ("cancelled", "CANCELLED"),
+                          ("withdrawn", "CANCELLED"), ("unsuccessful", "CLOSED"), ("complete", "CLOSED"), (None, "UNKNOWN"), ("planned", "UNKNOWN")]:
+            self.assertEqual(VS.norm_status(raw), want, raw)
+
+    def test_sample_listing_a_cancelled_notice_fails(self):
+        import verify_samples as VS
+        r = VS.judge({"url_status": 200, "official_status": "CANCELLED", "record_unavailable": False, "title_ok": True, "deadline_ok": True})
+        self.assertEqual(r["verdict"], "FAIL")
+
+    def test_ted_exact_deadline(self):
+        self.assertEqual(FM.ted_deadline(["2026-11-16+01:00", "2026-11-15+01:00"], ["17:00:00+01:00", "09:30:00+01:00"]), "2026-11-15T09:30:00+01:00")
+        self.assertEqual(FM.ted_deadline(["2026-11-16+01:00"], []), "2026-11-16+01:00")
+        self.assertEqual(FM.ted_deadline(["2026-11-16+01:00"], ["17:00+01:00"]), "2026-11-16T17:00:00+01:00")

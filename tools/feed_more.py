@@ -117,7 +117,7 @@ def ted():
     base = f"notice-type IN (cn-standard cn-social) AND deadline-receipt-tender-date-lot>={TODAY.strftime('%Y%m%d')}"
     queries = [(f"{base} AND publication-date>={d(30)} AND estimated-value-proc>=1000000", 2e6, 12),
                (f"{base} AND publication-date>={d(45)} AND NOT buyer-country IN ({' '.join(EEA)})", 0, 6)]
-    fields = ["publication-number", "notice-title", "buyer-name", "buyer-country", "deadline-receipt-tender-date-lot",
+    fields = ["publication-number", "notice-title", "buyer-name", "buyer-country", "deadline-receipt-tender-date-lot", "deadline-receipt-tender-time-lot",
               "contract-nature", "estimated-value-proc", "estimated-value-cur-proc"]
     for q, minv, pages in queries:
         for page in range(1, pages + 1):
@@ -137,13 +137,31 @@ def ted():
         for _ in v[25:]: drop(S, "country-cap")
     return res
 
+def ted_deadline(dates, times):
+    """TED gives lot deadlines as separate date ("2026-11-16+01:00") and time ("17:00:00+01:00") lists.
+    Returns the earliest lot deadline as one ISO instant ("2026-11-16T17:00:00+01:00"), or the earliest date when no time."""
+    best = None
+    for i, d in enumerate(dates or []):
+        m = re.match(r"(\d{4}-\d\d-\d\d)(Z|[+-]\d\d:\d\d)?$", str(d))
+        if not m: continue
+        t = (times or [])[i] if i < len(times or []) else None
+        tm = re.match(r"(\d\d:\d\d(?::\d\d)?)(Z|[+-]\d\d:\d\d)?$", str(t or ""))
+        if tm:
+            hhmmss = tm.group(1) + (":00" if len(tm.group(1)) == 5 else ""); off = tm.group(2) or m.group(2)
+            iso = f"{m.group(1)}T{hhmmss}{off}" if off else None
+        else: iso = None
+        key = iso or m.group(1) + "T23:59:59-12:00"
+        try: inst = datetime.datetime.fromisoformat(key.replace("Z", "+00:00"))
+        except ValueError: continue
+        if best is None or inst < best[0]: best = (inst, iso or str(d))
+    return best[1] if best else ""
+
 def ted_item(n, minv=0):
     S = "EU TED"
     c3 = (n.get("buyer-country") or [""])[0]; iso = ISO3.get(c3)
     if not iso: drop(S, "no-country"); return None
-    raws = sorted(str(x) for x in (n.get("deadline-receipt-tender-date-lot") or []) if re.match(r"\d{4}-\d\d-\d\d", str(x)))
-    if not raws: drop(S, "no-deadline"); return None
-    raw = raws[0]
+    raw = ted_deadline(n.get("deadline-receipt-tender-date-lot"), n.get("deadline-receipt-tender-time-lot"))
+    if not raw: drop(S, "no-deadline"); return None
     if not _keep(S, raw): return None
     cur = str(n.get("estimated-value-cur-proc") or "")
     try: val = float(n.get("estimated-value-proc") or 0)
