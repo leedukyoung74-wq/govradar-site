@@ -1122,7 +1122,7 @@ def cty_econ(iso, L):
 <script>(function(){{var S={S},L="{L}",I="{iso}",sec=document.getElementById("econ");if(!sec)return;
 function $(i){{return document.getElementById(i)}}
 var loc=L==="ar"?"ar-u-nu-latn":L;
-function C(v,cur){{try{{return new Intl.NumberFormat(loc,cur?{{style:"currency",currency:"USD",notation:"compact",maximumFractionDigits:1}}:{{notation:"compact",maximumFractionDigits:1}}).format(v)}}catch(e){{return String(Math.round(v))}}}}
+function C(v,cur){{if(L==="ko"&&cur)return v>=1e12?(v/1e12).toFixed(1)+"조 달러":v>=1e8?Math.round(v/1e8).toLocaleString("ko")+"억 달러":Math.round(v).toLocaleString("ko")+"달러";if(L==="ko"&&v>=1e4)return v>=1e8?(v/1e8).toFixed(1)+"억 명":Math.round(v/1e4).toLocaleString("ko")+"만 명";try{{return new Intl.NumberFormat(loc,cur?{{style:"currency",currency:"USD",notation:"compact",maximumFractionDigits:1}}:{{notation:"compact",maximumFractionDigits:1}}).format(v)}}catch(e){{return String(Math.round(v))}}}}
 function N(v,d){{try{{return new Intl.NumberFormat(loc,{{maximumFractionDigits:d}}).format(v)}}catch(e){{return String(v)}}}}
 function Y(a){{return a&&a[1]?a[1]+S[9]:""}}
 fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/econ.json",{{cache:"no-store"}}).then(function(r){{if(!r.ok)throw 0;return r.json()}}).then(function(j){{
