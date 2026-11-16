@@ -285,6 +285,10 @@ def glance(iso, L, d, name):
     news = (f'<div class="gl-news"><p class="gl-k">{e(g[3])}</p>' + "".join(card(x) for x in srcs) + '</div>') if srcs else ""
     return f'<section class="glance"><h2>{e(g[0].format(c=name))}</h2><div class="gl-top">{pic}{data}</div>{news}</section>'
 
+# USGS place names for countries whose English name differs (used as a regex on the page)
+QALIAS = {"TR": "Turkey|Türkiye", "RU": "Russia", "IR": "Iran", "US": "Alaska|California|Hawaii|Nevada|Oregon|Washington|Idaho|Montana|Utah|Texas|Oklahoma|Puerto Rico|U\\.S\\. Virgin Islands",
+          "CD": "Democratic Republic of the Congo|DR Congo", "KR": "South Korea", "KP": "North Korea", "TW": "Taiwan", "VN": "Vietnam", "LA": "Laos",
+          "BO": "Bolivia", "VE": "Venezuela", "SY": "Syria", "MM": "Myanmar", "PG": "Papua New Guinea", "FM": "Micronesia", "TZ": "Tanzania", "GB": "United Kingdom|UK"}
 def country_page(iso, L):
     t, d, c = T[L], DATA.get(iso) or {}, BY[iso]
     name = nm(iso, L)
@@ -354,7 +358,7 @@ def country_page(iso, L):
         body.append(sec("risk", t["risk"], f'<p>{f"<span class=lvl data-l={lv}>{e(t[chr(114)+chr(108)][lv])}</span>" if lv else ""} <span class="note">{e(r.get("checked",""))}</span></p><div class="risk">{cols}</div>'))
     ag = CT["agencies"]["country"].get(iso)
     if ag: body.append(sec("agencies", tx(L, "ag"), "<ul>" + "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a></li>' for n, u in ag) + "</ul>"))
-    body.append(f'<section class="sec" id="localhaz" data-iso="{iso}" hidden><h2>{e(tx(L,"n_eh"))}</h2><ul></ul></section>')
+    body.append(f'<section class="sec" id="localhaz" data-iso="{iso}" data-en="{e(QALIAS.get(iso) or re.escape(nm(iso, "en")))}" hidden><h2>{e(tx(L,"n_eh"))}</h2><ul></ul></section>')
     ec = G(d, "econ", L)
     if ec: body.append(sec("econ", t["econ"], f'<p>{e(ec.get("rating","—"))} · K-SURE {e(ec.get("ksure","—"))} · {e((ec.get("fx") or {}).get("code",""))} {e((ec.get("fx") or {}).get("change_30d",""))}</p>'))
     sc = G(d, "sanctions", L)
