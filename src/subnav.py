@@ -114,12 +114,14 @@ __SPY__"""
 
 SPYJS = '(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var box=n.querySelector(".in")||n,A=[].slice.call(n.querySelectorAll(\'a[href^="#"]\'));if(!A.length)return;\nvar S=A.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)))}),cur=-1,lock=0,vis={};\nfunction mark(k){if(k===cur)return;cur=k;A.forEach(function(a,i){if(i===k)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")});var a=A[k];if(a){var l=a.offsetLeft-(box.clientWidth-a.offsetWidth)/2;box.scrollTo({left:Math.max(0,l),behavior:"smooth"})}}\nA.forEach(function(a,i){a.addEventListener("click",function(ev){var s=S[i];if(!s||s.offsetParent===null)return;ev.preventDefault();lock=Date.now()+900;mark(i);var y=s.getBoundingClientRect().top+scrollY-118;scrollTo({top:y,behavior:"smooth"});try{history.replaceState(null,"",a.getAttribute("href"))}catch(e){}})});\nif(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[S.indexOf(e.target)]=e.isIntersecting});if(Date.now()<lock)return;var k=-1;for(var i=S.length-1;i>=0;i--)if(vis[i]&&S[i].offsetParent!==null){k=i;break}if(k<0){var y=scrollY+130;S.forEach(function(s,i){if(s&&s.offsetParent!==null&&s.getBoundingClientRect().top+scrollY<=y)k=i})}if(k<0&&scrollY<80)k=0;if(k>=0)mark(k)},{rootMargin:"-118px 0px -55% 0px"});S.forEach(function(s){if(s)io.observe(s)});}\nif(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();'
 SUBCSS = """.subnav{position:sticky;top:60px;z-index:19;background:#0b0b0b;border-bottom:1px solid #2a2a28}
-.subnav .in{display:flex;gap:4px;height:44px;align-items:center;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.subnav .in{display:flex;flex-wrap:wrap;gap:4px 4px;min-height:44px;align-items:center;max-width:1200px;margin:0 auto;padding:4px max(16px,env(safe-area-inset-left))}
+@media(max-width:760px){.subnav .in{gap:2px;padding:4px 10px}.subnav a{font-size:12.5px!important;padding:6px 9px!important}}
 .subnav .in::-webkit-scrollbar{display:none}
 .subnav a{flex:0 0 auto;white-space:nowrap;color:#bdbdb8;text-decoration:none;font-size:13.5px;padding:7px 12px;border-radius:999px;font-family:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
 .subnav a:hover{color:#fff;background:#1c1c1a}
 .subnav a[aria-current]{color:#0b0b0b;background:#E3CC96;font-weight:700}
 .gvh .subnav{position:static}
+.subnav.multi{position:static}
 """
 
 # ---- in-page table of contents as the second bar -------------------------------------------
