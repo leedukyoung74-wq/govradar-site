@@ -147,16 +147,21 @@ def body(L):
     # HAZARDS
     import ready_offline as RO
     out.append(RO.section(L))   # tools for when the internet and phone networks fail (#offline)
+    # moving clips (same canvas scenes as the home page and /hazards/), one per hazard tab
+    HZK = {"war": "war", "famine": "drought", "epidemic": "epidemic", "volcano": "volcano", "earthquake": "quake", "tsunami": "tsunami", "wildfire": "wildfire",
+           "asteroid": "impact", "radiation": "radiation", "flood": "flood", "heat": "heat", "cold": "cold", "outage": "outage"}
+    clip = lambda hid, lab: (f'<figure class="hzc hz-{HZK[hid]}"><div class="hzc-v v2"><i class="hzc-sw"></i><i class="hzc-rg"></i>'
+                             f'<canvas class="hzcv" data-k="{HZK[hid]}" aria-hidden="true"></canvas><span class="hzc-tag">{e(lab)}</span></div></figure>') if hid in HZK else ART.scene(hid)
     tabs = "".join(f'<button role="tab" data-hz="{h[0]}"{" class=on" if i == 0 else ""}>{e(h[1] if ko else h[2])}</button>' for i, h in enumerate(RC.HZ))
     panes = ""
     for i, (hid, nk, ne, ik, ie, ak, ae, pk, pe, ck, ce, ids) in enumerate(RC.HZ):
         plan = "".join(f'<tr><th>{p}</th><td>{e(x)}</td></tr>' for p, x in zip([t("30일", "30 days"), t("60일", "60 days"), t("90일", "90 days"), t("1년", "1 year")], pk if ko else pe))
-        panes += f'''<article class="rd-hz" data-hz="{hid}"{"" if i == 0 else " hidden"}><div class="rd-hz-a">{ART.scene(hid)}</div><div class="rd-hz-t"><h3>{e(nk if ko else ne)}</h3><p class="rd-lede2">{e(ik if ko else ie)}</p>
+        panes += f'''<article class="rd-hz" data-hz="{hid}"{"" if i == 0 else " hidden"}><div class="rd-hz-a">{clip(hid, nk if ko else ne)}</div><div class="rd-hz-t"><h3>{e(nk if ko else ne)}</h3><p class="rd-lede2">{e(ik if ko else ie)}</p>
 <ul class="rd-check">{"".join(f'<li><label><input type="checkbox" data-hzc="{hid}-{j}"> {e(x)}</label></li>' for j, x in enumerate(ak if ko else ae))}</ul>
 <table class="rd-t rd-mini">{plan}</table><p class="rd-caution">{e(ck if ko else ce)}</p><p class="note">{src(ids)}</p></div></article>'''
     out.append(f'''<section class="rd-sec" id="hazards"><div class="rd-in">
 <h2>{t("재난별 행동과 준비", "Actions and preparation by hazard")}</h2>
-<div class="rd-tabs" role="tablist">{tabs}</div>{panes}
+<div class="rd-tabs" role="tablist">{tabs}</div>{panes}<script src="/hazards/hzfx.js" defer></script><script src="/hazards/hzfx2.js" defer></script>
 <p class="note">{t("영아·고령자·장애·만성질환·반려동물은 개인별 준비가 따로 필요합니다. 처방약 여분과 냉장약 보관, 전기의료기기 예비전원은 의료진과 상의하세요.", "Infants, older people, disability, chronic illness and pets need individual plans. Discuss spare prescriptions, cold-chain medicines and backup power for medical devices with a clinician.")} {src([6, 7, 8])}</p>
 </div></section>''')
     # ORG

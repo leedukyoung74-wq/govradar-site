@@ -255,6 +255,37 @@ def lst(items, fmt):
     items = [x for x in (items or []) if x]
     return "<ul>" + "".join(fmt(x) for x in items) + "</ul>" if items else ""
 
+# ---- moving clips of the disaster types actually recorded in a country (EM-DAT/OWID deaths 2000-2025, same data as /hazards/)
+_DZ = None
+def dz():
+    global _DZ
+    if _DZ is None:
+        try:
+            raw = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "cf", "extra", "hazards", "data.js"), encoding="utf-8").read()
+            d = json.loads(raw[raw.index("{"): raw.rindex("}") + 1]); _DZ = ({c["a2"]: c["by"] for c in d["countries"].values() if c.get("a2")}, d["types"])
+        except Exception: _DZ = ({}, [])
+    return _DZ
+DZK = {"Flood": "flood", "Extreme weather": "storm", "Earthquake": "quake", "Landslide": "landslide", "Wildfire": "wildfire", "Drought": "drought", "Extreme temperature": "temp", "Volcanic activity": "volcano"}
+HZC_T = {"ko": ("이 나라에 기록된 재난 — 움직이는 화면", "2000~2025년 사망 {n}명", "출처: EM-DAT(CRED) · Our World in Data. 사망자가 기록된 재난 유형만, 많은 순서로 보여 줍니다.", "재난·분쟁 20가지 모두 보기 →"),
+ "en": ("Disasters recorded in this country, in motion", "{n} deaths, 2000–2025", "Source: EM-DAT (CRED) via Our World in Data. Only disaster types with recorded deaths, largest first.", "See all 20 hazards →"),
+ "es": ("Desastres registrados en este país, en movimiento", "{n} muertes, 2000–2025", "Fuente: EM-DAT (CRED) vía Our World in Data. Solo tipos con muertes registradas, de mayor a menor.", "Ver los 20 riesgos →"),
+ "fr": ("Catastrophes enregistrées dans ce pays, en mouvement", "{n} décès, 2000–2025", "Source : EM-DAT (CRED) via Our World in Data. Seuls les types ayant causé des décès, du plus au moins grave.", "Voir les 20 risques →"),
+ "ar": ("الكوارث المسجلة في هذا البلد، بالحركة", "{n} وفاة، 2000–2025", "المصدر: EM-DAT (CRED) عبر Our World in Data. أنواع الكوارث التي سُجلت فيها وفيات فقط، من الأكبر.", "عرض المخاطر العشرين →"),
+ "vi": ("Thiên tai đã ghi nhận ở quốc gia này, dạng chuyển động", "{n} người chết, 2000–2025", "Nguồn: EM-DAT (CRED) qua Our World in Data. Chỉ các loại có người chết được ghi nhận, từ nhiều đến ít.", "Xem cả 20 hiểm họa →"),
+ "id": ("Bencana yang tercatat di negara ini, bergerak", "{n} kematian, 2000–2025", "Sumber: EM-DAT (CRED) melalui Our World in Data. Hanya jenis bencana dengan kematian tercatat, terbesar dulu.", "Lihat 20 bahaya →")}
+def hz_clips(L, iso):
+    by, types = dz(); v = by.get(iso)
+    if not v: return ""
+    rows = sorted(((n, DZK.get(t_)) for t_, n in zip(types, v) if n and DZK.get(t_)), reverse=True)[:4]
+    if not rows: return ""
+    h, cap, srcn, more = HZC_T.get(L) or HZC_T["en"]; lang = L if L in ("ko", "es", "fr", "ar", "vi", "id") else "en"
+    loc = {"ko": "ko-KR", "en": "en-US", "es": "es-ES", "fr": "fr-FR", "ar": "ar", "vi": "vi-VN", "id": "id-ID"}.get(L, "en-US")
+    items = json.dumps([[k, cap.replace("{n}", f"{n:,}" if L in ("ko", "en") else f"{n:,}".replace(",", " " if L == "fr" else "."))] for n, k in rows], ensure_ascii=False)
+    return sec("hzclips", h, f'''<div class="hzcl" data-l="{lang}" data-it=\'{e(items)}\'></div><p class="note">{e(srcn)} <a href="/hazards/{"" if L == "ko" else "?l=" + lang}">{e(more)}</a></p>
+<style>.hzcl{{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}}</style>
+<script src="/hazards/hzfx.js" defer></script><script src="/hazards/hzfx2.js" defer></script>
+<script>addEventListener("DOMContentLoaded",function(){{var X=window.HZFX;document.querySelectorAll(".hzcl").forEach(function(w){{if(!X)return;var N=X.NM[w.dataset.l]||X.NM.en;w.innerHTML=JSON.parse(w.dataset.it).map(function(a){{return X.card(a[0],"none",N[a[0]],"",a[1])}}).join("")}})}})</script>''')
+
 def sec(id_, h, body):
     return f'<section class="sec" id="{id_}"><h2>{e(h)}</h2>{body}</section>' if body else ""
 
@@ -358,6 +389,8 @@ def country_page(iso, L):
     if r:
         cols = "".join(f'<div><b>{lab}</b><p>{e(" · ".join(r.get(k) or []) or "—")}</p></div>' for k, lab in (("disaster", "🌪"), ("conflict", "⚔"), ("epidemic", "🦠")))
         body.append(sec("risk", t["risk"], f'<p>{f"<span class=lvl data-l={lv}>{e(t[chr(114)+chr(108)][lv])}</span>" if lv else ""} <span class="note">{e(r.get("checked",""))}</span></p><div class="risk">{cols}</div>'))
+    _hc = hz_clips(L, iso)
+    if _hc: body.append(_hc)
     ag = CT["agencies"]["country"].get(iso)
     if ag: body.append(sec("agencies", tx(L, "ag"), "<ul>" + "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a></li>' for n, u in ag) + "</ul>"))
     body.append(f'<section class="sec" id="localhaz" data-iso="{iso}" data-en="{e(QALIAS.get(iso) or re.escape(nm(iso, "en")))}" hidden><h2>{e(tx(L,"n_eh"))}</h2><ul></ul></section>')
@@ -580,13 +613,13 @@ HZL_T = {"ko": "재난·분쟁 17가지 세계 지도로 보기", "en": "17 haza
 def hz_link(L, cls="btn"):
     return f'<a class="{cls}" href="/hazards/{"" if L == "ko" else "?l=en"}">{e(HZL_T.get(L) or HZL_T["en"])} →</a>'
 
-HZB_T = {"ko": ("재난·분쟁·사이버 공격 17가지를 움직이는 화면으로", "홍수·지진·산불부터 전쟁·시위·감염병, 사이버 공격까지. 나라를 누르면 그 나라에 기록된 재난·분쟁만 모아 보여 줍니다."),
- "en": ("Seventeen hazards, in motion", "From floods, quakes and wildfires to war, protest, epidemics and cyberattacks. Tap a country to see only what has been recorded there."),
- "es": ("Diecisiete riesgos, en movimiento", "De inundaciones, terremotos e incendios a guerras, protestas epidemias y ciberataques. Toque un país para ver solo lo registrado allí."),
- "fr": ("Dix-sept risques, en mouvement", "Inondations, séismes et feux de forêt, mais aussi guerres, manifestations épidémies et cyberattaques. Touchez un pays pour voir ce qui y a été enregistré."),
- "ar": ("سبعة عشر خطرًا في حركة", "من الفيضانات والزلازل والحرائق إلى الحروب والاحتجاجات والأوبئة والهجمات السيبرانية. اضغط على دولة لترى ما سُجّل فيها فقط."),
- "vi": ("Mười bảy loại hiểm họa chuyển động", "Từ lũ lụt, động đất, cháy rừng đến chiến tranh, biểu tình dịch bệnh và tấn công mạng. Chạm vào một quốc gia để xem những gì đã ghi nhận ở đó."),
- "id": ("Tujuh belas bahaya yang bergerak", "Dari banjir, gempa dan kebakaran hutan hingga perang, unjuk rasa wabah, serta serangan siber. Ketuk sebuah negara untuk melihat yang tercatat di sana.")}
+HZB_T = {"ko": ("재난·분쟁·사이버 공격 20가지를 움직이는 화면으로", "홍수·지진·산불, 폭염·한파·장기 정전부터 전쟁·시위·감염병, 사이버 공격까지. 나라를 누르면 그 나라에 기록된 재난·분쟁만 모아 보여 줍니다."),
+ "en": ("Twenty hazards, in motion", "From floods, quakes, wildfires, heatwaves, cold waves and long power cuts to war, protest, epidemics and cyberattacks. Tap a country to see only what has been recorded there."),
+ "es": ("Veinte riesgos, en movimiento", "De inundaciones, terremotos e incendios a guerras, protestas epidemias y ciberataques. Toque un país para ver solo lo registrado allí."),
+ "fr": ("Vingt risques, en mouvement", "Inondations, séismes et feux de forêt, mais aussi guerres, manifestations épidémies et cyberattaques. Touchez un pays pour voir ce qui y a été enregistré."),
+ "ar": ("عشرون خطرًا في حركة", "من الفيضانات والزلازل والحرائق إلى الحروب والاحتجاجات والأوبئة والهجمات السيبرانية. اضغط على دولة لترى ما سُجّل فيها فقط."),
+ "vi": ("Hai mươi loại hiểm họa chuyển động", "Từ lũ lụt, động đất, cháy rừng đến chiến tranh, biểu tình dịch bệnh và tấn công mạng. Chạm vào một quốc gia để xem những gì đã ghi nhận ở đó."),
+ "id": ("Dua puluh bahaya yang bergerak", "Dari banjir, gempa dan kebakaran hutan hingga perang, unjuk rasa wabah, serta serangan siber. Ketuk sebuah negara untuk melihat yang tercatat di sana.")}
 HZP = {"ko": ("재생", "일시정지", "이 재난 세계 지도에서 보기"), "en": ("Play", "Pause", "See this on the world map"), "es": ("Reproducir", "Pausa", "Verlo en el mapa mundial"),
  "fr": ("Lecture", "Pause", "Voir sur la carte du monde"), "ar": ("تشغيل", "إيقاف مؤقت", "شاهده على خريطة العالم"), "vi": ("Phát", "Tạm dừng", "Xem trên bản đồ thế giới"), "id": ("Putar", "Jeda", "Lihat di peta dunia")}
 def hz_band(L):
