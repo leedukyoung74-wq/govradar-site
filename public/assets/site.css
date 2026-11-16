@@ -834,12 +834,14 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;tr
 
 /* second menu bar, always directly under the top bar */
 .subnav{position:sticky;top:60px;z-index:19;background:#0b0b0b;border-bottom:1px solid #2a2a28}
-.subnav .in{display:flex;gap:4px;height:44px;align-items:center;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+.subnav .in{display:flex;flex-wrap:wrap;gap:4px 4px;min-height:44px;align-items:center;max-width:1200px;margin:0 auto;padding:4px max(16px,env(safe-area-inset-left))}
+@media(max-width:760px){.subnav .in{gap:2px;padding:4px 10px}.subnav a{font-size:12.5px!important;padding:6px 9px!important}}
 .subnav .in::-webkit-scrollbar{display:none}
 .subnav a{flex:0 0 auto;white-space:nowrap;color:#bdbdb8;text-decoration:none;font-size:13.5px;padding:7px 12px;border-radius:999px;font-family:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
 .subnav a:hover{color:#fff;background:#1c1c1a}
 .subnav a[aria-current]{color:#0b0b0b;background:#E3CC96;font-weight:700}
 .gvh .subnav{position:static}
+.subnav.multi{position:static}
 html{scroll-padding-top:116px}
 .links a[aria-current]{color:var(--ink);background:var(--panel2)}
 /* development banks & UN: real logos, large */
