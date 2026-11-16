@@ -19,7 +19,7 @@ def http(url, data=None, ctype=None, browser=False):
 
 n = lambda s: re.sub(r"\W+", " ", str(s or "").lower()).strip()
 
-def official(x):
+def _official(x):
     """Return (title, deadline_date, buyer) from the source's own API for this notice id."""
     s, sid = x["source"], x.get("sid", "")
     if s == "World Bank":
@@ -35,17 +35,46 @@ def official(x):
         dl = sorted(str(z)[:10] for z in (r.get("deadline-receipt-tender-date-lot") or []))
         return t, dl[0] if dl else "", FM._first(r.get("buyer-name"))
     if s in ("UK Find a Tender", "UK Contracts Finder"):
-        # the notice page itself (server-rendered): title and the deadline date must appear on it
-        _, b = http(x["url"], browser=True)
-        txt = n(re.sub(r"<[^>]+>", " ", b))
-        import datetime as _dt
-        dl = _dt.date.fromisoformat(x["deadline"]); human = n(f"{dl.day} {dl.strftime('%B %Y')}")
-        return (x["title"] if n(x["title"])[:50] in txt else "(not found on page)"), (x["deadline"] if human in txt else "(not found on page)"), None
+        # official OCDS record by id (no page scraping, no browser user agent); both services rate-limit, so space calls
+        import time; time.sleep(3)
+        if s == "UK Find a Tender": u = "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/" + urllib.parse.quote(sid)
+        else: u = "https://www.contractsfinder.service.gov.uk/Published/Notice/OCDS/" + x["url"].rstrip("/").rsplit("/", 1)[-1]
+        code, b = http(u)
+        if code == 429: return "RATE_LIMITED", "RATE_LIMITED", None
+        try:
+            j = json.loads(b)
+            if "records" in j:
+                rec = j["records"][0]; rel = rec.get("compiledRelease") or (rec.get("releases") or [{}])[-1]
+            else:
+                rel = (j.get("releases") or [{}])[-1]
+        except Exception: rel = {}
+        t = rel.get("tender") or {}
+        return t.get("title"), str((t.get("tenderPeriod") or {}).get("endDate") or "")[:10], (rel.get("buyer") or {}).get("name")
     if s == "Prozorro (Ukraine)" and x.get("pid"):
         _, b = http("https://public-api.prozorro.gov.ua/api/2.5/tenders/" + x["pid"])
         t = (json.loads(b or "{}").get("data") or {})
         return t.get("title_en") or t.get("title"), str((t.get("tenderPeriod") or {}).get("endDate") or "")[:10], (t.get("procuringEntity") or {}).get("name")
     return None, None, None
+
+def official(x):
+    """Official record, or ("UNAVAILABLE",)*3 when the source could not give one right now (HTTP error, rate limit,
+    empty or unparsable reply, unknown id). Unavailable is reported as UNKNOWN — never as a match or a mismatch."""
+    try: t, d, b = _official(x)
+    except Exception: return "UNAVAILABLE", "UNAVAILABLE", None
+    if t == "RATE_LIMITED" or not t or not d: return "UNAVAILABLE", "UNAVAILABLE", None
+    return t, d, b
+
+def judge(r):
+    c = r["url_status"]
+    if isinstance(c, int) and 200 <= c < 300: r["link"] = "ok"
+    elif c == 403: r["link"] = "unconfirmed"
+    elif isinstance(c, int) and 400 <= c < 500 and c != 429: r["link"] = "broken"
+    else: r["link"] = "unknown"
+    if r.get("record_unavailable"): r["record"] = "unavailable"
+    elif r.get("title_ok") and r.get("deadline_ok"): r["record"] = "match"
+    else: r["record"] = "mismatch"
+    r["verdict"] = "FAIL" if (r["link"] == "broken" or r["record"] == "mismatch") else ("PASS" if (r["link"] == "ok" and r["record"] == "match") else "UNKNOWN")
+    return r
 
 if __name__ == "__main__":
     k = int(sys.argv[1]) if len(sys.argv) > 1 else 4
@@ -53,19 +82,31 @@ if __name__ == "__main__":
     items = json.load(open(os.path.join(FEEDS, "tenders.json"), encoding="utf8"))["items"]
     by = {}
     for x in items: by.setdefault(x["source"], []).append(x)
-    quota = {"World Bank": k + 2, "EU TED": k + 2, "UK Find a Tender": k, "UK Contracts Finder": 10, "Prozorro (Ukraine)": 2}
+    quota = {"World Bank": k + 2, "EU TED": k + 2, "UK Find a Tender": k, "UK Contracts Finder": 4, "Prozorro (Ukraine)": 2}
     rows = []
     for s, q in quota.items():
         pool = by.get(s, []); step = max(1, len(pool) // max(1, q))
         for x in pool[::step][:q]:
-            code, _ = http(x["url"], browser=True)
+            code, _ = http(x["url"])
             t, d, b = official(x)
-            row = {"source": s, "sid": x.get("sid"), "url": x["url"], "url_status": code, "title_ok": None if t is None else n(t)[:60] == n(x["title"])[:60],
+            rl = t == "UNAVAILABLE"
+            if rl: t = d = None
+            row = {"record_unavailable": rl, "source": s, "sid": x.get("sid"), "url": x["url"], "url_status": code, "title_ok": None if t is None else n(t)[:60] == n(x["title"])[:60],
                    "deadline_ok": None if d is None else d == x["deadline"], "buyer_ok": None if b is None else n(b)[:40] == n(x["buyer"])[:40],
                    "site_title": x["title"][:80], "official_title": (t or "")[:80], "site_deadline": x["deadline"], "official_deadline": d}
             rows.append(row)
-    json.dump(rows, open(os.path.join(FEEDS, "verify_samples.json"), "w", encoding="utf8"), ensure_ascii=False, indent=1)
     for r in rows:
-        print(r["source"], "|", r["sid"], "|", r["url_status"], "| title", r["title_ok"], "| deadline", r["deadline_ok"], "| buyer", r["buyer_ok"])
-    ok = [r for r in rows if str(r["url_status"]).startswith("2") and r["title_ok"] is not False and r["deadline_ok"] is not False]
-    print(f"checked {len(rows)}, passed {len(ok)}")
+        pass
+    # Two separate judgements per notice:
+    #   link   ok (2xx) | broken (404, 410, other 4xx) | unconfirmed (403 — may be a bot block or a real denial; never counted
+    #          as success) | unknown (timeout, 429, 5xx, network error)
+    #   record match | mismatch | unavailable (official record could not be fetched)
+    # verdict FAIL if the link is broken or the record mismatches; PASS only if link ok AND record match; otherwise UNKNOWN.
+    for r in rows: judge(r)
+    ok = [r for r in rows if r["verdict"] == "PASS"]; unk = [r for r in rows if r["verdict"] == "UNKNOWN"]; bad = [r for r in rows if r["verdict"] == "FAIL"]
+    for r in rows: print(r["verdict"], "|", r["source"], "|", r["sid"], "| link", r["link"], r["url_status"], "| record", r["record"])
+    json.dump(rows, open(os.path.join(FEEDS, "verify_samples.json"), "w", encoding="utf8"), ensure_ascii=False, indent=1)
+    print(f"checked {len(rows)}, PASS {len(ok)}, FAIL {len(bad)}, UNKNOWN {len(unk)}")
+    # strict: any real mismatch or broken link fails the run; so does a check where fewer than half could be confirmed
+    if not rows or bad or len(ok) * 2 < len(rows):
+        print("FAIL: a sampled notice had a broken link or did not match its official record, or fewer than half could be confirmed"); sys.exit(1)

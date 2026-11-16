@@ -4,6 +4,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools")); sys.path.insert(0, ROOT)
 import feed_more as FM
 import feed_tenders as FT
+sys.path.insert(0, os.path.join(ROOT, "tools"))
 sys.path.insert(0, os.path.join(ROOT, "tools", "sources"))
 import summary as SUM
 
@@ -143,3 +144,119 @@ class NoKeys(unittest.TestCase):
         finally:
             for k, v in saved.items():
                 if v: os.environ[k] = v
+
+
+class Retry(unittest.TestCase):
+    def test_timeout_then_success_is_not_a_failure(self):
+        import time
+        FM.STATS.clear(); calls = {"n": 0}; real = time.sleep; time.sleep = lambda s: None
+        def flaky():
+            calls["n"] += 1
+            if calls["n"] < 2: raise TimeoutError("The read operation timed out")
+            return "ok"
+        try: self.assertEqual(FM._retry("T", flaky), "ok")
+        finally: time.sleep = real
+        self.assertEqual(FM.stat("T")["failed"], 0); self.assertEqual(FM.stat("T")["requests"], 1)
+
+    def test_http_404_is_not_retried(self):
+        import urllib.error
+        FM.STATS.clear(); calls = {"n": 0}
+        def nf():
+            calls["n"] += 1; raise urllib.error.HTTPError("u", 404, "nf", {}, None)
+        with self.assertRaises(Exception): FM._retry("T", nf)
+        self.assertEqual(calls["n"], 1); self.assertEqual(FM.stat("T")["failed"], 1)
+
+
+class FindATenderTimeout(unittest.TestCase):
+    """Replays the 2026-11-16 06:19Z production failure: the first Find a Tender request timed out."""
+    def test_uk_survives_one_read_timeout(self):
+        import io, time, urllib.request
+        dl = (FM.TODAY + datetime.timedelta(days=20)).isoformat() + "T12:00:00Z"
+        pkg = {"releases": [{"id": "000001-2026", "ocid": "ocds-h6vhtk-000001", "buyer": {"name": "Council A"},
+                             "tender": {"status": "active", "title": "Bridge works", "tenderPeriod": {"endDate": dl},
+                                        "value": {"amount": 5000000, "currency": "GBP"}, "mainProcurementCategory": "works"}}], "links": {}}
+        calls = {"n": 0}
+        class R(io.BytesIO):
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+        def fake(req, timeout=0):
+            calls["n"] += 1
+            if calls["n"] == 1: raise TimeoutError("The read operation timed out")
+            return R(json.dumps(pkg).encode())
+        real_open, real_sleep = urllib.request.urlopen, time.sleep
+        urllib.request.urlopen, time.sleep = fake, (lambda s: None)
+        try:
+            FM.STATS.clear(); got = FM.uk()
+        finally:
+            urllib.request.urlopen, time.sleep = real_open, real_sleep
+        self.assertEqual(len(got), 1); self.assertEqual(got[0]["title"], "Bridge works")
+        st = FM.stat("UK Find a Tender")
+        self.assertEqual(st["failed"], 0); self.assertEqual(FT.classify_state(st), "SUCCESS")
+        self.assertTrue(any(n.startswith("retry 1") for n in st["notes"]))
+
+    def test_rate_limit_waits_for_retry_after(self):
+        import time, urllib.error
+        waits = []; real = time.sleep; time.sleep = lambda s: waits.append(s); calls = {"n": 0}
+        def rl():
+            calls["n"] += 1
+            if calls["n"] == 1: raise urllib.error.HTTPError("u", 429, "Too Many Requests", {"Retry-After": "90"}, None)
+            return "ok"
+        try: self.assertEqual(FM._retry("T2", rl), "ok")
+        finally: time.sleep = real
+        self.assertEqual(waits, [90])
+
+
+import quality_gate as QG
+import verify_samples as VS
+
+def feed(n, src="World Bank", start=0, stamp=None, iso_cycle=("GB", "FR", "DE", "KE")):
+    now = datetime.datetime.now(datetime.timezone.utc)
+    items = [item(sid=f"S{i}", url=f"https://x.org/{src}/{i}", source=src, iso=iso_cycle[i % len(iso_cycle)], slug="s", n={}, added="2026-11-16", sec=[], pg="")
+             for i in range(start, start + n)]
+    return {"updated": stamp or now.strftime("%Y-%m-%dT%H:%MZ"), "count": len(items), "items": items}
+
+
+class QualityGate(unittest.TestCase):
+    def test_good_feed_passes(self):
+        self.assertEqual(QG.check({"tenders.json": feed(300)}, {"tenders.json": feed(280)}), [])
+
+    def test_big_drop_blocks(self):
+        bad = QG.check({"tenders.json": feed(150)}, {"tenders.json": feed(900)})
+        self.assertTrue(any("drop" in b for b in bad))
+
+    def test_vanished_source_blocks(self):
+        old = feed(200); old["items"] += feed(40, src="EU TED", start=500)["items"]; old["count"] = len(old["items"])
+        bad = QG.check({"tenders.json": feed(250)}, {"tenders.json": old})
+        self.assertTrue(any("EU TED" in b for b in bad))
+
+    def test_invalid_rows_and_duplicates_block(self):
+        f = feed(200); f["items"][0]["deadline"] = f["items"][0]["deadline_at"] = "2026-02-31"; f["items"][1]["url"] = f["items"][2]["url"]
+        bad = QG.check({"tenders.json": f}, {})
+        self.assertTrue(any("invalid" in b for b in bad)); self.assertTrue(any("duplicate" in b for b in bad))
+
+    def test_missing_field_and_stale_stamp_block(self):
+        f = feed(200, stamp="2026-01-01T00:00Z"); del f["items"][5]["slug"]
+        bad = QG.check({"tenders.json": f}, {})
+        self.assertTrue(any("missing:slug" in b for b in bad)); self.assertTrue(any("old" in b for b in bad))
+
+    def test_unreadable_blocks(self):
+        self.assertEqual(QG.check({"tenders.json": None}, {}), ["tenders.json missing or unreadable"])
+
+
+class LinkAndRecord(unittest.TestCase):
+    def j(self, code, unavailable=False, title=True, dl=True):
+        return VS.judge({"url_status": code, "record_unavailable": unavailable, "title_ok": title, "deadline_ok": dl})
+
+    def test_broken_link_fails_even_if_record_unavailable(self):
+        r = self.j(404, unavailable=True); self.assertEqual((r["link"], r["record"], r["verdict"]), ("broken", "unavailable", "FAIL"))
+
+    def test_403_is_never_success(self):
+        r = self.j(403); self.assertEqual((r["link"], r["verdict"]), ("unconfirmed", "UNKNOWN"))
+
+    def test_pass_needs_both(self):
+        self.assertEqual(self.j(200)["verdict"], "PASS")
+        self.assertEqual(self.j(200, unavailable=True)["verdict"], "UNKNOWN")
+        self.assertEqual(self.j(200, dl=False)["verdict"], "FAIL")
+
+    def test_temporary_errors_are_unknown(self):
+        for c in (429, 503, "TimeoutError"): self.assertEqual(self.j(c)["link"], "unknown")
