@@ -110,8 +110,24 @@ CSS = """.wc-hero{background:#0b1f3a;color:#fff;padding:72px 0 56px}.wc-hero h1{
 @media(max-width:900px){.wc-hero h1{font-size:36px}.wc-st{grid-template-columns:1fr}.wc-step{grid-template-columns:1fr;gap:10px}.wc-two{grid-template-columns:1fr}.wc-plan,.wc-ord{grid-template-columns:1fr 1fr}.wc-bar{grid-template-columns:110px minmax(0,1fr) 36px}.wc-t .hm{display:none}}
 @media(max-width:520px){.wc-plan,.wc-ord{grid-template-columns:1fr}}"""
 
+def _wt(L):
+    p = os.path.join(ROOT, "tools", "tr", f"win_{L}.json")
+    try: return json.load(open(p, encoding="utf-8"))
+    except Exception: return {}
+def _tr(v, D):
+    if isinstance(v, str): return D.get(v, v)
+    if isinstance(v, list): return [_tr(x, D) for x in v]
+    if isinstance(v, tuple): return tuple(_tr(x, D) for x in v)
+    if isinstance(v, dict): return {k: _tr(x, D) for k, x in v.items()}
+    return v
+
 def win_page(L, C):
-    ko = L == "ko"; t = T["ko" if ko else "en"]; e = C["e"]; i = 0 if ko else 1
+    ko = L == "ko"; e = C["e"]; i = 0 if ko else 1
+    D = {} if L in ("ko", "en") else _wt(L)
+    t = T["ko"] if ko else _tr(T["en"], D)
+    STEPS_ = STEPS if ko else [(k, (n[0], D.get(n[1], n[1])), (d[0], D.get(d[1], d[1])), [(a, D.get(b, b), u) for a, b, u in ext], (w[0], D.get(w[1], w[1])), [(a, D.get(b, b), u) for a, b, u in our]) for k, n, d, ext, w, our in STEPS]
+    PLAN_ = PLAN if ko else [tuple((x[0], D.get(x[1], x[1])) for x in row) for row in PLAN]
+    ORD_ = ORD if ko else [(k, (n[0], D.get(n[1], n[1])), (d[0], D.get(d[1], d[1]))) for k, n, d in ORD]
     P = _load("pipeline.json"); A = _load("awards.json"); TD = _load("tenders.json")
     pi = [x for x in P.get("items", []) if 0 < x.get("usd", 0) < 2e10]
     n_kr = len(A.get("korea") or []); n_a = A.get("count", 0)
@@ -125,7 +141,7 @@ def win_page(L, C):
     steps = "".join(f'<article class="wc-step" id="st-{k}"><h3>{e(nm[i])}</h3><div><h4>{e(t["do"])}</h4><p>{e(do[i])}</p><p class="lk">' +
                     "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(a if ko else b)} ↗</a>' for a, b, u in ext) +
                     f'</p></div><div class="we"><h4>{e(t["we"])}</h4><p>{e(we[i])}</p><p class="lk">' + "".join(f'<a href="{e(lk(u))}">{e(a if ko else b)} →</a>' for a, b, u in our) + '</p></div></article>'
-                    for k, nm, do, ext, we, our in STEPS)
+                    for k, nm, do, ext, we, our in STEPS_)
     def sec_name(x):
         import pages3 as P3
         names = {k: (nk if ko else ne) for k, nk, ne, *_ in P3.SECT}
@@ -141,8 +157,8 @@ def win_page(L, C):
         s = f'{e(x["cur"])} {x["amt"]:,.0f}'
         return s + (f'<br><small>≈ {_usd(x["usd"], ko)}</small>' if x.get("usd") and x["cur"] != "USD" else "")
     arow = "".join(f'<tr><td>{e(x["date"])}</td><td>{e(cname(x))}</td><td class="hm">{e(x["title"][:110])}</td><td>{e(x["winner"])} <small>({e(x["wctry"])})</small>{" · JV" if x.get("jv") else ""}</td><td class="n">{amt(x)}</td></tr>' for x in (A.get("items") or [])[:12])
-    plan = "".join(f'<div><b>{e(w[i])}</b><h3>{e(h[i])}</h3><p>{e(p[i])}</p></div>' for w, h, p in PLAN)
-    order = "".join(f'<a href="/{L}/pricing/?p={k}#order"><b>{e(n[i])}</b><span>{e(d[i])}</span></a>' for k, n, d in ORD)
+    plan = "".join(f'<div><b>{e(w[i])}</b><h3>{e(h[i])}</h3><p>{e(p[i])}</p></div>' for w, h, p in PLAN_)
+    order = "".join(f'<a href="/{L}/pricing/?p={k}#order"><b>{e(n[i])}</b><span>{e(d[i])}</span></a>' for k, n, d in ORD_)
     upd = (P.get("updated") or A.get("updated") or "")[:10]
     ins = t["ains"].replace("{n}", f"{n_a:,}").replace("{k}", str(n_kr))
     js = """<script>(function(){var F=%s,L=%s,ko=L==="ko";function es(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -156,7 +172,7 @@ wire(document.getElementById("aq"),document.getElementById("at"),j.items||[],fun
 return"<tr><td>"+es(x.date)+"</td><td>"+es(x.ctry)+'</td><td class="hm">'+es((x.title||"").slice(0,110))+"</td><td>"+es(x.winner)+" <small>("+es(x.wctry)+")</small>"+(x.jv?" · JV":"")+'</td><td class="n">'+a+"</td></tr>"},12)}).catch(function(){});
 })();</script>""" % (json.dumps(FEED), json.dumps(L))
     body = f'''<style>{CSS}</style>
-<section class="wc-hero"><div class="in"><p class="crumb"><a href="/{L}/" style="color:#9fb0c6">GOV RADAR</a> · <a href="/{L}/mdb/" style="color:#9fb0c6">{"입찰·마감 보드" if ko else "Tender board"}</a></p>
+<section class="wc-hero"><div class="in"><p class="crumb"><a href="/{L}/" style="color:#9fb0c6">GOV RADAR</a> · <a href="/{L}/mdb/" style="color:#9fb0c6">{"입찰·마감 보드" if ko else D.get("Tender board", "Tender board")}</a></p>
 <h1>{e(t["h1"])}</h1><p class="lede">{e(t["lead"])}</p><div class="wc-st">{stats}</div><div class="wc-j">{jump}</div></div></section>
 <section class="band" id="steps"><div class="in"><h2>{e(t["sh"])}</h2><p class="note">{e(t["sl"])}</p><div class="wc-steps">{steps}</div></div></section>
 <section class="band alt" id="pipe"><div class="in"><h2>{e(t["ph"])}</h2><p class="note">{e(t["pl"])}</p>
@@ -171,7 +187,7 @@ return"<tr><td>"+es(x.date)+"</td><td>"+es(x.ctry)+'</td><td class="hm">'+es((x.
 <section class="band alt" id="plan"><div class="in"><h2>{e(t["plh"])}</h2><p class="note">{e(t["pll"])}</p><div class="wc-plan">{plan}</div></div></section>
 <section class="band" id="order"><div class="in"><h2>{e(t["oh"])}</h2><p class="note">{e(t["ol"])}</p><div class="wc-ord">{order}</div>
 <p class="note" style="margin-top:18px">{e(t["upd"])} {e(upd)} · {e(t["src"])}</p></div></section>{js}'''
-    return C["head"](L, t["title"], t["desc"], f"/{L}/win/", {l: f"/{l}/win/" for l in C["LANGS"]}) + body + C["foot"](L)
+    return C["head"](L, t["title"], t["desc"], f"/{L}/win/", {l: f"/{l}/win/" for l in C["LANGS"]}, '<meta name="gv-tr" content="1">' if D else "") + body + C["foot"](L)
 
 BAND = {"ko": ("입찰은 이기는 것이 어렵습니다 — 입찰 수주 센터", "공고가 나오기 전 사업, 누가 얼마에 따냈는지, 입찰마다 준비할 서류와 일정까지 한곳에서 봅니다.",
                ["입찰 전 사업", "최근 낙찰 공고", "그중 한국 기업"], ["입찰 전 사업 레이더", "낙찰·경쟁사 분석", "수주 7단계", "90일 실행 계획"], "수주 센터 열기"),
