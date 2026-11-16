@@ -16,14 +16,26 @@ CASES = [  # (deadline_at, deadline, now UTC, open?)
     ("", "2026-11-16", "2026-11-17T11:00:00Z", True),     # date only: kept until the day ends at UTC-12
     ("", "2026-11-16", "2026-11-17T12:00:00Z", False),
     ("2026-11-16", "", "2026-11-17T11:59:00Z", True),     # date-only text in deadline_at
-    ("", "2026-02-31", "2026-01-01T00:00:00Z", True),     # impossible date: unknown -> kept, no date shown
-    ("", "", "2026-01-01T00:00:00Z", True),
+    ("", "2026-02-31", "2026-01-01T00:00:00Z", False),    # impossible date: unknown -> NOT open
+    ("", "", "2026-01-01T00:00:00Z", False),              # no deadline: unknown -> NOT open
+    ("not a date", "", "2026-01-01T00:00:00Z", False),
 ]
 
 class Python(unittest.TestCase):
     def test_cases(self):
         for at, d, now, want in CASES:
             self.assertEqual(D.is_open({"deadline_at": at, "deadline": d}, U(now)), want, (at, d, now))
+
+    def test_states(self):
+        n = U("2026-11-20T00:00:00Z")
+        self.assertEqual(D.state({"deadline_at": "2026-11-27T17:00:00Z"}, n), "open")
+        self.assertEqual(D.state({"deadline": "2026-11-27"}, n), "date_only")
+        self.assertEqual(D.state({"deadline": "2026-11-01"}, n), "closed")
+        self.assertEqual(D.state({"deadline": ""}, n), "unknown")
+
+    def test_stale_is_shown_but_not_counted(self):
+        x = {"deadline_at": "2026-11-27T17:00:00Z", "stale": True}
+        self.assertTrue(D.is_open(x, U("2026-11-20T00:00:00Z"))); self.assertFalse(D.is_listed_open(x, U("2026-11-20T00:00:00Z")))
 
 @unittest.skipUnless(shutil.which("node"), "node not installed")
 class Browser(unittest.TestCase):
@@ -34,6 +46,19 @@ class Browser(unittest.TestCase):
     def test_same_answer_as_python(self):
         res = self.run_js("console.log(JSON.stringify(%s.map(function(c){return GRDL.info(c[0],c[1],Date.parse(c[2])).open})))" % json.dumps(CASES))
         self.assertEqual(res, [c[3] for c in CASES])
+
+    def test_states_and_unknown_label(self):
+        r = self.run_js("""var n=Date.parse('2026-11-20T00:00:00Z');console.log(JSON.stringify([GRDL.info('2026-11-27T17:00:00Z','',n).state,
+          GRDL.info('','2026-11-27',n).state,GRDL.info('','2026-11-01',n).state,GRDL.info('','',n).state,GRDL.label(GRDL.info('','',n),'ko'),
+          GRDL.label(GRDL.info('2026-11-27T17:00:00Z','',n),'en','2026-11-19T06:10Z')]))""")
+        self.assertEqual(r[:4], ["open", "date_only", "closed", "unknown"]); self.assertIn("마감일 미확인", r[4]); self.assertIn("verification delayed", r[5])
+
+    def test_open_page_drops_row_at_deadline(self):
+        # a row closing 1 s from now disappears on the next sweep, while the page stays open
+        r = self.run_js("""var rows=[{dataset:{at:new Date(Date.now()+1000).toISOString().replace(/\.\d+Z$/,'Z'),dl:''},removed:false,remove:function(){this.removed=true},querySelector:function(){return null}}];
+          global.document={querySelectorAll:function(){return rows}};GRDL.sweep(document,'en');var before=rows[0].removed;
+          setTimeout(function(){GRDL.sweep(document,'en');console.log(JSON.stringify([before,rows[0].removed]))},1600)""")
+        self.assertEqual(r, [False, True])
 
     def test_labels(self):
         r = self.run_js("""var a=GRDL.info('2026-11-23T09:00:00+02:00','',Date.parse('2026-11-22T07:00:00Z')),

@@ -16,8 +16,19 @@ def closes_at(deadline_at="", deadline=""):
     except ValueError: return None, False
     return dt.datetime.combine(d, dt.time(23, 59, 59), dt.timezone(dt.timedelta(hours=-12))), False
 
-def is_open(x, now=None):
-    """x: a tender item (deadline_at / deadline). Items with no readable deadline count as open (kept, labelled)."""
+def state(x, now=None):
+    """"open" (exact time ahead) | "date_only" (date without time, kept until the day ends at UTC-12) | "closed" | "unknown"."""
     now = now or dt.datetime.now(dt.timezone.utc)
-    c, _ = closes_at(x.get("deadline_at"), x.get("deadline"))
-    return True if c is None else now < c
+    c, timed = closes_at(x.get("deadline_at"), x.get("deadline"))
+    if c is None: return "unknown"
+    if now >= c: return "closed"
+    return "open" if timed else "date_only"
+
+def is_open(x, now=None):
+    """Counts as an open tender: a readable deadline still ahead. Unknown or impossible deadlines are NOT open."""
+    return state(x, now) in ("open", "date_only")
+
+def is_listed_open(x, now=None):
+    """Open AND verified: items whose re-verification is delayed (stale) are shown with a label but kept out of
+    open counts, new/urgent lists and alerts."""
+    return is_open(x, now) and not x.get("stale")

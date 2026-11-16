@@ -346,3 +346,99 @@ class Reuse(unittest.TestCase):
             self.assertIn(s.get("reuse"), ("PASS", "FAIL", "UNKNOWN"), s["id"])
             self.assertTrue(s.get("reuse_url", "").startswith("http"), s["id"] + " needs a terms link")
             self.assertTrue(s.get("reuse_checked"), s["id"])
+
+
+class ContractsFinderRecord(unittest.TestCase):
+    PKG = json.dumps({"releases": [{"id": "de6f4b86-1352-4c39-9b37-199113e189da-920130", "ocid": "ocds-b5fd17-17d4acd2-34d6-4bbc-adce-12b741b20fd4",
+                                    "tender": {"title": "CA18606 - York College", "tenderPeriod": {"endDate": "2026-11-27T17:00:00Z"}}, "buyer": {"name": "York College"}}]})
+    X = {"source": "UK Contracts Finder", "sid": "ocds-b5fd17-17d4acd2-34d6-4bbc-adce-12b741b20fd4",
+         "url": "https://www.contractsfinder.service.gov.uk/Notice/de6f4b86-1352-4c39-9b37-199113e189da"}
+
+    def setUp(self):
+        import verify_samples as VS; self.VS = VS; self.orig = VS.http; import time; self.sleep = time.sleep; time.sleep = lambda s: None
+
+    def tearDown(self):
+        self.VS.http = self.orig; import time; time.sleep = self.sleep
+
+    def fake(self, answers):
+        calls = []
+        def h(url, *a, **k):
+            calls.append(url); st, body = answers[len(calls) - 1]; self.VS.TRACE.append({"url": url, "status": st, "type": "application/json" if body.startswith("{") else "text/html"}); return st, body
+        self.VS.http = h; return calls
+
+    def test_release_package_matches(self):
+        calls = self.fake([(200, self.PKG)])
+        self.assertEqual(self.VS.official(self.X), ("CA18606 - York College", "2026-11-27", "York College"))
+        self.assertTrue(calls[0].endswith("/Published/Notice/releases/de6f4b86-1352-4c39-9b37-199113e189da.json"))
+
+    def test_html_error_page_falls_back_to_records_then_unknown(self):
+        calls = self.fake([(200, "<html>If you typed the web address, check it is correct</html>"), (404, "")])
+        self.assertEqual(self.VS.official(self.X)[0], "UNAVAILABLE")          # never a match, never a mismatch
+        self.assertTrue(calls[1].endswith("/Published/Notice/records/ocds-b5fd17-17d4acd2-34d6-4bbc-adce-12b741b20fd4.json"))
+
+    def test_records_fallback_can_confirm(self):
+        rec = json.dumps({"records": [{"compiledRelease": json.loads(self.PKG)["releases"][0]}]})
+        self.fake([(404, ""), (200, rec)])
+        self.assertEqual(self.VS.official(self.X)[1], "2026-11-27")
+
+    def test_rate_limit_is_unknown(self):
+        self.fake([(429, ""), (429, "")])
+        self.assertEqual(self.VS.official(self.X)[0], "UNAVAILABLE")
+
+
+class OpenCatalogue(unittest.TestCase):
+    """What happens to yesterday's notices that today's search did not return (ChatGPT PR #12 review §3)."""
+    NOW = datetime.datetime(2026, 11, 20, 0, 0, tzinfo=datetime.timezone.utc); STAMP = "2026-11-20T00:00Z"
+
+    def prev(self, **kw):
+        x = {"source": "UK Contracts Finder", "sid": "ocds-1", "url": "https://cf/1", "title": "Catering tender", "deadline": "2026-12-02",
+             "deadline_at": "2026-12-02T12:00:00Z", "added": "2026-11-10", "iso": "GB", "buyer": "Trust"}
+        x.update(kw); return {x["url"]: x}
+
+    def run_(self, prev, state="EMPTY_SUCCESS", got=(), lookup=None, budget=40, src="UK Contracts Finder"):
+        return FT.carry(src, list(got), state, prev, self.NOW, self.STAMP, lookup or (lambda x: ("UNAVAILABLE", "UNAVAILABLE", None)), [budget])
+
+    def test_empty_success_old_but_open_notice_is_reverified_and_kept(self):
+        out, c = self.run_(self.prev(), lookup=lambda x: ("Catering tender", "2026-12-02", "Trust"))
+        self.assertEqual(len(out), 1); self.assertEqual(out[0]["verify"], "official"); self.assertNotIn("stale", out[0])
+        self.assertEqual(out[0]["added"], "2026-11-10")   # first-seen date kept -> never counted as new
+        self.assertEqual(c["carried_verified"], 1)
+
+    def test_unconfirmable_is_stale_not_open(self):
+        out, c = self.run_(self.prev())
+        self.assertTrue(out[0]["stale"]); self.assertEqual(out[0]["stale_since"], self.STAMP); self.assertEqual(c["carried_stale"], 1)
+        import deadline as DL
+        self.assertFalse(DL.is_listed_open(out[0], self.NOW))   # shown with a label, not counted / alerted
+
+    def test_stale_dropped_after_48_hours(self):
+        out, c = self.run_(self.prev(stale=True, stale_since="2026-11-17T23:00Z"))
+        self.assertEqual(out, []); self.assertEqual(c["dropped_unverified"], 1)
+        out, c = self.run_(self.prev(stale=True, stale_since="2026-11-18T01:00Z"))
+        self.assertEqual(len(out), 1)
+
+    def test_closed_notice_never_carried(self):
+        out, c = self.run_(self.prev(deadline="2026-11-19", deadline_at="2026-11-19T12:00:00Z"))
+        self.assertEqual(out, []); self.assertEqual(c["dropped_closed"], 1)
+
+    def test_deadline_extension_taken_from_official_record(self):
+        out, _ = self.run_(self.prev(), lookup=lambda x: ("Catering tender", "2026-12-09", "Trust"))
+        self.assertEqual(out[0]["deadline"], "2026-12-09")
+
+    def test_repeated_error_and_rate_limit_stay_unknown(self):
+        for st in ("ERROR", "PARTIAL"):
+            out, c = self.run_(self.prev(), state=st, lookup=lambda x: ("UNAVAILABLE", "UNAVAILABLE", None))
+            self.assertTrue(out[0]["stale"])
+
+    def test_notice_in_todays_search_is_not_duplicated(self):
+        p = self.prev(); out, _ = self.run_(p, state="SUCCESS", got=[dict(list(p.values())[0])])
+        self.assertEqual(out, [])
+
+    def test_success_of_unwindowed_source_does_not_carry(self):
+        out, _ = self.run_(self.prev(source="EU TED"), state="SUCCESS", src="EU TED")
+        self.assertEqual(out, [])
+
+    def test_lookup_budget(self):
+        p = {}
+        for i in range(3): p.update(self.prev(sid=f"ocds-{i}", url=f"https://cf/{i}"))
+        out, c = self.run_(p, lookup=lambda x: ("Catering tender", "2026-12-02", "T"), budget=1)
+        self.assertEqual((c["verify_lookups"], c["carried_verified"], c["carried_stale"]), (1, 1, 2))

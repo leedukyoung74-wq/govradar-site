@@ -135,6 +135,49 @@ def merge(groups, prev=None, now=None):
             items.append(x); c["kept"] += 1
     return items, counts
 
+# ---- open catalogue: what happens to yesterday's notices that today's search did not return -----------------------------
+# A source answering 0 (or failing, or searching only recently published notices) is NOT proof that its earlier notices
+# closed. Such notices are re-checked one by one against the source's official record (verify_samples.official):
+#   confirmed            -> kept as a normal open notice, last_verified_at = now (official deadline wins if it moved)
+#   not confirmable now  -> kept for at most 48 h as stale: shown with "verification delayed · last checked …" and a link
+#                           to the original, but left out of open counts, new/urgent lists and alerts
+#   still unconfirmed after 48 h, closed, or deadline unknown -> dropped (counted in the source status)
+# Carried notices keep their first-seen date, so they are never counted as new.
+WINDOWED = {"UK Contracts Finder", "UK Find a Tender"}   # their search only covers recently published notices
+STALE_MAX_H, VERIFY_CAP = 48, 40
+
+def _key(x): return (x.get("source"), x.get("sid") or x.get("url"))
+
+def carry(nm_, got, state, prev, now, stamp, lookup, budget):
+    """Returns (items to add, counts). lookup(x) -> (title, deadline_date, buyer) or ("UNAVAILABLE", ...)."""
+    import deadline as DL
+    c = {"carried_verified": 0, "carried_stale": 0, "dropped_unverified": 0, "dropped_closed": 0, "verify_lookups": 0}
+    if not (state in ("ERROR", "PARTIAL", "EMPTY_SUCCESS") or nm_ in WINDOWED): return [], c
+    have = {_key(x) for x in got} | {x.get("url") for x in got}
+    out = []
+    norm = lambda t: re.sub(r"\W+", " ", str(t or "").lower()).strip()[:40]
+    for x in prev.values():
+        if x.get("source") != nm_ or _key(x) in have or x.get("url") in have: continue
+        if not DL.is_open(x, now): c["dropped_closed"] += 1; continue
+        x = dict(x); t = d = None
+        if budget[0] > 0:
+            budget[0] -= 1; c["verify_lookups"] += 1
+            try: t, d, _ = lookup(x)
+            except Exception: t = "UNAVAILABLE"
+        if t and t != "UNAVAILABLE" and d and norm(t) == norm(x.get("title")):
+            if d != x.get("deadline"):                    # official deadline moved: take it (date only — time unknown)
+                x["deadline"] = x["deadline_at"] = d
+                if not DL.is_open(x, now): c["dropped_closed"] += 1; continue
+            x.update(last_verified_at=stamp, verify="official"); x.pop("stale", None); x.pop("stale_since", None)
+            out.append(x); c["carried_verified"] += 1; continue
+        since = x.get("stale_since") or stamp
+        try: age_h = (now - datetime.datetime.strptime(since, "%Y-%m-%dT%H:%MZ").replace(tzinfo=datetime.timezone.utc)).total_seconds() / 3600
+        except ValueError: age_h = 0
+        if age_h >= STALE_MAX_H: c["dropped_unverified"] += 1; continue
+        x.update(stale=True, stale_since=since, verify="pending"); x.setdefault("last_verified_at", x.get("added", ""))
+        out.append(x); c["carried_stale"] += 1
+    return out, c
+
 def main():
     import feed_more as FM
     prev = {}
@@ -146,16 +189,20 @@ def main():
     try: status = json.load(open(stp, encoding="utf8"))
     except Exception: status = {}
     groups = []
+    import verify_samples as VS
+    budget = [VERIFY_CAP]
     # FM.canada is written and tested but not run: canadabuys.canada.ca robots.txt disallows all agents except search engines
     for src in (worldbank, FM.ted, FM.uk, FM.ukcf, FM.prozorro, FM.dapa, FM.sam):
         nm_ = SRC_NAME[src.__name__]
         try: got = src()
         except Exception as ex: got = []; FM.stat(nm_)["failed"] += 1; FM.stat(nm_)["notes"].append(FM.mask(f"crashed: {type(ex).__name__}: {ex}")[:160])
         state = classify_state(FM.stat(nm_))
-        carried = 0
-        if state == "ERROR":  # a source that failed today keeps its still-open notices from yesterday
-            got = [dict(x) for x in prev.values() if x.get("source") == nm_]; carried = len(got)
-        groups.append((nm_, got)); FM.stat(nm_)["state"] = state; FM.stat(nm_)["carried_from_yesterday"] = carried
+        for x in got:   # seen in today's official search = verified now
+            x["last_verified_at"] = stamp; x["verify"] = "search"
+        extra, cc = carry(nm_, got, state, prev, now, stamp, VS.official, budget)
+        got = got + extra
+        groups.append((nm_, got)); FM.stat(nm_)["state"] = state; FM.stat(nm_).update(cc)
+        FM.stat(nm_)["carried_from_yesterday"] = cc["carried_verified"] + cc["carried_stale"]
     items, counts = merge(groups, prev, now)
     for x in items:
         x["sec"] = classify(x["title"] + " " + x["buyer"] + " " + x.get("project", ""))

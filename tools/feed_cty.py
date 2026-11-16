@@ -2,7 +2,7 @@
 Small files so each country page fetches only its own numbers."""
 import json, os, sys, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from deadline import is_open
+from deadline import is_listed_open as is_open
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEEDS = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch", "feeds")
 CAP = 20e9  # drop implausible project totals (data-entry outliers)

@@ -5,7 +5,7 @@ new tenders first seen today, tenders closing within 2 days, newest official haz
 and the state of every data source. Nothing here is estimated: every number is a count of items in the feeds."""
 import datetime as dt, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from deadline import is_open
+from deadline import is_listed_open as is_open, state as DLs
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch")
@@ -60,7 +60,8 @@ def build():
         s = load(f).get("src") or {}
         if s: src.append({"name": nm, "state": "SUCCESS" if all(x.get("ok") for x in s.values()) else ("PARTIAL" if any(x.get("ok") for x in s.values()) else "ERROR"), "kept": None, "new": None})
     return {"updated": NOW.strftime("%Y-%m-%dT%H:%MZ"), "date": today,
-            "n": {"open": len(open_), "new": len(new), "urgent": len(urgent), "countries": len({x.get("iso") for x in open_ if x.get("iso")}), "alerts": len(alerts)},
+            "n": {"open": len(open_), "new": len(new), "urgent": len(urgent), "countries": len({x.get("iso") for x in open_ if x.get("iso")}), "alerts": len(alerts),
+                  "stale": sum(1 for x in items if x.get("stale")), "unknown_deadline": sum(1 for x in items if DLs(x, NOW) == "unknown")},
             "new": [slim(x) for x in pick], "urgent": [slim(x) for x in urgent[:6]],
             "alerts": [{"t": (a.get("t") or "")[:120], "date": a.get("date", ""), "src": a.get("src", ""), "url": a.get("url", ""), "k": a.get("k", "")} for a in alerts[:6]],
             "src": src}
