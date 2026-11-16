@@ -307,6 +307,7 @@ def country_page(iso, L):
         body.append(f'<p class="summary">{e(summ)}</p>')
         body.append(glance(iso, L, d, name))
         body.append(P3.next_box(iso, L, C3(), d))
+        body.append(P3.cty_intel(iso, L))
         st = G(d, "status", L)
         if st:
             rs = tx(L, "rs")
