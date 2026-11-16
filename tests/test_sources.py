@@ -316,3 +316,13 @@ class Sanctions(unittest.TestCase):
         self.assertEqual(QG.check({"tenders.json": feed(300), "sanctions.json": ok}, {}), [])
         b = QG.check({"tenders.json": feed(300), "sanctions.json": {"c": {}, "src": {}}}, {})
         self.assertEqual(len([x for x in b if "sanctions" in x]), 3)
+
+
+class Active(unittest.TestCase):
+    def test_us_date(self):
+        import feed_intel as FI
+        self.assertEqual(FI.us_date("12/31/2025"), "2025-12-31"); self.assertEqual(FI.us_date("2027-06-30T00:00:00Z"), "2027-06-30"); self.assertEqual(FI.us_date(None), "")
+
+    def test_gate_active_minimum(self):
+        b = QG.check({"tenders.json": feed(300), "active.json": {"items": [{}] * 10}}, {})
+        self.assertTrue(any("active.json" in x for x in b))

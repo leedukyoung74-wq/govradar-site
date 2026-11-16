@@ -55,22 +55,30 @@ def awards():
                         "sec": classify(desc + " " + str(r.get("project_name") or ""))})
     return out
 
-def pipeline():
+def us_date(v):
+    """World Bank closing dates come as 12/31/2025 or 2025-12-31T00:00:00Z -> 2025-12-31"""
+    v = str(v or "").strip(); m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", v)
+    return f"{m.group(3)}-{int(m.group(1)):02d}-{int(m.group(2)):02d}" if m else v[:10]
+
+def pipeline(status="Pipeline", pages=3):
+    """World Bank projects by status: "Pipeline" (not yet approved, tenders 6-18 months ahead) or "Active" (approved,
+    being carried out — procurement under way). Active rows use the total commitment (totalcommamt)."""
     out = []
-    for os_ in range(0, 1500, 500):
-        q = urllib.parse.urlencode({"format": "json", "rows": 500, "os": os_, "status_exact": "Pipeline",
-                                    "fl": "id,project_name,countryshortname,totalamt,boardapprovaldate,sector1,sector,status,regionname,closingdate,url,mjtheme_namecode,lendinginstr"})
+    for os_ in range(0, pages * 500, 500):
+        q = urllib.parse.urlencode({"format": "json", "rows": 500, "os": os_, "status_exact": status,
+                                    "fl": "id,project_name,countryshortname,totalamt,totalcommamt,boardapprovaldate,sector1,sector,status,regionname,closingdate,url,mjtheme_namecode,lendinginstr"})
         try: j = get("https://search.worldbank.org/api/v2/projects?" + q)
         except Exception as ex: print("pipeline page", os_, "failed:", ex); break
         rows = list((j.get("projects") or {}).values())
         if not rows: break
         for r in rows:
             amt = num(str(r.get("totalamt") or "")) or 0
+            if status == "Active": amt = num(str(r.get("totalcommamt") or "")) or amt
             iso = iso_of(r.get("countryshortname"), "")
             nm = re.sub(r"\s+", " ", str(r.get("project_name") or "")).strip()
             secs = [x.get("Name") for x in (r.get("sector") or []) if isinstance(x, dict) and x.get("Name")]
             out.append({"id": r.get("id"), "iso": iso or "", "ctry": str(r.get("countryshortname") or "")[:40], "title": nm[:200], "usd": amt,
-                        "board": str(r.get("boardapprovaldate") or "")[:10], "region": str(r.get("regionname") or "")[:40], "instr": str(r.get("lendinginstr") or "")[:40],
+                        "board": str(r.get("boardapprovaldate") or "")[:10], "close": us_date(r.get("closingdate")), "region": str(r.get("regionname") or "")[:40], "instr": str(r.get("lendinginstr") or "")[:40],
                         "wbsec": secs[:3], "url": r.get("url") or f"https://projects.worldbank.org/en/projects-operations/project-detail/{r.get('id')}",
                         "sec": classify(nm + " " + " ".join(secs))})
         if len(rows) < 500: break
@@ -92,5 +100,10 @@ def main():
         for x in p: x["n"] = NAMES.get(x["iso"]) or {}; x["slug"] = SLUG.get(x["iso"], "")
         json.dump({"updated": now, "count": len(p), "total_usd": sum(x["usd"] for x in p), "items": p},
                   open(os.path.join(FEEDS, "pipeline.json"), "w", encoding="utf8"), ensure_ascii=False)
-    print("awards", len(a), "pipeline", len(p))
+    v = pipeline("Active", pages=8)
+    if len(v) >= 1000:   # a short answer means the API failed part-way: keep yesterday's file
+        v.sort(key=lambda x: -x["usd"])
+        json.dump({"updated": now, "count": len(v), "total_usd": sum(x["usd"] for x in v), "items": v},
+                  open(os.path.join(FEEDS, "active.json"), "w", encoding="utf8"), ensure_ascii=False)
+    print("awards", len(a), "pipeline", len(p), "active", len(v))
 if __name__ == "__main__": main()

@@ -10,10 +10,10 @@ def load(n):
     except Exception: return {}
 
 def main():
-    t, p, a = load("tenders.json"), load("pipeline.json"), load("awards.json")
+    t, p, a, v = load("tenders.json"), load("pipeline.json"), load("awards.json"), load("active.json")
     out = {}
     def slot(iso):
-        return out.setdefault(iso, {"t": [], "p": [], "a": []})
+        return out.setdefault(iso, {"t": [], "p": [], "a": [], "v": []})
     today = datetime.date.today().isoformat()
     for x in t.get("items", []):
         if x.get("iso") and (x.get("deadline") or "9") >= today: slot(x["iso"])["t"].append(x)
@@ -21,12 +21,15 @@ def main():
         if x.get("iso") and 0 < (x.get("usd") or 0) < CAP: slot(x["iso"])["p"].append(x)
     for x in a.get("items", []):
         if x.get("iso"): slot(x["iso"])["a"].append(x)
+    for x in v.get("items", []):
+        if x.get("iso") and 0 < (x.get("usd") or 0) < CAP: slot(x["iso"])["v"].append(x)
     d = os.path.join(FEEDS, "cty"); os.makedirs(d, exist_ok=True)
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     for iso, s in out.items():
         T = sorted(s["t"], key=lambda x: x.get("deadline") or "9")
         P = sorted(s["p"], key=lambda x: -x["usd"])
         A = sorted(s["a"], key=lambda x: x.get("date") or "", reverse=True)
+        V = sorted(s["v"], key=lambda x: -x["usd"])
         ctry = (A[0]["ctry"] if A else (P[0]["ctry"] if P else "")).lower()
         loc = sum(1 for x in A if (x.get("wctry") or "").lower() == ctry) if ctry else 0
         by = {}
@@ -36,6 +39,8 @@ def main():
                "t": {"n": len(T), "items": [{k: x.get(k, "") for k in ("title", "buyer", "deadline", "url", "pg", "source")} for x in T[:5]]},
                "p": {"n": len(P), "usd": round(sum(x["usd"] for x in P)),
                      "items": [{"title": x["title"], "usd": x["usd"], "url": x["url"], "sec": x.get("wbsec", [])[:2]} for x in P[:6]]},
+               "v": {"n": len(V), "usd": round(sum(x["usd"] for x in V)),
+                     "items": [{"title": x["title"], "usd": x["usd"], "url": x["url"], "board": x.get("board", ""), "close": x.get("close", ""), "sec": x.get("wbsec", [])[:2]} for x in V[:6]]},
                "a": {"n": len(A), "local": loc, "kr": kr, "usd": round(sum(x.get("usd") or 0 for x in A)),
                      "by": sorted(by.items(), key=lambda kv: -kv[1])[:5],
                      "items": [{k: x.get(k, "") for k in ("date", "title", "winner", "wctry", "usd", "url", "pg")} for x in A[:6]]}}
@@ -53,7 +58,9 @@ def main():
     for x in T:
         if x.get("iso"): blips[x["iso"]] = blips.get(x["iso"], 0) + 1
     dates = sorted(x.get("date") for x in A if x.get("date"))
+    Vs = [x for x in v.get("items", []) if 0 < (x.get("usd") or 0) < CAP]
     summ = {"updated": now, "t": {"n": len(T), "c": len(blips)}, "p": {"n": len(p.get("items", [])), "usd": round(sum(x["usd"] for x in P))},
+            "v": {"n": len(v.get("items", [])), "usd": round(sum(x["usd"] for x in Vs))},
             "a": {"n": len(A), "kr": sum(1 for x in A if "korea" in (x.get("wctry") or "").lower()), "from": dates[0] if dates else "", "to": dates[-1] if dates else ""},
             "gap": gaps[len(gaps) // 2] if gaps else None, "blips": blips}
     json.dump(summ, open(os.path.join(d, "_summary.json"), "w", encoding="utf8"), ensure_ascii=False)
