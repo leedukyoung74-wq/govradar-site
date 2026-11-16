@@ -116,3 +116,97 @@ def dapa():
                     "url": g("url", "Url", "link") or "https://www.dapa.go.kr", "source": "DAPA (Korea)", "type": g("ntceType", "type", "Form") or "Bid notice",
                     "project": "", "pm": "", "pmn": "", "pg": "GO", "ma": "", "est": "", "cur": ""})
     print("dapa", len(out)); return out
+
+def ukcf():
+    """UK Contracts Finder OCDS search (below and above threshold, England). GBP 1M+ only."""
+    out = []; url = "https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search?" + urllib.parse.urlencode(
+        {"publishedFrom": (TODAY - datetime.timedelta(days=21)).isoformat() + "T00:00:00", "stages": "tender", "limit": 100})
+    for _ in range(40):
+        try: j = json.loads(_get(url))
+        except Exception as ex: print("ukcf failed:", ex); break
+        for r in j.get("releases") or []:
+            t = r.get("tender") or {}
+            if t.get("status") != "active": continue
+            dl = str((t.get("tenderPeriod") or {}).get("endDate") or "")[:10]
+            if not dl or dl < MIN_DL: continue
+            v = t.get("value") or {}; amt = v.get("amount") or 0
+            if amt * EUR.get(v.get("currency", "GBP"), 1.17) < 1.2e6: continue
+            nid = str(r.get("id") or "")[:36]
+            out.append({"iso": "GB", "title": str(t.get("title") or "")[:220], "buyer": str((r.get("buyer") or {}).get("name") or "")[:160], "deadline": dl,
+                        "url": f"https://www.contractsfinder.service.gov.uk/Notice/{nid}", "source": "UK Contracts Finder", "type": "Tender notice", "project": "",
+                        "pm": "", "pmn": "", "pg": PG.get(t.get("mainProcurementCategory"), ""), "ma": "", "est": str(round(amt)), "cur": v.get("currency", "")})
+        nxt = (j.get("links") or {}).get("next")
+        if not nxt or not j.get("releases"): break
+        url = nxt
+    print("ukcf", len(out)); return out
+
+def canada():
+    """CanadaBuys open tender notices (open data CSV). Keeps notices open to foreign suppliers under WTO-GPA or the Canada-Korea FTA.
+    Contact names, e-mails and phone numbers in the file are not stored."""
+    import csv, io
+    try: txt = _get("https://canadabuys.canada.ca/opendata/pub/openTenderNotice-ouvertAvisAppelOffres.csv")
+    except Exception as ex: print("canada failed:", ex); return []
+    out = []
+    for r in csv.DictReader(io.StringIO(txt.lstrip("﻿"))):
+        ta = r.get("tradeAgreements-accordsCommerciaux-eng") or ""
+        if not re.search(r"World Trade Organization|WTO|Korea", ta): continue
+        dl = (r.get("tenderClosingDate-appelOffresDateCloture") or "")[:10]
+        if not dl or dl < MIN_DL: continue
+        cat = (r.get("procurementCategory-categorieApprovisionnement") or "")
+        out.append({"iso": "CA", "title": (r.get("title-titre-eng") or "")[:220], "buyer": (r.get("contractingEntityName-nomEntitContractante-eng") or "")[:160],
+                    "deadline": dl, "url": r.get("noticeURL-URLavis-eng") or "https://canadabuys.canada.ca", "source": "CanadaBuys", "type": "Tender notice",
+                    "project": "", "pm": "", "pmn": (r.get("procurementMethod-methodeApprovisionnement-eng") or "")[:60],
+                    "pg": "CW" if "CNST" in cat else "GO" if "GD" in cat else "NC", "ma": "WTO-GPA" if "World Trade" in ta else "", "est": "", "cur": ""})
+    out.sort(key=lambda x: x["deadline"])
+    print("canada", len(out)); return out[:100]
+
+def prozorro():
+    """Ukraine Prozorro public API: open EU-procedure (international) tenders of about UAH 40M+ (roughly US$1M)."""
+    cands, url = [], "https://public-api.prozorro.gov.ua/api/2.5/tenders?" + urllib.parse.urlencode(
+        {"descending": 1, "limit": 1000, "opt_fields": "status,procurementMethodType,tenderPeriod,tenderID"})
+    stop = (TODAY - datetime.timedelta(days=4)).isoformat()
+    for _ in range(25):
+        try: j = json.loads(_get(url))
+        except Exception as ex: print("prozorro list failed:", ex); break
+        d = j.get("data") or []
+        for x in d:
+            if x.get("status") == "active.tendering" and x.get("procurementMethodType") in ("aboveThreshold", "aboveThresholdEU", "competitiveDialogueEU", "requestForProposal"):
+                dl = str((x.get("tenderPeriod") or {}).get("endDate") or "")[:10]
+                if dl >= MIN_DL: cands.append(x)
+        if not d or str(d[-1].get("dateModified", ""))[:10] < stop: break
+        url = (j.get("next_page") or {}).get("uri")
+        if not url: break
+    import concurrent.futures as cf
+    def one(x):
+        try: return json.loads(_get("https://public-api.prozorro.gov.ua/api/2.5/tenders/" + x["id"]))["data"]
+        except Exception: return None
+    with cf.ThreadPoolExecutor(8) as ex: details = list(ex.map(one, cands[:400]))
+    out = []
+    for t in details:
+        if not t: continue
+        v = t.get("value") or {}; amt = v.get("amount") or 0
+        if amt * EUR.get(v.get("currency", "UAH"), .022) < 1e6: continue
+        out.append({"iso": "UA", "title": str(t.get("title_en") or t.get("title") or "")[:220], "buyer": str((t.get("procuringEntity") or {}).get("name") or "")[:160],
+                    "deadline": str(t["tenderPeriod"]["endDate"])[:10], "url": f"https://prozorro.gov.ua/tender/{t.get('tenderID')}", "source": "Prozorro (Ukraine)",
+                    "type": "Tender notice", "project": "", "pm": "", "pmn": str(t.get("procurementMethodType") or "")[:60],
+                    "pg": {"works": "CW", "goods": "GO", "services": "NC"}.get(t.get("mainProcurementCategory"), ""), "ma": "International" if "EU" in str(t.get("procurementMethodType")) else "",
+                    "est": str(round(amt)), "cur": v.get("currency", "")})
+    out.sort(key=lambda x: -float(x["est"] or 0))
+    print("prozorro candidates", len(cands), "kept", len(out[:60])); return out[:60]
+
+def sam():
+    """US SAM.gov Get Opportunities public API — runs only when the SAM_KEY secret is set."""
+    key = os.environ.get("SAM_KEY")
+    if not key: print("sam: no SAM_KEY, skipped"); return []
+    f = lambda d: d.strftime("%m/%d/%Y")
+    q = {"api_key": key, "postedFrom": f(TODAY - datetime.timedelta(days=30)), "postedTo": f(TODAY), "ptype": "o,k", "limit": 1000}
+    try: j = json.loads(_get("https://api.sam.gov/opportunities/v2/search?" + urllib.parse.urlencode(q)))
+    except Exception as ex: print("sam failed:", str(ex).replace(key, "***")); return []
+    out = []
+    for r in j.get("opportunitiesData") or []:
+        dl = str(r.get("responseDeadLine") or "")[:10]
+        if not dl or dl < MIN_DL: continue
+        out.append({"iso": "US", "title": str(r.get("title") or "")[:220], "buyer": str(r.get("fullParentPathName") or "")[:160], "deadline": dl,
+                    "url": r.get("uiLink") or "https://sam.gov", "source": "SAM.gov (US)", "type": str(r.get("type") or "")[:40], "project": "",
+                    "pm": "", "pmn": "", "pg": "", "ma": "", "est": "", "cur": ""})
+    print("sam", len(out)); return out[:80]

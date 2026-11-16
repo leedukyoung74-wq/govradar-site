@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: python tools/feed_tenders.py
-        env: { DAPA_KEY: "${{ secrets.DAPA_KEY }}" }
+        env: { DAPA_KEY: "${{ secrets.DAPA_KEY }}", SAM_KEY: "${{ secrets.SAM_KEY }}" }
       - run: python tools/feed_intel.py || echo "intel feed failed; keeping yesterday's files"
       - run: python tools/feed_cty.py || echo "country files failed"
       - name: Publish to data branch

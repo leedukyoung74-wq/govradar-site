@@ -73,31 +73,65 @@ def worldbank():
         if oldest and oldest < (TODAY - datetime.timedelta(days=120)).isoformat(): break
     return out
 
+SRC_NAME = {"worldbank": "World Bank", "ted": "EU TED", "uk": "UK Find a Tender", "ukcf": "UK Contracts Finder", "canada": "CanadaBuys",
+            "prozorro": "Prozorro (Ukraine)", "dapa": "DAPA (Korea)", "sam": "SAM.gov (US)"}
+MAX_DL = (TODAY + datetime.timedelta(days=730)).isoformat()
+
+def valid(x):
+    """Reject notices whose deadline is malformed, already too close, or implausibly far away, and items with no title, country or link."""
+    dl = x.get("deadline") or ""
+    if not re.match(r"\d{4}-\d{2}-\d{2}$", dl): return "bad-deadline"
+    if dl < MIN_DL: return "closing"
+    if dl > MAX_DL: return "far-deadline"
+    if not x.get("title") or not x.get("iso") or not str(x.get("url", "")).startswith("http"): return "missing-field"
+    return ""
+
+def dupkey(x):
+    # the same notice republished by two portals (e.g. Find a Tender and Contracts Finder): country + deadline + normalised title
+    return x["iso"] + "|" + x["deadline"] + "|" + re.sub(r"[^0-9a-z\u0400-\u04ff\u3131-\uD79D]", "", (x.get("title") or "").lower())[:80]
+
 def main():
     prev = {}
     if os.path.exists(OUT):
         try: prev = {x["url"]: x for x in json.load(open(OUT, encoding="utf8")).get("items", [])}
         except Exception: prev = {}
     import feed_more as FM
-    items, seen = [], set()
-    for src in (worldbank, FM.ted, FM.uk, FM.dapa):
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    stp = os.path.join(os.path.dirname(OUT), "sources_status.json")
+    try: status = json.load(open(stp, encoding="utf8"))
+    except Exception: status = {}
+    items, seen, keys = [], set(), set()
+    # FM.canada is written and tested but left out: canadabuys.canada.ca robots.txt disallows all agents except search engines
+    for src in (worldbank, FM.ted, FM.uk, FM.ukcf, FM.prozorro, FM.dapa, FM.sam):
+        nm_ = SRC_NAME[src.__name__]; st = status.get(nm_, {}); err = ""
         try: got = src()
-        except Exception as ex: print(src.__name__, "crashed:", ex); got = []
+        except Exception as ex: print(src.__name__, "crashed:", ex); got = []; err = type(ex).__name__
+        fresh = bool(got)
         if not got:  # a source that failed today keeps its still-open notices from yesterday
-            nm_ = {"worldbank": "World Bank", "ted": "EU TED", "uk": "UK Find a Tender", "dapa": "DAPA (Korea)"}[src.__name__]
             got = [dict(x) for x in prev.values() if x.get("source") == nm_ and x.get("deadline", "") >= MIN_DL]
+        rej = {}; kept = dup = 0
         for x in got:
-            if x["url"] in seen: continue
-            seen.add(x["url"])
+            why = valid(x)
+            if why: rej[why] = rej.get(why, 0) + 1; continue
+            k = dupkey(x)
+            if x["url"] in seen or k in keys: dup += 1; continue
+            seen.add(x["url"]); keys.add(k); kept += 1
             x["added"] = (prev.get(x["url"]) or {}).get("added") or TODAY.isoformat()
             x["sec"] = classify(x["title"] + " " + x["buyer"] + " " + x.get("project", ""))
             x["n"] = {L: v for L, v in (NAMES.get(x["iso"]) or {}).items()}; x["slug"] = SLUG.get(x["iso"], "")
             items.append(x)
+        st.update({"checked": now, "fresh": fresh, "kept": kept, "duplicates": dup, "rejected": rej, "error": err,
+                   "new_today": sum(1 for x in items if x.get("source") == nm_ and x["added"] == TODAY.isoformat())})
+        if fresh: st["last_success"] = now
+        st["state"] = "PASS" if fresh else ("SKIPPED" if src.__name__ in ("dapa", "sam") and not os.environ.get({"dapa": "DAPA_KEY", "sam": "SAM_KEY"}[src.__name__]) else "FAIL")
+        status[nm_] = st
     # if every source failed, keep yesterday's still-open items instead of publishing an empty board
     if not items: items = [x for x in prev.values() if x.get("deadline", "") >= MIN_DL]
     items.sort(key=lambda x: x["deadline"])
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    json.dump({"updated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "count": len(items), "items": items[:2500]}, open(OUT, "w", encoding="utf8"), ensure_ascii=False)
+    json.dump({"updated": now, "count": len(items), "items": items[:3000]}, open(OUT, "w", encoding="utf8"), ensure_ascii=False)
+    json.dump(status, open(stp, "w", encoding="utf8"), ensure_ascii=False, indent=1)
     print("tenders", len(items), "countries", len({x["iso"] for x in items}))
+    for k, v in status.items(): print(" ", k, v.get("state"), "kept", v.get("kept"), "dup", v.get("duplicates"), "rej", v.get("rejected"))
 
 if __name__ == "__main__": main()
