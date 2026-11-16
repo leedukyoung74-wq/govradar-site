@@ -872,3 +872,8 @@ html{scroll-padding-top:116px}
 .urc{border-left-color:#b54708}.urc h3{font-size:16px}
 @media (max-width:600px){.folder summary{flex-wrap:wrap;gap:4px 10px}.folder summary b{flex:1 1 100%}.bd{white-space:normal}}
 .mlock{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;border:1px dashed var(--ink);border-radius:8px;padding:10px 14px;margin:10px 0;background:var(--panel);font-size:15px}.mlock a{font-weight:700}
+/* header fit: languages with longer menu words first shrink, then switch to the menu button (set by a script in the header) */
+.nav.tight .links a{font-size:12.5px;padding:8px 5px}
+.nav.compact .links{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 16px 16px;box-shadow:0 18px 30px rgba(0,0,0,.18)}
+.nav.compact .links.open{display:flex}.nav.compact .links a{font-size:16px;padding:13px 6px;border-bottom:1px solid var(--line);border-radius:0;color:var(--ink)}
+.nav.compact .burger{display:flex}.nav.compact .navr{margin-inline-start:auto}
