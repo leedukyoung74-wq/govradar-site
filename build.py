@@ -741,6 +741,7 @@ sys.path.insert(0, os.path.join(ROOT, "tools"))
 import cyber_data as CY
 import src_title_en as STE
 import win as WIN
+import about as ABOUT
 import alerts_build as AB
 CYB_T = {"ko": ("사이버 공격 — 지금 주목할 사건", "실제 공격과 단순 장애를 구분해 정리했습니다. 유형 12가지, 역대 사건, 가정·기업·정부 준비 사항은 사이버 공격 페이지에 있습니다.", "사이버 공격 전체 보기 →", "이 나라 관련 사이버 사건"),
  "en": ("Cyberattacks — incidents to watch", "Real attacks are separated from plain outages. Twelve kinds of attack, landmark cases and preparation steps are on the cyberattack page.", "See the full cyberattack page →", "Cyber incidents involving this country"),
@@ -973,7 +974,7 @@ def build():
         for _g in GUIDES:
             if _g in BY:
                 W(f"/{L}/{BY[_g]['slug']}/guide/index.html", guide_page(_g, L)); urls.append((f"{url(L,_g)}guide/", {l: f"{url(l,_g)}guide/" for l in LANGS}))
-        W(f"/{L}/about/index.html", about_page(L)); urls.append((f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}))
+        W(f"/{L}/about/index.html", ABOUT.page(L, dict(C3(), img=P3.img, credit=P3.credit, paylink=P3.paylink, ld=ld, ORG=ORG))); urls.append((f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}))
         W(f"/{L}/prepare/index.html", stock_page(L)); urls.append((f"/{L}/prepare/", {l: f"/{l}/prepare/" for l in LANGS}))
         W(f"/{L}/ready/index.html", ready_page(L)); urls.append((f"/{L}/ready/", {l: f"/{l}/ready/" for l in LANGS}))
         W(f"/{L}/feeds/index.html", feeds_page(L)); W(f"/{L}/embed/index.html", embed_page(L)); W(f"/{L}/account/index.html", account_page(L)); import pages_req as PRQ; W(f"/{L}/request/index.html", PRQ.request_page(L, head, foot, LANGS)); urls.append((f"/{L}/request/", {l: f"/{l}/request/" for l in LANGS}))
