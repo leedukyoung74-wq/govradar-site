@@ -45,6 +45,9 @@ jobs:
       - name: Sanctions lists (UN, US OFAC, EU, UK) — no AI
         if: inputs.task == 'daily'
         run: python tools/feed_sanctions.py || echo "sanctions feed failed; keeping the last good numbers"
+      - name: Home "today's changes" summary — no AI
+        if: inputs.task == 'daily'
+        run: python tools/feed_today.py
       - name: Weekly source registry check
         if: inputs.task == 'sources'
         run: python tools/probe_sources.py data_branch/feeds/sources_registry.json

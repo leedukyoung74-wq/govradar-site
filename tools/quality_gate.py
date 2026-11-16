@@ -74,6 +74,12 @@ def check(new, old, now=None):
             if len(cc) < 100: bad.append(f"sanctions.json: only {len(cc)} countries (minimum 100)")
             if not any((v or {}).get("ok") for v in (sx.get("src") or {}).values()): bad.append("sanctions.json: no list answered")
             if not ((cc.get("KP") or {}).get("un") or [0])[0]: bad.append("sanctions.json: North Korea has no UN entries — parsing is broken")
+    td = new.get("today.json")
+    if td is not None:
+        n_ = (td.get("n") or {}) if isinstance(td, dict) else {}
+        if not isinstance(td, dict) or "open" not in n_: bad.append("today.json unreadable")
+        elif tn := new.get("tenders.json"):
+            if n_.get("open", 0) > len(tn.get("items") or []): bad.append("today.json counts more open tenders than tenders.json")
     return bad
 
 def published(path, d):
@@ -86,6 +92,7 @@ if __name__ == "__main__":
     names = ["tenders.json", "awards.json", "pipeline.json", "cty/_summary.json"]
     new = {k: load(os.path.join(d, "feeds", k)) for k in names}
     old = {k: published(k, d) for k in names}
+    if os.path.exists(os.path.join(d, "feeds", "today.json")): new["today.json"] = load(os.path.join(d, "feeds", "today.json"))
     if os.path.exists(os.path.join(d, "feeds", "active.json")): new["active.json"] = load(os.path.join(d, "feeds", "active.json"))
     if os.path.exists(os.path.join(d, "feeds", "sanctions.json")): new["sanctions.json"] = load(os.path.join(d, "feeds", "sanctions.json"))
     if os.path.exists(os.path.join(d, "feeds", "econ.json")): new["econ.json"] = load(os.path.join(d, "feeds", "econ.json"))

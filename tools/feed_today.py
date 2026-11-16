@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+"""Home "today's changes" — no AI. Reads the feeds this run just wrote and writes one small file,
+data_branch/feeds/today.json, so the home page needs a single request:
+new tenders first seen today, tenders closing within 2 days, newest official hazard alerts (48 h),
+and the state of every data source. Nothing here is estimated: every number is a count of items in the feeds."""
+import datetime as dt, json, os, sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch")
+NOW = dt.datetime.now(dt.timezone.utc)
+
+def load(p):
+    try: return json.load(open(os.path.join(D, p), encoding="utf8"))
+    except Exception: return {}
+
+def slim(x):
+    n = x.get("n") or {}
+    return {"t": (x.get("title") or "")[:140], "iso": x.get("iso", ""), "n": {k: n.get(k, "") for k in ("ko", "en", "es", "fr", "ar", "vi", "id")} if n else {},
+            "dl": x.get("deadline", ""), "url": x.get("url", ""), "src": x.get("source", "")}
+
+def num(v):
+    try: return float(v or 0)
+    except Exception: return 0.0
+
+def iso_date(v):
+    """'2026-11-13', '2026-Nov-21 04:10' or '2026-11-13T..' -> '2026-11-13' ('' if unreadable)"""
+    v = str(v or "")[:11]
+    for f, n in (("%Y-%m-%d", 10), ("%Y-%b-%d", 11)):
+        try: return dt.datetime.strptime(v[:n], f).date().isoformat()
+        except ValueError: pass
+    return ""
+
+def build():
+    today = NOW.date().isoformat()
+    items = (load("feeds/tenders.json").get("items") or [])
+    open_ = [x for x in items if (x.get("deadline") or "9") >= today]
+    new = [x for x in open_ if x.get("added") == today]
+    urgent = sorted([x for x in open_ if x.get("urgent")], key=lambda x: x.get("deadline_at") or x.get("deadline") or "")
+    # one of each source in turn, largest estimate first, so a single big source cannot fill the list
+    by = {}
+    for x in sorted(new, key=lambda x: -num(x.get("est"))): by.setdefault(x.get("source"), []).append(x)
+    pick = []
+    while len(pick) < 6 and any(by.values()):
+        for k in list(by):
+            if by[k] and len(pick) < 6: pick.append(by[k].pop(0))
+    off = load("hz/official.json")
+    cut = (NOW - dt.timedelta(hours=48)).date().isoformat()
+    # alerts dated in the last 48 h (future dates, e.g. an asteroid's approach day, are not "new")
+    alerts = sorted([dict(a, date=iso_date(a.get("date"))) for v in (off.get("items") or {}).values() for a in v
+                     if cut <= iso_date(a.get("date")) <= today], key=lambda a: a["date"], reverse=True)
+    src = []
+    for k, v in (load("feeds/sources_status.json") or {}).items():
+        if not isinstance(v, dict) or v.get("state") == "SKIPPED": continue
+        src.append({"name": k, "state": v.get("state", "UNKNOWN"), "kept": v.get("kept", 0), "new": v.get("new_today", 0)})
+    for k, v in (off.get("sources") or {}).items():
+        src.append({"name": k.upper(), "state": "SUCCESS" if v.get("ok") else "ERROR", "kept": v.get("n", 0), "new": None})
+    for f, nm in (("feeds/econ.json", "World Bank indicators / FX"), ("feeds/sanctions.json", "Sanctions lists")):
+        s = load(f).get("src") or {}
+        if s: src.append({"name": nm, "state": "SUCCESS" if all(x.get("ok") for x in s.values()) else ("PARTIAL" if any(x.get("ok") for x in s.values()) else "ERROR"), "kept": None, "new": None})
+    return {"updated": NOW.strftime("%Y-%m-%dT%H:%MZ"), "date": today,
+            "n": {"open": len(open_), "new": len(new), "urgent": len(urgent), "countries": len({x.get("iso") for x in open_ if x.get("iso")}), "alerts": len(alerts)},
+            "new": [slim(x) for x in pick], "urgent": [slim(x) for x in urgent[:6]],
+            "alerts": [{"t": (a.get("t") or "")[:120], "date": a.get("date", ""), "src": a.get("src", ""), "url": a.get("url", ""), "k": a.get("k", "")} for a in alerts[:6]],
+            "src": src}
+
+if __name__ == "__main__":
+    d = build()
+    json.dump(d, open(os.path.join(D, "feeds", "today.json"), "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
+    print("today:", d["n"], "sources", len(d["src"]))
