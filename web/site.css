@@ -531,7 +531,7 @@ em.nb{display:inline-block;font-style:normal;font-size:11px;font-weight:700;colo
 .rd-srcl{columns:2;font-size:14px;line-height:1.9;padding-left:20px}.rd-srcl a{color:#1d2b4f}
 @media (max-width:900px){.rd-hero-g,.rd-two,.rd-bag,.rd-hz{grid-template-columns:1fr}.rd-hero-g{gap:8px}.rd-status{grid-template-columns:1fr 1fr}.rd-pers{grid-template-columns:1fr 1fr}.rd-g3,.rd-g4{grid-template-columns:1fr 1fr}.rd-g6{grid-template-columns:1fr 1fr}.rd-srcl{columns:1}.rd-sec{padding:64px 0}}
 @media (max-width:560px){.rd-in{padding:0 16px}.rd-status,.rd-pers,.rd-g2,.rd-g3,.rd-g4{grid-template-columns:1fr}.rd-tl label{grid-template-columns:24px 1fr}.rd-when{grid-column:2}.rd-task{grid-column:2}.rd-cardp dl{grid-template-columns:1fr}.rd-t{font-size:14px}}
-@media print{header,footer,.rd-nav,.rd-hero,.rd-video,#setup,#calc,#stock form,#hazards,#org,#help,#sources,.prepbar,.rd-btn,#now{display:none!important}.rd-sec{padding:16px 0}body.print-card main>*:not(#card){display:none!important}body.print-card #card form,body.print-card #card .rd-two>div:first-child{display:none!important}}
+@media print{header,footer,.rd-nav,.rd-hero,.rd-video,#setup,#calc,#stock form,#hazards,#org,#help,#sources,.rd-acts,#local,.prepbar,.rd-btn,#now{display:none!important}.rd-sec{padding:16px 0}body.print-card main>*:not(#card){display:none!important}body.print-card #card form,body.print-card #card .rd-two>div:first-child{display:none!important}}
 
 .rd-band{background:#1d2b4f;color:#fff;padding:0}.rd-band-g{display:grid;grid-template-columns:5fr 6fr;gap:40px;align-items:center}
 .rd-band h2{color:#fff;font-size:clamp(26px,3vw,36px);font-weight:700;margin:40px 0 12px}.rd-band p{color:#e2e8f3;font-size:17px;line-height:1.7}
@@ -885,3 +885,8 @@ html{scroll-padding-top:116px}
 
 /* bigger flags 2026-11-16 */.flag{gap:12px;padding:10px 12px}.flag .fi{width:44px;height:33px;line-height:33px;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.1)}.fi.big{width:168px;line-height:126px;border-radius:10px}.who .fi,.mini .fi{width:28px;line-height:21px;border-radius:3px}@media(max-width:760px){.fi.big{width:112px;line-height:84px}.flag .fi{width:36px;height:27px;line-height:27px}}
 .dl li.stale{opacity:.7}.dl li.stale .grl{color:#b45309}
+
+/* preparedness: action buttons, country picker (2026-11-17) */
+.rd-acts{display:flex;gap:8px;flex-wrap:wrap}.rd-acts .rd-btn{margin:0}
+.rd-lbl{display:block;font-weight:700;margin:12px 0 4px}.rd-lbl select{display:block;width:100%;max-width:420px;margin-top:6px;padding:10px;font:inherit;font-size:16px;border:1px solid #9aa3b5;border-radius:6px;background:#fff}
+.rd-local h3{margin-top:0}.rd-local h4{margin:18px 0 6px}.rd-local ul{padding-left:20px}.rd-kr b{font-size:22px;margin-right:8px}
