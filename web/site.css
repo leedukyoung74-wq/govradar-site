@@ -1,7 +1,8 @@
+@font-face{font-family:"WMM Cyr";font-display:swap;src:local("Arial"),local("Helvetica Neue"),local("Roboto"),local("Noto Sans"),local("DejaVu Sans");unicode-range:U+0370-03FF,U+0400-052F,U+1C80-1C8F,U+2DE0-2DFF,U+A640-A69F}
 /* GOV RADAR public site — black & white, map keeps its colours */
-@font-face{font-family:"WMM Nexon";font-weight:300;font-display:swap;src:local("NEXON Lv1 Gothic Light"),local("NEXONLv1Gothic-Light"),local("NEXON Lv1 Gothic OTF Light"),url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff")}
-@font-face{font-family:"WMM Nexon";font-weight:400;font-display:swap;src:local("NEXON Lv1 Gothic"),local("NEXONLv1Gothic"),local("NEXON Lv1 Gothic OTF"),url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff")}
-@font-face{font-family:"WMM Nexon";font-weight:700;font-display:swap;src:local("NEXON Lv1 Gothic Bold"),local("NEXONLv1Gothic-Bold"),local("NEXON Lv1 Gothic OTF Bold"),url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff")}
+@font-face{font-family:"WMM Cyr","WMM Nexon";font-weight:300;font-display:swap;src:local("NEXON Lv1 Gothic Light"),local("NEXONLv1Gothic-Light"),local("NEXON Lv1 Gothic OTF Light"),url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff")}
+@font-face{font-family:"WMM Cyr","WMM Nexon";font-weight:400;font-display:swap;src:local("NEXON Lv1 Gothic"),local("NEXONLv1Gothic"),local("NEXON Lv1 Gothic OTF"),url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff")}
+@font-face{font-family:"WMM Cyr","WMM Nexon";font-weight:700;font-display:swap;src:local("NEXON Lv1 Gothic Bold"),local("NEXONLv1Gothic-Bold"),local("NEXON Lv1 Gothic OTF Bold"),url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff")}
 :root{--bg:#F5F5F2;--panel:#fff;--panel2:#EDEDEA;--ink:#0B0B0B;--muted:#5C5C5A;--line:#D7D7D3;
  --m-sea:#E7EEEC;--m-land:#C9D3D0;--m-done:#2F8A71;--m-hover:#E0A33A;--m-sel:#2C5BD6;--m-high:#C2412D;--m-mid:#E0A33A;--m-low:#7FB7A4;
  --f:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic","Noto Sans",system-ui,sans-serif;color-scheme:light}
@@ -136,7 +137,7 @@ h1,h2,h3,.lede{word-break:keep-all;overflow-wrap:anywhere}
 .qt{width:100%;border-collapse:collapse;max-width:640px}.qt td{padding:8px 4px;border-bottom:1px solid var(--line,#ddd)}.qt td:last-child{text-align:right}
 
 /* WMM official type rule — Korean always NEXON Lv1 Gothic: titles/emphasis Bold 700, body Regular 400, captions Light 300 */
-html,body,button,input,select,textarea{font-family:"WMM Nexon","NEXON Lv1 Gothic","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+html,body,button,input,select,textarea{font-family:"WMM Cyr","WMM Nexon","NEXON Lv1 Gothic","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
 body,p,li,td,input,select,textarea{font-weight:400}
 h1,h2,h3,h4,h5,h6,b,strong,th,.btn,summary,.chip.on,.kpis b{font-weight:700}
 small,figcaption,caption,.note,.meta,.crumb,.alt,.eb,.kpis span,.byline,.corp,.rgrid .flag small,.cards .card .note{font-weight:300}
@@ -154,9 +155,9 @@ small,figcaption,caption,.note,.meta,.crumb,.alt,.eb,.kpis span,.byline,.corp,.r
 @media (max-width:600px){.fband img{width:120px;height:120px}}
 
 /* ---------- 2026-10-31: header, per-language type, sign-in ---------- */
-html[lang=en] body,html[lang=es] body,html[lang=fr] body,html[lang=id] body,html[lang=en] :is(button,input,select,textarea),html[lang=es] :is(button,input,select,textarea),html[lang=fr] :is(button,input,select,textarea),html[lang=id] :is(button,input,select,textarea){font-family:"WMM Nexon","NEXON Lv1 Gothic",system-ui,sans-serif}
+html[lang=en] body,html[lang=es] body,html[lang=fr] body,html[lang=id] body,html[lang=en] :is(button,input,select,textarea),html[lang=es] :is(button,input,select,textarea),html[lang=fr] :is(button,input,select,textarea),html[lang=id] :is(button,input,select,textarea){font-family:"WMM Cyr","WMM Nexon","NEXON Lv1 Gothic",system-ui,sans-serif}
 html[lang=vi] body,html[lang=vi] :is(button,input,select,textarea){font-family:"Be Vietnam Pro","WMM Nexon","NEXON Lv1 Gothic",system-ui,sans-serif}
-html[lang=ar] body,html[lang=ar] :is(button,input,select,textarea){font-family:"WMM Nexon","NEXON Lv1 Gothic","IBM Plex Sans Arabic",system-ui,sans-serif}
+html[lang=ar] body,html[lang=ar] :is(button,input,select,textarea){font-family:"WMM Cyr","WMM Nexon","NEXON Lv1 Gothic","IBM Plex Sans Arabic",system-ui,sans-serif}
 html[lang=ar] h1,html[lang=ar] h2{letter-spacing:0}
 html:is([lang=en],[lang=es],[lang=fr],[lang=id],[lang=vi]) h1{letter-spacing:-.025em;font-weight:800}
 .nav .in{gap:14px}
@@ -837,7 +838,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;tr
 .subnav .in{display:flex;flex-wrap:wrap;gap:4px 4px;min-height:44px;align-items:center;max-width:1200px;margin:0 auto;padding:4px max(16px,env(safe-area-inset-left))}
 @media(max-width:760px){.subnav .in{gap:2px;padding:4px 10px}.subnav a{font-size:12.5px!important;padding:6px 9px!important}}
 .subnav .in::-webkit-scrollbar{display:none}
-.subnav a{flex:0 0 auto;white-space:nowrap;color:#bdbdb8;text-decoration:none;font-size:13.5px;padding:7px 12px;border-radius:999px;font-family:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+.subnav a{flex:0 0 auto;white-space:nowrap;color:#bdbdb8;text-decoration:none;font-size:13.5px;padding:7px 12px;border-radius:999px;font-family:"WMM Cyr","WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
 .subnav a:hover{color:#fff;background:#1c1c1a}
 .subnav a[aria-current]{color:#0b0b0b;background:#E3CC96;font-weight:700}
 .gvh .subnav{position:static}

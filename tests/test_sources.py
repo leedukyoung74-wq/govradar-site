@@ -326,3 +326,13 @@ class Active(unittest.TestCase):
     def test_gate_active_minimum(self):
         b = QG.check({"tenders.json": feed(300), "active.json": {"items": [{}] * 10}}, {})
         self.assertTrue(any("active.json" in x for x in b))
+
+
+class Today(unittest.TestCase):
+    def test_dates(self):
+        import feed_today as FT
+        self.assertEqual(FT.iso_date("2026-Nov-21 04:10"), "2026-11-21"); self.assertEqual(FT.iso_date("2026-11-13"), "2026-11-13"); self.assertEqual(FT.iso_date("x"), "")
+
+    def test_gate(self):
+        self.assertEqual(QG.check({"tenders.json": feed(300), "today.json": {"n": {"open": 300}}}, {}), [])
+        self.assertTrue(QG.check({"tenders.json": feed(300), "today.json": {"n": {"open": 999}}}, {}))

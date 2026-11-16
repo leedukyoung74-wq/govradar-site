@@ -853,6 +853,7 @@ def home(L):
 <div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b>{n_t}</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span></div><div><b>{e(last[5:].replace('-','/') or '—')}</b><span>{e(t['k_last'])}</span></div></div>
 </div></section>
 {ticker(L)}
+{P3.today_band(L)}
 <section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=6, home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
 {WIN.win_band(L, C3())}
 <section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
