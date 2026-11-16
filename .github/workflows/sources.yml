@@ -1,25 +1,10 @@
-name: Weekly source check (no AI)
+# Weekly source registry check — by hand here; the weekly TIMER belongs on main (ops/main-branch/schedule.yml).
+name: Source registry check (no AI)
 on:
-  schedule: [{ cron: "40 22 * * 0" }]
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
   probe:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v4
-        with: { ref: src }
-      - uses: actions/checkout@v4
-        with: { ref: data, path: data_branch }
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
-      - run: python tools/probe_sources.py data_branch/feeds/sources_registry.json
-      - name: Publish to data branch
-        run: |
-          cd data_branch
-          git add feeds/sources_registry.json
-          if git diff --cached --quiet; then echo "no change"; exit 0; fi
-          git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Source check $(date -u +%F)"
-          git push origin HEAD:data
+    uses: ./.github/workflows/feeds.yml
+    with: { task: sources, code_ref: src, dry_run: false }

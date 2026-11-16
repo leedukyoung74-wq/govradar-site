@@ -129,3 +129,17 @@ class Registry(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class NoKeys(unittest.TestCase):
+    def test_keyed_sources_skip_cleanly_without_keys(self):
+        saved = {k: os.environ.pop(k, None) for k in ("DAPA_KEY", "SAM_KEY")}
+        try:
+            FM.STATS.clear()
+            self.assertEqual(FM.dapa(), []); self.assertEqual(FM.sam(), [])
+            self.assertEqual(FT.classify_state(FM.stat("DAPA (Korea)")), "SKIPPED")
+            self.assertEqual(FT.classify_state(FM.stat("SAM.gov (US)")), "SKIPPED")
+            self.assertEqual(FM.stat("DAPA (Korea)")["requests"], 0)  # no network call at all
+        finally:
+            for k, v in saved.items():
+                if v: os.environ[k] = v
