@@ -28,7 +28,7 @@ def body(L):
     src = lambda ids: " ".join(f'<a class="ref" href="{e(RC.SRC[i][2])}" target="_blank" rel="noopener">[{i}] {e(RC.SRC[i][0] if ko else RC.SRC[i][1])}</a>' for i in ids)
     vid = f"/assets/ready-{'ko' if ko else 'en'}.mp4"
     nav = [("now", "지금 위험할 때", "If danger is now"), ("setup", "내 상황", "My situation"), ("plan", "맞춤 계획", "My plan"), ("calc", "준비량 계산", "Quantities"),
-           ("stock", "재고·교체", "Stock & expiry"), ("card", "대피·연락카드", "Contact card"), ("hazards", "재난별 안내", "By hazard"), ("help", "상담 요청", "Get help")]
+           ("stock", "재고·교체", "Stock & expiry"), ("card", "대피·연락카드", "Contact card"), ("offline", "통신 두절 도구", "When networks fail"), ("hazards", "재난별 안내", "By hazard"), ("help", "상담 요청", "Get help")]
     out = []
     out.append(f'''<section class="rd-hero"><div class="rd-in rd-hero-g">
 <div class="rd-hero-t"><p class="crumb"><a href="/{L}/">GOV RADAR</a> · <a href="/{L}/conflict/">{t("세계 상황판", "World watch")}</a></p>
@@ -132,6 +132,8 @@ def body(L):
 <button class="rd-btn ghost" type="button" onclick="document.body.classList.add('print-card');window.print();document.body.classList.remove('print-card')">{t("카드만 인쇄", "Print card only")}</button></div>
 </div></section>''')
     # HAZARDS
+    import ready_offline as RO
+    out.append(RO.section(L))   # tools for when the internet and phone networks fail (#offline)
     tabs = "".join(f'<button role="tab" data-hz="{h[0]}"{" class=on" if i == 0 else ""}>{e(h[1] if ko else h[2])}</button>' for i, h in enumerate(RC.HZ))
     panes = ""
     for i, (hid, nk, ne, ik, ie, ak, ae, pk, pe, ck, ce, ids) in enumerate(RC.HZ):
