@@ -1,0 +1,55 @@
+974	Ce qui peut être attaqué à distance — les 12 essentiels
+975	Tout ce qui est connecté à un réseau peut être atteint de l'extérieur. Des avions, navires et voitures à l'électricité, l'eau et les dispositifs médicaux, chacun avec un cas survenu ou confirmé. Les dessins sont des animations explicatives du principe.
+976	Comment on y accède
+977	Cas réel
+978	Que faire
+979	Source
+980	Exposés 12
+981	Avions
+982	Brouiller ou falsifier les signaux de navigation par satellite (GPS) affiche une position et une heure fausses dans le cockpit. Le wifi de bord et les liaisons de données de maintenance sont d'autres points d'entrée.
+983	Depuis 2023, bien plus d'avions de ligne subissent brouillage et falsification GPS près des zones de conflit comme la Baltique et le Moyen-Orient. Les pilotes recoupent avec la navigation inertielle et radio au sol.
+984	Compagnies et aéroports : détection des faux signaux et exercices de navigation de secours. Passagers : suivre les consignes officielles.
+985	Navires
+986	Les systèmes de navigation et de surveillance de cargaison reliés par satellite et la balise de position AIS sont visés. Une position AIS falsifiée fait apparaître le navire là où il n'est pas.
+987	En septembre 2026, un méthanier à propriétaire coréen a perdu l'accès à une partie de ses systèmes de contrôle et de surveillance de cargaison et renoncé à décharger au large de l'Italie (enquête en cours). En 2017, NotPetya a paralysé les systèmes portuaires et d'expédition de Maersk.
+988	Armateurs : séparer les réseaux d'exploitation du navire de l'informatique de bureau, contrôler les comptes de liaison satellite, s'entraîner à la navigation manuelle.
+989	Voitures et véhicules électriques
+990	Les voitures connectées s'ouvrent, démarrent et signalent leur position via une appli et les serveurs du constructeur. Une faille dans l'un ou l'autre permet à un tiers d'envoyer les mêmes commandes.
+991	En 2015, des chercheurs ont pris à distance le contrôle des freins et de la transmission d'une Jeep Cherokee en marche via le réseau mobile, entraînant le rappel de 1,4 million de véhicules. En 2024, une faille web permettant de localiser, ouvrir et démarrer des Kia à partir de la seule plaque a été découverte et corrigée.
+992	Propriétaires : mettre à jour le logiciel du véhicule, activer la connexion en deux étapes de l'appli, retirer l'accès de l'ancien propriétaire sur un véhicule d'occasion.
+993	Réseau électrique
+994	S'introduire dans les systèmes de contrôle (SCADA) qui pilotent les postes à distance permet d'ouvrir les disjoncteurs et de priver de courant des zones entières.
+995	En décembre 2015, des attaquants ont ouvert à distance des disjoncteurs de postes en Ukraine, privant de courant environ 230 000 personnes — la première grande coupure due à une cyberattaque.
+996	Ménages : lampes et batteries externes. Gestionnaires : réseaux de contrôle isolés, exercices de rétablissement manuel.
+997	Onduleurs solaires
+998	Les onduleurs des toits et des centrales sont reliés au cloud du fabricant et peuvent être réglés ou coupés à distance. S'ils s'éteignent en masse, le réseau peut vaciller.
+999	En mai 2025, Reuters a rapporté que des experts américains avaient trouvé des dispositifs de communication non documentés dans des onduleurs et batteries fabriqués en Chine.
+1000	Installateurs et exploitants : auditer les accès distants aux onduleurs, mettre à jour le firmware, limiter les liaisons au cloud du fabricant.
+1001	Stations d'eau
+1002	Les automates qui règlent le dosage des produits chimiques et les pompes peuvent être pilotés de l'extérieur s'ils sont exposés sur internet ou gardent leurs mots de passe par défaut.
+1003	En 2021, quelqu'un a utilisé un accès distant pour tenter de multiplier par plus de 100 la dose de soude à la station d'eau d'Oldsmar (Floride) ; un opérateur a aussitôt annulé. En novembre 2023, plusieurs services d'eau américains ont vu leurs automates Unitronics piratés via des mots de passe par défaut.
+1004	Ménages : eau potable de secours. Exploitants : changer les mots de passe par défaut, retirer les automates d'internet, alarmes de qualité de l'eau.
+1005	Dispositifs médicaux
+1006	Les appareils réglés par radio, comme les stimulateurs cardiaques et les pompes à insuline, peuvent recevoir de fausses commandes sans fil. L'imagerie et les moniteurs patients sont aussi sur le réseau de l'hôpital.
+1007	En 2017, la FDA américaine a demandé la mise à jour du firmware d'environ 465 000 stimulateurs Abbott (ex-St. Jude) en raison d'une faille radio. Aucun préjudice pour les patients n'a été signalé.
+1008	Patients : accepter les mises à jour proposées par l'équipe soignante. Hôpitaux : inventaire des appareils et réseau segmenté.
+1009	Chemins de fer
+1010	La radio et la signalisation des trains sont visées. Certains systèmes radio anciens déclenchent un arrêt d'urgence par une courte séquence de tonalités non chiffrée.
+1011	En août 2023, quelqu'un a diffusé le signal « Radio-Stop » sur les fréquences ferroviaires polonaises et une vingtaine de trains se sont arrêtés. Un matériel radio bon marché a suffi ; deux suspects ont été arrêtés.
+1012	Exploitants ferroviaires : passer à une radio numérique chiffrée (comme le GSM-R) et surveiller les signaux parasites.
+1013	Liaisons satellite
+1014	Les terminaux (modems) d'internet par satellite sont mis à jour à distance depuis un serveur de gestion. Si ce réseau est compromis, des dizaines de milliers de terminaux peuvent être neutralisés d'un coup.
+1015	Le 24 février 2022, jour de l'invasion de l'Ukraine par la Russie, des dizaines de milliers de terminaux KA-SAT de Viasat ont été mis hors service, et la télésurveillance d'environ 5 800 éoliennes allemandes a été perdue.
+1016	Organisations : protéger les comptes de gestion des terminaux et garder une liaison de secours.
+1017	Grues portuaires
+1018	Les grues à conteneurs sont reliées à leur fabricant pour le diagnostic à distance et les logiciels de commande. Des dispositifs de communication cachés font craindre des fuites de données ou un arrêt à distance.
+1019	Une enquête de la Chambre des représentants américaine en 2024 a trouvé des modems cellulaires non demandés par les ports sur certaines grues du chinois ZPMC. ZPMC a nié représenter une menace.
+1020	Ports : inspecter les équipements livrés pour y chercher des composants de communication et les exploiter avec l'accès distant fermé.
+1021	Caméras, box et objets connectés
+1022	Les caméras et box laissées avec leurs mots de passe par défaut sont prises automatiquement et deviennent des appareils « zombies » ; des centaines de milliers attaquent ensuite ensemble.
+1023	En 2016, le logiciel malveillant Mirai a pris le contrôle de centaines de milliers de caméras et de box aux mots de passe par défaut pour mener des attaques DDoS, mettant à terre le fournisseur DNS Dyn et avec lui l'accès à Twitter, Netflix et d'autres grands sites.
+1024	Ménages : changer les mots de passe par défaut, mettre à jour le firmware, couper l'accès distant inutile.
+1025	Smartphones
+1026	Des failles d'applis de messagerie peuvent infecter un téléphone sans que l'utilisateur ne touche à rien (zéro clic), exposant caméra, micro et messages.
+1027	En 2021, des analyses d'Amnesty International et d'autres ont confirmé que le logiciel espion Pegasus avait été installé sur des iPhone de journalistes et de militants par des failles zéro clic ; Apple a publié des mises à jour de sécurité d'urgence.
+1028	Particuliers : mettre à jour système et applis sans tarder, redémarrer de temps en temps, activer le mode Isolement en cas de risque élevé.

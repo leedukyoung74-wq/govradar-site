@@ -35,7 +35,7 @@ h2{color:var(--ink);font-size:clamp(26px,3.4vw,40px);line-height:1.25;font-weigh
 .stats div{min-width:0}.stats b{display:block;color:#fff;font-size:clamp(26px,3vw,38px);line-height:1.1}.stats span{display:block;font-size:14px;color:var(--soft)}.stats small{color:var(--red);font-size:13px}
 .jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
 .jump a{font-size:14px;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:var(--p2)}
-.kinds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.xps{background:linear-gradient(180deg,#05080e,#0a1220 40%,#05080e)}.xgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.xp{background:var(--p1);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:box-shadow .4s}.xp:has(.xv.on){box-shadow:0 0 0 1px rgba(255,93,108,.45)}.xv{position:relative;aspect-ratio:16/9;background:#03060c}.xv canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.xn{position:absolute;top:10px;left:12px;font:700 13px ui-monospace,Menlo,monospace;color:var(--c);background:rgba(0,0,0,.55);padding:2px 7px;border-radius:4px}.xb{padding:18px 20px 20px}.xb h3{font-size:21px;margin:0 0 10px;color:var(--ink);border-left:3px solid var(--c);padding-left:10px}.xb p{font-size:15px;line-height:1.6;color:var(--soft);margin:0 0 9px}.xb p b{display:block;font-size:12.5px;color:var(--c);margin-bottom:2px;letter-spacing:.2px}.xb .xdo{background:var(--p2);border-radius:8px;padding:10px 12px;color:var(--ink)}.xb .xsr{font-size:12.5px;color:var(--muted);margin:10px 0 0}.xb .xsr a{color:var(--muted)}@media(max-width:820px){.xgrid{grid-template-columns:1fr;gap:16px}.xb h3{font-size:19px}}.kinds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .kd{background:var(--p2);border-radius:10px;padding:22px;min-width:0}
 .kd h3{color:#fff;font-size:20px;margin:0 0 8px}.kd p{margin:0 0 10px;font-size:15.5px}.kd .dm{color:var(--amb);font-size:14.5px}.kd .ex{color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:10px;margin-top:12px}
 .flt{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
@@ -179,7 +179,8 @@ def map_data(i):
 T = {
  "ko": dict(title="사이버 공격 — 지금 세계에서 일어나는 일과 준비 · GOV RADAR", desc="사이버 공격 12가지 유형, 2026년 9~11월 국내외 사건(실제 공격과 단순 장애 구분), 역대 주요 사건, 한국 가정·기업·정부의 준비 사항 — GOV RADAR",
    crumb="재난 지도", h1="사이버 공격<br>지금 세계에서 일어나는 일과 준비", lead="해킹·디도스·랜섬웨어가 전력·금융·식수·식량·의료까지 멈출 수 있습니다. 2026년 9~11월 국내외 사건을 실제 공격과 단순 장애로 나눠 보여 주고, 가정·기업·정부가 지금 할 일을 정리했습니다.",
-   cap="사이버 공격 · 모션 그래픽", rel="관련 이미지(사건 현장 사진 아님)", upd="기준일", j=[("map","사건 지도"),("kinds","공격 유형 12가지"),("now","최근 사건"),("hist","역대 주요 사건"),("chain","연쇄 피해"),("rumor","소문 확인"),("prep","준비 사항"),("src","출처")],
+   cap="사이버 공격 · 모션 그래픽", rel="관련 이미지(사건 현장 사진 아님)", upd="기준일", xh="원격으로 공격받을 수 있는 것들 — 핵심 12가지", xl="네트워크에 연결된 것은 밖에서 조작될 길이 생깁니다. 비행기·배·자동차부터 전력·수도·의료기기까지, 실제로 일어났거나 확인된 사례와 함께 정리했습니다. 그림은 원리를 보여주는 설명용 애니메이션입니다.", xw="어떻게 뚫리나", xc="실제 사례", xd="대비", xs="출처",
+   j=[("map","사건 지도"),("kinds","공격 유형 12가지"),("exposed","원격 노출 12"),("now","최근 사건"),("hist","역대 주요 사건"),("chain","연쇄 피해"),("rumor","소문 확인"),("prep","준비 사항"),("src","출처")],
    kh="사이버 공격은 어떻게 일어나나 — 12가지 유형", kl="같은 '해킹'이라도 수법과 피해가 다릅니다. 유형마다 실제로 일어난 사례를 함께 붙였습니다.", dmg="주요 피해", ex="실제 사례",
    nh="최근 사건 — 실제 공격과 단순 장애를 구분해서", nl="2026년 9~11월 국내외 사건입니다. 장애가 났다고 모두 해킹은 아닙니다. 사건마다 지금까지 확인된 판정을 붙였습니다.",
    f=[("all","전체"),("atk","실제 공격"),("susp","조사 중·의심"),("no","공격 아님"),("vuln","취약점"),("KR","한국 관련")],
@@ -193,7 +194,8 @@ T = {
    foot="GOV RADAR · 월드메이킹멤버스(WMM) · 문의 73036396@naver.com", other="English"),
  "en": dict(title="Cyberattacks — what is happening now and how to prepare · GOV RADAR", desc="Twelve kinds of cyberattack, recent incidents worldwide (real attacks vs plain outages), landmark cases and what households, companies and governments should do — GOV RADAR",
    crumb="Hazard map", h1="Cyberattacks<br>what is happening, and how to prepare", lead="Hacking, DDoS and ransomware can stop power, money, water, food and healthcare. We separate real attacks from plain outages in incidents from September to November 2026, and set out what households, companies and governments can do now.",
-   cap="Cyberattack · motion graphic", rel="Related image, not the incident", upd="As of", j=[("map","Incident map"),("kinds","12 kinds"),("now","Recent incidents"),("hist","Landmark cases"),("chain","Knock-on effects"),("rumor","Rumour check"),("prep","Preparation"),("src","Sources")],
+   cap="Cyberattack · motion graphic", rel="Related image, not the incident", upd="As of", xh="What can be attacked remotely — the key 12", xl="Anything connected to a network can be reached from outside. From aircraft, ships and cars to power, water and medical devices, each comes with a case that happened or was confirmed. The drawings are explanatory animations of how it works.", xw="How it is reached", xc="Real case", xd="What to do", xs="Source",
+   j=[("map","Incident map"),("kinds","12 kinds"),("exposed","Exposed 12"),("now","Recent incidents"),("hist","Landmark cases"),("chain","Knock-on effects"),("rumor","Rumour check"),("prep","Preparation"),("src","Sources")],
    kh="How cyberattacks happen — 12 kinds", kl="'Hacking' covers very different methods and harms. Each kind comes with real cases.", dmg="Main harm", ex="Real cases",
    nh="Recent incidents — real attacks vs plain outages", nl="Incidents from September to November 2026. Not every outage is a hack; each item carries the verdict known so far.",
    f=[("all","All"),("atk","Real attacks"),("susp","Suspected"),("no","Not an attack"),("vuln","Vulnerability"),("KR","Korea")],
@@ -211,6 +213,10 @@ def page(L):
     path = "/cyber/" if L == "ko" else "/cyber/en/"
     kinds = "".join(f'<div class="kd" id="k-{k}"><h3>{E(n[i])}</h3><p>{E(d[i])}</p><p class="dm">{E(t["dmg"])} · {E(dm[i])}</p><p class="ex">{E(t["ex"])} · {E(ex[i])}</p></div>' for k, n, d, dm, ex in C.TYPES)
     TN = {k: n[i] for k, n, *_ in C.TYPES}
+    expo = "".join(f'<article class="xp" style="--c:{col}"><div class="xv"><canvas class="cyx" data-k="{k}" aria-hidden="true"></canvas><span class="xn">{n+1:02d}</span></div><div class="xb"><h3>{E(tt[i])}</h3>'
+                   f'<p><b>{E(t["xw"])}</b>{E(hw[i])}</p><p><b>{E(t["xc"])}</b>{E(cs[i])}</p><p class="xdo"><b>{E(t["xd"])}</b>{E(dd[i])}</p>'
+                   f'<p class="xsr">{E(t["xs"])} · ' + " · ".join(f'<a href="{E(u)}" target="_blank" rel="noopener nofollow">{E(lb.split(" — ")[0])}</a>' for lb, u in srcs) + '</p></div></article>'
+                   for n, (k, col, tt, hw, cs, dd, srcs) in enumerate(C.EXPOSE))
     rec = sorted(C.REC, key=lambda r: r[0], reverse=True)
     def dfmt(d): return d.replace("-", ".")
     evs = ""
@@ -259,6 +265,7 @@ def page(L):
 <div class="mv"><canvas class="hzcv" data-k="cyber" aria-hidden="true"></canvas><span class="cap">{E(t["cap"])}</span></div></div>
 <div class="stats">{stats}</div><p style="font-size:13px;color:var(--muted);margin-top:14px">{E(t["upd"])} {C.UPDATED} · {"국내 통계: 과학기술정보통신부·KISA 2026년 상반기 사이버위협 동향(7월 30일)" if L=="ko" else "Korean figures: MSIT/KISA H1 2026 cyber-threat report (30 Jul)"}</p></div></section>
 <section class="s" id="kinds"><div class="wrap"><h2>{E(t["kh"])}</h2><p class="lede">{E(t["kl"])}</p><div class="kinds">{kinds}</div></div></section>
+<section class="s xps" id="exposed"><div class="wrap"><h2>{E(t["xh"])}</h2><p class="lede">{E(t["xl"])}</p><div class="xgrid">{expo}</div></div></section>
 <section class="cmap" id="map"><div class="cm-wrap"><div class="cm-head"><div><p class="cm-eb">LIVE RADAR · CYBER INCIDENTS</p><h2>{"뉴스에 나온 사이버 사건, 세계 지도로" if L=="ko" else "Cyber incidents in the news, on the map"}</h2>
 <p class="cm-sub">{"점을 누르면 아래 사건 설명으로 이동합니다. 레이더가 지나갈 때 지점이 밝아집니다. 기준일 " if L=="ko" else "Tap a point to jump to the incident. Points flare as the sweep passes. As of "}{C.UPDATED}</p></div>
 <div class="cm-lg"><button type="button" data-k="atk" aria-pressed="true"><i style="--c:#ff4d5e"></i>{t["v"]["atk"]} <b id="n-atk"></b></button><button type="button" data-k="susp" aria-pressed="true"><i style="--c:#ffb238"></i>{t["v"]["susp"]} <b id="n-susp"></b></button><button type="button" data-k="no" aria-pressed="true"><i style="--c:#59c7ff"></i>{t["v"]["no"]} <b id="n-no"></b></button><button type="button" data-k="hist" aria-pressed="false"><i style="--c:#d9b45f"></i>{"역대 주요 사건" if L=="ko" else "Landmark cases"} <b id="n-hist"></b></button></div></div>
@@ -274,7 +281,7 @@ def page(L):
 <h3 id="callw" style="color:#fff;font-size:24px;margin:56px 0 6px">{E(t["cwh"])}</h3><p style="font-size:15px;color:var(--muted);margin:0 0 20px">{E(t["cwn"])}</p><div class="cws">{callw}</div></div></section>
 <section class="s" id="src"><div class="wrap"><h2>{E(t["sh"])}</h2><p class="lede" style="font-size:15px">{E(t["sn"])}</p><ol class="src">{src}</ol></div></section>
 <footer><div class="wrap">{E(t["foot"])}</div></footer><div style="background:#0a0a0a;display:flex;justify-content:center;align-items:center;padding:40px 16px 44px"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><img src="/assets/wmm-logo-white.png" alt="WORLD MAKING MEMBERS" width="150" height="150" style="display:block;width:150px;height:150px"></a></div>
-<script src="/hazards/hzfx.js"></script><script src="/hazards/hzfx2.js"></script>
+<script src="/hazards/hzfx.js"></script><script src="/hazards/hzfx2.js"></script><script src="/cyber/cyx.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script><script src="/hazards/world.js"></script>
 <script>(function(){{var P={map_data(i)},C={{atk:"#ff4d5e",susp:"#ffb238",no:"#59c7ff",vuln:"#b58cff",hist:"#d9b45f"}},ON={{atk:1,susp:1,no:1,vuln:1,hist:0}};
 if(!window.d3||!window.TOPO)return;var W=1600,H=760,svg=d3.select("#cmsvg"),pr=d3.geoNaturalEarth1().fitExtent([[10,10],[W-10,H-10]],{{type:"Sphere"}}),pa=d3.geoPath(pr);

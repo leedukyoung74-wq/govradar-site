@@ -1,0 +1,55 @@
+974	Apa saja yang bisa diserang dari jarak jauh — 12 utama
+975	Apa pun yang tersambung ke jaringan bisa dijangkau dari luar. Dari pesawat, kapal, dan mobil hingga listrik, air, dan alat medis, masing-masing disertai kasus yang terjadi atau terkonfirmasi. Gambar adalah animasi penjelasan cara kerjanya.
+976	Cara dibobol
+977	Kasus nyata
+978	Yang perlu dilakukan
+979	Sumber
+980	12 yang terekspos
+981	Pesawat
+982	Mengacaukan atau memalsukan sinyal navigasi satelit (GPS) membuat posisi dan waktu di layar kokpit salah. Wi-Fi kabin dan tautan data perawatan adalah pintu masuk lain.
+983	Sejak 2023 jauh lebih banyak pesawat penumpang mengalami gangguan dan pemalsuan GPS di sekitar zona konflik seperti Laut Baltik dan Timur Tengah. Pilot memeriksa silang dengan navigasi inersia dan radio darat.
+984	Maskapai dan bandara: prosedur deteksi sinyal palsu dan latihan navigasi cadangan. Penumpang: ikuti pemberitahuan resmi.
+985	Kapal
+986	Sistem navigasi dan pemantauan muatan yang tersambung lewat satelit serta suar posisi AIS menjadi sasaran. Posisi AIS palsu membuat kapal tampak berada di tempat lain.
+987	Pada September 2026 kapal LNG milik Korea kehilangan akses ke sebagian sistem kendali dan pemantauan muatan dan batal bongkar muat di lepas pantai Italia (sedang diselidiki). Pada 2017 NotPetya melumpuhkan sistem pelabuhan dan pengapalan Maersk.
+988	Perusahaan pelayaran: pisahkan jaringan operasi kapal dari TI kantor, kendalikan akun tautan satelit, latih navigasi manual.
+989	Mobil dan mobil listrik
+990	Mobil terhubung membuka kunci, menyala, dan melaporkan lokasi lewat aplikasi ponsel dan server pabrikan. Celah di salah satunya memungkinkan orang lain mengirim perintah yang sama.
+991	Pada 2015 peneliti mengendalikan rem dan transmisi Jeep Cherokee yang sedang melaju dari jarak jauh lewat jaringan seluler, memicu penarikan 1,4 juta kendaraan. Pada 2024 celah web yang memungkinkan siapa pun melacak, membuka, dan menyalakan mobil Kia hanya dari pelat nomor ditemukan dan diperbaiki.
+992	Pemilik: perbarui perangkat lunak kendaraan, aktifkan login dua langkah di aplikasi mobil, hapus akses pemilik lama pada mobil bekas.
+993	Jaringan listrik
+994	Menyusup ke sistem kendali (SCADA) yang mengoperasikan gardu induk dari jauh memungkinkan penyerang membuka pemutus dan memadamkan listrik satu wilayah.
+995	Pada Desember 2015 penyerang membuka pemutus gardu di Ukraina dari jarak jauh, memutus listrik bagi sekitar 230.000 orang — pemadaman besar pertama akibat serangan siber.
+996	Rumah tangga: senter dan power bank. Perusahaan listrik: jaringan kendali terisolasi, latihan pemulihan manual.
+997	Inverter surya
+998	Inverter di atap dan pembangkit tersambung ke cloud pabrikan dan bisa diatur atau dimatikan dari jauh. Jika banyak yang mati bersamaan, jaringan listrik bisa goyah.
+999	Pada Mei 2025 Reuters melaporkan pakar AS menemukan perangkat komunikasi tak terdokumentasi di inverter dan baterai buatan Tiongkok.
+1000	Pemasang dan pemilik pembangkit: audit akses jarak jauh ke inverter, perbarui firmware, batasi tautan ke cloud pabrikan.
+1001	Instalasi air
+1002	Pengendali yang mengatur dosis bahan kimia dan pompa di instalasi air bisa dioperasikan dari luar jika terbuka di internet atau masih memakai kata sandi bawaan.
+1003	Pada 2021 seseorang memakai akses jarak jauh untuk mencoba menaikkan dosis soda api lebih dari 100 kali di instalasi air Oldsmar, Florida; operator langsung membatalkannya. Pada November 2023 pengendali Unitronics di sejumlah perusahaan air AS dibobol lewat kata sandi bawaan.
+1004	Rumah tangga: air minum darurat. Operator: ganti kata sandi bawaan, lepaskan pengendali dari internet, alarm kualitas air.
+1005	Alat medis
+1006	Alat yang disetel lewat radio, seperti alat pacu jantung dan pompa insulin, berisiko menerima perintah nirkabel palsu. Alat pencitraan dan monitor pasien juga ada di jaringan rumah sakit.
+1007	Pada 2017 FDA AS meminta pembaruan firmware untuk sekitar 465.000 alat pacu jantung Abbott (dulu St. Jude) karena celah radio. Tidak ada laporan pasien dirugikan.
+1008	Pasien: terima pembaruan alat yang ditawarkan tim medis. Rumah sakit: daftar inventaris alat dan segmentasi jaringan.
+1009	Kereta api
+1010	Radio dan persinyalan kereta menjadi sasaran. Sebagian sistem radio lama memicu pengereman darurat hanya dengan rangkaian nada singkat tanpa enkripsi.
+1011	Pada Agustus 2023 seseorang memancarkan sinyal «Radio-Stop» di frekuensi kereta Polandia dan sekitar 20 kereta berhenti. Cukup dengan perangkat radio murah; dua tersangka ditangkap.
+1012	Operator kereta: beralih ke radio digital terenkripsi (seperti GSM-R) dan pantau sinyal liar.
+1013	Tautan satelit
+1014	Terminal (modem) internet satelit diperbarui dari jauh lewat server manajemen. Jika jaringan itu dibobol, puluhan ribu terminal bisa lumpuh sekaligus.
+1015	Pada 24 Februari 2022, hari Rusia menginvasi Ukraina, puluhan ribu terminal KA-SAT milik Viasat lumpuh, dan pemantauan jarak jauh sekitar 5.800 turbin angin di Jerman terputus.
+1016	Organisasi: lindungi akun manajemen terminal dan siapkan tautan komunikasi cadangan.
+1017	Derek pelabuhan
+1018	Derek peti kemas tersambung ke pabrikannya untuk diagnosis jarak jauh dan perangkat lunak kendali. Perangkat komunikasi tersembunyi memicu kekhawatiran kebocoran data atau dimatikan dari jauh.
+1019	Penyelidikan DPR AS pada 2024 menemukan modem seluler yang tidak diminta pelabuhan pada sebagian derek buatan ZPMC dari Tiongkok. ZPMC membantah menjadi ancaman.
+1020	Pelabuhan: periksa komponen komunikasi pada peralatan yang dikirim dan operasikan dengan akses jarak jauh tertutup.
+1021	Kamera, router, dan perangkat rumah
+1022	Kamera dan router yang masih memakai kata sandi bawaan diambil alih otomatis dan menjadi perangkat «zombi»; ratusan ribu di antaranya lalu menyerang bersama.
+1023	Pada 2016 malware Mirai menguasai ratusan ribu kamera dan router berkata sandi bawaan untuk serangan DDoS, melumpuhkan penyedia DNS Dyn dan bersamanya akses ke Twitter, Netflix, dan situs besar lain.
+1024	Rumah tangga: ganti kata sandi bawaan, perbarui firmware, matikan akses jarak jauh yang tidak dipakai.
+1025	Ponsel pintar
+1026	Celah di aplikasi pesan bisa menginfeksi ponsel tanpa pengguna menyentuh apa pun (zero-click), sehingga kamera, mikrofon, dan pesan terekspos.
+1027	Pada 2021 analisis forensik Amnesty International dan pihak lain memastikan spyware Pegasus terpasang di iPhone jurnalis dan aktivis lewat celah zero-click; Apple merilis pembaruan keamanan darurat.
+1028	Pribadi: segera perbarui sistem dan aplikasi, sesekali mulai ulang, gunakan Mode Isolasi (Lockdown) jika berisiko tinggi.

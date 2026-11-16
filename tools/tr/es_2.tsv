@@ -1,0 +1,55 @@
+974	Qué se puede atacar a distancia — los 12 clave
+975	Todo lo que está conectado a una red puede alcanzarse desde fuera. De aviones, barcos y coches a la electricidad, el agua y los dispositivos médicos, cada uno con un caso ocurrido o confirmado. Los dibujos son animaciones explicativas de cómo funciona.
+976	Cómo se llega
+977	Caso real
+978	Qué hacer
+979	Fuente
+980	Expuestos 12
+981	Aviones
+982	Interferir o falsificar las señales de navegación por satélite (GPS) muestra una posición y hora erróneas en la cabina. El wifi a bordo y los enlaces de datos de mantenimiento son otras vías de entrada.
+983	Desde 2023 muchos más aviones de pasajeros sufren interferencias y falsificación de GPS cerca de zonas de conflicto como el Báltico y Oriente Medio. Los pilotos lo contrastan con la navegación inercial y por radio terrestre.
+984	Aerolíneas y aeropuertos: detección de señales falsas y simulacros de navegación de respaldo. Pasajeros: seguir los avisos oficiales.
+985	Barcos
+986	Los sistemas de navegación y vigilancia de carga conectados por satélite y la baliza de posición AIS son los objetivos. Una posición AIS falsa hace que el barco parezca estar donde no está.
+987	En septiembre de 2026 un metanero de propiedad coreana perdió el acceso a parte de sus sistemas de control y vigilancia de carga y renunció a descargar frente a Italia (en investigación). En 2017 NotPetya paralizó los sistemas portuarios y de envío de Maersk.
+988	Navieras: separar las redes de operación del buque de la informática de oficina, controlar las cuentas del enlace satelital y entrenar la navegación manual.
+989	Coches y eléctricos
+990	Los coches conectados se abren, arrancan e informan de su posición a través de una app y de los servidores del fabricante. Un fallo en cualquiera de ellos permite a otro enviar las mismas órdenes.
+991	En 2015 unos investigadores controlaron a distancia los frenos y la transmisión de un Jeep Cherokee en marcha por la red móvil, lo que llevó a revisar 1,4 millones de vehículos. En 2024 se halló y corrigió un fallo web que permitía localizar, abrir y arrancar coches Kia solo con la matrícula.
+992	Propietarios: actualizar el software del vehículo, activar el inicio de sesión en dos pasos en la app y retirar el acceso del dueño anterior en coches usados.
+993	Red eléctrica
+994	Entrar en los sistemas de control (SCADA) que operan subestaciones a distancia permite abrir interruptores y dejar sin luz zonas enteras.
+995	En diciembre de 2015 unos atacantes abrieron a distancia interruptores de subestaciones en Ucrania y dejaron sin luz a unas 230.000 personas: el primer gran apagón causado por un ciberataque.
+996	Hogares: linternas y baterías externas. Eléctricas: redes de control aisladas y simulacros de reposición manual.
+997	Inversores solares
+998	Los inversores de tejados y plantas se conectan a la nube del fabricante y pueden configurarse o apagarse a distancia. Si muchos se apagan a la vez, la red puede desestabilizarse.
+999	En mayo de 2025 Reuters informó de que expertos de EE. UU. hallaron dispositivos de comunicación no documentados en inversores y baterías fabricados en China.
+1000	Instaladores y propietarios: revisar los accesos remotos a los inversores, actualizar el firmware y limitar los enlaces con la nube del fabricante.
+1001	Plantas de agua
+1002	Los controladores que regulan la dosificación química y las bombas pueden manejarse desde fuera si están expuestos en internet o conservan contraseñas por defecto.
+1003	En 2021 alguien usó un acceso remoto para intentar multiplicar por más de 100 la dosis de sosa en la planta de agua de Oldsmar (Florida); un operador lo revirtió al instante. En noviembre de 2023 varios servicios de agua de EE. UU. sufrieron intrusiones en controladores Unitronics con contraseñas por defecto.
+1004	Hogares: agua potable de emergencia. Operadores: cambiar contraseñas por defecto, sacar los controladores de internet y alarmas de calidad del agua.
+1005	Dispositivos médicos
+1006	Los dispositivos que se ajustan por radio, como marcapasos y bombas de insulina, pueden recibir órdenes inalámbricas falsas. Los equipos de imagen y monitores de pacientes también están en la red del hospital.
+1007	En 2017 la FDA de EE. UU. pidió actualizar el firmware de unos 465.000 marcapasos de Abbott (antes St. Jude) por una vulnerabilidad de radio. No se informó de daños a pacientes.
+1008	Pacientes: aceptar las actualizaciones que ofrezca su equipo médico. Hospitales: inventario de dispositivos y red segmentada.
+1009	Ferrocarril
+1010	La radio y la señalización de los trenes son los objetivos. Algunos sistemas de radio antiguos activan la parada de emergencia con una breve secuencia de tonos sin cifrar.
+1011	En agosto de 2023 alguien emitió la señal «Radio-Stop» en frecuencias ferroviarias polacas y unos 20 trenes se detuvieron. Bastó un equipo de radio barato; dos sospechosos fueron detenidos.
+1012	Operadores ferroviarios: pasar a radio digital cifrada (como GSM-R) y vigilar señales intrusas.
+1013	Enlaces por satélite
+1014	Los terminales (módems) de internet por satélite se actualizan a distancia desde un servidor de gestión. Si se vulnera esa red, decenas de miles de terminales pueden quedar inservibles a la vez.
+1015	El 24 de febrero de 2022, día de la invasión rusa de Ucrania, decenas de miles de terminales KA-SAT de Viasat quedaron fuera de servicio y se perdió la monitorización remota de unos 5.800 aerogeneradores alemanes.
+1016	Organizaciones: proteger las cuentas de gestión de terminales y tener un enlace de comunicación de respaldo.
+1017	Grúas portuarias
+1018	Las grúas de contenedores se conectan con su fabricante para diagnóstico remoto y software de control. Los dispositivos de comunicación ocultos hacen temer fugas de datos o un apagado a distancia.
+1019	Una investigación de la Cámara de Representantes de EE. UU. en 2024 halló módems celulares no solicitados por los puertos en algunas grúas fabricadas por la china ZPMC. ZPMC negó suponer una amenaza.
+1020	Puertos: inspeccionar los equipos entregados en busca de piezas de comunicación y operar con el acceso remoto cerrado.
+1021	Cámaras, routers y aparatos del hogar
+1022	Cámaras y routers con contraseñas por defecto son tomados automáticamente y se convierten en dispositivos «zombi»; cientos de miles atacan después a la vez.
+1023	En 2016 el malware Mirai tomó cientos de miles de cámaras y routers con contraseñas por defecto y los usó en ataques DDoS, tumbando al proveedor DNS Dyn y con él el acceso a Twitter, Netflix y otras grandes webs.
+1024	Hogares: cambiar las contraseñas por defecto, actualizar el firmware y desactivar el acceso remoto que no use.
+1025	Teléfonos móviles
+1026	Los fallos de las apps de mensajería pueden infectar un teléfono sin que el usuario toque nada (cero clic), exponiendo cámara, micrófono y mensajes.
+1027	En 2021 análisis forenses de Amnistía Internacional y otros confirmaron que el spyware Pegasus se había instalado en iPhones de periodistas y activistas con exploits de cero clic; Apple publicó actualizaciones de seguridad urgentes.
+1028	Particulares: actualizar sistema y apps cuanto antes, reiniciar de vez en cuando y usar el modo de aislamiento si corre un riesgo alto.
