@@ -1,0 +1,57 @@
+{
+ "checked": "2026-11-16T06:26Z",
+ "pages": [
+  {
+   "page": "/ko/mdb/?stay=1",
+   "status": 200,
+   "reads_feed": true
+  },
+  {
+   "page": "/ko/?stay=1",
+   "status": 200,
+   "reads_feed": true
+  },
+  {
+   "page": "/ko/ethiopia/?stay=1",
+   "status": 200,
+   "reads_feed": true
+  },
+  {
+   "page": "/ko/about/?stay=1",
+   "status": 200,
+   "reads_feed": true
+  }
+ ],
+ "feeds": {
+  "tenders.json": {
+   "status": 200,
+   "updated": "2026-11-16T03:39Z",
+   "age_hours": 2.8,
+   "count": 905
+  },
+  "cty/_summary.json": {
+   "status": 200,
+   "updated": "2026-11-16T03:40Z",
+   "age_hours": 2.8,
+   "count": 905
+  },
+  "awards.json": {
+   "status": 200,
+   "updated": "2026-11-16T03:39Z",
+   "age_hours": 2.8,
+   "count": 1507
+  }
+ },
+ "local": {
+  "items": 981,
+  "missing_fields": {},
+  "sources": [
+   "EU TED",
+   "Prozorro (Ukraine)",
+   "UK Contracts Finder",
+   "UK Find a Tender",
+   "World Bank"
+  ]
+ },
+ "result": "PASS"
+}
