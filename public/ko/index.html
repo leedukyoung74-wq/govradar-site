@@ -6,7 +6,7 @@
 <meta property="og:url" content="https://radar.wmm-hoa.com/ko/"><meta property="og:image" content="https://radar.wmm-hoa.com/assets/og.jpg"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a0a0a"><link rel="icon" href="/assets/mark.png"><link rel="apple-touch-icon" href="/assets/mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"><link rel="stylesheet" href="/assets/site.css?v=4e75ab41">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"><link rel="stylesheet" href="/assets/site.css?v=ae6fe8ee">
 <link rel="alternate" type="application/rss+xml" title="GOV RADAR" href="/feeds/ko/all.xml">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "GOV RADAR", "url": "https://radar.wmm-hoa.com/", "inLanguage": "ko", "publisher": {"@type": "Organization", "name": "WORLD MAKING MEMBERS Co., Ltd.", "alternateName": ["월드메이킹멤버스", "WMM"], "url": "https://www.wmm-hoa.com", "logo": "https://radar.wmm-hoa.com/assets/emblem.png", "email": "73036396@naver.com"}, "description": "193개국 정부의 국정 과제, 예산 사업, 입찰 공고, ODA·EDCF, 재해·분쟁 위험을 매주 갱신하는 한국 기업용 해외 정부 사업 레이더."}</script><script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js" defer></script><script src="/assets/hotmap.js?v=babde19d" defer></script></head><body>
 <header class="nav"><div class="in">
@@ -29,45 +29,185 @@
 <section class="band td" id="today"><div class="in"><h2 id="s1">오늘의 변화</h2><p class="note">매일 아침 AI 없이 새로 모은 결과입니다. 공고는 원문 기준이며, 숫자는 모두 실제 건수입니다.</p>
 <div class="tdk"><a href="/ko/win/"><b id="td-new">–</b><span>오늘 새로 잡힌 공고</span></a><a href="/ko/win/"><b id="td-urg">–</b><span>2일 안에 마감</span></a><a href="/ko/win/"><b id="td-open">–</b><span>지금 열린 입찰</span><small id="td-c"></small></a><a href="/hazards/"><b id="td-al">–</b><span>48시간 내 공식 경보</span></a></div>
 <div class="tdc"><div><h3>새로 잡힌 공고</h3><ol class="cil" id="td-nl"></ol></div><div><h3>마감 임박</h3><ol class="cil" id="td-ul"></ol></div><div><h3>공식 기관 경보</h3><ol class="cil" id="td-al2"></ol></div></div>
-<h3 class="tds-h">데이터 출처 상태</h3><ul class="tds" id="td-src"></ul><p class="cta"><a class="btn pri" href="/ko/win/">입찰·수주 센터에서 전체 보기 →</a></p><p class="fine" id="td-up"></p></div></section>
+<h3 class="tds-h">데이터 출처 상태</h3><ul class="tds" id="td-src"></ul><p class="fine lic"><b>출처·이용조건:</b> <a href="https://datacatalog.worldbank.org/search/dataset/0037776/procurement-notice" target="_blank" rel="noopener">세계은행 조달·사업·낙찰 데이터 (CC BY 4.0)</a> · <a href="https://ted.europa.eu/en/legal-notice" target="_blank" rel="noopener">EU 조달공보 TED (자유 재사용, EU 결정 2011/833)</a> · <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">영국 Find a Tender·Contracts Finder (Open Government Licence v3.0)</a> · <a href="https://prozorro.gov.ua/about" target="_blank" rel="noopener">우크라이나 Prozorro 공식 공개 데이터 (원문 링크 제공 · 이용조건 확인 중)</a>. 한국어 제목·분석은 GOV RADAR가 만든 것이며 각 기관의 보증이나 제휴가 아닙니다. 응찰 전 원문 공고를 확인하세요.</p><p class="cta"><a class="btn pri" href="/ko/win/">입찰·수주 센터에서 전체 보기 →</a></p><p class="fine" id="td-up"></p></div></section>
 <style>.tdk{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 28px}.tdk a{display:block;background:var(--bg2,#f3f5f8);padding:18px;border-radius:12px;color:inherit;text-decoration:none;transition:transform .2s}.tdk a:hover{transform:translateY(-2px)}.tdk b{display:block;font-size:36px;line-height:1.1}.tdk span{display:block;font-size:14px;margin-top:4px}.tdk small{display:block;font-size:13px;opacity:.7}
 .tdc{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.tdc .cil{padding:0;margin:0;list-style:none}.tdc .cil li{padding:10px 0;border-bottom:1px solid rgba(127,127,127,.18);font-size:15px;line-height:1.45}.tdc .cil li a{color:inherit}.tdc .cil li small{display:block;opacity:.72;font-size:13px}
-.tds-h{margin-top:32px}.tds{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:8px}.tds li{font-size:13px;padding:6px 12px;border-radius:999px;background:var(--bg2,#f3f5f8)}.tds li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:#16a34a}.tds li.p i{background:#f59e0b}.tds li.f i{background:#dc2626}
-@media(max-width:760px){.tdk{grid-template-columns:1fr 1fr;gap:8px}.tdk a{padding:14px 12px}.tdk b{font-size:26px}.tdc{grid-template-columns:1fr;gap:8px}}</style>
-<script>(function(){var S=["오늘의 변화", "매일 아침 AI 없이 새로 모은 결과입니다. 공고는 원문 기준이며, 숫자는 모두 실제 건수입니다.", "오늘 새로 잡힌 공고", "2일 안에 마감", "지금 열린 입찰", "48시간 내 공식 경보", "새로 잡힌 공고", "마감 임박", "공식 기관 경보", "데이터 출처 상태", "정상", "일부", "실패", "갱신", "오늘의 변화를 지금 불러오지 못했습니다.", "개국", "마감", "입찰·수주 센터에서 전체 보기", "결과 없음"],L="ko",sec=document.getElementById("today");if(!sec)return;var loc=L==="ar"?"ar-u-nu-latn":L;
+.tds-h{margin-top:32px}.tds{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:8px}.tds li{display:flex;align-items:center;gap:10px;font-size:14px;padding:8px 14px 8px 8px;border-radius:12px;background:var(--bg2,#f3f5f8)}.tds li .tdfl{width:40px;height:30px;line-height:30px}.tds li span{font-weight:700}.tds li b{font-weight:400;opacity:.8}.tds li i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#16a34a}.tds li.p i{background:#f59e0b}.tds li.f i{background:#dc2626}
+.tdc .cil li.tdf{display:flex;gap:14px;align-items:flex-start}.tdf>div{min-width:0}.tdfl{flex:none;width:48px;height:36px;line-height:36px;background-size:cover;border-radius:5px;box-shadow:0 0 0 1px rgba(0,0,0,.1);margin-top:3px}
+@media(max-width:760px){.tdfl{width:40px;height:30px;line-height:30px}.tdk{grid-template-columns:1fr 1fr;gap:8px}.tdk a{padding:14px 12px}.tdk b{font-size:26px}.tdc{grid-template-columns:1fr;gap:8px}}</style>
+<script>/* GOV RADAR deadline helper — one rule for every tender list on the site.
+   deadline_at with a time and offset (e.g. 2026-11-27T17:00:00Z, 2026-11-23T09:00:00+02:00) is compared with the
+   real current time; a notice disappears the minute it closes. A date with no time is kept until that date has ended
+   everywhere (23:59:59 at UTC-12) and is labelled "time not given — check the notice", never "open for bids".
+   Tested by tests/test_deadline.py (node). */
+var GRDL = window.GRDL || (function () {
+  var T = {
+    ko: ["마감", "시각 미확인 · 원문 확인", "내 시간", "마감됨", "시간 남음", "분 남음", "마감일 미확인 · 원문 확인", "검증 지연 · 마지막 확인", "원문 확인"],
+    en: ["closes", "time not given · check the notice", "your time", "closed", "h left", "min left", "deadline unknown · check the notice", "verification delayed · last checked", "check the notice"],
+    es: ["cierre", "hora no indicada · ver el aviso", "su hora", "cerrado", "h restantes", "min restantes", "fecha de cierre desconocida · ver el aviso", "verificación pendiente · última comprobación", "ver el aviso"],
+    fr: ["clôture", "heure non indiquée · voir l'avis", "votre heure", "clos", "h restantes", "min restantes", "date limite inconnue · voir l'avis", "vérification en attente · dernier contrôle", "voir l'avis"],
+    ar: ["الإغلاق", "الوقت غير محدد · راجع الإعلان", "توقيتك", "مغلق", "ساعة متبقية", "دقيقة متبقية", "موعد الإغلاق غير معروف · راجع الإعلان", "التحقق متأخر · آخر تحقق", "راجع الإعلان"],
+    vi: ["đóng", "chưa rõ giờ · xem thông báo", "giờ của bạn", "đã đóng", "giờ còn lại", "phút còn lại", "chưa rõ hạn chót · xem thông báo", "xác minh bị chậm · kiểm tra lần cuối", "xem thông báo"],
+    id: ["tutup", "jam tidak disebut · cek pengumuman", "waktu Anda", "ditutup", "jam lagi", "menit lagi", "batas waktu tidak diketahui · cek pengumuman", "verifikasi tertunda · terakhir dicek", "cek pengumuman"]
+  };
+  var RX = /^(\d{4}-\d{2}-\d{2})T(\d{2}):(\d{2})(?::\d{2}(?:\.\d+)?)?(Z|[+-]\d{2}:?\d{2})$/;
+  // state: "open" (exact time, still open) | "date_only" (date without time, kept until the day ends at UTC-12)
+  //        "closed" | "unknown" (no or impossible deadline). Only open and date_only count as open; unknown never does.
+  var UNK = { state: "unknown", timed: false, ms: null, open: false, date: "", src: "", left: null };
+  function info(at, d, now) {
+    now = now == null ? Date.now() : now;
+    var m = RX.exec(String(at || ""));
+    if (m) {
+      var ms = Date.parse(at); if (isNaN(ms)) return UNK;
+      var off = m[4] === "Z" ? "+00:00" : (m[4].length === 5 ? m[4].slice(0, 3) + ":" + m[4].slice(3) : m[4]);
+      return { state: now < ms ? "open" : "closed", timed: true, ms: ms, open: now < ms, date: m[1], src: m[1] + " " + m[2] + ":" + m[3] + " (UTC" + off + ")", left: ms - now };
+    }
+    var dd = /^\d{4}-\d{2}-\d{2}/.exec(String(at || d || ""));
+    if (dd) { var e = Date.parse(dd[0] + "T23:59:59-12:00"); if (isNaN(e) || new Date(Date.parse(dd[0] + "T12:00:00Z")).toISOString().slice(0, 10) !== dd[0]) return UNK; return { state: now < e ? "date_only" : "closed", timed: false, ms: e, open: now < e, date: dd[0], src: dd[0], left: e - now }; }
+    return UNK;
+  }
+  function days(i) { return i.left == null ? null : Math.floor(i.left / 864e5); }
+  function mine(i, L) {
+    if (!i.timed) return "";
+    try { return new Intl.DateTimeFormat(L === "ar" ? "ar-u-nu-latn" : L, { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false, timeZoneName: "short" }).format(i.ms); }
+    catch (e) { return ""; }
+  }
+  function label(i, L, stale) {
+    var t = T[L] || T.en;
+    if (i.state === "unknown") return t[6];
+    if (stale) return /^\d{4}-\d\d-\d\dT\d\d:\d\d/.test(String(stale))
+      ? t[7] + " " + String(stale).replace("T", " ").slice(0, 16) + " UTC · " + t[8]
+      : t[7].split(" · ")[0] + " · " + t[8];   // never checked since it went stale: no time shown, no first-seen date
+    if (!i.open) return t[3];
+    var s = t[0] + " " + i.src;
+    if (!i.timed) return s + " · " + t[1];
+    var m = mine(i, L); if (m) s += " · " + t[2] + " " + m;
+    if (i.left < 864e5) s += " · " + (i.left < 36e5 ? Math.max(1, Math.round(i.left / 6e4)) + t[5] : Math.floor(i.left / 36e5) + t[4]);
+    return s;
+  }
+  // Re-check every row on the page every 30 s (and when the tab comes back): a row whose deadline has passed is
+  // removed while the page stays open; labels (hours/minutes left) refresh. Rows carry data-at / data-dl / data-stale.
+  function sweep(root, L) {
+    (root || document).querySelectorAll("[data-gr]").forEach(function (li) {
+      var i = info(li.dataset.at, li.dataset.dl);
+      if (i.state === "closed") { li.remove(); return; }
+      var g = li.querySelector(".grl"); if (g) g.textContent = label(i, L, li.dataset.stale);
+    });
+  }
+  var started = false;
+  function watch(L) {
+    sweep(document, L); if (started) return; started = true;
+    setInterval(function () { sweep(document, L); }, 30000);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) sweep(document, L); });
+  }
+  return { info: info, days: days, label: label, mine: mine, sweep: sweep, watch: watch, T: T };
+})();
+if (typeof window !== "undefined") window.GRDL = GRDL;
+</script><script>(function(){var S=["오늘의 변화", "매일 아침 AI 없이 새로 모은 결과입니다. 공고는 원문 기준이며, 숫자는 모두 실제 건수입니다.", "오늘 새로 잡힌 공고", "2일 안에 마감", "지금 열린 입찰", "48시간 내 공식 경보", "새로 잡힌 공고", "마감 임박", "공식 기관 경보", "데이터 출처 상태", "정상", "일부", "실패", "갱신", "오늘의 변화를 지금 불러오지 못했습니다.", "개국", "마감", "입찰·수주 센터에서 전체 보기", "결과 없음"],L="ko",sec=document.getElementById("today");if(!sec)return;var loc=L==="ar"?"ar-u-nu-latn":L;
 function E(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function $(i){return document.getElementById(i)}function F(n){return new Intl.NumberFormat(loc).format(n||0)}
-function li(x){var c=(x.n&&(x.n[L]||x.n.en))||x.iso||"";return'<li dir="auto"><a href="'+E(x.url)+'" target="_blank" rel="noopener">'+E(x.t)+'</a><small>'+E(c)+" · "+E(x.src)+(x.dl?" · "+S[16]+" "+E(x.dl):"")+'</small></li>'}
+var SF={"World Bank":"un","EU TED":"eu","UK Find a Tender":"gb","UK Contracts Finder":"gb","Prozorro (Ukraine)":"ua","DAPA (Korea)":"kr","SAM.gov (US)":"us",
+"USGS":"us","GDACS":"eu","EONET":"us","NASA EONET":"us","WHO":"un","CNEOS":"us","NASA JPL":"us","SWPC":"us","NOAA SWPC":"us","World Bank indicators / FX":"un","Sanctions lists":"un"};
+function F_(c){c=String(c||"").toLowerCase();return/^[a-z]{2}$/.test(c)?'<span class="fi fi-'+c+' tdfl" aria-hidden="true"></span>':""}
+function li(x){var I=GRDL.info(x.dla,x.dl);if(!I.open)return"";var c=(x.n&&(x.n[L]||x.n.en))||x.iso||"";return'<li dir="auto" class="tdf" data-gr="1" data-at="'+E(x.dla)+'" data-dl="'+E(x.dl)+'">'+F_(x.iso)+'<div><a href="'+E(x.url)+'" target="_blank" rel="noopener">'+E(x.t)+'</a><small>'+E(c)+" · "+E(x.src)+' · <span class="grl">'+E(GRDL.label(I,L))+'</span></small></div></li>'}
 fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/today.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
 var n=d.n||{};$("td-new").textContent=F(n.new);$("td-urg").textContent=F(n.urgent);$("td-open").textContent=F(n.open);$("td-c").textContent=F(n.countries)+" "+S[15];$("td-al").textContent=F(n.alerts);
 var no='<li>'+S[18]+'</li>';$("td-nl").innerHTML=(d.new||[]).map(li).join("")||no;$("td-ul").innerHTML=(d.urgent||[]).map(li).join("")||no;
-$("td-al2").innerHTML=(d.alerts||[]).map(function(a){return'<li dir="auto"><a href="'+E(a.url)+'" target="_blank" rel="noopener">'+E(a.t)+'</a><small>'+E(a.src)+" · "+E(a.date)+'</small></li>'}).join("")||no;
-$("td-src").innerHTML=(d.src||[]).map(function(x){var st=x.state,c=st==="SUCCESS"||st==="EMPTY_SUCCESS"?"":st==="PARTIAL"?"p":"f",w=c===""?S[10]:c==="p"?S[11]:S[12];return'<li class="'+c+'"><i></i>'+E(x.name)+" · "+w+(x.kept?" · "+F(x.kept):"")+'</li>'}).join("");
-$("td-up").textContent=S[13]+" "+String(d.updated).replace("T"," ").replace("Z"," UTC");
+$("td-al2").innerHTML=(d.alerts||[]).map(function(a){return'<li dir="auto" class="tdf">'+F_(SF[a.src]||SF[String(a.src).toUpperCase()]||"un")+'<div><a href="'+E(a.url)+'" target="_blank" rel="noopener">'+E(a.t)+'</a><small>'+E(a.src)+" · "+E(a.date)+'</small></div></li>'}).join("")||no;
+$("td-src").innerHTML=(d.src||[]).map(function(x){var st=x.state,c=st==="SUCCESS"||st==="EMPTY_SUCCESS"?"":st==="PARTIAL"?"p":"f",w=c===""?S[10]:c==="p"?S[11]:S[12];return'<li class="'+c+'">'+F_(SF[x.name]||"un")+'<span>'+E(x.name)+'</span><b>'+w+(x.kept?" · "+F(x.kept):"")+'</b><i></i></li>'}).join("");
+$("td-up").textContent=S[13]+" "+String(d.updated).replace("T"," ").replace("Z"," UTC");GRDL.watch(L);
 }).catch(function(){sec.querySelector(".tdk").remove();sec.querySelector(".tdc").remove();sec.querySelector(".note").textContent=S[14]});})();</script>
-<section class="band alt" id="deadlines"><div class="in"><h2 id="s2">마감이 다가오는 입찰</h2><p class="note">원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로</p><p class="dleg"><span class="lg-new">신규 — 최근 7일 안에 올라온 공고</span><span class="lg-hot">마감 임박 — D-15 이내</span></p><ul class="dl"><li class="" data-s="digital" data-dl="2026-11-16"><span class="dd" data-dl="2026-11-16">11/16</span>
-<span class="tt"><a href="/ko/chile/#tenders"><span class="fi fi-cl " aria-hidden="true"></span> 칠레</a><b>유지보수 관리 소프트웨어</b><small>Mercado Público 공공기관(기관명 미표기)</small></span>
-<a class="src" href="https://bidsfactory.com/en/tenders/software-de-gestion-de-mantenimiento-chile_mercadopublico-2048-86-LP26" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="CL" data-title="유지보수 관리 소프트웨어" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="health" data-dl="2026-11-16"><span class="dd" data-dl="2026-11-16">11/16</span>
-<span class="tt"><a href="/ko/chile/#tenders"><span class="fi fi-cl " aria-hidden="true"></span> 칠레</a><b>라스카스카다스 마스터플랜 진단·수립 용역</b><small>Mercado Público 공공기관(기관명 미표기)</small></span>
-<a class="src" href="https://bidsfactory.com/en/tenders/diagnost-y-elab-del-plan-maestro-las-cascadas-chile_mercadopublico-644-8-LP26" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="CL" data-title="라스카스카다스 마스터플랜 진단·수립 용역" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="health" data-dl="2026-11-16"><span class="dd" data-dl="2026-11-16">11/16</span>
-<span class="tt"><a href="/ko/lithuania/#tenders"><span class="fi fi-lt " aria-hidden="true"></span> 리투아니아</a><b>초음파 진단기(쿠피슈키스 보건서비스 개선 사업)</b><small>쿠피슈키스 지자체</small></span>
-<a class="src" href="https://ted.europa.eu/en/notice/-/detail/700313-2026" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="LT" data-title="초음파 진단기(쿠피슈키스 보건서비스 개선 사업)" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="health trade" data-dl="2026-11-16"><span class="dd" data-dl="2026-11-16">11/16</span>
-<span class="tt"><a href="/ko/lithuania/#tenders"><span class="fi fi-lt " aria-hidden="true"></span> 리투아니아</a><b>구급차 공급</b><small>국가 응급의료서비스(GMPT)</small></span>
-<a class="src" href="https://ted.europa.eu/en/notice/-/detail/727716-2026" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="LT" data-title="구급차 공급" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="infra trade" data-dl="2026-11-16"><span class="dd" data-dl="2026-11-16">11/16</span>
-<span class="tt"><a href="/ko/lithuania/#tenders"><span class="fi fi-lt " aria-hidden="true"></span> 리투아니아</a><b>교통관리 시스템 및 유지보수</b><small>UAB Šiaulių šviesa(샤울레이)</small></span>
-<a class="src" href="https://ted.europa.eu/en/notice/-/detail/714824-2026" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="LT" data-title="교통관리 시스템 및 유지보수" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="other" data-dl="2026-11-16"><span class="dd" data-dl="2026-11-16">11/16</span>
-<span class="tt"><a href="/ko/jamaica/#tenders"><span class="fi fi-jm " aria-hidden="true"></span> 자메이카</a><b>ODPEM 2026 외부 회계감사</b><small>재난대비비상관리청(ODPEM)</small></span>
-<a class="src" href="https://www.globaltenders.com/tenders-jamaica.php" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="JM" data-title="ODPEM 2026 외부 회계감사" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li></ul><script>(function(){var t=new Date();t.setHours(0,0,0,0);document.querySelectorAll(".dl .dd").forEach(function(s){var d=new Date(s.dataset.dl+"T00:00:00"),n=Math.round((d-t)/864e5);if(n<0){s.closest("li").remove();return}if(s.closest(".lk"))return;s.insertAdjacentHTML("beforeend","<i>D-"+(n||"day")+"</i>");if(n<=15){s.classList.add("soon");s.closest("li").classList.add("hot")}});
+<section class="band alt" id="deadlines"><div class="in"><h2 id="s2">마감이 다가오는 입찰</h2><p class="note">원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로</p><p class="dleg"><span class="lg-new">신규 — 최근 7일 안에 올라온 공고</span><span class="lg-hot">마감 임박 — D-15 이내</span></p><ul class="dl"><li class="" data-s="digital" data-dl="2026-11-16" data-gr="1" data-at=""><span class="dd" data-dl="2026-11-16" data-at="">11/16</span>
+<span class="tt"><a href="/ko/chile/#tenders"><span class="fi fi-cl " aria-hidden="true"></span> 칠레</a><b>유지보수 관리 소프트웨어</b><small>Mercado Público 공공기관(기관명 미표기) · <span class="grl"></span></small></span>
+<a class="src" href="https://bidsfactory.com/en/tenders/software-de-gestion-de-mantenimiento-chile_mercadopublico-2048-86-LP26" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="CL" data-title="유지보수 관리 소프트웨어" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="health" data-dl="2026-11-16" data-gr="1" data-at=""><span class="dd" data-dl="2026-11-16" data-at="">11/16</span>
+<span class="tt"><a href="/ko/chile/#tenders"><span class="fi fi-cl " aria-hidden="true"></span> 칠레</a><b>라스카스카다스 마스터플랜 진단·수립 용역</b><small>Mercado Público 공공기관(기관명 미표기) · <span class="grl"></span></small></span>
+<a class="src" href="https://bidsfactory.com/en/tenders/diagnost-y-elab-del-plan-maestro-las-cascadas-chile_mercadopublico-644-8-LP26" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="CL" data-title="라스카스카다스 마스터플랜 진단·수립 용역" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="health" data-dl="2026-11-16" data-gr="1" data-at=""><span class="dd" data-dl="2026-11-16" data-at="">11/16</span>
+<span class="tt"><a href="/ko/lithuania/#tenders"><span class="fi fi-lt " aria-hidden="true"></span> 리투아니아</a><b>초음파 진단기(쿠피슈키스 보건서비스 개선 사업)</b><small>쿠피슈키스 지자체 · <span class="grl"></span></small></span>
+<a class="src" href="https://ted.europa.eu/en/notice/-/detail/700313-2026" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="LT" data-title="초음파 진단기(쿠피슈키스 보건서비스 개선 사업)" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="health trade" data-dl="2026-11-16" data-gr="1" data-at=""><span class="dd" data-dl="2026-11-16" data-at="">11/16</span>
+<span class="tt"><a href="/ko/lithuania/#tenders"><span class="fi fi-lt " aria-hidden="true"></span> 리투아니아</a><b>구급차 공급</b><small>국가 응급의료서비스(GMPT) · <span class="grl"></span></small></span>
+<a class="src" href="https://ted.europa.eu/en/notice/-/detail/727716-2026" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="LT" data-title="구급차 공급" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="infra trade" data-dl="2026-11-16" data-gr="1" data-at=""><span class="dd" data-dl="2026-11-16" data-at="">11/16</span>
+<span class="tt"><a href="/ko/lithuania/#tenders"><span class="fi fi-lt " aria-hidden="true"></span> 리투아니아</a><b>교통관리 시스템 및 유지보수</b><small>UAB Šiaulių šviesa(샤울레이) · <span class="grl"></span></small></span>
+<a class="src" href="https://ted.europa.eu/en/notice/-/detail/714824-2026" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="LT" data-title="교통관리 시스템 및 유지보수" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li><li class="" data-s="other" data-dl="2026-11-16" data-gr="1" data-at=""><span class="dd" data-dl="2026-11-16" data-at="">11/16</span>
+<span class="tt"><a href="/ko/jamaica/#tenders"><span class="fi fi-jm " aria-hidden="true"></span> 자메이카</a><b>ODPEM 2026 외부 회계감사</b><small>재난대비비상관리청(ODPEM) · <span class="grl"></span></small></span>
+<a class="src" href="https://www.globaltenders.com/tenders-jamaica.php" target="_blank" rel="noopener nofollow">원문 ↗</a><button class="sv" type="button" data-act="watch" data-iso="JM" data-title="ODPEM 2026 외부 회계감사" data-deadline="2026-11-16" title="내 관심 목록에 담기" aria-label="내 관심 목록에 담기">☆</button></li></ul><script>/* GOV RADAR deadline helper — one rule for every tender list on the site.
+   deadline_at with a time and offset (e.g. 2026-11-27T17:00:00Z, 2026-11-23T09:00:00+02:00) is compared with the
+   real current time; a notice disappears the minute it closes. A date with no time is kept until that date has ended
+   everywhere (23:59:59 at UTC-12) and is labelled "time not given — check the notice", never "open for bids".
+   Tested by tests/test_deadline.py (node). */
+var GRDL = window.GRDL || (function () {
+  var T = {
+    ko: ["마감", "시각 미확인 · 원문 확인", "내 시간", "마감됨", "시간 남음", "분 남음", "마감일 미확인 · 원문 확인", "검증 지연 · 마지막 확인", "원문 확인"],
+    en: ["closes", "time not given · check the notice", "your time", "closed", "h left", "min left", "deadline unknown · check the notice", "verification delayed · last checked", "check the notice"],
+    es: ["cierre", "hora no indicada · ver el aviso", "su hora", "cerrado", "h restantes", "min restantes", "fecha de cierre desconocida · ver el aviso", "verificación pendiente · última comprobación", "ver el aviso"],
+    fr: ["clôture", "heure non indiquée · voir l'avis", "votre heure", "clos", "h restantes", "min restantes", "date limite inconnue · voir l'avis", "vérification en attente · dernier contrôle", "voir l'avis"],
+    ar: ["الإغلاق", "الوقت غير محدد · راجع الإعلان", "توقيتك", "مغلق", "ساعة متبقية", "دقيقة متبقية", "موعد الإغلاق غير معروف · راجع الإعلان", "التحقق متأخر · آخر تحقق", "راجع الإعلان"],
+    vi: ["đóng", "chưa rõ giờ · xem thông báo", "giờ của bạn", "đã đóng", "giờ còn lại", "phút còn lại", "chưa rõ hạn chót · xem thông báo", "xác minh bị chậm · kiểm tra lần cuối", "xem thông báo"],
+    id: ["tutup", "jam tidak disebut · cek pengumuman", "waktu Anda", "ditutup", "jam lagi", "menit lagi", "batas waktu tidak diketahui · cek pengumuman", "verifikasi tertunda · terakhir dicek", "cek pengumuman"]
+  };
+  var RX = /^(\d{4}-\d{2}-\d{2})T(\d{2}):(\d{2})(?::\d{2}(?:\.\d+)?)?(Z|[+-]\d{2}:?\d{2})$/;
+  // state: "open" (exact time, still open) | "date_only" (date without time, kept until the day ends at UTC-12)
+  //        "closed" | "unknown" (no or impossible deadline). Only open and date_only count as open; unknown never does.
+  var UNK = { state: "unknown", timed: false, ms: null, open: false, date: "", src: "", left: null };
+  function info(at, d, now) {
+    now = now == null ? Date.now() : now;
+    var m = RX.exec(String(at || ""));
+    if (m) {
+      var ms = Date.parse(at); if (isNaN(ms)) return UNK;
+      var off = m[4] === "Z" ? "+00:00" : (m[4].length === 5 ? m[4].slice(0, 3) + ":" + m[4].slice(3) : m[4]);
+      return { state: now < ms ? "open" : "closed", timed: true, ms: ms, open: now < ms, date: m[1], src: m[1] + " " + m[2] + ":" + m[3] + " (UTC" + off + ")", left: ms - now };
+    }
+    var dd = /^\d{4}-\d{2}-\d{2}/.exec(String(at || d || ""));
+    if (dd) { var e = Date.parse(dd[0] + "T23:59:59-12:00"); if (isNaN(e) || new Date(Date.parse(dd[0] + "T12:00:00Z")).toISOString().slice(0, 10) !== dd[0]) return UNK; return { state: now < e ? "date_only" : "closed", timed: false, ms: e, open: now < e, date: dd[0], src: dd[0], left: e - now }; }
+    return UNK;
+  }
+  function days(i) { return i.left == null ? null : Math.floor(i.left / 864e5); }
+  function mine(i, L) {
+    if (!i.timed) return "";
+    try { return new Intl.DateTimeFormat(L === "ar" ? "ar-u-nu-latn" : L, { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false, timeZoneName: "short" }).format(i.ms); }
+    catch (e) { return ""; }
+  }
+  function label(i, L, stale) {
+    var t = T[L] || T.en;
+    if (i.state === "unknown") return t[6];
+    if (stale) return /^\d{4}-\d\d-\d\dT\d\d:\d\d/.test(String(stale))
+      ? t[7] + " " + String(stale).replace("T", " ").slice(0, 16) + " UTC · " + t[8]
+      : t[7].split(" · ")[0] + " · " + t[8];   // never checked since it went stale: no time shown, no first-seen date
+    if (!i.open) return t[3];
+    var s = t[0] + " " + i.src;
+    if (!i.timed) return s + " · " + t[1];
+    var m = mine(i, L); if (m) s += " · " + t[2] + " " + m;
+    if (i.left < 864e5) s += " · " + (i.left < 36e5 ? Math.max(1, Math.round(i.left / 6e4)) + t[5] : Math.floor(i.left / 36e5) + t[4]);
+    return s;
+  }
+  // Re-check every row on the page every 30 s (and when the tab comes back): a row whose deadline has passed is
+  // removed while the page stays open; labels (hours/minutes left) refresh. Rows carry data-at / data-dl / data-stale.
+  function sweep(root, L) {
+    (root || document).querySelectorAll("[data-gr]").forEach(function (li) {
+      var i = info(li.dataset.at, li.dataset.dl);
+      if (i.state === "closed") { li.remove(); return; }
+      var g = li.querySelector(".grl"); if (g) g.textContent = label(i, L, li.dataset.stale);
+    });
+  }
+  var started = false;
+  function watch(L) {
+    sweep(document, L); if (started) return; started = true;
+    setInterval(function () { sweep(document, L); }, 30000);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) sweep(document, L); });
+  }
+  return { info: info, days: days, label: label, mine: mine, sweep: sweep, watch: watch, T: T };
+})();
+if (typeof window !== "undefined") window.GRDL = GRDL;
+</script><script>(function(){var t=new Date();t.setHours(0,0,0,0);document.querySelectorAll(".dl .dd").forEach(function(s){var I=GRDL.info(s.dataset.at,s.dataset.dl),n=GRDL.days(I);if(I.state==="closed"){s.closest("li").remove();return}if(n==null)return;if(s.closest(".lk"))return;s.insertAdjacentHTML("beforeend","<i>D-"+(n||"day")+"</i>");if(n<=15){s.classList.add("soon");s.closest("li").classList.add("hot")}});
 var cs=document.querySelectorAll(".dlf .chip");function f(k){cs.forEach(function(c){c.classList.toggle("on",c.dataset.s===k)});document.querySelectorAll(".dl li").forEach(function(li){li.hidden=!(k==="all"||li.dataset.s.split(" ").indexOf(k)>=0)})}
 cs.forEach(function(c){c.addEventListener("click",function(){f(c.dataset.s)})});var q=new URLSearchParams(location.search).get("s");if(q&&cs.length)f(q);
-var ul=document.querySelector(".dl[data-feed]");if(!ul)return;fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/tenders.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){
+GRDL.watch(document.documentElement.lang||"en");var ul=document.querySelector(".dl[data-feed]");if(!ul)return;fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/tenders.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){
 var L=ul.dataset.l,have={},es=function(x){return String(x||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};ul.querySelectorAll("a.src").forEach(function(a){have[a.href]=1});
 var lis=[].slice.call(ul.children),add=0,wk=new Date(t);wk.setDate(wk.getDate()-7);
-(j.items||[]).forEach(function(x){if(have[x.url])return;var d=new Date(x.deadline+"T00:00:00"),n=Math.round((d-t)/864e5);if(n<0)return;var nw=new Date(x.added+"T00:00:00")>=wk;
-var li=document.createElement("li");li.className=(nw?"new ":"")+(n<=15?"hot":"");li.dataset.s=(x.sec||[]).join(" ")||"other";li.dataset.dl=x.deadline;li.dataset.pg=x.pg||"";li.dataset.pm=x.pm||"";li.dataset.est=x.est&&x.cur==="USD"?x.est:"";
-li.innerHTML='<span class="dd'+(n<=15?" soon":"")+'">'+x.deadline.slice(5).replace("-","/")+(nw?'<em class="nb">'+ul.dataset.nw+'</em>':'')+"<i>D-"+(n||"day")+'</i></span><span class="tt"><a href="/'+L+'/'+x.slug+'/#tenders"><span class="fi fi-'+x.iso.toLowerCase()+'" aria-hidden="true"></span> '+es((x.n||{})[L]||(x.n||{}).en||x.iso)+'</a><b>'+es(x.title)+'</b><small>'+es(x.buyer)+' · ⚙ '+es((L=="ko"?{"World Bank":"세계은행","EU TED":"EU 조달공보(TED)","UK Find a Tender":"영국 정부조달","DAPA (Korea)":"방위사업청 해외입찰","UK Contracts Finder":"영국 Contracts Finder","CanadaBuys":"캐나다 CanadaBuys","Prozorro (Ukraine)":"우크라이나 Prozorro","SAM.gov (US)":"미국 SAM.gov"}[x.source]:x.source)||ul.dataset.au)+'</small></span><a class="src" href="'+es(x.url)+'" target="_blank" rel="noopener nofollow">'+ul.dataset.sr+' ↗</a>';
+(j.items||[]).forEach(function(x){if(have[x.url])return;var I=GRDL.info(x.deadline_at,x.deadline),n=GRDL.days(I);if(!I.open||n==null)return;var nw=new Date(x.added+"T00:00:00")>=wk;
+var li=document.createElement("li");li.className=(nw?"new ":"")+(n<=15?"hot":"");li.dataset.s=(x.sec||[]).join(" ")||"other";li.dataset.dl=x.deadline;li.dataset.gr="1";li.dataset.at=x.deadline_at||"";if(x.stale){li.dataset.stale=x.last_verified_at||"-";li.classList.add("stale")}li.dataset.pg=x.pg||"";li.dataset.pm=x.pm||"";li.dataset.est=x.est&&x.cur==="USD"?x.est:"";
+li.innerHTML='<span class="dd'+(n<=15?" soon":"")+'">'+x.deadline.slice(5).replace("-","/")+(nw?'<em class="nb">'+ul.dataset.nw+'</em>':'')+"<i>D-"+(n||"day")+'</i></span><span class="tt"><a href="/'+L+'/'+x.slug+'/#tenders"><span class="fi fi-'+x.iso.toLowerCase()+'" aria-hidden="true"></span> '+es((x.n||{})[L]||(x.n||{}).en||x.iso)+'</a><b>'+es(x.title)+'</b><small>'+es(x.buyer)+' · <span class="grl">'+es(GRDL.label(I,L,x.stale?(x.last_verified_at||'-'):''))+'</span> · ⚙ '+es((L=="ko"?{"World Bank":"세계은행","EU TED":"EU 조달공보(TED)","UK Find a Tender":"영국 정부조달","DAPA (Korea)":"방위사업청 해외입찰","UK Contracts Finder":"영국 Contracts Finder","CanadaBuys":"캐나다 CanadaBuys","Prozorro (Ukraine)":"우크라이나 Prozorro","SAM.gov (US)":"미국 SAM.gov"}[x.source]:x.source)||ul.dataset.au)+'</small></span><a class="src" href="'+es(x.url)+'" target="_blank" rel="noopener nofollow">'+ul.dataset.sr+' ↗</a>';
 var at=lis.find(function(o){return o.dataset.dl&&o.dataset.dl>x.deadline});ul.insertBefore(li,at||null);add++});
-var on=document.querySelector(".dlf .chip.on");if(on)f(on.dataset.s);var c=document.querySelector(".dfc");if(c&&add)c.textContent=c.dataset.t.replace("{n}",add).replace("{d}",String(j.updated||"").slice(0,10))}).catch(function(){})})();</script><p class="cta"><a class="btn" href="/ko/mdb/#past">지난 입찰·타당성 준비 전체</a></p><p class="cta"><a class="btn pri" href="/ko/mdb/#deadlines">입찰·마감 보드 전체 보기</a> <button class="btn" data-auth="signup">관심 나라 저장 (무료)</button></p></div></section>
+GRDL.watch(L);var on=document.querySelector(".dlf .chip.on");if(on)f(on.dataset.s);var c=document.querySelector(".dfc");if(c&&add)c.textContent=c.dataset.t.replace("{n}",add).replace("{d}",String(j.updated||"").slice(0,10))}).catch(function(){})})();</script><p class="cta"><a class="btn" href="/ko/mdb/#past">지난 입찰·타당성 준비 전체</a></p><p class="cta"><a class="btn pri" href="/ko/mdb/#deadlines">입찰·마감 보드 전체 보기</a> <button class="btn" data-auth="signup">관심 나라 저장 (무료)</button></p></div></section>
 <section class="band wband" id="win"><div class="in"><h2 id="s3">입찰은 이기는 것이 어렵습니다 — 입찰 수주 센터</h2><p class="note">공고가 나오기 전 사업, 누가 얼마에 따냈는지, 입찰마다 준비할 서류와 일정까지 한곳에서 봅니다.</p><div class="wb-g"><a href="/ko/win/#pipe"><b>700</b><span>입찰 전 사업</span><small>763억 달러</small></a><a href="/ko/win/#awards"><b>1,507</b><span>최근 낙찰 공고</span><small>World Bank</small></a><a href="/ko/win/#awards"><b>1</b><span>그중 한국 기업</span><small>/ 1,507</small></a></div><div class="wb-c"><a href="/ko/win/#pipe">입찰 전 사업 레이더 →</a><a href="/ko/win/#awards">낙찰·경쟁사 분석 →</a><a href="/ko/win/#steps">수주 7단계 →</a><a href="/ko/win/#plan">90일 실행 계획 →</a></div><p class="cta"><a class="btn pri" href="/ko/win/">수주 센터 열기</a></p></div><style>.wband{background:#0b1f3a;color:#fff}.wband h2{color:#fff}.wband .note{color:#c9d3e0}.wb-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}.wb-g a{background:rgba(255,255,255,.06);padding:18px 20px;color:#fff}.wb-g b{display:block;font-size:34px;color:#e9c46a}.wb-g span{font-size:14.5px}.wb-g small{display:block;color:#9fb0c6;font-size:12.5px}.wb-c{display:flex;flex-wrap:wrap;gap:8px}.wb-c a{border:1px solid rgba(255,255,255,.35);padding:7px 14px;border-radius:18px;font-size:14px;color:#fff}.wband .btn.pri{background:#c9a45c;color:#0b1f3a;border-color:#c9a45c}@media(max-width:700px){.wb-g{grid-template-columns:1fr}}</style></section>
 <section class="band" id="board"><div class="in"><h2 id="s4">지금 제안할 수 있는 사업</h2><p class="note">각국 정부 사업에서 뽑은 유망 비즈니스입니다.</p><div class="board"><a class="opp" href="/ko/uzbekistan/#biz"><span class="who"><span class="fi fi-uz " aria-hidden="true"></span> 우즈베키스탄 <i class=fit>WMM 적합도</i></span><b>KOICA IT 허브 연계 AI·디지털 마케팅 교육과 스타트업 액셀러레이션</b><span class="note">KOICA가 1,400만 달러로 IT 허브와 센터를 짓고 있어 교육 콘텐츠와 인큐베이팅 운영 수요가 생긴다.</span></a><a class="opp" href="/ko/cameroon/#biz"><span class="who"><span class="fi fi-cm " aria-hidden="true"></span> 카메룬 <i class=fit>WMM 적합도</i></span><b>공무원 디지털 역량·전자정부 교육 프로그램</b><span class="note">KOICA SMART CAMPUS가 지어지면 운영할 교육 콘텐츠가 필요하다.</span></a><a class="opp" href="/ko/tunisia/#biz"><span class="who"><span class="fi fi-tn " aria-hidden="true"></span> 튀니지 <i class=fit>WMM 적합도</i></span><b>세무·관세 행정 디지털화·탈세 분석</b><span class="note">2027 예산 방향이 세무·관세 디지털화와 탈세 통제 강화를 명시했다.</span></a><a class="opp" href="/ko/tonga/#biz"><span class="who"><span class="fi fi-to " aria-hidden="true"></span> 통가 <i class=fit>WMM 적합도</i></span><b>태양광·배터리 저장</b><span class="note">TERM PLUS 재생에너지 사업과 전기요금 경감이 예산에 포함됐다.</span></a><a class="opp" href="/ko/kazakhstan/#biz"><span class="who"><span class="fi fi-kz " aria-hidden="true"></span> 카자흐스탄 <i class=fit>WMM 적합도</i></span><b>한국 부품·장비 중소기업의 카자흐스탄 현지화 진출 컨설팅</b><span class="note">대통령이 한국 기업에 생산 확대를 공개 요청했고 40억 달러 규모 공동 프로젝트가 진행 중이다.</span></a><a class="opp" href="/ko/kazakhstan/#biz"><span class="who"><span class="fi fi-kz " aria-hidden="true"></span> 카자흐스탄 <i class=fit>WMM 적합도</i></span><b>지방정부 민원 처리 AI 챗봇과 행정문서 자동화</b><span class="note">2026년을 &#x27;디지털화와 AI의 해&#x27;로 정해 행정 AI 도입이 정책 목표가 되었다.</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EB%AA%A8%EB%A1%9C%EC%BD%94#tier"><span class="who"><span class="fi fi-ma " aria-hidden="true"></span> 모로코 <i class=fit>WMM 적합도</i></span><b>모로코 중소기업 글로벌 가치사슬 진출·한국 기업 매칭</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%82%AC%EB%AA%A8%EC%95%84#tier"><span class="who"><span class="fi fi-ws " aria-hidden="true"></span> 사모아 <i class=fit>WMM 적합도</i></span><b>재해 조기경보·관측 시스템</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%ED%94%BC%EC%A7%80#tier"><span class="who"><span class="fi fi-fj " aria-hidden="true"></span> 피지 <i class=fit>WMM 적합도</i></span><b>공공행정 디지털 전환·AI 업무 자동화 교육</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%8A%A4%EB%A6%AC%EB%9E%91%EC%B9%B4#tier"><span class="who"><span class="fi fi-lk " aria-hidden="true"></span> 스리랑카 <i class=fit>WMM 적합도</i></span><b>지자체 세입 징수·민원 처리 자동화 솔루션</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%8A%A4%EB%A6%AC%EB%9E%91%EC%B9%B4#tier"><span class="who"><span class="fi fi-lk " aria-hidden="true"></span> 스리랑카 <i class=fit>WMM 적합도</i></span><b>공공투자 사업 선정·성과관리 컨설팅</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EB%A7%88%EC%85%9C%20%EC%A0%9C%EB%8F%84#tier"><span class="who"><span class="fi fi-mh " aria-hidden="true"></span> 마셜 제도 <i class=fit>WMM 적합도</i></span><b>태양광·에너지 저장장치</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%97%90%ED%8B%B0%EC%98%A4%ED%94%BC%EC%95%84#tier"><span class="who"><span class="fi fi-et " aria-hidden="true"></span> 에티오피아 <i class=fit>WMM 적합도</i></span><b>EDCF 연계 에너지·수자원 인프라 기자재 공급</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%82%AC%EC%9A%B0%EB%94%94%EC%95%84%EB%9D%BC%EB%B9%84%EC%95%84#tier"><span class="who"><span class="fi fi-sa " aria-hidden="true"></span> 사우디아라비아 <i class=fit>WMM 적합도</i></span><b>한국 중소기업 사우디 현지화(로컬 콘텐츠) 진입 컨설팅</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%82%AC%EC%9A%B0%EB%94%94%EC%95%84%EB%9D%BC%EB%B9%84%EC%95%84#tier"><span class="who"><span class="fi fi-sa " aria-hidden="true"></span> 사우디아라비아 <i class=fit>WMM 적합도</i></span><b>K-뷰티·소비재 사우디 유통 진입 지원</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%BA%84%EB%B3%B4%EB%94%94%EC%95%84#tier"><span class="who"><span class="fi fi-kh " aria-hidden="true"></span> 캄보디아 <i class=fit>WMM 적합도</i></span><b>중소기업 수출 준비 진단·코칭 프로그램</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%BD%A9%EA%B3%A0-%ED%82%A8%EC%83%A4%EC%82%AC#tier"><span class="who"><span class="fi fi-cd " aria-hidden="true"></span> 콩고-킨샤사 <i class=fit>WMM 적합도</i></span><b>정부 ICT 직무·역량 프레임워크 컨설팅</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EB%AA%A8%EB%A6%AC%EC%85%94%EC%8A%A4#tier"><span class="who"><span class="fi fi-mu " aria-hidden="true"></span> 모리셔스 <i class=fit>WMM 적합도</i></span><b>협동조합·중소기업 경영지원 컨설팅</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%9D%B8%EB%8F%84#tier"><span class="who"><span class="fi fi-in " aria-hidden="true"></span> 인도 <i class=fit>WMM 적합도</i></span><b>한국 소비재 중소기업 인도 퀵커머스·온라인 채널 입점 대행</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%9D%B8%EB%8F%84#tier"><span class="who"><span class="fi fi-in " aria-hidden="true"></span> 인도 <i class=fit>WMM 적합도</i></span><b>한-인도 CEPA 활용·원산지 컨설팅</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%B9%B4%ED%83%80%EB%A5%B4#tier"><span class="who"><span class="fi fi-qa " aria-hidden="true"></span> 카타르 <i class=fit>WMM 적합도</i></span><b>정부기관 업무 프로세스 진단·RPA/AI 자동화 패키지</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%B9%B4%ED%83%80%EB%A5%B4#tier"><span class="who"><span class="fi fi-qa " aria-hidden="true"></span> 카타르 <i class=fit>WMM 적합도</i></span><b>한국 중소기업의 로컬 콘텐츠 인증·현지 파트너 발굴 컨설팅</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EB%8F%84%EB%AF%B8%EB%8B%88%EC%B9%B4%20%EA%B3%B5%ED%99%94%EA%B5%AD#tier"><span class="who"><span class="fi fi-do " aria-hidden="true"></span> 도미니카 공화국 <i class=fit>WMM 적합도</i></span><b>배전 손실 저감용 스마트 계량·배전 자동화</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a><a class="opp lk" href="/ko/pricing/?t=member&need=biz&c=%EC%84%B8%EC%9D%B8%ED%8A%B8%EB%B9%88%EC%84%BC%ED%8A%B8%EA%B7%B8%EB%A0%88%EB%82%98%EB%94%98#tier"><span class="who"><span class="fi fi-vc " aria-hidden="true"></span> 세인트빈센트그레나딘 <i class=fit>WMM 적합도</i></span><b>담수화·급수 설비</b><span class="note">🔒 이유·대상 바이어 — 분석 회원 월 19,800원</span></a></div></div></section>
 <section class="band sbnd"><div class="in sbnd-g"><div><h2 id="s5">돈을 내기 전에, 받게 될 결과물을 먼저 보세요</h2><p class="sbnd-p">실제로 주문하면 이런 국가 진출 브리프를 업종에 맞춰 받습니다. 남아프리카 한 나라는 회원 전용 내용까지 모두 열어 두었습니다.</p><ul><li>정부 핵심 과제와 예산이 붙은 사업</li><li>유망 사업마다 이유와 대상 바이어</li><li>출처와 기준일, 확인하지 못한 점</li></ul><p class="cta"><a class="btn pri" href="/ko/sample/">샘플 브리프 전체 보기</a> <a class="btn" href="/ko/request/">분석 의뢰하기</a></p></div>
