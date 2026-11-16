@@ -4,6 +4,8 @@ data_branch/feeds/today.json, so the home page needs a single request:
 new tenders first seen today, tenders closing within 2 days, newest official hazard alerts (48 h),
 and the state of every data source. Nothing here is estimated: every number is a count of items in the feeds."""
 import datetime as dt, json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from deadline import is_listed_open as is_open, state as DLs
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch")
@@ -16,7 +18,7 @@ def load(p):
 def slim(x):
     n = x.get("n") or {}
     return {"t": (x.get("title") or "")[:140], "iso": x.get("iso", ""), "n": {k: n.get(k, "") for k in ("ko", "en", "es", "fr", "ar", "vi", "id")} if n else {},
-            "dl": x.get("deadline", ""), "url": x.get("url", ""), "src": x.get("source", "")}
+            "dl": x.get("deadline", ""), "dla": x.get("deadline_at", ""), "url": x.get("url", ""), "src": x.get("source", "")}
 
 def num(v):
     try: return float(v or 0)
@@ -33,7 +35,7 @@ def iso_date(v):
 def build():
     today = NOW.date().isoformat()
     items = (load("feeds/tenders.json").get("items") or [])
-    open_ = [x for x in items if (x.get("deadline") or "9") >= today]
+    open_ = [x for x in items if is_open(x, NOW)]   # real closing time (deadline_at), not just the date
     new = [x for x in open_ if x.get("added") == today]
     urgent = sorted([x for x in open_ if x.get("urgent")], key=lambda x: x.get("deadline_at") or x.get("deadline") or "")
     # one of each source in turn, largest estimate first, so a single big source cannot fill the list
@@ -58,7 +60,8 @@ def build():
         s = load(f).get("src") or {}
         if s: src.append({"name": nm, "state": "SUCCESS" if all(x.get("ok") for x in s.values()) else ("PARTIAL" if any(x.get("ok") for x in s.values()) else "ERROR"), "kept": None, "new": None})
     return {"updated": NOW.strftime("%Y-%m-%dT%H:%MZ"), "date": today,
-            "n": {"open": len(open_), "new": len(new), "urgent": len(urgent), "countries": len({x.get("iso") for x in open_ if x.get("iso")}), "alerts": len(alerts)},
+            "n": {"open": len(open_), "new": len(new), "urgent": len(urgent), "countries": len({x.get("iso") for x in open_ if x.get("iso")}), "alerts": len(alerts),
+                  "stale": sum(1 for x in items if x.get("stale")), "unknown_deadline": sum(1 for x in items if DLs(x, NOW) == "unknown")},
             "new": [slim(x) for x in pick], "urgent": [slim(x) for x in urgent[:6]],
             "alerts": [{"t": (a.get("t") or "")[:120], "date": a.get("date", ""), "src": a.get("src", ""), "url": a.get("url", ""), "k": a.get("k", "")} for a in alerts[:6]],
             "src": src}

@@ -346,3 +346,163 @@ class Reuse(unittest.TestCase):
             self.assertIn(s.get("reuse"), ("PASS", "FAIL", "UNKNOWN"), s["id"])
             self.assertTrue(s.get("reuse_url", "").startswith("http"), s["id"] + " needs a terms link")
             self.assertTrue(s.get("reuse_checked"), s["id"])
+
+
+class ContractsFinderRecord(unittest.TestCase):
+    PKG = json.dumps({"releases": [{"id": "de6f4b86-1352-4c39-9b37-199113e189da-920130", "ocid": "ocds-b5fd17-17d4acd2-34d6-4bbc-adce-12b741b20fd4",
+                                    "tender": {"title": "CA18606 - York College", "tenderPeriod": {"endDate": "2026-11-27T17:00:00Z"}}, "buyer": {"name": "York College"}}]})
+    X = {"source": "UK Contracts Finder", "sid": "ocds-b5fd17-17d4acd2-34d6-4bbc-adce-12b741b20fd4",
+         "url": "https://www.contractsfinder.service.gov.uk/Notice/de6f4b86-1352-4c39-9b37-199113e189da"}
+
+    def setUp(self):
+        import verify_samples as VS; self.VS = VS; self.orig = VS.http; import time; self.sleep = time.sleep; time.sleep = lambda s: None
+
+    def tearDown(self):
+        self.VS.http = self.orig; import time; time.sleep = self.sleep
+
+    def fake(self, answers):
+        calls = []
+        def h(url, *a, **k):
+            calls.append(url); st, body = answers[len(calls) - 1]; self.VS.TRACE.append({"url": url, "status": st, "type": "application/json" if body.startswith("{") else "text/html"}); return st, body
+        self.VS.http = h; return calls
+
+    def test_release_package_matches(self):
+        calls = self.fake([(200, self.PKG)])
+        self.assertEqual(self.VS.official(self.X), ("CA18606 - York College", "2026-11-27", "York College"))
+        self.assertTrue(calls[0].endswith("/Published/Notice/releases/de6f4b86-1352-4c39-9b37-199113e189da.json"))
+
+    def test_html_error_page_falls_back_to_records_then_unknown(self):
+        calls = self.fake([(200, "<html>If you typed the web address, check it is correct</html>"), (404, "")])
+        self.assertEqual(self.VS.official(self.X)[0], "UNAVAILABLE")          # never a match, never a mismatch
+        self.assertTrue(calls[1].endswith("/Published/Notice/records/ocds-b5fd17-17d4acd2-34d6-4bbc-adce-12b741b20fd4.json"))
+
+    def test_records_fallback_can_confirm(self):
+        rec = json.dumps({"records": [{"compiledRelease": json.loads(self.PKG)["releases"][0]}]})
+        self.fake([(404, ""), (200, rec)])
+        self.assertEqual(self.VS.official(self.X)[1], "2026-11-27")
+
+    def test_rate_limit_is_unknown(self):
+        self.fake([(429, ""), (429, "")])
+        self.assertEqual(self.VS.official(self.X)[0], "UNAVAILABLE")
+
+
+class OpenCatalogue(unittest.TestCase):
+    """Notices missing from today's search are re-read by id (ChatGPT PR #12 reviews §3 and 297ba85 §2)."""
+    NOW = datetime.datetime(2026, 11, 20, 0, 0, tzinfo=datetime.timezone.utc); STAMP = "2026-11-20T00:00Z"
+
+    def prev(self, **kw):
+        x = {"source": "UK Contracts Finder", "sid": "ocds-1", "url": "https://cf/1", "title": "Catering tender", "deadline": "2026-12-02",
+             "deadline_at": "2026-12-02T17:00:00Z", "added": "2026-11-10", "iso": "GB", "buyer": "Trust"}
+        x.update(kw); return {x["url"]: x}
+
+    @staticmethod
+    def rec(status="active", dl="2026-12-02T17:00:00Z", title="Catering tender", ok=True, why=""):
+        import verify_samples as VS
+        return {"ok": ok, "id": "ocds-1", "title": title, "deadline_at": dl, "timed": "T" in dl, "status": VS.norm_status(status),
+                "status_raw": status, "buyer": "Trust", "checked_at": "2026-11-20T00:00Z", "why": why}
+
+    def run_(self, prev, state="EMPTY_SUCCESS", got=(), lookup=None, budget=40, src="UK Contracts Finder", now=None):
+        return FT.carry(src, list(got), state, prev, now or self.NOW, self.STAMP, lookup or (lambda x: self.rec(ok=False, why="HTTP 200, not OCDS JSON")), [budget])
+
+    def test_active_old_but_open_notice_is_kept_with_full_grade(self):
+        out, c = self.run_(self.prev(), lookup=lambda x: self.rec())
+        self.assertEqual(out[0]["verify"], "full"); self.assertNotIn("stale", out[0]); self.assertEqual(out[0]["added"], "2026-11-10")
+        self.assertEqual(out[0]["last_verified_at"], "2026-11-20T00:00Z"); self.assertEqual(c["carried_verified"], 1)
+
+    def test_same_day_deadline_moved_earlier_is_applied(self):
+        out, _ = self.run_(self.prev(), lookup=lambda x: self.rec(dl="2026-12-02T10:00:00Z"))
+        self.assertEqual(out[0]["deadline_at"], "2026-12-02T10:00:00Z")
+        # and if the earlier time has already passed, the notice is dropped instead of showing open until 17:00
+        late = datetime.datetime(2026, 12, 2, 12, 0, tzinfo=datetime.timezone.utc)
+        out, c = self.run_(self.prev(), lookup=lambda x: self.rec(dl="2026-12-02T10:00:00Z"), now=late)
+        self.assertEqual(out, []); self.assertEqual(c["dropped_closed"], 1)
+
+    def test_same_day_deadline_moved_later_is_applied(self):
+        out, _ = self.run_(self.prev(), lookup=lambda x: self.rec(dl="2026-12-02T23:00:00+01:00"))
+        self.assertEqual(out[0]["deadline_at"], "2026-12-02T23:00:00+01:00")
+
+    def test_cancelled_withdrawn_or_closed_at_publisher_is_dropped(self):
+        for st in ("cancelled", "withdrawn", "unsuccessful", "complete"):
+            out, c = self.run_(self.prev(), lookup=lambda x, st=st: self.rec(status=st))
+            self.assertEqual(out, [], st); self.assertEqual(c["dropped_cancelled"], 1, st)
+
+    def test_status_not_given_is_never_confirmed_open(self):
+        out, c = self.run_(self.prev(source="EU TED"), src="EU TED", lookup=lambda x: self.rec(status=None))   # TED gives no status
+        self.assertTrue(out[0]["stale"]); self.assertEqual(out[0]["verify"], "partial"); self.assertEqual(c["carried_verified"], 0)
+
+    def test_world_bank_date_without_zone_is_date_grade(self):
+        out, _ = self.run_(self.prev(source="World Bank", deadline_at="2026-12-02"), src="World Bank", lookup=lambda x: self.rec(status="Published", dl="2026-12-02"))
+        self.assertEqual(out[0]["verify"], "date"); self.assertEqual(out[0]["deadline_at"], "2026-12-02")
+
+    def test_unconfirmable_is_stale_and_keeps_real_last_check(self):
+        out, c = self.run_(self.prev())
+        self.assertTrue(out[0]["stale"]); self.assertEqual(out[0]["stale_since"], self.STAMP)
+        self.assertEqual(out[0]["last_verified_at"], "")                       # NOT the first-seen date
+        out, _ = self.run_(self.prev(last_verified_at="2026-11-18T06:10Z"))
+        self.assertEqual(out[0]["last_verified_at"], "2026-11-18T06:10Z")
+        import deadline as DL
+        self.assertFalse(DL.is_listed_open(out[0], self.NOW))
+
+    def test_title_mismatch_and_rate_limit_are_not_confirmations(self):
+        out, _ = self.run_(self.prev(), lookup=lambda x: self.rec(title="Something else"))
+        self.assertTrue(out[0]["stale"])
+        out, _ = self.run_(self.prev(), lookup=lambda x: self.rec(ok=False, why="rate limited (429)"))
+        self.assertTrue(out[0]["stale"])
+
+    def test_stale_dropped_after_48_hours(self):
+        out, c = self.run_(self.prev(stale=True, stale_since="2026-11-17T23:00Z"))
+        self.assertEqual(out, []); self.assertEqual(c["dropped_unverified"], 1)
+        out, c = self.run_(self.prev(stale=True, stale_since="2026-11-18T01:00Z"))
+        self.assertEqual(len(out), 1)
+
+    def test_closed_notice_never_carried(self):
+        out, c = self.run_(self.prev(deadline="2026-11-19", deadline_at="2026-11-19T12:00:00Z"))
+        self.assertEqual(out, []); self.assertEqual(c["dropped_closed"], 1)
+
+    def test_notice_in_todays_search_is_not_duplicated(self):
+        p = self.prev(); out, _ = self.run_(p, state="SUCCESS", got=[dict(list(p.values())[0])])
+        self.assertEqual(out, [])
+
+    def test_success_of_unwindowed_source_does_not_carry(self):
+        out, _ = self.run_(self.prev(source="EU TED"), state="SUCCESS", src="EU TED")
+        self.assertEqual(out, [])
+
+    def test_lookup_budget(self):
+        p = {}
+        for i in range(3): p.update(self.prev(sid=f"ocds-{i}", url=f"https://cf/{i}"))
+        out, c = self.run_(p, lookup=lambda x: self.rec(), budget=1)
+        self.assertEqual((c["verify_lookups"], c["carried_verified"], c["carried_stale"]), (1, 1, 2))
+
+
+class AllSourcesEmpty(unittest.TestCase):
+    """Fallback when every source returns nothing: only VALID notices come back, and only as stale."""
+    def test_valid_restored_as_stale_invalid_and_closed_not_restored(self):
+        now = datetime.datetime.now(datetime.timezone.utc); stamp = now.strftime("%Y-%m-%dT%H:%MZ")
+        ok = item(sid="A", url="https://x/a"); ok["last_verified_at"] = "2026-11-16T11:14Z"
+        closed = item(sid="B", url="https://x/b", deadline=(now.date() - datetime.timedelta(days=2)).isoformat())
+        closed["deadline_at"] = closed["deadline"]
+        bad = item(sid="C", url="https://x/c", deadline="2026-02-31"); bad["deadline_at"] = "2026-02-31"
+        notitle = item(sid="D", url="https://x/d", title="")
+        out = FT.all_empty_fallback({x["url"]: x for x in (ok, closed, bad, notitle)}, now, stamp)
+        self.assertEqual([x["sid"] for x in out], ["A"])
+        self.assertTrue(out[0]["stale"]); self.assertEqual(out[0]["last_verified_at"], "2026-11-16T11:14Z")
+        import deadline as DL
+        self.assertFalse(DL.is_listed_open(out[0], now))
+
+
+class OfficialRecord(unittest.TestCase):
+    def test_status_mapping(self):
+        import verify_samples as VS
+        for raw, want in [("active", "ACTIVE"), ("active.tendering", "ACTIVE"), ("Published", "ACTIVE"), ("cancelled", "CANCELLED"),
+                          ("withdrawn", "CANCELLED"), ("unsuccessful", "CLOSED"), ("complete", "CLOSED"), (None, "UNKNOWN"), ("planned", "UNKNOWN")]:
+            self.assertEqual(VS.norm_status(raw), want, raw)
+
+    def test_sample_listing_a_cancelled_notice_fails(self):
+        import verify_samples as VS
+        r = VS.judge({"url_status": 200, "official_status": "CANCELLED", "record_unavailable": False, "title_ok": True, "deadline_ok": True})
+        self.assertEqual(r["verdict"], "FAIL")
+
+    def test_ted_exact_deadline(self):
+        self.assertEqual(FM.ted_deadline(["2026-11-16+01:00", "2026-11-15+01:00"], ["17:00:00+01:00", "09:30:00+01:00"]), "2026-11-15T09:30:00+01:00")
+        self.assertEqual(FM.ted_deadline(["2026-11-16+01:00"], []), "2026-11-16+01:00")
+        self.assertEqual(FM.ted_deadline(["2026-11-16+01:00"], ["17:00+01:00"]), "2026-11-16T17:00:00+01:00")
