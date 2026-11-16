@@ -3893,7 +3893,7 @@
   "access": "api",
   "auth": "none",
   "free": true,
-  "reuse": "UNKNOWN",
+  "reuse": "PASS",
   "login_captcha": "UNKNOWN",
   "frequency": "daily",
   "collect": "PASS",
@@ -3901,8 +3901,8 @@
   "url_status": "200",
   "robots": "unknown",
   "checked": "2026-11-16",
-  "reuse_basis": "World Bank Projects API — dataset licence not yet confirmed (World Bank data is usually CC BY 4.0; not verified for this API)",
-  "reuse_url": "https://datacatalog.worldbank.org/",
+  "reuse_basis": "CC BY 4.0 — World Bank Data Catalog \"World Bank Projects & Operations\" (lists the Projects API as its access link)",
+  "reuse_url": "https://datacatalog.worldbank.org/search/dataset/0037800",
   "reuse_checked": "2026-11-16"
  },
  {
@@ -3916,7 +3916,7 @@
   "access": "api",
   "auth": "none",
   "free": true,
-  "reuse": "UNKNOWN",
+  "reuse": "PASS",
   "login_captcha": "UNKNOWN",
   "frequency": "daily",
   "collect": "PASS",
@@ -3924,7 +3924,7 @@
   "url_status": "200",
   "robots": "unknown",
   "checked": "2026-11-16",
-  "reuse_basis": "Contract award datasets are listed in the World Bank Data Catalog; licence for the API used not yet confirmed",
+  "reuse_basis": "CC BY 4.0 — World Bank Data Catalog \"Contract Awards in Investment Project Financing\"",
   "reuse_url": "https://datacatalog.worldbank.org/search/dataset/0066876/contract-awards-in-investment-project-financing-since-fy-2017-fy-2019",
   "reuse_checked": "2026-11-16"
  },
