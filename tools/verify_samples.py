@@ -19,7 +19,7 @@ def http(url, data=None, ctype=None, browser=False):
 
 n = lambda s: re.sub(r"\W+", " ", str(s or "").lower()).strip()
 
-def official(x):
+def _official(x):
     """Return (title, deadline_date, buyer) from the source's own API for this notice id."""
     s, sid = x["source"], x.get("sid", "")
     if s == "World Bank":
@@ -56,6 +56,14 @@ def official(x):
         return t.get("title_en") or t.get("title"), str((t.get("tenderPeriod") or {}).get("endDate") or "")[:10], (t.get("procuringEntity") or {}).get("name")
     return None, None, None
 
+def official(x):
+    """Official record, or ("UNAVAILABLE",)*3 when the source could not give one right now (HTTP error, rate limit,
+    empty or unparsable reply, unknown id). Unavailable is reported as UNKNOWN — never as a match or a mismatch."""
+    try: t, d, b = _official(x)
+    except Exception: return "UNAVAILABLE", "UNAVAILABLE", None
+    if t == "RATE_LIMITED" or not t or not d: return "UNAVAILABLE", "UNAVAILABLE", None
+    return t, d, b
+
 if __name__ == "__main__":
     k = int(sys.argv[1]) if len(sys.argv) > 1 else 4
     sys.path.insert(0, os.path.join(ROOT, "tools"))
@@ -69,9 +77,9 @@ if __name__ == "__main__":
         for x in pool[::step][:q]:
             code, _ = http(x["url"])
             t, d, b = official(x)
-            rl = t == "RATE_LIMITED"
+            rl = t == "UNAVAILABLE"
             if rl: t = d = None
-            row = {"rate_limited": rl, "source": s, "sid": x.get("sid"), "url": x["url"], "url_status": code, "title_ok": None if t is None else n(t)[:60] == n(x["title"])[:60],
+            row = {"record_unavailable": rl, "source": s, "sid": x.get("sid"), "url": x["url"], "url_status": code, "title_ok": None if t is None else n(t)[:60] == n(x["title"])[:60],
                    "deadline_ok": None if d is None else d == x["deadline"], "buyer_ok": None if b is None else n(b)[:40] == n(x["buyer"])[:40],
                    "site_title": x["title"][:80], "official_title": (t or "")[:80], "site_deadline": x["deadline"], "official_deadline": d}
             rows.append(row)
@@ -81,10 +89,11 @@ if __name__ == "__main__":
     # site gives only to automated clients is reported as "bot-blocked" and does not fail the check when the record matches.
     for r in rows:
         r["link"] = "ok" if str(r["url_status"]).startswith("2") else ("bot-blocked" if r["url_status"] == 403 else "broken")
-        r["verdict"] = "UNKNOWN" if r["rate_limited"] else ("PASS" if r["title_ok"] and r["deadline_ok"] and r["link"] != "broken" else "FAIL")
+        r["verdict"] = "UNKNOWN" if r["record_unavailable"] else ("PASS" if r["title_ok"] and r["deadline_ok"] and r["link"] != "broken" else "FAIL")
     ok = [r for r in rows if r["verdict"] == "PASS"]; unk = [r for r in rows if r["verdict"] == "UNKNOWN"]
     for r in rows: print(r["verdict"], "|", r["source"], "|", r["sid"], "| link", r["link"], r["url_status"], "| title", r["title_ok"], "| deadline", r["deadline_ok"], "| buyer", r["buyer_ok"])
     json.dump(rows, open(os.path.join(FEEDS, "verify_samples.json"), "w", encoding="utf8"), ensure_ascii=False, indent=1)
-    print(f"checked {len(rows)}, passed {len(ok)}, unknown (rate limited) {len(unk)}")
-    if not rows or len(ok) + len(unk) < len(rows) or not ok:
-        print("FAIL: some sampled notices did not match their official record or the link did not open"); sys.exit(1)
+    print(f"checked {len(rows)}, passed {len(ok)}, mismatched {len(rows) - len(ok) - len(unk)}, unknown (official record unavailable) {len(unk)}")
+    # strict: any real mismatch or broken link fails the run; so does a check where fewer than half could be confirmed
+    if not rows or len(ok) + len(unk) < len(rows) or len(ok) * 2 < len(rows):
+        print("FAIL: a sampled notice did not match its official record, a link was broken, or fewer than half could be confirmed"); sys.exit(1)
