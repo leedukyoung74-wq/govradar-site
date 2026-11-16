@@ -94,7 +94,7 @@ class Sources(unittest.TestCase):
     def test_ted_item_d0_and_size(self):
         today = FM.TODAY.isoformat()
         n = {"publication-number": "1-2026", "notice-title": {"eng": "France – Works – Bridge"}, "buyer-name": {"fra": ["Ville"]},
-             "buyer-country": ["FRA"], "deadline-receipt-tender-date-lot": [today + "+14:00"], "contract-nature": ["works"],
+             "buyer-country": ["FRA"], "deadline-receipt-tender-date-lot": [today + "-12:00"], "contract-nature": ["works"],
              "estimated-value-proc": "3000000", "estimated-value-cur-proc": "EUR"}
         it = FM.ted_item(n, 2e6)
         self.assertIsNotNone(it); self.assertEqual(it["iso"], "FR"); self.assertEqual(it["title"], "Works – Bridge"); self.assertEqual(it["sid"], "1-2026")
@@ -290,3 +290,29 @@ class Econ(unittest.TestCase):
         bad = {"c": {"KR": {"gdp": [1, "2025"], "usd": 1.3}}, "src": {"fx": {"ok": False}}}
         b = QG.check({"tenders.json": feed(300), "econ.json": bad}, {})
         self.assertEqual(len([x for x in b if "econ" in x]), 4)
+
+
+class Sanctions(unittest.TestCase):
+    def setUp(self):
+        import feed_sanctions as FS; self.FS = FS
+
+    def test_country_names(self):
+        for n, c in [("Korea, North", "KP"), ("Burma", "MM"), ("St Kitts and Nevis", "KN"), ("Côte d'Ivoire", "CI"), ("United Kingdom", "GB"), ("France", "FR"), ("Region: Crimea", "UA")]:
+            self.assertEqual(self.FS.iso(n), c, n)
+        self.assertIsNone(self.FS.iso("-0-"))
+
+    def test_us_parse_and_tally(self):
+        sdn = b'36,"AEROCARIBBEAN AIRLINES",-0- ,"CUBA",-0-\n306,"BANCO",-0- ,"CUBA] [SDGT",-0-\n'
+        add = b'36,25,-0- ,"Havana","Cuba",-0-\n306,199,"x","Zurich","Switzerland",-0-\n306,200,"y","Havana","Cuba",-0-\n'
+        e, miss = self.FS.parse_us(sdn, add)
+        n, prog = self.FS.tally(e)
+        self.assertEqual((n["CU"], n["CH"]), (2, 1)); self.assertEqual(prog["CU"][0], "CUBA")
+
+    def test_uk_regime_short(self):
+        self.assertEqual(self.FS.short_uk("The Russia (Sanctions) (EU Exit) Regulations 2019"), "Russia")
+
+    def test_gate(self):
+        ok = {"c": {f"C{i}": {"us": [1, []]} for i in range(120)} | {"KP": {"un": [141, ["DPRK"]]}}, "src": {"un": {"ok": True}}}
+        self.assertEqual(QG.check({"tenders.json": feed(300), "sanctions.json": ok}, {}), [])
+        b = QG.check({"tenders.json": feed(300), "sanctions.json": {"c": {}, "src": {}}}, {})
+        self.assertEqual(len([x for x in b if "sanctions" in x]), 3)

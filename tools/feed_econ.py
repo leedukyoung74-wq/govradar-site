@@ -41,7 +41,8 @@ def parse_fx(j):
     return j["rates"], j.get("time_last_update_utc", "")
 
 def build(old):
-    c = {k: dict(v) for k, v in (old.get("c") or {}).items()}
+    valid = set(ISO3.values()) | set(CUR)
+    c = {k: dict(v) for k, v in (old.get("c") or {}).items() if k in valid}   # drops retired codes (FX, UK, YU, DY, HV)
     src = dict(old.get("src") or {})
     for k, code in IND.items():
         try:
