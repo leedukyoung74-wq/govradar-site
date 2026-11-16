@@ -803,7 +803,7 @@ idx();})();
 function tx(root){var D=window.HZTR;if(!D||!root)return;var w=document.createTreeWalker(root,4),n,a=[];while(n=w.nextNode())a.push(n);
 a.forEach(function(n){var p=n.parentNode;if(!p||/^(SCRIPT|STYLE)$/.test(p.nodeName))return;var t=n.nodeValue,s=t.trim();if(!s)return;var v=D[s];if(!v){var m=s.match(/^([\d.]+)× lunar distance$/);if(m&&D['@lunar'])v=m[1]+D['@lunar']}if(v&&v!==s)n.nodeValue=t.replace(s,v)});
 if(root.querySelectorAll)root.querySelectorAll('[title],[aria-label],[alt],[placeholder]').forEach(function(e){['title','aria-label','alt','placeholder'].forEach(function(k){var v=e.getAttribute(k);if(v&&D[v.trim()])e.setAttribute(k,D[v.trim()])})})}
-var sc=document.createElement('script');sc.src='/hazards/tr-'+L+'.js?v=1';sc.onload=function(){tx(document.body);new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(x){if(x.nodeType===3){var p=x.parentNode;if(p)tx(p)}else if(x.nodeType===1)tx(x)})})}).observe(document.body,{childList:true,subtree:true})};document.head.appendChild(sc)})();</script>
+var sc=document.createElement('script');sc.src='/hazards/tr-'+L+'.js?v=2';sc.onload=function(){tx(document.body);new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(x){if(x.nodeType===3){var p=x.parentNode;if(p)tx(p)}else if(x.nodeType===1)tx(x)})})}).observe(document.body,{childList:true,subtree:true})};document.head.appendChild(sc)})();</script>
 <style>.tr-c .kvl{margin:14px 0 4px;font-weight:700;font-size:14px;color:var(--ink,#111)}html[dir=rtl] body{text-align:right}html[dir=rtl] svg,html[dir=rtl] canvas{direction:ltr}</style>
 </body>
 </html>
