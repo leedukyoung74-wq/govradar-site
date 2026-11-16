@@ -164,3 +164,42 @@ class Retry(unittest.TestCase):
             calls["n"] += 1; raise urllib.error.HTTPError("u", 404, "nf", {}, None)
         with self.assertRaises(Exception): FM._retry("T", nf)
         self.assertEqual(calls["n"], 1); self.assertEqual(FM.stat("T")["failed"], 1)
+
+
+class FindATenderTimeout(unittest.TestCase):
+    """Replays the 2026-11-16 06:19Z production failure: the first Find a Tender request timed out."""
+    def test_uk_survives_one_read_timeout(self):
+        import io, time, urllib.request
+        dl = (FM.TODAY + datetime.timedelta(days=20)).isoformat() + "T12:00:00Z"
+        pkg = {"releases": [{"id": "000001-2026", "ocid": "ocds-h6vhtk-000001", "buyer": {"name": "Council A"},
+                             "tender": {"status": "active", "title": "Bridge works", "tenderPeriod": {"endDate": dl},
+                                        "value": {"amount": 5000000, "currency": "GBP"}, "mainProcurementCategory": "works"}}], "links": {}}
+        calls = {"n": 0}
+        class R(io.BytesIO):
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+        def fake(req, timeout=0):
+            calls["n"] += 1
+            if calls["n"] == 1: raise TimeoutError("The read operation timed out")
+            return R(json.dumps(pkg).encode())
+        real_open, real_sleep = urllib.request.urlopen, time.sleep
+        urllib.request.urlopen, time.sleep = fake, (lambda s: None)
+        try:
+            FM.STATS.clear(); got = FM.uk()
+        finally:
+            urllib.request.urlopen, time.sleep = real_open, real_sleep
+        self.assertEqual(len(got), 1); self.assertEqual(got[0]["title"], "Bridge works")
+        st = FM.stat("UK Find a Tender")
+        self.assertEqual(st["failed"], 0); self.assertEqual(FT.classify_state(st), "SUCCESS")
+        self.assertTrue(any(n.startswith("retry 1") for n in st["notes"]))
+
+    def test_rate_limit_waits_for_retry_after(self):
+        import time, urllib.error
+        waits = []; real = time.sleep; time.sleep = lambda s: waits.append(s); calls = {"n": 0}
+        def rl():
+            calls["n"] += 1
+            if calls["n"] == 1: raise urllib.error.HTTPError("u", 429, "Too Many Requests", {"Retry-After": "90"}, None)
+            return "ok"
+        try: self.assertEqual(FM._retry("T2", rl), "ok")
+        finally: time.sleep = real
+        self.assertEqual(waits, [90])

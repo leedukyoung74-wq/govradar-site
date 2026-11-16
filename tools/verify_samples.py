@@ -35,12 +35,21 @@ def official(x):
         dl = sorted(str(z)[:10] for z in (r.get("deadline-receipt-tender-date-lot") or []))
         return t, dl[0] if dl else "", FM._first(r.get("buyer-name"))
     if s in ("UK Find a Tender", "UK Contracts Finder"):
-        # the notice page itself (server-rendered): title and the deadline date must appear on it
-        _, b = http(x["url"], browser=True)
-        txt = n(re.sub(r"<[^>]+>", " ", b))
-        import datetime as _dt
-        dl = _dt.date.fromisoformat(x["deadline"]); human = n(f"{dl.day} {dl.strftime('%B %Y')}")
-        return (x["title"] if n(x["title"])[:50] in txt else "(not found on page)"), (x["deadline"] if human in txt else "(not found on page)"), None
+        # official OCDS record by id (no page scraping, no browser user agent); both services rate-limit, so space calls
+        import time; time.sleep(3)
+        if s == "UK Find a Tender": u = "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/" + urllib.parse.quote(sid)
+        else: u = "https://www.contractsfinder.service.gov.uk/Published/Notice/OCDS/" + x["url"].rstrip("/").rsplit("/", 1)[-1]
+        code, b = http(u)
+        if code == 429: return "RATE_LIMITED", "RATE_LIMITED", None
+        try:
+            j = json.loads(b)
+            if "records" in j:
+                rec = j["records"][0]; rel = rec.get("compiledRelease") or (rec.get("releases") or [{}])[-1]
+            else:
+                rel = (j.get("releases") or [{}])[-1]
+        except Exception: rel = {}
+        t = rel.get("tender") or {}
+        return t.get("title"), str((t.get("tenderPeriod") or {}).get("endDate") or "")[:10], (rel.get("buyer") or {}).get("name")
     if s == "Prozorro (Ukraine)" and x.get("pid"):
         _, b = http("https://public-api.prozorro.gov.ua/api/2.5/tenders/" + x["pid"])
         t = (json.loads(b or "{}").get("data") or {})
@@ -53,21 +62,29 @@ if __name__ == "__main__":
     items = json.load(open(os.path.join(FEEDS, "tenders.json"), encoding="utf8"))["items"]
     by = {}
     for x in items: by.setdefault(x["source"], []).append(x)
-    quota = {"World Bank": k + 2, "EU TED": k + 2, "UK Find a Tender": k, "UK Contracts Finder": 10, "Prozorro (Ukraine)": 2}
+    quota = {"World Bank": k + 2, "EU TED": k + 2, "UK Find a Tender": k, "UK Contracts Finder": 4, "Prozorro (Ukraine)": 2}
     rows = []
     for s, q in quota.items():
         pool = by.get(s, []); step = max(1, len(pool) // max(1, q))
         for x in pool[::step][:q]:
-            code, _ = http(x["url"], browser=True)
+            code, _ = http(x["url"])
             t, d, b = official(x)
-            row = {"source": s, "sid": x.get("sid"), "url": x["url"], "url_status": code, "title_ok": None if t is None else n(t)[:60] == n(x["title"])[:60],
+            rl = t == "RATE_LIMITED"
+            if rl: t = d = None
+            row = {"rate_limited": rl, "source": s, "sid": x.get("sid"), "url": x["url"], "url_status": code, "title_ok": None if t is None else n(t)[:60] == n(x["title"])[:60],
                    "deadline_ok": None if d is None else d == x["deadline"], "buyer_ok": None if b is None else n(b)[:40] == n(x["buyer"])[:40],
                    "site_title": x["title"][:80], "official_title": (t or "")[:80], "site_deadline": x["deadline"], "official_deadline": d}
             rows.append(row)
-    json.dump(rows, open(os.path.join(FEEDS, "verify_samples.json"), "w", encoding="utf8"), ensure_ascii=False, indent=1)
     for r in rows:
-        print(r["source"], "|", r["sid"], "|", r["url_status"], "| title", r["title_ok"], "| deadline", r["deadline_ok"], "| buyer", r["buyer_ok"])
-    ok = [r for r in rows if str(r["url_status"]).startswith("2") and r["title_ok"] is not False and r["deadline_ok"] is not False]
-    print(f"checked {len(rows)}, passed {len(ok)}")
-    if not rows or len(ok) < len(rows):
+        pass
+    # a notice passes when its official record matches (title and deadline). The public link must open (2xx); a 403 that the
+    # site gives only to automated clients is reported as "bot-blocked" and does not fail the check when the record matches.
+    for r in rows:
+        r["link"] = "ok" if str(r["url_status"]).startswith("2") else ("bot-blocked" if r["url_status"] == 403 else "broken")
+        r["verdict"] = "UNKNOWN" if r["rate_limited"] else ("PASS" if r["title_ok"] and r["deadline_ok"] and r["link"] != "broken" else "FAIL")
+    ok = [r for r in rows if r["verdict"] == "PASS"]; unk = [r for r in rows if r["verdict"] == "UNKNOWN"]
+    for r in rows: print(r["verdict"], "|", r["source"], "|", r["sid"], "| link", r["link"], r["url_status"], "| title", r["title_ok"], "| deadline", r["deadline_ok"], "| buyer", r["buyer_ok"])
+    json.dump(rows, open(os.path.join(FEEDS, "verify_samples.json"), "w", encoding="utf8"), ensure_ascii=False, indent=1)
+    print(f"checked {len(rows)}, passed {len(ok)}, unknown (rate limited) {len(unk)}")
+    if not rows or len(ok) + len(unk) < len(rows) or not ok:
         print("FAIL: some sampled notices did not match their official record or the link did not open"); sys.exit(1)

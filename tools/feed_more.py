@@ -49,17 +49,21 @@ def _retry(src, fn, tries=3):
             code = getattr(ex, "code", None)
             retryable = code is None or code == 429 or code >= 500
             if i < tries - 1 and retryable:
-                stat(src)["notes"].append(mask(f"retry {i + 1}: {type(ex).__name__}: {ex}")[:160]); time.sleep(5 if i == 0 else 15); continue
+                wait = 5 if i == 0 else 15
+                if code == 429:  # rate limit (Contracts Finder asks for about 2 minutes): honour Retry-After, at most 120 s
+                    try: wait = min(120, int((getattr(ex, "headers", None) or {}).get("Retry-After") or 60))
+                    except Exception: wait = 60
+                stat(src)["notes"].append(mask(f"retry {i + 1} after {wait}s: {type(ex).__name__}: {ex}")[:160]); time.sleep(wait); continue
             stat(src)["failed"] += 1; stat(src)["notes"].append(mask(f"{type(ex).__name__}: {ex}")[:160]); raise
 def _post(src, url, body):
     def f():
         req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={**UA, "Content-Type": "application/json"})
         with urllib.request.urlopen(req, timeout=90) as r: return json.loads(r.read().decode("utf8", "replace"))
     return _retry(src, f)
-def _get(src, url):
+def _get(src, url, tries=3, timeout=90):
     def f():
-        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90) as r: return r.read().decode("utf8", "replace")
-    return _retry(src, f)
+        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r: return r.read().decode("utf8", "replace")
+    return _retry(src, f, tries)
 def _first(v):
     if isinstance(v, dict):
         for k in ("eng", "ENG", "en"):
@@ -235,10 +239,16 @@ def prozorro():
         if not url: break
     todo = [x for x in cands if x["id"] not in cache][:400]
     import concurrent.futures as cf
+    # bounded: detail calls get one 30 s attempt each, and the batch stops after 20 failures or 8 minutes,
+    # so a Prozorro outage can never push the whole daily job past its time limit
+    import time as _t
+    t0, fails = _t.time(), [0]
     def one(x):
-        try: return json.loads(_get(S, "https://public-api.prozorro.gov.ua/api/2.5/tenders/" + x["id"]))["data"]
-        except Exception: return None
+        if fails[0] >= 20 or _t.time() - t0 > 480: return None
+        try: return json.loads(_get(S, "https://public-api.prozorro.gov.ua/api/2.5/tenders/" + x["id"], tries=1, timeout=30))["data"]
+        except Exception: fails[0] += 1; return None
     with cf.ThreadPoolExecutor(8) as ex: details = list(ex.map(one, todo))
+    if fails[0] >= 20 or _t.time() - t0 > 480: stat(S)["notes"].append("detail batch stopped early (failures or 8-minute limit)")
     for t in details:
         if not t: continue
         v = t.get("value") or {}
