@@ -100,4 +100,26 @@ def scene(kind):
         g += f'<rect x="330" y="320" width="140" height="90" fill="{N}"/>' + person(370, 410, .75, W) + person(430, 410, .75, W, kid=True)
         g += "".join(f'<path d="M{200+i*40} 140 l-20 -60" stroke="{M}" stroke-width="3" opacity=".5"/>' for i in range(11))
         g += f'<rect x="676" y="70" width="8" height="90" fill="{W}"/><circle cx="680" cy="66" r="10" fill="{A}"/>' + "".join(f'<path d="M{680-r} {66-r*0.6} q{r} {-r*0.9} {2*r} 0" fill="none" stroke="{A}" stroke-width="6" opacity="{1-i*.25}"/>' for i, r in enumerate((26, 44, 62)))
+    elif kind == "flood":
+        g += "".join(f'<path d="M{i*60} {60+(i%4)*12} l-16 40" stroke="{M}" stroke-width="3" opacity=".45"/>' for i in range(14))
+        g += f'<path d="M80 330 L80 250 L180 190 L280 250 L280 330 Z" fill="{P}"/><rect x="150" y="270" width="40" height="60" fill="{N}"/>'
+        g += f'<path d="M0 330 Q100 310 200 330 T400 330 T600 330 T800 330 L800 500 L0 500 Z" fill="{M}" opacity=".8"/><path d="M0 370 Q100 350 200 370 T400 370 T600 370 T800 370 L800 500 L0 500 Z" fill="{W}" opacity=".35"/>'
+        g += f'<path d="M520 330 L560 160 L800 160 L800 330 Z" fill="{D}"/><path d="M470 330 Q560 250 640 170" fill="none" stroke="{A}" stroke-width="8" stroke-dasharray="4 16" stroke-linecap="round"/>'
+        g += person(650, 160, .7, W) + person(700, 160, .7, W, kid=True)
+    elif kind == "heat":
+        g += f'<circle cx="620" cy="130" r="70" fill="{A}"/>' + "".join(f'<path d="M{620+int(110*__import__("math").cos(i*0.785))} {130+int(110*__import__("math").sin(i*0.785))} l{int(30*__import__("math").cos(i*0.785))} {int(30*__import__("math").sin(i*0.785))}" stroke="{A}" stroke-width="6"/>' for i in range(8)) + ground
+        g += f'<path d="M120 410 L120 260 L260 180 L400 260 L400 410 Z" fill="{P}"/><rect x="170" y="290" width="70" height="50" fill="{M}"/><rect x="280" y="330" width="60" height="80" fill="{N}"/>'
+        g += "".join(f'<path d="M{470+i*40} 400 q12 -20 0 -40 q-12 -20 0 -40" fill="none" stroke="{M}" stroke-width="3" opacity=".6"/>' for i in range(6))
+        g += person(310, 410, .75, W) + person(350, 410, .6, W)
+    elif kind == "cold":
+        g += "".join(f'<circle cx="{(i*97)%800}" cy="{(i*53)%400}" r="{2+(i%3)}" fill="{W}" opacity=".8"/>' for i in range(70))
+        g += f'<rect y="400" width="800" height="100" fill="{P}"/><path d="M200 400 L200 250 L340 170 L480 250 L480 400 Z" fill="{M}"/><path d="M190 255 L340 165 L490 255" fill="none" stroke="{W}" stroke-width="14"/>'
+        g += f'<rect x="300" y="300" width="80" height="60" fill="{A}" opacity=".85"/><rect x="420" y="190" width="24" height="50" fill="{N}"/>'
+        g += person(600, 400, .8, W) + f'<rect x="584" y="320" width="32" height="10" fill="{A}"/>'
+    elif kind == "outage":
+        g += f'<rect width="800" height="500" fill="{D}"/>' + ground
+        g += "".join(f'<rect x="{60+i*120}" y="{180+(i%2)*40}" width="90" height="{230-(i%2)*40}" fill="{N}"/>' for i in range(6))
+        g += "".join(f'<rect x="{75+i*120+(j%2)*35}" y="{200+(i%2)*40+(j//2)*40}" width="22" height="22" fill="{M}" opacity=".12"/>' for i in range(6) for j in range(6))
+        g += f'<rect x="355" y="300" width="22" height="22" fill="{P}"/><path d="M366 322 L300 410 L440 410 Z" fill="{P}" opacity=".18"/>'
+        g += f'<path d="M640 60 l-40 80 h30 l-30 70" fill="none" stroke="{A}" stroke-width="8" stroke-linejoin="round"/><path d="M590 70 L700 200" stroke="{W}" stroke-width="6"/>'
     return svg(g, label=kind)

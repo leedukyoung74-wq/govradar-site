@@ -21,7 +21,7 @@ def js_tr(L):
         except Exception: pass
     return {k: v for k, v in mp.items() if k in JS_KEYS}
 
-JS_KEYS = set(['Water needed (L)', 'Water short (L)', 'Calories needed', 'Calories short', 'Meals (3 a day)', 'One year of water is {0} L, about {1} tonnes. Rather than storing it all, keep 3–14 days at home plus verified ways to get and carry more.', 'Light', 'Phone charging', 'Per day ', 'battery example ', '3 days ≈ ', 'Device', 'past', 'No items yet.', 'item,qty,unit_price,expiry,location', 'Family', 'Nearby meeting place', 'Distant meeting place', 'Shelter / high ground', 'Out-of-area contact', 'Child pick-up / care', 'Medicine / medical', 'Schedule done — keep seasonal checks', 'water ', 'food ', ' ({0}-day target)', 'Nothing short for the target period', ' · recorded ', 'Done — print it', 'Missing ', ' (meeting place, shelter, out-of-area contact)', ' (item expiring)', ' (monthly check)', 'Add your last check date'])
+JS_KEYS = set(['Replace: ', 'Replace emergency item', 'Monthly emergency supply check', 'Monthly check', 'Restored. Reloading the page.', 'This is not a preparedness centre save file.', 'Add an item with an expiry date, or a last check date, to make reminders.', 'Water needed (L)', 'Water short (L)', 'Calories needed', 'Calories short', 'Meals (3 a day)', 'One year of water is {0} L, about {1} tonnes. Rather than storing it all, keep 3–14 days at home plus verified ways to get and carry more.', 'Light', 'Phone charging', 'Per day ', 'battery example ', '3 days ≈ ', 'Device', 'past', 'No items yet.', 'item,qty,unit_price,expiry,location', 'Family', 'Nearby meeting place', 'Distant meeting place', 'Shelter / high ground', 'Out-of-area contact', 'Child pick-up / care', 'Medicine / medical', 'Schedule done — keep seasonal checks', 'water ', 'food ', ' ({0}-day target)', 'Nothing short for the target period', ' · recorded ', 'Done — print it', 'Missing ', ' (meeting place, shelter, out-of-area contact)', ' (item expiring)', ' (monthly check)', 'Add your last check date'])
 
 def body(L):
     ko = L == "ko"; t = (lambda k, en: k if ko else en)
@@ -78,7 +78,8 @@ def body(L):
            ("365", "1년 지속 관리", "1-year upkeep", "사놓고 잊지 않으려면: 계절별 점검, 교체 일정, 가족 변화 반영, 훈련, 연간 예산·복구계획", "So nothing is forgotten: seasonal checks, replacement dates, family changes, drills, yearly budget and recovery plan")]
     pcards = "".join(f'<div class="rd-per" data-per="{d}"><b>{e(a if ko else b)}</b><p>{e(c if ko else dd)}</p></div>' for d, a, b, c, dd in per)
     out.append(f'''<section class="rd-sec" id="plan"><div class="rd-in">
-<div class="rd-head"><h2>{t("내 준비현황과 맞춤 계획", "My status and plan")}</h2><button class="rd-btn ghost" onclick="window.print()">{t("인쇄 / PDF 저장", "Print / save PDF")}</button></div>
+<div class="rd-head"><h2>{t("내 준비현황과 맞춤 계획", "My status and plan")}</h2><div class="rd-acts"><button class="rd-btn ghost" onclick="window.print()">{t("인쇄 / PDF 저장", "Print / save PDF")}</button><button class="rd-btn ghost" id="rd-save" type="button">{t("내 계획 파일로 저장", "Save my plan to a file")}</button><label class="rd-btn ghost" for="rd-load">{t("저장 파일 불러오기", "Restore from file")}</label><input id="rd-load" type="file" accept=".json,application/json" hidden></div></div>
+<p class="note" id="rd-io">{t("입력한 내용은 이 기기의 브라우저에만 저장됩니다. 기기를 바꾸거나 브라우저 기록을 지우기 전에 파일로 저장해 두세요. 파일은 서버로 보내지 않습니다.", "What you enter is kept only in this device's browser. Save it to a file before changing device or clearing browser data. The file is never sent to a server.")}</p>
 <div class="rd-status" id="rd-status">
 <div><span>{t("오늘 먼저 할 일", "Do first today")}</span><b id="st-todo">—</b></div>
 <div><span>{t("부족한 물품", "Short on")}</span><b id="st-short">—</b></div>
@@ -112,7 +113,8 @@ def body(L):
 </div></section>''')
     # STOCK
     out.append(f'''<section class="rd-sec" id="stock"><div class="rd-in">
-<div class="rd-head"><h2>{t("내 재고와 교체 일정", "My stock and replacement dates")}</h2><button class="rd-btn ghost" id="st-csv" type="button">{t("CSV로 내려받기", "Download CSV")}</button></div>
+<div class="rd-head"><h2>{t("내 재고와 교체 일정", "My stock and replacement dates")}</h2><div class="rd-acts"><button class="rd-btn ghost" id="st-csv" type="button">{t("CSV로 내려받기", "Download CSV")}</button><button class="rd-btn ghost" id="st-ics" type="button">{t("교체일 캘린더 알림(.ics)", "Expiry reminders for my calendar (.ics)")}</button></div></div>
+<p class="note">{t("캘린더 파일을 휴대폰·PC 캘린더에 추가하면 물품마다 기한 7일 전에 알림이 오고, '마지막 점검일'을 넣었다면 매달 같은 날 점검 알림이 반복됩니다.", "Add the file to your phone or computer calendar: each item alerts 7 days before expiry, and if you set a last check date a monthly check repeats on that day.")}</p>
 <p>{t("기한이 빠른 순서로 보입니다. 30일 안에 교체할 물품은 강조됩니다. 남은 사용일수가 '조달에 걸리는 날 + 여유일' 이하가 되면 보충하세요.", "Sorted by expiry; items due within 30 days are highlighted. Restock when days of use left fall to 'days to resupply + buffer days'.")}</p>
 <form class="rd-form rd-stock-f" id="st-f" onsubmit="return false"><div class="rd-g6">
 <label>{t("물품", "Item")}<input name="n" required></label><label>{t("수량", "Qty")}<input name="q" type="number" min="0" value="1"></label><label>{t("단가", "Unit price")}<input name="p" type="number" min="0" value="0"></label>
@@ -227,6 +229,17 @@ $$(".rd-per").forEach(function(x){x.classList.toggle("on",x.dataset.per==String(
 /* hazard tabs */
 $$(".rd-tabs button").forEach(function(b){b.addEventListener("click",function(){$$(".rd-tabs button").forEach(function(x){x.classList.toggle("on",x===b)});$$(".rd-hz").forEach(function(a){a.hidden=a.dataset.hz!==b.dataset.hz})})});
 var hz=(location.hash.match(/^#hz-(\w+)/)||[])[1];if(hz){var tb=$('.rd-tabs button[data-hz="'+hz+'"]');if(tb){tb.click();document.getElementById("hazards").scrollIntoView()}}
+/* save / restore / calendar (all in the browser; nothing is uploaded) */
+var KEYS=["setup","pw","checks","stock","card"];function dl(name,type,text){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:type}));a.download=name;document.body.appendChild(a);a.click();a.remove()}
+var sv=$("#rd-save");if(sv)sv.addEventListener("click",function(){var o={app:"gvr-ready",v:1,saved:new Date().toISOString()};KEYS.forEach(function(k){o[k]=S(k)});dl("my-preparedness-plan.json","application/json",JSON.stringify(o,null,1))});
+var ld=$("#rd-load");if(ld)ld.addEventListener("change",function(){var f=ld.files&&ld.files[0];if(!f)return;var r=new FileReader();r.onload=function(){var m=$("#rd-io");try{var o=JSON.parse(r.result);if(!o||o.app!=="gvr-ready")throw 0;KEYS.forEach(function(k){if(o[k]!=null)S(k,o[k])});if(m)m.textContent=T("불러왔습니다. 화면을 새로 고칩니다.","Restored. Reloading the page.");setTimeout(function(){location.reload()},600)}catch(e){if(m)m.textContent=T("이 파일은 대비센터 저장 파일이 아닙니다.","This is not a preparedness centre save file.")}};r.readAsText(f)});
+function ics(){var z=function(n){return(n<10?"0":"")+n},d8=function(s){return s.replace(/-/g,"")},nx=function(s){var t=new Date(s+"T00:00:00");t.setDate(t.getDate()+1);return t.getFullYear()+z(t.getMonth()+1)+z(t.getDate())},now=new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z",q=function(s){return String(s||"").replace(/[\\,;]/g,"\\$&").replace(/\n/g," ")};
+var ev=[];stk.filter(function(x){return x.x}).forEach(function(x,i){ev.push(["BEGIN:VEVENT","UID:gvr-"+i+"-"+d8(x.x)+"@radar.wmm-hoa.com","DTSTAMP:"+now,"DTSTART;VALUE=DATE:"+d8(x.x),"DTEND;VALUE=DATE:"+nx(x.x),"SUMMARY:"+q(T("교체: ","Replace: ")+x.n+(x.w?" ("+x.w+")":"")),"BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+q(T("비상물품 교체","Replace emergency item")),"TRIGGER:-P7D","END:VALARM","END:VEVENT"].join("\r\n"))});
+if(st.check){var t=new Date(st.check+"T00:00:00");t.setMonth(t.getMonth()+1);var c=t.getFullYear()+"-"+z(t.getMonth()+1)+"-"+z(t.getDate());ev.push(["BEGIN:VEVENT","UID:gvr-monthly@radar.wmm-hoa.com","DTSTAMP:"+now,"DTSTART;VALUE=DATE:"+d8(c),"DTEND;VALUE=DATE:"+nx(c),"RRULE:FREQ=MONTHLY","SUMMARY:"+q(T("비상물품 월간 점검","Monthly emergency supply check")),"BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+q(T("월간 점검","Monthly check")),"TRIGGER:PT9H","END:VALARM","END:VEVENT"].join("\r\n"))}
+return ev.length?["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//WMM//GOV RADAR preparedness//"+L.toUpperCase(),"CALSCALE:GREGORIAN"].concat(ev,["END:VCALENDAR"]).join("\r\n")+"\r\n":null}
+var si=$("#st-ics");if(si)si.addEventListener("click",function(){var c=ics();if(!c){alertNo();return}dl("preparedness-reminders.ics","text/calendar",c)});
+function alertNo(){var b=$("#st-body");if(b&&b.parentNode){var n=b.parentNode.parentNode.querySelector(".rd-noics");if(!n){n=document.createElement("p");n.className="note rd-noics";b.parentNode.parentNode.appendChild(n)}n.textContent=T("기한을 넣은 물품이나 마지막 점검일이 있어야 알림 파일을 만들 수 있습니다.","Add an item with an expiry date, or a last check date, to make reminders.")}}
+window.__gvrIcs=ics;
 calc();pwr();stock();card();status();
 })();</script>'''
 
@@ -266,6 +279,7 @@ CSS = r'''
 .rd-g2,.rd-g3,.rd-g4,.rd-g6{display:grid;gap:14px}.rd-g2{grid-template-columns:repeat(2,1fr)}.rd-g3{grid-template-columns:repeat(3,1fr)}.rd-g4{grid-template-columns:repeat(4,1fr)}.rd-g6{grid-template-columns:2fr 1fr 1fr 1.3fr 1.3fr auto;align-items:end}
 .rd-btn{display:inline-block;background:#e4572e;color:#fff;border:0;border-radius:6px;padding:12px 20px;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer}
 .rd-btn.ghost{background:#fff;color:#1d2b4f;box-shadow:inset 0 0 0 2px #1d2b4f}.rd-btn.light{background:#fff;color:#1d2b4f}
+.rd-acts{display:flex;gap:8px;flex-wrap:wrap}.rd-acts label.rd-btn{margin:0}
 .rd-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
 .rd-status{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:#1d2b4f;border-radius:8px;overflow:hidden;margin:18px 0 8px}
 .rd-status div{background:#1d2b4f;color:#fff;padding:18px 16px}.rd-status div:nth-child(odd){background:#22335c}
@@ -294,5 +308,5 @@ CSS = r'''
 .rd-srcl{columns:2;font-size:14px;line-height:1.9;padding-left:20px}.rd-srcl a{color:#1d2b4f}
 @media (max-width:900px){.rd-hero-g,.rd-two,.rd-bag,.rd-hz{grid-template-columns:1fr}.rd-hero-g{gap:8px}.rd-status{grid-template-columns:1fr 1fr}.rd-pers{grid-template-columns:1fr 1fr}.rd-g3,.rd-g4{grid-template-columns:1fr 1fr}.rd-g6{grid-template-columns:1fr 1fr}.rd-srcl{columns:1}.rd-sec{padding:64px 0}}
 @media (max-width:560px){.rd-in{padding:0 16px}.rd-status,.rd-pers,.rd-g2,.rd-g3,.rd-g4{grid-template-columns:1fr}.rd-tl label{grid-template-columns:24px 1fr}.rd-when{grid-column:2}.rd-task{grid-column:2}.rd-cardp dl{grid-template-columns:1fr}.rd-t{font-size:14px}}
-@media print{header,footer,.rd-nav,.rd-hero,.rd-video,#setup,#calc,#stock form,#hazards,#org,#help,#sources,.prepbar,.rd-btn,#now{display:none!important}.rd-sec{padding:16px 0}body.print-card main>*:not(#card){display:none!important}body.print-card #card form,body.print-card #card .rd-two>div:first-child{display:none!important}}
+@media print{header,footer,.rd-nav,.rd-hero,.rd-video,#setup,#calc,#stock form,#hazards,#org,#help,#sources,.rd-acts,.prepbar,.rd-btn,#now{display:none!important}.rd-sec{padding:16px 0}body.print-card main>*:not(#card){display:none!important}body.print-card #card form,body.print-card #card .rd-two>div:first-child{display:none!important}}
 '''
