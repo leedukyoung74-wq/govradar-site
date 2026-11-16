@@ -64,6 +64,18 @@ def official(x):
     if t == "RATE_LIMITED" or not t or not d: return "UNAVAILABLE", "UNAVAILABLE", None
     return t, d, b
 
+def judge(r):
+    c = r["url_status"]
+    if isinstance(c, int) and 200 <= c < 300: r["link"] = "ok"
+    elif c == 403: r["link"] = "unconfirmed"
+    elif isinstance(c, int) and 400 <= c < 500 and c != 429: r["link"] = "broken"
+    else: r["link"] = "unknown"
+    if r.get("record_unavailable"): r["record"] = "unavailable"
+    elif r.get("title_ok") and r.get("deadline_ok"): r["record"] = "match"
+    else: r["record"] = "mismatch"
+    r["verdict"] = "FAIL" if (r["link"] == "broken" or r["record"] == "mismatch") else ("PASS" if (r["link"] == "ok" and r["record"] == "match") else "UNKNOWN")
+    return r
+
 if __name__ == "__main__":
     k = int(sys.argv[1]) if len(sys.argv) > 1 else 4
     sys.path.insert(0, os.path.join(ROOT, "tools"))
@@ -85,15 +97,16 @@ if __name__ == "__main__":
             rows.append(row)
     for r in rows:
         pass
-    # a notice passes when its official record matches (title and deadline). The public link must open (2xx); a 403 that the
-    # site gives only to automated clients is reported as "bot-blocked" and does not fail the check when the record matches.
-    for r in rows:
-        r["link"] = "ok" if str(r["url_status"]).startswith("2") else ("bot-blocked" if r["url_status"] == 403 else "broken")
-        r["verdict"] = "UNKNOWN" if r["record_unavailable"] else ("PASS" if r["title_ok"] and r["deadline_ok"] and r["link"] != "broken" else "FAIL")
-    ok = [r for r in rows if r["verdict"] == "PASS"]; unk = [r for r in rows if r["verdict"] == "UNKNOWN"]
-    for r in rows: print(r["verdict"], "|", r["source"], "|", r["sid"], "| link", r["link"], r["url_status"], "| title", r["title_ok"], "| deadline", r["deadline_ok"], "| buyer", r["buyer_ok"])
+    # Two separate judgements per notice:
+    #   link   ok (2xx) | broken (404, 410, other 4xx) | unconfirmed (403 — may be a bot block or a real denial; never counted
+    #          as success) | unknown (timeout, 429, 5xx, network error)
+    #   record match | mismatch | unavailable (official record could not be fetched)
+    # verdict FAIL if the link is broken or the record mismatches; PASS only if link ok AND record match; otherwise UNKNOWN.
+    for r in rows: judge(r)
+    ok = [r for r in rows if r["verdict"] == "PASS"]; unk = [r for r in rows if r["verdict"] == "UNKNOWN"]; bad = [r for r in rows if r["verdict"] == "FAIL"]
+    for r in rows: print(r["verdict"], "|", r["source"], "|", r["sid"], "| link", r["link"], r["url_status"], "| record", r["record"])
     json.dump(rows, open(os.path.join(FEEDS, "verify_samples.json"), "w", encoding="utf8"), ensure_ascii=False, indent=1)
-    print(f"checked {len(rows)}, passed {len(ok)}, mismatched {len(rows) - len(ok) - len(unk)}, unknown (official record unavailable) {len(unk)}")
+    print(f"checked {len(rows)}, PASS {len(ok)}, FAIL {len(bad)}, UNKNOWN {len(unk)}")
     # strict: any real mismatch or broken link fails the run; so does a check where fewer than half could be confirmed
-    if not rows or len(ok) + len(unk) < len(rows) or len(ok) * 2 < len(rows):
-        print("FAIL: a sampled notice did not match its official record, a link was broken, or fewer than half could be confirmed"); sys.exit(1)
+    if not rows or bad or len(ok) * 2 < len(rows):
+        print("FAIL: a sampled notice had a broken link or did not match its official record, or fewer than half could be confirmed"); sys.exit(1)

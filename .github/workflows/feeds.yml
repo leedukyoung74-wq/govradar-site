@@ -39,6 +39,9 @@ jobs:
       - name: Weekly source registry check
         if: inputs.task == 'sources'
         run: python tools/probe_sources.py data_branch/feeds/sources_registry.json
+      - name: Quality gate — must pass before anything is published
+        if: inputs.task == 'daily'
+        run: python tools/quality_gate.py data_branch
       - name: Publish to data branch
         if: ${{ !inputs.dry_run }}
         run: |
