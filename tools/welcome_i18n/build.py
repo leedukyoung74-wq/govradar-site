@@ -42,6 +42,9 @@ def page(L, sub, s):
                   '@media (max-width:760px){header>nav{gap:6px 10px!important;padding:6px 12px!important;min-height:0!important}header>nav>a img{height:34px!important}'
                   'header>nav>div:nth-child(2){order:3;flex:1 1 100%!important;flex-wrap:nowrap!important;justify-content:flex-start!important;overflow-x:auto;gap:18px!important;font-size:14px!important;padding:2px 0 6px;scrollbar-width:none;white-space:nowrap}'
                   'header>nav>div:nth-child(2)::-webkit-scrollbar{display:none}header>nav>div:nth-child(3){margin-inline-start:auto}}'
+                  '@media (min-width:761px){header>nav{flex-wrap:nowrap!important;gap:12px clamp(12px,2vw,28px)!important;max-width:1320px!important}header>nav>div:nth-child(2){flex-wrap:nowrap!important;white-space:nowrap;gap:8px clamp(10px,1.5vw,28px)!important;font-size:clamp(13px,1.1vw,15px)!important;flex:1 1 auto!important;min-width:0;overflow-x:auto;scrollbar-width:none;justify-content:safe center!important}header>nav>div:nth-child(2)::-webkit-scrollbar{display:none}header>nav>div:nth-child(3){flex-wrap:nowrap!important;white-space:nowrap;flex:none}}'
+                  '@media (min-width:761px) and (max-width:1180px){header>nav{gap:10px 16px!important;padding:0 16px!important}header>nav>a img{height:36px!important}header>nav>div:nth-child(3) a[aria-label]{display:none!important}}'
+                  '@media (min-width:761px) and (max-width:960px){header>nav>div:nth-child(3) select{max-width:84px}}'
                   '[id]{scroll-margin-top:84px}@media (max-width:760px){[id]{scroll-margin-top:110px}}</style>'
                   '<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector(\'header nav>div a[style*="8fb4ff"]\');if(a&&a.parentNode.scrollWidth>a.parentNode.clientWidth)a.parentNode.scrollLeft=a.offsetLeft-a.parentNode.offsetLeft-16})</script></head>', 1)
     return s
