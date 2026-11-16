@@ -1,0 +1,3 @@
+# Preview builds of non-live branches (src, review/*) have no site of their own.
+# Cloudflare Pages publishes this folder for them; every path simply goes to the real site.
+/*  https://radar.wmm-hoa.com/:splat  302
