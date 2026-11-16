@@ -3870,14 +3870,17 @@
   "access": "api",
   "auth": "none",
   "free": true,
-  "reuse": "UNKNOWN",
+  "reuse": "PASS",
   "login_captcha": "UNKNOWN",
   "frequency": "daily",
   "collect": "PASS",
   "note": "Connected (feed_tenders.worldbank)",
   "url_status": "200",
   "robots": "unknown",
-  "checked": "2026-11-16"
+  "checked": "2026-11-16",
+  "reuse_basis": "CC BY 4.0 — World Bank Data Catalog, dataset \"Procurement Notice\"",
+  "reuse_url": "https://datacatalog.worldbank.org/search/dataset/0037776/procurement-notice",
+  "reuse_checked": "2026-11-16"
  },
  {
   "id": "INT-WB-PIPELINE",
@@ -3897,7 +3900,10 @@
   "note": "Connected (feed_intel.pipeline)",
   "url_status": "200",
   "robots": "unknown",
-  "checked": "2026-11-16"
+  "checked": "2026-11-16",
+  "reuse_basis": "World Bank Projects API — dataset licence not yet confirmed (World Bank data is usually CC BY 4.0; not verified for this API)",
+  "reuse_url": "https://datacatalog.worldbank.org/",
+  "reuse_checked": "2026-11-16"
  },
  {
   "id": "INT-WB-AWARDS",
@@ -3917,7 +3923,10 @@
   "note": "Connected (feed_intel.awards)",
   "url_status": "200",
   "robots": "unknown",
-  "checked": "2026-11-16"
+  "checked": "2026-11-16",
+  "reuse_basis": "Contract award datasets are listed in the World Bank Data Catalog; licence for the API used not yet confirmed",
+  "reuse_url": "https://datacatalog.worldbank.org/search/dataset/0066876/contract-awards-in-investment-project-financing-since-fy-2017-fy-2019",
+  "reuse_checked": "2026-11-16"
  },
  {
   "id": "INT-EU-TED",
@@ -3930,14 +3939,17 @@
   "access": "api",
   "auth": "none",
   "free": true,
-  "reuse": "UNKNOWN",
+  "reuse": "PASS",
   "login_captcha": "UNKNOWN",
   "frequency": "daily",
   "collect": "PASS",
   "note": "Connected (feed_more.ted)",
   "url_status": "405",
   "robots": "unknown",
-  "checked": "2026-11-16"
+  "checked": "2026-11-16",
+  "reuse_basis": "TED legal notice: procurement notices \"can be freely reused\", commercial or not (Commission Decision 2011/833/EU)",
+  "reuse_url": "https://ted.europa.eu/en/legal-notice",
+  "reuse_checked": "2026-11-16"
  },
  {
   "id": "NAT-GB-FTS",
@@ -3950,14 +3962,17 @@
   "access": "api-ocds",
   "auth": "none",
   "free": true,
-  "reuse": "UNKNOWN",
+  "reuse": "PASS",
   "login_captcha": "UNKNOWN",
   "frequency": "daily",
   "collect": "PASS",
   "note": "Connected (feed_more.uk)",
   "url_status": "200",
   "robots": "unknown",
-  "checked": "2026-11-16"
+  "checked": "2026-11-16",
+  "reuse_basis": "Open Government Licence v3.0 — declared in every API response (\"license\" field)",
+  "reuse_url": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "reuse_checked": "2026-11-16"
  },
  {
   "id": "NAT-GB-CF",
@@ -3970,14 +3985,17 @@
   "access": "api-ocds",
   "auth": "none",
   "free": true,
-  "reuse": "UNKNOWN",
+  "reuse": "PASS",
   "login_captcha": "UNKNOWN",
   "frequency": "daily",
   "collect": "PASS",
   "note": "Connected in review branch (feed_more.ukcf); notice URL = uuid part of release id, checked against live notice pages",
   "url_status": "200",
   "robots": "unknown",
-  "checked": "2026-11-16"
+  "checked": "2026-11-16",
+  "reuse_basis": "Open Government Licence v3.0 — declared in every API response (\"license\" field)",
+  "reuse_url": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "reuse_checked": "2026-11-16"
  },
  {
   "id": "NAT-CA-CANADABUYS",
@@ -4017,7 +4035,10 @@
   "note": "Connected in review branch (feed_more.prozorro); up to 400 new detail checks per run with a cache, unchecked count reported in sources_status.json; titles in Ukrainian",
   "url_status": "200",
   "robots": "unknown",
-  "checked": "2026-11-16"
+  "checked": "2026-11-16",
+  "reuse_basis": "No licence stated in the API response or on the Open Contracting data registry entry; owner decision needed",
+  "reuse_url": "https://data.open-contracting.org/en/publication/154",
+  "reuse_checked": "2026-11-16"
  },
  {
   "id": "NAT-KR-DAPA",

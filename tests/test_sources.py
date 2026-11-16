@@ -336,3 +336,13 @@ class Today(unittest.TestCase):
     def test_gate(self):
         self.assertEqual(QG.check({"tenders.json": feed(300), "today.json": {"n": {"open": 300}}}, {}), [])
         self.assertTrue(QG.check({"tenders.json": feed(300), "today.json": {"n": {"open": 999}}}, {}))
+
+
+class Reuse(unittest.TestCase):
+    def test_active_sources_state_reuse_with_evidence(self):
+        reg = json.load(open(os.path.join(os.path.dirname(__file__), "..", "tools", "sources", "registry.json"), encoding="utf8"))
+        for s in reg:
+            if s["collect"] != "PASS": continue
+            self.assertIn(s.get("reuse"), ("PASS", "FAIL", "UNKNOWN"), s["id"])
+            self.assertTrue(s.get("reuse_url", "").startswith("http"), s["id"] + " needs a terms link")
+            self.assertTrue(s.get("reuse_checked"), s["id"])
