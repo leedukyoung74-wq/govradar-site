@@ -26,7 +26,7 @@
   function R(seed) { var s = seed >>> 0 || 1; return function () { s ^= s << 13; s ^= s >>> 17; s ^= s << 5; return ((s >>> 0) % 100000) / 100000; }; }
   function n1(x) { return Math.sin(x) * .5 + Math.sin(x * 2.13 + 1.7) * .3 + Math.sin(x * 4.71 + .3) * .2; }
   function rgba(c, a) { return "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + a + ")"; }
-  function glow(g, c, b) { g.shadowColor = c; g.shadowBlur = b; }
+  var LOW = 0; function glow(g, c, b) { if (LOW) { g.shadowBlur = 0; return; } g.shadowColor = c; g.shadowBlur = b; }
   function noGlow(g) { g.shadowBlur = 0; }
   function sky(g, w, h, top, bot, a) { var gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, top); gr.addColorStop(1, bot); g.globalAlpha = a == null ? 1 : a; g.fillStyle = gr; g.fillRect(0, 0, w, h); g.globalAlpha = 1; }
   function radial(g, x, y, r, c, a) { var gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, rgba(c, a)); gr.addColorStop(1, rgba(c, 0)); g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2); }
@@ -232,17 +232,27 @@
   function setup(cv) {
     var k = cv.getAttribute("data-k"), sc = SC[k]; if (!sc) return null;
     var o = { cv: cv, k: k, sc: sc, S: null, vis: false, t0: (vt || performance.now() / 1000) - 2 - Math.random() * 7, last: 0 };
-    o.resize = function () { var r = cv.getBoundingClientRect(); if (!r.width) return false; var dpr = Math.min(2, window.devicePixelRatio || 1); cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
+    o.resize = function () { var r = cv.getBoundingClientRect(); if (!r.width) return false; var dpr = LOW > 1 ? 1 : Math.min(2, window.devicePixelRatio || 1); cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
       var seed = 0; for (var i = 0; i < k.length; i++) seed = seed * 31 + k.charCodeAt(i); o.S = { w: r.width, h: r.height, dpr: dpr, r: R(seed + 7) }; sc.init(o.S); o.g = cv.getContext("2d"); return true; };
     return o;
   }
   function frame(o, now, dt) { var g = o.g, S = o.S; if (!S) return; g.setTransform(S.dpr, 0, 0, S.dpr, 0, 0); g.clearRect(0, 0, S.w, S.h); var t = now - o.t0; try { o.sc.draw(g, S, t, dt); } catch (e) {} g.setTransform(S.dpr, 0, 0, S.dpr, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = "source-over"; noGlow(g); hud(g, S.w, S.h, o.k, t, o.k === "cyber" ? "rgba(255,120,140,.9)" : null); }
   var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) { es.forEach(function (e) { var o = e.target._hz; if (o) o.vis = e.isIntersecting; }); }, { rootMargin: "80px" }) : null;
   function scan() { document.querySelectorAll("canvas.hzcv").forEach(function (cv) { if (cv._hz) return; var o = setup(cv); if (!o) return; cv._hz = o; live.push(o); if (io) io.observe(cv); else o.vis = true; }); }
-  /* reduced motion: keep moving, at half speed (stopping looked broken on phones with that setting on) */
-  var lastT = 0, vt = 0, SP = RM ? .5 : 1; function loop(ms) { var now0 = ms / 1000, dt = Math.min(.05, now0 - (lastT || now0)) * SP; lastT = now0; vt = vt ? vt + dt : now0; var now = vt;
+  /* reduced motion: keep moving, at half speed (stopping looked broken on phones with that setting on).
+     Adaptive quality: the loop measures real frame time. On slow phones it drops the glow effect (LOW 1), then
+     draws at lower resolution, 20 fps and only the 6 cards nearest the centre of the screen (LOW 2), so the
+     motion stays smooth instead of freezing. Fast devices keep full quality. */
+  var lastT = 0, vt = 0, SP = RM ? .5 : 1, ema = 0, calm = 0, nextDraw = 0;
+  function loop(ms) { var now0 = ms / 1000, raw = now0 - (lastT || now0), dt = Math.min(.05, raw) * SP; lastT = now0; vt = vt ? vt + dt : now0; var now = vt;
+    if (raw > 0 && raw < 1) { ema = ema ? ema * .9 + raw * .1 : raw;
+      if (ema > .045 && LOW < 2) { calm = 0; LOW++; ema = 1 / 40; live.forEach(function (o) { o.S = null; }); }
+      else if (ema < .02 && LOW > 0 && ++calm > 600) { calm = 0; LOW--; live.forEach(function (o) { o.S = null; }); } }
     live = live.filter(function (o) { return document.body.contains(o.cv); });
-    live.forEach(function (o) { if (!o.vis) return; var r = o.cv.getBoundingClientRect(); if (!o.S || Math.abs(r.width - o.S.w) > 1) { if (!o.resize()) return; } frame(o, now, dt); });
+    if (LOW > 1 && now0 < nextDraw) { requestAnimationFrame(loop); return; } if (LOW > 1) nextDraw = now0 + 1 / 20;
+    var vis = live.filter(function (o) { return o.vis; }), cy = innerHeight / 2;
+    if (LOW > 1 && vis.length > 6) { vis.forEach(function (o) { var r = o.cv.getBoundingClientRect(); o.dc = Math.abs(r.top + r.height / 2 - cy); }); vis.sort(function (a, b) { return a.dc - b.dc; }); vis = vis.slice(0, 6); }
+    vis.forEach(function (o) { var r = o.cv.getBoundingClientRect(); if (!o.S || Math.abs(r.width - o.S.w) > 1) { if (!o.resize()) return; } frame(o, now, LOW > 1 ? dt * 3 : dt); });
     requestAnimationFrame(loop); }
   new MutationObserver(scan).observe(document.documentElement, { childList: true, subtree: true });
   if (document.readyState !== "loading") scan(); else document.addEventListener("DOMContentLoaded", scan);
