@@ -1,6 +1,8 @@
 """Per-country tender intel: feeds/cty/{ISO}.json built from tenders/pipeline/awards feeds.
 Small files so each country page fetches only its own numbers."""
 import json, os, sys, datetime
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from deadline import is_open
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEEDS = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch", "feeds")
 CAP = 20e9  # drop implausible project totals (data-entry outliers)
@@ -16,7 +18,7 @@ def main():
         return out.setdefault(iso, {"t": [], "p": [], "a": [], "v": []})
     today = datetime.date.today().isoformat()
     for x in t.get("items", []):
-        if x.get("iso") and (x.get("deadline") or "9") >= today: slot(x["iso"])["t"].append(x)
+        if x.get("iso") and is_open(x): slot(x["iso"])["t"].append(x)   # real closing time (deadline_at), not just the date
     for x in p.get("items", []):
         if x.get("iso") and 0 < (x.get("usd") or 0) < CAP: slot(x["iso"])["p"].append(x)
     for x in a.get("items", []):
@@ -26,7 +28,7 @@ def main():
     d = os.path.join(FEEDS, "cty"); os.makedirs(d, exist_ok=True)
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     for iso, s in out.items():
-        T = sorted(s["t"], key=lambda x: x.get("deadline") or "9")
+        T = sorted(s["t"], key=lambda x: x.get("deadline_at") or x.get("deadline") or "9")
         P = sorted(s["p"], key=lambda x: -x["usd"])
         A = sorted(s["a"], key=lambda x: x.get("date") or "", reverse=True)
         V = sorted(s["v"], key=lambda x: -x["usd"])
@@ -36,7 +38,7 @@ def main():
         for x in A: by[x.get("wctry") or "?"] = by.get(x.get("wctry") or "?", 0) + 1
         kr = sum(1 for x in A if "korea" in (x.get("wctry") or "").lower())
         rec = {"updated": now,
-               "t": {"n": len(T), "items": [{k: x.get(k, "") for k in ("title", "buyer", "deadline", "url", "pg", "source")} for x in T[:5]]},
+               "t": {"n": len(T), "items": [{k: x.get(k, "") for k in ("title", "buyer", "deadline", "deadline_at", "url", "pg", "source")} for x in T[:5]]},
                "p": {"n": len(P), "usd": round(sum(x["usd"] for x in P)),
                      "items": [{"title": x["title"], "usd": x["usd"], "url": x["url"], "sec": x.get("wbsec", [])[:2]} for x in P[:6]]},
                "v": {"n": len(V), "usd": round(sum(x["usd"] for x in V)),
@@ -53,7 +55,7 @@ def main():
         except Exception: pass
     gaps.sort()
     A = a.get("items", []); P = [x for x in p.get("items", []) if 0 < (x.get("usd") or 0) < CAP]
-    T = [x for x in t.get("items", []) if (x.get("deadline") or "9") >= today]
+    T = [x for x in t.get("items", []) if is_open(x)]
     blips = {}
     for x in T:
         if x.get("iso"): blips[x["iso"]] = blips.get(x["iso"], 0) + 1

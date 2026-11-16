@@ -4036,9 +4036,14 @@
   "url_status": "200",
   "robots": "unknown",
   "checked": "2026-11-16",
-  "reuse_basis": "No licence stated in the API response or on the Open Contracting data registry entry; owner decision needed",
-  "reuse_url": "https://data.open-contracting.org/en/publication/154",
-  "reuse_checked": "2026-11-16"
+  "reuse_basis": "Not upgraded to PASS. ChatGPT cross-review 2026-11-16 cites prozorro.gov.ua/about (open data, distribution and commercial use) and the data.gov.ua Prozorro dataset (copy, publish, distribute and commercial use with a link to the source, Creative Commons Attribution). Claude could not open either page from its environment. The API itself states no licence.",
+  "reuse_url": "https://prozorro.gov.ua/about",
+  "reuse_checked": "2026-11-16",
+  "reuse_refs": [
+   "https://data.gov.ua/en/dataset/f9c0acdb-23c5-4a2d-b549-9868df8ca927",
+   "https://data.open-contracting.org/en/publication/154"
+  ],
+  "reuse_plan": "Keep minimal metadata + link to the official notice, credit \"Prozorro (Ukraine), official open data\"; owner or counsel confirms the data.gov.ua terms before PASS; no bulk redistribution of raw API data."
  },
  {
   "id": "NAT-KR-DAPA",

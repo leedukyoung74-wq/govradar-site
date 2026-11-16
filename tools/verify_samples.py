@@ -38,7 +38,8 @@ def _official(x):
         # official OCDS record by id (no page scraping, no browser user agent); both services rate-limit, so space calls
         import time; time.sleep(3)
         if s == "UK Find a Tender": u = "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/" + urllib.parse.quote(sid)
-        else: u = "https://www.contractsfinder.service.gov.uk/Published/Notice/OCDS/" + x["url"].rstrip("/").rsplit("/", 1)[-1]
+        # official release by notice id (GOV.UK open-contracting guidance: /Published/Notice/releases/{NoticeId}.json)
+        else: u = "https://www.contractsfinder.service.gov.uk/Published/Notice/releases/" + x["url"].rstrip("/").rsplit("/", 1)[-1] + ".json"
         code, b = http(u)
         if code == 429: return "RATE_LIMITED", "RATE_LIMITED", None
         try:
