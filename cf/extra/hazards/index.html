@@ -782,7 +782,7 @@ function draw(box,p,v,dec){var W=560,H=230,m={t:10,r:10,b:24,l:40};
    tip.style('display',null).style('left',(x(yy)*sc)+'px').style('top',(y(v[i])*sc)+'px').text(yy+' · '+fmt(v[i],dec)+' '+p.u[ko?0:1]+(ex&&ex[i]!=null?' · '+p.xt[ko?0:1]+' '+ex[i]:''))})
   .on('mouseleave',function(){tip.style('display','none');dot.style('display','none')})}
 /* index chart */
-var IX=P.filter(function(p){return p.k!=='temp'}),on={};IX.forEach(function(p){on[p.k]=true});
+var IX=[];P.forEach(function(p){if(p.k==='temp')return;if(p.x)IX.push({k:p.x,c:'#8fb3e8',t:['지진 (규모 6.0 이상)','Earthquakes M6.0+'],q6:1});IX.push(p)});var on={};IX.forEach(function(p){on[p.k]=true});
 var ctl=document.getElementById('tr-ctl');
 function idx(){var W=1160,H=320,m={t:12,r:12,b:26,l:46},box=d3.select('#tr-idx');box.html('');
  var S=IX.filter(function(p){return on[p.k]}).map(function(p){var v=T.s[p.k].v,b=avg(v,1951,1980)||avg(v,1959,1980);return{p:p,d:ma(v,5).map(function(z,i){return[Y[i],z==null?null:z/b*100]}).filter(function(d){return d[1]!=null})}});
@@ -794,7 +794,7 @@ function idx(){var W=1160,H=320,m={t:12,r:12,b:26,l:46},box=d3.select('#tr-idx')
  s.append('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',y(100)).attr('y2',y(100)).attr('stroke','var(--muted)').attr('stroke-dasharray','4 4');
  S.forEach(function(q){s.append('path').attr('fill','none').attr('stroke',q.p.c).attr('stroke-width',2.6).attr('d',d3.line().curve(d3.curveMonotoneX).x(function(d){return x(d[0])}).y(function(d){return y(d[1])})(q.d));
   var e=q.d[q.d.length-1];s.append('text').attr('x',x(e[0])-4).attr('y',y(e[1])-6).attr('text-anchor','end').attr('font-size',12).attr('font-weight',700).attr('fill',q.p.c).text(Math.round(e[1]))})}
-ctl.innerHTML=IX.map(function(p){return'<button aria-pressed="true" data-k="'+p.k+'"><i style="background:'+p.c+'"></i>'+(p.mt?(ko?'지진 (규모 7.0 이상)':'Earthquakes M7.0+'):p.t[ko?0:1].replace(/ \(.*\)$/,''))+'</button>'}).join('');
+ctl.innerHTML=IX.map(function(p){return'<button aria-pressed="true" data-k="'+p.k+'"><i style="background:'+p.c+'"></i>'+(p.mt?(ko?'지진 (규모 7.0 이상)':'Earthquakes M7.0+'):p.q6?p.t[ko?0:1]:p.t[ko?0:1].replace(/ \(.*\)$/,''))+'</button>'}).join('');
 ctl.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;var k=b.dataset.k;on[k]=!on[k];if(!IX.some(function(p){return on[p.k]}))on[k]=true;b.setAttribute('aria-pressed',on[k]);idx()};
 idx();})();
 
