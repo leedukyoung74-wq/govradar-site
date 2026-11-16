@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
         with: { ref: "${{ inputs.code_ref }}" }
       - uses: actions/checkout@v4
-        with: { ref: data, path: data_branch }
+        with: { ref: data, path: data_branch, fetch-depth: 50 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Offline tests first (stop before touching data if the code is broken)
@@ -36,6 +36,9 @@ jobs:
         run: python tools/feed_intel.py || echo "intel feed failed; keeping yesterday's files"
       - if: inputs.task == 'daily'
         run: python tools/feed_cty.py || echo "country files failed"
+      - name: Official situation feed (USGS, GDACS, NASA EONET, WHO, NASA JPL, NOAA) — no AI
+        if: inputs.task == 'daily'
+        run: python tools/feed_official.py || echo "official feed partly failed; failed agencies keep their last good items"
       - name: Weekly source registry check
         if: inputs.task == 'sources'
         run: python tools/probe_sources.py data_branch/feeds/sources_registry.json
@@ -46,10 +49,16 @@ jobs:
         if: ${{ !inputs.dry_run }}
         run: |
           cd data_branch
-          git add feeds
+          git add feeds hz/official.json
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Feed ${{ inputs.task }} $(date -u +%FT%H:%MZ)"
-          git push origin HEAD:data
+          # other jobs (situation summary, member data) also write to data: if one pushed meanwhile, replay on top of it.
+          # A real conflict on the same file stops here instead of overwriting the other job's work.
+          for i in 1 2 3; do
+            git push origin HEAD:data && exit 0
+            git fetch -q origin data && git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" rebase origin/data || { git rebase --abort; echo "conflict with another data job"; exit 1; }
+          done
+          exit 1
       # Checks run AFTER publishing so a flaky outside page cannot stop the daily update, but they are strict:
       # any mismatch, broken link, unreadable page or stale site feed marks this run FAILED (red) for follow-up.
       - name: Cross-check sample notices against official records (strict)
@@ -65,6 +74,7 @@ jobs:
           name: feeds-${{ inputs.task }}-${{ github.run_id }}
           path: |
             data_branch/feeds/tenders.json
+            data_branch/hz/official.json
             data_branch/feeds/sources_status.json
             data_branch/feeds/verify_samples.json
             data_branch/feeds/site_check.json

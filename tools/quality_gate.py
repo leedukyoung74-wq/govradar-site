@@ -50,6 +50,11 @@ def check(new, old, now=None):
     s = new.get("cty/_summary.json")
     if s is not None and ((s.get("t") or {}).get("n") or 0) < 0.9 * len([x for x in items if x.get("deadline", "") >= now.date().isoformat()]):
         bad.append("cty/_summary.json open-tender count does not match tenders.json")
+    o = new.get("hz/official.json")
+    if o is not None:
+        srcs = o.get("sources") or {}
+        if not srcs or not isinstance(o.get("items"), dict): bad.append("hz/official.json unreadable")
+        elif sum(1 for v in srcs.values() if v.get("ok")) == 0: bad.append("hz/official.json: no agency answered (all 6 failed)")
     return bad
 
 def published(path, d):
@@ -62,6 +67,7 @@ if __name__ == "__main__":
     names = ["tenders.json", "awards.json", "pipeline.json", "cty/_summary.json"]
     new = {k: load(os.path.join(d, "feeds", k)) for k in names}
     old = {k: published(k, d) for k in names}
+    if os.path.exists(os.path.join(d, "hz", "official.json")): new["hz/official.json"] = load(os.path.join(d, "hz", "official.json"))
     bad = check(new, old)
     print(json.dumps({"result": "FAIL" if bad else "PASS", "problems": bad,
                       "notices": len((new.get("tenders.json") or {}).get("items") or []),
