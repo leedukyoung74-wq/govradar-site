@@ -42,7 +42,8 @@ def page(L, sub, s):
                   '@media (max-width:760px){header>nav{gap:6px 10px!important;padding:6px 12px!important;min-height:0!important}header>nav>a img{height:34px!important}'
                   'header>nav>div:nth-child(2){order:3;flex:1 1 100%!important;flex-wrap:nowrap!important;justify-content:flex-start!important;overflow-x:auto;gap:18px!important;font-size:14px!important;padding:2px 0 6px;scrollbar-width:none;white-space:nowrap}'
                   'header>nav>div:nth-child(2)::-webkit-scrollbar{display:none}header>nav>div:nth-child(3){margin-inline-start:auto}}'
-                  '[id]{scroll-margin-top:84px}@media (max-width:760px){[id]{scroll-margin-top:110px}}</style></head>', 1)
+                  '[id]{scroll-margin-top:84px}@media (max-width:760px){[id]{scroll-margin-top:110px}}</style>'
+                  '<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector(\'header nav>div a[style*="8fb4ff"]\');if(a&&a.parentNode.scrollWidth>a.parentNode.clientWidth)a.parentNode.scrollLeft=a.offsetLeft-a.parentNode.offsetLeft-16})</script></head>', 1)
     return s
 if os.path.isdir(OUT): shutil.rmtree(OUT)
 for L in LANGS:
