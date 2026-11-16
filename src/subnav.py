@@ -11,6 +11,7 @@ LBL = {
  "consortium":{"ko":"컨소시엄","en":"Consortium","es":"Consorcio","fr":"Consortium","ar":"الكونسورتيوم","vi":"Liên danh","id":"Konsorsium"},
  "experts":   {"ko":"전문가 참여","en":"Experts","es":"Expertos","fr":"Experts","ar":"الخبراء","vi":"Chuyên gia","id":"Pakar"},
  "partners":  {"ko":"협력 참여","en":"Partners","es":"Socios","fr":"Partenaires","ar":"الشركاء","vi":"Đối tác","id":"Mitra"},
+ "win":       {"ko":"수주 센터","en":"Win centre","es":"Centro para ganar","fr":"Centre pour gagner","ar":"مركز الفوز بالعقود","vi":"Trung tâm trúng thầu","id":"Pusat menang tender"},
  "notices":   {"ko":"공지","en":"Notices","es":"Avisos","fr":"Annonces","ar":"إعلانات","vi":"Thông báo","id":"Pengumuman"},
  "solutions": {"ko":"진출 지원","en":"Go global","es":"Expansión","fr":"S'implanter","ar":"التوسع الدولي","vi":"Ra quốc tế","id":"Ekspansi global"},
  "gcsme":     {"ko":"GCSME","en":"GCSME","es":"GCSME","fr":"GCSME","ar":"GCSME","vi":"GCSME","id":"GCSME"},
@@ -32,12 +33,12 @@ LBL = {
 }
 GROUPS = {
  "map":    ["map", "list", "sample", "request", "notices"],
- "biz":    ["mdb", "projects", "consortium", "experts", "partners", "notices"],
+ "biz":    ["mdb", "win", "projects", "consortium", "experts", "partners", "notices"],
  "go":     ["solutions", "gcsme", "request", "sample", "contracts"],
  "world":  ["conflict", "hazards", "cyber", "alerts", "ready", "prepare", "signals"],
  "member": ["pricing", "member", "account", "request", "about", "legal"],
 }
-SEG2G = {"mdb":"biz","projects":"biz","consortium":"biz","experts":"biz","partners":"biz","notices":"biz",
+SEG2G = {"mdb":"biz","win":"biz","projects":"biz","consortium":"biz","experts":"biz","partners":"biz","notices":"biz",
          "solutions":"go","gcsme":"go","request":"go","sample":"go","contracts":"go",
          "conflict":"world","ready":"world","prepare":"world",
          "pricing":"member","member":"member","account":"member","about":"member","legal":"member"}

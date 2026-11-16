@@ -62,7 +62,12 @@ def worldbank():
             if not title: continue
             out.append({"iso": iso, "title": title[:220], "buyer": str(r.get("contact_organization") or r.get("project_name") or "")[:160],
                         "deadline": dl, "url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/" + str(r.get("id")),
-                        "source": "World Bank", "type": nt, "project": str(r.get("project_name") or "")[:160]})
+                        "source": "World Bank", "type": nt, "project": str(r.get("project_name") or "")[:160],
+                        # for the per-tender "what to prepare" box: method (RFB/RFP/RFQ/QCBS...), group (GO goods, CW works, CS consulting, NC non-consulting),
+                        # market approach (international/national) and the buyer's estimate when published
+                        "pm": str(r.get("procurement_method_code") or ""), "pmn": str(r.get("procurement_method_name") or "")[:60],
+                        "pg": str(r.get("procurement_group") or ""), "ma": str(r.get("market_approach_name") or "")[:40],
+                        "est": str(r.get("bid_estimate_amount") or ""), "cur": str(r.get("bid_currency_code") or "")})
         oldest = str(rows[-1].get("submission_date") or "")[:10]
         if oldest and oldest < (TODAY - datetime.timedelta(days=120)).isoformat(): break
     return out

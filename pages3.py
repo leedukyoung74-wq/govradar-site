@@ -438,14 +438,39 @@ var ul=document.querySelector(".dl[data-feed]");if(!ul)return;fetch("https://raw
 var L=ul.dataset.l,have={},es=function(x){return String(x||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};ul.querySelectorAll("a.src").forEach(function(a){have[a.href]=1});
 var lis=[].slice.call(ul.children),add=0,wk=new Date(t);wk.setDate(wk.getDate()-7);
 (j.items||[]).forEach(function(x){if(have[x.url])return;var d=new Date(x.deadline+"T00:00:00"),n=Math.round((d-t)/864e5);if(n<0)return;var nw=new Date(x.added+"T00:00:00")>=wk;
-var li=document.createElement("li");li.className=(nw?"new ":"")+(n<=15?"hot":"");li.dataset.s=(x.sec||[]).join(" ")||"other";li.dataset.dl=x.deadline;
+var li=document.createElement("li");li.className=(nw?"new ":"")+(n<=15?"hot":"");li.dataset.s=(x.sec||[]).join(" ")||"other";li.dataset.dl=x.deadline;li.dataset.pg=x.pg||"";li.dataset.pm=x.pm||"";li.dataset.est=x.est&&x.cur==="USD"?x.est:"";
 li.innerHTML='<span class="dd'+(n<=15?" soon":"")+'">'+x.deadline.slice(5).replace("-","/")+(nw?'<em class="nb">'+ul.dataset.nw+'</em>':'')+"<i>D-"+(n||"day")+'</i></span><span class="tt"><a href="/'+L+'/'+x.slug+'/#tenders"><span class="fi fi-'+x.iso.toLowerCase()+'" aria-hidden="true"></span> '+es((x.n||{})[L]||(x.n||{}).en||x.iso)+'</a><b>'+es(x.title)+'</b><small>'+es(x.buyer)+' · ⚙ '+es(ul.dataset.au)+'</small></span><a class="src" href="'+es(x.url)+'" target="_blank" rel="noopener nofollow">'+ul.dataset.sr+' ↗</a>';
 var at=lis.find(function(o){return o.dataset.dl&&o.dataset.dl>x.deadline});ul.insertBefore(li,at||null);add++});
 var on=document.querySelector(".dlf .chip.on");if(on)f(on.dataset.s);var c=document.querySelector(".dfc");if(c&&add)c.textContent=c.dataset.t.replace("{n}",add).replace("{d}",String(j.updated||"").slice(0,10))}).catch(function(){})})();</script>'''
     leg = '<p class="dleg"><span class="lg-new">' + pt("lg_new", L) + '</span><span class="lg-hot">' + pt("lg_hot", L) + "</span></p>"
     feed = "" if home else f' data-feed="1" data-l="{L}" data-nw="{pt("new", L)}" data-sr="{"원문" if ko else "Notice"}" data-au="{pt("auto", L)}"'
     leg += "" if home else f'<p class="note dfc" data-t="{e(pt("autoc", L))}"></p>'
-    return f'{chips}{leg}<ul class="dl"{feed}>{rows or "<li>—</li>"}</ul>' + (tier_cta(L, "tenders", "", nlk) if nlk else "") + js
+    return f'{chips}{leg}<ul class="dl"{feed}>{rows or "<li>—</li>"}</ul>' + (tier_cta(L, "tenders", "", nlk) if nlk else "") + js + ("" if home else PREP_JS)
+
+
+PREP_JS = r"""<script>(function(){var ul=document.querySelector(".dl[data-feed]");if(!ul)return;var L=ul.dataset.l,ko=L==="ko";
+var W=ko?{btn:"준비할 것",type:{CW:"공사",GO:"물품",CS:"컨설팅",NC:"일반 용역"},tl:"유형",gs:"제목으로 판단",sch:"마감까지 역산 일정",docs:"보통 필요한 서류",jv:"파트너",fit:"적합도 검토 주문 (100,000원)",par:"현지 파트너 찾기",win:"수주 7단계 보기",
+ s:[[21,"참여 여부 판단: 자격 요건과 회사 실적 대조"],[14,"자격 서류 확보 · 현지 파트너 확정"],[7,"제안서·입찰서 완성"],[3,"내부 검토 · 입찰보증서 발급"],[1,"제출 (시간대 확인)"]],
+ short:"남은 기간이 짧습니다. 오늘 참여 여부를 정하고 서류부터 모으세요.",
+ d:{CW:["입찰보증서","최근 5년 유사 공사 실적","최근 3년 재무제표","장비·핵심 인력 계획","현지 등록 또는 공동수급(JV) 협약서"],GO:["기술사양 적합표","제조사 공급 승인서(MAF)","가격·납기 견적","유사 납품 실적","제품 인증서"],CS:["관심표명서(EOI) 또는 제안서","회사 유사 실적","핵심 인력 이력서","방법론·업무 계획","현지 협력사 협약"],NC:["회사 실적","인력·장비 계획","가격 견적","보험·면허 증빙"]},
+ jvy:"공사·대형 사업은 현지 등록업체와 공동수급(JV)을 검토하세요.",jvn:"현지 협력사가 있으면 평가·실행에 유리한 경우가 많습니다."}
+:{btn:"What to prepare",type:{CW:"Works",GO:"Goods",CS:"Consulting",NC:"Non-consulting"},tl:"Type",gs:"judged from the title",sch:"Schedule counted back from the deadline",docs:"Documents usually required",jv:"Partner",fit:"Order a fit review (₩100,000)",par:"Find a local partner",win:"See the 7 steps",
+ s:[[21,"Go/no-go: check eligibility against your record"],[14,"Collect eligibility documents · confirm local partner"],[7,"Finish the proposal or bid"],[3,"Internal review · issue the bid security"],[1,"Submit (check the time zone)"]],
+ short:"Little time left. Decide today and start with the documents.",
+ d:{CW:["Bid security","Similar works in the last 5 years","Financial statements, last 3 years","Equipment and key staff plan","Local registration or joint-venture agreement"],GO:["Technical compliance sheet","Manufacturer's authorisation (MAF)","Price and delivery quote","Similar supply record","Product certificates"],CS:["Expression of interest or proposal","Similar assignments","CVs of key experts","Methodology and work plan","Agreement with a local firm"],NC:["Company record","Staff and equipment plan","Price quote","Insurance and licences"]},
+ jvy:"For works and large projects, consider a joint venture with a locally registered firm.",jvn:"A local partner often helps in evaluation and delivery."};
+function guess(t){t=t.toLowerCase();if(/consult|용역|진단|수립|마스터플랜|연구|조사|technical assistance|\bta\b|study|assessment|design|audit|evaluation|advisor|expert|컨설팅|자문|설계|평가|감사|전문가/.test(t))return"CS";if(/construct|rehabilit|works|road|bridge|building|civil|공사|개보수|건설|개량|도로/.test(t))return"CW";if(/supply|equipment|procure|purchase|deliver|공급|장비|구매|설치/.test(t))return"GO";return""}
+var t0=new Date();t0.setHours(0,0,0,0);
+function box(li){var tt=(li.querySelector(".tt b")||{}).textContent||"",g=li.dataset.pg||"",gs=0;if(!W.type[g]){g=guess(tt)||"GO";gs=1}
+var n=Math.round((new Date(li.dataset.dl+"T00:00:00")-t0)/864e5),est=+li.dataset.est||0,h='<div class="pp"><p><b>'+W.tl+"</b> "+W.type[g]+(li.dataset.pm?" · "+li.dataset.pm:"")+(gs?' <small>('+W.gs+")</small>":"")+"</p>";
+h+="<p><b>"+W.sch+"</b></p><div class=\"pl\">";var any=0;W.s.forEach(function(s){if(s[0]<=n){var d=new Date(li.dataset.dl+"T00:00:00");d.setDate(d.getDate()-s[0]);h+="<div><span>D-"+s[0]+" · "+(d.getMonth()+1)+"/"+d.getDate()+"</span> "+s[1]+"</div>";any=1}});h+="</div>";if(!any||n<10)h+='<p class="pw">'+W.short+"</p>";
+h+="<p><b>"+W.docs+"</b></p><div class=\"pd\">"+W.d[g].map(function(x){return"<span>"+x+"</span>"}).join("")+"</div><p><b>"+W.jv+"</b> "+(g==="CW"||est>5e6?W.jvy:W.jvn)+"</p>";
+h+='<p class="pa"><a class="btn pri" href="/'+L+'/pricing/?p=fit#order">'+W.fit+'</a> <a class="btn" href="/'+L+'/consortium/">'+W.par+'</a> <a class="btn" href="/'+L+'/win/#steps">'+W.win+"</a></p></div>";return h}
+function add(li){if(li.querySelector(".pb")||!li.dataset.dl||li.classList.contains("lk"))return;var b=document.createElement("button");b.type="button";b.className="pb";b.textContent=W.btn+" ▾";b.setAttribute("aria-expanded","false");
+b.addEventListener("click",function(){var o=li.querySelector(".pp");if(o){o.remove();b.setAttribute("aria-expanded","false");return}li.insertAdjacentHTML("beforeend",box(li));b.setAttribute("aria-expanded","true")});li.appendChild(b)}
+[].forEach.call(ul.children,add);new MutationObserver(function(ms){ms.forEach(function(m){[].forEach.call(m.addedNodes,function(x){if(x.nodeType===1&&x.tagName==="LI")add(x)})})}).observe(ul,{childList:true})})();</script>
+<style>.dl .pb{grid-column:1/-1;justify-self:start;width:auto;font:inherit;font-size:12.5px;background:#fff;border:1px solid #c5cad3;padding:4px 12px;cursor:pointer;border-radius:14px;margin:2px 0 0}.dl .pp{grid-column:1/-1;background:#f6f7f9;border-left:3px solid #c9a45c;padding:12px 16px;margin:8px 0 4px;font-size:14px;line-height:1.6}
+.dl .pp p{margin:0 0 6px}.dl .pp .pl{margin:0 0 10px}.dl .pp .pl div{padding:2px 0}.dl .pp .pl span{display:inline-block;min-width:104px;font-weight:700;color:#0b1f3a}.dl .pp .pd{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}.dl .pp .pd span{background:#fff;border:1px solid #dfe3e8;padding:3px 9px;font-size:13px}.dl .pp .pw{color:#b0263a;font-weight:700}.dl .pp .pa .btn{margin:4px 6px 0 0}</style>"""
 
 # ---------------------------------------------------------------- country "what you can do now" box
 def next_box(iso, L, C, d):

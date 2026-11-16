@@ -4,7 +4,7 @@ on:
     - cron: "10 21 * * *"   # 06:10 Asia/Seoul every day
   push:
     branches: [src]
-    paths: [".github/workflows/tenders.yml", "tools/feed_tenders.py"]
+    paths: [".github/workflows/tenders.yml", "tools/feed_tenders.py", "tools/feed_intel.py"]
 permissions:
   contents: write
 concurrency: { group: tender-feed, cancel-in-progress: false }
@@ -19,6 +19,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: python tools/feed_tenders.py
+      - run: python tools/feed_intel.py || echo "intel feed failed; keeping yesterday's files"
       - name: Publish to data branch
         run: |
           cd data_branch

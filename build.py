@@ -629,7 +629,7 @@ def ticker(L):
 
 def purpose3(L):
     xs = PZ.get(L) or PZ["en"]
-    hrefs = [f"/{L}/mdb/", f"/{L}/ready/", f"/{L}/consortium/"]
+    hrefs = [f"/{L}/win/", f"/{L}/ready/", f"/{L}/consortium/"]
     ic = ["📑", "🛡️", "🤝"]
     return '<div class="pz">' + "".join(f'<a class="pz-b" href="{h}"><b>{e(t)} →</b><span>{e(d)}</span></a>' for (t, d), h, i in zip(xs, hrefs, ic)) + "</div>"
 
@@ -739,6 +739,7 @@ def mlock(L, f, sid, parts, wrap=("<ul>", "</ul>"), n=FREE_N):
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import cyber_data as CY
 import src_title_en as STE
+import win as WIN
 import alerts_build as AB
 CYB_T = {"ko": ("사이버 공격 — 지금 주목할 사건", "실제 공격과 단순 장애를 구분해 정리했습니다. 유형 12가지, 역대 사건, 가정·기업·정부 준비 사항은 사이버 공격 페이지에 있습니다.", "사이버 공격 전체 보기 →", "이 나라 관련 사이버 사건"),
  "en": ("Cyberattacks — incidents to watch", "Real attacks are separated from plain outages. Twelve kinds of attack, landmark cases and preparation steps are on the cyberattack page.", "See the full cyberattack page →", "Cyber incidents involving this country"),
@@ -827,13 +828,14 @@ def home(L):
 <div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b>{n_t}</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span></div><div><b>{e(last[5:].replace('-','/') or '—')}</b><span>{e(t['k_last'])}</span></div></div>
 </div></section>
 {ticker(L)}
+<section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=6, home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
+{WIN.win_band(L, C3())}
+<section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
+{sample_band(L)}
 <section class="band" id="map"><div class="in"><h2>{e(t['map_h'])}</h2>
 <div class="mapbox"><div id="wmap" data-lang="{L}"></div></div>
 <div class="filters"><input id="q" type="search" autocomplete="off" list="qlist" placeholder="{e(t['search'])}" aria-label="{e(t['search'])}"><datalist id="qlist">{"".join(f'<option value="{e(nm(c["iso"],L))}">' for c in sorted(META, key=lambda c: nm(c["iso"], L)))}</datalist><button class="chip on" data-r="ALL">{e(t['all'])}</button>{regions}</div>
 <div class="gwrap" id="gwrap"><div class="grid" id="grid">{grid}</div></div><p class="cta"><button class="btn" type="button" id="gmore" data-a="{e(GM.get(L, GM['en'])[0])}" data-b="{e(GM.get(L, GM['en'])[1])}">{e(GM.get(L, GM['en'])[0])}</button></p>{region_block(L)}</div></section>
-<section class="band alt" id="deadlines"><div class="in"><h2>{"마감이 다가오는 입찰" if L=="ko" else "Tenders closing soon"}</h2><p class="note">{"원문 공고 기준 · 분야별로 보려면 입찰·마감 보드로" if L=="ko" else "Dates from the original notices · filter by field on the tender board"}</p>{P3.deadline_board(L, C3(), limit=6, home=True)}<p class="cta"><a class="btn" href="/{L}/mdb/#past">{P3.pt("all", L)}</a></p><p class="cta"><a class="btn pri" href="/{L}/mdb/#deadlines">{"입찰·마감 보드 전체 보기" if L=="ko" else "Open the full tender board"}</a> <button class="btn" data-auth="signup">{e(t['cta_join'])}</button></p></div></section>
-<section class="band" id="board"><div class="in"><h2>{e(t['board_h'])}</h2><p class="note">{e(t['board_p'])}</p><div class="board">{board}</div></div></section>
-{sample_band(L)}
 <section class="band alt" id="world-now"><div class="in">{liveboard(L, "home")}<p class="cta"><a class="btn" href="/{L}/conflict/">{"전쟁·분쟁·자연재해·감염병 상황판 전체 보기" if L=="ko" else "Open the full war, disaster & outbreak board"}</a> {hz_link(L)}{' <a class="btn" href="/signals/">이코노미스트 표지·심슨·7인 전망 읽기 →</a>' if L=="ko" else f' <a class="btn" href="/signals/en/">Economist covers, Simpsons claims &amp; seven outlooks →</a>'}</p></div></section>
 {hz_band(L)}
 {cyber_band(L)}
@@ -958,6 +960,7 @@ def build():
         W(f"/{L}/individuals/index.html", P3.individuals_page(L, C3())); urls.append((f"/{L}/individuals/", {l: f"/{l}/individuals/" for l in LANGS}))
         W(f"/{L}/notices/index.html", P3.notices_page(L, C3())); urls.append((f"/{L}/notices/", {l: f"/{l}/notices/" for l in LANGS}))
         W(f"/{L}/solutions/index.html", P3.solutions_page(L, C3())); urls.append((f"/{L}/solutions/", {l: f"/{l}/solutions/" for l in LANGS}))
+        W(f"/{L}/win/index.html", WIN.win_page(L, C3())); urls.append((f"/{L}/win/", {l: f"/{l}/win/" for l in LANGS}))
         W(f"/{L}/membership/index.html", P3.membership_page(L, C3())); urls.append((f"/{L}/membership/", {l: f"/{l}/membership/" for l in LANGS}))
         W(f"/{L}/pricing/index.html", P3.pricing_page(L, C3(), PLANS, PLAN_NOTE)); urls.append((f"/{L}/pricing/", {l: f"/{l}/pricing/" for l in LANGS}))
         W(f"/{L}/projects/index.html", P2.projects_page(L, head, foot, e, LANGS, flag, vbh)); urls.append((f"/{L}/projects/", {l: f"/{l}/projects/" for l in LANGS}))
