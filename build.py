@@ -868,6 +868,8 @@ def region_block(L):
 def home(L):
     t = T[L]; path = f"/{L}/"; alts = {l: f"/{l}/" for l in LANGS}
     n_done = sum(done(i) for i in BY if not is_reg(i)); n_t = sum(len(DATA.get(i, {}).get("tenders") or []) for i in BY)
+    _tn = P3._today_n()[0].get("open")
+    if isinstance(_tn, int): n_t = _tn   # same number the live refresh shows (open tenders in the daily feed), not only those in country reports
     O = opps(); n_b = len(O); last = max([max(d.get("updated", "") or "", ((d.get("risk") or {}).get("checked") or "")) for d in DATA.values()] or [""])
     regions = "".join(f'<button class="chip" data-r="{k}">{e(v)}</button>' for k, v in t["regions"].items())
     grid = "".join(f'<a class="flag {"done" if done(c["iso"]) else ""}" data-r="{c["r"]}" data-n="{e((nm(c["iso"],L)+" "+c["en"]+" "+c["ko"]).lower())}" href="{url(L,c["iso"])}">{flag(c["iso"])}<span>{e(nm(c["iso"],L))}</span>{f"<i class=rk data-l={lvl(c[chr(105)+chr(115)+chr(111)])}></i>" if lvl(c["iso"]) in ("high","medium") else ""}</a>'
