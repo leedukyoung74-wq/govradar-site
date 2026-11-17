@@ -10,6 +10,7 @@ if [ -f data_branch/m/vault.json ] && git -C data_branch fetch -q origin data 2>
     echo "STOP: newer saved data exists (data branch m/vault.json). Run: git -C data_branch pull -q origin data && python3 tools/vault.py unpack, then rebuild."; exit 1; fi
 fi
 python3 tools/signals_i18n.py || exit 1
+python3 tools/orgs.py || exit 1   # one 'three entities' block for welcome + main
 python3 tools/welcome_i18n/build.py || exit 1
 python3 tools/alerts_build.py || exit 1
 python3 tools/cyber_build.py || exit 1

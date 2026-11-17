@@ -9,6 +9,7 @@ Usage : python3 build.py [--base https://radar.wmm-hoa.com]
 import json, glob, os, re, sys, shutil, html, unicodedata, datetime
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 from i18n import LANGS, LANG_NAME, RTL, T, INDUSTRIES, X
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools")); import orgs as ORGS   # shared 'three entities' showcase
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 from i18n2 import AT, NAV, MENU, PREP_T, LANG_SHORT, PLANS, PLAN_NOTE
 CT = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "content.json"), encoding="utf8"))
@@ -902,7 +903,7 @@ def home(L):
 {ready_band(L)}
 {P3.edge_html(L)}{P3.access_html(L)}
 <section class="band segband"><div class="in"><h2>{"이런 분들이 여기서 사업을 만듭니다" if L=="ko" else "Who does business here"}</h2>{P3.segments_html(L, L=="ko")}<p class="cta"><a class="btn pri" href="/{L}/solutions/">{"분야별로 무엇을 얻는지 보기" if L=="ko" else "See what each sector offers"}</a> <a class="btn" href="/{L}/individuals/">{"개인으로 참여하기" if L=="ko" else "Join as an individual"}</a> <a class="btn" href="/{L}/pricing/">{"주문·요금" if L=="ko" else "Orders & pricing"}</a></p></div></section>
-<section class="band" id="events"><div class="in"><h2>{e(t['ev_h'])}</h2>{evh}</div></section>
+<section class="band" id="events"><div class="in"><h2>{e(t['ev_h'])}</h2>{evh}</div></section>{ORGS.html(L)}
 
 """ + foot(L)
 
