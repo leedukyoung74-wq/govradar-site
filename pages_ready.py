@@ -150,7 +150,7 @@ def body(L):
     # moving clips (same canvas scenes as the home page and /hazards/), one per hazard tab
     HZK = {"war": "war", "famine": "drought", "epidemic": "epidemic", "volcano": "volcano", "earthquake": "quake", "tsunami": "tsunami", "wildfire": "wildfire",
            "asteroid": "impact", "radiation": "radiation", "flood": "flood", "heat": "heat", "cold": "cold", "outage": "outage"}
-    clip = lambda hid, lab: (f'<figure class="hzc hz-{HZK[hid]}"><div class="hzc-v v2"><i class="hzc-sw"></i><i class="hzc-rg"></i>'
+    clip = lambda hid, lab: (f'<figure class="hzc hz-{HZK[hid]}"' + (f' data-hzk="{HZK[hid]}" data-hzl="{L}"' if HZK[hid] != "radiation" else "") + '><div class="hzc-v v2"><i class="hzc-sw"></i><i class="hzc-rg"></i>'
                              f'<canvas class="hzcv" data-k="{HZK[hid]}" aria-hidden="true"></canvas><span class="hzc-tag">{e(lab)}</span></div></figure>') if hid in HZK else ART.scene(hid)
     tabs = "".join(f'<button role="tab" data-hz="{h[0]}"{" class=on" if i == 0 else ""}>{e(h[1] if ko else h[2])}</button>' for i, h in enumerate(RC.HZ))
     panes = ""
@@ -161,7 +161,7 @@ def body(L):
 <table class="rd-t rd-mini">{plan}</table><p class="rd-caution">{e(ck if ko else ce)}</p><p class="note">{src(ids)}</p></div></article>'''
     out.append(f'''<section class="rd-sec" id="hazards"><div class="rd-in">
 <h2>{t("재난별 행동과 준비", "Actions and preparation by hazard")}</h2>
-<div class="rd-tabs" role="tablist">{tabs}</div>{panes}<script src="/hazards/hzfx.js" defer></script><script src="/hazards/hzfx2.js" defer></script>
+<div class="rd-tabs" role="tablist">{tabs}</div>{panes}<script src="/hazards/hzfx.js" defer></script><script src="/hazards/hzfx2.js" defer></script><script src="/hazards/hzstory.js" defer></script>
 <p class="note">{t("영아·고령자·장애·만성질환·반려동물은 개인별 준비가 따로 필요합니다. 처방약 여분과 냉장약 보관, 전기의료기기 예비전원은 의료진과 상의하세요.", "Infants, older people, disability, chronic illness and pets need individual plans. Discuss spare prescriptions, cold-chain medicines and backup power for medical devices with a clinician.")} {src([6, 7, 8])}</p>
 </div></section>''')
     # ORG
