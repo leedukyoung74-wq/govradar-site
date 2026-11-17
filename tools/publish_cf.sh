@@ -2,6 +2,13 @@
 # 사이트 업데이트를 Cloudflare(live 브랜치)에만 올림 — Netlify 크레딧 0
 set -e
 cd /home/claude/site
+# Guard (2026-11-17): never publish with country data older than the newest saved vault — a manual publish
+# from a stale working folder rolled back the daily country refresh once. Fix: python3 tools/vault.py unpack
+if [ -f data_branch/m/vault.json ] && git -C data_branch fetch -q origin data 2>/dev/null; then
+  R=$(git -C data_branch show origin/data:m/vault.json 2>/dev/null | sha256sum | cut -d' ' -f1)
+  if [ -n "$R" ] && [ "$R" != "$(cat private/.vault_sha 2>/dev/null)" ]; then
+    echo "STOP: newer saved data exists (data branch m/vault.json). Run: git -C data_branch pull -q origin data && python3 tools/vault.py unpack, then rebuild."; exit 1; fi
+fi
 python3 tools/signals_i18n.py || exit 1
 python3 tools/welcome_i18n/build.py || exit 1
 python3 tools/alerts_build.py || exit 1
