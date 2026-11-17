@@ -355,6 +355,24 @@ def wmm_ladder(L):
     return (f'<section class="band" id="wmm-membership"><div class="in"><h2>{h}</h2><p class="note">{n}</p>'
             f'<div class="tscroll"><table class="tiers">{li}</table></div>'
             f'<p class="cta"><a class="btn pri" href="{WMM_MS}{"?lang=ko" if ko else "?lang=en"}" target="_blank" rel="noopener">{b}</a> <a class="btn" href="/{L}/membership/">{"멤버십 등급·혜택 자세히 보기" if ko else "Membership grades & benefits in detail"}</a></p></div></section>')
+# Customers outside Korea (2026-11-14 review: reply language, reply time, support countries, Korea vs overseas) — conservative wording
+GLOBAL_INFO = [
+ ("응대 언어", "Languages we answer in", "문의 답변과 결과물은 한국어 또는 영어로 드립니다. 스페인어·프랑스어·아랍어·베트남어·인도네시아어 화면은 읽기용 번역이며, 상담은 한국어·영어로 합니다.",
+  "Replies and deliverables are in Korean or English. The Spanish, French, Arabic, Vietnamese and Indonesian pages are reading translations; consultations are in Korean or English."),
+ ("회신 시간", "When we reply", "한국 시간(KST, UTC+9) 기준 영업일 1~2일 안에 접수 확인 메일을 보냅니다. 주말과 한국 공휴일은 영업일에서 빠집니다.",
+  "We confirm receipt within one to two business days, Korea time (KST, UTC+9). Weekends and Korean public holidays are not business days."),
+ ("지원 방식과 나라", "How and where we help", "지원은 온라인으로 합니다. 분석은 193개국의 공개 자료를 근거로 하며, 모든 나라에서 같은 현지 지원을 하지는 않습니다. 현지 파트너 연결은 상담 뒤 가능한 나라에서만 안내합니다.",
+  "Support is online. Analysis draws on public information for 193 countries; we do not offer the same local support everywhere. Local partner introductions are offered after a consultation, only where available."),
+ ("가격과 결제", "Prices and payment", "가격은 원화 기준입니다(분석 회원 월 19,800원). 해외 기업은 견적을 요청하면 통화와 결제 방법을 견적서로 안내합니다. GCSME 회원사는 회원가 페이지를 이용하세요.",
+  "Prices are in Korean won (analysis membership KRW 19,800 a month). Companies outside Korea receive the currency and payment method on the quote. GCSME member companies can use the member-price page."),
+]
+def global_info(L, e):
+    ko = L == "ko"
+    cards = "".join(f'<div class="card"><h3>{e(a if ko else b)}</h3><p>{e(c if ko else d)}</p></div>' for a, b, c, d in GLOBAL_INFO)
+    return (f'<section class="band" id="global"><div class="in"><h2>{"한국 밖에서 이용하는 고객께" if ko else "For customers outside Korea"}</h2>'
+            f'<p class="note">{"무료 가입과 사이트 열람은 어느 나라에서나 같습니다. 아래는 상담·의뢰·결제에 관한 안내입니다." if ko else "Free sign-up and browsing are the same in every country. The notes below cover consultations, requests and payment."}</p>'
+            f'<div class="grid g4" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px">{cards}</div><p class="cta"><a class="btn" href="/{L}/gcsme/">{"GCSME 회원가 보기" if ko else "GCSME member prices"} →</a></p></div></section>')
+
 def pricing_page(L, C, PLANS, PLAN_NOTE):
     ko = L == "ko"; e = C["e"]
     offers = [
@@ -391,7 +409,7 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
 <h2>{"무료·분석 회원·파트너십 비교" if ko else "Free, analysis membership and partnership"}</h2><p class="note"><a href="/{L}/how/">{"신청 후 진행 순서·납기·고객 약속 보기 →" if ko else "How it works: steps, turnaround and our promises →"}</a></p><p class="note">{"무료로 가입하면 193개국 지도·요약·상황판·재난 대비를 보고, 각 나라의 사업·입찰·일정은 앞부분만 볼 수 있습니다. 전체 목록과 AI 분석·알림은 분석 회원(M1, 월 19,800원)부터, 사람이 하는 판단(적합도·브리프)과 직접 만나 함께하는 프로젝트 파트너십은 별도입니다." if ko else "Free sign-up shows the map, summaries, situation board and preparedness for 193 countries, plus the first items of each country's programmes, tenders and events. Full lists, AI analysis and alerts start at the analysis membership (M1, ₩19,800/month); human judgement (fit reviews, briefs) and in-person project partnerships are separate."}</p>{tier_table(L)}</div></section>
 {wmm_ladder(L)}<section class="band"><div class="in"><h2>{"지금 주문할 수 있는 것" if ko else "Available now"}</h2><div class="offers">{orows}</div></div></section>
 <section class="band alt"><div class="in"><h2>{"주문하면 이렇게 진행됩니다" if ko else "How an order works"}</h2><ol class="flow">{"".join(f"<li>{x}</li>" for x in steps)}</ol></div></section>
-<section class="band alt" id="order"><div class="in narrow"><h2>{"신청서" if ko else "Request form"}</h2>
+{global_info(L, e)}<section class="band alt" id="order"><div class="in narrow"><h2>{"신청서" if ko else "Request form"}</h2>
 <form class="cform" name="order" method="POST" data-netlify="true" netlify-honeypot="hp" action="/{L}/thanks/"><input type="hidden" name="form-name" value="order"><p hidden><input name="hp"></p><input type="hidden" name="lang" value="{L}">
 <div class="two"><label>{"신청 상품" if ko else "Product"}<select name="product" id="o-prod">{prod_opts}</select></label><label>{"관심 나라 (여러 곳 가능)" if ko else "Countries (several OK)"}<input name="countries" id="o-cty" required></label></div>
 <div class="two"><label>{"회사·기관명" if ko else "Company / organisation"}<input name="org" required></label><label>{"담당자 이름" if ko else "Contact name"}<input name="name" required></label></div>
@@ -607,6 +625,8 @@ FAQ = [
  ("여러 명이 같이 써도 되나요?", "Can several people use it?", "분석 회원은 1명 기준입니다. 여러 명이 쓰려면 기관 라이선스를 권합니다.", "An analysis membership is for one person. For teams, choose an institutional licence."),
  ("무료 가입으로는 어디까지 보나요?", "What does a free sign-up show?", "193개국 지도·나라별 요약·상황판·재난 대비는 모두 보고, 각 나라의 정부 사업·입찰·일정은 앞부분(항목별 2건, 일정 3건)만 봅니다. 전체 목록과 분석·알림은 분석 회원(M1, 월 19,800원)부터 열립니다.", "The map, country summaries, situation board and preparedness for 193 countries, plus the first items of each country's programmes, tenders and events (2 per section, 3 events). Full lists, analysis and alerts open from the analysis membership (M1, ₩19,800/month)."),
  ("정보가 틀리면요?", "What if something is wrong?", "73036396@naver.com 으로 알려 주세요. 영업일 2일 안에 확인해 고치고 정정 기록을 남깁니다.", "Email 73036396@naver.com. We check and correct within two business days and log the correction."),
+ ("한국 밖에서도 이용할 수 있나요?", "Can I use it from outside Korea?", "네. 무료 가입과 열람은 어느 나라에서나 같습니다. 상담과 결과물은 한국어 또는 영어로, 접수 확인은 한국 시간 기준 영업일 1~2일 안에 드립니다. 지원은 온라인이며 현지 파트너 연결은 가능한 나라에서만 안내합니다.", "Yes. Sign-up and browsing are the same everywhere. Consultations and deliverables are in Korean or English, and we confirm receipt within one to two business days, Korea time. Support is online; local partner introductions are offered only where available."),
+ ("해외 기업은 어떻게 결제하나요?", "How do companies outside Korea pay?", "견적을 요청하시면 통화와 결제 방법을 견적서로 안내합니다. GCSME 회원사는 회원가 페이지에서 신청하세요.", "Request a quote and we state the currency and payment method on it. GCSME member companies can apply on the member-price page."),
  ("해외 입찰을 대신 내 주나요?", "Do you submit bids for us?", "입찰 참여 결정과 제출은 고객이 합니다. 우리는 정보·적합도 검토·제안서 초안·파트너 연결을 돕습니다.", "You decide and submit. We help with information, fit reviews, draft proposals and partner introductions."),
 ]
 def how_page(L, C):
