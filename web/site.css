@@ -890,3 +890,6 @@ html{scroll-padding-top:116px}
 .rd-acts{display:flex;gap:8px;flex-wrap:wrap}.rd-acts .rd-btn{margin:0}
 .rd-lbl{display:block;font-weight:700;margin:12px 0 4px}.rd-lbl select{display:block;width:100%;max-width:420px;margin-top:6px;padding:10px;font:inherit;font-size:16px;border:1px solid #9aa3b5;border-radius:6px;background:#fff}
 .rd-local h3{margin-top:0}.rd-local h4{margin:18px 0 6px}.rd-local ul{padding-left:20px}.rd-kr b{font-size:22px;margin-right:8px}
+
+/* world watch: shared canvas clips (2026-11-17) */
+.hz-vis .lb-clip{border-radius:0;aspect-ratio:16/10}

@@ -312,13 +312,33 @@ window.gvLang = function (sel) {
           it.map(function (x) { return "<li>" + (x.lvl ? '<span class="lv ' + (x.lvl === "red" ? "war" : "watch") + '">' + x.lvl.toUpperCase() + "</span> " : "") + (x.iso ? flag(x.iso) + " " : "") + (x.url ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.t) + "</a>" : esc(x.t)) + ' <small class="note">' + esc(x.date || "") + "</small></li>"; }).join("") + "</ul></div>";
       });
       if (f.space) rows += '<div class="lb-card"><p><b>NOAA SWPC</b> <small class="note">' + o[6] + '</small></p><p><a href="' + esc(f.space.url) + '" target="_blank" rel="noopener">' + esc(f.space.r + " · " + f.space.s + " · " + f.space.g) + "</a></p></div>";
+      var cards = [], AK = { usgs: "quake", gdacs: "storm", eonet: "wildfire", who: "epidemic", cneos: "impact" };
+      Object.keys(S).forEach(function (k) { (f.items[k] || []).slice(0, 2).forEach(function (x) { cards.push({ src: S[k], k: x.k || AK[k], t: x.t, date: x.date, url: x.url, iso: x.iso }); }); });
+      var OC = { ko: ["공식 기관 최신 경보 — 움직이는 화면", "기관마다 가장 최근 경보 2건씩, 매일 아침 자동으로 받아 표시합니다."], en: ["Latest official alerts, in motion", "The two most recent alerts from each agency, collected automatically every morning."],
+        es: ["Últimas alertas oficiales, en movimiento", "Las dos alertas más recientes de cada agencia, recogidas cada mañana."], fr: ["Dernières alertes officielles, en mouvement", "Les deux alertes les plus récentes de chaque agence, collectées chaque matin."],
+        ar: ["أحدث التنبيهات الرسمية بالحركة", "أحدث تنبيهين من كل جهة، تُجمع تلقائيًا كل صباح."], vi: ["Cảnh báo chính thức mới nhất, dạng chuyển động", "Hai cảnh báo mới nhất của mỗi cơ quan, thu thập tự động mỗi sáng."],
+        id: ["Peringatan resmi terbaru, bergerak", "Dua peringatan terbaru dari tiap lembaga, dikumpulkan otomatis setiap pagi."] }[L] || null;
+      var draw = function () { var X = window.HZFX, N = X ? (X.NM[L] || X.NM.en) : {};
+        return '<h3 id="official-motion">' + esc((OC || [])[0] || "Latest official alerts") + '</h3><p class="note">' + esc((OC || [])[1] || "") + '</p><div class="lb-hzgrid">' + cards.map(function (c) {
+          var kk = KM[c.k] || "quake", txt = window.ATR ? ATR.t(c, L) : c.t;
+          return '<div class="lb-hz hz-' + kk + '"><div class="hz-vis">' + clip(c.k) + '<span class="hz-tag">' + esc(N[kk] || t.k[c.k] || c.k) + '</span></div><div class="hz-txt"><p><b>' + (c.iso ? flag(c.iso) + " " : "") + esc(c.src) + '</b> <small class="note">' + esc(c.date || "") + '</small></p><p>' + (c.url ? '<a href="' + esc(c.url) + '" target="_blank" rel="noopener" title="' + esc(c.t) + '">' + esc(txt) + '</a>' : esc(txt)) + '</p></div></div>'; }).join("") + "</div>"; };
+      if (cards.length) { hzLoad(); var go = function () { body.insertAdjacentHTML("beforeend", draw()); body.insertAdjacentHTML("beforeend", '<h3 id="official">' + o[0] + '</h3><p class="note">' + o[1] + '</p><div class="lb-grid">' + rows + "</div>"); };
+        var need = []; if (!window.ATR) need.push("/assets/atr.js");
+        var wait = function (n) { if ((window.HZFX || n > 40) && (window.ATR || n > 40)) { if (window.ATR) ATR.load(go); else go(); } else setTimeout(function () { wait(n + 1); }, 100); };
+        need.forEach(function (u) { var sc = document.createElement("script"); sc.src = u; document.head.appendChild(sc); }); wait(0); return; }
       body.insertAdjacentHTML("beforeend", '<h3 id="official">' + o[0] + '</h3><p class="note">' + o[1] + '</p><div class="lb-grid">' + rows + "</div>");
     }).catch(function () {});
   }
+  // 2026-11-17: moving clips are the shared canvas scenes (/hazards/hzfx*.js) instead of the older SVG overlays
+  var KM = { tsunami: "tsunami", quake: "quake", storm: "storm", flood: "flood", volcano: "volcano", weather: "storm", fire: "wildfire", wildfire: "wildfire", epidemic: "epidemic",
+    asteroid: "impact", impact: "impact", drought: "drought", heat: "heat", cold: "cold", outage: "outage", landslide: "landslide", temp: "temp", war: "war" };
+  function hzLoad() { if (window.HZFX || document.getElementById("hzfx-js")) return; ["/hazards/hzfx.js", "/hazards/hzfx2.js"].forEach(function (u, i) { var sc = document.createElement("script"); sc.src = u; sc.async = false; if (!i) sc.id = "hzfx-js"; document.head.appendChild(sc); }); }
+  function clip(k) { return '<div class="hzc-v v2 lb-clip"><i class="hzc-sw"></i><i class="hzc-rg"></i><canvas class="hzcv" data-k="' + (KM[k] || "quake") + '" aria-hidden="true"></canvas></div>'; }
   function hzCard(x, cn, label, home) {
-    var k = x.kind, map = x.iso ? '<div class="hotmap hzmap" data-focus="' + esc(x.iso) + '" data-hl="' + esc(x.iso) + '" data-pts="[]"></div>' : '<div class="hzmap space"></div>';
-    return '<div class="lb-hz hz-' + k + '"><div class="hz-vis">' + map + '<div class="hzfx">' + (FX[k] || FX.quake) + '</div><span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (window.__gvT && window.__gvT.ne || "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
+    hzLoad();
+    return '<div class="lb-hz hz-' + x.kind + '"><div class="hz-vis">' + clip(x.kind) + '<span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (window.__gvT && window.__gvT.ne || "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
   }
+
   var TR = {};
   function tr(s) { return (s && TR[s]) || s; }
   function pick(o) { return ko ? (o.ko || o.en) : tr(o.en || o.ko); }
