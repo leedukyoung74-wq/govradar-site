@@ -47,7 +47,7 @@ if (await st({ req_no: own.req_no, ok: true }) !== 403) fail.push("patch-no-toke
 if (await st({ req_no: own.req_no, tok: "0".repeat(32), ok: true }) !== 403) fail.push("patch-wrong-token");
 if (await st({ req_no: other.req_no, tok: own.tok, ok: false }) !== 403) fail.push("patch-other-request");
 if (await st({ req_no: own.req_no, tok: own.tok, ok: true }) !== 200) fail.push("patch-owner");
-if (raw.prepare("select status, relay_key from requests where req_no=?").get(own.req_no).status !== "relayed") fail.push("patch-status");
+if (raw.prepare("select status, relay_key from requests where req_no=?").get(own.req_no).status !== "client_ok") fail.push("patch-status");
 if (await st({ req_no: own.req_no, tok: own.tok, ok: false }) !== 403) fail.push("patch-replay");
 raw.prepare("update requests set created_at='2020-01-01T00:00:00Z' where req_no=?").run(r3.req_no);
 if (await st({ req_no: r3.req_no, tok: r3.tok, ok: true }) !== 403) fail.push("patch-expired");
@@ -63,4 +63,13 @@ for (let i = 0; i < 21; i++) last = await mod.onRequestPost(req("POST", { type: 
 if (last.status !== 429) fail.push("rate-network");
 const slot = raw.prepare("select sum(counted) c from requests where user_key='u:user-m1x'").get().c;
 if (slot > 2) fail.push("race");
+// network key: salted per day, not a plain hash; wiped after 48 h; duplicate answers carry no token
+const crypto2 = await import("node:crypto");
+const row1 = raw.prepare("select ip_hash from requests where ip_hash is not null limit 1").get();
+const plain = crypto2.createHash("sha256").update("ip|1.1.1.1").digest("hex");
+if (!row1 || row1.ip_hash === plain) fail.push("ip-plain-hash");
+raw.prepare("update requests set created_at='2020-01-01T00:00:00Z' where req_no=?").run(r6.req_no);
+IP = "5.5.5.5"; await call(P, "POST", { type: "tender", body: "W", email: "w@ex.com" });
+if (raw.prepare("select ip_hash from requests where req_no=?").get(r6.req_no).ip_hash !== null) fail.push("ip-wipe-48h");
+if (r2.tok) fail.push("dup-has-token");
 if (fail.length) { console.error("FAIL", fail.join(",")); process.exit(1); } else console.log("req_server OK");
