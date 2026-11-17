@@ -11,7 +11,7 @@ const D1 = { prepare(q) { const st = raw.prepare(q); let args = []; const o = { 
 globalThis.fetch = async (url, opt) => { const t = (opt.headers.authorization || "").split(" ")[1]; if (!t) return { ok: false };
   return { ok: true, json: async () => ({ id: "user-" + t, email: t + "@ex.com", app_metadata: { roles: t.startsWith("m1") ? ["m1"] : [] } }) }; };
 const mod = await import(ROOT + "/cf/functions/api/req.js");
-const env = { GV_DB: D1 };
+const env = { GV_DB: D1, GV_STORE: "on" };
 let IP = "1.1.1.1";
 const req = (method, body, tok) => ({ request: { headers: { get: k => (k === "authorization" && tok ? "Bearer " + tok : k === "cf-connecting-ip" ? IP : null) }, json: async () => body } , env });
 const call = async (fn, ...a) => (await (await fn(req(...a))).json());
@@ -63,4 +63,48 @@ for (let i = 0; i < 21; i++) last = await mod.onRequestPost(req("POST", { type: 
 if (last.status !== 429) fail.push("rate-network");
 const slot = raw.prepare("select sum(counted) c from requests where user_key='u:user-m1x'").get().c;
 if (slot > 2) fail.push("race");
+// --- retention, member standing, store switch (owner decision 2026-11-17)
+const S = mod.standing, K = (iso) => new Date(Date.parse(iso) - 9 * 3600e3);   // Korea time -> Date
+const chk = (name, got, want) => { if (JSON.stringify(got) !== JSON.stringify(want)) fail.push(name + ":" + JSON.stringify(got)); };
+const mon = { plan: "monthly", paid_through: "2026-11", status: "active" }, late = { plan: "monthly", paid_through: "2026-10", status: "active" };
+chk("paid", S("m1", mon, K("2026-11-20T10:00:00Z")).state, "ok");
+chk("due-day1", S("m1", late, K("2026-11-01T23:00:00Z")).state, "ok");
+chk("day2-block", [S("m1", late, K("2026-11-02T00:00:00Z")).state, S("m1", late, K("2026-11-02T00:00:00Z")).can_request], ["grace", false]);
+chk("day7-last", S("m1", late, K("2026-11-07T23:59:00Z")).grade, "m1");
+chk("day8-m0", S("m1", late, K("2026-11-08T00:00:00Z")).grade, "m0");
+chk("suspended", S("m3", { plan: "monthly", paid_through: "2026-12", status: "suspended" }, K("2026-11-10T00:00:00Z")).paid, false);
+chk("annual-in", S("m2", { plan: "annual", contract_end: "2027-03-31", status: "active" }, K("2026-11-10T00:00:00Z")).state, "ok");
+chk("annual-after1", S("m2", { plan: "annual", contract_end: "2026-11-09", status: "active" }, K("2026-11-10T00:00:00Z")).state, "grace");
+chk("annual-after7", S("m2", { plan: "annual", contract_end: "2026-11-02", status: "active" }, K("2026-11-09T00:00:00Z")).grade, "m0");
+chk("no-row", S("m1", null).state, "no_billing_row");
+chk("free", S("m0", null).paid, false);
+// grace member: request is taken as a quote, not counted
+raw.prepare("insert into members (user_id, plan, paid_through, status) values ('user-m1g','monthly','2000-01','active')").run();
+IP = "4.4.4.4";
+const g = await call(P, "POST", { type: "tender", body: "G1", email: "g@ex.com" }, "m1g");
+if (!(g.quote && !g.counted && g.standing === "lapsed")) fail.push("lapsed-quote:" + JSON.stringify(g));
+// retention: closing starts the clock; text blanked after 90 days, record deleted after 1 year; legal hold untouched
+raw.prepare("update requests set status='done' where req_no=?").run(r1.req_no);
+const c = raw.prepare("select completed_at, purge_body_at, purge_row_at from requests where req_no=?").get(r1.req_no);
+if (!c.completed_at || Math.round((Date.parse(c.purge_body_at) - Date.parse(c.completed_at)) / 864e5) !== 90 || Math.round((Date.parse(c.purge_row_at) - Date.parse(c.completed_at)) / 864e5) !== 365) fail.push("clock:" + JSON.stringify(c));
+const any = raw.prepare("select purge_body_at, purge_row_at from requests where req_no=?").get(r5.req_no);
+if (!any.purge_body_at || !any.purge_row_at) fail.push("safety-clock");
+raw.prepare("update requests set purge_body_at='2020-01-01T00:00:00Z' where req_no in (?,?)").run(r1.req_no, r3.req_no);
+raw.prepare("update requests set legal_hold=1 where req_no=?").run(r3.req_no);
+raw.prepare("update requests set purge_row_at='2020-01-01T00:00:00Z' where req_no=?").run(r5.req_no);
+await call(G, "GET", null, "m1");
+const a1 = raw.prepare("select body, email, type, status from requests where req_no=?").get(r1.req_no);
+if (!(a1 && a1.body === "" && a1.email === "" && a1.type === "tender")) fail.push("purge-body:" + JSON.stringify(a1));
+if (raw.prepare("select body from requests where req_no=?").get(r3.req_no).body !== "B") fail.push("legal-hold");
+if (raw.prepare("select count(*) n from requests where req_no=?").get(r5.req_no).n !== 0) fail.push("purge-row");
+// withdrawal: own rows deleted now except legal hold (blanked)
+const del = await (await mod.onRequestDelete(req("DELETE", null, "m1"))).json();
+const left = raw.prepare("select req_no, body, legal_hold from requests where user_key='u:user-m1'").all();
+if (!(del.ok && left.length === 1 && left[0].legal_hold === 1 && left[0].body === "")) fail.push("withdraw:" + JSON.stringify(left));
+// store switch: off -> 503 everywhere; test -> only @example addresses
+const offEnv = { GV_DB: D1 }, tEnv = { GV_DB: D1, GV_STORE: "test" };
+if ((await mod.onRequestPost({ request: req("POST", { type: "tender", body: "X", email: "a@example.com" }).request, env: offEnv })).status !== 503) fail.push("off");
+if ((await mod.onRequestPost({ request: req("POST", { type: "tender", body: "X", email: "real@naver.com" }).request, env: tEnv })).status !== 503) fail.push("test-real");
+IP = "9.9.9.9";
+if ((await mod.onRequestPost({ request: req("POST", { type: "tender", body: "X", email: "a@example.com" }).request, env: tEnv })).status !== 200) fail.push("test-fake");
 if (fail.length) { console.error("FAIL", fail.join(",")); process.exit(1); } else console.log("req_server OK");
