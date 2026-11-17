@@ -1,0 +1,24 @@
+name: Retention purge watch
+# Daily: if the request database is connected and the last successful purge is older than 36 hours, this run FAILS
+# (GitHub then emails the repository owner). Not deployed / not connected yet = pass. Public status page only; no secrets.
+on:
+  schedule: [{ cron: "47 1 * * *" }]   # 10:47 KST
+  workflow_dispatch:
+permissions: { contents: read }
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import json, sys, urllib.request, urllib.error
+          try:
+              d = json.load(urllib.request.urlopen("https://radar.wmm-hoa.com/api/purge-status", timeout=30))
+          except urllib.error.HTTPError as e:
+              if e.code in (404, 405): print("status page not deployed yet"); sys.exit(0)
+              d = {"configured": True, "stale": True, "error": f"HTTP {e.code}"}
+          except Exception as e:
+              d = {"configured": True, "stale": True, "error": str(e)}
+          print(json.dumps(d))
+          sys.exit(1 if d.get("configured") and d.get("stale") else 0)
+          PY
