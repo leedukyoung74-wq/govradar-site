@@ -321,7 +321,7 @@ window.gvLang = function (sel) {
       var draw = function () { var X = window.HZFX, N = X ? (X.NM[L] || X.NM.en) : {};
         return '<h3 id="official-motion">' + esc((OC || [])[0] || "Latest official alerts") + '</h3><p class="note">' + esc((OC || [])[1] || "") + '</p><div class="lb-hzgrid">' + cards.map(function (c) {
           var kk = KM[c.k] || "quake", txt = window.ATR ? ATR.t(c, L) : c.t;
-          return '<div class="lb-hz hz-' + kk + '"><div class="hz-vis">' + clip(c.k) + '<span class="hz-tag">' + esc(N[kk] || t.k[c.k] || c.k) + '</span></div><div class="hz-txt"><p><b>' + (c.iso ? flag(c.iso) + " " : "") + esc(c.src) + '</b> <small class="note">' + esc(c.date || "") + '</small></p><p>' + (c.url ? '<a href="' + esc(c.url) + '" target="_blank" rel="noopener" title="' + esc(c.t) + '">' + esc(txt) + '</a>' : esc(txt)) + '</p></div></div>'; }).join("") + "</div>"; };
+          return '<div class="lb-hz hz-' + kk + '" data-hzk="' + kk + '" data-hzl="' + L + '"><div class="hz-vis">' + clip(c.k) + '<span class="hz-tag">' + esc(N[kk] || t.k[c.k] || c.k) + '</span></div><div class="hz-txt"><p><b>' + (c.iso ? flag(c.iso) + " " : "") + esc(c.src) + '</b> <small class="note">' + esc(c.date || "") + '</small></p><p>' + (c.url ? '<a href="' + esc(c.url) + '" target="_blank" rel="noopener" title="' + esc(c.t) + '">' + esc(txt) + '</a>' : esc(txt)) + '</p></div></div>'; }).join("") + "</div>"; };
       if (cards.length) { hzLoad(); var go = function () { body.insertAdjacentHTML("beforeend", draw()); body.insertAdjacentHTML("beforeend", '<h3 id="official">' + o[0] + '</h3><p class="note">' + o[1] + '</p><div class="lb-grid">' + rows + "</div>"); };
         var need = []; if (!window.ATR) need.push("/assets/atr.js");
         var wait = function (n) { if ((window.HZFX || n > 40) && (window.ATR || n > 40)) { if (window.ATR) ATR.load(go); else go(); } else setTimeout(function () { wait(n + 1); }, 100); };
@@ -332,11 +332,11 @@ window.gvLang = function (sel) {
   // 2026-11-17: moving clips are the shared canvas scenes (/hazards/hzfx*.js) instead of the older SVG overlays
   var KM = { tsunami: "tsunami", quake: "quake", storm: "storm", flood: "flood", volcano: "volcano", weather: "storm", fire: "wildfire", wildfire: "wildfire", epidemic: "epidemic",
     asteroid: "impact", impact: "impact", drought: "drought", heat: "heat", cold: "cold", outage: "outage", landslide: "landslide", temp: "temp", war: "war" };
-  function hzLoad() { if (window.HZFX || document.getElementById("hzfx-js")) return; ["/hazards/hzfx.js", "/hazards/hzfx2.js"].forEach(function (u, i) { var sc = document.createElement("script"); sc.src = u; sc.async = false; if (!i) sc.id = "hzfx-js"; document.head.appendChild(sc); }); }
+  function hzLoad() { if (window.HZFX || document.getElementById("hzfx-js")) return; ["/hazards/hzfx.js", "/hazards/hzfx2.js", "/hazards/hzstory.js"].forEach(function (u, i) { var sc = document.createElement("script"); sc.src = u; sc.async = false; if (!i) sc.id = "hzfx-js"; document.head.appendChild(sc); }); }
   function clip(k) { return '<div class="hzc-v v2 lb-clip"><i class="hzc-sw"></i><i class="hzc-rg"></i><canvas class="hzcv" data-k="' + (KM[k] || "quake") + '" aria-hidden="true"></canvas></div>'; }
   function hzCard(x, cn, label, home) {
     hzLoad();
-    return '<div class="lb-hz hz-' + x.kind + '"><div class="hz-vis">' + clip(x.kind) + '<span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (window.__gvT && window.__gvT.ne || "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
+    return '<div class="lb-hz hz-' + x.kind + '" data-hzk="' + (KM[x.kind] || "quake") + '" data-hzl="' + L + '"><div class="hz-vis">' + clip(x.kind) + '<span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (window.__gvT && window.__gvT.ne || "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
   }
 
   var TR = {};

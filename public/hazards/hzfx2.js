@@ -6,16 +6,16 @@
   var NMC = { ko: "사이버 공격", en: "Cyberattack", es: "Ciberataque", fr: "Cyberattaque", ar: "هجوم سيبراني", vi: "Tấn công mạng", id: "Serangan siber" };
   for (var l in X.NM) X.NM[l].cyber = NMC[l] || NMC.en;
   // 2026-11-17: heat wave, cold wave and snow, long power outage (gallery), radioactive fallout (preparedness centre only)
-  var NMX = { ko: { heat: "폭염", cold: "한파·대설", outage: "장기 정전", radiation: "핵·방사성 낙진" },
-    en: { heat: "Heatwave", cold: "Cold wave · heavy snow", outage: "Long power outage", radiation: "Nuclear · radioactive fallout" },
-    es: { heat: "Ola de calor", cold: "Ola de frío · nevada", outage: "Apagón prolongado", radiation: "Nuclear · lluvia radiactiva" },
-    fr: { heat: "Canicule", cold: "Vague de froid · neige", outage: "Panne de courant prolongée", radiation: "Nucléaire · retombées radioactives" },
-    ar: { heat: "موجة حر", cold: "موجة برد · ثلوج كثيفة", outage: "انقطاع طويل للكهرباء", radiation: "نووي · غبار مشع" },
-    vi: { heat: "Nắng nóng", cold: "Rét đậm · tuyết lớn", outage: "Mất điện kéo dài", radiation: "Hạt nhân · bụi phóng xạ" },
-    id: { heat: "Gelombang panas", cold: "Gelombang dingin · salju lebat", outage: "Pemadaman listrik panjang", radiation: "Nuklir · debu radioaktif" } };
+  var NMX = { ko: { heat: "폭염", cold: "한파·대설", outage: "장기 정전", radiation: "핵·방사성 낙진", water: "물 오염" },
+    en: { heat: "Heatwave", cold: "Cold wave · heavy snow", outage: "Long power outage", radiation: "Nuclear · radioactive fallout", water: "Water contamination" },
+    es: { heat: "Ola de calor", cold: "Ola de frío · nevada", outage: "Apagón prolongado", radiation: "Nuclear · lluvia radiactiva", water: "Contaminación del agua" },
+    fr: { heat: "Canicule", cold: "Vague de froid · neige", outage: "Panne de courant prolongée", radiation: "Nucléaire · retombées radioactives", water: "Pollution de l'eau" },
+    ar: { heat: "موجة حر", cold: "موجة برد · ثلوج كثيفة", outage: "انقطاع طويل للكهرباء", radiation: "نووي · غبار مشع", water: "تلوث المياه" },
+    vi: { heat: "Nắng nóng", cold: "Rét đậm · tuyết lớn", outage: "Mất điện kéo dài", radiation: "Hạt nhân · bụi phóng xạ", water: "Ô nhiễm nguồn nước" },
+    id: { heat: "Gelombang panas", cold: "Gelombang dingin · salju lebat", outage: "Pemadaman listrik panjang", radiation: "Nuklir · debu radioaktif", water: "Pencemaran air" } };
   for (l in X.NM) { var nx = NMX[l] || NMX.en; for (var kk in nx) X.NM[l][kk] = nx[kk]; }
-  X.G = X.K.concat(["cyber", "heat", "cold", "outage"]);   // gallery list (these have no disaster dataset, so they stay off the data map)
-  var CODE = { flood: "FLD", storm: "STM", quake: "EQK", tsunami: "TSU", landslide: "LSD", wildfire: "WLF", fire: "FIR", drought: "DRT", temp: "TMP", volcano: "VOL", impact: "IMP", war: "WAR", ethnic: "ETH", protest: "PRT", riot: "RIO", epidemic: "EPI", cyber: "CYB", heat: "HEA", cold: "CLD", outage: "PWR", radiation: "RAD" };
+  X.G = X.K.concat(["cyber", "heat", "cold", "outage", "water"]);   // gallery list (these have no disaster dataset, so they stay off the data map)
+  var CODE = { flood: "FLD", storm: "STM", quake: "EQK", tsunami: "TSU", landslide: "LSD", wildfire: "WLF", fire: "FIR", drought: "DRT", temp: "TMP", volcano: "VOL", impact: "IMP", war: "WAR", ethnic: "ETH", protest: "PRT", riot: "RIO", epidemic: "EPI", cyber: "CYB", heat: "HEA", cold: "CLD", outage: "PWR", radiation: "RAD", water: "WTR" };
 
   var css = ".hzc-v canvas.hzcv{position:absolute;inset:0;width:100%;height:100%;z-index:4;display:block}" +
     ".hzc-v.v2 .hzc-sw{opacity:.35}.hzc-v.v2 .hzc-rg{opacity:.45}.hzc-v.v2::after{opacity:.5}" +
@@ -280,6 +280,22 @@
       g.fillStyle = "rgba(255,226,150,.85)"; g.fillRect(cx - w * .05, base - h * .14, w * .1, h * .14); radial(g, cx, base - h * .07, w * .12, [255, 220, 140], .25);
       for (var k = 0; k < 3; k++) { var ph = ((t * .5 + k / 3) % 1); g.strokeStyle = rgba([210, 240, 90], .55 * (1 - ph)); g.lineWidth = 1.5; g.beginPath(); g.arc(w * .14, h * .22, 6 + ph * h * .14, 0, TAU); g.stroke(); }
       g.fillStyle = "rgba(210,240,90,.95)"; g.beginPath(); g.arc(w * .14, h * .22, 4, 0, TAU); g.fill(); } };
+
+  SC.water = { init: function (S) { var r = S.r; S.P = []; for (var i = 0; i < 90; i++) S.P.push([r() * S.w, S.h * (.55 + r() * .4), r(), .3 + r() * .7]); S.B = []; for (i = 0; i < 26; i++) S.B.push([r() * S.w, S.h, .3 + r() * .7]); },
+    draw: function (g, S, t, dt) { var w = S.w, h = S.h, wl = h * .52;
+      sky(g, w, h, "rgba(8,20,32,.9)", "rgba(10,26,36,.95)"); radial(g, w * .2, h * .1, w * .5, [120, 170, 210], .14);
+      g.fillStyle = "#1a2a2e"; g.fillRect(w * .78, h * .18, w * .22, h * .36); g.fillStyle = "#26383c"; g.fillRect(w * .62, h * .44, w * .2, h * .05);
+      var gr = g.createLinearGradient(0, wl, 0, h); gr.addColorStop(0, "rgba(40,110,150,.85)"); gr.addColorStop(1, "rgba(8,34,52,.95)"); g.fillStyle = gr; g.beginPath(); g.moveTo(0, h);
+      for (var x = 0; x <= w; x += 4) g.lineTo(x, wl + Math.sin(x * .04 + t * 1.4) * 2 + n1(x * .02 + t * .5) * 1.5); g.lineTo(w, h); g.fill();
+      var ox = w * .63, oy = h * .49, spread = (t % 12) / 12, pr = w * (.08 + spread * .5);
+      var pg = g.createRadialGradient(ox, oy + h * .05, 0, ox, oy + h * .05, pr); pg.addColorStop(0, "rgba(150,120,40,.75)"); pg.addColorStop(.6, "rgba(120,110,50,.35)"); pg.addColorStop(1, "rgba(110,100,60,0)");
+      g.fillStyle = pg; g.beginPath(); g.ellipse(ox - pr * .35, oy + h * .12, pr, h * .16 * (.6 + spread), 0, 0, TAU); g.fill();
+      g.fillStyle = "rgba(170,140,60,.9)"; for (var k = 0; k < 4; k++) { var yy = oy + ((t * 40 + k * 9) % 22); g.fillRect(ox - 3, yy, 6, 3); }
+      S.P.forEach(function (p) { p[0] -= dt * 8 * p[3]; if (p[0] < -4) p[0] = w + 4; g.fillStyle = p[2] < .5 ? "rgba(190,160,80,.55)" : "rgba(220,230,240,.35)"; g.fillRect(p[0], p[1] + Math.sin(t * 2 + p[2] * 9) * 1.5, 2, 2); });
+      S.B.forEach(function (b) { b[1] -= dt * 18 * b[2]; if (b[1] < wl) { b[1] = h; b[0] = Math.random() * w; } g.strokeStyle = "rgba(200,230,255,.4)"; g.beginPath(); g.arc(b[0], b[1], 1.6 + b[2] * 1.5, 0, TAU); g.stroke(); });
+      var dx = w * .14, dy = h * .24 + ((t * 30) % (h * .22)); glow(g, "rgba(150,210,255,.9)", 8); g.fillStyle = "rgba(170,220,255,.95)"; g.beginPath(); g.moveTo(dx, dy - 7); g.quadraticCurveTo(dx + 6, dy + 2, dx, dy + 5); g.quadraticCurveTo(dx - 6, dy + 2, dx, dy - 7); g.fill(); noGlow(g);
+      g.fillStyle = "rgba(200,210,220,.85)"; g.fillRect(dx - 14, h * .16, 28, 6); g.fillRect(dx - 3, h * .16, 6, h * .07);
+      var bx = w * .06, by = h * .62; g.strokeStyle = "rgba(255,200,80,.9)"; g.lineWidth = 2; g.beginPath(); g.moveTo(bx, by - 18); g.lineTo(bx + 20, by + 16); g.lineTo(bx - 20, by + 16); g.closePath(); g.stroke(); g.fillStyle = "rgba(255,200,80,.95)"; g.fillRect(bx - 1, by - 6, 2, 12); g.fillRect(bx - 1, by + 9, 2, 3); } };
 
   /* ---------- runtime ---------- */
   var live = [], RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;

@@ -3,7 +3,7 @@
 <head><script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/welcome/"+(l==="ko"?"":l+"/"))})();</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="세계 재난·분쟁 20가지를 움직이는 레이더 화면과 나라별 지도로 봅니다 — GOV RADAR">
+<meta name="description" content="세계 재난·분쟁 21가지를 움직이는 레이더 화면과 나라별 지도로 봅니다 — GOV RADAR">
 <link rel="icon" href="/favicon.ico">
 <title>GOV RADAR 재난 한눈에 보기</title>
 <style>
@@ -292,7 +292,7 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 </style>
 </head>
 <body>
-<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/hazards/":"/hazards/?l="+l};window.GVH_SUB=function(l){var k=l==="ko";return[["#kp",k?"한눈에":"At a glance"],["#trend",k?"장기 추세":"Long-term trends"],["#tr-emdat",k?"재난 건수":"Disasters"],["#tr-conf",k?"무력분쟁 수":"Conflicts"],["#tr-q7",k?"규모 6·7 이상 지진":"M6+ · M7+ quakes"],["#tr-ts",k?"쓰나미":"Tsunamis"],["#tr-temp",k?"지구 기온":"Temperature"],["#tr-co2",k?"이산화탄소":"CO₂"],["#years",k?"연도별 재난":"By year"],["#map",k?"나라별 피해 지도":"Country map"],["#types",k?"20가지 재난":"20 hazards"],["#apophis",k?"소행성 아포피스":"Asteroid Apophis"]]};</script><script src="/assets/gvhdr.js?v=58adee57" data-l="auto" data-g="world" data-a="hazards"></script>
+<script>window.GVH_LANG_URL=function(l){return l==="ko"?"/hazards/":"/hazards/?l="+l};window.GVH_SUB=function(l){var k=l==="ko";return[["#kp",k?"한눈에":"At a glance"],["#trend",k?"장기 추세":"Long-term trends"],["#tr-emdat",k?"재난 건수":"Disasters"],["#tr-conf",k?"무력분쟁 수":"Conflicts"],["#tr-q7",k?"규모 6·7 이상 지진":"M6+ · M7+ quakes"],["#tr-ts",k?"쓰나미":"Tsunamis"],["#tr-temp",k?"지구 기온":"Temperature"],["#tr-co2",k?"이산화탄소":"CO₂"],["#years",k?"연도별 재난":"By year"],["#map",k?"나라별 피해 지도":"Country map"],["#types",k?"21가지 재난":"21 hazards"],["#apophis",k?"소행성 아포피스":"Asteroid Apophis"]]};</script><script src="/assets/gvhdr.js?v=58adee57" data-l="auto" data-g="world" data-a="hazards"></script>
 
 <main>
 <div class="hero"><div class="in">
@@ -394,7 +394,7 @@ footer img{width:56px;height:56px;border-radius:50%;background:#fff;margin-botto
 <script src="data.js"></script>
 <script src="world.js"></script>
 <script src="hz.js"></script>
-<script src="hzfx.js"></script><script src="hzfx2.js"></script>
+<script src="hzfx.js"></script><script src="hzfx2.js"></script><script src="hzstory.js"></script>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="bgW" viewBox="0 0 640 400"></symbol><symbol id="bgC" viewBox="0 0 640 400"></symbol></defs></svg>
 <script>
 (function(){
@@ -406,13 +406,13 @@ en:{'Flood':'Flood','Extreme weather':'Storm','Earthquake':'Quake · tsunami','L
 var COL={};TY.forEach(function(t,i){COL[t]='var(--s'+(i+1)+')'});
 var T={ko:{
 nav1:'연도별 재난',nav4:'재난 종류',fk_n:'기록이 있는 나라 {n}곳 — 지도에 진하게 표시',fk_all:'모든 나라 공통 위험',fk_tip:'색칠된 나라를 누르면 그 나라의 재난·분쟁 화면이 모두 열립니다. 같은 종류 버튼을 다시 누르면 원래 지도로 돌아갑니다.',fk_x:'전체 지도 보기',
-t_h:'재난·분쟁 20가지를 움직이는 화면으로',
+t_h:'재난·분쟁 21가지를 움직이는 화면으로',
 t_s:'자연재해부터 전쟁·시위까지 겹치는 종류는 하나로 묶었습니다. 위 지도에서 나라를 누르면 그 나라에 기록이 있는 종류만 골라 같은 화면으로 보여 줍니다.',
 t_src:'그림은 이해를 돕는 설명용 애니메이션이며 실제 촬영 영상이 아닙니다. 나라별 기록 출처: 자연재해 EM-DAT/Our World in Data(2000–2025 사망), 해일 NOAA 국립환경정보센터(2000–2025 피해 기록 지점), 전쟁·집단 분쟁 UCDP/Our World in Data(2000–2025 사망), 시위·폭동 Mass Mobilization Project(하버드 데이터버스, 2000–2020, 미국 미포함), 지금 진행 중 항목은 GOV RADAR 상황판({u} 기준).',
 c_h:'이 나라에서 기록된 재난·분쟁',c_s:'2000년 이후 공식 기록이 있는 종류만 골랐습니다. 빨간 표시는 지금 진행 중인 일입니다.',c_cm:'모든 나라 공통으로 대비할 위험',c_cs:'나라를 가리지 않고 일어날 수 있어 함께 보여 줍니다.',c_none:'2000년 이후 이 나라에 기록된 큰 재난·분쟁은 없습니다.',
 now:'지금',d_n:'2000–2025 사망 {n}명',s_em:'EM-DAT · 2000–2025',d_ts:'피해 기록 지점 {n}곳',s_ts:'NOAA · 2000–2025',d_war:'무력충돌 사망 {n}명',s_war:'UCDP · 2000–2025',d_eth:'집단 간 충돌 사망 {n}명',s_eth:'UCDP 비국가 충돌 · 2000–2025',d_pr:'정부 대상 시위 {n}건',s_pr:'Mass Mobilization · 2000–2020',d_ri:'폭력이 동반된 시위 {n}건',s_ri:'Mass Mobilization · 2000–2020',d_live:'최근 발생',s_live:'실시간 관측',
 cm_fire:'건물·공장 화재',cm_epi:'새 감염병 유행',cm_imp:'아포피스 2029년 근접 · 충돌 위험 없음(NASA)',
-g:{heat:'숨 막히는 더위가 며칠씩 이어집니다',cold:'혹한과 폭설로 길과 수도관이 얼어붙습니다',outage:'전기가 끊겨 조명·난방·통신이 함께 멈춥니다',flood:'큰비·강물 범람으로 마을이 잠깁니다',storm:'강한 바람과 폭우가 한꺼번에 옵니다',quake:'땅이 흔들려 건물이 무너집니다',tsunami:'지진·화산이 만든 큰 파도가 해안을 덮칩니다',landslide:'비탈의 흙과 돌이 쏟아져 내립니다',wildfire:'숲과 들에 불이 번집니다',fire:'건물·공장·시장에서 난 불',drought:'비가 오지 않아 땅과 작물이 마릅니다',temp:'극심한 더위나 추위가 며칠씩 이어집니다',volcano:'용암·화산재·가스가 분출합니다',impact:'소행성·혜성이 지구에 떨어지는 경우',war:'국가가 무력으로 싸우는 전쟁·내전',ethnic:'민족·종교·무장집단끼리 벌이는 충돌',protest:'정부를 향한 대규모 집회',riot:'방화·투석 등 폭력이 동반된 소요',epidemic:'감염병이 빠르게 퍼집니다'},
+g:{water:'오염된 물이 설사병과 감염병으로 이어집니다',heat:'숨 막히는 더위가 며칠씩 이어집니다',cold:'혹한과 폭설로 길과 수도관이 얼어붙습니다',outage:'전기가 끊겨 조명·난방·통신이 함께 멈춥니다',flood:'큰비·강물 범람으로 마을이 잠깁니다',storm:'강한 바람과 폭우가 한꺼번에 옵니다',quake:'땅이 흔들려 건물이 무너집니다',tsunami:'지진·화산이 만든 큰 파도가 해안을 덮칩니다',landslide:'비탈의 흙과 돌이 쏟아져 내립니다',wildfire:'숲과 들에 불이 번집니다',fire:'건물·공장·시장에서 난 불',drought:'비가 오지 않아 땅과 작물이 마릅니다',temp:'극심한 더위나 추위가 며칠씩 이어집니다',volcano:'용암·화산재·가스가 분출합니다',impact:'소행성·혜성이 지구에 떨어지는 경우',war:'국가가 무력으로 싸우는 전쟁·내전',ethnic:'민족·종교·무장집단끼리 벌이는 충돌',protest:'정부를 향한 대규모 집회',riot:'방화·투석 등 폭력이 동반된 소요',epidemic:'감염병이 빠르게 퍼집니다'},
 nav2:'세계·나라별 지도',nav3:'아포피스',
 h1:'세계 재난을 한 화면에서 봅니다',
 lede:'2000년부터 2025년까지 해마다 어떤 재난이 몇 건 났는지, 어느 나라가 가장 크게 다쳤는지, 소행성 아포피스가 언제 얼마나 가까이 오는지를 공식 관측·통계 자료로 정리했습니다.',
@@ -434,13 +434,13 @@ moon:'달 거리 38만 km',geo:'정지궤도 4.2만 km',earth:'지구에서의 �
 f1:'월드메이킹멤버스 주식회사 · GOV RADAR',snap:'{d} 기준',livenow:'실시간'},
 en:{
 nav1:'By year',nav4:'Hazard types',fk_n:'{n} countries with a record — shaded on the map',fk_all:'A risk for every country',fk_tip:'Tap a shaded country to open all of its hazard clips. Tap the type again to return to the full map.',fk_x:'Show full map',
-t_h:'Twenty hazards, shown in motion',
+t_h:'Twenty-one hazards, shown in motion',
 t_s:'Overlapping kinds are merged into one, from natural disasters to war and unrest. Tap a country on the map above to see only the kinds recorded there, on the same screen.',
 t_src:'These are explanatory animations, not real footage. Country records: natural disasters EM-DAT / Our World in Data (deaths 2000–2025), tsunami NOAA NCEI (damaging run-up sites 2000–2025), war and communal conflict UCDP / Our World in Data (deaths 2000–2025), protests and riots Mass Mobilization Project (Harvard Dataverse, 2000–2020, US not covered); ongoing items from the GOV RADAR board as of {u}.',
 c_h:'Hazards recorded in this country',c_s:'Only kinds with an official record since 2000. Red marks something happening now.',c_cm:'Risks every country should prepare for',c_cs:'Shown for all countries because they can happen anywhere.',c_none:'No major disaster or conflict recorded here since 2000.',
 now:'Now',d_n:'{n} deaths, 2000–2025',s_em:'EM-DAT · 2000–2025',d_ts:'{n} damaging run-up sites',s_ts:'NOAA · 2000–2025',d_war:'{n} armed-conflict deaths',s_war:'UCDP · 2000–2025',d_eth:'{n} deaths in communal fighting',s_eth:'UCDP non-state · 2000–2025',d_pr:'{n} anti-government protests',s_pr:'Mass Mobilization · 2000–2020',d_ri:'{n} protests with violence',s_ri:'Mass Mobilization · 2000–2020',d_live:'Recent event',s_live:'Live observation',
 cm_fire:'Building and factory fires',cm_epi:'A new outbreak',cm_imp:'Apophis passes in 2029 · no impact risk (NASA)',
-g:{heat:'Dangerous heat that lasts for days',cold:'Bitter cold and heavy snow freeze roads and pipes',outage:'Power fails and light, heating and phones stop together',flood:'Heavy rain and rivers flood towns',storm:'Strong wind and heavy rain together',quake:'The ground shakes and buildings fall',tsunami:'Waves from a quake or eruption hit the coast',landslide:'Soil and rock slide down a slope',wildfire:'Fire spreads through forest and grassland',fire:'Fires in buildings, factories and markets',drought:'No rain, dry land and failed crops',temp:'Extreme heat or cold lasting days',volcano:'Lava, ash and gas erupt',impact:'An asteroid or comet hits Earth',war:'States fighting a war or civil war',ethnic:'Ethnic, religious or armed groups fighting each other',protest:'Mass rallies aimed at the government',riot:'Unrest with arson or stone-throwing',epidemic:'An infectious disease spreads fast'},
+g:{water:'Contaminated water spreads diarrhoeal disease and outbreaks',heat:'Dangerous heat that lasts for days',cold:'Bitter cold and heavy snow freeze roads and pipes',outage:'Power fails and light, heating and phones stop together',flood:'Heavy rain and rivers flood towns',storm:'Strong wind and heavy rain together',quake:'The ground shakes and buildings fall',tsunami:'Waves from a quake or eruption hit the coast',landslide:'Soil and rock slide down a slope',wildfire:'Fire spreads through forest and grassland',fire:'Fires in buildings, factories and markets',drought:'No rain, dry land and failed crops',temp:'Extreme heat or cold lasting days',volcano:'Lava, ash and gas erupt',impact:'An asteroid or comet hits Earth',war:'States fighting a war or civil war',ethnic:'Ethnic, religious or armed groups fighting each other',protest:'Mass rallies aimed at the government',riot:'Unrest with arson or stone-throwing',epidemic:'An infectious disease spreads fast'},
 nav2:'World & country maps',nav3:'Apophis',
 h1:'The world’s disasters on one screen',
 lede:'How many disasters of each kind were recorded every year from 2000 to 2025, which countries were hit hardest, and when asteroid Apophis comes close, compiled from official observation and statistics sources.',
@@ -607,7 +607,7 @@ function bgCountry(f){var mp=mainPoly(f),cen=d3.geoCentroid(mp);
  var pr=d3.geoMercator().rotate([-cen[0],0]).fitExtent([[190,110],[450,290]],Math.abs(cen[1])>62?mp:f),pa=d3.geoPath(pr);
  var b=pa.bounds(f);if(b[1][0]-b[0][0]>640)pr.fitExtent([[190,110],[450,290]],mp);
  document.getElementById('bgC').innerHTML=feats.filter(function(x){return x.id!==f.id}).map(function(x){var d=pa(x);return d?'<path class="hzbg-land" d="'+d+'"/>':''}).join('')+'<path class="hzbg-hl" d="'+pa(f)+'"/>'}
-function hzGallery(){var g=T[lang].g;document.getElementById('hzall').innerHTML=(X.G||X.K).map(function(k){return X.card(k,'bgW',X.NM[lang][k],g[k],'')}).join('')}
+function hzGallery(){var g=T[lang].g;document.getElementById('hzall').innerHTML=(X.G||X.K).map(function(k){return X.card(k,'bgW',X.NM[lang][k],g[k],'').replace('<figure ','<figure data-hzk="'+k+'" data-hzl="'+lang+'" title="'+(lang==='ko'?'눌러서 자세히 보기':'Click for the story')+'" ')}).join('')}
 function nowTxt(o){return o?(lang==='ko'?(o.ko||o.en):(o.en||o.ko)):''}
 function hzCountry(id,f,here){
  bgCountry(f);
