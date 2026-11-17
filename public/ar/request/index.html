@@ -37,7 +37,7 @@
 </form>
 <h3>الطلبات المرسلة من هذا المتصفح</h3><ul class="rq-mine"></ul>
 </div></section>
-<script>(function(){var K={"names": {"tender": "هل يمكن لشركتنا التقدم لهذه المناقصة؟", "country": "فرص الأعمال في دولة ما", "family": "خطة استعداد لعائلتي", "partner": "شركاء ومسارات دعم لما أحتاجه"}, "done": "تم الاستلام. رقم الطلب", "dup": "لقد أرسلت الطلب نفسه للتو. رقم الطلب", "st": "تم الاستلام — انتظر رسالة التأكيد منا", "none": "لا توجد طلبات بعد.", "req": "يرجى ملء الحقول المطلوبة.", "sending": "Sending…"};
+<script>(function(){var K={"names": {"tender": "هل يمكن لشركتنا التقدم لهذه المناقصة؟", "country": "فرص الأعمال في دولة ما", "family": "خطة استعداد لعائلتي", "partner": "شركاء ومسارات دعم لما أحتاجه"}, "done": "تم الاستلام. رقم الطلب", "dup": "لقد أرسلت الطلب نفسه للتو. رقم الطلب", "st": "تم الاستلام — انتظر رسالة التأكيد منا", "none": "لا توجد طلبات بعد.", "req": "يرجى ملء الحقول المطلوبة.", "sending": "Sending…", "left": "{n} requests left this month", "over": "Over this month's two included requests — we will send a quote first", "quote": "Not a member — we will email a quote first", "sent": "Received", "S": {"received": "Received", "relayed": "Received · passed to staff", "relay_failed": "Received · alert being re-checked", "in_progress": "In progress", "done": "Done · check your email", "failed": "Could not be done · allowance returned", "cancelled": "Cancelled · allowance returned"}};
 var f=document.querySelector(".rq-form"),msg=f.querySelector(".rq-msg"),btn=f.querySelector("button[type=submit]");
 function cur(){return (document.querySelector("input[name=rqt]:checked")||{}).value}
 document.querySelectorAll("input[name=rqt]").forEach(function(r){r.addEventListener("change",function(){f.querySelectorAll(".rq-f").forEach(function(d){d.hidden=d.dataset.t!==cur()})})});
@@ -53,8 +53,24 @@ var h=hash(t+lines.join("|")+f.email.value),a=load(),prev=a.filter(function(x){r
 if(prev){ev.preventDefault();msg.textContent=K.dup+" "+prev.id;return}
 var d=new Date(),id="RQ-"+String(d.getFullYear()).slice(2)+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+"-"+Math.random().toString(36).slice(2,6).toUpperCase();
 f.product.value="request:"+t+" "+id;f.field.value=t;f.need.value="["+id+"] "+(K.names[t]||t)+"\n"+lines.join("\n");
-a.unshift({id:id,t:t,h:h,ts:Date.now(),at:d.toISOString().slice(0,10)});save(a);btn.disabled=true;btn.textContent=K.sending;msg.textContent=K.done+" "+id});
-paint()})();</script></main><footer><div class="in">
+a.unshift({id:id,t:t,h:h,ts:Date.now(),at:d.toISOString().slice(0,10)});save(a);btn.disabled=true;btn.textContent=K.sending;msg.textContent=K.done+" "+id;
+/* server record (Cloudflare D1): if /api/req answers, it issues the number, counts the monthly allowance and blocks duplicates;
+   the Netlify form is then posted by fetch and its result reported back. 503 (not configured) -> the browser-only flow above. */
+if(SRV&&!f.dataset.srv){ev.preventDefault();var sendBody=lines.join("\n");
+fetch("/api/req",{method:"POST",headers:hdr({"content-type":"application/json"}),body:JSON.stringify({type:t,body:sendBody,email:f.email.value,lang:L})}).then(function(r){if(r.status===503){SRV=false;throw 0}return r.json()}).then(function(j){
+if(!j.req_no)throw 0;id=j.req_no;a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\n"+sendBody;
+var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{n}",j.left):" · "+K.over):" · "+K.quote);msg.textContent=info;
+return fetch(f.getAttribute("action"),{method:"POST",headers:{"content-type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(f)).toString(),redirect:"manual"}).then(function(r2){var ok=r2.type==="opaqueredirect"||r2.status<400;
+return fetch("/api/req",{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({req_no:id,ok:ok})}).then(function(){btn.textContent=K.sent;paint()})});
+}).catch(function(){f.dataset.srv="1";f.submit()})}
+});
+var L=document.documentElement.lang||"ko",SRV=true;
+function tok(){try{var x=JSON.parse(localStorage.getItem("wmm.auth.v1")||"null");return x&&x.access_token}catch(e){return null}}
+function hdr(h){var k=tok();if(k)h.authorization="Bearer "+k;return h}
+paint();
+if(tok())fetch("/api/req",{headers:hdr({})}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){var u=document.querySelector(".rq-mine");
+u.innerHTML=(j.member?"<li class=note>"+K.left.replace("{n}",j.left)+"</li>":"")+((j.items||[]).map(function(x){return "<li><b>"+x.req_no+"</b> · "+(K.names[x.type]||x.type)+" <small class=note>"+String(x.created_at).slice(0,10)+" · "+(K.S[x.status]||x.status)+"</small></li>"}).join("")||"<li class=note>"+K.none+"</li>")}).catch(function(){})
+})();</script></main><footer><div class="in">
 <div class="flogos"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener" class="flogo"><img src="/assets/wmm-logo.png" alt="شعار WORLD MAKING MEMBERS" width="52" height="52" class="wmm"><span><b>WORLD MAKING MEMBERS Co., Ltd.</b><small>월드메이킹멤버스 주식회사</small></span></a><a href="https://www.gcsme.kr" target="_blank" rel="noopener" class="flogo"><img src="/assets/gcsme-logo.jpg" alt="GCSME KOREA 로고" width="52" height="52" class="gc"><span><b>GCSME KOREA</b><small>Global &amp; Commonwealth SME Club</small></span></a><a href="https://www.gcsme.club" target="_blank" rel="noopener" class="flogo"><img src="/assets/gcsme-club.webp" alt="Global &amp; Commonwealth SME Club 로고" width="76" height="52" class="gclub"><span><b>Global &amp; Commonwealth SME Club</b><small>www.gcsme.club</small></span></a></div>
 <div class="lic"><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=5898801039" target="_blank" rel="noopener">معلومات الشركة</a><span class="bar"></span><span>ترخيص البيع عبر الإنترنت: رقم 2024-سيول سوتشو-2185</span></div>
 <p class="corp">WORLD MAKING MEMBERS Co., Ltd. · الرئيس التنفيذي Lee Duk-young · رقم التسجيل 589-88-01039 · E-mail 73036396@naver.com</p>
