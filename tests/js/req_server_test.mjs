@@ -142,7 +142,8 @@ if (!(log && log.ok === 1 && log.body_cleared >= 1)) fail.push("cron-log:" + JSO
 // store switch: off -> 503 everywhere; test -> only @example addresses
 const offEnv = { GV_DB: D1 }, tEnv = { GV_DB: D1, GV_STORE: "test" };
 if ((await mod.onRequestPost({ request: req("POST", { type: "tender", body: "X", email: "a@example.com" }).request, env: offEnv })).status !== 503) fail.push("off");
-if ((await mod.onRequestPost({ request: req("POST", { type: "tender", body: "X", email: "real@naver.com" }).request, env: tEnv })).status !== 503) fail.push("test-real");
+{ const rr = await mod.onRequestPost({ request: req("POST", { type: "tender", body: "X", email: "real@naver.com" }).request, env: tEnv });
+  if (rr.status !== 503 || (await rr.json()).error !== "test_only") fail.push("test-real-not-test_only"); }
 IP = "9.9.9.9";
 if ((await mod.onRequestPost({ request: req("POST", { type: "tender", body: "X", email: "a@example.com" }).request, env: tEnv })).status !== 200) fail.push("test-fake");
 // network key: salted per day, not a plain hash; wiped after 48 h; duplicate answers carry no token
@@ -154,4 +155,19 @@ raw.prepare("update requests set created_at='2020-01-01T00:00:00Z' where req_no=
 IP = "5.5.5.5"; await call(P, "POST", { type: "tender", body: "W", email: "w@ex.com" });
 if (raw.prepare("select ip_hash from requests where req_no=?").get(r6.req_no).ip_hash !== null) fail.push("ip-wipe-48h");
 if (r2.tok) fail.push("dup-has-token");
+// 24-hour network limit spans the UTC-midnight salt change
+{ const ipdb = raw; IP = "7.7.7.7";
+  for (let i = 0; i < 12; i++) await mod.onRequestPost(req("POST", { type: "partner", body: "Y" + i, email: "y" + i + "@ex.com" }));
+  const today = new Date().toISOString().slice(0, 10), yday = new Date(Date.now() - 864e5).toISOString().slice(0, 10);
+  // pretend those 12 were made yesterday under yesterday's salt
+  const old = ipdb.prepare("select salt from salts where day=?").get(today).salt;
+  ipdb.prepare("delete from salts where day=?").run(yday); ipdb.prepare("update salts set day=? where day=?").run(yday, today);
+  ipdb.prepare("update requests set created_at=? where body like 'Y%'").run(new Date(Date.now() - 3 * 3600e3).toISOString());
+  let last; for (let i = 0; i < 9; i++) last = await mod.onRequestPost(req("POST", { type: "partner", body: "Z" + i, email: "z" + i + "@ex.com" }));
+  if (last.status !== 429) fail.push("ip-limit-across-midnight:" + last.status); }
+// purge status page
+{ const PS = await import(ROOT + "/cf/functions/api/purge-status.js");
+  const s1 = await (await PS.onRequestGet({ env: { GV_DB: D1 } })).json();
+  if (!(s1.configured && s1.last_ok_at && s1.stale === false)) fail.push("purge-status:" + JSON.stringify(s1));
+  const s0 = await (await PS.onRequestGet({ env: {} })).json(); if (s0.configured !== false) fail.push("purge-status-off"); }
 if (fail.length) { console.error("FAIL", fail.join(",")); process.exit(1); } else console.log("req_server OK");

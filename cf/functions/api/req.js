@@ -30,8 +30,10 @@ async function ipKey(db, ip, now) {
   await db.prepare("insert or ignore into salts (day, salt) values (?, ?)").bind(day, rnd(32)).run();
   await db.prepare("delete from salts where day<?").bind(old).run();
   await db.prepare("update requests set ip_hash=null where ip_hash is not null and created_at<?").bind(new Date(now.getTime() - 2 * 864e5).toISOString()).run();
-  const r = await db.prepare("select salt from salts where day=?").bind(day).first();
-  return sha((r ? r.salt : rnd(32)) + "|" + ip);
+  const yday = new Date(now.getTime() - 864e5).toISOString().slice(0, 10);
+  const r = await db.prepare("select salt from salts where day=?").bind(day).first(), y = await db.prepare("select salt from salts where day=?").bind(yday).first();
+  const cur = await sha((r ? r.salt : rnd(32)) + "|" + ip);
+  return { cur, prev: y ? await sha(y.salt + "|" + ip) : cur };   // prev lets the 24-hour limit span the UTC midnight salt change
 }
 const kstMonth = d => new Date(d.getTime() + 9 * 3600e3).toISOString().slice(0, 7);
 async function used(db, key, month) { const r = await db.prepare("select count(*) n from requests where user_key=? and month=? and counted=1").bind(key, month).first(); return (r && r.n) || 0; }
@@ -92,7 +94,7 @@ export async function onRequestPost({ request, env }) {
   let email = String(b.email || "").trim().toLowerCase();
   if (!TYPES.includes(type) || !body || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json({ error: "bad" }, 400);
   const u = await who(request); if (u) email = u.email || email;
-  if (mode === "test" && !/@example\.(com|org)$/.test(email)) return json({ error: "not_configured" }, 503);   // test mode: no real addresses
+  if (mode === "test" && !/@example\.(com|org)$/.test(email)) return json({ error: "test_only" }, 503);   // test mode: real addresses refused; the page must NOT fall back to the old form
   await purge(db0(env), new Date());
   const key = u ? "u:" + u.id : "e:" + (await sha(email)), now = new Date(), month = kstMonth(now), db = env.GV_DB;
   const dedupe = await sha(type + "|" + body + "|" + email);
@@ -103,7 +105,7 @@ export async function onRequestPost({ request, env }) {
   if (prev) { const n = await used(db, key, month); return json({ req_no: prev.req_no, duplicate: true, counted: !!prev.counted, member, left: member ? Math.max(0, LIMIT - n) : 0 }); }
   const ip = await ipKey(db, request.headers.get("cf-connecting-ip") || "none", now), since = new Date(now.getTime() - 864e5).toISOString();
   const rk = await db.prepare("select count(*) n from requests where user_key=? and created_at>?").bind(key, since).first();
-  const ri = await db.prepare("select count(*) n from requests where ip_hash=? and created_at>?").bind(ip, since).first();
+  const ri = await db.prepare("select count(*) n from requests where ip_hash in (?,?) and created_at>?").bind(ip.cur, ip.prev, since).first();
   if ((rk && rk.n) >= DAY_KEY || (ri && ri.n) >= DAY_IP) return json({ error: "too_many" }, 429);
   const tok = rnd(16), d = new Date(now.getTime() + 9 * 3600e3), day = d.toISOString().slice(2, 10).replace(/-/g, "");
   let req = "", res = null;
@@ -112,7 +114,7 @@ export async function onRequestPost({ request, env }) {
     try {   // one statement: the monthly count and the insert happen together, so two requests at once cannot both use the last slot
       res = await db.prepare("insert into requests (req_no, created_at, month, user_key, email, grade, type, lang, body, dedupe, counted, relay_key, ip_hash) " +
         "select ?,?,?,?,?,?,?,?,?,?, case when ?=1 and (select count(*) from requests where user_key=? and month=? and counted=1) < ? then 1 else 0 end, ?, ?")
-        .bind(req, now.toISOString(), month, key, email, u ? st.grade || u.grade : null, type, lang, body, dedupe, canCount ? 1 : 0, key, month, LIMIT, await sha(tok), ip).run();
+        .bind(req, now.toISOString(), month, key, email, u ? st.grade || u.grade : null, type, lang, body, dedupe, canCount ? 1 : 0, key, month, LIMIT, await sha(tok), ip.cur).run();
     } catch (e) { if (!/UNIQUE|constraint/i.test(String(e && e.message))) throw e; }
   }
   if (!res) return json({ error: "busy" }, 503);
