@@ -450,9 +450,9 @@ window.gvLang = function (sel) {
     });
     function paint() { if (!items.length) return; var h = items.join(""); tk.innerHTML = h + h; tk.style.animationDuration = Math.max(40, items.length * 7) + "s"; }
     paint();
-    fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/official.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (f) {
+    fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/official.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (f) { return new Promise(function (ok) { (window.ATR ? ATR.load : function (cb) { cb(); })(function () { ok(f); }); }); }).then(function (f) {
       if (!f) return; var add = [];
-      ["gdacs", "usgs", "who"].forEach(function (k) { (f.items[k] || []).slice(0, 3).forEach(function (x) { add.push('<span class="ti al"><em>' + (x.lvl ? x.lvl.toUpperCase() : k.toUpperCase()) + "</em>" + String(x.t).replace(/[<>&]/g, "").slice(0, 90) + "</span>"); }); });
+      ["gdacs", "usgs", "who"].forEach(function (k) { (f.items[k] || []).slice(0, 3).forEach(function (x) { var tx = window.ATR ? ATR.t({ t: x.t, k: x.k, src: k === "who" ? "WHO" : k.toUpperCase() }, L) : x.t; add.push('<span class="ti al"><em>' + (x.lvl ? x.lvl.toUpperCase() : k.toUpperCase()) + "</em>" + String(tx).replace(/[<>&]/g, "").slice(0, 90) + "</span>"); }); });
       for (var i = 0; i < add.length; i++) items.splice(Math.min(items.length, i * 2 + 1), 0, add[i]); paint();
     }).catch(function () {});
   }
@@ -480,3 +480,25 @@ function mark(k){if(k===cur)return;cur=k;A.forEach(function(a,i){if(i===k)a.setA
 A.forEach(function(a,i){a.addEventListener("click",function(ev){var s=S[i];if(!s||s.offsetParent===null)return;ev.preventDefault();lock=Date.now()+900;mark(i);var y=s.getBoundingClientRect().top+scrollY-118;scrollTo({top:y,behavior:"smooth"});try{history.replaceState(null,"",a.getAttribute("href"))}catch(e){}})});
 if(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[S.indexOf(e.target)]=e.isIntersecting});if(Date.now()<lock)return;var k=-1;for(var i=0;i<S.length;i++)if(vis[i]){k=i;break}if(k<0){var y=scrollY+130;S.forEach(function(s,i){if(s&&s.getBoundingClientRect().top+scrollY<=y)k=i})}if(k>=0)mark(k)},{rootMargin:"-118px 0px -55% 0px"});S.forEach(function(s){if(s)io.observe(s)});}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();
+
+/* ---- My countries on the home page (signed-in): saved countries are kept on the account, separate from the screen language ---- */
+(function () {
+  var home = document.getElementById("today"); if (!home) return;
+  var L = (location.pathname.match(/^\/([a-z]{2})\//) || [, "en"])[1];
+  var H = { ko: ["내 관심 나라", "화면 언어를 바꿔도 관심 나라는 계정에 그대로 남습니다. 나라 페이지의 '관심 나라 저장'으로 추가합니다."], en: ["My countries", "Your saved countries stay on your account whatever language you read in. Add more with 'Save country' on any country page."],
+    es: ["Mis países", "Sus países guardados siguen en su cuenta en cualquier idioma. Añada más desde cada página de país."], fr: ["Mes pays", "Vos pays enregistrés restent sur votre compte, quelle que soit la langue. Ajoutez-en depuis chaque page pays."],
+    ar: ["دولي", "تبقى الدول المحفوظة في حسابك مهما كانت لغة العرض. أضف المزيد من صفحة كل دولة."], vi: ["Quốc gia của tôi", "Các quốc gia đã lưu vẫn giữ trong tài khoản dù bạn đổi ngôn ngữ. Thêm từ trang từng quốc gia."],
+    id: ["Negara saya", "Negara yang disimpan tetap ada di akun Anda dalam bahasa apa pun. Tambahkan dari halaman tiap negara."] }[L] || null;
+  var n = 0, t = setInterval(function () {
+    var au = window.WMMAuth; if (++n > 40) clearInterval(t); if (!au || !au.session) return; clearInterval(t);
+    var f = ((au.user() || {}).user_metadata || {}).follows || []; if (!f.length) return;
+    fetch("/data/countries.json").then(function (r) { return r.json(); }).then(function (cs) {
+      var by = {}; cs.forEach(function (c) { by[c.iso] = c; });
+      var chips = f.filter(function (i) { return by[i]; }).map(function (i) { var c = by[i]; return '<a class="myc" href="/' + L + "/" + c.slug + '/"><span class="fi fi-' + i.toLowerCase() + '" aria-hidden="true"></span>' + (c.names[L] || c.names.en) + "</a>"; }).join("");
+      if (!chips) return;
+      var s = document.createElement("section"); s.className = "band"; s.id = "mycountries";
+      s.innerHTML = '<div class="in"><h2>' + (H ? H[0] : "My countries") + '</h2><p class="note">' + (H ? H[1] : "") + '</p><p class="mycs">' + chips + "</p></div>";
+      home.parentNode.insertBefore(s, home);
+    }).catch(function () {});
+  }, 250);
+})();
