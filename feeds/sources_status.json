@@ -4,11 +4,11 @@
   "failed": 0,
   "raw": 3000,
   "filtered": {
-   "closed": 185,
-   "award-notice": 2157,
-   "no-country": 90,
-   "individual-consultant": 238,
-   "no-deadline": 10
+   "award-notice": 2165,
+   "individual-consultant": 228,
+   "no-country": 67,
+   "no-deadline": 11,
+   "closed": 188
   },
   "notes": [],
   "state": "SUCCESS",
@@ -19,23 +19,23 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 320,
+  "in": 341,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 320,
-  "checked": "2026-11-16T21:48Z",
-  "new_today": 67,
-  "last_success": "2026-11-16T21:48Z"
+  "kept": 341,
+  "checked": "2026-11-17T21:54Z",
+  "new_today": 58,
+  "last_success": "2026-11-17T21:54Z"
  },
  "EU TED": {
   "requests": 13,
   "failed": 0,
-  "raw": 3171,
+  "raw": 3170,
   "filtered": {
-   "closed": 156,
-   "below-size": 1476,
-   "country-cap": 961
+   "below-size": 1474,
+   "closed": 101,
+   "country-cap": 1009
   },
   "notes": [],
   "state": "SUCCESS",
@@ -46,49 +46,49 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 578,
+  "in": 586,
   "rejected": {},
   "duplicates": 1,
   "flagged_similar": 0,
-  "kept": 577,
-  "checked": "2026-11-16T21:48Z",
-  "new_today": 577,
-  "last_success": "2026-11-16T21:48Z"
+  "kept": 585,
+  "checked": "2026-11-17T21:54Z",
+  "new_today": 46,
+  "last_success": "2026-11-17T21:54Z"
  },
  "UK Find a Tender": {
   "requests": 2,
   "failed": 0,
-  "raw": 135,
+  "raw": 131,
   "filtered": {
-   "below-size": 80,
-   "closed": 5,
-   "source-cap": 10
+   "below-size": 74,
+   "closed": 6,
+   "source-cap": 11
   },
   "notes": [],
   "state": "SUCCESS",
-  "carried_verified": 3,
-  "carried_stale": 0,
+  "carried_verified": 4,
+  "carried_stale": 1,
   "dropped_unverified": 0,
-  "dropped_closed": 1,
+  "dropped_closed": 0,
   "dropped_cancelled": 0,
-  "verify_lookups": 3,
-  "carried_from_yesterday": 3,
-  "in": 43,
+  "verify_lookups": 5,
+  "carried_from_yesterday": 5,
+  "in": 45,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 43,
-  "checked": "2026-11-16T21:48Z",
-  "new_today": 43,
-  "last_success": "2026-11-16T21:48Z"
+  "kept": 45,
+  "checked": "2026-11-17T21:54Z",
+  "new_today": 2,
+  "last_success": "2026-11-17T21:54Z"
  },
  "UK Contracts Finder": {
   "requests": 2,
   "failed": 0,
-  "raw": 139,
+  "raw": 140,
   "filtered": {
-   "below-size": 86,
-   "closed": 45
+   "below-size": 90,
+   "closed": 41
   },
   "notes": [],
   "state": "SUCCESS",
@@ -99,28 +99,28 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 8,
+  "in": 9,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 1,
-  "kept": 8,
-  "checked": "2026-11-16T21:48Z",
-  "new_today": 8,
-  "last_success": "2026-11-16T21:48Z"
+  "kept": 9,
+  "checked": "2026-11-17T21:54Z",
+  "new_today": 1,
+  "last_success": "2026-11-17T21:54Z"
  },
  "Prozorro (Ukraine)": {
   "requests": 425,
   "failed": 0,
   "raw": 25000,
   "filtered": {
-   "below-size": 1071,
-   "not-checked-yet": 292
+   "below-size": 385,
+   "not-checked-yet": 1050
   },
   "notes": [],
-  "candidates": 1405,
+  "candidates": 1450,
   "checked_now": 400,
-  "rechecked_changed": 127,
-  "unchecked": 292,
+  "rechecked_changed": 259,
+  "unchecked": 1050,
   "state": "SUCCESS",
   "carried_verified": 0,
   "carried_stale": 0,
@@ -129,14 +129,14 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 42,
+  "in": 15,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 42,
-  "checked": "2026-11-16T21:48Z",
-  "new_today": 42,
-  "last_success": "2026-11-16T21:48Z"
+  "kept": 15,
+  "checked": "2026-11-17T21:54Z",
+  "new_today": 7,
+  "last_success": "2026-11-17T21:54Z"
  },
  "DAPA (Korea)": {
   "requests": 0,
@@ -158,7 +158,7 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 0,
-  "checked": "2026-11-16T21:48Z",
+  "checked": "2026-11-17T21:54Z",
   "new_today": 0,
   "last_success": ""
  },
@@ -182,7 +182,7 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 0,
-  "checked": "2026-11-16T21:48Z",
+  "checked": "2026-11-17T21:54Z",
   "new_today": 0,
   "last_success": ""
  }
