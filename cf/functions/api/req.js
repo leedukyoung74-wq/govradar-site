@@ -9,6 +9,7 @@
 // Retention (owner decision 2026-11-17): request text 90 days after completion, minimal record up to 1 year after completion,
 // contract/payment/dispute records kept apart in legal_records for the period the law sets; purged on every call (no cron).
 // Member standing (owner decision 2026-11-17): see standing() below; the members table holds billing dates only.
+import { purgeLogged } from "./_purge.js";
 const IDENTITY = "https://wmm-govradar.netlify.app/.netlify/identity/user";
 const MEMBER = ["m1", "m2", "m3", "m4", "m5", "admin", "owner"], LIMIT = 2, TYPES = ["tender", "country", "family", "partner"];
 const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "content-type": "application/json", "cache-control": "no-store" } });
@@ -36,38 +37,42 @@ const kstMonth = d => new Date(d.getTime() + 9 * 3600e3).toISOString().slice(0, 
 async function used(db, key, month) { const r = await db.prepare("select count(*) n from requests where user_key=? and month=? and counted=1").bind(key, month).first(); return (r && r.n) || 0; }
 const DAY = 864e5, KST = 9 * 3600e3;
 const kstDate = d => new Date(d.getTime() + KST);                  // shift so getUTC* reads Korea time
-// Member standing from the members row (billing) on top of the login role.
-// monthly: fee due on the 1st (KST). Unpaid for this month: 1st = normal; from the 2nd new paid requests are blocked;
-//          from the 8th 00:00 KST the member counts as M0 until payment is confirmed.
-// quarter/annual: same steps counted from the contract end date (day after end = blocked, 7 days after end = M0).
-// suspended: paid features off at once. No members row: the login role alone decides (as before).
+// Member standing (owner decision 2026-11-17, fixed after ChatGPT review T20261117-06). Fail-closed: a paid role is honoured
+// only when a billing row confirms it. No row, unreadable table or missing dates -> "unverified": the member keeps reading
+// as before but new paid requests are taken as quotes (not counted) until the owner records the payment.
+// monthly: paid_through = last paid month (YYYY-MM). The next fee is due on the 1st of the following month (KST).
+//          Overdue days count from that due date and keep growing month after month until a payment is recorded:
+//          due day = normal; 1-6 days overdue = new paid requests blocked; 7+ days (the 8th 00:00 KST on) = M0.
+// quarterly / annual: contract_end = last day; day after = blocked, 7 days after = M0.  suspended: M0 at once.
 export function standing(role, m, now) {
   now = now || new Date();
   if (!role || role === "m0") return { grade: "m0", paid: false, can_request: false, state: "free" };
   if (role === "admin" || role === "owner") return { grade: role, paid: true, can_request: true, state: "staff" };
-  if (!m) return { grade: role, paid: true, can_request: true, state: "no_billing_row" };
+  const unverified = { grade: "m0", paid: false, can_request: false, state: "unverified" };
+  if (!m || m === "error") return unverified;
   if (m.status === "suspended") return { grade: "m0", paid: false, can_request: false, state: "suspended" };
-  const k = kstDate(now), today = k.toISOString().slice(0, 10);
-  let overdue;                                                       // days past the due date, 0 = due today or paid
-  if ((m.plan || "monthly") === "monthly") {
-    const month = today.slice(0, 7);
-    overdue = String(m.paid_through || "") >= month ? 0 : k.getUTCDate() - 1;
-  } else {
-    const end = String(m.contract_end || "");
-    overdue = !end || today <= end ? 0 : Math.round((Date.parse(today) - Date.parse(end)) / DAY);
-  }
+  if (m.status !== "active") return unverified;
+  const today = kstDate(now).toISOString().slice(0, 10), plan = m.plan || "monthly";
+  let due;                                                           // first day NOT covered by a payment (KST date)
+  if (plan === "monthly") {
+    const pt = String(m.paid_through || ""); if (!/^\d{4}-\d{2}$/.test(pt)) return unverified;
+    let y = +pt.slice(0, 4), mo = +pt.slice(5, 7) + 1; if (mo > 12) { mo = 1; y++; }
+    due = `${y}-${String(mo).padStart(2, "0")}-01`;
+  } else if (plan === "quarterly" || plan === "annual") {
+    const end = String(m.contract_end || ""); if (!/^\d{4}-\d{2}-\d{2}$/.test(end)) return unverified;
+    due = new Date(Date.parse(end) + DAY).toISOString().slice(0, 10);
+    if (today < due) return { grade: role, paid: true, can_request: true, state: "ok" };
+    const late = Math.round((Date.parse(today) - Date.parse(end)) / DAY);
+    return late >= 7 ? { grade: "m0", paid: false, can_request: false, state: "lapsed" } : { grade: role, paid: true, can_request: false, state: "grace" };
+  } else return unverified;
+  const overdue = Math.round((Date.parse(today) - Date.parse(due)) / DAY);   // monthly: <=0 paid ahead or due today
   if (overdue >= 7) return { grade: "m0", paid: false, can_request: false, state: "lapsed" };
   if (overdue >= 1) return { grade: role, paid: true, can_request: false, state: "grace" };
   return { grade: role, paid: true, can_request: true, state: "ok" };
 }
-async function memberRow(db, id) { try { return await db.prepare("select * from members where user_id=?").bind(id).first(); } catch (e) { return null; } }
-// Retention, run on every call: cheap indexed updates; nothing under legal_hold is touched.
-async function purge(db, now) {
-  const t = now.toISOString();
-  await db.prepare("update requests set body='', email='', note=null, dedupe='', ip_hash=null, relay_key=null, body_purged_at=? where body_purged_at is null and legal_hold=0 and purge_body_at is not null and purge_body_at<?").bind(t, t).run();
-  await db.prepare("delete from requests where legal_hold=0 and purge_row_at is not null and purge_row_at<?").bind(t).run();
-  await db.prepare("delete from legal_records where retain_until<?").bind(t.slice(0, 10)).run();
-}
+async function memberRow(db, id) { try { return await db.prepare("select * from members where user_id=?").bind(id).first(); } catch (e) { return "error"; } }   // error -> unverified (fail-closed)
+// Retention runs on every call AND daily from the scheduled worker (cf/cron/purge-worker.js): see _purge.js.
+async function purge(db, now) { await purgeLogged(db, now, "request"); }
 const db0 = env => env.GV_DB;
 function storeMode(env) { const v = String(env.GV_STORE || "").toLowerCase(); return v === "on" ? "on" : v === "test" ? "test" : "off"; }
 export async function onRequestGet({ request, env }) {
@@ -137,6 +142,6 @@ export async function onRequestDelete({ request, env }) {
   const u = await who(request); if (!u) return json({ error: "login" }, 401);
   const key = "u:" + u.id, db = env.GV_DB, e = "e:" + (await sha(u.email || ""));
   const r = await db.prepare("delete from requests where user_key in (?,?) and legal_hold=0").bind(key, e).run();
-  await db.prepare("update requests set body='', note=null, dedupe='', ip_hash=null, relay_key=null where user_key in (?,?) and legal_hold=1").bind(key, e).run();
+  await db.prepare("update requests set body='', email='', note=null, dedupe='', ip_hash=null, relay_key=null, body_purged_at=? where user_key in (?,?) and legal_hold=1").bind(new Date().toISOString(), key, e).run();
   return json({ ok: true, deleted: r && r.meta ? r.meta.changes : 0, kept_for_law: true });
 }

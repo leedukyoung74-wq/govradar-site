@@ -1,4 +1,5 @@
--- GOV RADAR member requests (Cloudflare D1, free plan). Run once in Cloudflare → D1 → govradar → Console.
+-- GOV RADAR member requests (Cloudflare D1, free plan). FRESH database only: run once in Cloudflare → D1 → Console.
+-- A database made from an older version must be updated with cf/d1/migrations/ in order instead (re-running this file adds no columns).
 -- One row per request. counted=1 uses the monthly allowance; the owner sets counted=0 to give it back (failed or cancelled).
 -- Personal data: email and request text. Keep only as long as the privacy policy says; delete with: delete from requests where created_at < '<date>'.
 create table if not exists requests (
@@ -21,7 +22,8 @@ create table if not exists requests (
   purge_body_at  text,                      -- completed_at + 90 days: request text, email, note are blanked
   purge_row_at   text,                      -- completed_at + 1 year: the minimal record is deleted
   body_purged_at text,                      -- when the text was blanked
-  legal_hold     integer not null default 0 -- 1 = tied to a contract, payment or dispute: see legal_records, not purged here
+  legal_hold     integer not null default 0, -- 1 = tied to a contract, payment or dispute: keeps ONLY the minimal record, ONLY until legal_until
+  legal_until    text                      -- 'YYYY-MM-DD' end of the legal period; empty or past -> hold released by the purge
 );
 create index if not exists req_ip on requests(ip_hash, created_at);
 create index if not exists req_user_month on requests(user_key, month);
@@ -43,7 +45,7 @@ begin
     purge_row_at = strftime('%Y-%m-%dT%H:%M:%fZ', new.created_at, '+730 days')
   where req_no = new.req_no and purge_body_at is null;
 end;
-create index if not exists req_purge on requests(legal_hold, purge_body_at);
+create index if not exists req_purge on requests(purge_body_at);
 create index if not exists req_purge_row on requests(legal_hold, purge_row_at);
 
 -- Billing standing of paid members (dates only; no card or account numbers). No row = login role alone decides.
@@ -57,6 +59,11 @@ create table if not exists members (
   updated_at    text,
   note          text
 );
+
+-- Purge log: every run (daily worker and on-request) with counts, so a stalled purge is visible.
+create table if not exists purge_runs (at text not null, source text, ok integer, body_cleared integer, rows_deleted integer,
+  holds_released integer, legal_deleted integer, ip_wiped integer, error text);
+create index if not exists purge_at on purge_runs(at);
 
 -- Contract, payment and dispute records, kept apart for the period the law sets (owner fills these by hand).
 -- Example periods under the Korean e-commerce consumer protection rules: contract / withdrawal and payment / supply 5 years,
@@ -73,3 +80,7 @@ create table if not exists legal_records (
 create index if not exists legal_until on legal_records(retain_until);
 -- Daily random salt for the network-address key (deleted after 2 days).
 create table if not exists salts (day text primary key, salt text not null);
+
+-- Version marker (migrations check it).
+create table if not exists schema_version (v integer not null);
+insert into schema_version (v) select 2 where not exists (select 1 from schema_version);

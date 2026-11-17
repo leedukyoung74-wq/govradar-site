@@ -1,0 +1,30 @@
+// Retention purge, shared by the request API (runs on every call) and the scheduled worker (cf/cron/purge-worker.js, daily).
+// This file has no request handlers, so Cloudflare Pages does not serve it as a page or API route.
+// Rules (owner decision 2026-11-17):
+//  - request text, email, note: blanked 90 days after the request is closed (unclosed: 1 year after it was made)
+//  - minimal record: deleted 1 year after closing (unclosed: 2 years) unless an UNEXPIRED legal hold applies
+//  - legal hold protects only the minimal record and only until legal_until; with no date or a past date it is released
+//  - legal_records rows are deleted after retain_until; network keys are wiped after 48 hours; day salts after 2 days
+export async function purgeAll(db, now) {
+  const t = now.toISOString(), d = t.slice(0, 10), h48 = new Date(now.getTime() - 2 * 864e5).toISOString();
+  const n = r => (r && r.meta ? Number(r.meta.changes) : 0) || 0, out = {};
+  out.holds_released = n(await db.prepare("update requests set legal_hold=0 where legal_hold=1 and (legal_until is null or legal_until<?)").bind(d).run());
+  out.body_cleared = n(await db.prepare("update requests set body='', email='', note=null, dedupe='', ip_hash=null, relay_key=null, body_purged_at=? where body_purged_at is null and purge_body_at is not null and purge_body_at<?").bind(t, t).run());
+  out.rows_deleted = n(await db.prepare("delete from requests where legal_hold=0 and purge_row_at is not null and purge_row_at<?").bind(t).run());
+  out.legal_deleted = n(await db.prepare("delete from legal_records where retain_until<?").bind(d).run());
+  out.ip_wiped = n(await db.prepare("update requests set ip_hash=null where ip_hash is not null and created_at<?").bind(h48).run());
+  await db.prepare("delete from salts where day<?").bind(h48.slice(0, 10)).run();
+  return out;
+}
+export async function purgeLogged(db, now, source) {
+  try {
+    const o = await purgeAll(db, now);
+    await db.prepare("insert into purge_runs (at, source, ok, body_cleared, rows_deleted, holds_released, legal_deleted, ip_wiped) values (?,?,?,?,?,?,?,?)")
+      .bind(now.toISOString(), source, 1, o.body_cleared, o.rows_deleted, o.holds_released, o.legal_deleted, o.ip_wiped).run();
+    await db.prepare("delete from purge_runs where at<?").bind(new Date(now.getTime() - 400 * 864e5).toISOString()).run();
+    return { ok: true, ...o };
+  } catch (e) {
+    try { await db.prepare("insert into purge_runs (at, source, ok, error) values (?,?,0,?)").bind(now.toISOString(), source, String(e && e.message || e).slice(0, 200)).run(); } catch (e2) {}
+    return { ok: false, error: String(e && e.message || e) };
+  }
+}
