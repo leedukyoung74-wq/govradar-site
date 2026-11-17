@@ -18,7 +18,7 @@ def load(p):
 def slim(x):
     n = x.get("n") or {}
     return {"t": (x.get("title") or "")[:140], "iso": x.get("iso", ""), "n": {k: n.get(k, "") for k in ("ko", "en", "es", "fr", "ar", "vi", "id")} if n else {},
-            "dl": x.get("deadline", ""), "dla": x.get("deadline_at", ""), "url": x.get("url", ""), "src": x.get("source", "")}
+            "dl": x.get("deadline", ""), "dla": x.get("deadline_at", ""), "url": x.get("url", ""), "src": x.get("source", ""), "sec": list(x.get("sec") or [])[:2]}
 
 def num(v):
     try: return float(v or 0)
