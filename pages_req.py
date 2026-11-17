@@ -15,8 +15,8 @@ K = {
   email="이메일", name="이름 또는 담당자", org="회사·단체명 (선택)", country="관심 국가", code="회원 코드 (있으면)",
   agree="개인정보 수집·이용(의뢰 처리 목적, 처리 후 1년 보관)에 동의합니다", btn="의뢰 보내기", sending="보내는 중…",
   done="접수되었습니다. 요청번호", dup="같은 내용을 방금 보내셨습니다. 요청번호", mine="이 브라우저에서 보낸 의뢰", mine_n="아직 보낸 의뢰가 없습니다.",
-  st="접수됨 — 확인 메일을 기다려 주세요", wait="요청이 많거나 일시적인 문제로 보내지 못했습니다. 아무것도 전송되지 않았습니다. 잠시 뒤 다시 보내거나 73036396@naver.com으로 메일 주세요.", req="필수 항목을 채워 주세요.", left="이번 달 남은 의뢰 {n}건", over="이번 달 포함 건수(2건)를 넘어 견적을 먼저 보내 드립니다", quote="회원이 아니어서 견적을 먼저 이메일로 보내 드립니다", sent="접수 완료",
-  S={"received": "접수됨", "client_ok": "접수됨 · 알림 보냄", "client_fail": "접수됨 · 알림 재확인 중", "relayed": "접수됨 · 알림 보냄", "relay_failed": "접수됨 · 알림 재확인 중", "in_progress": "처리 중", "done": "완료 · 이메일 확인", "failed": "처리 불가 · 한도 반환", "cancelled": "취소 · 한도 반환"},
+  st="접수됨 — 확인 메일을 기다려 주세요", wait="요청이 많거나 일시적인 문제로 보내지 못했습니다. 아무것도 전송되지 않았습니다. 잠시 뒤 다시 보내거나 73036396@naver.com으로 메일 주세요.", test="지금은 비공개 시험 중이라 접수를 받지 않습니다. 73036396@naver.com으로 메일 주세요.", al_wait="담당자 알림 보내는 중…", al_ok="담당자 알림 보냄(이 브라우저 기준)", al_fail="담당자 알림 전송 실패 — 접수는 서버에 저장되어 있습니다. 급하면 73036396@naver.com으로 메일 주세요", req="필수 항목을 채워 주세요.", left="이번 달 남은 의뢰 {n}건", over="이번 달 포함 건수(2건)를 넘어 견적을 먼저 보내 드립니다", quote="회원이 아니어서 견적을 먼저 이메일로 보내 드립니다", sent="접수 완료",
+  S={"received": "접수됨", "client_ok": "접수됨 · 알림 보냄(브라우저 보고)", "client_fail": "접수됨 · 알림 실패(접수는 보관)", "relayed": "접수됨 · 알림 보냄", "relay_failed": "접수됨 · 알림 재확인 중", "in_progress": "처리 중", "done": "완료 · 이메일 확인", "failed": "처리 불가 · 한도 반환", "cancelled": "취소 · 한도 반환"},
   types=[
    ("tender", "이 입찰에 우리 회사가 참여할 수 있는지 검토", "참가 자격·필요 서류·부족한 조건을 정리한 참가 조건표와 참여 권고(예·조건부·아니오)", "공고 링크 또는 제목, 업종, 연 매출, 공공·해외 실적, 보유 인증",
     [("tender", "공고 링크 또는 제목", "text", True), ("industry", "업종·주력 제품", "text", True), ("revenue", "연 매출 (억 원)", "number", False), ("record", "공공·해외 실적 (간단히)", "textarea", False), ("certs", "보유 인증", "text", False)]),
@@ -81,7 +81,7 @@ def request_page(L, head, foot, LANGS):
 </form>
 <h3>{e(k["mine"])}</h3><ul class="rq-mine"></ul>
 </div></section>
-<script>(function(){{var K={json.dumps({"names": names, "done": k["done"], "dup": k["dup"], "st": k["st"], "none": k["mine_n"], "req": k["req"], "sending": k["sending"], "btn": k["btn"], "left": k.get("left", "이번 달 남은 의뢰 {n}건"), "over": k.get("over", "이번 달 포함 건수를 넘어 견적을 먼저 보내 드립니다"), "quote": k.get("quote", "견적을 먼저 이메일로 보내 드립니다"), "sent": k.get("sent", "접수 완료"), "wait": k.get("wait", "Too many requests or a temporary problem. Nothing was sent. Please try again later, or write to 73036396@naver.com."), "S": k.get("S", {})}, ensure_ascii=False)};
+<script>(function(){{var K={json.dumps({"names": names, "done": k["done"], "dup": k["dup"], "st": k["st"], "none": k["mine_n"], "req": k["req"], "sending": k["sending"], "btn": k["btn"], "left": k.get("left", "이번 달 남은 의뢰 {n}건"), "over": k.get("over", "이번 달 포함 건수를 넘어 견적을 먼저 보내 드립니다"), "quote": k.get("quote", "견적을 먼저 이메일로 보내 드립니다"), "sent": k.get("sent", "접수 완료"), "wait": k.get("wait", "Too many requests or a temporary problem. Nothing was sent. Please try again later, or write to 73036396@naver.com."), "test": k.get("test", "Requests are not being accepted during the private test. Please write to 73036396@naver.com."), "al_wait": k.get("al_wait", "notifying staff…"), "al_ok": k.get("al_ok", "staff notified (as reported by this browser)"), "al_fail": k.get("al_fail", "staff alert failed — your request is still saved on the server; for urgent matters write to 73036396@naver.com"), "S": k.get("S", {})}, ensure_ascii=False)};
 var f=document.querySelector(".rq-form"),msg=f.querySelector(".rq-msg"),btn=f.querySelector("button[type=submit]");
 function cur(){{return (document.querySelector("input[name=rqt]:checked")||{{}}).value}}
 document.querySelectorAll("input[name=rqt]").forEach(function(r){{r.addEventListener("change",function(){{f.querySelectorAll(".rq-f").forEach(function(d){{d.hidden=d.dataset.t!==cur()}})}})}});
@@ -104,11 +104,16 @@ if(SRV&&!f.dataset.srv){{ev.preventDefault();var sendBody=lines.join("\\n");
 fetch("/api/req",{{method:"POST",headers:hdr({{"content-type":"application/json"}}),body:JSON.stringify({{type:t,body:sendBody,email:f.email.value,lang:L}})}}).then(function(r){{return r.json().catch(function(){{return {{}}}}).then(function(j){{j._s=r.status;return j}})}}).then(function(j){{
 /* only an explicit "not configured" answer falls back to the old form; 429 / 4xx / 5xx / network errors send nothing anywhere */
 if(j._s===503&&j.error==="not_configured"){{SRV=false;f.dataset.srv="1";f.submit();return}}
+if(j.error==="test_only"){{a.shift();save(a);btn.disabled=false;btn.textContent=K.btn||btn.textContent;msg.textContent=K.test;return}}
 if(j._s!==200||!j.req_no)throw 0;id=j.req_no;var rtok=j.tok||"";a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+sendBody;
-var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{{n}}",j.left):" · "+K.over):" · "+K.quote);msg.textContent=info;
-if(j.duplicate){{btn.textContent=K.sent;paint();return}}
-return fetch(f.getAttribute("action"),{{method:"POST",headers:{{"content-type":"application/x-www-form-urlencoded"}},body:new URLSearchParams(new FormData(f)).toString(),redirect:"manual"}}).then(function(r2){{var ok=r2.type==="opaqueredirect"||r2.status<400;
-return rtok?fetch("/api/req",{{method:"PATCH",headers:{{"content-type":"application/json"}},body:JSON.stringify({{req_no:id,tok:rtok,ok:ok}})}}):0}}).then(function(){{btn.textContent=K.sent;paint()}})
+/* from here the request IS saved on the server: alert problems never erase it or say "nothing was sent" */
+var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{{n}}",j.left):" · "+K.over):" · "+K.quote);
+if(j.duplicate){{msg.textContent=info;btn.textContent=K.sent;paint();return}}
+msg.textContent=info+" · "+K.al_wait;
+var fin=function(ok){{msg.textContent=info+" · "+(ok?K.al_ok:K.al_fail);btn.textContent=K.sent;paint();
+ if(rtok)fetch("/api/req",{{method:"PATCH",headers:{{"content-type":"application/json"}},body:JSON.stringify({{req_no:id,tok:rtok,ok:ok}})}}).catch(function(){{}})}};
+return fetch(f.getAttribute("action"),{{method:"POST",headers:{{"content-type":"application/x-www-form-urlencoded"}},body:new URLSearchParams(new FormData(f)).toString(),redirect:"manual"}})
+ .then(function(r2){{return r2.type==="opaqueredirect"||r2.status<400}},function(){{return false}}).then(fin,function(){{fin(false)}})
 }}).catch(function(){{a.shift();save(a);btn.disabled=false;btn.textContent=K.btn||btn.textContent;msg.textContent=K.wait}})}}
 }});
 var L=document.documentElement.lang||"ko",SRV=true;
