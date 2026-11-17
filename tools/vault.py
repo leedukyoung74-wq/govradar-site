@@ -5,7 +5,7 @@ import base64, hashlib, io, json, os, secrets, sys, tarfile
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEY = os.path.join(ROOT, "private", "master.key"); OUT = os.path.join(ROOT, "data_branch", "m", "vault.json")
-ITEMS = ["export", "private/members.json", "private/tasks.json", "private/foresight_country.json"]
+ITEMS = ["export", "private/members.json", "private/tasks.json", "private/foresight_country.json", "src/i18n_data"]   # i18n_data: daily translations (2026-11-17)
 k = lambda: AESGCM(base64.b64decode(open(KEY).read().strip()))
 MARK = os.path.join(ROOT, "private", ".vault_sha")   # which vault this working folder matches (publish_cf.sh checks it)
 def mark(): open(MARK, "w").write(hashlib.sha256(open(OUT, "rb").read()).hexdigest())
