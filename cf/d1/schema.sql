@@ -48,7 +48,8 @@ end;
 create index if not exists req_purge on requests(purge_body_at);
 create index if not exists req_purge_row on requests(legal_hold, purge_row_at);
 
--- Billing standing of paid members (dates only; no card or account numbers). No row = login role alone decides.
+-- Billing standing of paid members (dates only; no card or account numbers). Fail-closed: a paid login role WITHOUT a row here
+-- (or with missing dates) counts as 'unverified' — new paid requests become quotes until the owner records the payment.
 create table if not exists members (
   user_id       text primary key,           -- Netlify Identity user id
   plan          text not null default 'monthly', -- monthly | quarterly | annual
@@ -78,6 +79,23 @@ create table if not exists legal_records (
   retain_until  text not null               -- 'YYYY-MM-DD'
 );
 create index if not exists legal_until on legal_records(retain_until);
+-- legal_records is the single source of the legal period: adding, changing or removing one keeps the related request's
+-- legal_hold / legal_until in step (latest retain_until of that request wins; none left = hold released).
+create trigger if not exists legal_sync_ins after insert on legal_records when new.req_no is not null
+begin update requests set legal_hold=1, legal_until=(select max(retain_until) from legal_records where req_no=new.req_no) where req_no=new.req_no; end;
+create trigger if not exists legal_sync_upd after update of retain_until, req_no on legal_records
+begin
+  update requests set legal_until=(select max(retain_until) from legal_records where req_no=requests.req_no),
+    legal_hold=case when exists(select 1 from legal_records where req_no=requests.req_no) then 1 else 0 end
+  where req_no in (old.req_no, new.req_no);
+end;
+create trigger if not exists legal_sync_del after delete on legal_records when old.req_no is not null
+begin
+  update requests set legal_until=(select max(retain_until) from legal_records where req_no=old.req_no),
+    legal_hold=case when exists(select 1 from legal_records where req_no=old.req_no) then 1 else 0 end
+  where req_no=old.req_no;
+end;
+
 -- Daily random salt for the network-address key (deleted after 2 days).
 create table if not exists salts (day text primary key, salt text not null);
 

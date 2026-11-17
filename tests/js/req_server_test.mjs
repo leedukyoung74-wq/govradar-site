@@ -165,6 +165,17 @@ if (r2.tok) fail.push("dup-has-token");
   ipdb.prepare("update requests set created_at=? where body like 'Y%'").run(new Date(Date.now() - 3 * 3600e3).toISOString());
   let last; for (let i = 0; i < 9; i++) last = await mod.onRequestPost(req("POST", { type: "partner", body: "Z" + i, email: "z" + i + "@ex.com" }));
   if (last.status !== 429) fail.push("ip-limit-across-midnight:" + last.status); }
+// legal_records keeps requests.legal_hold / legal_until in step
+raw.exec("insert into requests (req_no, created_at, month, user_key, email, type, body, dedupe) values ('RQ-LEG-1','2026-11-01T00:00:00Z','2026-11','u:lg','l@ex.com','tender','b','d')");
+raw.exec("insert into legal_records (kind, req_no, summary, created_at, retain_until) values ('payment','RQ-LEG-1','invoice','2026-11-01','2031-11-01'),('dispute','RQ-LEG-1','claim','2026-11-02','2029-11-02')");
+let lg = raw.prepare("select legal_hold, legal_until from requests where req_no='RQ-LEG-1'").get();
+if (!(lg.legal_hold === 1 && lg.legal_until === "2031-11-01")) fail.push("legal-sync-ins:" + JSON.stringify(lg));
+raw.exec("delete from legal_records where req_no='RQ-LEG-1' and kind='payment'");
+lg = raw.prepare("select legal_hold, legal_until from requests where req_no='RQ-LEG-1'").get();
+if (!(lg.legal_hold === 1 && lg.legal_until === "2029-11-02")) fail.push("legal-sync-del1:" + JSON.stringify(lg));
+raw.exec("delete from legal_records where req_no='RQ-LEG-1'");
+lg = raw.prepare("select legal_hold, legal_until from requests where req_no='RQ-LEG-1'").get();
+if (!(lg.legal_hold === 0 && lg.legal_until === null)) fail.push("legal-sync-del2:" + JSON.stringify(lg));
 // purge status page
 { const PS = await import(ROOT + "/cf/functions/api/purge-status.js");
   const s1 = await (await PS.onRequestGet({ env: { GV_DB: D1 } })).json();
