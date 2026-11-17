@@ -22,6 +22,16 @@ async function who(request) {
 }
 const rnd = n => [...crypto.getRandomValues(new Uint8Array(n))].map(x => x.toString(16).padStart(2, "0")).join("");
 const DAY_KEY = 10, DAY_IP = 20, RELAY_WINDOW = 30 * 60e3;   // per person / per network per 24h; relay report accepted for 30 min
+// Network address for the daily limit: keyed with a random salt that changes every day (UTC) and is deleted after 2 days,
+// so stored values cannot be matched to an address or across days once the salt is gone. Values are wiped after 48 hours.
+async function ipKey(db, ip, now) {
+  const day = now.toISOString().slice(0, 10), old = new Date(now.getTime() - 2 * 864e5).toISOString().slice(0, 10);
+  await db.prepare("insert or ignore into salts (day, salt) values (?, ?)").bind(day, rnd(32)).run();
+  await db.prepare("delete from salts where day<?").bind(old).run();
+  await db.prepare("update requests set ip_hash=null where ip_hash is not null and created_at<?").bind(new Date(now.getTime() - 2 * 864e5).toISOString()).run();
+  const r = await db.prepare("select salt from salts where day=?").bind(day).first();
+  return sha((r ? r.salt : rnd(32)) + "|" + ip);
+}
 const kstMonth = d => new Date(d.getTime() + 9 * 3600e3).toISOString().slice(0, 7);
 async function used(db, key, month) { const r = await db.prepare("select count(*) n from requests where user_key=? and month=? and counted=1").bind(key, month).first(); return (r && r.n) || 0; }
 const DAY = 864e5, KST = 9 * 3600e3;
@@ -86,7 +96,7 @@ export async function onRequestPost({ request, env }) {
   const st = u ? standing(u.grade, await memberRow(db, u.id), now) : { paid: false, can_request: false, state: "guest" };
   const member = st.paid, canCount = st.can_request;
   if (prev) { const n = await used(db, key, month); return json({ req_no: prev.req_no, duplicate: true, counted: !!prev.counted, member, left: member ? Math.max(0, LIMIT - n) : 0 }); }
-  const ip = await sha("ip|" + (request.headers.get("cf-connecting-ip") || "none")), since = new Date(now.getTime() - 864e5).toISOString();
+  const ip = await ipKey(db, request.headers.get("cf-connecting-ip") || "none", now), since = new Date(now.getTime() - 864e5).toISOString();
   const rk = await db.prepare("select count(*) n from requests where user_key=? and created_at>?").bind(key, since).first();
   const ri = await db.prepare("select count(*) n from requests where ip_hash=? and created_at>?").bind(ip, since).first();
   if ((rk && rk.n) >= DAY_KEY || (ri && ri.n) >= DAY_IP) return json({ error: "too_many" }, 429);
@@ -104,16 +114,16 @@ export async function onRequestPost({ request, env }) {
   const row = await db.prepare("select counted from requests where req_no=?").bind(req).first(), counted = row ? row.counted : 0, n = await used(db, key, month);
   return json({ req_no: req, tok, duplicate: false, counted: !!counted, member, standing: st.state, quote: !counted, left: canCount ? Math.max(0, LIMIT - n) : 0 });
 }
-// The page reports whether the Netlify form went through, so a failed alert is visible to the owner.
-// Only the browser that made the request can report it: POST hands it a one-time random token (only its hash is stored),
-// the report must come within 30 minutes, and it can only move received -> relayed / relay_failed. Knowing a request number is not enough.
+// The page reports whether ITS OWN post of the Netlify form looked successful. The server cannot see Netlify, so this is
+// recorded as client_ok / client_fail (what the browser said), never as a confirmed delivery. Only the browser that made the request can report it: POST hands it a one-time random token (only its hash is stored),
+// the report must come within 30 minutes, and it can only move received -> client_ok / client_fail. Knowing a request number is not enough.
 // A relay failure keeps the request and its count: the record is still here for the owner to handle (owner gives the count back if it is cancelled).
 export async function onRequestPatch({ request, env }) {
   if (!env.GV_DB || storeMode(env) === "off") return json({ error: "not_configured" }, 503);
   let b; try { b = await request.json(); } catch (e) { return json({ error: "bad" }, 400); }
   const no = String(b.req_no || ""), tok = String(b.tok || "");
   if (!/^RQ-\d{6}-[0-9A-F]{8}$/.test(no) || !/^[0-9a-f]{32}$/.test(tok)) return json({ error: "forbidden" }, 403);
-  const st = b.ok ? "relayed" : "relay_failed", after = new Date(Date.now() - RELAY_WINDOW).toISOString();
+  const st = b.ok ? "client_ok" : "client_fail", after = new Date(Date.now() - RELAY_WINDOW).toISOString();
   const r = await env.GV_DB.prepare("update requests set status=?, relay_key=null where req_no=? and relay_key=? and status='received' and created_at>?")
     .bind(st, no, await sha(tok), after).run();
   const changed = r && r.meta ? r.meta.changes : (r && r.changes);

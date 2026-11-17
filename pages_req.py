@@ -15,8 +15,8 @@ K = {
   email="이메일", name="이름 또는 담당자", org="회사·단체명 (선택)", country="관심 국가", code="회원 코드 (있으면)",
   agree="개인정보 수집·이용(의뢰 처리 목적, 처리 후 1년 보관)에 동의합니다", btn="의뢰 보내기", sending="보내는 중…",
   done="접수되었습니다. 요청번호", dup="같은 내용을 방금 보내셨습니다. 요청번호", mine="이 브라우저에서 보낸 의뢰", mine_n="아직 보낸 의뢰가 없습니다.",
-  st="접수됨 — 확인 메일을 기다려 주세요", req="필수 항목을 채워 주세요.", left="이번 달 남은 의뢰 {n}건", over="이번 달 포함 건수(2건)를 넘어 견적을 먼저 보내 드립니다", quote="회원이 아니어서 견적을 먼저 이메일로 보내 드립니다", sent="접수 완료",
-  S={"received": "접수됨", "relayed": "접수됨 · 담당자 전달", "relay_failed": "접수됨 · 알림 재확인 중", "in_progress": "처리 중", "done": "완료 · 이메일 확인", "failed": "처리 불가 · 한도 반환", "cancelled": "취소 · 한도 반환"},
+  st="접수됨 — 확인 메일을 기다려 주세요", wait="요청이 많거나 일시적인 문제로 보내지 못했습니다. 아무것도 전송되지 않았습니다. 잠시 뒤 다시 보내거나 73036396@naver.com으로 메일 주세요.", req="필수 항목을 채워 주세요.", left="이번 달 남은 의뢰 {n}건", over="이번 달 포함 건수(2건)를 넘어 견적을 먼저 보내 드립니다", quote="회원이 아니어서 견적을 먼저 이메일로 보내 드립니다", sent="접수 완료",
+  S={"received": "접수됨", "client_ok": "접수됨 · 알림 보냄", "client_fail": "접수됨 · 알림 재확인 중", "relayed": "접수됨 · 알림 보냄", "relay_failed": "접수됨 · 알림 재확인 중", "in_progress": "처리 중", "done": "완료 · 이메일 확인", "failed": "처리 불가 · 한도 반환", "cancelled": "취소 · 한도 반환"},
   types=[
    ("tender", "이 입찰에 우리 회사가 참여할 수 있는지 검토", "참가 자격·필요 서류·부족한 조건을 정리한 참가 조건표와 참여 권고(예·조건부·아니오)", "공고 링크 또는 제목, 업종, 연 매출, 공공·해외 실적, 보유 인증",
     [("tender", "공고 링크 또는 제목", "text", True), ("industry", "업종·주력 제품", "text", True), ("revenue", "연 매출 (억 원)", "number", False), ("record", "공공·해외 실적 (간단히)", "textarea", False), ("certs", "보유 인증", "text", False)]),
@@ -38,7 +38,7 @@ K = {
   agree="I agree to the collection and use of my details to handle this request (kept for one year)", btn="Send request", sending="Sending…",
   done="Received. Request number", dup="You just sent the same request. Request number", mine="Requests sent from this browser", mine_n="No requests yet.",
   st="Received — watch for our confirmation email", req="Please fill in the required fields.", left="{n} requests left this month", over="Over this month's two included requests — we will send a quote first", quote="Not a member — we will email a quote first", sent="Received",
-  S={"received": "Received", "relayed": "Received · passed to staff", "relay_failed": "Received · alert being re-checked", "in_progress": "In progress", "done": "Done · check your email", "failed": "Could not be done · allowance returned", "cancelled": "Cancelled · allowance returned"},
+  S={"received": "Received", "client_ok": "Received · alert sent", "client_fail": "Received · alert being re-checked", "relayed": "Received · alert sent", "relay_failed": "Received · alert being re-checked", "in_progress": "In progress", "done": "Done · check your email", "failed": "Could not be done · allowance returned", "cancelled": "Cancelled · allowance returned"},
   types=[
    ("tender", "Can our company bid on this tender?", "An entry-conditions table (eligibility, documents, gaps) and a recommendation: yes, conditional or no", "Notice link or title, industry, annual revenue, public or overseas record, certifications",
     [("tender", "Notice link or title", "text", True), ("industry", "Industry and main product", "text", True), ("revenue", "Annual revenue (USD)", "text", False), ("record", "Public or overseas record (brief)", "textarea", False), ("certs", "Certifications", "text", False)]),
@@ -81,7 +81,7 @@ def request_page(L, head, foot, LANGS):
 </form>
 <h3>{e(k["mine"])}</h3><ul class="rq-mine"></ul>
 </div></section>
-<script>(function(){{var K={json.dumps({"names": names, "done": k["done"], "dup": k["dup"], "st": k["st"], "none": k["mine_n"], "req": k["req"], "sending": k["sending"], "left": k.get("left", "이번 달 남은 의뢰 {n}건"), "over": k.get("over", "이번 달 포함 건수를 넘어 견적을 먼저 보내 드립니다"), "quote": k.get("quote", "견적을 먼저 이메일로 보내 드립니다"), "sent": k.get("sent", "접수 완료"), "S": k.get("S", {})}, ensure_ascii=False)};
+<script>(function(){{var K={json.dumps({"names": names, "done": k["done"], "dup": k["dup"], "st": k["st"], "none": k["mine_n"], "req": k["req"], "sending": k["sending"], "btn": k["btn"], "left": k.get("left", "이번 달 남은 의뢰 {n}건"), "over": k.get("over", "이번 달 포함 건수를 넘어 견적을 먼저 보내 드립니다"), "quote": k.get("quote", "견적을 먼저 이메일로 보내 드립니다"), "sent": k.get("sent", "접수 완료"), "wait": k.get("wait", "Too many requests or a temporary problem. Nothing was sent. Please try again later, or write to 73036396@naver.com."), "S": k.get("S", {})}, ensure_ascii=False)};
 var f=document.querySelector(".rq-form"),msg=f.querySelector(".rq-msg"),btn=f.querySelector("button[type=submit]");
 function cur(){{return (document.querySelector("input[name=rqt]:checked")||{{}}).value}}
 document.querySelectorAll("input[name=rqt]").forEach(function(r){{r.addEventListener("change",function(){{f.querySelectorAll(".rq-f").forEach(function(d){{d.hidden=d.dataset.t!==cur()}})}})}});
@@ -101,12 +101,15 @@ a.unshift({{id:id,t:t,h:h,ts:Date.now(),at:d.toISOString().slice(0,10)}});save(a
 /* server record (Cloudflare D1): if /api/req answers, it issues the number, counts the monthly allowance and blocks duplicates;
    the Netlify form is then posted by fetch and its result reported back. 503 (not configured) -> the browser-only flow above. */
 if(SRV&&!f.dataset.srv){{ev.preventDefault();var sendBody=lines.join("\\n");
-fetch("/api/req",{{method:"POST",headers:hdr({{"content-type":"application/json"}}),body:JSON.stringify({{type:t,body:sendBody,email:f.email.value,lang:L}})}}).then(function(r){{if(r.status===503){{SRV=false;throw 0}}return r.json()}}).then(function(j){{
-if(!j.req_no)throw 0;id=j.req_no;var rtok=j.tok||"";a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+sendBody;
+fetch("/api/req",{{method:"POST",headers:hdr({{"content-type":"application/json"}}),body:JSON.stringify({{type:t,body:sendBody,email:f.email.value,lang:L}})}}).then(function(r){{return r.json().catch(function(){{return {{}}}}).then(function(j){{j._s=r.status;return j}})}}).then(function(j){{
+/* only an explicit "not configured" answer falls back to the old form; 429 / 4xx / 5xx / network errors send nothing anywhere */
+if(j._s===503&&j.error==="not_configured"){{SRV=false;f.dataset.srv="1";f.submit();return}}
+if(j._s!==200||!j.req_no)throw 0;id=j.req_no;var rtok=j.tok||"";a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+sendBody;
 var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{{n}}",j.left):" · "+K.over):" · "+K.quote);msg.textContent=info;
+if(j.duplicate){{btn.textContent=K.sent;paint();return}}
 return fetch(f.getAttribute("action"),{{method:"POST",headers:{{"content-type":"application/x-www-form-urlencoded"}},body:new URLSearchParams(new FormData(f)).toString(),redirect:"manual"}}).then(function(r2){{var ok=r2.type==="opaqueredirect"||r2.status<400;
-return fetch("/api/req",{{method:"PATCH",headers:{{"content-type":"application/json"}},body:JSON.stringify({{req_no:id,tok:rtok,ok:ok}})}}).then(function(){{btn.textContent=K.sent;paint()}})}});
-}}).catch(function(){{f.dataset.srv="1";f.submit()}})}}
+return rtok?fetch("/api/req",{{method:"PATCH",headers:{{"content-type":"application/json"}},body:JSON.stringify({{req_no:id,tok:rtok,ok:ok}})}}):0}}).then(function(){{btn.textContent=K.sent;paint()}})
+}}).catch(function(){{a.shift();save(a);btn.disabled=false;btn.textContent=K.btn||btn.textContent;msg.textContent=K.wait}})}}
 }});
 var L=document.documentElement.lang||"ko",SRV=true;
 function tok(){{try{{var x=JSON.parse(localStorage.getItem("wmm.auth.v1")||"null");return x&&x.access_token}}catch(e){{return null}}}}

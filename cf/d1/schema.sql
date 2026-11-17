@@ -13,10 +13,10 @@ create table if not exists requests (
   body       text not null,                 -- the request text (no health details are asked for)
   dedupe     text not null,                 -- hash of type+body+email: same request within 10 minutes is not counted twice
   counted    integer not null default 0,    -- 1 = uses one of the monthly requests
-  status     text not null default 'received', -- received | relayed | relay_failed | in_progress | done | failed | cancelled
+  status     text not null default 'received', -- received | client_ok | client_fail (browser's own report, not a confirmed delivery) | in_progress | done | failed | cancelled
   note       text,
   relay_key  text,                          -- sha256 of the one-time token given to the sender; cleared after the relay report
-  ip_hash    text,                          -- sha256 of the network address, only for the daily request limit
+  ip_hash    text,                          -- network address keyed with a daily random salt (salts table), only for the daily limit; wiped after 48 h
   completed_at   text,                      -- set when status becomes done | failed | cancelled (trigger below)
   purge_body_at  text,                      -- completed_at + 90 days: request text, email, note are blanked
   purge_row_at   text,                      -- completed_at + 1 year: the minimal record is deleted
@@ -71,3 +71,5 @@ create table if not exists legal_records (
   retain_until  text not null               -- 'YYYY-MM-DD'
 );
 create index if not exists legal_until on legal_records(retain_until);
+-- Daily random salt for the network-address key (deleted after 2 days).
+create table if not exists salts (day text primary key, salt text not null);
