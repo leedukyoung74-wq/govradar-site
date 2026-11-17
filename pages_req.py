@@ -102,10 +102,10 @@ a.unshift({{id:id,t:t,h:h,ts:Date.now(),at:d.toISOString().slice(0,10)}});save(a
    the Netlify form is then posted by fetch and its result reported back. 503 (not configured) -> the browser-only flow above. */
 if(SRV&&!f.dataset.srv){{ev.preventDefault();var sendBody=lines.join("\\n");
 fetch("/api/req",{{method:"POST",headers:hdr({{"content-type":"application/json"}}),body:JSON.stringify({{type:t,body:sendBody,email:f.email.value,lang:L}})}}).then(function(r){{if(r.status===503){{SRV=false;throw 0}}return r.json()}}).then(function(j){{
-if(!j.req_no)throw 0;id=j.req_no;a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+sendBody;
+if(!j.req_no)throw 0;id=j.req_no;var rtok=j.tok||"";a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+sendBody;
 var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{{n}}",j.left):" · "+K.over):" · "+K.quote);msg.textContent=info;
 return fetch(f.getAttribute("action"),{{method:"POST",headers:{{"content-type":"application/x-www-form-urlencoded"}},body:new URLSearchParams(new FormData(f)).toString(),redirect:"manual"}}).then(function(r2){{var ok=r2.type==="opaqueredirect"||r2.status<400;
-return fetch("/api/req",{{method:"PATCH",headers:{{"content-type":"application/json"}},body:JSON.stringify({{req_no:id,ok:ok}})}}).then(function(){{btn.textContent=K.sent;paint()}})}});
+return fetch("/api/req",{{method:"PATCH",headers:{{"content-type":"application/json"}},body:JSON.stringify({{req_no:id,tok:rtok,ok:ok}})}}).then(function(){{btn.textContent=K.sent;paint()}})}});
 }}).catch(function(){{f.dataset.srv="1";f.submit()}})}}
 }});
 var L=document.documentElement.lang||"ko",SRV=true;
