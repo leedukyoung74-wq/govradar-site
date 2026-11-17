@@ -1,1 +1,1 @@
-{"version": 1, "include": ["/.netlify/*", "/nfid/*", "/nfform", "/pay/*", "/mkey"], "exclude": []}
+{"version": 1, "include": ["/.netlify/*", "/nfid/*", "/nfform", "/pay/*", "/mkey", "/api/req"], "exclude": []}
