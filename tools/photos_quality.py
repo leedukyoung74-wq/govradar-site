@@ -11,8 +11,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); OUT = os.pat
 UA = {"User-Agent": "GOV-RADAR-photos/1.1 (https://radar.wmm-hoa.com; 73036396@naver.com)"}
 OVR = {"BR": "Rio de Janeiro", "ZA": "Cape Town", "TZ": "Dar es Salaam", "LK": "Colombo", "VN": "Hanoi", "NZ": "Auckland", "CH": "Zurich", "MA": "Marrakesh"}
 FREE = re.compile(r"^(cc0|cc[ -]by(-sa)?([ -]\d(\.\d)?)?|public domain|pd\b|pd-)", re.I)
-BAD = re.compile(r"(map|flag|coat|emblem|seal|logo|locator|location|montage|collage|collection|diagram|\.svg|\.gif|\.png|\.tif)", re.I)
-GOOD = re.compile(r"(skyline|panorama|cityscape|view|aerial|downtown|old town|historic|square|harbou?r|waterfront|centre|center)", re.I)
+BAD = re.compile(r"(map|flag|coat of arms|emblem|seal|logo|locator|montage|collage|diagram|interior|inside|ceiling|\bdome|nave|altar|apse|vault|organ|choir|crypt|fresco|mosaic|stained|painting|portrait|statue|sculpture|relief|detail|museum|exhibit|\bbirds?\b(?!.?s.?eye)|\bbats?\b|\bfish|insect|snake|animal|flower|butterfly|monkey|lizard|frog|\bpeople|\bwoman|\bman\b|\bgirl|\bboy\b|tractor|bicycle|\bships?\b|\bcars?\b|aircraft|airport|terminal|\.svg|\.gif|\.png|\.tif)", re.I)
+GOOD = re.compile(r"(skyline|panoram|cityscape|city view|view (of|from|over)|aerial|downtown|old town|from above|bird|overview|harbou?r|waterfront|night)", re.I)
 def call(p, tries=8):
     u = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({**p, "format": "json", "formatversion": "2", "maxlag": "5"})
     for i in range(tries):
@@ -22,7 +22,7 @@ def call(p, tries=8):
             w = min(240, 20 * (i + 1)); print("retry", i, e, file=sys.stderr, flush=True); time.sleep(w)
     return {}
 def search(city, cat):
-    r = call({"action": "query", "generator": "search", "gsrsearch": f'"{city}" incategory:"{cat}"', "gsrnamespace": 6, "gsrlimit": 40,
+    r = call({"action": "query", "generator": "search", "gsrsearch": f'"{city}" (skyline OR panorama OR cityscape OR view OR aerial) incategory:"{cat}"', "gsrnamespace": 6, "gsrlimit": 40,
               "prop": "imageinfo", "iiprop": "size|extmetadata|url|mime", "iiurlwidth": 1920})
     out = []
     for p in (r.get("query") or {}).get("pages") or []:
@@ -31,7 +31,7 @@ def search(city, cat):
         art = re.sub("<[^>]+>", "", (m.get("Artist") or {}).get("value", "")).strip()[:80]
         w, h = ii.get("width", 0), ii.get("height", 1)
         if ii.get("mime") != "image/jpeg" or BAD.search(t) or not FREE.match(lic) or w < 2400 or not (1.35 <= w / h <= 3.2): continue
-        if city.split()[0].lower() not in t.lower(): continue          # the city must be named in the file title
+        if city.split()[0].lower() not in t.lower() or not GOOD.search(t): continue   # the city named + a city-view word in the title
         s = (3 if cat.startswith("Featured") else 1) + (2 if GOOD.search(t) else 0) + min(w, 8000) / 4000
         out.append({"file": t, "thumb": ii.get("thumburl"), "w": w, "h": h, "artist": art or "unknown", "license": lic,
                     "page": "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(t.replace(" ", "_")), "score": round(s, 2), "set": cat})
