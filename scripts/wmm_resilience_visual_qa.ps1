@@ -45,8 +45,10 @@ foreach ($lang in $langs) {
             $url
         )
         Write-Host "Capture: $name"
-        & $edge @args 2>$null | Out-Null
-        $exit = $LASTEXITCODE
+        $stderrFile = Join-Path $OutputDir "$name-edge-stderr.log"
+        $stdoutFile = Join-Path $OutputDir "$name-edge-stdout.log"
+        $process = Start-Process -FilePath $edge -ArgumentList $args -Wait -PassThru -RedirectStandardError $stderrFile -RedirectStandardOutput $stdoutFile
+        $exit = $process.ExitCode
         $ok = (Test-Path $file) -and ((Get-Item $file).Length -gt 5000)
         $records += [pscustomobject]@{
             Language=$lang
