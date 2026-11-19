@@ -31,3 +31,12 @@
 
 기초 지침: CDC Emergency Water Supply https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html
 발전기 안전: https://www.cdc.gov/natural-disasters/psa-toolkit/use-a-generator-safely.html
+
+
+## PR #55 source corrections — 2026-11-19, review branch only
+- CDC emergency-water starting minimum: 1 US gallon (~3.8 L) per person per day. For 2 people over 14 days, displayed quantity = **106.4 L** using the 3.8 L planning approximation. This is a planning starting point, not an exact conversion or a complete needs assessment. Add water for heat, health, pregnancy, children and pets.
+- The seven existing `/{lang}/prepare/` source pages were updated **only in unmerged PR #55**, from the inconsistent 84 L table baseline; product blurbs claiming 3 L/day were also reconciled. `main` and the live production site retain their old content until authorized deployment. The original list of products and 20-kit categories remains intact.
+- Corrected unsafe wording implying a camping stove may be used indoors if ventilated. Camping stoves/charcoal devices are **outdoor-only**. Fuel generators must operate outside, >=20 ft (~6 m) from windows, doors and vents.
+- Gate: `tests/check_wmm_prepare_safety.cjs` asserts 7 route water total, source-note consistency and removal of unsafe indoor stove wording. It is included in `.github/workflows/wmm_resilience_check.yml`.
+- English, Spanish, French, Arabic, Vietnamese, Indonesian safety translations are preliminary and still require native-language expert review before production.
+- Sources: [CDC water guidance](https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html), [CDC carbon monoxide safety](https://www.cdc.gov/natural-disasters/psa-toolkit/avoiding-carbon-monoxide-poisoning.html).
