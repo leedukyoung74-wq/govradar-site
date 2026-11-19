@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Read-only evidence gate: official preparedness guidance is NOT product verification.
-import fs from 'node:fs';
-import {fileURLToPath} from 'node:url';
-const dir=new URL('../',import.meta.url);
-const read=p=>JSON.parse(fs.readFileSync(new URL(p,dir),'utf8'));
+const fs=require('node:fs');
+const path=require('node:path');
+const dir=path.resolve(__dirname,'..');
+const read=p=>JSON.parse(fs.readFileSync(path.join(dir,p),'utf8'));
 const master=read('data/countries.json');
 const food=read('data/wmm-food-country-profiles.json');
 const official=read('data/wmm-food-primary-guidance-reviewed.json');
