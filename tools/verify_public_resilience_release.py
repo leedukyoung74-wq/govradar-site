@@ -18,6 +18,8 @@ TESTS = [
     ("/assets/wmm-resilience.css",".wmm-rs"),
     ("/data/wmm-food-country-profiles.json",'"local_official_guidance_verified"'),
     ("/data/wmm-food-primary-guidance-reviewed.json",'"product_review_status"'),
+    ("/data/countries.json",'"iso"'),
+    ("/data/regions.json",'"iso"'),
 ]
 
 def check(url, needle):
@@ -30,7 +32,23 @@ def check(url, needle):
             body=response.read(1500000).decode("utf-8","replace")
             result={"http_status":response.status,
                     "has_release_marker":needle in body,
-                    "outdated_water_marker":"84L" in body if "/ko/prepare/" in url else None}
+                    "outdated_water_marker":"84L" in body if "/prepare/" in url else None}
+            if url.endswith("/data/wmm-food-country-profiles.json"):
+                profiles=json.loads(body)
+                product_claims=sum(bool(x.get("local_official_guidance_verified") or
+                    x.get("retail_availability_verified") or x.get("shelf_life_verified")) for x in profiles)
+                result["profile_count"]=len(profiles)
+                result["product_claim_count"]=product_claims
+                result["has_release_marker"]=result["has_release_marker"] and len(profiles)==193 and product_claims==0
+            elif url.endswith("/data/wmm-food-primary-guidance-reviewed.json"):
+                guidance=json.loads(body)
+                codes={x["iso"] for x in guidance.get("countries",[])}
+                result["guidance_countries"]=sorted(codes)
+                result["has_release_marker"]=result["has_release_marker"] and codes=={"KR","JP","US"}
+            elif url.endswith("/data/countries.json"):
+                result["has_release_marker"]=result["has_release_marker"] and len(json.loads(body))==193
+            elif url.endswith("/data/regions.json"):
+                result["has_release_marker"]=result["has_release_marker"] and len(json.loads(body))==23
     except urllib.error.HTTPError as exc:
         result={"http_status":exc.code,"has_release_marker":False,
                 "outdated_water_marker":None}
