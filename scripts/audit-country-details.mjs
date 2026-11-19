@@ -4,7 +4,8 @@
  * A valid URL is NOT independent verification or a license to republish.
  * node scripts/audit-country-details.mjs > audit-results/country-coverage.json
  */
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { URL } from 'node:url';
 const files = new URL('../data/c/', import.meta.url);
 const countries = JSON.parse(readFileSync(new URL('../data/countries.json', import.meta.url),'utf8'));
@@ -61,4 +62,20 @@ const output={
  past_deadline_tenders_work_queue:pastDeadlineTenders.sort((a,b)=>a.recorded_deadline.localeCompare(b.recorded_deadline)),
  countries:records
 };
-console.log(JSON.stringify(output,null,2));
+const serialized = JSON.stringify(output, null, 2) + '\n';
+const outputArg = process.argv.indexOf('--output');
+if (outputArg !== -1) {
+  const requested = process.argv[outputArg + 1];
+  if (!requested || requested.startsWith('--')) {
+    console.error('Usage: node scripts/audit-country-details.mjs --output <existing-folder/report.json>');
+    process.exitCode = 2;
+  } else {
+    const destination = resolve(requested);
+    writeFileSync(destination, serialized, { encoding: 'utf8', flag: 'w' });
+    const reread = JSON.parse(readFileSync(destination, 'utf8'));
+    if (reread.coverage_total !== countries.length) throw new Error('Report round-trip validation failed');
+    console.log('UTF-8 JSON report written and verified: ' + destination);
+  }
+} else {
+  process.stdout.write(serialized);
+}
