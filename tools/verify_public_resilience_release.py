@@ -8,13 +8,15 @@ import urllib.request
 from datetime import datetime, timezone
 
 BASES = ("https://radar.wmm-hoa.com","https://wmm-radar.pages.dev")
+LANGS=("ko","en","es","fr","ar","vi","id")
 TESTS = [
-    ("/ko/resilience/","wmm-resilience"),
-    ("/en/resilience/","wmm-resilience"),
-    ("/ko/prepare/","106.4L"),
-    ("/quality/","Data Quality Review"),
-    ("/review/","review-status.js"),
+    *((f"/{lang}/resilience/","wmm-resilience") for lang in LANGS),
+    *((f"/{lang}/prepare/","106.4L") for lang in LANGS),
+    ("/ko/ready/","재난 대비센터"),
+    ("/en/ready/","Preparedness"),
     ("/assets/wmm-resilience.js","countrySourceTitle"),
+    ("/assets/wmm-resilience.css",".wmm-rs"),
+    ("/data/wmm-food-country-profiles.json",'"local_official_guidance_verified"'),
     ("/data/wmm-food-primary-guidance-reviewed.json",'"product_review_status"'),
 ]
 
