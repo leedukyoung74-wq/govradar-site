@@ -37,5 +37,9 @@ assert 'id="rs-out" role="status"' in js
 assert 'id="rs-pout" role="status"' in js
 assert '.wmm-rs[dir=rtl] .rs-alert' in css, "RTL styles must target root direction"
 assert 'x.toLocaleString(L,' in js, "Numbers should follow selected language"
+assert '최소 약 6m' in js and '20 ft (6 m)' in js, "Outdoor generator distance warning must remain"
+assert 'country="+encodeURIComponent(selected)' in js, "Language switch must keep the selected country"
+assert 'draftLabel:"검토 예시 · 미검증"' in js, "Draft food data must not look verified"
+assert '@media(max-width:420px)' in css, "Small phone breakpoint required"
 assert not re.search(r'\bfetch\s*\([^)]*,\s*\{\s*method\s*:\s*["\']POST', js, re.I), "No POST of personal data"
 print("PASS: 193 unique country profiles, status gates, seven locales, safe static references")
