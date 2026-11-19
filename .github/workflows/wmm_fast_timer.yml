@@ -18,4 +18,4 @@ jobs:
   public_official_refresh:
     uses: leedukyoung74-wq/govradar-site/.github/workflows/wmm_fast_official.yml@src
     with:
-      dry_run: ${{ github.event_name != 'schedule' && (github.event_name != 'workflow_dispatch' || inputs.dry_run) }}
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
