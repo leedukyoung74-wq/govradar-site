@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Read-only public-site version check for GOV RADAR. No auth, no deployment.
+Exit 0 if current live version matches release expectations; 2 otherwise.
+"""
+import json
+import urllib.error
+import urllib.request
+from datetime import datetime, timezone
+
+BASES = ("https://radar.wmm-hoa.com","https://wmm-radar.pages.dev")
+TESTS = [
+    ("/ko/resilience/","wmm-resilience"),
+    ("/en/resilience/","wmm-resilience"),
+    ("/ko/prepare/","106.4L"),
+    ("/quality/","Data Quality Review"),
+    ("/review/","review-status.js"),
+    ("/assets/wmm-resilience.js","countrySourceTitle"),
+    ("/data/wmm-food-primary-guidance-reviewed.json",'"product_review_status"'),
+]
+
+def check(url, needle):
+    request = urllib.request.Request(url, headers={
+        "User-Agent":"WMM-GOV-RADAR-ReadOnly-Version-Sentinel/1.0",
+        "Cache-Control":"no-cache",
+    })
+    try:
+        with urllib.request.urlopen(request, timeout=14) as response:
+            body=response.read(1500000).decode("utf-8","replace")
+            result={"http_status":response.status,
+                    "has_release_marker":needle in body,
+                    "outdated_water_marker":"84L" in body if "/ko/prepare/" in url else None}
+    except urllib.error.HTTPError as exc:
+        result={"http_status":exc.code,"has_release_marker":False,
+                "outdated_water_marker":None}
+    except Exception as exc:
+        result={"http_status":None,"has_release_marker":False,
+                "outdated_water_marker":None,
+                "error_type":type(exc).__name__}
+    result["ready"]=result["http_status"]==200 and result["has_release_marker"] and not result["outdated_water_marker"]
+    return result
+
+def main():
+    details=[]
+    for base in BASES:
+        for path, marker in TESTS:
+            item={"origin":base,"path":path,**check(base+path,marker)}
+            details.append(item)
+    summary={
+        "checked_at_utc":datetime.now(timezone.utc).isoformat(),
+        "mode":"read_only",
+        "deployment_performed":False,
+        "ready_count":sum(int(x["ready"]) for x in details),
+        "total_checks":len(details),
+        "production_new_release_confirmed":all(x["ready"] for x in details),
+        "checks":details,
+    }
+    print(json.dumps(summary,ensure_ascii=False,indent=2))
+    return 0 if summary["production_new_release_confirmed"] else 2
+
+if __name__ == "__main__":
+    raise SystemExit(main())
