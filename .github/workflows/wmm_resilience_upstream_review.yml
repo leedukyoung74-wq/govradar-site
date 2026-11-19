@@ -8,6 +8,7 @@ on:
       - 'src/wmm-food-*.json'
       - 'web/wmm-resilience.*'
       - 'tests/test_resilience_source_build.py'
+      - 'tests/wmm_resilience_generated_browser_review.cjs'
       - '.github/workflows/wmm_resilience_upstream_review.yml'
   workflow_dispatch:
 permissions:
@@ -15,7 +16,7 @@ permissions:
 jobs:
   generated_preview:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -58,3 +59,18 @@ jobs:
           assert '/resilience/' not in site
           print('PASS: generated seven-language isolated routes, 193 countries, 23 regions, safety copy, review-only noindex and evidence files.')
           PY
+      - name: Install isolated Chromium runner (review only)
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+          npx playwright install chromium
+      - name: Start generated-site local HTTP preview
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist >/tmp/wmm-resilience-build-preview.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/ko/resilience/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/wmm-resilience-build-preview.log
+          exit 1
+      - name: Browser test 21 generated pages and calculations (no deploy)
+        run: node tests/wmm_resilience_generated_browser_review.cjs
