@@ -1,5 +1,5 @@
 name: WMM Official NWS + CISA KEV public updates
-# v2: source health diagnostics now include safe HTTP status categories.
+# v3: NWS /alerts/active uses supported no-limit official GeoJSON endpoint.
 on:
   schedule:
     - cron: '*/15 * * * *'
