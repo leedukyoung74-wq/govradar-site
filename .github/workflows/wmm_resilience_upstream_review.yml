@@ -13,6 +13,7 @@ on:
       - 'tests/test_resilience_source_build.py'
       - 'tests/wmm_resilience_generated_browser_review.cjs'
       - '.github/workflows/wmm_resilience_upstream_review.yml'
+      - 'tools/prepare_resilience_release_review.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -69,6 +70,15 @@ jobs:
           assert '/quality/' not in site and '/review/' not in site
           print('PASS: generated seven-language isolated routes, 193 countries, 23 regions, safety copy, review-only noindex and evidence files.')
           PY
+      - name: Prepare verifiable review-only delivery delta (never deploy)
+        run: python tools/prepare_resilience_release_review.py
+      - name: Store review evidence bundle for authorized release operator
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-resilience-release-review-ONLY
+          path: release-review/
+          retention-days: 3
+          if-no-files-found: error
       - name: Install isolated Chromium runner (review only)
         run: |
           npm install --no-save --no-audit --no-fund playwright@1.56.1
