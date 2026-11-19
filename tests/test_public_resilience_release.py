@@ -27,6 +27,25 @@ class TestPublicVersionSentinel(TestCase):
             result=sentinel.check("https://radar.wmm-hoa.com/ko/prepare/","106.4L")
             self.assertFalse(result["ready"])
             self.assertTrue(result["outdated_water_marker"])
+    def test_routes_cover_all_locales_and_data_contract(self):
+        self.assertEqual(len(sentinel.LANGS),7)
+        self.assertEqual(len(sentinel.TESTS),22)
+        for lang in sentinel.LANGS:
+            self.assertIn((f"/{lang}/prepare/","106.4L"),sentinel.TESTS)
+            self.assertIn((f"/{lang}/resilience/","wmm-resilience"),sentinel.TESTS)
+        self.assertNotIn(("/quality/","Data Quality Review"),sentinel.TESTS)
+    def test_false_product_verification_is_blocked(self):
+        import json
+        class FalseClaimResponse(MockResponse):
+            def read(self,n):
+                return json.dumps([{"iso":str(i),
+                    "local_official_guidance_verified": i==0,
+                    "retail_availability_verified":False,
+                    "shelf_life_verified":False} for i in range(193)]).encode()
+        with mock.patch.object(sentinel.urllib.request,"urlopen",return_value=FalseClaimResponse()):
+            state=sentinel.check("https://radar.wmm-hoa.com/data/wmm-food-country-profiles.json",'"local_official_guidance_verified"')
+            self.assertEqual(state["product_claim_count"],1)
+            self.assertFalse(state["ready"])
     def test_no_token_or_deploy_endpoint(self):
         source=(ROOT/"tools/verify_public_resilience_release.py").read_text(encoding="utf8")
         for prohibited in ("CLOUDFLARE_API_TOKEN","POST","PUT","DELETE","wrangler pages deploy"):
