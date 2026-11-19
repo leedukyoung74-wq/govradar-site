@@ -54,6 +54,16 @@ class ResilienceSourceBuildContract(unittest.TestCase):
         self.assertIn('fetch("/data/wmm-food-country-profiles.json")', js)
         self.assertIn('fetch("/data/wmm-food-primary-guidance-reviewed.json")', js)
 
+    def test_draft_safety_translations_and_food_name_suppression(self):
+        js = (ROOT / "web/wmm-resilience.js").read_text(encoding="utf8")
+        self.assertIn("var provisionalSafetyLocales=", js)
+        self.assertIn("languageReviewNote", js)
+        self.assertIn('L==="ko"?"<p><b>"+e(t.countryExamples)', js)
+        for locale in ("es", "fr", "ar", "vi", "id"):
+            with self.subTest(locale=locale):
+                self.assertIn('"' + locale + '":{"calcNote":', js)
+        self.assertIn("if(provisionalSafetyLocales[L])Object.assign(t,provisionalSafetyLocales[L]);", js)
+
     def test_193_countries_23_regions_and_zero_product_validation(self):
         master_ids = {x["iso"] for x in self.master}
         food_ids = {x["iso"] for x in self.foods}
