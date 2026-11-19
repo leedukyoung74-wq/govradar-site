@@ -32,9 +32,7 @@ foreach($lang in $langs) {
  $dom=if(Test-Path $stdout){Get-Content -Path $stdout -Raw -Encoding UTF8}else{""}
  $countrySelect=[regex]::Match($dom,'(?is)<select\b[^>]*\bid="rs-country"[^>]*>(.*?)</select>')
  $countries=if($countrySelect.Success){([regex]::Matches($countrySelect.Groups[1].Value,'(?i)<option\b')).Count}else{0}
- $selectedCountry=$countrySelect.Success -and [regex]::IsMatch($countrySelect.Groups[1].Value,'(?is)<option\b[^>]*value="NZ"[^>]*selected')
- # On some Chromium versions selectedness is a live DOM property not serialized.
- # Therefore confirm NZ's loaded country panel separately.
+ # Browser selected option serialization differs; confirm NZ using the rendered panel instead.
  $countryPanel=[regex]::Match($dom,'(?is)<div\b[^>]*\bid="rs-foodcountry"[^>]*>(.*?)</div>')
  $panelHasNZ=$countryPanel.Success -and $countryPanel.Groups[1].Value.Contains('(NZ)')
  $hasMainHeading=[regex]::IsMatch($dom,'(?is)<h1\b[^>]*>[^<]+</h1>')
