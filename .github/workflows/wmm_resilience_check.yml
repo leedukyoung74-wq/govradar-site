@@ -5,9 +5,11 @@ on:
       - 'assets/wmm-resilience.*'
       - 'data/wmm-food-country-profiles.json'
       - '**/resilience/index.html'
+      - '**/prepare/index.html'
       - 'tests/check_wmm_resilience.py'
       - 'tests/test_wmm_resilience_runtime.cjs'
       - 'tests/check_wmm_legacy_overlap.cjs'
+      - 'tests/check_wmm_prepare_safety.cjs'
       - 'scripts/build_wmm_food_review_queue.mjs'
       - 'scripts/wmm_resilience_visual_qa.ps1'
       - 'scripts/wmm_resilience_dom_qa.ps1'
@@ -28,6 +30,8 @@ jobs:
         run: node tests/test_wmm_resilience_runtime.cjs
       - name: Legacy prepare overlap diagnostics (read-only)
         run: node tests/check_wmm_legacy_overlap.cjs
+      - name: Seven-language kit water and combustion safety
+        run: node tests/check_wmm_prepare_safety.cjs
       - name: Country food verification queue integrity
         run: node scripts/build_wmm_food_review_queue.mjs --check
       - name: Data and markup invariants
