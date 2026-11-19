@@ -6,6 +6,7 @@ on:
       - 'data/wmm-food-country-profiles.json'
       - '**/resilience/index.html'
       - 'tests/check_wmm_resilience.py'
+      - 'tests/test_wmm_resilience_runtime.cjs'
       - '.github/workflows/wmm_resilience_check.yml'
   workflow_dispatch:
 permissions:
@@ -18,5 +19,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: JavaScript syntax
         run: node --check assets/wmm-resilience.js
+      - name: JavaScript runtime smoke test (no browser/network)
+        run: node tests/test_wmm_resilience_runtime.cjs
       - name: Data and markup invariants
         run: python3 tests/check_wmm_resilience.py
