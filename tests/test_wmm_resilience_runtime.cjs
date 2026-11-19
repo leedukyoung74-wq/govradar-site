@@ -10,6 +10,7 @@ const rootDir = path.join(__dirname, '..');
 const script = fs.readFileSync(path.join(rootDir, 'assets/wmm-resilience.js'), 'utf8');
 const countries = JSON.parse(fs.readFileSync(path.join(rootDir,'data/countries.json'),'utf8'));
 const foods = JSON.parse(fs.readFileSync(path.join(rootDir,'data/wmm-food-country-profiles.json'),'utf8'));
+const guidance = JSON.parse(fs.readFileSync(path.join(rootDir,'data/wmm-food-primary-guidance-reviewed.json'),'utf8'));
 const optionPattern = /<option value="([^"]+)">([^<]*)<\/option>/g;
 
 function makePage(lang, search = '?country=KR', store = new Map()) {
@@ -52,7 +53,8 @@ function makePage(lang, search = '?country=KR', store = new Map()) {
     fetch(url) {
       calls.push(url);
       const data=url==='/data/countries.json'?countries:
-        url==='/data/wmm-food-country-profiles.json'?foods:null;
+        url==='/data/wmm-food-country-profiles.json'?foods:
+        url==='/data/wmm-food-primary-guidance-reviewed.json'?guidance:null;
       return Promise.resolve({ok:!!data,json:()=>Promise.resolve(structuredClone(data))});
     }
   };
@@ -74,10 +76,12 @@ async function settle() {
   assert.match(ko.el('#rs-out').innerHTML,/56,000 kcal/);
   assert.match(ko.el('#rs-out').innerHTML,/400 Wh/);
   assert.match(ko.el('#rs-pout').innerHTML,/210 Wh/);
-  assert.equal(ko.calls.length,2);
+  assert.equal(ko.calls.length,3);
   assert.equal(ko.el('#rs-country').options.length,193);
   assert.equal(ko.el('#rs-country').value,'KR');
   assert.match(ko.el('#rs-foodcountry').innerHTML,/검토 예시 · 미검증|미검증/);
+  assert.match(ko.el('#rs-foodcountry').innerHTML,/정부기관 비축 지침 원문/);
+  assert.match(ko.el('#rs-foodcountry').innerHTML,/safekorea.go.kr/);
   assert.match(ko.root.innerHTML,/최소 약 6m/);
   ko.el('#rs-lang').listeners.change({target:{value:'en'}});
   assert.equal(ko.location.href,'/en/resilience/?country=KR');
@@ -88,7 +92,7 @@ async function settle() {
   ko.el('#rs-p').listeners.input();
   assert.match(ko.el('#rs-out').innerHTML,/456 L/);
   assert.match(ko.el('#rs-out').innerHTML,/360/);
-  assert.equal(ko.calls.length,2);
+  assert.equal(ko.calls.length,3);
 
   // Browser-only storage, progress, and clearing.
   assert.match(ko.el('#rs-progress').textContent,/0\/16/);
@@ -105,6 +109,7 @@ async function settle() {
   assert.equal(ar.root.dir,'rtl');
   assert.equal(ar.el('#rs-country').options.length,193);
   assert.equal(ar.el('#rs-country').value,'NZ');
+  assert.doesNotMatch(ar.el('#rs-foodcountry').innerHTML,/Official agency guidance/);
   ar.el('#rs-lang').listeners.change({target:{value:'vi'}});
   assert.equal(ar.location.href,'/vi/resilience/?country=NZ');
 
