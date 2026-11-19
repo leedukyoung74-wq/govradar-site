@@ -1,0 +1,97 @@
+name: WMM verified US weather and CISA KEV updater
+on:
+  workflow_call:
+    inputs:
+      dry_run: {type: boolean, default: true}
+permissions:
+  contents: write
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    concurrency:
+      group: wmm-nws-cisa-official-data
+      cancel-in-progress: false
+    steps:
+      - name: Review code from src
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: code
+          persist-credentials: false
+      - name: Read existing public data branch
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data_branch
+          fetch-depth: 2
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline tests / fail-safe and source validity
+        run: python -m unittest discover -s code/tests -p 'test_wmm_public_nws_cisa.py' -v
+      - name: Collect official source datasets
+        run: python code/tools/wmm_public_nws_cisa.py data_branch
+      - name: Enforce schema and publication gate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data_branch/hz')
+          nws=json.load(open(p/'nws_active.json',encoding='utf-8'))
+          kev=json.load(open(p/'cisa_kev.json',encoding='utf-8'))
+          for d in (nws,kev):
+              assert isinstance(d.get('items'),list)
+              h=d.get('source_health',{})
+              assert isinstance(h.get('ok'),bool) and isinstance(h.get('stale'),bool)
+              assert h.get('ok') != h.get('stale')
+          assert nws.get('kind') in ('active_us_weather_alerts','nws')
+          assert kev.get('kind') in ('known_exploited_vulnerabilities','cisa_kev')
+          assert len(nws['items'])<=100 and len(kev['items'])<=100
+          assert not any(x.get('src')!='NWS' for x in nws['items'])
+          assert all(x.get('severity') in ('Extreme','Severe') for x in nws['items'])
+          assert all(x.get('cve','').startswith('CVE-') for x in kev['items'])
+          if kev['source_health']['ok']:
+              assert kev.get('not_realtime_attack_feed') is True and kev.get('total_vulnerabilities',0)>=1000
+          if not nws['source_health']['ok'] and not kev['source_health']['ok'] and not (nws['items'] or kev['items']):
+              raise SystemExit('BLOCKED: both first-time official source checks failed')
+          print('PASS: NWS actual severe/extreme and KEV metadata published safely')
+          PY
+      - name: Publish independent public official datasets
+        if: ${{ !inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          cd data_branch
+          git config user.name 'WMM Official Feed Bot'
+          git config user.email '73036396@naver.com'
+          git add hz/nws_active.json hz/cisa_kev.json
+          if git diff --cached --quiet; then
+            echo 'No new validated data'
+            exit 0
+          fi
+          git commit -m 'Official NWS + CISA KEV refresh (automated)'
+          for n in 1 2 3 4; do
+            if git push origin HEAD:data; then
+              echo 'PUBLISHED_OFFICIAL_NWS_KEV=YES'
+              exit 0
+            fi
+            git fetch -q origin data
+            git rebase origin/data || {
+              git rebase --abort
+              echo 'Concurrent change conflict: refuse to overwrite' >&2
+              exit 1
+            }
+          done
+          echo 'PUBLISH_FAILED' >&2
+          exit 1
+      - name: Retain diagnostics for owner review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nws-cisa-official-${{ github.run_id }}
+          path: |
+            data_branch/hz/nws_active.json
+            data_branch/hz/cisa_kev.json
+          if-no-files-found: ignore
+          retention-days: 3
