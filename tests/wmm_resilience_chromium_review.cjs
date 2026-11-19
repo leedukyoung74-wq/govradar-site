@@ -69,7 +69,7 @@ try {
       assert.equal(await page.locator('[data-check="water"]').isChecked(),false);
     });
     row.checks.links=await check(page,name+' legacy links',async()=>{
-      assert.equal(await page.locator('a[href="/'+lang+'/prepare/"]').count(),lang==='ko'?1:0);
+      assert.equal(await page.locator('a[href="/'+lang+'/prepare/"]').count(),1);
     });
     row.checks.runtime=await check(page,name+' console/runtime',async()=>{
       assert.deepEqual(errors,[]);
