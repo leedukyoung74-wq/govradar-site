@@ -28,6 +28,17 @@ jobs:
           code=$?
           set -e
           echo "Current release readiness check exit code: $code"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path("version-evidence/report.json")
+          if not path.exists(): raise SystemExit("No report found")
+          report=json.loads(path.read_text(encoding="utf-8"))
+          print("READY",report.get("ready_count"),"/",report.get("total_checks"))
+          for c in report.get("checks",[]):
+              if not c.get("ready"):
+                  print("BLOCKER",c.get("origin"),c.get("path"),"HTTP",c.get("http_status"),"marker",c.get("has_release_marker"),"old84",c.get("outdated_water_marker"),"error",c.get("error_type"))
+          PY
           if [ "$code" = 2 ]; then
             echo "BLOCKED (expected before first approved deployment). See report artifact."
           elif [ "$code" != 0 ]; then
