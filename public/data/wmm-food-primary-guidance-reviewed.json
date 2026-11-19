@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-11-19",
+  "scope": "Official country-level household food preparedness guidance, NOT product verification",
+  "warning": "These links corroborate broad food preparation and storage practices. They do not validate any named local product, shelf-life, retail availability, nutritional sufficiency, or food safety certification.",
+  "countries": [
+    {
+      "iso": "KR",
+      "country": "Republic of Korea",
+      "source_review_status": "official_primary_guidance_checked",
+      "product_review_status": "not_checked",
+      "evidence": [
+        {
+          "agency": "국민안전24",
+          "url": "https://safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=preparationEmcSuply&menuSn=4",
+          "topic": "비상대비 물자준비",
+          "verified_claim_ko": "조리·보관이 비교적 편한 쌀, 라면, 밀가루, 통조림 등의 비축과 정기적 순환교체를 안내",
+          "scope_limit": "해당 페이지의 30일 비상대비 맥락은 보편적 일상 재난 최소 비축 기준과 동일하지 않음"
+        },
+        {
+          "agency": "식품의약품안전처",
+          "url": "https://www.youtube.com/watch?v=dusgGQikgGc",
+          "topic": "소비기한·보관방법 공식 교육영상",
+          "verified_claim_ko": "식품 표시 소비기한 및 보관방법 준수를 강조",
+          "scope_limit": "특정 비축식품 제품 인증 또는 소비기한 증거가 아님"
+        }
+      ]
+    },
+    {
+      "iso": "JP",
+      "country": "Japan",
+      "source_review_status": "official_primary_guidance_checked",
+      "product_review_status": "not_checked",
+      "evidence": [
+        {
+          "agency": "農林水産省 (MAFF)",
+          "url": "https://www.maff.go.jp/j/zyukyu/foodstock/guidebook.html",
+          "topic": "災害時に備えた食品ストックガイド",
+          "verified_claim_ko": "가정 식품 비축과 소비·보충을 반복하는 로링 스톡 방법을 안내",
+          "scope_limit": "제품의 실제 시장 유통·개별 소비기한은 별도 검증"
+        },
+        {
+          "agency": "農林水産省 (MAFF)",
+          "url": "https://www.maff.go.jp/j/zyukyu/foodstock/chapter01.html",
+          "topic": "家庭備蓄のすすめ",
+          "verified_claim_ko": "최소 3일~1주일 비축을 가정 대비 수준으로 설명하며 위험도에 따라 더 길게 대비할 수 있음",
+          "scope_limit": "식품 종류별 정확한 유통기한·물량을 일괄 인증하지 않음"
+        }
+      ]
+    },
+    {
+      "iso": "US",
+      "country": "United States",
+      "source_review_status": "official_primary_guidance_checked",
+      "product_review_status": "not_checked",
+      "evidence": [
+        {
+          "agency": "USDA FSIS",
+          "url": "https://ask.fsis.usda.gov/article/What-foods-should-I-keep-in-my-house-for-emergencies",
+          "topic": "What foods should I keep in my house for emergencies?",
+          "verified_claim_ko": "가정에 상온보관 가능한 비상식량을 준비하도록 안내",
+          "scope_limit": "특정 제조사·제품 안전성 또는 영양 완전성 보증 아님"
+        },
+        {
+          "agency": "CDC",
+          "url": "https://www.cdc.gov/prepare-your-health/take-action/personal-needs.html",
+          "topic": "Personal Needs",
+          "verified_claim_ko": "영유아, 알레르기, 식이제한, 특정 질환자의 특별 식품 필요를 다룸",
+          "scope_limit": "질환별 맞춤 식단이나 개인 의료 조언 아님"
+        }
+      ]
+    }
+  ]
+}
