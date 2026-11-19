@@ -5,7 +5,7 @@
 .wmm-rs .rs-hero{padding:28px 30px;border:1px solid var(--r-line);border-radius:19px;background:var(--r-bg)}
 .wmm-rs .rs-top{display:flex;align-items:start;gap:16px;justify-content:space-between;flex-wrap:wrap}
 .wmm-rs .rs-eyebrow{font-size:11px;letter-spacing:.15em;font-weight:750;color:#ae8858}
-.wmm-rs h2{font-size:clamp(22px,3vw,33px);line-height:1.26;margin:10px 0 9px;letter-spacing:-.03em}
+.wmm-rs h1{font-size:clamp(22px,3vw,33px);line-height:1.26;margin:10px 0 9px;letter-spacing:-.03em}
 .wmm-rs h3{font-size:17px;margin:0 0 12px}
 .wmm-rs p{margin:6px 0}
 .wmm-rs .rs-muted,.wmm-rs small{color:var(--r-muted)}
@@ -44,6 +44,6 @@
 .wmm-rs .rs-check{font-size:12px;display:flex;gap:8px;align-items:start;padding:7px 5px}
 .wmm-rs .rs-check input{min-height:0;margin-top:4px}
 .wmm-rs .rs-foot{margin:18px 0;font-size:11px;color:var(--r-muted)}
-.wmm-rs [dir=rtl] .rs-alert{border-left:0;border-right:3px solid #b67a32}
+.wmm-rs[dir=rtl] .rs-alert{border-left:0;border-right:3px solid #b67a32}
 @media(max-width:800px){.wmm-rs .rs-fields,.wmm-rs .rs-result{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){#wmm-resilience{padding:0 12px;margin:26px auto}.wmm-rs .rs-section,.wmm-rs .rs-hero{padding:18px}.wmm-rs .rs-grid{gap:6px}.wmm-rs .rs-node{padding:10px 5px}.wmm-rs .rs-node b{font-size:11px}.wmm-rs .rs-node small{font-size:9px}.wmm-rs .rs-items,.wmm-rs .rs-list{grid-template-columns:1fr}}
