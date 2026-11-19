@@ -58,6 +58,27 @@ try {
       const rendered=await page.locator('#rs-foodcountry').innerText();
       assert.ok(rendered.includes('NZ'),rendered);
       assert.ok(rendered.length>30);
+      if(['es','fr','ar','vi','id'].includes(lang)){
+        assert.ok(!/[가-힣]/.test(rendered),'Untranslated Korean food examples must be hidden: '+rendered);
+      }
+    });
+    row.checks.safetyLocalization=await check(page,name+' provisional safety translation',async()=>{
+      const warnings=await page.locator('.rs-alert').allTextContents();
+      assert.equal(warnings.length,4);
+      assert.ok(warnings.every(w=>w.length>30));
+      if(['es','fr','ar','vi','id'].includes(lang)){
+        assert.ok((await page.locator('.rs-hero').innerText()).length>50);
+        const all=await page.locator('#wmm-resilience').innerText();
+        const notices={
+          es:'Traducción de seguridad preliminar',
+          fr:'Traduction de sécurité provisoire',
+          ar:'ترجمة أولية لإرشادات السلامة',
+          vi:'Bản dịch hướng dẫn an toàn còn sơ bộ',
+          id:'Terjemahan keselamatan masih awal'
+        };
+        assert.ok(all.includes(notices[lang]),'Missing explicit draft safety translation warning');
+        assert.ok(!warnings[0].startsWith('Never use portable generators'),'Safety warning silently fell back to English');
+      }
     });
     row.checks.checklist=await check(page,name+' checklist',async()=>{
       await page.locator('[data-check="water"]').check();
