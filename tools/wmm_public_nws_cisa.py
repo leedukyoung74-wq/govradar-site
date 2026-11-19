@@ -18,13 +18,13 @@ import urllib.request
 from pathlib import Path
 
 UTC = dt.timezone.utc
-NWS_URL = 'https://api.weather.gov/alerts/active?limit=500'
+NWS_URL = 'https://api.weather.gov/alerts/active'
 CISA_PRIMARY = 'https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json'
 CISA_MIRROR = 'https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json'
 NWS_HOSTS = {'api.weather.gov'}
 CISA_HOSTS = {'www.cisa.gov', 'raw.githubusercontent.com'}
 CVE = re.compile(r'^CVE-\d{4}-\d{4,19}$')
-MAX_BYTES = 9_000_000
+MAX_BYTES = 20_000_000
 
 
 def iso(now):
@@ -53,7 +53,7 @@ def fetch_json(url, hosts, max_bytes=MAX_BYTES):
         raise ValueError('source_not_allowlisted')
     req = urllib.request.Request(url, headers={
         'User-Agent': 'WMM-GOV-RADAR/1.0 (public official data; https://radar.wmm-hoa.com/)',
-        'Accept': 'application/geo+json, application/json'
+        'Accept': 'application/geo+json'
     })
     with urllib.request.urlopen(req, timeout=40) as response:
         if response.status != 200 or not official_url(response.geturl(), hosts):
