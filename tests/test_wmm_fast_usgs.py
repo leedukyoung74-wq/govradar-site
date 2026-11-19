@@ -68,7 +68,19 @@ class FastUSGSTests(unittest.TestCase):
         before['items']['usgs'] = F.quake_rows({'features': [event()]})
         new, changed = F.transform(before, {'features': [event()]}, NOW)
         self.assertTrue(changed)
-        self.assertEqual(new['checked'], '2026-11-19T12:40')
+        self.assertEqual(new['checked'], '2026-11-19T12:10')
+        self.assertEqual(new['usgs_fast_checked'], '2026-11-19T12:40')
+
+    def test_fast_heartbeat_does_not_freshen_six_agency_time(self):
+        before = old()
+        before['checked'] = '2026-11-18T06:10'
+        before['usgs_fast_checked'] = '2026-11-19T12:35'
+        before['items']['usgs'] = F.quake_rows({'features': [event()]})
+        before['sources']['usgs']['n'] = len(before['items']['usgs'])
+        new, changed = F.transform(before, {'features': [event()]}, NOW)
+        self.assertFalse(changed)
+        self.assertEqual(new['checked'], '2026-11-18T06:10')
+        self.assertEqual(new['usgs_fast_checked'], '2026-11-19T12:35')
 
     def test_refuse_to_write_without_existing_official(self):
         with tempfile.TemporaryDirectory() as t:
