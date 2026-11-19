@@ -1,0 +1,56 @@
+name: WMM GOV RADAR live health daily (READ ONLY)
+on:
+  schedule:
+    # 08:30 Asia/Seoul, equivalent to previous-day 23:30 UTC.
+    - cron: "30 23 * * *"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/wmm_public_health_daily.yml'
+permissions:
+  contents: read
+jobs:
+  health:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - name: Read canonical source monitor from src (no site changes)
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify monitor logic and safe GET-only contract
+        run: python -m unittest discover -s tests -p 'test_public_resilience_release.py' -v
+      - name: Check all 44 published routes and data invariants
+        shell: bash
+        run: |
+          mkdir -p evidence
+          python tools/verify_public_resilience_release.py > evidence/report.json || {
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('evidence/report.json').read_text(encoding='utf-8'))
+          print("MONITOR FAILURE",r.get("ready_count"),"/",r.get("total_checks"))
+          for item in r.get('checks',[]):
+              if not item.get('ready'):
+                  print(item.get('origin'),item.get('path'),item.get('http_status'),item.get('error_type',''),item.get('outdated_water_marker'))
+          PY
+            exit 1
+          }
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('evidence/report.json').read_text(encoding='utf-8'))
+          print('PASS',r['ready_count'],'/',r['total_checks'],'read-only public checks')
+          PY
+      - name: Preserve evidence for drift investigation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-public-health-readonly
+          path: evidence/report.json
+          if-no-files-found: warn
+          retention-days: 7
