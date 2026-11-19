@@ -6,7 +6,7 @@
 .wmm-rs .rs-top{display:flex;align-items:start;gap:16px;justify-content:space-between;flex-wrap:wrap}
 .wmm-rs .rs-eyebrow{font-size:11px;letter-spacing:.15em;font-weight:750;color:#ae8858}
 .wmm-rs h1{font-size:clamp(22px,3vw,33px);line-height:1.26;margin:10px 0 9px;letter-spacing:-.03em}
-.wmm-rs h3{font-size:17px;margin:0 0 12px}
+.wmm-rs h2{font-size:17px;margin:0 0 12px}
 .wmm-rs p{margin:6px 0}
 .wmm-rs .rs-muted,.wmm-rs small{color:var(--r-muted)}
 .wmm-rs select,.wmm-rs input{font:inherit;color:var(--r-ink);background:var(--r-bg);border:1px solid var(--r-line);border-radius:9px;padding:9px 11px;min-height:40px}
