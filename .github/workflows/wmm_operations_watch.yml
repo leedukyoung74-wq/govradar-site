@@ -1,0 +1,131 @@
+name: WMM GOV RADAR hourly public operations watch
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/wmm_operations_watch.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Verify scheduled runs, public data freshness and deployed site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import datetime as dt, json, os, sys, urllib.parse, urllib.request, urllib.error
+          UTC=dt.timezone.utc
+          KST=dt.timezone(dt.timedelta(hours=9))
+          now=dt.datetime.now(UTC)
+          repo='leedukyoung74-wq/govradar-site'
+          raw='https://raw.githubusercontent.com/'+repo+'/data/hz/'
+          checks=[]
+          def record(label, ok, detail):
+              obj={'item':label,'ok':bool(ok),'detail':detail}
+              checks.append(obj)
+              print(json.dumps(obj,ensure_ascii=False,sort_keys=True),flush=True)
+          def get(url, github=False, json_only=False):
+              host=urllib.parse.urlsplit(url).hostname
+              allowed={'api.github.com'} if github else {'raw.githubusercontent.com','radar.wmm-hoa.com'}
+              if host not in allowed or not url.startswith('https://'):
+                  raise ValueError('host_not_allowlisted')
+              headers={'User-Agent':'WMM-GOV-RADAR-Operations-Watch/1.0','Accept':'application/vnd.github+json' if github else '*/*'}
+              if github and os.environ.get('GH_TOKEN'):
+                  headers['Authorization']='Bearer '+os.environ['GH_TOKEN']
+              with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=20) as r:
+                  if r.status!=200: raise RuntimeError('HTTP_'+str(r.status))
+                  if urllib.parse.urlsplit(r.geturl()).hostname not in allowed: raise ValueError('redirect_not_allowlisted')
+                  body=r.read(1_000_000+1)
+                  if len(body)>1_000_000: raise ValueError('response_too_large')
+                  text=body.decode('utf-8','replace')
+              return json.loads(text) if json_only else text
+          def parse_time(s, naive_tz=UTC):
+              if not s:return None
+              try:
+                  o=dt.datetime.fromisoformat(str(s).replace('Z','+00:00'))
+                  if o.tzinfo is None:o=o.replace(tzinfo=naive_tz)
+                  return o.astimezone(UTC)
+              except (ValueError,TypeError,OverflowError):return None
+          def age_minutes(s, tz=UTC):
+              t=parse_time(s,tz)
+              return None if not t else round((now-t).total_seconds()/60,1)
+          def fresh(s, minutes, tz=UTC):
+              age=age_minutes(s,tz)
+              return age is not None and -5<=age<=minutes
+          try:
+              data=get(raw+'official.json',json_only=True)
+              us=data.get('sources',{}).get('usgs',{})
+              age=age_minutes(data.get('usgs_fast_checked'),KST)
+              record('USGS official fast',us.get('ok') is True and fresh(data.get('usgs_fast_checked'),120,KST),
+                     {'minutes_since_fast_checked':age,'items':us.get('n')})
+              other={k:age_minutes(data.get('sources',{}).get(k,{}).get('last_ok'),KST) for k in ('gdacs','eonet','who','cneos','swpc')}
+              record('Other five agencies daily freshness',all(v is not None and -5<=v<=36*60 for v in other.values()),
+                     {'minutes_since_last_ok':other})
+          except Exception as exc:
+              record('Official disaster feed',False,type(exc).__name__)
+          for name,filename,limit in (('US NWS weather','nws_active.json',180),('CISA KEV','cisa_kev.json',10*60)):
+              try:
+                  d=get(raw+filename,json_only=True)
+                  h=d.get('source_health',{})
+                  age=age_minutes(h.get('last_ok'))
+                  ok=h.get('ok') is True and h.get('stale') is False and fresh(h.get('last_ok'),limit)
+                  if name=='CISA KEV':
+                      ok=ok and d.get('not_realtime_attack_feed') is True and d.get('total_vulnerabilities',0)>=1000
+                  record(name,ok,{'minutes_since_last_ok':age,'items_displayed':len(d.get('items',[])),
+                                  'source_error':h.get('last_error'),'source_health_ok':h.get('ok')})
+              except Exception as exc:
+                  record(name,False,type(exc).__name__)
+          url='https://api.github.com/repos/'+repo+'/actions/runs?event=schedule&per_page=100'
+          first_nws=dt.datetime(2026,11,19,4,54,tzinfo=UTC)
+          expected=(
+              ('USGS five-minute schedule','WMM GOV RADAR fast official data publishing',150,dt.datetime(2026,11,19,4,39,tzinfo=UTC)),
+              ('NWS/CISA 15-minute schedule','WMM Official NWS + CISA KEV public updates',180,first_nws))
+          try:
+              runs=get(url,github=True,json_only=True).get('workflow_runs',[])
+              for label,name,limit,start in expected:
+                  found=sorted((r for r in runs if r.get('name')==name and r.get('event')=='schedule'),key=lambda r:r.get('created_at') or '',reverse=True)
+                  if not found and (now-start).total_seconds()<3*3600:
+                      record(label,True,{'state':'initial_grace_period_NOT_YET_PROVEN','scheduled_runs_seen':0,
+                                         'grace_ends_utc':(start+dt.timedelta(hours=3)).isoformat()})
+                      continue
+                  recent=found[0] if found else None
+                  age=age_minutes(recent.get('created_at')) if recent else None
+                  ok=bool(recent and age is not None and -5<=age<=limit and recent.get('conclusion')=='success')
+                  record(label,ok,{'state':'verified' if recent else 'missing','last_run_id':recent.get('id') if recent else None,
+                                   'last_conclusion':recent.get('conclusion') if recent else None,
+                                   'minutes_since_last_scheduled_run':age})
+          except Exception as exc:
+              record('GitHub scheduled events check',False,type(exc).__name__)
+          for label,path,needle in (
+              ('KO cyber website','/cyber/?stay=1','wmm-official-sources.js'),
+              ('EN cyber website','/cyber/en/?stay=1','wmm-official-sources.js'),
+              ('Global hazards website','/hazards/?stay=1','wmm-official-sources.js'),
+              ('Public panel JavaScript','/assets/wmm-official-sources.js','cisa_kev.json')):
+              try:
+                  html=get('https://radar.wmm-hoa.com'+path)
+                  record(label,needle in html,{'http':200,'expected_marker_present':needle in html})
+              except Exception as exc:
+                  record(label,False,type(exc).__name__)
+          summary_path=os.environ.get('GITHUB_STEP_SUMMARY')
+          failed=[x for x in checks if not x['ok']]
+          result='PASS' if not failed else 'FAIL'
+          table=['## WMM GOV RADAR hourly public health: '+result,'',
+                 '| Check | Result |','|---|---|']
+          for x in checks:table.append('| '+x['item']+' | '+('PASS' if x['ok'] else 'FAIL')+' |')
+          table.append('')
+          table.append('Data are public-source only. GitHub scheduled runs may be delayed; a PASS cannot guarantee exact five-minute execution.')
+          if summary_path:
+              with open(summary_path,'a',encoding='utf-8') as f:
+                  f.write('\n'.join(table)+'\n')
+          print(json.dumps({'result':result,'failed_checks':[x['item'] for x in failed],'checked':len(checks),
+                            'checked_at_utc':now.isoformat()},ensure_ascii=False))
+          sys.exit(1 if failed else 0)
+          PY
