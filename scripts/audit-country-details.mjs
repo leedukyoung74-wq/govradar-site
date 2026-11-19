@@ -19,9 +19,11 @@ const isDate=s=>{
 let withoutFile=0,withoutSources=0,stale=0,invalidDeadlines=0,deadlinePassed=0, totalTenders=0;
 const now=new Date(); const today=now.toISOString().slice(0,10);
 const records=[];
+const missingProfiles=[];
+const pastDeadlineTenders=[];
 for(const c of countries){
  const path=new URL(c.iso+'.json',files);
- if(!existsSync(path)){withoutFile++;records.push({iso:c.iso,profile_exists:false,officially_verified:false,flags:['PROFILE_MISSING']});continue;}
+ if(!existsSync(path)){withoutFile++;missingProfiles.push({iso:c.iso,slug:c.slug||null,name_ko:c.names?.ko||null,name_en:c.names?.en||null,required_path:'data/c/'+c.iso+'.json'});records.push({iso:c.iso,profile_exists:false,officially_verified:false,flags:['PROFILE_MISSING']});continue;}
  let doc;
  try{doc=JSON.parse(readFileSync(path,'utf8'));}
  catch{records.push({iso:c.iso,profile_exists:true,officially_verified:false,flags:['PROFILE_INVALID_JSON']});continue;}
@@ -34,10 +36,10 @@ for(const c of countries){
    const age=(now.getTime()-Date.parse(doc.updated+'T00:00:00Z'))/86400000;
    if(age>30){stale++;flags.push('PROFILE_STALE_30D');}
  }
- for(const t of tenders){
+ for(const [tenderIndex,t] of tenders.entries()){
    totalTenders++;
    if(t.deadline&&!isDate(t.deadline)){invalidDeadlines++;flags.push('INVALID_TENDER_DATE');}
-   if(isDate(t.deadline)&&t.deadline<today){deadlinePassed++;flags.push('PAST_DEADLINE_REQUIRES_REVIEW');}
+   if(isDate(t.deadline)&&t.deadline<today){deadlinePassed++;flags.push('PAST_DEADLINE_REQUIRES_REVIEW');pastDeadlineTenders.push({iso:c.iso,country:c.names?.ko||c.names?.en||c.iso,profile_path:'data/c/'+c.iso+'.json',source_index:tenderIndex,title:t.title||null,buyer:t.buyer||null,recorded_deadline:t.deadline,source_url:urlOK(t.url)?t.url:null,editorial_action:'VERIFY_EXTENSION_CANCELLATION_OR_ARCHIVE',verified:false});}
  }
  if(tenders.some(t=>!urlOK(t.url)))flags.push('TENDER_MISSING_DIRECT_SOURCE');
  records.push({
@@ -55,6 +57,8 @@ const output={
  tenders_past_deadline_requiring_review:deadlinePassed,
  verified_official_sources:0,
  verification_note:'Source URL and legacy done flags are NOT evidence of official confirmation. The verified count stays zero until independent, documented human review occurs.',
+ missing_profile_work_queue:missingProfiles,
+ past_deadline_tenders_work_queue:pastDeadlineTenders.sort((a,b)=>a.recorded_deadline.localeCompare(b.recorded_deadline)),
  countries:records
 };
 console.log(JSON.stringify(output,null,2));
