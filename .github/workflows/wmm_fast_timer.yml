@@ -1,0 +1,21 @@
+name: WMM GOV RADAR fast official data publishing
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/wmm_fast_timer.yml
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'TRUE = test only, FALSE = publish reviewed public official feed'
+        type: boolean
+        default: true
+permissions:
+  contents: write
+jobs:
+  public_official_refresh:
+    uses: leedukyoung74-wq/govradar-site/.github/workflows/wmm_fast_official.yml@src
+    with:
+      dry_run: ${{ github.event_name != 'schedule' && (github.event_name != 'workflow_dispatch' || inputs.dry_run) }}
