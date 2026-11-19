@@ -711,7 +711,7 @@ def stock_page(L):
     H = (dict(t="Home stockpile kit — what, how much, which products", d="A practical home stockpile list: 20 categories, quantities for 2 adults over 14 days, and the actual products to buy.", cat="Full list of essentials", q="Quantities — 2 adults · 14 days", pr="Actual products", prp="Compare prices and stock through the links. No retailer partnership.", sf="Safety first", src="Sources")
          if en else dict(t="가정 비축 키트 — 무엇을, 얼마나, 어떤 제품으로", d="생활필수품 20개 분류, 성인 2명·14일 비축 수량, 실제로 살 제품 구성까지 한 페이지에 정리했습니다.", cat="생활필수품 전체 리스트", q="비축 수량 — 성인 2명 · 14일", pr="실제 제품 구성", prp="가격과 재고는 링크에서 비교하세요. 특정 판매처와 제휴하지 않았습니다.", sf="꼭 지킬 것", src="자료 원문"))
     def qv(q):
-        if q["mode"] == "pd": return f'{q["per"]*28}{q["unit_ko"]} {"+" if en else "이상"}'
+        if q["mode"] == "pd": return f'{q["per"]*28:g}{q["unit_ko"]} {"+" if en else "이상"}'
         if q["mode"] == "scale": return f'{q["lo"]}~{q["hi"]}{" " if en else ""}{q["unit_en"] if en else q["unit_ko"]}'
         return (q["txt_en"] if en else q["txt_ko"]).replace("{d}", "14").replace("{p}", "2")
     CN = {c["id"]: nmk(c) for c in STK["cats"]}
@@ -1036,6 +1036,10 @@ def build():
         W(f"/{L}/about/index.html", ABOUT.page(L, dict(C3(), img=P3.img, credit=P3.credit, paylink=P3.paylink, ld=ld, ORG=ORG))); urls.append((f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}))
         W(f"/{L}/prepare/index.html", stock_page(L)); urls.append((f"/{L}/prepare/", {l: f"/{l}/prepare/" for l in LANGS}))
         W(f"/{L}/ready/index.html", ready_page(L)); urls.append((f"/{L}/ready/", {l: f"/{l}/ready/" for l in LANGS}))
+        # Isolated review-only self-reliance module. Preserve legacy /ready/ and /prepare/.
+        # Intentionally absent from sitemap/navigation until signed-off product/data review.
+        _rs = os.path.join(SRC, "resilience_pages", L + ".html")
+        W(f"/{L}/resilience/index.html", open(_rs, encoding="utf8").read())
         W(f"/{L}/feeds/index.html", feeds_page(L)); W(f"/{L}/embed/index.html", embed_page(L)); W(f"/{L}/account/index.html", account_page(L)); import pages_req as PRQ; W(f"/{L}/request/index.html", PRQ.request_page(L, head, foot, LANGS)); urls.append((f"/{L}/request/", {l: f"/{l}/request/" for l in LANGS}))
         for c in META:
             W(f"/{L}/{c['slug']}/index.html", country_page(c["iso"], L))
@@ -1050,6 +1054,11 @@ def build():
     cj = [{"iso": c["iso"], "slug": c["slug"], "r": c["r"], "done": done(c["iso"]), "risk": lvl(c["iso"]), "names": NAMES[c["iso"]]} for c in META]
     W("/data/countries.json", json.dumps(cj, ensure_ascii=False))
     W("/data/regions.json", json.dumps([{"code": x["iso"], "parent": x["parent"], "type": x["type"], "slug": BY[x["iso"]]["slug"], "done": done(x["iso"]), "ko": x["ko"], "en": x["en"]} for x in REGS], ensure_ascii=False))
+    # Stage documentary, unverified country food profiles independently of tender/region data.
+    # Official preparedness references are NOT product or shelf-life certification.
+    for _rs_file in ("wmm-food-country-profiles.json", "wmm-food-primary-guidance-reviewed.json"):
+        _rs_path = os.path.join(SRC, _rs_file)
+        W("/data/" + _rs_file, open(_rs_path, encoding="utf8").read())
     hz = os.path.join(ROOT, "export", "hazards.json")
     W("/data/hazards.json", open(hz, encoding="utf8").read() if os.path.exists(hz) else "{}")
     W("/assets/gvhdr.js", _gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU))

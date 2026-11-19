@@ -1,0 +1,84 @@
+name: WMM Resilience upstream generated-site review (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'build.py'
+      - 'src/stock.json'
+      - 'src/resilience_pages/**'
+      - 'src/wmm-food-*.json'
+      - 'web/wmm-resilience.*'
+      - 'tests/test_resilience_source_build.py'
+      - 'tests/wmm_resilience_generated_browser_review.cjs'
+      - '.github/workflows/wmm_resilience_upstream_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  generated_preview:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Source safety and build-route contracts (read only)
+        run: python -m unittest discover -s tests -p 'test_resilience_source_build.py' -v
+      - name: Build isolated site in GitHub runner; do not publish
+        run: python build.py --base https://preview.invalid
+      - name: Verify generated site contents and legacy routes
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          out=Path('dist')
+          langs=['ko','en','es','fr','ar','vi','id']
+          for lang in langs:
+              for route in ('ready','prepare','resilience'):
+                  html=(out/lang/route/'index.html').read_text(encoding='utf-8')
+                  assert '<html' in html, (lang,route)
+              new=(out/lang/'resilience/index.html').read_text(encoding='utf-8')
+              old=(out/lang/'prepare/index.html').read_text(encoding='utf-8')
+              assert 'noindex, nofollow' in new, lang
+              assert f'href="/{lang}/ready/"' in new, lang
+              assert f'href="/{lang}/prepare/"' in new, lang
+              assert '106.4L' in old, lang
+              assert '84L' not in old, lang
+          for file in ('wmm-resilience.js','wmm-resilience.css'):
+              assert (out/'assets'/file).is_file(),file
+          food=json.loads((out/'data/wmm-food-country-profiles.json').read_text(encoding='utf-8'))
+          refs=json.loads((out/'data/wmm-food-primary-guidance-reviewed.json').read_text(encoding='utf-8'))
+          countries=json.loads((out/'data/countries.json').read_text(encoding='utf-8'))
+          regions=json.loads((out/'data/regions.json').read_text(encoding='utf-8'))
+          assert len(food)==193 and len(countries)==193 and len(regions)==23
+          assert {x['iso'] for x in food}=={x['iso'] for x in countries}
+          assert len(refs['countries'])==3
+          assert all(not x['retail_availability_verified'] and not x['shelf_life_verified'] for x in food)
+          site=(out/'sitemap.xml').read_text(encoding='utf-8')
+          assert '/resilience/' not in site
+          print('PASS: generated seven-language isolated routes, 193 countries, 23 regions, safety copy, review-only noindex and evidence files.')
+          PY
+      - name: Install isolated Chromium runner (review only)
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+          npx playwright install chromium
+      - name: Start generated-site local HTTP preview
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist >/tmp/wmm-resilience-build-preview.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/ko/resilience/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/wmm-resilience-build-preview.log
+          exit 1
+      - name: Browser test 21 generated pages and calculations (no deploy)
+        run: node tests/wmm_resilience_generated_browser_review.cjs
+      - name: Save generated-site screenshots and browser review evidence (not deployment)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-upstream-generated-resilience-review
+          path: browser-review/
+          retention-days: 7
+          if-no-files-found: warn
