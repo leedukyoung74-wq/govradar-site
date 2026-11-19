@@ -2,7 +2,7 @@ name: WMM Official NWS + CISA KEV public updates
 # v3: NWS /alerts/active uses supported no-limit official GeoJSON endpoint.
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '13,28,43,58 * * * *'
   push:
     branches: [main]
     paths:
