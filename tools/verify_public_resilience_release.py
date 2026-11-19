@@ -9,6 +9,26 @@ from datetime import datetime, timezone
 
 BASES = ("https://radar.wmm-hoa.com","https://wmm-radar.pages.dev")
 LANGS=("ko","en","es","fr","ar","vi","id")
+# Safety-critical public content checked as part of the same GET-only release monitor.
+SAFE_STOVE={
+ "ko":"실내·차고·텐트에서는 환기하더라도 사용하지 마세요.",
+ "en":"never indoors, in garages or tents, even with ventilation.",
+ "es":"nunca en casa, garaje ni tienda, aunque haya ventilación.",
+ "fr":"jamais dans une habitation, un garage ou une tente, même ventilés.",
+ "ar":"وليس داخل المنازل أو المرائب أو الخيام حتى مع التهوية.",
+ "vi":"không dùng trong nhà, ga-ra hoặc lều kể cả khi có thông gió.",
+ "id":"jangan gunakan di dalam rumah, garasi atau tenda meski ada ventilasi.",
+}
+OLD_UNSAFE={
+ "ko":"실내 사용 시 환기",
+ "en":"ventilate indoors",
+ "es":"ventile en interiores",
+ "fr":"aérer en intérieur",
+ "ar":"مع التهوية داخل المباني",
+ "vi":"thông gió khi dùng trong nhà",
+ "id":"pastikan ventilasi jika di dalam ruangan",
+}
+
 TESTS = [
     *((f"/{lang}/resilience/","wmm-resilience") for lang in LANGS),
     *((f"/{lang}/prepare/","106.4L") for lang in LANGS),
@@ -33,6 +53,13 @@ def check(url, needle):
             result={"http_status":response.status,
                     "has_release_marker":needle in body,
                     "outdated_water_marker":"84L" in body if "/prepare/" in url else None}
+            if "/prepare/" in url:
+                lang=url.split("/prepare/")[0].rsplit("/",1)[-1]
+                result["stove_safety_verified"]=SAFE_STOVE[lang] in body and OLD_UNSAFE[lang] not in body
+                result["has_release_marker"]=result["has_release_marker"] and result["stove_safety_verified"]
+            elif "/resilience/" in url:
+                result["review_not_indexed"]="noindex, nofollow" in body
+                result["has_release_marker"]=result["has_release_marker"] and result["review_not_indexed"]
             if url.endswith("/data/wmm-food-country-profiles.json"):
                 profiles=json.loads(body)
                 product_claims=sum(bool(x.get("local_official_guidance_verified") or
