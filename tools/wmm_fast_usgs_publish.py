@@ -108,8 +108,11 @@ def transform(old, raw, now, error=None):
         result['items']['usgs'] = rows
         result['sources']['usgs'] = {'ok': True, 'last_ok': stamp(now), 'n': len(rows)}
     changed = result['sources']['usgs'].get('ok') != prev.get('ok') or rows != old_items
-    if changed or heartbeat_due(old.get('checked'), now):
-        result['checked'] = stamp(now)
+    # Do not reset the aggregate 'checked' time. It belongs to the six-agency daily
+    # collector; updating it on an USGS-only refresh would falsely freshen other agencies.
+    last_fast = old.get('usgs_fast_checked') or old.get('checked')
+    if changed or heartbeat_due(last_fast, now):
+        result['usgs_fast_checked'] = stamp(now)
         return result, True
     return old, False
 
