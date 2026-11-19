@@ -1,0 +1,47 @@
+name: WMM World Bank OP00477812 public URL diagnostic
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/wmm_worldbank_url_probe.yml
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Read-only World Bank official direct link / API / landing page
+        shell: bash
+        run: |
+          python - <<'PY'
+          import urllib.request,urllib.error,urllib.parse,json
+          sid='OP00477812'
+          urls=[
+            ('detail','https://projects.worldbank.org/en/projects-operations/procurement-detail/'+sid),
+            ('api','https://search.worldbank.org/api/v2/procnotices?format=json&id='+sid),
+            ('opportunities','https://projects.worldbank.org/en/projects-operations/opportunities'),
+            ('notices','https://projects.worldbank.org/en/projects-operations/procurement'),
+          ]
+          for label,url in urls:
+            req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; WMM-GOV-RADAR-Source-Quality/1.0)','Accept':'text/html,application/json,*/*'})
+            try:
+              with urllib.request.urlopen(req,timeout=25) as r:
+                body=r.read(2_000_000)
+                info={'kind':label,'status':r.status,'content_type':r.headers.get('Content-Type','').split(';')[0],'final_host':urllib.parse.urlsplit(r.url).hostname,'bytes':len(body)}
+                if label=='api':
+                  try:
+                    o=json.loads(body)
+                    items=o.get('procnotices') or []
+                    info['id_returned']=str(items[0].get('id')) if items else None
+                    info['id_matches']=info['id_returned']==sid
+                    info['notice_status']=str(items[0].get('notice_status')) if items else None
+                  except Exception as exc:
+                    info['parse_error']=type(exc).__name__
+                print(json.dumps(info),flush=True)
+            except urllib.error.HTTPError as exc:
+              print(json.dumps({'kind':label,'status':exc.code,'error':'HTTPError'}),flush=True)
+            except Exception as exc:
+              print(json.dumps({'kind':label,'status':None,'error':type(exc).__name__}),flush=True)
+          PY
