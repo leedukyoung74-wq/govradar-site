@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+const assert = require('node:assert/strict');
+const q = require('../assets/review-status.js');
+assert.equal(q.dateOnly('2026-02-29'),null,'reject impossible date');
+assert.equal(q.dateOnly('2028-02-29'),'2028-02-29','accept leap day');
+assert.equal(q.safeUrl('javascript:alert(1)'),null);
+assert.equal(q.safeUrl('https://example.org/notices/123'),'https://example.org/notices/123');
+const today='2026-11-19';
+let x=q.evaluate({deadline:'2026-11-10'},'2026-11-09',today);
+assert.equal(x.verified,false);
+assert.equal(x.deadlineStatus,'passed');
+assert.equal(x.sourceStatus,'missing');
+assert.ok(x.reasons.includes('DEADLINE_PASSED'));
+x=q.evaluate({source_url:'https://example.org',deadline:'2026-11-30'},'2026-10-01',today);
+assert.equal(x.sourceStatus,'link_present_not_verified');
+assert.equal(x.freshnessStatus,'stale');
+assert.equal(x.verified,false,'a link never implies independent verification');
+x=q.evaluate({deadline:'2026-11-19'},'2026-11-19',today);
+assert.equal(x.deadlineStatus,'today');
+x=q.evaluate({deadline:'2026-11-31'},'2026-12-01',today);
+assert.equal(x.deadlineStatus,'invalid');
+assert.equal(x.freshnessStatus,'invalid');
+x=q.evaluate({},null,today);
+assert.equal(x.deadlineStatus,'unknown');
+assert.equal(x.freshnessStatus,'unknown');
+console.log('PASS review-status: date, source, stale, safe-URL and no auto-verification tests');
