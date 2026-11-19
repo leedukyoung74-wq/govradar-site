@@ -77,7 +77,10 @@ async function settle() {
   assert.equal(ko.calls.length,2);
   assert.equal(ko.el('#rs-country').options.length,193);
   assert.equal(ko.el('#rs-country').value,'KR');
-  assert.match(ko.el('#rs-foodcountry').innerHTML,/illustrative|pending/);
+  assert.match(ko.el('#rs-foodcountry').innerHTML,/검토 예시 · 미검증|미검증/);
+  assert.match(ko.root.innerHTML,/최소 약 6m/);
+  ko.el('#rs-lang').listeners.change({target:{value:'en'}});
+  assert.equal(ko.location.href,'/en/resilience/?country=KR');
 
   // Changing input recomputes values, without a reload or external request.
   ko.el('#rs-p').value='4';
@@ -103,7 +106,7 @@ async function settle() {
   assert.equal(ar.el('#rs-country').options.length,193);
   assert.equal(ar.el('#rs-country').value,'NZ');
   ar.el('#rs-lang').listeners.change({target:{value:'vi'}});
-  assert.equal(ar.location.href,'/vi/resilience/');
+  assert.equal(ar.location.href,'/vi/resilience/?country=NZ');
 
   for(const lang of ['en','es','fr','vi','id']){
     const page=makePage(lang);
