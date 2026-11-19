@@ -32,5 +32,10 @@ assert "/data/wmm-food-country-profiles.json" in js
 assert "localStorage" in js
 assert "does not" in js.lower() or "never" in js.lower()
 assert "grid-template-columns" in css and "@media" in css
+assert "e(t.title)+'</h1>'" in js, "Rendered page must retain a main H1"
+assert "class=\\\"rs-result\\\" id=\\\"rs-out\\\" role=\\\"status\\\"" in js
+assert "class=\\\"rs-result\\\" id=\\\"rs-pout\\\" role=\\\"status\\\"" in js
+assert '.wmm-rs[dir=rtl] .rs-alert' in css, "RTL styles must target root direction"
+assert 'x.toLocaleString(L,' in js, "Numbers should follow selected language"
 assert not re.search(r'\bfetch\s*\([^)]*,\s*\{\s*method\s*:\s*["\']POST', js, re.I), "No POST of personal data"
 print("PASS: 193 unique country profiles, status gates, seven locales, safe static references")
