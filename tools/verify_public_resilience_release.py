@@ -19,7 +19,7 @@ TESTS = [
     ("/data/wmm-food-country-profiles.json",'"local_official_guidance_verified"'),
     ("/data/wmm-food-primary-guidance-reviewed.json",'"product_review_status"'),
     ("/data/countries.json",'"iso"'),
-    ("/data/regions.json",'"iso"'),
+    ("/data/regions.json",'"code"'),
 ]
 
 def check(url, needle):
