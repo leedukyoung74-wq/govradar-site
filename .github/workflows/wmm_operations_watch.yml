@@ -93,7 +93,7 @@ jobs:
               for label,name,limit,start in expected:
                   found=sorted((r for r in runs if r.get('name')==name and r.get('event')=='schedule'),key=lambda r:r.get('created_at') or '',reverse=True)
                   if not found and (now-start).total_seconds()<3*3600:
-                      record(label,True,{'state':'initial_grace_period_NOT_YET_PROVEN','scheduled_runs_seen':0,
+                      record(label,True,{'state':'initial_grace_period_NOT_YET_PROVEN','scheduled_runs_seen':0,'pending':True,
                                          'grace_ends_utc':(start+dt.timedelta(hours=3)).isoformat()})
                       continue
                   recent=found[0] if found else None
@@ -116,16 +116,17 @@ jobs:
                   record(label,False,type(exc).__name__)
           summary_path=os.environ.get('GITHUB_STEP_SUMMARY')
           failed=[x for x in checks if not x['ok']]
-          result='PASS' if not failed else 'FAIL'
+          pending=[x for x in checks if x.get('detail',{}).get('pending')]
+          result='FAIL' if failed else ('PENDING' if pending else 'PASS')
           table=['## WMM GOV RADAR hourly public health: '+result,'',
                  '| Check | Result |','|---|---|']
-          for x in checks:table.append('| '+x['item']+' | '+('PASS' if x['ok'] else 'FAIL')+' |')
+          for x in checks:table.append('| '+x['item']+' | '+('PENDING' if x.get('detail',{}).get('pending') else ('PASS' if x['ok'] else 'FAIL'))+' |')
           table.append('')
           table.append('Data are public-source only. GitHub scheduled runs may be delayed; a PASS cannot guarantee exact five-minute execution.')
           if summary_path:
               with open(summary_path,'a',encoding='utf-8') as f:
                   f.write('\n'.join(table)+'\n')
           print(json.dumps({'result':result,'failed_checks':[x['item'] for x in failed],'checked':len(checks),
-                            'checked_at_utc':now.isoformat()},ensure_ascii=False))
+                            'pending_checks':[x['item'] for x in pending], 'checked_at_utc':now.isoformat()},ensure_ascii=False))
           sys.exit(1 if failed else 0)
           PY
