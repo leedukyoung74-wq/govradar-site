@@ -1,0 +1,40 @@
+name: WMM Resilience Chromium visual review (isolated)
+on:
+  pull_request:
+    paths:
+      - 'assets/wmm-resilience.*'
+      - '**/resilience/index.html'
+      - 'tests/wmm_resilience_chromium_review.cjs'
+      - '.github/workflows/wmm_resilience_browser_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Chromium test runner (CI only)
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+          npx playwright install chromium
+      - name: Start localhost static preview
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/wmm-preview.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/ko/resilience/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/wmm-preview.log
+          exit 1
+      - name: Render all seven languages, test three breakpoints and capture screenshots
+        run: node tests/wmm_resilience_chromium_review.cjs
+      - name: Upload review evidence (not deploy)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-resilience-chromium-visual-review
+          path: browser-review/
+          retention-days: 14
+          if-no-files-found: warn
