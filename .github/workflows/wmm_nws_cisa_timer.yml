@@ -1,4 +1,5 @@
 name: WMM Official NWS + CISA KEV public updates
+# v2: source health diagnostics now include safe HTTP status categories.
 on:
   schedule:
     - cron: '*/15 * * * *'
