@@ -4,6 +4,8 @@ on:
     paths:
       - 'assets/wmm-resilience.*'
       - 'data/wmm-food-country-profiles.json'
+      - 'data/wmm-food-primary-guidance-reviewed.json'
+      - 'tests/check_wmm_food_primary_guidance.cjs'
       - '**/resilience/index.html'
       - '**/prepare/index.html'
       - 'tests/check_wmm_resilience.py'
@@ -34,5 +36,7 @@ jobs:
         run: node tests/check_wmm_prepare_safety.cjs
       - name: Country food verification queue integrity
         run: node scripts/build_wmm_food_review_queue.mjs --check
+      - name: Official guidance evidence must not imply product verification
+        run: node tests/check_wmm_food_primary_guidance.cjs
       - name: Data and markup invariants
         run: python3 tests/check_wmm_resilience.py
