@@ -1,0 +1,84 @@
+name: WMM official USGS fast updater (reusable)
+on:
+  workflow_call:
+    inputs:
+      dry_run:
+        type: boolean
+        default: true
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    concurrency:
+      group: wmm-usgs-fast-data
+      cancel-in-progress: false
+    steps:
+      - name: Collect reviewed code from src
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: code
+          persist-credentials: false
+      - name: Check out existing public data branch
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data_branch
+          fetch-depth: 2
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline public-source safety tests
+        run: python -m unittest discover -s code/tests -p 'test_wmm_fast_usgs.py' -v
+      - name: Fetch verified USGS feed and preserve all other official agencies
+        run: python code/tools/wmm_fast_usgs_publish.py data_branch/hz/official.json
+      - name: Validate minimal published structure
+        run: |
+          python - <<'PY'
+          import json
+          p='data_branch/hz/official.json'
+          d=json.load(open(p,encoding='utf-8'))
+          assert isinstance(d.get('sources'),dict)
+          assert isinstance(d.get('items'),dict)
+          assert 'gdacs' in d['sources'] and 'usgs' in d['sources']
+          assert len(d['items'].get('usgs') or []) <= 12
+          assert all(x.get('src')=='USGS' and x.get('k')=='quake' for x in d['items']['usgs'])
+          print('PASS: safe official feed schema')
+          PY
+      - name: Publish ONLY reviewed official.json to existing data branch
+        if: ${{ !inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          cd data_branch
+          git config user.name 'WMM Official Feed Bot'
+          git config user.email '73036396@naver.com'
+          for n in 1 2 3; do
+            git add hz/official.json
+            if git diff --cached --quiet; then
+              echo 'No new incident / no heartbeat due: no publish needed'
+              exit 0
+            fi
+            git commit -m 'Official USGS refresh (automated)'
+            if git push origin HEAD:data; then
+              echo 'PUBLISHED_TO_DATA_BRANCH=YES'
+              exit 0
+            fi
+            echo 'Concurrent data-branch push; re-read latest data and recompute USGS only'
+            git fetch origin data
+            git reset --hard origin/data
+            cd ..
+            python code/tools/wmm_fast_usgs_publish.py data_branch/hz/official.json
+            cd data_branch
+          done
+          echo 'PUBLISH_FAILED after 3 attempts' >&2
+          exit 1
+      - name: Retain a diagnostic sample
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fast-usgs-${{ github.run_id }}
+          path: data_branch/hz/official.json
+          retention-days: 2
