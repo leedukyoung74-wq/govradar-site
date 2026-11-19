@@ -1036,6 +1036,10 @@ def build():
         W(f"/{L}/about/index.html", ABOUT.page(L, dict(C3(), img=P3.img, credit=P3.credit, paylink=P3.paylink, ld=ld, ORG=ORG))); urls.append((f"/{L}/about/", {l: f"/{l}/about/" for l in LANGS}))
         W(f"/{L}/prepare/index.html", stock_page(L)); urls.append((f"/{L}/prepare/", {l: f"/{l}/prepare/" for l in LANGS}))
         W(f"/{L}/ready/index.html", ready_page(L)); urls.append((f"/{L}/ready/", {l: f"/{l}/ready/" for l in LANGS}))
+        # Isolated review-only self-reliance module. Preserve legacy /ready/ and /prepare/.
+        # Intentionally absent from sitemap/navigation until signed-off product/data review.
+        _rs = os.path.join(SRC, "resilience_pages", L + ".html")
+        W(f"/{L}/resilience/index.html", open(_rs, encoding="utf8").read())
         W(f"/{L}/feeds/index.html", feeds_page(L)); W(f"/{L}/embed/index.html", embed_page(L)); W(f"/{L}/account/index.html", account_page(L)); import pages_req as PRQ; W(f"/{L}/request/index.html", PRQ.request_page(L, head, foot, LANGS)); urls.append((f"/{L}/request/", {l: f"/{l}/request/" for l in LANGS}))
         for c in META:
             W(f"/{L}/{c['slug']}/index.html", country_page(c["iso"], L))
@@ -1050,6 +1054,11 @@ def build():
     cj = [{"iso": c["iso"], "slug": c["slug"], "r": c["r"], "done": done(c["iso"]), "risk": lvl(c["iso"]), "names": NAMES[c["iso"]]} for c in META]
     W("/data/countries.json", json.dumps(cj, ensure_ascii=False))
     W("/data/regions.json", json.dumps([{"code": x["iso"], "parent": x["parent"], "type": x["type"], "slug": BY[x["iso"]]["slug"], "done": done(x["iso"]), "ko": x["ko"], "en": x["en"]} for x in REGS], ensure_ascii=False))
+    # Stage documentary, unverified country food profiles independently of tender/region data.
+    # Official preparedness references are NOT product or shelf-life certification.
+    for _rs_file in ("wmm-food-country-profiles.json", "wmm-food-primary-guidance-reviewed.json"):
+        _rs_path = os.path.join(SRC, _rs_file)
+        W("/data/" + _rs_file, open(_rs_path, encoding="utf8").read())
     hz = os.path.join(ROOT, "export", "hazards.json")
     W("/data/hazards.json", open(hz, encoding="utf8").read() if os.path.exists(hz) else "{}")
     W("/assets/gvhdr.js", _gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU))
