@@ -74,3 +74,11 @@ jobs:
           exit 1
       - name: Browser test 21 generated pages and calculations (no deploy)
         run: node tests/wmm_resilience_generated_browser_review.cjs
+      - name: Save generated-site screenshots and browser review evidence (not deployment)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-upstream-generated-resilience-review
+          path: browser-review/
+          retention-days: 7
+          if-no-files-found: warn
