@@ -1,0 +1,78 @@
+name: WMM Data Quality Gate (review only)
+
+on:
+  pull_request:
+    paths:
+      - 'data/countries.json'
+      - 'data/regions.json'
+      - 'data/opps.json'
+      - 'scripts/audit-data.mjs'
+      - 'scripts/check-review-pages.mjs'
+      - 'scripts/test-review-status.cjs'
+      - 'assets/review-status.js'
+      - 'scripts/build-review-queue.mjs'
+      - 'scripts/audit-country-details.mjs'
+      - 'data/c/**'
+      - 'quality/**'
+      - 'review/**'
+      - '.github/workflows/wmm_data_quality_gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test source and deadline evaluation
+        run: node scripts/test-review-status.cjs
+      - name: Verify review page scripts
+        run: node scripts/check-review-pages.mjs
+      - name: Run read-only data audit
+        id: audit
+        continue-on-error: true
+        shell: bash
+        run: |
+          mkdir -p audit-results
+          node scripts/audit-data.mjs > audit-results/report.json 2> audit-results/warnings.txt
+      - name: Build 20-record manual review queue
+        run: node scripts/build-review-queue.mjs > audit-results/review-queue.json
+      - name: Audit 193 country profiles
+        run: |
+          node scripts/audit-country-details.mjs --output audit-results/country-coverage.json
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('audit-results/country-coverage.json','utf8'));if(d.coverage_total!==193||d.missing_profile_work_queue.length!==d.profiles_missing||!d.missing_profile_work_queue.some(x=>/[가-힣]/.test(x.name_ko||'')))process.exit(1);console.log('PASS: UTF-8 JSON roundtrip and Korean names')"
+      - name: Write summary
+        if: always()
+        shell: bash
+        run: |
+          echo '## WMM GOV RADAR data audit' >> "$GITHUB_STEP_SUMMARY"
+          echo 'This is a source quality report, not verification of 193 countries or government procurement.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Source records are unchanged; the job does not publish to the website.' >> "$GITHUB_STEP_SUMMARY"
+          echo '### Audit JSON' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat audit-results/report.json >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo '### Review warnings' >> "$GITHUB_STEP_SUMMARY"
+          echo '```text' >> "$GITHUB_STEP_SUMMARY"
+          cat audit-results/warnings.txt >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-govradar-data-audit
+          path: audit-results/
+          retention-days: 14
+      - name: Block structural integrity failures
+        if: steps.audit.outcome == 'failure'
+        run: |
+          echo 'Data integrity failures detected. Resolve errors before approval.'
+          exit 1

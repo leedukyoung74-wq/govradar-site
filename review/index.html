@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>WMM GOV RADAR | 국가·특별지역 기회 검수</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Noto Sans KR",sans-serif;background:#0b1118;color:#f6f7f8}*{box-sizing:border-box}body{margin:0}main{max-width:1180px;margin:auto;padding:32px 20px 80px}a{color:#d9b98b}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #c3a77d;outline-offset:2px}.top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;border-bottom:1px solid #30404e;padding-bottom:18px}h1{font-size:clamp(27px,4vw,44px);margin:30px 0 6px;letter-spacing:-.04em}h2{font-size:21px}p{line-height:1.7;color:#c4ced7}.stamp{border:1px solid #706049;border-radius:99px;color:#e3c18e;font-size:12px;padding:5px 10px}.panel{background:#0e1825;border:1px solid #324250;border-radius:14px;padding:18px;margin-top:22px}.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px}.filters label{font-size:13px;color:#c8d1dc;display:grid;gap:6px}.filters input,.filters select{font:inherit;color:#fff;background:#152130;border:1px solid #586674;padding:11px;border-radius:8px;width:100%}.stats{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}.stats span{background:#152130;padding:8px 12px;border-radius:7px;font-size:13px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{border:1px solid #354454;background:#101b28;border-radius:13px;padding:20px}.card h3{margin:8px 0 7px;font-size:18px}.card p{margin:8px 0;font-size:14px}.badges{display:flex;gap:6px;flex-wrap:wrap}.badge{background:#26394b;color:#e9f0f6;border-radius:4px;padding:4px 8px;font-size:11px}.badge.uncertain{background:#3a3025;color:#f5d0a0}.source{font-size:13px}.buttons{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:15px}button{background:#c3a77d;color:#101419;border:0;border-radius:8px;font-weight:700;padding:11px 16px;cursor:pointer}button.secondary{background:#243545;color:#fff}.empty{padding:32px;border:1px dashed #536171;border-radius:12px}footer{margin-top:36px;padding-top:20px;border-top:1px solid #324250;color:#acb7c0;font-size:13px}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:790px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:1fr}}@media(max-width:430px){.filters{grid-template-columns:1fr}main{padding:18px 14px 60px}} 
+</style>
+</head>
+<body><main>
+<div class="top"><strong>WMM · GOV RADAR</strong><div><a href="/ko/">레이더 메인</a> · <a href="/quality/">품질 진단</a> · <a href="https://www.wmm-hoa.com/#request" rel="noopener">WMM 상담</a></div></div>
+<h1>국가·특별지역 사업기회 검수</h1>
+<span class="stamp">내부 검토용 · 사실 검증/수주 보장 아님</span>
+<p>기존 GOV RADAR 데이터의 출처·마감일·위치 연결을 검토합니다. 원본 출처가 없는 항목은 확인된 정부 입찰이 아닌 <strong>미확인 사업 아이디어</strong>입니다. 데이터는 자동 수정되거나 게시되지 않습니다.</p>
+<div class="panel">
+<div class="filters">
+<label for="search">검색<input id="search" type="search" placeholder="국가, 지역, 사업명"></label>
+<label for="scope">범위<select id="scope"><option value="all">국가+특별지역</option><option value="country">193개국</option><option value="region">선정 특별지역</option></select></label>
+<label for="country">국가/지역<select id="country"><option value="">전체</option></select></label>
+<label for="state">원문 검증<select id="state"><option value="all">전체</option><option value="missing">출처 없음</option><option value="linked">원문 링크 있음</option><option value="deadline">마감일 표기</option><option value="upcoming">마감 예정(날짜 기준)</option><option value="expired">마감 경과(날짜 기준)</option><option value="date_issue">마감일 누락/오류</option></select></label>
+</div>
+<div class="stats" id="stats" aria-live="polite">데이터 로딩 중…</div>
+<div id="results" class="cards" aria-label="사업기회 검토 결과"></div>
+<div class="buttons"><button class="secondary" type="button" id="prev">이전</button><span id="page" role="status"></span><button class="secondary" type="button" id="next">다음</button></div>
+</div>
+<footer>공개 입찰/발주 확인, 조달 자격, 예산 승인, 원문 사용권은 별도 검증이 필수입니다. 무료 공공 안전정보에 대한 접근은 제한하지 않습니다. 본 페이지는 초안 브랜치에서만 준비 중입니다.</footer>
+<script src="/assets/review-status.js"></script>
+<script>
+(async()=>{
+'use strict';
+const el=id=>document.getElementById(id),escapeHTML=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params=new URLSearchParams(location.search), initialScope=params.get('scope');
+if(['country','region'].includes(initialScope))el('scope').value=initialScope;
+let countries=[],regions=[],items=[],p=0;const pageSize=20;
+const quality=window.WMMReviewStatus; if(!quality)throw new Error('품질 평가 모듈 누락');
+const allowedHref=quality.safeUrl;
+try{
+const responses=await Promise.all(['countries','regions','opps'].map(x=>fetch('/data/'+x+'.json',{cache:'no-store'})));
+if(responses.some(r=>!r.ok))throw new Error('HTTP '+responses.map(r=>r.status).join(','));
+const raw=await Promise.all(responses.map(r=>r.json()));[countries,regions]=raw;items=raw[2].items;
+if(!Array.isArray(countries)||!Array.isArray(regions)||!Array.isArray(items))throw new Error('JSON 구조가 올바르지 않습니다.');
+const cmap=new Map(countries.map(c=>[c.iso,c])),rmap=new Map(regions.map(r=>[r.code,r]));
+const choices=[...countries.map(c=>({id:c.iso,title:c.names?.ko||c.iso})),...regions.map(r=>({id:r.code,title:r.ko||r.en||r.code}))].sort((a,b)=>a.title.localeCompare(b.title,'ko'));
+const picker=el('country');for(const o of choices){const option=document.createElement('option');option.value=o.id;option.textContent=o.title+' ('+o.id+')';picker.appendChild(option);}
+function selected(){
+const scope=el('scope').value,key=el('country').value,term=el('search').value.trim().toLocaleLowerCase(),state=el('state').value;
+return items.filter(item=>{
+const region=rmap.get(item.iso),country=cmap.get(item.iso),title=(region?.ko||country?.names?.ko||item.names?.ko||item.iso);
+const url=item.source_url||item.sourceUrl||item.url||item.source;const source=allowedHref(url);
+if(scope==='country'&&!country)return false;if(scope==='region'&&!region)return false;if(key&&key!==item.iso)return false;
+if(term&&![title,item.iso,item.ko,item.en,item.kind].some(x=>String(x||'').toLocaleLowerCase().includes(term)))return false;
+if(state==='missing'&&source)return false;if(state==='linked'&&!source)return false;if(state==='deadline'&&!item.deadline)return false;
+const assessment=quality.evaluate(item,raw[2].updated);
+if(state==='upcoming'&&!['future','today'].includes(assessment.deadlineStatus))return false;
+if(state==='expired'&&assessment.deadlineStatus!=='passed')return false;
+if(state==='date_issue'&&!['unknown','invalid'].includes(assessment.deadlineStatus))return false;return true;
+});
+}
+function render(){
+const current=selected();p=Math.min(p,Math.max(0,Math.ceil(current.length/pageSize)-1));
+el('stats').textContent='현재 필터: '+current.length+'건 · 원문 주소 확인 필요 '+current.filter(x=>!allowedHref(x.source_url||x.sourceUrl||x.url||x.source)).length+'건 · 원본 스냅샷 '+(raw[2].updated||'시각 없음');
+const html=current.slice(p*pageSize,(p+1)*pageSize).map(item=>{
+const region=rmap.get(item.iso),country=cmap.get(item.iso),name=region?.ko||country?.names?.ko||item.names?.ko||item.iso;
+const link=allowedHref(item.source_url||item.sourceUrl||item.url||item.source);
+const category=region?'선정 특별지역':'국가';const assessment=quality.evaluate(item,raw[2].updated);const label=link?'원문 링크 있음 · 검증 미완료':'공식 원문 미확인';
+const deadlineLabel={unknown:'마감일 자료 없음',invalid:'마감일 형식 오류',passed:'마감일 경과 · 재확인 필요',today:'오늘 마감 · 원문 확인 필요',future:'마감일 표기 · 원문 확인 필요'}[assessment.deadlineStatus];
+const freshnessLabel={unknown:'자료 갱신일 미확인',invalid:'갱신일이 미래로 기록됨',stale:'자료 갱신 30일 초과',recorded:'자료 기록일 존재 · 사실 확인 필요'}[assessment.freshnessStatus];
+return '<article class="card"><div class="badges"><span class="badge">'+escapeHTML(category)+'</span><span class="badge uncertain">'+escapeHTML(label)+'</span><span class="badge uncertain">'+escapeHTML(deadlineLabel)+'</span></div><h3>'+escapeHTML(item.ko||item.en||'제목 없음')+'</h3><p>'+escapeHTML(name)+' · '+escapeHTML(item.iso)+' · '+escapeHTML(item.kind||'분류 미상')+'</p><p class="source">마감일: '+escapeHTML(item.deadline||'자료 없음')+' · 데이터 표기일: '+escapeHTML(item.u||'자료 없음')+'</p><p class="source">'+escapeHTML(freshnessLabel)+'</p>'+(link?'<a href="'+escapeHTML(link)+'" target="_blank" rel="noopener noreferrer">원문 열기 (사실 별도 확인)</a>':'<p class="source">재원·발주처·조달 여부 미확인 — 실제 입찰로 분류 금지</p>')+'</article>';
+}).join('');
+el('results').innerHTML=html||'<p class="empty">일치하는 항목이 없거나 원본 데이터를 사용할 수 없습니다.</p>';
+el('page').textContent=(current.length?p+1:0)+' / '+Math.ceil(current.length/pageSize)+' 페이지';
+el('prev').disabled=p===0;el('next').disabled=(p+1)*pageSize>=current.length;
+}
+for(const id of ['search','scope','country','state'])el(id).addEventListener('input',()=>{p=0;render()});
+el('prev').addEventListener('click',()=>{p--;render();el('results').scrollIntoView({block:'start'})});
+el('next').addEventListener('click',()=>{p++;render();el('results').scrollIntoView({block:'start'})});
+render();
+}catch(err){el('stats').textContent='데이터 불러오기 실패: '+err.message;el('results').innerHTML='<p class="empty">데이터 연결 실패. 실시간 수치로 표시하지 않습니다.</p>';el('prev').disabled=el('next').disabled=true;}
+})();
+</script>
+</main></body></html>
