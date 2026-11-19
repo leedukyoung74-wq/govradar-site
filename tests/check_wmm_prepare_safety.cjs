@@ -22,6 +22,7 @@ for(const lang of langs) {
  assert.ok(/(?:3\.8|3,8|3\.8)/.test(h[1]),lang+': baseline must be spelled out');
  assert.ok(h[1].includes(lang==='ko'?'106.4':lang==='en'?'106.4':lang==='ar'?'106.4':lang==='fr'?'106,4':lang==='es'?'106,4':lang==='vi'?'106,4':'106,4'),lang+': displayed quantity should agree with language note');
  for(const phrase of unsafe) assert.ok(!content.includes(phrase),lang+': hazardous indoor stove wording still present: '+phrase);
+ assert.ok(!/(?:\b3\s*L\s*(?:per person|por persona|par personne|mỗi người|per orang)|3 لترات للشخص|3L 기준)/i.test(content),lang+': obsolete daily water baseline appears on product listing');
  assert.ok(content.includes('/'+lang+'/prepare/') || content.includes('prepare/'),lang+': existing page path must persist');
 }
 console.log('PASS: 7 legacy prepare routes harmonize 106.4 L and avoid ambiguous indoor stove directions');
