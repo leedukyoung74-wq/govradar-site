@@ -67,3 +67,8 @@ $records | Format-Table Language,Viewport,Captured,EdgeExitCode -AutoSize
 Write-Host "Output folder: $OutputDir"
 Write-Host "Captures are for manual visual review. No live site changes, no data uploads."
 if ($records.Where({-not $_.Captured}).Count -gt 0) { throw "At least one screenshot failed. See capture-results.csv" }
+$zip = Join-Path $OutputDir "WMM_Visual_Review.zip"
+$images = Get-ChildItem -Path $OutputDir -Filter "*.png" -File | Select-Object -ExpandProperty FullName
+Compress-Archive -Path ($images + @(Join-Path $OutputDir "capture-results.csv")) -DestinationPath $zip -Force
+Write-Host "Review archive (local only): $zip"
+
