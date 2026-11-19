@@ -20,6 +20,7 @@ async function check(page, name, fn) {
   catch(e){ failures.push({name,error:String(e.stack||e)}); return false; }
 }
 (async()=>{
+try {
   browser=await chromium.launch({headless:true,args:['--no-sandbox']});
   for(const lang of langs)for(const viewport of sizes){
     const name=lang+'-'+viewport.id;
