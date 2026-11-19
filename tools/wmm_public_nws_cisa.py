@@ -12,6 +12,7 @@ import json
 import os
 import re
 import tempfile
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -192,6 +193,23 @@ def cisa_fetch(now):
     raise ValueError('cisa_official_sources_unavailable')
 
 
+def safe_error(e):
+    """Expose a bounded source-health category without publishing arbitrary URLs or secrets."""
+    if isinstance(e, urllib.error.HTTPError):
+        return 'HTTP_' + str(e.code)
+    if isinstance(e, json.JSONDecodeError):
+        return 'invalid_json'
+    if isinstance(e, ValueError) and str(e) in (
+        'source_too_large', 'nws_bad_schema', 'nws_empty_response',
+        'nws_pagination_not_allowlisted', 'source_redirect_or_http',
+        'source_not_allowlisted', 'cisa_official_sources_unavailable',
+        'invalid_collector_output', 'cisa_bad_schema'):
+        return str(e)
+    if isinstance(e, (urllib.error.URLError, TimeoutError, ConnectionError)):
+        return 'network_unavailable'
+    return type(e).__name__
+
+
 def elapsed(s, now):
     t = parse_time(s)
     return float('inf') if t is None else (now-t).total_seconds()
@@ -224,7 +242,7 @@ def collect_one(path, kind, fn, min_interval_s, now):
         previous_ok = (old or {}).get('source_health', {}).get('last_ok')
         result['source_health'] = {
             'ok': False, 'last_ok': previous_ok, 'checked_at': iso(now),
-            'stale': True, 'last_error': type(e).__name__
+            'stale': True, 'last_error': safe_error(e)
         }
         status = 'delayed'
     if result != old:
@@ -233,7 +251,8 @@ def collect_one(path, kind, fn, min_interval_s, now):
     else:
         changed = False
     return {'kind': kind, 'status': status, 'items': len(result['items']), 'published': changed,
-            'last_ok': result['source_health'].get('last_ok')}
+            'last_ok': result['source_health'].get('last_ok'),
+            'last_error': result['source_health'].get('last_error')}
 
 
 def save_atomic(path, obj):
