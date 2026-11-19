@@ -18,7 +18,7 @@
 <label for="search">검색<input id="search" type="search" placeholder="국가, 지역, 사업명"></label>
 <label for="scope">범위<select id="scope"><option value="all">국가+특별지역</option><option value="country">193개국</option><option value="region">선정 특별지역</option></select></label>
 <label for="country">국가/지역<select id="country"><option value="">전체</option></select></label>
-<label for="state">원문 검증<select id="state"><option value="all">전체</option><option value="missing">출처 없음</option><option value="linked">원문 링크 있음</option><option value="deadline">마감일 표기</option></select></label>
+<label for="state">원문 검증<select id="state"><option value="all">전체</option><option value="missing">출처 없음</option><option value="linked">원문 링크 있음</option><option value="deadline">마감일 표기</option><option value="upcoming">마감 예정(날짜 기준)</option><option value="expired">마감 경과(날짜 기준)</option><option value="date_issue">마감일 누락/오류</option></select></label>
 </div>
 <div class="stats" id="stats" aria-live="polite">데이터 로딩 중…</div>
 <div id="results" class="cards" aria-label="사업기회 검토 결과"></div>
@@ -50,7 +50,11 @@ const region=rmap.get(item.iso),country=cmap.get(item.iso),title=(region?.ko||co
 const url=item.source_url||item.sourceUrl||item.url||item.source;const source=allowedHref(url);
 if(scope==='country'&&!country)return false;if(scope==='region'&&!region)return false;if(key&&key!==item.iso)return false;
 if(term&&![title,item.iso,item.ko,item.en,item.kind].some(x=>String(x||'').toLocaleLowerCase().includes(term)))return false;
-if(state==='missing'&&source)return false;if(state==='linked'&&!source)return false;if(state==='deadline'&&!item.deadline)return false;return true;
+if(state==='missing'&&source)return false;if(state==='linked'&&!source)return false;if(state==='deadline'&&!item.deadline)return false;
+const assessment=quality.evaluate(item,raw[2].updated);
+if(state==='upcoming'&&!['future','today'].includes(assessment.deadlineStatus))return false;
+if(state==='expired'&&assessment.deadlineStatus!=='passed')return false;
+if(state==='date_issue'&&!['unknown','invalid'].includes(assessment.deadlineStatus))return false;return true;
 });
 }
 function render(){
