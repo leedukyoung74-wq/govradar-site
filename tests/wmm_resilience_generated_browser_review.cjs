@@ -38,6 +38,25 @@ try {
       assert.equal(await page.locator('#rs-lang').inputValue(),lang);
       assert.equal(await page.locator('main').getAttribute('dir'),lang==='ar'?'rtl':'ltr');
     });
+    row.checks.accessibilitySemantics=await check(page,name+' keyboard and ARIA semantics',async()=>{
+      const sectionTitles=await page.locator('#wmm-resilience .rs-section > h2').count();
+      assert.ok(sectionTitles>=6,'Expected h2 section headings beneath h1');
+      assert.equal(await page.locator('#rs-foodcountry').getAttribute('aria-live'),'polite');
+      assert.equal(await page.locator('#rs-progress').getAttribute('aria-live'),'polite');
+      const filters=page.locator('#rs-cats button');
+      assert.ok(await filters.count()>=2);
+      assert.equal(await filters.first().getAttribute('aria-pressed'),'true');
+      await filters.nth(1).focus();
+      await page.keyboard.press('Enter');
+      assert.equal(await filters.nth(1).getAttribute('aria-pressed'),'true');
+      assert.equal(await filters.first().getAttribute('aria-pressed'),'false');
+      await filters.first().focus();
+      await page.keyboard.press('Space');
+      assert.equal(await filters.first().getAttribute('aria-pressed'),'true');
+      for(const id of ['rs-p','rs-w','rs-b','rs-use','rs-panel','rs-sun','rs-country','rs-lang']){
+        assert.ok((await page.locator('#'+id).evaluate(el=>el.closest('label')?.textContent.trim()))?.length>1,'Missing accessible label '+id);
+      }
+    });
     row.checks.horizontalOverflow=await check(page,name+' overflow',async()=>{
       const sizes=await page.evaluate(()=>({viewport:innerWidth,page:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
       assert.ok(sizes.page<=sizes.viewport+2,JSON.stringify(sizes));
