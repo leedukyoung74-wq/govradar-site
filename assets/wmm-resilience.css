@@ -47,3 +47,5 @@
 .wmm-rs[dir=rtl] .rs-alert{border-left:0;border-right:3px solid #b67a32}
 @media(max-width:800px){.wmm-rs .rs-fields,.wmm-rs .rs-result{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){#wmm-resilience{padding:0 12px;margin:26px auto}.wmm-rs .rs-section,.wmm-rs .rs-hero{padding:18px}.wmm-rs .rs-grid{gap:6px}.wmm-rs .rs-node{padding:10px 5px}.wmm-rs .rs-node b{font-size:11px}.wmm-rs .rs-node small{font-size:9px}.wmm-rs .rs-items,.wmm-rs .rs-list{grid-template-columns:1fr}}
+/* Narrow phones: keep concept nodes readable and avoid clipped unit labels. */
+@media(max-width:420px){.wmm-rs .rs-grid{grid-template-columns:1fr}.wmm-rs .rs-result,.wmm-rs .rs-fields{grid-template-columns:1fr}.wmm-rs .rs-node{min-height:54px}.wmm-rs .rs-node b{font-size:13px}.wmm-rs .rs-node small{font-size:11px}.wmm-rs .rs-metric strong{overflow-wrap:anywhere}.wmm-rs .rs-lang select{max-width:100%}}
