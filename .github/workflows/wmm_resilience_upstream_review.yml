@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - 'build.py'
+      - 'src/review_pages/**'
+      - 'web/review-status.js'
+      - 'tests/test_review_pages_source_build.py'
       - 'src/stock.json'
       - 'src/resilience_pages/**'
       - 'src/wmm-food-*.json'
@@ -24,6 +27,8 @@ jobs:
           python-version: '3.12'
       - name: Source safety and build-route contracts (read only)
         run: python -m unittest discover -s tests -p 'test_resilience_source_build.py' -v
+      - name: Read-only quality page source contract
+        run: python -m unittest discover -s tests -p 'test_review_pages_source_build.py' -v
       - name: Build isolated site in GitHub runner; do not publish
         run: python build.py --base https://preview.invalid
       - name: Verify generated site contents and legacy routes
@@ -55,8 +60,13 @@ jobs:
           assert {x['iso'] for x in food}=={x['iso'] for x in countries}
           assert len(refs['countries'])==3
           assert all(not x['retail_availability_verified'] and not x['shelf_life_verified'] for x in food)
+          for review in ('quality','review'):
+              content=(out/review/'index.html').read_text(encoding='utf-8')
+              assert 'noindex,nofollow' in content
+          assert (out/'assets/review-status.js').is_file()
           site=(out/'sitemap.xml').read_text(encoding='utf-8')
           assert '/resilience/' not in site
+          assert '/quality/' not in site and '/review/' not in site
           print('PASS: generated seven-language isolated routes, 193 countries, 23 regions, safety copy, review-only noindex and evidence files.')
           PY
       - name: Install isolated Chromium runner (review only)
