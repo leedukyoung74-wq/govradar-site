@@ -13,13 +13,35 @@ class MockResponse:
     status=200
     def __enter__(self): return self
     def __exit__(self,*args): return False
-    def read(self,n): return b"new 106.4L release"
+    def read(self,n): return ("new 106.4L release "+sentinel.SAFE_STOVE["ko"]).encode("utf-8")
 class TestPublicVersionSentinel(TestCase):
     def test_successful_release_text(self):
         with mock.patch.object(sentinel.urllib.request,"urlopen",return_value=MockResponse()) as request:
             result=sentinel.check("https://radar.wmm-hoa.com/ko/prepare/","106.4L")
             self.assertTrue(result["ready"])
             self.assertEqual(request.call_args.args[0].get_method(),"GET")
+    def test_old_unsafe_indoor_stove_copy_blocks(self):
+        class UnsafeStoveResponse(MockResponse):
+            def read(self,n):
+                return ("106.4L "+sentinel.SAFE_STOVE["ko"]+
+                        " "+sentinel.OLD_UNSAFE["ko"]).encode("utf-8")
+        with mock.patch.object(sentinel.urllib.request,"urlopen",return_value=UnsafeStoveResponse()):
+            result=sentinel.check("https://radar.wmm-hoa.com/ko/prepare/","106.4L")
+            self.assertFalse(result["ready"])
+            self.assertFalse(result["stove_safety_verified"])
+    def test_missing_review_noindex_blocks(self):
+        class UnprotectedResponse(MockResponse):
+            def read(self,n): return b"wmm-resilience demo without noindex"
+        with mock.patch.object(sentinel.urllib.request,"urlopen",return_value=UnprotectedResponse()):
+            result=sentinel.check("https://radar.wmm-hoa.com/en/resilience/","wmm-resilience")
+            self.assertFalse(result["ready"])
+            self.assertFalse(result["review_not_indexed"])
+    def test_all_locales_have_safe_outdoor_stove_text(self):
+        self.assertEqual(set(sentinel.SAFE_STOVE),set(sentinel.LANGS))
+        self.assertEqual(set(sentinel.OLD_UNSAFE),set(sentinel.LANGS))
+        for language in sentinel.LANGS:
+            self.assertTrue(sentinel.SAFE_STOVE[language])
+            self.assertTrue(sentinel.OLD_UNSAFE[language])
     def test_stale_water_blocks(self):
         class OldResponse(MockResponse):
             def read(self,n): return b"old 84L and 106.4L mixed"
