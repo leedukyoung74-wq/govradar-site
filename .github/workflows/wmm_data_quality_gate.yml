@@ -9,6 +9,8 @@ on:
       - 'scripts/audit-data.mjs'
       - 'scripts/check-review-pages.mjs'
       - 'scripts/build-review-queue.mjs'
+      - 'scripts/audit-country-details.mjs'
+      - 'data/c/**'
       - 'quality/**'
       - 'review/**'
       - '.github/workflows/wmm_data_quality_gate.yml'
@@ -39,6 +41,8 @@ jobs:
           node scripts/audit-data.mjs > audit-results/report.json 2> audit-results/warnings.txt
       - name: Build 20-record manual review queue
         run: node scripts/build-review-queue.mjs > audit-results/review-queue.json
+      - name: Audit 193 country profiles
+        run: node scripts/audit-country-details.mjs > audit-results/country-coverage.json
       - name: Write summary
         if: always()
         shell: bash
