@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Test overlay source preservation and no-deploy contract
+      - name: Test surgical seven-language safety patch, live route preservation and no-deploy contract
         run: python -m unittest discover -s tests -p 'test_live_overlay.py' -v
       - name: Build complete canonical site (no publication)
         run: python build.py --base https://radar.wmm-hoa.com
@@ -48,6 +48,15 @@ jobs:
           assert report['verified_country_products']==0
           assert not (staged/'quality/index.html').exists()
           assert not (staged/'review/index.html').exists()
+          for lang in ['ko','en','es','fr','ar','vi','id']:
+            original=(live/'public'/lang/'prepare/index.html').read_text(encoding='utf-8')
+            patched=(staged/lang/'prepare/index.html').read_text(encoding='utf-8')
+            assert '84L' in original and '84L' not in patched, lang
+            assert '106.4L' in patched, lang
+            assert len(patched) >= len(original)-300, (lang,len(patched),len(original))
+            for needle in ['<head>','id="s5"']:
+              assert needle in patched, (lang,needle)
+
           for rel in ['_routes.json','_headers','_redirects','assets/auth.js','assets/site.js','ko/index.html','en/index.html','data/countries.json','data/regions.json']:
             assert (staged/rel).read_bytes()==(live/'public'/rel).read_bytes(),rel
           for path in (live/'functions').rglob('*'):
