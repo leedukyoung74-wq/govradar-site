@@ -8,6 +8,9 @@ on:
       - 'tests/test_cti_internal_review.py'
       - 'tools/cti_asset_match.py'
       - 'tests/test_cti_asset_match.py'
+      - 'tools/cti_provider_audit.py'
+      - 'tests/test_cti_provider_audit.py'
+      - 'ops/cti_provider_registry.json'
       - '.github/workflows/wmm_cti_safe_intake_qa.yml'
   workflow_dispatch:
 permissions:
@@ -27,6 +30,10 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_cti_internal_review.py' -v
       - name: Test approved inventory candidate-only matching (no scanning)
         run: python -m unittest discover -s tests -p 'test_cti_asset_match.py' -v
+      - name: Assert nine CTI providers stay disabled without license and authorization
+        run: |
+          python -m unittest discover -s tests -p 'test_cti_provider_audit.py' -v
+          python tools/cti_provider_audit.py
       - name: Pull CISA official mirror for INTERNAL validation ONLY
         run: |
           mkdir -p /tmp/wmm-cti-audit
