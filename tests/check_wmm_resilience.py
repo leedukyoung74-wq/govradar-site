@@ -32,7 +32,7 @@ assert "/data/wmm-food-country-profiles.json" in js
 assert "localStorage" in js
 assert "does not" in js.lower() or "never" in js.lower()
 assert "grid-template-columns" in css and "@media" in css
-assert "e(t.title)+'</h1>'" in js, "Rendered page must retain a main H1"
+assert "<h1>'+e(t.title)+'</h1>" in js, "Rendered page must retain a main H1"
 assert "class=\\\"rs-result\\\" id=\\\"rs-out\\\" role=\\\"status\\\"" in js
 assert "class=\\\"rs-result\\\" id=\\\"rs-pout\\\" role=\\\"status\\\"" in js
 assert '.wmm-rs[dir=rtl] .rs-alert' in css, "RTL styles must target root direction"
