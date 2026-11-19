@@ -1,0 +1,22 @@
+name: WMM resilience isolated review checks
+on:
+  pull_request:
+    paths:
+      - 'assets/wmm-resilience.*'
+      - 'data/wmm-food-country-profiles.json'
+      - '**/resilience/index.html'
+      - 'tests/check_wmm_resilience.py'
+      - '.github/workflows/wmm_resilience_check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax
+        run: node --check assets/wmm-resilience.js
+      - name: Data and markup invariants
+        run: python3 tests/check_wmm_resilience.py
