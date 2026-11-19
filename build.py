@@ -711,7 +711,7 @@ def stock_page(L):
     H = (dict(t="Home stockpile kit — what, how much, which products", d="A practical home stockpile list: 20 categories, quantities for 2 adults over 14 days, and the actual products to buy.", cat="Full list of essentials", q="Quantities — 2 adults · 14 days", pr="Actual products", prp="Compare prices and stock through the links. No retailer partnership.", sf="Safety first", src="Sources")
          if en else dict(t="가정 비축 키트 — 무엇을, 얼마나, 어떤 제품으로", d="생활필수품 20개 분류, 성인 2명·14일 비축 수량, 실제로 살 제품 구성까지 한 페이지에 정리했습니다.", cat="생활필수품 전체 리스트", q="비축 수량 — 성인 2명 · 14일", pr="실제 제품 구성", prp="가격과 재고는 링크에서 비교하세요. 특정 판매처와 제휴하지 않았습니다.", sf="꼭 지킬 것", src="자료 원문"))
     def qv(q):
-        if q["mode"] == "pd": return f'{q["per"]*28}{q["unit_ko"]} {"+" if en else "이상"}'
+        if q["mode"] == "pd": return f'{q["per"]*28:g}{q["unit_ko"]} {"+" if en else "이상"}'
         if q["mode"] == "scale": return f'{q["lo"]}~{q["hi"]}{" " if en else ""}{q["unit_en"] if en else q["unit_ko"]}'
         return (q["txt_en"] if en else q["txt_ko"]).replace("{d}", "14").replace("{p}", "2")
     CN = {c["id"]: nmk(c) for c in STK["cats"]}
