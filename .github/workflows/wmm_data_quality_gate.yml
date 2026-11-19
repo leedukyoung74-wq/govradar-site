@@ -8,6 +8,8 @@ on:
       - 'data/opps.json'
       - 'scripts/audit-data.mjs'
       - 'scripts/check-review-pages.mjs'
+      - 'scripts/test-review-status.cjs'
+      - 'assets/review-status.js'
       - 'scripts/build-review-queue.mjs'
       - 'scripts/audit-country-details.mjs'
       - 'data/c/**'
@@ -30,6 +32,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Test source and deadline evaluation
+        run: node scripts/test-review-status.cjs
       - name: Verify review page scripts
         run: node scripts/check-review-pages.mjs
       - name: Run read-only data audit
