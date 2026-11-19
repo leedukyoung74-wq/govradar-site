@@ -34,8 +34,10 @@ uniq(regions, 'code', 'special region');
 const countrySet = new Set(countries.map(x => x.iso));
 const badParents = regions.filter(x => !countrySet.has(x.parent));
 if (badParents.length) fail(`Special regions have missing parent countries: ${badParents.map(x => x.code).join(', ')}`);
-const badOppCountries = opportunities.filter(x => !countrySet.has(x.iso));
-if (badOppCountries.length) fail(`Opportunities with unknown country: ${badOppCountries.length}`);
+const regionSet = new Set(regions.map(x => x.code));
+const badOppLocations = opportunities.filter(x => !countrySet.has(x.iso) && !regionSet.has(x.iso));
+if (badOppLocations.length) fail(`Opportunities with unknown country or special-region code: ${badOppLocations.length}`);
+const regionalOpportunities = opportunities.filter(x => regionSet.has(x.iso));
 const missingSource = opportunities.filter(x => !x.source_url && !x.sourceUrl && !x.url && !x.source);
 const noDeadline = opportunities.filter(x => !x.deadline);
 const dated = opportunities.filter(x => x.deadline);
@@ -54,6 +56,8 @@ const report = {
   special_regions_registered: regions.length,
   special_regions_done_flag_true: regions.filter(x => x.done === true).length,
   opportunities_total: opportunities.length,
+  opportunities_linked_to_special_regions: regionalOpportunities.length,
+  opportunities_unknown_location: badOppLocations.length,
   opportunities_missing_source: missingSource.length,
   opportunities_no_deadline: noDeadline.length,
   opportunities_invalid_deadline_format: invalidDeadline.length,
