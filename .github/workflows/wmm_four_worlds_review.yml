@@ -1,0 +1,34 @@
+name: WMM four-worlds and cover archive — review only
+on:
+  pull_request:
+    paths:
+      - 'ops/editorial_cover_prophecy_index.json'
+      - 'prototypes/four-worlds-conversion/**'
+      - 'tests/test_wmm_four_worlds_editorial_funnel.py'
+      - '.github/workflows/wmm_four_worlds_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify 41-year evidence index and four conversion funnels
+        run: python -m unittest discover -s tests -p test_wmm_four_worlds_editorial_funnel.py -v
+      - name: Confirm NO LIVE, DNS, payment or public data changes
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('ops/editorial_cover_prophecy_index.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['upcoming_2028']['official_publication_verified'] is False
+          assert len(d['seven_ministers'])==7
+          assert len(d['cover_index'])==41
+          print('REVIEW ONLY: editorial evidence index + isolated local-first prototype')
+          print('NO production branch, no live API, no newsletter sending, no donations')
+          PY
