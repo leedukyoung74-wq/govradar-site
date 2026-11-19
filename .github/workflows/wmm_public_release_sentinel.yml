@@ -1,0 +1,42 @@
+name: WMM Public Release Version Sentinel (READ ONLY)
+on:
+  pull_request:
+    paths:
+      - 'tools/verify_public_resilience_release.py'
+      - 'tests/test_public_resilience_release.py'
+      - '.github/workflows/wmm_public_release_sentinel.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  version_check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate read-only sentinel logic
+        run: python -m unittest discover -s tests -p 'test_public_resilience_release.py' -v
+      - name: Check public Cloudflare Pages origin and custom hostname (no changes)
+        shell: bash
+        run: |
+          mkdir -p version-evidence
+          set +e
+          python tools/verify_public_resilience_release.py > version-evidence/report.json
+          code=$?
+          set -e
+          echo "Current release readiness check exit code: $code"
+          if [ "$code" = 2 ]; then
+            echo "BLOCKED (expected before first approved deployment). See report artifact."
+          elif [ "$code" != 0 ]; then
+            exit "$code"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wmm-public-production-version-sentinel
+          path: version-evidence/
+          if-no-files-found: warn
+          retention-days: 5
