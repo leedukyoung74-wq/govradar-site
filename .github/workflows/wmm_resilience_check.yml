@@ -10,6 +10,7 @@ on:
       - 'tests/check_wmm_legacy_overlap.cjs'
       - 'scripts/build_wmm_food_review_queue.mjs'
       - 'scripts/wmm_resilience_visual_qa.ps1'
+      - 'scripts/wmm_resilience_dom_qa.ps1'
       - 'docs/WMM_RESILIENCE_INTEGRATION_REVIEW_20261119.md'
       - '.github/workflows/wmm_resilience_check.yml'
   workflow_dispatch:
