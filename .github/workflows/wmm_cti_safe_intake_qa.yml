@@ -4,6 +4,8 @@ on:
     paths:
       - 'tools/cti_safe_intake.py'
       - 'tests/test_cti_safe_intake.py'
+      - 'tools/cti_internal_review.py'
+      - 'tests/test_cti_internal_review.py'
       - '.github/workflows/wmm_cti_safe_intake_qa.yml'
   workflow_dispatch:
 permissions:
@@ -19,6 +21,8 @@ jobs:
           python-version: '3.12'
       - name: Validate synthetic safe intake and release gates
         run: python -m unittest discover -s tests -p 'test_cti_safe_intake.py' -v
+      - name: Test internal CTI triage freshness and legal gates
+        run: python -m unittest discover -s tests -p 'test_cti_internal_review.py' -v
       - name: Pull CISA official mirror for INTERNAL validation ONLY
         run: |
           mkdir -p /tmp/wmm-cti-audit
@@ -35,6 +39,19 @@ jobs:
           print('CTI read-only sample validation PASS; entries:',p['source_entries'])
           print('Source SHA256:',p['source_sha256'])
           print('NO public feed upload, NO provider secret, NO user PII, NO darknet connection')
+          PY
+      - name: Produce only private short-lived CTI brief and validate release block
+        run: |
+          python tools/cti_internal_review.py --input /tmp/wmm-cti-audit/kev-internal.json --out /tmp/wmm-cti-audit/kev-private-review.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/wmm-cti-audit/kev-private-review.json'))
+          assert d['public_release_allowed'] is False
+          assert d['provider_darkweb_connected'] is False
+          assert d['confirmed_customer_breaches'] == 0
+          assert d['freshness'] == 'REVIEW_REQUIRED'
+          assert 1 <= d['recent_30d_entries'] <= d['source_entries']
+          print("PASS: private, non-publication review with freshness guard")
           PY
       - name: Ensure unpublished internal data is deleted at runner shutdown
         if: always()
