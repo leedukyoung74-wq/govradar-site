@@ -115,6 +115,6 @@ def main():
     if "/public/" in str(output).replace("\\\\","/") or "/data_branch/" in str(output).replace("\\\\","/"):
         raise ValueError("Refuse public-site or live-data output")
     output.parent.mkdir(parents=True,exist_ok=True)
-    output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\\n",encoding="utf8")
+    output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
     print(f"PASS: {result['source_entries']} KEV entries; internal report only, no public publish")
 if __name__=="__main__": main()
