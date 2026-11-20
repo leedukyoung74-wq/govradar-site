@@ -1,0 +1,40 @@
+name: WMM GOV RADAR hourly watcher syntax QA (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/wmm_operations_watch.yml'
+      - '.github/workflows/wmm_operations_watch_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile the existing inline Python and confirm strict feed checks
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import ast
+          source = Path('.github/workflows/wmm_operations_watch.yml').read_text(encoding='utf8')
+          start = "          python - <<'PY'\n"
+          end = "\n          PY\n"
+          assert start in source and end in source, 'watcher Python heredoc not found'
+          segment = source.split(start, 1)[1].split(end, 1)[0]
+          code = "\n".join(line[10:] if line.startswith('          ') else line for line in segment.splitlines())
+          ast.parse(code, filename='wmm_operations_watch.py')
+          required = [
+              'Global open tenders', '193-country notice summary', 'Contract awards',
+              'Verified-open vs all-tenders upper bound', 'max_bytes=2_500_000',
+              '30*60', 'sys.exit(1 if failed else 0)',
+          ]
+          for marker in required:
+              assert marker in code, 'missing strict health marker: ' + marker
+          print('PASS: watcher inline Python compiles; GOV RADAR freshness checks are present; no deployment')
+          PY
