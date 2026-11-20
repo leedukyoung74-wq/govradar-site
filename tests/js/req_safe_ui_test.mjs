@@ -30,7 +30,8 @@ async function scenario(apiStatus, relayStatus) {
     "email":{value:"buyer@example.com"},
     "product":{value:""},
     "field":{value:""},
-    "need":{value:""}
+    "need":{value:""},
+    "privacy_agree":{checked:true}
   };
   const form={
     action:"https://radar.wmm-hoa.com/nfform?next=/en/thanks/",
@@ -61,10 +62,13 @@ async function scenario(apiStatus, relayStatus) {
   const calls=[];
   const fetch=async (url,options)=>{
     calls.push(url);
-    if(url==="/api/req")return {
+    if(url==="/api/req") {
+      assert.equal(JSON.parse(options.body).privacy_consent,true,"backend must receive explicit consent");
+      return {
       status:apiStatus,ok:apiStatus===200,
       json:async()=>({req_no:"RQ-261120-TEST"})
     };
+    }
     if(url.includes("/nfform"))return {status:relayStatus,ok:relayStatus===200,type:"basic"};
     throw Error("Unexpected URL "+url);
   };
