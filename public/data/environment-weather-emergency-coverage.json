@@ -1,0 +1,1566 @@
+{
+  "schema_version": 1,
+  "target_countries": 193,
+  "target_category_links": 579,
+  "linked_candidate_countries_all_three": 73,
+  "candidate_links_by_category": {
+    "environment": 73,
+    "weather": 74,
+    "emergency": 73
+  },
+  "linked_candidate_total": 220,
+  "missing_national_category_links": 359,
+  "live_verified_total": 0,
+  "country_counts": {
+    "DZ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "AO": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BJ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BW": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BF": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BI": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "CV": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "CM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "CF": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TD": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "KM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "CG": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "CD": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "CI": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "DJ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "EG": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "GQ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "ER": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SZ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "ET": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "GA": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "GM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "GH": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "GN": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "GW": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "KE": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "LS": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "LR": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "LY": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MG": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MW": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "ML": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MR": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MU": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MA": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "MZ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "NA": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "NE": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "NG": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "RW": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "ST": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SN": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SC": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SL": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SO": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "ZA": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "SS": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SD": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TZ": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "TG": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TN": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "UG": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "ZM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "ZW": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "AF": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BD": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "BT": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BN": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "KH": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "CN": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "IN": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "ID": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "JP": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "KZ": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "KP": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "KR": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "KG": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "LA": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MY": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "MV": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MN": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "NP": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "PK": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "PH": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "SG": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "LK": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TJ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TH": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "TL": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "UZ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "VN": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "BH": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "IR": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "IQ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "IL": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "JO": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "KW": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "LB": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "OM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "QA": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SA": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "SY": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "AE": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "YE": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TR": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "AL": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "AD": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "AM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "AT": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "AZ": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "BY": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BE": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "BA": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BG": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "HR": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "CY": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "CZ": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "DK": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "EE": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "FI": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "FR": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "GE": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "DE": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "GR": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "HU": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "IS": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "IE": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "IT": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "LV": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "LI": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "LT": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "LU": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MT": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MD": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MC": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "ME": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "NL": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "MK": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "NO": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "PL": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "PT": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "RO": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "RU": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "SM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "RS": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SK": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SI": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "ES": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "SE": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "CH": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "UA": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "GB": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "CA": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "US": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "MX": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "AG": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "AR": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "BS": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BB": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BZ": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "BO": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "BR": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "CL": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "CO": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "CR": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "CU": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "DM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "DO": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "EC": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "SV": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "GD": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "GT": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "GY": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "HT": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "HN": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "JM": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "NI": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "PA": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "PY": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "PE": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "KN": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "LC": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "VC": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SR": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TT": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "UY": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "VE": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "AU": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "FJ": {
+      "linked_candidates": 1,
+      "missing": 2,
+      "environment": false,
+      "weather": true,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "KI": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "MH": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "FM": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "NR": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "NZ": {
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
+      "live_verified": 0
+    },
+    "PW": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "PG": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "WS": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "SB": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TO": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "TV": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    },
+    "VU": {
+      "linked_candidates": 0,
+      "missing": 3,
+      "environment": false,
+      "weather": false,
+      "emergency": false,
+      "live_verified": 0
+    }
+  },
+  "warning": "Curated agency references, not independently live-verified; no 24h emergency response or alert-feed guarantee.",
+  "international_directory_refs": {
+    "environment": "https://www.unep.org/en/cpr/member-states-directory",
+    "weather": "https://worldweather.wmo.int/en/members.html",
+    "emergency": "https://www.undrr.org/implementing-sendai-framework/sendai-focal-points-and-national-platforms"
+  }
+}

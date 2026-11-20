@@ -1,0 +1,2655 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "coverage_basis": "23 existing regions.json records, separate from 193 sovereign countries",
+  "categories": [
+    "government_business",
+    "news_media",
+    "environment",
+    "meteorology",
+    "emergency",
+    "defence_security",
+    "public_health",
+    "critical_infrastructure"
+  ],
+  "rules": [
+    "Three original official government/business service links per territory where available; government offices are not counted as independent agencies by default.",
+    "Three distinct locally publishing newsrooms per territory; government press releases cannot count as news publishers.",
+    "For defence, mark responsible parent-state agency as parent_authority; do not assert a territory has its own military.",
+    "Empty arrays mean no verified candidate entered, never imply a link or live data feed.",
+    "Government/business, local news and environment/weather/emergency counts must remain separate from sovereign-country totals."
+  ],
+  "territories": {
+    "PH-BARMM": {
+      "name_en": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+      "name_ko": "방사모로 자치지역 (BARMM)",
+      "parent_iso": "PH",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "BARMM Office of Chief Minister procurement",
+          "url": "https://bangsamoro.gov.ph/BAC/",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://bangsamoro.gov.ph/BAC/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bangsamoro Planning and Development Authority",
+          "url": "https://bpda.bangsamoro.gov.ph/",
+          "authority_scope": "local_development",
+          "evidence_url": "https://bpda.bangsamoro.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bangsamoro Economic Zone Authority",
+          "url": "https://beza.bangsamoro.gov.ph/home",
+          "authority_scope": "investment",
+          "evidence_url": "https://beza.bangsamoro.gov.ph/home",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "MindaNews (Mindanao coverage)",
+          "url": "https://mindanews.com/",
+          "authority_scope": "regional_coverage_not_BARMMonly",
+          "evidence_url": "https://mindanews.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "BangsamoroToday",
+          "url": "https://bangsamorotoday.com/",
+          "authority_scope": "local_publisher",
+          "evidence_url": "https://bangsamorotoday.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bangsamoro Media Productions",
+          "url": "https://bmpgabay.com/",
+          "authority_scope": "local_private_publisher",
+          "evidence_url": "https://bmpgabay.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "BARMM Ministry of Environment, Natural Resources and Energy",
+          "url": "https://menre.bangsamoro.gov.ph/",
+          "authority_scope": "local",
+          "evidence_url": "https://menre.bangsamoro.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Philippine PAGASA",
+          "url": "https://www.pagasa.dost.gov.ph/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.pagasa.dost.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "National Disaster Risk Reduction and Management Council",
+          "url": "https://ndrrmc.gov.ph/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://ndrrmc.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Department of National Defense Philippines",
+          "url": "https://www.dnd.gov.ph/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.dnd.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "BARMM Ministry of Health",
+          "url": "https://moh.bangsamoro.gov.ph/",
+          "authority_scope": "local",
+          "evidence_url": "https://moh.bangsamoro.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "BARMM Planning and Development Authority",
+          "url": "https://bpda.bangsamoro.gov.ph/",
+          "authority_scope": "local_development",
+          "evidence_url": "https://bpda.bangsamoro.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "MindaNews covers Mindanao including BARMM; it is not a BARMM-exclusive publisher. The BARMM government press office is NOT counted as independent news."
+    },
+    "IQ-KRI": {
+      "name_en": "Kurdistan Region",
+      "name_ko": "쿠르디스탄 지역",
+      "parent_iso": "IQ",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Kurdistan Regional Government",
+          "url": "https://gov.krd/english/",
+          "authority_scope": "local",
+          "evidence_url": "https://gov.krd/english/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "KRG Department of Media and Information",
+          "url": "https://gov.krd/dmi-en/",
+          "authority_scope": "official_communications",
+          "evidence_url": "https://gov.krd/dmi-en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "KRG Ministry of Peshmerga Affairs public administrative information",
+          "url": "https://gov.krd/mopa-en/",
+          "authority_scope": "public_ministry_not_procurement",
+          "evidence_url": "https://gov.krd/mopa-en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Rudaw",
+          "url": "https://www.rudaw.net/english",
+          "authority_scope": "local",
+          "evidence_url": "https://www.rudaw.net/english",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Kurdistan24",
+          "url": "https://www.kurdistan24.net/en",
+          "authority_scope": "local",
+          "evidence_url": "https://www.kurdistan24.net/en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Shafaq News",
+          "url": "https://shafaq.com/en",
+          "authority_scope": "local",
+          "evidence_url": "https://shafaq.com/en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "KRG government sector directory",
+          "url": "https://gov.krd/english/",
+          "authority_scope": "local_directory_not_environment_specialist",
+          "evidence_url": "https://gov.krd/english/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Iraq Meteorological Organization",
+          "url": "https://www.meteoseism.gov.iq/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.meteoseism.gov.iq/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "KRG government civil-defence information",
+          "url": "https://gov.krd/dmi-en/publications/news-service/",
+          "authority_scope": "official_publications",
+          "evidence_url": "https://gov.krd/dmi-en/publications/news-service/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "KRG Ministry of Peshmerga Affairs",
+          "url": "https://gov.krd/mopa-en/",
+          "authority_scope": "regional_security_force",
+          "evidence_url": "https://gov.krd/mopa-en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Iraq Ministry of Defence",
+          "url": "https://mod.mil.iq/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://mod.mil.iq/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Official news from KRG is distinct from privately operated media; public defence information only."
+    },
+    "TZ-ZAN": {
+      "name_en": "Zanzibar",
+      "name_ko": "잔지바르",
+      "parent_iso": "TZ",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Government of Zanzibar",
+          "url": "https://www.zanzibar.go.tz/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.zanzibar.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Zanzibar Investment Promotion Authority",
+          "url": "https://zipa.go.tz/",
+          "authority_scope": "investment",
+          "evidence_url": "https://zipa.go.tz/r1d2t9/the-organization",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Zanzibar Environmental Management Authority permit services",
+          "url": "https://zema.go.tz/services",
+          "authority_scope": "government_regulatory_business_service",
+          "evidence_url": "https://zema.go.tz/services",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Zanzibar government newspapers including Zanzibar Leo",
+          "url": "https://epaper.smsz.co.tz/",
+          "authority_scope": "state_publisher",
+          "evidence_url": "https://epaper.smsz.co.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "ZNZ News",
+          "url": "https://znznews.com/",
+          "authority_scope": "regional_news_platform",
+          "evidence_url": "https://znznews.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Zanzibar Broadcasting Corporation ZBC TV",
+          "url": "https://zbc.go.tz/",
+          "authority_scope": "state_broadcaster",
+          "evidence_url": "https://www.tuz.go.tz/media-information",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Zanzibar Environmental Management Authority",
+          "url": "https://www.zema.go.tz/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://www.zema.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Tanzania Meteorological Authority",
+          "url": "https://www.meteo.go.tz/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.meteo.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Zanzibar Broadcasting Commission weather safety notices",
+          "url": "https://tuz.go.tz/",
+          "authority_scope": "broadcast_regulator_not_emergency_authority",
+          "evidence_url": "https://tuz.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Tanzania People's Defence Force",
+          "url": "https://www.tpdf.mil.tz/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.tpdf.mil.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Zanzibar government health portal",
+          "url": "https://www.zanzibar.go.tz/",
+          "authority_scope": "government_directory",
+          "evidence_url": "https://www.zanzibar.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Zanzibar government agency directory",
+          "url": "https://www.zanzibar.go.tz/",
+          "authority_scope": "government_directory",
+          "evidence_url": "https://www.zanzibar.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Newspapers Zanzibar Leo/Zaspoti/Zanzibar Mail share a publisher and must NOT be counted as three independent newsrooms. ZBC Television outlet website is a candidate reported by broadcaster directories; direct live access is untested."
+    },
+    "ID-AC": {
+      "name_en": "Aceh",
+      "name_ko": "아체 특별자치주",
+      "parent_iso": "ID",
+      "region_type": "special",
+      "government_business": [
+        {
+          "name": "Aceh Provincial Government",
+          "url": "https://acehprov.go.id/",
+          "authority_scope": "local",
+          "evidence_url": "https://acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Aceh electronic procurement LPSE (national LKPP directory)",
+          "url": "https://eproc.lkpp.go.id/lpse/read/106/lpse-provinsi-aceh",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://eproc.lkpp.go.id/lpse/read/106/lpse-provinsi-aceh",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Aceh Investment and One-Stop Integrated Services",
+          "url": "https://www.dpmptsp.acehprov.go.id/",
+          "authority_scope": "investment",
+          "evidence_url": "https://www.dpmptsp.acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Serambi Indonesia",
+          "url": "https://serambinews.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://serambinews.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "AJNN Aceh Journal National Network",
+          "url": "https://www.ajnn.net/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ajnn.net/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Berita Kini",
+          "url": "https://beritakini.co/",
+          "authority_scope": "local",
+          "evidence_url": "https://beritakini.co/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Aceh Environment and Forestry Department",
+          "url": "https://dlhk.acehprov.go.id/",
+          "authority_scope": "local",
+          "evidence_url": "https://dlhk.acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Indonesian Meteorology Agency BMKG",
+          "url": "https://www.bmkg.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.bmkg.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Aceh Disaster Management Agency BPBA",
+          "url": "https://bpba.acehprov.go.id/",
+          "authority_scope": "local",
+          "evidence_url": "https://bpba.acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Indonesian National Armed Forces",
+          "url": "https://www.tni.mil.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.tni.mil.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Aceh Public Health Department",
+          "url": "https://dinkes.acehprov.go.id/",
+          "authority_scope": "local",
+          "evidence_url": "https://dinkes.acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Three Aceh publisher brands are independently listed in Indonesian press/media references, but current URL accessibility remains untested."
+    },
+    "ID-PP": {
+      "name_en": "Papua special autonomy provinces",
+      "name_ko": "파푸아 특별자치 지역",
+      "parent_iso": "ID",
+      "region_type": "special",
+      "government_business": [
+        {
+          "name": "Papua Provincial Government",
+          "url": "https://www.papua.go.id/",
+          "authority_scope": "one_of_multiple_provinces",
+          "evidence_url": "https://www.papua.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Indonesia national LKPP procurement directory",
+          "url": "https://eproc.lkpp.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://eproc.lkpp.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Papua Indigenous Supplier Government Procurement SIKaP-OAP",
+          "url": "https://sikap-oap.papua.go.id/spse",
+          "authority_scope": "papua_province_procurement",
+          "evidence_url": "https://sikap-oap.papua.go.id/spse",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Cenderawasih Pos",
+          "url": "https://cenderawasihpos.jawapos.com/",
+          "authority_scope": "regional_coverage",
+          "evidence_url": "https://cenderawasihpos.jawapos.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Jubi Papua",
+          "url": "https://jubi.id/",
+          "authority_scope": "regional_publisher",
+          "evidence_url": "https://jubi.id/tentang-kami/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Suara Papua",
+          "url": "https://suarapapua.com/",
+          "authority_scope": "regional_publisher",
+          "evidence_url": "https://suarapapua.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Indonesia Ministry of Environment",
+          "url": "https://www.menlh.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.menlh.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Indonesia BMKG",
+          "url": "https://www.bmkg.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.bmkg.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Indonesia National Disaster Management Agency",
+          "url": "https://bnpb.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://bnpb.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Indonesian National Armed Forces",
+          "url": "https://www.tni.mil.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.tni.mil.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Composite grouping of several Papuan special autonomy provinces, NOT a single provincial administration. Sub-province authority mapping is required; the national ministry sites cannot be counted as provincial agencies."
+    },
+    "PG-NSB": {
+      "name_en": "Autonomous Region of Bougainville",
+      "name_ko": "부건빌 자치지역",
+      "parent_iso": "PG",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Autonomous Bougainville Government",
+          "url": "https://abg.gov.pg/",
+          "authority_scope": "local",
+          "evidence_url": "https://abg.gov.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bougainville Department of Commerce, Trade and Industry",
+          "url": "https://abg.gov.pg/index.php/government/departments/commerce-trade-and-industry",
+          "authority_scope": "regional_business_department",
+          "evidence_url": "https://abg.gov.pg/index.php/government/departments/commerce-trade-and-industry",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bougainville government official contracts and tenders legislation",
+          "url": "https://abg.gov.pg/acts-laws",
+          "authority_scope": "legislation_not_live_tender",
+          "evidence_url": "https://abg.gov.pg/acts-laws",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Bougainville News / Radio New Dawn",
+          "url": "https://bougainvillenews.com/",
+          "authority_scope": "locally_based_publisher",
+          "evidence_url": "https://bougainvillenews.com/contact/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Post-Courier PNG Bougainville coverage",
+          "url": "https://www.postcourier.com.pg/",
+          "authority_scope": "parent_country_news_with_region_coverage",
+          "evidence_url": "https://www.postcourier.com.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "The National PNG Bougainville coverage",
+          "url": "https://www.thenational.com.pg/",
+          "authority_scope": "parent_country_news_with_region_coverage",
+          "evidence_url": "https://www.thenational.com.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Bougainville Government ministry directory",
+          "url": "https://abg.gov.pg/",
+          "authority_scope": "regional_government_directory",
+          "evidence_url": "https://abg.gov.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Papua New Guinea National Weather Service",
+          "url": "https://www.pngmet.gov.pg/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.pngmet.gov.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Bougainville government disaster and emergency news",
+          "url": "https://abg.gov.pg/index.php/news",
+          "authority_scope": "government_emergency_information",
+          "evidence_url": "https://abg.gov.pg/index.php/news",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Papua New Guinea Defence Force",
+          "url": "https://www.defence.gov.pg/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defence.gov.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [
+        {
+          "name": "Bougainville Department of President and Executive Council",
+          "url": "https://abg.gov.pg/government/departments/president-executive-council-department",
+          "authority_scope": "local",
+          "evidence_url": "https://abg.gov.pg/government/departments/president-executive-council-department",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Government-produced Bougainville Bulletin is not counted as an independent newsroom. Private New Dawn FM official domain still requires source validation. Post-Courier and The National publish at parent-country level; regional coverage is not a locally-based Bougainville news organisation."
+    },
+    "MY-SBH": {
+      "name_en": "Sabah",
+      "name_ko": "사바",
+      "parent_iso": "MY",
+      "region_type": "special",
+      "government_business": [
+        {
+          "name": "Sabah Government",
+          "url": "https://www.sabah.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sabah Public Works Department",
+          "url": "https://jkr.sabah.gov.my/",
+          "authority_scope": "public_works",
+          "evidence_url": "https://jkr.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sabah Water Department tenders",
+          "url": "https://water.sabah.gov.my/tender",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://water.sabah.gov.my/tender",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Daily Express Sabah",
+          "url": "https://www.dailyexpress.com.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dailyexpress.com.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "The Borneo Post Sabah",
+          "url": "https://www.theborneopost.com/",
+          "authority_scope": "regional_coverage",
+          "evidence_url": "https://www.theborneopost.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Overseas Chinese Daily News",
+          "url": "https://www.ocdn.com.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ocdn.com.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Sabah Environment Protection Department",
+          "url": "https://epd.sabah.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://epd.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "MetMalaysia",
+          "url": "https://www.met.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.met.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "NADMA Malaysia",
+          "url": "https://www.nadma.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.nadma.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Malaysia Ministry of Defence",
+          "url": "https://www.mod.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.mod.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [
+        {
+          "name": "Sabah Public Works Department",
+          "url": "https://jkr.sabah.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://jkr.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Sabah Government main portal repeated in government business cards pending independent tender source. Do NOT count repeated site as two separate agencies. Removed duplicated Sabah government portal as a second independent source; government_business presently 2/3 pending verified separate service."
+    },
+    "MY-SWK": {
+      "name_en": "Sarawak",
+      "name_ko": "사라왁",
+      "parent_iso": "MY",
+      "region_type": "special",
+      "government_business": [
+        {
+          "name": "Sarawak Government",
+          "url": "https://sarawak.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://sarawak.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sarawak Government eTender notices",
+          "url": "https://etendernotice.sarawak.gov.my/etender/public/public_tender_list.jsp",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://etendernotice.sarawak.gov.my/etender/public/public_tender_list.jsp",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sarawak Public Works Department tenders",
+          "url": "https://jkr.sarawak.gov.my/web/subpage/tender_and_quotation_list",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://jkr.sarawak.gov.my/web/subpage/tender_and_quotation_list",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "The Borneo Post Sarawak",
+          "url": "https://www.theborneopost.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.theborneopost.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "DayakDaily",
+          "url": "https://dayakdaily.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://dayakdaily.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sarawak Tribune",
+          "url": "https://www.sarawaktribune.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.sarawaktribune.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Natural Resources and Environment Board Sarawak",
+          "url": "https://www.nreb.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.nreb.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "MetMalaysia",
+          "url": "https://www.met.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.met.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Malaysia NADMA",
+          "url": "https://www.nadma.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.nadma.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Malaysia Ministry of Defence",
+          "url": "https://www.mod.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.mod.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Sarawak Government",
+          "url": "https://sarawak.gov.my/",
+          "authority_scope": "regional_directory",
+          "evidence_url": "https://sarawak.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Sarawak Public Works Department",
+          "url": "https://jkr.sarawak.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://jkr.sarawak.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "State tender sources are distinct services but some are agencies from the same parent government. Public media brands are treated separately from government media."
+    },
+    "CN-HK": {
+      "name_en": "Hong Kong SAR",
+      "name_ko": "홍콩 특별행정구",
+      "parent_iso": "CN",
+      "region_type": "sar",
+      "government_business": [
+        {
+          "name": "Hong Kong government services",
+          "url": "https://www.gov.hk/en/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.hk/en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "InvestHK government tender opportunities",
+          "url": "https://www.investhk.gov.hk/en/business-opportunities-government-tender-notices/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.investhk.gov.hk/en/business-opportunities-government-tender-notices/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Government Logistics Department",
+          "url": "https://www.gld.gov.hk/en/our-services/procurement/forecast-purchase/BDs/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gld.gov.hk/en/our-services/procurement/forecast-purchase/BDs/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "RTHK",
+          "url": "https://www.rthk.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.rthk.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/topics/hong-kong",
+          "authority_scope": "local",
+          "evidence_url": "https://www.scmp.com/topics/hong-kong",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Hong Kong Free Press",
+          "url": "https://hongkongfp.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://hongkongfp.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Environmental Protection Department",
+          "url": "https://www.epd.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.epd.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Hong Kong Observatory",
+          "url": "https://www.hko.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.hko.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Security Bureau emergency information",
+          "url": "https://www.sb.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.sb.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Hong Kong Fire Services Department",
+          "url": "https://www.hkfsd.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.hkfsd.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Hong Kong Security Bureau",
+          "url": "https://www.sb.gov.hk/",
+          "authority_scope": "local_security",
+          "evidence_url": "https://www.sb.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "PRC Ministry of National Defense",
+          "url": "https://eng.mod.gov.cn/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://eng.mod.gov.cn/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Hong Kong Centre for Health Protection",
+          "url": "https://www.chp.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.chp.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Hong Kong Transport Department",
+          "url": "https://www.td.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.td.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "CN-MO": {
+      "name_en": "Macao SAR",
+      "name_ko": "마카오 특별행정구",
+      "parent_iso": "CN",
+      "region_type": "sar",
+      "government_business": [
+        {
+          "name": "Macao SAR Government",
+          "url": "https://www.gov.mo/en/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.mo/en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Macao Commerce and Investment Promotion Institute IPIM",
+          "url": "https://www.ipim.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ipim.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Macao Environmental Protection Bureau procurement notices",
+          "url": "https://www.dspa.gov.mo/tender.aspx",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dspa.gov.mo/tender.aspx",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "TDM Macao",
+          "url": "https://www.tdm.com.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.tdm.com.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Macau Daily Times",
+          "url": "https://macaudailytimes.com.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://macaudailytimes.com.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Hoje Macau",
+          "url": "https://hojemacau.com.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://hojemacau.com.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Macao Environmental Protection Bureau DSPA",
+          "url": "https://www.dspa.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dspa.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Macao Meteorological and Geophysical Bureau",
+          "url": "https://www.dsmg.gov.mo/en",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dsmg.gov.mo/en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Macao Unitary Police Service and Civil Protection",
+          "url": "https://www.spu.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.spu.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Macao Unitary Police Service",
+          "url": "https://www.spu.gov.mo/",
+          "authority_scope": "local_security",
+          "evidence_url": "https://www.spu.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "PRC Ministry of National Defense",
+          "url": "https://eng.mod.gov.cn/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://eng.mod.gov.cn/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Macao Health Bureau",
+          "url": "https://www.ssm.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ssm.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Macao Transport Bureau",
+          "url": "https://www.dsat.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dsat.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "DK-GL": {
+      "name_en": "Greenland",
+      "name_ko": "그린란드",
+      "parent_iso": "DK",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Government of Greenland Naalakkersuisut",
+          "url": "https://naalakkersuisut.gl/",
+          "authority_scope": "local",
+          "evidence_url": "https://naalakkersuisut.gl/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Business in Greenland government business portal",
+          "url": "https://businessingreenland.gl/",
+          "authority_scope": "local",
+          "evidence_url": "https://businessingreenland.gl/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Greenland Mineral Resources Authority",
+          "url": "https://govmin.gl/",
+          "authority_scope": "local",
+          "evidence_url": "https://govmin.gl/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "KNR Greenlandic Broadcasting Corporation",
+          "url": "https://knr.gl/",
+          "authority_scope": "local",
+          "evidence_url": "https://knr.gl/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sermitsiaq",
+          "url": "https://www.sermitsiaq.ag/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.sermitsiaq.ag/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [],
+      "meteorology": [
+        {
+          "name": "Danish Meteorological Institute DMI",
+          "url": "https://www.dmi.dk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.dmi.dk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Government of Greenland natural hazard policy",
+          "url": "https://naalakkersuisut.gl/Nyheder/2026/06/1806_naturfarer?sc_lang=da",
+          "authority_scope": "local",
+          "evidence_url": "https://naalakkersuisut.gl/Nyheder/2026/06/1806_naturfarer?sc_lang=da",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Danish Defence",
+          "url": "https://www.forsvaret.dk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.forsvaret.dk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "DK-FO": {
+      "name_en": "Faroe Islands",
+      "name_ko": "페로 제도",
+      "parent_iso": "DK",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Government of the Faroe Islands",
+          "url": "https://www.government.fo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.government.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Faroe Islands Business Authority Vinnustovnurin",
+          "url": "https://www.vs.fo/fo/english/welcome",
+          "authority_scope": "regional_business_regulator",
+          "evidence_url": "https://www.vs.fo/fo/english/welcome",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Faroe Islands Foreign Relations and Fisheries Ministry",
+          "url": "https://www.ufmr.fo/fo/arbeidsoeki/fiskivinna",
+          "authority_scope": "regional_fisheries_business_regulation",
+          "evidence_url": "https://www.ufmr.fo/fo/arbeidsoeki/fiskivinna",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Kringvarp Føroya",
+          "url": "https://kvf.fo/",
+          "authority_scope": "local",
+          "evidence_url": "https://kvf.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Dimmalætting",
+          "url": "https://dimma.fo/",
+          "authority_scope": "local",
+          "evidence_url": "https://dimma.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "in.fo",
+          "url": "https://www.in.fo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.in.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [],
+      "meteorology": [
+        {
+          "name": "Danish Meteorological Institute DMI",
+          "url": "https://www.dmi.dk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.dmi.dk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Faroe Islands Government national security and resilience policy",
+          "url": "https://www.government.fo/en/foreign-relations/national-security-policy",
+          "authority_scope": "local",
+          "evidence_url": "https://www.government.fo/en/foreign-relations/national-security-policy",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Faroe Islands national security policy",
+          "url": "https://www.government.fo/en/foreign-relations/national-security-policy",
+          "authority_scope": "local_security_policy",
+          "evidence_url": "https://www.government.fo/en/foreign-relations/national-security-policy",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Danish Defence",
+          "url": "https://www.forsvaret.dk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.forsvaret.dk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "FI-AX": {
+      "name_en": "Åland Islands",
+      "name_ko": "올란드 제도",
+      "parent_iso": "FI",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Government of Åland",
+          "url": "https://www.regeringen.ax/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.regeringen.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Åland Government public procurement notices",
+          "url": "https://www.regeringen.ax/anslagstavla",
+          "authority_scope": "local_procurement_announcements",
+          "evidence_url": "https://www.regeringen.ax/anslagstavla",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Åland Statistics and Research Office (ÅSUB)",
+          "url": "https://www.asub.ax/",
+          "authority_scope": "public_economic_data_not_tender",
+          "evidence_url": "https://www.asub.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Ålandstidningen",
+          "url": "https://www.alandstidningen.ax/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.alandstidningen.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Nya Åland",
+          "url": "https://www.nyan.ax/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.nyan.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Ålands Radio",
+          "url": "https://alandsradio.ax/",
+          "authority_scope": "public_broadcaster",
+          "evidence_url": "https://alandsradio.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Government of Åland",
+          "url": "https://www.regeringen.ax/",
+          "authority_scope": "local_government_directory",
+          "evidence_url": "https://www.regeringen.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Finnish Meteorological Institute",
+          "url": "https://en.ilmatieteenlaitos.fi/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://en.ilmatieteenlaitos.fi/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Government of Åland",
+          "url": "https://www.regeringen.ax/",
+          "authority_scope": "local_government_directory",
+          "evidence_url": "https://www.regeringen.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Finnish Ministry of Defence",
+          "url": "https://www.defmin.fi/en",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defmin.fi/en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Åland Health and Medical Care ÅHS",
+          "url": "https://www.ahs.ax/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ahs.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Government of Åland",
+          "url": "https://www.regeringen.ax/",
+          "authority_scope": "local_government_directory",
+          "evidence_url": "https://www.regeringen.ax/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Åland has demilitarised status under its special regime. Do not imply an Åland standing army. Finnish defence is parent-level context only."
+    },
+    "PT-20": {
+      "name_en": "Azores",
+      "name_ko": "아소르스 자치지역",
+      "parent_iso": "PT",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Government of the Azores",
+          "url": "https://portal.azores.gov.pt/",
+          "authority_scope": "local",
+          "evidence_url": "https://portal.azores.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Azores Government investment programme",
+          "url": "https://portal.azores.gov.pt/en/web/comunicacao/news-detail?id=20494807",
+          "authority_scope": "official_investment_information",
+          "evidence_url": "https://portal.azores.gov.pt/en/web/comunicacao/news-detail?id=20494807",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Portugal public contracts portal BASE",
+          "url": "https://www.base.gov.pt/",
+          "authority_scope": "parent_authority_procurement",
+          "evidence_url": "https://www.base.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "RTP Açores",
+          "url": "https://acores.rtp.pt/",
+          "authority_scope": "public_broadcaster",
+          "evidence_url": "https://acores.rtp.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Açoriano Oriental",
+          "url": "https://www.acorianooriental.pt/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.acorianooriental.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Diário Insular",
+          "url": "https://www.diarioinsular.pt/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.diarioinsular.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Azores regional environment information",
+          "url": "https://portal.azores.gov.pt/",
+          "authority_scope": "local_government_directory",
+          "evidence_url": "https://portal.azores.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Portuguese Institute for Sea and Atmosphere IPMA",
+          "url": "https://www.ipma.pt/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.ipma.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Azores Government civil protection information",
+          "url": "https://portal.azores.gov.pt/en/web/comunicacao/news-detail?id=21608757",
+          "authority_scope": "regional_civil_protection_policy",
+          "evidence_url": "https://portal.azores.gov.pt/en/web/comunicacao/news-detail?id=21608757",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Portugal Ministry of National Defence",
+          "url": "https://www.defesa.gov.pt/pt",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defesa.gov.pt/pt",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Azores Government health services",
+          "url": "https://portal.azores.gov.pt/",
+          "authority_scope": "local_government_directory",
+          "evidence_url": "https://portal.azores.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Portugal central defence agency serves Azores. The national procurement portal is not an Azores-only institution."
+    },
+    "PT-30": {
+      "name_en": "Madeira",
+      "name_ko": "마데이라 자치지역",
+      "parent_iso": "PT",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Madeira Regional Government",
+          "url": "https://www.madeira.gov.pt/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.madeira.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Madeira Regional Development Institute",
+          "url": "https://www.idr.madeira.gov.pt/",
+          "authority_scope": "regional_investment",
+          "evidence_url": "https://www.idr.madeira.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Portugal public contracts portal BASE",
+          "url": "https://www.base.gov.pt/",
+          "authority_scope": "parent_authority_procurement",
+          "evidence_url": "https://www.base.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Diário de Notícias da Madeira",
+          "url": "https://www.dnoticias.pt/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dnoticias.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "JM Madeira",
+          "url": "https://www.jm-madeira.pt/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.jm-madeira.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "RTP Madeira",
+          "url": "https://madeira.rtp.pt/",
+          "authority_scope": "public_broadcaster",
+          "evidence_url": "https://madeira.rtp.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Madeira government environment directory",
+          "url": "https://www.madeira.gov.pt/",
+          "authority_scope": "local_government_directory",
+          "evidence_url": "https://www.madeira.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Portugal IPMA",
+          "url": "https://www.ipma.pt/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.ipma.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Madeira Regional Government",
+          "url": "https://www.madeira.gov.pt/",
+          "authority_scope": "local_government_directory",
+          "evidence_url": "https://www.madeira.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Portugal Ministry of National Defence",
+          "url": "https://www.defesa.gov.pt/pt",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defesa.gov.pt/pt",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Madeira Regional Government health portal",
+          "url": "https://www.madeira.gov.pt/",
+          "authority_scope": "local_government_directory",
+          "evidence_url": "https://www.madeira.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Madeira Regional Development Institute",
+          "url": "https://www.idr.madeira.gov.pt/",
+          "authority_scope": "regional_infrastructure_programmes",
+          "evidence_url": "https://www.idr.madeira.gov.pt/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Public procurement portal BASE is nationwide. Not all linked directories represent regional specialist agencies."
+    },
+    "ES-PV": {
+      "name_en": "Basque Country",
+      "name_ko": "바스크 자치지방",
+      "parent_iso": "ES",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Basque Government Euskadi",
+          "url": "https://www.euskadi.eus/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.euskadi.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Euskadi Public Procurement Platform",
+          "url": "https://www.contratacion.euskadi.eus/",
+          "authority_scope": "regional_procurement",
+          "evidence_url": "https://www.contratacion.euskadi.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "SPRI Basque Business Development Agency",
+          "url": "https://www.spri.eus/",
+          "authority_scope": "regional_business_support",
+          "evidence_url": "https://www.spri.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "EITB",
+          "url": "https://www.eitb.eus/",
+          "authority_scope": "public_broadcaster",
+          "evidence_url": "https://www.eitb.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Berria",
+          "url": "https://www.berria.eus/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.berria.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Deia",
+          "url": "https://www.deia.eus/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.deia.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Ihobe Basque environmental management agency",
+          "url": "https://www.ihobe.eus/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ihobe.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Euskalmet",
+          "url": "https://www.euskalmet.euskadi.eus/",
+          "authority_scope": "regional_agency",
+          "evidence_url": "https://www.euskalmet.euskadi.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Basque Government public safety and 112 service",
+          "url": "https://www.euskadi.eus/",
+          "authority_scope": "regional_government_directory",
+          "evidence_url": "https://www.euskadi.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Spain Ministry of Defence",
+          "url": "https://www.defensa.gob.es/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defensa.gob.es/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Osakidetza Basque Health Service",
+          "url": "https://www.osakidetza.euskadi.eus/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.osakidetza.euskadi.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Basque Government infrastructure and mobility",
+          "url": "https://www.euskadi.eus/",
+          "authority_scope": "regional_directory",
+          "evidence_url": "https://www.euskadi.eus/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Spanish national defence authority applies. EITB is publicly owned, not a government press-release unit."
+    },
+    "ES-CT": {
+      "name_en": "Catalonia",
+      "name_ko": "카탈루냐",
+      "parent_iso": "ES",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Government of Catalonia Generalitat",
+          "url": "https://web.gencat.cat/",
+          "authority_scope": "local",
+          "evidence_url": "https://web.gencat.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Catalonia Public Procurement Platform",
+          "url": "https://contractaciopublica.cat/",
+          "authority_scope": "regional_procurement",
+          "evidence_url": "https://contractaciopublica.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "ACCIÓ Catalonia Trade and Investment",
+          "url": "https://www.accio.gencat.cat/",
+          "authority_scope": "regional_business_support",
+          "evidence_url": "https://www.accio.gencat.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "3CatInfo",
+          "url": "https://www.3cat.cat/3catinfo/",
+          "authority_scope": "public_broadcaster",
+          "evidence_url": "https://www.3cat.cat/3catinfo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Diari ARA",
+          "url": "https://www.ara.cat/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ara.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "VilaWeb",
+          "url": "https://www.vilaweb.cat/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.vilaweb.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Government of Catalonia environment portal",
+          "url": "https://mediambient.gencat.cat/",
+          "authority_scope": "regional_authority",
+          "evidence_url": "https://mediambient.gencat.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Meteocat",
+          "url": "https://www.meteo.cat/",
+          "authority_scope": "regional_meteorology",
+          "evidence_url": "https://www.meteo.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Catalonia civil protection",
+          "url": "https://interior.gencat.cat/",
+          "authority_scope": "regional_government_department",
+          "evidence_url": "https://interior.gencat.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Spain Ministry of Defence",
+          "url": "https://www.defensa.gob.es/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defensa.gob.es/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Catalan Public Health Agency",
+          "url": "https://salutpublica.gencat.cat/",
+          "authority_scope": "local",
+          "evidence_url": "https://salutpublica.gencat.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Catalonia Transport",
+          "url": "https://territori.gencat.cat/",
+          "authority_scope": "regional_authority",
+          "evidence_url": "https://territori.gencat.cat/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Regional police and civil-protection structures are not equivalent to autonomous military forces."
+    },
+    "GB-SCT": {
+      "name_en": "Scotland",
+      "name_ko": "스코틀랜드",
+      "parent_iso": "GB",
+      "region_type": "dev",
+      "government_business": [
+        {
+          "name": "Scottish Government",
+          "url": "https://www.gov.scot/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.scot/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Public Contracts Scotland",
+          "url": "https://www.publiccontractsscotland.gov.uk/",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://www.gov.scot/publications/frameworks-and-contracts/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Scottish Enterprise",
+          "url": "https://www.scottish-enterprise.com/",
+          "authority_scope": "public_business_agency",
+          "evidence_url": "https://www.gov.scot/publications/national-public-bodies-directory/pages/executive-non-departmental-public-bodies/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "BBC Scotland News",
+          "url": "https://www.bbc.com/news/scotland",
+          "authority_scope": "local",
+          "evidence_url": "https://www.bbc.com/news/scotland",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "STV News",
+          "url": "https://news.stv.tv/",
+          "authority_scope": "local",
+          "evidence_url": "https://news.stv.tv/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "The Scotsman",
+          "url": "https://www.scotsman.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.scotsman.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Scottish Environment Protection Agency",
+          "url": "https://www.sepa.org.uk/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://www.gov.scot/publications/national-public-bodies-directory/pages/executive-non-departmental-public-bodies/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "UK Met Office Scotland weather",
+          "url": "https://www.metoffice.gov.uk/weather/forecast/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.metoffice.gov.uk/weather/forecast/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Ready Scotland",
+          "url": "https://ready.scot/",
+          "authority_scope": "local",
+          "evidence_url": "https://ready.scot/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "UK Ministry of Defence",
+          "url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Public Health Scotland",
+          "url": "https://publichealthscotland.scot/",
+          "authority_scope": "local",
+          "evidence_url": "https://publichealthscotland.scot/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Transport Scotland",
+          "url": "https://www.transport.gov.scot/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.transport.gov.scot/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "GB-WLS": {
+      "name_en": "Wales",
+      "name_ko": "웨일스",
+      "parent_iso": "GB",
+      "region_type": "dev",
+      "government_business": [
+        {
+          "name": "Welsh Government",
+          "url": "https://www.gov.wales/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sell2Wales",
+          "url": "https://www.sell2wales.gov.wales/",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://www.sell2wales.gov.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Business Wales",
+          "url": "https://businesswales.gov.wales/",
+          "authority_scope": "government_business_support",
+          "evidence_url": "https://businesswales.gov.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "BBC News Wales",
+          "url": "https://www.bbc.com/news/wales",
+          "authority_scope": "local",
+          "evidence_url": "https://www.bbc.com/news/wales",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "ITV News Wales",
+          "url": "https://www.itv.com/news/wales",
+          "authority_scope": "local",
+          "evidence_url": "https://www.itv.com/news/wales",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Nation.Cymru",
+          "url": "https://nation.cymru/",
+          "authority_scope": "local",
+          "evidence_url": "https://nation.cymru/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Natural Resources Wales",
+          "url": "https://naturalresources.wales/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://naturalresources.wales/evidence-and-data/research-and-reports/flooding-reports-evidence-and-data/flood-risk-management-annual-report-2025-to-2026/?lang=en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "UK Met Office",
+          "url": "https://www.metoffice.gov.uk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.metoffice.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Wales resilience and risks",
+          "url": "https://www.gov.wales/resilience-risks-in-wales",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.wales/resilience-risks-in-wales",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "UK Ministry of Defence",
+          "url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Public Health Wales",
+          "url": "https://phw.nhs.wales/",
+          "authority_scope": "local",
+          "evidence_url": "https://phw.nhs.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Traffic Wales",
+          "url": "https://traffic.wales/",
+          "authority_scope": "local",
+          "evidence_url": "https://traffic.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "GB-NIR": {
+      "name_en": "Northern Ireland",
+      "name_ko": "북아일랜드",
+      "parent_iso": "GB",
+      "region_type": "dev",
+      "government_business": [
+        {
+          "name": "Northern Ireland Executive",
+          "url": "https://www.northernireland.gov.uk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.northernireland.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "eTendersNI procurement",
+          "url": "https://www.finance-ni.gov.uk/topics/etendersni",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://www.finance-ni.gov.uk/topics/etendersni",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Invest Northern Ireland",
+          "url": "https://www.investni.com/",
+          "authority_scope": "government_business_support",
+          "evidence_url": "https://www.investni.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "BBC News Northern Ireland",
+          "url": "https://www.bbc.com/news/northern_ireland",
+          "authority_scope": "local",
+          "evidence_url": "https://www.bbc.com/news/northern_ireland",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Belfast Telegraph",
+          "url": "https://www.belfasttelegraph.co.uk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.belfasttelegraph.co.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "The Irish News",
+          "url": "https://www.irishnews.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.irishnews.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Northern Ireland Environment Agency",
+          "url": "https://www.daera-ni.gov.uk/contacts/northern-ireland-environment-agency-niea",
+          "authority_scope": "local",
+          "evidence_url": "https://www.daera-ni.gov.uk/contacts/northern-ireland-environment-agency-niea",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "UK Met Office",
+          "url": "https://www.metoffice.gov.uk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.metoffice.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "nidirect emergency information",
+          "url": "https://www.nidirect.gov.uk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.nidirect.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "UK Ministry of Defence",
+          "url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Public Health Agency NI",
+          "url": "https://www.publichealth.hscni.net/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.publichealth.hscni.net/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Department for Infrastructure NI",
+          "url": "https://www.infrastructure-ni.gov.uk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.infrastructure-ni.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "FR-NC": {
+      "name_en": "New Caledonia",
+      "name_ko": "뉴칼레도니아",
+      "parent_iso": "FR",
+      "region_type": "terr",
+      "government_business": [
+        {
+          "name": "New Caledonia Government",
+          "url": "https://gouv.nc/",
+          "authority_scope": "local",
+          "evidence_url": "https://gouv.nc/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "New Caledonia Open Data",
+          "url": "https://data.gouv.nc/pages/accueil/",
+          "authority_scope": "public_data_not_tender",
+          "evidence_url": "https://data.gouv.nc/pages/accueil/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "New Caledonia public procurement directorate",
+          "url": "https://gouv.nc/direction/achats-patrimoine-et-moyens",
+          "authority_scope": "government_procurement_authority",
+          "evidence_url": "https://gouv.nc/direction/achats-patrimoine-et-moyens",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Les Nouvelles Calédoniennes",
+          "url": "https://www.lnc.nc/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.lnc.nc/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Nouvelle-Calédonie la 1ère",
+          "url": "https://www.nc1.nc/",
+          "authority_scope": "public_broadcaster",
+          "evidence_url": "https://www.nc1.nc/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Radio Rythme Bleu",
+          "url": "https://www.rrb.nc/",
+          "authority_scope": "broadcaster",
+          "evidence_url": "https://www.rrb.nc/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "New Caledonia Government environment information",
+          "url": "https://gouv.nc/",
+          "authority_scope": "regional_directory",
+          "evidence_url": "https://gouv.nc/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Météo-France Nouvelle-Calédonie",
+          "url": "https://meteo.nc/",
+          "authority_scope": "parent_authority_regional_service",
+          "evidence_url": "https://gouv.nc/actualites/22-04-2026/lancement-des-travaux-pour-la-construction-du-radar-meteorologique-de-noumea",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "New Caledonia Directorate of Civil Security and Risk Management",
+          "url": "https://securite-civile.gouv.nc/",
+          "authority_scope": "regional_agency",
+          "evidence_url": "https://securite-civile.gouv.nc/securite-civile-presentation/presentation",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "French Ministry of the Armed Forces",
+          "url": "https://www.defense.gouv.fr/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defense.gouv.fr/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "New Caledonia government health administration",
+          "url": "https://gouv.nc/",
+          "authority_scope": "regional_directory",
+          "evidence_url": "https://gouv.nc/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "New Caledonia Government public procurement directorate",
+          "url": "https://gouv.nc/direction/achats-patrimoine-et-moyens",
+          "authority_scope": "regional_government",
+          "evidence_url": "https://gouv.nc/direction/achats-patrimoine-et-moyens",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Les Nouvelles Calédoniennes ownership/continued newsroom activity should be checked before any live source use, due to reported prior financial disruption."
+    },
+    "US-PR": {
+      "name_en": "Puerto Rico",
+      "name_ko": "푸에르토리코",
+      "parent_iso": "US",
+      "region_type": "terr",
+      "government_business": [
+        {
+          "name": "Puerto Rico General Services Administration tender notices",
+          "url": "https://asg.pr.gov/subastas",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://asg.pr.gov/subastas",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Puerto Rico Registry of Government Bids",
+          "url": "https://subastas.pr.gov/",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://subastas.pr.gov/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Puerto Rico Public Buildings Authority tenders",
+          "url": "https://www.aep.pr.gov/subastas",
+          "authority_scope": "public_authority_procurement",
+          "evidence_url": "https://www.aep.pr.gov/subastas",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "El Nuevo Día",
+          "url": "https://www.elnuevodia.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.elnuevodia.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Primera Hora",
+          "url": "https://www.primerahora.com/",
+          "authority_scope": "same_media_group_different_brand",
+          "evidence_url": "https://www.primerahora.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "El Vocero",
+          "url": "https://www.elvocero.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.elvocero.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Puerto Rico Department of Natural and Environmental Resources",
+          "url": "https://drna.pr.gov/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://drna.pr.gov/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "US National Weather Service San Juan",
+          "url": "https://www.weather.gov/sju/",
+          "authority_scope": "parent_authority_regional_office",
+          "evidence_url": "https://www.weather.gov/sju/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Puerto Rico Emergency Management Agency NMEAD",
+          "url": "https://manejodeemergencias.pr.gov/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://manejodeemergencias.pr.gov/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "US Department of Defense",
+          "url": "https://www.defense.gov/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defense.gov/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Puerto Rico National Guard",
+          "url": "https://pr.ng.mil/",
+          "authority_scope": "territorial_national_guard",
+          "evidence_url": "https://pr.ng.mil/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Puerto Rico Department of Health",
+          "url": "https://www.salud.pr.gov/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://www.salud.pr.gov/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Puerto Rico Public Buildings Authority",
+          "url": "https://www.aep.pr.gov/",
+          "authority_scope": "regional_public_infrastructure",
+          "evidence_url": "https://www.aep.pr.gov/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "El Nuevo Día and Primera Hora are separate editorial brands in one media group, not separate owners. NWS federal agency is parent jurisdiction; PR National Guard is not an independent sovereign military."
+    },
+    "SO-SL": {
+      "name_en": "Somaliland (de facto)",
+      "name_ko": "소말릴란드 (사실상 독립)",
+      "parent_iso": "SO",
+      "region_type": "defacto",
+      "government_business": [
+        {
+          "name": "Somaliland Presidency public administration",
+          "url": "https://madaxtooyadajsl.com/",
+          "authority_scope": "de_facto_authority",
+          "evidence_url": "https://madaxtooyadajsl.com/cabinet/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Somaliland Ministry of Finance and Economic Development",
+          "url": "https://www.slmof.org/",
+          "authority_scope": "de_facto_authority",
+          "evidence_url": "https://www.slmof.org/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Somaliland government claimed ministry directory",
+          "url": "https://sl-gov.org/ministries",
+          "authority_scope": "self_described_unverified_authority",
+          "evidence_url": "https://sl-gov.org/ministries",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Somaliland Chronicle",
+          "url": "https://somalilandchronicle.com/",
+          "authority_scope": "de_facto_region_newsroom",
+          "evidence_url": "https://somalilandchronicle.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Horn Diplomat",
+          "url": "https://www.horndiplomat.com/category/news/somaliland/",
+          "authority_scope": "de_facto_region_newsroom",
+          "evidence_url": "https://www.horndiplomat.com/category/news/somaliland/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Somaliland Standard",
+          "url": "https://somalilandstandard.com/",
+          "authority_scope": "de_facto_region_newsroom",
+          "evidence_url": "https://somalilandstandard.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Somaliland claimed environment agency directory",
+          "url": "https://sl-gov.org/ministries",
+          "authority_scope": "self_described_unverified_authority",
+          "evidence_url": "https://sl-gov.org/ministries",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [
+        {
+          "name": "Somaliland government claimed defence structure",
+          "url": "https://sl-gov.org/government",
+          "authority_scope": "de_facto_claim_not_international_recognition",
+          "evidence_url": "https://sl-gov.org/government",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Disputed/de facto administration. Do not present Somaliland as an additional UN member state or treat self-described web domains as independently verified. Authority and ownership cross-check needed."
+    }
+  }
+}

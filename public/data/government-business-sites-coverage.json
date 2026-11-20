@@ -1,0 +1,983 @@
+{
+  "target_countries": 193,
+  "minimum_verified_per_country": 3,
+  "target_verified_links": 579,
+  "verified_countries": 191,
+  "verified_links": 573,
+  "countries_below_target": [
+    "ER",
+    "KP"
+  ],
+  "candidate_only_countries": [
+    "ER",
+    "KP"
+  ],
+  "country_counts": {
+    "AD": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "AE": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "AF": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "AG": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "AL": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "AM": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "AO": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "AR": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "AT": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "AU": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "AZ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BA": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BB": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "BD": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BE": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BF": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BG": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BH": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "BI": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BJ": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "BN": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BO": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "BR": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "BS": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BT": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BW": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "BY": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "BZ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "CA": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "CD": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "CF": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "CG": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "CH": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "CI": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "CL": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "CM": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "CN": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "CO": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "CR": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "CU": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "CV": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "CY": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "CZ": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "DE": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "DJ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "DK": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "DM": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "DO": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "DZ": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "EC": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "EE": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "EG": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "ER": {
+      "verified": 0,
+      "candidate": 1,
+      "gap": 3
+    },
+    "ES": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "ET": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "FI": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "FJ": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "FM": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "FR": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "GA": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "GB": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "GD": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "GE": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "GH": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "GM": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "GN": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "GQ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "GR": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "GT": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "GW": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "GY": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "HN": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "HR": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "HT": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "HU": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "ID": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "IE": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "IL": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "IN": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "IQ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "IR": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "IS": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "IT": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "JM": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "JO": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "JP": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "KE": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "KG": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "KH": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "KI": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "KM": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "KN": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "KP": {
+      "verified": 0,
+      "candidate": 0,
+      "gap": 3
+    },
+    "KR": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "KW": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "KZ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "LA": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "LB": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "LC": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "LI": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "LK": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "LR": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "LS": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "LT": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "LU": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "LV": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "LY": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MA": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "MC": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MD": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "ME": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "MG": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "MH": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MK": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "ML": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MM": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "MN": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MR": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MT": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MU": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MV": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "MW": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MX": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "MY": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "MZ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "NA": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "NE": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "NG": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "NI": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "NL": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "NO": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "NP": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "NR": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "NZ": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "OM": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "PA": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "PE": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "PG": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "PH": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "PK": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "PL": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "PT": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "PW": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "PY": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "QA": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "RO": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "RS": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "RU": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "RW": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "SA": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SB": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SC": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "SD": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "SE": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SG": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "SI": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SK": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "SL": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SM": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "SN": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SO": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SR": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SS": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "ST": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SV": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "SY": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "SZ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "TD": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "TG": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "TH": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "TJ": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "TL": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "TM": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "TN": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "TO": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "TR": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "TT": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "TV": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "TZ": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "UA": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "UG": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "US": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "UY": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "UZ": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "VC": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "VE": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "VN": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "VU": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "WS": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "YE": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "ZA": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    },
+    "ZM": {
+      "verified": 3,
+      "candidate": 1,
+      "gap": 0
+    },
+    "ZW": {
+      "verified": 3,
+      "candidate": 0,
+      "gap": 0
+    }
+  },
+  "remaining_required_link_slots": 6
+}

@@ -1,0 +1,803 @@
+{
+  "source_kind": "original_publisher_news_sources",
+  "not_government_site_count": true,
+  "not_live_news_feed": true,
+  "target_countries": 193,
+  "minimum_per_country": 3,
+  "target_links": 579,
+  "countries_with_at_least_three_recorded": 177,
+  "registered_publisher_links": 531,
+  "remaining_minimum_link_slots": 48,
+  "country_counts": {
+    "AD": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AF": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AL": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AU": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "AZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BB": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BD": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BF": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BH": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BI": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BJ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BS": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BW": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BY": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "BZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CD": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CF": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "CG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CH": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CI": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CL": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CU": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CV": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CY": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "CZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "DE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "DJ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "DK": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "DM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "DO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "DZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "EC": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "EE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "EG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ER": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "ES": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ET": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "FI": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "FJ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "FM": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "FR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GB": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GD": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GH": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GQ": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "GR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "GW": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "GY": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "HN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "HR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "HT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "HU": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ID": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "IE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "IL": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "IN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "IQ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "IR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "IS": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "IT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "JM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "JO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "JP": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "KE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "KG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "KH": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "KI": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "KM": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "KN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "KP": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "KR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "KW": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "KZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LA": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "LB": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LC": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LI": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "LK": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LS": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LU": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LV": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "LY": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MC": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MD": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ME": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MH": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "MK": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ML": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MU": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MV": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MW": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MX": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MY": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "MZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "NA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "NE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "NG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "NI": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "NL": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "NO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "NP": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "NR": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "NZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "OM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "PA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "PE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "PG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "PH": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "PK": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "PL": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "PT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "PW": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "PY": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "QA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "RO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "RS": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "RU": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "RW": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SB": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SC": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SD": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SI": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SK": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SL": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SS": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ST": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "SV": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SY": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "SZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TD": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TH": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TJ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TL": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TO": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TR": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TT": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "TV": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "TZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "UA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "UG": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "US": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "UY": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "UZ": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "VC": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "VE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "VN": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "VU": {
+      "publisher_links_recorded": 0,
+      "remaining_to_three": 3
+    },
+    "WS": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "YE": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ZA": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ZM": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    },
+    "ZW": {
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
+    }
+  },
+  "uncatalogued_countries": [
+    "CF",
+    "ER",
+    "FM",
+    "GQ",
+    "GW",
+    "KI",
+    "KM",
+    "KP",
+    "LA",
+    "LI",
+    "MH",
+    "NR",
+    "PW",
+    "ST",
+    "TV",
+    "VU"
+  ]
+}
