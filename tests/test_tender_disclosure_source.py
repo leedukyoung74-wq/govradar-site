@@ -56,3 +56,14 @@ class TenderDisclosureSourceTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SecondarySourceLabelTest(__import__("unittest").TestCase):
+    def test_aggregator_and_press_are_secondary(self):
+        import importlib, sys, pathlib
+        sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+        P3 = importlib.import_module("pages3")
+        self.assertTrue(P3.is_secondary({"url": "https://www.mangofetch.com/x"}))
+        self.assertTrue(P3.is_secondary({"url": "https://ted.europa.eu/x", "source": "EU TED (TenderMetric에서 확인)"}))
+        self.assertFalse(P3.is_secondary({"url": "https://projects.worldbank.org/x", "source": "World Bank"}))
+        self.assertFalse(P3.is_secondary({"url": "https://www.etenders.gov.ie/x"}))
