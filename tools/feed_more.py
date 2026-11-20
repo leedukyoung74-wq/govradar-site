@@ -281,7 +281,7 @@ def uk():
     # Cap to a polite number of source calls per scheduled run. If the
     # cursor still has more pages, _ocds records PARTIAL (never false success).
     # A 21-day backfill needs a separately approved incremental cursor job.
-    out = _ocds(S, url, mk, max_pages=12, timeout=20, tries=1,
+    out = _ocds(S, url, mk, max_pages=12, timeout=20, tries=2,
                 time_budget=110, min_interval=2)
     st = stat(S)
     # A 21-day first-page *timeout* should not permanently disable the entire
