@@ -12,6 +12,8 @@ on:
       - 'tests/test_export_inputs.py'
       - 'tools/check_research_coverage.py'
       - 'tests/test_research_coverage.py'
+      - 'tools/check_public_fixture_leak.py'
+      - 'tests/test_public_fixture_leak.py'
       - 'tools/publish_cf.sh'
       - 'tests/test_publish_export_preflight.py'
       - '.github/workflows/wmm_tender_disclosure_qa.yml'
@@ -37,6 +39,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_research_coverage.py' -v
       - name: Verify safe opt-in preflight in deploy shell (never execute deploy)
         run: python -m unittest discover -s tests -p 'test_publish_export_preflight.py' -v
+      - name: Verify release fixture scanner in isolation
+        run: python -m unittest discover -s tests -p 'test_public_fixture_leak.py' -v
   generated-mdb-qa:
     runs-on: ubuntu-latest
     timeout-minutes: 12
