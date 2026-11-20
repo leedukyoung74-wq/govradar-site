@@ -18,6 +18,7 @@ case "${WMM_EXPORT_PREFLIGHT:-off}" in
     ;;
   required)
     echo "INFO: validating local exported countries before publish"
+    python3 tools/check_research_coverage.py --export-dir export/countries --metadata src/countries_meta.json --min-researched "${WMM_EXPORT_MIN_RESEARCHED:-1}" || { echo "STOP: no valid researched country coverage; nothing published."; exit 1; }
     python3 tools/check_export_inputs.py \
       --export-dir export/countries \
       --min-countries "${WMM_EXPORT_MIN_COUNTRIES:-20}" \
