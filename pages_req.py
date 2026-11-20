@@ -15,8 +15,8 @@ K = {
   email="이메일", name="이름 또는 담당자", org="회사·단체명 (선택)", country="관심 국가", code="회원 코드 (있으면)",
   agree="개인정보 수집·이용(의뢰 처리 목적, 처리 후 1년 보관)에 동의합니다", btn="의뢰 보내기", sending="보내는 중…",
   done="접수되었습니다. 요청번호", dup="같은 내용을 방금 보내셨습니다. 요청번호", mine="이 브라우저에서 보낸 의뢰", mine_n="아직 보낸 의뢰가 없습니다.",
-  st="접수됨 — 확인 메일을 기다려 주세요", req="필수 항목을 채워 주세요.", left="이번 달 남은 의뢰 {n}건", over="이번 달 포함 건수(2건)를 넘어 견적을 먼저 보내 드립니다", quote="회원이 아니어서 견적을 먼저 이메일로 보내 드립니다", sent="접수 완료",
-  S={"received": "접수됨", "relayed": "접수됨 · 담당자 전달", "relay_failed": "접수됨 · 알림 재확인 중", "in_progress": "처리 중", "done": "완료 · 이메일 확인", "failed": "처리 불가 · 한도 반환", "cancelled": "취소 · 한도 반환"},
+  st="접수됨 — 확인 메일을 기다려 주세요", req="필수 항목을 채워 주세요.", left="이번 달 남은 의뢰 {n}건", over="이번 달 포함 건수(2건)를 넘어 견적을 먼저 보내 드립니다", quote="회원이 아니어서 견적을 먼저 이메일로 보내 드립니다", sent="요청 기록됨 · 담당자 확인 대기",
+  S={"received": "접수됨", "relay_unverified": "전송 시도됨 · 담당자 확인 대기", "relayed": "접수됨 · 담당자 전달", "relay_failed": "접수됨 · 알림 재확인 중", "in_progress": "처리 중", "done": "완료 · 이메일 확인", "failed": "처리 불가 · 한도 반환", "cancelled": "취소 · 한도 반환"},
   types=[
    ("tender", "이 입찰에 우리 회사가 참여할 수 있는지 검토", "참가 자격·필요 서류·부족한 조건을 정리한 참가 조건표와 참여 권고(예·조건부·아니오)", "공고 링크 또는 제목, 업종, 연 매출, 공공·해외 실적, 보유 인증",
     [("tender", "공고 링크 또는 제목", "text", True), ("industry", "업종·주력 제품", "text", True), ("revenue", "연 매출 (억 원)", "number", False), ("record", "공공·해외 실적 (간단히)", "textarea", False), ("certs", "보유 인증", "text", False)]),
@@ -37,8 +37,8 @@ K = {
   email="Email", name="Name or contact person", org="Company or organisation (optional)", country="Country of interest", code="Member code (if any)",
   agree="I agree to the collection and use of my details to handle this request (kept for one year)", btn="Send request", sending="Sending…",
   done="Received. Request number", dup="You just sent the same request. Request number", mine="Requests sent from this browser", mine_n="No requests yet.",
-  st="Received — watch for our confirmation email", req="Please fill in the required fields.", left="{n} requests left this month", over="Over this month's two included requests — we will send a quote first", quote="Not a member — we will email a quote first", sent="Received",
-  S={"received": "Received", "relayed": "Received · passed to staff", "relay_failed": "Received · alert being re-checked", "in_progress": "In progress", "done": "Done · check your email", "failed": "Could not be done · allowance returned", "cancelled": "Cancelled · allowance returned"},
+  st="Received — watch for our confirmation email", req="Please fill in the required fields.", left="{n} requests left this month", over="Over this month's two included requests — we will send a quote first", quote="Not a member — we will email a quote first", sent="Request recorded · staff verification pending",
+  S={"received": "Received", "relay_unverified": "Sent attempt · awaiting staff verification", "relayed": "Received · passed to staff", "relay_failed": "Received · alert being re-checked", "in_progress": "In progress", "done": "Done · check your email", "failed": "Could not be done · allowance returned", "cancelled": "Cancelled · allowance returned"},
   types=[
    ("tender", "Can our company bid on this tender?", "An entry-conditions table (eligibility, documents, gaps) and a recommendation: yes, conditional or no", "Notice link or title, industry, annual revenue, public or overseas record, certifications",
     [("tender", "Notice link or title", "text", True), ("industry", "Industry and main product", "text", True), ("revenue", "Annual revenue (USD)", "text", False), ("record", "Public or overseas record (brief)", "textarea", False), ("certs", "Certifications", "text", False)]),
@@ -105,7 +105,7 @@ fetch("/api/req",{{method:"POST",headers:hdr({{"content-type":"application/json"
 if(!j.req_no)throw 0;id=j.req_no;a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+sendBody;
 var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{{n}}",j.left):" · "+K.over):" · "+K.quote);msg.textContent=info;
 return fetch(f.getAttribute("action"),{{method:"POST",headers:{{"content-type":"application/x-www-form-urlencoded"}},body:new URLSearchParams(new FormData(f)).toString(),redirect:"manual"}}).then(function(r2){{var ok=r2.type==="opaqueredirect"||r2.status<400;
-return fetch("/api/req",{{method:"PATCH",headers:{{"content-type":"application/json"}},body:JSON.stringify({{req_no:id,ok:ok}})}}).then(function(){{btn.textContent=K.sent;paint()}})}});
+return (tok()?fetch("/api/req",{{method:"PATCH",headers:hdr({{"content-type":"application/json"}}),body:JSON.stringify({{req_no:id,ok:ok}})}}):Promise.resolve(null)).then(function(){{btn.textContent=K.sent;paint()}})}});
 }}).catch(function(){{f.dataset.srv="1";f.submit()}})}}
 }});
 var L=document.documentElement.lang||"ko",SRV=true;
