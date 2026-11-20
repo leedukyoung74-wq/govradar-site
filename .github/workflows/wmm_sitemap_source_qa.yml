@@ -25,3 +25,11 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_finalize_sitemap.py' -v
       - name: Check shell syntax without publishing
         run: bash -n tools/publish_cf.sh
+      - name: Checkout current generated live branch as read-only audit source
+        uses: actions/checkout@v7
+        with:
+          ref: live
+          path: live-branch
+          persist-credentials: false
+      - name: Verify current live artifact can produce a complete sitemap (read-only)
+        run: python3 tools/finalize_sitemap.py live-branch/public --min-urls 1000
