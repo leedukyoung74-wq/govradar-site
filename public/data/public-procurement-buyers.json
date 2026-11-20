@@ -1,0 +1,3658 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-20T23:50:57.629315+00:00",
+  "type": "source_backed_public_procurement_organisations",
+  "not_commercial_buyer_directory": true,
+  "disclaimer_ko": "공식 공개 조달공고의 발주기관 목록입니다. 상업 수입 바이어·거래 의사·연락처 또는 현재 입찰 가능 상태를 보증하지 않습니다. 원문에서 재확인하세요.",
+  "disclaimer_en": "Procuring entities named in official public notices; NOT a verified importer, sales-buyer or contact directory. Confirm notice status with the original issuer.",
+  "organisations": [
+    {
+      "country_iso": "AO",
+      "procurement_entity": "Ministry of Social Action, Family and Promotion of Women",
+      "source_backed_notice_count": 9,
+      "notices": [
+        {
+          "title": "Formacao no ramo de gestão do pessoal do MASFAMU",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480685",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contratacao de empresa para formacao em materia de comunicacao para o pessoal do MASFAMU",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480675",
+          "source": "World Bank"
+        },
+        {
+          "title": "Formação Especializada em materia de CSU dos representantes provinciais",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480682",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contratacao de empresa para traducao e edicao das politicas e protocolos",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481656",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contratacao de servicos de comunicacao social (reportagem)",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481655",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "KE",
+      "procurement_entity": "ICT Authority",
+      "source_backed_notice_count": 7,
+      "notices": [
+        {
+          "title": "Development of Artificial Intelligence Competency Frameworks for Kenya’s Education System",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480442",
+          "source": "World Bank"
+        },
+        {
+          "title": "Consulting Services for Development of a National Monitoring and Implementation Framework for Satellite and Non-Terrestrial Technologies",
+          "deadline": "2026-12-02",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482006",
+          "source": "World Bank"
+        },
+        {
+          "title": "Enhancement of the Smart Academy Portal as Kenya’s National Digital Skills Marketplace and Ecosystem Aggregator",
+          "deadline": "2026-12-22",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480438",
+          "source": "World Bank"
+        },
+        {
+          "title": "Supply, Design, Delivery, Installation, Configuration, Testing, Commissioning And Maintenance Of an Integrated Government Resource Platform (IGRP) in Three (3) Lots",
+          "deadline": "2026-12-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479956",
+          "source": "World Bank"
+        },
+        {
+          "title": "Supply, Delivery, Integration, Support, Capacity Building and Maintenance Support of Hardware, Analysts Computer, Security Software and Technology tools, Support for ICTA’s Government Security Operation Centre (GOVSOC)",
+          "deadline": "2027-01-07",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480068",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TD",
+      "procurement_entity": "Ministry of National Education- Chad Improving Learning Outcomes Project",
+      "source_backed_notice_count": 5,
+      "notices": [
+        {
+          "title": "Recrutement d'un Auditeur Externe pour les états financiers des Projets PARAEB et RELANCE, exercices 2026 et 2027.",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480001",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction de 30 écoles dans les provinces du Moyen Chari et du Mandoul",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479842",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction de 34 écoles dans les provinces du Batha, du Ouaddaï et du Chari Baguirmi",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479867",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction de 48 écoles dans les provinces du Lac et de Hadjer Lamis",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479856",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction de 26 écoles dans les provinces du Salamat et du Sila",
+          "deadline": "2026-12-17",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479846",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "Ministry of Education and Science of Ukraine",
+      "source_backed_notice_count": 5,
+      "notices": [
+        {
+          "title": "Procurement of Equipment for the Environmental Monitoring Laboratory",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479329",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement of Application Software. Part 3.",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479398",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement of Computer and Telecommunications Equipment",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480353",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement of server equipment for the deployment of the \"Trembit\" version 2.0 system",
+          "deadline": "2026-12-03",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482496",
+          "source": "World Bank"
+        },
+        {
+          "title": "Technical Assistance in the design and implementation of the “First Steps Forward” plans in participating hromadas",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480306",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UZ",
+      "procurement_entity": "NATIONAL AGENCY FOR SOCIAL PROTECTION UNDER THE PRESIDENT OF THE REPUBLIC OF UZBEKISTAN",
+      "source_backed_notice_count": 5,
+      "notices": [
+        {
+          "title": "Procurement of Specialized Equipment for Social Service and Rehabilitation Institutions",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00462564",
+          "source": "World Bank"
+        },
+        {
+          "title": "Household Appliances, Electrical Equipment, Extension Cords and Air Conditioners for 14 Rehabilitation Centers for Victims of Domestic Violence",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482280",
+          "source": "World Bank"
+        },
+        {
+          "title": "Expertise in prosthetic devices and rehabilitation equipment",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481780",
+          "source": "World Bank"
+        },
+        {
+          "title": "IT, Multimedia, Photo/Video and CCTV Equipment for 14 Rehabilitation Centers for Victims of Domestic Violence",
+          "deadline": "2026-12-07",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482278",
+          "source": "World Bank"
+        },
+        {
+          "title": "Other Goods for 14 Rehabilitation Centers for Victims of Domestic Violence (Safes, Décor, Floor Lamps, Information Stands, Desk Sets and Aquariums)",
+          "deadline": "2026-12-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482284",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AO",
+      "procurement_entity": "National Institute of Employment and Professional Training",
+      "source_backed_notice_count": 4,
+      "notices": [
+        {
+          "title": "Contratação de consultoria para realização de diagnostico de necessidades formativas, de acordo com a demanda do mercado de trabalho e elaboração/atualização de planos curriculares",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480533",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contratação de uma Empresa para a implementação da estratégia de capacitação dos jovens empreendedores com potencial de crescimento (Implementação)",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480518",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contratação uma empresa para a implementação da estratégia de capacitação dos jovens empreendedores com potencial de crescimento (Comunicação)",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480529",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contratação de uma empresa para elaboração da engenharia e padronização dos processos e automação",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480129",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BI",
+      "procurement_entity": "Ministry of Communication, Information Technology and Media - Executive Secretariat for ICT (SETIC)",
+      "source_backed_notice_count": 4,
+      "notices": [
+        {
+          "title": "MFBEN - DSI - AT CABINET- Recrutement d'un consultant pour la formation et la certification des techniciens de la DSI, SETIC et de l'OBR sur l'Audit Système d'information",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478716",
+          "source": "World Bank"
+        },
+        {
+          "title": "MFBEN - DSI - AT CABINET- Recrutement d'un consultant pour la formation et la certification des techniciens de la DSI, SETIC et de l'OBR sur le HACKING FORENSIC INVESTIGATION",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479014",
+          "source": "World Bank"
+        },
+        {
+          "title": "ARCT: Acquisition des équipements, applications, matériel et logiciels pour le CERT national afin de permettre des capacités de renseignement sur les menaces, de prévention, d'atténuation, de défense et de réponse",
+          "deadline": "2026-12-21",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479796",
+          "source": "World Bank"
+        },
+        {
+          "title": "Acquisition d'une plateforme d'interopérabilité gouvernementale intégrant un système PKI (Infrastructure à clés publiques)",
+          "deadline": "2027-01-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482177",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "CM",
+      "procurement_entity": "MINISTRY OF ECONOMY, PLANNING AND REGIONAL DEVELOPMENT",
+      "source_backed_notice_count": 4,
+      "notices": [
+        {
+          "title": "TRAVAUX DE CONSTRUCTION/REHABILITATION DES INFRASTRUCTURES SOCIO-ECONOMIQUES (ETABLISSEMENTS SCOLAIRES, CENTRE DE SANTE, MAGASIN DE STOCKAGE, INFRASTRUCTURES COMMUNAUTAIRES) DANS LES COMMUNES DE KOUSSERI, MAKARY ET LOGON",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479925",
+          "source": "World Bank"
+        },
+        {
+          "title": "TRAVAUX DE CONSTRUCTION/REHABILITATION DES INFRASTRUCTURES SOCIO-ECONOMIQUES (ECOLES, MAGASIN DE STOCKAGE, INFRA COMMUNAUTAIRES ET PASTORALES) DANS LES COMMUNES MORA ET WAZA (DEPARTEMENTS DU MAYO SAVA ET DU LOGONE ET CHA",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479936",
+          "source": "World Bank"
+        },
+        {
+          "title": "RÉALISATION DES POINTS D’EAU (MINI-ADDUCTION EN EAU POTABLE À ÉNERGIE SOLAIRE, FORAGES) DANS LES COMMUNES (KOUSSERI, MAKARY ET LOGONE BIRNI) DANS LE DEPARTEMENT DU LOGONE ET CHARI",
+          "deadline": "2026-12-16",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482120",
+          "source": "World Bank"
+        },
+        {
+          "title": "RÉALISATION DES POINTS D’EAU (MINI-ADDUCTION EN EAU POTABLE À ÉNERGIE SOLAIRE, FORAGES) DANS LES COMMUNES (MORA ET WAZA) DANS LES DEPARTEMENTS DU MAYO SAVA ET LOGONE ET CHARI",
+          "deadline": "2026-12-17",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482131",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "PHI UNIVERSITY CLINIC FOR CARDIOLOGY AND CARDIOVASCULAR SURGERY NATIONAL CENTER FOR CARDIOVASCULAR DISEASES",
+      "source_backed_notice_count": 4,
+      "notices": [
+        {
+          "title": "Medical equipments, pharmaceuticals and personal care products – Consumable material for intravascular lithotripsy for calcified stenoses",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/741977-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Medical equipments, pharmaceuticals and personal care products – Consumable, centrifugal pump head with tubing for ECMO machine and oxygenators for ECMO machine.",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/742460-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Medical equipments, pharmaceuticals and personal care products – Medical devices and medical consumables for interventional cardiology – stents and distal embolic protection.",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/743838-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Medical equipments, pharmaceuticals and personal care products – Integrated systemic perfusion system designed for an extracorporeal circulation machine.",
+          "deadline": "2026-12-07",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/778035-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MT",
+      "procurement_entity": "Department of Contracts",
+      "source_backed_notice_count": 4,
+      "notices": [
+        {
+          "title": "Parcel delivery services – CT2390/2026 - Framework Contract for the Provision of Outsourced Genetic Testing Service (Re-Issue)",
+          "deadline": "2026-11-26",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/735154-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Site preparation work – CT3056/2026 - TENDER FOR THE DESIGN, BUILD, SUPPLY AND INSTALLATION OF AN ENERGY EFFICIENT AND ENVIRONMENTALLY SUSTAINABLE FOOD INNOVATION HUB FOR THE MALTA FOOD AGENCY",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/738133-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Supply services of office personnel – CT2381/2026 - SERVICES – TENDER FOR THE PROVISION OF SECURITY SERVICES FOR THE COURT SERVICES AGENCY",
+          "deadline": "2026-12-01",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/731522-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Medical equipments, pharmaceuticals and personal care products – CT2197/2026 - FRAMEWORK CONTRACT FOR THE SUPPLY OF TOTAL KNEE REPLACEMENT SYSTEM PPU",
+          "deadline": "2026-12-04",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/741722-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "National Road Authority",
+      "source_backed_notice_count": 4,
+      "notices": [
+        {
+          "title": "Supervision of the Construction of substructures and installation of Metallic bridges in Zambezia province",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478688",
+          "source": "World Bank"
+        },
+        {
+          "title": "Rehabilitation of the N1 Corridor, Chimuara - Nicoadala Lot 2 (88 - 165km) Design and Build Road Project in Zambézia Province",
+          "deadline": "2026-12-22",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478521",
+          "source": "World Bank"
+        },
+        {
+          "title": "Rehabilitation of the N1 Corridor, Metoro - Pemba (94 km) Design and Build Road Project in Cabo Delgado Province",
+          "deadline": "2027-01-05",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479832",
+          "source": "World Bank"
+        },
+        {
+          "title": "Rehabilitation of the N1 Corridor, Inchope - Gorongosa (70 km) Design and Build Road Project in Sofala Province",
+          "deadline": "2027-01-05",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480107",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ET",
+      "procurement_entity": "Somali Regional Project Coordination Unit",
+      "source_backed_notice_count": 3,
+      "notices": [
+        {
+          "title": "Consultancy service for Feasibility Study & Detail Designs for Nine (9) Groundwater Investigation for Borehole Drilling of Harwo,Dambal(two sites),Hadagalo, Shilabo (two sites),Lagahida, Mayumuluko & Dunyar project wored",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481408",
+          "source": "World Bank"
+        },
+        {
+          "title": "\"Consultancy service for Feasibility Study & Detail Designs for Medium Span Bridges and Gravel Access Road in Aware, Kubi, Hadagalo & Hamaro and Guredamole, Mubarak, El-Ogaden, Hararey, Dambal & Shilabo Projects Woredas ",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481406",
+          "source": "World Bank"
+        },
+        {
+          "title": "Consultancy service for Feasibility Study & Detail Designs for Nine (9) Groundwater Investigation for Borehole Drilling of Bilcilbur,Dagahmadow,Goljano,Shabeley, Danot(two sites),Kohle, Mula & Daror project woredas",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481417",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "GA",
+      "procurement_entity": "COMMISSION NATIONALE DES TIPPEE",
+      "source_backed_notice_count": 3,
+      "notices": [
+        {
+          "title": "Évaluation stratégique environnementale et sociale SESA）",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480832",
+          "source": "World Bank"
+        },
+        {
+          "title": "Étude sur le plan national d'électrification géolocalisée à moindre coût au Gabon pour un accès universel à l’électricité",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482232",
+          "source": "World Bank"
+        },
+        {
+          "title": "Câblage et interconnexion des bâtiments du Ministère de la Planification et de la prospective",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481677",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "PK",
+      "procurement_entity": "Project Management Unit, School Education Department, Government of Balochistan",
+      "source_backed_notice_count": 3,
+      "notices": [
+        {
+          "title": "Procurement of School Furniture for ECE Classrooms under STEP-B.",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480066",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement of ECE-TLM for ECE Classrooms under STEP-B.",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480064",
+          "source": "World Bank"
+        },
+        {
+          "title": "Engagement of a Third-Party Validation (TPV) Firm for Verification of Community-Based School Sites Identified by District Education Groups (DEGs)",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481056",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UG",
+      "procurement_entity": "Ministry of Education and Sports",
+      "source_backed_notice_count": 3,
+      "notices": [
+        {
+          "title": "Construction and Rehabilitation of Buhungiro Technical School in Isingiro District under Uganda Skills Development in Refugee and Host Communities (USDRH) Project",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479942",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction and Rehabilitation of Inde Technical School in Madi-Okollo District under Uganda Skills Development in Refugee and Host Communities (USDRH) Project",
+          "deadline": "2026-12-01",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479939",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction and Rehabilitation of Omugo Technical School in Terego District under Uganda Skills Development in Refugee and Host Communities (USDRH) Project",
+          "deadline": "2026-12-01",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479940",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AL",
+      "procurement_entity": "Ministry of Agriculture and Rural Development",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Supply of Equipment for Three AKU Laboratories",
+          "deadline": "2026-12-21",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479273",
+          "source": "World Bank"
+        },
+        {
+          "title": "Two Drainage Pumping Stations upgrade and modernization",
+          "deadline": "2026-12-28",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480669",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BZ",
+      "procurement_entity": "SOCIAL INVESTMENT FUND",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Supply and delivery of Tractors and small machinery for MAFSNGI Central Farm and SIRDI.",
+          "deadline": "2026-12-07",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477520",
+          "source": "World Bank"
+        },
+        {
+          "title": "Supply and delivery of additional biological agents for SIRDI.",
+          "deadline": "2026-12-08",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477506",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "CD",
+      "procurement_entity": "Ministry of Entrepreneurship and Small Medium Enterprises",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Sélection de deux ONG pour la Mise en œuvre des activités de prévention et réponse aux EAS/HS liés au Projet sur les villes du Lobito",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481784",
+          "source": "World Bank"
+        },
+        {
+          "title": "Acquisition et installation d'équipements de production et d'autonomie énergétique (Kit photovoltaïque et Générateur) au profit du Centre de PME MAZZARELLO de Mbuji-Mayi (Province du Kasaï Oriental)",
+          "deadline": "2026-12-15",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481930",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "CN",
+      "procurement_entity": "Foreign Debt Management Office, Shaanxi Provincial DRC",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Procurement of collection and transfer vehicles and equipment for collection points in the Chuanyuan and Xishan areas and transfer stations in the urban area of Chencang District。",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480178",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement of Equipment for Garbage Classification Publicity and Promotion Activities in Chengguan Town, Liulin Town and Chencun Town (Pilot)",
+          "deadline": "2026-12-01",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00458971",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "EG",
+      "procurement_entity": "Micro Small and Medium Enterprises Development Agency",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Integrated Security Monitoring and Cloud Licensing Solution",
+          "deadline": "2026-12-01",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482050",
+          "source": "World Bank"
+        },
+        {
+          "title": "Network, Wireless and NAC Solution",
+          "deadline": "2026-12-01",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482048",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ES",
+      "procurement_entity": "Ayuntamiento de Errenteria - Ayuntamiento de Errenteria",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Street-cleaning and sweeping services – Servicio de limpieza viaria y de recogida y transporte de residuos urbanos en Errenteria",
+          "deadline": "2026-11-27",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/749904-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Street-cleaning and sweeping services – Servicio de limpieza viaria y de recogida y transporte de residuos urbanos en Errenteria",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/756356-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "FR",
+      "procurement_entity": "Etablissement public territorial Grand Orly Seine Bièvre",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Sewerage work – Travaux d'entretien et opérations programmées sur les infrastructures de voirie et l'assainissement de l'Établissement Public Territorial Grand-Orly Seine Bièvre",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/745006-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Installation of traffic monitoring equipment – Marché global de performance incluant la conception, l'exploitation, la maintenance et la rénovation des installations d'éclairage public et de signalisation lumineuse trico",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/747021-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "SUPPLY CHAIN COORDINATION LIMITED",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Infant Feeding and Associated Accessories",
+          "deadline": "2027-01-13",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108334-2026",
+          "source": "UK Find a Tender"
+        },
+        {
+          "title": "Vascular Therapy and Associated Products 2028",
+          "deadline": "2027-01-19",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109328-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GY",
+      "procurement_entity": "Health Sector Development Unit - Ministry of Health",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Supply, Delivery, and Installation of IT Equipment and Accessories in lots: Lot 1: Laptop Computers & Accessories Lot 2: Desktop computers & Monitors Lot 3: Printers Lot 4: IT equipment & Accessories",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479159",
+          "source": "World Bank"
+        },
+        {
+          "title": "Supply and Delivery of (5) Road Ambulances",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478163",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "IN",
+      "procurement_entity": "Assam Disaster Risk Management Agency",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Civil Works for Material Bank at 09 (nine) locations (Barnagar, Dergaon, Golaghat, Khumtai, Ujoni Majuli, Dhakuakhana, Nowboicha, Nazira, Sivasagar, Katigorah & Maibang) in Assam under AIRBMP",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482039",
+          "source": "World Bank"
+        },
+        {
+          "title": "Supply, Installation and Commissioning of ESE type Lightning Arrester for Assam State Disaster Management Authority (ASDMA) under Assam Integrated River Basis Management Program (AIRBMP)",
+          "deadline": "2026-12-01",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482034",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "IN",
+      "procurement_entity": "Department of Health and Family Welfare, West Bengal",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Knowledge Attitude and Practice (KAP) Assessment – linked to Social and Behavior Change Communication (SBCC)",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482342",
+          "source": "World Bank"
+        },
+        {
+          "title": "WHO STEP-wise approach to NCD risk factor surveillance (STEPS) Survey for NCD (round 1)",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482326",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "KE",
+      "procurement_entity": "Ministry of Transport and Infrastructure",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Consulting Services for Technical Assistance in the Customization of Human Resources Management Instruments for Seventy-Nine (79) Cities/Municipalities in Kenya",
+          "deadline": "2026-12-02",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478446",
+          "source": "World Bank"
+        },
+        {
+          "title": "Consulting Services for Municipality-Wide Road and Storm Water Infrastructure Master Planning and Identification of Two (2) Priority Road Corridors And Associated Storm Water Drainage & NMT Systems for Dadaab-Hagadera an",
+          "deadline": "2026-12-02",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478442",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "KH",
+      "procurement_entity": "Ministry of Education Youth and Sport",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Construction of a complex building at ITC",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00476260",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction of Training and Incubation Building (NUBB-TIB) for Student Learning and Practicing",
+          "deadline": "2026-12-08",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479553",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "KM",
+      "procurement_entity": "Comoros National Water Resilience Project",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Acquisition d’un véhicule de type pick-up et de deux (02) motos au profit de l’ARSEE",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481473",
+          "source": "World Bank"
+        },
+        {
+          "title": "Travaux de rénovation et de déviation des conduites d'eau potable à Moroni",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480655",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LB",
+      "procurement_entity": "Council for Development and Reconstruction",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Complementary Works for the Expansion of the Sewage Collection Network to Connect to the Zahle & Aitanit Wastewater Treatment Plants",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477790",
+          "source": "World Bank"
+        },
+        {
+          "title": "Upgrading the Ministry of Agricultural Kfarshima Laboratories (Supply of Spare Parts and New Machinery, Maintenance Services, and Execution of Minor Rehabilitation Works).",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478291",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LK",
+      "procurement_entity": "Ministry of Transport, Highways and Urban Development",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Consultancy Services for Detailed Design and Construction Supervision for Arugambay Cluster development",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478876",
+          "source": "World Bank"
+        },
+        {
+          "title": "Consultancy Services for Preparation of Regional Development Plans for the Northern and Eastern Provinces.",
+          "deadline": "2026-12-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482290",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LS",
+      "procurement_entity": "Ministry of Social Development",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Supply and Delivery of Wheelchairs and other assistive devices for 8 Districts and MO-RATE",
+          "deadline": "2026-12-08",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481734",
+          "source": "World Bank"
+        },
+        {
+          "title": "Supply and fitting of orthotics, raised shoes, callipers and other associated devices for Beneficiaries nationwide",
+          "deadline": "2026-12-15",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481738",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MD",
+      "procurement_entity": "National Office for Infrastructure Development \"Moldova-Project\"",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Architectural design services – Technical Design Services for the Capital Repair and Reconfiguration of IP “Luceafarul” Theoretical High School, Vulcanesti",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/725898-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Architectural design services – Technical Design Services for the Reconstruction and Reconfiguration of Student Dormitory No. 7, Moldovan Academy of Economic Studies",
+          "deadline": "2026-12-18",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/788725-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "ME",
+      "procurement_entity": "Ministry of Finance-Technical Service Unit",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Development of a National Strategy and Implementation Roadmap for Montenegro's Participation in Euro system TARGET Services",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480968",
+          "source": "World Bank"
+        },
+        {
+          "title": "National Municipal Waste Composition Study for Montenegro (with a Chapter 33 Plastic Own Resource Module)",
+          "deadline": "2026-12-02",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482106",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "Ministry of Health of the Republic of North Macedonia",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Influenza vaccines – “Free Influenza Vaccination for the 2026/2027 Season for Risk Groups” – Seasonal Influenza Vaccines",
+          "deadline": "2026-11-26",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/779352-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Pharmaceutical articles – Medicinal Products for the Treatment of Rare Diseases in the Republic of North Macedonia for the Period May 2026 – December 2028",
+          "deadline": "2026-12-09",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/782494-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "Ministry of Justice – Directorate for Execution of Sanctions",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Construction work – Construction of Facilities in the Central Service Unit, Pre­trial Unit and Closed Unit and Infrastructure at Idrizovo Correctional Facility (Segment II Stage 1)",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/789384-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "System maintenance services – Procurement of Services for the Maintenance of Information Technology Equipment for Electronic Monitoring in the Implementation of House Arrest or Conditional Release, for the Needs of the D",
+          "deadline": "2026-12-02",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/763868-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "Housing Development Fund",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Contract for the paving of the Pemba road corridor, with a length of 5.7 km.",
+          "deadline": "2026-12-29",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481600",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contracting of Works for the Construction of Four Schools in Nampula Province",
+          "deadline": "2026-12-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481596",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "Ministry of Transport and Communications",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Construction of Houses for the Resettlement of Those Affected by the BRT Works (RAP)",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479063",
+          "source": "World Bank"
+        },
+        {
+          "title": "Consultancy Services for Detailed Engineering Design for Construction of Municipal Roads and Stormwater System",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481009",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "Provincial Directorate of Public Works of Nampula",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Work Supervision of energy efficiency improvement in 3 selected water supply systems in Mucuali, Quixaxe and Namige, Nampula Province",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480772",
+          "source": "World Bank"
+        },
+        {
+          "title": "Works to improve the energy efficiency of 2 selected water supply systems Quixaxe and Namige, Nampula Province",
+          "deadline": "2026-12-09",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480767",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "NG",
+      "procurement_entity": "Federal Ministry of Education - IDEAS Project",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "PROCUREMENT AND DISTRIBUTION OF VOCATIONAL TRAINING STARTER KITS FOR TRAINEES OF IDEAS-TVET INITIATIVE ACROSS SIX GEOPOLITICAL ZONES OF NIGERIA. Package 1- (Creative & Personal Services + Construction, Finishing & Buildi",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480649",
+          "source": "World Bank"
+        },
+        {
+          "title": "PROCUREMENT AND DISTRIBUTION OF VOCATIONAL TRAINING STARTER KITS FOR TRAINEES OF IDEAS-TVET INITIATIVE ACROSS SIX GEOPOLITICAL ZONES OF NIGERIA- Package 2 (ICT & Electronics + Automobile) - Lot1-Lot 7",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480650",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SE",
+      "procurement_entity": "HALMSTADS KOMMUN",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Financial leasing services – Finansiell leasing",
+          "deadline": "2026-12-01",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757015-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Construction work – Entreprenad Tullkammarkajen",
+          "deadline": "2026-12-18",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757708-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "ST",
+      "procurement_entity": "Project Fiduciary and Administrative Agency",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Contratação de gabinete para desenvolver projetos detalhados de arquitetónico e infraestrutura para o desenvolvimento de 3 locais turísticos selecionados, 2 em São Tomé e 1 na RAP.",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480653",
+          "source": "World Bank"
+        },
+        {
+          "title": "Aquisição de materiais de Segurança Marítima para Pescadores Artesanais em STP e aquisição de materiais informáticos e equipamentos, para reforçar o processo de recolha, processamento, análise e divulgação de dados sobre",
+          "deadline": "2026-12-01",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480659",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SV",
+      "procurement_entity": "Ministry of Education",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Diseño e implementación de un curso especializado con metodología de talleres para Formadores de Formadores de Primera Infancia de Educación Superior",
+          "deadline": "2026-12-01",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482183",
+          "source": "World Bank"
+        },
+        {
+          "title": "Diseño e impresión de materiales educativos físicos de remediación",
+          "deadline": "2027-01-07",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481897",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TG",
+      "procurement_entity": "Agricultural Transformation Agency",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Recrutement d’un cabinet pour une assistance à l’ATA dans les activités de planification, suivi évaluation, gestion fiduciaire, de sauvegarde environnementale et sociale, audit interne, gestion des ressources humaines, i",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479577",
+          "source": "World Bank"
+        },
+        {
+          "title": "Recrutement d’un consultant pour la réalisation d’une étude diagnostique des risques agricoles et de l’assurance agricole au Togo et l’élaboration d’une stratégie de promotion de l’assurance agricole",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479574",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "Main Department of the State Emergency Service of Ukraine in Volyn region",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Heavy-duty motor vehicles – Heavy-duty motor vehicles cod DK 021:2015 ­ 34140000­0 (Medium-class all-terrain fire tanker with a tank of at least 3000 l)",
+          "deadline": "2027-01-05",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/759913-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Heavy-duty motor vehicles – Heavy-duty motor vehicles cod DK 021:2015 - 34140000-0 (Medium-class all-terrain fire tanker with a tank of at least 3000 l)",
+          "deadline": "2027-01-05",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757063-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "UZ",
+      "procurement_entity": "Project Management Unit (PMU) under The Statistics Agency",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Procure of solar panels for the NSC and regional departments",
+          "deadline": "2026-12-14",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481179",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procure vehicles for regional departments of NSC",
+          "deadline": "2026-12-14",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481138",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AL",
+      "procurement_entity": "Regional Hospital \"Omer Nishani\" Gjirokaster",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Tomography devices – Supply of a Multi-Slice Computed Tomography (CT) Scanner",
+          "deadline": "2026-12-28",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/747286-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "AM",
+      "procurement_entity": "Armenian Territorial Development Fund",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consulting Services for the Tourism and Regional Infrastructure Program (TRIP) Project Appraisal",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480874",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AM",
+      "procurement_entity": "Water Committee under the Ministry of Territorial Administration and Infrastructure",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Feasibility Study, Preparation of Preliminary and Detailed Designs, Bidding Documents, Technical Supervision for Irrigation Systems",
+          "deadline": "2026-12-15",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480348",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AO",
+      "procurement_entity": "Ministry of Education, Planning Studies and Statistics Unit, Angola Learning for All Project",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Contratação de Empreitada para Construção de 1 Escolas do Tipo T12 do I Ciclo do Ensino Secundário na Província de Lunda Sul, 2 Escolas do Tipo T12 do I Ciclo do Ensino Secundário na Província do Moxico e 1 Escola na Pro",
+          "deadline": "2026-12-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478074",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AO",
+      "procurement_entity": "National Agency for Land Transportation",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Contratação de uma Firma para efectuar Estudos de Demanda e a Avaliação de Impacto Laboral.",
+          "deadline": "2026-12-03",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482207",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AO",
+      "procurement_entity": "National Statistics Institute",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Contratação de Firma para Campanha Publicitaria e Divulgação de Eventos",
+          "deadline": "2026-12-21",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480249",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AO",
+      "procurement_entity": "Territorial Administration Ministry",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Contratação de uma firma para a reabilitação das Naves da área administrativa Base logística do Ministério da Administração do Território",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479864",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AR",
+      "procurement_entity": "Ministerio de Ambiente y Cambio Climático de la Provincia de Jujuy",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Miscellaneous general and special-purpose machinery – 4ta Adquisición de Equipos — GIRSU Jujuy",
+          "deadline": "2027-01-05",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/801093-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "AT",
+      "procurement_entity": "IT-Services der Sozialversicherung GmbH",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Business services: law, marketing, consulting, recruitment, printing and security – Organisationsberatung 2026",
+          "deadline": "2026-12-07",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/755708-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BA",
+      "procurement_entity": "Public Institution Healthcare center Ljubuški",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Medical equipments – Contract notice- supply for digital x-ray and 4D ultrasound with gynecological probe",
+          "deadline": "2026-12-14",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/713440-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BB",
+      "procurement_entity": "United Nations Office for Project Services (UNOPS)",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Rubbish compactors – Procurement of waste compactors and forklifts for the Queen Elizabeth Hospital in Barbados",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/781001-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BD",
+      "procurement_entity": "Chattogram Water Supply and Sewerage Authority",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction, Design, Supply, Installation, Testing & Commissioning for System Improvement and DMA Formation of Lot-1) MOHARA Water Supply System and Lot-2) Modunaghat and Kalurghat Water Supply System",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00456235",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BD",
+      "procurement_entity": "Department of Environment",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Development of Turtle Hatchery for Conservation",
+          "deadline": "2026-11-29",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481750",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BD",
+      "procurement_entity": "Directorate of Secondary and Higher Education",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Review of Multimedia Classroom Program & Need Assessment for ICT Training Focusing AI",
+          "deadline": "2026-12-09",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479209",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BD",
+      "procurement_entity": "Local Government Engineering Department",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Supply and Installation of Early Streamer Emission Lighting Protection System in Coxs Bazar District & in Hatiya, Noakhali District.",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479212",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BE",
+      "procurement_entity": "Commission européenne, OIB - Office for Infrastructure and Logistics in Brussels",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Building completion work – Entreprise générale pour la réalisation de travaux de rénovation et de transformation ou de construction (TRT) pour les bâtiments occupés/gérés par la Commission",
+          "deadline": "2026-12-01",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/744420-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BE",
+      "procurement_entity": "European Commission, DG BUDG - Budget",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Belgium, Latvia, Germany, France, Romania, Denmark, Spain, Italy, Ireland, Luxembourg, Slovakia, Hungary, Malta, Netherlands, Greece, Austria, Slovenia, Estonia, Portugal – IT services: consulting, software development, ",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/755875-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BE",
+      "procurement_entity": "European Commission, DG JUST - Justice and Consumers",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Services furnished by business, professional and specialist organisations – AccessibleEU - phase II",
+          "deadline": "2026-12-16",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/742110-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BE",
+      "procurement_entity": "European Commission, DG MOVE - Mobility and Transport",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Economic impact assessment – Framework Contract for Impact Assessment and Evaluation Support Studies in the Field of Transport and Tourism",
+          "deadline": "2026-12-16",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/749359-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BE",
+      "procurement_entity": "European Commission, DG REGIO - Regional and Urban Policy",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Business and management consultancy and related services – Comprehensive management of Transition and Resilience Platform (TRP) (2026CE160AT107)",
+          "deadline": "2027-01-12",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757807-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BE",
+      "procurement_entity": "European Defence Agency",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Telecommunications services – Service FWC for the Provision of Satellite Communication, related Services and Supplies (26.ISE.JP.001)",
+          "deadline": "2027-01-22",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/732645-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BE",
+      "procurement_entity": "European Parliament, SG - Directorate-General for Infrastructure and Logistics",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction work – AO 26 023 — Contrat cadre de Travaux de Techniques Spéciales dans les bâtiments du Parlement européen à Bruxelles",
+          "deadline": "2026-11-25",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/735167-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "BI",
+      "procurement_entity": "Ministry of Infrastructure, Equipment and Social Housing",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Fourniture d' équipements TIC , de bureau et pour entretien pour les communes , OBUHA,OGR ( SP/CNF), SFC",
+          "deadline": "2026-12-14",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481726",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BR",
+      "procurement_entity": "Secretariat of Infrastructure of the State of Bahia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Operacionalização e Manutenção do Sistema de Planejamento de Logística de Transportes",
+          "deadline": "2026-12-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480604",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BR",
+      "procurement_entity": "Special Secretariat of Planning, Budget, and Innovation",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Aquisição de mobiliário mesas e cadeiras e ventiladores para os Cursos Piloto de Habilidades Digitais",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479641",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BR",
+      "procurement_entity": "State Secretariat of Finance of Alagoas",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "RH 2 - Empresa de consultoria para realização de diagnóstico arquivístico, dimensionamento da massa documental, elaboração da estratégia tecnológica e apoio técnico à futura contratação de serviços de digitalização dos r",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00461095",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BT",
+      "procurement_entity": "GovTech Agency",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Supply, Installation, and Commissioning of Last-Mile Connectivity Infrastructure and Local Area Network (LAN)",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00469659",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BT",
+      "procurement_entity": "Ministry of Agriculture and Livestock",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of food processing technology for National Post Harvest Center ( NPHC)",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481763",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BT",
+      "procurement_entity": "Ministry of Infrastructure and Transport",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "SUPPLY AND DELIVERY OF SURVEY EQUIPMENT AND SOFTWARE",
+          "deadline": "2026-12-14",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481703",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "CI",
+      "procurement_entity": "Ministry of Digital Transition and Technological Innovation",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Recrutement de cabinet pour le renforcement des capacités de 5500 fonctionnaires et agents de l'Etat en compétences numériques intermédiaires",
+          "deadline": "2026-12-03",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481598",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "CI",
+      "procurement_entity": "Office Nationale de l'Eau Potable",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Travaux de renforcement de l’alimentation en eau potable des villes de Korhogo, Ferkessédougou, Napié et localités environnantes",
+          "deadline": "2026-12-29",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481956",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "CY",
+      "procurement_entity": "Electricity Authority of Cyprus",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Electric motors, generators and transformers – 025/2026 Supply of Ground Mounted Distribution Transformers",
+          "deadline": "2026-12-02",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/730484-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DE",
+      "procurement_entity": "European Union Aviation Safety Agency",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "IT services: consulting, software development, Internet and support – ECCAIRS.2 - E2 MIDAS - Maintenance, Infrastructure, Development and Application Support",
+          "deadline": "2026-12-04",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/746419-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DJ",
+      "procurement_entity": "Ministry of Economy and Finances in charge of Industry",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Recrutement d'un agence de vérification indépendante des résultats.",
+          "deadline": "2026-12-08",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481634",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Aalborg Service A/S",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction structures and materials; auxiliary products to construction (except electric apparatus) – Rammeaftale - prærør og muffemontage til Aalborg Forsyning",
+          "deadline": "2026-12-03",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/756119-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Danish Ministry of Defence Acquisition and Logistics Organisation",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Installation services (except software) – El- og Smedearbejde til Forsvarets sejlende enheder",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/763160-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Ishøj Kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Health and social work services – Genudbud af hjemmepleje og helhedspleje i Ishøj kommune",
+          "deadline": "2026-12-01",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757774-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Københavns Kommune - Økonomiforvaltningen",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Printing and related services – Fællesudbud af trykkeriydelser (2027)",
+          "deadline": "2026-11-25",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/741661-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Mariagerfjord kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Feasibility study, advisory service, analysis – Udbud af konsulenter til lavbunds- og vådområdeprojekter indenfor Grøn Trepart",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/751219-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Odense Kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Road-maintenance works – Belægninger-åbent land",
+          "deadline": "2026-12-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/753627-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Randers Kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Surface work for roads – Asfaltudbud Randers Kommune - Rammeaftale 2027-2028",
+          "deadline": "2026-12-01",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/748188-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Skanderborg kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Washing and dry-cleaning services – Vask, leje og levering af linned til Jysk Fællesindkøb",
+          "deadline": "2026-11-25",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/742654-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "DK",
+      "procurement_entity": "Tårnby Kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Washing and dry-cleaning services – Kontrakt for vask og leje (2026)",
+          "deadline": "2026-11-29",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/761045-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "EG",
+      "procurement_entity": "Egyptian Environmental Affairs Agency",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "HCW treatment units for Ain Shams, French Kaser alainy hospitals, and Eldemerash",
+          "deadline": "2027-01-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479721",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ES",
+      "procurement_entity": "Alcaldía del Ayuntamiento de la Villa de La Orotava",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Refuse and waste related services – Servicio de Recogida de Residuos Domésticos (Fracción resto, orgánica, papel/cartón, envases, voluminosos y aceites domésticos) y Limpieza Viaria",
+          "deadline": "2026-12-04",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/759181-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "ES",
+      "procurement_entity": "Consejería de Sanidad del Gobierno de Canarias",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Cleaning services – Servicio de limpieza, desinfección y prestaciones auxiliares del Complejo Hospitalario Universitario Nuestra Señora de Candelariaperteneciente al Servicio Canario de la Salud",
+          "deadline": "2026-11-26",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/749141-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "ES",
+      "procurement_entity": "Área de Gobierno de Urbanismo, Medio Ambiente y Movilidad del Ayuntamiento de Madrid",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Refuse disposal and treatment – Contrato mixto de servicio de recuperación y adecuación de materiales procedentes del tratamiento de residuos domésticos y ejecución de obras de mejora en el Centro de Tratamiento de Las D",
+          "deadline": "2026-12-14",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757976-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "ET",
+      "procurement_entity": "Agricultural Transformation Institute",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of ICT Equipment (Smart Mobile Phones, Laptops, Desktop,Tablets Computers, UPS, Air Conditioners, Solar power system and Wi-Fi Dongles) for Digital Output Tracking System (DOTS) and for Digital Contract Farmi",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481880",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "FR",
+      "procurement_entity": "CENTRE HOSPITALIER REGIONAL UNIVERSITAIRE DE NANCY",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Dairy products – FOURNITURE DE PRODUITS LAITIERS ET OVOPRODUITS",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/754938-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "FR",
+      "procurement_entity": "Direction générale de l'administration pénitentiaire",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Miscellaneous food products – Approvisionnement des produits de cantine des établissements pénitentiaires",
+          "deadline": "2026-12-15",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/751046-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Birmingham City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "P3435 - A38 New Cycle Route",
+          "deadline": "2027-01-15",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109187-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Carmarthenshire County Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "South West Wales Regional Civil Engineering Contractors Framework 2027",
+          "deadline": "2026-12-03",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109446-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Central Bedfordshire Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "CBC-2107-FW-SK -  Alternative Education and Provision",
+          "deadline": "2026-12-16",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108613-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "City & County of Swansea",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Framework Agreement for the Supply and Delivery of Electrical Goods and Associated Materials",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109757-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Colchester City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "GB-Colchester: 0509-PA - Replacement Windows & Doors of Housing Stock",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/6406ee4d-d158-4ae1-81d9-c874094fbd10",
+          "source": "UK Contracts Finder"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Herefordshire Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Tender for Residential and Nursing Care Home Partnership Framework in Herefordshire",
+          "deadline": "2027-01-04",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108686-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Hertfordshire County Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "TPPL & HCC Vehicle Purchase Framework 2027",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108528-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Ipswich Borough Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Planned Maintenance Contract",
+          "deadline": "2026-12-04",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109105-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "KBS Maritime Ltd",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Crane Provision Framework",
+          "deadline": "2026-12-03",
+          "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/60a48dfe-b2c0-461e-a34c-50e398cc9c9a",
+          "source": "UK Contracts Finder"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Lancashire County Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Plant & Vehicle Hire (Operated & Non-Operated) and Associated Services",
+          "deadline": "2026-11-27",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108622-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Leicester City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "PAN3556 - The provision of Housing Related Accommodation Based Support for Homeless Households",
+          "deadline": "2027-01-12",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108967-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Leicestershire County Council, trading as ESPO",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "509_27 Parking Management Solutions",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109370-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Lisburn and Castlereagh City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Project management consultancy services – T26/27-008 PEACE PLUS - Celebrating Us",
+          "deadline": "2026-11-27",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/750759-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "London Borough of Harrow",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Home Care Framework Tender",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108319-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Metropolitan borough of Bury",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Millgate Shopping Centre Re-Development",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109401-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Milton Keynes City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Parking Services Contract 2027",
+          "deadline": "2027-01-25",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109463-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "NETWORK RAIL INFRASTRUCTURE LIMITED",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Aerial Services including asset inspection and surveys",
+          "deadline": "2026-12-17",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108455-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "North Lanarkshire Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Flexible Framework for Early Learning and Childcare Services in North Lanarkshire 2027-2031",
+          "deadline": "2026-12-11",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109942-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "NORTHERN TRAINS LIMITED",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Provision of Customer Information Solution (CIS) Software, Support & Maintenance",
+          "deadline": "2026-12-14",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108683-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Oldham Metropolitan Borough Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Extra Care Housing Support Services",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110081-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Regional Business Services Organisation Procurement and Logistics Service",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Health and social work services – CAWT PEACEPLUS EASY Project: Early Intervention Support for Children, Young People and Families presenting with Neurodevelopmental Needs (SHSCT Area)",
+          "deadline": "2026-12-03",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/770442-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Scottish Borders Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Road Materials, Aggregates (Dry) & Ready-Mix Cement Framework Agreement",
+          "deadline": "2027-01-05",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110019-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Scottish Government",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "General Office Supplies 2027",
+          "deadline": "2026-12-17",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108333-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "SEVERN TRENT WATER LIMITED",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Active Gas Capture (Digested Sludge Degassing) Solutions",
+          "deadline": "2027-01-15",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108704-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Shropshire Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Shropshire 0-25 Public Health Nursing Service (PHNS)",
+          "deadline": "2026-12-21",
+          "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/24d33f16-5423-43b8-9aec-68e19200e363",
+          "source": "UK Contracts Finder"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Sizewell C Limited",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "SZC CWA - Pool Bunker Construction",
+          "deadline": "2026-11-25",
+          "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/0a92843d-9da8-4c16-b682-33b5d72727db",
+          "source": "UK Contracts Finder"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "St Helens Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "021707 - St Helens Healthy Child Programme 0-19 years",
+          "deadline": "2026-12-14",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108616-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "The Association of North East Councils Limited (NEPO)",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Retrofit and Energy Efficiency Works",
+          "deadline": "2027-01-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109811-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "The Common Services Agency (more commonly known as Public Services Delivery Scotland) (PSD Scotland)",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "NP50427 - Ophthalmology Consumables and Associated Equipment",
+          "deadline": "2026-12-16",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108491-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "The Council of the Borough of Kirklees",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Framework for the Provision of Electrical Works and Goods",
+          "deadline": "2027-01-06",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109207-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "The Council of the City of Wakefield",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Flexible Framework Agreement for the Provision of Home Care Services",
+          "deadline": "2026-12-14",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108685-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Thurrock Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Principal Contractor for the Redevelopment and Improvement Works to Construct 33 Affordable Homes at Broxburn Drive, South Ockendon",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109681-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "United Kingdom National Nuclear Laboratory",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "NNLC703F - Fabrication, Machining, Associated Supplies and Services Open Framework",
+          "deadline": "2026-12-15",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109622-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "UNIVERSITY HOSPITALS COVENTRY AND WARWICKSHIRE NHS TRUST",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "CWPS - Pathology Sample Transportation",
+          "deadline": "2027-01-08",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109502-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "V V B Engineering (UK) Ltd",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Provision of BMS System MEICA-BMS-01",
+          "deadline": "2026-11-25",
+          "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/4b0cfa78-7a75-418d-a17d-4af9633137b7",
+          "source": "UK Contracts Finder"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "VIRANO FRAMEWORKS LTD",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Virano - ICT Framework",
+          "deadline": "2026-12-15",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108588-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "VIVO DEFENCE SERVICES LIMITED",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "MOD FM Maintenance East Anglia",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/afd07786-47ca-48b3-9ea9-8518b0e5a29a",
+          "source": "UK Contracts Finder"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Westminster City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "P762 Westminster City Council - Waste Treatment Contracts",
+          "deadline": "2027-01-04",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110004-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "WOLVERHAMPTON HOMES LIMITED",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Housing Maintenance Support Contract",
+          "deadline": "2027-01-07",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109405-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GE",
+      "procurement_entity": "Ministry of Environmental Protection and Agriculture of Georgia (MEPA)",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Design, Development, Integration, Migration, Testing, Deployment, and Support of the Preferential Agro-Credit Project System (PACPS)",
+          "deadline": "2026-12-17",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00472679",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "GE",
+      "procurement_entity": "Solid Waste Management Company of Georgia LTD",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Preparation of an Environmental and Social Impact Assessment and Associated Environmental and Social Instruments for the Proposed Hazardous Waste Treatment and Landfill Facility in Georgia",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478272",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "GH",
+      "procurement_entity": "Ghana Education Service",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of 44,100 pcs of play games materials for Early Childhood Education",
+          "deadline": "2026-12-09",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481349",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ID",
+      "procurement_entity": "Biro LPPBMN - Ministry of Transportation",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction of BRT BBMA – Cinunuk Depot",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478425",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ID",
+      "procurement_entity": "Directorate General of Health Services, Ministry of Health, Republic of Indonesia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Automated Peritoneal Dialysis (11 unit)",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481695",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ID",
+      "procurement_entity": "Directorate General of Public Health, Ministry of Health, Republic of Indonesia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of Anak Timbangan standar E2 (1 mg – 2 kg) : 36 Units",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481967",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "IE",
+      "procurement_entity": "Galway City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Health services – Galway City Council - Provision of service to operate Galway Homeless Day Centre and Temporary Emergency Accommodation Facility located on the Seamus Quirke Road,",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/741765-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "IE",
+      "procurement_entity": "South Dublin County Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Mechanical installations – CFT 4031 - Single Operator Framework for; Response Maintenance, Service and Upgrade of Various Central Heating Systems in South Dublin County Council (5 Lots)",
+          "deadline": "2026-11-27",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/754184-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "IE",
+      "procurement_entity": "The Office of Government Procurement",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Legal services – PLI143F Multi Supplier Framework for the Provision of Legal Services for Public Sector Bodies",
+          "deadline": "2026-12-03",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/739133-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "IE",
+      "procurement_entity": "Waterford City and County Council_103683",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Architectural services for building extensions – WCCC26 495 Design Team for proposed redevelopment at 25-26 O Connell Street Waterford",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757960-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "IN",
+      "procurement_entity": "Department of Energy",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Removal of debris constituting of grits/pebbles/wooden pieces/silt etc from desilting tank to aqueduct No.2 of 2x11.25MW Ganvi Power House Stage-1 deposited due to heavy flood in Ganvi khad on dated 13/08/2025",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482379",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "IN",
+      "procurement_entity": "Flood and River Erosion Management Agency of Assam - FREMAA",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consultancy Services for the Development, Stakeholder Engagement, and Finalization of the Assam State Water Policy under AIRBMP",
+          "deadline": "2026-11-21",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477970",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "JM",
+      "procurement_entity": "Ministry of Labour and Social Security",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Development of an operational framework, draft Ops Manual (or update NIS Ops Manual) for UI including emergency protocols, conduct training for MLSS staff and critical stakeholders (employers and trade unions etc).",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482493",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "JO",
+      "procurement_entity": "The Ministry of Planning & International Cooperation",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Supply, Installation, Testing, Configuration, and Integration of Next-Generation Firewall (NGFW) including Migration of Settings for MOSD",
+          "deadline": "2026-11-22",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00470245",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "KH",
+      "procurement_entity": "Ministry of Labour and Vocational Training",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consultancy Firm to Support the Upgrading of the Job Matching Portal (Digital) of the National Employment Agency and Developing the Labour Market Information System (LMIS)",
+          "deadline": "2026-12-03",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478592",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "KH",
+      "procurement_entity": "Ministry of Public Works and Transport (CRCI PMU)",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Package 01 - Civil Works for Improvement and Maintenance of 62 km of the National Road 64 through Output and Performance Based Road Contract (OPBRC)",
+          "deadline": "2027-01-05",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478224",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LA",
+      "procurement_entity": "Ministry of Public Works and Transport",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Climate Resilient Rehabilitation and Maintenance of National Road 2W Section 4",
+          "deadline": "2026-12-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478478",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LB",
+      "procurement_entity": "Ministry of Finance",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "External Audit of the Fiscal Management Project Financial Statements for TF0C3381, IBRD9644 & TF0D2231 .",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480319",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LC",
+      "procurement_entity": "Ministry of Finance, Economic Development and Youth Economy",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of Drones for the Forestry Department",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481683",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LC",
+      "procurement_entity": "Saint Lucia Air and Sea Ports Authority",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Review of Airports and Seaports Tariff",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479946",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LR",
+      "procurement_entity": "Ministry of Commerce and Industry",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Provision, Configuration, Customization, Integration, Testing, Deployment, and Operational Support for Shared Core Banking System for the Central Bank of Liberia",
+          "deadline": "2027-01-08",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480359",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LR",
+      "procurement_entity": "Ministry of Gender, Children & Social Protection",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "consulting Service for the development and rollout of a Gender-Based Management Information System (GB MIS)",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478753",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LR",
+      "procurement_entity": "Ministry of Public Works",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction of Climate Resilient Flood Mitigation Structures (Culverts, Road Drains, Drainage Channels, Foot Bridges, Maintenance Depot, etc.) in Location One: Atlantic Sub-location (New Kru Area), Northern Bushrod Isla",
+          "deadline": "2026-12-29",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481213",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LR",
+      "procurement_entity": "Public Procurement and Concessions Commission",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Acquisition of ICT Equipment, including 211 Laptop Computers and 54 printers for the roll-out and onboarding of additional 50 MACs on the e-GP platform under the Phase III implementation.",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480568",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LS",
+      "procurement_entity": "Ministry of Trade and Industry",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Master Plan for Commercialization of Delicious Fruits for LHITC",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479665",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "LU",
+      "procurement_entity": "European Commission, Publications Office",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "IT services: consulting, software development, Internet and support – EUDOR – Long-term digital preservation service",
+          "deadline": "2026-12-09",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/736656-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "LU",
+      "procurement_entity": "European Investment Bank",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Technical assistance services – Green Gateway Advisory Programme II",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/748543-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "LU",
+      "procurement_entity": "European Parliament, SG - Directorate-General for Infrastructure and Logistics",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Cupboards – Fourniture et installation de vestiaires métalliques",
+          "deadline": "2026-11-25",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/732347-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MD",
+      "procurement_entity": "Office for External Assistance Programs Management",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consulting Services for the Development of the Methodology for the Elaboration of the Interactive Map on Seismic Risk in the Republic of Moldova",
+          "deadline": "2026-12-02",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479233",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ME",
+      "procurement_entity": "Ministry of Education, Science and Innovation",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction supervision services – Provision of design and supervision services for the reconstruction works of kindergarten in Zabjelo, Podgorica, Kotor and Momisici, Podgorica.",
+          "deadline": "2026-12-04",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/790787-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "ME",
+      "procurement_entity": "Ministry of public works",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Firefighting, rescue and safety equipment – Procurement of firefighting equipment",
+          "deadline": "2026-12-22",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/725286-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MG",
+      "procurement_entity": "Road Agency",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Appui à l’ATT dans l’élaboration d’un schéma directeur de formation aux opérateurs et aux préposés en vue de professionnaliser le sous-secteur Transport Routier",
+          "deadline": "2026-12-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482392",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "Joint Stock Company for performing energy activity natural gas transmission NOMAGAS Skopje in state ownership",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Pipeline-inspection services – Inspection of the natural gas transmission system Zhidilovo–Skopje and distribution pipeline Skopje South using the in-line method, and inspection of Deve Bair–Zhidilovo (0–4 km) and distri",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/738988-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "Ministry of Defence",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Dairy products – Milk and dairy products",
+          "deadline": "2026-11-25",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/744934-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "Ministry of Environment and Physical Planning",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Electricity – Procurement of electricity",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/744870-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "Municipality of Tetovo",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Winter-maintenance vehicles – Winter Maintenance of Road Infrastructure within the Territory of the Municipality of Tetovo",
+          "deadline": "2026-12-18",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/809975-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "National Bank of the Republic of North Macedonia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction management services – Construction manager of the new National Bank building",
+          "deadline": "2026-12-01",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/792060-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "PE National Broadcasting - Skopje",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Electricity – ELECTRICITY SUPPLY",
+          "deadline": "2026-12-21",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/803977-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "PHI Clinical Hospital Tetovo",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Heating oil – Extra light household oil -1 (EL-1)",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/745020-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "PHO Centar For Public Health - Skopje",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Medical consumables – Laboratory consumables",
+          "deadline": "2026-12-14",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/790777-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "Public Health Facilility General Hospital with extended scope of practice",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Laboratory reagents – Laboratory reagents and consumables 2",
+          "deadline": "2026-12-15",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/796459-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "Public Health Institution Specialized Hospital for prevention, treatment and rehabilitation of cardiovascular diseases – Ohrid",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Angiography supplies – Procurement of goods – dispensable material for endovascular procedures on the peripheral vascular system",
+          "deadline": "2026-12-15",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/796326-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MK",
+      "procurement_entity": "University Institute of Radiology, Skopje",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Medical equipments, pharmaceuticals and personal care products – Repair and servising",
+          "deadline": "2026-12-11",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/789153-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MN",
+      "procurement_entity": "Integrated Project Implementation Unit of Ministry of Road and Transport",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Package 6: Last Mile Connectivity 14.7 km New Road Construction Works in Esunzuil Soum, Uvurkhangai Province (Re-tendering)",
+          "deadline": "2026-12-14",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480744",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MN",
+      "procurement_entity": "Ministry of Energy, Mongolia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction of Mandalgobi-Arvaikheer 220kV Double-Circuit Transmission Line (287 km) - (Three lots)",
+          "deadline": "2026-12-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477669",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MT",
+      "procurement_entity": "Water Services Corporation",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Trench-digging work – WSC/T/074/2026 - WORKS – CONSOLIDATION OF SEWER AND POTABLE WATER NETWORKS IN ENVIRONMENTALLY FRIENDLY MANNER IN XATT TA’ SAN ĠORĠ AREA – BIRŻEBBUĠA BY THE WATER SERVICES CORPORATION",
+          "deadline": "2026-11-25",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/741512-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "MV",
+      "procurement_entity": "Ministry of Environment, Climate Change and Technology",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Supply, Installation and Commissioning of 200 TB Backup Capacity Appliance Storage and Network Switch",
+          "deadline": "2026-12-17",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479225",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MV",
+      "procurement_entity": "Ministry of Homeland Security, Labour and Technology",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of equipment to monitor the Quality of Services (QoS) of mobile broadband Services",
+          "deadline": "2026-12-16",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479247",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MW",
+      "procurement_entity": "Ntchisi District Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "CONSTRUCTION AND REHABILITATION OF CHITAWO PRIMARY SCHOOL BLOCKS",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479033",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "Ministry of Health",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement and distribution of NCDs materials",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479873",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "Ministry of Transport and Logistics",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consultancy services for Assessment of Climate Vulnerability along the Nacala Corridor and Supervision of Civil Works.",
+          "deadline": "2026-12-18",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477039",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "National e-Government Institute",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "IT Equipment for ATDI (security Servers) and Interoperability Laboratory",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479380",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "Water Supply Asset Holding and Investment Fund",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consultancy Services for Detailed Engineering Design, Supervision and Environmental and Social Instruments for Water Supply and Sanitation Infrastructure for Vilanculos, Pambarra and Mapinhane",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00473532",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "NE",
+      "procurement_entity": "IMPROVING WOMEN AND GIRLS’ ACCESS TO IMPROVED HEALTH AND NUTRITION SERVICES IN PRIORITY AREAS",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Recrutement d’un cabinet chargé de l’audit externe du Projet LAFIA IYALI au titre de l’exercice 2026, de l’exercice 2027 y compris la période de clôture",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479928",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "NG",
+      "procurement_entity": "Cross River State SPIN",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "CONSULTANCY SERVICES FOR THE PREPARATION AND IMPLEMENTATION OF A RESETTLEMENT ACTION PLAN FOR THE CONSTRUCTION OF BANSARA IRRIGATION SCHEME, CROSS RIVER STATE",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480078",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "NG",
+      "procurement_entity": "LAGOS STATE SPCU",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of ICT Equipments ( 1 Nos of Desktop Computer, 25 Nos of Laptops, 463 Nos of Tablets, Digital Equipments and Tools, 1 Nos of Projector, 3600 Nos of Mobile Phones and other related Computer Accessories)",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481093",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "NG",
+      "procurement_entity": "Niger State SPIN",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consultancy services for the Preparation of the required Environmental and Social Instruments for SPIN Rabbah Irrigation Scheme in line with the disclosed Environmental and Social Management Framework (ESMF) and Resettle",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479744",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "NG",
+      "procurement_entity": "Sustainable Power and Irrigation for Nigeria (SPIN) Project Federal Ministry of Water Resources & Sanitation,",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "REHABILITATION AND MODERNIZATION OF IRRIGATION SCHEMES – LOT 1: DOMA (NASARAWA STATE) AND GALALA (BAUCHI STATE); LOT 2: KAMPE OMI (KOGI STATE) AND DUKKU LADE (KWARA STATE); LOT 3: NDIEZE (EBONYI STATE) AND ADANI (ENUGU S",
+          "deadline": "2026-12-22",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479463",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "NL",
+      "procurement_entity": "Wageningen University & Research",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Information systems and servers – Europese aanbesteding levering van Server- en Storagesystemen",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757614-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "NO",
+      "procurement_entity": "Alta kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Electricity, heating, solar and nuclear energy – Electrical power and portfolio management",
+          "deadline": "2026-11-27",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/739777-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "NO",
+      "procurement_entity": "Lillestrøm Kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Plumbing and sanitary works – Framework agreement for plumbing services.",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/739624-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "NO",
+      "procurement_entity": "NORDRE FOLLO KOMMUNE",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction work – Fløysbonn secondary school",
+          "deadline": "2026-12-07",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/741413-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "NO",
+      "procurement_entity": "Oslo kommune v/ Bymiljøetaten",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consultative engineering and construction services – 62-BYM-2026 Framework agreement for project manager services.",
+          "deadline": "2026-11-24",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/740529-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "NO",
+      "procurement_entity": "Oslo kommune v/ Økonomi- og forvaltningsetaten",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Food, beverages, tobacco and related products – Framework agreement for the procurement of food and drink - Detailed agreement",
+          "deadline": "2026-12-04",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/759720-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "NO",
+      "procurement_entity": "The Norwegian Defence Materiel Agency",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Animal products, meat and meat products – Delivery of red and white meat",
+          "deadline": "2026-12-02",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/744099-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "NO",
+      "procurement_entity": "Trondheim kommune",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Electricity – Electricity - Physical delivery and financial management of electricity.",
+          "deadline": "2026-11-23",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/733806-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "PH",
+      "procurement_entity": "Department of Agrarian Reform",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Subdivision Survey of the Collective CLOAs 2026 - C",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480409",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "PK",
+      "procurement_entity": "KP Sustainable Development Unit, Planning and Development Department",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Supply and Installation of Specialized Museum Showcases at Peshawar Museum",
+          "deadline": "2026-11-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478001",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "PK",
+      "procurement_entity": "National Health Support Program Sindh",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of IT Equipment / Gadgets for the Implementation of DHIS-2 Daily Reporting in remaining 28 Districts of Sindh",
+          "deadline": "2026-12-17",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481855",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "PT",
+      "procurement_entity": "Secretaria-Geral do Ministério da Defesa Nacional",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Software maintenance and repair services – Atualização das Licenças do Sistema Integrado de Gestão da Defesa Nacional (SIGDN) para 2027 e 2028",
+          "deadline": "2026-11-29",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/763304-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "RO",
+      "procurement_entity": "Institutul Regional de Oncologie Iasi",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Antineoplastic and immunomodulating agents – ACORD CADRU DE FURNIZARE MEDICAMENTE",
+          "deadline": "2026-12-02",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/745421-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "RS",
+      "procurement_entity": "Ministry of Education Republic of Serbia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Furniture – The procurement of furniture for the needs of the Student Dormitory in Nis within the \"Student Housing\" project",
+          "deadline": "2026-12-01",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/734907-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "RS",
+      "procurement_entity": "Ministry of Information and Telecommunications, Republic of Serbia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Transport services (excl. Waste transport) – Provision of travel management, event organization and logistical support services",
+          "deadline": "2026-12-28",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/740924-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "RS",
+      "procurement_entity": "Ministry of Interior of the Republic of Serbia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Specialised boats – Procurement of RIB and rubber boats with outboard engines and trailers for project I.D.Danube",
+          "deadline": "2027-01-19",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/806828-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "RW",
+      "procurement_entity": "Rwanda Biomedical Center - Ministry of Health",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of ambulances",
+          "deadline": "2026-12-29",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482046",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SE",
+      "procurement_entity": "Järfälla Kommun",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Eggs – Livsmedel",
+          "deadline": "2026-12-22",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/743022-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "SE",
+      "procurement_entity": "Mölndals stad",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction work – Markarbeten - Forsåker",
+          "deadline": "2026-12-15",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/753082-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "SE",
+      "procurement_entity": "Trollhättans stad",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Food, beverages, tobacco and related products – Livsmedel VästUpp 2027",
+          "deadline": "2026-12-18",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/762629-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "SE",
+      "procurement_entity": "Uddevalla kommun",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Computer equipment and supplies – Digitala enheter - VästUpp",
+          "deadline": "2026-11-26",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/741455-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "SE",
+      "procurement_entity": "Ystad Kommun",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Information technology services – IT-Partner",
+          "deadline": "2026-12-02",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/761331-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "SO",
+      "procurement_entity": "Federal Republic of Somalia, Ministry of Finance, Office of the Director General",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Vault Management System (VMS) for CBS",
+          "deadline": "2026-12-14",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480473",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SO",
+      "procurement_entity": "Ministry of Fisheries and Blue Economy of the Federal Government of Somalia",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consultancy Services for Institutional Development of Fisheries Cooperatives/Associations, Including Women's Groups in entrepreneurship and business management",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481117",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SV",
+      "procurement_entity": "Ministerio de Obras Públicas y de Transporte-DACGER",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "REHABILITACIÓN DE CENTROS EDUCATIVOS POR AFECTACIONES CAUSADAS POR EL EVENTO HIDROMETEOROLOGICO ASOCIADO A CAG DEL 14 AL 21 DE JUNIO DE 2024, A NIVEL NACIONAL",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480311",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SV",
+      "procurement_entity": "Ministry of Public Works and Transport",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Suministro de Licencias de Software para la Unidad Ejecutora del Proyecto de Transporte e Infraestructura Resiliente de El Salvador",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479461",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SY",
+      "procurement_entity": "The Public Establishment for Transmission and Distribution of Electricity",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Design, Supply and Installation of high voltage substations (total number of transformers as follows: 3x300 MVA 400/230 kV, 9x125 MVA 230/66 kV and 17x30 MVA 66/20 kV of combined transformation capacity), including the S",
+          "deadline": "2027-02-03",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480092",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TJ",
+      "procurement_entity": "STATE INSTITUTION \"Project Implementation Unit for Access to Green and Rural Development Finance\"",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction of the Training Center and the Bridge over the Varzob River",
+          "deadline": "2026-12-15",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482125",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TJ",
+      "procurement_entity": "State Unitary Enterprise Khojagii Manziliyu Kommunali of Fayzobod Region",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Sewage work – Rehabilitation of the Water Supply and Wastewater System in Fayzobod region, Tajikistan",
+          "deadline": "2026-11-27",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/721889-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "TR",
+      "procurement_entity": "Balıkesir Metropolitan Municipality",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Balıkesir Fire Brigade Disaster Management Vehicles Procurement Sub-Project",
+          "deadline": "2026-11-20",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00473154",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TR",
+      "procurement_entity": "Directorate General of Water Management",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "TÜRKİYE FLOOD AND DROUGHT MANAGEMENT PROJECT - FLOOD FORECASTING AND EARLY WARNING SYSTEM IN 6 RIVER BASINS (Marmara, Yeşilırmak, Sakarya, Batı Akdeniz, Akarçay, Burdur)",
+          "deadline": "2026-12-25",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00472980",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TR",
+      "procurement_entity": "General Directorate of European Union and Foreign Relations, Ministry of Environment Urbanization and Climate Change",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Earthmoving machinery – Supply of Equipment for Tunceli Solid WAste Management Project",
+          "deadline": "2027-01-04",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/737255-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "TR",
+      "procurement_entity": "GENERAL DIRECTORATE OF FORESTRY",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of Digital Radio Communication System",
+          "deadline": "2026-12-28",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480335",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TR",
+      "procurement_entity": "Ministry of Family and Social Services, General Directorate of Social Assistance, Frit Coordination",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Seminar organisation services – Within the period from February 2027 to May 2027, a total of three (3) distinct organisation service procurements will be carried out under the SSN-E Projects",
+          "deadline": "2027-01-11",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/786506-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "TR",
+      "procurement_entity": "Ministry of Health",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of Eye Outpatient Clinic System",
+          "deadline": "2026-12-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481326",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TR",
+      "procurement_entity": "TURKISH ELECTRICITY TRANSMISSION CORPORATION",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "154 kV Antalya – Göksu Underground Cable Connection",
+          "deadline": "2026-12-08",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477657",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TV",
+      "procurement_entity": "Ministry of Public Works, Infrastructure, Environment, Labour, Metrology and Disaster.",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Port Management Information System",
+          "deadline": "2026-12-07",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482505",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TZ",
+      "procurement_entity": "European External Action Service (EEAS)",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Travel agency, tour operator and tourist assistance services – EUDEL Tanzania - travel agency services",
+          "deadline": "2026-11-27",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/728978-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "TZ",
+      "procurement_entity": "Ministry of Livestock and Fisheries",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction and facilitation of New Administration Block, Fish Processing Building and Small Business Building at Bagamoyo Fish Market in Bagamoyo Districts",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481643",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "1 STATE FIRE AND RESCUE DEPARTMENT OF THE MAIN DEPARTMENT OF THE STATE SERVICE OF UKRAINE FOR EMERGENCIES IN VOLYN REGION",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Heavy-duty motor vehicles – Heavy-duty all-terrain fire tankers with a water tank capacity of at least 5,000 litres",
+          "deadline": "2027-01-18",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/796279-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "Kyiv School of Economics Institute",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Organization and Delivery of the Workshop under the I_CAN Training Programme in Kyiv",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481200",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "Kyivpastrans Municipal Enterprise of Kyiv City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Railway and tramway passenger coaches, and trolleybuses – Procurement of 2 New Funicular Cable Railway Cabins for Carriage of Passengers, Associated Goods and Related Services",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757544-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "Ministry for Recovery, Infrastructure and Transport of Ukraine (MRIT)",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Implementation, Analytical Support and Technical Support Services for the State Register of Damaged and Destroyed Property (RDDP)",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478344",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "Municipal Non-profit Enterprise “Andrii Novak Transcarpathian Regional Clinical Hospital” of Transcarpathian Regional Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Operating techniques – Equipment for operating rooms, complete with instruments (laparoscopic system, electrosurgical platform, holmium laser)",
+          "deadline": "2026-12-14",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/718584-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "State Agency for Restoration and Development of Infrastructure of Ukraine",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction work – Reconstruction of the Bridge at km 41+040 of the Public Road of National Importance M-15 Odesa - Reni (to Bucharest), Odesa region",
+          "deadline": "2026-11-27",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/735572-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "State Enterprise “Ukrainian Sea Ports Authority”",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of Mobile (wheeled) hydraulic material handlers",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479242",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UA",
+      "procurement_entity": "The Ministry of Education and Science of Ukraine",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of school furniture",
+          "deadline": "2026-11-26",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479385",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UG",
+      "procurement_entity": "National Information and Technology Authority - Uganda",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Design,Supply,Installation,Testing and Commissioning of Integrated Site Infrastructure and ICT Connectivity Systems for Telecenters",
+          "deadline": "2026-12-03",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480356",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "US",
+      "procurement_entity": "European External Action Service (EEAS)",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Financial and insurance services – Insurance Brokerage Services for the EU Delegation to the USA",
+          "deadline": "2026-12-09",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/747055-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "UZ",
+      "procurement_entity": "Ministry of Economy and Finance of the Republic of Uzbekistan",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Office equipment",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480482",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "WS",
+      "procurement_entity": "Central Bank of Samoa",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Diagnostic of retail payment switch and use cases",
+          "deadline": "2026-12-07",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481574",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ZM",
+      "procurement_entity": "Ministry of Tourism",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "CONSULTING SERVICES FOR THE ENGAGEMENT OF A GRANT MANAGEMENT COMPANY",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478746",
+          "source": "World Bank"
+        }
+      ]
+    }
+  ],
+  "country_count": 81
+}
