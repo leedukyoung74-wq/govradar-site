@@ -873,6 +873,28 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "CF": [
+      {
+        "name_en": "Radio Ndeke Luka",
+        "name_ko": "Radio Ndeke Luka",
+        "publisher_type": "nonprofit_newsroom",
+        "url": "https://www.radiondekeluka.org/",
+        "evidence_url": "https://www.radiondekeluka.org/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Only two distinct owned news publishers verified; 1 remaining."
+      },
+      {
+        "name_en": "Corbeau News Centrafrique",
+        "name_ko": "Corbeau News Centrafrique",
+        "publisher_type": "news_site",
+        "url": "https://corbeaunews-centrafrique.org/",
+        "evidence_url": "https://corbeaunews-centrafrique.org/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Only two distinct owned news publishers verified; 1 remaining."
+      }
+    ],
     "CG": [
       {
         "name_en": "Agence Congolaise d'Information",
@@ -1308,6 +1330,38 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "DM": [
+      {
+        "name_en": "Dominica News Online",
+        "name_ko": "Dominica News Online",
+        "publisher_type": "news_site",
+        "url": "https://dominicanewsonline.com/",
+        "evidence_url": "https://dominicanewsonline.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "DBS Radio Dominica",
+        "name_ko": "DBS Radio Dominica",
+        "publisher_type": "public_broadcaster",
+        "url": "https://dbcradio.net/",
+        "evidence_url": "https://dbcradio.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "Kairi FM",
+        "name_ko": "Kairi FM",
+        "publisher_type": "broadcaster",
+        "url": "https://kairifmlive.com/",
+        "evidence_url": "https://kairifmlive.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      }
+    ],
     "DO": [
       {
         "name_en": "Listín Diario",
@@ -1453,6 +1507,38 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "ER": [
+      {
+        "name_en": "Eritrea Ministry of Information / Shabait",
+        "name_ko": "Eritrea Ministry of Information / Shabait",
+        "publisher_type": "state_news_agency",
+        "url": "https://shabait.com/",
+        "evidence_url": "https://shabait.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "The two non-state outlets are Eritrean exile/diaspora media; domestic authorities license no private broadcasting."
+      },
+      {
+        "name_en": "Awate",
+        "name_ko": "Awate",
+        "publisher_type": "news_site",
+        "url": "https://awate.com/",
+        "evidence_url": "https://awate.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "The two non-state outlets are Eritrean exile/diaspora media; domestic authorities license no private broadcasting."
+      },
+      {
+        "name_en": "Asmarino Independent",
+        "name_ko": "Asmarino Independent",
+        "publisher_type": "news_site",
+        "url": "https://asmarino.com/",
+        "evidence_url": "https://asmarino.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "The two non-state outlets are Eritrean exile/diaspora media; domestic authorities license no private broadcasting."
+      }
+    ],
     "ES": [
       {
         "name_en": "Agencia EFE",
@@ -1567,6 +1653,28 @@
         "evidence_url": "https://fijisun.com.fj/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
+      }
+    ],
+    "FM": [
+      {
+        "name_en": "The Kaselehlie Press",
+        "name_ko": "The Kaselehlie Press",
+        "publisher_type": "newspaper",
+        "url": "https://kpress.fm/",
+        "evidence_url": "https://kpress.fm/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Micronesia Sun is headquartered in Pohnpei/FSM and covers other Pacific states as well."
+      },
+      {
+        "name_en": "Micronesia Sun",
+        "name_ko": "Micronesia Sun",
+        "publisher_type": "news_site",
+        "url": "https://micronesiasun.com/",
+        "evidence_url": "https://micronesiasun.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Micronesia Sun is headquartered in Pohnpei/FSM and covers other Pacific states as well."
       }
     ],
     "FR": [
@@ -1799,6 +1907,38 @@
         "evidence_url": "https://mediaguinee.com/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
+      }
+    ],
+    "GQ": [
+      {
+        "name_en": "Guinea Ecuatorial Press",
+        "name_ko": "Guinea Ecuatorial Press",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.guineaecuatorialpress.com/",
+        "evidence_url": "https://www.guineaecuatorialpress.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "The government portal publishes official state institutional messages; not an independent editorial news source."
+      },
+      {
+        "name_en": "Ahora EG",
+        "name_ko": "Ahora EG",
+        "publisher_type": "news_site",
+        "url": "https://ahoraeg.com/",
+        "evidence_url": "https://ahoraeg.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "The government portal publishes official state institutional messages; not an independent editorial news source."
+      },
+      {
+        "name_en": "Real Equatorial Guinea",
+        "name_ko": "Real Equatorial Guinea",
+        "publisher_type": "news_site",
+        "url": "https://www.realequatorialguinea.com/",
+        "evidence_url": "https://www.realequatorialguinea.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "The government portal publishes official state institutional messages; not an independent editorial news source."
       }
     ],
     "GR": [
@@ -2410,6 +2550,38 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "KM": [
+      {
+        "name_en": "Al-Watwan",
+        "name_ko": "Al-Watwan",
+        "publisher_type": "newspaper",
+        "url": "https://alwatwan.net/",
+        "evidence_url": "https://alwatwan.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "Comores Infos",
+        "name_ko": "Comores Infos",
+        "publisher_type": "news_site",
+        "url": "https://www.comoresinfos.net/",
+        "evidence_url": "https://www.comoresinfos.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "La Gazette des Comores",
+        "name_ko": "La Gazette des Comores",
+        "publisher_type": "newspaper",
+        "url": "https://lagazettedescomores.com/",
+        "evidence_url": "https://lagazettedescomores.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      }
+    ],
     "KN": [
       {
         "name_en": "SKNIS",
@@ -2526,6 +2698,38 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "LA": [
+      {
+        "name_en": "KPL Lao News Agency",
+        "name_ko": "KPL Lao News Agency",
+        "publisher_type": "state_news_agency",
+        "url": "https://kpl.gov.la/",
+        "evidence_url": "https://kpl.gov.la/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "Vientiane Times",
+        "name_ko": "Vientiane Times",
+        "publisher_type": "newspaper",
+        "url": "https://www.vientianetimes.org.la/",
+        "evidence_url": "https://www.vientianetimes.org.la/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "The Laotian Times",
+        "name_ko": "The Laotian Times",
+        "publisher_type": "news_site",
+        "url": "https://laotiantimes.com/",
+        "evidence_url": "https://laotiantimes.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      }
+    ],
     "LB": [
       {
         "name_en": "National News Agency Lebanon",
@@ -2582,6 +2786,38 @@
         "evidence_url": "https://www.htsstlucia.org/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
+      }
+    ],
+    "LI": [
+      {
+        "name_en": "Liechtensteiner Vaterland",
+        "name_ko": "Liechtensteiner Vaterland",
+        "publisher_type": "newspaper",
+        "url": "https://www.vaterland.li/",
+        "evidence_url": "https://www.vaterland.li/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "lie:zeit",
+        "name_ko": "lie:zeit",
+        "publisher_type": "newspaper",
+        "url": "https://www.lie-zeit.li/",
+        "evidence_url": "https://www.lie-zeit.li/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "1FLTV",
+        "name_ko": "1FLTV",
+        "publisher_type": "broadcaster",
+        "url": "https://1fl.li/wp/",
+        "evidence_url": "https://1fl.li/wp/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
       }
     ],
     "LK": [
@@ -2930,6 +3166,18 @@
         "evidence_url": "https://2424.mg/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
+      }
+    ],
+    "MH": [
+      {
+        "name_en": "Marshall Islands Journal",
+        "name_ko": "Marshall Islands Journal",
+        "publisher_type": "newspaper",
+        "url": "https://marshallislandsjournal.com/",
+        "evidence_url": "https://marshallislandsjournal.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Only one national original newspaper found; regional/global wire reprints not counted."
       }
     ],
     "MK": [
@@ -3744,6 +3992,28 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "PW": [
+      {
+        "name_en": "Island Times Palau",
+        "name_ko": "Island Times Palau",
+        "publisher_type": "newspaper",
+        "url": "https://islandtimes.org/",
+        "evidence_url": "https://islandtimes.org/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Two distinct native print/news sites recorded; no fabricated third."
+      },
+      {
+        "name_en": "Tia Belau",
+        "name_ko": "Tia Belau",
+        "publisher_type": "newspaper",
+        "url": "https://www.tiabelaunews.com/",
+        "evidence_url": "https://www.tiabelaunews.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Two distinct native print/news sites recorded; no fabricated third."
+      }
+    ],
     "PY": [
       {
         "name_en": "ABC Color",
@@ -4324,6 +4594,28 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "ST": [
+      {
+        "name_en": "Tela Nón",
+        "name_ko": "Tela Nón",
+        "publisher_type": "news_site",
+        "url": "https://www.telanon.info/",
+        "evidence_url": "https://www.telanon.info/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Only two distinct original publisher domains recorded; 1 remaining."
+      },
+      {
+        "name_en": "STP-Press",
+        "name_ko": "STP-Press",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.stp-press.st/",
+        "evidence_url": "https://www.stp-press.st/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Only two distinct original publisher domains recorded; 1 remaining."
+      }
+    ],
     "SV": [
       {
         "name_en": "La Prensa Gráfica",
@@ -4612,6 +4904,38 @@
         "evidence_url": "https://www.mosaiquefm.net/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
+      }
+    ],
+    "TO": [
+      {
+        "name_en": "Matangi Tonga",
+        "name_ko": "Matangi Tonga",
+        "publisher_type": "news_site",
+        "url": "https://matangitonga.to/",
+        "evidence_url": "https://matangitonga.to/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Kaniva Tonga is a Tonga-focused diaspora publisher operating outside the country."
+      },
+      {
+        "name_en": "Tonga Broadcasting Commission",
+        "name_ko": "Tonga Broadcasting Commission",
+        "publisher_type": "public_broadcaster",
+        "url": "https://tbc.to/en/",
+        "evidence_url": "https://tbc.to/en/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Kaniva Tonga is a Tonga-focused diaspora publisher operating outside the country."
+      },
+      {
+        "name_en": "Kaniva Tonga",
+        "name_ko": "Kaniva Tonga",
+        "publisher_type": "news_site",
+        "url": "https://kanivatonga.co.nz/",
+        "evidence_url": "https://kanivatonga.co.nz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": "Kaniva Tonga is a Tonga-focused diaspora publisher operating outside the country."
       }
     ],
     "TR": [
@@ -4931,6 +5255,38 @@
         "evidence_url": "https://vietnamnet.vn/en",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
+      }
+    ],
+    "VU": [
+      {
+        "name_en": "Vanuatu Daily Post",
+        "name_ko": "Vanuatu Daily Post",
+        "publisher_type": "newspaper",
+        "url": "https://www.dailypost.vu/",
+        "evidence_url": "https://www.dailypost.vu/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "VBTC",
+        "name_ko": "VBTC",
+        "publisher_type": "public_broadcaster",
+        "url": "https://vbtc.vu/",
+        "evidence_url": "https://vbtc.vu/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
+      },
+      {
+        "name_en": "Vanuatu Independent",
+        "name_ko": "Vanuatu Independent",
+        "publisher_type": "news_site",
+        "url": "https://www.vanuatuindependent.com/",
+        "evidence_url": "https://www.vanuatuindependent.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded",
+        "note": ""
       }
     ],
     "WS": [
