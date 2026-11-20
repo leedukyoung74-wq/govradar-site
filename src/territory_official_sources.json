@@ -1,0 +1,739 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "coverage_basis": "23 existing regions.json records, separate from 193 sovereign countries",
+  "categories": [
+    "government_business",
+    "news_media",
+    "environment",
+    "meteorology",
+    "emergency",
+    "defence_security",
+    "public_health",
+    "critical_infrastructure"
+  ],
+  "rules": [
+    "Three original official government/business service links per territory where available; government offices are not counted as independent agencies by default.",
+    "Three distinct locally publishing newsrooms per territory; government press releases cannot count as news publishers.",
+    "For defence, mark responsible parent-state agency as parent_authority; do not assert a territory has its own military.",
+    "Empty arrays mean no verified candidate entered, never imply a link or live data feed.",
+    "Government/business, local news and environment/weather/emergency counts must remain separate from sovereign-country totals."
+  ],
+  "territories": {
+    "PH-BARMM": {
+      "name_en": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+      "name_ko": "방사모로 자치지역 (BARMM)",
+      "parent_iso": "PH",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "IQ-KRI": {
+      "name_en": "Kurdistan Region",
+      "name_ko": "쿠르디스탄 지역",
+      "parent_iso": "IQ",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "TZ-ZAN": {
+      "name_en": "Zanzibar",
+      "name_ko": "잔지바르",
+      "parent_iso": "TZ",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "ID-AC": {
+      "name_en": "Aceh",
+      "name_ko": "아체 특별자치주",
+      "parent_iso": "ID",
+      "region_type": "special",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "ID-PP": {
+      "name_en": "Papua special autonomy provinces",
+      "name_ko": "파푸아 특별자치 지역",
+      "parent_iso": "ID",
+      "region_type": "special",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "PG-NSB": {
+      "name_en": "Autonomous Region of Bougainville",
+      "name_ko": "부건빌 자치지역",
+      "parent_iso": "PG",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "MY-SBH": {
+      "name_en": "Sabah",
+      "name_ko": "사바",
+      "parent_iso": "MY",
+      "region_type": "special",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "MY-SWK": {
+      "name_en": "Sarawak",
+      "name_ko": "사라왁",
+      "parent_iso": "MY",
+      "region_type": "special",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "CN-HK": {
+      "name_en": "Hong Kong SAR",
+      "name_ko": "홍콩 특별행정구",
+      "parent_iso": "CN",
+      "region_type": "sar",
+      "government_business": [
+        {
+          "name": "Hong Kong government services",
+          "url": "https://www.gov.hk/en/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.hk/en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "InvestHK government tender opportunities",
+          "url": "https://www.investhk.gov.hk/en/business-opportunities-government-tender-notices/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.investhk.gov.hk/en/business-opportunities-government-tender-notices/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Government Logistics Department",
+          "url": "https://www.gld.gov.hk/en/our-services/procurement/forecast-purchase/BDs/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gld.gov.hk/en/our-services/procurement/forecast-purchase/BDs/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "RTHK",
+          "url": "https://www.rthk.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.rthk.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/topics/hong-kong",
+          "authority_scope": "local",
+          "evidence_url": "https://www.scmp.com/topics/hong-kong",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Hong Kong Free Press",
+          "url": "https://hongkongfp.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://hongkongfp.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Environmental Protection Department",
+          "url": "https://www.epd.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.epd.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Hong Kong Observatory",
+          "url": "https://www.hko.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.hko.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Security Bureau emergency information",
+          "url": "https://www.sb.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.sb.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Hong Kong Fire Services Department",
+          "url": "https://www.hkfsd.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.hkfsd.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Hong Kong Security Bureau",
+          "url": "https://www.sb.gov.hk/",
+          "authority_scope": "local_security",
+          "evidence_url": "https://www.sb.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "PRC Ministry of National Defense",
+          "url": "https://eng.mod.gov.cn/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://eng.mod.gov.cn/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Hong Kong Centre for Health Protection",
+          "url": "https://www.chp.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.chp.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Hong Kong Transport Department",
+          "url": "https://www.td.gov.hk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.td.gov.hk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "CN-MO": {
+      "name_en": "Macao SAR",
+      "name_ko": "마카오 특별행정구",
+      "parent_iso": "CN",
+      "region_type": "sar",
+      "government_business": [
+        {
+          "name": "Macao SAR Government",
+          "url": "https://www.gov.mo/en/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.mo/en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Macao Commerce and Investment Promotion Institute IPIM",
+          "url": "https://www.ipim.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ipim.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Macao Environmental Protection Bureau procurement notices",
+          "url": "https://www.dspa.gov.mo/tender.aspx",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dspa.gov.mo/tender.aspx",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "TDM Macao",
+          "url": "https://www.tdm.com.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.tdm.com.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Macau Daily Times",
+          "url": "https://macaudailytimes.com.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://macaudailytimes.com.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Hoje Macau",
+          "url": "https://hojemacau.com.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://hojemacau.com.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Macao Environmental Protection Bureau DSPA",
+          "url": "https://www.dspa.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dspa.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Macao Meteorological and Geophysical Bureau",
+          "url": "https://www.dsmg.gov.mo/en",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dsmg.gov.mo/en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Macao Unitary Police Service and Civil Protection",
+          "url": "https://www.spu.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.spu.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Macao Unitary Police Service",
+          "url": "https://www.spu.gov.mo/",
+          "authority_scope": "local_security",
+          "evidence_url": "https://www.spu.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "PRC Ministry of National Defense",
+          "url": "https://eng.mod.gov.cn/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://eng.mod.gov.cn/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Macao Health Bureau",
+          "url": "https://www.ssm.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ssm.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Macao Transport Bureau",
+          "url": "https://www.dsat.gov.mo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dsat.gov.mo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "DK-GL": {
+      "name_en": "Greenland",
+      "name_ko": "그린란드",
+      "parent_iso": "DK",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Government of Greenland Naalakkersuisut",
+          "url": "https://naalakkersuisut.gl/",
+          "authority_scope": "local",
+          "evidence_url": "https://naalakkersuisut.gl/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Business in Greenland government business portal",
+          "url": "https://businessingreenland.gl/",
+          "authority_scope": "local",
+          "evidence_url": "https://businessingreenland.gl/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Greenland Mineral Resources Authority",
+          "url": "https://govmin.gl/",
+          "authority_scope": "local",
+          "evidence_url": "https://govmin.gl/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "KNR Greenlandic Broadcasting Corporation",
+          "url": "https://knr.gl/",
+          "authority_scope": "local",
+          "evidence_url": "https://knr.gl/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sermitsiaq",
+          "url": "https://www.sermitsiaq.ag/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.sermitsiaq.ag/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [],
+      "meteorology": [
+        {
+          "name": "Danish Meteorological Institute DMI",
+          "url": "https://www.dmi.dk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.dmi.dk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Government of Greenland natural hazard policy",
+          "url": "https://naalakkersuisut.gl/Nyheder/2026/06/1806_naturfarer?sc_lang=da",
+          "authority_scope": "local",
+          "evidence_url": "https://naalakkersuisut.gl/Nyheder/2026/06/1806_naturfarer?sc_lang=da",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Danish Defence",
+          "url": "https://www.forsvaret.dk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.forsvaret.dk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "DK-FO": {
+      "name_en": "Faroe Islands",
+      "name_ko": "페로 제도",
+      "parent_iso": "DK",
+      "region_type": "auto",
+      "government_business": [
+        {
+          "name": "Government of the Faroe Islands",
+          "url": "https://www.government.fo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.government.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Kringvarp Føroya",
+          "url": "https://kvf.fo/",
+          "authority_scope": "local",
+          "evidence_url": "https://kvf.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Dimmalætting",
+          "url": "https://dimma.fo/",
+          "authority_scope": "local",
+          "evidence_url": "https://dimma.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "in.fo",
+          "url": "https://www.in.fo/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.in.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [],
+      "meteorology": [
+        {
+          "name": "Danish Meteorological Institute DMI",
+          "url": "https://www.dmi.dk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.dmi.dk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Faroe Islands Government national security and resilience policy",
+          "url": "https://www.government.fo/en/foreign-relations/national-security-policy",
+          "authority_scope": "local",
+          "evidence_url": "https://www.government.fo/en/foreign-relations/national-security-policy",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Faroe Islands national security policy",
+          "url": "https://www.government.fo/en/foreign-relations/national-security-policy",
+          "authority_scope": "local_security_policy",
+          "evidence_url": "https://www.government.fo/en/foreign-relations/national-security-policy",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Danish Defence",
+          "url": "https://www.forsvaret.dk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.forsvaret.dk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "curated_candidates_not_live_verified"
+    },
+    "FI-AX": {
+      "name_en": "Åland Islands",
+      "name_ko": "올란드 제도",
+      "parent_iso": "FI",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "PT-20": {
+      "name_en": "Azores",
+      "name_ko": "아소르스 자치지역",
+      "parent_iso": "PT",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "PT-30": {
+      "name_en": "Madeira",
+      "name_ko": "마데이라 자치지역",
+      "parent_iso": "PT",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "ES-PV": {
+      "name_en": "Basque Country",
+      "name_ko": "바스크 자치지방",
+      "parent_iso": "ES",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "ES-CT": {
+      "name_en": "Catalonia",
+      "name_ko": "카탈루냐",
+      "parent_iso": "ES",
+      "region_type": "auto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "GB-SCT": {
+      "name_en": "Scotland",
+      "name_ko": "스코틀랜드",
+      "parent_iso": "GB",
+      "region_type": "dev",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "GB-WLS": {
+      "name_en": "Wales",
+      "name_ko": "웨일스",
+      "parent_iso": "GB",
+      "region_type": "dev",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "GB-NIR": {
+      "name_en": "Northern Ireland",
+      "name_ko": "북아일랜드",
+      "parent_iso": "GB",
+      "region_type": "dev",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "FR-NC": {
+      "name_en": "New Caledonia",
+      "name_ko": "뉴칼레도니아",
+      "parent_iso": "FR",
+      "region_type": "terr",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "US-PR": {
+      "name_en": "Puerto Rico",
+      "name_ko": "푸에르토리코",
+      "parent_iso": "US",
+      "region_type": "terr",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    },
+    "SO-SL": {
+      "name_en": "Somaliland (de facto)",
+      "name_ko": "소말릴란드 (사실상 독립)",
+      "parent_iso": "SO",
+      "region_type": "defacto",
+      "government_business": [],
+      "news_media": [],
+      "environment": [],
+      "meteorology": [],
+      "emergency": [],
+      "defence_security": [],
+      "public_health": [],
+      "critical_infrastructure": [],
+      "status": "research_pending"
+    }
+  }
+}
