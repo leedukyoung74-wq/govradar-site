@@ -35,10 +35,14 @@ def render(iso, is_territory, language, territories, defence):
     else:
         item = defence.get(iso)
         if not item: return ""
-        groups = [("official_sites", "국방·군사 공식기관" if ko else "Official defence institutions", item.get("official_sites") or [])]
+        _civil = item.get("defence_structure") in ("no_standing_army", "no_regular_armed_forces")
+        _grpname = ("국방 담당·공공안보 기관 (상비군 없음)" if ko else "Defence responsibilities and civilian security (no standing army)") if _civil else ("국방·군사 공식기관" if ko else "Official defence institutions")
+        groups = [("official_sites", _grpname, item.get("official_sites") or [])]
         total = sum(len(records) for _,_,records in groups)
-        heading = "국가 국방·군사 공식 정보원" if ko else "National defence official sources"
+        heading = "국가 국방·안보 공식 정보원" if ko else "National defence and security official sources"
     out = [f'<h2>{esc(heading)}</h2><p class="note">{esc(label)}</p>']
+    if not is_territory and item.get("defence_structure") in ("no_standing_army", "no_regular_armed_forces"):
+        out.append('<p class="note">' + ("상비군 없음: 경찰·해안경비·정부 국방책임기관은 육·해·공군으로 계산하지 않습니다." if ko else "No standing army: civilian security and coast guard sources are not military services.") + "</p>")
     for key, name, records in groups:
         out.append(f'<h3>{esc(name)} <small>{len(records)}' + ("/3" if key in ("government_business","news_media","official_sites") else "") + "</small></h3>")
         if not records:
