@@ -2816,6 +2816,35 @@
         "evidence_url": "https://www.em.gov.lv/en/article/new-round-large-investment-program-has-started-eu67-million-development-and-export-latvian-companies"
       }
     ],
+    "LY": [
+      {
+        "name_ko": "정부 국가 입찰 공고 · 리비아",
+        "name_en": "Libya Government Tender Platform · Prime Minister's Office",
+        "category": "procurement",
+        "url": "https://attaat.pm.gov.ly/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://attaat.pm.gov.ly/"
+      },
+      {
+        "name_ko": "금융편의기금 · 국영 중소기업 지원",
+        "name_en": "Libya Financial Facilities Fund · State SME Support",
+        "category": "support",
+        "url": "https://stmll.gov.ly/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://stmll.gov.ly/"
+      },
+      {
+        "name_ko": "NDA · 국가개발청 투자·사업기회",
+        "name_en": "Libya National Development Agency · Strategic Investment Projects",
+        "category": "investment",
+        "url": "https://nda.gov.ly/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nda.gov.ly/en/"
+      }
+    ],
     "MA": [
       {
         "name_ko": "모로코 정부 공식 입찰공고",
@@ -3017,6 +3046,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investnorthmacedonia.gov.mk/"
+      }
+    ],
+    "ML": [
+      {
+        "name_ko": "DGMP-DSP · 말리 국가 공공조달",
+        "name_en": "Mali DGMP-DSP · Official Government Procurement",
+        "category": "procurement",
+        "url": "https://dgmp.gouv.ml/?q=node%2F57",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://uppp.gouv.ml/liens-utiles/"
+      },
+      {
+        "name_ko": "APEJ · 청년 기업·고용 지원청",
+        "name_en": "Mali APEJ · Government Youth Employment and Enterprise Support",
+        "category": "support",
+        "url": "https://apej.ml/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://apej.ml/"
+      },
+      {
+        "name_ko": "API-Mali · 국가 투자진흥청",
+        "name_en": "Mali Agency for Investment Promotion",
+        "category": "investment",
+        "url": "https://apimali.gov.ml/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://primature.ml/apiagence-pour-la-promotions-des-investissement-au-mali/"
       }
     ],
     "MM": [
