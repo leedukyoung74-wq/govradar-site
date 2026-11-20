@@ -2758,6 +2758,35 @@
         "evidence_url": "https://www.amdie.gov.ma/"
       }
     ],
+    "MC": [
+      {
+        "name_ko": "모나코 시청 공식 공공조달",
+        "name_en": "Monaco Municipality Public Tender Platform",
+        "category": "procurement",
+        "url": "https://mairie.marches-publics.mc/accueil.php",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mairie.marches-publics.mc/accueil.php"
+      },
+      {
+        "name_ko": "정부 기업개발·지원 공식 포털",
+        "name_en": "Monaco Government Enterprise Services",
+        "category": "support",
+        "url": "https://monentreprise.gouv.mc/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://monentreprise.gouv.mc/en/content/download/236778/file/AN%20Practical%20guide%20-%20One-time%20service%20-%2010.03.2025.pdf?inLanguage=eng-GB&version=4"
+      },
+      {
+        "name_ko": "정부 지정 비즈니스·투자 유치 안내",
+        "name_en": "Monaco Welcome · Government-Commissioned Investment and Business Welcome",
+        "category": "investment",
+        "url": "https://www.monaco-welcome.mc/en/links",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.monaco-welcome.mc/en/labellise/monaco-economic-board-meb"
+      }
+    ],
     "MD": [
       {
         "name_ko": "MTender · 몰도바 전자조달",
@@ -3800,6 +3829,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://ras.gov.rs/en/about-us/our-organization"
+      }
+    ],
+    "RU": [
+      {
+        "name_ko": "러시아 연방재무부 공식 국가조달",
+        "name_en": "Russia Unified Government Procurement Information System",
+        "category": "procurement",
+        "url": "https://zakupki.gov.ru/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://roskazna.gov.ru/index.php/gis/eis-zakupki-gov-ru"
+      },
+      {
+        "name_ko": "연방 중소기업 개발공사 · 지원사업",
+        "name_en": "Russia Federal Corporation for SME Development",
+        "category": "support",
+        "url": "https://corpmsp.ru/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://corpmsp.ru/about/docs"
+      },
+      {
+        "name_ko": "국가산업정보시스템 · 산업투자 지원",
+        "name_en": "Russia State Industrial Information System · Investment Support Navigator",
+        "category": "investment",
+        "url": "https://gisp.gov.ru/nmp/main/636",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gisp.gov.ru/mainpage/?origin_referer=yandex.ru"
       }
     ],
     "RW": [
