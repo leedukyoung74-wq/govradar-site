@@ -18,7 +18,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    concurrency: { group: "feeds-${{ inputs.dry_run && 'dry' || 'live' }}", cancel-in-progress: false }
+    # Supersede obsolete PR dry-runs on a new commit; never cancel real data publication.
+    concurrency: { group: "feeds-${{ inputs.dry_run && 'dry' || 'live' }}", cancel-in-progress: ${{ inputs.dry_run }} }
     steps:
       - uses: actions/checkout@v4
         with: { ref: "${{ inputs.code_ref }}" }
