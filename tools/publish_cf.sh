@@ -20,6 +20,10 @@ python3 tools/text_wrap.py || exit 1   # Korean line breaking on every page (aft
 python3 tools/cf_variant.py dist cf/public
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public
+# P0 SEO gate: reconcile *existing full generated* sitemap in cf/public (pre-deploy only).
+# Remove solely noncanonical/noindex/deleted URL entries; block if >100 lost or final <1000.
+python3 tools/repair_sitemap.py cf/public --min-urls 1000 --max-removed 100 --write || { echo 'STOP: unsafe sitemap reconciliation. No live push.'; exit 1; }
+python3 tools/finalize_sitemap.py cf/public --min-urls 1000 || { echo 'STOP: generated sitemap verification failed. No live push.'; exit 1; }
 cd /home/claude/govradar-live
 git fetch -q origin live && git reset -q --soft origin/live
 rm -rf public functions && cp -a /home/claude/site/cf/public /home/claude/site/cf/functions .
