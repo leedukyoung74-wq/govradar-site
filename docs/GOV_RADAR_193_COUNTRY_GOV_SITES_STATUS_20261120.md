@@ -1,10 +1,10 @@
-# GOV RADAR 193개국 정부 공식 사업 사이트 카탈로그 현황
+# GOV RADAR 193개국 공식 사업·입찰·투자 출처 — 국가별 수량
 
-**기준일:** 2026-11-20 · **검토용 브랜치:** `review/govradar-40countries-official-sites-20261120` · 공식 출처 `120/579` · 최소 3건 등록한 국가 `40/193`.
+**기준일 2026-11-20 · 검토 브랜치 `review/govradar-40countries-official-sites-20261120`** · **49/193개국**, 공식기관 출처 **147/579개** · 추가 검증 필요 **144개국·432개**.
 
-**중요:** 여기서 '공식 출처 등록'은 정부·공공기관 공식 페이지 및 운영 주체 관련 근거 URL을 소스에 정리한 수입니다. 실시간 API 수집, 사업 신청 가능 여부, 공개 홈페이지 배포, 로그인 없이 자동 크롤링 가능 여부는 별도 검증입니다. 과거 레지스트리의 HTTP 200은 공식기관 확인으로 계산하지 않습니다. 유료 API와 라이브 고객 데이터는 사용하지 않았습니다.
+검증 수는 정부 또는 공식 지정 기관 운영 근거 URL과 메타데이터가 있는 `official_primary` 항목만 계산합니다. HTTP 200 후보·글로벌 공통 사이트 복사·추정 URL·실시간 API 수집 여부는 포함되지 않습니다. 기관 조직개편, 각국 입찰 참여 권한 및 최근 리다이렉트는 최종 배포 전 별도 확인이 필요합니다.
 
-| 지역 | 국가(한국어 / English) | ISO | 공식 등록 | 부족 | 공식 출처 (최대 3개) |
+| 지역 | 국가명 | ISO | 공식 등록 | 최소 부족 | 등록된 공식 사이트 |
 |---|---|:---:|---:|---:|---|
 | 아프리카 | 알제리 / Algeria | DZ | **0** | 3 | — |
 | 아프리카 | 앙골라 / Angola | AO | **0** | 3 | — |
@@ -105,30 +105,30 @@
 | 중동 | 튀르키예 / Türkiye | TR | **3** | 0 | [EKAP · Türkiye Electronic Public Procurement](https://ekap.kik.gov.tr/ekap/ortak/ihalearama/index.html) · [KOSGEB · National SME Support Agency](https://www.kosgeb.gov.tr/) · [Invest in Türkiye · Presidential Investment Office](https://www.invest.gov.tr/en/pages/who-we-are.aspx) |
 | 유럽 | 알바니아 / Albania | AL | **0** | 3 | — |
 | 유럽 | 안도라 / Andorra | AD | **0** | 3 | — |
-| 유럽 | 아르메니아 / Armenia | 미주 | **0** | 3 | — |
+| 유럽 | 아르메니아 / Armenia | AM | **0** | 3 | — |
 | 유럽 | 오스트리아 / Austria | AT | **0** | 3 | — |
 | 유럽 | 아제르바이잔 / Azerbaijan | AZ | **0** | 3 | — |
 | 유럽 | 벨라루스 / Belarus | BY | **0** | 3 | — |
 | 유럽 | 벨기에 / Belgium | BE | **0** | 3 | — |
 | 유럽 | 보스니아 헤르체고비나 / Bosnia and Herzegovina | BA | **0** | 3 | — |
-| 유럽 | 불가리아 / Bulgaria | BG | **0** | 3 | — |
-| 유럽 | 크로아티아 / Croatia | HR | **0** | 3 | — |
+| 유럽 | 불가리아 / Bulgaria | BG | **3** | 0 | [CAIS EOP · Bulgaria Electronic Public Procurement](https://app.eop.bg/) · [Bulgarian Executive Agency for SME Promotion](https://sme.government.bg/programs) · [Invest Bulgaria Agency · Investment Promotion](https://investbg.government.bg/) |
+| 유럽 | 크로아티아 / Croatia | HR | **3** | 0 | [EOJN RH · Croatian Public Tenders](https://eojn.hr/) · [HAMAG-BICRO · Government SME and Innovation Funding](https://hamagbicro.hr/natjecaji/) · [Invest Croatia · Government Investment Guide](https://investcroatia.gov.hr/en/) |
 | 유럽 | 키프로스 / Cyprus | CY | **0** | 3 | — |
-| 유럽 | 체코 / Czechia | CZ | **0** | 3 | — |
+| 유럽 | 체코 / Czechia | CZ | **3** | 0 | [NEN · Czech National Electronic Procurement](https://nen.nipez.cz/en/) · [CzechBusiness · Government Enterprise and Export Support](https://czechbusiness.gov.cz/) · [CzechInvest · Continuing Investment Support Service](https://czechinvest.gov.cz/) |
 | 유럽 | 덴마크 / Denmark | DK | **3** | 0 | [Udbud.dk · Danish Public Procurement](https://udbud.dk/) · [Danish Business Authority · Grants](https://udviklingidanmark.erhvervsstyrelsen.dk/soeg-midler) · [Invest in Denmark · National Investment Promotion](https://investindk.com/about/) |
 | 유럽 | 에스토니아 / Estonia | EE | **0** | 3 | — |
-| 유럽 | 핀란드 / Finland | FI | **0** | 3 | — |
+| 유럽 | 핀란드 / Finland | FI | **3** | 0 | [Hilma · Finland Official Tender Notices](https://www.hankintailmoitukset.fi/en) · [Business Finland · Business Funding](https://www.businessfinland.fi/en/services/funding/) · [Finnvera · State-Owned Export and SME Finance](https://www.finnvera.fi/eng) |
 | 유럽 | 프랑스 / France | FR | **3** | 0 | [PLACE · French State Procurement](https://www.marches-publics.gouv.fr/index.php/entreprise) · [BOAMP · Official Procurement Notices](https://www.boamp.fr/) · [Service Public · Business Procurement Guidance](https://entreprendre.service-public.gouv.fr/vosdroits/F32089) |
 | 유럽 | 조지아 / Georgia | GE | **0** | 3 | — |
 | 유럽 | 독일 / Germany | DE | **3** | 0 | [Bekanntmachungsservice · German Public Tender Notices](https://oeffentlichevergabe.de/) · [Förderdatenbank · Federal Funding Programmes](https://www.foerderdatenbank.de/FDB/DE/Home/home.html) · [Germany Trade & Invest · Federal Investment Promotion](https://www.gtai.de/en/invest/) |
 | 유럽 | 그리스 / Greece | GR | **0** | 3 | — |
 | 유럽 | 헝가리 / Hungary | HU | **0** | 3 | — |
 | 유럽 | 아이슬란드 / Iceland | IS | **0** | 3 | — |
-| 유럽 | 아일랜드 / Ireland | IE | **0** | 3 | — |
+| 유럽 | 아일랜드 / Ireland | IE | **3** | 0 | [eTenders · Ireland Public Procurement](https://www.etenders.gov.ie/) · [Enterprise Ireland · Enterprise Funding and Grants](https://www.enterprise-ireland.com/en/supports/funding-and-grants) · [IDA Ireland · Inward Investment Promotion Agency](https://www.idaireland.com/) |
 | 유럽 | 이탈리아 / Italy | IT | **3** | 0 | [ANAC · Public Procurement Legal Notices](https://pubblicitalegale.anticorruzione.it/bdncp) · [Invitalia · Enterprise Grants and Incentives](https://www.invitalia.it/per-le-imprese/incentivi-e-strumenti) · [Invest in Italy · Government Investment Incentives](https://www.investinitaly.gov.it/en/doing-business/incentives) |
-| 유럽 | 라트비아 / Latvia | LV | **0** | 3 | — |
+| 유럽 | 라트비아 / Latvia | LV | **3** | 0 | [EIS · Latvia Government e-Procurement](https://www.eis.gov.lv/EIS/) · [LIAA · Investment and Development Agency Support](https://liaa.business.gov.lv/en) · [ALTUM · Public Development Finance Institution](https://www.altum.lv/en/) |
 | 유럽 | 리히텐슈타인 / Liechtenstein | LI | **0** | 3 | — |
-| 유럽 | 리투아니아 / Lithuania | LT | **0** | 3 | — |
+| 유럽 | 리투아니아 / Lithuania | LT | **3** | 0 | [New CVP IS · Lithuanian Public Procurement](https://viesiejipirkimai.lt/epps/home.do) · [Innovation Agency Lithuania · Funding Programmes](https://www.inovacijuagentura.lt/finansavimas/?lang=en) · [Invest Lithuania · Investment Promotion](https://investlithuania.com/) |
 | 유럽 | 룩셈부르크 / Luxembourg | LU | **0** | 3 | — |
 | 유럽 | 몰타 / Malta | MT | **0** | 3 | — |
 | 유럽 | 몰도바 / Moldova | MD | **0** | 3 | — |
@@ -143,8 +143,8 @@
 | 유럽 | 러시아 / Russia | RU | **0** | 3 | — |
 | 유럽 | 산마리노 / San Marino | SM | **0** | 3 | — |
 | 유럽 | 세르비아 / Serbia | RS | **0** | 3 | — |
-| 유럽 | 슬로바키아 / Slovakia | SK | **0** | 3 | — |
-| 유럽 | 슬로베니아 / Slovenia | SI | **0** | 3 | — |
+| 유럽 | 슬로바키아 / Slovakia | SK | **3** | 0 | [ÚVO · Slovak Public Procurement Bulletin](https://www.uvo.gov.sk/vestnik-a-registre/vestnik) · [Slovak Business Agency · SME Support](https://www.sbagency.sk/) · [SARIO · Slovak Investment and Trade Development Agency](https://www.sario.sk/) |
+| 유럽 | 슬로베니아 / Slovenia | SI | **3** | 0 | [e-JN · Slovenia Public Electronic Procurement](https://ejn.gov.si/en/) · [SPOT · Slovenia Business Funding Support](https://spot.gov.si/sl/teme/spodbude-za-podjetnistvo/) · [SPIRIT Slovenia · Investment Promotion](https://www.spiritslovenia.si/) |
 | 유럽 | 스페인 / Spain | ES | **3** | 0 | [PLACSP · Spain Public Sector Procurement](https://contrataciondelestado.es/) · [BDNS · National Grants Announcements](https://www.infosubvenciones.es/bdnstrans/es/index) · [ICEX · Spain Export and Investment](https://www.icex.es/es) |
 | 유럽 | 스웨덴 / Sweden | SE | **3** | 0 | [Swedish Procurement Authority · Supplier Guidance](https://www.upphandlingsmyndigheten.se/en/conducting-business-with-public-sector-stakeholders/finding-business-in-the-public-sector/) · [Vinnova · Swedish Innovation Funding](https://www.vinnova.se/en/apply-for-funding) · [Verksamt · Official Business Service](https://verksamt.se/) |
 | 유럽 | 스위스 / Switzerland | CH | **3** | 0 | [simap · Swiss Public Procurement](https://www.simap.ch/en) · [Innosuisse · Swiss Federal Innovation Agency](https://www.innosuisse.admin.ch/en/) · [SECO · Swiss Government Procurement](https://www.seco.admin.ch/en/government-procurement) |
@@ -200,16 +200,9 @@
 | 오세아니아 | 투발루 / Tuvalu | TV | **0** | 3 | — |
 | 오세아니아 | 바누아투 / Vanuatu | VU | **0** | 3 | — |
 
-## 합계
+## 집계
 
-- 193개 국가 전부 표에 포함했습니다.
-- 공식 출처 등록 **120개**, 최소 3개 등록 완료 **40개국**.
-- 아직 최소 목표에 못 미치는 국가 **153개**, 추가 최소 출처 **459개**.
-- 후보 사이트는 `tools/sources/registry.json`에 따로 남겨 두었으며 정부 공식기관 확인 근거가 없으면 완료 수에 포함하지 않습니다.
-
-## 재검증 절차
-
-1. 소속 정부·공공기관이 운영하는 공식 원문인지 확인하고 공식 안내·근거 URL을 추가합니다.
-2. 최신 이관·기관 통합과 로그인/보안 정책을 확인하고 사실과 다를 경우 기각합니다.
-3. 3개 공식 출처를 등록한 후 CI 검사와 독립 교차검수를 통과하고 PR에 기록합니다.
-4. `main`·`src`·`live`·`data` 운영 배포는 별도 승인·검증 전에는 건드리지 않습니다.
+- 193개국 모두 포함, 공식 사이트 3개 등록: **49개국** / 미완료 **144개국**
+- 확인 근거를 가진 공식기관 사이트 **147개** / 최소 목표 579개 / 추가 **432개**
+- 국가별 3개는 **최소 개수**이며 조달·지원·투자 정보를 구분합니다. 실제로 현재 진행 중인 공고의 수는 별도입니다.
+- 본 문서는 검토용 PR 데이터 스냅샷입니다. 운영 공개 사이트에 자동 반영되지는 않습니다.
