@@ -1,0 +1,17 @@
+name: Photo candidates (review only)
+on:
+  pull_request:
+    paths: ["tools/photos_quality.py", ".github/workflows/photos-pick.yml"]
+permissions: { contents: read }
+jobs:
+  pick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow
+      - run: python tools/photos_quality.py
+      - uses: actions/upload-artifact@v4
+        with: { name: photo-candidates, path: out/, retention-days: 7 }
