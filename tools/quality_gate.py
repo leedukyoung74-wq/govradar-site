@@ -11,7 +11,7 @@ def load(p):
     try: return json.load(open(p, encoding="utf8"))
     except Exception: return None
 
-def check(new, old, now=None):
+def check(new, old, now=None, require_country_summary=False):
     """new/old: dicts of feed name -> parsed JSON (old may be empty). Returns list of failure strings (empty = pass)."""
     import feed_tenders as FT
     now = now or datetime.datetime.now(datetime.timezone.utc); bad = []
@@ -52,9 +52,9 @@ def check(new, old, now=None):
     # blocking good builds; an arbitrary 90% threshold also hid genuine mismatches.
     import deadline as DL
     s = new.get("cty/_summary.json")
-    if not isinstance(s, dict) or not isinstance(s.get("t"), dict):
+    if (require_country_summary or s is not None) and (not isinstance(s, dict) or not isinstance(s.get("t"), dict)):
         bad.append("cty/_summary.json missing or unreadable")
-    else:
+    elif s is not None:
         expected = sum(DL.is_listed_open(x, now) and bool(x.get("iso")) for x in items)
         actual = s["t"].get("n")
         if actual != expected:
@@ -109,7 +109,7 @@ if __name__ == "__main__":
     if os.path.exists(os.path.join(d, "feeds", "sanctions.json")): new["sanctions.json"] = load(os.path.join(d, "feeds", "sanctions.json"))
     if os.path.exists(os.path.join(d, "feeds", "econ.json")): new["econ.json"] = load(os.path.join(d, "feeds", "econ.json"))
     if os.path.exists(os.path.join(d, "hz", "official.json")): new["hz/official.json"] = load(os.path.join(d, "hz", "official.json"))
-    bad = check(new, old)
+    bad = check(new, old, require_country_summary=True)
     print(json.dumps({"result": "FAIL" if bad else "PASS", "problems": bad,
                       "notices": len((new.get("tenders.json") or {}).get("items") or []),
                       "published_notices": len((old.get("tenders.json") or {}).get("items") or [])}, ensure_ascii=False, indent=1))
