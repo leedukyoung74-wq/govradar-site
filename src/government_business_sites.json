@@ -32,6 +32,38 @@
         "evidence_url": "https://u.ae/en/information-and-services/finance-and-investment/foreign-direct-investment"
       }
     ],
+    "AG": [
+      {
+        "name_ko": "앤티가 바부다 입찰위원회 · 공공사업 기회",
+        "name_en": "Antigua and Barbuda Tenders Board · Business Opportunities",
+        "category": "procurement",
+        "url": "https://tendersboard.gov.ag/business-opportunities/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://tendersboard.gov.ag/business-opportunities/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "총리실 창업지원 프로그램 · EDP",
+        "name_en": "Antigua and Barbuda Entrepreneurial Development Programme",
+        "category": "support",
+        "url": "https://antiguabarbudaedp.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://antiguabarbudaedp.com/how-to-apply/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "앤티가 바부다 투자청 · ABIA",
+        "name_en": "Antigua & Barbuda Investment Authority",
+        "category": "investment",
+        "url": "https://investantiguabarbuda.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://chogm26.gov.ag/press_release_detail_page.php?press_release_page_id=pr_september_04_2026",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      }
+    ],
     "AL": [
       {
         "name_ko": "APP · 알바니아 국가조달 공고",
@@ -612,6 +644,38 @@
         "evidence_url": "https://www.bitc.co.bw/"
       }
     ],
+    "BZ": [
+      {
+        "name_ko": "벨리즈 재무부 · 국가 조달기회 포털",
+        "name_en": "Belize Ministry of Finance · National Procurement Opportunities",
+        "category": "procurement",
+        "url": "https://procurement.gov.bz/opportunities/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procurement.gov.bz/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "벨리즈 경제개발위원회 · 기업·경제지원",
+        "name_en": "Belize Economic Development Council · Government Business Policy",
+        "category": "support",
+        "url": "https://edc.gov.bz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://edc.gov.bz/links/beltraide/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "BELTRAIDE · 국가 투자·수출 지원",
+        "name_en": "BELTRAIDE · Belize Trade and Investment Development Service",
+        "category": "investment",
+        "url": "https://beltraide.bz/belize-invest/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://edc.gov.bz/links/beltraide/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      }
+    ],
     "CA": [
       {
         "name_ko": "CanadaBuys · 정부 조달",
@@ -1018,6 +1082,38 @@
         "evidence_url": "https://um.dk/sydkorea/en/the-trade-council/invest-in-denmark"
       }
     ],
+    "DM": [
+      {
+        "name_ko": "도미니카 정부 공공조달 공고",
+        "name_en": "Dominica Government Public Procurement Listing",
+        "category": "procurement",
+        "url": "https://procurement.dominica.gov.dm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procurement.dominica.gov.dm/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "도미니카 정부 중소기업지원국",
+        "name_en": "Dominica Government Small Business Support Unit",
+        "category": "support",
+        "url": "https://sbsu.dominica.gov.dm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.labour.gov.dm/about-us/small-business-unit",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "Invest Dominica · 투자진흥청",
+        "name_en": "Invest Dominica Authority · National Investment Services",
+        "category": "investment",
+        "url": "https://investdominica.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.dominica.gov.dm/government-directory",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      }
+    ],
     "DO": [
       {
         "name_ko": "DGCP · 도미니카 국가조달 정보",
@@ -1335,6 +1431,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities"
+      }
+    ],
+    "GD": [
+      {
+        "name_ko": "그레나다 정부 전자조달 입찰",
+        "name_en": "Grenada Government e-Procurement Portal",
+        "category": "procurement",
+        "url": "https://supplier.in-tend.co.uk/gnd/tenders/current",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.procurement.gd/docs/guides/grenada-supplier-registration-guide-2023.pdf",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "그레나다개발은행 · 소기업 개발기금",
+        "name_en": "Grenada Development Bank · Government SME Development Fund",
+        "category": "support",
+        "url": "https://www.grenadadevelopmentbank.com/small-business-dev-fund.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.grenadadevelopmentbank.com/small-business-dev-fund.html",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "그레나다 투자진흥청",
+        "name_en": "Grenada Investment Promotion Agency · GIDC",
+        "category": "investment",
+        "url": "https://investingrenada.gd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gidc.gd/business-units/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
       }
     ],
     "GE": [
@@ -1975,6 +2103,38 @@
         "evidence_url": "https://www.cib-cdc.gov.kh/"
       }
     ],
+    "KN": [
+      {
+        "name_ko": "세인트키츠 네비스 정부 발주 · 공공사업 입찰",
+        "name_en": "St Kitts and Nevis Public Infrastructure Ministry · Tenders",
+        "category": "procurement",
+        "url": "https://mopieudt.gov.kn/category/work/tenders/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sknis.gov.kn/2026/05/28/request-for-proposal-acquisition-and-implementation-of-a-budgeting-system/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "경제부 중소기업개발센터 · SBDC",
+        "name_en": "St Kitts and Nevis Ministry SME Development Centre",
+        "category": "support",
+        "url": "https://www.mosbecce.gov.kn/sbdc/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mosbecce.gov.kn/sbdc/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "SKIPA · 정부 투자진흥기관",
+        "name_en": "St Kitts Investment Promotion Agency · Government",
+        "category": "investment",
+        "url": "https://www.edi.gov.kn/st-kitts-investment-and-promotion-agency-skipa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.kn/ag-investments/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      }
+    ],
     "KR": [
       {
         "name_ko": "나라장터 · 국가종합전자조달",
@@ -2060,6 +2220,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://invest.gov.kz/ru/about-us/purchase/"
+      }
+    ],
+    "LC": [
+      {
+        "name_ko": "세인트루시아 정부 입찰 및 계약공고",
+        "name_en": "Saint Lucia Government Official Tender Notices",
+        "category": "procurement",
+        "url": "https://www.govt.lc/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.finance.gov.lc/tenders/view/867",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "중소기업개발국 · 국가기업지원",
+        "name_en": "Saint Lucia Government Small Enterprise Development Unit",
+        "category": "support",
+        "url": "https://finance.govt.lc/ministries/tourism-heritage-and-creative-industries/small-enterprise-development-unit",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govt.lc/ministries/tourism-heritage-and-creative-industries/small-enterprise-development-unit",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "Invest Saint Lucia · 국가 투자진흥",
+        "name_en": "Invest Saint Lucia · National Investment Promotion",
+        "category": "investment",
+        "url": "https://investstlucia.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://pmd.govt.lc/statutory-body/invest-saint-lucia-isl/",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
       }
     ],
     "LK": [
@@ -3742,6 +3934,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://gov.uz/en/activity_page/investment"
+      }
+    ],
+    "VC": [
+      {
+        "name_ko": "세인트빈센트 정부 전자입찰 현행 공고",
+        "name_en": "Saint Vincent and the Grenadines eProcure · Current Bids",
+        "category": "procurement",
+        "url": "https://procurement.gov.vc/eprocure/index.php/current-bids",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.vc/index.php/procurement-notices",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "재무부 중소기업 개발기금·보조금",
+        "name_en": "Saint Vincent and the Grenadines Ministry of Finance · SME Grant Support",
+        "category": "support",
+        "url": "https://finance.gov.vc/finance/index.php/guidelines-to-applicants-for-financial-assistance",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://finance.gov.vc/finance/index.php/guidelines-to-applicants-for-financial-assistance",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
+      },
+      {
+        "name_ko": "Invest SVG · 정부 투자진흥청",
+        "name_en": "Invest SVG · National Investment Agency",
+        "category": "investment",
+        "url": "https://investsvg.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.vc/images/pdf_documents/Invest_SVG_Growing_Horizons_PRESS_RELEASE.pdf",
+        "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
       }
     ],
     "VN": [
