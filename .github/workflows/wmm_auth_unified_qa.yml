@@ -1,0 +1,26 @@
+name: WMM Unified Auth Consent and Google Return QA (No Deploy)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'web/auth.js'
+      - 'tests/test_auth_marketing_consent.test.cjs'
+      - 'tests/test_auth_oauth_return.test.cjs'
+      - '.github/workflows/wmm_auth_unified_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  client-auth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Validate JavaScript syntax
+        run: node --check web/auth.js
+      - name: Run consent and OAuth mock tests against same merged file (no network)
+        run: node --test tests/test_auth_marketing_consent.test.cjs tests/test_auth_oauth_return.test.cjs
