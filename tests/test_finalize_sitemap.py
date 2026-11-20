@@ -51,6 +51,18 @@ class FinalizeSitemapTests(unittest.TestCase):
         self.assertEqual(report["public_urls"], 14)
         self.assertEqual(report["excluded"], 2)
 
+    def test_review_and_private_routes_are_never_indexed(self):
+        make_page(self.root, "ko", "resilience")
+        make_page(self.root, "en", "account")
+        make_page(self.root, "ko", "member")
+        report = finalize(self.root, min_urls=14, write=True)
+        self.assertEqual(report["public_urls"], 14)
+        self.assertEqual(report["excluded"], 3)
+        text = (self.root / "sitemap.xml").read_text(encoding="utf8")
+        self.assertNotIn("/resilience/", text)
+        self.assertNotIn("/account/", text)
+        self.assertNotIn("/member/", text)
+
     def test_minimum_coverage_blocks_incomplete_write(self):
         with self.assertRaises(ValueError):
             finalize(self.root, min_urls=1000, write=True)
