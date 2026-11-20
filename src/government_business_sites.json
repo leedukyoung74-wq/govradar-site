@@ -1085,6 +1085,38 @@
         "evidence_url": "https://www.gtai.de/en/meta/about-us"
       }
     ],
+    "DJ": [
+      {
+        "name_ko": "지부티 정부 국가 공공입찰",
+        "name_en": "Djibouti Official National Public Procurement Notices",
+        "category": "procurement",
+        "url": "https://marchespublics.gouv.dj/marches",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cnmp.gouv.dj/plateformes",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "FDED · 국가 경제개발기업기금",
+        "name_en": "Djibouti Economic Development Fund · SME Financing",
+        "category": "support",
+        "url": "https://fded.dj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://fded.dj/a-propos-de-nous/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "ANPI · 국가 투자진흥청",
+        "name_en": "Djibouti National Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://djib-invest.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.presidence.dj/index.php/page/investir-a-djibouti",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      }
+    ],
     "DK": [
       {
         "name_ko": "Udbud.dk · 덴마크 조달공고",
@@ -1434,6 +1466,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32089"
+      }
+    ],
+    "GA": [
+      {
+        "name_ko": "ARMP · 가봉 공공조달 감독청",
+        "name_en": "Gabon Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://armp.ga/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp.ga/index.php/missions-attributions/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "통상·중소기업부 · 국가 사업지원",
+        "name_en": "Gabon Ministry of Commerce and SMEs",
+        "category": "support",
+        "url": "https://www.commerce.gouv.ga/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.commerce.gouv.ga/dgpme",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "ANPI-Gabon · 국가투자진흥청",
+        "name_en": "Gabon National Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://investingabon.ga/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investingabon.ga/about",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
       }
     ],
     "GB": [
@@ -2347,6 +2411,70 @@
         "evidence_url": "https://www.srilankabusiness.com/edb/about-us/organisation-structure.html"
       }
     ],
+    "LR": [
+      {
+        "name_ko": "PPCC · 리베리아 국가공공조달",
+        "name_en": "Liberia Public Procurement and Concessions Commission",
+        "category": "procurement",
+        "url": "https://www.ppcc.gov.lr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ppcc.gov.lr/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "상공부 · 중소기업 금융·무역지원",
+        "name_en": "Liberia Ministry of Commerce · LIFT Enterprise Support",
+        "category": "support",
+        "url": "https://moci.gov.lr/node/4148",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moci.gov.lr/node/4148",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "NIC · 리베리아 국가투자위원회",
+        "name_en": "Liberia National Investment Commission",
+        "category": "investment",
+        "url": "https://www.nic.gov.lr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.nic.gov.lr/pages/faqs/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      }
+    ],
+    "LS": [
+      {
+        "name_ko": "레소토 정부 공공입찰 공고",
+        "name_en": "Lesotho Government Official Tender Notices",
+        "category": "procurement",
+        "url": "https://www.gov.ls/documents/tenders/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.ls/download-category/tenders/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "BEDCO · 국영 중소기업개발공사",
+        "name_en": "Lesotho Basotho Enterprises Development Corporation",
+        "category": "support",
+        "url": "https://www.bedco.org.ls/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.bedco.org.ls/about",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "LNDC · 국영 산업개발·투자청",
+        "name_en": "Lesotho National Development Corporation",
+        "category": "investment",
+        "url": "https://lndc.org.ls/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://lndc.org.ls/who-we-are/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      }
+    ],
     "LT": [
       {
         "name_ko": "신규 CVP IS · 국가 전자조달",
@@ -2638,6 +2766,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.investmongolia.gov.mn/en/"
+      }
+    ],
+    "MR": [
+      {
+        "name_ko": "모리타니 국가공공조달 포털",
+        "name_en": "Mauritania Official National Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://marchespublics.gov.mr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://marchespublics.gov.mr/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "TECHGHIL · 창업·중소기업 금융지원",
+        "name_en": "Mauritania TECHGHIL · Entrepreneurship and SME Finance",
+        "category": "support",
+        "url": "https://www.techghil.mr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.techghil.mr/cms/avis-dappel-a-candidatures-pour-le-programme-dappui-au-developpement-des-petites-et-moyennes-entreprises-pme",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "APIM · 모리타니 국가투자진흥청",
+        "name_en": "Mauritania National Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://apim.gov.mr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://apim.gov.mr/expansion-of-apims-mandate-and-strengthening-of-its-role/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
       }
     ],
     "MT": [
@@ -3595,6 +3755,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.mhsr.sk/ministerstvo/operacne-programy/opis/elektronizacia-sluzieb-ministerstva-hospodarstva-sr/sluzby-a-zivotne-situacie"
+      }
+    ],
+    "SL": [
+      {
+        "name_ko": "NPPA · 시에라리온 공공조달공고",
+        "name_en": "Sierra Leone National Public Procurement Authority · Bids",
+        "category": "procurement",
+        "url": "https://nppa.gov.sl/bid/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nppa.gov.sl/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "통상산업부 · SMEDA 중소기업지원",
+        "name_en": "Sierra Leone Ministry of Trade · SME Development Agency",
+        "category": "support",
+        "url": "https://moti.gov.sl/agencies",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moti.gov.sl/agencies",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
+      },
+      {
+        "name_ko": "NIB · 국가투자위원회",
+        "name_en": "Sierra Leone National Investment Board",
+        "category": "investment",
+        "url": "https://nib.gov.sl/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nib.gov.sl/investment-promotion-and-export/",
+        "review_note": "Matched public primary agency sources; operational / HTTP redirect checks remain separate release gate"
       }
     ],
     "SM": [
