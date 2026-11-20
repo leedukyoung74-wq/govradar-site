@@ -1,13 +1,13 @@
-# GOV RADAR — 국가별 공식 원문 뉴스 발행사 (193개국)
+# GOV RADAR — 193개국별 국가 언론·뉴스 원문 정보원 등록현황
 
-**검토용 목록:** **90개국·270개 언론사**(국가별 3곳) · 목표 **193개국·579곳** · 아직 **103개국·309곳** 미등록.
+기준: 2026-11-21 · **120/193개국·360/579개** 원문 발행사 링크. 아직 **73개국·219곳** 미등록.
 
-각 매체의 운영사 사이트를 한 번씩 기록하고 국영·공영·민영을 구분합니다. **국영 통신이 독립적이라는 뜻이 아니며** 신문·방송 소속/실접속/RSS 저작권 사용권을 전수 검증한 것이 아닙니다. 국제통신사 3곳을 193개국 공통으로 복제하지 않음. 실제 기사 수집/번역/발송이나 운영배포는 하지 않았습니다.
+**자료 상태:** 원문 발행사 사이트 URL, 국영·공영·민영 범주, 날짜를 기록한 **검토용 원본 링크 목록**입니다. 보도 사실성·독립성·저작권·RSS/API 이용허가·서비스 현재 접속성을 완전히 검증했다는 뜻이 아닙니다. 언론사는 정부 지원사업/조달 사이트 수에 포함시키지 않습니다. 7개 언어 웹 페이지 코드는 검토 브랜치에만 연결, 운영 미배포.
 
-| 국가 | ISO | 언론 발행사 | 부족 | 원문 사이트 및 유형 |
+| 국가 | ISO | 등록 언론사 | 부족 | 서로 다른 원문 발행사 |
 |---|:---:|---:|---:|---|
-| 알제리 / Algeria | DZ | **0** | 3 | 미조사 |
-| 앙골라 / Angola | AO | **0** | 3 | 미조사 |
+| 알제리 / Algeria | DZ | **3** | 0 | [Algeria Press Service](https://www.aps.dz/) (state_news_agency) · [El Watan](https://elwatan-dz.com/) (newspaper) · [TSA Algérie](https://www.tsa-algerie.com/) (news_site) |
+| 앙골라 / Angola | AO | **3** | 0 | [ANGOP](https://www.angop.ao/en/) (state_news_agency) · [Jornal de Angola](https://www.jornaldeangola.ao/) (newspaper) · [Novo Jornal](https://novojornal.co.ao/) (newspaper) |
 | 베냉 / Benin | BJ | **0** | 3 | 미조사 |
 | 보츠와나 / Botswana | BW | **0** | 3 | 미조사 |
 | 부르키나파소 / Burkina Faso | BF | **0** | 3 | 미조사 |
@@ -18,14 +18,14 @@
 | 차드 / Chad | TD | **0** | 3 | 미조사 |
 | 코모로 / Comoros | KM | **0** | 3 | 미조사 |
 | 콩고 / Congo | CG | **0** | 3 | 미조사 |
-| 콩고민주공화국 / DR Congo | CD | **0** | 3 | 미조사 |
+| 콩고민주공화국 / DR Congo | CD | **3** | 0 | [Agence Congolaise de Presse](https://acp.cd/) (state_news_agency) · [Radio Okapi](https://www.radiookapi.net/) (broadcaster) · [Actualite.cd](https://actualite.cd/) (news_site) |
 | 코트디부아르 / Côte d'Ivoire | CI | **3** | 0 | [Agence Ivoirienne de Presse](https://www.aip.ci/) (state_news_agency) · [Fraternité Matin](https://www.fratmat.info/) (newspaper) · [Abidjan.net](https://news.abidjan.net/) (news_site) |
 | 지부티 / Djibouti | DJ | **0** | 3 | 미조사 |
 | 이집트 / Egypt | EG | **3** | 0 | [Middle East News Agency](https://mena.org.eg/en) (state_news_agency) · [Ahram Online](https://english.ahram.org.eg/) (newspaper) · [Al-Masry Al-Youm](https://www.almasryalyoum.com/) (newspaper) |
 | 적도기니 / Equatorial Guinea | GQ | **0** | 3 | 미조사 |
 | 에리트레아 / Eritrea | ER | **0** | 3 | 미조사 |
 | 에스와티니 / Eswatini | SZ | **0** | 3 | 미조사 |
-| 에티오피아 / Ethiopia | ET | **0** | 3 | 미조사 |
+| 에티오피아 / Ethiopia | ET | **3** | 0 | [Ethiopian News Agency](https://www.ena.et/web/eng) (state_news_agency) · [Addis Standard](https://addisstandard.com/) (news_site) · [The Reporter Ethiopia](https://www.thereporterethiopia.com/) (newspaper) |
 | 가봉 / Gabon | GA | **0** | 3 | 미조사 |
 | 감비아 / Gambia | GM | **0** | 3 | 미조사 |
 | 가나 / Ghana | GH | **3** | 0 | [Ghana News Agency](https://gna.org.gh/) (state_news_agency) · [Daily Graphic](https://www.graphic.com.gh/) (newspaper) · [MyJoyOnline](https://www.myjoyonline.com/) (broadcaster) |
@@ -34,7 +34,7 @@
 | 케냐 / Kenya | KE | **3** | 0 | [Kenya Broadcasting Corporation](https://www.kbc.co.ke/) (public_broadcaster) · [Nation Africa](https://nation.africa/) (newspaper) · [The Standard Kenya](https://www.standardmedia.co.ke/) (newspaper) |
 | 레소토 / Lesotho | LS | **0** | 3 | 미조사 |
 | 라이베리아 / Liberia | LR | **0** | 3 | 미조사 |
-| 리비아 / Libya | LY | **0** | 3 | 미조사 |
+| 리비아 / Libya | LY | **3** | 0 | [Libyan News Agency LANA](https://lana.gov.ly/) (state_news_agency) · [Libya Observer](https://libyaobserver.ly/) (news_site) · [Libya Herald](https://libyaherald.com/) (news_site) |
 | 마다가스카르 / Madagascar | MG | **0** | 3 | 미조사 |
 | 말라위 / Malawi | MW | **0** | 3 | 미조사 |
 | 말리 / Mali | ML | **0** | 3 | 미조사 |
@@ -50,56 +50,56 @@
 | 세네갈 / Senegal | SN | **3** | 0 | [Agence de Presse Sénégalaise](https://aps.sn/) (state_news_agency) · [Le Soleil Senegal](https://lesoleil.sn/) (newspaper) · [Seneweb](https://www.seneweb.com/) (news_site) |
 | 세이셸 / Seychelles | SC | **0** | 3 | 미조사 |
 | 시에라리온 / Sierra Leone | SL | **0** | 3 | 미조사 |
-| 소말리아 / Somalia | SO | **0** | 3 | 미조사 |
+| 소말리아 / Somalia | SO | **3** | 0 | [Somali National News Agency](https://sonna.so/en/) (state_news_agency) · [Hiiraan Online](https://www.hiiraan.com/) (news_site) · [Garowe Online](https://www.garoweonline.com/) (news_site) |
 | 남아프리카공화국 / South Africa | ZA | **3** | 0 | [SABC News](https://www.sabcnews.com/sabcnews/) (public_broadcaster) · [News24](https://www.news24.com/) (news_site) · [TimesLIVE](https://www.timeslive.co.za/) (newspaper) |
-| 남수단 / South Sudan | SS | **0** | 3 | 미조사 |
-| 수단 / Sudan | SD | **0** | 3 | 미조사 |
+| 남수단 / South Sudan | SS | **3** | 0 | [Eye Radio](https://www.eyeradio.org/) (broadcaster) · [Radio Miraya](https://unmiss.unmissions.org/radio-miraya) (public_broadcaster) · [Sudans Post](https://www.sudanspost.com/) (news_site) |
+| 수단 / Sudan | SD | **3** | 0 | [Sudan News Agency SUNA](https://suna-sd.net/en) (state_news_agency) · [Sudan Tribune](https://sudantribune.com/) (news_site) · [Radio Dabanga](https://www.dabangasudan.org/en/) (broadcaster) |
 | 탄자니아 / Tanzania | TZ | **3** | 0 | [Tanzania Broadcasting Corporation](https://www.tbc.go.tz/) (public_broadcaster) · [The Citizen Tanzania](https://www.thecitizen.co.tz/) (newspaper) · [Mwananchi](https://www.mwananchi.co.tz/) (newspaper) |
 | 토고 / Togo | TG | **0** | 3 | 미조사 |
-| 튀니지 / Tunisia | TN | **0** | 3 | 미조사 |
+| 튀니지 / Tunisia | TN | **3** | 0 | [Tunis Afrique Presse](https://www.tap.info.tn/en) (state_news_agency) · [La Presse de Tunisie](https://lapresse.tn/) (newspaper) · [Mosaïque FM](https://www.mosaiquefm.net/) (broadcaster) |
 | 우간다 / Uganda | UG | **3** | 0 | [Uganda Broadcasting Corporation](https://ubc.go.ug/) (public_broadcaster) · [Daily Monitor](https://www.monitor.co.ug/) (newspaper) · [New Vision](https://www.newvision.co.ug/) (newspaper) |
 | 잠비아 / Zambia | ZM | **0** | 3 | 미조사 |
 | 짐바브웨 / Zimbabwe | ZW | **0** | 3 | 미조사 |
-| 아프가니스탄 / Afghanistan | AF | **0** | 3 | 미조사 |
+| 아프가니스탄 / Afghanistan | AF | **3** | 0 | [Pajhwok Afghan News](https://pajhwok.com/) (news_agency) · [TOLOnews](https://tolonews.com/) (broadcaster) · [Amu TV](https://amu.tv/) (broadcaster) |
 | 방글라데시 / Bangladesh | BD | **3** | 0 | [Bangladesh Sangbad Sangstha](https://www.bssnews.net/) (state_news_agency) · [Prothom Alo](https://www.prothomalo.com/) (newspaper) · [The Daily Star Bangladesh](https://www.thedailystar.net/) (newspaper) |
 | 부탄 / Bhutan | BT | **0** | 3 | 미조사 |
 | 브루나이 / Brunei | BN | **0** | 3 | 미조사 |
-| 캄보디아 / Cambodia | KH | **0** | 3 | 미조사 |
-| 중국 / China | CN | **0** | 3 | 미조사 |
+| 캄보디아 / Cambodia | KH | **3** | 0 | [Agence Kampuchea Presse](https://www.akp.gov.kh/) (state_news_agency) · [The Phnom Penh Post](https://www.phnompenhpost.com/) (newspaper) · [Khmer Times](https://www.khmertimeskh.com/) (newspaper) |
+| 중국 / China | CN | **3** | 0 | [Xinhua News Agency](https://www.news.cn/) (state_news_agency) · [People's Daily](https://en.people.cn/) (state_news_agency) · [CGTN](https://www.cgtn.com/) (state_news_agency) |
 | 인도 / India | IN | **3** | 0 | [Press Trust of India](https://www.ptinews.com/) (news_agency) · [Asian News International](https://www.aninews.in/) (news_agency) · [The Hindu](https://www.thehindu.com/) (newspaper) |
 | 인도네시아 / Indonesia | ID | **3** | 0 | [ANTARA](https://www.antaranews.com/) (state_news_agency) · [Kompas](https://www.kompas.id/) (newspaper) · [Tempo](https://www.tempo.co/) (news_site) |
 | 일본 / Japan | JP | **3** | 0 | [NHK News](https://www3.nhk.or.jp/news/) (public_broadcaster) · [Kyodo News](https://english.kyodonews.net/) (news_agency) · [Jiji Press](https://www.jiji.com/) (news_agency) |
-| 카자흐스탄 / Kazakhstan | KZ | **0** | 3 | 미조사 |
+| 카자흐스탄 / Kazakhstan | KZ | **3** | 0 | [Qazinform](https://qazinform.com/) (state_news_agency) · [Tengrinews](https://tengrinews.kz/) (news_site) · [Informburo](https://informburo.kz/) (news_site) |
 | 북한 / North Korea | KP | **0** | 3 | 미조사 |
 | 대한민국 / South Korea | KR | **3** | 0 | [Yonhap News Agency](https://www.yna.co.kr/) (news_agency) · [KBS News](https://news.kbs.co.kr/) (public_broadcaster) · [MBC News](https://imnews.imbc.com/) (broadcaster) |
-| 키르기스스탄 / Kyrgyzstan | KG | **0** | 3 | 미조사 |
+| 키르기스스탄 / Kyrgyzstan | KG | **3** | 0 | [Kabar](https://kabar.kg/) (state_news_agency) · [24.kg](https://24.kg/) (news_site) · [AKIpress](https://akipress.com/) (news_agency) |
 | 라오스 / Laos | LA | **0** | 3 | 미조사 |
 | 말레이시아 / Malaysia | MY | **3** | 0 | [Bernama](https://www.bernama.com/en/) (state_news_agency) · [The Star Malaysia](https://www.thestar.com.my/) (newspaper) · [New Straits Times](https://www.nst.com.my/) (newspaper) |
 | 몰디브 / Maldives | MV | **0** | 3 | 미조사 |
-| 몽골 / Mongolia | MN | **0** | 3 | 미조사 |
-| 미얀마 / Myanmar | MM | **0** | 3 | 미조사 |
+| 몽골 / Mongolia | MN | **3** | 0 | [Montsame](https://montsame.mn/en/) (state_news_agency) · [News.mn](https://news.mn/en/) (news_site) · [IKON Mongolia](https://ikon.mn/) (news_site) |
+| 미얀마 / Myanmar | MM | **3** | 0 | [Myanmar Now](https://myanmar-now.org/en/) (news_site) · [The Irrawaddy](https://www.irrawaddy.com/) (news_site) · [Mizzima](https://www.mizzima.com/) (news_site) |
 | 네팔 / Nepal | NP | **3** | 0 | [Rastriya Samachar Samiti](https://rss.com.np/) (state_news_agency) · [The Kathmandu Post](https://kathmandupost.com/) (newspaper) · [Online Khabar](https://www.onlinekhabar.com/) (news_site) |
 | 파키스탄 / Pakistan | PK | **3** | 0 | [Associated Press of Pakistan](https://www.app.com.pk/) (state_news_agency) · [Dawn](https://www.dawn.com/) (newspaper) · [Geo News](https://www.geo.tv/) (broadcaster) |
 | 필리핀 / Philippines | PH | **3** | 0 | [Philippine News Agency](https://www.pna.gov.ph/) (state_news_agency) · [GMA News](https://www.gmanetwork.com/news/) (broadcaster) · [ABS-CBN News](https://www.abs-cbn.com/news) (broadcaster) |
 | 싱가포르 / Singapore | SG | **3** | 0 | [CNA](https://www.channelnewsasia.com/) (broadcaster) · [The Straits Times](https://www.straitstimes.com/) (newspaper) · [The Business Times Singapore](https://www.businesstimes.com.sg/) (newspaper) |
 | 스리랑카 / Sri Lanka | LK | **3** | 0 | [News First Sri Lanka](https://www.newsfirst.lk/) (broadcaster) · [Ada Derana](https://www.adaderana.lk/) (broadcaster) · [Daily Mirror Sri Lanka](https://www.dailymirror.lk/) (newspaper) |
-| 타지키스탄 / Tajikistan | TJ | **0** | 3 | 미조사 |
-| 태국 / Thailand | TH | **0** | 3 | 미조사 |
+| 타지키스탄 / Tajikistan | TJ | **3** | 0 | [Khovar](https://khovar.tj/eng/) (state_news_agency) · [Asia-Plus](https://asiaplustj.info/en) (news_site) · [Avesta Tajikistan](https://avesta.tj/) (news_site) |
+| 태국 / Thailand | TH | **3** | 0 | [MCOT](https://www.mcot.net/) (public_broadcaster) · [Bangkok Post](https://www.bangkokpost.com/) (newspaper) · [The Nation Thailand](https://www.nationthailand.com/) (newspaper) |
 | 동티모르 / Timor-Leste | TL | **0** | 3 | 미조사 |
-| 투르크메니스탄 / Turkmenistan | TM | **0** | 3 | 미조사 |
-| 우즈베키스탄 / Uzbekistan | UZ | **0** | 3 | 미조사 |
+| 투르크메니스탄 / Turkmenistan | TM | **3** | 0 | [Turkmen State News TDH](https://tdh.gov.tm/en) (state_news_agency) · [Turkmenportal](https://turkmenportal.com/en) (news_site) · [Orient Turkmenistan](https://orient.tm/en) (news_site) |
+| 우즈베키스탄 / Uzbekistan | UZ | **3** | 0 | [UzA Uzbekistan News Agency](https://uza.uz/en) (state_news_agency) · [Kun.uz](https://kun.uz/en) (news_site) · [Gazeta.uz](https://www.gazeta.uz/en/) (news_site) |
 | 베트남 / Vietnam | VN | **3** | 0 | [Vietnam News Agency](https://news.vnanet.vn/en/) (state_news_agency) · [VnExpress International](https://e.vnexpress.net/) (news_site) · [VietNamNet](https://vietnamnet.vn/en) (news_site) |
-| 바레인 / Bahrain | BH | **0** | 3 | 미조사 |
-| 이란 / Iran | IR | **0** | 3 | 미조사 |
-| 이라크 / Iraq | IQ | **0** | 3 | 미조사 |
-| 이스라엘 / Israel | IL | **0** | 3 | 미조사 |
-| 요르단 / Jordan | JO | **0** | 3 | 미조사 |
-| 쿠웨이트 / Kuwait | KW | **0** | 3 | 미조사 |
-| 레바논 / Lebanon | LB | **0** | 3 | 미조사 |
-| 오만 / Oman | OM | **0** | 3 | 미조사 |
-| 카타르 / Qatar | QA | **0** | 3 | 미조사 |
+| 바레인 / Bahrain | BH | **3** | 0 | [Bahrain News Agency](https://www.bna.bh/en/) (state_news_agency) · [Gulf Daily News](https://www.gdnonline.com/) (newspaper) · [Bahrain Mirror](https://bahrainmirror.com/) (news_site) |
+| 이란 / Iran | IR | **3** | 0 | [IRNA](https://en.irna.ir/) (state_news_agency) · [ISNA](https://www.isna.ir/) (news_agency) · [Tasnim News Agency](https://www.tasnimnews.com/en) (news_agency) |
+| 이라크 / Iraq | IQ | **3** | 0 | [Iraqi News Agency](https://ina.iq/eng/) (state_news_agency) · [Rudaw](https://www.rudaw.net/english) (broadcaster) · [Shafaq News](https://shafaq.com/en) (news_site) |
+| 이스라엘 / Israel | IL | **3** | 0 | [Ynetnews](https://www.ynetnews.com/) (news_site) · [Haaretz](https://www.haaretz.com/) (newspaper) · [The Times of Israel](https://www.timesofisrael.com/) (news_site) |
+| 요르단 / Jordan | JO | **3** | 0 | [Petra News Agency](https://petra.gov.jo/) (state_news_agency) · [Roya News](https://en.royanews.tv/) (broadcaster) · [The Jordan Times](https://jordantimes.com/) (newspaper) |
+| 쿠웨이트 / Kuwait | KW | **3** | 0 | [Kuwait News Agency](https://www.kuna.net.kw/) (state_news_agency) · [Kuwait Times](https://kuwaittimes.com/) (newspaper) · [Arab Times Kuwait](https://www.arabtimesonline.com/news/) (newspaper) |
+| 레바논 / Lebanon | LB | **3** | 0 | [National News Agency Lebanon](https://nna-leb.gov.lb/en/) (state_news_agency) · [L'Orient Today](https://today.lorientlejour.com/) (newspaper) · [MTV Lebanon](https://www.mtv.com.lb/en) (broadcaster) |
+| 오만 / Oman | OM | **3** | 0 | [Oman News Agency](https://omannews.gov.om/) (state_news_agency) · [Times of Oman](https://timesofoman.com/) (newspaper) · [Muscat Daily](https://www.muscatdaily.com/) (newspaper) |
+| 카타르 / Qatar | QA | **3** | 0 | [Qatar News Agency](https://www.qna.org.qa/en/) (state_news_agency) · [Al Jazeera](https://www.aljazeera.com/) (broadcaster) · [Gulf Times](https://www.gulf-times.com/) (newspaper) |
 | 사우디아라비아 / Saudi Arabia | SA | **3** | 0 | [Saudi Press Agency](https://www.spa.gov.sa/en) (state_news_agency) · [Al Arabiya](https://english.alarabiya.net/) (broadcaster) · [Arab News](https://www.arabnews.com/) (newspaper) |
-| 시리아 / Syria | SY | **0** | 3 | 미조사 |
+| 시리아 / Syria | SY | **3** | 0 | [SANA](https://sana.sy/en/) (state_news_agency) · [Enab Baladi](https://english.enabbaladi.net/) (news_site) · [Syria TV](https://www.syria.tv/) (broadcaster) |
 | 아랍에미리트 / United Arab Emirates | AE | **3** | 0 | [Emirates News Agency WAM](https://www.wam.ae/en) (state_news_agency) · [Khaleej Times](https://www.khaleejtimes.com/) (newspaper) · [The National UAE](https://www.thenationalnews.com/) (newspaper) |
 | 예멘 / Yemen | YE | **0** | 3 | 미조사 |
 | 튀르키예 / Türkiye | TR | **3** | 0 | [Anadolu Agency](https://www.aa.com.tr/en) (state_news_agency) · [TRT World](https://www.trtworld.com/) (public_broadcaster) · [Hürriyet](https://www.hurriyet.com.tr/) (newspaper) |
