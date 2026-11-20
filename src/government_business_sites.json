@@ -293,6 +293,35 @@
         "evidence_url": "https://www.bahrainedb.com/"
       }
     ],
+    "BO": [
+      {
+        "name_ko": "SICOES · 볼리비아 정부계약 시스템",
+        "name_en": "Bolivia SICOES · Public Procurement System",
+        "category": "procurement",
+        "url": "https://www.sicoes.gob.bo/portal/index.php?id=convocatorias",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sicoes.gob.bo/"
+      },
+      {
+        "name_ko": "PRO-BOLIVIA · 생산기업 지원",
+        "name_en": "PRO-BOLIVIA · Government Enterprise Development",
+        "category": "support",
+        "url": "https://www.probolivia.gob.bo/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gob.bo/entidades/pro-bolivia"
+      },
+      {
+        "name_ko": "생산개발부 · 산업지원 정책",
+        "name_en": "Bolivia Ministry of Productive Development",
+        "category": "investment",
+        "url": "https://www.produccion.gob.bo/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gob.bo/entidades/pro-bolivia"
+      }
+    ],
     "BR": [
       {
         "name_ko": "PNCP · 국가 조달 공고",
@@ -496,6 +525,35 @@
         "evidence_url": "https://procolombia.co/"
       }
     ],
+    "CR": [
+      {
+        "name_ko": "SICOP · 코스타리카 통합 국가조달",
+        "name_en": "Costa Rica SICOP · National Procurement Platform",
+        "category": "procurement",
+        "url": "https://www.sicop.go.cr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.comex.go.cr/transparencia/datos-abiertos/"
+      },
+      {
+        "name_ko": "MEIC · 경제산업통상부 중소기업지원",
+        "name_en": "Costa Rica MEIC · Enterprise Development",
+        "category": "support",
+        "url": "https://www.meic.go.cr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.presidencia.go.cr/gabinete/ministerio-de-economia-industria-y-comercio-meic"
+      },
+      {
+        "name_ko": "PROCOMER · 무역·투자진흥",
+        "name_en": "Costa Rica PROCOMER · Export and Investment Promotion",
+        "category": "investment",
+        "url": "https://procomer.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procomer.com/"
+      }
+    ],
     "CY": [
       {
         "name_ko": "키프로스 정부 · 전자조달",
@@ -610,6 +668,64 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://um.dk/sydkorea/en/the-trade-council/invest-in-denmark"
+      }
+    ],
+    "DO": [
+      {
+        "name_ko": "DGCP · 도미니카 국가조달 정보",
+        "name_en": "Dominican Republic DGCP · Official Procurement Information",
+        "category": "procurement",
+        "url": "https://datosabiertos.dgcp.gob.do/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.dgcp.gob.do/consultas/"
+      },
+      {
+        "name_ko": "PROMIPYME · 국가 중소기업지원",
+        "name_en": "Dominican Republic PROMIPYME · SME Support",
+        "category": "support",
+        "url": "https://promipyme.gob.do/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.datos.gov.do/dataset/directorio-general-promipyme"
+      },
+      {
+        "name_ko": "ProDominicana · 국가 수출·투자진흥",
+        "name_en": "ProDominicana · Government Export and Investment Agency",
+        "category": "investment",
+        "url": "https://prodominicana.gob.do/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gob.do/servicios/oportunidades-comerciales-de-republica-dominicana-en-mercados-internacionales"
+      }
+    ],
+    "EC": [
+      {
+        "name_ko": "SERCOP · 에콰도르 국가조달",
+        "name_en": "Ecuador SERCOP · Official Public Contracting System",
+        "category": "procurement",
+        "url": "https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA/"
+      },
+      {
+        "name_ko": "생산·무역·투자부 · 기업지원",
+        "name_en": "Ecuador Ministry of Production · Enterprise Services",
+        "category": "support",
+        "url": "https://www.produccion.gob.ec/servicios-y-tramites-del-ministerio-de-produccion-comercio-exterior-inversiones-y-pesca/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.produccion.gob.ec/"
+      },
+      {
+        "name_ko": "PRO ECUADOR · 국가수출·투자진흥",
+        "name_en": "PRO ECUADOR · National Trade and Investment Promotion",
+        "category": "investment",
+        "url": "https://www.proecuador.gob.ec/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.proecuador.gob.ec/"
       }
     ],
     "EE": [
@@ -873,6 +989,64 @@
         "evidence_url": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-helpdesk/financing-for-your-investment"
       }
     ],
+    "GT": [
+      {
+        "name_ko": "Guatecompras · 국가조달 시스템",
+        "name_en": "Guatemala Guatecompras · State Procurement",
+        "category": "procurement",
+        "url": "https://www.guatecompras.gt/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.prensa.gob.gt/comunicado/guatecompras-suma-3-funcionalidades-nuevas-que-aportan-la-transparencia"
+      },
+      {
+        "name_ko": "MINECO · 중소기업 지원",
+        "name_en": "Guatemala Ministry of Economy · SME Programmes",
+        "category": "support",
+        "url": "https://www.mineco.gob.gt/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mineco.gob.gt/compras-directas"
+      },
+      {
+        "name_ko": "PRONACOM · 국가 경쟁력·투자진흥",
+        "name_en": "Guatemala PRONACOM · Competitiveness and Investment",
+        "category": "investment",
+        "url": "https://www.pronacom.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mineco.gob.gt/compras-directas"
+      }
+    ],
+    "HN": [
+      {
+        "name_ko": "Honducompras · 온두라스 국가조달",
+        "name_en": "Honduras Honducompras · Official Public Procurement",
+        "category": "procurement",
+        "url": "https://honducompras.gob.hn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://oncae.gob.hn/honducompras/"
+      },
+      {
+        "name_ko": "SDE · 경제개발부 기업지원",
+        "name_en": "Honduras Ministry of Economic Development",
+        "category": "support",
+        "url": "https://sde.gob.hn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://portalunico.iaip.gob.hn/388/42/"
+      },
+      {
+        "name_ko": "CNI · 국가투자위원회",
+        "name_en": "Honduras National Investment Council · Investment Facilitation",
+        "category": "investment",
+        "url": "https://cni.hn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cni.hn/desayuno-clima-de-inversion-en-honduras/"
+      }
+    ],
     "HR": [
       {
         "name_ko": "EOJN RH · 크로아티아 국가조달",
@@ -1074,6 +1248,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.investinitaly.gov.it/en/doing-business/incentives"
+      }
+    ],
+    "JM": [
+      {
+        "name_ko": "GOJEP · 자메이카 정부전자조달",
+        "name_en": "Jamaica GOJEP · Government e-Procurement",
+        "category": "procurement",
+        "url": "https://www.gojep.gov.jm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mof.gov.jm/goj-advances-digital-procurement-with-launch-of-gojep-2-0/"
+      },
+      {
+        "name_ko": "JBDC · 정부 기업개발공사",
+        "name_en": "Jamaica Business Development Corporation · SME Services",
+        "category": "support",
+        "url": "https://www.jbdc.net/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.miic.gov.jm/entrepreneurs-encouraged-to-utilise-services-offered-by-government-agencies/"
+      },
+      {
+        "name_ko": "JAMPRO · 국가 투자·수출진흥",
+        "name_en": "Jamaica JAMPRO · Investment and Export Promotion",
+        "category": "investment",
+        "url": "https://dobusinessjamaica.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dobusinessjamaica.com/about-us"
       }
     ],
     "JO": [
@@ -1656,6 +1859,35 @@
         "evidence_url": "https://investoman.om/"
       }
     ],
+    "PA": [
+      {
+        "name_ko": "PanamaCompra · 국가전자조달",
+        "name_en": "PanamaCompra · Government Procurement Platform",
+        "category": "procurement",
+        "url": "https://www.panamacompra.gob.pa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.panamacompra.gob.pa/"
+      },
+      {
+        "name_ko": "AMPYME · 중소기업 지원청",
+        "name_en": "Panama AMPYME · Micro and SME Authority",
+        "category": "support",
+        "url": "https://ampyme.gob.pa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ampyme.gob.pa/"
+      },
+      {
+        "name_ko": "ProPanamá · 국가투자진흥",
+        "name_en": "ProPanama · National Investment Promotion",
+        "category": "investment",
+        "url": "https://propanama.gob.pa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://propanama.gob.pa/"
+      }
+    ],
     "PE": [
       {
         "name_ko": "OECE · SEACE 공공입찰 검색 안내",
@@ -1799,6 +2031,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gov.pt/entidades/agencia-para-o-investimento-e-comercio-externo-de-portugal"
+      }
+    ],
+    "PY": [
+      {
+        "name_ko": "DNCP · 공공조달공고 검색",
+        "name_en": "Paraguay DNCP · Government Tender Search",
+        "category": "procurement",
+        "url": "https://contrataciones.gov.py/buscador/licitaciones.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.contrataciones.gov.py/dncp/mipymes/buscador-de-oportunidades/"
+      },
+      {
+        "name_ko": "MIC · 산업통상부 기업지원",
+        "name_en": "Paraguay Ministry of Industry and Commerce · SME Support",
+        "category": "support",
+        "url": "https://www.mic.gov.py/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mic.gov.py/rediex-ofrece-diferentes-servicios-a-inversionistas-interesados-en-radicar-capital-en-paraguay/"
+      },
+      {
+        "name_ko": "REDIEX · 국가투자·수출진흥망",
+        "name_en": "REDIEX · Investment and Exports Network",
+        "category": "investment",
+        "url": "https://www.rediex.gov.py/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mic.gov.py/rediex-ofrece-diferentes-servicios-a-inversionistas-interesados-en-radicar-capital-en-paraguay/"
       }
     ],
     "QA": [
@@ -2062,6 +2323,35 @@
         "evidence_url": "https://www.mhsr.sk/ministerstvo/operacne-programy/opis/elektronizacia-sluzieb-ministerstva-hospodarstva-sr/sluzby-a-zivotne-situacie"
       }
     ],
+    "SV": [
+      {
+        "name_ko": "COMPRASAL · 정부 전자조달",
+        "name_en": "El Salvador COMPRASAL · Public Procurement",
+        "category": "procurement",
+        "url": "https://www.comprasal.gob.sv/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investinelsalvador.gob.sv/es/announcements"
+      },
+      {
+        "name_ko": "CONAMYPE · 중소기업 발전위원회",
+        "name_en": "El Salvador CONAMYPE · National MSME Commission",
+        "category": "support",
+        "url": "https://www.conamype.gob.sv/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.conamype.gob.sv/"
+      },
+      {
+        "name_ko": "INVEST El Salvador · 공공 투자진흥",
+        "name_en": "INVEST El Salvador · Government Investment Promotion",
+        "category": "investment",
+        "url": "https://www.investinelsalvador.gob.sv/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investinelsalvador.gob.sv/es/announcements"
+      }
+    ],
     "TH": [
       {
         "name_ko": "e-GP · 국가 전자조달 시스템",
@@ -2149,6 +2439,35 @@
         "evidence_url": "https://www.invest.gov.tr/en/pages/who-we-are.aspx"
       }
     ],
+    "TT": [
+      {
+        "name_ko": "ProcureTT · 공공구매규제청 공고",
+        "name_en": "Trinidad and Tobago ProcureTT · Official Procurement Notices",
+        "category": "procurement",
+        "url": "https://oprtt.org/procurett/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://oprtt.org/procurett/"
+      },
+      {
+        "name_ko": "통상투자부 · 중소기업 지원",
+        "name_en": "Trinidad and Tobago Ministry of Trade · SME Programmes",
+        "category": "support",
+        "url": "https://tradeind.gov.tt/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://tradeind.gov.tt/other-organizations/"
+      },
+      {
+        "name_ko": "투자유치국 · 정부 공식 투자지원",
+        "name_en": "Trinidad and Tobago Government · Investment Directorate",
+        "category": "investment",
+        "url": "https://mtti.gov.tt/investment-directorate/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mtti.gov.tt/investment-directorate/"
+      }
+    ],
     "TZ": [
       {
         "name_ko": "NeST · 탄자니아 국가조달",
@@ -2234,6 +2553,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.sba.gov/counseling/get-started/"
+      }
+    ],
+    "UY": [
+      {
+        "name_ko": "ARCE · 우루과이 국가조달청",
+        "name_en": "Uruguay ARCE · State Procurement Regulatory Agency",
+        "category": "procurement",
+        "url": "https://www.gub.uy/agencia-reguladora-compras-estatales/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gub.uy/ministerio-interior/tramites-y-servicios/servicios/agencia-reguladora-compras-estatales-arce"
+      },
+      {
+        "name_ko": "ANII · 국립 연구·기업혁신 지원",
+        "name_en": "Uruguay ANII · Innovation and Entrepreneurship Grants",
+        "category": "support",
+        "url": "https://anii.org.uy/apoyos/innovacion/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://anii.org.uy/apoyos/calendario/"
+      },
+      {
+        "name_ko": "Uruguay XXI · 국가 투자·수출진흥",
+        "name_en": "Uruguay XXI · Investment and Export Promotion",
+        "category": "investment",
+        "url": "https://www.uruguayxxi.gub.uy/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.uruguayxxi.gub.uy/en/"
       }
     ],
     "UZ": [
