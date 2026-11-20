@@ -49,10 +49,13 @@ class RegionAndDefenceDirectoryQA(unittest.TestCase):
                 self.assertEqual(src["access"], "not_live_tested")
             if len(item["official_sites"]) == 0:
                 self.assertEqual(item["status"], "research_pending")
-        self.assertGreaterEqual(sum(len(c["official_sites"]) for c in entries.values()), 125)
-        self.assertGreaterEqual(sum(len(c["official_sites"]) >= 3 for c in entries.values()), 35)
-        self.assertGreaterEqual(sum(len(c["official_sites"]) > 0 for c in entries.values()), 46)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) for c in entries.values()), 137)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) >= 3 for c in entries.values()), 37)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) > 0 for c in entries.values()), 51)
         self.assertEqual(len(entries), 193)
+        for iso in ("IS", "LI", "CR", "PA", "MU"):
+            self.assertIn(entries[iso]["defence_structure"], ("no_standing_army", "no_regular_armed_forces"))
+            self.assertTrue(entries[iso]["structure_evidence_url"].startswith("https://"))
     def test_country_and_territory_pages_wired_without_live_claims(self):
         build = (ROOT / "build.py").read_text(encoding="utf-8")
         helper = (ROOT / "tools" / "territory_defence_sections.py").read_text(encoding="utf-8")
