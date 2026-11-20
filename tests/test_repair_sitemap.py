@@ -77,7 +77,7 @@ class ReconcileSitemapTest(unittest.TestCase):
 
     def test_repair_missing_canonical_file_only_removes_matching_entry(self):
         (self.root / "es" / "ghana" / "index.html").unlink()
-        result = repair(self.root,min_urls=13,max_removed=3)
+        result = repair(self.root,min_urls=13,max_removed=3,max_removed_ratio=0.2)
         self.assertEqual(result["removed_urls"],2)
         self.assertEqual(result["urls"],13)
 
