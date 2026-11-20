@@ -1,0 +1,70 @@
+"""Official government-site coverage: no invented government links, no fake 193/193."""
+from pathlib import Path
+import sys
+import unittest
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/"tools"))
+from government_business_sites import load_directory,safe_https
+
+
+class GovernmentBusinessSiteTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.sites,cls.report=load_directory(ROOT)
+
+    def test_has_193_sovereign_country_entries(self):
+        self.assertEqual(193,len(self.sites))
+        self.assertEqual(579,self.report["target_verified_links"])
+        self.assertEqual(193,len(self.report["country_counts"]))
+
+    def test_exactly_10_verified_priority_country_sets(self):
+        # Increase this threshold only when independently reviewed additions
+        # are made. Do not assert 193/193 before that is actually true.
+        self.assertGreaterEqual(self.report["verified_countries"],10)
+        self.assertGreaterEqual(self.report["verified_links"],30)
+        self.assertEqual(579-self.report["verified_links"],
+                         self.report["remaining_required_link_slots"])
+        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA"):
+            self.assertGreaterEqual(self.report["country_counts"][iso]["verified"],3,iso)
+
+    def test_one_legacy_registry_entry_does_not_count_as_government_verified(self):
+        # A portal that returned HTTP 200 is NOT evidence that its operator
+        # is an official agency or that the URL serves procurement today.
+        self.assertEqual(0,self.report["country_counts"]["AF"]["verified"])
+        self.assertGreaterEqual(self.report["country_counts"]["AF"]["gap"],3)
+        self.assertTrue(all(x["verification"]!="official_primary"
+                            for x in self.sites["AF"]))
+
+    def test_unique_https_urls_and_verification_provenance(self):
+        for iso,links in self.sites.items():
+            self.assertEqual(len(links),len({x["url"].rstrip("/") for x in links}),iso)
+            for row in links:
+                self.assertTrue(safe_https(row["url"]),(iso,row["url"]))
+                if row["verification"]=="official_primary":
+                    self.assertTrue(safe_https(row["evidence_url"]))
+                    self.assertTrue(row["verified_on"])
+
+    def test_unverified_sites_cannot_claim_verified(self):
+        for links in self.sites.values():
+            for x in links:
+                if x["verification"]!="official_primary":
+                    self.assertFalse(x.get("verified_on"))
+                    self.assertFalse(x.get("evidence_url"))
+
+    def test_url_parser_fails_closed(self):
+        for url in ("http://example.gov/","javascript:alert(1)",
+                    "https://user:pass@legit.gov/", "https://example.gov:444/",
+                    "https://example.gov/\n<script>"):
+            self.assertFalse(safe_https(url),url)
+
+    def test_country_pages_render_all_sovereign_portals_not_only_six_guides(self):
+        build=(ROOT/"build.py").read_text(encoding="utf-8")
+        self.assertIn('GOV_BUSINESS_SITES, GOV_SITE_COVERAGE = _load_gov_sites(ROOT)',build)
+        self.assertIn('sec("government-business-sites", _title, _html)',build)
+        self.assertIn('if not c.get("reg"):',build)
+        self.assertIn('"government-business-sites-coverage.json"',build)
+
+
+if __name__=="__main__":
+    unittest.main()
