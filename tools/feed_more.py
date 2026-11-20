@@ -55,11 +55,11 @@ def _retry(src, fn, tries=3):
                     except Exception: wait = 60
                 stat(src)["notes"].append(mask(f"retry {i + 1} after {wait}s: {type(ex).__name__}: {ex}")[:160]); time.sleep(wait); continue
             stat(src)["failed"] += 1; stat(src)["notes"].append(mask(f"{type(ex).__name__}: {ex}")[:160]); raise
-def _post(src, url, body):
+def _post(src, url, body, tries=3, timeout=90):
     def f():
         req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={**UA, "Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=90) as r: return json.loads(r.read().decode("utf8", "replace"))
-    return _retry(src, f)
+        with urllib.request.urlopen(req, timeout=timeout) as r: return json.loads(r.read().decode("utf8", "replace"))
+    return _retry(src, f, tries)
 def _get(src, url, tries=3, timeout=90):
     def f():
         with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r: return r.read().decode("utf8", "replace")
@@ -113,7 +113,9 @@ def _keep(src, raw):
 
 # ---------------------------------------------------------------- sources
 def ted():
+    import time
     S = "EU TED"; out = []; d = lambda n: (TODAY - datetime.timedelta(days=n)).strftime("%Y%m%d")
+    deadline = time.monotonic() + 140
     base = f"notice-type IN (cn-standard cn-social) AND deadline-receipt-tender-date-lot>={TODAY.strftime('%Y%m%d')}"
     queries = [(f"{base} AND publication-date>={d(30)} AND estimated-value-proc>=1000000", 2e6, 12),
                (f"{base} AND publication-date>={d(45)} AND NOT buyer-country IN ({' '.join(EEA)})", 0, 6)]
@@ -121,7 +123,13 @@ def ted():
               "contract-nature", "estimated-value-proc", "estimated-value-cur-proc"]
     for q, minv, pages in queries:
         for page in range(1, pages + 1):
-            try: j = _post(S, "https://api.ted.europa.eu/v3/notices/search", {"query": q, "fields": fields, "limit": 250, "page": page})
+            if time.monotonic() >= deadline:
+                stat(S)["failed"] += 1
+                stat(S)["notes"].append("source_time_budget_exceeded: TED partial results; previous notices need verification")
+                break
+            try: j = _post(S, "https://api.ted.europa.eu/v3/notices/search",
+                           {"query": q, "fields": fields, "limit": 250, "page": page},
+                           tries=2, timeout=30)
             except Exception: break
             ns = j.get("notices") or []; stat(S)["raw"] += len(ns)
             for n in ns:
@@ -175,9 +183,28 @@ def ted_item(n, minv=0):
             "pm": "", "pmn": "", "pg": PG.get(nat, ""), "ma": "", "est": str(round(val)) if val else "", "cur": cur, "eur": round(eur)}
 
 def _ocds(S, url, mk):
-    out = []
+    """Bound pagination and forbid cross-origin/downgrade/repeating source URLs."""
+    import time
+    base = urllib.parse.urlsplit(url)
+    if base.scheme != "https" or not base.hostname or base.username or base.password:
+        stat(S)["failed"] += 1
+        stat(S)["notes"].append("invalid_ocds_source_url")
+        return []
+    out, seen = [], set()
+    deadline = time.monotonic() + 140
     for _ in range(40):
-        try: j = json.loads(_get(S, url))
+        parsed = urllib.parse.urlsplit(url)
+        if (parsed.scheme != "https" or parsed.hostname != base.hostname
+                or parsed.port != base.port or parsed.username or parsed.password or url in seen):
+            stat(S)["failed"] += 1
+            stat(S)["notes"].append("unsafe_or_repeated_ocds_pagination_blocked")
+            break
+        if time.monotonic() >= deadline:
+            stat(S)["failed"] += 1
+            stat(S)["notes"].append("source_time_budget_exceeded: OCDS partial results")
+            break
+        seen.add(url)
+        try: j = json.loads(_get(S, url, tries=2, timeout=30))
         except Exception: break
         rels = j.get("releases") or []; stat(S)["raw"] += len(rels)
         for r in rels:
@@ -185,7 +212,7 @@ def _ocds(S, url, mk):
             if it: out.append(it)
         nxt = (j.get("links") or {}).get("next")
         if not nxt or not rels: break
-        url = nxt
+        url = urllib.parse.urljoin(url, str(nxt))
     return out
 
 def _ocds_item(S, r, url, minv_eur=1.2e6):
@@ -243,8 +270,22 @@ def prozorro():
     cands, url = [], "https://public-api.prozorro.gov.ua/api/2.5/tenders?" + urllib.parse.urlencode(
         {"descending": 1, "limit": 1000, "opt_fields": "status,procurementMethodType,tenderPeriod,tenderID"})
     stop = (TODAY - datetime.timedelta(days=4)).isoformat()
+    import time as _clock
+    list_deadline = _clock.monotonic() + 140
+    seen_pages = set()
     for _ in range(25):
-        try: j = json.loads(_get(S, url))
+        page_url = urllib.parse.urlsplit(url)
+        if (page_url.scheme != "https" or page_url.hostname != "public-api.prozorro.gov.ua"
+                or page_url.username or page_url.password or url in seen_pages):
+            stat(S)["failed"] += 1
+            stat(S)["notes"].append("unsafe_or_repeated_prozorro_pagination_blocked")
+            break
+        if _clock.monotonic() >= list_deadline:
+            stat(S)["failed"] += 1
+            stat(S)["notes"].append("source_time_budget_exceeded: Prozorro list partial")
+            break
+        seen_pages.add(url)
+        try: j = json.loads(_get(S, url, tries=1, timeout=25))
         except Exception: break
         d = j.get("data") or []; stat(S)["raw"] += len(d)
         for x in d:
@@ -253,23 +294,23 @@ def prozorro():
             raw = str((x.get("tenderPeriod") or {}).get("endDate") or "")
             if still_open(raw): cands.append(x)
         if not d or str(d[-1].get("dateModified", ""))[:10] < stop: break
-        url = (j.get("next_page") or {}).get("uri")
-        if not url: break
+        nxt = (j.get("next_page") or {}).get("uri")
+        if not nxt: break
+        url = urllib.parse.urljoin(url, str(nxt))
     # re-check a cached tender when Prozorro says it changed since we read it (deadline extended, title edited);
     # changed ones go first, then new candidates, 400 detail calls at most per run
     changed = [x for x in cands if x["id"] in cache and str(x.get("dateModified") or "") > str(cache[x["id"]].get("mod") or "")]
     todo = (changed + [x for x in cands if x["id"] not in cache])[:400]
     import concurrent.futures as cf
-    # bounded: detail calls get one 30 s attempt each, and the batch stops after 20 failures or 8 minutes,
-    # so a Prozorro outage can never push the whole daily job past its time limit
+    # bounded: one 30-second attempt, 8 workers, 4-minute batch budget.
     import time as _t
-    t0, fails = _t.time(), [0]
+    t0, fails = _t.monotonic(), [0]
     def one(x):
-        if fails[0] >= 20 or _t.time() - t0 > 480: return None
+        if fails[0] >= 20 or _t.monotonic() - t0 > 240: return None
         try: return json.loads(_get(S, "https://public-api.prozorro.gov.ua/api/2.5/tenders/" + x["id"], tries=1, timeout=30))["data"]
         except Exception: fails[0] += 1; return None
     with cf.ThreadPoolExecutor(8) as ex: details = list(ex.map(one, todo))
-    if fails[0] >= 20 or _t.time() - t0 > 480: stat(S)["notes"].append("detail batch stopped early (failures or 8-minute limit)")
+    if fails[0] >= 20 or _t.monotonic() - t0 > 240: stat(S)["notes"].append("detail batch stopped early (failures or 4-minute limit)")
     for t in details:
         if not t: continue
         v = t.get("value") or {}
