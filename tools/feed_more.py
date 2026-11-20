@@ -272,11 +272,19 @@ def prozorro():
     stop = (TODAY - datetime.timedelta(days=4)).isoformat()
     import time as _clock
     list_deadline = _clock.monotonic() + 140
+    seen_pages = set()
     for _ in range(25):
+        page_url = urllib.parse.urlsplit(url)
+        if (page_url.scheme != "https" or page_url.hostname != "public-api.prozorro.gov.ua"
+                or page_url.username or page_url.password or url in seen_pages):
+            stat(S)["failed"] += 1
+            stat(S)["notes"].append("unsafe_or_repeated_prozorro_pagination_blocked")
+            break
         if _clock.monotonic() >= list_deadline:
             stat(S)["failed"] += 1
             stat(S)["notes"].append("source_time_budget_exceeded: Prozorro list partial")
             break
+        seen_pages.add(url)
         try: j = json.loads(_get(S, url, tries=1, timeout=25))
         except Exception: break
         d = j.get("data") or []; stat(S)["raw"] += len(d)
@@ -286,8 +294,9 @@ def prozorro():
             raw = str((x.get("tenderPeriod") or {}).get("endDate") or "")
             if still_open(raw): cands.append(x)
         if not d or str(d[-1].get("dateModified", ""))[:10] < stop: break
-        url = (j.get("next_page") or {}).get("uri")
-        if not url: break
+        nxt = (j.get("next_page") or {}).get("uri")
+        if not nxt: break
+        url = urllib.parse.urljoin(url, str(nxt))
     # re-check a cached tender when Prozorro says it changed since we read it (deadline extended, title edited);
     # changed ones go first, then new candidates, 400 detail calls at most per run
     changed = [x for x in cands if x["id"] in cache and str(x.get("dateModified") or "") > str(cache[x["id"]].get("mod") or "")]
