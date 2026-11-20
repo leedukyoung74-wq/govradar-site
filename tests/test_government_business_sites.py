@@ -18,23 +18,24 @@ class GovernmentBusinessSiteTests(unittest.TestCase):
         self.assertEqual(579,self.report["target_verified_links"])
         self.assertEqual(193,len(self.report["country_counts"]))
 
-    def test_at_least_176_verified_priority_country_sets(self):
+    def test_at_least_191_verified_priority_country_sets(self):
         # Increase this threshold only when independently reviewed additions
         # are made. Do not assert 193/193 before that is actually true.
-        self.assertGreaterEqual(self.report["verified_countries"],176)
-        self.assertGreaterEqual(self.report["verified_links"],528)
+        self.assertGreaterEqual(self.report["verified_countries"],191)
+        self.assertGreaterEqual(self.report["verified_links"],573)
         self.assertEqual(579-self.report["verified_links"],
                          self.report["remaining_required_link_slots"])
-        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA","KE","ZA","PH","BR","ID","DE","ES","NZ","CH","NL","NO","SE","DK","AE","BD","CL","CO","EG","GH","IT","MY","MX","NG","PK","PE","PL","PT","TH","TR","VN","BG","CZ","FI","HR","IE","LT","LV","SI","SK","AL","AT","BE","EE","GR","HU","CY","LU","RO","RS","UA","AR","GE","BA","KZ","CN","NP","LK","UZ","BH","QA","JO","OM","KW","IL","MA","TN","RW","BW","TZ","ZM","KH","UY","PY","PA","CR","DO","EC","BO","GT","HN","SV","JM","TT","IS","MD","MK","AZ","AM","MT","SN","NA","ET","FJ","PG","UG","MU","WS","SB","VU","ZW","GM","CI","GY","BB","MV","BN","SC","MW","MG","ME","BT","TL","KG","AO","SZ","BS","MN","DZ","BJ","CM","GN","TG","CV","CD","MZ","AD","LI","SM","BZ","GD","LC","AG","DM","VC","KN","KI","MH","FM","NR","PW","TO","TV","GA","LS","LR","SL","MR","NE","HT","NI","SR","RU","MC","LB","IQ","LA","TJ","MM","ML","LY"):
+        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA","KE","ZA","PH","BR","ID","DE","ES","NZ","CH","NL","NO","SE","DK","AE","BD","CL","CO","EG","GH","IT","MY","MX","NG","PK","PE","PL","PT","TH","TR","VN","BG","CZ","FI","HR","IE","LT","LV","SI","SK","AL","AT","BE","EE","GR","HU","CY","LU","RO","RS","UA","AR","GE","BA","KZ","CN","NP","LK","UZ","BH","QA","JO","OM","KW","IL","MA","TN","RW","BW","TZ","ZM","KH","UY","PY","PA","CR","DO","EC","BO","GT","HN","SV","JM","TT","IS","MD","MK","AZ","AM","MT","SN","NA","ET","FJ","PG","UG","MU","WS","SB","VU","ZW","GM","CI","GY","BB","MV","BN","SC","MW","MG","ME","BT","TL","KG","AO","SZ","BS","MN","DZ","BJ","CM","GN","TG","CV","CD","MZ","AD","LI","SM","BZ","GD","LC","AG","DM","VC","KN","KI","MH","FM","NR","PW","TO","TV","GA","LS","LR","SL","MR","NE","HT","NI","SR","RU","MC","LB","IQ","LA","TJ","MM","ML","LY","BY","IR","SY","YE","SO","ST","SS","CF","VE","AF","TM","SD","GQ","GW","CU"):
             self.assertGreaterEqual(self.report["country_counts"][iso]["verified"],3,iso)
 
-    def test_one_legacy_registry_entry_does_not_count_as_government_verified(self):
-        # A portal that returned HTTP 200 is NOT evidence that its operator
-        # is an official agency or that the URL serves procurement today.
-        self.assertEqual(0,self.report["country_counts"]["AF"]["verified"])
-        self.assertGreaterEqual(self.report["country_counts"]["AF"]["gap"],3)
-        self.assertTrue(all(x["verification"]!="official_primary"
-                            for x in self.sites["AF"]))
+    def test_unsupported_states_not_fabricated_from_historical_candidates(self):
+        # A portal returning HTTP 200 is NOT government agency confirmation.
+        # Do not fabricate three sources for closed/non-disclosing states.
+        for iso in ("ER", "KP"):
+            self.assertEqual(0,self.report["country_counts"][iso]["verified"])
+            self.assertEqual(3,self.report["country_counts"][iso]["gap"])
+            self.assertTrue(all(x["verification"]!="official_primary"
+                                for x in self.sites[iso]))
 
     def test_unique_https_urls_and_verification_provenance(self):
         for iso,links in self.sites.items():
