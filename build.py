@@ -368,6 +368,52 @@ def country_page(iso, L):
         _html = (f'<p class="note">{e(_note)}</p><div class="cards">{"".join(_cards)}</div>'
                  if _cards else f'<p class="note">{e(_note)} {e(_empty)}</p>')
         body.append(sec("government-business-sites", _title, _html))
+        # Public, ungated and explicit about source confidence. A worldwide
+        # directory fallback is never presented as a country's own agency.
+        _ewe_t = {
+            "ko": ("환경 · 날씨 · 비상사태 공식기관", ("환경·기후", "기상·날씨", "재난·비상사태"),
+                   "국가기관 링크 후보 · 접속/실시간 경보 미검증", "국가기관 미연결 · 국제기구 디렉터리에서 검색",
+                   "지역 경보/대피는 현지 정부 공식 발표와 긴급전화로 확인하세요. 이 링크는 실시간 비상 알림이 아닙니다."),
+            "en": ("Environment, weather & emergency authorities", ("Environment", "Meteorology", "Disaster & emergency"),
+                   "National agency candidate · live/alert status unverified", "No national agency linked · search global official directory",
+                   "Follow local government emergency orders and emergency numbers. These links are not a real-time warning system."),
+            "es": ("Medio ambiente, meteorología y emergencias", ("Medio ambiente", "Meteorología", "Emergencias"),
+                   "Organismo nacional candidato · no verificado en vivo", "Sin enlace nacional · buscar en directorio internacional",
+                   "Siga las alertas y órdenes oficiales locales. Estos enlaces no son alertas en tiempo real."),
+            "fr": ("Environnement, météo et urgences", ("Environnement", "Météo", "Urgences"),
+                   "Organisme national candidat · non vérifié en direct", "Aucun lien national · chercher dans l'annuaire international",
+                   "Suivez les consignes officielles locales. Ces liens ne sont pas des alertes en temps réel."),
+            "ar": ("البيئة والطقس والطوارئ", ("البيئة", "الأرصاد", "الطوارئ"),
+                   "رابط جهة وطنية مرشح · غير متحقق منه مباشرة", "لا يوجد رابط وطني · ابحث في الدليل الدولي",
+                   "اتبع تعليمات الطوارئ المحلية الرسمية. هذه ليست إنذارات مباشرة."),
+            "vi": ("Môi trường, thời tiết và khẩn cấp", ("Môi trường", "Khí tượng", "Khẩn cấp"),
+                   "Liên kết cơ quan quốc gia đề xuất · chưa xác thực trực tiếp", "Chưa có liên kết quốc gia · tra cứu danh bạ quốc tế",
+                   "Tuân thủ cảnh báo và hướng dẫn khẩn cấp của chính quyền địa phương."),
+            "id": ("Lingkungan, cuaca dan kedaruratan", ("Lingkungan", "Meteorologi", "Darurat"),
+                   "Calon tautan lembaga nasional · belum diverifikasi langsung", "Belum ada tautan nasional · cari melalui direktori internasional",
+                   "Ikuti instruksi darurat resmi pemerintah setempat, bukan hanya halaman ini.")
+        }
+        _head, _labs, _good, _missing, _warning = _ewe_t.get(L, _ewe_t["en"])
+        _source = EWE_SITES[iso]
+        _cards = []
+        for _i, _kind in enumerate(("environment", "weather", "emergency")):
+            _site = _source[_kind]
+            _lab = _labs[_i]
+            if _site is not None:
+                _href = _site["url"]
+                _nm = _site["name"]
+                _state = _good
+            else:
+                _href = EWE_COVERAGE["international_directory_refs"][_kind]
+                _nm = {"environment": "UNEP Environment Directory",
+                       "weather": "WMO National Weather Services",
+                       "emergency": "UNDRR National Disaster Authorities"}[_kind]
+                _state = _missing
+            _cards.append(f'<a class="card" href="{e(_href)}" target="_blank" rel="noopener noreferrer nofollow"'
+                          f' style="display:block;text-decoration:none"><b>{e(_lab)}</b>'
+                          f'<p>{e(_nm)}</p><p class="note">{e(_state)}</p></a>')
+        _ewe_html = '<p class="note">' + e(_warning) + '</p><div class="cards">' + ''.join(_cards) + '</div>'
+        body.append(sec("environment-weather-emergency", _head, _ewe_html))
     if iso in GUIDES:
         body.append(f'<p class="regbar"><a class="chip" href="{url(L,iso)}guide/">{"How to sell to this government →" if L!="ko" else "이 나라 정부에 파는 법 →"}</a> <a class="chip" href="/{L}/mdb/">{"Development bank tenders" if L!="ko" else "개발은행·국제기구 조달"}</a></p>')
     if c.get("reg"):
@@ -474,6 +520,10 @@ GUIDES = json.load(open(os.path.join(SRC, "guides.json"), encoding="utf8"))
 # explicitly unverified candidates; never imply HTTP 200 == official agency.
 from government_business_sites import load_directory as _load_gov_sites
 GOV_BUSINESS_SITES, GOV_SITE_COVERAGE = _load_gov_sites(ROOT)
+# Distinct public country agencies: climate/environment, national weather and
+# emergency/disaster office. Candidate links are NOT real-time integrations.
+from environment_weather_emergency_sites import load_catalog as _load_ewe_catalog
+EWE_SITES, EWE_COVERAGE = _load_ewe_catalog(ROOT)
 for _iso, _d in DATA.items():
     if isinstance(_d.get("guide"), dict): GUIDES[_iso] = _d["guide"]
 MDBI = [("WB","World Bank","세계은행","https://projects.worldbank.org/en/projects-operations/procurement",["world bank","세계은행","ibrd"]),
@@ -1035,6 +1085,10 @@ def build():
     # This is a source directory count, never an actual live tender count.
     with open(OUT + "/data/government-business-sites-coverage.json", "w", encoding="utf-8") as _f:
         json.dump(GOV_SITE_COVERAGE, _f, ensure_ascii=False, indent=2)
+    with open(OUT + "/data/environment-weather-emergency-coverage.json", "w", encoding="utf-8") as _f:
+        json.dump(EWE_COVERAGE, _f, ensure_ascii=False, indent=2)
+    with open(OUT + "/data/environment-weather-emergency-directory.json", "w", encoding="utf-8") as _f:
+        json.dump(EWE_SITES, _f, ensure_ascii=False, indent=2)
     for f in ("wmm-logo-white.png", "wmm-logo.png", "gcsme-logo.jpg", "emblem.png", "og.jpg", "spot.jpg", "paper.jpg", "logo-h.webp", "logo-h-lg.webp", "logo-v.webp", "mark.png"): shutil.copy(os.path.join(SRC, f), OUT + "/assets/" + f)
     for f in glob.glob(os.path.join(ROOT, "web", "*")): shutil.copy(f, OUT + "/assets/")
     os.makedirs(OUT + "/embed/gateway", exist_ok=True); shutil.copy(os.path.join(SRC, "gateway.html"), OUT + "/embed/gateway/index.html")
