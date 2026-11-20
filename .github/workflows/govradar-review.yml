@@ -1,0 +1,55 @@
+name: GOV RADAR credit-free review
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/govradar-review.yml'
+      - 'govradar_daily.py'
+  workflow_dispatch:
+  schedule:
+    - cron: '47 22 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: govradar-credit-free-review
+  cancel-in-progress: false
+
+jobs:
+  public-feed-check:
+    if: >-
+      toJSON(github.event.repository.private) == 'false' &&
+      (github.event_name != 'pull_request' ||
+      (github.event.pull_request.head.repo.full_name == github.repository &&
+      github.head_ref == 'review/wmm-credit-free-daily-radar-20261121'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run public feed checks
+        run: python3 govradar_daily.py
+      - name: Report source counts
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          reports = sorted(Path("govradar-reports").glob("*.json"))
+          if not reports:
+              raise SystemExit("No report was produced")
+          report = json.loads(reports[-1].read_text(encoding="utf-8"))
+          print("## GOV RADAR public source check")
+          print("Generated " + report["run_at_kst"])
+          print()
+          print("| Category | Source | Status | HTTP | Items |")
+          print("|---|---|---|---|---|")
+          for source in report["sources"]:
+              print(f'| {source["category"]} | {source["publisher"]} | {source["status"]} | '
+                    f'{source.get("http_status", "")} | {len(source["items"])} |')
+          print("\nClaude QA is pending. Ownership grouping does not verify claims.")
+          PY
