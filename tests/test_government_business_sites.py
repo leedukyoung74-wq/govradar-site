@@ -63,7 +63,7 @@ class GovernmentBusinessSiteTests(unittest.TestCase):
         self.assertIn('GOV_BUSINESS_SITES, GOV_SITE_COVERAGE = _load_gov_sites(ROOT)',build)
         self.assertIn('sec("government-business-sites", _title, _html)',build)
         self.assertIn('if not c.get("reg"):',build)
-        self.assertIn('"government-business-sites-coverage.json"',build)
+        self.assertIn("government-business-sites-coverage.json",build)
 
 
 if __name__=="__main__":
