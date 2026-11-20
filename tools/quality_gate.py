@@ -11,7 +11,7 @@ def load(p):
     try: return json.load(open(p, encoding="utf8"))
     except Exception: return None
 
-def check(new, old, now=None):
+def check(new, old, now=None, require_country_summary=False):
     """new/old: dicts of feed name -> parsed JSON (old may be empty). Returns list of failure strings (empty = pass)."""
     import feed_tenders as FT
     now = now or datetime.datetime.now(datetime.timezone.utc); bad = []
@@ -35,6 +35,7 @@ def check(new, old, now=None):
     try:
         age = (now - datetime.datetime.strptime(t.get("updated", ""), "%Y-%m-%dT%H:%MZ").replace(tzinfo=datetime.timezone.utc)).total_seconds() / 3600
         if age > 6: bad.append(f"tenders.json stamp is {age:.1f} h old (was it rebuilt?)")
+        if age < -0.1: bad.append(f"tenders.json stamp is {abs(age):.1f} h in the future (clock error)")
     except Exception: bad.append("tenders.json has no valid 'updated' stamp")
     # a source that used to deliver must not silently vanish (an ERROR day carries yesterday's notices instead)
     old_src = {}; new_src = {}
@@ -47,9 +48,20 @@ def check(new, old, now=None):
         if j is None: continue
         n_ = len(j.get("items") or [])
         if n_ < minimum: bad.append(f"{f} has only {n_} items (minimum {minimum})")
+    # Match feed_cty.py: only verified, non-stale still-open notices enter country counters.
+    # A date-only comparison counted delayed-verification items and blocked publication.
+    import deadline as DL
     s = new.get("cty/_summary.json")
-    if s is not None and ((s.get("t") or {}).get("n") or 0) < 0.9 * len([x for x in items if x.get("deadline", "") >= now.date().isoformat()]):
-        bad.append("cty/_summary.json open-tender count does not match tenders.json")
+    if (require_country_summary or s is not None) and (not isinstance(s, dict) or not isinstance(s.get("t"), dict)):
+        bad.append("cty/_summary.json missing or unreadable")
+    elif s is not None:
+        expected = sum(DL.is_listed_open(x, now) and bool(x.get("iso")) for x in items)
+        actual = s["t"].get("n")
+        if actual != expected:
+            bad.append(f"cty/_summary.json open-tender count {actual!r} != verified open tenders {expected}")
+        expected_countries = len({x.get("iso") for x in items if x.get("iso") and DL.is_listed_open(x, now)})
+        if s["t"].get("c") != expected_countries:
+            bad.append(f"cty/_summary.json country count {s['t'].get('c')!r} != verified open countries {expected_countries}")
     o = new.get("hz/official.json")
     if o is not None:
         srcs = o.get("sources") or {}
@@ -97,7 +109,7 @@ if __name__ == "__main__":
     if os.path.exists(os.path.join(d, "feeds", "sanctions.json")): new["sanctions.json"] = load(os.path.join(d, "feeds", "sanctions.json"))
     if os.path.exists(os.path.join(d, "feeds", "econ.json")): new["econ.json"] = load(os.path.join(d, "feeds", "econ.json"))
     if os.path.exists(os.path.join(d, "hz", "official.json")): new["hz/official.json"] = load(os.path.join(d, "hz", "official.json"))
-    bad = check(new, old)
+    bad = check(new, old, require_country_summary=True)
     print(json.dumps({"result": "FAIL" if bad else "PASS", "problems": bad,
                       "notices": len((new.get("tenders.json") or {}).get("items") or []),
                       "published_notices": len((old.get("tenders.json") or {}).get("items") or [])}, ensure_ascii=False, indent=1))
