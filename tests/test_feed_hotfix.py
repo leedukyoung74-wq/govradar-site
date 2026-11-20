@@ -45,13 +45,14 @@ class VerifiedOpenParity(unittest.TestCase):
         self.assertTrue(any("missing or unreadable" in s for s in self.gate(None)))
 
 
-class DisjointPublicationOwnership(unittest.TestCase):
-    def test_daily_publisher_stages_only_feeds(self):
+class SafeConcurrentPublication(unittest.TestCase):
+    def test_daily_publisher_reconciles_both_feeds_and_official_sources(self):
         workflow = (ROOT / ".github/workflows/feeds.yml").read_text(encoding="utf-8")
-        self.assertIn("git add feeds", workflow)
-        for line in workflow.splitlines():
-            if line.strip().startswith("git add "):
-                self.assertNotIn("hz/official.json", line)
+        self.assertIn("git add feeds hz/official.json", workflow)
+        self.assertIn("merge_official_sources.py", workflow)
+        self.assertIn("git reset --hard origin/data", workflow)
+        self.assertIn("python ../tools/quality_gate.py .", workflow)
+        self.assertNotIn("git push --force", workflow)
 
     def test_dedicated_hazard_publisher_still_stages_official_json(self):
         workflow = (ROOT / ".github/workflows/wmm_fast_official.yml").read_text(encoding="utf-8")
