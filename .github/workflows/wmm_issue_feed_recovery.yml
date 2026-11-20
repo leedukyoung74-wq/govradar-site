@@ -1,0 +1,30 @@
+# Manual emergency fallback when scheduled GitHub cron events do not arrive.
+# Only the repository OWNER can trigger it through an exact issue #80 comment.
+# No arbitrary issue/PR content is ever executed in a shell.
+name: GOV RADAR owner-only feed recovery
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+jobs:
+  verified_dry_run:
+    if: ${{ github.event.issue.number == 80 && !github.event.issue.pull_request && github.event.issue.state == 'open' && github.event.comment.user.login == 'leedukyoung74-wq' && github.event.comment.author_association == 'OWNER' && github.event.comment.body == '/govradar-dryrun' }}
+    uses: leedukyoung74-wq/govradar-site/.github/workflows/feeds.yml@src
+    with:
+      task: daily
+      code_ref: src
+      dry_run: true
+    secrets:
+      DAPA_KEY: ${{ secrets.DAPA_KEY }}
+      SAM_KEY: ${{ secrets.SAM_KEY }}
+  verified_publish:
+    if: ${{ github.event.issue.number == 80 && !github.event.issue.pull_request && github.event.issue.state == 'open' && github.event.comment.user.login == 'leedukyoung74-wq' && github.event.comment.author_association == 'OWNER' && github.event.comment.body == '/govradar-publish' }}
+    uses: leedukyoung74-wq/govradar-site/.github/workflows/feeds.yml@src
+    with:
+      task: daily
+      code_ref: src
+      dry_run: false
+    secrets:
+      DAPA_KEY: ${{ secrets.DAPA_KEY }}
+      SAM_KEY: ${{ secrets.SAM_KEY }}
