@@ -14,7 +14,7 @@ class PublisherOwnershipTests(unittest.TestCase):
 
     def test_dry_runs_may_be_superseded_but_live_publishing_must_not_be(self):
         wf = (ROOT / ".github/workflows/feeds.yml").read_text(encoding="utf-8")
-        self.assertIn("cancel-in-progress: ${{ inputs.dry_run }}", wf)
+        self.assertIn('cancel-in-progress: "${{ inputs.dry_run }}"', wf)
         self.assertIn("dry_run: true", (ROOT / ".github/workflows/feeds-dryrun.yml").read_text(encoding="utf-8"))
 
     def test_fast_official_publisher_owns_official_hazard_data(self):
