@@ -1156,7 +1156,16 @@ def build():
         "countries_total": len(_defence_counts), "target_official_links": len(_defence_counts) * 3,
         "registered_official_links": sum(_defence_counts.values()),
         "countries_with_three_recorded": sum(n >= 3 for n in _defence_counts.values()),
+        "countries_with_three_not_classified_no_standing_army": sum(
+            len(item["official_sites"]) >= 3 and item.get("defence_structure") not in ("no_standing_army", "no_regular_armed_forces")
+            for item in NATIONAL_DEFENCE_SITES.values()),
+        "countries_no_standing_army": [iso for iso, item in NATIONAL_DEFENCE_SITES.items()
+            if item.get("defence_structure") in ("no_standing_army", "no_regular_armed_forces")],
+        "registered_links_in_no_standing_army_countries": sum(
+            len(item["official_sites"]) for item in NATIONAL_DEFENCE_SITES.values()
+            if item.get("defence_structure") in ("no_standing_army", "no_regular_armed_forces")),
         "remaining_minimum_slots": sum(max(0, 3 - n) for n in _defence_counts.values()),
+        "applicability_note": "Three separate military institutions cannot exist in every sovereign state. Entries for countries without standing armies are civilian security / policy links, not military branches.",
         "not_live_verified": True, "country_counts": _defence_counts}, ensure_ascii=False))
     # Stage documentary, unverified country food profiles independently of tender/region data.
     # Official preparedness references are NOT product or shelf-life certification.
