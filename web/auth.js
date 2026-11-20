@@ -3,6 +3,35 @@
    Membership level comes from app_metadata.roles (m1…m5, edu, youth, uni, admin). */
 (function () {
   const API = "/.netlify/identity", KEY = "wmm.auth.v1";
+  // Preserve in-site navigation across third-party Google OAuth round trips.
+  // Only current same-origin localized paths are permitted (never external URLs).
+  const RETURN_KEY = "wmm.auth.return.v1";
+  const SAFE_PATH = /^\/(?:ko|en|es|fr|ar|vi|id)\/(?:[^\\#\r\n]*)$/;
+  function allowedReturnPath(target) {
+    if (typeof target !== "string" || target.length > 2048 || !SAFE_PATH.test(target) ||
+        target.startsWith("//") || target.includes("\\")) return null;
+    try {
+      const p = new URL(target, location.origin);
+      if (p.origin !== location.origin || p.hash) return null;
+      return p.pathname + p.search;
+    } catch (e) { return null; }
+  }
+  function rememberOAuthReturn() {
+    try {
+      const dest = allowedReturnPath(location.pathname + location.search);
+      if (dest) sessionStorage.setItem(RETURN_KEY, dest);
+    } catch (e) {}
+  }
+  function resumeOAuthReturn() {
+    let raw = null;
+    try { raw = sessionStorage.getItem(RETURN_KEY); sessionStorage.removeItem(RETURN_KEY); }
+    catch (e) { return false; }
+    const dest = allowedReturnPath(raw);
+    if (!dest || dest === location.pathname + location.search) return false;
+    location.replace(dest);
+    return true;
+  }
+
   const L = window.RADAR_LANG || "en", T = (window.RADAR_AT || {});
   const $ = s => document.querySelector(s);
   const tt = k => T[k] || k;
@@ -48,7 +77,7 @@
       if (h.get("confirmation_token")) { clear(); const tok = await j("/verify", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ token: h.get("confirmation_token"), type: "signup" }) }); await withTokens(tok); toast(tt("confirmed")); }
       else if (h.get("recovery_token")) { clear(); const tok = await j("/verify", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ token: h.get("recovery_token"), type: "recovery" }) }); await withTokens(tok); open("newpw"); }
       else if (h.get("invite_token")) { clear(); open("invite", h.get("invite_token")); }
-      else if (h.get("access_token")) { const tok = { access_token: h.get("access_token"), refresh_token: h.get("refresh_token"), expires_in: +h.get("expires_in") || 3600 }; clear(); await withTokens(tok); toast(tt("welcome")); }
+      else if (h.get("access_token")) { const tok = { access_token: h.get("access_token"), refresh_token: h.get("refresh_token"), expires_in: +h.get("expires_in") || 3600 }; clear(); await withTokens(tok); toast(tt("welcome")); resumeOAuthReturn(); }
       else if (h.get("error_description")) { clear(); toast(h.get("error_description")); }
     } catch (e) { toast(e.message); }
   }
@@ -78,7 +107,7 @@
     const m = $("#authm"); if (!m) return;
     $("#authx").addEventListener("click", close);
     m.addEventListener("click", e => { if (e.target === m) close(); const a = e.target.closest("[data-am]"); if (a) { e.preventDefault(); open(a.dataset.am); } });
-    $("#auth-google").addEventListener("click", () => { location.href = API + "/authorize?provider=google"; });
+    $("#auth-google").addEventListener("click", () => { rememberOAuthReturn(); location.href = API + "/authorize?provider=google"; });
     $("#authf").addEventListener("submit", async e => {
       e.preventDefault(); const msg = $("#authmsg"), btn = $("#auth-sub"); btn.disabled = true; msg.textContent = "…";
       const em = ($("#authe").value || "").trim(), pw = $("#authp").value || "";
@@ -87,7 +116,10 @@
           if (!$("#auth-terms").checked) throw new Error(tt("need_terms"));
           const age = $("#auth-age").value; if (age === "u14") throw new Error(tt("u14"));
           if (pw.length < 8) throw new Error(tt("pw_short"));
-          const r = await signup(em, pw, { full_name: $("#authn").value.trim(), lang: L, age_band: age, terms_at: new Date().toISOString(), marketing: !!($("#auth-mkt") && $("#auth-mkt").checked), marketing_at: new Date().toISOString() });
+          const marketing = !!($("#auth-mkt") && $("#auth-mkt").checked);
+          const decisionAt = new Date().toISOString();
+          const r = await signup(em, pw, { full_name: $("#authn").value.trim(), lang: L, age_band: age, terms_at: decisionAt,
+            marketing, marketing_at: marketing ? decisionAt : null, marketing_decision_at: decisionAt });
           if (r && r.confirmed_at) { await login(em, pw); msg.textContent = tt("welcome"); setTimeout(close, 900); } else msg.textContent = tt("check_mail");
         } else if (MODE === "reset") { await recover(em); msg.textContent = tt("reset_sent"); }
         else if (MODE === "newpw") { if (pw.length < 8) throw new Error(tt("pw_short")); await update({ password: pw }); msg.textContent = tt("pw_saved"); setTimeout(close, 900); }
@@ -116,7 +148,7 @@
     const row = document.createElement("div"); row.style.cssText = "display:flex;flex-wrap:wrap;gap:8px";
     [["mkt_yes", true, "#1e4fb8"], ["mkt_no", false, "transparent"]].forEach(([k, v, bg]) => { const x = document.createElement("button"); x.type = "button"; x.textContent = tt(k);
       x.style.cssText = "min-height:44px;padding:0 18px;border:1px solid #fff;background:" + bg + ";color:#fff;font:inherit;font-weight:700;cursor:pointer";
-      x.onclick = async () => { try { await update({ data: { marketing: v, marketing_at: new Date().toISOString() } }); toast(tt("mkt_saved")); } catch (e) { toast(e.message); } b.remove(); }; row.appendChild(x); });
+      x.onclick = async () => { try { const decisionAt = new Date().toISOString(); await update({ data: { marketing: v, marketing_at: v ? decisionAt : null, marketing_decision_at: decisionAt } }); toast(tt("mkt_saved")); } catch (e) { toast(e.message); } b.remove(); }; row.appendChild(x); });
     b.appendChild(row); document.body.appendChild(b);
   }
   subs.push(() => setTimeout(askMkt, 600));
