@@ -351,6 +351,35 @@
         "evidence_url": "https://flandersinvestmentandtrade.be/en/subsidies"
       }
     ],
+    "BF": [
+      {
+        "name_ko": "DGCMEF · 부르키나파소 정부 공공조달",
+        "name_en": "Burkina Faso DGCMEF · Public Procurement Notices",
+        "category": "procurement",
+        "url": "https://dgcmef.gov.bf/fr",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.dgcmef.gov.bf/fr/plan-de-passation-des-march-s-publics"
+      },
+      {
+        "name_ko": "APEC · 국가 공동기업 창업지원",
+        "name_en": "Burkina Faso APEC · Community Entrepreneurship Agency",
+        "category": "support",
+        "url": "https://apec.bf/a-propos/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gouvernement.gov.bf/?p=23193"
+      },
+      {
+        "name_ko": "ABI · 부르키나파소 투자진흥청",
+        "name_en": "Burkina Faso Investment Agency · ABI",
+        "category": "investment",
+        "url": "https://www.investburkina.bf/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investburkina.bf/projects/immobilier-9"
+      }
+    ],
     "BG": [
       {
         "name_ko": "CAIS EOP · 공공조달 전자시스템",
@@ -668,6 +697,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://anapi.cd/en/procedures"
+      }
+    ],
+    "CG": [
+      {
+        "name_ko": "ARMP · 콩고공화국 국가조달청",
+        "name_en": "Republic of Congo ARMP · Public Procurement Authority",
+        "category": "procurement",
+        "url": "https://armp.cg/services-portal.php?id=12&lang=en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.armp.cg/index.php?customer-service=&lang=en"
+      },
+      {
+        "name_ko": "ADPME · 공공 중소기업 개발청",
+        "name_en": "Republic of Congo ADPME · SME Support Agency",
+        "category": "support",
+        "url": "https://www.adpme.cg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.entreprises.gouv.cg/structure-du-ministere/"
+      },
+      {
+        "name_ko": "API Congo · 국가 투자진흥청",
+        "name_en": "Republic of Congo Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://apicongo.cg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.apicongo.cg/presentation_api.php?lang=fr"
       }
     ],
     "CH": [
@@ -1306,6 +1364,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32089"
+      }
+    ],
+    "GA": [
+      {
+        "name_ko": "ARMP · 가봉 공공조달 규제청",
+        "name_en": "Gabon Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://armp.ga/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp.ga/"
+      },
+      {
+        "name_ko": "ANPI PME Scoring · 국립중소기업 지원서비스",
+        "name_en": "Gabon ANPI · Government SME Scoring",
+        "category": "support",
+        "url": "https://scoring.investingabon.ga/procedure",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investingabon.ga/outils-investisseurs"
+      },
+      {
+        "name_ko": "ANPI · 가봉 국가 투자진흥",
+        "name_en": "Gabon National Investment Promotion Agency · ANPI",
+        "category": "investment",
+        "url": "https://investingabon.ga/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gouvernement.ga/2025/08/18/gni-anpi-gabon/"
       }
     ],
     "GB": [
@@ -2062,6 +2149,35 @@
         "evidence_url": "https://invest.gov.kz/ru/about-us/purchase/"
       }
     ],
+    "LA": [
+      {
+        "name_ko": "재무부 PPD · 라오스 정부 조달공고",
+        "name_en": "Laos Ministry of Finance · Public Procurement Publication",
+        "category": "procurement",
+        "url": "https://ppd.mof.gov.la/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ppmd.mof.gov.la/storage/1716281129.Procurement%20Manual_Eng_Final.pdf"
+      },
+      {
+        "name_ko": "상공부 · 라오스 사업지원·입찰",
+        "name_en": "Laos Ministry of Industry and Commerce · Business Support",
+        "category": "support",
+        "url": "https://www.moic.gov.la/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moic.gov.la/en/tenders/9"
+      },
+      {
+        "name_ko": "투자관리위원회 · 라오스 투자진흥",
+        "name_en": "Lao PDR Investment Promotion and Management Committee",
+        "category": "investment",
+        "url": "https://investlaos.gov.la/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investlaos.gov.la/"
+      }
+    ],
     "LK": [
       {
         "name_ko": "재무부 · 공공구매 공고",
@@ -2089,6 +2205,64 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.srilankabusiness.com/edb/about-us/organisation-structure.html"
+      }
+    ],
+    "LR": [
+      {
+        "name_ko": "PPCC · 라이베리아 공인 전자조달",
+        "name_en": "Liberia PPCC · Official e-Government Procurement",
+        "category": "procurement",
+        "url": "https://eprocurement.ppcc.gov.lr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ppcc.gov.lr/node/7297"
+      },
+      {
+        "name_ko": "상공산업부 · 라이베리아 중소기업 지원",
+        "name_en": "Liberia Ministry of Commerce & Industry · MSME Support",
+        "category": "support",
+        "url": "https://www.moci.gov.lr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moci.gov.lr/media/press-releases-0"
+      },
+      {
+        "name_ko": "NIC · 국가투자위원회",
+        "name_en": "Liberia National Investment Commission",
+        "category": "investment",
+        "url": "https://nic.gov.lr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ppcc.gov.lr/office/news/newsroom/press-release/president-boakai-appoints-officials-national-investment"
+      }
+    ],
+    "LS": [
+      {
+        "name_ko": "재무부 · 레소토 정부 조달공고",
+        "name_en": "Lesotho Ministry of Finance · Public Tenders",
+        "category": "procurement",
+        "url": "https://www.finance.gov.ls/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.ls/documents/tenders/"
+      },
+      {
+        "name_ko": "OBFC · 레소토 정부 기업등록 원스톱",
+        "name_en": "Lesotho Government One-Stop Business Registration",
+        "category": "support",
+        "url": "https://businessregistrations.gov.ls/register-business",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.ls/government-ministries/trade-industry-business-development-and-tourism/"
+      },
+      {
+        "name_ko": "LNDC · 레소토 국가 투자금융 지원",
+        "name_en": "Lesotho National Development Corporation · Investment Support",
+        "category": "investment",
+        "url": "https://lndc.org.ls/services/investment-support/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://invest.sadc.int/how-invest/lesotho"
       }
     ],
     "LT": [
@@ -2350,6 +2524,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.investmongolia.gov.mn/en/"
+      }
+    ],
+    "MR": [
+      {
+        "name_ko": "국가조달공고 플랫폼 · 모리타니",
+        "name_en": "Mauritania National Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://marchespublics.gov.mr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ami.mr/fr/archives/260199"
+      },
+      {
+        "name_ko": "국가 행정서비스 · 기업 설립 안내",
+        "name_en": "Mauritania Government Administrative Business Procedures",
+        "category": "support",
+        "url": "https://procedures.gov.mr/fr/procedure/790",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procedures.gov.mr/fr/defaultservice/view/790"
+      },
+      {
+        "name_ko": "APIM · 모리타니 투자진흥청",
+        "name_en": "Mauritania Investment Promotion Agency · APIM",
+        "category": "investment",
+        "url": "https://apim.gov.mr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://apim.gov.mr/investor-services/investor-support/"
       }
     ],
     "MT": [
@@ -3309,6 +3512,35 @@
         "evidence_url": "https://www.mhsr.sk/ministerstvo/operacne-programy/opis/elektronizacia-sluzieb-ministerstva-hospodarstva-sr/sluzby-a-zivotne-situacie"
       }
     ],
+    "SL": [
+      {
+        "name_ko": "NPPA · 시에라리온 공공조달 eGP",
+        "name_en": "Sierra Leone NPPA · Electronic Public Procurement",
+        "category": "procurement",
+        "url": "https://egp.nppa.gov.sl/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nppa.gov.sl/bid/"
+      },
+      {
+        "name_ko": "Local Content Agency · 자국 기업시장 지원",
+        "name_en": "Sierra Leone Local Content Agency · Enterprise Support",
+        "category": "support",
+        "url": "https://www.localcontent.gov.sl/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moti.gov.sl/agencies"
+      },
+      {
+        "name_ko": "NIB · 정부 통합 투자위원회",
+        "name_en": "Sierra Leone National Investment Board",
+        "category": "investment",
+        "url": "https://nib.gov.sl/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nib.gov.sl/investment-promotion-and-export/"
+      }
+    ],
     "SN": [
       {
         "name_ko": "공공조달 포털 · 세네갈",
@@ -3452,6 +3684,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.ditp.go.th/en"
+      }
+    ],
+    "TJ": [
+      {
+        "name_ko": "국가공공조달청 · 타지키스탄",
+        "name_en": "Tajikistan State e-Procurement Agency",
+        "category": "procurement",
+        "url": "https://edavlat.tj/en/zakupki/main",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.trade.gov/country-commercial-guides/tajikistan-selling-public-sector"
+      },
+      {
+        "name_ko": "국가투자위원회 · 기업·투자행정",
+        "name_en": "Tajikistan State Committee on Investment · Enterprise Services",
+        "category": "support",
+        "url": "https://edavlat.tj/en/sarmoyaguzori/about",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://egov.tj/site/sarmoyaguzori?lang=en"
+      },
+      {
+        "name_ko": "TajInvest · 정부 투자지원 법인",
+        "name_en": "TajInvest · Government Investment Promotion Enterprise",
+        "category": "investment",
+        "url": "https://tajinvest.tj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://2021-2025.state.gov/reports/2024-investment-climate-statements/tajikistan/"
       }
     ],
     "TL": [
