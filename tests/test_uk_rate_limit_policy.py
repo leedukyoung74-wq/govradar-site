@@ -68,10 +68,8 @@ class UKRateSafety(unittest.TestCase):
             rows=FM._ocds(SRC,URL,lambda x:x,max_pages=5)
         self.assertEqual(calls[0],2)
         self.assertEqual(len(rows),1)
-        # _get itself is mocked, so _ocds knows only that an upstream request failed.
-        # Actual _retry also records failed attempts and forced defer.
-        self.assertEqual("SUCCESS",FT.classify_state(FM.stat(SRC)))
-        # The mocked _get bypasses _retry; real 429 path is covered above.
+        self.assertEqual("PARTIAL",FT.classify_state(FM.stat(SRC)))
+        self.assertTrue(any("ocds_request_exception" in v for v in FM.stat(SRC)["notes"]))
 
 if __name__=="__main__":
     unittest.main()
