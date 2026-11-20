@@ -32,7 +32,7 @@ jobs:
               obj={'item':label,'ok':bool(ok),'detail':detail}
               checks.append(obj)
               print(json.dumps(obj,ensure_ascii=False,sort_keys=True),flush=True)
-          def get(url, github=False, json_only=False):
+          def get(url, github=False, json_only=False, max_bytes=1_000_000):
               host=urllib.parse.urlsplit(url).hostname
               allowed={'api.github.com'} if github else {'raw.githubusercontent.com','radar.wmm-hoa.com'}
               if host not in allowed or not url.startswith('https://'):
@@ -43,8 +43,8 @@ jobs:
               with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=20) as r:
                   if r.status!=200: raise RuntimeError('HTTP_'+str(r.status))
                   if urllib.parse.urlsplit(r.geturl()).hostname not in allowed: raise ValueError('redirect_not_allowlisted')
-                  body=r.read(1_000_000+1)
-                  if len(body)>1_000_000: raise ValueError('response_too_large')
+                  body=r.read(max_bytes+1)
+                  if len(body)>max_bytes: raise ValueError('response_too_large')
                   text=body.decode('utf-8','replace')
               return json.loads(text) if json_only else text
           def parse_time(s, naive_tz=UTC):
@@ -71,6 +71,31 @@ jobs:
                      {'minutes_since_last_ok':other})
           except Exception as exc:
               record('Official disaster feed',False,type(exc).__name__)
+          # Government opportunity notices are a separate critical product from the hazard radar.
+          # Check the PUBLIC data branch; successful local collection is not sufficient.
+          feed_root='https://raw.githubusercontent.com/'+repo+'/data/feeds/'
+          observed={}
+          for label,filename,minimum in (
+              ('Global open tenders','tenders.json',100),
+              ('193-country notice summary','cty/_summary.json',1),
+              ('Contract awards','awards.json',100)):
+              try:
+                  d=get(feed_root+filename,json_only=True,max_bytes=2_500_000)
+                  count=(d.get('t') or {}).get('n') if filename.startswith('cty/') else d.get('count')
+                  updated=d.get('updated')
+                  good=isinstance(count,int) and count>=minimum and fresh(updated,30*60)
+                  if filename=='tenders.json':
+                      good=good and isinstance(d.get('items'),list) and len(d['items'])==count
+                  observed[filename]=count
+                  record(label,good,{'age_minutes':age_minutes(updated),'items':count,'updated':updated,
+                                    'threshold_minutes':30*60})
+              except Exception as exc:
+                  record(label,False,{'error':type(exc).__name__})
+          if 'tenders.json' in observed and 'cty/_summary.json' in observed:
+              n=observed['tenders.json']; c=observed['cty/_summary.json']
+              record('Verified-open vs all-tenders upper bound',
+                     isinstance(n,int) and isinstance(c,int) and 0<=c<=n,
+                     {'verified_open':c,'all_tenders':n})
           for name,filename,limit in (('US NWS weather','nws_active.json',180),('CISA KEV','cisa_kev.json',10*60)):
               try:
                   d=get(raw+filename,json_only=True)
