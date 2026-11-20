@@ -9,6 +9,28 @@ if [ -f data_branch/m/vault.json ] && git -C data_branch fetch -q origin data 2>
   if [ -n "$R" ] && [ "$R" != "$(cat private/.vault_sha 2>/dev/null)" ]; then
     echo "STOP: newer saved data exists (data branch m/vault.json). Run: git -C data_branch pull -q origin data && python3 tools/vault.py unpack, then rebuild."; exit 1; fi
 fi
+# Opt-in P0 release gate (disabled by default until export dates/coverage are approved).
+# Set WMM_EXPORT_PREFLIGHT=required only after confirming actual collector schema and policy.
+# This must run before any live-branch git operations or rendered-site writes.
+case "${WMM_EXPORT_PREFLIGHT:-off}" in
+  off)
+    echo "INFO: export freshness preflight is OFF; live publication is NOT protected by this optional gate."
+    ;;
+  required)
+    echo "INFO: validating local exported countries before publish"
+    python3 tools/check_export_inputs.py \
+      --export-dir export/countries \
+      --min-countries "${WMM_EXPORT_MIN_COUNTRIES:-20}" \
+      --max-age-days "${WMM_EXPORT_MAX_AGE_DAYS:-7}" || {
+        echo "STOP: country export freshness preflight failed; nothing published."
+        exit 1
+      }
+    ;;
+  *)
+    echo "STOP: WMM_EXPORT_PREFLIGHT must be 'off' or 'required'."
+    exit 1
+    ;;
+esac
 python3 tools/signals_i18n.py || exit 1
 python3 tools/orgs.py || exit 1   # one 'three entities' block for welcome + main
 python3 tools/welcome_i18n/build.py || exit 1
