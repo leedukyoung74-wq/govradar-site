@@ -59,6 +59,22 @@
           "evidence_url": "https://mindanews.com/",
           "verification": "curated_candidate",
           "access": "not_live_tested"
+        },
+        {
+          "name": "BangsamoroToday",
+          "url": "https://bangsamorotoday.com/",
+          "authority_scope": "local_publisher",
+          "evidence_url": "https://bangsamorotoday.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bangsamoro Media Productions",
+          "url": "https://bmpgabay.com/",
+          "authority_scope": "local_private_publisher",
+          "evidence_url": "https://bmpgabay.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
         }
       ],
       "environment": [
@@ -273,6 +289,22 @@
           "evidence_url": "https://epaper.smsz.co.tz/",
           "verification": "curated_candidate",
           "access": "not_live_tested"
+        },
+        {
+          "name": "ZNZ News",
+          "url": "https://znznews.com/",
+          "authority_scope": "regional_news_platform",
+          "evidence_url": "https://znznews.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Zanzibar Broadcasting Corporation ZBC TV",
+          "url": "https://zbc.go.tz/",
+          "authority_scope": "state_broadcaster",
+          "evidence_url": "https://www.tuz.go.tz/media-information",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
         }
       ],
       "environment": [
@@ -336,7 +368,7 @@
         }
       ],
       "status": "curated_candidates_not_live_verified",
-      "notes": "Newspapers Zanzibar Leo/Zaspoti/Zanzibar Mail share a publisher and must NOT be counted as three independent newsrooms."
+      "notes": "Newspapers Zanzibar Leo/Zaspoti/Zanzibar Mail share a publisher and must NOT be counted as three independent newsrooms. ZBC Television outlet website is a candidate reported by broadcaster directories; direct live access is untested."
     },
     "ID-AC": {
       "name_en": "Aceh",
@@ -470,6 +502,14 @@
           "evidence_url": "https://eproc.lkpp.go.id/",
           "verification": "curated_candidate",
           "access": "not_live_tested"
+        },
+        {
+          "name": "Papua Indigenous Supplier Government Procurement SIKaP-OAP",
+          "url": "https://sikap-oap.papua.go.id/spse",
+          "authority_scope": "papua_province_procurement",
+          "evidence_url": "https://sikap-oap.papua.go.id/spse",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
         }
       ],
       "news_media": [
@@ -478,6 +518,22 @@
           "url": "https://cenderawasihpos.jawapos.com/",
           "authority_scope": "regional_coverage",
           "evidence_url": "https://cenderawasihpos.jawapos.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Jubi Papua",
+          "url": "https://jubi.id/",
+          "authority_scope": "regional_publisher",
+          "evidence_url": "https://jubi.id/tentang-kami/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Suara Papua",
+          "url": "https://suarapapua.com/",
+          "authority_scope": "regional_publisher",
+          "evidence_url": "https://suarapapua.com/",
           "verification": "curated_candidate",
           "access": "not_live_tested"
         }
@@ -558,7 +614,32 @@
           "access": "not_live_tested"
         }
       ],
-      "news_media": [],
+      "news_media": [
+        {
+          "name": "Bougainville News / Radio New Dawn",
+          "url": "https://bougainvillenews.com/",
+          "authority_scope": "locally_based_publisher",
+          "evidence_url": "https://bougainvillenews.com/contact/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Post-Courier PNG Bougainville coverage",
+          "url": "https://www.postcourier.com.pg/",
+          "authority_scope": "parent_country_news_with_region_coverage",
+          "evidence_url": "https://www.postcourier.com.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "The National PNG Bougainville coverage",
+          "url": "https://www.thenational.com.pg/",
+          "authority_scope": "parent_country_news_with_region_coverage",
+          "evidence_url": "https://www.thenational.com.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
       "environment": [
         {
           "name": "Bougainville Government ministry directory",
@@ -611,7 +692,7 @@
         }
       ],
       "status": "curated_candidates_not_live_verified",
-      "notes": "Government-produced Bougainville Bulletin is not counted as an independent newsroom. Private New Dawn FM official domain still requires source validation."
+      "notes": "Government-produced Bougainville Bulletin is not counted as an independent newsroom. Private New Dawn FM official domain still requires source validation. Post-Courier and The National publish at parent-country level; regional coverage is not a locally-based Bougainville news organisation."
     },
     "MY-SBH": {
       "name_en": "Sabah",
@@ -632,6 +713,14 @@
           "url": "https://jkr.sabah.gov.my/",
           "authority_scope": "public_works",
           "evidence_url": "https://jkr.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sabah Water Department tenders",
+          "url": "https://water.sabah.gov.my/tender",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://water.sabah.gov.my/tender",
           "verification": "curated_candidate",
           "access": "not_live_tested"
         }
@@ -1193,6 +1282,22 @@
           "url": "https://www.government.fo/",
           "authority_scope": "local",
           "evidence_url": "https://www.government.fo/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Faroe Islands Business Authority Vinnustovnurin",
+          "url": "https://www.vs.fo/fo/english/welcome",
+          "authority_scope": "regional_business_regulator",
+          "evidence_url": "https://www.vs.fo/fo/english/welcome",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Faroe Islands Foreign Relations and Fisheries Ministry",
+          "url": "https://www.ufmr.fo/fo/arbeidsoeki/fiskivinna",
+          "authority_scope": "regional_fisheries_business_regulation",
+          "evidence_url": "https://www.ufmr.fo/fo/arbeidsoeki/fiskivinna",
           "verification": "curated_candidate",
           "access": "not_live_tested"
         }
@@ -2493,7 +2598,32 @@
           "access": "not_live_tested"
         }
       ],
-      "news_media": [],
+      "news_media": [
+        {
+          "name": "Somaliland Chronicle",
+          "url": "https://somalilandchronicle.com/",
+          "authority_scope": "de_facto_region_newsroom",
+          "evidence_url": "https://somalilandchronicle.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Horn Diplomat",
+          "url": "https://www.horndiplomat.com/category/news/somaliland/",
+          "authority_scope": "de_facto_region_newsroom",
+          "evidence_url": "https://www.horndiplomat.com/category/news/somaliland/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Somaliland Standard",
+          "url": "https://somalilandstandard.com/",
+          "authority_scope": "de_facto_region_newsroom",
+          "evidence_url": "https://somalilandstandard.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
       "environment": [
         {
           "name": "Somaliland claimed environment agency directory",
