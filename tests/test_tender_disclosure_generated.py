@@ -4,12 +4,14 @@ Run after: python build.py --base https://radar.wmm-hoa.com
 No network, deployment, database writes, customer messages, or payments.
 """
 import ast
+import os
 import pathlib
 import unittest
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 LANGS=("ko","en","es","fr","ar","vi","id")
 
+@unittest.skipUnless(os.environ.get("WMM_GENERATED_QA") == "1", "Generated HTML QA runs only after build")
 class TenderDisclosureGeneratedTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
