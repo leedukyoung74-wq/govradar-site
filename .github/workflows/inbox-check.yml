@@ -1,0 +1,30 @@
+# ChatGPT 조사 파일 무료 검수 (AI 크레딧 0). ChatGPT/Codex 가 data 브랜치 inbox/country/GPT_COUNTRY_YYYYMMDD.json 으로 올리면
+# 형식·금지어·출처 링크를 검사해 inbox/report/ 에 결과를 쓴다. 사이트 게시는 하지 않는다(게시는 대표 승인된 작업만).
+# 예약 실행은 main 의 schedule.yml 에서 이 파일을 호출해야 켜진다(대표 승인 후). 지금은 손으로 실행(workflow_dispatch)만.
+name: Inbox check (free)
+on:
+  workflow_dispatch: {}
+  workflow_call: {}
+permissions:
+  contents: write
+concurrency: { group: inbox-check, cancel-in-progress: false }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: src }
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data_branch }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python -m unittest discover -s tests -p test_inbox_check.py
+      - run: mkdir -p data_branch/inbox/country data_branch/inbox/report && python tools/inbox_check.py data_branch/inbox/country data_branch/inbox/report
+      - name: Save report to data branch (inbox/report only)
+        run: |
+          cd data_branch
+          git add inbox/report
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -qm "Inbox check report"
+          for i in 1 2 3; do git push -q origin HEAD:data && break; git pull -q --rebase origin data; done

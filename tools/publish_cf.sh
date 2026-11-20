@@ -24,6 +24,9 @@ cd /home/claude/govradar-live
 git fetch -q origin live && git reset -q --soft origin/live
 rm -rf public functions && cp -a /home/claude/site/cf/public /home/claude/site/cf/functions .
 git add -A
+# Guard (2026-11-21): live 브랜치에만 있는 파일(다른 작업이 live에 직접 올린 기능)이 지워지면 게시를 멈춘다.
+D=$(git diff --cached --diff-filter=D --name-only | head -5)
+if [ -n "$D" ] && [ -z "$ALLOW_LIVE_DELETE" ]; then echo "STOP: live 전용 파일 삭제 감지 — src에 먼저 반영 필요: $D"; git reset -q; exit 1; fi
 if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
 git commit -qm "${1:-사이트 업데이트}
 
