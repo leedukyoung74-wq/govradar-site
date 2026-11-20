@@ -61,6 +61,35 @@
         "evidence_url": "https://u.ae/en/information-and-services/finance-and-investment/foreign-direct-investment"
       }
     ],
+    "AG": [
+      {
+        "name_ko": "정부 공공입찰 · 앤티가바부다",
+        "name_en": "Antigua and Barbuda Government Public Tenders",
+        "category": "procurement",
+        "url": "https://ab.gov.ag/detail_template.php?page=government_services%2Ftenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ab.gov.ag/detail_template.php?page=government_services%2Ftenders"
+      },
+      {
+        "name_ko": "총리 기업개발 프로그램 · 중소기업",
+        "name_en": "Antigua and Barbuda Prime Minister Entrepreneurial Development Programme",
+        "category": "support",
+        "url": "https://antiguabarbudaedp.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://abipco.gov.ag/small-business-development/"
+      },
+      {
+        "name_ko": "ABIA · 국가 투자진흥청",
+        "name_en": "Antigua and Barbuda Investment Authority",
+        "category": "investment",
+        "url": "https://investantiguabarbuda.org/investment/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://chogm26.gov.ag/press_release_detail_page.php?press_release_page_id=pr_september_04_2026"
+      }
+    ],
     "AL": [
       {
         "name_ko": "APP · 알바니아 국가조달 공고",
@@ -1192,6 +1221,35 @@
         "evidence_url": "https://um.dk/sydkorea/en/the-trade-council/invest-in-denmark"
       }
     ],
+    "DM": [
+      {
+        "name_ko": "정부 조달·입찰 공개 포털",
+        "name_en": "Dominica Government Procurement Notices",
+        "category": "procurement",
+        "url": "https://procurement.dominica.gov.dm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dominica.gov.dm/notices"
+      },
+      {
+        "name_ko": "정부 SBSU · 중소기업 지원센터",
+        "name_en": "Dominica Government Small Business Support Unit",
+        "category": "support",
+        "url": "https://sbsu.dominica.gov.dm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://sbsu.dominica.gov.dm/index.php/about-us"
+      },
+      {
+        "name_ko": "IDA · 국가 투자진흥청",
+        "name_en": "Invest Dominica Authority · National Investment Agency",
+        "category": "investment",
+        "url": "https://investdominica.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investdominica.com/about/"
+      }
+    ],
     "DO": [
       {
         "name_ko": "DGCP · 도미니카 국가조달 정보",
@@ -2205,6 +2263,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.investcomoros.net/nous-contacter/"
+      }
+    ],
+    "KN": [
+      {
+        "name_ko": "정부 공개 입찰·공고 · 세인트키츠네비스",
+        "name_en": "Saint Kitts and Nevis Official Tender Notices",
+        "category": "procurement",
+        "url": "https://www.sknis.gov.kn/notices/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sknis.gov.kn/2026/02/09/invitation-for-open-tender-consultant-analysis-service-for-solid-waste-management-in-st-kitts-and-nevis/"
+      },
+      {
+        "name_ko": "중소기업개발센터 · 정부 지원",
+        "name_en": "St Kitts and Nevis Government Small Business Development Centre",
+        "category": "support",
+        "url": "https://www.mosbecce.gov.kn/sbdc/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sknis.gov.kn/2026/11/16/government-to-assess-growth-of-retail-and-food-businesses-in-communities-strengthen-support-for-local-entrepreneurs/"
+      },
+      {
+        "name_ko": "SKIPA · 국가 투자진흥",
+        "name_en": "St Kitts Investment Promotion Agency · Government",
+        "category": "investment",
+        "url": "https://www.edi.gov.kn/st-kitts-investment-and-promotion-agency-skipa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.kn/embassies-statutory-bodies-financial-servives/"
       }
     ],
     "KR": [
@@ -4090,6 +4177,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://gov.uz/en/activity_page/investment"
+      }
+    ],
+    "VC": [
+      {
+        "name_ko": "정부 전자입찰 · 세인트빈센트그레나딘",
+        "name_en": "Saint Vincent and the Grenadines eProcurement Current Bids",
+        "category": "procurement",
+        "url": "https://procurement.gov.vc/eprocure/index.php/current-bids",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.vc/index.php/procurement-notices"
+      },
+      {
+        "name_ko": "CED · 국영 기업개발센터",
+        "name_en": "Saint Vincent Centre for Enterprise Development",
+        "category": "support",
+        "url": "https://ced.gov.vc/ced/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ced.gov.vc/ced/index.php/aboust-us"
+      },
+      {
+        "name_ko": "Invest SVG · 국가 투자진흥청",
+        "name_en": "Invest SVG · Official Government Investment Agency",
+        "category": "investment",
+        "url": "https://investsvg.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investsvg.com/services/investment-facilitation-services/"
       }
     ],
     "VN": [
