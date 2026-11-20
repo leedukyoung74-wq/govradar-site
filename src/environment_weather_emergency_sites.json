@@ -1,0 +1,2075 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "policy": "Country-specific environmental, weather and emergency institutions. Every link is a curated official-looking primary-source candidate; links have NOT been tested live and do NOT prove real-time alert feeds. Never substitute global directory for national agency confirmation.",
+  "directory_refs": {
+    "environment": "https://www.unep.org/en/cpr/member-states-directory",
+    "weather": "https://worldweather.wmo.int/en/members.html",
+    "emergency": "https://www.undrr.org/implementing-sendai-framework/sendai-focal-points-and-national-platforms"
+  },
+  "countries": {
+    "DZ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "AO": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BJ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BW": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BF": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BI": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CV": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CF": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TD": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "KM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CG": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CD": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CI": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "DJ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "EG": {
+      "environment": {
+        "name": "Egyptian Environmental Affairs Agency",
+        "url": "https://www.eeaa.gov.eg/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Egyptian Meteorological Authority",
+        "url": "https://ema.gov.eg/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Egyptian Cabinet Information and Decision Support Centre",
+        "url": "https://www.idsc.gov.eg/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "GQ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "ER": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SZ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "ET": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GA": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GH": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GN": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GW": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "KE": {
+      "environment": {
+        "name": "Ministry of Environment, Climate Change and Forestry",
+        "url": "https://www.environment.go.ke/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Kenya Meteorological Department",
+        "url": "https://meteo.go.ke/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Operations Centre",
+        "url": "https://www.ndoc.go.ke/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "LS": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "LR": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "LY": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MG": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MW": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "ML": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MR": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MU": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MA": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MZ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NA": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NE": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NG": {
+      "environment": {
+        "name": "Federal Ministry of Environment",
+        "url": "https://environment.gov.ng/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Nigerian Meteorological Agency · NiMet",
+        "url": "https://nimet.gov.ng/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Emergency Management Agency · NEMA",
+        "url": "https://www.nema.gov.ng/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "RW": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "ST": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SN": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SC": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SL": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SO": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "ZA": {
+      "environment": {
+        "name": "Department of Forestry, Fisheries and the Environment",
+        "url": "https://www.dffe.gov.za/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "South African Weather Service",
+        "url": "https://www.weathersa.co.za/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Management Centre",
+        "url": "https://www.ndmc.gov.za/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "SS": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SD": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TZ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TG": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TN": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "UG": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "ZM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "ZW": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "AF": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BD": {
+      "environment": {
+        "name": "Department of Environment",
+        "url": "https://doe.gov.bd/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Bangladesh Meteorological Department",
+        "url": "https://bmd.gov.bd/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Department of Disaster Management",
+        "url": "https://ddm.gov.bd/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "BT": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BN": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "KH": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CN": {
+      "environment": {
+        "name": "Ministry of Ecology and Environment",
+        "url": "https://www.mee.gov.cn/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "China Meteorological Administration",
+        "url": "https://www.cma.gov.cn/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Ministry of Emergency Management",
+        "url": "https://www.mem.gov.cn/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "IN": {
+      "environment": {
+        "name": "Ministry of Environment, Forest and Climate Change",
+        "url": "https://moef.gov.in/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "India Meteorological Department",
+        "url": "https://mausam.imd.gov.in/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Management Authority · SACHET",
+        "url": "https://sachet.ndma.gov.in/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "ID": {
+      "environment": {
+        "name": "Ministry of Environment",
+        "url": "https://kemenlh.go.id/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "BMKG Meteorology Climatology Geophysics",
+        "url": "https://www.bmkg.go.id/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Management Agency · BNPB",
+        "url": "https://bnpb.go.id/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "JP": {
+      "environment": {
+        "name": "Ministry of the Environment",
+        "url": "https://www.env.go.jp/en/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Japan Meteorological Agency",
+        "url": "https://www.jma.go.jp/jma/en/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Cabinet Office Disaster Management",
+        "url": "https://www.bousai.go.jp/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "KZ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "KP": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "KR": {
+      "environment": {
+        "name": "기후에너지환경부",
+        "url": "https://www.mcee.go.kr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "기상청",
+        "url": "https://www.weather.go.kr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "국민재난안전포털",
+        "url": "https://www.safekorea.go.kr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "KG": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "LA": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MY": {
+      "environment": {
+        "name": "Ministry of Natural Resources and Environmental Sustainability",
+        "url": "https://www.nres.gov.my/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Malaysian Meteorological Department",
+        "url": "https://www.met.gov.my/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Management Agency · NADMA",
+        "url": "https://www.nadma.gov.my/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "MV": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MN": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NP": {
+      "environment": {
+        "name": "Ministry of Forests and Environment",
+        "url": "https://mofe.gov.np/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Department of Hydrology and Meteorology",
+        "url": "https://www.dhm.gov.np/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Risk Reduction Management Authority",
+        "url": "https://www.ndrrma.gov.np/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "PK": {
+      "environment": {
+        "name": "Ministry of Climate Change and Environmental Coordination",
+        "url": "https://mocc.gov.pk/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Pakistan Meteorological Department",
+        "url": "https://www.pmd.gov.pk/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Management Authority",
+        "url": "https://ndma.gov.pk/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "PH": {
+      "environment": {
+        "name": "Department of Environment and Natural Resources",
+        "url": "https://denr.gov.ph/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "PAGASA Weather Service",
+        "url": "https://www.pagasa.dost.gov.ph/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Risk Reduction and Management Council",
+        "url": "https://ndrrmc.gov.ph/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "SG": {
+      "environment": {
+        "name": "Ministry of Sustainability and the Environment",
+        "url": "https://www.mse.gov.sg/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Meteorological Service Singapore",
+        "url": "https://www.weather.gov.sg/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Singapore Civil Defence Force",
+        "url": "https://www.scdf.gov.sg/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "LK": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TJ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TH": {
+      "environment": {
+        "name": "Ministry of Natural Resources and Environment",
+        "url": "https://www.mnre.go.th/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Thai Meteorological Department",
+        "url": "https://www.tmd.go.th/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Department of Disaster Prevention and Mitigation",
+        "url": "https://www.disaster.go.th/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "TL": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "UZ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "VN": {
+      "environment": {
+        "name": "Ministry of Agriculture and Environment",
+        "url": "https://mae.gov.vn/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Center for Hydro-Meteorological Forecasting",
+        "url": "https://nchmf.gov.vn/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Vietnam Disaster and Dyke Management Authority",
+        "url": "https://phongchongthientai.mard.gov.vn/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "BH": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "IR": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "IQ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "IL": {
+      "environment": {
+        "name": "Ministry of Environmental Protection",
+        "url": "https://www.gov.il/en/departments/ministry_of_environmental_protection",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Israel Meteorological Service",
+        "url": "https://ims.gov.il/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Home Front Command · Public Emergency Guidance",
+        "url": "https://www.oref.org.il/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "JO": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "KW": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "LB": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "OM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "QA": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SA": {
+      "environment": {
+        "name": "National Center for Environmental Compliance",
+        "url": "https://www.ncec.gov.sa/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Center for Meteorology",
+        "url": "https://ncm.gov.sa/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "General Directorate of Civil Defense",
+        "url": "https://www.998.gov.sa/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "SY": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "AE": {
+      "environment": {
+        "name": "Ministry of Climate Change and Environment",
+        "url": "https://www.moccae.gov.ae/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Center of Meteorology",
+        "url": "https://www.ncm.gov.ae/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Emergency Crisis and Disaster Management Authority",
+        "url": "https://www.ncema.gov.ae/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "YE": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TR": {
+      "environment": {
+        "name": "Ministry of Environment, Urbanization and Climate Change",
+        "url": "https://csb.gov.tr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Turkish State Meteorological Service · MGM",
+        "url": "https://www.mgm.gov.tr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Disaster and Emergency Management Presidency · AFAD",
+        "url": "https://www.afad.gov.tr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "AL": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "AD": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "AM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "AT": {
+      "environment": {
+        "name": "Austria Federal Ministry of Climate Action",
+        "url": "https://www.bmk.gv.at/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "GeoSphere Austria",
+        "url": "https://www.geosphere.at/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Austrian Civil Protection Association",
+        "url": "https://www.zivilschutz.at/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "AZ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BY": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BE": {
+      "environment": {
+        "name": "Belgian Federal Public Service Health and Environment",
+        "url": "https://www.health.belgium.be/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Royal Meteorological Institute of Belgium",
+        "url": "https://www.meteo.be/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Crisis Centre Belgium",
+        "url": "https://crisiscenter.be/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "BA": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BG": {
+      "environment": {
+        "name": "Bulgarian Ministry of Environment and Water",
+        "url": "https://www.moew.government.bg/en/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Institute of Meteorology and Hydrology",
+        "url": "https://www.meteo.bg/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Bulgarian Civil Protection",
+        "url": "https://www.mvr.bg/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "HR": {
+      "environment": {
+        "name": "Croatia Ministry of Environment",
+        "url": "https://mingor.gov.hr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Croatian Meteorological and Hydrological Service",
+        "url": "https://meteo.hr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Croatian Civil Protection Directorate",
+        "url": "https://civilna-zastita.gov.hr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "CY": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CZ": {
+      "environment": {
+        "name": "Czech Ministry of the Environment",
+        "url": "https://mzp.gov.cz/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Czech Hydrometeorological Institute",
+        "url": "https://www.chmi.cz/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Czech Fire Rescue Service",
+        "url": "https://hzscr.gov.cz/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "DK": {
+      "environment": {
+        "name": "Danish Environmental Protection Agency",
+        "url": "https://mst.dk/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Danish Meteorological Institute",
+        "url": "https://www.dmi.dk/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Danish Emergency Management Agency",
+        "url": "https://www.brs.dk/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "EE": {
+      "environment": {
+        "name": "Estonian Ministry of Climate",
+        "url": "https://kliimaministeerium.ee/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Estonian Environment Agency Weather Service",
+        "url": "https://www.ilmateenistus.ee/?lang=en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Estonian Rescue Board",
+        "url": "https://www.rescue.ee/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "FI": {
+      "environment": {
+        "name": "Ministry of the Environment",
+        "url": "https://ym.fi/en/frontpage",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Finnish Meteorological Institute",
+        "url": "https://en.ilmatieteenlaitos.fi/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Finnish Rescue Services",
+        "url": "https://pelastustoimi.fi/en/frontpage",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "FR": {
+      "environment": {
+        "name": "Ministry for Ecological Transition",
+        "url": "https://www.ecologie.gouv.fr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Météo-France",
+        "url": "https://meteofrance.com/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Géorisques · Official Major Risk Information",
+        "url": "https://www.georisques.gouv.fr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "GE": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "DE": {
+      "environment": {
+        "name": "Federal Ministry for the Environment",
+        "url": "https://www.bundesumweltministerium.de/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Deutscher Wetterdienst",
+        "url": "https://www.dwd.de/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Federal Office of Civil Protection and Disaster Assistance",
+        "url": "https://www.bbk.bund.de/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "GR": {
+      "environment": {
+        "name": "Greek Ministry of Environment and Energy",
+        "url": "https://ypen.gov.gr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Hellenic National Meteorological Service",
+        "url": "https://www.emy.gr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Hellenic Ministry of Climate Crisis and Civil Protection",
+        "url": "https://civilprotection.gov.gr/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "HU": {
+      "environment": {
+        "name": "Hungarian Ministry of Energy · Environment",
+        "url": "https://kormany.hu/energiaugyi-miniszterium",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "HungaroMet Meteorological Service",
+        "url": "https://www.met.hu/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Hungary Directorate General for Disaster Management",
+        "url": "https://www.katasztrofavedelem.hu/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "IS": {
+      "environment": {
+        "name": "Environment Agency of Iceland",
+        "url": "https://www.ust.is/english/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Icelandic Meteorological Office",
+        "url": "https://en.vedur.is/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Department of Civil Protection and Emergency Management",
+        "url": "https://www.almannavarnir.is/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "IE": {
+      "environment": {
+        "name": "Irish Environmental Protection Agency",
+        "url": "https://www.epa.ie/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Met Éireann",
+        "url": "https://www.met.ie/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Government of Ireland · Emergency Planning",
+        "url": "https://www.gov.ie/en/department-of-defence/organisation-information/office-of-emergency-planning/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "IT": {
+      "environment": {
+        "name": "Ministry of Environment and Energy Security",
+        "url": "https://www.mase.gov.it/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Italian Air Force Meteorological Service",
+        "url": "https://www.meteoam.it/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Italian Civil Protection Department",
+        "url": "https://www.protezionecivile.gov.it/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "LV": {
+      "environment": {
+        "name": "Latvia Ministry of Climate and Energy",
+        "url": "https://www.kem.gov.lv/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Latvian Environment, Geology and Meteorology Centre",
+        "url": "https://videscentrs.lvgmc.lv/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Latvia State Fire and Rescue Service",
+        "url": "https://www.vugd.gov.lv/en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "LI": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "LT": {
+      "environment": {
+        "name": "Lithuania Ministry of Environment",
+        "url": "https://am.lrv.lt/en/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Lithuanian Hydrometeorological Service",
+        "url": "https://www.meteo.lt/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Lithuania Fire and Rescue Department",
+        "url": "https://pagd.lrv.lt/en/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "LU": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MT": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MD": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MC": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "ME": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NL": {
+      "environment": {
+        "name": "Ministry of Infrastructure and Water Management",
+        "url": "https://www.government.nl/ministries/ministry-of-infrastructure-and-water-management",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Royal Netherlands Meteorological Institute",
+        "url": "https://www.knmi.nl/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Government of the Netherlands · Crisis Information",
+        "url": "https://crisis.nl/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "MK": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NO": {
+      "environment": {
+        "name": "Norwegian Environment Agency",
+        "url": "https://www.miljodirektoratet.no/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Norwegian Meteorological Institute",
+        "url": "https://www.met.no/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Directorate for Civil Protection · DSB",
+        "url": "https://www.dsb.no/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "PL": {
+      "environment": {
+        "name": "Poland Ministry of Climate and Environment",
+        "url": "https://www.gov.pl/web/climate",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Polish Institute of Meteorology and Water Management",
+        "url": "https://www.imgw.pl/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Poland Government Centre for Security",
+        "url": "https://www.gov.pl/web/rcb",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "PT": {
+      "environment": {
+        "name": "Portuguese Environment Agency · APA",
+        "url": "https://apambiente.pt/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Portuguese Institute of Sea and Atmosphere",
+        "url": "https://www.ipma.pt/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Emergency and Civil Protection Authority",
+        "url": "https://prociv.gov.pt/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "RO": {
+      "environment": {
+        "name": "Romania Ministry of Environment",
+        "url": "https://mmediu.ro/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Romanian National Meteorological Administration",
+        "url": "https://www.meteoromania.ro/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "General Inspectorate for Emergency Situations",
+        "url": "https://www.igsu.ro/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "RU": {
+      "environment": {
+        "name": "Ministry of Natural Resources and Environment",
+        "url": "https://www.mnr.gov.ru/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Hydrometcentre of Russia",
+        "url": "https://meteoinfo.ru/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "EMERCOM of Russia",
+        "url": "https://www.mchs.gov.ru/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "SM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "RS": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SK": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SI": {
+      "environment": {
+        "name": "Slovenian Environment Agency · ARSO",
+        "url": "https://www.arso.gov.si/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Slovenia ARSO Weather Service",
+        "url": "https://meteo.arso.gov.si/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Slovenian Administration for Civil Protection",
+        "url": "https://www.sos112.si/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "ES": {
+      "environment": {
+        "name": "Ministry for Ecological Transition",
+        "url": "https://www.miteco.gob.es/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "AEMET State Meteorological Agency",
+        "url": "https://www.aemet.es/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Spanish Civil Protection Directorate",
+        "url": "https://www.proteccioncivil.es/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "SE": {
+      "environment": {
+        "name": "Swedish Environmental Protection Agency",
+        "url": "https://www.naturvardsverket.se/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Swedish Meteorological and Hydrological Institute",
+        "url": "https://www.smhi.se/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Swedish Civil Contingencies Agency",
+        "url": "https://www.msb.se/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "CH": {
+      "environment": {
+        "name": "Swiss Federal Office for the Environment",
+        "url": "https://www.bafu.admin.ch/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "MeteoSwiss",
+        "url": "https://www.meteoswiss.admin.ch/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Swiss Federal Office for Civil Protection",
+        "url": "https://www.babs.admin.ch/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "UA": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GB": {
+      "environment": {
+        "name": "UK Environment Agency",
+        "url": "https://www.gov.uk/government/organisations/environment-agency",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "UK Met Office",
+        "url": "https://www.metoffice.gov.uk/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "UK Government · Emergency Preparation",
+        "url": "https://www.gov.uk/government/emergency-preparation-reponse-and-recovery",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "CA": {
+      "environment": {
+        "name": "Environment and Climate Change Canada",
+        "url": "https://www.canada.ca/en/environment-climate-change.html",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Meteorological Service of Canada",
+        "url": "https://weather.gc.ca/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Public Safety Canada · Emergency Management",
+        "url": "https://www.canada.ca/en/public-safety-canada.html",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "US": {
+      "environment": {
+        "name": "US Environmental Protection Agency",
+        "url": "https://www.epa.gov/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Weather Service",
+        "url": "https://www.weather.gov/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Federal Emergency Management Agency",
+        "url": "https://www.fema.gov/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "MX": {
+      "environment": {
+        "name": "Secretariat of Environment and Natural Resources",
+        "url": "https://www.gob.mx/semarnat",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Meteorological Service · SMN",
+        "url": "https://smn.conagua.gob.mx/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Prevention Centre · CENAPRED",
+        "url": "https://www.gob.mx/cenapred",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "AG": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "AR": {
+      "environment": {
+        "name": "Secretariat of Tourism, Environment and Sports",
+        "url": "https://www.argentina.gob.ar/ambiente",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Meteorological Service",
+        "url": "https://www.smn.gob.ar/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Integrated Risk Management System · SINAGIR",
+        "url": "https://www.argentina.gob.ar/sinagir",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "BS": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BB": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BZ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BO": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "BR": {
+      "environment": {
+        "name": "Ministry of Environment and Climate Change",
+        "url": "https://www.gov.br/mma/pt-br",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Institute of Meteorology · INMET",
+        "url": "https://portal.inmet.gov.br/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Centre for Natural Disaster Monitoring · CEMADEN",
+        "url": "https://www.gov.br/cemaden/pt-br",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "CL": {
+      "environment": {
+        "name": "Ministry of the Environment",
+        "url": "https://mma.gob.cl/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Dirección Meteorológica de Chile",
+        "url": "https://www.meteochile.gob.cl/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Prevention and Response Service · SENAPRED",
+        "url": "https://www.senapred.cl/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "CO": {
+      "environment": {
+        "name": "Ministry of Environment and Sustainable Development",
+        "url": "https://www.minambiente.gov.co/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Institute of Hydrology, Meteorology and Environmental Studies · IDEAM",
+        "url": "https://www.ideam.gov.co/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Unit for Disaster Risk Management · UNGRD",
+        "url": "https://www.gestiondelriesgo.gov.co/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "CR": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "CU": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "DM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "DO": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "EC": {
+      "environment": {
+        "name": "Ministry of Environment",
+        "url": "https://www.ambiente.gob.ec/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Meteorology and Hydrology Institute · INAMHI",
+        "url": "https://www.inamhi.gob.ec/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Risk Management Secretariat",
+        "url": "https://www.gestionderiesgos.gob.ec/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "SV": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GD": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GT": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "GY": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "HT": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "HN": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "JM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NI": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "PA": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "PY": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "PE": {
+      "environment": {
+        "name": "Ministry of the Environment · MINAM",
+        "url": "https://www.gob.pe/minam",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Meteorology and Hydrology Service · SENAMHI",
+        "url": "https://www.senamhi.gob.pe/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Civil Defence Institute · INDECI",
+        "url": "https://www.gob.pe/indeci",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "KN": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "LC": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "VC": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SR": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TT": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "UY": {
+      "environment": {
+        "name": "Uruguay Ministry of Environment",
+        "url": "https://www.gub.uy/ministerio-ambiente/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Uruguayan Institute of Meteorology · INUMET",
+        "url": "https://www.inumet.gub.uy/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Emergency System · SINAE",
+        "url": "https://www.gub.uy/sistema-nacional-emergencias/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "VE": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "AU": {
+      "environment": {
+        "name": "Department of Climate Change, Energy, the Environment and Water",
+        "url": "https://www.dcceew.gov.au/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Emergency Management Agency",
+        "url": "https://www.nema.gov.au/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "FJ": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "KI": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "MH": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "FM": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NR": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "NZ": {
+      "environment": {
+        "name": "Ministry for the Environment",
+        "url": "https://environment.govt.nz/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "MetService New Zealand",
+        "url": "https://www.metservice.com/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Emergency Management Agency",
+        "url": "https://www.civildefence.govt.nz/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
+    },
+    "PW": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "PG": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "WS": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "SB": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TO": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "TV": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    },
+    "VU": {
+      "environment": null,
+      "weather": null,
+      "emergency": null
+    }
+  }
+}
