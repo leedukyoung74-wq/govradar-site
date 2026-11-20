@@ -1197,11 +1197,22 @@ TD = {
  "vi": ["Thay đổi hôm nay", "Thu thập mới mỗi sáng, không dùng AI. Thông báo theo nguồn gốc và mọi con số là số đếm thực.", "Thông báo mới hôm nay", "Đóng trong 2 ngày", "Gói thầu đang mở", "Cảnh báo chính thức 48 giờ", "Thông báo mới", "Sắp đóng", "Cảnh báo chính thức", "Trạng thái nguồn dữ liệu", "Tốt", "Một phần", "Lỗi", "cập nhật", "Hiện chưa tải được thay đổi hôm nay.", "quốc gia", "đóng", "Xem tất cả ở trung tâm đấu thầu", "không có"],
  "id": ["Perubahan hari ini", "Dikumpulkan setiap pagi tanpa AI. Pengumuman mengikuti sumber asli dan setiap angka adalah hitungan nyata.", "Pengumuman baru hari ini", "Tutup dalam 2 hari", "Tender terbuka", "Peringatan resmi 48 jam", "Pengumuman baru", "Segera tutup", "Peringatan resmi", "Status sumber data", "OK", "Sebagian", "Gagal", "diperbarui", "Perubahan hari ini belum dapat dimuat.", "negara", "tutup", "Lihat semua di pusat tender", "tidak ada"],
 }
+def _today_n():
+    """Numbers baked in at build time from data/feeds/today.json, so the band never shows bare dashes when the
+    live fetch is slow, blocked or JavaScript is off; the live fetch still replaces them with fresher numbers."""
+    import os
+    for f in ("data_branch/feeds/today.json", "data/feeds/today.json"):
+        f = os.path.join(os.path.dirname(os.path.abspath(__file__)), f)
+        try:
+            d = _json.load(open(f, encoding="utf-8")); return d.get("n") or {}, str(d.get("updated") or "")
+        except Exception: pass
+    return {}, ""
 def today_band(L):
     s = TD.get(L) or TD["en"]; S = _json.dumps(s, ensure_ascii=False)
+    n, up = _today_n(); fm = lambda k: f"{n[k]:,}" if isinstance(n.get(k), int) else "–"
     hz = f'/hazards/{"" if L == "ko" else "?l=en"}'
     return f'''<section class="band td" id="today"><div class="in"><h2>{s[0]}</h2><p class="note">{s[1]}</p>
-<div class="tdk"><a href="/{L}/win/"><b id="td-new">–</b><span>{s[2]}</span></a><a href="/{L}/win/"><b id="td-urg">–</b><span>{s[3]}</span></a><a href="/{L}/win/"><b id="td-open">–</b><span>{s[4]}</span><small id="td-c"></small></a><a href="{hz}"><b id="td-al">–</b><span>{s[5]}</span></a></div>
+<div class="tdk"><a href="/{L}/win/"><b id="td-new">{fm("new")}</b><span>{s[2]}</span></a><a href="/{L}/win/"><b id="td-urg">{fm("urgent")}</b><span>{s[3]}</span></a><a href="/{L}/win/"><b id="td-open">{fm("open")}</b><span>{s[4]}</span><small id="td-c"></small></a><a href="{hz}"><b id="td-al">{fm("alerts")}</b><span>{s[5]}</span></a></div>
 <div class="tdc"><div><h3>{s[6]}</h3><ol class="cil" id="td-nl"></ol></div><div><h3>{s[7]}</h3><ol class="cil" id="td-ul"></ol></div><div><h3>{s[8]}</h3><ol class="cil" id="td-al2"></ol></div></div>
 <h3 class="tds-h">{s[9]}</h3><ul class="tds" id="td-src"></ul>{lic_note(L)}<p class="cta"><a class="btn pri" href="/{L}/win/">{s[17]} →</a></p><p class="fine" id="td-up"></p></div></section>
 <style>.tdk{{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 28px}}.tdk a{{display:block;background:var(--bg2,#f3f5f8);padding:18px;border-radius:12px;color:inherit;text-decoration:none;transition:transform .2s}}.tdk a:hover{{transform:translateY(-2px)}}.tdk b{{display:block;font-size:36px;line-height:1.1}}.tdk span{{display:block;font-size:14px;margin-top:4px}}.tdk small{{display:block;font-size:13px;opacity:.7}}
