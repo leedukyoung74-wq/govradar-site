@@ -140,7 +140,8 @@
     // We distinguish server storage from a form relay response and from complete failure.
     fetch("/api/req", {
       method: "POST", headers: authHeaders(),
-      body: JSON.stringify({ type: type, body: body, email: email, lang: lang }),
+      body: JSON.stringify({ type: type, body: body, email: email, lang: lang,
+        privacy_consent: Boolean(field("privacy_agree") && field("privacy_agree").checked) }),
       credentials: "same-origin"
     }).then(function (response) {
       if (response.status === 503) return { fallback: true };
