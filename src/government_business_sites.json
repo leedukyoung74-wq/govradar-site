@@ -3,151 +3,6 @@
   "reviewed_on": "2026-11-20",
   "policy": "Only direct primary government/authorized official institutional URLs receive official_primary status. A successful HTTP response alone is not official confirmation.",
   "countries": {
-    "KR": [
-      {
-        "name_ko": "나라장터 · 국가종합전자조달",
-        "name_en": "KONEPS · Public Procurement",
-        "category": "procurement",
-        "url": "https://www.g2b.go.kr/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.g2b.go.kr/"
-      },
-      {
-        "name_ko": "기업마당 · 정부지원사업",
-        "name_en": "Bizinfo · Government Business Support",
-        "category": "support",
-        "url": "https://www.bizinfo.go.kr/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.bizinfo.go.kr/"
-      },
-      {
-        "name_ko": "K-Startup · 창업지원포털",
-        "name_en": "K-Startup · Startup Support",
-        "category": "support",
-        "url": "https://www.k-startup.go.kr/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.k-startup.go.kr/"
-      }
-    ],
-    "US": [
-      {
-        "name_ko": "SAM.gov · 연방정부 계약·등록",
-        "name_en": "SAM.gov · Federal Contracting",
-        "category": "procurement",
-        "url": "https://sam.gov/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://sam.gov/"
-      },
-      {
-        "name_ko": "Grants.gov · 연방 보조금",
-        "name_en": "Grants.gov · Federal Funding",
-        "category": "support",
-        "url": "https://www.grants.gov/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.grants.gov/"
-      },
-      {
-        "name_ko": "SBA · 연방 조달 지원",
-        "name_en": "SBA · Federal Contracting Support",
-        "category": "support",
-        "url": "https://www.sba.gov/counseling/get-started/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.sba.gov/counseling/get-started/"
-      }
-    ],
-    "GB": [
-      {
-        "name_ko": "Find a Tender · 정부 조달",
-        "name_en": "Find a Tender · Central Procurement",
-        "category": "procurement",
-        "url": "https://www.find-tender.service.gov.uk/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.find-tender.service.gov.uk/"
-      },
-      {
-        "name_ko": "Contracts Finder · 정부 계약",
-        "name_en": "Contracts Finder · Public Contracts",
-        "category": "procurement",
-        "url": "https://www.contractsfinder.service.gov.uk/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.contractsfinder.service.gov.uk/"
-      },
-      {
-        "name_ko": "정부 상업청 · 공급 기회",
-        "name_en": "Government Commercial Agency · Supply Opportunities",
-        "category": "support",
-        "url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities"
-      }
-    ],
-    "JP": [
-      {
-        "name_ko": "JETRO · 정부 조달 공고",
-        "name_en": "JETRO · Government Procurement",
-        "category": "procurement",
-        "url": "https://www.jetro.go.jp/en/database/procurement/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.jetro.go.jp/en/database/procurement/"
-      },
-      {
-        "name_ko": "디지털청 · 조달 정보",
-        "name_en": "Digital Agency · Procurement",
-        "category": "procurement",
-        "url": "https://www.digital.go.jp/en/procurement",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.digital.go.jp/en/procurement"
-      },
-      {
-        "name_ko": "J-Grants · 국가 보조금",
-        "name_en": "J-Grants · Government Subsidies",
-        "category": "support",
-        "url": "https://www.jgrants-portal.go.jp/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.jgrants-portal.go.jp/"
-      }
-    ],
-    "IN": [
-      {
-        "name_ko": "GeM · 정부 전자조달시장",
-        "name_en": "GeM · Government e-Marketplace",
-        "category": "procurement",
-        "url": "https://gem.gov.in/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://gem.gov.in/"
-      },
-      {
-        "name_ko": "Startup India · 창업지원",
-        "name_en": "Startup India · Schemes and Programmes",
-        "category": "support",
-        "url": "https://www.startupindia.gov.in/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.startupindia.gov.in/"
-      },
-      {
-        "name_ko": "Invest India · 투자진흥",
-        "name_en": "Invest India · Investment Facilitation",
-        "category": "investment",
-        "url": "https://www.investindia.gov.in/",
-        "verification": "official_primary",
-        "verified_on": "2026-11-20",
-        "evidence_url": "https://www.investindia.gov.in/"
-      }
-    ],
     "AU": [
       {
         "name_ko": "AusTender · 연방 조달",
@@ -175,6 +30,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://sellingtogov.finance.gov.au/"
+      }
+    ],
+    "BR": [
+      {
+        "name_ko": "PNCP · 국가 조달 공고",
+        "name_en": "PNCP · National Public Procurement",
+        "category": "procurement",
+        "url": "https://www.gov.br/pncp/pt-br",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gov.br/pncp/pt-br"
+      },
+      {
+        "name_ko": "Compras.gov.br · 연방 조달",
+        "name_en": "Compras.gov.br · Federal Procurement",
+        "category": "procurement",
+        "url": "https://www.gov.br/compras/pt-br/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gov.br/compras/pt-br/"
+      },
+      {
+        "name_ko": "Contrata+Brasil · 소기업 정부 거래",
+        "name_en": "Contrata+Brasil · Small Business Government Selling",
+        "category": "support",
+        "url": "https://www.gov.br/contratamaisbrasil/pt-br",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gov.br/contratamaisbrasil/pt-br"
       }
     ],
     "CA": [
@@ -235,33 +119,207 @@
         "evidence_url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32089"
       }
     ],
-    "SG": [
+    "GB": [
       {
-        "name_ko": "GeBIZ · 정부 조달",
-        "name_en": "GeBIZ · Government Procurement",
+        "name_ko": "Find a Tender · 정부 조달",
+        "name_en": "Find a Tender · Central Procurement",
         "category": "procurement",
-        "url": "https://www.gebiz.gov.sg/",
+        "url": "https://www.find-tender.service.gov.uk/",
         "verification": "official_primary",
         "verified_on": "2026-11-20",
-        "evidence_url": "https://www.gebiz.gov.sg/"
+        "evidence_url": "https://www.find-tender.service.gov.uk/"
       },
       {
-        "name_ko": "Enterprise Singapore · 정부지원",
-        "name_en": "Enterprise Singapore · Business Grants",
+        "name_ko": "Contracts Finder · 정부 계약",
+        "name_en": "Contracts Finder · Public Contracts",
+        "category": "procurement",
+        "url": "https://www.contractsfinder.service.gov.uk/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.contractsfinder.service.gov.uk/"
+      },
+      {
+        "name_ko": "정부 상업청 · 공급 기회",
+        "name_en": "Government Commercial Agency · Supply Opportunities",
         "category": "support",
-        "url": "https://www.enterprisesg.gov.sg/financial-support",
+        "url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities",
         "verification": "official_primary",
         "verified_on": "2026-11-20",
-        "evidence_url": "https://www.enterprisesg.gov.sg/financial-support"
+        "evidence_url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities"
+      }
+    ],
+    "ID": [
+      {
+        "name_ko": "INAPROC · 공공 조달",
+        "name_en": "INAPROC · Public Procurement",
+        "category": "procurement",
+        "url": "https://eproc.lkpp.go.id/aplikasi/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://eproc.lkpp.go.id/aplikasi/"
       },
       {
-        "name_ko": "EDB · 투자진흥",
-        "name_en": "Singapore EDB · Investment",
-        "category": "investment",
-        "url": "https://www.edb.gov.sg/",
+        "name_ko": "OSS · 사업 인허가",
+        "name_en": "OSS · Business Licensing",
+        "category": "support",
+        "url": "https://oss.go.id/en",
         "verification": "official_primary",
         "verified_on": "2026-11-20",
-        "evidence_url": "https://www.edb.gov.sg/"
+        "evidence_url": "https://oss.go.id/en"
+      },
+      {
+        "name_ko": "BKPM · 투자부",
+        "name_en": "BKPM · Ministry of Investment",
+        "category": "investment",
+        "url": "https://www.bkpm.go.id/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.bkpm.go.id/"
+      }
+    ],
+    "IN": [
+      {
+        "name_ko": "GeM · 정부 전자조달시장",
+        "name_en": "GeM · Government e-Marketplace",
+        "category": "procurement",
+        "url": "https://gem.gov.in/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://gem.gov.in/"
+      },
+      {
+        "name_ko": "Startup India · 창업지원",
+        "name_en": "Startup India · Schemes and Programmes",
+        "category": "support",
+        "url": "https://www.startupindia.gov.in/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.startupindia.gov.in/"
+      },
+      {
+        "name_ko": "Invest India · 투자진흥",
+        "name_en": "Invest India · Investment Facilitation",
+        "category": "investment",
+        "url": "https://www.investindia.gov.in/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.investindia.gov.in/"
+      }
+    ],
+    "JP": [
+      {
+        "name_ko": "JETRO · 정부 조달 공고",
+        "name_en": "JETRO · Government Procurement",
+        "category": "procurement",
+        "url": "https://www.jetro.go.jp/en/database/procurement/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.jetro.go.jp/en/database/procurement/"
+      },
+      {
+        "name_ko": "디지털청 · 조달 정보",
+        "name_en": "Digital Agency · Procurement",
+        "category": "procurement",
+        "url": "https://www.digital.go.jp/en/procurement",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.digital.go.jp/en/procurement"
+      },
+      {
+        "name_ko": "J-Grants · 국가 보조금",
+        "name_en": "J-Grants · Government Subsidies",
+        "category": "support",
+        "url": "https://www.jgrants-portal.go.jp/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.jgrants-portal.go.jp/"
+      }
+    ],
+    "KE": [
+      {
+        "name_ko": "케냐 공공조달정보포털",
+        "name_en": "Kenya Public Procurement Information Portal",
+        "category": "procurement",
+        "url": "https://www.tenders.go.ke/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.tenders.go.ke/"
+      },
+      {
+        "name_ko": "케냐 공공조달규제청",
+        "name_en": "Kenya Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://ppra.go.ke/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://ppra.go.ke/"
+      },
+      {
+        "name_ko": "케냐 기업등록청",
+        "name_en": "Kenya Business Registration Service",
+        "category": "support",
+        "url": "https://brs.go.ke/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://brs.go.ke/"
+      }
+    ],
+    "KR": [
+      {
+        "name_ko": "나라장터 · 국가종합전자조달",
+        "name_en": "KONEPS · Public Procurement",
+        "category": "procurement",
+        "url": "https://www.g2b.go.kr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.g2b.go.kr/"
+      },
+      {
+        "name_ko": "기업마당 · 정부지원사업",
+        "name_en": "Bizinfo · Government Business Support",
+        "category": "support",
+        "url": "https://www.bizinfo.go.kr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.bizinfo.go.kr/"
+      },
+      {
+        "name_ko": "K-Startup · 창업지원포털",
+        "name_en": "K-Startup · Startup Support",
+        "category": "support",
+        "url": "https://www.k-startup.go.kr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.k-startup.go.kr/"
+      }
+    ],
+    "PH": [
+      {
+        "name_ko": "PhilGEPS · 정부 전자조달",
+        "name_en": "PhilGEPS · Government Procurement",
+        "category": "procurement",
+        "url": "https://notices.philgeps.gov.ph/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://notices.philgeps.gov.ph/"
+      },
+      {
+        "name_ko": "DTI Tradeline · 해외 바이어·수출",
+        "name_en": "DTI Tradeline · Export Buyer Matching",
+        "category": "support",
+        "url": "https://tradelinephilippines.dti.gov.ph/web/tradeline-portal/home",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://tradelinephilippines.dti.gov.ph/web/tradeline-portal/home"
+      },
+      {
+        "name_ko": "필리핀 투자위원회",
+        "name_en": "Philippines Board of Investments",
+        "category": "investment",
+        "url": "https://boi.gov.ph/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://boi.gov.ph/"
       }
     ],
     "SA": [
@@ -291,6 +349,93 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://misa.gov.sa/"
+      }
+    ],
+    "SG": [
+      {
+        "name_ko": "GeBIZ · 정부 조달",
+        "name_en": "GeBIZ · Government Procurement",
+        "category": "procurement",
+        "url": "https://www.gebiz.gov.sg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gebiz.gov.sg/"
+      },
+      {
+        "name_ko": "Enterprise Singapore · 정부지원",
+        "name_en": "Enterprise Singapore · Business Grants",
+        "category": "support",
+        "url": "https://www.enterprisesg.gov.sg/financial-support",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.enterprisesg.gov.sg/financial-support"
+      },
+      {
+        "name_ko": "EDB · 투자진흥",
+        "name_en": "Singapore EDB · Investment",
+        "category": "investment",
+        "url": "https://www.edb.gov.sg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.edb.gov.sg/"
+      }
+    ],
+    "US": [
+      {
+        "name_ko": "SAM.gov · 연방정부 계약·등록",
+        "name_en": "SAM.gov · Federal Contracting",
+        "category": "procurement",
+        "url": "https://sam.gov/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://sam.gov/"
+      },
+      {
+        "name_ko": "Grants.gov · 연방 보조금",
+        "name_en": "Grants.gov · Federal Funding",
+        "category": "support",
+        "url": "https://www.grants.gov/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.grants.gov/"
+      },
+      {
+        "name_ko": "SBA · 연방 조달 지원",
+        "name_en": "SBA · Federal Contracting Support",
+        "category": "support",
+        "url": "https://www.sba.gov/counseling/get-started/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.sba.gov/counseling/get-started/"
+      }
+    ],
+    "ZA": [
+      {
+        "name_ko": "남아공 공공입찰 포털",
+        "name_en": "South Africa eTenders Portal",
+        "category": "procurement",
+        "url": "https://www.etenders.gov.za/Home/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.etenders.gov.za/Home/"
+      },
+      {
+        "name_ko": "남아공 국가재무부",
+        "name_en": "South Africa National Treasury",
+        "category": "support",
+        "url": "https://www.treasury.gov.za/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.treasury.gov.za/"
+      },
+      {
+        "name_ko": "InvestSA · 남아공 투자진흥",
+        "name_en": "InvestSA · Investment Promotion",
+        "category": "investment",
+        "url": "https://www.investsa.gov.za/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.investsa.gov.za/"
       }
     ]
   }
