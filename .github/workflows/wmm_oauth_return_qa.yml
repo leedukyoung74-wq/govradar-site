@@ -1,0 +1,25 @@
+name: WMM OAuth Return Navigation QA (No Deploy)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'web/auth.js'
+      - 'tests/test_auth_oauth_return.test.cjs'
+      - '.github/workflows/wmm_oauth_return_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Check browser auth script JavaScript syntax
+        run: node --check web/auth.js
+      - name: Mock Google OAuth callback and safe in-site return
+        run: node --test tests/test_auth_oauth_return.test.cjs
