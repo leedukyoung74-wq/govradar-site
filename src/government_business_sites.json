@@ -1868,6 +1868,38 @@
         "evidence_url": "https://apip.gov.gn/"
       }
     ],
+    "GQ": [
+      {
+        "name_ko": "운수통신부 · 국가 공식 국제입찰 공고",
+        "name_en": "Equatorial Guinea Transport Ministry · Official Public Tender Notices",
+        "category": "procurement",
+        "url": "https://minttsia.gob.gq/guinea-ecuatorial-lanza-licitacion-internacional-para-modernizar-su-ley-de-telecomunicaciones/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://minttsia.gob.gq/guinea-ecuatorial-lanza-licitacion-internacional-para-modernizar-su-ley-de-telecomunicaciones/",
+        "notes": "Procurement link is a sector ministry's official tender announcement, not a unified national tender portal"
+      },
+      {
+        "name_ko": "노동부 · 청년 창업·중소기업 지원",
+        "name_en": "Equatorial Guinea Labour Ministry · Enterprise and Youth Funding",
+        "category": "support",
+        "url": "https://mintrabajo.gob.gq/el-gobierno-acelera-la-implementacion-del-plan-nacional-de-autoempleo-y-emprendimiento-juvenil/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mintrabajo.gob.gq/el-gobierno-acelera-la-implementacion-del-plan-nacional-de-autoempleo-y-emprendimiento-juvenil/",
+        "notes": "Procurement link is a sector ministry's official tender announcement, not a unified national tender portal"
+      },
+      {
+        "name_ko": "총리실 · 국가 경제·투자 행정",
+        "name_en": "Equatorial Guinea Prime Minister's Office · Economic and Investment Policy",
+        "category": "investment",
+        "url": "https://primatura.gob.gq/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://primatura.gob.gq/",
+        "notes": "Procurement link is a sector ministry's official tender announcement, not a unified national tender portal"
+      }
+    ],
     "GR": [
       {
         "name_ko": "ESIDIS · 그리스 정부 전자조달",
@@ -4276,6 +4308,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.investinseychelles.com/about/about-sib"
+      }
+    ],
+    "SD": [
+      {
+        "name_ko": "재무부 조달계약청 · 국가공공입찰",
+        "name_en": "Sudan Finance Ministry · Public Procurement and Contracting Department",
+        "category": "procurement",
+        "url": "https://ppda.mof.gov.sd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mof.gov.sd/",
+        "notes": "Conflict-disrupted public services; website uptime and jurisdiction/eligibility uncertain"
+      },
+      {
+        "name_ko": "Baldna · 국가 전자정부 기업행정서비스",
+        "name_en": "Sudan eGovernment · Business & Trade Services",
+        "category": "support",
+        "url": "https://baldna.gov.sd/services/2/list/1",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://baldna.gov.sd/services/2/list/1",
+        "notes": "Conflict-disrupted public services; website uptime and jurisdiction/eligibility uncertain"
+      },
+      {
+        "name_ko": "FMA · 국가 금융시장·투자감독청",
+        "name_en": "Sudan Financial Markets Authority · Investor Services",
+        "category": "investment",
+        "url": "https://fma.gov.sd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://fma.gov.sd/bout-fma/",
+        "notes": "Conflict-disrupted public services; website uptime and jurisdiction/eligibility uncertain"
       }
     ],
     "SE": [
