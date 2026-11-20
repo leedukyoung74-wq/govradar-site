@@ -1511,6 +1511,35 @@
         "evidence_url": "https://investmentfiji.org.fj/"
       }
     ],
+    "FM": [
+      {
+        "name_ko": "FSM 재무행정청 · 조달 기회",
+        "name_en": "Micronesia Department of Finance · Procurement Opportunities",
+        "category": "procurement",
+        "url": "https://dofa.gov.fm/opportunity/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dofa.gov.fm/services/procurement/"
+      },
+      {
+        "name_ko": "자원개발청 · 기업·산업지원",
+        "name_en": "Micronesia Department of Resources and Development",
+        "category": "support",
+        "url": "https://rd.gov.fm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://rd.gov.fm/"
+      },
+      {
+        "name_ko": "무역투자국 · 공식 민간투자",
+        "name_en": "Micronesia Department of Resources and Development · Trade & Investment",
+        "category": "investment",
+        "url": "https://rd.gov.fm/trade-and-investment",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://rd.gov.fm/trade-and-investment"
+      }
+    ],
     "FR": [
       {
         "name_ko": "PLACE · 정부 전자조달",
@@ -2236,6 +2265,35 @@
         "evidence_url": "https://www.cib-cdc.gov.kh/"
       }
     ],
+    "KI": [
+      {
+        "name_ko": "키리바시 국가 공공조달 · 재무부",
+        "name_en": "Kiribati Ministry of Finance · Public Procurement",
+        "category": "procurement",
+        "url": "https://procurement.gov.ki/tender-list",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procurement.gov.ki/-16"
+      },
+      {
+        "name_ko": "MTCIC · 정부 기업개발센터",
+        "name_en": "Kiribati Government Business Promotion Centre",
+        "category": "support",
+        "url": "https://mtcic.gov.ki/business-promotion-centre/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mtcic.gov.ki/business-promotion-centre/"
+      },
+      {
+        "name_ko": "투자진흥국 · Kiribati 정부",
+        "name_en": "Kiribati Investment Promotion Division",
+        "category": "investment",
+        "url": "https://www.investinkiribati.mtcic.gov.ki/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investinkiribati.mtcic.gov.ki/about-us"
+      }
+    ],
     "KM": [
       {
         "name_ko": "DNCMP · 코모로 국가 공공조달",
@@ -2671,6 +2729,35 @@
         "evidence_url": "https://edbm.mg/en/a-propos-dedbm"
       }
     ],
+    "MH": [
+      {
+        "name_ko": "재무부 · 마셜제도 정부 공고",
+        "name_en": "Marshall Islands Ministry of Finance · Tenders and Bidders",
+        "category": "procurement",
+        "url": "https://mof.gov.mh/category/tenders-bidders/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mof.gov.mh/division-of-budget-procurement-and-supply/"
+      },
+      {
+        "name_ko": "OCIT · 기업·상업 개발 지원",
+        "name_en": "Marshall Islands Office of Commerce Investment & Tourism",
+        "category": "support",
+        "url": "https://www.ocit.mh/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ocit.mh/ab"
+      },
+      {
+        "name_ko": "OCIT · 국가 투자진흥 안내",
+        "name_en": "Marshall Islands Government Investment Promotion",
+        "category": "investment",
+        "url": "https://www.ocit.mh/investment",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ocit.mh/investment"
+      }
+    ],
     "MK": [
       {
         "name_ko": "e-Nabavki · 북마케도니아 국가조달",
@@ -3077,6 +3164,35 @@
         "evidence_url": "https://ibn.gov.np/"
       }
     ],
+    "NR": [
+      {
+        "name_ko": "재무부 · 나우루 정부조달",
+        "name_en": "Nauru Department of Finance · Public Procurement",
+        "category": "procurement",
+        "url": "https://naurufinance.info/procurement/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://naurufinance.info/procurement/"
+      },
+      {
+        "name_ko": "재무부 · 경제개발 서비스",
+        "name_en": "Nauru Government Finance · Economic Development Services",
+        "category": "support",
+        "url": "https://naurufinance.info/economic-services/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://naurufinance.info/economic-services/"
+      },
+      {
+        "name_ko": "상업·외국인투자 담당정부",
+        "name_en": "Nauru Government · Minister for Commerce and Foreign Investment",
+        "category": "investment",
+        "url": "https://www.nauru.gov.nr/government/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.nauru.gov.nr/media/219968/gazette_80-26.pdf"
+      }
+    ],
     "NZ": [
       {
         "name_ko": "GETS · 뉴질랜드 정부조달 공고",
@@ -3336,6 +3452,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gov.pt/entidades/agencia-para-o-investimento-e-comercio-externo-de-portugal"
+      }
+    ],
+    "PW": [
+      {
+        "name_ko": "팔라우 정부 입찰·RFP",
+        "name_en": "Palau National Government Procurement Notices",
+        "category": "procurement",
+        "url": "https://www.palaugov.pw/rfp-bids/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://suppliers.gov.pw/legislation/"
+      },
+      {
+        "name_ko": "팔라우 정부 중소기업지원",
+        "name_en": "Palau Government Small Business Development Centre",
+        "category": "support",
+        "url": "https://www.palaugov.pw/executive-branch/ministries/public-infrastructure/small-business-development-center/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.palaugov.pw/executive-branch/ministries/public-infrastructure/small-business-development-center/"
+      },
+      {
+        "name_ko": "Foreign Investment Board · 팔라우",
+        "name_en": "Palau Government Foreign Investment Board",
+        "category": "investment",
+        "url": "https://www.palaugov.pw/fib/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.palaugov.pw/fib/"
       }
     ],
     "PY": [
@@ -3947,6 +4092,35 @@
         "evidence_url": "https://investintunisia.tn/en/"
       }
     ],
+    "TO": [
+      {
+        "name_ko": "재무부 · 통가 공공조달",
+        "name_en": "Tonga Ministry of Finance · Procurement",
+        "category": "procurement",
+        "url": "https://www.finance.gov.to/index.php/node/170",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.finance.gov.to/index.php/node/170"
+      },
+      {
+        "name_ko": "MTED · 통가 정부 중소기업 지원",
+        "name_en": "Tonga Government SME and Business Support Division",
+        "category": "support",
+        "url": "https://www.mted.gov.to/business-support-marketing-promotion/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mted.gov.to/business-support-marketing-promotion/"
+      },
+      {
+        "name_ko": "Invest Tonga · 국가 투자지원",
+        "name_en": "Invest Tonga · Government Investment Promotion",
+        "category": "investment",
+        "url": "https://www.investtonga.gov.to/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investtonga.gov.to/about-us"
+      }
+    ],
     "TR": [
       {
         "name_ko": "EKAP · 전자공공조달",
@@ -4003,6 +4177,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://mtti.gov.tt/investment-directorate/"
+      }
+    ],
+    "TV": [
+      {
+        "name_ko": "투발루 정부 전자조달",
+        "name_en": "Government of Tuvalu Official eProcurement",
+        "category": "procurement",
+        "url": "https://portal.tenderlink.com/got/login",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://portal.tenderlink.com/got/login"
+      },
+      {
+        "name_ko": "재무부 · 사업개발 서비스",
+        "name_en": "Tuvalu Finance Ministry · Business Development",
+        "category": "support",
+        "url": "https://finance.gov.tv/business/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://finance.gov.tv/business/"
+      },
+      {
+        "name_ko": "무역투자 절차 · 공식 정부 포털",
+        "name_en": "Tuvalu Government Trade and Investment Procedures",
+        "category": "investment",
+        "url": "https://tuvalu.tradeportal.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://tuvalu.tradeportal.org/"
       }
     ],
     "TZ": [
