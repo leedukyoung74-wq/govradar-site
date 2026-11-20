@@ -40,12 +40,29 @@ def safe_official_notice(notice):
     except (ValueError,TypeError):
         return False
 
+# Deliberately conservative. Only strings with an organisational marker
+# qualify for public indexing; a plain person's first+last name does not.
+# This sacrifices coverage instead of publishing unintended personal names.
+ORG_MARKER = re.compile(
+    r"\b(ministry|department|council|borough|city|municipal|municipality|"
+    r"government|authority|agency|office|university|hospital|school|"
+    r"national|regional|district|state|province|institute|commission|"
+    r"directorate|bank|public|secretariat|administration|corporation|"
+    r"gouvernement|ministere|minist[eè]re|ville|commune|universit[eé]|"
+    r"ministerio|gobierno|ayuntamiento|universidad|minist[eé]rio|"
+    r"prefeitura|verwaltung|ministerium|stad|kommune|kommun|kommunen|"
+    r"departement|departamento|universit[aà]|mairie|cons[eé]il|"
+    r"ltd|limited|incorporated|foundation|fund|service|services)\b",
+    re.I
+)
+
 def normalize_organisation(text):
     if not isinstance(text,str): return ""
     s=re.sub(r"\s+"," ",text).strip()
-    # Avoid indexing obvious direct personal contact or raw phone/email fields.
+    # Avoid indexing apparent direct personal contacts, phones and names.
     if not (4<=len(s)<=160) or "@" in s or re.search(r"\+?\d[\d\s()-]{7,}\d",s):
         return ""
+    if not ORG_MARKER.search(s): return ""
     return s
 
 def build(items,now=None):
