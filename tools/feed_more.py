@@ -175,8 +175,21 @@ def ted_item(n, minv=0):
             "pm": "", "pmn": "", "pg": PG.get(nat, ""), "ma": "", "est": str(round(val)) if val else "", "cur": cur, "eur": round(eur)}
 
 def _ocds(S, url, mk):
-    out = []
+    """Only follow HTTPS pagination on the originating official host.
+    Never follow malformed/external, repeating or non-HTTPS pagination URLs."""
+    origin = urllib.parse.urlsplit(url)
+    if origin.scheme != "https" or not origin.hostname or origin.username or origin.password:
+        stat(S)["notes"].append("invalid OCDS source URL")
+        return []
+    out, seen = [], set()
     for _ in range(40):
+        parsed = urllib.parse.urlsplit(url)
+        if (parsed.scheme != "https" or parsed.hostname != origin.hostname
+                or parsed.port != origin.port or parsed.username or parsed.password
+                or url in seen):
+            stat(S)["notes"].append("unsafe or repeated OCDS pagination URL blocked")
+            break
+        seen.add(url)
         try: j = json.loads(_get(S, url))
         except Exception: break
         rels = j.get("releases") or []; stat(S)["raw"] += len(rels)
@@ -185,7 +198,7 @@ def _ocds(S, url, mk):
             if it: out.append(it)
         nxt = (j.get("links") or {}).get("next")
         if not nxt or not rels: break
-        url = nxt
+        url = urllib.parse.urljoin(url, str(nxt))
     return out
 
 def _ocds_item(S, r, url, minv_eur=1.2e6):
