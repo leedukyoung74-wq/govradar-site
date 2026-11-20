@@ -90,6 +90,35 @@
         "evidence_url": "https://enterprisearmenia.am/"
       }
     ],
+    "AO": [
+      {
+        "name_ko": "공공조달 포털 · 앙골라 재무부",
+        "name_en": "Angola Ministry of Finance · Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://compraspublicas.minfin.gov.ao/ComprasPublicas/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://compraspublicas.minfin.gov.ao/ComprasPublicas/"
+      },
+      {
+        "name_ko": "INAPEM · 국영 중소기업 지원청",
+        "name_en": "Angola INAPEM · MSME Business Support",
+        "category": "support",
+        "url": "https://inapem.gov.ao/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gue.gov.ao/portal/investimento-inapem"
+      },
+      {
+        "name_ko": "AIPEX · 국가 투자지원·수출진흥",
+        "name_en": "Angola AIPEX · Government Investment Promotion",
+        "category": "investment",
+        "url": "https://gue.gov.ao/portal/investimento-aipex",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gue.gov.ao/portal/investimento-aipex"
+      }
+    ],
     "AR": [
       {
         "name_ko": "COMPR.AR · 국가 공공조달",
@@ -465,6 +494,64 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gov.br/contratamaisbrasil/pt-br"
+      }
+    ],
+    "BS": [
+      {
+        "name_ko": "ePSR · 바하마 정부 전자조달",
+        "name_en": "Bahamas Ministry of Finance · Public e-Procurement",
+        "category": "procurement",
+        "url": "https://mofvendors.gov.bs/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mofvendors.gov.bs/"
+      },
+      {
+        "name_ko": "SBDC · 중소기업개발센터",
+        "name_en": "Bahamas Access Accelerator · Public SME Development",
+        "category": "support",
+        "url": "https://sbdcbahamas.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moea.gov.bs/agencies-and-divisions/"
+      },
+      {
+        "name_ko": "경제부 · 투자·산업지원",
+        "name_en": "Bahamas Ministry of Economic Affairs · Business Development",
+        "category": "investment",
+        "url": "https://moea.gov.bs/agencies-and-divisions/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moea.gov.bs/agencies-and-divisions/"
+      }
+    ],
+    "BT": [
+      {
+        "name_ko": "e-GP · 부탄 국가 전자조달",
+        "name_en": "Bhutan Royal Government · National e-Procurement",
+        "category": "procurement",
+        "url": "https://egp.gov.bt/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://egp.gov.bt/"
+      },
+      {
+        "name_ko": "산업부 · 정부 중소기업 지원",
+        "name_en": "Bhutan Department of Industry · Cottage and Small Enterprise",
+        "category": "support",
+        "url": "https://industry.gov.bt/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://industry.gov.bt/about-us/mandates/2"
+      },
+      {
+        "name_ko": "Invest Bhutan · 정부 투자진흥",
+        "name_en": "Invest Bhutan · Ministry of Industry Investment Promotion",
+        "category": "investment",
+        "url": "https://investbhutan.gov.bt/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://industry.gov.bt/services/view/foreign-direct-investment"
       }
     ],
     "BW": [
@@ -1656,6 +1743,35 @@
         "evidence_url": "https://brs.go.ke/"
       }
     ],
+    "KG": [
+      {
+        "name_ko": "국가전자조달 · 키르기스스탄",
+        "name_en": "Kyrgyz Republic Public Procurement Platform",
+        "category": "procurement",
+        "url": "https://zakupki.gov.kg/popp/home.xhtml",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://zakupki.gov.kg/"
+      },
+      {
+        "name_ko": "기업개발기금 · 국영 금융지원",
+        "name_en": "Kyrgyz Entrepreneurship Development Fund · SME Finance",
+        "category": "support",
+        "url": "https://frp.kg/kreditovanie/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://frp.kg/o-kompanii/smi-o-nas/fond-razvitiya-predprinimatelstva-udvoil-ustavnyij-kapital-i-narastil-vyidachu-kreditov.html"
+      },
+      {
+        "name_ko": "국가투자청 · 대통령 산하",
+        "name_en": "Kyrgyz National Investment Agency",
+        "category": "investment",
+        "url": "https://invest.gov.kg/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://invest.gov.kg/en/about"
+      }
+    ],
     "KH": [
       {
         "name_ko": "공공조달총국 · 조달 공고",
@@ -2031,6 +2147,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investnorthmacedonia.gov.mk/"
+      }
+    ],
+    "MN": [
+      {
+        "name_ko": "국가전자조달 · 몽골 국가입찰",
+        "name_en": "Mongolia National Government Tender Portal",
+        "category": "procurement",
+        "url": "https://www.tender.gov.mn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investmongolia.gov.mn/en/"
+      },
+      {
+        "name_ko": "중소기업청 · 정책·지원금",
+        "name_en": "Mongolia Government SME Development Agency",
+        "category": "support",
+        "url": "https://www.sme.gov.mn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sme.gov.mn/"
+      },
+      {
+        "name_ko": "Invest Mongolia · 국가 투자무역청",
+        "name_en": "Mongolia Investment and Trade Agency",
+        "category": "investment",
+        "url": "https://www.investmongolia.gov.mn/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investmongolia.gov.mn/en/"
       }
     ],
     "MT": [
@@ -3019,6 +3164,35 @@
         "evidence_url": "https://www.investinelsalvador.gob.sv/es/announcements"
       }
     ],
+    "SZ": [
+      {
+        "name_ko": "ESPPRA · 에스와티니 조달감독청",
+        "name_en": "Eswatini Public Procurement Regulatory Agency",
+        "category": "procurement",
+        "url": "https://www.esppra.co.sz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.esppra.co.sz/"
+      },
+      {
+        "name_ko": "SEDCO · 국영 중소기업개발",
+        "name_en": "Eswatini Small Enterprises Development Company",
+        "category": "support",
+        "url": "https://www.sedco.co.sz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sedco.co.sz/company-overview/"
+      },
+      {
+        "name_ko": "EIPA · 국가 투자·무역진흥",
+        "name_en": "Eswatini Investment Promotion Authority",
+        "category": "investment",
+        "url": "https://investeswatini.org.sz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investeswatini.org.sz/"
+      }
+    ],
     "TH": [
       {
         "name_ko": "e-GP · 국가 전자조달 시스템",
@@ -3046,6 +3220,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.ditp.go.th/en"
+      }
+    ],
+    "TL": [
+      {
+        "name_ko": "국가 eProcurement · 동티모르",
+        "name_en": "Timor-Leste National e-Procurement",
+        "category": "procurement",
+        "url": "https://www.eprocurement.gov.tl/public/indexeprtl?lang=en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mof.gov.tl/"
+      },
+      {
+        "name_ko": "TradeInvest · 공공 수출지원",
+        "name_en": "TradeInvest Timor-Leste · Export Promotion and Award",
+        "category": "support",
+        "url": "https://tradeinvest.tl/node/119",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://tradeinvest.tl/node/119"
+      },
+      {
+        "name_ko": "TradeInvest · 국가 투자진흥",
+        "name_en": "TradeInvest Timor-Leste · Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://tradeinvest.tl/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://tradeinvest.tl/node/30"
       }
     ],
     "TN": [
