@@ -18,7 +18,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    concurrency: { group: "feeds-${{ inputs.dry_run && 'dry' || 'live' }}", cancel-in-progress: false }
+    # Supersede obsolete PR dry-runs on a new commit; never cancel real data publication.
+    concurrency: { group: "feeds-${{ inputs.dry_run && 'dry' || 'live' }}", cancel-in-progress: "${{ inputs.dry_run }}" }
     steps:
       - uses: actions/checkout@v4
         with: { ref: "${{ inputs.code_ref }}" }
@@ -58,7 +59,9 @@ jobs:
         if: ${{ !inputs.dry_run }}
         run: |
           cd data_branch
-          git add feeds hz/official.json
+          # Dedicated fast official publisher owns hz/official.json; never commit it here.
+          # Keeping disjoint file ownership avoids rebase conflicts with frequent USGS refreshes.
+          git add feeds
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Feed ${{ inputs.task }} $(date -u +%FT%H:%MZ)"
           # other jobs (situation summary, member data) also write to data: if one pushed meanwhile, replay on top of it.
