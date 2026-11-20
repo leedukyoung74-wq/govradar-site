@@ -1,8 +1,14 @@
 name: WMM Official NWS + CISA KEV public updates
-# v3: NWS /alerts/active uses supported no-limit official GeoJSON endpoint.
+# Free public-source updater. A missed 15-minute GitHub schedule can also be
+# recovered after a successful USGS run, but ONLY if source freshness is due.
 on:
   schedule:
     - cron: '13,28,43,58 * * * *'
+  workflow_run:
+    workflows:
+      - WMM GOV RADAR fast official data publishing
+    types: [completed]
+    branches: [main]
   push:
     branches: [main]
     paths:
@@ -16,7 +22,40 @@ on:
 permissions:
   contents: write
 jobs:
+  freshness_gate:
+    # Ignore failed/cancelled upstream USGS jobs. Normal schedules and manual
+    # dry runs retain their prior functionality.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    permissions:
+      contents: read
+    outputs:
+      refresh: ${{ steps.due.outputs.refresh }}
+    steps:
+      - name: Read this independent timer code without credentials
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: control
+          persist-credentials: false
+      - name: Read existing official public feed statuses only
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data_branch
+          persist-credentials: false
+      - name: Decide whether fallback truly needs another source poll
+        id: due
+        env:
+          TRIGGER: ${{ github.event_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 control/ops/nws_cisa_due.py --event "$TRIGGER" --data data_branch >> "$GITHUB_OUTPUT"
   verified_nws_cisa:
+    needs: freshness_gate
+    if: ${{ needs.freshness_gate.outputs.refresh == 'true' }}
     uses: leedukyoung74-wq/govradar-site/.github/workflows/wmm_nws_cisa_official.yml@src
     with:
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}

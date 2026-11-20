@@ -1,0 +1,35 @@
+name: WMM NWS CISA missed-cron fallback QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_nws_cisa_timer.yml'
+      - '.github/workflows/wmm_nws_cisa_fallback_qa.yml'
+      - 'ops/nws_cisa_due.py'
+      - 'ops/tests/test_nws_cisa_due.py'
+permissions:
+  contents: read
+jobs:
+  verify_fallback:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate fallback source freshness decisions without network
+        run: python3 -m unittest discover -s ops/tests -p 'test_nws_cisa_due.py' -v
+      - name: Enforce triggering safety and unchanged public writer
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path('.github/workflows/wmm_nws_cisa_timer.yml').read_text()
+          assert 'workflow_run:' in s and 'types: [completed]' in s
+          assert "github.event.workflow_run.conclusion == 'success'" in s
+          assert "needs.freshness_gate.outputs.refresh == 'true'" in s
+          assert 'ref: data' in s and 'persist-credentials: false' in s
+          assert 'wmm_nws_cisa_official.yml@src' in s
+          assert 'dry_run:' in s and 'workflow_dispatch' in s
+          assert 'git push' not in s and 'git commit' not in s
+          print('PASS: successful source trigger only, read-only check, existing guarded publisher')
+          PY
