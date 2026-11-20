@@ -82,6 +82,34 @@ class SitemapGateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "duplicate"):
             validate(self.root, min_urls=14)
 
+    def test_orphan_hreflang_fails(self):
+        xml = (self.root / "sitemap.xml").read_text(encoding="utf8")
+        xml = xml.replace(
+            '<url><loc>' + self.urls[0] + '</loc></url>',
+            '<url><loc>' + self.urls[0] + '</loc>'
+            '<xhtml:link rel="alternate" hreflang="es" href="' + ORIGIN + '/es/not-a-page/"/></url>',
+        ).replace(
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+        )
+        (self.root / "sitemap.xml").write_text(xml, encoding="utf8")
+        with self.assertRaisesRegex(ValueError, "Orphan hreflang"):
+            validate(self.root, min_urls=14)
+
+    def test_wrong_locale_hreflang_fails(self):
+        xml = (self.root / "sitemap.xml").read_text(encoding="utf8")
+        xml = xml.replace(
+            '<url><loc>' + self.urls[0] + '</loc></url>',
+            '<url><loc>' + self.urls[0] + '</loc>'
+            '<xhtml:link rel="alternate" hreflang="es" href="' + ORIGIN + '/en/"/></url>',
+        ).replace(
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+        )
+        (self.root / "sitemap.xml").write_text(xml, encoding="utf8")
+        with self.assertRaisesRegex(ValueError, "Wrong-language hreflang"):
+            validate(self.root, min_urls=14)
+
     def test_official_robots_sitemap_missing_fails(self):
         self.set_robots(False)
         with self.assertRaisesRegex(ValueError, "robots.txt"):
