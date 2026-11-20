@@ -17,7 +17,7 @@ class OutputConsistencyTests(unittest.TestCase):
         (output/"data"/"c").mkdir(parents=True)
         (exports/"KR.json").write_text(json.dumps({"id":"KR","data":{"agenda":["test"],"tenders":[{"title":"test","deadline":"2026-11-30"}]}}))
         (output/"data"/"countries.json").write_text(json.dumps([{"iso":"KR","slug":"south-korea","done":True}]))
-        (output/"data"/"opps.json").write_text(json.dumps({"items":[{"iso":"KR","kind":"tenders"}]}))
+        (output/"data"/"opps.json").write_text(json.dumps({"items":[{"iso":"KR","kind":"tenders","ko":"test","deadline":"2026-11-30"}]}))
         (output/"data"/"c"/"KR.json").write_text(json.dumps({"iso":"KR"}))
         for lang in ("ko","en","es","fr","ar","vi","id"):
             (output/lang/"south-korea").mkdir(parents=True)
@@ -52,6 +52,46 @@ class OutputConsistencyTests(unittest.TestCase):
             (out/"data"/"opps.json").write_text(json.dumps({"items":[]}))
             r=inspect_build(exports,out)
             self.assertIn("PUBLISHED_OPPORTUNITY_COUNT_MISMATCH",r["errors"])
+
+
+    def test_equal_count_wrong_deadline_is_blocked(self):
+        with tempfile.TemporaryDirectory() as d:
+            exports,out=self.fixture(pathlib.Path(d))
+            # An equal-count stale record must NEVER pass export consistency.
+            (out/"data"/"opps.json").write_text(json.dumps({
+                "items":[{"iso":"KR","kind":"tenders","ko":"test","deadline":"2026-12-31"}]
+            }))
+            r=inspect_build(exports,out)
+            self.assertFalse(r["passed"])
+            self.assertNotIn("PUBLISHED_OPPORTUNITY_COUNT_MISMATCH",r["errors"])
+            self.assertIn("PUBLISHED_OPPORTUNITY_CONTENT_MISMATCH",r["errors"])
+
+    def test_equal_count_wrong_title_or_kind_is_blocked(self):
+        with tempfile.TemporaryDirectory() as d:
+            exports,out=self.fixture(pathlib.Path(d))
+            for changed in (
+                {"iso":"KR","kind":"tenders","ko":"wrong title","deadline":"2026-11-30"},
+                {"iso":"KR","kind":"biz","ko":"test","deadline":"2026-11-30"}
+            ):
+                with self.subTest(changed=changed):
+                    (out/"data"/"opps.json").write_text(json.dumps({"items":[changed]}))
+                    self.assertIn("PUBLISHED_OPPORTUNITY_CONTENT_MISMATCH",
+                                  inspect_build(exports,out)["errors"])
+
+    def test_duplicate_country_export_is_blocked(self):
+        with tempfile.TemporaryDirectory() as d:
+            exports,out=self.fixture(pathlib.Path(d))
+            (exports/"KR.copy.json").write_text((exports/"KR.json").read_text())
+            self.assertIn("DUPLICATE_SOURCE_COUNTRY_EXPORT:KR",
+                          inspect_build(exports,out)["errors"])
+
+    def test_invalid_published_items_fail_without_silent_pass(self):
+        with tempfile.TemporaryDirectory() as d:
+            exports,out=self.fixture(pathlib.Path(d))
+            (out/"data"/"opps.json").write_text(json.dumps({"items":["not a record"]}))
+            result=inspect_build(exports,out)
+            self.assertFalse(result["passed"])
+            self.assertIn("INVALID_PUBLISHED_OPPORTUNITY_RECORD:1",result["errors"])
 
     def test_empty_build_and_empty_export_fail_closed(self):
         with tempfile.TemporaryDirectory() as d:
