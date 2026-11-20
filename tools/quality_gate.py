@@ -47,9 +47,21 @@ def check(new, old, now=None):
         if j is None: continue
         n_ = len(j.get("items") or [])
         if n_ < minimum: bad.append(f"{f} has only {n_} items (minimum {minimum})")
+    # Match the exact open/verified rule used when generating the country summary.
+    # Date-only checks mistakenly counted stale (unverified) carried notices as open,
+    # blocking good builds; an arbitrary 90% threshold also hid genuine mismatches.
+    import deadline as DL
     s = new.get("cty/_summary.json")
-    if s is not None and ((s.get("t") or {}).get("n") or 0) < 0.9 * len([x for x in items if x.get("deadline", "") >= now.date().isoformat()]):
-        bad.append("cty/_summary.json open-tender count does not match tenders.json")
+    if not isinstance(s, dict) or not isinstance(s.get("t"), dict):
+        bad.append("cty/_summary.json missing or unreadable")
+    else:
+        expected = sum(DL.is_listed_open(x, now) and bool(x.get("iso")) for x in items)
+        actual = s["t"].get("n")
+        if actual != expected:
+            bad.append(f"cty/_summary.json open-tender count {actual!r} != verified open tenders {expected}")
+        expected_countries = len({x.get("iso") for x in items if x.get("iso") and DL.is_listed_open(x, now)})
+        if s["t"].get("c") != expected_countries:
+            bad.append(f"cty/_summary.json country count {s['t'].get('c')!r} != verified open countries {expected_countries}")
     o = new.get("hz/official.json")
     if o is not None:
         srcs = o.get("sources") or {}
