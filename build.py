@@ -336,6 +336,38 @@ def country_page(iso, L):
     desc = (summ[:150] + "…") if len(summ) > 150 else (summ or t["desc_cty"].format(c=name))
     r = risk_txt(d, L); lv = lvl(iso)
     body = []
+    if not c.get("reg"):
+        _texts = {
+            "ko": ("정부사업 핵심 사이트", "공식 기관 확인", "정부 기관 여부 검증 대기", "공식 기관 링크", "확인된 사이트"),
+            "en": ("Government business sites", "Official source verified", "Agency verification pending", "official source links", "verified sites"),
+            "es": ("Portales públicos de negocios", "Fuente oficial verificada", "Verificación pendiente", "enlaces oficiales", "sitios verificados"),
+            "fr": ("Portails publics d'affaires", "Source officielle vérifiée", "Vérification en attente", "liens officiels", "sites vérifiés"),
+            "ar": ("مواقع الأعمال الحكومية", "مصدر رسمي موثق", "بانتظار التحقق", "روابط رسمية", "مواقع موثقة"),
+            "vi": ("Cổng kinh doanh chính phủ", "Đã xác minh chính thức", "Đang chờ xác minh", "liên kết chính thức", "đã xác minh"),
+            "id": ("Portal bisnis pemerintah", "Sumber resmi terverifikasi", "Verifikasi lembaga tertunda", "tautan resmi", "situs terverifikasi")
+        }
+        _title, _verified, _pending, _unit, _countlab = _texts.get(L, _texts["en"])
+        _list = GOV_BUSINESS_SITES.get(iso, [])
+        _number = GOV_SITE_COVERAGE["country_counts"][iso]["verified"]
+        _note = (f"최소 3개 공식 사이트 목표 · 현재 {_number}/3개 검증 · 미검증 후보는 공식 기관으로 인정하지 않습니다." if L == "ko"
+                 else f"Target: at least 3 official sites · {_number}/3 verified. Unverified directory candidates are not confirmed official agencies.")
+        _cards = []
+        for _site in _list:
+            _ok = _site["verification"] == "official_primary"
+            _category = {"procurement": ("입찰·조달", "Procurement"), "support": ("기업·지원", "Business support"),
+                         "investment": ("투자진흥", "Investment")}.get(_site["category"], ("공공사업", "Public business"))
+            _name = _site["name_ko"] if L == "ko" else _site["name_en"]
+            _status = _verified if _ok else _pending
+            _caption = _category[0] if L == "ko" else _category[1]
+            _cards.append(f'<a class="card" href="{e(_site["url"])}" target="_blank" rel="noopener noreferrer nofollow"'
+                          f' style="display:block;text-decoration:none"><b>{e(_name)}</b>'
+                          f'<p class="note">{e(_caption)} · {e(_status)}</p>'
+                          f'<small>{e(_site["url"])}</small></a>')
+        _empty = ("아직 검증된 공식 사이트가 없습니다. 검수 후 등록합니다." if L == "ko"
+                  else "No verified official sites yet. This country remains in the review queue.")
+        _html = (f'<p class="note">{e(_note)}</p><div class="cards">{"".join(_cards)}</div>'
+                 if _cards else f'<p class="note">{e(_note)} {e(_empty)}</p>')
+        body.append(sec("government-business-sites", _title, _html))
     if iso in GUIDES:
         body.append(f'<p class="regbar"><a class="chip" href="{url(L,iso)}guide/">{"How to sell to this government →" if L!="ko" else "이 나라 정부에 파는 법 →"}</a> <a class="chip" href="/{L}/mdb/">{"Development bank tenders" if L!="ko" else "개발은행·국제기구 조달"}</a></p>')
     if c.get("reg"):
@@ -438,6 +470,10 @@ for _k, _v in PHOTOS.items():
 PHC = {"ko": "사진", "en": "Photo", "es": "Foto", "fr": "Photo", "ar": "صورة", "vi": "Ảnh", "id": "Foto"}
 STK = json.load(open(os.path.join(SRC, "stock.json"), encoding="utf8"))
 GUIDES = json.load(open(os.path.join(SRC, "guides.json"), encoding="utf8"))
+# Country-specific primary government-business portals. Registry URLs are
+# explicitly unverified candidates; never imply HTTP 200 == official agency.
+from government_business_sites import load_directory as _load_gov_sites
+GOV_BUSINESS_SITES, GOV_SITE_COVERAGE = _load_gov_sites(ROOT)
 for _iso, _d in DATA.items():
     if isinstance(_d.get("guide"), dict): GUIDES[_iso] = _d["guide"]
 MDBI = [("WB","World Bank","세계은행","https://projects.worldbank.org/en/projects-operations/procurement",["world bank","세계은행","ibrd"]),
@@ -995,6 +1031,10 @@ f.style.cssText='width:100%%;height:'+h+'px;border:0;border-radius:12px';f.loadi
 def build():
     if os.path.exists(OUT): shutil.rmtree(OUT)
     os.makedirs(OUT + "/assets"); os.makedirs(OUT + "/data")
+    # Public machine-readable coverage makes unverified-country gaps auditable.
+    # This is a source directory count, never an actual live tender count.
+    with open(OUT + "/data/government-business-sites-coverage.json", "w", encoding="utf-8") as _f:
+        json.dump(GOV_SITE_COVERAGE, _f, ensure_ascii=False, indent=2)
     for f in ("wmm-logo-white.png", "wmm-logo.png", "gcsme-logo.jpg", "emblem.png", "og.jpg", "spot.jpg", "paper.jpg", "logo-h.webp", "logo-h-lg.webp", "logo-v.webp", "mark.png"): shutil.copy(os.path.join(SRC, f), OUT + "/assets/" + f)
     for f in glob.glob(os.path.join(ROOT, "web", "*")): shutil.copy(f, OUT + "/assets/")
     os.makedirs(OUT + "/embed/gateway", exist_ok=True); shutil.copy(os.path.join(SRC, "gateway.html"), OUT + "/embed/gateway/index.html")
