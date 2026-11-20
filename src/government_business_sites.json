@@ -496,6 +496,35 @@
         "evidence_url": "https://www.seco.admin.ch/en/government-procurement"
       }
     ],
+    "CI": [
+      {
+        "name_ko": "DGMP · 코트디부아르 국가조달",
+        "name_en": "Côte d'Ivoire DGMP · Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://www.marchespublics.ci/accueil/home",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.marchespublics.ci/accueil/home"
+      },
+      {
+        "name_ko": "Côte d'Ivoire PME · 국영 중소기업지원",
+        "name_en": "Côte d'Ivoire PME · State-Owned Enterprise Development",
+        "category": "support",
+        "url": "https://cipme.ci/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://pme.gouv.ci/views/agence-pme/"
+      },
+      {
+        "name_ko": "CEPICI · 국가 투자진흥센터",
+        "name_en": "Côte d'Ivoire CEPICI · Government Investment Promotion",
+        "category": "investment",
+        "url": "https://cepici.ci/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gouv.ci/index.php/services"
+      }
+    ],
     "CL": [
       {
         "name_ko": "Mercado Público · 칠레 국가조달",
@@ -1074,6 +1103,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://gipc.gov.gh/about-gipc/"
+      }
+    ],
+    "GM": [
+      {
+        "name_ko": "GPPA · 감비아 국가 공공조달청",
+        "name_en": "Gambia Public Procurement Authority · Tender Notices",
+        "category": "procurement",
+        "url": "https://www.gppa.gm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gambia.gov.gm/gambia-public-procurement-authority/"
+      },
+      {
+        "name_ko": "GiEPA · 기업개발기금 사업지원",
+        "name_en": "Gambia GIEPA · Enterprise Development Fund",
+        "category": "support",
+        "url": "https://www.giepa.gm/enterprise-support/enterprise-development-fund/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.giepa.gm/enterprise-support/enterprise-development-fund/"
+      },
+      {
+        "name_ko": "GiEPA · 국가 투자수출 진흥",
+        "name_en": "Gambia Investment and Export Promotion Agency",
+        "category": "investment",
+        "url": "https://www.giepa.gm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gambia.gov.gm/gambia-investment-and-export-promotion-agency/"
       }
     ],
     "GR": [
@@ -1859,6 +1917,35 @@
         "evidence_url": "https://www.trademalta.org/"
       }
     ],
+    "MU": [
+      {
+        "name_ko": "모리셔스 정부 전자조달 e-PS",
+        "name_en": "Mauritius Government e-Procurement System",
+        "category": "procurement",
+        "url": "https://eproc.publicprocurement.govmu.org/index",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govmu.org/EN/Pages/eprocurement.aspx"
+      },
+      {
+        "name_ko": "중소기업부 SME 등록·지원",
+        "name_en": "Mauritius Ministry SME Division · Business Support",
+        "category": "support",
+        "url": "https://smeregistration.govmu.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govmu.org/EN/infoservices/business/Pages/sme.aspx"
+      },
+      {
+        "name_ko": "EDB Mauritius · 국가 투자진흥",
+        "name_en": "Economic Development Board Mauritius · National Investment",
+        "category": "investment",
+        "url": "https://edbmauritius.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://edbmauritius.org/about-edb"
+      }
+    ],
     "MX": [
       {
         "name_ko": "Compras MX · 연방 공공조달",
@@ -2497,6 +2584,35 @@
         "evidence_url": "https://misa.gov.sa/"
       }
     ],
+    "SB": [
+      {
+        "name_ko": "솔로몬 제도 정부입찰 원문",
+        "name_en": "Solomon Islands Government Tender Portal",
+        "category": "procurement",
+        "url": "https://solomons.gov.sb/portal_tender/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://solomons.gov.sb/portal_tender/"
+      },
+      {
+        "name_ko": "상공부 · 기업 협동조합 지원",
+        "name_en": "Solomon Islands Commerce Ministry · SME Support",
+        "category": "support",
+        "url": "https://commerce.gov.sb/business-and-cooperatives-development/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://commerce.gov.sb/business-and-cooperatives-development/"
+      },
+      {
+        "name_ko": "Invest Solomons · 국가 투자진흥",
+        "name_en": "Solomon Islands InvestSolomons · Government Investment",
+        "category": "investment",
+        "url": "https://www.investsolomons.gov.sb/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investsolomons.gov.sb/about-us"
+      }
+    ],
     "SE": [
       {
         "name_ko": "스웨덴 조달청 · 입찰참여 안내",
@@ -2990,6 +3106,64 @@
         "evidence_url": "https://moit.gov.vn/en/administrative-departments/directorate-agency/vietnam-trade-promotion-agency"
       }
     ],
+    "VU": [
+      {
+        "name_ko": "CTB · 바누아투 중앙정부 조달",
+        "name_en": "Vanuatu Central Tender Board · Official Notices",
+        "category": "procurement",
+        "url": "https://ctb.gov.vu/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ctb.gov.vu/en/"
+      },
+      {
+        "name_ko": "통상산업부 · 기업·산업지원",
+        "name_en": "Vanuatu Ministry of Trade & Commerce · Enterprise Services",
+        "category": "support",
+        "url": "https://mtc.gov.vu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mtc.gov.vu/about-and-divisions"
+      },
+      {
+        "name_ko": "VFIPA · 정부 투자진흥청",
+        "name_en": "Vanuatu Foreign Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://investvanuatu.vu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investvanuatu.vu/"
+      }
+    ],
+    "WS": [
+      {
+        "name_ko": "사모아 재무부 정부조달 입찰",
+        "name_en": "Samoa Ministry of Finance · e-Tendering",
+        "category": "procurement",
+        "url": "https://portal.tenderlink.com/mof_samoa/alltenders/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mof.gov.ws/our-services/operations-management-department/procurement-general-notices"
+      },
+      {
+        "name_ko": "MCIL · 중소기업 산업개발",
+        "name_en": "Samoa Ministry of Commerce · SME Industry Development",
+        "category": "support",
+        "url": "https://mcil.gov.ws/services/industry",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mcil.gov.ws/services/industry"
+      },
+      {
+        "name_ko": "사업등록 · 정부 공인 온라인 서비스",
+        "name_en": "Samoa Government Online Business Registries",
+        "category": "investment",
+        "url": "https://businessregistries.gov.ws/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mcil.gov.ws/online-services"
+      }
+    ],
     "ZA": [
       {
         "name_ko": "남아공 공공입찰 포털",
@@ -3046,6 +3220,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.zda.org.zm/"
+      }
+    ],
+    "ZW": [
+      {
+        "name_ko": "PRAZ eGP · 짐바브웨 국가조달",
+        "name_en": "Zimbabwe PRAZ · Government e-Procurement",
+        "category": "procurement",
+        "url": "https://egp.praz.org.zw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.praz.org.zw/egp/"
+      },
+      {
+        "name_ko": "SMEDCO · 국영중소기업개발공사",
+        "name_en": "Zimbabwe SMEDCO · State SME Development Corporation",
+        "category": "support",
+        "url": "https://www.smedco.co.zw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.smedco.co.zw/teama.html"
+      },
+      {
+        "name_ko": "ZIDA · 국가 투자개발청",
+        "name_en": "Zimbabwe Investment and Development Agency",
+        "category": "investment",
+        "url": "https://zidainvest.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://zidainvest.com/about-zida/"
       }
     ]
   }
