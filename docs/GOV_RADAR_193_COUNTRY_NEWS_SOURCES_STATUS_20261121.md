@@ -1,8 +1,8 @@
 # GOV RADAR — 193개국 뉴스·언론 원문 정보원 수량
 
-**2026-11-21 검토 브랜치: 175/193개국 · 525/579개** 언론사 원문 링크. 남은 **18개국 · 54개 매체**. 언론 발행사 홈페이지 주소, 국영통신·공영방송·민영언론 종류, 확인일을 기록했습니다. 여러 기사 섹션을 서로 다른 매체로 중복 집계하지 않습니다.
+**2026-11-21 검토 브랜치: 177/193개국 · 531/579개** 언론사 원문 링크. 남은 **16개국 · 48개 매체**. 언론 발행사 홈페이지 주소, 국영통신·공영방송·민영언론 종류, 확인일을 기록했습니다. 여러 기사 섹션을 서로 다른 매체로 중복 집계하지 않습니다.
 
-**중요:** 이는 실제 뉴스 발행사 **연결용 디렉터리**입니다. 편집 독립성·보도 사실성·정부와의 관계·상업적 재이용 허가·RSS/유료 API·24시간 실시간 수집과 525개 URL의 현재 접속성을 전수 검증한 상태는 아닙니다. 국가별 언론사 검증이 불충분하면 0/3으로 두고, **정부사업·조달 사이트 573개와 절대 합산하지 않습니다.** 운영 사이트에는 아직 미배포.
+**중요:** 이는 실제 뉴스 발행사 **연결용 디렉터리**입니다. 편집 독립성·보도 사실성·정부와의 관계·상업적 재이용 허가·RSS/유료 API·24시간 실시간 수집과 531개 URL의 현재 접속성을 전수 검증한 상태는 아닙니다. 국가별 언론사 검증이 불충분하면 0/3으로 두고, **정부사업·조달 사이트 573개와 절대 합산하지 않습니다.** 운영 사이트에는 아직 미배포.
 
 | 국가 | ISO | 발행사 수 | 부족 | 발행사 원문 및 유형 |
 |---|:---:|---:|---:|---|
@@ -164,7 +164,7 @@
 | 콜롬비아 / Colombia | CO | **3** | 0 | [Caracol Radio](https://caracol.com.co/) (broadcaster) · [El Tiempo](https://www.eltiempo.com/) (newspaper) · [Noticias RCN](https://www.noticiasrcn.com/) (broadcaster) |
 | 코스타리카 / Costa Rica | CR | **3** | 0 | [La Nación Costa Rica](https://www.nacion.com/) (newspaper) · [Teletica](https://www.teletica.com/) (broadcaster) · [CRHoy](https://www.crhoy.com/) (news_site) |
 | 쿠바 / Cuba | CU | **3** | 0 | [Granma](https://www.granma.cu/) (state_news_agency) · [Cubadebate](https://www.cubadebate.cu/) (news_site) · [14ymedio](https://www.14ymedio.com/) (news_site) |
-| 도미니카 연방 / Dominica | DM | **0** | 3 | 미조사 |
+| 도미니카 연방 / Dominica | DM | **3** | 0 | [Dominica News Online](https://dominicanewsonline.com/news/) (news_site) · [DBS Radio](https://dbcradio.net/) (public_broadcaster) · [Q95 FM](https://www.q95da.com/) (broadcaster) |
 | 도미니카 공화국 / Dominican Republic | DO | **3** | 0 | [Listín Diario](https://listindiario.com/) (newspaper) · [Diario Libre](https://www.diariolibre.com/) (newspaper) · [Noticias SIN](https://noticiassin.com/) (broadcaster) |
 | 에콰도르 / Ecuador | EC | **3** | 0 | [Ecuavisa](https://www.ecuavisa.com/) (broadcaster) · [El Universo](https://www.eluniverso.com/) (newspaper) · [Primicias](https://www.primicias.ec/) (news_site) |
 | 엘살바도르 / El Salvador | SV | **3** | 0 | [La Prensa Gráfica](https://www.laprensagrafica.com/) (newspaper) · [El Diario de Hoy](https://www.elsalvador.com/) (newspaper) · [Diario El Mundo](https://diario.elmundo.sv/) (newspaper) |
@@ -196,6 +196,6 @@
 | 파푸아뉴기니 / Papua New Guinea | PG | **3** | 0 | [EMTV](https://emtv.com.pg/) (broadcaster) · [Post-Courier PNG](https://www.postcourier.com.pg/) (newspaper) · [The National PNG](https://www.thenational.com.pg/) (newspaper) |
 | 사모아 / Samoa | WS | **3** | 0 | [Samoa Observer](https://www.samoaobserver.ws/) (newspaper) · [Talamua](https://www.talamua.com/) (news_site) · [Samoa Global News](https://samoaglobalnews.com/) (news_site) |
 | 솔로몬 제도 / Solomon Islands | SB | **3** | 0 | [Solomon Star](https://www.solomonstarnews.com/) (newspaper) · [Island Sun](https://theislandsun.com.sb/) (newspaper) · [SIBC](https://www.sibconline.com.sb/) (public_broadcaster) |
-| 통가 / Tonga | TO | **0** | 3 | 미조사 |
+| 통가 / Tonga | TO | **3** | 0 | [Matangi Tonga](https://matangitonga.to/) (news_site) · [Kaniva Tonga](https://kanivatonga.co.nz/) (news_site) · [Tonga Broadcasting Commission](https://tbc.to/en/) (public_broadcaster) |
 | 투발루 / Tuvalu | TV | **0** | 3 | 미조사 |
 | 바누아투 / Vanuatu | VU | **0** | 3 | 미조사 |

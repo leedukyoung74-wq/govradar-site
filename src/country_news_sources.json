@@ -5077,6 +5077,64 @@
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
       }
+    ],
+    "TO": [
+      {
+        "name_en": "Matangi Tonga",
+        "name_ko": "Matangi Tonga",
+        "publisher_type": "news_site",
+        "url": "https://matangitonga.to/",
+        "evidence_url": "https://matangitonga.to/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Kaniva Tonga",
+        "name_ko": "Kaniva Tonga",
+        "publisher_type": "news_site",
+        "url": "https://kanivatonga.co.nz/",
+        "evidence_url": "https://rsf.org/en/country/tonga",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Tonga Broadcasting Commission",
+        "name_ko": "Tonga Broadcasting Commission",
+        "publisher_type": "public_broadcaster",
+        "url": "https://tbc.to/en/",
+        "evidence_url": "https://tbc.to/en/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "DM": [
+      {
+        "name_en": "Dominica News Online",
+        "name_ko": "Dominica News Online",
+        "publisher_type": "news_site",
+        "url": "https://dominicanewsonline.com/news/",
+        "evidence_url": "https://dominicanewsonline.com/news/contact/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "DBS Radio / Dominica Broadcasting Corporation",
+        "name_ko": "DBS Radio / Dominica Broadcasting Corporation",
+        "publisher_type": "public_broadcaster",
+        "url": "https://dbcradio.net/",
+        "evidence_url": "https://dbcradio.net/about-us/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Q95 FM Dominica",
+        "name_ko": "Q95 FM Dominica",
+        "publisher_type": "broadcaster",
+        "url": "https://www.q95da.com/",
+        "evidence_url": "https://www.q95da.com/contact-us.html",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
     ]
   }
 }
