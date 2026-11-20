@@ -65,14 +65,14 @@ def build(items,now=None):
             continue
         key=(iso,re.sub(r"\s+"," ",buyer).casefold())
         result=index.setdefault(key,{"country_iso":iso,"procurement_entity":buyer,
-                                   "source_verified_notice_count":0,"notices":[]})
+                                   "source_backed_notice_count":0,"notices":[]})
         evidence={"title":title[:220],"deadline":item.get("deadline",""),
                   "notice_url":item["url"],"source":item["source"]}
         if any(x["notice_url"]==evidence["notice_url"] for x in result["notices"]):
             continue
-        result["source_verified_notice_count"]+=1
+        result["source_backed_notice_count"]+=1
         result["notices"].append(evidence)
-    rows=sorted(index.values(),key=lambda x:(-x["source_verified_notice_count"],x["country_iso"],x["procurement_entity"].casefold()))
+    rows=sorted(index.values(),key=lambda x:(-x["source_backed_notice_count"],x["country_iso"],x["procurement_entity"].casefold()))
     for row in rows:
         row["notices"]=sorted(row["notices"],key=lambda x:x["deadline"])[:5]
     return {"schema_version":1,"generated_at_utc":now.isoformat(),
