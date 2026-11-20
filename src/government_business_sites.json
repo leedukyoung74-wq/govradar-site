@@ -61,6 +61,38 @@
         "evidence_url": "https://u.ae/en/information-and-services/finance-and-investment/foreign-direct-investment"
       }
     ],
+    "AF": [
+      {
+        "name_ko": "NPD · 아프가니스탄 국가 조달총국",
+        "name_en": "Afghanistan National Procurement Directorate · e-Procurement",
+        "category": "procurement",
+        "url": "https://npa.gov.af/en/home",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://npa.gov.af/en/introduction",
+        "notes": "Current authorities and procurement registration are subject to governance and sanctions/eligibility checks"
+      },
+      {
+        "name_ko": "산업통상부 · 중소기업·무역 개발",
+        "name_en": "Afghanistan Ministry of Industry and Commerce · SME Support",
+        "category": "support",
+        "url": "https://www.moci.gov.af/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dpmea.gov.af/1405-English-News-91",
+        "notes": "Current authorities and procurement registration are subject to governance and sanctions/eligibility checks"
+      },
+      {
+        "name_ko": "Invest in Afghanistan · 산업통상부 투자지원",
+        "name_en": "Afghanistan Ministry of Industry & Commerce · Investment Facilitation",
+        "category": "investment",
+        "url": "https://investinafghanistan.af/page/invest-introduction",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investinafghanistan.af/page/invest-introduction",
+        "notes": "Current authorities and procurement registration are subject to governance and sanctions/eligibility checks"
+      }
+    ],
     "AG": [
       {
         "name_ko": "정부 공공입찰 · 앤티가바부다",
@@ -4807,6 +4839,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://tradeinvest.tl/node/30"
+      }
+    ],
+    "TM": [
+      {
+        "name_ko": "국영석유가스 · 공공사업 국제입찰공고",
+        "name_en": "Turkmenistan State Oil and Gas Complex · Official Tenders",
+        "category": "procurement",
+        "url": "https://oilgas.gov.tm/en/posts/tenderler",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://oilgas.gov.tm/en/posts/tenderler/17769/the-turkmennebit-state-concern-announces-an-open-international-tender-10092026-23102026",
+        "notes": "No national unified procurement agency (2026 US ITA report). Oil-gas tender link covers only the sector and may be access-restricted"
+      },
+      {
+        "name_ko": "통상대외경제부 · 중소기업 지원",
+        "name_en": "Turkmenistan Ministry of Trade & Foreign Economic Relations · SME Support",
+        "category": "support",
+        "url": "https://mintradefer.gov.tm/index-en.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mintradefer.gov.tm/index-en.html",
+        "notes": "No national unified procurement agency (2026 US ITA report). Oil-gas tender link covers only the sector and may be access-restricted"
+      },
+      {
+        "name_ko": "재무부 · 정부 투자정보 포털",
+        "name_en": "Turkmenistan Ministry of Finance · Official Investment Information",
+        "category": "investment",
+        "url": "https://invest.gov.tm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.trade.gov/country-commercial-guides/turkmenistan-selling-public-sector",
+        "notes": "No national unified procurement agency (2026 US ITA report). Oil-gas tender link covers only the sector and may be access-restricted"
       }
     ],
     "TN": [
