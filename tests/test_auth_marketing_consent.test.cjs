@@ -97,8 +97,10 @@ test("existing member choosing No sends marketing:false with cleared consent tim
     expires_at:Date.now()+600000,user:{id:"test-user",user_metadata:{}}};
   const storage={getItem:()=>JSON.stringify(session),setItem(){},removeItem(){}};
   const requests=[];
-  const fetchFn=async (url,options)=>{
-    if (!url.endsWith("/user") || options.method!=="PUT") throw Error("Unexpected network call");
+  const fetchFn=async (url,options={})=>{
+    if (!url.endsWith("/user")) throw Error("Unexpected network call");
+    if (!options.method) return {ok:true,text:async()=>JSON.stringify({id:"test-user",user_metadata:{}})};
+    if (options.method!=="PUT") throw Error("Unexpected method");
     requests.push(JSON.parse(options.body));
     return {ok:true,text:async()=>JSON.stringify({id:"test-user",user_metadata:{marketing:false}})};
   };
@@ -110,6 +112,7 @@ test("existing member choosing No sends marketing:false with cleared consent tim
     Date,URLSearchParams,Error,JSON,String,encodeURIComponent
   },{timeout:1000,filename:"auth.js"});
   documentHandlers.DOMContentLoaded();
+  await new Promise(resolve=>setImmediate(resolve)); // allow Identity /user verification
   assert.equal(typeof openConsentDialog,"function");
   openConsentDialog();
   assert.ok(modal,"Marketing choice dialog must appear");
