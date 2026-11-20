@@ -4,7 +4,9 @@ on:
     branches: [src]
     paths:
       - 'cf/functions/nfform.js'
+      - 'scripts/wmm_form_routes_audit.mjs'
       - 'tests/wmm_form_relay.test.mjs'
+      - 'tests/wmm_form_routes_audit.test.mjs'
       - '.github/workflows/wmm_form_relay_qa.yml'
   workflow_dispatch:
 permissions:
@@ -19,7 +21,20 @@ jobs:
         with:
           node-version: '22'
           package-manager-cache: false
-      - name: Validate Cloudflare Pages Function syntax
-        run: node --check cf/functions/nfform.js
-      - name: Test Netlify Forms relay with simulated requests (no live submissions)
-        run: node --test tests/wmm_form_relay.test.mjs
+      - name: Validate Form Pages Function and static auditor syntax
+        run: |
+          node --check cf/functions/nfform.js
+          node --check scripts/wmm_form_routes_audit.mjs
+      - name: Test safe relaying and localized form routing (no live submissions)
+        run: node --test tests/wmm_form_relay.test.mjs tests/wmm_form_routes_audit.test.mjs
+      - name: Checkout existing live files for read-only generated-form audit
+        uses: actions/checkout@v7
+        with:
+          ref: live
+          path: live-branch
+          persist-credentials: false
+      - name: Validate already-generated production form route definitions
+        run: |
+          test -f live-branch/functions/nfform.js
+          node scripts/wmm_form_routes_audit.mjs live-branch/public
+          echo "Verified static form destinations, NOT form submission delivery."
