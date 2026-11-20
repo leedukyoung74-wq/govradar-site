@@ -7,7 +7,7 @@ How it works
   code unwraps K with the member's code and decrypts the analysis files.
 - Files are published on the GitHub "data" branch and read from raw.githubusercontent.com,
   so adding a member or refreshing analysis never needs a Netlify deploy.
-- Revoke = delete the member's entry and run `rotate` (new K, all files re-encrypted).
+- Revoke must rotate K and re-encrypt all current files in the same guarded local operation. Published data branch and prior downloads remain separate.
 
 Usage
   python3 tools/member.py encrypt                 # encrypt private/m/** into data/m/**
@@ -90,6 +90,12 @@ def add(email, months=1):
     return code, exp
 
 
+def rekey(revoked_email=None):
+    # Revoke/rotate without leaving old K in place. Dry data branch: no git push.
+    from member_rekey import rekey_local
+    return rekey_local(PRIV, OUT, _members(), _wrap, _kid, revoked_email=revoked_email)
+
+
 def main(a):
     cmd = a[0] if a else "list"
     if cmd == "encrypt": print("encrypted", encrypt(), "files; active keys", write_keys())
@@ -97,9 +103,10 @@ def main(a):
         code, exp = add(a[1], a[2] if len(a) > 2 else 1)
         print(json.dumps({"email": a[1], "code": code, "exp": exp, "link": f"https://radar.wmm-hoa.com/ko/member/#{code}"}, ensure_ascii=False))
     elif cmd == "remove":
-        m = _members(); m.pop(a[1].strip().lower(), None); _save_members(m); print("removed; active keys", write_keys())
+        if len(a) < 2: raise ValueError("remove requires EMAIL")
+        print(json.dumps(rekey(a[1]), ensure_ascii=False))
     elif cmd == "rotate":
-        _master(new=True); print("rotated; files", encrypt(), "keys", write_keys())
+        print(json.dumps(rekey(), ensure_ascii=False))
     else:
         for k, v in _members().items(): print(k, v["exp"])
 
