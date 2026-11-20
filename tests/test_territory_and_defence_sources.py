@@ -49,9 +49,9 @@ class RegionAndDefenceDirectoryQA(unittest.TestCase):
                 self.assertEqual(src["access"], "not_live_tested")
             if len(item["official_sites"]) == 0:
                 self.assertEqual(item["status"], "research_pending")
-        self.assertGreaterEqual(sum(len(c["official_sites"]) for c in entries.values()), 137)
-        self.assertGreaterEqual(sum(len(c["official_sites"]) >= 3 for c in entries.values()), 37)
-        self.assertGreaterEqual(sum(len(c["official_sites"]) > 0 for c in entries.values()), 51)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) for c in entries.values()), 157)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) >= 3 for c in entries.values()), 43)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) > 0 for c in entries.values()), 58)
         self.assertEqual(len(entries), 193)
         for iso in ("IS", "LI", "CR", "PA", "MU"):
             self.assertIn(entries[iso]["defence_structure"], ("no_standing_army", "no_regular_armed_forces"))
