@@ -4,6 +4,25 @@ const NETLIFY_FORMS_ENDPOINT = "https://wmm-govradar.netlify.app/";
 const FALLBACK = "/ko/thanks/";
 const SAFE_CONFIRMATION = /^\/(?:ko|en|es|fr|ar|vi|id)\/(?:thanks|consortium\/thanks)\/$/;
 const MAX_FORM_BYTES = 256 * 1024;
+const REGISTERED_FORM_NAMES = new Set([
+  "consortium", "contract-request", "expert-apply", "feedback",
+  "gcsme-member", "order", "partner-apply", "unlock"
+]);
+
+async function submittedFormName(body, contentType) {
+  try {
+    let values;
+    if (/^application\/x-www-form-urlencoded/i.test(contentType)) {
+      values = new URLSearchParams(new TextDecoder().decode(body)).getAll("form-name");
+    } else {
+      const parsed = new Request(NETLIFY_FORMS_ENDPOINT, {
+        method: "POST", headers: {"content-type": contentType}, body
+      });
+      values = (await parsed.formData()).getAll("form-name");
+    }
+    return values.length === 1 && typeof values[0] === "string" ? values[0] : null;
+  } catch { return null; }
+}
 
 export function safeConfirmationPath(candidate) {
   if (typeof candidate !== "string" || !SAFE_CONFIRMATION.test(candidate)) return FALLBACK;
@@ -45,6 +64,10 @@ export async function onRequestPost({request}) {
   catch { return new Response("Cannot read form submission", {status: 400}); }
   if (body === null) return new Response("Form submission exceeds size limit", {status: 413});
   if (body.byteLength === 0) return new Response("Empty form submission", {status: 400});
+  const formName = await submittedFormName(body, type);
+  if (!REGISTERED_FORM_NAMES.has(formName)) {
+    return new Response("Unknown or invalid form name", {status: 400});
+  }
 
   let response;
   const controller = new AbortController();
