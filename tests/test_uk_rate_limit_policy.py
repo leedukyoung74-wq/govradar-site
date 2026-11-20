@@ -38,13 +38,14 @@ class UKRateSafety(unittest.TestCase):
             FM.uk()
         self.assertEqual(fn.call_count,1)
         self.assertEqual(fn.call_args.kwargs["max_pages"],12)
-        self.assertEqual(fn.call_args.kwargs["tries"],1)
+        self.assertEqual(fn.call_args.kwargs["tries"],2)
         self.assertGreaterEqual(fn.call_args.kwargs["min_interval"],1)
         self.assertLessEqual(fn.call_args.kwargs["time_budget"],120)
 
     def test_pacing_sleep_and_page_cap_remain_partial(self):
         urls=[]
         def data(_source,url,**kw):
+            FM.stat(SRC)["requests"] += 1
             urls.append(url)
             return json.dumps({"releases":[{"id":str(len(urls))}],
                                "links":{"next":"?page="+str(len(urls)+1)}})
@@ -60,6 +61,7 @@ class UKRateSafety(unittest.TestCase):
     def test_429_after_first_page_never_confirms_complete(self):
         calls=[0]
         def source(_name,_url,**kw):
+            FM.stat(SRC)["requests"] += 1
             calls[0]+=1
             if calls[0]>1: raise HTTPError(URL,429,"Too Many Requests",
                                           {"Retry-After":"120"},None)
