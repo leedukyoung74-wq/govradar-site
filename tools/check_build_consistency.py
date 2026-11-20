@@ -2,10 +2,11 @@
 """Read-only staging build consistency check, independent of file timestamps.
 
 The generated public country flags, country profile files, localized pages and
-opportunity counts must reflect the same local export inputs. No data is written.
+opportunity identities (country, type, title and deadline) must match source exports. No data is written.
 This is NOT a primary-source or real-time tender validity verification.
 """
 import argparse
+from collections import Counter
 import json
 from pathlib import Path
 
@@ -32,6 +33,8 @@ def inspect_build(export_dir="export/countries",public_dir="dist",*,min_research
         return {"passed":False,"errors":["MISSING_OR_INVALID_OUTPUT_JSON",str(error)[:120]],"researched":0}
     researched=set()
     expected_opps=0
+    source_opportunity_records=Counter()
+    seen_exports=set()
     source_count=0
     for path in sorted(src.glob("*.json")):
         try:
@@ -44,6 +47,10 @@ def inspect_build(export_dir="export/countries",public_dir="dist",*,min_research
             if not isinstance(payload,dict) or iso not in by_country:
                 failures.append("INVALID_OR_UNPUBLISHED_EXPORT:"+path.name)
                 continue
+            if iso in seen_exports:
+                failures.append("DUPLICATE_SOURCE_COUNTRY_EXPORT:"+iso)
+                continue
+            seen_exports.add(iso)
             source_count+=1
             done=bool(payload.get("agenda"))
             if bool(by_country[iso].get("done"))!=done:
@@ -67,7 +74,13 @@ def inspect_build(export_dir="export/countries",public_dir="dist",*,min_research
                 if not isinstance(arr,list):
                     failures.append("INVALID_SOURCE_OPPORTUNITIES:"+iso+":"+kind)
                     continue
-                expected_opps+=sum(isinstance(x,dict) for x in arr)
+                for item in arr:
+                    if not isinstance(item,dict):
+                        continue
+                    expected_opps+=1
+                    source_opportunity_records[(iso,kind,
+                                                item.get("title"),
+                                                item.get("deadline",""))]+=1
         except (OSError,ValueError,TypeError) as error:
             failures.append("INVALID_EXPORT:"+path.name+":"+str(error)[:70])
     published_done={x for x,c in by_country.items() if c.get("done")}
@@ -75,6 +88,25 @@ def inspect_build(export_dir="export/countries",public_dir="dist",*,min_research
         failures.append("PUBLISHED_RESEARCH_COUNTRY_SET_MISMATCH")
     if len(opps["items"])!=expected_opps:
         failures.append("PUBLISHED_OPPORTUNITY_COUNT_MISMATCH")
+    published_opportunity_records=Counter()
+    malformed_items=0
+    for item in opps["items"]:
+        if not isinstance(item,dict):
+            malformed_items+=1
+            continue
+        fields=(item.get("iso"),item.get("kind"),item.get("ko"),item.get("deadline",""))
+        if not isinstance(fields[0],str) or not isinstance(fields[1],str) or (
+            fields[2] is not None and not isinstance(fields[2],str)
+        ) or not isinstance(fields[3],str):
+            malformed_items+=1
+            continue
+        published_opportunity_records[fields]+=1
+    if malformed_items:
+        failures.append("INVALID_PUBLISHED_OPPORTUNITY_RECORD:"+str(malformed_items))
+    # Counts alone are insufficient: stale title/deadline/country/kind can
+    # silently pass when another record is substituted one-for-one.
+    if published_opportunity_records!=source_opportunity_records:
+        failures.append("PUBLISHED_OPPORTUNITY_CONTENT_MISMATCH")
     if len(researched)<min_researched:
         failures.append("INSUFFICIENT_RESEARCHED_EXPORTS")
     return {"classification":"OFFLINE_BUILD_INPUT_OUTPUT_CONSISTENCY_ONLY",
