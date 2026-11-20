@@ -102,6 +102,18 @@ def main():
         h = h.replace('data-l="ko" data-g="world" data-a="signals"', 'data-l="%s" data-g="world" data-a="signals"' % L, 1)
         h = h.replace('<script src="/signals/p7.js"></script>', '<script src="/signals/p7.en.js"></script>').replace('<script src="/signals/p7d.js"></script>', '<script src="/signals/p7d.en.js"></script>')
         h = h.replace("</style>", RTL_CSS + "</style>", 1) if L == "ar" else h
+        # Keep the 2027 commentary bilingual: the English source is the same
+        # verified editorial excerpt released on the public /signals/en/ page.
+        # Replacing by stable markers prevents unreviewed Korean from leaking
+        # into English and preserves the generator's no-Hangul QA gate.
+        _marker_start = "<!-- WMM_WORLD_AHEAD_2027_START -->"
+        _marker_end = "<!-- WMM_WORLD_AHEAD_2027_END -->"
+        if h.count(_marker_start) != 1 or h.count(_marker_end) != 1:
+            raise RuntimeError("2027 WMM callout is missing or duplicated")
+        _start = h.index(_marker_start) + len(_marker_start)
+        _stop = h.index(_marker_end, _start)
+        _2027_en = "<section aria-label=\"2027 special report\" style=\"border:2px solid #caa96e;border-radius:16px;padding:20px;margin:24px 0;background:rgba(188,153,83,.08)\"><span style=\"font-weight:800;color:#9d7626\">2027 · NEW REPORT</span><h2 style=\"margin:.4em 0\">The World Ahead 2027: 10 themes, evidence &amp; cover commentary</h2><p>A new independent GOV RADAR research brief: source-checked analysis of ten Economist themes, distinguishing events from forecasts and symbolic interpretation. The detailed research dashboard is currently in Korean.</p><p><a href=\"/ko/world-ahead-2027/\" style=\"font-weight:800;text-decoration:underline\">Explore the 2027 WMM research dashboard ↗</a> · <a href=\"https://www.economistgroup.com/press-centre/the-economist/the-economist-launches-the-world-ahead-2027-heralding-the-post-trump-era-amid-upheaval-from-bond-markets-and-ai\" rel=\"noopener noreferrer\" target=\"_blank\">Original Economist cover</a></p><small>The full copyrighted cover is not reproduced without a licence.</small></section>"
+        h = h[:_start] + _2027_en + h[_stop:]
         left = sorted(set(HANGUL.findall(h)))
         if left:
             lines = [l[:160] for l in h.split("\n") if HANGUL.search(l)]
