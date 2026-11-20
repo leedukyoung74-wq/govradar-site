@@ -90,6 +90,64 @@
         "evidence_url": "https://ised-isde.canada.ca/site/clean-growth-hub/en/selling-government"
       }
     ],
+    "DE": [
+      {
+        "name_ko": "공공조달 공고 서비스 · 독일 전국 공고",
+        "name_en": "Bekanntmachungsservice · German Public Tender Notices",
+        "category": "procurement",
+        "url": "https://oeffentlichevergabe.de/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://oeffentlichevergabe.de/ui/en/"
+      },
+      {
+        "name_ko": "연방 지원사업 데이터베이스",
+        "name_en": "Förderdatenbank · Federal Funding Programmes",
+        "category": "support",
+        "url": "https://www.foerderdatenbank.de/FDB/DE/Home/home.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.foerderdatenbank.de/FDB/DE/Home/home.html"
+      },
+      {
+        "name_ko": "GTAI · 독일연방 투자진흥",
+        "name_en": "Germany Trade & Invest · Federal Investment Promotion",
+        "category": "investment",
+        "url": "https://www.gtai.de/en/invest/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gtai.de/en/meta/about-us"
+      }
+    ],
+    "ES": [
+      {
+        "name_ko": "스페인 공공부문 조달 플랫폼",
+        "name_en": "PLACSP · Spain Public Sector Procurement",
+        "category": "procurement",
+        "url": "https://contrataciondelestado.es/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://administracion.gob.es/en/tu-espacio-europeo/derechos-obligaciones/empresas/contratacion-publica/participar-licitaciones/publicidad"
+      },
+      {
+        "name_ko": "BDNS · 국가 보조금 공고",
+        "name_en": "BDNS · National Grants Announcements",
+        "category": "support",
+        "url": "https://www.infosubvenciones.es/bdnstrans/es/index",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://datos.gob.es/es/catalogo/e05250001-base-de-datos-nacional-de-subvenciones"
+      },
+      {
+        "name_ko": "ICEX · 수출 및 투자 진흥",
+        "name_en": "ICEX · Spain Export and Investment",
+        "category": "investment",
+        "url": "https://www.icex.es/es",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.icex.es/es/sobre-nosotros/administracion-abierta/transparencia/informacion-general-normativa-funciones"
+      }
+    ],
     "FR": [
       {
         "name_ko": "PLACE · 정부 전자조달",
@@ -291,6 +349,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.k-startup.go.kr/"
+      }
+    ],
+    "NZ": [
+      {
+        "name_ko": "GETS · 뉴질랜드 정부조달 공고",
+        "name_en": "GETS · New Zealand Government Electronic Tenders",
+        "category": "procurement",
+        "url": "https://www.gets.govt.nz/ExternalIndex.htm",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.procurement.govt.nz/suppliers/gets/"
+      },
+      {
+        "name_ko": "Business.govt.nz · 기업 정부지원",
+        "name_en": "Business.govt.nz · Government Business Support",
+        "category": "support",
+        "url": "https://www.business.govt.nz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.business.govt.nz/about-us"
+      },
+      {
+        "name_ko": "NZTE · 정부 수출 및 투자지원",
+        "name_en": "NZTE · Government Trade & Enterprise Support",
+        "category": "investment",
+        "url": "https://www.nzte.govt.nz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.nzte.govt.nz/page/about-nzte"
       }
     ],
     "PH": [
