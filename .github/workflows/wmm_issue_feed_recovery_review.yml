@@ -1,0 +1,38 @@
+name: GOV RADAR issue dispatch safety QA (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/wmm_issue_feed_recovery.yml'
+      - '.github/workflows/wmm_issue_feed_recovery_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate exact owner-only issue controls and no arbitrary code
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          text=Path('.github/workflows/wmm_issue_feed_recovery.yml').read_text(encoding='utf-8')
+          checks=[
+            "github.event.issue.number == 80",
+            "!github.event.issue.pull_request",
+            "github.event.issue.state == 'open'",
+            "github.event.comment.user.login == 'leedukyoung74-wq'",
+            "github.event.comment.author_association == 'OWNER'",
+          ]
+          for check in checks:
+              assert text.count(check)==2, (check,text.count(check))
+          assert text.count("github.event.comment.body == '/govradar-dryrun'")==1
+          assert text.count("github.event.comment.body == '/govradar-publish'")==1
+          assert text.count('dry_run: true')==1
+          assert text.count('dry_run: false')==1
+          assert 'workflow_dispatch' not in text
+          assert '      - run:' not in text, 'untrusted comment must not execute a shell'
+          assert text.count('uses: leedukyoung74-wq/govradar-site/.github/workflows/feeds.yml@src')==2
+          print('PASS: exact issue #80 + repository OWNER + literal command; no production changes')
+          PY
