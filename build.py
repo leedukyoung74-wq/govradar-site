@@ -336,6 +336,55 @@ def country_page(iso, L):
     desc = (summ[:150] + "…") if len(summ) > 150 else (summ or t["desc_cty"].format(c=name))
     r = risk_txt(d, L); lv = lvl(iso)
     body = []
+    if not c.get("reg"):
+        _texts = {
+            "ko": ("정부사업 핵심 사이트", "공식 기관 확인", "정부 기관 여부 검증 대기", "공식 기관 링크", "확인된 사이트"),
+            "en": ("Government business sites", "Official source verified", "Agency verification pending", "official source links", "verified sites"),
+            "es": ("Portales públicos de negocios", "Fuente oficial verificada", "Verificación pendiente", "enlaces oficiales", "sitios verificados"),
+            "fr": ("Portails publics d'affaires", "Source officielle vérifiée", "Vérification en attente", "liens officiels", "sites vérifiés"),
+            "ar": ("مواقع الأعمال الحكومية", "مصدر رسمي موثق", "بانتظار التحقق", "روابط رسمية", "مواقع موثقة"),
+            "vi": ("Cổng kinh doanh chính phủ", "Đã xác minh chính thức", "Đang chờ xác minh", "liên kết chính thức", "đã xác minh"),
+            "id": ("Portal bisnis pemerintah", "Sumber resmi terverifikasi", "Verifikasi lembaga tertunda", "tautan resmi", "situs terverifikasi")
+        }
+        _title, _verified, _pending, _unit, _countlab = _texts.get(L, _texts["en"])
+        _list = GOV_BUSINESS_SITES.get(iso, [])
+        _number = GOV_SITE_COVERAGE["country_counts"][iso]["verified"]
+        _note = (f"최소 3개 공식 사이트 목표 · 현재 {_number}/3개 검증 · 미검증 후보는 공식 기관으로 인정하지 않습니다." if L == "ko"
+                 else f"Target: at least 3 official sites · {_number}/3 verified. Unverified directory candidates are not confirmed official agencies.")
+        _cards = []
+        for _site in _list:
+            _ok = _site["verification"] == "official_primary"
+            _category = {"procurement": ("입찰·조달", "Procurement"), "support": ("기업·지원", "Business support"),
+                         "investment": ("투자진흥", "Investment")}.get(_site["category"], ("공공사업", "Public business"))
+            _name = _site["name_ko"] if L == "ko" else _site["name_en"]
+            _status = _verified if _ok else _pending
+            _caption = _category[0] if L == "ko" else _category[1]
+            _cards.append(f'<a class="card" href="{e(_site["url"])}" target="_blank" rel="noopener noreferrer nofollow"'
+                          f' style="display:block;text-decoration:none"><b>{e(_name)}</b>'
+                          f'<p class="note">{e(_caption)} · {e(_status)}</p>'
+                          f'<small>{e(_site["url"])}</small></a>')
+        _empty = ("아직 검증된 공식 사이트가 없습니다. 검수 후 등록합니다." if L == "ko"
+                  else "No verified official sites yet. This country remains in the review queue.")
+        _html = (f'<p class="note">{e(_note)}</p><div class="cards">{"".join(_cards)}</div>'
+                 if _cards else f'<p class="note">{e(_note)} {e(_empty)}</p>')
+        body.append(sec("government-business-sites", _title, _html))
+        # News is not an official government tender source. It links to the
+        # original newsroom and does not copy/reproduce article contents.
+        _news = COUNTRY_NEWS_SITES[iso]
+        _news_n = COUNTRY_NEWS_COVERAGE["country_counts"][iso]["publisher_links_recorded"]
+        _news_title = "국가별 언론·뉴스 원문" if L == "ko" else "Original national news publishers"
+        _news_note = (f"서로 다른 언론사 최소 3곳 목표 · 현재 {_news_n}/3곳 등록. 국가기관 발표, 공영방송, 민영 언론을 구분합니다. 기사 정확성·편집 독립성·실시간 수집은 별도 검증합니다."
+                      if L == "ko" else f"Target: 3 distinct national news publishers · {_news_n}/3 recorded. Public, state-affiliated and private outlets are labelled separately. This is not live news or editorial validation.")
+        _news_cards = []
+        for _publisher in _news:
+            _publisher_label = _publisher["name_ko"] if L == "ko" else _publisher["name_en"]
+            _publisher_type = _publisher["publisher_type"].replace("_"," ")
+            _news_cards.append(
+                f'<a class="card" href="{e(_publisher["url"])}" target="_blank" rel="noopener noreferrer nofollow" style="display:block;text-decoration:none">'
+                f'<b>{e(_publisher_label)}</b><p class="note">{e(_publisher_type)} · {e("발행사 원문" if L == "ko" else "Original publisher website")}</p>'
+                f'<small>{e(_publisher["url"])}</small></a>')
+        _news_html = f'<p class="note">{e(_news_note)}</p><div class="cards">{"".join(_news_cards)}</div>'
+        body.append(sec("country-news-sources", _news_title, _news_html))
     if iso in GUIDES:
         body.append(f'<p class="regbar"><a class="chip" href="{url(L,iso)}guide/">{"How to sell to this government →" if L!="ko" else "이 나라 정부에 파는 법 →"}</a> <a class="chip" href="/{L}/mdb/">{"Development bank tenders" if L!="ko" else "개발은행·국제기구 조달"}</a></p>')
     if c.get("reg"):
@@ -405,6 +454,9 @@ def country_page(iso, L):
     if ec: body.append(sec("econ", t["econ"], f'<p>{e(ec.get("rating","—"))} · K-SURE {e(ec.get("ksure","—"))} · {e((ec.get("fx") or {}).get("code",""))} {e((ec.get("fx") or {}).get("change_30d",""))}</p>'))
     sc = G(d, "sanctions", L)
     if sc: body.append(sec("sanctions", t["sanctions"], f'<p>{e(", ".join(sc.get("programs") or []) or "—")}</p><p class="note">{e(sc.get("summary",""))}</p>'))
+    # Public official-source candidate links, explicitly NOT live-verified.
+    _official_section = _render_territory_defence(iso, bool(c.get("reg")), L, TERRITORY_SOURCE_SITES, NATIONAL_DEFENCE_SITES)
+    if _official_section: body.append(sec("official-source-directory", "공식기관 정보원" if L == "ko" else "Official-source directory", _official_section))
     src = lst(d.get("sources"), lambda s: f'<li><a href="{e(s.get("url"))}" target="_blank" rel="noopener nofollow">{e(_stl(s.get("title"), s.get("url"), L))}</a></li>' if str(s.get("url","")).startswith("https://") else "")
     body.append(sec("sources", t["sources"], src))
     # sidebar
@@ -438,6 +490,16 @@ for _k, _v in PHOTOS.items():
 PHC = {"ko": "사진", "en": "Photo", "es": "Foto", "fr": "Photo", "ar": "صورة", "vi": "Ảnh", "id": "Foto"}
 STK = json.load(open(os.path.join(SRC, "stock.json"), encoding="utf8"))
 GUIDES = json.load(open(os.path.join(SRC, "guides.json"), encoding="utf8"))
+# Country-specific primary government-business portals. Registry URLs are
+# explicitly unverified candidates; never imply HTTP 200 == official agency.
+from government_business_sites import load_directory as _load_gov_sites
+GOV_BUSINESS_SITES, GOV_SITE_COVERAGE = _load_gov_sites(ROOT)
+# Independent news-publisher navigation, never mixed into official tenders.
+from country_news_sources import load_directory as _load_country_news
+COUNTRY_NEWS_SITES, COUNTRY_NEWS_COVERAGE = _load_country_news(ROOT)
+# Independent, curated candidate source directories (never live alert feeds).
+from territory_defence_sections import load as _load_territory_defence, render as _render_territory_defence
+TERRITORY_SOURCE_SITES, NATIONAL_DEFENCE_SITES = _load_territory_defence(ROOT)
 for _iso, _d in DATA.items():
     if isinstance(_d.get("guide"), dict): GUIDES[_iso] = _d["guide"]
 MDBI = [("WB","World Bank","세계은행","https://projects.worldbank.org/en/projects-operations/procurement",["world bank","세계은행","ibrd"]),
@@ -997,6 +1059,13 @@ f.style.cssText='width:100%%;height:'+h+'px;border:0;border-radius:12px';f.loadi
 def build():
     if os.path.exists(OUT): shutil.rmtree(OUT)
     os.makedirs(OUT + "/assets"); os.makedirs(OUT + "/data")
+    # Public machine-readable coverage makes unverified-country gaps auditable.
+    # This is a source directory count, never an actual live tender count.
+    with open(OUT + "/data/government-business-sites-coverage.json", "w", encoding="utf-8") as _f:
+        json.dump(GOV_SITE_COVERAGE, _f, ensure_ascii=False, indent=2)
+    # News has its own denominator and never inflates government portal counts.
+    with open(OUT + "/data/country-news-coverage.json", "w", encoding="utf-8") as _news_report:
+        json.dump(COUNTRY_NEWS_COVERAGE, _news_report, ensure_ascii=False, indent=2)
     for f in ("wmm-logo-white.png", "wmm-logo.png", "gcsme-logo.jpg", "emblem.png", "og.jpg", "spot.jpg", "paper.jpg", "logo-h.webp", "logo-h-lg.webp", "logo-v.webp", "mark.png"): shutil.copy(os.path.join(SRC, f), OUT + "/assets/" + f)
     for f in glob.glob(os.path.join(ROOT, "web", "*")): shutil.copy(f, OUT + "/assets/")
     os.makedirs(OUT + "/embed/gateway", exist_ok=True); shutil.copy(os.path.join(SRC, "gateway.html"), OUT + "/embed/gateway/index.html")
@@ -1067,6 +1136,39 @@ def build():
     cj = [{"iso": c["iso"], "slug": c["slug"], "r": c["r"], "done": done(c["iso"]), "risk": lvl(c["iso"]), "names": NAMES[c["iso"]]} for c in META]
     W("/data/countries.json", json.dumps(cj, ensure_ascii=False))
     W("/data/regions.json", json.dumps([{"code": x["iso"], "parent": x["parent"], "type": x["type"], "slug": BY[x["iso"]]["slug"], "done": done(x["iso"]), "ko": x["ko"], "en": x["en"]} for x in REGS], ensure_ascii=False))
+    # Separate sovereign and subnational read-only directories, not mixed in coverage totals.
+    for _source_file in ("territory_official_sources.json", "country_defence_official_sources.json"):
+        W("/data/" + _source_file, open(os.path.join(SRC, _source_file), encoding="utf8").read())
+    # Curated-source coverage is independent of live alerts and procurement/news counts.
+    _region_counts = {}
+    for _code, _record in TERRITORY_SOURCE_SITES.items():
+        _counts = {k: len(_record.get(k) or []) for k in (
+            "government_business", "news_media", "environment", "meteorology",
+            "emergency", "defence_security", "public_health", "critical_infrastructure")}
+        _region_counts[_code] = {"name_en": _record["name_en"], "parent_iso": _record["parent_iso"],
+            "counts": _counts, "government_three_recorded": _counts["government_business"] >= 3,
+            "news_three_recorded": _counts["news_media"] >= 3, "live_verified": False}
+    W("/data/territory-source-coverage.json", json.dumps({
+        "regions_total": len(_region_counts),
+        "regions_with_three_government_sources_recorded": sum(x["government_three_recorded"] for x in _region_counts.values()),
+        "regions_with_three_news_sources_recorded": sum(x["news_three_recorded"] for x in _region_counts.values()),
+        "not_live_verified": True, "regions": _region_counts}, ensure_ascii=False))
+    _defence_counts = {iso: len(item["official_sites"]) for iso, item in NATIONAL_DEFENCE_SITES.items()}
+    W("/data/country-defence-coverage.json", json.dumps({
+        "countries_total": len(_defence_counts), "target_official_links": len(_defence_counts) * 3,
+        "registered_official_links": sum(_defence_counts.values()),
+        "countries_with_three_recorded": sum(n >= 3 for n in _defence_counts.values()),
+        "countries_with_three_not_classified_no_standing_army": sum(
+            len(item["official_sites"]) >= 3 and item.get("defence_structure") not in ("no_standing_army", "no_regular_armed_forces")
+            for item in NATIONAL_DEFENCE_SITES.values()),
+        "countries_no_standing_army": [iso for iso, item in NATIONAL_DEFENCE_SITES.items()
+            if item.get("defence_structure") in ("no_standing_army", "no_regular_armed_forces")],
+        "registered_links_in_no_standing_army_countries": sum(
+            len(item["official_sites"]) for item in NATIONAL_DEFENCE_SITES.values()
+            if item.get("defence_structure") in ("no_standing_army", "no_regular_armed_forces")),
+        "remaining_minimum_slots": sum(max(0, 3 - n) for n in _defence_counts.values()),
+        "applicability_note": "Three separate military institutions cannot exist in every sovereign state. Entries for countries without standing armies are civilian security / policy links, not military branches.",
+        "not_live_verified": True, "country_counts": _defence_counts}, ensure_ascii=False))
     # Stage documentary, unverified country food profiles independently of tender/region data.
     # Official preparedness references are NOT product or shelf-life certification.
     for _rs_file in ("wmm-food-country-profiles.json", "wmm-food-primary-guidance-reviewed.json"):
