@@ -3,6 +3,35 @@
   "reviewed_on": "2026-11-20",
   "policy": "Only direct primary government/authorized official institutional URLs receive official_primary status. A successful HTTP response alone is not official confirmation.",
   "countries": {
+    "AD": [
+      {
+        "name_ko": "안도라 정부 통합 전자조달",
+        "name_en": "Andorra Government Public Procurement Platform",
+        "category": "procurement",
+        "url": "https://contractacio.govern.ad/SLE_Internet/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.portaljuridicandorra.ad/R20260204A"
+      },
+      {
+        "name_ko": "Andorra Business · 2026 기업 보조금",
+        "name_en": "Andorra Business · Enterprise Subsidy Calls",
+        "category": "support",
+        "url": "https://www.andorrabusiness.com/en/creix-andorra/business-growth-programs/subsidies/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govern.ad/ca/w/andorra-business-posa-a-concurs-2-milions-d-euros-la-major-dotacio-publica-impulsada-al-pais-per-fomentar-la-innovacio-i-atraure-empreses-d-alt-valor-afegit"
+      },
+      {
+        "name_ko": "Andorra Business · 공식 투자지원",
+        "name_en": "Andorra Business · Invest in Andorra",
+        "category": "investment",
+        "url": "https://www.andorrabusiness.com/en/invest-in-andorra/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.andorrabusiness.com/en/invest-in-andorra/"
+      }
+    ],
     "AE": [
       {
         "name_ko": "연방 재무부 · 조달 기회",
@@ -30,6 +59,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://u.ae/en/information-and-services/finance-and-investment/foreign-direct-investment"
+      }
+    ],
+    "AG": [
+      {
+        "name_ko": "Antigua Tenders Board · 공공입찰",
+        "name_en": "Antigua and Barbuda Tenders Board · Procurement",
+        "category": "procurement",
+        "url": "https://tendersboard.gov.ag/business-opportunities/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://tendersboard.gov.ag/business-opportunities/"
+      },
+      {
+        "name_ko": "EDP · 총리실 창업지원 프로그램",
+        "name_en": "Antigua & Barbuda PM Entrepreneurial Development Programme",
+        "category": "support",
+        "url": "https://antiguabarbudaedp.com/small-businesses/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.abipco.gov.ag/small-business-development/"
+      },
+      {
+        "name_ko": "ABIA · 국가 투자진흥",
+        "name_en": "Antigua and Barbuda Investment Authority",
+        "category": "investment",
+        "url": "https://investantiguabarbuda.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://chogm26.gov.ag/press_release_detail_page.php?press_release_page_id=pr_september_04_2026"
       }
     ],
     "AL": [
@@ -641,6 +699,35 @@
         "evidence_url": "https://www.bitc.co.bw/"
       }
     ],
+    "BZ": [
+      {
+        "name_ko": "벨리즈 국가 전자조달 · 재무부",
+        "name_en": "Belize Government Procurement · Ministry of Finance",
+        "category": "procurement",
+        "url": "https://procurement.gov.bz/opportunities/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mof.gov.bz/ova_sev/public-procurement/"
+      },
+      {
+        "name_ko": "BELTRAIDE · 국립 중소기업개발센터",
+        "name_en": "BELTRAIDE · Government SME Development Centre",
+        "category": "support",
+        "url": "https://beltraide.bz/sbdcbelize/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://edc.gov.bz/links/beltraide/"
+      },
+      {
+        "name_ko": "BELTRAIDE · 공식 투자·무역진흥",
+        "name_en": "BELTRAIDE · Statutory Trade and Investment Promotion",
+        "category": "investment",
+        "url": "https://beltraide.bz/about-us/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investcaricom.org/investment-agencies/beltraide/"
+      }
+    ],
     "CA": [
       {
         "name_ko": "CanadaBuys · 정부 조달",
@@ -1076,6 +1163,35 @@
         "evidence_url": "https://um.dk/sydkorea/en/the-trade-council/invest-in-denmark"
       }
     ],
+    "DM": [
+      {
+        "name_ko": "도미니카 정부 전자조달·계약",
+        "name_en": "Dominica Government Procurement Notices and Bidding",
+        "category": "procurement",
+        "url": "https://procurement.dominica.gov.dm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.dominica.gov.dm/notices"
+      },
+      {
+        "name_ko": "도미니카 정부 소기업지원부",
+        "name_en": "Dominica Government Small Business Support Unit",
+        "category": "support",
+        "url": "https://sbsu.dominica.gov.dm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://sbsu.dominica.gov.dm/"
+      },
+      {
+        "name_ko": "Invest Dominica · 투자진흥청",
+        "name_en": "Invest Dominica Authority · Government Investment",
+        "category": "investment",
+        "url": "https://investdominica.com/about/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investdominica.com/about/our-services/"
+      }
+    ],
     "DO": [
       {
         "name_ko": "DGCP · 도미니카 국가조달 정보",
@@ -1422,6 +1538,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities"
+      }
+    ],
+    "GD": [
+      {
+        "name_ko": "그레나다 정부 In-Tend 전자조달",
+        "name_en": "Grenada Government e-Procurement In-Tend",
+        "category": "procurement",
+        "url": "https://supplier.in-tend.co.uk/gnd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://climateresilience.gov.gd/docs/request-for-expressions-of-interest-consulting-services-firms-selection/"
+      },
+      {
+        "name_ko": "GIDC · 국립 소기업개발센터",
+        "name_en": "Grenada GIDC · Business Development Centre",
+        "category": "support",
+        "url": "https://businessdevelopmentcentre.gd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gidc.gd/who-we-are/"
+      },
+      {
+        "name_ko": "Invest Grenada · 국가 투자진흥",
+        "name_en": "Invest Grenada · Investment Development Corporation",
+        "category": "investment",
+        "url": "https://investingrenada.gd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://grenadaparliament.gd/wp-content/uploads/2026/09/GIDC-2025-Annual-Report-Final.pdf"
       }
     ],
     "GE": [
@@ -2176,6 +2321,64 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investlaos.gov.la/"
+      }
+    ],
+    "LC": [
+      {
+        "name_ko": "세인트루시아 정부 공개 조달공고",
+        "name_en": "Saint Lucia Government Tender Notices",
+        "category": "procurement",
+        "url": "https://www.govt.lc/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govt.lc/tenders"
+      },
+      {
+        "name_ko": "중소기업 개발과 · 정부 지원",
+        "name_en": "Saint Lucia Small Enterprise Development Unit",
+        "category": "support",
+        "url": "https://www.govt.lc/ministries/tourism-heritage-and-creative-industries/small-enterprise-development-unit",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govt.lc/ministries/tourism-heritage-and-creative-industries/small-enterprise-development-unit"
+      },
+      {
+        "name_ko": "Invest Saint Lucia · 공식 투자진흥청",
+        "name_en": "Invest Saint Lucia · Government Investment Promotion",
+        "category": "investment",
+        "url": "https://investstlucia.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://pmd.govt.lc/statutory-body/invest-saint-lucia-isl/"
+      }
+    ],
+    "LI": [
+      {
+        "name_ko": "리히텐슈타인 국가조달 전담부서",
+        "name_en": "Liechtenstein Government · Public Procurement Unit",
+        "category": "procurement",
+        "url": "https://www.llv.li/en/national-administration/public-procurement-department",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.regierung.li/inhalt-submenue/16290/stabsstelle-regierungskanzlei-en-/16294/Specialised-Unit-for-Public-Procurement"
+      },
+      {
+        "name_ko": "행정부 · 정부 기업지원·금융",
+        "name_en": "Liechtenstein National Administration · Business Funding",
+        "category": "support",
+        "url": "https://www.llv.li/en/business/financing-funding",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.regierung.li/medienportal-medium/16182/232328/0/medienmitteilung"
+      },
+      {
+        "name_ko": "Liechtenstein Marketing · 국가 산업투자 입지",
+        "name_en": "Liechtenstein Business · Official Economic Location Promotion",
+        "category": "investment",
+        "url": "https://en.liechtenstein-business.li/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://bua.regierung.li/BuA/default.aspx?content=626774022&nr=71&year=2014"
       }
     ],
     "LK": [
@@ -4003,6 +4206,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://gov.uz/en/activity_page/investment"
+      }
+    ],
+    "VC": [
+      {
+        "name_ko": "세인트빈센트 국가 전자조달",
+        "name_en": "Saint Vincent and the Grenadines Government Procurement",
+        "category": "procurement",
+        "url": "https://procurement.gov.vc/eprocure/index.php/current-bids",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procurement.gov.vc/eprocure/index.php/current-bids"
+      },
+      {
+        "name_ko": "재무부 PRYME · 중소기업 사업지원",
+        "name_en": "Saint Vincent Ministry of Finance · PRYME SME Funding",
+        "category": "support",
+        "url": "https://finance.gov.vc/finance/index.php/pryme",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://finance.gov.vc/finance/index.php/guidelines-to-applicants-for-financial-assistance"
+      },
+      {
+        "name_ko": "Invest SVG · 국가 투자청",
+        "name_en": "Invest SVG · Government Investment Agency",
+        "category": "investment",
+        "url": "https://investsvg.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investsvg.com/contact/"
       }
     ],
     "VN": [
