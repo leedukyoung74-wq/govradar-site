@@ -40,7 +40,7 @@ jobs:
           assert report['target_verified_links']==579
           assert report['remaining_required_link_slots']>0,'Cannot claim complete without genuine source review'
           from build import slug
-          reviewed={'KR','US','GB','JP','IN','AU','CA','FR','SG','SA'}
+          reviewed={'KR','US','GB','JP','IN','AU','CA','FR','SG','SA','KE','ZA','PH','BR','ID'}
           done=0
           for lang in ('ko','en','es','fr','ar','vi','id'):
               for country in c:
