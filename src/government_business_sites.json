@@ -1918,6 +1918,38 @@
         "evidence_url": "https://investcroatia.gov.hr/en/hamag-bicro/"
       }
     ],
+    "HT": [
+      {
+        "name_ko": "아이티 국가 공공조달위원회 · 공식 공고",
+        "name_en": "Haiti CNMP · Official Public Procurement Notices",
+        "category": "procurement",
+        "url": "https://cnmp.gouv.ht/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cnmp.gouv.ht/",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
+      },
+      {
+        "name_ko": "상공업부 · PSME 중소기업지원",
+        "name_en": "Haiti Ministry of Commerce · Small Enterprise Support Programme",
+        "category": "support",
+        "url": "https://mci.gouv.ht/psme.php",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mci.gouv.ht/psme.php",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
+      },
+      {
+        "name_ko": "CFI · 국가투자촉진센터",
+        "name_en": "Haiti Center for Investment Facilitation · Public Agency",
+        "category": "investment",
+        "url": "https://cfi.ht/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cfi.ht/en/a-propos/",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
+      }
+    ],
     "HU": [
       {
         "name_ko": "Közbeszerzési Hatóság · 헝가리 공공조달청",
@@ -3221,6 +3253,38 @@
         "evidence_url": "https://nipc.gov.ng/notifications"
       }
     ],
+    "NI": [
+      {
+        "name_ko": "SISCAE · 니카라과 국가 전자입찰 검색",
+        "name_en": "Nicaragua Compra · Government SISCAE Active Procedures",
+        "category": "procurement",
+        "url": "https://www.gestion.nicaraguacompra.gob.ni/siscae/portal/adquisiciones-gestion/busquedaProcedimientosVigentes?proc_estado=VIGENTE",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.hacienda.gob.ni/",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
+      },
+      {
+        "name_ko": "MIFIC · 중소기업 산업진흥 사업",
+        "name_en": "Nicaragua Ministry of Industry and Commerce · SME Projects",
+        "category": "support",
+        "url": "https://www.mific.gob.ni/Inicio/Fomento/Industria/Proyectos",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mific.gob.ni/Inicio/Fomento/Industria/Proyectos",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
+      },
+      {
+        "name_ko": "SPIEX · 대통령실 투자수출진흥 사무국",
+        "name_en": "Nicaragua SPIEX · Official Investment and Export Promotion Secretariat",
+        "category": "investment",
+        "url": "https://www.spiex.gob.ni/es/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.spiex.gob.ni/es/servicios",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
+      }
+    ],
     "NL": [
       {
         "name_ko": "TenderNed · 국가 조달공고",
@@ -4040,6 +4104,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/afrika/senegal/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari"
+      }
+    ],
+    "SR": [
+      {
+        "name_ko": "수리남 정부 공식 조달·입찰공고",
+        "name_en": "Suriname Government · Official Public Procurement Notices",
+        "category": "procurement",
+        "url": "https://gov.sr/aanbestedingen/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.sr/aanbestedingen/",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
+      },
+      {
+        "name_ko": "경제부 · KMO 중소기업 자금지원",
+        "name_en": "Suriname Ministry of Economic Affairs · SME Finance Unit",
+        "category": "support",
+        "url": "https://gov.sr/ministeries/ministerie-van-economische-zaken-ondernemerschap-technologische-innovatie/kmo-unit/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.sr/ministeries/ministerie-van-economische-zaken-ondernemerschap-technologische-innovatie/kmo-unit/",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
+      },
+      {
+        "name_ko": "SITA · 국가 투자·무역진흥청",
+        "name_en": "Suriname Investment and Trade Agency · National Agency",
+        "category": "investment",
+        "url": "https://www.sita.sr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sita.sr/",
+        "review_note": "Primary official source checked; individual URL and licensing/permissions require final release QA"
       }
     ],
     "SV": [
