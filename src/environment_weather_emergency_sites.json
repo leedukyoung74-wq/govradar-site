@@ -808,8 +808,8 @@
         "review": "curated_candidate"
       },
       "emergency": {
-        "name": "General Directorate of Civil Defense",
-        "url": "https://www.998.gov.sa/",
+        "name": "Saudi Civil Defense · Government emergency and civil protection",
+        "url": "https://998.gov.sa/en",
         "source": "government_agency_curated",
         "access": "not_live_tested",
         "review": "curated_candidate"
@@ -1552,11 +1552,12 @@
         "review": "curated_candidate"
       },
       "emergency": {
-        "name": "Swedish Civil Contingencies Agency",
-        "url": "https://www.msb.se/",
+        "name": "Swedish Civil Defence and Resilience Agency (MCF; renamed from MSB in 2026)",
+        "url": "https://www.mcf.se/en/",
         "source": "government_agency_curated",
         "access": "not_live_tested",
-        "review": "curated_candidate"
+        "review": "curated_candidate",
+        "evidence_url": "https://www.mcf.se/en/about-us/swedish-civil-defence-and-resilience-agency/"
       }
     },
     "CH": {
