@@ -1,6 +1,6 @@
 """Per-country tender intel: feeds/cty/{ISO}.json built from tenders/pipeline/awards feeds.
 Small files so each country page fetches only its own numbers."""
-import json, os, sys, datetime
+import json, os, sys, datetime, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from deadline import is_listed_open as is_open
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,6 +26,12 @@ def main():
     for x in v.get("items", []):
         if x.get("iso") and 0 < (x.get("usd") or 0) < CAP: slot(x["iso"])["v"].append(x)
     d = os.path.join(FEEDS, "cty"); os.makedirs(d, exist_ok=True)
+    # A country with its last open notice gone must not keep yesterday's
+    # positive per-country JSON counters. Emit a current zero-count record
+    # for every previously generated ISO page, without deleting old files.
+    for fname in os.listdir(d):
+        if re.fullmatch(r"[A-Z]{2}\.json", fname) and os.path.isfile(os.path.join(d, fname)):
+            slot(fname[:2])
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     for iso, s in out.items():
         T = sorted(s["t"], key=lambda x: x.get("deadline_at") or x.get("deadline") or "9")

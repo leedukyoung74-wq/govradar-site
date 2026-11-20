@@ -52,6 +52,12 @@ jobs:
       - name: Weekly source registry check
         if: inputs.task == 'sources'
         run: python tools/probe_sources.py data_branch/feeds/sources_registry.json
+      # Time may pass while numerous public sources are collected. Remove ONLY
+      # notices that have actually closed, then rebuild country/home counters.
+      # This preserves original source timestamps and still uses the strict gate.
+      - name: Reconcile tenders that closed during long collection
+        if: inputs.task == 'daily'
+        run: python tools/reconcile_expiring_tenders.py data_branch
       - name: Quality gate — must pass before anything is published
         if: inputs.task == 'daily'
         run: python tools/quality_gate.py data_branch

@@ -221,17 +221,23 @@ def _ocds_item(S, r, url, minv_eur=1.2e6):
     raw = str((t.get("tenderPeriod") or {}).get("endDate") or "")
     if not raw: drop(S, "no-deadline"); return None
     if not _keep(S, raw): return None
-    v = t.get("value") or {}; amt = v.get("amount") or 0
+    v = t.get("value") or {}
+    # Newer UK Procurement Act notices may publish amountGross instead of amount.
+    # Preserve the distinction in the record rather than implying a net estimate.
+    gross_only = v.get("amount") is None and v.get("amountGross") is not None
+    try: amt = float(v.get("amount") if v.get("amount") is not None else (v.get("amountGross") or 0))
+    except (ValueError, TypeError): drop(S, "invalid-estimate"); return None
     if amt * EUR.get(v.get("currency", "GBP"), 1.17) < minv_eur: drop(S, "below-size"); return None
     return {"iso": "GB", "title": str(t.get("title") or "")[:220], "buyer": str((r.get("buyer") or {}).get("name") or "")[:160],
             "deadline": raw[:10], "deadline_at": raw, "url": url, "sid": str(r.get("ocid") or r.get("id") or ""), "source": S,
             "type": "Tender notice", "project": "", "pm": "", "pmn": str(t.get("procurementMethodDetails") or "")[:60],
-            "pg": PG.get(t.get("mainProcurementCategory"), ""), "ma": "", "est": str(round(amt)) if amt else "", "cur": v.get("currency", "")}
+            "pg": PG.get(t.get("mainProcurementCategory"), ""), "ma": "", "est": str(round(amt)) if amt else "", "cur": v.get("currency", ""),
+            "est_gross": gross_only}
 
 def uk():
     S = "UK Find a Tender"
     url = "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?" + urllib.parse.urlencode(
-        {"stages": "tender", "limit": 100, "updatedFrom": (TODAY - datetime.timedelta(days=21)).isoformat() + "T00:00:00"})
+        {"limit": 100, "updatedFrom": (TODAY - datetime.timedelta(days=21)).isoformat() + "T00:00:00"})
     out = _ocds(S, url, lambda r: _ocds_item(S, r, f"https://www.find-tender.service.gov.uk/Notice/{r.get('id')}"))
     seen = {}
     for x in out:
