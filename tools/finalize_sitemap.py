@@ -78,6 +78,33 @@ def validate(root: Path, min_urls: int = 1000) -> dict:
         per_locale[lang] += 1
     if not all(per_locale.values()):
         raise ValueError("One or more site languages missing from sitemap")
+    # hreflang must never direct crawlers to missing, noindex, or wrong-language URLs.
+    # Some older feeds carry no alternate metadata; validate all present alternates.
+    valid_urls = set(urls)
+    xhtml_ns = "{http://www.w3.org/1999/xhtml}"
+    for entry in tree.getroot().findall(SITEMAP_NS + "url"):
+        loc = entry.find(SITEMAP_NS + "loc").text.strip()
+        loc_path = urlsplit(loc).path
+        loc_suffix = "/".join([p for p in loc_path.split("/") if p][1:])
+        seen_langs = set()
+        for alt in entry.findall(xhtml_ns + "link"):
+            if alt.get("rel") != "alternate":
+                raise ValueError("Invalid alternate relation for: " + loc)
+            lang, href = alt.get("hreflang", ""), alt.get("href", "")
+            if lang not in LANGS and lang != "x-default":
+                raise ValueError("Unknown alternate language for: " + loc)
+            if lang in seen_langs:
+                raise ValueError("Duplicate alternate language for: " + loc)
+            seen_langs.add(lang)
+            if href not in valid_urls:
+                raise ValueError("Orphan hreflang URL for: " + loc + " => " + href)
+            target_parts = [p for p in urlsplit(href).path.split("/") if p]
+            if lang in LANGS and target_parts[0] != lang:
+                raise ValueError("Wrong-language hreflang URL for: " + loc)
+            target_suffix = "/".join(target_parts[1:])
+            if target_suffix != loc_suffix:
+                raise ValueError("Mismatched hreflang route for: " + loc)
+
     robots_file = root / "robots.txt"
     if not robots_file.is_file():
         raise ValueError("robots.txt missing")
