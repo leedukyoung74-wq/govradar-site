@@ -2526,6 +2526,35 @@
         "evidence_url": "https://invest.gov.kz/ru/about-us/purchase/"
       }
     ],
+    "LA": [
+      {
+        "name_ko": "공공사업 입찰 · 공공사업운수부",
+        "name_en": "Laos Ministry of Public Works and Transport · Government Procurement",
+        "category": "procurement",
+        "url": "https://mpwt.gov.la/en/ongoing-procurement",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dca.mpwt.gov.la/"
+      },
+      {
+        "name_ko": "산업통상부 · 중소기업 등록·지원",
+        "name_en": "Laos Ministry of Industry and Commerce · Enterprise Services",
+        "category": "support",
+        "url": "https://www.moic.gov.la/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://law.moic.gov.la/phamsoot/2019/03/Decree-6-No.-299-ENG.pdf"
+      },
+      {
+        "name_ko": "국가 투자촉진관리위원회",
+        "name_en": "Lao Investment Promotion and Management Committee",
+        "category": "investment",
+        "url": "https://investlaos.gov.la/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mpi.gov.la/en/about-mpi/investment-promotion-department/"
+      }
+    ],
     "LB": [
       {
         "name_ko": "공공조달청 · 레바논 정부입찰",
@@ -2988,6 +3017,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investnorthmacedonia.gov.mk/"
+      }
+    ],
+    "MM": [
+      {
+        "name_ko": "국가 정부입찰 공개",
+        "name_en": "Myanmar Government Public Tender Portal",
+        "category": "procurement",
+        "url": "https://myanmar.gov.mm/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://myanmar.gov.mm/government-website"
+      },
+      {
+        "name_ko": "상무부 · MSME 수출기업 지원",
+        "name_en": "Myanmar Ministry of Commerce · MSME and Trade Services",
+        "category": "support",
+        "url": "https://commerce.gov.mm/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://myanmar.gov.mm/ministry-of-commerce"
+      },
+      {
+        "name_ko": "DICA · 국가 투자·회사등록",
+        "name_en": "Myanmar Directorate of Investment and Company Administration",
+        "category": "investment",
+        "url": "https://www.dica.gov.mm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.dica.gov.mm/roles-and-responsibilities/"
       }
     ],
     "MN": [
@@ -4409,6 +4467,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.ditp.go.th/en"
+      }
+    ],
+    "TJ": [
+      {
+        "name_ko": "국가 조달청 전자입찰",
+        "name_en": "Tajikistan State Public Procurement ePortal",
+        "category": "procurement",
+        "url": "https://eprocurement.gov.tj/en/searchanno",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://eprocurement.gov.tj/en/registration/user"
+      },
+      {
+        "name_ko": "정부 투자청 · 기업지원 정책",
+        "name_en": "Tajikistan State Committee on Investments · Entrepreneurship Support",
+        "category": "support",
+        "url": "https://egov.tj/site/sarmoyaguzori?lang=en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://egov.tj/site/sarmoyaguzori?lang=en"
+      },
+      {
+        "name_ko": "TajInvest · 국영투자진흥",
+        "name_en": "Tajikistan TajInvest · State Investment Promotion",
+        "category": "investment",
+        "url": "https://www.tajinvest.tj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.trade.gov/country-commercial-guides/tajikistan-selling-public-sector"
       }
     ],
     "TL": [
