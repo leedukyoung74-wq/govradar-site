@@ -3,13 +3,42 @@
    Membership level comes from app_metadata.roles (m1…m5, edu, youth, uni, admin). */
 (function () {
   const API = "/nfid", KEY = "wmm.auth.v1";
+  // Preserve in-site navigation across third-party Google OAuth round trips.
+  // Only current same-origin localized paths are permitted (never external URLs).
+  const RETURN_KEY = "wmm.auth.return.v1";
+  const SAFE_PATH = /^\/(?:ko|en|es|fr|ar|vi|id)\/(?:[^\\#\r\n]*)$/;
+  function allowedReturnPath(target) {
+    if (typeof target !== "string" || target.length > 2048 || !SAFE_PATH.test(target) ||
+        target.startsWith("//") || target.includes("\\")) return null;
+    try {
+      const p = new URL(target, location.origin);
+      if (p.origin !== location.origin || p.hash) return null;
+      return p.pathname + p.search;
+    } catch (e) { return null; }
+  }
+  function rememberOAuthReturn() {
+    try {
+      const dest = allowedReturnPath(location.pathname + location.search);
+      if (dest) sessionStorage.setItem(RETURN_KEY, dest);
+    } catch (e) {}
+  }
+  function resumeOAuthReturn() {
+    let raw = null;
+    try { raw = sessionStorage.getItem(RETURN_KEY); sessionStorage.removeItem(RETURN_KEY); }
+    catch (e) { return false; }
+    const dest = allowedReturnPath(raw);
+    if (!dest || dest === location.pathname + location.search) return false;
+    location.replace(dest);
+    return true;
+  }
+
   const L = window.RADAR_LANG || "en", T = (window.RADAR_AT || {});
   const $ = s => document.querySelector(s);
   const tt = k => T[k] || k;
-  let S = null, SETTINGS = null; const subs = [];
+  let S = null, SETTINGS = null, VERIFIED = false; const subs = [];
 
-  function load() { try { S = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { S = null; } }
-  function save(v) { S = v; try { v ? localStorage.setItem(KEY, JSON.stringify(v)) : localStorage.removeItem(KEY); } catch (e) {} subs.forEach(f => { try { f(S); } catch (e) {} }); }
+  function load() { VERIFIED = false; try { S = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { S = null; } }
+  function save(v, verified = false) { S = v; VERIFIED = !!v && verified; try { v ? localStorage.setItem(KEY, JSON.stringify(v)) : localStorage.removeItem(KEY); } catch (e) {} subs.forEach(f => { try { f(S); } catch (e) {} }); }
   async function j(path, opt) {
     const r = await fetch(API + path, opt);
     const txt = await r.text(); let d = null; try { d = txt ? JSON.parse(txt) : null; } catch (e) { d = { msg: txt }; }
@@ -19,7 +48,7 @@
   async function settings() { if (SETTINGS) return SETTINGS; try { SETTINGS = await j("/settings"); } catch (e) { SETTINGS = { off: true, status: e.status }; } return SETTINGS; }
   async function withTokens(tok) {
     const user = await j("/user", { headers: { authorization: "Bearer " + tok.access_token } });
-    save({ access_token: tok.access_token, refresh_token: tok.refresh_token, expires_at: Date.now() + (tok.expires_in || 3600) * 1000, user });
+    save({ access_token: tok.access_token, refresh_token: tok.refresh_token, expires_at: Date.now() + (tok.expires_in || 3600) * 1000, user }, true);
     return S;
   }
   async function refresh() {
@@ -27,18 +56,34 @@
     try { const tok = await j("/token", { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded" }, body: "grant_type=refresh_token&refresh_token=" + encodeURIComponent(S.refresh_token) }); return await withTokens(tok); }
     catch (e) { save(null); return null; }
   }
-  async function token() { if (!S) return null; if (Date.now() > S.expires_at - 60000) await refresh(); return S && S.access_token; }
+  async function verifyStoredSession() {
+    if (!S || !S.access_token) return null;
+    try {
+      if (Date.now() > Number(S.expires_at || 0) - 60000) return await refresh();
+      const user = await j("/user", { headers: { authorization: "Bearer " + S.access_token } });
+      save({ ...S, user }, true);
+      return S;
+    } catch (e) {
+      // Rejected tokens are invalid; temporary server failures grant no membership access.
+      if (e.status === 401 || e.status === 403) save(null);
+      return null;
+    }
+  }
+  async function token() { if (!S) return null; if (!VERIFIED) await verifyStoredSession(); if (!S) return null; if (Date.now() > S.expires_at - 60000) await refresh(); return VERIFIED && S ? S.access_token : null; }
   async function login(email, password) {
     const tok = await j("/token", { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded" }, body: "grant_type=password&username=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password) });
     return withTokens(tok);
   }
   async function signup(email, password, data) { return j("/signup", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ email, password, data }) }); }
   async function recover(email) { return j("/recover", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ email }) }); }
-  async function update(attrs) { const t = await token(); const user = await j("/user", { method: "PUT", headers: { "content-type": "application/json", authorization: "Bearer " + t }, body: JSON.stringify(attrs) }); save({ ...S, user }); return user; }
+  async function update(attrs) { const t = await token(); const user = await j("/user", { method: "PUT", headers: { "content-type": "application/json", authorization: "Bearer " + t }, body: JSON.stringify(attrs) }); save({ ...S, user }, true); return user; }
   function logout() { const t = S && S.access_token; save(null); try { sessionStorage.removeItem("gv_k"); sessionStorage.removeItem("gv_grade"); } catch (e) {} if (t) fetch(API + "/logout", { method: "POST", headers: { authorization: "Bearer " + t } }).catch(() => {}); }
-  function roles() { return (S && S.user && S.user.app_metadata && S.user.app_metadata.roles) || []; }
-  function tier() { const r = roles().map(x => String(x).toLowerCase()); for (const k of ["admin", "m5", "m4", "m3", "m2", "uni", "m1", "edu", "youth"]) if (r.includes(k)) return k; return S ? "free" : null; }
-  function has(min) { const order = { free: 0, youth: 1, edu: 1, m1: 1, uni: 2, m2: 2, m3: 3, m4: 4, m5: 5, admin: 9 }; const t = tier(); return t ? (order[t] || 0) >= (order[min] || 0) : false; }
+  function roles() {
+    const v = VERIFIED && S && S.user && S.user.app_metadata && S.user.app_metadata.roles;
+    return Array.isArray(v) ? v : [];
+  }
+  function tier() { if (!VERIFIED) return null; const r = roles().map(x => String(x).toLowerCase()); for (const k of ["admin", "m5", "m4", "m3", "m2", "uni", "m1", "edu", "youth"]) if (r.includes(k)) return k; return S ? "free" : null; }
+  function has(min) { const order = { free: 0, youth: 1, edu: 1, m1: 1, uni: 2, m2: 2, m3: 3, m4: 4, m5: 5, admin: 9 }; if (!Object.prototype.hasOwnProperty.call(order, min)) return false; const t = tier(); return t ? (order[t] || 0) >= order[min] : false; }
 
   /* handle links from emails: #confirmation_token / #recovery_token / #invite_token / #access_token (Google) */
   async function hash() {
@@ -48,7 +93,7 @@
       if (h.get("confirmation_token")) { clear(); const tok = await j("/verify", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ token: h.get("confirmation_token"), type: "signup" }) }); await withTokens(tok); toast(tt("confirmed")); }
       else if (h.get("recovery_token")) { clear(); const tok = await j("/verify", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ token: h.get("recovery_token"), type: "recovery" }) }); await withTokens(tok); open("newpw"); }
       else if (h.get("invite_token")) { clear(); open("invite", h.get("invite_token")); }
-      else if (h.get("access_token")) { const tok = { access_token: h.get("access_token"), refresh_token: h.get("refresh_token"), expires_in: +h.get("expires_in") || 3600 }; clear(); await withTokens(tok); toast(tt("welcome")); }
+      else if (h.get("access_token")) { const tok = { access_token: h.get("access_token"), refresh_token: h.get("refresh_token"), expires_in: +h.get("expires_in") || 3600 }; clear(); await withTokens(tok); toast(tt("welcome")); resumeOAuthReturn(); }
       else if (h.get("error_description")) { clear(); toast(h.get("error_description")); }
     } catch (e) { toast(e.message); }
   }
@@ -78,7 +123,7 @@
     const m = $("#authm"); if (!m) return;
     $("#authx").addEventListener("click", close);
     m.addEventListener("click", e => { if (e.target === m) close(); const a = e.target.closest("[data-am]"); if (a) { e.preventDefault(); open(a.dataset.am); } });
-    $("#auth-google").addEventListener("click", () => { location.href = API + "/authorize?provider=google"; });
+    $("#auth-google").addEventListener("click", () => { rememberOAuthReturn(); location.href = API + "/authorize?provider=google"; });
     $("#authf").addEventListener("submit", async e => {
       e.preventDefault(); const msg = $("#authmsg"), btn = $("#auth-sub"); btn.disabled = true; msg.textContent = "…";
       const em = ($("#authe").value || "").trim(), pw = $("#authp").value || "";
@@ -87,7 +132,10 @@
           if (!$("#auth-terms").checked) throw new Error(tt("need_terms"));
           const age = $("#auth-age").value; if (age === "u14") throw new Error(tt("u14"));
           if (pw.length < 8) throw new Error(tt("pw_short"));
-          const r = await signup(em, pw, { full_name: $("#authn").value.trim(), lang: L, age_band: age, terms_at: new Date().toISOString(), marketing: !!($("#auth-mkt") && $("#auth-mkt").checked), marketing_at: new Date().toISOString() });
+          const marketing = !!($("#auth-mkt") && $("#auth-mkt").checked);
+          const decisionAt = new Date().toISOString();
+          const r = await signup(em, pw, { full_name: $("#authn").value.trim(), lang: L, age_band: age, terms_at: decisionAt,
+            marketing, marketing_at: marketing ? decisionAt : null, marketing_decision_at: decisionAt });
           if (r && r.confirmed_at) { await login(em, pw); msg.textContent = tt("welcome"); setTimeout(close, 900); } else msg.textContent = tt("check_mail");
         } else if (MODE === "reset") { await recover(em); msg.textContent = tt("reset_sent"); }
         else if (MODE === "newpw") { if (pw.length < 8) throw new Error(tt("pw_short")); await update({ password: pw }); msg.textContent = tt("pw_saved"); setTimeout(close, 900); }
@@ -101,14 +149,14 @@
   }
   function paint() {
     const b = $("#loginbtn"); if (!b) return;
-    b.textContent = S ? tt("account") : tt("login");
-    b.classList.toggle("on", !!S);
+    b.textContent = VERIFIED && S ? tt("account") : tt("login");
+    b.classList.toggle("on", !!(VERIFIED && S));
     document.documentElement.dataset.tier = tier() || "";
     document.querySelectorAll("[data-tier-min]").forEach(x => { const ok = has(x.dataset.tierMin); x.classList.toggle("unlocked", ok); });
   }
 
   function askMkt() {
-    if (!S || !S.user || document.getElementById("mktask")) return;
+    if (!VERIFIED || !S || !S.user || document.getElementById("mktask")) return;
     const md = S.user.user_metadata || {}; if (typeof md.marketing === "boolean") return;
     const b = document.createElement("div"); b.id = "mktask"; b.setAttribute("role", "dialog"); b.setAttribute("aria-label", tt("mkt_q"));
     b.style.cssText = "position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;background:#0b1f3a;color:#fff;padding:18px 20px;border-radius:8px;z-index:9999;box-shadow:0 8px 30px rgba(0,0,0,.35);font-size:15px;line-height:1.6";
@@ -116,7 +164,7 @@
     const row = document.createElement("div"); row.style.cssText = "display:flex;flex-wrap:wrap;gap:8px";
     [["mkt_yes", true, "#1e4fb8"], ["mkt_no", false, "transparent"]].forEach(([k, v, bg]) => { const x = document.createElement("button"); x.type = "button"; x.textContent = tt(k);
       x.style.cssText = "min-height:44px;padding:0 18px;border:1px solid #fff;background:" + bg + ";color:#fff;font:inherit;font-weight:700;cursor:pointer";
-      x.onclick = async () => { try { await update({ data: { marketing: v, marketing_at: new Date().toISOString() } }); toast(tt("mkt_saved")); } catch (e) { toast(e.message); } b.remove(); }; row.appendChild(x); });
+      x.onclick = async () => { try { const decisionAt = new Date().toISOString(); await update({ data: { marketing: v, marketing_at: v ? decisionAt : null, marketing_decision_at: decisionAt } }); toast(tt("mkt_saved")); } catch (e) { toast(e.message); } b.remove(); }; row.appendChild(x); });
     b.appendChild(row); document.body.appendChild(b);
   }
   subs.push(() => setTimeout(askMkt, 600));
@@ -124,8 +172,8 @@
   load(); subs.push(paint);
   document.addEventListener("DOMContentLoaded", () => {
     wire(); paint(); hash(); setTimeout(askMkt, 1200);
-    const b = $("#loginbtn"); if (b) b.addEventListener("click", () => { if (S) location.href = `/${L}/account/`; else open("login"); });
-    document.addEventListener("click", e => { const a = e.target.closest("[data-auth]"); if (a) { e.preventDefault(); if (S && a.dataset.auth === "signup") location.href = `/${L}/account/`; else open(a.dataset.auth); } });
-    if (S && Date.now() > S.expires_at - 60000) refresh().then(paint);
+    const b = $("#loginbtn"); if (b) b.addEventListener("click", () => { if (VERIFIED && S) location.href = `/${L}/account/`; else open("login"); });
+    document.addEventListener("click", e => { const a = e.target.closest("[data-auth]"); if (a) { e.preventDefault(); if (VERIFIED && S && a.dataset.auth === "signup") location.href = `/${L}/account/`; else open(a.dataset.auth); } });
+    if (S && !/(?:access_token|confirmation_token|recovery_token|invite_token)=/.test(location.hash || "")) verifyStoredSession().then(paint);
   });
 })();
