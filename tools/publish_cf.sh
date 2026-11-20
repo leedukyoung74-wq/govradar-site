@@ -43,6 +43,14 @@ python3 tools/text_wrap.py || exit 1   # Korean line breaking on every page (aft
 python3 tools/cf_variant.py dist cf/public
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public
+# When explicitly enabled, the finished staging output must match the exported country source.
+# Keep this after all overlays and before touching the live repository.
+if [ "${WMM_EXPORT_PREFLIGHT:-off}" = "required" ]; then
+  python3 tools/check_build_consistency.py --export-dir export/countries --public-dir cf/public --min-researched "${WMM_EXPORT_MIN_RESEARCHED:-1}" || {
+    echo "STOP: generated pages do not match export data; nothing published."
+    exit 1
+  }
+fi
 # Mandatory release-output sanity check, even if optional country freshness gate is off.
 python3 tools/check_public_fixture_leak.py cf/public || { echo "STOP: invalid or synthetic public assets; live branch unchanged."; exit 1; }
 cd /home/claude/govradar-live
