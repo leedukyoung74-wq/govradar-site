@@ -323,9 +323,29 @@
     "ZA": {
       "name_en": "South Africa",
       "name_ko": "남아프리카공화국",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "South African Department of Defence",
+          "url": "https://www.dod.mil.za/",
+          "role": "defence_department",
+          "evidence_url": "https://www.gov.za/about-government/contact-directory/departments/defence-department",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Armscor South African Defence Acquisition Agency",
+          "url": "https://armscor.co.za/",
+          "role": "statutory_defence_acquisition",
+          "evidence_url": "https://armscor.co.za/about-us/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Do not count the gov.za DoD directory as a third agency; it points to the same Department of Defence."
     },
     "SS": {
       "name_en": "South Sudan",
@@ -393,9 +413,37 @@
     "BD": {
       "name_en": "Bangladesh",
       "name_ko": "방글라데시",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Bangladesh Armed Forces Division",
+          "url": "https://afd.gov.bd/",
+          "role": "military_affairs_division",
+          "evidence_url": "https://afd.gov.bd/bangladesh-armed-forces",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Bangladesh Army",
+          "url": "https://www.army.mil.bd/",
+          "role": "army",
+          "evidence_url": "https://www.army.mil.bd/home",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Bangladesh Navy",
+          "url": "https://navy.mil.bd/",
+          "role": "navy",
+          "evidence_url": "https://navy.mil.bd/Command/Ministry-Of-Defence.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "BT": {
       "name_en": "Bhutan",
@@ -428,16 +476,73 @@
     "IN": {
       "name_en": "India",
       "name_ko": "인도",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "India Ministry of Defence",
+          "url": "https://www.mod.gov.in/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.india.gov.in/category/defence-foreign-affairs/ministry/ministry-of-defence-1531939293121080",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "India Department of Military Affairs",
+          "url": "https://www.dmamod.gov.in/",
+          "role": "military_affairs_department",
+          "evidence_url": "https://igod.gov.in/index.php/organization/YQUjYIQBF92NGf8XoaQ6",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Indian Navy",
+          "url": "https://indiannavy.gov.in/",
+          "role": "navy",
+          "evidence_url": "https://www.india.gov.in/category/defence-foreign-affairs/subcategory/defence/details/website-of-indian-army",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Department of Military Affairs is a distinct government department under same ministry."
     },
     "ID": {
       "name_en": "Indonesia",
       "name_ko": "인도네시아",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Indonesia Ministry of Defence",
+          "url": "https://www.kemhan.go.id/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.kemhan.go.id/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Indonesian National Armed Forces TNI",
+          "url": "https://www.tni.mil.id/",
+          "role": "national_armed_forces",
+          "evidence_url": "https://www.kemhan.go.id/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Indonesian Army TNI AD",
+          "url": "https://tniad.mil.id/",
+          "role": "army",
+          "evidence_url": "https://tniad.mil.id/profil/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "JP": {
       "name_en": "Japan",
@@ -575,16 +680,72 @@
     "PK": {
       "name_en": "Pakistan",
       "name_ko": "파키스탄",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Pakistan Ministry of Defence",
+          "url": "https://mod.gov.pk/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.pakistan.gov.pk/ministries",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Pakistan Navy",
+          "url": "https://www.paknavy.gov.pk/",
+          "role": "navy",
+          "evidence_url": "https://mod.gov.pk/Overview",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Pakistan Armed Forces Inter-Services Public Relations",
+          "url": "https://www.ispr.gov.pk/",
+          "role": "military_public_affairs",
+          "evidence_url": "https://www.radio.gov.pk/24-05-2018/malicious-email-from-invite-at-isprpress-has-no-link-to-it-ispr",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "PH": {
       "name_en": "Philippines",
       "name_ko": "필리핀",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Philippines Department of National Defense",
+          "url": "https://www.dnd.gov.ph/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.doj.gov.ph/national-institutions.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Armed Forces of the Philippines",
+          "url": "https://www.afp.mil.ph/",
+          "role": "national_armed_forces",
+          "evidence_url": "https://www.afp.mil.ph/about-us/organization/afp-organization",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Philippine Navy",
+          "url": "https://www.navy.mil.ph/",
+          "role": "navy",
+          "evidence_url": "https://www.afp.mil.ph/about-us/organization/afp-organization",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "SG": {
       "name_en": "Singapore",
@@ -624,9 +785,37 @@
     "LK": {
       "name_en": "Sri Lanka",
       "name_ko": "스리랑카",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Sri Lanka Ministry of Defence",
+          "url": "https://www.defence.lk/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.defence.lk/Home/establishments",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Sri Lanka Army",
+          "url": "https://www.army.lk/",
+          "role": "army",
+          "evidence_url": "https://www.defence.lk/Home/establishments",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Sri Lanka Navy",
+          "url": "https://www.navy.lk/",
+          "role": "navy",
+          "evidence_url": "https://www.defence.lk/Home/establishments",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "TJ": {
       "name_en": "Tajikistan",
@@ -638,9 +827,37 @@
     "TH": {
       "name_en": "Thailand",
       "name_ko": "태국",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Thailand Ministry of Defence",
+          "url": "https://www.mod.go.th/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.nsc.go.th/en/related-agencies-and-useful-links/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Royal Thai Army",
+          "url": "https://rta.mi.th/",
+          "role": "army",
+          "evidence_url": "https://www.nsc.go.th/en/related-agencies-and-useful-links/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Royal Thai Navy",
+          "url": "https://www.navy.mi.th/",
+          "role": "navy",
+          "evidence_url": "https://www.nsc.go.th/en/related-agencies-and-useful-links/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "TL": {
       "name_en": "Timor-Leste",
@@ -764,9 +981,37 @@
     "TR": {
       "name_en": "Türkiye",
       "name_ko": "튀르키예",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Türkiye Ministry of National Defence",
+          "url": "https://www.msb.gov.tr/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.msb.gov.tr/Bakanlik/TeskilatSemasi/GMF2WHJAfxtco3Xza1B8YQ",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Turkish Land Forces Command",
+          "url": "https://www.kkk.tsk.tr/",
+          "role": "army",
+          "evidence_url": "https://www.turkiye.gov.tr/kara-kuvvetleri-komutanligi",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Turkish Naval Forces Command",
+          "url": "https://www.dzkk.tsk.tr/",
+          "role": "navy",
+          "evidence_url": "https://www.turkiye.gov.tr/deniz-kuvvetleri-komutanligi",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "AL": {
       "name_en": "Albania",
@@ -953,9 +1198,37 @@
     "GR": {
       "name_en": "Greece",
       "name_ko": "그리스",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Greece Ministry of National Defence",
+          "url": "https://www.mod.mil.gr/en/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.gov.gr/en/upourgeia/upourgeio-ethnikes-amunas",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Hellenic National Defence General Staff",
+          "url": "https://geetha.mil.gr/en/",
+          "role": "joint_general_staff",
+          "evidence_url": "https://www.mod.mil.gr/en/links/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Hellenic Navy",
+          "url": "https://hellenicnavy.gr/en/",
+          "role": "navy",
+          "evidence_url": "https://www.mod.mil.gr/en/links/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "HU": {
       "name_en": "Hungary",
