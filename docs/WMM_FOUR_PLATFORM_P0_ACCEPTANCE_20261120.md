@@ -23,3 +23,10 @@ For each feature: repo/commit, deployment URL and timestamp, screenshot or brows
 
 ## Safety & change policy
 No auto payments, refills, emailing users, intrusive scraping, production configuration changes or merging this PR. Existing production and all other working branches remain unchanged.
+
+## 2026-11-20 verified implementation (review branch only)
+- **Observed defect:** `robots.txt` references `https://radar.wmm-hoa.com/sitemap.xml`, while the tracked `main:sitemap.xml` blob is empty (SHA `e3e0a4510e36398042dddbc3c2ea630f4aa2538b`). This is a repository-source defect. Whether the production domain serves the same empty file remains unverified.
+- **Fixed in PR branch:** nonempty `sitemap.xml` with exactly 14 existing static routes: 7 localized homepages and 7 localized `prepare` pages, each with reciprocal language alternates. Verified all 14 corresponding `index.html` files in `main` by path. Deliberately excluded `ready` and `resilience`, which lack verified `main` files; future larger sitemap expansion must be generated from full production/route inventory.
+- **Predeploy source tests:** `tests/wmm_sitemap.test.mjs` checks URLs, static files, language alternates, and excludes unsupported paths. Existing HTTP test suite now checks for false successes (redirect to login, cross-domain redirect, blank HTML and wrong content type).
+- **CI:** `.github/workflows/wmm_public_healthcheck_unit.yml` runs deterministic offline tests on PR changes. CI success means source integrity only; it does not mean indexed pages or real site flows work.
+- **Next P0:** verify the production deployment source and live `/sitemap.xml` response, then confirm actual deployment and search-console submission only after approved rollout. Until those steps, production SEO remains UNVERIFIED.
