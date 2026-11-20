@@ -310,6 +310,8 @@ var sw=document.getElementById("cmsw"),t0=performance.now(),RM=matchMedia("(pref
 function loop(ms){{var a=((ms-t0)/1000*(RM?30:60))%360;sw.style.transform="translate(-50%,-50%) rotate("+a+"deg)";g.classed("fl",function(p){{var d=(a-p.A+360)%360;return d<28}});requestAnimationFrame(loop)}}requestAnimationFrame(loop);
 }})();</script>
 <script>(function(){{var b=document.querySelectorAll("#flt button"),ev=document.querySelectorAll("#evs .ev");b.forEach(function(x){{x.onclick=function(){{var f=x.dataset.f;b.forEach(function(y){{y.setAttribute("aria-pressed",y===x)}});ev.forEach(function(e){{var ok=f==="all"||(f==="KR"?(" "+e.dataset.iso+" ").indexOf(" KR ")>=0:e.dataset.v===f);e.style.display=ok?"":"none"}})}}}})}})();</script>
+
+<script defer src="/assets/wmm-official-sources.js"></script>
 </body></html>'''
 
 def main():
