@@ -120,6 +120,10 @@ def classify_state(st):
     if not raw: return "EMPTY_SUCCESS"
     return "SUCCESS"
 
+def source_answered(st):
+    """Evidence of at least one usable upstream reply, never an inferred refresh."""
+    return st.get("raw", 0) > 0 or st.get("requests", 0) > st.get("failed", 0)
+
 def merge(groups, prev=None, now=None):
     """groups: list of (source name, items). Returns (items, per-source counts). Confirmed duplicates are dropped;
     look-alikes from different sources are kept and flagged with "dupc" (the other item's URL) for human review."""
@@ -247,7 +251,7 @@ def main():
         st["new_today"] = sum(1 for x in items if x["source"] == nm_ and x["added"] == TODAY.isoformat())
         # A PARTIAL source can contain valid rows, but a source that never
         # answered cannot advance its last truly successful check.
-        answered = st.get("raw", 0) > 0 or (st.get("requests", 0) > st.get("failed", 0))
+        answered = source_answered(st)
         if st["state"] in ("SUCCESS", "EMPTY_SUCCESS", "PARTIAL") and answered:
             st["last_success"] = stamp
         else:
