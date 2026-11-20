@@ -92,7 +92,7 @@ class BoundedProzorro(unittest.TestCase):
                         return json.dumps({"data": candidates, "next_page": {"uri": next_url}})
                     with patch.object(FM, "FEEDS", tmp), patch.object(FM, "_get", side_effect=fake_get):
                         self.assertEqual(FM.prozorro(), [])
-                    self.assertEqual(len(called), 1 if not next_url.startswith("https://public-api.prozorro.gov.ua/api/2.5/tenders") else 2)
+                    self.assertEqual(len(called), 1)
                     self.assertGreaterEqual(FM.stat("Prozorro (Ukraine)")["failed"], 1)
 
 
