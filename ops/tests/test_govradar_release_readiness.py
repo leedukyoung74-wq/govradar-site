@@ -38,7 +38,8 @@ class AuditTest(unittest.TestCase):
     def test_green_sources_cannot_falsely_claim_real_member_login(self):
         report=inspect(self.s,self.l,self.d,NOW)
         self.assertEqual("NOT_READY",report["result"])
-        self.assertEqual([],report["blockers"])
+        # A mocked catalog with 579 integers is NOT official evidence.
+        self.assertIn("national_government_portals",report["blockers"])
         self.assertIn("member_login_authorized",report["unverified"])
         self.assertIn("buyer_intake_authorized",report["unverified"])
 
@@ -68,6 +69,30 @@ class AuditTest(unittest.TestCase):
     def test_missing_catalog_does_not_mark_all_193_country_sites_complete(self):
         (self.s/"src/government_business_sites.json").unlink()
         self.assertEqual("block",self.states()["national_government_portals"]["status"])
+
+    def test_fabricated_579_portals_cannot_pass_release_gate(self):
+        # 193 synthetic ISO-shaped test identifiers, never real site assertions.
+        codes=[chr(65+i//26)+chr(65+i%26) for i in range(193)]
+        self.store(self.s,"src/countries_meta.json",[{"iso":i} for i in codes])
+        def link(c,i,verification):
+            return {"name_ko":"가상 자료","name_en":"Synthetic test fixture",
+                    "category":"procurement","url":f"https://example.gov/{c}/p{i}",
+                    "verification":verification,"verified_on":"2026-11-20",
+                    "evidence_url":"https://example.gov/"}
+        # Merely having 579 records did not establish a single government authority.
+        self.store(self.s,"src/government_business_sites.json",
+                   {"schema_version":1,"countries":{c:[link(c,i,"registry_candidate") for i in range(3)] for c in codes}})
+        denied=self.states()["national_government_portals"]
+        self.assertEqual("block",denied["status"])
+        self.assertEqual(0,denied["detail"]["official_site_records_in_src"])
+        # Even structurally declared government entries require an independent
+        # real-agency check; metadata can never self-certify live readiness.
+        self.store(self.s,"src/government_business_sites.json",
+                   {"schema_version":1,"countries":{c:[link(c,i,"official_primary") for i in range(3)] for c in codes}})
+        claimed=self.states()["national_government_portals"]
+        self.assertEqual(579,claimed["detail"]["official_site_records_in_src"])
+        self.assertTrue(claimed["detail"]["structurally_complete"])
+        self.assertEqual("unverified",claimed["status"])
 
     def test_readonly_and_source_clock(self):
         before=(self.d/"feeds/sources_status.json").read_bytes()
