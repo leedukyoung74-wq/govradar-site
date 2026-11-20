@@ -3,6 +3,35 @@
   "reviewed_on": "2026-11-20",
   "policy": "Only direct primary government/authorized official institutional URLs receive official_primary status. A successful HTTP response alone is not official confirmation.",
   "countries": {
+    "AE": [
+      {
+        "name_ko": "연방 재무부 · 조달 기회",
+        "name_en": "UAE Ministry of Finance · Federal Tender Opportunities",
+        "category": "procurement",
+        "url": "https://mof.gov.ae/en/public-finance/government-procurement/current-business-opportunities/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://mof.gov.ae/en/public-finance/government-procurement/"
+      },
+      {
+        "name_ko": "경제관광부 · 투자지원 기관",
+        "name_en": "UAE Ministry of Economy & Tourism · Investment Support",
+        "category": "investment",
+        "url": "https://www.moet.gov.ae/en/web/guest/investment-support-entities",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.moet.gov.ae/en/web/guest/investment-support-entities"
+      },
+      {
+        "name_ko": "두바이 정부 · 투자·기업 설립",
+        "name_en": "Invest in Dubai · Government Investor Services",
+        "category": "investment",
+        "url": "https://www.investindubai.gov.ae/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://u.ae/en/information-and-services/finance-and-investment/foreign-direct-investment"
+      }
+    ],
     "AU": [
       {
         "name_ko": "AusTender · 연방 조달",
@@ -30,6 +59,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://sellingtogov.finance.gov.au/"
+      }
+    ],
+    "BD": [
+      {
+        "name_ko": "방글라데시 공공조달청 · 전자입찰",
+        "name_en": "Bangladesh BPPA · e-Government Procurement",
+        "category": "procurement",
+        "url": "https://www.eprocure.gov.bd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.bppa.gov.bd/e-gp.html"
+      },
+      {
+        "name_ko": "Invest Bangladesh · 통합 투자지원청",
+        "name_en": "Invest Bangladesh · New National Investment Authority",
+        "category": "investment",
+        "url": "https://investbangladesh.gov.bd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://investbangladesh.gov.bd/press-release/invest-bangladesh-begins-journey-as-countrys-apex-investment-promotion-agency"
+      },
+      {
+        "name_ko": "SME Foundation · 중소기업 지원",
+        "name_en": "Bangladesh SME Foundation · Enterprise Support",
+        "category": "support",
+        "url": "https://smef.gov.bd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://smef.gov.bd/"
       }
     ],
     "BR": [
@@ -119,6 +177,64 @@
         "evidence_url": "https://www.seco.admin.ch/en/government-procurement"
       }
     ],
+    "CL": [
+      {
+        "name_ko": "Mercado Público · 칠레 국가조달",
+        "name_en": "Mercado Público · Chile State Procurement",
+        "category": "procurement",
+        "url": "https://www.mercadopublico.cl/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.chilecompra.cl/mercado-publico/"
+      },
+      {
+        "name_ko": "CORFO · 기업 혁신·지원사업",
+        "name_en": "CORFO · Enterprise Innovation Calls",
+        "category": "support",
+        "url": "https://www.corfo.cl/sites/cpp/convocatorias_programas_innovacion",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gob.cl/en/services/"
+      },
+      {
+        "name_ko": "InvestChile · 국가 투자진흥",
+        "name_en": "InvestChile · Government Investment Agency",
+        "category": "investment",
+        "url": "https://www.investchile.gob.cl/es/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.investchile.gob.cl/es/programs-and-incentives-for-investment/"
+      }
+    ],
+    "CO": [
+      {
+        "name_ko": "Colombia Compra Eficiente · SECOP",
+        "name_en": "Colombia Compra Eficiente · SECOP Procurement",
+        "category": "procurement",
+        "url": "https://www.colombiacompra.gov.co/secop",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.colombiacompra.gov.co/secop"
+      },
+      {
+        "name_ko": "Mi Pymes · 기업지원 공모",
+        "name_en": "MiPymes Colombia · Support Calls",
+        "category": "support",
+        "url": "https://www.mipymes.gov.co/programas/inclusion-productiva/convocatorias",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.mincit.gov.co/prensa/noticias/industria/mipymes-y-economia-popular-podran-acceder-a-servic"
+      },
+      {
+        "name_ko": "ProColombia · 수출·투자진흥",
+        "name_en": "ProColombia · Trade and Investment Promotion",
+        "category": "investment",
+        "url": "https://procolombia.co/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://procolombia.co/"
+      }
+    ],
     "DE": [
       {
         "name_ko": "공공조달 공고 서비스 · 독일 전국 공고",
@@ -175,6 +291,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://um.dk/sydkorea/en/the-trade-council/invest-in-denmark"
+      }
+    ],
+    "EG": [
+      {
+        "name_ko": "이집트 전자조달 플랫폼",
+        "name_en": "Egypt · Public e-Procurement System",
+        "category": "procurement",
+        "url": "https://www.eps-gags.gov.eg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gags.gov.eg/Home/PurchasesIndex"
+      },
+      {
+        "name_ko": "MSMEDA · 중소기업지원청",
+        "name_en": "Egypt MSMEDA · SME Development Agency",
+        "category": "support",
+        "url": "https://www.msmeda.org.eg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.msmeda.org.eg/"
+      },
+      {
+        "name_ko": "GAFI · 투자진흥·자유구역청",
+        "name_en": "Egypt GAFI · Investment and Free Zones",
+        "category": "investment",
+        "url": "https://gafi.gov.eg/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.investinegypt.gov.eg/English/NewsAndEvents/News/Pages/GAFI-Launches-New-E-Portal.aspx"
       }
     ],
     "ES": [
@@ -264,6 +409,35 @@
         "evidence_url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities"
       }
     ],
+    "GH": [
+      {
+        "name_ko": "GHANEPS · 정부조달",
+        "name_en": "GHANEPS · Ghana Electronic Procurement System",
+        "category": "procurement",
+        "url": "https://www.ghaneps.gov.gh/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://ppa.gov.gh/mandatory-use-of-the-ghana-electronic-procurement-system-ghaneps-for-all-government-procurement/"
+      },
+      {
+        "name_ko": "GEA · 중소기업 지원청",
+        "name_en": "Ghana Enterprises Agency · MSME Support",
+        "category": "support",
+        "url": "https://gea.gov.gh/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://gea.gov.gh/about-us/"
+      },
+      {
+        "name_ko": "GIPC · 투자진흥센터",
+        "name_en": "Ghana Investment Promotion Centre",
+        "category": "investment",
+        "url": "https://gipc.gov.gh/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://gipc.gov.gh/about-gipc/"
+      }
+    ],
     "ID": [
       {
         "name_ko": "INAPROC · 공공 조달",
@@ -320,6 +494,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.investindia.gov.in/"
+      }
+    ],
+    "IT": [
+      {
+        "name_ko": "ANAC · 공공계약 공식 공고",
+        "name_en": "ANAC · Public Procurement Legal Notices",
+        "category": "procurement",
+        "url": "https://pubblicitalegale.anticorruzione.it/bdncp",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.invitalia.it/bandi-di-gara-e-contratti"
+      },
+      {
+        "name_ko": "Invitalia · 기업 인센티브",
+        "name_en": "Invitalia · Enterprise Grants and Incentives",
+        "category": "support",
+        "url": "https://www.invitalia.it/per-le-imprese/incentivi-e-strumenti",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.invitalia.it/per-le-imprese/incentivi-e-strumenti"
+      },
+      {
+        "name_ko": "Invest in Italy · 투자 인센티브",
+        "name_en": "Invest in Italy · Government Investment Incentives",
+        "category": "investment",
+        "url": "https://www.investinitaly.gov.it/en/doing-business/incentives",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.investinitaly.gov.it/en/doing-business/incentives"
       }
     ],
     "JP": [
@@ -409,6 +612,93 @@
         "evidence_url": "https://www.k-startup.go.kr/"
       }
     ],
+    "MX": [
+      {
+        "name_ko": "Compras MX · 연방 공공조달",
+        "name_en": "Compras MX · Federal Public Procurement",
+        "category": "procurement",
+        "url": "https://compranet.buengobierno.gob.mx/compras-mx",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gob.mx/contratacionesabiertas"
+      },
+      {
+        "name_ko": "MIPYMESMX · 경제부 중소기업 지원",
+        "name_en": "MIPYMESMX · Economy Ministry SME Support",
+        "category": "support",
+        "url": "https://mipymes.economia.gob.mx/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://mipymes.economia.gob.mx/"
+      },
+      {
+        "name_ko": "NAFIN · 국가개발금융 기업지원",
+        "name_en": "NAFIN · National Development Finance",
+        "category": "support",
+        "url": "https://www.nafin.gob.mx/portalnf/content/financiamiento/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gob.mx/nafin/acciones-y-programas/plan-mexico-421359"
+      }
+    ],
+    "MY": [
+      {
+        "name_ko": "말레이시아 재무부 · 공공조달",
+        "name_en": "MyPROCUREMENT · Malaysian Treasury Procurement",
+        "category": "procurement",
+        "url": "https://myprocurement.treasury.gov.my/advertisements/tender",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://myprocurement.treasury.gov.my/about"
+      },
+      {
+        "name_ko": "SME Corp. Malaysia · 중소기업 지원",
+        "name_en": "SME Corp. Malaysia · Government SME Support",
+        "category": "support",
+        "url": "https://smecorp.gov.my/index.php/en/about-sme-corp-malaysia",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://smecorp.gov.my/index.php/en/about-sme-corp-malaysia"
+      },
+      {
+        "name_ko": "MIDA · 국가 투자 인센티브",
+        "name_en": "MIDA · Malaysian Investment Promotion",
+        "category": "investment",
+        "url": "https://www.mida.gov.my/setting-up-content/incentives/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.mida.gov.my/forms-and-guidelines/"
+      }
+    ],
+    "NG": [
+      {
+        "name_ko": "BPP · 국가 공공조달 규제청",
+        "name_en": "Bureau of Public Procurement · Nigeria",
+        "category": "procurement",
+        "url": "https://www.bpp.gov.ng/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.bpp.gov.ng/wp-content/uploads/2025/06/PUBLIC-DISCLAIMER-for-CCSP.pdf"
+      },
+      {
+        "name_ko": "SMEDAN · 중소기업개발청",
+        "name_en": "SMEDAN · Nigeria Enterprise Development",
+        "category": "support",
+        "url": "https://smedan.gov.ng/our-programs/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://services.gov.ng/service-provider/smedan/smedan-smedan-one-stop-portal"
+      },
+      {
+        "name_ko": "NIPC · 투자진흥위원회",
+        "name_en": "Nigerian Investment Promotion Commission",
+        "category": "investment",
+        "url": "https://nipc.gov.ng/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://nipc.gov.ng/notifications"
+      }
+    ],
     "NL": [
       {
         "name_ko": "TenderNed · 국가 조달공고",
@@ -496,6 +786,35 @@
         "evidence_url": "https://www.nzte.govt.nz/page/about-nzte"
       }
     ],
+    "PE": [
+      {
+        "name_ko": "OECE · SEACE 공공입찰 검색 안내",
+        "name_en": "Peru OECE · SEACE Public Procurement Search",
+        "category": "procurement",
+        "url": "https://www.gob.pe/32306-como-acceder-a-los-procesos-de-seleccion-convocados-y-en-curso",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gob.pe/7324"
+      },
+      {
+        "name_ko": "PRODUCE Más · 중소기업지원",
+        "name_en": "PRODUCE Más · SME Business Services",
+        "category": "support",
+        "url": "https://www.gob.pe/producemas",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gob.pe/institucion/produce/noticias/1400912-eres-emprendedor-o-una-mype-produce-mas-te-ayuda-a-acceder-a-servicios-y-asesoria-gratuita-de-forma-sencilla"
+      },
+      {
+        "name_ko": "PROINVERSIÓN · 투자진흥청",
+        "name_en": "PROINVERSIÓN · Public-Private Investment",
+        "category": "investment",
+        "url": "https://www.investinperu.pe/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gob.pe/institucion/proinversion/institucional"
+      }
+    ],
     "PH": [
       {
         "name_ko": "PhilGEPS · 정부 전자조달",
@@ -523,6 +842,93 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://boi.gov.ph/"
+      }
+    ],
+    "PK": [
+      {
+        "name_ko": "EPADS · 연방 공공조달",
+        "name_en": "EPADS · Pakistan Electronic Public Procurement",
+        "category": "procurement",
+        "url": "https://epads.gov.pk/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://ppra.gov.pk/announcements"
+      },
+      {
+        "name_ko": "SMEDA · 중소기업개발청",
+        "name_en": "SMEDA · Government SME Development Agency",
+        "category": "support",
+        "url": "https://smeda.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://smeda.org/index.php?Itemid=105&id=7&option=com_content&view=category"
+      },
+      {
+        "name_ko": "BOI · 투자위원회",
+        "name_en": "Pakistan Board of Investment",
+        "category": "investment",
+        "url": "https://invest.gov.pk/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.moip.gov.pk/SiteImage/Publication/Final%20Version%20of%20Investment%20Guide.pdf"
+      }
+    ],
+    "PL": [
+      {
+        "name_ko": "e-Zamówienia · 정부전자입찰",
+        "name_en": "e-Zamówienia · Poland Public Procurement",
+        "category": "procurement",
+        "url": "https://ezamowienia.gov.pl/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://ezamowienia.gov.pl/en/"
+      },
+      {
+        "name_ko": "PARP · 중소기업 자금 공모",
+        "name_en": "PARP · SME Funding Calls",
+        "category": "support",
+        "url": "https://www.parp.gov.pl/component/grants",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.parp.gov.pl/component/grants"
+      },
+      {
+        "name_ko": "PAIH · 투자·무역지원",
+        "name_en": "PAIH · Polish Investment and Trade Agency",
+        "category": "investment",
+        "url": "https://www.paih.gov.pl/en/why-poland/investment-incentives/governmental-grants/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.paih.gov.pl/en/why-poland/investment-incentives/governmental-grants/"
+      }
+    ],
+    "PT": [
+      {
+        "name_ko": "BASE · 공공계약 등록·공개",
+        "name_en": "BASE · Portuguese Public Procurement Contracts",
+        "category": "procurement",
+        "url": "https://www.base.gov.pt/Base4/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.base.gov.pt/Base4/en/the-portal/base/"
+      },
+      {
+        "name_ko": "IAPMEI · 기업지원 프로그램",
+        "name_en": "IAPMEI · Enterprise Support and Funding",
+        "category": "support",
+        "url": "https://www.iapmei.pt/pt/saber-mais/incentivos-e-financiamento/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gov.pt/guias/apoios-financeiros-publicos-para-empresas-em-portugal"
+      },
+      {
+        "name_ko": "AICEP · 투자·수출진흥",
+        "name_en": "AICEP · Invest in Portugal",
+        "category": "investment",
+        "url": "https://www.investinportugal.pt/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.gov.pt/entidades/agencia-para-o-investimento-e-comercio-externo-de-portugal"
       }
     ],
     "SA": [
@@ -612,6 +1018,64 @@
         "evidence_url": "https://www.edb.gov.sg/"
       }
     ],
+    "TH": [
+      {
+        "name_ko": "e-GP · 국가 전자조달 시스템",
+        "name_en": "Thailand e-GP · Government Procurement",
+        "category": "procurement",
+        "url": "https://www.gprocurement.go.th/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.thaigov.go.th/th/news/169044"
+      },
+      {
+        "name_ko": "BOI · 투자지원위원회",
+        "name_en": "Thailand Board of Investment · Investment Incentives",
+        "category": "investment",
+        "url": "https://www.boi.go.th/index.php?language=en&page=incentive",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.boi.go.th/index.php?language=en&page=incentive"
+      },
+      {
+        "name_ko": "DITP · 무역진흥청",
+        "name_en": "Thailand Department of International Trade Promotion",
+        "category": "support",
+        "url": "https://www.ditp.go.th/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.ditp.go.th/en"
+      }
+    ],
+    "TR": [
+      {
+        "name_ko": "EKAP · 전자공공조달",
+        "name_en": "EKAP · Türkiye Electronic Public Procurement",
+        "category": "procurement",
+        "url": "https://ekap.kik.gov.tr/ekap/ortak/ihalearama/index.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.turkiye.gov.tr/kamu-ihale-kurumu"
+      },
+      {
+        "name_ko": "KOSGEB · 중소기업 지원",
+        "name_en": "KOSGEB · National SME Support Agency",
+        "category": "support",
+        "url": "https://www.kosgeb.gov.tr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.turkiye.gov.tr/kucuk-ve-orta-olcekli-isletmeleri-gelistirme-ve-destekleme-idaresi-baskanligi-kosgeb"
+      },
+      {
+        "name_ko": "대통령실 투자재무국 · 투자지원",
+        "name_en": "Invest in Türkiye · Presidential Investment Office",
+        "category": "investment",
+        "url": "https://www.invest.gov.tr/en/pages/who-we-are.aspx",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.invest.gov.tr/en/pages/who-we-are.aspx"
+      }
+    ],
     "US": [
       {
         "name_ko": "SAM.gov · 연방정부 계약·등록",
@@ -639,6 +1103,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.sba.gov/counseling/get-started/"
+      }
+    ],
+    "VN": [
+      {
+        "name_ko": "국가전자입찰망 · 재무부",
+        "name_en": "Vietnam National e-Procurement System",
+        "category": "procurement",
+        "url": "https://muasamcong.mof.gov.vn/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://muasamcong.mof.gov.vn/en/"
+      },
+      {
+        "name_ko": "국가 기업등록 · 기업정보 지원",
+        "name_en": "Vietnam National Business Registration Portal",
+        "category": "support",
+        "url": "https://dangkykinhdoanh.gov.vn/en/Pages/default.aspx",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://dangkykinhdoanh.gov.vn/en/Pages/default.aspx"
+      },
+      {
+        "name_ko": "VIETRADE · 정부 무역진흥청",
+        "name_en": "VIETRADE · Government Trade Promotion Agency",
+        "category": "investment",
+        "url": "https://vietrade.gov.vn/en/introductions",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://moit.gov.vn/en/administrative-departments/directorate-agency/vietnam-trade-promotion-agency"
       }
     ],
     "ZA": [
