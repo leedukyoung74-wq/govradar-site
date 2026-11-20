@@ -40,5 +40,16 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check cryptography
           python -m unittest discover -s member_security_checks -p 'test_rekey.py' -v
+      - name: Checkout existing live branch only for offline static form audit
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: live-branch
+          persist-credentials: false
+      - name: Check real generated live form routes, without submission
+        run: |
+          test -f live-branch/functions/nfform.js
+          node scripts/wmm_form_routes_audit.mjs live-branch/public
+          node --test tests/wmm_form_live_contract.test.mjs
       - name: Assert no tests changed repository files
         run: git diff --exit-code
