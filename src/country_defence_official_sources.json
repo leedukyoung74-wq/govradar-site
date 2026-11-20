@@ -918,9 +918,37 @@
     "DE": {
       "name_en": "Germany",
       "name_ko": "독일",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Bundeswehr",
+          "url": "https://www.bundeswehr.de/",
+          "role": "national_armed_forces",
+          "evidence_url": "https://www.bundeswehr.de/de/organisation",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "German Army Heer",
+          "url": "https://www.bundeswehr.de/de/organisation/heer",
+          "role": "army",
+          "evidence_url": "https://www.bundeswehr.de/de/organisation",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "German Navy Marine",
+          "url": "https://www.bundeswehr.de/de/organisation/marine",
+          "role": "navy",
+          "evidence_url": "https://www.bundeswehr.de/de/organisation",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "GR": {
       "name_en": "Greece",
@@ -953,9 +981,37 @@
     "IT": {
       "name_en": "Italy",
       "name_ko": "이탈리아",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Italian Ministry of Defence",
+          "url": "https://www.difesa.it/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.difesa.it/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Italian Army",
+          "url": "https://www.esercito.difesa.it/",
+          "role": "army",
+          "evidence_url": "https://www.difesa.it/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Italian Navy",
+          "url": "https://www.marina.difesa.it/",
+          "role": "navy",
+          "evidence_url": "https://www.difesa.it/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "LV": {
       "name_en": "Latvia",
@@ -1044,9 +1100,37 @@
     "PT": {
       "name_en": "Portugal",
       "name_ko": "포르투갈",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Portuguese Ministry of National Defence",
+          "url": "https://www.defesa.gov.pt/pt",
+          "role": "defence_ministry",
+          "evidence_url": "https://portugal.gov.pt/pt/gc24/area-de-governo/defesa-nacional/acerca",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Portuguese Army",
+          "url": "https://www.defesa.gov.pt/pt/defesa/organizacao/forcasarmadas/exercito",
+          "role": "army",
+          "evidence_url": "https://www.defesa.gov.pt/pt/defesa/organizacao/forcasarmadas/Paginas/default.aspx",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Portuguese Navy",
+          "url": "https://www.defesa.gov.pt/pt/defesa/organizacao/forcasarmadas/marinha",
+          "role": "navy",
+          "evidence_url": "https://www.defesa.gov.pt/pt/defesa/organizacao/forcasarmadas/Paginas/default.aspx",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "RO": {
       "name_en": "Romania",
@@ -1093,9 +1177,37 @@
     "ES": {
       "name_en": "Spain",
       "name_ko": "스페인",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Spanish Ministry of Defence",
+          "url": "https://www.defensa.gob.es/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.defensa.gob.es/fuerzasarmadas/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Spanish Army",
+          "url": "https://ejercito.defensa.gob.es/",
+          "role": "army",
+          "evidence_url": "https://administracion.gob.es/informacion/sedes-electronicas-y-portales-de-internet-publicos/portales/age-ministerios/mdef",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Spanish Navy",
+          "url": "https://armada.defensa.gob.es/",
+          "role": "navy",
+          "evidence_url": "https://www.defensa.gob.es/fuerzasarmadas/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "SE": {
       "name_en": "Sweden",
@@ -1527,9 +1639,37 @@
     "NZ": {
       "name_en": "New Zealand",
       "name_ko": "뉴질랜드",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "New Zealand Defence Force",
+          "url": "https://www.nzdf.mil.nz/",
+          "role": "national_armed_forces",
+          "evidence_url": "https://www.govt.nz/organisations/new-zealand-defence-force/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "New Zealand Army",
+          "url": "https://www.nzdf.mil.nz/army/",
+          "role": "army",
+          "evidence_url": "https://www.nzdf.mil.nz/nzdf/structure-and-leadership/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Royal New Zealand Navy",
+          "url": "https://www.nzdf.mil.nz/navy/",
+          "role": "navy",
+          "evidence_url": "https://www.govt.nz/organisations/new-zealand-defence-force/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
     },
     "PW": {
       "name_en": "Palau",
