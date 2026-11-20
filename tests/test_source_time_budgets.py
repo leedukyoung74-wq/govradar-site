@@ -73,6 +73,29 @@ class BoundedOCDS(unittest.TestCase):
         self.assertEqual(calls[0], {"tries": 2, "timeout": 30})
 
 
+class BoundedProzorro(unittest.TestCase):
+    def setUp(self):
+        FM.STATS.clear()
+
+    def test_ukraine_pagination_cannot_escape_official_host(self):
+        import tempfile
+        candidates = [{"id": "x", "status": "complete", "dateModified": FM.TODAY.isoformat()}]
+        with tempfile.TemporaryDirectory() as tmp:
+            for next_url in ("https://example.org/api/data",
+                             "http://public-api.prozorro.gov.ua/api/2.5/tenders",
+                             "https://public-api.prozorro.gov.ua/api/2.5/tenders?descending=1&limit=1000&opt_fields=status%2CprocurementMethodType%2CtenderPeriod%2CtenderID"):
+                with self.subTest(next_url=next_url):
+                    FM.STATS.clear()
+                    called = []
+                    def fake_get(src, url, **kwargs):
+                        called.append(url)
+                        return json.dumps({"data": candidates, "next_page": {"uri": next_url}})
+                    with patch.object(FM, "FEEDS", tmp), patch.object(FM, "_get", side_effect=fake_get):
+                        self.assertEqual(FM.prozorro(), [])
+                    self.assertEqual(len(called), 1 if not next_url.startswith("https://public-api.prozorro.gov.ua/api/2.5/tenders") else 2)
+                    self.assertGreaterEqual(FM.stat("Prozorro (Ukraine)")["failed"], 1)
+
+
 class BoundedTED(unittest.TestCase):
     def setUp(self):
         FM.STATS.clear()
