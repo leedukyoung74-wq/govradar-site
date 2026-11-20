@@ -16,6 +16,8 @@ import xml.etree.ElementTree as ET
 
 ORIGIN = "https://radar.wmm-hoa.com"
 LANGS = ("ko", "en", "es", "fr", "ar", "vi", "id")
+# These routes are deliberately excluded from public discovery until product review.
+EXCLUDED_ROUTE_PREFIXES = ("resilience/", "account/", "member/", "feeds/", "embed/")
 CANONICAL = re.compile(r"<link\b[^>]*>", re.I)
 META = re.compile(r"<meta\b[^>]*>", re.I)
 ATTR = re.compile(r"""([-\w]+)\s*=\s*(["'])(.*?)\2""", re.I | re.S)
@@ -53,6 +55,9 @@ def collect(root: Path) -> tuple[list[tuple[str, dict[str, str]]], list[dict]]:
                 continue
             rel = page.relative_to(folder).as_posix()
             suffix = "" if rel == "index.html" else rel.removesuffix("/index.html") + "/"
+            if any(suffix.startswith(prefix) for prefix in EXCLUDED_ROUTE_PREFIXES):
+                excluded.append({"file": str(page.relative_to(root)), "reason": "REVIEW_OR_PRIVATE_ROUTE"})
+                continue
             expected = f"{ORIGIN}/{lang}/{suffix}"
             canonical, reason = public_canonical_head(page)
             if reason or canonical != expected:
