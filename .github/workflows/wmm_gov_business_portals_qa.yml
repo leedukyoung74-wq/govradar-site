@@ -1,0 +1,103 @@
+name: GOV RADAR 193-country official business portal QA (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'src/government_business_sites.json'
+      - 'tools/government_business_sites.py'
+      - 'tools/sources/registry.json'
+      - 'src/countries_meta.json'
+      - 'build.py'
+      - 'tests/test_government_business_sites.py'
+      - '.github/workflows/wmm_gov_business_portals_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify_193_portals:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate primary sources, security and truthful coverage
+        run: python -m unittest discover -s tests -p 'test_government_business_sites.py' -v
+      - name: Generate all localized pages in isolated workspace only
+        run: python build.py --base https://preview.invalid
+      - name: Confirm country pages expose links and exact pending-country count
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          base=Path('dist')
+          c=json.loads(Path('src/countries_meta.json').read_text(encoding='utf-8'))
+          report=json.loads((base/'data/government-business-sites-coverage.json').read_text(encoding='utf-8'))
+          assert report['target_countries']==193
+          assert report['target_verified_links']==579
+          assert report['remaining_required_link_slots']>0,'Cannot claim complete without genuine source review'
+          from build import slug
+          reviewed={'KR','US','GB','JP','IN','AU','CA','FR','SG','SA','KE','ZA','PH','BR','ID'}
+          done=0
+          for lang in ('ko','en','es','fr','ar','vi','id'):
+              for country in c:
+                  iso=country['iso']
+                  p=base/lang/slug(country['en'])/'index.html'
+                  assert p.is_file(),(lang,iso,'missing page')
+                  html=p.read_text(encoding='utf-8')
+                  assert 'id="government-business-sites"' in html,(lang,iso,'missing resources section')
+                  if iso in reviewed:
+                      assert report['country_counts'][iso]['verified']>=3,(lang,iso,'under minimum')
+                      section=html.split('id="government-business-sites"',1)[1].split('</section>',1)[0]
+                      assert section.count('Official source verified' if lang!='ko' else '공식 기관 확인')>=3 if lang in ('ko','en') else section.count('target="_blank"')>=3,(lang,iso,'3 validated links not on page')
+                  done+=1
+          assert done==1351,done
+          print('PASS: 1351 national localized pages; verified official vs unverified candidate clearly separated')
+          print('COVERAGE:',report['verified_countries'],'of 193 nations;',
+                report['verified_links'],'verified sites;',
+                report['remaining_required_link_slots'],'government-site slots still require review')
+          PY
+      - name: Build 193-country source evidence queue for Claude cross-review
+        run: |
+          mkdir -p review-evidence
+          python - <<'PY'
+          import csv, json, sys
+          from pathlib import Path
+          sys.path.insert(0,'tools')
+          from government_business_sites import load_directory
+          sites, report=load_directory(Path('.'))
+          countries=json.loads(Path('src/countries_meta.json').read_text(encoding='utf-8'))
+          countries=sorted(countries,key=lambda r:(r['r'],r['iso']))
+          out=Path('review-evidence/193-government-site-review-queue.csv')
+          with out.open('w',encoding='utf-8-sig',newline='') as f:
+              writer=csv.writer(f)
+              writer.writerow(('iso','country_en','country_ko','region','verified','remaining_to_3',
+                               'legacy_unverified_candidate','candidate_url','last_url_check',
+                               'claim','claude_action'))
+              registry=json.loads(Path('tools/sources/registry.json').read_text(encoding='utf-8'))
+              candidates={x.get('iso'):x for x in registry if x.get('kind')=='national-portal'}
+              for c in countries:
+                  iso=c['iso']
+                  n=report['country_counts'][iso]['verified']
+                  candidate=candidates.get(iso) or {}
+                  writer.writerow((iso,c['en'],c['ko'],c['r'],n,max(0,3-n),
+                                   candidate.get('name',''),candidate.get('url',''),
+                                   candidate.get('checked',''),
+                                   'UNVERIFIED until official primary agency evidence',
+                                   'Find distinct original government procurement, SME, investment portals; verify operator, URL, date'))
+          assert len(countries)==193
+          assert sum(report['country_counts'][x['iso']]['gap'] for x in countries)==report['remaining_required_link_slots']
+          print('REVIEW QUEUE:',len(countries),'countries;',report['remaining_required_link_slots'],'missing verified government sites.')
+          PY
+      - name: Archive public-source Claude review queue only
+        uses: actions/upload-artifact@v4
+        with:
+          name: govradar-193-country-official-sites-review-queue
+          path: review-evidence/193-government-site-review-queue.csv
+          retention-days: 5
+          if-no-files-found: error
+      - name: Confirm no deployment or publication
+        run: echo 'Read-only GitHub checkout. No production deployment and no paid API.'
