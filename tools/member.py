@@ -31,20 +31,29 @@ b64 = lambda b: base64.b64encode(b).decode()
 
 
 def _master(new=False):
+    if new:
+        raise RuntimeError("Unsafe direct master overwrite disabled; use guarded rekey()")
     p = os.path.join(PRIV, "master.key")
-    if new or not os.path.exists(p):
+    if not os.path.exists(p):
         os.makedirs(PRIV, exist_ok=True)
-        open(p, "w").write(b64(secrets.token_bytes(32)))
-    return base64.b64decode(open(p).read().strip())
+        with open(p, "w", encoding="utf8") as f:
+            f.write(b64(secrets.token_bytes(32)))
+    with open(p, "r", encoding="utf8") as f:
+        return base64.b64decode(f.read().strip())
 
 
 def _members():
     p = os.path.join(PRIV, "members.json")
-    return json.load(open(p)) if os.path.exists(p) else {}
+    if not os.path.exists(p):
+        return {}
+    with open(p, "r", encoding="utf8") as f:
+        return json.load(f)
 
 
 def _save_members(m):
-    json.dump(m, open(os.path.join(PRIV, "members.json"), "w"), ensure_ascii=False, indent=1)
+    os.makedirs(PRIV, exist_ok=True)
+    with open(os.path.join(PRIV, "members.json"), "w", encoding="utf8") as f:
+        json.dump(m, f, ensure_ascii=False, indent=1)
 
 
 def _kid(code):
@@ -64,7 +73,8 @@ def write_keys():
         if m["exp"] >= today:
             keys[_kid(m["code"])] = {**_wrap(K, m["code"]), "exp": m["exp"]}
     os.makedirs(os.path.join(OUT, "m"), exist_ok=True)
-    json.dump({"v": 1, "iter": ITER, "updated": today, "keys": keys}, open(os.path.join(OUT, "m", "keys.json"), "w"))
+    with open(os.path.join(OUT, "m", "keys.json"), "w", encoding="utf8") as f:
+        json.dump({"v": 1, "iter": ITER, "updated": today, "keys": keys}, f)
     return len(keys)
 
 
