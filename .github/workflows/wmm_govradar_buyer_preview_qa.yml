@@ -5,6 +5,11 @@ on:
     paths:
       - 'pages_req.py'
       - 'web/req-safe.js'
+      - 'cf/functions/api/req.js'
+      - 'tests/test_req_safe_ui.py'
+      - 'tests/test_req_server.py'
+      - 'tests/js/req_safe_ui_test.mjs'
+      - 'tests/js/req_server_test.mjs'
       - 'build.py'
       - 'tests/test_req_generated_preview.py'
       - 'tests/fixtures/create_tender_fixture.py'
@@ -33,6 +38,8 @@ jobs:
           python-version: '3.12'
       - name: Verify source and request runtime without network calls
         run: python -m unittest discover -s tests -p 'test_req_safe_ui.py' -v
+      - name: Verify buyer request server consent and duplicates using in-memory SQLite (offline)
+        run: node --experimental-sqlite tests/js/req_server_test.mjs
       - name: Inject synthetic-only tender records in isolated runner (never publish)
         run: python tests/fixtures/create_tender_fixture.py
       - name: Build isolated static site (NO DEPLOY)
