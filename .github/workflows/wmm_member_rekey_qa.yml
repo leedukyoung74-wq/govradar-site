@@ -1,0 +1,29 @@
+name: WMM Member Rekey & Revocation Security QA (No Deploy)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'tools/member.py'
+      - 'tools/member_rekey.py'
+      - 'member_security_checks/test_rekey.py'
+      - '.github/workflows/wmm_member_rekey_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rekey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install open-source cryptography test dependency
+        run: python3 -m pip install --disable-pip-version-check cryptography
+      - name: Validate Python syntax
+        run: python3 -m py_compile tools/member.py tools/member_rekey.py
+      - name: Test fake-member revocation, full rekey and rollback without network
+        run: python3 -m unittest discover -s member_security_checks -p 'test_rekey.py' -v
+      - name: Verify tests did not change repository files
+        run: git diff --exit-code
