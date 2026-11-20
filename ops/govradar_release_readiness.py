@@ -45,7 +45,7 @@ def json_file(path):
 
 def official_https(url):
     """Structural URL screen; this does NOT prove a government's ownership."""
-    if not isinstance(url,str) or any(c in url for c in ("\\n","\\r","\\t")):
+    if not isinstance(url,str) or any(c in url for c in ("\n","\r","\t")):
         return False
     try:
         from urllib.parse import urlsplit
