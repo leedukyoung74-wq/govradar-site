@@ -1,0 +1,877 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "policy": "Only publisher-operated original news sites. State-owned and private publishers are distinct. A listed publisher is not confirmation of editorial independence, unrestricted article reuse, RSS/API access, or live availability. Official government announcements are a different class of source.",
+  "countries": {
+    "AE": [
+      {
+        "name_en": "Emirates News Agency WAM",
+        "name_ko": "WAM 국영통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.wam.ae/en",
+        "evidence_url": "https://www.wam.ae/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Khaleej Times",
+        "name_ko": "칼리지 타임스",
+        "publisher_type": "newspaper",
+        "url": "https://www.khaleejtimes.com/",
+        "evidence_url": "https://www.khaleejtimes.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The National UAE",
+        "name_ko": "더 내셔널",
+        "publisher_type": "newspaper",
+        "url": "https://www.thenationalnews.com/",
+        "evidence_url": "https://www.thenationalnews.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "AR": [
+      {
+        "name_en": "La Nación Argentina",
+        "name_ko": "라 나시온",
+        "publisher_type": "newspaper",
+        "url": "https://www.lanacion.com.ar/",
+        "evidence_url": "https://www.lanacion.com.ar/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Clarín",
+        "name_ko": "클라린",
+        "publisher_type": "newspaper",
+        "url": "https://www.clarin.com/",
+        "evidence_url": "https://www.clarin.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Infobae Argentina",
+        "name_ko": "인포바에",
+        "publisher_type": "news_site",
+        "url": "https://www.infobae.com/",
+        "evidence_url": "https://www.infobae.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "AU": [
+      {
+        "name_en": "ABC News Australia",
+        "name_ko": "ABC 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.abc.net.au/news/",
+        "evidence_url": "https://www.abc.net.au/news/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "SBS News",
+        "name_ko": "SBS 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.sbs.com.au/news",
+        "evidence_url": "https://www.sbs.com.au/news",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Australian Associated Press",
+        "name_ko": "AAP 통신",
+        "publisher_type": "news_agency",
+        "url": "https://www.aap.com.au/",
+        "evidence_url": "https://www.aap.com.au/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "BR": [
+      {
+        "name_en": "Agência Brasil",
+        "name_ko": "아젠시아 브라질",
+        "publisher_type": "state_news_agency",
+        "url": "https://agenciabrasil.ebc.com.br/",
+        "evidence_url": "https://agenciabrasil.ebc.com.br/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "G1 Globo",
+        "name_ko": "글로부 G1",
+        "publisher_type": "news_site",
+        "url": "https://g1.globo.com/",
+        "evidence_url": "https://g1.globo.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Folha de S.Paulo",
+        "name_ko": "폴랴 지 상파울루",
+        "publisher_type": "newspaper",
+        "url": "https://www1.folha.uol.com.br/",
+        "evidence_url": "https://www1.folha.uol.com.br/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "CA": [
+      {
+        "name_en": "CBC News",
+        "name_ko": "CBC 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.cbc.ca/news",
+        "evidence_url": "https://www.cbc.ca/news",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "CTV News",
+        "name_ko": "CTV 뉴스",
+        "publisher_type": "broadcaster",
+        "url": "https://www.ctvnews.ca/",
+        "evidence_url": "https://www.ctvnews.ca/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Global News",
+        "name_ko": "글로벌뉴스",
+        "publisher_type": "broadcaster",
+        "url": "https://globalnews.ca/",
+        "evidence_url": "https://globalnews.ca/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "CH": [
+      {
+        "name_en": "SRF News",
+        "name_ko": "SRF 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.srf.ch/news",
+        "evidence_url": "https://www.srf.ch/news",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "RTS Info",
+        "name_ko": "RTS 정보",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rts.ch/info",
+        "evidence_url": "https://www.rts.ch/info",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Keystone-SDA",
+        "name_ko": "키스톤 SDA",
+        "publisher_type": "news_agency",
+        "url": "https://www.keystone-sda.ch/",
+        "evidence_url": "https://www.keystone-sda.ch/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "DE": [
+      {
+        "name_en": "ARD Tagesschau",
+        "name_ko": "ARD 타게스샤우",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.tagesschau.de/",
+        "evidence_url": "https://www.tagesschau.de/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "ZDF Heute",
+        "name_ko": "ZDF 호이테",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.zdfheute.de/",
+        "evidence_url": "https://www.zdfheute.de/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "DPA",
+        "name_ko": "dpa 통신",
+        "publisher_type": "news_agency",
+        "url": "https://www.dpa.com/en",
+        "evidence_url": "https://www.dpa.com/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "ES": [
+      {
+        "name_en": "Agencia EFE",
+        "name_ko": "EFE 통신",
+        "publisher_type": "news_agency",
+        "url": "https://efe.com/",
+        "evidence_url": "https://efe.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "RTVE Noticias",
+        "name_ko": "RTVE 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rtve.es/noticias/",
+        "evidence_url": "https://www.rtve.es/noticias/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "El País",
+        "name_ko": "엘 파이스",
+        "publisher_type": "newspaper",
+        "url": "https://elpais.com/",
+        "evidence_url": "https://elpais.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "FR": [
+      {
+        "name_en": "Agence France-Presse",
+        "name_ko": "AFP 통신",
+        "publisher_type": "news_agency",
+        "url": "https://www.afp.com/en",
+        "evidence_url": "https://www.afp.com/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "France 24",
+        "name_ko": "프랑스24",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.france24.com/en",
+        "evidence_url": "https://www.france24.com/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Franceinfo",
+        "name_ko": "프랑스앵포",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.francetvinfo.fr/",
+        "evidence_url": "https://www.francetvinfo.fr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "GB": [
+      {
+        "name_en": "BBC News",
+        "name_ko": "BBC 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.bbc.com/news",
+        "evidence_url": "https://www.bbc.com/news",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "ITV News",
+        "name_ko": "ITV 뉴스",
+        "publisher_type": "broadcaster",
+        "url": "https://www.itv.com/news",
+        "evidence_url": "https://www.itv.com/news",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Guardian",
+        "name_ko": "가디언",
+        "publisher_type": "newspaper",
+        "url": "https://www.theguardian.com/uk",
+        "evidence_url": "https://www.theguardian.com/uk",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "GH": [
+      {
+        "name_en": "Ghana News Agency",
+        "name_ko": "가나 뉴스통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://gna.org.gh/",
+        "evidence_url": "https://gna.org.gh/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Daily Graphic",
+        "name_ko": "데일리 그래픽",
+        "publisher_type": "newspaper",
+        "url": "https://www.graphic.com.gh/",
+        "evidence_url": "https://www.graphic.com.gh/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "MyJoyOnline",
+        "name_ko": "마이조이온라인",
+        "publisher_type": "broadcaster",
+        "url": "https://www.myjoyonline.com/",
+        "evidence_url": "https://www.myjoyonline.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "ID": [
+      {
+        "name_en": "ANTARA",
+        "name_ko": "안타라 통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.antaranews.com/",
+        "evidence_url": "https://www.antaranews.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Kompas",
+        "name_ko": "콤파스",
+        "publisher_type": "newspaper",
+        "url": "https://www.kompas.id/",
+        "evidence_url": "https://www.kompas.id/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Tempo",
+        "name_ko": "템포",
+        "publisher_type": "news_site",
+        "url": "https://www.tempo.co/",
+        "evidence_url": "https://www.tempo.co/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "IN": [
+      {
+        "name_en": "Press Trust of India",
+        "name_ko": "PTI 통신",
+        "publisher_type": "news_agency",
+        "url": "https://www.ptinews.com/",
+        "evidence_url": "https://www.ptinews.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Asian News International",
+        "name_ko": "ANI 통신",
+        "publisher_type": "news_agency",
+        "url": "https://www.aninews.in/",
+        "evidence_url": "https://www.aninews.in/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Hindu",
+        "name_ko": "더 힌두",
+        "publisher_type": "newspaper",
+        "url": "https://www.thehindu.com/",
+        "evidence_url": "https://www.thehindu.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "IT": [
+      {
+        "name_en": "ANSA",
+        "name_ko": "ANSA 통신",
+        "publisher_type": "news_agency",
+        "url": "https://www.ansa.it/",
+        "evidence_url": "https://www.ansa.it/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "RaiNews",
+        "name_ko": "라이뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rainews.it/",
+        "evidence_url": "https://www.rainews.it/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Corriere della Sera",
+        "name_ko": "코리에레 델라 세라",
+        "publisher_type": "newspaper",
+        "url": "https://www.corriere.it/",
+        "evidence_url": "https://www.corriere.it/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "JP": [
+      {
+        "name_en": "NHK News",
+        "name_ko": "NHK 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www3.nhk.or.jp/news/",
+        "evidence_url": "https://www3.nhk.or.jp/news/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Kyodo News",
+        "name_ko": "교도통신",
+        "publisher_type": "news_agency",
+        "url": "https://english.kyodonews.net/",
+        "evidence_url": "https://english.kyodonews.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Jiji Press",
+        "name_ko": "지지통신",
+        "publisher_type": "news_agency",
+        "url": "https://www.jiji.com/",
+        "evidence_url": "https://www.jiji.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "KR": [
+      {
+        "name_en": "Yonhap News Agency",
+        "name_ko": "연합뉴스",
+        "publisher_type": "news_agency",
+        "url": "https://www.yna.co.kr/",
+        "evidence_url": "https://www.yna.co.kr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "KBS News",
+        "name_ko": "KBS 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://news.kbs.co.kr/",
+        "evidence_url": "https://news.kbs.co.kr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "MBC News",
+        "name_ko": "MBC 뉴스",
+        "publisher_type": "broadcaster",
+        "url": "https://imnews.imbc.com/",
+        "evidence_url": "https://imnews.imbc.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "MX": [
+      {
+        "name_en": "El Universal Mexico",
+        "name_ko": "엘 우니베르살",
+        "publisher_type": "newspaper",
+        "url": "https://www.eluniversal.com.mx/",
+        "evidence_url": "https://www.eluniversal.com.mx/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "La Jornada",
+        "name_ko": "라 호르나다",
+        "publisher_type": "newspaper",
+        "url": "https://www.jornada.com.mx/",
+        "evidence_url": "https://www.jornada.com.mx/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Milenio",
+        "name_ko": "밀레니오",
+        "publisher_type": "news_site",
+        "url": "https://www.milenio.com/",
+        "evidence_url": "https://www.milenio.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "MY": [
+      {
+        "name_en": "Bernama",
+        "name_ko": "베르나마",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.bernama.com/en/",
+        "evidence_url": "https://www.bernama.com/en/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Star Malaysia",
+        "name_ko": "더 스타",
+        "publisher_type": "newspaper",
+        "url": "https://www.thestar.com.my/",
+        "evidence_url": "https://www.thestar.com.my/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "New Straits Times",
+        "name_ko": "뉴 스트레이츠 타임스",
+        "publisher_type": "newspaper",
+        "url": "https://www.nst.com.my/",
+        "evidence_url": "https://www.nst.com.my/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "NG": [
+      {
+        "name_en": "News Agency of Nigeria",
+        "name_ko": "나이지리아 뉴스통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://nannews.ng/",
+        "evidence_url": "https://nannews.ng/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Punch",
+        "name_ko": "펀치",
+        "publisher_type": "newspaper",
+        "url": "https://punchng.com/",
+        "evidence_url": "https://punchng.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Premium Times",
+        "name_ko": "프리미엄 타임스",
+        "publisher_type": "news_site",
+        "url": "https://www.premiumtimesng.com/",
+        "evidence_url": "https://www.premiumtimesng.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "NL": [
+      {
+        "name_en": "NOS",
+        "name_ko": "NOS",
+        "publisher_type": "public_broadcaster",
+        "url": "https://nos.nl/",
+        "evidence_url": "https://nos.nl/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "RTL Nieuws",
+        "name_ko": "RTL 뉴스",
+        "publisher_type": "broadcaster",
+        "url": "https://www.rtl.nl/nieuws",
+        "evidence_url": "https://www.rtl.nl/nieuws",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "NU.nl",
+        "name_ko": "NU.nl",
+        "publisher_type": "news_site",
+        "url": "https://www.nu.nl/",
+        "evidence_url": "https://www.nu.nl/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "NZ": [
+      {
+        "name_en": "Radio New Zealand",
+        "name_ko": "뉴질랜드 라디오 RNZ",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rnz.co.nz/",
+        "evidence_url": "https://www.rnz.co.nz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Stuff New Zealand",
+        "name_ko": "스터프",
+        "publisher_type": "news_site",
+        "url": "https://www.stuff.co.nz/",
+        "evidence_url": "https://www.stuff.co.nz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "New Zealand Herald",
+        "name_ko": "NZ 헤럴드",
+        "publisher_type": "newspaper",
+        "url": "https://www.nzherald.co.nz/",
+        "evidence_url": "https://www.nzherald.co.nz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "PH": [
+      {
+        "name_en": "Philippine News Agency",
+        "name_ko": "필리핀 뉴스통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.pna.gov.ph/",
+        "evidence_url": "https://www.pna.gov.ph/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "GMA News",
+        "name_ko": "GMA 뉴스",
+        "publisher_type": "broadcaster",
+        "url": "https://www.gmanetwork.com/news/",
+        "evidence_url": "https://www.gmanetwork.com/news/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "ABS-CBN News",
+        "name_ko": "ABS-CBN 뉴스",
+        "publisher_type": "broadcaster",
+        "url": "https://www.abs-cbn.com/news",
+        "evidence_url": "https://www.abs-cbn.com/news",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "PL": [
+      {
+        "name_en": "Polish Press Agency PAP",
+        "name_ko": "PAP 통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.pap.pl/",
+        "evidence_url": "https://www.pap.pl/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "TVN24",
+        "name_ko": "TVN24",
+        "publisher_type": "broadcaster",
+        "url": "https://tvn24.pl/",
+        "evidence_url": "https://tvn24.pl/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Polskie Radio",
+        "name_ko": "폴스키에 라디오",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.polskieradio.pl/",
+        "evidence_url": "https://www.polskieradio.pl/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "SA": [
+      {
+        "name_en": "Saudi Press Agency",
+        "name_ko": "SPA 국영통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.spa.gov.sa/en",
+        "evidence_url": "https://www.spa.gov.sa/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Al Arabiya",
+        "name_ko": "알 아라비야",
+        "publisher_type": "broadcaster",
+        "url": "https://english.alarabiya.net/",
+        "evidence_url": "https://english.alarabiya.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Arab News",
+        "name_ko": "아랍뉴스",
+        "publisher_type": "newspaper",
+        "url": "https://www.arabnews.com/",
+        "evidence_url": "https://www.arabnews.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "SE": [
+      {
+        "name_en": "SVT Nyheter",
+        "name_ko": "SVT 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.svt.se/nyheter",
+        "evidence_url": "https://www.svt.se/nyheter",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Sveriges Radio",
+        "name_ko": "스웨덴 라디오",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.sverigesradio.se/",
+        "evidence_url": "https://www.sverigesradio.se/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "TT Nyhetsbyrån",
+        "name_ko": "TT 통신",
+        "publisher_type": "news_agency",
+        "url": "https://tt.se/",
+        "evidence_url": "https://tt.se/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "SG": [
+      {
+        "name_en": "CNA",
+        "name_ko": "CNA",
+        "publisher_type": "broadcaster",
+        "url": "https://www.channelnewsasia.com/",
+        "evidence_url": "https://www.channelnewsasia.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Straits Times",
+        "name_ko": "스트레이츠 타임스",
+        "publisher_type": "newspaper",
+        "url": "https://www.straitstimes.com/",
+        "evidence_url": "https://www.straitstimes.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Business Times Singapore",
+        "name_ko": "비즈니스 타임스",
+        "publisher_type": "newspaper",
+        "url": "https://www.businesstimes.com.sg/",
+        "evidence_url": "https://www.businesstimes.com.sg/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "TR": [
+      {
+        "name_en": "Anadolu Agency",
+        "name_ko": "아나돌루 통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.aa.com.tr/en",
+        "evidence_url": "https://www.aa.com.tr/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "TRT World",
+        "name_ko": "TRT 월드",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.trtworld.com/",
+        "evidence_url": "https://www.trtworld.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Hürriyet",
+        "name_ko": "휘리예트",
+        "publisher_type": "newspaper",
+        "url": "https://www.hurriyet.com.tr/",
+        "evidence_url": "https://www.hurriyet.com.tr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "US": [
+      {
+        "name_en": "Associated Press",
+        "name_ko": "AP 통신",
+        "publisher_type": "news_agency",
+        "url": "https://apnews.com/",
+        "evidence_url": "https://apnews.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "NPR",
+        "name_ko": "NPR",
+        "publisher_type": "nonprofit_newsroom",
+        "url": "https://www.npr.org/",
+        "evidence_url": "https://www.npr.org/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "PBS NewsHour",
+        "name_ko": "PBS 뉴스아워",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.pbs.org/newshour/",
+        "evidence_url": "https://www.pbs.org/newshour/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "VN": [
+      {
+        "name_en": "Vietnam News Agency",
+        "name_ko": "베트남 뉴스통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://news.vnanet.vn/en/",
+        "evidence_url": "https://news.vnanet.vn/en/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "VnExpress International",
+        "name_ko": "브이엔익스프레스",
+        "publisher_type": "news_site",
+        "url": "https://e.vnexpress.net/",
+        "evidence_url": "https://e.vnexpress.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "VietNamNet",
+        "name_ko": "베트남넷",
+        "publisher_type": "news_site",
+        "url": "https://vietnamnet.vn/en",
+        "evidence_url": "https://vietnamnet.vn/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "ZA": [
+      {
+        "name_en": "SABC News",
+        "name_ko": "SABC 뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.sabcnews.com/sabcnews/",
+        "evidence_url": "https://www.sabcnews.com/sabcnews/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "News24",
+        "name_ko": "뉴스24",
+        "publisher_type": "news_site",
+        "url": "https://www.news24.com/",
+        "evidence_url": "https://www.news24.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "TimesLIVE",
+        "name_ko": "타임스라이브",
+        "publisher_type": "newspaper",
+        "url": "https://www.timeslive.co.za/",
+        "evidence_url": "https://www.timeslive.co.za/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ]
+  }
+}
