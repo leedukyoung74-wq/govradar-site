@@ -90,6 +90,35 @@
         "evidence_url": "https://ised-isde.canada.ca/site/clean-growth-hub/en/selling-government"
       }
     ],
+    "CH": [
+      {
+        "name_ko": "simap · 스위스 공식 조달",
+        "name_en": "simap · Swiss Public Procurement",
+        "category": "procurement",
+        "url": "https://www.simap.ch/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.kmu.admin.ch/en/simap-the-swiss-public-procurement-platform"
+      },
+      {
+        "name_ko": "Innosuisse · 연방 혁신지원",
+        "name_en": "Innosuisse · Swiss Federal Innovation Agency",
+        "category": "support",
+        "url": "https://www.innosuisse.admin.ch/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.innosuisse.admin.ch/en/"
+      },
+      {
+        "name_ko": "SECO · 스위스 정부조달 안내",
+        "name_en": "SECO · Swiss Government Procurement",
+        "category": "support",
+        "url": "https://www.seco.admin.ch/en/government-procurement",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.seco.admin.ch/en/government-procurement"
+      }
+    ],
     "DE": [
       {
         "name_ko": "공공조달 공고 서비스 · 독일 전국 공고",
@@ -117,6 +146,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gtai.de/en/meta/about-us"
+      }
+    ],
+    "DK": [
+      {
+        "name_ko": "Udbud.dk · 덴마크 조달공고",
+        "name_en": "Udbud.dk · Danish Public Procurement",
+        "category": "procurement",
+        "url": "https://udbud.dk/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://udbud.dk/information/om-udbud-dk"
+      },
+      {
+        "name_ko": "덴마크 기업청 · 지원금 공모",
+        "name_en": "Danish Business Authority · Grants",
+        "category": "support",
+        "url": "https://udviklingidanmark.erhvervsstyrelsen.dk/soeg-midler",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://udviklingidanmark.erhvervsstyrelsen.dk/soeg-midler"
+      },
+      {
+        "name_ko": "Invest in Denmark · 투자유치",
+        "name_en": "Invest in Denmark · National Investment Promotion",
+        "category": "investment",
+        "url": "https://investindk.com/about/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://um.dk/sydkorea/en/the-trade-council/invest-in-denmark"
       }
     ],
     "ES": [
@@ -351,6 +409,64 @@
         "evidence_url": "https://www.k-startup.go.kr/"
       }
     ],
+    "NL": [
+      {
+        "name_ko": "TenderNed · 국가 조달공고",
+        "name_en": "TenderNed · Dutch Public Procurement",
+        "category": "procurement",
+        "url": "https://www.tenderned.nl/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.tenderned.nl/cms/en/english/tenderned-dutch-governments-online-tendering-system"
+      },
+      {
+        "name_ko": "RVO · 기업 보조금",
+        "name_en": "RVO · Netherlands Subsidies",
+        "category": "support",
+        "url": "https://english.rvo.nl/subsidy-guide",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://english.rvo.nl/subsidy-guide"
+      },
+      {
+        "name_ko": "NFIA · 국가 투자진흥",
+        "name_en": "NFIA · Netherlands Foreign Investment Agency",
+        "category": "investment",
+        "url": "https://investinholland.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.rijksoverheid.nl/service/contact/contactgids/n/netherlands-foreign-investment-agency"
+      }
+    ],
+    "NO": [
+      {
+        "name_ko": "Doffin · 정부 조달공고",
+        "name_en": "Doffin · Norwegian Public Procurement",
+        "category": "procurement",
+        "url": "https://doffin.anskaffelser.no/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.doffin.anskaffelser.no/about"
+      },
+      {
+        "name_ko": "Innovation Norway · 혁신계약 보조금",
+        "name_en": "Innovation Norway · Innovation Contracts",
+        "category": "support",
+        "url": "https://www.innovasjonnorge.no/en/tjeneste/tilskudd-til-innovasjonskontrakter",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.innovasjonnorge.no/en/tjeneste/tilskudd-til-innovasjonskontrakter"
+      },
+      {
+        "name_ko": "연구위원회 · 연구혁신 지원사업",
+        "name_en": "Research Council · Grant Calls",
+        "category": "support",
+        "url": "https://www.forskningsradet.no/en/call-for-proposals/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.forskningsradet.no/en/call-for-proposals/"
+      }
+    ],
     "NZ": [
       {
         "name_ko": "GETS · 뉴질랜드 정부조달 공고",
@@ -436,6 +552,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://misa.gov.sa/"
+      }
+    ],
+    "SE": [
+      {
+        "name_ko": "스웨덴 조달청 · 입찰참여 안내",
+        "name_en": "Swedish Procurement Authority · Supplier Guidance",
+        "category": "procurement",
+        "url": "https://www.upphandlingsmyndigheten.se/en/conducting-business-with-public-sector-stakeholders/finding-business-in-the-public-sector/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.upphandlingsmyndigheten.se/en/about-public-procurement/"
+      },
+      {
+        "name_ko": "Vinnova · 국가 혁신 지원금",
+        "name_en": "Vinnova · Swedish Innovation Funding",
+        "category": "support",
+        "url": "https://www.vinnova.se/en/apply-for-funding",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://www.vinnova.se/en/our-activities/we-open-up-for-innovation"
+      },
+      {
+        "name_ko": "Verksamt · 정부 기업지원 포털",
+        "name_en": "Verksamt · Official Business Service",
+        "category": "support",
+        "url": "https://verksamt.se/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-20",
+        "evidence_url": "https://verksamt.se/avtal-fakturering/affarer-med-offentlig-verksamhet"
       }
     ],
     "SG": [
