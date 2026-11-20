@@ -19,11 +19,13 @@ class NWSAndCISAFallbackTests(unittest.TestCase):
         (self.data / "hz").mkdir()
         self.now = dt.datetime(2026, 11, 20, 11, 0, tzinfo=UTC)
 
-    def set_feed(self, name, *, age_minutes=0, ok=True, stale=False, bad_time=False):
+    def set_feed(self, name, *, age_minutes=0, ok=True, stale=False, bad_time=False, checked_age_minutes=None):
         when = self.now - dt.timedelta(minutes=age_minutes)
         stamp = "not-a-date" if bad_time else when.isoformat().replace("+00:00", "Z")
+        checked = ((self.now - dt.timedelta(minutes=checked_age_minutes)).isoformat().replace("+00:00", "Z")
+                   if checked_age_minutes is not None else None)
         (self.data / "hz" / name).write_text(json.dumps({
-            "source_health": {"ok": ok, "stale": stale, "last_ok": stamp},
+            "source_health": {"ok": ok, "stale": stale, "last_ok": stamp, "checked_at": checked},
             "items": []
         }), encoding="utf-8")
 
@@ -46,6 +48,16 @@ class NWSAndCISAFallbackTests(unittest.TestCase):
     def test_one_failed_source_forces_retry(self):
         self.fill()
         self.set_feed("nws_active.json", age_minutes=2, ok=False, stale=True)
+        self.assertTrue(should_refresh("workflow_run", self.data, self.now))
+
+    def test_recent_failure_is_rate_limited_without_marking_healthy(self):
+        self.fill()
+        self.set_feed("nws_active.json", age_minutes=300, ok=False, stale=True, checked_age_minutes=4)
+        self.assertFalse(should_refresh("workflow_run", self.data, self.now))
+
+    def test_failed_source_retries_after_30_minute_cooldown(self):
+        self.fill()
+        self.set_feed("nws_active.json", age_minutes=300, ok=False, stale=True, checked_age_minutes=31)
         self.assertTrue(should_refresh("workflow_run", self.data, self.now))
 
     def test_malformed_timestamp_fails_closed(self):

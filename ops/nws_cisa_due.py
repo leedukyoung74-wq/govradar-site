@@ -13,6 +13,9 @@ UTC = dt.timezone.utc
 # Stay under the watch's NWS 180min and CISA 600min limits when wakeups occur.
 LIMITS = (("nws_active.json", 90 * 60), ("cisa_kev.json", 8 * 3600))
 CLOCK_SKEW_SECONDS = 5 * 60
+# On upstream failures, do not hammer official endpoints each time a
+# successful USGS run wakes the fallback. Keep delayed status visible.
+FAILED_RETRY_COOLDOWN_SECONDS = 30 * 60
 
 
 def parse_utc(s):
@@ -30,7 +33,14 @@ def needs_refresh(path, max_age_seconds, now):
     try:
         d = json.loads(Path(path).read_text(encoding="utf-8"))
         h = d["source_health"]
-        if not isinstance(h, dict) or h.get("ok") is not True or h.get("stale") is not False:
+        if not isinstance(h, dict):
+            return True
+        if h.get("ok") is not True or h.get("stale") is not False:
+            checked = parse_utc(h.get("checked_at"))
+            if checked is not None:
+                seconds = (now - checked).total_seconds()
+                if -CLOCK_SKEW_SECONDS <= seconds < FAILED_RETRY_COOLDOWN_SECONDS:
+                    return False  # failed recently; retain public delayed signal
             return True
         stamp = parse_utc(h.get("last_ok"))
         if stamp is None:
