@@ -44,8 +44,8 @@ class RegionAndDefenceDirectoryQA(unittest.TestCase):
                 self.assertEqual(src["access"], "not_live_tested")
             if len(item["official_sites"]) == 0:
                 self.assertEqual(item["status"], "research_pending")
-        self.assertEqual(sum(len(c["official_sites"]) for c in entries.values()), 24)
-        self.assertEqual(sum(len(c["official_sites"]) >= 3 for c in entries.values()), 8)
+        self.assertEqual(sum(len(c["official_sites"]) for c in entries.values()), 39)
+        self.assertEqual(sum(len(c["official_sites"]) >= 3 for c in entries.values()), 13)
     def check_url(self, value):
         u = urlsplit(value)
         self.assertEqual(u.scheme, "https")
