@@ -336,6 +336,7 @@ def country_page(iso, L):
     desc = (summ[:150] + "…") if len(summ) > 150 else (summ or t["desc_cty"].format(c=name))
     r = risk_txt(d, L); lv = lvl(iso)
     body = []
+    _dir_start = len(body)  # 공식 사이트·언론·환경 디렉터리: 분석 본문 뒤(출처 앞)로 옮김
     if not c.get("reg"):
         _texts = {
             "ko": ("정부사업 핵심 사이트", "공식 기관 확인", "정부 기관 여부 검증 대기", "공식 기관 링크", "확인된 사이트"),
@@ -431,6 +432,7 @@ def country_page(iso, L):
                           f'<p>{e(_nm)}</p><p class="note">{e(_state)}</p></a>')
         _ewe_html = '<p class="note">' + e(_warning) + '</p><div class="cards">' + ''.join(_cards) + '</div>'
         body.append(sec("environment-weather-emergency", _head, _ewe_html))
+    _dir_secs = body[_dir_start:]; del body[_dir_start:]
     if iso in GUIDES:
         body.append(f'<p class="regbar"><a class="chip" href="{url(L,iso)}guide/">{"How to sell to this government →" if L!="ko" else "이 나라 정부에 파는 법 →"}</a> <a class="chip" href="/{L}/mdb/">{"Development bank tenders" if L!="ko" else "개발은행·국제기구 조달"}</a></p>')
     if c.get("reg"):
@@ -500,6 +502,7 @@ def country_page(iso, L):
     if ec: body.append(sec("econ", t["econ"], f'<p>{e(ec.get("rating","—"))} · K-SURE {e(ec.get("ksure","—"))} · {e((ec.get("fx") or {}).get("code",""))} {e((ec.get("fx") or {}).get("change_30d",""))}</p>'))
     sc = G(d, "sanctions", L)
     if sc: body.append(sec("sanctions", t["sanctions"], f'<p>{e(", ".join(sc.get("programs") or []) or "—")}</p><p class="note">{e(sc.get("summary",""))}</p>'))
+    body.extend(_dir_secs)
     # Public official-source candidate links, explicitly NOT live-verified.
     _official_section = _render_territory_defence(iso, bool(c.get("reg")), L, TERRITORY_SOURCE_SITES, NATIONAL_DEFENCE_SITES)
     if _official_section: body.append(sec("official-source-directory", "공식기관 정보원" if L == "ko" else "Official-source directory", _official_section))
