@@ -1,0 +1,72 @@
+name: WMM GOV RADAR five P0 release-readiness evidence (READ ONLY)
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ops/govradar_release_readiness.py'
+      - 'ops/tests/test_govradar_release_readiness.py'
+      - '.github/workflows/wmm_govradar_release_readiness.yml'
+permissions:
+  contents: read
+jobs:
+  verify_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Read-only checkout of audit logic
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit test audit status invariants and prove fail-closed behavior
+        run: python -m unittest discover -s ops/tests -p test_govradar_release_readiness.py -v
+      - name: Read current build source without deploy privileges
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: snapshot-src
+          persist-credentials: false
+      - name: Read current public live branch without deploy privileges
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: snapshot-live
+          persist-credentials: false
+      - name: Read latest published public feeds only
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: snapshot-data
+          persist-credentials: false
+      - name: Classify verified data, release drift and owner-only blockers
+        run: |
+          python ops/govradar_release_readiness.py \
+            --src snapshot-src --live snapshot-live --data snapshot-data \
+            --out audit-evidence/report.json
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          a=json.loads(Path('audit-evidence/report.json').read_text())
+          lines=['## GOV RADAR verified P0 deployment readiness', '',
+                 '**'+a['result']+'** — a passed unit test is NOT a successful live membership or buyer request.', '',
+                 '| Control | Classification |','|---|---|']
+          lines += ['| '+r['id']+' | '+r['status']+' |' for r in a['checks']]
+          lines += ['', 'No live deployment, API key, payment, CRM, browser login or customer record was changed.']
+          print('\n'.join(lines))
+          if os.environ.get('GITHUB_STEP_SUMMARY'):
+              with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+                  f.write('\n'.join(lines)+'\n')
+          PY
+      - name: Store limited evidence; never publish or access private customer records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: govradar-5-p0-readonly-readiness
+          path: audit-evidence/report.json
+          retention-days: 2
+          if-no-files-found: warn
