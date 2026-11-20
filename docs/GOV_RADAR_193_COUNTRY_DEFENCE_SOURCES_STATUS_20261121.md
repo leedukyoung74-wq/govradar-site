@@ -1,9 +1,10 @@
 # GOV RADAR · 193개국 국방·공공안보 공식정보원 전수 수량표 (2026-11-21)
 
-- 주권국가 193개 전부 등록·미등록 상태 표시. **51개국 1곳 이상, 37개국 3곳 이상, 총 137개 공개기관 URL 후보.** 나머지 142개국은 미조사.
-- 기준 목표 193×3=579은 **조사 편의용 슬롯 수**이지, 193개국 모두 군대/군종 3곳이 존재한다는 사실 주장이 아니다. 상비군 없는 코스타리카·파나마·아이슬란드·리히텐슈타인·모리셔스는 군 조직이 아닌 안보 정책·경찰·해안경비 링크를 별도 분류한다.
-- 국방부, 군종, 군 공보, 군학교, 민간 국방행정·해안경비기관이 섞여 있으므로 **3개 링크=3개 독립 군 조직**으로 해석 금지. URL은 기계적 링크 등록으로, 실제 URL 접근/기관 공식성/상업적 활용·크롤링 허가는 전수 검증 전.
-- 23개 자치지역 데이터와 별도, 뉴스 193개국·정부사업 193개국 통계와 절대 합산 금지.
+- 주권국가 193개 전부 상태 표시. **58개국 1곳 이상, 43개국에 공개기관 링크 3곳 이상, 총 157개 후보.** 나머지 135개국은 미조사.
+- **3개 링크가 반드시 3개 군 기관을 뜻하지는 않음.** 국방부, 군종, 국방행정, 민간 해안경비/보안기관을 명시적으로 분류. 5개국(IS/LI/CR/PA/MU)은 상비군 없는 법적/운영상 구조이므로 3개 군 조직 요구의 직접 대상이 아님.
+- 579개는 193개국 × 3개 **표면상 슬롯 목표**이며, 모든 국가가 3개 상비군 조직을 가진다는 주장이 아니다.
+- 모든 링크는 홈페이지/공보/기관 등록 후보. 접근 허용·상업적 API 권한·URL 최근 접속·자동 경보 연동은 전수 검사 전이며 검토 브랜치에는 배포하지 않음.
+- 23개 자치·특별지역, 국가 조달, 국가 뉴스, 환경·기상·비상사태의 출처 수와 합산 금지.
 
 | 국가 | ISO | 후보 수 | 3까지 부족 | 군 편제 구분 | 공개 공식기관 후보 링크 |
 |---|:--:|--:|--:|---|---|
@@ -14,7 +15,7 @@
 | 알바니아 | AL | 2 | 1 | 일반 | [Albania Ministry of Defence](https://www.mod.gov.al/eng/) · [Albanian Armed Forces](https://mod.gov.al/eng/aaf) |
 | 아르메니아 | AM | 0 | 3 | 일반 | 미조사 |
 | 앙골라 | AO | 0 | 3 | 일반 | 미조사 |
-| 아르헨티나 | AR | 0 | 3 | 일반 | 미조사 |
+| 아르헨티나 | AR | 3 | 0 | 일반 | [Argentina Ministry of Defence](https://www.argentina.gob.ar/defensa) · [Argentine Army](https://www.argentina.gob.ar/defensa/ejercito) · [Argentine Navy](https://www.argentina.gob.ar/defensa/armada) |
 | 오스트리아 | AT | 1 | 2 | 일반 | [Austrian Armed Forces / Ministry of Defence](https://www.bundesheer.at/) |
 | 호주 | AU | 3 | 0 | 일반 | [Australian Department of Defence](https://www.defence.gov.au/) · [Australian Army](https://www.army.gov.au/) · [Royal Australian Navy](https://www.navy.gov.au/) |
 | 아제르바이잔 | AZ | 0 | 3 | 일반 | 미조사 |
@@ -29,7 +30,7 @@
 | 베냉 | BJ | 0 | 3 | 일반 | 미조사 |
 | 브루나이 | BN | 0 | 3 | 일반 | 미조사 |
 | 볼리비아 | BO | 0 | 3 | 일반 | 미조사 |
-| 브라질 | BR | 0 | 3 | 일반 | 미조사 |
+| 브라질 | BR | 3 | 0 | 일반 | [Brazil Ministry of Defence](https://www.gov.br/defesa/pt-br) · [Brazilian Navy](https://www.marinha.mil.br/) · [Brazilian Army](https://www.eb.mil.br/) |
 | 바하마 | BS | 0 | 3 | 일반 | 미조사 |
 | 부탄 | BT | 0 | 3 | 일반 | 미조사 |
 | 보츠와나 | BW | 0 | 3 | 일반 | 미조사 |
@@ -41,11 +42,11 @@
 | 콩고 | CG | 0 | 3 | 일반 | 미조사 |
 | 스위스 | CH | 3 | 0 | 일반 | [Switzerland Federal Department of Defence, Civil Protection and Sport](https://www.vbs.admin.ch/en) · [Swiss Armed Forces](https://www.vtg.admin.ch/en) · [Swiss Federal Office for Civil Protection](https://www.babs.admin.ch/en) |
 | 코트디부아르 | CI | 0 | 3 | 일반 | 미조사 |
-| 칠레 | CL | 0 | 3 | 일반 | 미조사 |
+| 칠레 | CL | 3 | 0 | 일반 | [Chile Ministry of National Defence](https://www.gob.cl/ministerios/ministerio-de-defensa-nacional/) · [Chilean Army](https://www.ejercito.cl/) · [Chilean Navy](https://www.armada.cl/) |
 | 카메룬 | CM | 0 | 3 | 일반 | 미조사 |
 | 중국 | CN | 0 | 3 | 일반 | 미조사 |
-| 콜롬비아 | CO | 0 | 3 | 일반 | 미조사 |
-| 코스타리카 | CR | 3 | 0 | 상비군 없음·민간안보 책임기관 | [Costa Rica Ministry of Public Security](https://www.seguridadpublica.go.cr/) · [Costa Rica Fuerza Pública](https://www.seguridadpublica.go.cr/estructura/viceministrour/fuerza_publica/) · [Costa Rica National Coast Guard](https://siseco.seguridadpublica.go.cr/estructura/viceministroCPE-UC/guardacostas/index.aspx) |
+| 콜롬비아 | CO | 3 | 0 | 일반 | [Colombia Ministry of National Defence](https://www.mindefensa.gov.co/) · [Colombian National Army](https://www.ejercito.mil.co/) · [Colombian Navy](https://www.armada.mil.co/) |
+| 코스타리카 | CR | 3 | 0 | 상비군 없음·민간안보 | [Costa Rica Ministry of Public Security](https://www.seguridadpublica.go.cr/) · [Costa Rica Fuerza Pública](https://www.seguridadpublica.go.cr/estructura/viceministrour/fuerza_publica/) · [Costa Rica National Coast Guard](https://siseco.seguridadpublica.go.cr/estructura/viceministroCPE-UC/guardacostas/index.aspx) |
 | 쿠바 | CU | 0 | 3 | 일반 | 미조사 |
 | 카보베르데 | CV | 0 | 3 | 일반 | 미조사 |
 | 키프로스 | CY | 0 | 3 | 일반 | 미조사 |
@@ -88,7 +89,7 @@
 | 인도 | IN | 3 | 0 | 일반 | [India Ministry of Defence](https://www.mod.gov.in/) · [India Department of Military Affairs](https://www.dmamod.gov.in/) · [Indian Navy](https://indiannavy.gov.in/) |
 | 이라크 | IQ | 0 | 3 | 일반 | 미조사 |
 | 이란 | IR | 0 | 3 | 일반 | 미조사 |
-| 아이슬란드 | IS | 2 | 1 | 상비군 없음·민간안보 책임기관 | [Iceland government national security policy](https://eng.menntamalaraduneyti.is/topics/foreign-affairs/national-security/) · [Icelandic Coast Guard](https://www.lhg.is/en/) |
+| 아이슬란드 | IS | 2 | 1 | 상비군 없음·민간안보 | [Iceland government national security policy](https://eng.menntamalaraduneyti.is/topics/foreign-affairs/national-security/) · [Icelandic Coast Guard](https://www.lhg.is/en/) |
 | 이탈리아 | IT | 3 | 0 | 일반 | [Italian Ministry of Defence](https://www.difesa.it/) · [Italian Army](https://www.esercito.difesa.it/) · [Italian Navy](https://www.marina.difesa.it/) |
 | 자메이카 | JM | 0 | 3 | 일반 | 미조사 |
 | 요르단 | JO | 0 | 3 | 일반 | 미조사 |
@@ -106,7 +107,7 @@
 | 라오스 | LA | 0 | 3 | 일반 | 미조사 |
 | 레바논 | LB | 0 | 3 | 일반 | 미조사 |
 | 세인트루시아 | LC | 0 | 3 | 일반 | 미조사 |
-| 리히텐슈타인 | LI | 2 | 1 | 상비군 없음·민간안보 책임기관 | [Liechtenstein Government security policy](https://www.regierung.li/thema/17090/sicherheitsstrategie?id=234494) · [Liechtenstein National Police](https://www.landespolizei.li/en) |
+| 리히텐슈타인 | LI | 2 | 1 | 상비군 없음·민간안보 | [Liechtenstein Government security policy](https://www.regierung.li/thema/17090/sicherheitsstrategie?id=234494) · [Liechtenstein National Police](https://www.landespolizei.li/en) |
 | 스리랑카 | LK | 3 | 0 | 일반 | [Sri Lanka Ministry of Defence](https://www.defence.lk/) · [Sri Lanka Army](https://www.army.lk/) · [Sri Lanka Navy](https://www.navy.lk/) |
 | 라이베리아 | LR | 0 | 3 | 일반 | 미조사 |
 | 레소토 | LS | 0 | 3 | 일반 | 미조사 |
@@ -126,10 +127,10 @@
 | 몽골 | MN | 0 | 3 | 일반 | 미조사 |
 | 모리타니 | MR | 0 | 3 | 일반 | 미조사 |
 | 몰타 | MT | 0 | 3 | 일반 | 미조사 |
-| 모리셔스 | MU | 3 | 0 | 상비군 없음·민간안보 책임기관 | [Mauritius Police Force](https://police.govmu.org/police/) · [Mauritius Police Special Mobile Force](https://police.govmu.org/police/?page_id=4926) · [Mauritius Police National Coast Guard](https://police.govmu.org/police/?page_id=4922) |
+| 모리셔스 | MU | 3 | 0 | 상비군 없음·민간안보 | [Mauritius Police Force](https://police.govmu.org/police/) · [Mauritius Police Special Mobile Force](https://police.govmu.org/police/?page_id=4926) · [Mauritius Police National Coast Guard](https://police.govmu.org/police/?page_id=4922) |
 | 몰디브 | MV | 0 | 3 | 일반 | 미조사 |
 | 말라위 | MW | 0 | 3 | 일반 | 미조사 |
-| 멕시코 | MX | 0 | 3 | 일반 | 미조사 |
+| 멕시코 | MX | 2 | 1 | 일반 | [Mexico Secretariat of National Defence (DEFENSA)](https://www.gob.mx/defensa) · [Mexico Secretariat of the Navy (SEMAR)](https://www.gob.mx/semar) |
 | 말레이시아 | MY | 0 | 3 | 일반 | 미조사 |
 | 모잠비크 | MZ | 0 | 3 | 일반 | 미조사 |
 | 나미비아 | NA | 0 | 3 | 일반 | 미조사 |
@@ -142,8 +143,8 @@
 | 나우루 | NR | 0 | 3 | 일반 | 미조사 |
 | 뉴질랜드 | NZ | 3 | 0 | 일반 | [New Zealand Defence Force](https://www.nzdf.mil.nz/) · [New Zealand Army](https://www.nzdf.mil.nz/army/) · [Royal New Zealand Navy](https://www.nzdf.mil.nz/navy/) |
 | 오만 | OM | 0 | 3 | 일반 | 미조사 |
-| 파나마 | PA | 2 | 1 | 상비군 없음·민간안보 책임기관 | [Panama Ministry of Public Security](https://www.minseg.gob.pa/) · [Panama SENAN / Aeronaval Service ministry information](https://www.minseg.gob.pa/minseg-anuncia-el-ascenso-de-1098-oficiales-en-los-rangos-de-mayor-capitan-y-teniente/) |
-| 페루 | PE | 0 | 3 | 일반 | 미조사 |
+| 파나마 | PA | 2 | 1 | 상비군 없음·민간안보 | [Panama Ministry of Public Security](https://www.minseg.gob.pa/) · [Panama SENAN / Aeronaval Service ministry information](https://www.minseg.gob.pa/minseg-anuncia-el-ascenso-de-1098-oficiales-en-los-rangos-de-mayor-capitan-y-teniente/) |
+| 페루 | PE | 3 | 0 | 일반 | [Peru Ministry of Defence](https://www.gob.pe/institucion/mindef/institucional) · [Peruvian Army](https://www.gob.pe/ejercito) · [Peruvian Navy](https://www.gob.pe/marina/) |
 | 파푸아뉴기니 | PG | 0 | 3 | 일반 | 미조사 |
 | 필리핀 | PH | 3 | 0 | 일반 | [Philippines Department of National Defense](https://www.dnd.gov.ph/) · [Armed Forces of the Philippines](https://www.afp.mil.ph/) · [Philippine Navy](https://www.navy.mil.ph/) |
 | 파키스탄 | PK | 3 | 0 | 일반 | [Pakistan Ministry of Defence](https://mod.gov.pk/) · [Pakistan Navy](https://www.paknavy.gov.pk/) · [Pakistan Armed Forces Inter-Services Public Relations](https://www.ispr.gov.pk/) |
@@ -186,7 +187,7 @@
 | 트리니다드 토바고 | TT | 0 | 3 | 일반 | 미조사 |
 | 투발루 | TV | 0 | 3 | 일반 | 미조사 |
 | 탄자니아 | TZ | 0 | 3 | 일반 | 미조사 |
-| 우크라이나 | UA | 0 | 3 | 일반 | 미조사 |
+| 우크라이나 | UA | 3 | 0 | 일반 | [Ukraine Ministry of Defence](https://mod.gov.ua/en) · [Ukraine Land Forces](https://landforces.mil.gov.ua/en/) · [Armed Forces of Ukraine public website](https://www.zsu.gov.ua/) |
 | 우간다 | UG | 0 | 3 | 일반 | 미조사 |
 | 미국 | US | 3 | 0 | 일반 | [U.S. Department of Defense](https://www.defense.gov/) · [U.S. Army](https://www.army.mil/) · [U.S. Navy](https://www.navy.mil/) |
 | 우루과이 | UY | 0 | 3 | 일반 | 미조사 |
@@ -201,5 +202,9 @@
 | 잠비아 | ZM | 0 | 3 | 일반 | 미조사 |
 | 짐바브웨 | ZW | 0 | 3 | 일반 | 미조사 |
 
-## 운영 금지/검증 게이트
-데이터셋은 read-only 공식 링크 카탈로그다. 군부대 위치·병력 이동·장비 위치·작전시간 등 운영상 민감한 군사 정보를 수집/공유하지 않는다. 자동수집 전 기관별 약관·정부 허가, HTTP, 중복·관할, 데이터 보존, 이용료, 언론과의 교차검수 및 장애 복구를 검증할 것. 이번 검토 브랜치는 운영 배포 없음.
+## 검증 순서
+1. 국방 책임기관의 실존과 관할을 정부 조직도·정식 법령으로 확인
+2. 기관 실접속 및 리다이렉트/403/404/429·중복·보안·전수 근거 검증
+3. 무상비군 국가의 민간 안보 링크를 군종과 분리
+4. 신청/공고/비상사태/군사 부대 현황을 혼동하지 않는 UX, 7개 언어 모바일 회귀 검증
+5. 실제 사용이 허용된 공공 정보만 읽기 전용으로 제공; 군부대 위치·병력 이동·작전 시각·민감 지휘정보 수집 금지
