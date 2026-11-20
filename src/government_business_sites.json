@@ -847,6 +847,38 @@
         "evidence_url": "https://anapi.cd/en/procedures"
       }
     ],
+    "CF": [
+      {
+        "name_ko": "DGMP · 중앙아프리카공화국 공공조달총국",
+        "name_en": "Central African Republic DGMP · State Procurement Directorate",
+        "category": "procurement",
+        "url": "https://dgmp-rca.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.finances.gouv.cf/marches-publics/plans-de-passation-des-marches",
+        "notes": ""
+      },
+      {
+        "name_ko": "MENPT · 정부 디지털산업·중소기업 프로젝트",
+        "name_en": "Central African Republic Digital Economy Ministry · Business Projects",
+        "category": "support",
+        "url": "https://menpt.cf/pgnsp.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://menpt.cf/",
+        "notes": ""
+      },
+      {
+        "name_ko": "경제계획국제협력부 · 공공투자사업",
+        "name_en": "Central African Republic Ministry of Economy Planning & International Cooperation",
+        "category": "investment",
+        "url": "https://mepci-rca.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mepci-rca.org/",
+        "notes": ""
+      }
+    ],
     "CG": [
       {
         "name_ko": "ARMP · 콩고 국가조달청",
@@ -4478,6 +4510,38 @@
         "evidence_url": "https://sita.sr/about-us/"
       }
     ],
+    "SS": [
+      {
+        "name_ko": "PPDAA · 남수단 정부조달 포털",
+        "name_en": "South Sudan PPDAA · National Government Tender Portal",
+        "category": "procurement",
+        "url": "https://tenderportal.ppdaa.gov.ss/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ppdaa.gov.ss/",
+        "notes": "Central/federal system; service catalog availability and jurisdiction must be checked"
+      },
+      {
+        "name_ko": "국가 전자정부 · 기업 등록지원",
+        "name_en": "South Sudan Unified Digital Government · Business Registration",
+        "category": "support",
+        "url": "https://accounts.eservices.gov.ss/mdas",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://accounts.eservices.gov.ss/mdas",
+        "notes": "Central/federal system; service catalog availability and jurisdiction must be checked"
+      },
+      {
+        "name_ko": "투자부 · 온라인 투자서비스",
+        "name_en": "South Sudan Ministry of Investment · Government Investor Services",
+        "category": "investment",
+        "url": "https://investment.eservices.gov.ss/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investment.eservices.gov.ss/",
+        "notes": "Central/federal system; service catalog availability and jurisdiction must be checked"
+      }
+    ],
     "ST": [
       {
         "name_ko": "COSSIL · 국가공공계약 포털",
@@ -5091,6 +5155,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investsvg.com/services/investment-facilitation-services/"
+      }
+    ],
+    "VE": [
+      {
+        "name_ko": "SNC · 베네수엘라 공공조달서비스",
+        "name_en": "Venezuela National Contracting Service · Public Tender Calls",
+        "category": "procurement",
+        "url": "https://www.snc.gob.ve/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.eoicaracas.gov.in/tendering-process.php",
+        "notes": ""
+      },
+      {
+        "name_ko": "INAPYMI · 국가 중소산업지원청",
+        "name_en": "Venezuela INAPYMI · National SME Development Institute",
+        "category": "support",
+        "url": "https://www.inapymi.gob.ve/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://intellectual-property-helpdesk.ec.europa.eu/organisations/instituto-nacional-de-desarrollo-de-la-pequena-y-mediana-industria_en",
+        "notes": "EU institutional directory validates ownership, but current HTTPS responsiveness needs independent retest"
+      },
+      {
+        "name_ko": "CIIP · 국가 투자진흥청",
+        "name_en": "Venezuela International Center for Productive Investment · State Investment Agency",
+        "category": "investment",
+        "url": "https://ciip.gob.ve/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ciip.gob.ve/en/about-ciip",
+        "notes": ""
       }
     ],
     "VN": [
