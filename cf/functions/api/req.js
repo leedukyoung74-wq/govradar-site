@@ -28,9 +28,20 @@ export async function onRequestGet({ request, env }) {
 export async function onRequestPost({ request, env }) {
   if (!env.GV_DB) return json({ error: "not_configured" }, 503);
   let b; try { b = await request.json(); } catch (e) { return json({ error: "bad" }, 400); }
-  const type = String(b.type || ""), body = String(b.body || "").slice(0, 4000), lang = String(b.lang || "").slice(0, 5);
-  let email = String(b.email || "").trim().toLowerCase();
-  if (!TYPES.includes(type) || !body || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json({ error: "bad" }, 400);
+  // Explicit consent must be verified server-side, not just by the HTML checkbox.
+  // Reject oversized inputs rather than silently truncating a customer's request.
+  if (!b || typeof b !== "object" || Array.isArray(b) || b.privacy_consent !== true) {
+    return json({ error: "privacy_consent_required" }, 400);
+  }
+  const type = typeof b.type === "string" ? b.type : "";
+  const body = typeof b.body === "string" ? b.body.trim() : "";
+  const lang = typeof b.lang === "string" ? b.lang : "en";
+  let email = typeof b.email === "string" ? b.email.trim().toLowerCase() : "";
+  if (!TYPES.includes(type) || !body || body.length > 4000 ||
+      !["ko", "en", "es", "fr", "ar", "vi", "id"].includes(lang) ||
+      email.length > 254 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    return json({ error: "bad" }, 400);
+  }
   const u = await who(request); if (u) email = u.email || email;
   const key = u ? "u:" + u.id : "e:" + (await sha(email)), now = new Date(), month = kstMonth(now), db = env.GV_DB;
   const dedupe = await sha(type + "|" + body + "|" + email);
@@ -44,11 +55,10 @@ export async function onRequestPost({ request, env }) {
     .bind(req, now.toISOString(), month, key, email, u ? u.grade : null, type, lang, body, dedupe, counted).run();
   return json({ req_no: req, duplicate: false, counted: !!counted, member, quote: !counted, left: member ? Math.max(0, LIMIT - n - counted) : 0 });
 }
-// The page reports whether the Netlify form went through, so a failed alert is visible to the owner.
-export async function onRequestPatch({ request, env }) {
-  if (!env.GV_DB) return json({ error: "not_configured" }, 503);
-  let b; try { b = await request.json(); } catch (e) { return json({ error: "bad" }, 400); }
-  const st = b.ok ? "relayed" : "relay_failed";
-  await env.GV_DB.prepare("update requests set status=? where req_no=? and status in ('received','relay_failed')").bind(st, String(b.req_no || "")).run();
-  return json({ ok: true });
+// PATCH previously trusted an unauthenticated browser-supplied "ok" status.
+// That allowed anyone with a request number to forge owner-delivery status. Until
+// a server-to-server authenticated relay receipt is implemented, do not accept
+// status changes from browser clients. POST and authenticated GET are unaffected.
+export async function onRequestPatch() {
+  return json({ error: "unverified_relay_status_not_supported" }, 403);
 }

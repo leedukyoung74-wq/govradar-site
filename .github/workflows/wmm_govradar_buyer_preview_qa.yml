@@ -1,0 +1,54 @@
+name: GOV RADAR buyer generated-page QA (NO DEPLOY)
+on:
+  push:
+    branches: ["review/wmm-govradar-autobuild-24h-20261120"]
+    paths:
+      - 'pages_req.py'
+      - 'web/req-safe.js'
+      - 'cf/functions/api/req.js'
+      - 'tests/test_req_safe_ui.py'
+      - 'tests/test_req_server.py'
+      - 'tests/js/req_safe_ui_test.mjs'
+      - 'tests/js/req_server_test.mjs'
+      - 'build.py'
+      - 'tests/test_req_generated_preview.py'
+      - 'tests/fixtures/create_tender_fixture.py'
+      - 'tools/check_build_consistency.py'
+      - 'tests/test_build_consistency.py'
+      - '.github/workflows/wmm_govradar_buyer_preview_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: wmm-govradar-buyer-qa-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  buyer_preview:
+    name: Offline build + 7-language buyer QA
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout review branch, no write token
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Use Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify source and request runtime without network calls
+        run: python -m unittest discover -s tests -p 'test_req_safe_ui.py' -v
+      - name: Verify buyer request server consent and duplicates using in-memory SQLite (offline)
+        run: node --experimental-sqlite tests/js/req_server_test.mjs
+      - name: Inject synthetic-only tender records in isolated runner (never publish)
+        run: python tests/fixtures/create_tender_fixture.py
+      - name: Build isolated static site (NO DEPLOY)
+        run: python build.py --base https://preview.invalid
+      - name: Assert that generated 7-language country pages and opportunity details match source fixture
+        run: |
+          python -m unittest discover -s tests -p 'test_build_consistency.py' -v
+          python tools/check_build_consistency.py --export-dir export/countries --public-dir dist --min-researched 1
+      - name: Verify generated buyer routes, 7 locales and safe request asset
+        env:
+          WMM_BUYER_GENERATED_QA: '1'
+        run: python -m unittest discover -s tests -p 'test_req_generated_preview.py' -v

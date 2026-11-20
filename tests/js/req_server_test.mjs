@@ -15,17 +15,23 @@ const env = { GV_DB: D1 };
 const req = (method, body, tok) => ({ request: { headers: { get: k => (k === "authorization" && tok ? "Bearer " + tok : null) }, json: async () => body } , env });
 const call = async (fn, ...a) => (await (await fn(req(...a))).json());
 const P = mod.onRequestPost, G = mod.onRequestGet;
-out.push(["1", await call(P, "POST", { type: "tender", body: "A", email: "x@ex.com" }, "m1")]);
-out.push(["2", await call(P, "POST", { type: "tender", body: "A", email: "x@ex.com" }, "m1")]);
-out.push(["3", await call(P, "POST", { type: "country", body: "B", email: "x@ex.com" }, "m1")]);
-out.push(["4", await call(P, "POST", { type: "family", body: "C", email: "x@ex.com" }, "m1")]);
-out.push(["5", await call(P, "POST", { type: "partner", body: "D", email: "y@ex.com" }, "m0")]);
-out.push(["6", await call(P, "POST", { type: "partner", body: "E", email: "z@ex.com" })]);
-out.push(["7", await call(P, "POST", { type: "x", body: "E", email: "z@ex.com" })]);
+out.push(["1", await call(P, "POST", { type: "tender", body: "A", email: "x@ex.com", privacy_consent: true }, "m1")]);
+out.push(["2", await call(P, "POST", { type: "tender", body: "A", email: "x@ex.com", privacy_consent: true }, "m1")]);
+out.push(["3", await call(P, "POST", { type: "country", body: "B", email: "x@ex.com", privacy_consent: true }, "m1")]);
+out.push(["4", await call(P, "POST", { type: "family", body: "C", email: "x@ex.com", privacy_consent: true }, "m1")]);
+out.push(["5", await call(P, "POST", { type: "partner", body: "D", email: "y@ex.com", privacy_consent: true }, "m0")]);
+out.push(["6", await call(P, "POST", { type: "partner", body: "E", email: "z@ex.com", privacy_consent: true })]);
+out.push(["7", await call(P, "POST", { type: "x", body: "E", email: "z@ex.com", privacy_consent: true })]);
 const h = await call(G, "GET", null, "m1"); out.push(["8", String(h.items.length) + " " + h.left]);
 raw.exec("update requests set counted=0, status='failed' where type='country'");
 out.push(["9", (await call(G, "GET", null, "m1")).left]);
 out.push(["10", (await mod.onRequestPost({ request: req("POST", {}, "m1").request, env: {} })).status]);
+
+out.push(["11", await call(P, "POST", { type: "tender", body: "consent test", email: "x@ex.com" }, "m1")]);
+out.push(["12", await call(P, "POST", { type: "tender", body: "consent test", email: "x@ex.com", privacy_consent: false }, "m1")]);
+out.push(["13", await call(P, "POST", { type: "tender", body: "x".repeat(5000), email: "x@ex.com", privacy_consent: true }, "m1")]);
+out.push(["14", await call(P, "POST", null, "m1")]);
+out.push(["15", await call(P, "POST", { type: "tender", body: "ok", email: "x@ex.com", lang: "xx", privacy_consent: true }, "m1")]);
 
 const [r1,r2,r3,r4,r5,r6,r7,,,] = out.map(x=>x[1]);
 const fail = [];
@@ -38,4 +44,9 @@ if (r7.error !== "bad") fail.push("bad");
 if (out[7][1].split(" ")[0] !== "3") {}
 if (out[8][1] !== 1) fail.push("refund");
 if (out[9][1] !== 503) fail.push("nodb");
+for (let i=10;i<15;i++) {
+  if (out[i][1].error !== (i===10||i===11||i===13 ? "privacy_consent_required" : "bad")) fail.push("input:" + i);
+}
+const forbiddenPatch=await mod.onRequestPatch(req("PATCH", {req_no:r1.req_no,ok:true},"m1"));
+if (forbiddenPatch.status!==403) fail.push("unauthenticated status patch");
 if (fail.length) { console.error("FAIL", fail.join(",")); process.exit(1); } else console.log("req_server OK");
