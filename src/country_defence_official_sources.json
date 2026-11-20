@@ -1,0 +1,1584 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-21",
+  "scope": "193 sovereign states only; autonomous/special regions separately maintained in territory_official_sources.json",
+  "target_minimum_sites_per_country": 3,
+  "policy": "Public official defence institution links only. The three entries must be meaningful, distinguishable official military/defence organizations or service branches, not copies of a single publisher section. Do not assume all sovereign states maintain standing armies. Empty records indicate pending research, not military absence. These links are not verified live military intelligence or alert feeds. No geolocation of troops, installations, operations or weapons.",
+  "countries": {
+    "DZ": {
+      "name_en": "Algeria",
+      "name_ko": "알제리",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AO": {
+      "name_en": "Angola",
+      "name_ko": "앙골라",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BJ": {
+      "name_en": "Benin",
+      "name_ko": "베냉",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BW": {
+      "name_en": "Botswana",
+      "name_ko": "보츠와나",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BF": {
+      "name_en": "Burkina Faso",
+      "name_ko": "부르키나파소",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BI": {
+      "name_en": "Burundi",
+      "name_ko": "부룬디",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CV": {
+      "name_en": "Cabo Verde",
+      "name_ko": "카보베르데",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CM": {
+      "name_en": "Cameroon",
+      "name_ko": "카메룬",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CF": {
+      "name_en": "Central African Republic",
+      "name_ko": "중앙아프리카공화국",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TD": {
+      "name_en": "Chad",
+      "name_ko": "차드",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "KM": {
+      "name_en": "Comoros",
+      "name_ko": "코모로",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CG": {
+      "name_en": "Congo",
+      "name_ko": "콩고",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CD": {
+      "name_en": "DR Congo",
+      "name_ko": "콩고민주공화국",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CI": {
+      "name_en": "Côte d'Ivoire",
+      "name_ko": "코트디부아르",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "DJ": {
+      "name_en": "Djibouti",
+      "name_ko": "지부티",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "EG": {
+      "name_en": "Egypt",
+      "name_ko": "이집트",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GQ": {
+      "name_en": "Equatorial Guinea",
+      "name_ko": "적도기니",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ER": {
+      "name_en": "Eritrea",
+      "name_ko": "에리트레아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SZ": {
+      "name_en": "Eswatini",
+      "name_ko": "에스와티니",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ET": {
+      "name_en": "Ethiopia",
+      "name_ko": "에티오피아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GA": {
+      "name_en": "Gabon",
+      "name_ko": "가봉",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GM": {
+      "name_en": "Gambia",
+      "name_ko": "감비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GH": {
+      "name_en": "Ghana",
+      "name_ko": "가나",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GN": {
+      "name_en": "Guinea",
+      "name_ko": "기니",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GW": {
+      "name_en": "Guinea-Bissau",
+      "name_ko": "기니비사우",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "KE": {
+      "name_en": "Kenya",
+      "name_ko": "케냐",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LS": {
+      "name_en": "Lesotho",
+      "name_ko": "레소토",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LR": {
+      "name_en": "Liberia",
+      "name_ko": "라이베리아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LY": {
+      "name_en": "Libya",
+      "name_ko": "리비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MG": {
+      "name_en": "Madagascar",
+      "name_ko": "마다가스카르",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MW": {
+      "name_en": "Malawi",
+      "name_ko": "말라위",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ML": {
+      "name_en": "Mali",
+      "name_ko": "말리",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MR": {
+      "name_en": "Mauritania",
+      "name_ko": "모리타니",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MU": {
+      "name_en": "Mauritius",
+      "name_ko": "모리셔스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MA": {
+      "name_en": "Morocco",
+      "name_ko": "모로코",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MZ": {
+      "name_en": "Mozambique",
+      "name_ko": "모잠비크",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NA": {
+      "name_en": "Namibia",
+      "name_ko": "나미비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NE": {
+      "name_en": "Niger",
+      "name_ko": "니제르",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NG": {
+      "name_en": "Nigeria",
+      "name_ko": "나이지리아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "RW": {
+      "name_en": "Rwanda",
+      "name_ko": "르완다",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ST": {
+      "name_en": "São Tomé and Príncipe",
+      "name_ko": "상투메프린시페",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SN": {
+      "name_en": "Senegal",
+      "name_ko": "세네갈",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SC": {
+      "name_en": "Seychelles",
+      "name_ko": "세이셸",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SL": {
+      "name_en": "Sierra Leone",
+      "name_ko": "시에라리온",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SO": {
+      "name_en": "Somalia",
+      "name_ko": "소말리아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ZA": {
+      "name_en": "South Africa",
+      "name_ko": "남아프리카공화국",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SS": {
+      "name_en": "South Sudan",
+      "name_ko": "남수단",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SD": {
+      "name_en": "Sudan",
+      "name_ko": "수단",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TZ": {
+      "name_en": "Tanzania",
+      "name_ko": "탄자니아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TG": {
+      "name_en": "Togo",
+      "name_ko": "토고",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TN": {
+      "name_en": "Tunisia",
+      "name_ko": "튀니지",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "UG": {
+      "name_en": "Uganda",
+      "name_ko": "우간다",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ZM": {
+      "name_en": "Zambia",
+      "name_ko": "잠비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ZW": {
+      "name_en": "Zimbabwe",
+      "name_ko": "짐바브웨",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AF": {
+      "name_en": "Afghanistan",
+      "name_ko": "아프가니스탄",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BD": {
+      "name_en": "Bangladesh",
+      "name_ko": "방글라데시",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BT": {
+      "name_en": "Bhutan",
+      "name_ko": "부탄",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BN": {
+      "name_en": "Brunei",
+      "name_ko": "브루나이",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "KH": {
+      "name_en": "Cambodia",
+      "name_ko": "캄보디아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CN": {
+      "name_en": "China",
+      "name_ko": "중국",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "IN": {
+      "name_en": "India",
+      "name_ko": "인도",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ID": {
+      "name_en": "Indonesia",
+      "name_ko": "인도네시아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "JP": {
+      "name_en": "Japan",
+      "name_ko": "일본",
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Japan Ministry of Defense",
+          "url": "https://www.mod.go.jp/en/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.mod.go.jp/en/about/index.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Japan Ground Self-Defense Force",
+          "url": "https://www.mod.go.jp/gsdf/",
+          "role": "ground_self_defense_force",
+          "evidence_url": "https://www.mod.go.jp/en/about/index.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Japan Maritime Self-Defense Force",
+          "url": "https://www.mod.go.jp/msdf/",
+          "role": "maritime_self_defense_force",
+          "evidence_url": "https://www.mod.go.jp/en/about/index.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
+    },
+    "KZ": {
+      "name_en": "Kazakhstan",
+      "name_ko": "카자흐스탄",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "KP": {
+      "name_en": "North Korea",
+      "name_ko": "북한",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "KR": {
+      "name_en": "South Korea",
+      "name_ko": "대한민국",
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Republic of Korea Ministry of National Defense",
+          "url": "https://www.mnd.go.kr/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.mpm.go.kr/mpm/info/fair/recruit/army/army01/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Republic of Korea Navy",
+          "url": "https://www.navy.mil.kr/",
+          "role": "navy",
+          "evidence_url": "https://www.mpm.go.kr/mpm/info/fair/recruit/army/army01/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Republic of Korea Air Force",
+          "url": "https://rokaf.airforce.mil.kr/",
+          "role": "air_force",
+          "evidence_url": "https://www.mpm.go.kr/mpm/info/fair/recruit/army/army01/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
+    },
+    "KG": {
+      "name_en": "Kyrgyzstan",
+      "name_ko": "키르기스스탄",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LA": {
+      "name_en": "Laos",
+      "name_ko": "라오스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MY": {
+      "name_en": "Malaysia",
+      "name_ko": "말레이시아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MV": {
+      "name_en": "Maldives",
+      "name_ko": "몰디브",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MN": {
+      "name_en": "Mongolia",
+      "name_ko": "몽골",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MM": {
+      "name_en": "Myanmar",
+      "name_ko": "미얀마",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NP": {
+      "name_en": "Nepal",
+      "name_ko": "네팔",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PK": {
+      "name_en": "Pakistan",
+      "name_ko": "파키스탄",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PH": {
+      "name_en": "Philippines",
+      "name_ko": "필리핀",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SG": {
+      "name_en": "Singapore",
+      "name_ko": "싱가포르",
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Singapore Ministry of Defence",
+          "url": "https://www.mindef.gov.sg/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.mindef.gov.sg/about-us/organisation/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Singapore Army",
+          "url": "https://www.army.gov.sg/",
+          "role": "army",
+          "evidence_url": "https://www.mindef.gov.sg/related-sites/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Republic of Singapore Air Force",
+          "url": "https://www.rsaf.gov.sg/",
+          "role": "air_force",
+          "evidence_url": "https://www.mindef.gov.sg/related-sites/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
+    },
+    "LK": {
+      "name_en": "Sri Lanka",
+      "name_ko": "스리랑카",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TJ": {
+      "name_en": "Tajikistan",
+      "name_ko": "타지키스탄",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TH": {
+      "name_en": "Thailand",
+      "name_ko": "태국",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TL": {
+      "name_en": "Timor-Leste",
+      "name_ko": "동티모르",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TM": {
+      "name_en": "Turkmenistan",
+      "name_ko": "투르크메니스탄",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "UZ": {
+      "name_en": "Uzbekistan",
+      "name_ko": "우즈베키스탄",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "VN": {
+      "name_en": "Vietnam",
+      "name_ko": "베트남",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BH": {
+      "name_en": "Bahrain",
+      "name_ko": "바레인",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "IR": {
+      "name_en": "Iran",
+      "name_ko": "이란",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "IQ": {
+      "name_en": "Iraq",
+      "name_ko": "이라크",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "IL": {
+      "name_en": "Israel",
+      "name_ko": "이스라엘",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "JO": {
+      "name_en": "Jordan",
+      "name_ko": "요르단",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "KW": {
+      "name_en": "Kuwait",
+      "name_ko": "쿠웨이트",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LB": {
+      "name_en": "Lebanon",
+      "name_ko": "레바논",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "OM": {
+      "name_en": "Oman",
+      "name_ko": "오만",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "QA": {
+      "name_en": "Qatar",
+      "name_ko": "카타르",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SA": {
+      "name_en": "Saudi Arabia",
+      "name_ko": "사우디아라비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SY": {
+      "name_en": "Syria",
+      "name_ko": "시리아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AE": {
+      "name_en": "United Arab Emirates",
+      "name_ko": "아랍에미리트",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "YE": {
+      "name_en": "Yemen",
+      "name_ko": "예멘",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TR": {
+      "name_en": "Türkiye",
+      "name_ko": "튀르키예",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AL": {
+      "name_en": "Albania",
+      "name_ko": "알바니아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AD": {
+      "name_en": "Andorra",
+      "name_ko": "안도라",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AM": {
+      "name_en": "Armenia",
+      "name_ko": "아르메니아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AT": {
+      "name_en": "Austria",
+      "name_ko": "오스트리아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AZ": {
+      "name_en": "Azerbaijan",
+      "name_ko": "아제르바이잔",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BY": {
+      "name_en": "Belarus",
+      "name_ko": "벨라루스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BE": {
+      "name_en": "Belgium",
+      "name_ko": "벨기에",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BA": {
+      "name_en": "Bosnia and Herzegovina",
+      "name_ko": "보스니아 헤르체고비나",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BG": {
+      "name_en": "Bulgaria",
+      "name_ko": "불가리아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "HR": {
+      "name_en": "Croatia",
+      "name_ko": "크로아티아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CY": {
+      "name_en": "Cyprus",
+      "name_ko": "키프로스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CZ": {
+      "name_en": "Czechia",
+      "name_ko": "체코",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "DK": {
+      "name_en": "Denmark",
+      "name_ko": "덴마크",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "EE": {
+      "name_en": "Estonia",
+      "name_ko": "에스토니아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "FI": {
+      "name_en": "Finland",
+      "name_ko": "핀란드",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "FR": {
+      "name_en": "France",
+      "name_ko": "프랑스",
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "French Ministry of the Armed Forces",
+          "url": "https://www.defense.gouv.fr/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.defense.gouv.fr/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "French Army (Armée de Terre)",
+          "url": "https://www.defense.gouv.fr/terre",
+          "role": "army",
+          "evidence_url": "https://www.defense.gouv.fr/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "French Navy (Marine Nationale)",
+          "url": "https://www.defense.gouv.fr/marine",
+          "role": "navy",
+          "evidence_url": "https://www.defense.gouv.fr/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
+    },
+    "GE": {
+      "name_en": "Georgia",
+      "name_ko": "조지아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "DE": {
+      "name_en": "Germany",
+      "name_ko": "독일",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GR": {
+      "name_en": "Greece",
+      "name_ko": "그리스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "HU": {
+      "name_en": "Hungary",
+      "name_ko": "헝가리",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "IS": {
+      "name_en": "Iceland",
+      "name_ko": "아이슬란드",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "IE": {
+      "name_en": "Ireland",
+      "name_ko": "아일랜드",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "IT": {
+      "name_en": "Italy",
+      "name_ko": "이탈리아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LV": {
+      "name_en": "Latvia",
+      "name_ko": "라트비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LI": {
+      "name_en": "Liechtenstein",
+      "name_ko": "리히텐슈타인",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LT": {
+      "name_en": "Lithuania",
+      "name_ko": "리투아니아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LU": {
+      "name_en": "Luxembourg",
+      "name_ko": "룩셈부르크",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MT": {
+      "name_en": "Malta",
+      "name_ko": "몰타",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MD": {
+      "name_en": "Moldova",
+      "name_ko": "몰도바",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MC": {
+      "name_en": "Monaco",
+      "name_ko": "모나코",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ME": {
+      "name_en": "Montenegro",
+      "name_ko": "몬테네그로",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NL": {
+      "name_en": "Netherlands",
+      "name_ko": "네덜란드",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MK": {
+      "name_en": "North Macedonia",
+      "name_ko": "북마케도니아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NO": {
+      "name_en": "Norway",
+      "name_ko": "노르웨이",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PL": {
+      "name_en": "Poland",
+      "name_ko": "폴란드",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PT": {
+      "name_en": "Portugal",
+      "name_ko": "포르투갈",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "RO": {
+      "name_en": "Romania",
+      "name_ko": "루마니아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "RU": {
+      "name_en": "Russia",
+      "name_ko": "러시아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SM": {
+      "name_en": "San Marino",
+      "name_ko": "산마리노",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "RS": {
+      "name_en": "Serbia",
+      "name_ko": "세르비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SK": {
+      "name_en": "Slovakia",
+      "name_ko": "슬로바키아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SI": {
+      "name_en": "Slovenia",
+      "name_ko": "슬로베니아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "ES": {
+      "name_en": "Spain",
+      "name_ko": "스페인",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SE": {
+      "name_en": "Sweden",
+      "name_ko": "스웨덴",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CH": {
+      "name_en": "Switzerland",
+      "name_ko": "스위스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "UA": {
+      "name_en": "Ukraine",
+      "name_ko": "우크라이나",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GB": {
+      "name_en": "United Kingdom",
+      "name_ko": "영국",
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "UK Ministry of Defence",
+          "url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence/about",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "British Army",
+          "url": "https://www.army.mod.uk/",
+          "role": "army",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence/about",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Royal Air Force",
+          "url": "https://www.raf.mod.uk/",
+          "role": "air_force",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence/about",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
+    },
+    "CA": {
+      "name_en": "Canada",
+      "name_ko": "캐나다",
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Department of National Defence Canada",
+          "url": "https://www.canada.ca/en/department-national-defence.html",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.canada.ca/en/department-national-defence/corporate/mandate.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Royal Canadian Navy",
+          "url": "https://www.canada.ca/en/navy.html",
+          "role": "navy",
+          "evidence_url": "https://www.canada.ca/en/department-national-defence/corporate/organizational-structure.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Royal Canadian Air Force",
+          "url": "https://www.canada.ca/en/air-force.html",
+          "role": "air_force",
+          "evidence_url": "https://www.canada.ca/en/department-national-defence/corporate/organizational-structure.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
+    },
+    "US": {
+      "name_en": "United States",
+      "name_ko": "미국",
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "U.S. Department of Defense",
+          "url": "https://www.defense.gov/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.defense.gov/About/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "U.S. Army",
+          "url": "https://www.army.mil/",
+          "role": "army",
+          "evidence_url": "https://www.defense.gov/Resources/Military-Departments/DOD-Websites/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "U.S. Navy",
+          "url": "https://www.navy.mil/",
+          "role": "navy",
+          "evidence_url": "https://www.defense.gov/Resources/Military-Departments/DOD-Websites/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
+    },
+    "MX": {
+      "name_en": "Mexico",
+      "name_ko": "멕시코",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AG": {
+      "name_en": "Antigua and Barbuda",
+      "name_ko": "앤티가 바부다",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AR": {
+      "name_en": "Argentina",
+      "name_ko": "아르헨티나",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BS": {
+      "name_en": "Bahamas",
+      "name_ko": "바하마",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BB": {
+      "name_en": "Barbados",
+      "name_ko": "바베이도스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BZ": {
+      "name_en": "Belize",
+      "name_ko": "벨리즈",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BO": {
+      "name_en": "Bolivia",
+      "name_ko": "볼리비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "BR": {
+      "name_en": "Brazil",
+      "name_ko": "브라질",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CL": {
+      "name_en": "Chile",
+      "name_ko": "칠레",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CO": {
+      "name_en": "Colombia",
+      "name_ko": "콜롬비아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CR": {
+      "name_en": "Costa Rica",
+      "name_ko": "코스타리카",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "CU": {
+      "name_en": "Cuba",
+      "name_ko": "쿠바",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "DM": {
+      "name_en": "Dominica",
+      "name_ko": "도미니카 연방",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "DO": {
+      "name_en": "Dominican Republic",
+      "name_ko": "도미니카 공화국",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "EC": {
+      "name_en": "Ecuador",
+      "name_ko": "에콰도르",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SV": {
+      "name_en": "El Salvador",
+      "name_ko": "엘살바도르",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GD": {
+      "name_en": "Grenada",
+      "name_ko": "그레나다",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GT": {
+      "name_en": "Guatemala",
+      "name_ko": "과테말라",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "GY": {
+      "name_en": "Guyana",
+      "name_ko": "가이아나",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "HT": {
+      "name_en": "Haiti",
+      "name_ko": "아이티",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "HN": {
+      "name_en": "Honduras",
+      "name_ko": "온두라스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "JM": {
+      "name_en": "Jamaica",
+      "name_ko": "자메이카",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NI": {
+      "name_en": "Nicaragua",
+      "name_ko": "니카라과",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PA": {
+      "name_en": "Panama",
+      "name_ko": "파나마",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PY": {
+      "name_en": "Paraguay",
+      "name_ko": "파라과이",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PE": {
+      "name_en": "Peru",
+      "name_ko": "페루",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "KN": {
+      "name_en": "Saint Kitts and Nevis",
+      "name_ko": "세인트키츠 네비스",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "LC": {
+      "name_en": "Saint Lucia",
+      "name_ko": "세인트루시아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "VC": {
+      "name_en": "Saint Vincent and the Grenadines",
+      "name_ko": "세인트빈센트 그레나딘",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SR": {
+      "name_en": "Suriname",
+      "name_ko": "수리남",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TT": {
+      "name_en": "Trinidad and Tobago",
+      "name_ko": "트리니다드 토바고",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "UY": {
+      "name_en": "Uruguay",
+      "name_ko": "우루과이",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "VE": {
+      "name_en": "Venezuela",
+      "name_ko": "베네수엘라",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "AU": {
+      "name_en": "Australia",
+      "name_ko": "호주",
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Australian Department of Defence",
+          "url": "https://www.defence.gov.au/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.defence.gov.au/about/who-we-are/organisation-structure",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Australian Army",
+          "url": "https://www.army.gov.au/",
+          "role": "army",
+          "evidence_url": "https://www.defence.gov.au/about/who-we-are/organisation-structure",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Royal Australian Navy",
+          "url": "https://www.navy.gov.au/",
+          "role": "navy",
+          "evidence_url": "https://www.defence.gov.au/about/who-we-are/organisation-structure",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested"
+    },
+    "FJ": {
+      "name_en": "Fiji",
+      "name_ko": "피지",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "KI": {
+      "name_en": "Kiribati",
+      "name_ko": "키리바시",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "MH": {
+      "name_en": "Marshall Islands",
+      "name_ko": "마셜 제도",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "FM": {
+      "name_en": "Micronesia",
+      "name_ko": "미크로네시아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NR": {
+      "name_en": "Nauru",
+      "name_ko": "나우루",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "NZ": {
+      "name_en": "New Zealand",
+      "name_ko": "뉴질랜드",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PW": {
+      "name_en": "Palau",
+      "name_ko": "팔라우",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "PG": {
+      "name_en": "Papua New Guinea",
+      "name_ko": "파푸아뉴기니",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "WS": {
+      "name_en": "Samoa",
+      "name_ko": "사모아",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "SB": {
+      "name_en": "Solomon Islands",
+      "name_ko": "솔로몬 제도",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TO": {
+      "name_en": "Tonga",
+      "name_ko": "통가",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "TV": {
+      "name_en": "Tuvalu",
+      "name_ko": "투발루",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    },
+    "VU": {
+      "name_en": "Vanuatu",
+      "name_ko": "바누아투",
+      "defence_structure": "not_yet_assessed",
+      "official_sites": [],
+      "status": "research_pending"
+    }
+  }
+}
