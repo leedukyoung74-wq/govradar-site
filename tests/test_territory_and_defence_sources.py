@@ -15,6 +15,11 @@ class RegionAndDefenceDirectoryQA(unittest.TestCase):
         self.assertEqual(set(items), {x["iso"] for x in regions})
         fields = directory["categories"]
         self.assertEqual(len(fields), 8)
+        self.assertEqual(sum(len(x["government_business"]) >= 3 for x in items.values()), 23)
+        self.assertEqual(sum(len(x["news_media"]) >= 3 for x in items.values()), 22)
+        self.assertEqual(sum(len(x["government_business"]) for x in items.values()), 69)
+        self.assertEqual(sum(len(x["news_media"]) for x in items.values()), 68)
+        self.assertEqual(len(items["DK-GL"]["news_media"]), 2)
         for r in regions:
             item = items[r["iso"]]
             self.assertEqual(item["parent_iso"], r["parent"])
@@ -44,8 +49,19 @@ class RegionAndDefenceDirectoryQA(unittest.TestCase):
                 self.assertEqual(src["access"], "not_live_tested")
             if len(item["official_sites"]) == 0:
                 self.assertEqual(item["status"], "research_pending")
-        self.assertEqual(sum(len(c["official_sites"]) for c in entries.values()), 39)
-        self.assertEqual(sum(len(c["official_sites"]) >= 3 for c in entries.values()), 13)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) for c in entries.values()), 125)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) >= 3 for c in entries.values()), 35)
+        self.assertGreaterEqual(sum(len(c["official_sites"]) > 0 for c in entries.values()), 46)
+        self.assertEqual(len(entries), 193)
+    def test_country_and_territory_pages_wired_without_live_claims(self):
+        build = (ROOT / "build.py").read_text(encoding="utf-8")
+        helper = (ROOT / "tools" / "territory_defence_sections.py").read_text(encoding="utf-8")
+        self.assertIn("_render_territory_defence(iso, bool(c.get(\"reg\"))", build)
+        self.assertIn("territory-source-coverage.json", build)
+        self.assertIn("country-defence-coverage.json", build)
+        self.assertIn("not_live_verified", build)
+        self.assertIn("not verified live links", helper)
+
     def check_url(self, value):
         u = urlsplit(value)
         self.assertEqual(u.scheme, "https")
