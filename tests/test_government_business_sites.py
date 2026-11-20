@@ -18,14 +18,14 @@ class GovernmentBusinessSiteTests(unittest.TestCase):
         self.assertEqual(579,self.report["target_verified_links"])
         self.assertEqual(193,len(self.report["country_counts"]))
 
-    def test_at_least_63_verified_priority_country_sets(self):
+    def test_at_least_81_verified_priority_country_sets(self):
         # Increase this threshold only when independently reviewed additions
         # are made. Do not assert 193/193 before that is actually true.
-        self.assertGreaterEqual(self.report["verified_countries"],63)
-        self.assertGreaterEqual(self.report["verified_links"],189)
+        self.assertGreaterEqual(self.report["verified_countries"],81)
+        self.assertGreaterEqual(self.report["verified_links"],243)
         self.assertEqual(579-self.report["verified_links"],
                          self.report["remaining_required_link_slots"])
-        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA","KE","ZA","PH","BR","ID","DE","ES","NZ","CH","NL","NO","SE","DK","AE","BD","CL","CO","EG","GH","IT","MY","MX","NG","PK","PE","PL","PT","TH","TR","VN","BG","CZ","FI","HR","IE","LT","LV","SI","SK","AL","AT","BE","EE","GR","HU","CY","LU","RO","RS","UA","AR","GE","BA"):
+        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA","KE","ZA","PH","BR","ID","DE","ES","NZ","CH","NL","NO","SE","DK","AE","BD","CL","CO","EG","GH","IT","MY","MX","NG","PK","PE","PL","PT","TH","TR","VN","BG","CZ","FI","HR","IE","LT","LV","SI","SK","AL","AT","BE","EE","GR","HU","CY","LU","RO","RS","UA","AR","GE","BA","KZ","CN","NP","LK","UZ","BH","QA","JO","OM","KW","IL","MA","TN","RW","BW","TZ","ZM","KH"):
             self.assertGreaterEqual(self.report["country_counts"][iso]["verified"],3,iso)
 
     def test_one_legacy_registry_entry_does_not_count_as_government_verified(self):
