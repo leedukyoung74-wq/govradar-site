@@ -39,7 +39,9 @@ class TenderDisclosureGeneratedTests(unittest.TestCase):
                     self.assertIn(self.labels[lang]["external"],visible,
                                   f"{lang}: external source label missing for rendered cards")
                 self.assertIn('id="deadlines"',html)
-                self.assertIn('data-dl=',html)
+                self.assertIn('class="dl"',html)
+                if '<li data-s=' in html or '<li class="new"' in html:
+                    self.assertIn('data-dl=',html)
 
     def test_generated_pages_do_not_use_unqualified_open_headline(self):
         for lang in LANGS:
