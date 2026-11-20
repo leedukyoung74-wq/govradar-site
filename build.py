@@ -368,6 +368,23 @@ def country_page(iso, L):
         _html = (f'<p class="note">{e(_note)}</p><div class="cards">{"".join(_cards)}</div>'
                  if _cards else f'<p class="note">{e(_note)} {e(_empty)}</p>')
         body.append(sec("government-business-sites", _title, _html))
+        # News is not an official government tender source. It links to the
+        # original newsroom and does not copy/reproduce article contents.
+        _news = COUNTRY_NEWS_SITES[iso]
+        _news_n = COUNTRY_NEWS_COVERAGE["country_counts"][iso]["publisher_links_recorded"]
+        _news_title = "국가별 언론·뉴스 원문" if L == "ko" else "Original national news publishers"
+        _news_note = (f"서로 다른 언론사 최소 3곳 목표 · 현재 {_news_n}/3곳 등록. 국가기관 발표, 공영방송, 민영 언론을 구분합니다. 기사 정확성·편집 독립성·실시간 수집은 별도 검증합니다."
+                      if L == "ko" else f"Target: 3 distinct national news publishers · {_news_n}/3 recorded. Public, state-affiliated and private outlets are labelled separately. This is not live news or editorial validation.")
+        _news_cards = []
+        for _publisher in _news:
+            _publisher_label = _publisher["name_ko"] if L == "ko" else _publisher["name_en"]
+            _publisher_type = _publisher["publisher_type"].replace("_"," ")
+            _news_cards.append(
+                f'<a class="card" href="{e(_publisher["url"])}" target="_blank" rel="noopener noreferrer nofollow" style="display:block;text-decoration:none">'
+                f'<b>{e(_publisher_label)}</b><p class="note">{e(_publisher_type)} · {e("발행사 원문" if L == "ko" else "Original publisher website")}</p>'
+                f'<small>{e(_publisher["url"])}</small></a>')
+        _news_html = f'<p class="note">{e(_news_note)}</p><div class="cards">{"".join(_news_cards)}</div>'
+        body.append(sec("country-news-sources", _news_title, _news_html))
     if iso in GUIDES:
         body.append(f'<p class="regbar"><a class="chip" href="{url(L,iso)}guide/">{"How to sell to this government →" if L!="ko" else "이 나라 정부에 파는 법 →"}</a> <a class="chip" href="/{L}/mdb/">{"Development bank tenders" if L!="ko" else "개발은행·국제기구 조달"}</a></p>')
     if c.get("reg"):
@@ -474,6 +491,9 @@ GUIDES = json.load(open(os.path.join(SRC, "guides.json"), encoding="utf8"))
 # explicitly unverified candidates; never imply HTTP 200 == official agency.
 from government_business_sites import load_directory as _load_gov_sites
 GOV_BUSINESS_SITES, GOV_SITE_COVERAGE = _load_gov_sites(ROOT)
+# Independent news-publisher navigation, never mixed into official tenders.
+from country_news_sources import load_directory as _load_country_news
+COUNTRY_NEWS_SITES, COUNTRY_NEWS_COVERAGE = _load_country_news(ROOT)
 for _iso, _d in DATA.items():
     if isinstance(_d.get("guide"), dict): GUIDES[_iso] = _d["guide"]
 MDBI = [("WB","World Bank","세계은행","https://projects.worldbank.org/en/projects-operations/procurement",["world bank","세계은행","ibrd"]),
@@ -1035,6 +1055,9 @@ def build():
     # This is a source directory count, never an actual live tender count.
     with open(OUT + "/data/government-business-sites-coverage.json", "w", encoding="utf-8") as _f:
         json.dump(GOV_SITE_COVERAGE, _f, ensure_ascii=False, indent=2)
+    # News has its own denominator and never inflates government portal counts.
+    with open(OUT + "/data/country-news-coverage.json", "w", encoding="utf-8") as _news_report:
+        json.dump(COUNTRY_NEWS_COVERAGE, _news_report, ensure_ascii=False, indent=2)
     for f in ("wmm-logo-white.png", "wmm-logo.png", "gcsme-logo.jpg", "emblem.png", "og.jpg", "spot.jpg", "paper.jpg", "logo-h.webp", "logo-h-lg.webp", "logo-v.webp", "mark.png"): shutil.copy(os.path.join(SRC, f), OUT + "/assets/" + f)
     for f in glob.glob(os.path.join(ROOT, "web", "*")): shutil.copy(f, OUT + "/assets/")
     os.makedirs(OUT + "/embed/gateway", exist_ok=True); shutil.copy(os.path.join(SRC, "gateway.html"), OUT + "/embed/gateway/index.html")
