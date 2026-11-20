@@ -3,6 +3,38 @@
   "reviewed_on": "2026-11-20",
   "policy": "Only direct primary government/authorized official institutional URLs receive official_primary status. A successful HTTP response alone is not official confirmation.",
   "countries": {
+    "AD": [
+      {
+        "name_ko": "안도라 정부 공식 공공조달 플랫폼",
+        "name_en": "Andorra Government Public Sector Procurement Platform",
+        "category": "procurement",
+        "url": "https://contractacio.govern.ad/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.andorralavella.ad/cultura/?q=transparencia%2Fcontractaci%C3%B3-p%C3%BAblica",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      },
+      {
+        "name_ko": "Andorra Business · 2026 국가지원금",
+        "name_en": "Andorra Business · Government 2026 Innovation Incentive Grants",
+        "category": "support",
+        "url": "https://www.andorrabusiness.com/en/creix-andorra/create-company-andorra/andorra-business-incentives-to-attract-high-value-added-companies/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.andorrabusiness.com/en/actualitat/andorra-business-launches-e2-million-funding-call-the-largest-public-investment-ever-made-in-andorra-to-foster-innovation-and-attract-high-value-added-companies/",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      },
+      {
+        "name_ko": "정부 공식 투명성 포털 · 계약·보조금",
+        "name_en": "Andorra Government Transparency · Public Contracts and Grants",
+        "category": "investment",
+        "url": "https://transparencia.ad/inici_bo",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://transparencia.ad/inici_bo",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      }
+    ],
     "AE": [
       {
         "name_ko": "연방 재무부 · 조달 기회",
@@ -2254,6 +2286,38 @@
         "review_note": "Public search confirmation 2026-11-21; access and agency mandate require release cross-check"
       }
     ],
+    "LI": [
+      {
+        "name_ko": "리히텐슈타인 정부 공식 조달담당국",
+        "name_en": "Liechtenstein National Administration · Public Procurement Unit",
+        "category": "procurement",
+        "url": "https://www.llv.li/en/national-administration/public-procurement-department",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.regierung.li/inhalt-submenue/16290/stabsstelle-regierungskanzlei-en-/16294/Specialised-Unit-for-Public-Procurement",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      },
+      {
+        "name_ko": "경제청 · 국가 중소기업 혁신지원금",
+        "name_en": "Liechtenstein Office Economic Affairs · SME Innovation Check",
+        "category": "support",
+        "url": "https://www.llv.li/en/national-administration/office-of-economic-affairs/location-promotion/funding/innovation-check",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.llv.li/en/business/financing-funding/funding",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      },
+      {
+        "name_ko": "경제청 · 중소기업 해외 수출지원",
+        "name_en": "Liechtenstein Office of Economic Affairs · Export Support for SMEs",
+        "category": "investment",
+        "url": "https://www.llv.li/en/national-administration/office-of-economic-affairs/location-promotion/funding/export-promotion-for-smes",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.llv.li/en/national-administration/office-of-economic-affairs",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      }
+    ],
     "LK": [
       {
         "name_ko": "재무부 · 공공구매 공고",
@@ -2397,6 +2461,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.amdie.gov.ma/"
+      }
+    ],
+    "MC": [
+      {
+        "name_ko": "모나코 시청 공식 전자조달",
+        "name_en": "Monaco Municipality · Official Procurement Platform",
+        "category": "procurement",
+        "url": "https://mairie.marches-publics.mc/accueil.php",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mairie.marches-publics.mc/accueil.php",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      },
+      {
+        "name_ko": "모나코 정부 기업행정 서비스",
+        "name_en": "Monaco Government Business Services · MonEntreprise",
+        "category": "support",
+        "url": "https://monentreprise.gouv.mc/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://monentreprise.gouv.mc/",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      },
+      {
+        "name_ko": "공식 관보 · 공공 발주 공고",
+        "name_en": "Monaco Official Gazette · Public Tender Notices",
+        "category": "investment",
+        "url": "https://journaldemonaco.gouv.mc/en/Journaux/2026/Journal-8817/Avis-d-appel-a-concurrence-pour-la-passation-d-un-Marche-public-de-services",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://legimonaco.mc/tnc/ordonnance/2018/12-20-7.264",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
       }
     ],
     "MD": [
@@ -3499,6 +3595,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.mhsr.sk/ministerstvo/operacne-programy/opis/elektronizacia-sluzieb-ministerstva-hospodarstva-sr/sluzby-a-zivotne-situacie"
+      }
+    ],
+    "SM": [
+      {
+        "name_ko": "산마리노 공공 조달·계약 사무소",
+        "name_en": "San Marino State Procurement and Contracts Office",
+        "category": "procurement",
+        "url": "https://www.gov.sm/pub1/GovSM/Dipartimenti/Dipartimento-Funzione-Pubblica/Ufficio-Approvvigionamenti-e-Contratti.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.sm/pub1/GovSM/Dipartimenti/Dipartimento-Funzione-Pubblica/Ufficio-Approvvigionamenti-e-Contratti.html",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      },
+      {
+        "name_ko": "국가경제개발청 · 기업 설립지원",
+        "name_en": "San Marino Economic Development Agency · Chamber of Commerce",
+        "category": "support",
+        "url": "https://www.camcom.sm/en/registers-and-services/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.camcom.sm/en/mission/",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+      },
+      {
+        "name_ko": "산마리노 경제개발청 · 투자지원",
+        "name_en": "San Marino State-Linked Economic Development Agency · Investor Services",
+        "category": "investment",
+        "url": "https://www.camcom.sm/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.consolatosanmarino.uk/en/invest-in-san-marino/",
+        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
       }
     ],
     "SN": [
