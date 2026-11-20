@@ -43,6 +43,8 @@ python3 tools/text_wrap.py || exit 1   # Korean line breaking on every page (aft
 python3 tools/cf_variant.py dist cf/public
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public
+# Mandatory release-output sanity check, even if optional country freshness gate is off.
+python3 tools/check_public_fixture_leak.py cf/public || { echo "STOP: invalid or synthetic public assets; live branch unchanged."; exit 1; }
 cd /home/claude/govradar-live
 git fetch -q origin live && git reset -q --soft origin/live
 rm -rf public functions && cp -a /home/claude/site/cf/public /home/claude/site/cf/functions .
