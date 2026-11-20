@@ -182,7 +182,7 @@ def ted_item(n, minv=0):
             "url": f"https://ted.europa.eu/en/notice/-/detail/{pn}", "sid": pn, "source": S, "type": "Contract notice", "project": "",
             "pm": "", "pmn": "", "pg": PG.get(nat, ""), "ma": "", "est": str(round(val)) if val else "", "cur": cur, "eur": round(eur)}
 
-def _ocds(S, url, mk):
+def _ocds(S, url, mk, *, max_pages=40, timeout=30, tries=2, time_budget=140):
     """Bound pagination and forbid cross-origin/downgrade/repeating source URLs."""
     import time
     base = urllib.parse.urlsplit(url)
@@ -191,8 +191,8 @@ def _ocds(S, url, mk):
         stat(S)["notes"].append("invalid_ocds_source_url")
         return []
     out, seen = [], set()
-    deadline = time.monotonic() + 140
-    for _ in range(40):
+    deadline = time.monotonic() + time_budget
+    for _ in range(max_pages):
         parsed = urllib.parse.urlsplit(url)
         if (parsed.scheme != "https" or parsed.hostname != base.hostname
                 or parsed.port != base.port or parsed.username or parsed.password or url in seen):
@@ -204,7 +204,7 @@ def _ocds(S, url, mk):
             stat(S)["notes"].append("source_time_budget_exceeded: OCDS partial results")
             break
         seen.add(url)
-        try: j = json.loads(_get(S, url, tries=2, timeout=30))
+        try: j = json.loads(_get(S, url, tries=tries, timeout=timeout))
         except Exception: break
         rels = j.get("releases") or []; stat(S)["raw"] += len(rels)
         for r in rels:
@@ -213,6 +213,11 @@ def _ocds(S, url, mk):
         nxt = (j.get("links") or {}).get("next")
         if not nxt or not rels: break
         url = urllib.parse.urljoin(url, str(nxt))
+    else:
+        # Reaching a configured cap with another page pending is PARTIAL,
+        # never a confirmed complete official release snapshot.
+        stat(S)["failed"] += 1
+        stat(S)["notes"].append("source_page_cap_reached: OCDS partial results")
     return out
 
 def _ocds_item(S, r, url, minv_eur=1.2e6):
@@ -236,9 +241,27 @@ def _ocds_item(S, r, url, minv_eur=1.2e6):
 
 def uk():
     S = "UK Find a Tender"
-    url = "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?" + urllib.parse.urlencode(
-        {"limit": 100, "updatedFrom": (TODAY - datetime.timedelta(days=21)).isoformat() + "T00:00:00"})
-    out = _ocds(S, url, lambda r: _ocds_item(S, r, f"https://www.find-tender.service.gov.uk/Notice/{r.get('id')}"))
+    endpoint = "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?"
+    cutoff = datetime.datetime.now(datetime.timezone.utc)
+    # Freeze the upper bound for cursor-consistent source windows.
+    url = endpoint + urllib.parse.urlencode(
+        {"limit": 100, "updatedFrom": (cutoff - datetime.timedelta(days=21)).strftime("%Y-%m-%dT%H:%M:%SZ"),
+         "updatedTo": cutoff.strftime("%Y-%m-%dT%H:%M:%SZ")})
+    mk = lambda r: _ocds_item(S, r, f"https://www.find-tender.service.gov.uk/Notice/{r.get('id')}")
+    out = _ocds(S, url, mk)
+    st = stat(S)
+    # A 21-day first-page *timeout* should not permanently disable the entire
+    # UK source. Retry once in a bounded 48-hour window with smaller packages.
+    # Preserve the failed original request: classifying the result as PARTIAL
+    # is mandatory and cannot be mistaken for complete source coverage.
+    timeout_seen = any("TimeoutError" in n or "timed out" in n.lower() for n in st["notes"])
+    rate_limited = any("429" in n for n in st["notes"])
+    if not out and st["raw"] == 0 and st["failed"] and timeout_seen and not rate_limited:
+        st["notes"].append("partial_48h_fallback_after_21d_timeout: not full 21-day coverage")
+        short_url = endpoint + urllib.parse.urlencode(
+            {"limit": 10, "updatedFrom": (cutoff - datetime.timedelta(days=2)).strftime("%Y-%m-%dT%H:%M:%SZ"),
+             "updatedTo": cutoff.strftime("%Y-%m-%dT%H:%M:%SZ")})
+        out = _ocds(S, short_url, mk, max_pages=6, timeout=20, tries=1, time_budget=60)
     seen = {}
     for x in out:
         if x["sid"] in seen: drop(S, "same-notice-update")
