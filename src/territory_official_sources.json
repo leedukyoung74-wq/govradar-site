@@ -25,120 +25,824 @@
       "name_ko": "방사모로 자치지역 (BARMM)",
       "parent_iso": "PH",
       "region_type": "auto",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
-      "public_health": [],
-      "critical_infrastructure": [],
-      "status": "research_pending"
+      "government_business": [
+        {
+          "name": "BARMM Office of Chief Minister procurement",
+          "url": "https://bangsamoro.gov.ph/BAC/",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://bangsamoro.gov.ph/BAC/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bangsamoro Planning and Development Authority",
+          "url": "https://bpda.bangsamoro.gov.ph/",
+          "authority_scope": "local_development",
+          "evidence_url": "https://bpda.bangsamoro.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bangsamoro Economic Zone Authority",
+          "url": "https://beza.bangsamoro.gov.ph/home",
+          "authority_scope": "investment",
+          "evidence_url": "https://beza.bangsamoro.gov.ph/home",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "MindaNews (Mindanao coverage)",
+          "url": "https://mindanews.com/",
+          "authority_scope": "regional_coverage_not_BARMMonly",
+          "evidence_url": "https://mindanews.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "BARMM Ministry of Environment, Natural Resources and Energy",
+          "url": "https://menre.bangsamoro.gov.ph/",
+          "authority_scope": "local",
+          "evidence_url": "https://menre.bangsamoro.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Philippine PAGASA",
+          "url": "https://www.pagasa.dost.gov.ph/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.pagasa.dost.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "National Disaster Risk Reduction and Management Council",
+          "url": "https://ndrrmc.gov.ph/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://ndrrmc.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Department of National Defense Philippines",
+          "url": "https://www.dnd.gov.ph/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.dnd.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "BARMM Ministry of Health",
+          "url": "https://moh.bangsamoro.gov.ph/",
+          "authority_scope": "local",
+          "evidence_url": "https://moh.bangsamoro.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "BARMM Planning and Development Authority",
+          "url": "https://bpda.bangsamoro.gov.ph/",
+          "authority_scope": "local_development",
+          "evidence_url": "https://bpda.bangsamoro.gov.ph/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "MindaNews covers Mindanao including BARMM; it is not a BARMM-exclusive publisher. The BARMM government press office is NOT counted as independent news."
     },
     "IQ-KRI": {
       "name_en": "Kurdistan Region",
       "name_ko": "쿠르디스탄 지역",
       "parent_iso": "IQ",
       "region_type": "auto",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
+      "government_business": [
+        {
+          "name": "Kurdistan Regional Government",
+          "url": "https://gov.krd/english/",
+          "authority_scope": "local",
+          "evidence_url": "https://gov.krd/english/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "KRG Department of Media and Information",
+          "url": "https://gov.krd/dmi-en/",
+          "authority_scope": "official_communications",
+          "evidence_url": "https://gov.krd/dmi-en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "KRG Ministry of Peshmerga Affairs public administrative information",
+          "url": "https://gov.krd/mopa-en/",
+          "authority_scope": "public_ministry_not_procurement",
+          "evidence_url": "https://gov.krd/mopa-en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Rudaw",
+          "url": "https://www.rudaw.net/english",
+          "authority_scope": "local",
+          "evidence_url": "https://www.rudaw.net/english",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Kurdistan24",
+          "url": "https://www.kurdistan24.net/en",
+          "authority_scope": "local",
+          "evidence_url": "https://www.kurdistan24.net/en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Shafaq News",
+          "url": "https://shafaq.com/en",
+          "authority_scope": "local",
+          "evidence_url": "https://shafaq.com/en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "KRG government sector directory",
+          "url": "https://gov.krd/english/",
+          "authority_scope": "local_directory_not_environment_specialist",
+          "evidence_url": "https://gov.krd/english/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Iraq Meteorological Organization",
+          "url": "https://www.meteoseism.gov.iq/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.meteoseism.gov.iq/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "KRG government civil-defence information",
+          "url": "https://gov.krd/dmi-en/publications/news-service/",
+          "authority_scope": "official_publications",
+          "evidence_url": "https://gov.krd/dmi-en/publications/news-service/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "KRG Ministry of Peshmerga Affairs",
+          "url": "https://gov.krd/mopa-en/",
+          "authority_scope": "regional_security_force",
+          "evidence_url": "https://gov.krd/mopa-en/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Iraq Ministry of Defence",
+          "url": "https://mod.mil.iq/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://mod.mil.iq/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
       "public_health": [],
       "critical_infrastructure": [],
-      "status": "research_pending"
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Official news from KRG is distinct from privately operated media; public defence information only."
     },
     "TZ-ZAN": {
       "name_en": "Zanzibar",
       "name_ko": "잔지바르",
       "parent_iso": "TZ",
       "region_type": "auto",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
-      "public_health": [],
-      "critical_infrastructure": [],
-      "status": "research_pending"
+      "government_business": [
+        {
+          "name": "Government of Zanzibar",
+          "url": "https://www.zanzibar.go.tz/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.zanzibar.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Zanzibar Investment Promotion Authority",
+          "url": "https://zipa.go.tz/",
+          "authority_scope": "investment",
+          "evidence_url": "https://zipa.go.tz/r1d2t9/the-organization",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Zanzibar Environmental Management Authority permit services",
+          "url": "https://zema.go.tz/services",
+          "authority_scope": "government_regulatory_business_service",
+          "evidence_url": "https://zema.go.tz/services",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Zanzibar government newspapers including Zanzibar Leo",
+          "url": "https://epaper.smsz.co.tz/",
+          "authority_scope": "state_publisher",
+          "evidence_url": "https://epaper.smsz.co.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Zanzibar Environmental Management Authority",
+          "url": "https://www.zema.go.tz/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://www.zema.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Tanzania Meteorological Authority",
+          "url": "https://www.meteo.go.tz/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.meteo.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Zanzibar Broadcasting Commission weather safety notices",
+          "url": "https://tuz.go.tz/",
+          "authority_scope": "broadcast_regulator_not_emergency_authority",
+          "evidence_url": "https://tuz.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Tanzania People's Defence Force",
+          "url": "https://www.tpdf.mil.tz/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.tpdf.mil.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Zanzibar government health portal",
+          "url": "https://www.zanzibar.go.tz/",
+          "authority_scope": "government_directory",
+          "evidence_url": "https://www.zanzibar.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Zanzibar government agency directory",
+          "url": "https://www.zanzibar.go.tz/",
+          "authority_scope": "government_directory",
+          "evidence_url": "https://www.zanzibar.go.tz/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Newspapers Zanzibar Leo/Zaspoti/Zanzibar Mail share a publisher and must NOT be counted as three independent newsrooms."
     },
     "ID-AC": {
       "name_en": "Aceh",
       "name_ko": "아체 특별자치주",
       "parent_iso": "ID",
       "region_type": "special",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
-      "public_health": [],
+      "government_business": [
+        {
+          "name": "Aceh Provincial Government",
+          "url": "https://acehprov.go.id/",
+          "authority_scope": "local",
+          "evidence_url": "https://acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Aceh electronic procurement LPSE (national LKPP directory)",
+          "url": "https://eproc.lkpp.go.id/lpse/read/106/lpse-provinsi-aceh",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://eproc.lkpp.go.id/lpse/read/106/lpse-provinsi-aceh",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Aceh Investment and One-Stop Integrated Services",
+          "url": "https://www.dpmptsp.acehprov.go.id/",
+          "authority_scope": "investment",
+          "evidence_url": "https://www.dpmptsp.acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Serambi Indonesia",
+          "url": "https://serambinews.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://serambinews.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "AJNN Aceh Journal National Network",
+          "url": "https://www.ajnn.net/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ajnn.net/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Berita Kini",
+          "url": "https://beritakini.co/",
+          "authority_scope": "local",
+          "evidence_url": "https://beritakini.co/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Aceh Environment and Forestry Department",
+          "url": "https://dlhk.acehprov.go.id/",
+          "authority_scope": "local",
+          "evidence_url": "https://dlhk.acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Indonesian Meteorology Agency BMKG",
+          "url": "https://www.bmkg.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.bmkg.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Aceh Disaster Management Agency BPBA",
+          "url": "https://bpba.acehprov.go.id/",
+          "authority_scope": "local",
+          "evidence_url": "https://bpba.acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Indonesian National Armed Forces",
+          "url": "https://www.tni.mil.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.tni.mil.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Aceh Public Health Department",
+          "url": "https://dinkes.acehprov.go.id/",
+          "authority_scope": "local",
+          "evidence_url": "https://dinkes.acehprov.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
       "critical_infrastructure": [],
-      "status": "research_pending"
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Three Aceh publisher brands are independently listed in Indonesian press/media references, but current URL accessibility remains untested."
     },
     "ID-PP": {
       "name_en": "Papua special autonomy provinces",
       "name_ko": "파푸아 특별자치 지역",
       "parent_iso": "ID",
       "region_type": "special",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
+      "government_business": [
+        {
+          "name": "Papua Provincial Government",
+          "url": "https://www.papua.go.id/",
+          "authority_scope": "one_of_multiple_provinces",
+          "evidence_url": "https://www.papua.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Indonesia national LKPP procurement directory",
+          "url": "https://eproc.lkpp.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://eproc.lkpp.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Cenderawasih Pos",
+          "url": "https://cenderawasihpos.jawapos.com/",
+          "authority_scope": "regional_coverage",
+          "evidence_url": "https://cenderawasihpos.jawapos.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Indonesia Ministry of Environment",
+          "url": "https://www.menlh.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.menlh.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Indonesia BMKG",
+          "url": "https://www.bmkg.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.bmkg.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Indonesia National Disaster Management Agency",
+          "url": "https://bnpb.go.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://bnpb.go.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Indonesian National Armed Forces",
+          "url": "https://www.tni.mil.id/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.tni.mil.id/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
       "public_health": [],
       "critical_infrastructure": [],
-      "status": "research_pending"
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Composite grouping of several Papuan special autonomy provinces, NOT a single provincial administration. Sub-province authority mapping is required; the national ministry sites cannot be counted as provincial agencies."
     },
     "PG-NSB": {
       "name_en": "Autonomous Region of Bougainville",
       "name_ko": "부건빌 자치지역",
       "parent_iso": "PG",
       "region_type": "auto",
-      "government_business": [],
+      "government_business": [
+        {
+          "name": "Autonomous Bougainville Government",
+          "url": "https://abg.gov.pg/",
+          "authority_scope": "local",
+          "evidence_url": "https://abg.gov.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bougainville Department of Commerce, Trade and Industry",
+          "url": "https://abg.gov.pg/index.php/government/departments/commerce-trade-and-industry",
+          "authority_scope": "regional_business_department",
+          "evidence_url": "https://abg.gov.pg/index.php/government/departments/commerce-trade-and-industry",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Bougainville government official contracts and tenders legislation",
+          "url": "https://abg.gov.pg/acts-laws",
+          "authority_scope": "legislation_not_live_tender",
+          "evidence_url": "https://abg.gov.pg/acts-laws",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
       "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
+      "environment": [
+        {
+          "name": "Bougainville Government ministry directory",
+          "url": "https://abg.gov.pg/",
+          "authority_scope": "regional_government_directory",
+          "evidence_url": "https://abg.gov.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "Papua New Guinea National Weather Service",
+          "url": "https://www.pngmet.gov.pg/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.pngmet.gov.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Bougainville government disaster and emergency news",
+          "url": "https://abg.gov.pg/index.php/news",
+          "authority_scope": "government_emergency_information",
+          "evidence_url": "https://abg.gov.pg/index.php/news",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Papua New Guinea Defence Force",
+          "url": "https://www.defence.gov.pg/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.defence.gov.pg/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
       "public_health": [],
-      "critical_infrastructure": [],
-      "status": "research_pending"
+      "critical_infrastructure": [
+        {
+          "name": "Bougainville Department of President and Executive Council",
+          "url": "https://abg.gov.pg/government/departments/president-executive-council-department",
+          "authority_scope": "local",
+          "evidence_url": "https://abg.gov.pg/government/departments/president-executive-council-department",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Government-produced Bougainville Bulletin is not counted as an independent newsroom. Private New Dawn FM official domain still requires source validation."
     },
     "MY-SBH": {
       "name_en": "Sabah",
       "name_ko": "사바",
       "parent_iso": "MY",
       "region_type": "special",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
+      "government_business": [
+        {
+          "name": "Sabah Government",
+          "url": "https://www.sabah.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sabah government tender directory",
+          "url": "https://www.sabah.gov.my/",
+          "authority_scope": "government_directory_only",
+          "evidence_url": "https://www.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sabah Public Works Department",
+          "url": "https://jkr.sabah.gov.my/",
+          "authority_scope": "public_works",
+          "evidence_url": "https://jkr.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "Daily Express Sabah",
+          "url": "https://www.dailyexpress.com.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.dailyexpress.com.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "The Borneo Post Sabah",
+          "url": "https://www.theborneopost.com/",
+          "authority_scope": "regional_coverage",
+          "evidence_url": "https://www.theborneopost.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Overseas Chinese Daily News",
+          "url": "https://www.ocdn.com.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.ocdn.com.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Sabah Environment Protection Department",
+          "url": "https://epd.sabah.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://epd.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "MetMalaysia",
+          "url": "https://www.met.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.met.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "NADMA Malaysia",
+          "url": "https://www.nadma.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.nadma.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Malaysia Ministry of Defence",
+          "url": "https://www.mod.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.mod.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
       "public_health": [],
-      "critical_infrastructure": [],
-      "status": "research_pending"
+      "critical_infrastructure": [
+        {
+          "name": "Sabah Public Works Department",
+          "url": "https://jkr.sabah.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://jkr.sabah.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "Sabah Government main portal repeated in government business cards pending independent tender source. Do NOT count repeated site as two separate agencies."
     },
     "MY-SWK": {
       "name_en": "Sarawak",
       "name_ko": "사라왁",
       "parent_iso": "MY",
       "region_type": "special",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
-      "public_health": [],
-      "critical_infrastructure": [],
-      "status": "research_pending"
+      "government_business": [
+        {
+          "name": "Sarawak Government",
+          "url": "https://sarawak.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://sarawak.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sarawak Government eTender notices",
+          "url": "https://etendernotice.sarawak.gov.my/etender/public/public_tender_list.jsp",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://etendernotice.sarawak.gov.my/etender/public/public_tender_list.jsp",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sarawak Public Works Department tenders",
+          "url": "https://jkr.sarawak.gov.my/web/subpage/tender_and_quotation_list",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://jkr.sarawak.gov.my/web/subpage/tender_and_quotation_list",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "The Borneo Post Sarawak",
+          "url": "https://www.theborneopost.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.theborneopost.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "DayakDaily",
+          "url": "https://dayakdaily.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://dayakdaily.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sarawak Tribune",
+          "url": "https://www.sarawaktribune.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.sarawaktribune.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Natural Resources and Environment Board Sarawak",
+          "url": "https://www.nreb.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.nreb.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "MetMalaysia",
+          "url": "https://www.met.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.met.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Malaysia NADMA",
+          "url": "https://www.nadma.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.nadma.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "Malaysia Ministry of Defence",
+          "url": "https://www.mod.gov.my/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.mod.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Sarawak Government",
+          "url": "https://sarawak.gov.my/",
+          "authority_scope": "regional_directory",
+          "evidence_url": "https://sarawak.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Sarawak Public Works Department",
+          "url": "https://jkr.sarawak.gov.my/",
+          "authority_scope": "local",
+          "evidence_url": "https://jkr.sarawak.gov.my/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified",
+      "notes": "State tender sources are distinct services but some are agencies from the same parent government. Public media brands are treated separately from government media."
     },
     "CN-HK": {
       "name_en": "Hong Kong SAR",
