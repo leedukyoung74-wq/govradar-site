@@ -8,13 +8,6 @@ on:
       - 'build.py'
       - 'tests/test_req_generated_preview.py'
       - '.github/workflows/wmm_govradar_buyer_preview_qa.yml'
-  pull_request:
-    paths:
-      - 'pages_req.py'
-      - 'web/req-safe.js'
-      - 'build.py'
-      - 'tests/test_req_generated_preview.py'
-      - '.github/workflows/wmm_govradar_buyer_preview_qa.yml'
   workflow_dispatch:
 permissions:
   contents: read
