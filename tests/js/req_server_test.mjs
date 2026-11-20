@@ -21,7 +21,7 @@ out.push(["3", await call(P, "POST", { type: "country", body: "B", email: "x@ex.
 out.push(["4", await call(P, "POST", { type: "family", body: "C", email: "x@ex.com", privacy_consent: true }, "m1")]);
 out.push(["5", await call(P, "POST", { type: "partner", body: "D", email: "y@ex.com", privacy_consent: true }, "m0")]);
 out.push(["6", await call(P, "POST", { type: "partner", body: "E", email: "z@ex.com", privacy_consent: true })]);
-out.push(["7", await call(P, "POST", { type: "x", body: "E", email: "z@ex.com" })]);
+out.push(["7", await call(P, "POST", { type: "x", body: "E", email: "z@ex.com", privacy_consent: true })]);
 const h = await call(G, "GET", null, "m1"); out.push(["8", String(h.items.length) + " " + h.left]);
 raw.exec("update requests set counted=0, status='failed' where type='country'");
 out.push(["9", (await call(G, "GET", null, "m1")).left]);
