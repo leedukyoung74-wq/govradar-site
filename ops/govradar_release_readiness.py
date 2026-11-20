@@ -42,6 +42,76 @@ def json_file(path):
     except (UnicodeError,ValueError,TypeError):return None
 
 
+
+def official_https(url):
+    """Structural URL screen; this does NOT prove a government's ownership."""
+    if not isinstance(url,str) or any(c in url for c in ("\n","\r","\t")):
+        return False
+    try:
+        from urllib.parse import urlsplit
+        p=urlsplit(url)
+        return (p.scheme=="https" and bool(p.hostname) and p.hostname!="localhost"
+                and p.port is None and not p.username and not p.password
+                and not p.fragment and " " not in url)
+    except (TypeError,ValueError):
+        return False
+
+
+def check_government_catalog(src,now):
+    """Verify metadata integrity; never invent external institutional proof."""
+    meta=json_file(src/"src"/"countries_meta.json")
+    directory=json_file(src/"src"/"government_business_sites.json")
+    result={"official_site_records_in_src":0,"countries_with_3_or_more":0,
+            "structurally_complete":False,"invalid_records":0,"missing_country_count":193}
+    if not isinstance(meta,list) or not isinstance(directory,dict) or directory.get("schema_version")!=1:
+        return result
+    try:
+        isos=[r["iso"] for r in meta]
+        if len(isos)!=193 or len(set(isos))!=193 or not all(isinstance(i,str) and len(i)==2 for i in isos):
+            return result
+    except (TypeError,KeyError):
+        return result
+    rows_by_iso=directory.get("countries")
+    if not isinstance(rows_by_iso,dict) or set(rows_by_iso)-set(isos):
+        return result
+    valid=0
+    covered=0
+    invalid=0
+    for iso in isos:
+        entries=rows_by_iso.get(iso,[])
+        if not isinstance(entries,list):
+            invalid+=1
+            continue
+        seen=set()
+        for r in entries:
+            if not isinstance(r,dict):
+                invalid+=1
+                continue
+            url,ev=r.get("url"),r.get("evidence_url")
+            try:
+                check_date=dt.date.fromisoformat(r.get("verified_on",""))
+            except (ValueError,TypeError):
+                check_date=None
+            from urllib.parse import urlsplit
+            canonical=(urlsplit(url).hostname or "").lower()+urlsplit(url).path.rstrip("/").lower() if official_https(url) else ""
+            ok=(bool(canonical) and canonical not in seen and official_https(ev)
+                and r.get("verification")=="official_primary"
+                and r.get("category") in ("procurement","support","investment")
+                and isinstance(r.get("name_ko"),str) and bool(r["name_ko"].strip())
+                and isinstance(r.get("name_en"),str) and bool(r["name_en"].strip())
+                and check_date is not None and check_date<=now.date())
+            if not ok:
+                invalid+=1
+                continue
+            seen.add(canonical)
+            valid+=1
+        if len(seen)>=3:
+            covered+=1
+    result.update(official_site_records_in_src=valid,countries_with_3_or_more=covered,
+                  invalid_records=invalid,missing_country_count=193-covered,
+                  structurally_complete=(valid>=579 and covered==193 and invalid==0))
+    return result
+
 def inspect(src,live,data,now=None):
     src,live,data=map(Path,(src,live,data))
     now=now or dt.datetime.now(UTC)
@@ -86,13 +156,12 @@ def inspect(src,live,data,now=None):
         add(key,"pass" if ok else "block",
             {"source_health_ok":h.get("ok"),"stale":h.get("stale"),
              "age_minutes":round(age_m,1) if age_m is not None else None})
-    directory=json_file(src/"src"/"government_business_sites.json")
-    count=sum(len(x) for x in directory.get("countries",{}).values()) if isinstance(directory,dict) else 0
-    markets=sum(len(x)>=3 for x in directory.get("countries",{}).values()) if isinstance(directory,dict) else 0
-    add("national_government_portals","pass" if count>=579 and markets==193 else "block",
-        {"official_site_records_in_src":count,"countries_with_3_or_more":markets,
-         "minimum_required":579,"target_countries":193,
-         "note":"Source-side catalog count only; each link needs separate official evidence."})
+    gov_sites=check_government_catalog(src,now)
+    add("national_government_portals",
+        # A structurally complete file never proves an external authority is real.
+        "unverified" if gov_sites["structurally_complete"] else "block",
+        {**gov_sites,"minimum_required":579,"target_countries":193,
+         "note":"Only official_primary entries with dated evidence count. Even a complete catalog needs independent authority/redirect review before release."})
     # These require actual owner-controlled test identities, browser and D1/IdP
     # access. Local code or file equality NEVER proves production auth.
     for key,description in (

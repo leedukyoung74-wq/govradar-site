@@ -1,0 +1,29 @@
+name: GOV RADAR official evidence gate regression (NO DEPLOY)
+on:
+  push:
+    branches:
+      - review/govradar-p0-evidence-gate-hardening-20261120
+    paths:
+      - 'ops/govradar_release_readiness.py'
+      - 'ops/tests/test_govradar_release_readiness.py'
+      - '.github/workflows/wmm_p0_evidence_gate_qa.yml'
+  pull_request:
+    paths:
+      - 'ops/govradar_release_readiness.py'
+      - 'ops/tests/test_govradar_release_readiness.py'
+      - '.github/workflows/wmm_p0_evidence_gate_qa.yml'
+permissions:
+  contents: read
+jobs:
+  source_only_qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fail closed on fabricated portal claims (offline, no secrets)
+        run: python -m unittest discover -s ops/tests -p test_govradar_release_readiness.py -v
