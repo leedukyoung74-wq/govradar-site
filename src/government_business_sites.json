@@ -61,6 +61,35 @@
         "evidence_url": "https://u.ae/en/information-and-services/finance-and-investment/foreign-direct-investment"
       }
     ],
+    "AG": [
+      {
+        "name_ko": "앤티가 바부다 · 정부입찰위원회",
+        "name_en": "Antigua and Barbuda Government Tenders Board",
+        "category": "procurement",
+        "url": "https://tendersboard.gov.ag/business-opportunities/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ab.gov.ag/detail_template.php?page=government_services%2Ftenders"
+      },
+      {
+        "name_ko": "총리실 기업개발프로그램 · 중소기업",
+        "name_en": "Antigua & Barbuda Prime Minister Entrepreneurial Development Programme",
+        "category": "support",
+        "url": "https://antiguabarbudaedp.com/small-businesses/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ab.gov.ag/detail_template.php?page=media%2Fcabinet_notes%2F2026%2F2026_sept_23-cabinet_meeting"
+      },
+      {
+        "name_ko": "ABIA · 국가 투자청",
+        "name_en": "Antigua and Barbuda Investment Authority",
+        "category": "investment",
+        "url": "https://investantiguabarbuda.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ab.gov.ag/detail_template.php?page=government_services%2Ftenders"
+      }
+    ],
     "AL": [
       {
         "name_ko": "APP · 알바니아 국가조달 공고",
@@ -2323,6 +2352,35 @@
         "evidence_url": "https://invest.gov.kz/ru/about-us/purchase/"
       }
     ],
+    "LC": [
+      {
+        "name_ko": "세인트루시아 정부 재무부 · 입찰공고",
+        "name_en": "Saint Lucia Department of Finance · Public Tenders",
+        "category": "procurement",
+        "url": "https://www.finance.gov.lc/tenders/index",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govt.lc/tenders"
+      },
+      {
+        "name_ko": "중소기업 개발부 · 정부 창업지원",
+        "name_en": "Saint Lucia Small Enterprise Development Unit",
+        "category": "support",
+        "url": "https://www.govt.lc/ministries/tourism-heritage-and-creative-industries/small-enterprise-development-unit",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govt.lc/ministries/tourism-heritage-and-creative-industries/small-enterprise-development-unit"
+      },
+      {
+        "name_ko": "Invest Saint Lucia · 국가투자진흥",
+        "name_en": "Invest Saint Lucia · National Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://investstlucia.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://pmd.govt.lc/statutory-body/invest-saint-lucia-isl/"
+      }
+    ],
     "LK": [
       {
         "name_ko": "재무부 · 공공구매 공고",
@@ -4061,6 +4119,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://gov.uz/en/activity_page/investment"
+      }
+    ],
+    "VC": [
+      {
+        "name_ko": "세인트빈센트 국가조달 · 현행 입찰",
+        "name_en": "Saint Vincent and the Grenadines · Current Public Tenders",
+        "category": "procurement",
+        "url": "https://procurement.gov.vc/eprocure/index.php/current-bids",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.vc/index.php/procurement-notices"
+      },
+      {
+        "name_ko": "경제기획 재무부 · 중소기업 보조금",
+        "name_en": "Saint Vincent Government SME Grants · Finance Ministry",
+        "category": "support",
+        "url": "https://finance.gov.vc/finance/images/PDF/small-grant-programme-criteria.pdf",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.vc/index.php/business/regulations/44-web-classified"
+      },
+      {
+        "name_ko": "Invest SVG · 정부 투자진흥기관",
+        "name_en": "Invest SVG · Official Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://investsvg.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.vc/index.php/business/regulations/44-web-classified"
       }
     ],
     "VN": [
