@@ -2091,6 +2091,35 @@
         "evidence_url": "https://www.investindia.gov.in/"
       }
     ],
+    "IQ": [
+      {
+        "name_ko": "Iraq Tender Portal · 공식 조달공고",
+        "name_en": "Iraq Unified Electronic Tender Platform · Ministry of Planning",
+        "category": "procurement",
+        "url": "https://itp.iq/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mop.gov.iq/documents/gov_contarct/announcements/2026/3429.pdf"
+      },
+      {
+        "name_ko": "산업광물부 · 제조기업 지원 정보",
+        "name_en": "Iraq Ministry of Industry and Minerals · Industrial Business Platform",
+        "category": "support",
+        "url": "https://iip.industry.gov.iq/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ur.gov.iq/index/show-eservice/50602/10058/org"
+      },
+      {
+        "name_ko": "NIC · 국가 투자위원회",
+        "name_en": "Iraq National Investment Commission",
+        "category": "investment",
+        "url": "https://investpromo.gov.iq/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investpromo.gov.iq/about-us/"
+      }
+    ],
     "IS": [
       {
         "name_ko": "Útboðsvefur · 아이슬란드 국가조달 공고",
@@ -2495,6 +2524,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://invest.gov.kz/ru/about-us/purchase/"
+      }
+    ],
+    "LB": [
+      {
+        "name_ko": "공공조달청 · 레바논 정부입찰",
+        "name_en": "Lebanon Public Procurement Authority · Current Tenders",
+        "category": "procurement",
+        "url": "https://www.ppa.gov.lb/en/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ppa.gov.lb/en"
+      },
+      {
+        "name_ko": "경제통상부 · 중소기업 지원",
+        "name_en": "Lebanon Ministry of Economy and Trade · SME Support",
+        "category": "support",
+        "url": "https://economy.gov.lb/en/services/support-to-smes/whats-in-lebanon-for-smes",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://economy.gov.lb/en/services/support-to-smes/whats-in-lebanon-for-smes"
+      },
+      {
+        "name_ko": "IDAL · 국가 투자진흥청",
+        "name_en": "Investment Development Authority of Lebanon · IDAL",
+        "category": "investment",
+        "url": "https://investinlebanon.gov.lb/en/about_us",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investinlebanon.gov.lb/en/about_us/who_we_are"
       }
     ],
     "LC": [
