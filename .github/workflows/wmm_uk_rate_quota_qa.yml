@@ -1,0 +1,27 @@
+name: GOV RADAR UK FTS 429 quota safety (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - "tools/feed_more.py"
+      - "tests/test_uk_rate_limit_policy.py"
+      - ".github/workflows/wmm_uk_rate_quota_qa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  uk-source-policy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline UK regression and no live/paid requests
+        run: |
+          python -m unittest discover -s tests -p 'test_uk_rate_limit_policy.py' -v
+          python -m unittest discover -s tests -p 'test_uk_timeout_fallback.py' -v
+          python -m unittest discover -s tests -p 'test_uk_modern_notices.py' -v
+          python -m unittest discover -s tests -p 'test_source_time_budgets.py' -v
