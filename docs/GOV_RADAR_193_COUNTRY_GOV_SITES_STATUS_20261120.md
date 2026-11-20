@@ -1,13 +1,12 @@
-# GOV RADAR 193개국 정부 사업·조달·기업지원·투자 공식 출처 현황
+# GOV RADAR — 국가별 정부 사업·공공조달·기업 지원·투자 기관 카탈로그
 
-**2026-11-21 검토용 카탈로그:** **164/193개국·492/579개 등록**, **29개국·87곳 미등록**.
+**2026-11-21 검토용 등록:** 167/193개국·501/579개, 부족 **26개국·78개**.
 
-- 국가별 최소 3개 목표. 공식기관 소속 근거 URL이 있는 레코드 집계. 과거 레거시 HTTP 200 후보는 공식 수량에 합산하지 않습니다.
-- 주의: 정부/공공기관 근거 메타데이터가 등록된 것이며, 각 URL의 현재 접속 성공·최신 법적 소속·API 수집 권한·서비스 동작을 **전수 독립검증한 것은 아닙니다**.
-- 언론 뉴스 3곳, 환경기관, 기상기관, 비상사태·재난기관은 **별도 출처 카탈로그**로 관리하고 정부 사업 출처 총계에 혼합하지 않습니다.
-- 운영 배포 여부: **미배포** (검토용 PR).
+- 국가별 최소 3개 공식기관 조달·기업지원·투자 페이지 및 공식 근거 URL/확인 날짜를 검토용 레코드로 작성. 과거 HTTP 200 후보를 정부기관 공식 수치에 합산하지 않음.
+- 이 수치는 구조화된 등록 항목이지 전체 사이트의 실제 접속·현행 운영 주체·실시간 API·모바일 동작을 전수 검증 완료한 것이 아님.
+- 뉴스·언론·환경·날씨·비상사태 정보원은 별도로 구분하며 공식 사업사이트 수량에 포함시키지 않음. **실운영 사이트 미배포**.
 
-| 지역 | 국가 | ISO | 등록 | 부족 | 정부·공공기관 공식 출처 |
+| 지역 | 국가 | ISO | 등록 | 부족 | 공식기관 URL |
 |---|---|:---:|---:|---:|---|
 | 아프리카 | 알제리 / Algeria | DZ | **3** | 0 | [Algeria National Public Procurement Portal](https://www.marches-publics.gov.dz/) · [Algeria NESDA · National Entrepreneurship Development](https://nesda.dz/) · [Algerian Investment Promotion Agency](https://aapi.dz/) |
 | 아프리카 | 앙골라 / Angola | AO | **3** | 0 | [Angola Ministry of Finance · Public Procurement Portal](https://compraspublicas.minfin.gov.ao/ComprasPublicas/) · [Angola INAPEM · MSME Business Support](https://inapem.gov.ao/) · [Angola AIPEX · Government Investment Promotion](https://gue.gov.ao/portal/investimento-aipex) |
@@ -174,17 +173,17 @@
 | 미주 | 그레나다 / Grenada | GD | **3** | 0 | [Government of Grenada Official eProcurement](https://supplier.in-tend.co.uk/gnd/) · [Grenada Investment Development Corporation · SME Development](https://gidc.gd/business-units/) · [Grenada Investment Development Corporation · Investment](https://gidc.gd/) |
 | 미주 | 과테말라 / Guatemala | GT | **3** | 0 | [Guatemala Guatecompras · State Procurement](https://www.guatecompras.gt/) · [Guatemala Ministry of Economy · SME Programmes](https://www.mineco.gob.gt/) · [Guatemala PRONACOM · Competitiveness and Investment](https://www.pronacom.org/) |
 | 미주 | 가이아나 / Guyana | GY | **3** | 0 | [Guyana National Procurement Board · Public Opportunities](https://eprocure.gov.gy/) · [Guyana Small Business Bureau · Enterprise Support](https://sbb.gov.gy/) · [Guyana Office for Investment · GO-Invest](https://www.guyanainvest.gov.gy/) |
-| 미주 | 아이티 / Haiti | HT | **0** | 3 | — |
+| 미주 | 아이티 / Haiti | HT | **3** | 0 | [Haiti CNMP · Official Public Procurement](https://www.cnmp.gouv.ht/) · [Haiti Ministry of Commerce and Industry · Enterprise Development](https://mci.gouv.ht/) · [Haiti Centre de Facilitation des Investissements](https://cfi.ht/en/) |
 | 미주 | 온두라스 / Honduras | HN | **3** | 0 | [Honduras Honducompras · Official Public Procurement](https://honducompras.gob.hn/) · [Honduras Ministry of Economic Development](https://sde.gob.hn/) · [Honduras National Investment Council · Investment Facilitation](https://cni.hn/) |
 | 미주 | 자메이카 / Jamaica | JM | **3** | 0 | [Jamaica GOJEP · Government e-Procurement](https://www.gojep.gov.jm/) · [Jamaica Business Development Corporation · SME Services](https://www.jbdc.net/) · [Jamaica JAMPRO · Investment and Export Promotion](https://dobusinessjamaica.com/) |
-| 미주 | 니카라과 / Nicaragua | NI | **0** | 3 | — |
+| 미주 | 니카라과 / Nicaragua | NI | **3** | 0 | [Nicaragua SISCAE · Official Procurement Procedures](https://www.gestion.nicaraguacompra.gob.ni/siscae/portal/adquisiciones-gestion/busquedaProcedimientosVigentes?proc_estado=VIGENTE) · [Nicaragua Ministry of Industry and Commerce · Enterprise Services](https://www.mific.gob.ni/) · [Nicaragua MIFIC · Directorate of Foreign Investment](https://www.mific.gob.ni/Inicio/Fomento/Industria/Direcci%C3%B3n-de-Inversiones) |
 | 미주 | 파나마 / Panama | PA | **3** | 0 | [PanamaCompra · Government Procurement Platform](https://www.panamacompra.gob.pa/) · [Panama AMPYME · Micro and SME Authority](https://ampyme.gob.pa/) · [ProPanama · National Investment Promotion](https://propanama.gob.pa/) |
 | 미주 | 파라과이 / Paraguay | PY | **3** | 0 | [Paraguay DNCP · Government Tender Search](https://contrataciones.gov.py/buscador/licitaciones.html) · [Paraguay Ministry of Industry and Commerce · SME Support](https://www.mic.gov.py/) · [REDIEX · Investment and Exports Network](https://www.rediex.gov.py/) |
 | 미주 | 페루 / Peru | PE | **3** | 0 | [Peru OECE · SEACE Public Procurement Search](https://www.gob.pe/32306-como-acceder-a-los-procesos-de-seleccion-convocados-y-en-curso) · [PRODUCE Más · SME Business Services](https://www.gob.pe/producemas) · [PROINVERSIÓN · Public-Private Investment](https://www.investinperu.pe/) |
 | 미주 | 세인트키츠 네비스 / Saint Kitts and Nevis | KN | **3** | 0 | [Saint Kitts and Nevis Official Tender Notices](https://www.sknis.gov.kn/notices/) · [St Kitts and Nevis Government Small Business Development Centre](https://www.mosbecce.gov.kn/sbdc/) · [St Kitts Investment Promotion Agency · Government](https://www.edi.gov.kn/st-kitts-investment-and-promotion-agency-skipa/) |
 | 미주 | 세인트루시아 / Saint Lucia | LC | **3** | 0 | [Government of Saint Lucia Tender Notices](https://www.govt.lc/tenders) · [Saint Lucia Small Enterprise Development Unit](https://www.govt.lc/services/apply-for-small-business-advisory-services) · [Invest Saint Lucia · Statutory Investment Promotion Agency](https://investstlucia.com/) |
 | 미주 | 세인트빈센트 그레나딘 / Saint Vincent and the Grenadines | VC | **3** | 0 | [Saint Vincent and the Grenadines eProcurement Current Bids](https://procurement.gov.vc/eprocure/index.php/current-bids) · [Saint Vincent Centre for Enterprise Development](https://ced.gov.vc/ced/) · [Invest SVG · Official Government Investment Agency](https://investsvg.com/) |
-| 미주 | 수리남 / Suriname | SR | **0** | 3 | — |
+| 미주 | 수리남 / Suriname | SR | **3** | 0 | [Suriname Government · Public Procurement Announcements](https://gov.sr/aanbestedingen/) · [Suriname Government · SME Diversification and Start-up Support](https://gov.sr/sme-diversification-start-up-support-program/) · [Suriname State Investment and Trade Agency](https://sita.sr/invest/) |
 | 미주 | 트리니다드 토바고 / Trinidad and Tobago | TT | **3** | 0 | [Trinidad and Tobago ProcureTT · Official Procurement Notices](https://oprtt.org/procurett/) · [Trinidad and Tobago Ministry of Trade · SME Programmes](https://tradeind.gov.tt/) · [Trinidad and Tobago Government · Investment Directorate](https://mtti.gov.tt/investment-directorate/) |
 | 미주 | 우루과이 / Uruguay | UY | **3** | 0 | [Uruguay ARCE · State Procurement Regulatory Agency](https://www.gub.uy/agencia-reguladora-compras-estatales/) · [Uruguay ANII · Innovation and Entrepreneurship Grants](https://anii.org.uy/apoyos/innovacion/) · [Uruguay XXI · Investment and Export Promotion](https://www.uruguayxxi.gub.uy/en/) |
 | 미주 | 베네수엘라 / Venezuela | VE | **0** | 3 | — |
@@ -203,4 +202,4 @@
 | 오세아니아 | 투발루 / Tuvalu | TV | **3** | 0 | [Government of Tuvalu Official eProcurement](https://portal.tenderlink.com/got/login) · [Tuvalu Finance Ministry · Business Development](https://finance.gov.tv/business/) · [Tuvalu Government Trade and Investment Procedures](https://tuvalu.tradeportal.org/) |
 | 오세아니아 | 바누아투 / Vanuatu | VU | **3** | 0 | [Vanuatu Central Tender Board · Official Notices](https://ctb.gov.vu/en/) · [Vanuatu Ministry of Trade & Commerce · Enterprise Services](https://mtc.gov.vu/) · [Vanuatu Foreign Investment Promotion Agency](https://investvanuatu.vu/) |
 
-개별 근거는 `src/government_business_sites.json`의 `evidence_url` 참조.
+출처 확인: `src/government_business_sites.json` 각 항목의 `evidence_url` 참조. 실제 정부기관명/운영정책 바뀜은 추가 점검 대상.
