@@ -728,6 +728,38 @@
         "evidence_url": "https://www.bitc.co.bw/"
       }
     ],
+    "BY": [
+      {
+        "name_ko": "Goszakupki · 벨라루스 전자조달",
+        "name_en": "Belarus goszakupki.by · State Procurement Platform",
+        "category": "procurement",
+        "url": "https://goszakupki.by/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cis-legislation.com/document.fwx?rgn=167643",
+        "notes": "No claim of live accessibility from this evidence"
+      },
+      {
+        "name_ko": "경제부 · 중소기업지원 정책",
+        "name_en": "Belarus Ministry of Economy · SME Development and Support",
+        "category": "support",
+        "url": "https://economy.gov.by/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investinbelarus.by/",
+        "notes": "No claim of live accessibility from this evidence"
+      },
+      {
+        "name_ko": "NAIP · 국립 투자·민영화청",
+        "name_en": "Belarus National Agency of Investment and Privatization",
+        "category": "investment",
+        "url": "https://investinbelarus.by/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investinbelarus.by/",
+        "notes": "No claim of live accessibility from this evidence"
+      }
+    ],
     "BZ": [
       {
         "name_ko": "벨리즈 정부 공공조달 기회",
@@ -2118,6 +2150,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investpromo.gov.iq/about-us/"
+      }
+    ],
+    "IR": [
+      {
+        "name_ko": "Setadiran · 이란 정부 전자조달",
+        "name_en": "Iran Government Electronic Procurement System · Setad",
+        "category": "procurement",
+        "url": "https://www.setadiran.ir/setad/cms/home",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/guney-asya/iran/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari",
+        "notes": "Government-system attribution sourced to government trade directory; remote access and sanctions not validated"
+      },
+      {
+        "name_ko": "ISIPO · 국립 중소산업·산업단지청",
+        "name_en": "Iran Small Industries and Industrial Parks Organization",
+        "category": "support",
+        "url": "https://en.isipo.ir/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/guney-asya/iran/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari",
+        "notes": "Government-system attribution sourced to government trade directory; remote access and sanctions not validated"
+      },
+      {
+        "name_ko": "OIETAI · 투자·기술경제지원기구",
+        "name_en": "Iran Organization for Investment, Economic and Technical Assistance",
+        "category": "investment",
+        "url": "https://www.investiniran.ir/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/guney-asya/iran/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari",
+        "notes": "Government-system attribution sourced to government trade directory; remote access and sanctions not validated"
       }
     ],
     "IS": [
@@ -4411,6 +4475,38 @@
         "evidence_url": "https://www.investinelsalvador.gob.sv/es/announcements"
       }
     ],
+    "SY": [
+      {
+        "name_ko": "SANA · 시리아 국가기관 공개입찰 원문 공고",
+        "name_en": "Syria SANA · Public Ministry Tender Announcements (not unified portal)",
+        "category": "procurement",
+        "url": "https://sana.sy/economy/syrian-economy/2637284/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://sana.sy/en/presidency/2303036/",
+        "notes": "Official ministry tender announcement via national news service, not a unified procurement platform"
+      },
+      {
+        "name_ko": "SMEDA · 중소기업 개발청",
+        "name_en": "Syria SME Development Authority · Government SME Services",
+        "category": "support",
+        "url": "https://smeda.gov.sy/?lang=en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://sana.sy/en/economic/2340521/",
+        "notes": ""
+      },
+      {
+        "name_ko": "시리아 투자청 · 투자진흥",
+        "name_en": "Syrian Investment Authority · Government Investor Services",
+        "category": "investment",
+        "url": "https://invest.gov.sy/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://sana.sy/en/syria/page/2/",
+        "notes": ""
+      }
+    ],
     "SZ": [
       {
         "name_ko": "ESPPRA · 에스와티니 조달감독청",
@@ -5018,6 +5114,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://mcil.gov.ws/online-services"
+      }
+    ],
+    "YE": [
+      {
+        "name_ko": "HATC · 예멘 최고입찰감독청 공개공고 (사나)",
+        "name_en": "Yemen HATC · Public Tender Oversight (Sanaa authority)",
+        "category": "procurement",
+        "url": "https://www.hatcyemen.org/the_tenders/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://hatcyemen.org/about_us/index.php",
+        "notes": "Competing territorial authorities: confirm official/operational jurisdiction and applicable sanctions before any action"
+      },
+      {
+        "name_ko": "경제·산업·투자부 · 기업개발 지원",
+        "name_en": "Yemen Ministry of Economy, Industry and Investment · Business Services",
+        "category": "support",
+        "url": "https://moit.gov.ye/industrial-sector",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moit.gov.ye/sectors",
+        "notes": "Competing territorial authorities: confirm official/operational jurisdiction and applicable sanctions before any action"
+      },
+      {
+        "name_ko": "일반투자청 · 공인 투자 원스톱",
+        "name_en": "Yemen General Investment Authority · One-Stop Business Portal",
+        "category": "investment",
+        "url": "https://nsw.gov.ye/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investinyemen.org/",
+        "notes": "Competing territorial authorities: confirm official/operational jurisdiction and applicable sanctions before any action"
       }
     ],
     "ZA": [
