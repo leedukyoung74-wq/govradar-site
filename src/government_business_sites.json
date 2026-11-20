@@ -415,6 +415,38 @@
         "evidence_url": "https://flandersinvestmentandtrade.be/en/subsidies"
       }
     ],
+    "BF": [
+      {
+        "name_ko": "DGCMEF · 부르키나파소 국가공공조달",
+        "name_en": "Burkina Faso Government Public Procurement Directorate",
+        "category": "procurement",
+        "url": "https://www.dgcmef.gov.bf/fr/plan-de-passation-des-march-s-publics",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.dgcmef.gov.bf/fr/plan-de-passation-des-march-s-publics",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      },
+      {
+        "name_ko": "Business Procédures · 정부기업 창업지원",
+        "name_en": "Burkina Faso Official Business Registration and SME Guidance",
+        "category": "support",
+        "url": "https://businessprocedures.bf/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://businessprocedures.bf/Team?includeSearch=true&l=fr",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      },
+      {
+        "name_ko": "ABI · 현행 부르키나파소 투자진흥청",
+        "name_en": "Agence Burkinabè des Investissements · ABI",
+        "category": "investment",
+        "url": "https://www.investburkina.bf/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investburkina.bf/projects/immobilier-9",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      }
+    ],
     "BG": [
       {
         "name_ko": "CAIS EOP · 공공조달 전자시스템",
@@ -764,6 +796,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://anapi.cd/en/procedures"
+      }
+    ],
+    "CG": [
+      {
+        "name_ko": "ARMP · 콩고공화국 국가조달청",
+        "name_en": "Republic of Congo Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://armp.cg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp.cg/",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      },
+      {
+        "name_ko": "산업개발부 · 기업·산업 지원",
+        "name_en": "Republic of Congo Ministry of Industrial Development · Business Support",
+        "category": "support",
+        "url": "https://www.industrie.gouv.cg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.industrie.gouv.cg/",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      },
+      {
+        "name_ko": "API-Congo · 콩고공화국 투자진흥청",
+        "name_en": "Republic of Congo National Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://apicongo.cg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://apicongo.cg/presentation_api.php?lang=en",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
       }
     ],
     "CH": [
@@ -3032,6 +3096,38 @@
         "evidence_url": "https://nipdb.com/"
       }
     ],
+    "NE": [
+      {
+        "name_ko": "니제르 국가 공공조달 입찰공고",
+        "name_en": "Niger Official Public Procurement Notices Portal",
+        "category": "procurement",
+        "url": "https://www.marchespublics.ne/index.php",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.marchespublics.ne/compte",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      },
+      {
+        "name_ko": "FONAP · 니제르 중소기업 자금지원",
+        "name_en": "Niger National SME and SMI Support Fund · FONAP",
+        "category": "support",
+        "url": "https://fonap.ne/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://fonap.ne/",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      },
+      {
+        "name_ko": "ANPIPS · 니제르 국가 투자진흥",
+        "name_en": "Niger National Private Investment Promotion Agency · ANPIPS",
+        "category": "investment",
+        "url": "https://www.anpips.ne/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.anpips.ne/banque-de-projets/",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      }
+    ],
     "NG": [
       {
         "name_ko": "BPP · 국가 공공조달 규제청",
@@ -3906,6 +4002,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investeswatini.org.sz/"
+      }
+    ],
+    "TD": [
+      {
+        "name_ko": "ARMP · 차드 국가공공조달청",
+        "name_en": "Chad Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://www.armp-tchad.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.armp-tchad.com/",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      },
+      {
+        "name_ko": "통상산업부 · 차드 중소기업 지원",
+        "name_en": "Chad Ministry of Commerce and Industry · SME Services",
+        "category": "support",
+        "url": "https://commerce.gouv.td/services-aux-entreprises-2/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://commerce.gouv.td/missions-et-attributions/",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
+      },
+      {
+        "name_ko": "ANIE · 차드 국가 투자·수출진흥청",
+        "name_en": "Chad National Investment and Export Agency · ANIE",
+        "category": "investment",
+        "url": "https://anie.td/promotion-investissements",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://anie.td/services",
+        "review_note": "Primary agency website and current government authority checked; independent final URL/operational QA required"
       }
     ],
     "TG": [
