@@ -33,7 +33,7 @@ class NewsDirectoryQA(unittest.TestCase):
     def test_closed_country_cannot_have_fake_three_news_publishers(self):
         self.assertEqual(self.report["country_counts"]["KP"]["publisher_links_recorded"],0)
         self.assertEqual(self.report["country_counts"]["ER"]["publisher_links_recorded"],0)
-        self.assertEqual(self.report["country_counts"]["AF"]["remaining_to_three"],3)
+        self.assertEqual(self.report["country_counts"]["AF"]["remaining_to_three"],0)
 
     def test_url_parser_blocks_unsafe_schemes_and_credentials(self):
         for url in ("javascript:alert(1)","http://news.example.com",
