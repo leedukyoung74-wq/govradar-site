@@ -68,7 +68,7 @@ def request_page(L, head, foot, LANGS):
 <h2>{e(k["pick"])}</h2><div class="rq-g">{cards}</div>
 <div class="rq-rule"><p><b>{e(k["rule"])}</b> · {e(k["rule_all"])}</p><p>{e(k["limit"])}</p></div>
 <h2>{e(k["fill"])}</h2>
-<form class="cform rq-form" name="order" method="POST" data-netlify="true" netlify-honeypot="hp" action="/{L}/thanks/">
+<form class="cform rq-form" name="order" method="POST" data-netlify="true" netlify-honeypot="hp" action="/nfform?next=/{L}/thanks/">
 <input type="hidden" name="form-name" value="order"><input type="hidden" name="lang" value="{L}"><input type="hidden" name="product"><input type="hidden" name="need"><input type="hidden" name="field">
 <p hidden><label>hp<input name="hp"></label></p>
 {fields}
@@ -81,39 +81,7 @@ def request_page(L, head, foot, LANGS):
 </form>
 <h3>{e(k["mine"])}</h3><ul class="rq-mine"></ul>
 </div></section>
-<script>(function(){{var K={json.dumps({"names": names, "done": k["done"], "dup": k["dup"], "st": k["st"], "none": k["mine_n"], "req": k["req"], "sending": k["sending"], "left": k.get("left", "이번 달 남은 의뢰 {n}건"), "over": k.get("over", "이번 달 포함 건수를 넘어 견적을 먼저 보내 드립니다"), "quote": k.get("quote", "견적을 먼저 이메일로 보내 드립니다"), "sent": k.get("sent", "접수 완료"), "S": k.get("S", {})}, ensure_ascii=False)};
-var f=document.querySelector(".rq-form"),msg=f.querySelector(".rq-msg"),btn=f.querySelector("button[type=submit]");
-function cur(){{return (document.querySelector("input[name=rqt]:checked")||{{}}).value}}
-document.querySelectorAll("input[name=rqt]").forEach(function(r){{r.addEventListener("change",function(){{f.querySelectorAll(".rq-f").forEach(function(d){{d.hidden=d.dataset.t!==cur()}})}})}});
-function load(){{try{{return JSON.parse(localStorage.getItem("gv_rq")||"[]")}}catch(e){{return []}}}}
-function save(a){{try{{localStorage.setItem("gv_rq",JSON.stringify(a.slice(0,30)))}}catch(e){{}}}}
-function paint(){{var a=load(),u=document.querySelector(".rq-mine");u.innerHTML=a.length?a.map(function(x){{return "<li><b>"+x.id+"</b> · "+(K.names[x.t]||x.t)+" <small class=note>"+x.at+" · "+K.st+"</small></li>"}}).join(""):"<li class=note>"+K.none+"</li>"}}
-function hash(s){{var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return String(h)}}
-f.addEventListener("submit",function(ev){{var t=cur(),box=f.querySelector('.rq-f[data-t="'+t+'"]'),lines=[],ok=true;
-box.querySelectorAll("[data-k]").forEach(function(i){{var v=(i.value||"").trim();if(i.hasAttribute("data-req")&&!v)ok=false;if(v)lines.push(i.parentNode.firstChild.textContent.replace(" *","")+": "+v)}});
-var code=(f.querySelector('[data-k=code]').value||"").trim();if(code)lines.push("member code: "+code);
-if(!ok){{ev.preventDefault();msg.textContent=K.req;return}}
-var h=hash(t+lines.join("|")+f.email.value),a=load(),prev=a.filter(function(x){{return x.h===h&&Date.now()-x.ts<6e5}})[0];
-if(prev){{ev.preventDefault();msg.textContent=K.dup+" "+prev.id;return}}
-var d=new Date(),id="RQ-"+String(d.getFullYear()).slice(2)+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+"-"+Math.random().toString(36).slice(2,6).toUpperCase();
-f.product.value="request:"+t+" "+id;f.field.value=t;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+lines.join("\\n");
-a.unshift({{id:id,t:t,h:h,ts:Date.now(),at:d.toISOString().slice(0,10)}});save(a);btn.disabled=true;btn.textContent=K.sending;msg.textContent=K.done+" "+id;
-/* server record (Cloudflare D1): if /api/req answers, it issues the number, counts the monthly allowance and blocks duplicates;
-   the Netlify form is then posted by fetch and its result reported back. 503 (not configured) -> the browser-only flow above. */
-if(SRV&&!f.dataset.srv){{ev.preventDefault();var sendBody=lines.join("\\n");
-fetch("/api/req",{{method:"POST",headers:hdr({{"content-type":"application/json"}}),body:JSON.stringify({{type:t,body:sendBody,email:f.email.value,lang:L}})}}).then(function(r){{if(r.status===503){{SRV=false;throw 0}}return r.json()}}).then(function(j){{
-if(!j.req_no)throw 0;id=j.req_no;a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+sendBody;
-var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{{n}}",j.left):" · "+K.over):" · "+K.quote);msg.textContent=info;
-return fetch(f.getAttribute("action"),{{method:"POST",headers:{{"content-type":"application/x-www-form-urlencoded"}},body:new URLSearchParams(new FormData(f)).toString(),redirect:"manual"}}).then(function(r2){{var ok=r2.type==="opaqueredirect"||r2.status<400;
-return fetch("/api/req",{{method:"PATCH",headers:{{"content-type":"application/json"}},body:JSON.stringify({{req_no:id,ok:ok}})}}).then(function(){{btn.textContent=K.sent;paint()}})}});
-}}).catch(function(){{f.dataset.srv="1";f.submit()}})}}
-}});
-var L=document.documentElement.lang||"ko",SRV=true;
-function tok(){{try{{var x=JSON.parse(localStorage.getItem("wmm.auth.v1")||"null");return x&&x.access_token}}catch(e){{return null}}}}
-function hdr(h){{var k=tok();if(k)h.authorization="Bearer "+k;return h}}
-paint();
-if(tok())fetch("/api/req",{{headers:hdr({{}})}}).then(function(r){{if(!r.ok)throw 0;return r.json()}}).then(function(j){{var u=document.querySelector(".rq-mine");
-u.innerHTML=(j.member?"<li class=note>"+K.left.replace("{{n}}",j.left)+"</li>":"")+((j.items||[]).map(function(x){{return "<li><b>"+x.req_no+"</b> · "+(K.names[x.type]||x.type)+" <small class=note>"+String(x.created_at).slice(0,10)+" · "+(K.S[x.status]||x.status)+"</small></li>"}}).join("")||"<li class=note>"+K.none+"</li>")}}).catch(function(){{}})
-}})();</script>'''
+<script>window.WMM_REQUEST_TEXT={json.dumps({"names": names, "none": k["mine_n"], "req": k["req"]}, ensure_ascii=False)};</script>
+<script src="/assets/req-safe.js" defer></script>'''
     t_ = k["t"]
     return head(L, t_ + " · GOV RADAR", k["lede"][:150], f"/{L}/request/", {l: f"/{l}/request/" for l in LANGS}) + body + foot(L)
