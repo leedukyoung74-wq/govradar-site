@@ -40,10 +40,9 @@ class BuyerGeneratedPreview(unittest.TestCase):
         self.assertNotIn('f.submit()',code)
 
     def test_locale_english_business_pages_exist(self):
-        for page in ("index","mdb/index","solutions/index","partners/index",
-                     "membership/index","request/index"):
-            with self.subTest(page=page):
-                path=ROOT/"dist"/"en"/("index.html" if page=="index" else page)
+        for route in ("", "mdb", "solutions", "partners", "membership", "request"):
+            with self.subTest(route=route or "home"):
+                path=ROOT/"dist"/"en"/route/"index.html"
                 self.assertTrue(path.is_file(),f"missing: {path}")
         for locale in LANGS:
             with self.subTest(locale=locale):
