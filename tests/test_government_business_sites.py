@@ -18,14 +18,14 @@ class GovernmentBusinessSiteTests(unittest.TestCase):
         self.assertEqual(579,self.report["target_verified_links"])
         self.assertEqual(193,len(self.report["country_counts"]))
 
-    def test_at_least_15_verified_priority_country_sets(self):
+    def test_at_least_18_verified_priority_country_sets(self):
         # Increase this threshold only when independently reviewed additions
         # are made. Do not assert 193/193 before that is actually true.
-        self.assertGreaterEqual(self.report["verified_countries"],15)
-        self.assertGreaterEqual(self.report["verified_links"],45)
+        self.assertGreaterEqual(self.report["verified_countries"],18)
+        self.assertGreaterEqual(self.report["verified_links"],54)
         self.assertEqual(579-self.report["verified_links"],
                          self.report["remaining_required_link_slots"])
-        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA","KE","ZA","PH","BR","ID"):
+        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA","KE","ZA","PH","BR","ID","DE","ES","NZ"):
             self.assertGreaterEqual(self.report["country_counts"][iso]["verified"],3,iso)
 
     def test_one_legacy_registry_entry_does_not_count_as_government_verified(self):
