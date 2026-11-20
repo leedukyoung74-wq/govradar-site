@@ -1,10 +1,8 @@
-# GOV RADAR 193개국 공식 사업·입찰·투자 출처 — 국가별 수량
+# GOV RADAR 공식 정부·사업 포털 — 193개국 전체 수량표
 
-**기준일 2026-11-20 · 검토 브랜치 `review/govradar-40countries-official-sites-20261120`** · **49/193개국**, 공식기관 출처 **147/579개** · 추가 검증 필요 **144개국·432개**.
+기준: 2026-11-21. **63/193개국, 공식 출처 등록 189/579건, 부족 130개국·390건.** 공식기관 근거 URL을 기록한 카탈로그 항목 수이며 실시간 API·입찰 공고의 확인 수는 아닙니다. 레거시 후보 URL은 등록 수에서 제외. 개별 링크 접근 가능 여부와 운영 주체는 배포 전 교차검수 필요.
 
-검증 수는 정부 또는 공식 지정 기관 운영 근거 URL과 메타데이터가 있는 `official_primary` 항목만 계산합니다. HTTP 200 후보·글로벌 공통 사이트 복사·추정 URL·실시간 API 수집 여부는 포함되지 않습니다. 기관 조직개편, 각국 입찰 참여 권한 및 최근 리다이렉트는 최종 배포 전 별도 확인이 필요합니다.
-
-| 지역 | 국가명 | ISO | 공식 등록 | 최소 부족 | 등록된 공식 사이트 |
+| 지역 | 국가 | ISO | 등록 수 | 부족 수 | 공식사이트 링크 |
 |---|---|:---:|---:|---:|---|
 | 아프리카 | 알제리 / Algeria | DZ | **0** | 3 | — |
 | 아프리카 | 앙골라 / Angola | AO | **0** | 3 | — |
@@ -103,33 +101,33 @@
 | 중동 | 아랍에미리트 / United Arab Emirates | AE | **3** | 0 | [UAE Ministry of Finance · Federal Tender Opportunities](https://mof.gov.ae/en/public-finance/government-procurement/current-business-opportunities/) · [UAE Ministry of Economy & Tourism · Investment Support](https://www.moet.gov.ae/en/web/guest/investment-support-entities) · [Invest in Dubai · Government Investor Services](https://www.investindubai.gov.ae/en/) |
 | 중동 | 예멘 / Yemen | YE | **0** | 3 | — |
 | 중동 | 튀르키예 / Türkiye | TR | **3** | 0 | [EKAP · Türkiye Electronic Public Procurement](https://ekap.kik.gov.tr/ekap/ortak/ihalearama/index.html) · [KOSGEB · National SME Support Agency](https://www.kosgeb.gov.tr/) · [Invest in Türkiye · Presidential Investment Office](https://www.invest.gov.tr/en/pages/who-we-are.aspx) |
-| 유럽 | 알바니아 / Albania | AL | **0** | 3 | — |
+| 유럽 | 알바니아 / Albania | AL | **3** | 0 | [Albanian Public Procurement Agency · Contract Notices](https://www.app.gov.al/contract-notice/) · [Albanian Investment Development Agency](https://aida.gov.al/) · [e-Albania · Government Business Services](https://e-albania.al/) |
 | 유럽 | 안도라 / Andorra | AD | **0** | 3 | — |
 | 유럽 | 아르메니아 / Armenia | AM | **0** | 3 | — |
-| 유럽 | 오스트리아 / Austria | AT | **0** | 3 | — |
+| 유럽 | 오스트리아 / Austria | AT | **3** | 0 | [USP Austria · Government eProcurement Search](https://www.usp.gv.at/en/services/ausschreibungssuche.html) · [Austria Wirtschaftsservice · Federal Business Grants](https://www.aws.at/en/) · [Austria Business Agency · Invest in Austria](https://aba.gv.at/en/) |
 | 유럽 | 아제르바이잔 / Azerbaijan | AZ | **0** | 3 | — |
 | 유럽 | 벨라루스 / Belarus | BY | **0** | 3 | — |
-| 유럽 | 벨기에 / Belgium | BE | **0** | 3 | — |
-| 유럽 | 보스니아 헤르체고비나 / Bosnia and Herzegovina | BA | **0** | 3 | — |
+| 유럽 | 벨기에 / Belgium | BE | **3** | 0 | [Belgian Federal e-Procurement Platform](https://www.publicprocurement.be/) · [Flanders Innovation & Entrepreneurship · Subsidies](https://www.vlaio.be/en/guidance-advice/vlaio-supports-foreign-investors/government-support) · [Flanders Investment & Trade · Export Support](https://flandersinvestmentandtrade.be/en/subsidies) |
+| 유럽 | 보스니아 헤르체고비나 / Bosnia and Herzegovina | BA | **3** | 0 | [Bosnia and Herzegovina e-Procurement](https://next.ejn.gov.ba/) · [Federation SME and Crafts Development Ministry](https://fmrpo.gov.ba/) · [Bosnia and Herzegovina Foreign Investment Promotion Agency](https://fipa.gov.ba/en/services) |
 | 유럽 | 불가리아 / Bulgaria | BG | **3** | 0 | [CAIS EOP · Bulgaria Electronic Public Procurement](https://app.eop.bg/) · [Bulgarian Executive Agency for SME Promotion](https://sme.government.bg/programs) · [Invest Bulgaria Agency · Investment Promotion](https://investbg.government.bg/) |
 | 유럽 | 크로아티아 / Croatia | HR | **3** | 0 | [EOJN RH · Croatian Public Tenders](https://eojn.hr/) · [HAMAG-BICRO · Government SME and Innovation Funding](https://hamagbicro.hr/natjecaji/) · [Invest Croatia · Government Investment Guide](https://investcroatia.gov.hr/en/) |
-| 유럽 | 키프로스 / Cyprus | CY | **0** | 3 | — |
+| 유럽 | 키프로스 / Cyprus | CY | **3** | 0 | [Cyprus Treasury · Government eProcurement](https://publicprocurement.gov.cy/monades/eprocurement/) · [Cyprus Funding Programmes Portal](https://www.fundingprogrammesportal.gov.cy/en/) · [Invest Cyprus · Government Investment Promotion](https://www.investcyprus.org.cy/) |
 | 유럽 | 체코 / Czechia | CZ | **3** | 0 | [NEN · Czech National Electronic Procurement](https://nen.nipez.cz/en/) · [CzechBusiness · Government Enterprise and Export Support](https://czechbusiness.gov.cz/) · [CzechInvest · Continuing Investment Support Service](https://czechinvest.gov.cz/) |
 | 유럽 | 덴마크 / Denmark | DK | **3** | 0 | [Udbud.dk · Danish Public Procurement](https://udbud.dk/) · [Danish Business Authority · Grants](https://udviklingidanmark.erhvervsstyrelsen.dk/soeg-midler) · [Invest in Denmark · National Investment Promotion](https://investindk.com/about/) |
-| 유럽 | 에스토니아 / Estonia | EE | **0** | 3 | — |
+| 유럽 | 에스토니아 / Estonia | EE | **3** | 0 | [Estonian Public Procurement Register](https://riigihanked.riik.ee/) · [Estonian Business and Innovation Agency · Grants](https://eis.ee/en/services/development-grant/) · [Invest in Estonia · Government Investment Agency](https://investinestonia.com/business-in-estonia/incentives/our-grants/) |
 | 유럽 | 핀란드 / Finland | FI | **3** | 0 | [Hilma · Finland Official Tender Notices](https://www.hankintailmoitukset.fi/en) · [Business Finland · Business Funding](https://www.businessfinland.fi/en/services/funding/) · [Finnvera · State-Owned Export and SME Finance](https://www.finnvera.fi/eng) |
 | 유럽 | 프랑스 / France | FR | **3** | 0 | [PLACE · French State Procurement](https://www.marches-publics.gouv.fr/index.php/entreprise) · [BOAMP · Official Procurement Notices](https://www.boamp.fr/) · [Service Public · Business Procurement Guidance](https://entreprendre.service-public.gouv.fr/vosdroits/F32089) |
-| 유럽 | 조지아 / Georgia | GE | **0** | 3 | — |
+| 유럽 | 조지아 / Georgia | GE | **3** | 0 | [Georgia State Procurement Agency · Tenders](https://tenders.procurement.gov.ge/) · [Enterprise Georgia · Government Enterprise Support](https://www.enterprisegeorgia.gov.ge/en/home) · [Invest in Georgia · Official Investment Promotion](https://www.investingeorgia.org/) |
 | 유럽 | 독일 / Germany | DE | **3** | 0 | [Bekanntmachungsservice · German Public Tender Notices](https://oeffentlichevergabe.de/) · [Förderdatenbank · Federal Funding Programmes](https://www.foerderdatenbank.de/FDB/DE/Home/home.html) · [Germany Trade & Invest · Federal Investment Promotion](https://www.gtai.de/en/invest/) |
-| 유럽 | 그리스 / Greece | GR | **0** | 3 | — |
-| 유럽 | 헝가리 / Hungary | HU | **0** | 3 | — |
+| 유럽 | 그리스 / Greece | GR | **3** | 0 | [Greek eProcurement · Promitheus Portal](https://www.eprocurement.gov.gr/) · [ESPA · Greek National EU Funding Framework](https://www.espa.gr/en/Pages/default.aspx) · [Enterprise Greece · State Investment Promotion](https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-helpdesk/financing-for-your-investment) |
+| 유럽 | 헝가리 / Hungary | HU | **3** | 0 | [Hungarian Public Procurement Authority](https://www.kozbeszerzes.hu/) · [Palyazat.gov.hu · Hungarian Government Grants](https://www.palyazat.gov.hu/) · [Hungarian Investment Promotion Agency](https://hipa.hu/) |
 | 유럽 | 아이슬란드 / Iceland | IS | **0** | 3 | — |
 | 유럽 | 아일랜드 / Ireland | IE | **3** | 0 | [eTenders · Ireland Public Procurement](https://www.etenders.gov.ie/) · [Enterprise Ireland · Enterprise Funding and Grants](https://www.enterprise-ireland.com/en/supports/funding-and-grants) · [IDA Ireland · Inward Investment Promotion Agency](https://www.idaireland.com/) |
 | 유럽 | 이탈리아 / Italy | IT | **3** | 0 | [ANAC · Public Procurement Legal Notices](https://pubblicitalegale.anticorruzione.it/bdncp) · [Invitalia · Enterprise Grants and Incentives](https://www.invitalia.it/per-le-imprese/incentivi-e-strumenti) · [Invest in Italy · Government Investment Incentives](https://www.investinitaly.gov.it/en/doing-business/incentives) |
 | 유럽 | 라트비아 / Latvia | LV | **3** | 0 | [EIS · Latvia Government e-Procurement](https://www.eis.gov.lv/EIS/) · [LIAA · Investment and Development Agency Support](https://liaa.business.gov.lv/en) · [ALTUM · Public Development Finance Institution](https://www.altum.lv/en/) |
 | 유럽 | 리히텐슈타인 / Liechtenstein | LI | **0** | 3 | — |
 | 유럽 | 리투아니아 / Lithuania | LT | **3** | 0 | [New CVP IS · Lithuanian Public Procurement](https://viesiejipirkimai.lt/epps/home.do) · [Innovation Agency Lithuania · Funding Programmes](https://www.inovacijuagentura.lt/finansavimas/?lang=en) · [Invest Lithuania · Investment Promotion](https://investlithuania.com/) |
-| 유럽 | 룩셈부르크 / Luxembourg | LU | **0** | 3 | — |
+| 유럽 | 룩셈부르크 / Luxembourg | LU | **3** | 0 | [Luxembourg Public Contracts Portal](https://marches.public.lu/) · [Guichet.lu · Government SME Investment Aid](https://guichet.public.lu/en/entreprises/financement-aides/regime-pme/aides-generales-pme/aide-investissement.html) · [Luxinnovation · National Innovation Agency](https://luxinnovation.lu/) |
 | 유럽 | 몰타 / Malta | MT | **0** | 3 | — |
 | 유럽 | 몰도바 / Moldova | MD | **0** | 3 | — |
 | 유럽 | 모나코 / Monaco | MC | **0** | 3 | — |
@@ -139,22 +137,22 @@
 | 유럽 | 노르웨이 / Norway | NO | **3** | 0 | [Doffin · Norwegian Public Procurement](https://doffin.anskaffelser.no/) · [Innovation Norway · Innovation Contracts](https://www.innovasjonnorge.no/en/tjeneste/tilskudd-til-innovasjonskontrakter) · [Research Council · Grant Calls](https://www.forskningsradet.no/en/call-for-proposals/) |
 | 유럽 | 폴란드 / Poland | PL | **3** | 0 | [e-Zamówienia · Poland Public Procurement](https://ezamowienia.gov.pl/en/) · [PARP · SME Funding Calls](https://www.parp.gov.pl/component/grants) · [PAIH · Polish Investment and Trade Agency](https://www.paih.gov.pl/en/why-poland/investment-incentives/governmental-grants/) |
 | 유럽 | 포르투갈 / Portugal | PT | **3** | 0 | [BASE · Portuguese Public Procurement Contracts](https://www.base.gov.pt/Base4/en) · [IAPMEI · Enterprise Support and Funding](https://www.iapmei.pt/pt/saber-mais/incentivos-e-financiamento/) · [AICEP · Invest in Portugal](https://www.investinportugal.pt/) |
-| 유럽 | 루마니아 / Romania | RO | **0** | 3 | — |
+| 유럽 | 루마니아 / Romania | RO | **3** | 0 | [Romanian SEAP · Public Procurement System](https://www.e-licitatie.ro/pub) · [Romania Ministry of European Investments · Funding](https://oportunitati-ue.gov.ro/) · [Invest Romania · Government Investment Promotion](https://investromania.gov.ro/) |
 | 유럽 | 러시아 / Russia | RU | **0** | 3 | — |
 | 유럽 | 산마리노 / San Marino | SM | **0** | 3 | — |
-| 유럽 | 세르비아 / Serbia | RS | **0** | 3 | — |
+| 유럽 | 세르비아 / Serbia | RS | **3** | 0 | [Serbia Public Procurement Portal](https://jnportal.ujn.gov.rs/) · [Serbia Ministry of Economy · Public SME Calls](https://www.privreda.gov.rs/lat/usluge/javni-pozivi) · [Development Agency of Serbia · Government Investment](https://ras.gov.rs/en/about-us/our-services) |
 | 유럽 | 슬로바키아 / Slovakia | SK | **3** | 0 | [ÚVO · Slovak Public Procurement Bulletin](https://www.uvo.gov.sk/vestnik-a-registre/vestnik) · [Slovak Business Agency · SME Support](https://www.sbagency.sk/) · [SARIO · Slovak Investment and Trade Development Agency](https://www.sario.sk/) |
 | 유럽 | 슬로베니아 / Slovenia | SI | **3** | 0 | [e-JN · Slovenia Public Electronic Procurement](https://ejn.gov.si/en/) · [SPOT · Slovenia Business Funding Support](https://spot.gov.si/sl/teme/spodbude-za-podjetnistvo/) · [SPIRIT Slovenia · Investment Promotion](https://www.spiritslovenia.si/) |
 | 유럽 | 스페인 / Spain | ES | **3** | 0 | [PLACSP · Spain Public Sector Procurement](https://contrataciondelestado.es/) · [BDNS · National Grants Announcements](https://www.infosubvenciones.es/bdnstrans/es/index) · [ICEX · Spain Export and Investment](https://www.icex.es/es) |
 | 유럽 | 스웨덴 / Sweden | SE | **3** | 0 | [Swedish Procurement Authority · Supplier Guidance](https://www.upphandlingsmyndigheten.se/en/conducting-business-with-public-sector-stakeholders/finding-business-in-the-public-sector/) · [Vinnova · Swedish Innovation Funding](https://www.vinnova.se/en/apply-for-funding) · [Verksamt · Official Business Service](https://verksamt.se/) |
 | 유럽 | 스위스 / Switzerland | CH | **3** | 0 | [simap · Swiss Public Procurement](https://www.simap.ch/en) · [Innosuisse · Swiss Federal Innovation Agency](https://www.innosuisse.admin.ch/en/) · [SECO · Swiss Government Procurement](https://www.seco.admin.ch/en/government-procurement) |
-| 유럽 | 우크라이나 / Ukraine | UA | **0** | 3 | — |
+| 유럽 | 우크라이나 / Ukraine | UA | **3** | 0 | [Ukraine Prozorro Public Procurement](https://prozorro.gov.ua/) · [Diia.Business · Government SME Grants](https://business.diia.gov.ua/finance/grant_na_vlasnu_spravu) · [UkraineInvest · Investment Promotion Office](https://ukraineinvest.gov.ua/en/industries/ukraine-investment-portal-eng/) |
 | 유럽 | 영국 / United Kingdom | GB | **3** | 0 | [Find a Tender · Central Procurement](https://www.find-tender.service.gov.uk/) · [Contracts Finder · Public Contracts](https://www.contractsfinder.service.gov.uk/) · [Government Commercial Agency · Supply Opportunities](https://www.gca.gov.uk/how-to-supply/find-tender-opportunities) |
 | 미주 | 캐나다 / Canada | CA | **3** | 0 | [CanadaBuys · Government Procurement](https://canadabuys.canada.ca/en) · [Canada.ca · Doing Business with Government](https://www.canada.ca/en/services/business/doing-business.html) · [ISED · Selling Innovation to Government](https://ised-isde.canada.ca/site/clean-growth-hub/en/selling-government) |
 | 미주 | 미국 / United States | US | **3** | 0 | [SAM.gov · Federal Contracting](https://sam.gov/) · [Grants.gov · Federal Funding](https://www.grants.gov/) · [SBA · Federal Contracting Support](https://www.sba.gov/counseling/get-started/) |
 | 미주 | 멕시코 / Mexico | MX | **3** | 0 | [Compras MX · Federal Public Procurement](https://compranet.buengobierno.gob.mx/compras-mx) · [MIPYMESMX · Economy Ministry SME Support](https://mipymes.economia.gob.mx/) · [NAFIN · National Development Finance](https://www.nafin.gob.mx/portalnf/content/financiamiento/) |
 | 미주 | 앤티가 바부다 / Antigua and Barbuda | AG | **0** | 3 | — |
-| 미주 | 아르헨티나 / Argentina | AR | **0** | 3 | — |
+| 미주 | 아르헨티나 / Argentina | AR | **3** | 0 | [Argentina COMPR.AR · Government Procurement](https://comprar.gob.ar/) · [Argentina Government · SME Productive Development](https://www.argentina.gob.ar/servicio/presentar-la-rendicion-del-programa-desarrollo-productivo-pyme) · [Argentina Investment and International Trade Agency](https://www.inversionycomercio.ar/) |
 | 미주 | 바하마 / Bahamas | BS | **0** | 3 | — |
 | 미주 | 바베이도스 / Barbados | BB | **0** | 3 | — |
 | 미주 | 벨리즈 / Belize | BZ | **0** | 3 | — |
@@ -200,9 +198,4 @@
 | 오세아니아 | 투발루 / Tuvalu | TV | **0** | 3 | — |
 | 오세아니아 | 바누아투 / Vanuatu | VU | **0** | 3 | — |
 
-## 집계
-
-- 193개국 모두 포함, 공식 사이트 3개 등록: **49개국** / 미완료 **144개국**
-- 확인 근거를 가진 공식기관 사이트 **147개** / 최소 목표 579개 / 추가 **432개**
-- 국가별 3개는 **최소 개수**이며 조달·지원·투자 정보를 구분합니다. 실제로 현재 진행 중인 공고의 수는 별도입니다.
-- 본 문서는 검토용 PR 데이터 스냅샷입니다. 운영 공개 사이트에 자동 반영되지는 않습니다.
+각 링크의 공식기관 소속 근거는 `src/government_business_sites.json`의 `evidence_url` 필드를 확인하십시오. 자동 기재 및 오검증 금지.
