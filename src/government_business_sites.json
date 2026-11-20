@@ -235,6 +235,35 @@
         "evidence_url": "https://fipa.gov.ba/en/services"
       }
     ],
+    "BB": [
+      {
+        "name_ko": "Procure Barbados · 공공조달",
+        "name_en": "Barbados Government Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://procure.gov.bb/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procure.gov.bb/"
+      },
+      {
+        "name_ko": "FundAccess · 정부 중소기업 개발기금",
+        "name_en": "Barbados FundAccess · MSME Development Finance",
+        "category": "support",
+        "url": "https://www.fundaccess.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.fundaccess.org/about/"
+      },
+      {
+        "name_ko": "Invest Barbados · 투자진흥청",
+        "name_en": "Invest Barbados · National Investment Promotion",
+        "category": "investment",
+        "url": "https://www.investbarbados.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investbarbados.org/"
+      }
+    ],
     "BD": [
       {
         "name_ko": "방글라데시 공공조달청 · 전자입찰",
@@ -349,6 +378,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.bahrainedb.com/"
+      }
+    ],
+    "BN": [
+      {
+        "name_ko": "재무경제부 · 공공조달 절차",
+        "name_en": "Brunei Ministry of Finance and Economy · Government Procurement",
+        "category": "procurement",
+        "url": "https://www.mof.gov.bn/procurement-process-workflow/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mof.gov.bn/procurement-process-workflow/"
+      },
+      {
+        "name_ko": "businessBN · 정부 기업서비스",
+        "name_en": "Brunei businessBN · Whole-of-Government Enterprise Services",
+        "category": "support",
+        "url": "https://www.business.gov.bn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.bedb.gov.bn/faqs"
+      },
+      {
+        "name_ko": "BEDB · 국가 경제개발·투자",
+        "name_en": "Brunei Economic Development Board · Investment Promotion",
+        "category": "investment",
+        "url": "https://www.bedb.gov.bn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.bedb.gov.bn/about-bedb"
       }
     ],
     "BO": [
@@ -1192,6 +1250,35 @@
         "evidence_url": "https://www.mineco.gob.gt/compras-directas"
       }
     ],
+    "GY": [
+      {
+        "name_ko": "eProcure · 가이아나 정부조달",
+        "name_en": "Guyana National Procurement Board · Public Opportunities",
+        "category": "procurement",
+        "url": "https://eprocure.gov.gy/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://portal.gov.gy/apps/government-of-guyana-procurement-opportunities-eprocure"
+      },
+      {
+        "name_ko": "SBB · 정부 중소기업 지원",
+        "name_en": "Guyana Small Business Bureau · Enterprise Support",
+        "category": "support",
+        "url": "https://sbb.gov.gy/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://sbb.gov.gy/20-government-procurement/"
+      },
+      {
+        "name_ko": "GO-Invest · 국가 투자진흥청",
+        "name_en": "Guyana Office for Investment · GO-Invest",
+        "category": "investment",
+        "url": "https://www.guyanainvest.gov.gy/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://portal.gov.gy/agencies/guyana-office-for-investment-go-invest"
+      }
+    ],
     "HN": [
       {
         "name_ko": "Honducompras · 온두라스 국가조달",
@@ -1859,6 +1946,64 @@
         "evidence_url": "https://invest.gov.md/"
       }
     ],
+    "ME": [
+      {
+        "name_ko": "CEJN · 몬테네그로 국가조달",
+        "name_en": "Montenegro CEJN · Public Procurement System",
+        "category": "procurement",
+        "url": "https://cejn.gov.me/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.me/mif/politika-javnih-nabavki/cejn"
+      },
+      {
+        "name_ko": "Biznis.gov.me · 정부 기업지원",
+        "name_en": "Montenegro Biznis · Government Business Programmes",
+        "category": "support",
+        "url": "https://biznis.gov.me/pretraga",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://biznis.gov.me/pretraga"
+      },
+      {
+        "name_ko": "MIA · 국가 투자진흥청",
+        "name_en": "Montenegro Investment Agency · State Investment Support",
+        "category": "investment",
+        "url": "https://mia.gov.me/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mia.gov.me/en/about-agency/about-us/"
+      }
+    ],
+    "MG": [
+      {
+        "name_ko": "ARMP e-GP · 마다가스카르 전자조달",
+        "name_en": "Madagascar ARMP · E-Government Procurement",
+        "category": "procurement",
+        "url": "https://marches.armp.mg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://prea.gov.mg/e-gp/"
+      },
+      {
+        "name_ko": "Fihariana · 국가 창업·기업지원",
+        "name_en": "Madagascar Fihariana · National Entrepreneurship Support",
+        "category": "support",
+        "url": "https://www.fihariana.mg/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.fihariana.mg/en/news/reminder-of-the-basis-of-the-fihariana-program/"
+      },
+      {
+        "name_ko": "EDBM · 국가 투자개발청",
+        "name_en": "Madagascar Economic Development Board · Investment Promotion",
+        "category": "investment",
+        "url": "https://edbm.mg/en/a-propos-dedbm",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://edbm.mg/en/a-propos-dedbm"
+      }
+    ],
     "MK": [
       {
         "name_ko": "e-Nabavki · 북마케도니아 국가조달",
@@ -1944,6 +2089,64 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://edbmauritius.org/about-edb"
+      }
+    ],
+    "MV": [
+      {
+        "name_ko": "재무부 · 몰디브 공식 입찰",
+        "name_en": "Maldives Ministry of Finance · Public Tenders",
+        "category": "procurement",
+        "url": "https://finance.gov.mv/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://finance.gov.mv/tenders"
+      },
+      {
+        "name_ko": "경제개발무역부 · 중소기업 등록지원",
+        "name_en": "Maldives Ministry Economic Development · SME Services",
+        "category": "support",
+        "url": "https://trade.gov.mv/en/business-services/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://trade.gov.mv/en/business-services/"
+      },
+      {
+        "name_ko": "Invest Maldives · 국가 투자청",
+        "name_en": "Invest Maldives · National Investment Promotion",
+        "category": "investment",
+        "url": "https://investmaldives.gov.mv/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investmaldives.gov.mv/about-us/"
+      }
+    ],
+    "MW": [
+      {
+        "name_ko": "PPDA · 말라위 국가조달",
+        "name_en": "Malawi PPDA · Official Procurement Notices",
+        "category": "procurement",
+        "url": "https://www.ppda.mw/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ppda.mw/tenders"
+      },
+      {
+        "name_ko": "SMEDI · 국영 중소기업개발",
+        "name_en": "Malawi SMEDI · State Enterprise Development Institute",
+        "category": "support",
+        "url": "https://smedco.mw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://smedco.mw/about-us"
+      },
+      {
+        "name_ko": "MITC · 국가 투자·무역진흥",
+        "name_en": "Malawi Investment and Trade Centre",
+        "category": "investment",
+        "url": "https://mitc.mw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mitc.mw/about-us-mitc/"
       }
     ],
     "MX": [
@@ -2611,6 +2814,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.investsolomons.gov.sb/about-us"
+      }
+    ],
+    "SC": [
+      {
+        "name_ko": "POU · 세이셸 국가조달",
+        "name_en": "Seychelles Procurement Oversight Unit · Tenders",
+        "category": "procurement",
+        "url": "https://www.pou.gov.sc/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.pou.gov.sc/about"
+      },
+      {
+        "name_ko": "경제재무부 · 중소기업 경제지원",
+        "name_en": "Seychelles Ministry of Finance · Enterprise Services",
+        "category": "support",
+        "url": "https://www.finance.gov.sc/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.finance.gov.sc/ministrys-overview/finance-department/"
+      },
+      {
+        "name_ko": "SIB · 국가 투자진흥청",
+        "name_en": "Seychelles Investment Board · Investor Support",
+        "category": "investment",
+        "url": "https://www.investinseychelles.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investinseychelles.com/about/about-sib"
       }
     ],
     "SE": [
