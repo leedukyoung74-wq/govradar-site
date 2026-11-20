@@ -1,47 +1,47 @@
-# GOV RADAR — 193개국별 국가 언론·뉴스 원문 정보원 등록현황
+# GOV RADAR 국가별 원문 언론·뉴스 발행사 193개국 현황
 
-기준: 2026-11-21 · **120/193개국·360/579개** 원문 발행사 링크. 아직 **73개국·219곳** 미등록.
+2026-11-21 검토용 **150/193개국·450/579개** 국가별 언론 발행사 원문 링크. **43개국·129개** 미등록.
 
-**자료 상태:** 원문 발행사 사이트 URL, 국영·공영·민영 범주, 날짜를 기록한 **검토용 원본 링크 목록**입니다. 보도 사실성·독립성·저작권·RSS/API 이용허가·서비스 현재 접속성을 완전히 검증했다는 뜻이 아닙니다. 언론사는 정부 지원사업/조달 사이트 수에 포함시키지 않습니다. 7개 언어 웹 페이지 코드는 검토 브랜치에만 연결, 운영 미배포.
+정부 발언/보도자료와 공공조달 공식 기관을 뉴스 발행사 수에 섞지 않았으며, **국영·공영·민영·비영리** 운영 형태를 구분했습니다. 기사 정확성, 편집 독립성, 기사 본문 복제 허가, API/RSS 접근, 언론사 사이트 현재 정상 접속을 전수 검증하지 않았습니다. 리포트는 검토용, 홈페이지 미배포.
 
-| 국가 | ISO | 등록 언론사 | 부족 | 서로 다른 원문 발행사 |
+| 국가 | ISO | 국가별 언론사 등록 | 부족 | 출처 원문 URL |
 |---|:---:|---:|---:|---|
 | 알제리 / Algeria | DZ | **3** | 0 | [Algeria Press Service](https://www.aps.dz/) (state_news_agency) · [El Watan](https://elwatan-dz.com/) (newspaper) · [TSA Algérie](https://www.tsa-algerie.com/) (news_site) |
 | 앙골라 / Angola | AO | **3** | 0 | [ANGOP](https://www.angop.ao/en/) (state_news_agency) · [Jornal de Angola](https://www.jornaldeangola.ao/) (newspaper) · [Novo Jornal](https://novojornal.co.ao/) (newspaper) |
-| 베냉 / Benin | BJ | **0** | 3 | 미조사 |
-| 보츠와나 / Botswana | BW | **0** | 3 | 미조사 |
-| 부르키나파소 / Burkina Faso | BF | **0** | 3 | 미조사 |
-| 부룬디 / Burundi | BI | **0** | 3 | 미조사 |
-| 카보베르데 / Cabo Verde | CV | **0** | 3 | 미조사 |
+| 베냉 / Benin | BJ | **3** | 0 | [Agence Bénin Presse](https://www.agencebeninpresse.info/) (state_news_agency) · [La Nation Bénin](https://www.lanation.bj/) (newspaper) · [24 Heures au Bénin](https://www.24haubenin.info/) (news_site) |
+| 보츠와나 / Botswana | BW | **3** | 0 | [Botswana Daily News](https://dailynews.gov.bw/) (state_news_agency) · [Mmegi](https://www.mmegi.bw/) (newspaper) · [Sunday Standard Botswana](https://www.sundaystandard.info/) (newspaper) |
+| 부르키나파소 / Burkina Faso | BF | **3** | 0 | [Agence d'Information du Burkina](https://www.aib.media/) (state_news_agency) · [LeFaso.net](https://lefaso.net/) (news_site) · [Burkina24](https://burkina24.com/) (news_site) |
+| 부룬디 / Burundi | BI | **3** | 0 | [RTNB Burundi](https://rtnb.bi/) (public_broadcaster) · [Iwacu Burundi](https://www.iwacu-burundi.org/) (newspaper) · [Burundi Eco](https://burundi-eco.com/) (newspaper) |
+| 카보베르데 / Cabo Verde | CV | **3** | 0 | [Inforpress Cabo Verde](https://inforpress.cv/) (state_news_agency) · [RTC Cabo Verde](https://www.rtc.cv/) (public_broadcaster) · [Expresso das Ilhas](https://expressodasilhas.cv/) (newspaper) |
 | 카메룬 / Cameroon | CM | **3** | 0 | [CRTV](https://crtv.cm/) (public_broadcaster) · [Cameroon Tribune](https://www.cameroon-tribune.cm/) (newspaper) · [Journal du Cameroun](https://www.journalducameroun.com/) (news_site) |
 | 중앙아프리카공화국 / Central African Republic | CF | **0** | 3 | 미조사 |
-| 차드 / Chad | TD | **0** | 3 | 미조사 |
+| 차드 / Chad | TD | **3** | 0 | [ATPE Tchad](https://atpe.td/) (state_news_agency) · [Tchadinfos](https://tchadinfos.com/) (news_site) · [Alwihda Info](https://www.alwihdainfo.com/) (news_site) |
 | 코모로 / Comoros | KM | **0** | 3 | 미조사 |
-| 콩고 / Congo | CG | **0** | 3 | 미조사 |
+| 콩고 / Congo | CG | **3** | 0 | [Agence Congolaise d'Information](https://www.aci.cg/) (state_news_agency) · [Les Dépêches de Brazzaville](https://www.adiac-congo.com/) (newspaper) · [Vox TV Congo](https://voxtv.cg/) (broadcaster) |
 | 콩고민주공화국 / DR Congo | CD | **3** | 0 | [Agence Congolaise de Presse](https://acp.cd/) (state_news_agency) · [Radio Okapi](https://www.radiookapi.net/) (broadcaster) · [Actualite.cd](https://actualite.cd/) (news_site) |
 | 코트디부아르 / Côte d'Ivoire | CI | **3** | 0 | [Agence Ivoirienne de Presse](https://www.aip.ci/) (state_news_agency) · [Fraternité Matin](https://www.fratmat.info/) (newspaper) · [Abidjan.net](https://news.abidjan.net/) (news_site) |
-| 지부티 / Djibouti | DJ | **0** | 3 | 미조사 |
+| 지부티 / Djibouti | DJ | **3** | 0 | [Agence Djiboutienne d'Information](https://www.adi.dj/) (state_news_agency) · [La Nation Djibouti](https://www.lanation.dj/) (newspaper) · [RTD Djibouti](https://rtd.dj/) (public_broadcaster) |
 | 이집트 / Egypt | EG | **3** | 0 | [Middle East News Agency](https://mena.org.eg/en) (state_news_agency) · [Ahram Online](https://english.ahram.org.eg/) (newspaper) · [Al-Masry Al-Youm](https://www.almasryalyoum.com/) (newspaper) |
 | 적도기니 / Equatorial Guinea | GQ | **0** | 3 | 미조사 |
 | 에리트레아 / Eritrea | ER | **0** | 3 | 미조사 |
 | 에스와티니 / Eswatini | SZ | **0** | 3 | 미조사 |
 | 에티오피아 / Ethiopia | ET | **3** | 0 | [Ethiopian News Agency](https://www.ena.et/web/eng) (state_news_agency) · [Addis Standard](https://addisstandard.com/) (news_site) · [The Reporter Ethiopia](https://www.thereporterethiopia.com/) (newspaper) |
 | 가봉 / Gabon | GA | **0** | 3 | 미조사 |
-| 감비아 / Gambia | GM | **0** | 3 | 미조사 |
+| 감비아 / Gambia | GM | **3** | 0 | [The Point Gambia](https://thepoint.gm/) (newspaper) · [Foroyaa](https://foroyaa.net/) (newspaper) · [The Standard Gambia](https://standard.gm/) (newspaper) |
 | 가나 / Ghana | GH | **3** | 0 | [Ghana News Agency](https://gna.org.gh/) (state_news_agency) · [Daily Graphic](https://www.graphic.com.gh/) (newspaper) · [MyJoyOnline](https://www.myjoyonline.com/) (broadcaster) |
-| 기니 / Guinea | GN | **0** | 3 | 미조사 |
+| 기니 / Guinea | GN | **3** | 0 | [AGP Guinée](https://agpguinee.com/) (state_news_agency) · [GuineeNews](https://guineenews.org/) (news_site) · [Mediaguinee](https://mediaguinee.com/) (news_site) |
 | 기니비사우 / Guinea-Bissau | GW | **0** | 3 | 미조사 |
 | 케냐 / Kenya | KE | **3** | 0 | [Kenya Broadcasting Corporation](https://www.kbc.co.ke/) (public_broadcaster) · [Nation Africa](https://nation.africa/) (newspaper) · [The Standard Kenya](https://www.standardmedia.co.ke/) (newspaper) |
 | 레소토 / Lesotho | LS | **0** | 3 | 미조사 |
-| 라이베리아 / Liberia | LR | **0** | 3 | 미조사 |
+| 라이베리아 / Liberia | LR | **3** | 0 | [Liberian Observer](https://www.liberianobserver.com/) (newspaper) · [FrontPage Africa](https://frontpageafricaonline.com/) (news_site) · [The New Dawn Liberia](https://thenewdawnliberia.com/) (newspaper) |
 | 리비아 / Libya | LY | **3** | 0 | [Libyan News Agency LANA](https://lana.gov.ly/) (state_news_agency) · [Libya Observer](https://libyaobserver.ly/) (news_site) · [Libya Herald](https://libyaherald.com/) (news_site) |
-| 마다가스카르 / Madagascar | MG | **0** | 3 | 미조사 |
+| 마다가스카르 / Madagascar | MG | **3** | 0 | [Midi Madagasikara](https://midi-madagasikara.mg/) (newspaper) · [L'Express de Madagascar](https://lexpress.mg/) (newspaper) · [2424.mg](https://2424.mg/) (news_site) |
 | 말라위 / Malawi | MW | **0** | 3 | 미조사 |
 | 말리 / Mali | ML | **0** | 3 | 미조사 |
 | 모리타니 / Mauritania | MR | **0** | 3 | 미조사 |
 | 모리셔스 / Mauritius | MU | **3** | 0 | [Mauritius Broadcasting Corporation](https://www.mbc.mu/) (public_broadcaster) · [Le Mauricien](https://www.lemauricien.com/) (newspaper) · [L'Express Mauritius](https://lexpress.mu/) (newspaper) |
 | 모로코 / Morocco | MA | **3** | 0 | [Maghreb Arabe Presse MAP](https://www.mapnews.ma/en) (state_news_agency) · [SNRT News](https://snrtnews.com/) (public_broadcaster) · [Le Matin](https://lematin.ma/) (newspaper) |
-| 모잠비크 / Mozambique | MZ | **0** | 3 | 미조사 |
+| 모잠비크 / Mozambique | MZ | **3** | 0 | [Agência de Informação de Moçambique](https://aimnews.org/) (state_news_agency) · [Notícias Mozambique](https://www.jornalnoticias.co.mz/) (newspaper) · [O País Mozambique](https://opais.co.mz/) (newspaper) |
 | 나미비아 / Namibia | NA | **0** | 3 | 미조사 |
 | 니제르 / Niger | NE | **0** | 3 | 미조사 |
 | 나이지리아 / Nigeria | NG | **3** | 0 | [News Agency of Nigeria](https://nannews.ng/) (state_news_agency) · [Punch](https://punchng.com/) (newspaper) · [Premium Times](https://www.premiumtimesng.com/) (news_site) |
@@ -103,45 +103,45 @@
 | 아랍에미리트 / United Arab Emirates | AE | **3** | 0 | [Emirates News Agency WAM](https://www.wam.ae/en) (state_news_agency) · [Khaleej Times](https://www.khaleejtimes.com/) (newspaper) · [The National UAE](https://www.thenationalnews.com/) (newspaper) |
 | 예멘 / Yemen | YE | **0** | 3 | 미조사 |
 | 튀르키예 / Türkiye | TR | **3** | 0 | [Anadolu Agency](https://www.aa.com.tr/en) (state_news_agency) · [TRT World](https://www.trtworld.com/) (public_broadcaster) · [Hürriyet](https://www.hurriyet.com.tr/) (newspaper) |
-| 알바니아 / Albania | AL | **0** | 3 | 미조사 |
-| 안도라 / Andorra | AD | **0** | 3 | 미조사 |
-| 아르메니아 / Armenia | AM | **0** | 3 | 미조사 |
+| 알바니아 / Albania | AL | **3** | 0 | [Albanian Telegraphic Agency](https://ata.gov.al/) (state_news_agency) · [Top Channel](https://top-channel.tv/) (broadcaster) · [BalkanWeb](https://www.balkanweb.com/) (news_site) |
+| 안도라 / Andorra | AD | **3** | 0 | [Diari d'Andorra](https://www.diariandorra.ad/) (newspaper) · [Altaveu](https://www.altaveu.com/) (news_site) · [RTVA](https://www.rtva.ad/ca/noticies) (public_broadcaster) |
+| 아르메니아 / Armenia | AM | **3** | 0 | [Armenpress](https://armenpress.am/en) (state_news_agency) · [NEWS.am](https://news.am/eng/) (news_site) · [CivilNet](https://www.civilnet.am/en) (news_site) |
 | 오스트리아 / Austria | AT | **3** | 0 | [ORF News](https://orf.at/) (public_broadcaster) · [APA Austria](https://www.apa.at/) (news_agency) · [Der Standard](https://www.derstandard.at/) (newspaper) |
-| 아제르바이잔 / Azerbaijan | AZ | **0** | 3 | 미조사 |
-| 벨라루스 / Belarus | BY | **0** | 3 | 미조사 |
+| 아제르바이잔 / Azerbaijan | AZ | **3** | 0 | [AZERTAC](https://azertag.az/en) (state_news_agency) · [Trend News Agency](https://en.trend.az/) (news_agency) · [Report.az](https://report.az/en/) (news_site) |
+| 벨라루스 / Belarus | BY | **3** | 0 | [BelTA](https://eng.belta.by/) (state_news_agency) · [Nasha Niva](https://nashaniva.com/) (news_site) · [Zerkalo](https://zerkalo.io/) (news_site) |
 | 벨기에 / Belgium | BE | **3** | 0 | [RTBF](https://www.rtbf.be/) (public_broadcaster) · [VRT NWS](https://www.vrt.be/vrtnws/nl/) (public_broadcaster) · [Belga News Agency](https://www.belga.be/) (news_agency) |
-| 보스니아 헤르체고비나 / Bosnia and Herzegovina | BA | **0** | 3 | 미조사 |
+| 보스니아 헤르체고비나 / Bosnia and Herzegovina | BA | **3** | 0 | [FENA](https://fena.ba/) (news_agency) · [Klix.ba](https://www.klix.ba/) (news_site) · [N1 Bosnia and Herzegovina](https://n1info.ba/) (broadcaster) |
 | 불가리아 / Bulgaria | BG | **3** | 0 | [Bulgarian News Agency BTA](https://www.bta.bg/) (state_news_agency) · [BNT News](https://bntnews.bg/) (public_broadcaster) · [Novinite](https://www.novinite.com/) (news_site) |
 | 크로아티아 / Croatia | HR | **3** | 0 | [HINA](https://www.hina.hr/) (news_agency) · [HRT Vijesti](https://vijesti.hrt.hr/) (public_broadcaster) · [Jutarnji List](https://www.jutarnji.hr/) (newspaper) |
-| 키프로스 / Cyprus | CY | **0** | 3 | 미조사 |
+| 키프로스 / Cyprus | CY | **3** | 0 | [Cyprus News Agency](https://www.cna.org.cy/) (state_news_agency) · [Cyprus Mail](https://cyprus-mail.com/) (newspaper) · [Philenews](https://www.philenews.com/) (newspaper) |
 | 체코 / Czechia | CZ | **3** | 0 | [ČTK / České Noviny](https://www.ceskenoviny.cz/) (news_agency) · [ČT24](https://ct24.ceskatelevize.cz/) (public_broadcaster) · [Seznam Zprávy](https://www.seznamzpravy.cz/) (news_site) |
 | 덴마크 / Denmark | DK | **3** | 0 | [DR Nyheder](https://www.dr.dk/nyheder) (public_broadcaster) · [TV 2 Nyheder](https://nyheder.tv2.dk/) (broadcaster) · [Ritzau](https://via.ritzau.dk/) (news_agency) |
 | 에스토니아 / Estonia | EE | **3** | 0 | [ERR](https://www.err.ee/) (public_broadcaster) · [Postimees](https://www.postimees.ee/) (newspaper) · [Delfi Estonia](https://www.delfi.ee/) (news_site) |
 | 핀란드 / Finland | FI | **3** | 0 | [Yle](https://yle.fi/) (public_broadcaster) · [Helsingin Sanomat](https://www.hs.fi/) (newspaper) · [STT News Agency](https://stt.fi/) (news_agency) |
 | 프랑스 / France | FR | **3** | 0 | [Agence France-Presse](https://www.afp.com/en) (news_agency) · [France 24](https://www.france24.com/en) (public_broadcaster) · [Franceinfo](https://www.francetvinfo.fr/) (public_broadcaster) |
-| 조지아 / Georgia | GE | **0** | 3 | 미조사 |
+| 조지아 / Georgia | GE | **3** | 0 | [Agenda.ge](https://agenda.ge/en) (news_site) · [Civil Georgia](https://civil.ge/) (news_site) · [Interpressnews](https://www.interpressnews.ge/en/) (news_agency) |
 | 독일 / Germany | DE | **3** | 0 | [ARD Tagesschau](https://www.tagesschau.de/) (public_broadcaster) · [ZDF Heute](https://www.zdfheute.de/) (public_broadcaster) · [DPA](https://www.dpa.com/en) (news_agency) |
 | 그리스 / Greece | GR | **3** | 0 | [Athens-Macedonian News Agency](https://www.amna.gr/en/) (state_news_agency) · [ERT News](https://www.ertnews.gr/) (public_broadcaster) · [Kathimerini](https://www.kathimerini.gr/) (newspaper) |
 | 헝가리 / Hungary | HU | **3** | 0 | [Híradó](https://hirado.hu/) (public_broadcaster) · [Telex](https://telex.hu/) (news_site) · [HVG](https://hvg.hu/) (news_site) |
-| 아이슬란드 / Iceland | IS | **0** | 3 | 미조사 |
+| 아이슬란드 / Iceland | IS | **3** | 0 | [RÚV](https://www.ruv.is/) (public_broadcaster) · [Morgunblaðið](https://www.mbl.is/frettir/) (newspaper) · [Vísir](https://www.visir.is/) (news_site) |
 | 아일랜드 / Ireland | IE | **3** | 0 | [RTÉ News](https://www.rte.ie/news/) (public_broadcaster) · [The Irish Times](https://www.irishtimes.com/) (newspaper) · [Irish Independent](https://www.independent.ie/) (newspaper) |
 | 이탈리아 / Italy | IT | **3** | 0 | [ANSA](https://www.ansa.it/) (news_agency) · [RaiNews](https://www.rainews.it/) (public_broadcaster) · [Corriere della Sera](https://www.corriere.it/) (newspaper) |
 | 라트비아 / Latvia | LV | **3** | 0 | [LSM Latvia](https://www.lsm.lv/) (public_broadcaster) · [LETA](https://letanews.eu/) (news_agency) · [Delfi Latvia](https://www.delfi.lv/) (news_site) |
 | 리히텐슈타인 / Liechtenstein | LI | **0** | 3 | 미조사 |
 | 리투아니아 / Lithuania | LT | **3** | 0 | [LRT](https://www.lrt.lt/) (public_broadcaster) · [ELTA](https://www.elta.lt/) (news_agency) · [Delfi Lithuania](https://www.delfi.lt/) (news_site) |
-| 룩셈부르크 / Luxembourg | LU | **0** | 3 | 미조사 |
-| 몰타 / Malta | MT | **0** | 3 | 미조사 |
-| 몰도바 / Moldova | MD | **0** | 3 | 미조사 |
-| 모나코 / Monaco | MC | **0** | 3 | 미조사 |
-| 몬테네그로 / Montenegro | ME | **0** | 3 | 미조사 |
+| 룩셈부르크 / Luxembourg | LU | **3** | 0 | [RTL Lëtzebuerg](https://www.rtl.lu/) (broadcaster) · [Luxemburger Wort](https://www.wort.lu/) (newspaper) · [L'essentiel Luxembourg](https://www.lessentiel.lu/) (newspaper) |
+| 몰타 / Malta | MT | **3** | 0 | [Times of Malta](https://timesofmalta.com/) (newspaper) · [MaltaToday](https://www.maltatoday.com.mt/) (newspaper) · [TVMnews Malta](https://tvmnews.mt/) (public_broadcaster) |
+| 몰도바 / Moldova | MD | **3** | 0 | [Moldpres](https://www.moldpres.md/en) (state_news_agency) · [Newsmaker Moldova](https://newsmaker.md/) (news_site) · [Ziarul de Gardă](https://www.zdg.md/) (newspaper) |
+| 모나코 / Monaco | MC | **3** | 0 | [Monaco Matin](https://www.monacomatin.mc/) (newspaper) · [Monaco Tribune](https://www.monaco-tribune.com/) (news_site) · [Monaco Info](https://www.monacoinfo.com/) (public_broadcaster) |
+| 몬테네그로 / Montenegro | ME | **3** | 0 | [RTCG Montenegro](https://rtcg.me/) (public_broadcaster) · [Vijesti Montenegro](https://www.vijesti.me/) (newspaper) · [CDM Montenegro](https://www.cdm.me/) (news_site) |
 | 네덜란드 / Netherlands | NL | **3** | 0 | [NOS](https://nos.nl/) (public_broadcaster) · [RTL Nieuws](https://www.rtl.nl/nieuws) (broadcaster) · [NU.nl](https://www.nu.nl/) (news_site) |
-| 북마케도니아 / North Macedonia | MK | **0** | 3 | 미조사 |
+| 북마케도니아 / North Macedonia | MK | **3** | 0 | [MIA North Macedonia](https://mia.mk/en) (state_news_agency) · [Telma TV](https://telma.com.mk/) (broadcaster) · [Sloboden Pechat](https://www.slobodenpecat.mk/en/) (newspaper) |
 | 노르웨이 / Norway | NO | **3** | 0 | [NRK](https://www.nrk.no/) (public_broadcaster) · [TV 2 Norway](https://www.tv2.no/) (broadcaster) · [VG](https://www.vg.no/) (newspaper) |
 | 폴란드 / Poland | PL | **3** | 0 | [Polish Press Agency PAP](https://www.pap.pl/) (state_news_agency) · [TVN24](https://tvn24.pl/) (broadcaster) · [Polskie Radio](https://www.polskieradio.pl/) (public_broadcaster) |
 | 포르투갈 / Portugal | PT | **3** | 0 | [Lusa](https://www.lusa.pt/) (news_agency) · [RTP Notícias](https://www.rtp.pt/noticias/) (public_broadcaster) · [Público](https://www.publico.pt/) (newspaper) |
 | 루마니아 / Romania | RO | **3** | 0 | [Agerpres](https://agerpres.ro/) (state_news_agency) · [Digi24](https://www.digi24.ro/) (broadcaster) · [HotNews.ro](https://hotnews.ro/) (news_site) |
-| 러시아 / Russia | RU | **0** | 3 | 미조사 |
-| 산마리노 / San Marino | SM | **0** | 3 | 미조사 |
+| 러시아 / Russia | RU | **3** | 0 | [TASS](https://tass.com/) (state_news_agency) · [Interfax](https://interfax.com/) (news_agency) · [RBC Russia](https://www.rbc.ru/) (news_site) |
+| 산마리노 / San Marino | SM | **3** | 0 | [San Marino RTV](https://www.sanmarinortv.sm/) (public_broadcaster) · [Libertas San Marino](https://www.libertas.sm/) (news_site) · [San Marino Fixing](https://www.sanmarinofixing.com/) (newspaper) |
 | 세르비아 / Serbia | RS | **3** | 0 | [Tanjug](https://www.tanjug.rs/) (news_agency) · [RTS Serbia](https://www.rts.rs/) (public_broadcaster) · [N1 Serbia](https://n1info.rs/) (broadcaster) |
 | 슬로바키아 / Slovakia | SK | **3** | 0 | [TASR / Teraz](https://www.teraz.sk/) (state_news_agency) · [STVR Správy](https://spravy.stvr.sk/) (public_broadcaster) · [SME](https://www.sme.sk/) (newspaper) |
 | 슬로베니아 / Slovenia | SI | **3** | 0 | [STA Slovenia](https://www.sta.si/) (news_agency) · [RTV Slovenija](https://www.rtvslo.si/) (public_broadcaster) · [Delo](https://www.delo.si/) (newspaper) |
