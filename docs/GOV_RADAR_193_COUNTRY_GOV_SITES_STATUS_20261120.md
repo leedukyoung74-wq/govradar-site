@@ -1,10 +1,12 @@
-# GOV RADAR: 193개국 공식 정부 사업·조달·기업지원·투자 카탈로그 국가별 수량
+# GOV RADAR — 193개국 정부 사업·조달·기업지원·투자기관 공식 출처
 
-**2026-11-21 · 검토용 브랜치 `review/govradar-171countries-513-official-sites-20261121`** · **171/193개국, 513/579개** 근거 포함 등록 · **22개국·66개 미완료**.
+**2026-11-21 검토용 카탈로그:** **176/193개국·528/579개 기록**, 아직 **17개국·51개** 미충족.
 
-검증 용어: 이 수치는 공식기관 근거 URL·국가·기관·분야를 작성한 카탈로그 기록이며 각 주소를 실제 서버에서 검증하거나 실시간 공고 API로 자동 수집하고 있다고 주장하지 않습니다. 특히 전쟁/제재·정치불안 국가의 공식기관 소속/운영은 추가 점검합니다. 뉴스·언론 3개와 환경·날씨·비상사태 사이트는 별도 출처 카탈로그를 사용하며 정부사업 총계에 합산하지 않습니다. 운영 배포 미완료.
+### 검증 범위의 정확한 의미
 
-| 지역 | 국가 | ISO | 정부 공식 출처 등록 | 추가 필요 | 공식 조달·지원·투자 링크 |
+정부·공공기관 소속의 근거 URL, 기관명, 분야, 자료등록일을 기록한 카탈로그 수입니다. **각 URL의 실시간 HTTP 동작·운영기관 법적 자격·동일기관 중복·2026년 조직변동 및 자동수집 API를 독립적으로 전수 재검증한 숫자가 아닙니다.** 과거 국가별 `registry.json` HTTP 200 후보는 공식사이트 확인 수에서 제외했습니다. 운영 홈페이지/`live` 배포는 하지 않았습니다. 언론/뉴스·환경·기상·재난 기관은 별도 출처 목록으로 집계합니다.
+
+| 지역 | 국가명 | ISO | 공식 출처 등록 | 목표 부족 | 각 출처 |
 |---|---|:---:|---:|---:|---|
 | 아프리카 | 알제리 / Algeria | DZ | **3** | 0 | [Algeria National Public Procurement Portal](https://www.marches-publics.gov.dz/) · [Algeria NESDA · National Entrepreneurship Development](https://nesda.dz/) · [Algerian Investment Promotion Agency](https://aapi.dz/) |
 | 아프리카 | 앙골라 / Angola | AO | **3** | 0 | [Angola Ministry of Finance · Public Procurement Portal](https://compraspublicas.minfin.gov.ao/ComprasPublicas/) · [Angola INAPEM · MSME Business Support](https://inapem.gov.ao/) · [Angola AIPEX · Government Investment Promotion](https://gue.gov.ao/portal/investimento-aipex) |
@@ -34,10 +36,10 @@
 | 아프리카 | 케냐 / Kenya | KE | **3** | 0 | [Kenya Public Procurement Information Portal](https://www.tenders.go.ke/) · [Kenya Public Procurement Regulatory Authority](https://ppra.go.ke/) · [Kenya Business Registration Service](https://brs.go.ke/) |
 | 아프리카 | 레소토 / Lesotho | LS | **3** | 0 | [Lesotho Ministry of Finance · Official Tenders](https://www.finance.gov.ls/tenders) · [Basotho Enterprises Development Corporation · SME Support](https://www.bedco.org.ls/) · [Lesotho National Development Corporation · Investment](https://lndc.org.ls/services/investment-support/) |
 | 아프리카 | 라이베리아 / Liberia | LR | **3** | 0 | [Liberia Public Procurement & Concessions Commission](https://www.ppcc.gov.lr/) · [Liberia Ministry of Commerce · Business Development](https://moci.gov.lr/general/liberia-investment-finance-and-trade-project) · [Liberia National Investment Commission](https://www.nic.gov.lr/) |
-| 아프리카 | 리비아 / Libya | LY | **0** | 3 | — |
+| 아프리카 | 리비아 / Libya | LY | **3** | 0 | [Libya Government Tender Platform · Prime Minister's Office](https://attaat.pm.gov.ly/) · [Libya Financial Facilities Fund · State SME Support](https://stmll.gov.ly/) · [Libya National Development Agency · Strategic Investment Projects](https://nda.gov.ly/en/) |
 | 아프리카 | 마다가스카르 / Madagascar | MG | **3** | 0 | [Madagascar ARMP · E-Government Procurement](https://marches.armp.mg/) · [Madagascar Fihariana · National Entrepreneurship Support](https://www.fihariana.mg/en/) · [Madagascar Economic Development Board · Investment Promotion](https://edbm.mg/en/a-propos-dedbm) |
 | 아프리카 | 말라위 / Malawi | MW | **3** | 0 | [Malawi PPDA · Official Procurement Notices](https://www.ppda.mw/tenders) · [Malawi SMEDI · State Enterprise Development Institute](https://smedco.mw/) · [Malawi Investment and Trade Centre](https://mitc.mw/) |
-| 아프리카 | 말리 / Mali | ML | **0** | 3 | — |
+| 아프리카 | 말리 / Mali | ML | **3** | 0 | [Mali DGMP-DSP · Official Government Procurement](https://dgmp.gouv.ml/?q=node%2F57) · [Mali APEJ · Government Youth Employment and Enterprise Support](https://apej.ml/) · [Mali Agency for Investment Promotion](https://apimali.gov.ml/en/) |
 | 아프리카 | 모리타니 / Mauritania | MR | **3** | 0 | [Mauritania Official National Public Procurement Portal](https://marchespublics.gov.mr/) · [Mauritania Official Government Business Procedures](https://procedures.gov.mr/fr/procedure/790) · [Mauritania Investment Promotion Agency](https://apim.gov.mr/) |
 | 아프리카 | 모리셔스 / Mauritius | MU | **3** | 0 | [Mauritius Government e-Procurement System](https://eproc.publicprocurement.govmu.org/index) · [Mauritius Ministry SME Division · Business Support](https://smeregistration.govmu.org/) · [Economic Development Board Mauritius · National Investment](https://edbmauritius.org/) |
 | 아프리카 | 모로코 / Morocco | MA | **3** | 0 | [Morocco Public Procurement Electronic Portal](https://www.marchespublics.gov.ma/) · [Maroc PME · SME Financial Assistance](https://marocpme.gov.ma/mowakaba-tpme/) · [Moroccan Investment and Export Development Agency](https://www.amdie.gov.ma/) |
@@ -73,17 +75,17 @@
 | 아시아 | 북한 / North Korea | KP | **0** | 3 | — |
 | 아시아 | 대한민국 / South Korea | KR | **3** | 0 | [KONEPS · Public Procurement](https://www.g2b.go.kr/) · [Bizinfo · Government Business Support](https://www.bizinfo.go.kr/) · [K-Startup · Startup Support](https://www.k-startup.go.kr/) |
 | 아시아 | 키르기스스탄 / Kyrgyzstan | KG | **3** | 0 | [Kyrgyz Republic Public Procurement Platform](https://zakupki.gov.kg/popp/home.xhtml) · [Kyrgyz Entrepreneurship Development Fund · SME Finance](https://frp.kg/kreditovanie/) · [Kyrgyz National Investment Agency](https://invest.gov.kg/en) |
-| 아시아 | 라오스 / Laos | LA | **0** | 3 | — |
+| 아시아 | 라오스 / Laos | LA | **3** | 0 | [Laos Ministry of Public Works and Transport · Government Procurement](https://mpwt.gov.la/en/ongoing-procurement) · [Laos Ministry of Industry and Commerce · Enterprise Services](https://www.moic.gov.la/en) · [Lao Investment Promotion and Management Committee](https://investlaos.gov.la/) |
 | 아시아 | 말레이시아 / Malaysia | MY | **3** | 0 | [MyPROCUREMENT · Malaysian Treasury Procurement](https://myprocurement.treasury.gov.my/advertisements/tender) · [SME Corp. Malaysia · Government SME Support](https://smecorp.gov.my/index.php/en/about-sme-corp-malaysia) · [MIDA · Malaysian Investment Promotion](https://www.mida.gov.my/setting-up-content/incentives/) |
 | 아시아 | 몰디브 / Maldives | MV | **3** | 0 | [Maldives Ministry of Finance · Public Tenders](https://finance.gov.mv/tenders) · [Maldives Ministry Economic Development · SME Services](https://trade.gov.mv/en/business-services/) · [Invest Maldives · National Investment Promotion](https://investmaldives.gov.mv/) |
 | 아시아 | 몽골 / Mongolia | MN | **3** | 0 | [Mongolia National Government Tender Portal](https://www.tender.gov.mn/) · [Mongolia Government SME Development Agency](https://www.sme.gov.mn/) · [Mongolia Investment and Trade Agency](https://www.investmongolia.gov.mn/en/) |
-| 아시아 | 미얀마 / Myanmar | MM | **0** | 3 | — |
+| 아시아 | 미얀마 / Myanmar | MM | **3** | 0 | [Myanmar Government Public Tender Portal](https://myanmar.gov.mm/tenders) · [Myanmar Ministry of Commerce · MSME and Trade Services](https://commerce.gov.mm/en) · [Myanmar Directorate of Investment and Company Administration](https://www.dica.gov.mm/) |
 | 아시아 | 네팔 / Nepal | NP | **3** | 0 | [Nepal e-Government Procurement · Bolpatra](https://bolpatra.gov.np/egp/) · [Nepal Department of Industry · Business Services](https://www.doind.gov.np/) · [Investment Board Nepal · Investment Opportunities](https://ibn.gov.np/) |
 | 아시아 | 파키스탄 / Pakistan | PK | **3** | 0 | [EPADS · Pakistan Electronic Public Procurement](https://epads.gov.pk/) · [SMEDA · Government SME Development Agency](https://smeda.org/) · [Pakistan Board of Investment](https://invest.gov.pk/) |
 | 아시아 | 필리핀 / Philippines | PH | **3** | 0 | [PhilGEPS · Government Procurement](https://notices.philgeps.gov.ph/) · [DTI Tradeline · Export Buyer Matching](https://tradelinephilippines.dti.gov.ph/web/tradeline-portal/home) · [Philippines Board of Investments](https://boi.gov.ph/) |
 | 아시아 | 싱가포르 / Singapore | SG | **3** | 0 | [GeBIZ · Government Procurement](https://www.gebiz.gov.sg/) · [Enterprise Singapore · Business Grants](https://www.enterprisesg.gov.sg/financial-support) · [Singapore EDB · Investment](https://www.edb.gov.sg/) |
 | 아시아 | 스리랑카 / Sri Lanka | LK | **3** | 0 | [Sri Lanka Treasury · Government Procurement](https://www.treasury.gov.lk/web/procurement-notices) · [Sri Lanka Export Development Board · Enterprise Support](https://www.srilankabusiness.com/) · [Sri Lanka Board of Investment · BOI](https://investsrilanka.com/) |
-| 아시아 | 타지키스탄 / Tajikistan | TJ | **0** | 3 | — |
+| 아시아 | 타지키스탄 / Tajikistan | TJ | **3** | 0 | [Tajikistan State Public Procurement ePortal](https://eprocurement.gov.tj/en/searchanno) · [Tajikistan State Committee on Investments · Entrepreneurship Support](https://egov.tj/site/sarmoyaguzori?lang=en) · [Tajikistan TajInvest · State Investment Promotion](https://www.tajinvest.tj/) |
 | 아시아 | 태국 / Thailand | TH | **3** | 0 | [Thailand e-GP · Government Procurement](https://www.gprocurement.go.th/) · [Thailand Board of Investment · Investment Incentives](https://www.boi.go.th/index.php?language=en&page=incentive) · [Thailand Department of International Trade Promotion](https://www.ditp.go.th/en) |
 | 아시아 | 동티모르 / Timor-Leste | TL | **3** | 0 | [Timor-Leste National e-Procurement](https://www.eprocurement.gov.tl/public/indexeprtl?lang=en) · [TradeInvest Timor-Leste · Export Promotion and Award](https://tradeinvest.tl/node/119) · [TradeInvest Timor-Leste · Investment Promotion Agency](https://tradeinvest.tl/) |
 | 아시아 | 투르크메니스탄 / Turkmenistan | TM | **0** | 3 | — |
@@ -200,4 +202,4 @@
 | 오세아니아 | 투발루 / Tuvalu | TV | **3** | 0 | [Government of Tuvalu Official eProcurement](https://portal.tenderlink.com/got/login) · [Tuvalu Finance Ministry · Business Development](https://finance.gov.tv/business/) · [Tuvalu Government Trade and Investment Procedures](https://tuvalu.tradeportal.org/) |
 | 오세아니아 | 바누아투 / Vanuatu | VU | **3** | 0 | [Vanuatu Central Tender Board · Official Notices](https://ctb.gov.vu/en/) · [Vanuatu Ministry of Trade & Commerce · Enterprise Services](https://mtc.gov.vu/) · [Vanuatu Foreign Investment Promotion Agency](https://investvanuatu.vu/) |
 
-추가 근거 주소: `src/government_business_sites.json` 각 항목 `evidence_url` 참고.
+공식 근거 URL: `src/government_business_sites.json`의 국가별 항목 `evidence_url` 확인. 링크가 오류/불명확한 기관은 이후 별도 조사에서 보완하며 '완료'가 아닙니다.
