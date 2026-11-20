@@ -1503,6 +1503,38 @@
         "evidence_url": "https://investmentfiji.org.fj/"
       }
     ],
+    "FM": [
+      {
+        "name_ko": "FSM 재무행정부 · 공공구매기회",
+        "name_en": "FSM Department of Finance · Official Procurement Opportunities",
+        "category": "procurement",
+        "url": "https://dofa.gov.fm/opportunity/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dofa.gov.fm/services/procurement/",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      },
+      {
+        "name_ko": "FSM 개발은행 · 정부 중소기업 융자",
+        "name_en": "FSM Development Bank · Public SME Financing",
+        "category": "support",
+        "url": "https://www.fsmdb.fm/fsmdb-products/business-term-loans/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.fsmdb.fm/about-fsmdb/history-of-the-bank/",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      },
+      {
+        "name_ko": "FSM 자원개발부 · 투자·무역지원",
+        "name_en": "FSM Department of Resources & Development · Trade and Investment",
+        "category": "investment",
+        "url": "https://rd.gov.fm/trade-and-investment",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://rd.gov.fm/trade-and-investment",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      }
+    ],
     "FR": [
       {
         "name_ko": "PLACE · 정부 전자조달",
@@ -2261,6 +2293,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.cib-cdc.gov.kh/"
+      }
+    ],
+    "KI": [
+      {
+        "name_ko": "키리바시 중앙공공조달청 · 정부 입찰",
+        "name_en": "Kiribati Central Procurement Unit · Official Tender List",
+        "category": "procurement",
+        "url": "https://www.procurement.gov.ki/tender-list?page=0",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procurement.gov.ki/article1",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      },
+      {
+        "name_ko": "상공관광산업부 · 기업지원센터",
+        "name_en": "Kiribati Ministry of Commerce · Business Promotion Centre",
+        "category": "support",
+        "url": "https://mtcic.gov.ki/business-promotion-centre/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mtcic.gov.ki/business-promotion-centre/",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      },
+      {
+        "name_ko": "국가 투자진흥국 · Invest Kiribati",
+        "name_en": "Kiribati Investment Promotion Division · Official",
+        "category": "investment",
+        "url": "https://www.investinkiribati.mtcic.gov.ki/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investinkiribati.mtcic.gov.ki/about-us",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
       }
     ],
     "KN": [
@@ -3505,6 +3569,38 @@
         "evidence_url": "https://www.gov.pt/entidades/agencia-para-o-investimento-e-comercio-externo-de-portugal"
       }
     ],
+    "PW": [
+      {
+        "name_ko": "팔라우 정부 공식 입찰 공고",
+        "name_en": "Palau Government · Official Bids and RFPs",
+        "category": "procurement",
+        "url": "https://www.palaugov.pw/rfp-bids/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.palaugov.pw/rfp-bids/",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      },
+      {
+        "name_ko": "팔라우 정부 중소기업지원센터",
+        "name_en": "Palau Government Small Business Development Center",
+        "category": "support",
+        "url": "https://www.palaugov.pw/executive-branch/ministries/public-infrastructure/small-business-development-center/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.palaugov.pw/executive-branch/ministries/public-infrastructure/small-business-development-center/",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      },
+      {
+        "name_ko": "팔라우 외국인투자위원회",
+        "name_en": "Palau Foreign Investment Board · Government",
+        "category": "investment",
+        "url": "https://www.palaugov.pw/fib/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.palaugov.pw/fib/",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      }
+    ],
     "PY": [
       {
         "name_ko": "DNCP · 공공조달공고 검색",
@@ -4150,6 +4246,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investintunisia.tn/en/"
+      }
+    ],
+    "TO": [
+      {
+        "name_ko": "통가 재무부 · 정부조달 정책·안내",
+        "name_en": "Tonga Ministry of Finance · Government Procurement",
+        "category": "procurement",
+        "url": "https://www.finance.gov.to/index.php/node/170",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.finance.gov.to/index.php/node/170",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      },
+      {
+        "name_ko": "통가 경제개발부 · 기업지원 프로그램",
+        "name_en": "Tonga Ministry of Trade and Economic Development · Business Support",
+        "category": "support",
+        "url": "https://www.mted.gov.to/business-support-marketing-promotion/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mted.gov.to/business-support-marketing-promotion/",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
+      },
+      {
+        "name_ko": "Invest Tonga · 정부 투자진흥부서",
+        "name_en": "Invest Tonga · National Investment Promotion",
+        "category": "investment",
+        "url": "https://www.investtonga.gov.to/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investtonga.gov.to/about-us",
+        "review_note": "Sourced to official government agency; crawl/API availability and current bid status are separate"
       }
     ],
     "TR": [
