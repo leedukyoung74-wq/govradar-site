@@ -57,18 +57,38 @@ jobs:
       - name: Publish to data branch
         if: ${{ !inputs.dry_run }}
         run: |
+          set -euo pipefail
           cd data_branch
-          # The dedicated fast official updater exclusively publishes hz/official.json.
-          # Daily tenders publish ONLY feeds/, avoiding cross-writer rebase conflicts.
-          git add feeds
+          git config user.name "GOV RADAR bot"
+          git config user.email "73036396@naver.com"
+          # Both the six-agency daily snapshot and tenders must reach data/.
+          # If the fast USGS updater wrote concurrently, merge by source freshness,
+          # NOT by overwriting or discarding other agencies' data.
+          git add feeds hz/official.json
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
-          git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -m "Feed ${{ inputs.task }} $(date -u +%FT%H:%MZ)"
-          # other jobs (situation summary, member data) also write to data: if one pushed meanwhile, replay on top of it.
-          # A real conflict on the same file stops here instead of overwriting the other job's work.
-          for i in 1 2 3; do
-            git push origin HEAD:data && exit 0
-            git fetch -q origin data && git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" rebase origin/data || { git rebase --abort; echo "conflict with another data job"; exit 1; }
+          collected_official="$(mktemp)"
+          trap 'rm -f "$collected_official"' EXIT
+          cp hz/official.json "$collected_official"
+          git commit -m "Feed ${{ inputs.task }} $(date -u +%FT%H:%MZ)"
+          generated_sha="$(git rev-parse HEAD)"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:data; then
+              echo "PUBLISHED_TO_DATA_BRANCH=YES"
+              exit 0
+            fi
+            if [ "$attempt" -eq 3 ]; then break; fi
+            echo "Concurrent data update; merging source snapshots with the latest remote data"
+            git fetch -q origin data
+            git reset --hard origin/data
+            git checkout "$generated_sha" -- feeds
+            python ../tools/merge_official_sources.py hz/official.json "$collected_official"
+            # Run the strict gate again against the NEW remote base before retrying.
+            python ../tools/quality_gate.py .
+            git add feeds hz/official.json
+            if git diff --cached --quiet; then echo "already published"; exit 0; fi
+            git commit -m "Feed ${{ inputs.task }} reconciled $(date -u +%FT%H:%MZ)"
           done
+          echo "PUBLISH_FAILED after 3 attempts; no forced update" >&2
           exit 1
       # Checks run AFTER publishing so a flaky outside page cannot stop the daily update, but they are strict:
       # any mismatch, broken link, unreadable page or stale site feed marks this run FAILED (red) for follow-up.
