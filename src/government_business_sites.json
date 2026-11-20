@@ -61,6 +61,35 @@
         "evidence_url": "https://e-albania.al/"
       }
     ],
+    "AM": [
+      {
+        "name_ko": "재무부 · 아르메니아 국가조달",
+        "name_en": "Armenia Ministry of Finance · Procurement Portal",
+        "category": "procurement",
+        "url": "https://procurement.minfin.am/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procurement.minfin.am/en/"
+      },
+      {
+        "name_ko": "경제부 · 국가 기업·산업지원",
+        "name_en": "Armenia Ministry of Economy · Enterprise Support",
+        "category": "support",
+        "url": "https://mineconomy.am/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mineconomy.am/en/"
+      },
+      {
+        "name_ko": "Enterprise Armenia · 국가 투자지원",
+        "name_en": "Enterprise Armenia · Investment Promotion Foundation",
+        "category": "investment",
+        "url": "https://enterprisearmenia.am/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://enterprisearmenia.am/"
+      }
+    ],
     "AR": [
       {
         "name_ko": "COMPR.AR · 국가 공공조달",
@@ -146,6 +175,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://sellingtogov.finance.gov.au/"
+      }
+    ],
+    "AZ": [
+      {
+        "name_ko": "전자정부 조달 · 아제르바이잔 국가입찰",
+        "name_en": "Azerbaijan eTender · State Procurement",
+        "category": "procurement",
+        "url": "https://etender.gov.az/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://etender.gov.az/"
+      },
+      {
+        "name_ko": "KOBIA · 중소기업발전청",
+        "name_en": "KOBIA · Small and Medium Business Development Agency",
+        "category": "support",
+        "url": "https://smb.gov.az/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://economy.gov.az/en/page/muracietler/sual-cavab/kob"
+      },
+      {
+        "name_ko": "KOBIA Invest · 투자사업 포털",
+        "name_en": "KOBIA Invest · SME Investment Opportunities",
+        "category": "investment",
+        "url": "https://invest.smb.gov.az/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://economy.gov.az/en/page/muracietler/sual-cavab/kob"
       }
     ],
     "BA": [
@@ -815,6 +873,35 @@
         "evidence_url": "https://www.icex.es/es/sobre-nosotros/administracion-abierta/transparencia/informacion-general-normativa-funciones"
       }
     ],
+    "ET": [
+      {
+        "name_ko": "eGP · 에티오피아 국가전자조달",
+        "name_en": "Ethiopia eGP · Government e-Procurement",
+        "category": "procurement",
+        "url": "https://egp.gov.et/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ppa.gov.et/wp-content/uploads/2025/06/Directive_No_1073_2025_Federal_Government_Public_Procurement_Directive.pdf"
+      },
+      {
+        "name_ko": "산업부 · 정부 기업지원",
+        "name_en": "Ethiopia Ministry of Industry · Enterprise Services",
+        "category": "support",
+        "url": "https://www.moi.gov.et/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.moi.gov.et/"
+      },
+      {
+        "name_ko": "EIC · 투자위원회",
+        "name_en": "Ethiopian Investment Commission · Invest Ethiopia",
+        "category": "investment",
+        "url": "https://investethiopia.gov.et/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investethiopia.gov.et/"
+      }
+    ],
     "FI": [
       {
         "name_ko": "HILMA · 핀란드 국가입찰공고",
@@ -842,6 +929,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.finnvera.fi/eng/about-finnvera"
+      }
+    ],
+    "FJ": [
+      {
+        "name_ko": "재무부 TenderLink · 피지 공공입찰",
+        "name_en": "Fiji Ministry of Finance · Official e-Tendering",
+        "category": "procurement",
+        "url": "https://portal.tenderlink.com/financefiji/alltenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.finance.gov.fj/"
+      },
+      {
+        "name_ko": "통상부 · 중소기업·산업지원",
+        "name_en": "Fiji Ministry of Trade · Enterprise Support",
+        "category": "support",
+        "url": "https://www.mcttt.gov.fj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mcttt.gov.fj/"
+      },
+      {
+        "name_ko": "Investment Fiji · 정부 투자진흥",
+        "name_en": "Investment Fiji · Government Investment Agency",
+        "category": "investment",
+        "url": "https://investmentfiji.org.fj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investmentfiji.org.fj/"
       }
     ],
     "FR": [
@@ -1219,6 +1335,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.investindia.gov.in/"
+      }
+    ],
+    "IS": [
+      {
+        "name_ko": "Útboðsvefur · 아이슬란드 국가조달 공고",
+        "name_en": "Iceland Útboðsvefur · Official Public Tenders",
+        "category": "procurement",
+        "url": "https://utbodsvefur.is/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://island.is/en/o/the-financial-management-authority/utbodsvefur-is"
+      },
+      {
+        "name_ko": "Rannís · 국가 연구혁신 기금",
+        "name_en": "Rannís · Icelandic National Research Funding",
+        "category": "support",
+        "url": "https://www.rannis.is/english/funding/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.rannis.is/english/"
+      },
+      {
+        "name_ko": "Invest in Iceland · 국가 투자진흥",
+        "name_en": "Invest in Iceland · National Investment Promotion",
+        "category": "investment",
+        "url": "https://www.invest.is/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.invest.is/"
       }
     ],
     "IT": [
@@ -1627,6 +1772,93 @@
         "evidence_url": "https://www.amdie.gov.ma/"
       }
     ],
+    "MD": [
+      {
+        "name_ko": "MTender · 몰도바 전자조달",
+        "name_en": "Moldova MTender · Public Procurement",
+        "category": "procurement",
+        "url": "https://mtender.gov.md/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mtender.gov.md/en"
+      },
+      {
+        "name_ko": "ODA · 기업개발 지원금",
+        "name_en": "ODA Moldova · Entrepreneurship Development Grants",
+        "category": "support",
+        "url": "https://www.oda.md/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.oda.md/en/media-page-en/press/press-releases/business-development-grants-oda-announces-schedule-of-calls-for-september-november2026"
+      },
+      {
+        "name_ko": "Invest Moldova · 국가 투자진흥",
+        "name_en": "Invest Moldova · National Investment Promotion",
+        "category": "investment",
+        "url": "https://invest.gov.md/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://invest.gov.md/"
+      }
+    ],
+    "MK": [
+      {
+        "name_ko": "e-Nabavki · 북마케도니아 국가조달",
+        "name_en": "North Macedonia e-Nabavki · Public Procurement",
+        "category": "procurement",
+        "url": "https://www.e-nabavki.gov.mk/PublicAccess/home.aspx",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.e-nabavki.gov.mk/PublicAccess/home.aspx"
+      },
+      {
+        "name_ko": "FITR · 국가 기술혁신 지원기금",
+        "name_en": "North Macedonia Fund for Innovation and Technology Development",
+        "category": "support",
+        "url": "https://fitr.mk/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://fitr.mk/"
+      },
+      {
+        "name_ko": "Invest North Macedonia · 국가 투자진흥",
+        "name_en": "Invest North Macedonia · Official Investment Agency",
+        "category": "investment",
+        "url": "https://investnorthmacedonia.gov.mk/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investnorthmacedonia.gov.mk/"
+      }
+    ],
+    "MT": [
+      {
+        "name_ko": "ePPS · 몰타 전자조달",
+        "name_en": "Malta ePPS · Public e-Procurement",
+        "category": "procurement",
+        "url": "https://www.etenders.gov.mt/epps/home.do",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.etenders.gov.mt/epps/home.do"
+      },
+      {
+        "name_ko": "Malta Enterprise · 정부 기업지원",
+        "name_en": "Malta Enterprise · Enterprise Grants and Finance",
+        "category": "support",
+        "url": "https://maltaenterprise.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://maltaenterprise.com/"
+      },
+      {
+        "name_ko": "TradeMalta · 공공 무역진흥",
+        "name_en": "TradeMalta · Public-Private Export Promotion",
+        "category": "investment",
+        "url": "https://www.trademalta.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.trademalta.org/"
+      }
+    ],
     "MX": [
       {
         "name_ko": "Compras MX · 연방 공공조달",
@@ -1683,6 +1915,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.mida.gov.my/forms-and-guidelines/"
+      }
+    ],
+    "NA": [
+      {
+        "name_ko": "eProcurement · 나미비아 정부조달",
+        "name_en": "Namibia Government e-Procurement",
+        "category": "procurement",
+        "url": "https://www.eprocurement.gov.na/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.eprocurement.gov.na/"
+      },
+      {
+        "name_ko": "DBN · 국책개발은행 기업자금",
+        "name_en": "Development Bank of Namibia · Business Finance",
+        "category": "support",
+        "url": "https://www.dbn.com.na/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.dbn.com.na/procurement/"
+      },
+      {
+        "name_ko": "NIPDB · 국가 투자진흥개발청",
+        "name_en": "Namibia Investment Promotion and Development Board",
+        "category": "investment",
+        "url": "https://nipdb.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nipdb.com/"
       }
     ],
     "NG": [
@@ -1915,6 +2176,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gob.pe/institucion/proinversion/institucional"
+      }
+    ],
+    "PG": [
+      {
+        "name_ko": "NPC · 파푸아뉴기니 조달공고",
+        "name_en": "Papua New Guinea National Procurement Commission",
+        "category": "procurement",
+        "url": "https://npc.gov.pg/tender-advertisement/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://npc.gov.pg/tender-advertisement/"
+      },
+      {
+        "name_ko": "SME Corporation · 국가 기업지원",
+        "name_en": "PNG Small and Medium Enterprises Corporation",
+        "category": "support",
+        "url": "https://www.smecorp.gov.pg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.smecorp.gov.pg/"
+      },
+      {
+        "name_ko": "IPA · 국가 투자진흥청",
+        "name_en": "PNG Investment Promotion Authority",
+        "category": "investment",
+        "url": "https://www.ipa.gov.pg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ipa.gov.pg/"
       }
     ],
     "PH": [
@@ -2323,6 +2613,35 @@
         "evidence_url": "https://www.mhsr.sk/ministerstvo/operacne-programy/opis/elektronizacia-sluzieb-ministerstva-hospodarstva-sr/sluzby-a-zivotne-situacie"
       }
     ],
+    "SN": [
+      {
+        "name_ko": "공공조달 포털 · 세네갈",
+        "name_en": "Senegal National Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://www.marchespublics.sn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/afrika/senegal/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari"
+      },
+      {
+        "name_ko": "ADEPME · 국가 중소기업 발전지원",
+        "name_en": "ADEPME · Senegal SME Development Agency",
+        "category": "support",
+        "url": "https://www.adepme.sn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.adepme.sn/"
+      },
+      {
+        "name_ko": "APIX · 국가 투자진흥청",
+        "name_en": "APIX · Senegal Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://investinsenegal.sn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/afrika/senegal/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari"
+      }
+    ],
     "SV": [
       {
         "name_ko": "COMPRASAL · 정부 전자조달",
@@ -2524,6 +2843,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://ukraineinvest.gov.ua/en/industries/ukraine-investment-portal-eng/"
+      }
+    ],
+    "UG": [
+      {
+        "name_ko": "eGP · 우간다 정부 전자조달",
+        "name_en": "Uganda eGP · Electronic Government Procurement",
+        "category": "procurement",
+        "url": "https://egpuganda.go.ug/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ppda.go.ug/"
+      },
+      {
+        "name_ko": "UDC · 국영 산업개발기업",
+        "name_en": "Uganda Development Corporation · Business Development",
+        "category": "support",
+        "url": "https://www.udc.go.ug/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.udc.go.ug/"
+      },
+      {
+        "name_ko": "UIA · 우간다 투자진흥청",
+        "name_en": "Uganda Investment Authority",
+        "category": "investment",
+        "url": "https://www.ugandainvest.go.ug/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ugandainvest.go.ug/"
       }
     ],
     "US": [
