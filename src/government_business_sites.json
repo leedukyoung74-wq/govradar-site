@@ -1917,6 +1917,35 @@
         "evidence_url": "https://investcroatia.gov.hr/en/hamag-bicro/"
       }
     ],
+    "HT": [
+      {
+        "name_ko": "CNMP · 아이티 국가 정부조달 공고",
+        "name_en": "Haiti CNMP · Official Public Procurement",
+        "category": "procurement",
+        "url": "https://www.cnmp.gouv.ht/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.cnmp.gouv.ht/"
+      },
+      {
+        "name_ko": "상공산업부 · 청년·기업개발 지원",
+        "name_en": "Haiti Ministry of Commerce and Industry · Enterprise Development",
+        "category": "support",
+        "url": "https://mci.gouv.ht/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mci.gouv.ht/download.php?id=58"
+      },
+      {
+        "name_ko": "CFI · 정부 투자진흥센터",
+        "name_en": "Haiti Centre de Facilitation des Investissements",
+        "category": "investment",
+        "url": "https://cfi.ht/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cfi.ht/en/a-propos/"
+      }
+    ],
     "HU": [
       {
         "name_ko": "Közbeszerzési Hatóság · 헝가리 공공조달청",
@@ -3222,6 +3251,35 @@
         "evidence_url": "https://nipc.gov.ng/notifications"
       }
     ],
+    "NI": [
+      {
+        "name_ko": "SISCAE · 니카라과 공공조달 입찰",
+        "name_en": "Nicaragua SISCAE · Official Procurement Procedures",
+        "category": "procurement",
+        "url": "https://www.gestion.nicaraguacompra.gob.ni/siscae/portal/adquisiciones-gestion/busquedaProcedimientosVigentes?proc_estado=VIGENTE",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gestion.nicaraguacompra.gob.ni/proveedores-gestion-portlet/fragments/registracion/terminosYCondiciones.jsf"
+      },
+      {
+        "name_ko": "MIFIC · 정부 중소기업·사업 지원",
+        "name_en": "Nicaragua Ministry of Industry and Commerce · Enterprise Services",
+        "category": "support",
+        "url": "https://www.mific.gob.ni/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mific.gob.ni/Inicio/Acerca-de-la-Instituci%C3%B3n/Marco-Jur%C3%ADdico"
+      },
+      {
+        "name_ko": "MIFIC · 국가 외국인투자 지원국",
+        "name_en": "Nicaragua MIFIC · Directorate of Foreign Investment",
+        "category": "investment",
+        "url": "https://www.mific.gob.ni/Inicio/Fomento/Industria/Direcci%C3%B3n-de-Inversiones",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mific.gob.ni/Inicio/Fomento/Industria/Direcci%C3%B3n-de-Inversiones"
+      }
+    ],
     "NL": [
       {
         "name_ko": "TenderNed · 국가 조달공고",
@@ -4061,6 +4119,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/afrika/senegal/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari"
+      }
+    ],
+    "SR": [
+      {
+        "name_ko": "정부 중앙 입찰 게시판 · 수리남",
+        "name_en": "Suriname Government · Public Procurement Announcements",
+        "category": "procurement",
+        "url": "https://gov.sr/aanbestedingen/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.sr/aanbestedingen/"
+      },
+      {
+        "name_ko": "정부 SME 창업·산업 지원사업",
+        "name_en": "Suriname Government · SME Diversification and Start-up Support",
+        "category": "support",
+        "url": "https://gov.sr/sme-diversification-start-up-support-program/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.sr/sme-diversification-start-up-support-program/"
+      },
+      {
+        "name_ko": "SITA · 국영 투자·무역진흥",
+        "name_en": "Suriname State Investment and Trade Agency",
+        "category": "investment",
+        "url": "https://sita.sr/invest/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://sita.sr/about-us/"
       }
     ],
     "SV": [
