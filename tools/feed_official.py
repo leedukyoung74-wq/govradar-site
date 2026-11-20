@@ -125,6 +125,11 @@ def main():
         old = {"sources": {}, "items": {}}
     stamp = NOW.astimezone(KST).strftime("%Y-%m-%dT%H:%M")
     res = {"v": 1, "checked": stamp, "sources": {}, "items": {}, "space": old.get("space")}
+    # The fast USGS publisher owns this independent heartbeat. A daily
+    # six-agency refresh must never erase its provenance or invent a new
+    # fast-poll timestamp. A future real fast poll will update it itself.
+    if "usgs_fast_checked" in old:
+        res["usgs_fast_checked"] = old["usgs_fast_checked"]
     for name, fn in (("usgs", usgs), ("gdacs", gdacs), ("eonet", eonet), ("who", who), ("cneos", cneos), ("swpc", swpc)):
         prev = old.get("sources", {}).get(name, {})
         try:
