@@ -3,6 +3,35 @@
   "reviewed_on": "2026-11-20",
   "policy": "Only direct primary government/authorized official institutional URLs receive official_primary status. A successful HTTP response alone is not official confirmation.",
   "countries": {
+    "AD": [
+      {
+        "name_ko": "정부조달 PCSP · 안도라",
+        "name_en": "Andorra Government Public Procurement PCSP",
+        "category": "procurement",
+        "url": "https://contractacio.govern.ad/SLE_Internet",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://seu.andorralavella.ad/contingutPublic/mostrarContingut/84"
+      },
+      {
+        "name_ko": "Andorra Recerca + Innovació · 공공혁신",
+        "name_en": "Andorra Research + Innovation · Public Innovation",
+        "category": "support",
+        "url": "https://ari.ad/en/innovation",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ari.ad/transparencia/informacio-organitzativa-institucional"
+      },
+      {
+        "name_ko": "Andorra Business · 경제투자진흥",
+        "name_en": "Andorra Business · Economic Development Agency",
+        "category": "investment",
+        "url": "https://www.andorrabusiness.com/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.andorrabusiness.com/en/meet-andorrabusiness/qui-som/"
+      }
+    ],
     "AE": [
       {
         "name_ko": "연방 재무부 · 조달 기회",
@@ -668,6 +697,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.bitc.co.bw/"
+      }
+    ],
+    "BZ": [
+      {
+        "name_ko": "벨리즈 정부 공공조달 기회",
+        "name_en": "Belize Government Public Procurement Notices",
+        "category": "procurement",
+        "url": "https://procurement.gov.bz/opportunities/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procurement.gov.bz/"
+      },
+      {
+        "name_ko": "SBDCBelize · 중소기업지원센터",
+        "name_en": "Belize Small Business Development Centre",
+        "category": "support",
+        "url": "https://beltraide.bz/sbdcbelize/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://beltraide.bz/about-us/"
+      },
+      {
+        "name_ko": "BELTRAIDE · 투자·수출진흥",
+        "name_en": "BELTRAIDE · Belize National Investment Promotion",
+        "category": "investment",
+        "url": "https://beltraide.bz/belize-invest/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://beltraide.bz/about-us/"
       }
     ],
     "CA": [
@@ -1453,6 +1511,35 @@
         "evidence_url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities"
       }
     ],
+    "GD": [
+      {
+        "name_ko": "그레나다 정부 전자조달",
+        "name_en": "Government of Grenada Official eProcurement",
+        "category": "procurement",
+        "url": "https://supplier.in-tend.co.uk/gnd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://climateresilience.gov.gd/docs/request-for-expressions-of-interest-consulting-services-firms-selection/"
+      },
+      {
+        "name_ko": "GIDC · 국가 중소기업 지원센터",
+        "name_en": "Grenada Investment Development Corporation · SME Development",
+        "category": "support",
+        "url": "https://gidc.gd/business-units/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gidc.gd/who-we-are/"
+      },
+      {
+        "name_ko": "GIDC · 투자진흥·인센티브",
+        "name_en": "Grenada Investment Development Corporation · Investment",
+        "category": "investment",
+        "url": "https://gidc.gd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gidc.gd/who-we-are/"
+      }
+    ],
     "GE": [
       {
         "name_ko": "SPA · 조지아 국가전자조달",
@@ -2205,6 +2292,64 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://invest.gov.kz/ru/about-us/purchase/"
+      }
+    ],
+    "LC": [
+      {
+        "name_ko": "정부 입찰 공고 · 세인트루시아",
+        "name_en": "Government of Saint Lucia Tender Notices",
+        "category": "procurement",
+        "url": "https://www.govt.lc/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govt.lc/tenders"
+      },
+      {
+        "name_ko": "SEDU · 정부 중소기업 상담지원",
+        "name_en": "Saint Lucia Small Enterprise Development Unit",
+        "category": "support",
+        "url": "https://www.govt.lc/services/apply-for-small-business-advisory-services",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.govt.lc/ministries/tourism-heritage-and-creative-industries/small-enterprise-development-unit"
+      },
+      {
+        "name_ko": "Invest Saint Lucia · 국가 투자진흥",
+        "name_en": "Invest Saint Lucia · Statutory Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://investstlucia.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investstlucia.com/about-invest-saint-lucia/frequently-asked-questions/"
+      }
+    ],
+    "LI": [
+      {
+        "name_ko": "공공조달 공식 공고 · 리히텐슈타인",
+        "name_en": "Liechtenstein Public Procurement Notices",
+        "category": "procurement",
+        "url": "https://vergaben.llv.li/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.llv.li/en/national-administration/public-procurement-department/basic-provisions/announcements/international-affairs-announcements"
+      },
+      {
+        "name_ko": "경제청 · 중소기업 연구혁신 지원",
+        "name_en": "Liechtenstein Office of Economic Affairs · SME Funding",
+        "category": "support",
+        "url": "https://www.llv.li/en/business/financing-funding/funding",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.llv.li/en/business/financing-funding/funding"
+      },
+      {
+        "name_ko": "경제청 · 기업입지·수출 지원",
+        "name_en": "Liechtenstein National Administration · Location Promotion",
+        "category": "investment",
+        "url": "https://www.llv.li/en/national-administration/office-of-economic-affairs/location-promotion",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.llv.li/en/national-administration/office-of-economic-affairs/economic-affairs-trade-law"
       }
     ],
     "LK": [
@@ -3452,6 +3597,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.mhsr.sk/ministerstvo/operacne-programy/opis/elektronizacia-sluzieb-ministerstva-hospodarstva-sr/sluzby-a-zivotne-situacie"
+      }
+    ],
+    "SM": [
+      {
+        "name_ko": "정부 조달·계약청 · 산마리노",
+        "name_en": "San Marino Government Procurement and Contracts Office",
+        "category": "procurement",
+        "url": "https://www.gov.sm/pub1/GovSM/Dipartimenti/Dipartimento-Funzione-Pubblica/Ufficio-Approvvigionamenti-e-Contratti.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.sm/pub1/GovSM/Dipartimenti/Dipartimento-Funzione-Pubblica/Ufficio-Approvvigionamenti-e-Contratti.html"
+      },
+      {
+        "name_ko": "국영 혁신원 · 스타트업지원",
+        "name_en": "San Marino Innovation · State-Owned Startup Support",
+        "category": "support",
+        "url": "https://www.sanmarinoinnovation.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.bollettinoufficiale.sm/on-line/home/parte-amministrativa-e-inserzioni/istituto-per-linnovazione.html"
+      },
+      {
+        "name_ko": "경제개발청·상공회의소 · 투자지원",
+        "name_en": "San Marino Economic Development Agency and Chamber",
+        "category": "investment",
+        "url": "https://www.camcom.sm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.camcom.sm/contattaci/"
       }
     ],
     "SN": [
