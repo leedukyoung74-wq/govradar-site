@@ -1569,6 +1569,35 @@
         "evidence_url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32089"
       }
     ],
+    "GA": [
+      {
+        "name_ko": "ARMP · 가봉 국가 공공조달청",
+        "name_en": "Gabon Public Procurement Regulatory Agency",
+        "category": "procurement",
+        "url": "https://armp.ga/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp.ga/"
+      },
+      {
+        "name_ko": "상공·중소기업부 · 기업지원",
+        "name_en": "Gabon Ministry of Commerce and SMEs",
+        "category": "support",
+        "url": "https://www.pme.gouv.ga/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.pme.gouv.ga/"
+      },
+      {
+        "name_ko": "ANPI · 국가 투자진흥청",
+        "name_en": "ANPI Gabon · Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://www.investingabon.ga/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investingabon.ga/"
+      }
+    ],
     "GB": [
       {
         "name_ko": "Find a Tender · 정부 조달",
@@ -2526,6 +2555,64 @@
         "evidence_url": "https://www.srilankabusiness.com/edb/about-us/organisation-structure.html"
       }
     ],
+    "LR": [
+      {
+        "name_ko": "PPCC · 리베리아 공공조달 위원회",
+        "name_en": "Liberia Public Procurement & Concessions Commission",
+        "category": "procurement",
+        "url": "https://www.ppcc.gov.lr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ppcc.gov.lr/"
+      },
+      {
+        "name_ko": "상공산업부 · 정부 기업지원",
+        "name_en": "Liberia Ministry of Commerce · Business Development",
+        "category": "support",
+        "url": "https://moci.gov.lr/general/liberia-investment-finance-and-trade-project",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moci.gov.lr/general/liberia-investment-finance-and-trade-project"
+      },
+      {
+        "name_ko": "NIC · 국가 투자위원회",
+        "name_en": "Liberia National Investment Commission",
+        "category": "investment",
+        "url": "https://www.nic.gov.lr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.nic.gov.lr/"
+      }
+    ],
+    "LS": [
+      {
+        "name_ko": "재무부 · 레소토 정부 입찰",
+        "name_en": "Lesotho Ministry of Finance · Official Tenders",
+        "category": "procurement",
+        "url": "https://www.finance.gov.ls/tenders",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.finance.gov.ls/tenders"
+      },
+      {
+        "name_ko": "BEDCO · 국가 기업개발공사",
+        "name_en": "Basotho Enterprises Development Corporation · SME Support",
+        "category": "support",
+        "url": "https://www.bedco.org.ls/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.bedco.org.ls/bep2026"
+      },
+      {
+        "name_ko": "LNDC · 국가 투자개발공사",
+        "name_en": "Lesotho National Development Corporation · Investment",
+        "category": "investment",
+        "url": "https://lndc.org.ls/services/investment-support/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://invest.sadc.int/how-invest/lesotho"
+      }
+    ],
     "LT": [
       {
         "name_ko": "신규 CVP IS · 국가 전자조달",
@@ -2816,6 +2903,35 @@
         "evidence_url": "https://www.investmongolia.gov.mn/en/"
       }
     ],
+    "MR": [
+      {
+        "name_ko": "PNMP · 모리타니 국가입찰",
+        "name_en": "Mauritania Official National Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://marchespublics.gov.mr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://marchespublics.gov.mr/"
+      },
+      {
+        "name_ko": "정부 창업절차 원스톱 안내",
+        "name_en": "Mauritania Official Government Business Procedures",
+        "category": "support",
+        "url": "https://procedures.gov.mr/fr/procedure/790",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procedures.gov.mr/fr/procedure/790"
+      },
+      {
+        "name_ko": "APIM · 국가 투자진흥청",
+        "name_en": "Mauritania Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://apim.gov.mr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://apim.gov.mr/expansion-of-apims-mandate-and-strengthening-of-its-role/"
+      }
+    ],
     "MT": [
       {
         "name_ko": "ePPS · 몰타 전자조달",
@@ -3046,6 +3162,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://nipdb.com/"
+      }
+    ],
+    "NE": [
+      {
+        "name_ko": "국가 정부조달·PPP 포털",
+        "name_en": "Niger Public Procurement and Public Service Delegations",
+        "category": "procurement",
+        "url": "https://www.marchespublics.ne/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.marchespublics.ne/"
+      },
+      {
+        "name_ko": "FONAP · 국가 중소기업 지원기금",
+        "name_en": "Niger National Fund for SMEs and Industries",
+        "category": "support",
+        "url": "https://www.fonap.ne/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.fonap.ne/fr/missions-vision-valeurs"
+      },
+      {
+        "name_ko": "ANPIPS · 국가 투자진흥청",
+        "name_en": "Niger National Agency for Private Investment Promotion",
+        "category": "investment",
+        "url": "https://www.anpips.ne/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.anpips.ne/missions-objectifs/"
       }
     ],
     "NG": [
@@ -3829,6 +3974,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.mhsr.sk/ministerstvo/operacne-programy/opis/elektronizacia-sluzieb-ministerstva-hospodarstva-sr/sluzby-a-zivotne-situacie"
+      }
+    ],
+    "SL": [
+      {
+        "name_ko": "NPPA · 시에라리온 국가전자조달",
+        "name_en": "Sierra Leone National Public Procurement Authority · eGP",
+        "category": "procurement",
+        "url": "https://egp.nppa.gov.sl/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://egp.nppa.gov.sl/terms-and-conditions"
+      },
+      {
+        "name_ko": "NIB · 공공 민간사업 성장지원",
+        "name_en": "Sierra Leone National Investment Board · Enterprise Development",
+        "category": "support",
+        "url": "https://nib.gov.sl/overview-services/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nib.gov.sl/overview-services/"
+      },
+      {
+        "name_ko": "NIB · 국가 투자·수출 진흥",
+        "name_en": "Sierra Leone National Investment Board · Investment Promotion",
+        "category": "investment",
+        "url": "https://nib.gov.sl/investment-promotion-and-export/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nib.gov.sl/investment-promotion-and-export/"
       }
     ],
     "SM": [
