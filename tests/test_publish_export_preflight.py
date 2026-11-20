@@ -47,6 +47,17 @@ class PublishExportPreflightTests(unittest.TestCase):
         self.assertLess(check,s.index("cd /home/claude/govradar-live"))
         self.assertLess(check,s.index("rm -rf public functions"))
 
+    def test_optional_input_output_parity_precedes_live_publish(self):
+        s=self.source
+        marker="python3 tools/check_build_consistency.py"
+        self.assertIn(marker,s)
+        idx=s.index(marker)
+        self.assertGreater(idx,s.index("python3 tools/asset_version.py cf/public"))
+        self.assertLess(idx,s.index("cd /home/claude/govradar-live"))
+        self.assertIn('--public-dir cf/public',s)
+        self.assertIn('if [ "${WMM_EXPORT_PREFLIGHT:-off}" = "required" ]; then',s)
+        self.assertIn("STOP: generated pages do not match export data; nothing published.",s)
+
     def test_does_not_inject_synthetic_qa_data(self):
         s=self.source
         self.assertNotIn("create_tender_fixture",s)
