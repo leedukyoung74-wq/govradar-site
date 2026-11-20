@@ -454,6 +454,9 @@ def country_page(iso, L):
     if ec: body.append(sec("econ", t["econ"], f'<p>{e(ec.get("rating","—"))} · K-SURE {e(ec.get("ksure","—"))} · {e((ec.get("fx") or {}).get("code",""))} {e((ec.get("fx") or {}).get("change_30d",""))}</p>'))
     sc = G(d, "sanctions", L)
     if sc: body.append(sec("sanctions", t["sanctions"], f'<p>{e(", ".join(sc.get("programs") or []) or "—")}</p><p class="note">{e(sc.get("summary",""))}</p>'))
+    # Public official-source candidate links, explicitly NOT live-verified.
+    _official_section = _render_territory_defence(iso, bool(c.get("reg")), L, TERRITORY_SOURCE_SITES, NATIONAL_DEFENCE_SITES)
+    if _official_section: body.append(sec("official-source-directory", "공식기관 정보원" if L == "ko" else "Official-source directory", _official_section))
     src = lst(d.get("sources"), lambda s: f'<li><a href="{e(s.get("url"))}" target="_blank" rel="noopener nofollow">{e(_stl(s.get("title"), s.get("url"), L))}</a></li>' if str(s.get("url","")).startswith("https://") else "")
     body.append(sec("sources", t["sources"], src))
     # sidebar
@@ -494,6 +497,9 @@ GOV_BUSINESS_SITES, GOV_SITE_COVERAGE = _load_gov_sites(ROOT)
 # Independent news-publisher navigation, never mixed into official tenders.
 from country_news_sources import load_directory as _load_country_news
 COUNTRY_NEWS_SITES, COUNTRY_NEWS_COVERAGE = _load_country_news(ROOT)
+# Independent, curated candidate source directories (never live alert feeds).
+from territory_defence_sections import load as _load_territory_defence, render as _render_territory_defence
+TERRITORY_SOURCE_SITES, NATIONAL_DEFENCE_SITES = _load_territory_defence(ROOT)
 for _iso, _d in DATA.items():
     if isinstance(_d.get("guide"), dict): GUIDES[_iso] = _d["guide"]
 MDBI = [("WB","World Bank","세계은행","https://projects.worldbank.org/en/projects-operations/procurement",["world bank","세계은행","ibrd"]),
@@ -1128,6 +1134,9 @@ def build():
     cj = [{"iso": c["iso"], "slug": c["slug"], "r": c["r"], "done": done(c["iso"]), "risk": lvl(c["iso"]), "names": NAMES[c["iso"]]} for c in META]
     W("/data/countries.json", json.dumps(cj, ensure_ascii=False))
     W("/data/regions.json", json.dumps([{"code": x["iso"], "parent": x["parent"], "type": x["type"], "slug": BY[x["iso"]]["slug"], "done": done(x["iso"]), "ko": x["ko"], "en": x["en"]} for x in REGS], ensure_ascii=False))
+    # Separate sovereign and subnational read-only directories, not mixed in coverage totals.
+    for _source_file in ("territory_official_sources.json", "country_defence_official_sources.json"):
+        W("/data/" + _source_file, open(os.path.join(SRC, _source_file), encoding="utf8").read())
     # Stage documentary, unverified country food profiles independently of tender/region data.
     # Official preparedness references are NOT product or shelf-life certification.
     for _rs_file in ("wmm-food-country-profiles.json", "wmm-food-primary-guidance-reviewed.json"):
