@@ -39,6 +39,7 @@ class PublicProcurementBuyersTests(unittest.TestCase):
               entry(url="https://www.find-tender.service.gov.uk\\@evil.test/Notice/123"),
               entry(url="https://www.find-tender.service.gov.uk/Notice/123#fragment"),
               entry(buyer="name@example.org"),
+              entry(buyer="John Smith",url="https://www.find-tender.service.gov.uk/Notice/name"),
               entry(status="cancelled"),
               entry(url="https://www.find-tender.service.gov.uk/Notice/ok")]
         results=BP.build(rows,NOW)
@@ -49,6 +50,7 @@ class PublicProcurementBuyersTests(unittest.TestCase):
         self.assertEqual([],BP.build([],NOW)["organisations"])
         self.assertFalse(BP.safe_official_notice(entry(url="https://sam.gov/")))
         self.assertEqual("",BP.normalize_organisation("+82 10-1234-5678"))
+        self.assertEqual("",BP.normalize_organisation("John Smith"))
         with self.assertRaises(ValueError):
             BP.build([],dt.datetime(2026,11,20))
 
