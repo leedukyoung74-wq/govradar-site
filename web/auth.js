@@ -87,7 +87,10 @@
           if (!$("#auth-terms").checked) throw new Error(tt("need_terms"));
           const age = $("#auth-age").value; if (age === "u14") throw new Error(tt("u14"));
           if (pw.length < 8) throw new Error(tt("pw_short"));
-          const r = await signup(em, pw, { full_name: $("#authn").value.trim(), lang: L, age_band: age, terms_at: new Date().toISOString(), marketing: !!($("#auth-mkt") && $("#auth-mkt").checked), marketing_at: new Date().toISOString() });
+          const marketing = !!($("#auth-mkt") && $("#auth-mkt").checked);
+          const decisionAt = new Date().toISOString();
+          const r = await signup(em, pw, { full_name: $("#authn").value.trim(), lang: L, age_band: age, terms_at: decisionAt,
+            marketing, marketing_at: marketing ? decisionAt : null, marketing_decision_at: decisionAt });
           if (r && r.confirmed_at) { await login(em, pw); msg.textContent = tt("welcome"); setTimeout(close, 900); } else msg.textContent = tt("check_mail");
         } else if (MODE === "reset") { await recover(em); msg.textContent = tt("reset_sent"); }
         else if (MODE === "newpw") { if (pw.length < 8) throw new Error(tt("pw_short")); await update({ password: pw }); msg.textContent = tt("pw_saved"); setTimeout(close, 900); }
@@ -116,7 +119,7 @@
     const row = document.createElement("div"); row.style.cssText = "display:flex;flex-wrap:wrap;gap:8px";
     [["mkt_yes", true, "#1e4fb8"], ["mkt_no", false, "transparent"]].forEach(([k, v, bg]) => { const x = document.createElement("button"); x.type = "button"; x.textContent = tt(k);
       x.style.cssText = "min-height:44px;padding:0 18px;border:1px solid #fff;background:" + bg + ";color:#fff;font:inherit;font-weight:700;cursor:pointer";
-      x.onclick = async () => { try { await update({ data: { marketing: v, marketing_at: new Date().toISOString() } }); toast(tt("mkt_saved")); } catch (e) { toast(e.message); } b.remove(); }; row.appendChild(x); });
+      x.onclick = async () => { try { const decisionAt = new Date().toISOString(); await update({ data: { marketing: v, marketing_at: v ? decisionAt : null, marketing_decision_at: decisionAt } }); toast(tt("mkt_saved")); } catch (e) { toast(e.message); } b.remove(); }; row.appendChild(x); });
     b.appendChild(row); document.body.appendChild(b);
   }
   subs.push(() => setTimeout(askMkt, 600));
