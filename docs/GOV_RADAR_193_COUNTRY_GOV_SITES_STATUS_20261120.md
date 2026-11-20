@@ -105,7 +105,7 @@
 | 중동 | 튀르키예 / Türkiye | TR | **3** | 0 | [EKAP · Türkiye Electronic Public Procurement](https://ekap.kik.gov.tr/ekap/ortak/ihalearama/index.html) · [KOSGEB · National SME Support Agency](https://www.kosgeb.gov.tr/) · [Invest in Türkiye · Presidential Investment Office](https://www.invest.gov.tr/en/pages/who-we-are.aspx) |
 | 유럽 | 알바니아 / Albania | AL | **0** | 3 | — |
 | 유럽 | 안도라 / Andorra | AD | **0** | 3 | — |
-| 유럽 | 아르메니아 / Armenia | AM | **0** | 3 | — |
+| 유럽 | 아르메니아 / Armenia | 미주 | **0** | 3 | — |
 | 유럽 | 오스트리아 / Austria | AT | **0** | 3 | — |
 | 유럽 | 아제르바이잔 / Azerbaijan | AZ | **0** | 3 | — |
 | 유럽 | 벨라루스 / Belarus | BY | **0** | 3 | — |
@@ -150,41 +150,41 @@
 | 유럽 | 스위스 / Switzerland | CH | **3** | 0 | [simap · Swiss Public Procurement](https://www.simap.ch/en) · [Innosuisse · Swiss Federal Innovation Agency](https://www.innosuisse.admin.ch/en/) · [SECO · Swiss Government Procurement](https://www.seco.admin.ch/en/government-procurement) |
 | 유럽 | 우크라이나 / Ukraine | UA | **0** | 3 | — |
 | 유럽 | 영국 / United Kingdom | GB | **3** | 0 | [Find a Tender · Central Procurement](https://www.find-tender.service.gov.uk/) · [Contracts Finder · Public Contracts](https://www.contractsfinder.service.gov.uk/) · [Government Commercial Agency · Supply Opportunities](https://www.gca.gov.uk/how-to-supply/find-tender-opportunities) |
-| AM | 캐나다 / Canada | CA | **3** | 0 | [CanadaBuys · Government Procurement](https://canadabuys.canada.ca/en) · [Canada.ca · Doing Business with Government](https://www.canada.ca/en/services/business/doing-business.html) · [ISED · Selling Innovation to Government](https://ised-isde.canada.ca/site/clean-growth-hub/en/selling-government) |
-| AM | 미국 / United States | US | **3** | 0 | [SAM.gov · Federal Contracting](https://sam.gov/) · [Grants.gov · Federal Funding](https://www.grants.gov/) · [SBA · Federal Contracting Support](https://www.sba.gov/counseling/get-started/) |
-| AM | 멕시코 / Mexico | MX | **3** | 0 | [Compras MX · Federal Public Procurement](https://compranet.buengobierno.gob.mx/compras-mx) · [MIPYMESMX · Economy Ministry SME Support](https://mipymes.economia.gob.mx/) · [NAFIN · National Development Finance](https://www.nafin.gob.mx/portalnf/content/financiamiento/) |
-| AM | 앤티가 바부다 / Antigua and Barbuda | AG | **0** | 3 | — |
-| AM | 아르헨티나 / Argentina | AR | **0** | 3 | — |
-| AM | 바하마 / Bahamas | BS | **0** | 3 | — |
-| AM | 바베이도스 / Barbados | BB | **0** | 3 | — |
-| AM | 벨리즈 / Belize | BZ | **0** | 3 | — |
-| AM | 볼리비아 / Bolivia | BO | **0** | 3 | — |
-| AM | 브라질 / Brazil | BR | **3** | 0 | [PNCP · National Public Procurement](https://www.gov.br/pncp/pt-br) · [Compras.gov.br · Federal Procurement](https://www.gov.br/compras/pt-br/) · [Contrata+Brasil · Small Business Government Selling](https://www.gov.br/contratamaisbrasil/pt-br) |
-| AM | 칠레 / Chile | CL | **3** | 0 | [Mercado Público · Chile State Procurement](https://www.mercadopublico.cl/) · [CORFO · Enterprise Innovation Calls](https://www.corfo.cl/sites/cpp/convocatorias_programas_innovacion) · [InvestChile · Government Investment Agency](https://www.investchile.gob.cl/es/) |
-| AM | 콜롬비아 / Colombia | CO | **3** | 0 | [Colombia Compra Eficiente · SECOP Procurement](https://www.colombiacompra.gov.co/secop) · [MiPymes Colombia · Support Calls](https://www.mipymes.gov.co/programas/inclusion-productiva/convocatorias) · [ProColombia · Trade and Investment Promotion](https://procolombia.co/) |
-| AM | 코스타리카 / Costa Rica | CR | **0** | 3 | — |
-| AM | 쿠바 / Cuba | CU | **0** | 3 | — |
-| AM | 도미니카 연방 / Dominica | DM | **0** | 3 | — |
-| AM | 도미니카 공화국 / Dominican Republic | DO | **0** | 3 | — |
-| AM | 에콰도르 / Ecuador | EC | **0** | 3 | — |
-| AM | 엘살바도르 / El Salvador | SV | **0** | 3 | — |
-| AM | 그레나다 / Grenada | GD | **0** | 3 | — |
-| AM | 과테말라 / Guatemala | GT | **0** | 3 | — |
-| AM | 가이아나 / Guyana | GY | **0** | 3 | — |
-| AM | 아이티 / Haiti | HT | **0** | 3 | — |
-| AM | 온두라스 / Honduras | HN | **0** | 3 | — |
-| AM | 자메이카 / Jamaica | JM | **0** | 3 | — |
-| AM | 니카라과 / Nicaragua | NI | **0** | 3 | — |
-| AM | 파나마 / Panama | PA | **0** | 3 | — |
-| AM | 파라과이 / Paraguay | PY | **0** | 3 | — |
-| AM | 페루 / Peru | PE | **3** | 0 | [Peru OECE · SEACE Public Procurement Search](https://www.gob.pe/32306-como-acceder-a-los-procesos-de-seleccion-convocados-y-en-curso) · [PRODUCE Más · SME Business Services](https://www.gob.pe/producemas) · [PROINVERSIÓN · Public-Private Investment](https://www.investinperu.pe/) |
-| AM | 세인트키츠 네비스 / Saint Kitts and Nevis | KN | **0** | 3 | — |
-| AM | 세인트루시아 / Saint Lucia | LC | **0** | 3 | — |
-| AM | 세인트빈센트 그레나딘 / Saint Vincent and the Grenadines | VC | **0** | 3 | — |
-| AM | 수리남 / Suriname | SR | **0** | 3 | — |
-| AM | 트리니다드 토바고 / Trinidad and Tobago | TT | **0** | 3 | — |
-| AM | 우루과이 / Uruguay | UY | **0** | 3 | — |
-| AM | 베네수엘라 / Venezuela | VE | **0** | 3 | — |
+| 미주 | 캐나다 / Canada | CA | **3** | 0 | [CanadaBuys · Government Procurement](https://canadabuys.canada.ca/en) · [Canada.ca · Doing Business with Government](https://www.canada.ca/en/services/business/doing-business.html) · [ISED · Selling Innovation to Government](https://ised-isde.canada.ca/site/clean-growth-hub/en/selling-government) |
+| 미주 | 미국 / United States | US | **3** | 0 | [SAM.gov · Federal Contracting](https://sam.gov/) · [Grants.gov · Federal Funding](https://www.grants.gov/) · [SBA · Federal Contracting Support](https://www.sba.gov/counseling/get-started/) |
+| 미주 | 멕시코 / Mexico | MX | **3** | 0 | [Compras MX · Federal Public Procurement](https://compranet.buengobierno.gob.mx/compras-mx) · [MIPYMESMX · Economy Ministry SME Support](https://mipymes.economia.gob.mx/) · [NAFIN · National Development Finance](https://www.nafin.gob.mx/portalnf/content/financiamiento/) |
+| 미주 | 앤티가 바부다 / Antigua and Barbuda | AG | **0** | 3 | — |
+| 미주 | 아르헨티나 / Argentina | AR | **0** | 3 | — |
+| 미주 | 바하마 / Bahamas | BS | **0** | 3 | — |
+| 미주 | 바베이도스 / Barbados | BB | **0** | 3 | — |
+| 미주 | 벨리즈 / Belize | BZ | **0** | 3 | — |
+| 미주 | 볼리비아 / Bolivia | BO | **0** | 3 | — |
+| 미주 | 브라질 / Brazil | BR | **3** | 0 | [PNCP · National Public Procurement](https://www.gov.br/pncp/pt-br) · [Compras.gov.br · Federal Procurement](https://www.gov.br/compras/pt-br/) · [Contrata+Brasil · Small Business Government Selling](https://www.gov.br/contratamaisbrasil/pt-br) |
+| 미주 | 칠레 / Chile | CL | **3** | 0 | [Mercado Público · Chile State Procurement](https://www.mercadopublico.cl/) · [CORFO · Enterprise Innovation Calls](https://www.corfo.cl/sites/cpp/convocatorias_programas_innovacion) · [InvestChile · Government Investment Agency](https://www.investchile.gob.cl/es/) |
+| 미주 | 콜롬비아 / Colombia | CO | **3** | 0 | [Colombia Compra Eficiente · SECOP Procurement](https://www.colombiacompra.gov.co/secop) · [MiPymes Colombia · Support Calls](https://www.mipymes.gov.co/programas/inclusion-productiva/convocatorias) · [ProColombia · Trade and Investment Promotion](https://procolombia.co/) |
+| 미주 | 코스타리카 / Costa Rica | CR | **0** | 3 | — |
+| 미주 | 쿠바 / Cuba | CU | **0** | 3 | — |
+| 미주 | 도미니카 연방 / Dominica | DM | **0** | 3 | — |
+| 미주 | 도미니카 공화국 / Dominican Republic | DO | **0** | 3 | — |
+| 미주 | 에콰도르 / Ecuador | EC | **0** | 3 | — |
+| 미주 | 엘살바도르 / El Salvador | SV | **0** | 3 | — |
+| 미주 | 그레나다 / Grenada | GD | **0** | 3 | — |
+| 미주 | 과테말라 / Guatemala | GT | **0** | 3 | — |
+| 미주 | 가이아나 / Guyana | GY | **0** | 3 | — |
+| 미주 | 아이티 / Haiti | HT | **0** | 3 | — |
+| 미주 | 온두라스 / Honduras | HN | **0** | 3 | — |
+| 미주 | 자메이카 / Jamaica | JM | **0** | 3 | — |
+| 미주 | 니카라과 / Nicaragua | NI | **0** | 3 | — |
+| 미주 | 파나마 / Panama | PA | **0** | 3 | — |
+| 미주 | 파라과이 / Paraguay | PY | **0** | 3 | — |
+| 미주 | 페루 / Peru | PE | **3** | 0 | [Peru OECE · SEACE Public Procurement Search](https://www.gob.pe/32306-como-acceder-a-los-procesos-de-seleccion-convocados-y-en-curso) · [PRODUCE Más · SME Business Services](https://www.gob.pe/producemas) · [PROINVERSIÓN · Public-Private Investment](https://www.investinperu.pe/) |
+| 미주 | 세인트키츠 네비스 / Saint Kitts and Nevis | KN | **0** | 3 | — |
+| 미주 | 세인트루시아 / Saint Lucia | LC | **0** | 3 | — |
+| 미주 | 세인트빈센트 그레나딘 / Saint Vincent and the Grenadines | VC | **0** | 3 | — |
+| 미주 | 수리남 / Suriname | SR | **0** | 3 | — |
+| 미주 | 트리니다드 토바고 / Trinidad and Tobago | TT | **0** | 3 | — |
+| 미주 | 우루과이 / Uruguay | UY | **0** | 3 | — |
+| 미주 | 베네수엘라 / Venezuela | VE | **0** | 3 | — |
 | 오세아니아 | 호주 / Australia | AU | **3** | 0 | [AusTender · Australian Government Tenders](https://www.tenders.gov.au/) · [business.gov.au · Grants Finder](https://business.gov.au/grants-and-programs/) · [Selling to Government · Procurement Guidance](https://sellingtogov.finance.gov.au/) |
 | 오세아니아 | 피지 / Fiji | FJ | **0** | 3 | — |
 | 오세아니아 | 키리바시 / Kiribati | KI | **0** | 3 | — |
