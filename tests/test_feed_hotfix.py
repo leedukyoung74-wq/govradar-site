@@ -35,6 +35,11 @@ class VerifiedOpenParity(unittest.TestCase):
     def test_unverified_carried_item_is_not_counted_open(self):
         self.assertEqual([], self.gate({"t": {"n": 99, "c": 1}}))
 
+    def test_future_dated_feed_timestamp_blocks_publication(self):
+        self.feed["updated"] = "2026-11-21T08:00Z"
+        self.assertTrue(any("in the future" in s for s in
+                            self.gate({"t": {"n": 99, "c": 1}})))
+
     def test_notice_mismatch_blocks_publication(self):
         self.assertTrue(any("open-tender count" in s for s in self.gate({"t": {"n": 98, "c": 1}})))
 
