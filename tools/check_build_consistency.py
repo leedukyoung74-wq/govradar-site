@@ -73,14 +73,15 @@ def inspect_build(export_dir="export/countries",public_dir="dist",*,min_research
     published_done={x for x,c in by_country.items() if c.get("done")}
     if researched!=published_done:
         failures.append("PUBLISHED_RESEARCH_COUNTRY_SET_MISMATCH")
-    if len(opps["items"])!=expected_opps:
+    country_opps=[x for x in opps["items"] if "-" not in str(x.get("iso",""))]  # 자치·특별지역(PH-BARMM 등)은 국가 내보내기 대상이 아님
+    if len(country_opps)!=expected_opps:
         failures.append("PUBLISHED_OPPORTUNITY_COUNT_MISMATCH")
     if len(researched)<min_researched:
         failures.append("INSUFFICIENT_RESEARCHED_EXPORTS")
     return {"classification":"OFFLINE_BUILD_INPUT_OUTPUT_CONSISTENCY_ONLY",
             "passed":not failures,"sourceFiles":source_count,
             "researched":len(researched),"publishedResearched":len(published_done),
-            "expectedOpportunityItems":expected_opps,"publishedOpportunityItems":len(opps["items"]),
+            "expectedOpportunityItems":expected_opps,"publishedOpportunityItems":len(country_opps),"publishedRegionOpportunityItems":len(opps["items"])-len(country_opps),
             "errors":failures,
             "caveat":"Consistency does not imply source agency verification, freshness, deadline amendments, or production deployment."}
 
