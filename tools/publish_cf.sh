@@ -41,6 +41,7 @@ python3 tools/i18n_build.py || exit 1
 python3 tools/hz_i18n.py || exit 1
 python3 tools/text_wrap.py || exit 1   # Korean line breaking on every page (after the page generators)
 python3 tools/cf_variant.py dist cf/public
+python3 tools/buyers_page.py || exit 1   # 공공조달 발주기관 검색(/buyers/, PR #111)
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public
 # When explicitly enabled, the finished staging output must match the exported country source.
