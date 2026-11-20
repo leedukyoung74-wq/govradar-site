@@ -3,6 +3,35 @@
   "reviewed_on": "2026-11-20",
   "policy": "Only direct primary government/authorized official institutional URLs receive official_primary status. A successful HTTP response alone is not official confirmation.",
   "countries": {
+    "AD": [
+      {
+        "name_ko": "안도라 국가 전자조달",
+        "name_en": "Andorra Government · Public Procurement Platform",
+        "category": "procurement",
+        "url": "https://contractacio.govern.ad/SLE_Internet",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://transparencia.andorratelecom.com/ca/transparencia/contractacio-publica-convenis-i-subvencions/contractes-licitats-i-adjudicats/"
+      },
+      {
+        "name_ko": "ARI · 국가 혁신·연구·창업지원",
+        "name_en": "Andorra Research and Innovation · Entrepreneurship Support",
+        "category": "support",
+        "url": "https://www.ari.ad/innovacio",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.transparencia.ad/entitats-dependents-i-participades-i-organismes-publics-vinculats/ministeri-de-presidencia-economia-treball-i-habitatge"
+      },
+      {
+        "name_ko": "Andorra Business · 공공 투자진흥청",
+        "name_en": "Andorra Business · Economic Development and Investment",
+        "category": "investment",
+        "url": "https://www.andorrabusiness.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.transparencia.ad/entitats-dependents-i-participades-i-organismes-publics-vinculats/ministeri-de-presidencia-economia-treball-i-habitatge"
+      }
+    ],
     "AE": [
       {
         "name_ko": "연방 재무부 · 조달 기회",
@@ -670,6 +699,35 @@
         "evidence_url": "https://www.bitc.co.bw/"
       }
     ],
+    "BZ": [
+      {
+        "name_ko": "벨리즈 정부 중앙 조달공고",
+        "name_en": "Belize Government · Central Public Procurement Notices",
+        "category": "procurement",
+        "url": "https://procurement.gov.bz/opportunities/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mof.gov.bz/ova_sev/public-procurement/"
+      },
+      {
+        "name_ko": "BELTRAIDE · 국가 중소기업 지원",
+        "name_en": "BELTRAIDE · Belize Government Small Business Support",
+        "category": "support",
+        "url": "https://beltraide.bz/sbdcbelize/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://edc.gov.bz/links/beltraide/"
+      },
+      {
+        "name_ko": "경제전환부 · 공공투자프로그램",
+        "name_en": "Belize Ministry of Economic Transformation · Investment Programme",
+        "category": "investment",
+        "url": "https://met.gov.bz/psip/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://met.gov.bz/psip/"
+      }
+    ],
     "CA": [
       {
         "name_ko": "CanadaBuys · 정부 조달",
@@ -1134,6 +1192,35 @@
         "evidence_url": "https://um.dk/sydkorea/en/the-trade-council/invest-in-denmark"
       }
     ],
+    "DM": [
+      {
+        "name_ko": "도미니카 정부조달 공고",
+        "name_en": "Dominica Government · Procurement Portal",
+        "category": "procurement",
+        "url": "https://procurement.dominica.gov.dm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://procurement.dominica.gov.dm/"
+      },
+      {
+        "name_ko": "정부 중소기업지원부",
+        "name_en": "Dominica Government · Small Business Support Unit",
+        "category": "support",
+        "url": "https://sbsu.dominica.gov.dm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://labour.gov.dm/about-us/small-business-unit"
+      },
+      {
+        "name_ko": "Invest Dominica · 국가 투자진흥청",
+        "name_en": "Invest Dominica Authority · Government Investment Promotion",
+        "category": "investment",
+        "url": "https://investdominica.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dominica.gov.dm/laws/2007/act9-2007.pdf"
+      }
+    ],
     "DO": [
       {
         "name_ko": "DGCP · 도미니카 국가조달 정보",
@@ -1451,6 +1538,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities"
+      }
+    ],
+    "GD": [
+      {
+        "name_ko": "그레나다 정부 전자조달",
+        "name_en": "Government of Grenada · In-Tend Public Procurement",
+        "category": "procurement",
+        "url": "https://supplier.in-tend.co.uk/gnd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.procurement.gd/docs/guides/grenada-supplier-registration-guide-2023.pdf"
+      },
+      {
+        "name_ko": "GIDC 기업개발센터 · 중소기업지원",
+        "name_en": "Grenada Business Development Centre · GIDC",
+        "category": "support",
+        "url": "https://businessdevelopmentcentre.gd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gidc.gd/business-units/"
+      },
+      {
+        "name_ko": "GIDC · 국가 투자개발공사",
+        "name_en": "Grenada Investment Development Corporation",
+        "category": "investment",
+        "url": "https://gidc.gd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gidc.gd/who-we-are/"
       }
     ],
     "GE": [
@@ -2350,6 +2466,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.amdie.gov.ma/"
+      }
+    ],
+    "MC": [
+      {
+        "name_ko": "모나코 시청 공공조달 플랫폼",
+        "name_en": "Monaco Municipality · Public Procurement Platform",
+        "category": "procurement",
+        "url": "https://mairie.marches-publics.mc/accueil.php",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mairie.mc/dematerialisation-des-appels-doffre"
+      },
+      {
+        "name_ko": "MonEntreprise · 모나코 정부 기업지원",
+        "name_en": "MonEntreprise · Monaco Government Business Services",
+        "category": "support",
+        "url": "https://monentreprise.gouv.mc/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://legimonaco.mc/tnc/ordonnance/2023/03-15-9.827/"
+      },
+      {
+        "name_ko": "Monaco Welcome · 정부 투자·기업유치",
+        "name_en": "Monaco Welcome · Government-Commissioned Investor Services",
+        "category": "investment",
+        "url": "https://www.monaco-welcome.mc/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.monaco-welcome.mc/en/monaco-welcome/principles"
       }
     ],
     "MD": [
