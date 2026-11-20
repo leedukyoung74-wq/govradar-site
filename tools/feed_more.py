@@ -227,8 +227,15 @@ def _ocds(S, url, mk, *, max_pages=40, timeout=30, tries=2, time_budget=140, min
             if wait: time.sleep(wait)
         last_request_at = time.monotonic()
         seen.add(url)
+        before_failed = stat(S)["failed"]
         try: j = json.loads(_get(S, url, tries=tries, timeout=timeout))
-        except Exception: break
+        except Exception as ex:
+            # If a test adapter or unexpected upstream error skips _retry,
+            # still treat a mid-pagination exception as PARTIAL, not SUCCESS.
+            if stat(S)["failed"] == before_failed:
+                stat(S)["failed"] += 1
+                stat(S)["notes"].append("ocds_request_exception: " + type(ex).__name__)
+            break
         rels = j.get("releases") or []; stat(S)["raw"] += len(rels)
         for r in rels:
             it = mk(r)
