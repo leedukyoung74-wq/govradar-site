@@ -1,0 +1,161 @@
+name: WMM GOV RADAR hourly Codex builder (DISABLED; NO DEPLOY)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: wmm-govradar-autobuild
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    if: vars.WMM_AUTOBUILD_ENABLED == 'true' && vars.WMM_AUTOBUILD_COST_APPROVED == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    outputs:
+      run: ${{ steps.guard.outputs.run }}
+      cycle: ${{ steps.guard.outputs.cycle }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/wmm-govradar-autobuild-24h-20261120
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Strict 24-hour and budget authorization
+        id: guard
+        env:
+          WMM_AUTOBUILD_ENABLED: ${{ vars.WMM_AUTOBUILD_ENABLED }}
+          WMM_AUTOBUILD_COST_APPROVED: ${{ vars.WMM_AUTOBUILD_COST_APPROVED }}
+          WMM_AUTOBUILD_START_UTC: ${{ vars.WMM_AUTOBUILD_START_UTC }}
+        run: python tools/wmm_24h_agent_gate.py
+
+  coding_agent:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    permissions:
+      contents: read
+    outputs:
+      base_sha: ${{ steps.base.outputs.base_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/wmm-govradar-autobuild-24h-20261120
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preserve trusted patch guard before AI can edit source
+        run: |
+          cp tools/wmm_autobuild_diff_guard.py "$RUNNER_TEMP/wmm-autobuild-guard.py"
+          mkdir -p "$RUNNER_TEMP/wmm-autobuild"
+      - name: Record immutable starting commit
+        id: base
+        run: echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Codex writes a small GOV RADAR buyer-facing source change
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ':workspace'
+          safety-strategy: drop-sudo
+          prompt: |
+            Read docs/WMM_GOVRADAR_AUTOBUILD_AGENT_24H_20261120.md thoroughly.
+            This is 24-hour coding cycle ${{ needs.gate.outputs.cycle }} of 23.
+            Implement ONE concrete, useful GOV RADAR overseas-buyer website improvement.
+            Edit real code and add or fix offline tests. Do not only report recommendations.
+            Use only permitted paths and avoid exposing or inventing official tender data.
+            Do not change any workflow, authentication, payments, private data, domain,
+            publishing script, or deployed website. No git pushes, commits or deploys.
+            Do not read API credentials. Summarize changed files, test results and gaps.
+          output-file: ${{ runner.temp }}/wmm-autobuild/agent-summary.md
+      - name: Collect only approved source patch (never push in this job)
+        run: |
+          python "$RUNNER_TEMP/wmm-autobuild-guard.py" collect --patch "$RUNNER_TEMP/wmm-autobuild/proposed.patch"
+      - name: Save proposed patch for isolated review
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-autobuild-proposed-${{ github.run_id }}
+          path: ${{ runner.temp }}/wmm-autobuild/
+          retention-days: 2
+          if-no-files-found: error
+
+  verify_patch:
+    needs: [gate, coding_agent]
+    if: needs.coding_agent.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/wmm-govradar-autobuild-24h-20261120
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: wmm-autobuild-proposed-${{ github.run_id }}
+          path: proposal/
+      - name: Validate base revision and untrusted patch paths
+        env:
+          EXPECTED_BASE_SHA: ${{ needs.coding_agent.outputs.base_sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_BASE_SHA"
+          python tools/wmm_autobuild_diff_guard.py validate --patch proposal/proposed.patch
+          git apply --check proposal/proposed.patch
+          git apply proposal/proposed.patch
+          git diff --check
+      - name: Test changed implementation without any API key
+        run: |
+          python -m py_compile build.py pages3.py
+          python -m unittest discover -s tests -v
+      - name: Preserve exactly the verified patch
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-autobuild-verified-${{ github.run_id }}
+          path: proposal/proposed.patch
+          retention-days: 2
+          if-no-files-found: error
+
+  save_review_branch_only:
+    needs: [gate, coding_agent, verify_patch]
+    if: needs.verify_patch.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/wmm-govradar-autobuild-24h-20261120
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: wmm-autobuild-verified-${{ github.run_id }}
+          path: proposal/
+      - name: Only apply tested code changes to the dedicated review branch
+        env:
+          EXPECTED_BASE_SHA: ${{ needs.coding_agent.outputs.base_sha }}
+          WMM_CYCLE: ${{ needs.gate.outputs.cycle }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_BASE_SHA"
+          python tools/wmm_autobuild_diff_guard.py validate --patch proposal/proposed.patch
+          git apply --check proposal/proposed.patch
+          git apply proposal/proposed.patch
+          git diff --check
+          git add -- build.py pages3.py web/ tests/ docs/ schemas/ src/review_pages/
+          git diff --cached --quiet && { echo "No source changes to save"; exit 1; }
+          git config user.name "WMM review automation"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "review: GOV RADAR buyer improvements cycle $WMM_CYCLE"
+          git push origin HEAD:refs/heads/review/wmm-govradar-autobuild-24h-20261120
