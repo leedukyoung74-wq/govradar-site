@@ -44,11 +44,27 @@ export async function onRequestPost({ request, env }) {
     .bind(req, now.toISOString(), month, key, email, u ? u.grade : null, type, lang, body, dedupe, counted).run();
   return json({ req_no: req, duplicate: false, counted: !!counted, member, quote: !counted, left: member ? Math.max(0, LIMIT - n - counted) : 0 });
 }
-// The page reports whether the Netlify form went through, so a failed alert is visible to the owner.
+// Browser-reported relay outcomes are NOT evidence of Netlify inbox/CRM delivery.
+// Only the verified signed-in request owner may attach a non-authoritative relay report.
+// Anonymous requests are still accepted via POST, but only owner-side checks can
+// confirm their delivery. Never trust a request number as an authorization token.
 export async function onRequestPatch({ request, env }) {
   if (!env.GV_DB) return json({ error: "not_configured" }, 503);
+  const u = await who(request);
+  if (!u || !u.id) return json({ error: "login_required_to_update" }, 401);
   let b; try { b = await request.json(); } catch (e) { return json({ error: "bad" }, 400); }
-  const st = b.ok ? "relayed" : "relay_failed";
-  await env.GV_DB.prepare("update requests set status=? where req_no=? and status in ('received','relay_failed')").bind(st, String(b.req_no || "")).run();
-  return json({ ok: true });
+  const reqNo = b && b.req_no;
+  if (typeof reqNo !== "string" || !/^RQ-[0-9]{6}-[A-F0-9]{4,16}$/.test(reqNo) ||
+      typeof b.ok !== "boolean") return json({ error: "bad" }, 400);
+  const ownKey = "u:" + u.id;
+  const existing = await env.GV_DB.prepare("select user_key, status from requests where req_no=?").bind(reqNo).first();
+  // Return the same status for absent and other-owner requests (no enumeration).
+  if (!existing || existing.user_key !== ownKey) return json({ error: "not_found" }, 404);
+  if (!["received", "relay_failed", "relay_unverified"].includes(existing.status))
+    return json({ error: "status_locked" }, 409);
+  const state = b.ok ? "relay_unverified" : "relay_failed";
+  // The ownership predicate also protects against a concurrent reassignment.
+  await env.GV_DB.prepare("update requests set status=? where req_no=? and user_key=? and status in ('received','relay_failed','relay_unverified')")
+    .bind(state, reqNo, ownKey).run();
+  return json({ ok: true, status: state, delivery_verified: false });
 }
