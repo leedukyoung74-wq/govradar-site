@@ -113,9 +113,29 @@
     "EG": {
       "name_en": "Egypt",
       "name_ko": "이집트",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Egyptian Armed Forces / Ministry of Defence",
+          "url": "https://www.mod.gov.eg/ModWebSite/Default.aspx",
+          "role": "national_armed_forces_and_ministry",
+          "evidence_url": "https://sis.gov.eg/en/egypt/military-institution/armed-forces/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Egypt Ministry of Military Production",
+          "url": "https://www.momp.gov.eg/Home/English",
+          "role": "military_industrial_ministry",
+          "evidence_url": "https://www.momp.gov.eg/Home/English",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Ministry of Military Production is industrial administration, NOT a separate armed-service command."
     },
     "GQ": {
       "name_en": "Equatorial Guinea",
@@ -183,9 +203,38 @@
     "KE": {
       "name_en": "Kenya",
       "name_ko": "케냐",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Kenya Ministry of Defence",
+          "url": "https://www.mod.go.ke/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.mod.go.ke/kdf-services/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Kenya Army",
+          "url": "https://www.mod.go.ke/kenya-army/",
+          "role": "army",
+          "evidence_url": "https://www.mod.go.ke/kdf-services/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Kenya Navy",
+          "url": "https://www.mod.go.ke/kenya-navy/",
+          "role": "navy",
+          "evidence_url": "https://www.mod.go.ke/kdf-services/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Official service pages are within one Ministry website; these are three different organisational subjects but not three independent domains."
     },
     "LS": {
       "name_en": "Lesotho",
@@ -304,9 +353,38 @@
     "NG": {
       "name_en": "Nigeria",
       "name_ko": "나이지리아",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Nigeria Ministry of Defence",
+          "url": "https://defence.gov.ng/",
+          "role": "defence_ministry",
+          "evidence_url": "https://defence.gov.ng/about.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Nigerian Army",
+          "url": "https://army.mil.ng/",
+          "role": "army",
+          "evidence_url": "https://defence.gov.ng/military.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Nigerian Navy",
+          "url": "https://www.navy.mil.ng/",
+          "role": "navy",
+          "evidence_url": "https://defence.gov.ng/military.html",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Three separate official ministry or service sites."
     },
     "RW": {
       "name_en": "Rwanda",
@@ -675,9 +753,38 @@
     "MY": {
       "name_en": "Malaysia",
       "name_ko": "말레이시아",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Malaysia Ministry of Defence",
+          "url": "https://www.mod.gov.my/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.mod.gov.my/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Malaysian Army",
+          "url": "https://army.mil.my/",
+          "role": "army",
+          "evidence_url": "https://army.mil.my/index.php/mengenai-kami/profile/fungsi",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Royal Malaysian Navy",
+          "url": "https://navy.mil.my/",
+          "role": "navy",
+          "evidence_url": "https://navy.mil.my/en/clients-charter",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Three national official military institutions."
     },
     "MV": {
       "name_en": "Maldives",
@@ -941,9 +1048,38 @@
     "IL": {
       "name_en": "Israel",
       "name_ko": "이스라엘",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Israel Ministry of Defense",
+          "url": "https://www.mod.gov.il/en",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.mod.gov.il/en/about-us/about-the-israel-ministry-of-defense",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Israel Defense Forces",
+          "url": "https://www.idf.il/en/",
+          "role": "national_armed_forces",
+          "evidence_url": "https://www.gov.il/en/departments/israel_defense_forces/govil-landing-page",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Israeli Air Force public information",
+          "url": "https://www.idf.il/en/mini-sites/israeli-air-force/",
+          "role": "air_force",
+          "evidence_url": "https://www.idf.il/en/about-us/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "IAF source is a section of IDF publisher, a different branch but not a third legally separate web owner."
     },
     "JO": {
       "name_en": "Jordan",
@@ -983,9 +1119,20 @@
     "SA": {
       "name_en": "Saudi Arabia",
       "name_ko": "사우디아라비아",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Saudi Arabia Ministry of Defense",
+          "url": "https://www.mod.gov.sa/",
+          "role": "defence_ministry",
+          "evidence_url": "https://my.gov.sa/en/agencies/17627",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Army/navy/air force public organisational websites remain unverified; one ministry recorded."
     },
     "SY": {
       "name_en": "Syria",
@@ -997,9 +1144,20 @@
     "AE": {
       "name_en": "United Arab Emirates",
       "name_ko": "아랍에미리트",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "UAE Ministry of Defence",
+          "url": "https://mod.gov.ae/",
+          "role": "defence_ministry",
+          "evidence_url": "https://u.ae/en/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "UAE government directory lists ministry URL (old path may be HTTP); this HTTPS site is candidate, no live-access proof."
     },
     "YE": {
       "name_en": "Yemen",
