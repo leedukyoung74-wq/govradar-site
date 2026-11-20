@@ -46,3 +46,12 @@
 [ ] 담당자의 명시적 배포 승인
 
 이 문서는 자동 실행이 시작되었다는 증거가 아니다.
+
+## 2026-11-20: 실제 코딩 에이전트 준비 (검토용, 가동 전)
+- 앞서 만든 시간별 점검 워크플로는 실제 자율 코딩이 **아니다**. 사용자 요구는 GOV RADAR 기능을 매시간 실제 개발하고 누적하는 것이다.
+- 새 파일: .github/workflows/wmm_govradar_codex_autobuild.yml — 공식 openai/codex-action@v1을 이용하는 실제 코드 수정용 파이프라인 초안.
+- 별도 승인 게이트: tools/wmm_24h_agent_gate.py — 활성화, 별도 비용 승인, UTC 시작 시각과 24시간 구간이 모두 충족돼야 Codex 시작.
+- AI 권한이 있는 job은 GitHub 읽기만 가능하고, 소스 변경은 최대 8개 파일/250KB 패치. 검증 잡은 별도 비밀키 없는 러너에서 단위 테스트 통과를 확인.
+- 최종 커밋 job은 Codex 비밀키가 없는 환경에서 **검토 전용** review/wmm-govradar-autobuild-24h-20261120 브랜치로만 push. 운영 main/live 병합/배포 없음.
+- 실제로 작동하려면 GitHub 기본 브랜치에 워크플로 승인 설치, 해당 검토용 브랜치, OpenAI API 인증, 별도 예산 및 GitHub 변수(WMM_AUTOBUILD_ENABLED, WMM_AUTOBUILD_COST_APPROVED, WMM_AUTOBUILD_START_UTC)가 필요. **현재 설정/승인/가동하지 않았다.**
+- 오프라인 코드 테스트가 통과해도 외부 Codex 실행·실제 비용·브랜치 push 정책·24시간 연속 완성은 검증되지 않았다.
