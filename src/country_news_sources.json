@@ -61,6 +61,35 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "AT": [
+      {
+        "name_en": "ORF News",
+        "name_ko": "ORF News",
+        "publisher_type": "public_broadcaster",
+        "url": "https://orf.at/",
+        "evidence_url": "https://orf.at/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "APA Austria",
+        "name_ko": "APA Austria",
+        "publisher_type": "news_agency",
+        "url": "https://www.apa.at/",
+        "evidence_url": "https://www.apa.at/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Der Standard",
+        "name_ko": "Der Standard",
+        "publisher_type": "newspaper",
+        "url": "https://www.derstandard.at/",
+        "evidence_url": "https://www.derstandard.at/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
     "AU": [
       {
         "name_en": "ABC News Australia",
@@ -86,6 +115,93 @@
         "publisher_type": "news_agency",
         "url": "https://www.aap.com.au/",
         "evidence_url": "https://www.aap.com.au/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "BD": [
+      {
+        "name_en": "Bangladesh Sangbad Sangstha",
+        "name_ko": "Bangladesh Sangbad Sangstha",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.bssnews.net/",
+        "evidence_url": "https://www.bssnews.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Prothom Alo",
+        "name_ko": "Prothom Alo",
+        "publisher_type": "newspaper",
+        "url": "https://www.prothomalo.com/",
+        "evidence_url": "https://www.prothomalo.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Daily Star Bangladesh",
+        "name_ko": "The Daily Star Bangladesh",
+        "publisher_type": "newspaper",
+        "url": "https://www.thedailystar.net/",
+        "evidence_url": "https://www.thedailystar.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "BE": [
+      {
+        "name_en": "RTBF",
+        "name_ko": "RTBF",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rtbf.be/",
+        "evidence_url": "https://www.rtbf.be/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "VRT NWS",
+        "name_ko": "VRT NWS",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.vrt.be/vrtnws/nl/",
+        "evidence_url": "https://www.vrt.be/vrtnws/nl/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Belga News Agency",
+        "name_ko": "Belga News Agency",
+        "publisher_type": "news_agency",
+        "url": "https://www.belga.be/",
+        "evidence_url": "https://www.belga.be/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "BG": [
+      {
+        "name_en": "Bulgarian News Agency BTA",
+        "name_ko": "Bulgarian News Agency BTA",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.bta.bg/",
+        "evidence_url": "https://www.bta.bg/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "BNT News",
+        "name_ko": "BNT News",
+        "publisher_type": "public_broadcaster",
+        "url": "https://bntnews.bg/",
+        "evidence_url": "https://bntnews.bg/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Novinite",
+        "name_ko": "Novinite",
+        "publisher_type": "news_site",
+        "url": "https://www.novinite.com/",
+        "evidence_url": "https://www.novinite.com/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
       }
@@ -177,6 +293,35 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "CZ": [
+      {
+        "name_en": "ČTK / České Noviny",
+        "name_ko": "체코 통신 ČTK",
+        "publisher_type": "news_agency",
+        "url": "https://www.ceskenoviny.cz/",
+        "evidence_url": "https://www.ceskenoviny.cz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "ČT24",
+        "name_ko": "체코 공영방송 ČT24",
+        "publisher_type": "public_broadcaster",
+        "url": "https://ct24.ceskatelevize.cz/",
+        "evidence_url": "https://ct24.ceskatelevize.cz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Seznam Zprávy",
+        "name_ko": "세즈남 뉴스",
+        "publisher_type": "news_site",
+        "url": "https://www.seznamzpravy.cz/",
+        "evidence_url": "https://www.seznamzpravy.cz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
     "DE": [
       {
         "name_en": "ARD Tagesschau",
@@ -206,6 +351,93 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "DK": [
+      {
+        "name_en": "DR Nyheder",
+        "name_ko": "DR Nyheder",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.dr.dk/nyheder",
+        "evidence_url": "https://www.dr.dk/nyheder",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "TV 2 Nyheder",
+        "name_ko": "TV 2 Nyheder",
+        "publisher_type": "broadcaster",
+        "url": "https://nyheder.tv2.dk/",
+        "evidence_url": "https://nyheder.tv2.dk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Ritzau",
+        "name_ko": "Ritzau",
+        "publisher_type": "news_agency",
+        "url": "https://via.ritzau.dk/",
+        "evidence_url": "https://via.ritzau.dk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "EE": [
+      {
+        "name_en": "ERR",
+        "name_ko": "ERR",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.err.ee/",
+        "evidence_url": "https://www.err.ee/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Postimees",
+        "name_ko": "Postimees",
+        "publisher_type": "newspaper",
+        "url": "https://www.postimees.ee/",
+        "evidence_url": "https://www.postimees.ee/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Delfi Estonia",
+        "name_ko": "Delfi Estonia",
+        "publisher_type": "news_site",
+        "url": "https://www.delfi.ee/",
+        "evidence_url": "https://www.delfi.ee/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "EG": [
+      {
+        "name_en": "Middle East News Agency",
+        "name_ko": "중동뉴스통신 MENA",
+        "publisher_type": "state_news_agency",
+        "url": "https://mena.org.eg/en",
+        "evidence_url": "https://mena.org.eg/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Ahram Online",
+        "name_ko": "아흐람 온라인",
+        "publisher_type": "newspaper",
+        "url": "https://english.ahram.org.eg/",
+        "evidence_url": "https://english.ahram.org.eg/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Al-Masry Al-Youm",
+        "name_ko": "알 마스리 알 요움",
+        "publisher_type": "newspaper",
+        "url": "https://www.almasryalyoum.com/",
+        "evidence_url": "https://www.almasryalyoum.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
     "ES": [
       {
         "name_en": "Agencia EFE",
@@ -231,6 +463,35 @@
         "publisher_type": "newspaper",
         "url": "https://elpais.com/",
         "evidence_url": "https://elpais.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "FI": [
+      {
+        "name_en": "Yle",
+        "name_ko": "Yle",
+        "publisher_type": "public_broadcaster",
+        "url": "https://yle.fi/",
+        "evidence_url": "https://yle.fi/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Helsingin Sanomat",
+        "name_ko": "Helsingin Sanomat",
+        "publisher_type": "newspaper",
+        "url": "https://www.hs.fi/",
+        "evidence_url": "https://www.hs.fi/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "STT News Agency",
+        "name_ko": "STT News Agency",
+        "publisher_type": "news_agency",
+        "url": "https://stt.fi/",
+        "evidence_url": "https://stt.fi/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
       }
@@ -322,6 +583,93 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "GR": [
+      {
+        "name_en": "Athens-Macedonian News Agency",
+        "name_ko": "Athens-Macedonian News Agency",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.amna.gr/en/",
+        "evidence_url": "https://www.amna.gr/en/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "ERT News",
+        "name_ko": "ERT News",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.ertnews.gr/",
+        "evidence_url": "https://www.ertnews.gr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Kathimerini",
+        "name_ko": "Kathimerini",
+        "publisher_type": "newspaper",
+        "url": "https://www.kathimerini.gr/",
+        "evidence_url": "https://www.kathimerini.gr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "HR": [
+      {
+        "name_en": "HINA",
+        "name_ko": "HINA",
+        "publisher_type": "news_agency",
+        "url": "https://www.hina.hr/",
+        "evidence_url": "https://www.hina.hr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "HRT Vijesti",
+        "name_ko": "HRT Vijesti",
+        "publisher_type": "public_broadcaster",
+        "url": "https://vijesti.hrt.hr/",
+        "evidence_url": "https://vijesti.hrt.hr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Jutarnji List",
+        "name_ko": "Jutarnji List",
+        "publisher_type": "newspaper",
+        "url": "https://www.jutarnji.hr/",
+        "evidence_url": "https://www.jutarnji.hr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "HU": [
+      {
+        "name_en": "Híradó",
+        "name_ko": "Híradó",
+        "publisher_type": "public_broadcaster",
+        "url": "https://hirado.hu/",
+        "evidence_url": "https://hirado.hu/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Telex",
+        "name_ko": "Telex",
+        "publisher_type": "news_site",
+        "url": "https://telex.hu/",
+        "evidence_url": "https://telex.hu/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "HVG",
+        "name_ko": "HVG",
+        "publisher_type": "news_site",
+        "url": "https://hvg.hu/",
+        "evidence_url": "https://hvg.hu/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
     "ID": [
       {
         "name_en": "ANTARA",
@@ -347,6 +695,35 @@
         "publisher_type": "news_site",
         "url": "https://www.tempo.co/",
         "evidence_url": "https://www.tempo.co/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "IE": [
+      {
+        "name_en": "RTÉ News",
+        "name_ko": "RTÉ News",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rte.ie/news/",
+        "evidence_url": "https://www.rte.ie/news/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Irish Times",
+        "name_ko": "The Irish Times",
+        "publisher_type": "newspaper",
+        "url": "https://www.irishtimes.com/",
+        "evidence_url": "https://www.irishtimes.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Irish Independent",
+        "name_ko": "Irish Independent",
+        "publisher_type": "newspaper",
+        "url": "https://www.independent.ie/",
+        "evidence_url": "https://www.independent.ie/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
       }
@@ -438,6 +815,35 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "KE": [
+      {
+        "name_en": "Kenya Broadcasting Corporation",
+        "name_ko": "Kenya Broadcasting Corporation",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.kbc.co.ke/",
+        "evidence_url": "https://www.kbc.co.ke/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Nation Africa",
+        "name_ko": "Nation Africa",
+        "publisher_type": "newspaper",
+        "url": "https://nation.africa/",
+        "evidence_url": "https://nation.africa/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Standard Kenya",
+        "name_ko": "The Standard Kenya",
+        "publisher_type": "newspaper",
+        "url": "https://www.standardmedia.co.ke/",
+        "evidence_url": "https://www.standardmedia.co.ke/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
     "KR": [
       {
         "name_en": "Yonhap News Agency",
@@ -463,6 +869,122 @@
         "publisher_type": "broadcaster",
         "url": "https://imnews.imbc.com/",
         "evidence_url": "https://imnews.imbc.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "LK": [
+      {
+        "name_en": "News First Sri Lanka",
+        "name_ko": "News First Sri Lanka",
+        "publisher_type": "broadcaster",
+        "url": "https://www.newsfirst.lk/",
+        "evidence_url": "https://www.newsfirst.lk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Ada Derana",
+        "name_ko": "Ada Derana",
+        "publisher_type": "broadcaster",
+        "url": "https://www.adaderana.lk/",
+        "evidence_url": "https://www.adaderana.lk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Daily Mirror Sri Lanka",
+        "name_ko": "Daily Mirror Sri Lanka",
+        "publisher_type": "newspaper",
+        "url": "https://www.dailymirror.lk/",
+        "evidence_url": "https://www.dailymirror.lk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "LT": [
+      {
+        "name_en": "LRT",
+        "name_ko": "LRT",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.lrt.lt/",
+        "evidence_url": "https://www.lrt.lt/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "ELTA",
+        "name_ko": "ELTA",
+        "publisher_type": "news_agency",
+        "url": "https://www.elta.lt/",
+        "evidence_url": "https://www.elta.lt/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Delfi Lithuania",
+        "name_ko": "Delfi Lithuania",
+        "publisher_type": "news_site",
+        "url": "https://www.delfi.lt/",
+        "evidence_url": "https://www.delfi.lt/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "LV": [
+      {
+        "name_en": "LSM Latvia",
+        "name_ko": "LSM Latvia",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.lsm.lv/",
+        "evidence_url": "https://www.lsm.lv/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "LETA",
+        "name_ko": "LETA",
+        "publisher_type": "news_agency",
+        "url": "https://letanews.eu/",
+        "evidence_url": "https://letanews.eu/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Delfi Latvia",
+        "name_ko": "Delfi Latvia",
+        "publisher_type": "news_site",
+        "url": "https://www.delfi.lv/",
+        "evidence_url": "https://www.delfi.lv/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "MA": [
+      {
+        "name_en": "Maghreb Arabe Presse MAP",
+        "name_ko": "Maghreb Arabe Presse MAP",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.mapnews.ma/en",
+        "evidence_url": "https://www.mapnews.ma/en",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "SNRT News",
+        "name_ko": "SNRT News",
+        "publisher_type": "public_broadcaster",
+        "url": "https://snrtnews.com/",
+        "evidence_url": "https://snrtnews.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Le Matin",
+        "name_ko": "Le Matin",
+        "publisher_type": "newspaper",
+        "url": "https://lematin.ma/",
+        "evidence_url": "https://lematin.ma/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
       }
@@ -583,6 +1105,64 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "NO": [
+      {
+        "name_en": "NRK",
+        "name_ko": "NRK",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.nrk.no/",
+        "evidence_url": "https://www.nrk.no/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "TV 2 Norway",
+        "name_ko": "TV 2 Norway",
+        "publisher_type": "broadcaster",
+        "url": "https://www.tv2.no/",
+        "evidence_url": "https://www.tv2.no/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "VG",
+        "name_ko": "VG",
+        "publisher_type": "newspaper",
+        "url": "https://www.vg.no/",
+        "evidence_url": "https://www.vg.no/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "NP": [
+      {
+        "name_en": "Rastriya Samachar Samiti",
+        "name_ko": "네팔 국영 RSS 통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://rss.com.np/",
+        "evidence_url": "https://rss.com.np/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Kathmandu Post",
+        "name_ko": "카트만두 포스트",
+        "publisher_type": "newspaper",
+        "url": "https://kathmandupost.com/",
+        "evidence_url": "https://kathmandupost.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Online Khabar",
+        "name_ko": "온라인 카바르",
+        "publisher_type": "news_site",
+        "url": "https://www.onlinekhabar.com/",
+        "evidence_url": "https://www.onlinekhabar.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
     "NZ": [
       {
         "name_en": "Radio New Zealand",
@@ -641,6 +1221,35 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "PK": [
+      {
+        "name_en": "Associated Press of Pakistan",
+        "name_ko": "Associated Press of Pakistan",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.app.com.pk/",
+        "evidence_url": "https://www.app.com.pk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Dawn",
+        "name_ko": "Dawn",
+        "publisher_type": "newspaper",
+        "url": "https://www.dawn.com/",
+        "evidence_url": "https://www.dawn.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Geo News",
+        "name_ko": "Geo News",
+        "publisher_type": "broadcaster",
+        "url": "https://www.geo.tv/",
+        "evidence_url": "https://www.geo.tv/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
     "PL": [
       {
         "name_en": "Polish Press Agency PAP",
@@ -666,6 +1275,122 @@
         "publisher_type": "public_broadcaster",
         "url": "https://www.polskieradio.pl/",
         "evidence_url": "https://www.polskieradio.pl/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "PT": [
+      {
+        "name_en": "Lusa",
+        "name_ko": "Lusa",
+        "publisher_type": "news_agency",
+        "url": "https://www.lusa.pt/",
+        "evidence_url": "https://www.lusa.pt/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "RTP Notícias",
+        "name_ko": "RTP Notícias",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rtp.pt/noticias/",
+        "evidence_url": "https://www.rtp.pt/noticias/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Público",
+        "name_ko": "Público",
+        "publisher_type": "newspaper",
+        "url": "https://www.publico.pt/",
+        "evidence_url": "https://www.publico.pt/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "RO": [
+      {
+        "name_en": "Agerpres",
+        "name_ko": "Agerpres",
+        "publisher_type": "state_news_agency",
+        "url": "https://agerpres.ro/",
+        "evidence_url": "https://agerpres.ro/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Digi24",
+        "name_ko": "Digi24",
+        "publisher_type": "broadcaster",
+        "url": "https://www.digi24.ro/",
+        "evidence_url": "https://www.digi24.ro/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "HotNews.ro",
+        "name_ko": "HotNews.ro",
+        "publisher_type": "news_site",
+        "url": "https://hotnews.ro/",
+        "evidence_url": "https://hotnews.ro/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "RS": [
+      {
+        "name_en": "Tanjug",
+        "name_ko": "Tanjug",
+        "publisher_type": "news_agency",
+        "url": "https://www.tanjug.rs/",
+        "evidence_url": "https://www.tanjug.rs/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "RTS Serbia",
+        "name_ko": "RTS Serbia",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rts.rs/",
+        "evidence_url": "https://www.rts.rs/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "N1 Serbia",
+        "name_ko": "N1 Serbia",
+        "publisher_type": "broadcaster",
+        "url": "https://n1info.rs/",
+        "evidence_url": "https://n1info.rs/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "RW": [
+      {
+        "name_en": "Rwanda Broadcasting Agency",
+        "name_ko": "Rwanda Broadcasting Agency",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rba.co.rw/",
+        "evidence_url": "https://www.rba.co.rw/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The New Times Rwanda",
+        "name_ko": "The New Times Rwanda",
+        "publisher_type": "newspaper",
+        "url": "https://www.newtimes.co.rw/",
+        "evidence_url": "https://www.newtimes.co.rw/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "IGIHE",
+        "name_ko": "IGIHE",
+        "publisher_type": "news_site",
+        "url": "https://igihe.com/",
+        "evidence_url": "https://igihe.com/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
       }
@@ -757,6 +1482,64 @@
         "verification": "publisher_link_recorded"
       }
     ],
+    "SI": [
+      {
+        "name_en": "STA Slovenia",
+        "name_ko": "STA Slovenia",
+        "publisher_type": "news_agency",
+        "url": "https://www.sta.si/",
+        "evidence_url": "https://www.sta.si/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "RTV Slovenija",
+        "name_ko": "RTV Slovenija",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.rtvslo.si/",
+        "evidence_url": "https://www.rtvslo.si/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Delo",
+        "name_ko": "Delo",
+        "publisher_type": "newspaper",
+        "url": "https://www.delo.si/",
+        "evidence_url": "https://www.delo.si/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "SK": [
+      {
+        "name_en": "TASR / Teraz",
+        "name_ko": "TASR 통신",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.teraz.sk/",
+        "evidence_url": "https://www.teraz.sk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "STVR Správy",
+        "name_ko": "STVR 공영뉴스",
+        "publisher_type": "public_broadcaster",
+        "url": "https://spravy.stvr.sk/",
+        "evidence_url": "https://spravy.stvr.sk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "SME",
+        "name_ko": "SME",
+        "publisher_type": "newspaper",
+        "url": "https://www.sme.sk/",
+        "evidence_url": "https://www.sme.sk/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
     "TR": [
       {
         "name_en": "Anadolu Agency",
@@ -782,6 +1565,93 @@
         "publisher_type": "newspaper",
         "url": "https://www.hurriyet.com.tr/",
         "evidence_url": "https://www.hurriyet.com.tr/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "TZ": [
+      {
+        "name_en": "Tanzania Broadcasting Corporation",
+        "name_ko": "Tanzania Broadcasting Corporation",
+        "publisher_type": "public_broadcaster",
+        "url": "https://www.tbc.go.tz/",
+        "evidence_url": "https://www.tbc.go.tz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Citizen Tanzania",
+        "name_ko": "The Citizen Tanzania",
+        "publisher_type": "newspaper",
+        "url": "https://www.thecitizen.co.tz/",
+        "evidence_url": "https://www.thecitizen.co.tz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Mwananchi",
+        "name_ko": "Mwananchi",
+        "publisher_type": "newspaper",
+        "url": "https://www.mwananchi.co.tz/",
+        "evidence_url": "https://www.mwananchi.co.tz/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "UA": [
+      {
+        "name_en": "Ukrinform",
+        "name_ko": "Ukrinform",
+        "publisher_type": "state_news_agency",
+        "url": "https://www.ukrinform.net/",
+        "evidence_url": "https://www.ukrinform.net/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Suspilne",
+        "name_ko": "Suspilne",
+        "publisher_type": "public_broadcaster",
+        "url": "https://suspilne.media/",
+        "evidence_url": "https://suspilne.media/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "The Kyiv Independent",
+        "name_ko": "The Kyiv Independent",
+        "publisher_type": "news_site",
+        "url": "https://kyivindependent.com/",
+        "evidence_url": "https://kyivindependent.com/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      }
+    ],
+    "UG": [
+      {
+        "name_en": "Uganda Broadcasting Corporation",
+        "name_ko": "Uganda Broadcasting Corporation",
+        "publisher_type": "public_broadcaster",
+        "url": "https://ubc.go.ug/",
+        "evidence_url": "https://ubc.go.ug/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "Daily Monitor",
+        "name_ko": "Daily Monitor",
+        "publisher_type": "newspaper",
+        "url": "https://www.monitor.co.ug/",
+        "evidence_url": "https://www.monitor.co.ug/",
+        "reviewed_on": "2026-11-21",
+        "verification": "publisher_link_recorded"
+      },
+      {
+        "name_en": "New Vision",
+        "name_ko": "New Vision",
+        "publisher_type": "newspaper",
+        "url": "https://www.newvision.co.ug/",
+        "evidence_url": "https://www.newvision.co.ug/",
         "reviewed_on": "2026-11-21",
         "verification": "publisher_link_recorded"
       }
