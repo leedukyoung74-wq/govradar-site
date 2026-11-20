@@ -40,6 +40,13 @@ class PublishExportPreflightTests(unittest.TestCase):
         self.assertIn("    exit 1",s)
         self.assertIn('WMM_EXPORT_PREFLIGHT must be',s)
 
+    def test_public_assets_scanned_before_live_worktree_changes(self):
+        s=self.source
+        check=s.index("python3 tools/check_public_fixture_leak.py cf/public")
+        self.assertLess(s.index("python3 tools/asset_version.py cf/public"),check)
+        self.assertLess(check,s.index("cd /home/claude/govradar-live"))
+        self.assertLess(check,s.index("rm -rf public functions"))
+
     def test_does_not_inject_synthetic_qa_data(self):
         s=self.source
         self.assertNotIn("create_tender_fixture",s)
