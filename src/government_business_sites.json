@@ -4417,6 +4417,38 @@
         "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/afrika/senegal/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari"
       }
     ],
+    "SO": [
+      {
+        "name_ko": "연방 재무부 · 정부조달 기회",
+        "name_en": "Somalia Ministry of Finance · Federal Public Procurement Opportunities",
+        "category": "procurement",
+        "url": "https://mof.gov.so/procurement",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mof.gov.so/index.php/department/public-procurement",
+        "notes": "Federal government sources; coverage of de facto autonomous areas is not guaranteed"
+      },
+      {
+        "name_ko": "상공부 · 중소기업·협동조합 지원",
+        "name_en": "Somalia Ministry of Commerce · SMEs Entrepreneurship and Cooperatives",
+        "category": "support",
+        "url": "https://moci.gov.so/en/departments/smes-entrepreneurship-cooperatives/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://moci.gov.so/en/about-moci/",
+        "notes": "Federal government sources; coverage of de facto autonomous areas is not guaranteed"
+      },
+      {
+        "name_ko": "SOMINVEST · 국가 투자진흥청",
+        "name_en": "Somalia Investment Promotion Office · SOMINVEST",
+        "category": "investment",
+        "url": "https://sominvest.gov.so/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mop.gov.so/departments/sominvest/",
+        "notes": "Federal government sources; coverage of de facto autonomous areas is not guaranteed"
+      }
+    ],
     "SR": [
       {
         "name_ko": "정부 중앙 입찰 게시판 · 수리남",
@@ -4444,6 +4476,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://sita.sr/about-us/"
+      }
+    ],
+    "ST": [
+      {
+        "name_ko": "COSSIL · 국가공공계약 포털",
+        "name_en": "São Tomé and Príncipe COSSIL · Official Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://contratospublicos.gov.st/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://contratospublicos.gov.st/sobre-nos",
+        "notes": ""
+      },
+      {
+        "name_ko": "GUCE · 국가 통상 원스톱",
+        "name_en": "São Tomé and Príncipe Government Trade Single Window",
+        "category": "support",
+        "url": "https://guce.gov.st/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://guce.gov.st/quem-somos/",
+        "notes": ""
+      },
+      {
+        "name_ko": "국가 관광청 · 정부 투자진흥 안내",
+        "name_en": "São Tomé Government Investment Facilitation · APCI Information",
+        "category": "investment",
+        "url": "https://turismo.gov.st/en/guide-pratique/informations-utiles/investments",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://turismo.gov.st/en/guide-pratique/informations-utiles/investments",
+        "notes": ""
       }
     ],
     "SV": [
