@@ -5,6 +5,8 @@ on:
       - 'scripts/wmm_public_healthcheck.mjs'
       - 'tests/wmm_public_healthcheck.test.mjs'
       - 'tests/wmm_sitemap.test.mjs'
+      - 'scripts/wmm_sitemap_preview.mjs'
+      - 'tests/wmm_sitemap_preview.test.mjs'
       - 'sitemap.xml'
       - '.github/workflows/wmm_public_healthcheck_unit.yml'
   workflow_dispatch:
@@ -20,5 +22,17 @@ jobs:
         with:
           node-version: '22'
           package-manager-cache: false
-      - name: Run offline unit and sitemap-source tests (no network)
-        run: node --test tests/wmm_public_healthcheck.test.mjs tests/wmm_sitemap.test.mjs
+      - name: Run offline unit tests and source route inventory (no network)
+        run: node --test tests/wmm_public_healthcheck.test.mjs tests/wmm_sitemap.test.mjs tests/wmm_sitemap_preview.test.mjs
+      - name: Build review-only source-derived sitemap
+        run: |
+          node scripts/wmm_sitemap_preview.mjs --output "$RUNNER_TEMP/wmm-sitemap-preview.xml" --json > "$RUNNER_TEMP/wmm-sitemap-preview-summary.json"
+          cat "$RUNNER_TEMP/wmm-sitemap-preview-summary.json"
+      - name: Save preview artifact only (not public deployment)
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-sitemap-preview
+          path: |
+            ${{ runner.temp }}/wmm-sitemap-preview.xml
+            ${{ runner.temp }}/wmm-sitemap-preview-summary.json
+          retention-days: 3
