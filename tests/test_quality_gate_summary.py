@@ -30,7 +30,7 @@ class CountrySummaryQualityGateTests(unittest.TestCase):
     def check(self, summary):
         new = {"tenders.json": self.feed, "cty/_summary.json": summary}
         with patch("feed_tenders.valid", return_value=""):
-            return quality_gate.check(new, {}, now=self.now)
+            return quality_gate.check(new, {}, now=self.now, require_country_summary=True)
 
     def test_stale_not_counted_as_verified_open(self):
         self.assertEqual([], self.check({"t": {"n": 99, "c": 1}}))
