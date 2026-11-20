@@ -1,0 +1,45 @@
+name: GOV RADAR buyer generated-page QA (NO DEPLOY)
+on:
+  push:
+    branches: ["review/wmm-govradar-autobuild-24h-20261120"]
+    paths:
+      - 'pages_req.py'
+      - 'web/req-safe.js'
+      - 'build.py'
+      - 'tests/test_req_generated_preview.py'
+      - '.github/workflows/wmm_govradar_buyer_preview_qa.yml'
+  pull_request:
+    paths:
+      - 'pages_req.py'
+      - 'web/req-safe.js'
+      - 'build.py'
+      - 'tests/test_req_generated_preview.py'
+      - '.github/workflows/wmm_govradar_buyer_preview_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: wmm-govradar-buyer-qa-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  buyer_preview:
+    name: Offline build + 7-language buyer QA
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout review branch, no write token
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Use Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify source and request runtime without network calls
+        run: python -m unittest discover -s tests -p 'test_req_safe_ui.py' -v
+      - name: Build isolated static site (NO DEPLOY)
+        run: python build.py --base https://preview.invalid
+      - name: Verify generated buyer routes, 7 locales and safe request asset
+        env:
+          WMM_BUYER_GENERATED_QA: '1'
+        run: python -m unittest discover -s tests -p 'test_req_generated_preview.py' -v
