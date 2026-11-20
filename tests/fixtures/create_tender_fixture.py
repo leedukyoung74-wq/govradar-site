@@ -15,6 +15,7 @@ past=(today-datetime.timedelta(days=90)).isoformat()
 fixture={
   "id":"KR",
   "data":{
+    "agenda":["WMM QA synthetic country summary — NOT A REAL GOVERNMENT NOTICE"],
     "tenders":[
       {"title":"WMM_QA_SYNTHETIC_FUTURE_TENDER","buyer":"WMM QA ONLY", "deadline":future,
        "url":"https://example.org/wmm-qa-future", "added":today.isoformat()},
