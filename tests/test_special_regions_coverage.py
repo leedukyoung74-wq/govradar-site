@@ -25,6 +25,11 @@ class SpecialRegionsCoverageTests(unittest.TestCase):
             self.assertTrue(record["sources"],row["iso"])
             self.assertTrue(all(x["url"].startswith("https://") for x in record["sources"]),row["iso"])
 
+    def test_builder_falls_back_only_when_barmm_export_absent(self):
+        build=(ROOT/"build.py").read_text(encoding="utf-8")
+        self.assertIn('if "PH-BARMM" not in DATA:',build)
+        self.assertIn('DATA["PH-BARMM"] = _region_research["PH-BARMM"]',build)
+
     def test_barmm_budget_is_not_falsely_marked_as_confirmed_tender(self):
         item=RR.D["PH-BARMM"]
         self.assertEqual([],item["tenders"])

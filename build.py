@@ -81,6 +81,12 @@ for x in REGS:
 for f in glob.glob(os.path.join(ROOT, "export", "regions", "*.json")):
     j = json.load(open(f, encoding="utf8")); d = j.get("data", j); code = j.get("id") or os.path.basename(f)[:-5]
     if code in BY: DATA[code] = d
+# Preserve the external region export as authoritative; source-verified BARMM
+# is used only if its separate export record has not yet arrived.
+if "PH-BARMM" not in DATA:
+    from regions_20261114 import D as _region_research
+    if "PH-BARMM" in _region_research:
+        DATA["PH-BARMM"] = _region_research["PH-BARMM"]
 # --- translated country content (es/fr/ar/vi/id), merged over en by index ---
 def _merge_tr(base, tr):
     if isinstance(base, dict) and isinstance(tr, dict):
