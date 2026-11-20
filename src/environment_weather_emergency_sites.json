@@ -137,9 +137,27 @@
       "emergency": null
     },
     "GH": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Ghana Environmental Protection Agency",
+        "url": "https://epa.gov.gh/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Ghana Meteorological Agency",
+        "url": "https://www.meteo.gov.gh/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Disaster Management Organisation · NADMO",
+        "url": "https://nadmo.gov.gh/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "GN": {
       "environment": null,
@@ -215,9 +233,27 @@
       "emergency": null
     },
     "MA": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Morocco Ministry of Energy Transition and Sustainable Development",
+        "url": "https://www.environnement.gov.ma/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Morocco Directorate General of Meteorology",
+        "url": "https://www.marocmeteo.ma/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Morocco Civil Protection Directorate",
+        "url": "https://www.protectioncivile.ma/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "MZ": {
       "environment": null,
@@ -258,9 +294,27 @@
       }
     },
     "RW": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Ministry of Environment",
+        "url": "https://environment.gov.rw/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Rwanda Meteorology Agency · Meteo Rwanda",
+        "url": "https://www.meteorwanda.gov.rw/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Ministry in charge of Emergency Management · MINEMA",
+        "url": "https://www.minema.gov.rw/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "ST": {
       "environment": null,
@@ -321,9 +375,27 @@
       "emergency": null
     },
     "TZ": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Tanzania Vice President's Office · Environment",
+        "url": "https://www.vpo.go.tz/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Tanzania Meteorological Authority",
+        "url": "https://www.meteo.go.tz/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Prime Minister's Office · Disaster Management",
+        "url": "https://www.pmo.go.tz/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "TG": {
       "environment": null,
@@ -331,9 +403,27 @@
       "emergency": null
     },
     "TN": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Tunisia Ministry of Environment",
+        "url": "https://www.environnement.gov.tn/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Institute of Meteorology",
+        "url": "https://www.meteo.tn/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Office National de la Protection Civile",
+        "url": "https://www.onpc.nat.tn/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "UG": {
       "environment": null,
@@ -486,9 +576,27 @@
       }
     },
     "KZ": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Ministry of Ecology and Natural Resources",
+        "url": "https://www.gov.kz/memleket/entities/ecogeo?lang=en",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Kazhydromet · National Hydrometeorological Service",
+        "url": "https://www.kazhydromet.kz/en",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Ministry of Emergency Situations",
+        "url": "https://www.gov.kz/memleket/entities/emer?lang=en",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "KP": {
       "environment": null,
@@ -910,9 +1018,27 @@
       }
     },
     "AZ": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Ministry of Ecology and Natural Resources",
+        "url": "https://eco.gov.az/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Azerbaijan National Hydrometeorological Service",
+        "url": "https://www.meteo.az/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Ministry of Emergency Situations",
+        "url": "https://fhn.gov.az/en/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "BY": {
       "environment": null,
@@ -1724,9 +1850,27 @@
       "emergency": null
     },
     "BO": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Ministry of Environment and Water · MMAyA",
+        "url": "https://www.mmaya.gob.bo/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Meteorology and Hydrology Service · SENAMHI",
+        "url": "https://senamhi.gob.bo/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Vice Ministry of Civil Defense",
+        "url": "https://www.defensacivil.gob.bo/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "BR": {
       "environment": {
@@ -1798,9 +1942,27 @@
       }
     },
     "CR": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Ministry of Environment and Energy · MINAE",
+        "url": "https://www.minae.go.cr/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Instituto Meteorológico Nacional · IMN",
+        "url": "https://www.imn.ac.cr/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Emergency Commission · CNE",
+        "url": "https://www.cne.go.cr/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "CU": {
       "environment": null,
@@ -1871,9 +2033,27 @@
       "emergency": null
     },
     "JM": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "National Environment and Planning Agency · NEPA",
+        "url": "https://nepa.gov.jm/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Meteorological Service of Jamaica",
+        "url": "https://metservice.gov.jm/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "Office of Disaster Preparedness and Emergency Management",
+        "url": "https://www.odpem.gov.jm/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "NI": {
       "environment": null,
@@ -1881,14 +2061,50 @@
       "emergency": null
     },
     "PA": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Panama Ministry of Environment · MiAMBIENTE",
+        "url": "https://miambiente.gob.pa/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "Panama Institute of Meteorology and Hydrology · IMHPA",
+        "url": "https://www.imhpa.gob.pa/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Civil Protection System · SINAPROC",
+        "url": "https://www.sinaproc.gob.pa/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "PY": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Ministry of Environment and Sustainable Development · MADES",
+        "url": "https://www.mades.gov.py/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "weather": {
+        "name": "National Meteorology and Hydrology Directorate",
+        "url": "https://www.meteorologia.gov.py/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      },
+      "emergency": {
+        "name": "National Emergency Secretariat · SEN",
+        "url": "https://sen.gov.py/",
+        "source": "public_agency_curated_and_directories",
+        "access": "not_live_tested",
+        "review": "curated_candidate"
+      }
     },
     "PE": {
       "environment": {
@@ -1991,7 +2207,14 @@
     },
     "FJ": {
       "environment": null,
-      "weather": null,
+      "weather": {
+        "name": "Fiji Meteorological and Hydrological Services",
+        "url": "https://www.met.gov.fj/",
+        "source": "WMO_Fiji_national_weather_service",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "evidence_url": "https://www.met.gov.fj/fiji-weather/"
+      },
       "emergency": null
     },
     "KI": {
