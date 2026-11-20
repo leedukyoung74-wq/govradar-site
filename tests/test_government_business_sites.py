@@ -18,14 +18,14 @@ class GovernmentBusinessSiteTests(unittest.TestCase):
         self.assertEqual(579,self.report["target_verified_links"])
         self.assertEqual(193,len(self.report["country_counts"]))
 
-    def test_at_least_135_verified_priority_country_sets(self):
+    def test_at_least_144_verified_priority_country_sets(self):
         # Increase this threshold only when independently reviewed additions
         # are made. Do not assert 193/193 before that is actually true.
-        self.assertGreaterEqual(self.report["verified_countries"],135)
-        self.assertGreaterEqual(self.report["verified_links"],405)
+        self.assertGreaterEqual(self.report["verified_countries"],144)
+        self.assertGreaterEqual(self.report["verified_links"],432)
         self.assertEqual(579-self.report["verified_links"],
                          self.report["remaining_required_link_slots"])
-        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA","KE","ZA","PH","BR","ID","DE","ES","NZ","CH","NL","NO","SE","DK","AE","BD","CL","CO","EG","GH","IT","MY","MX","NG","PK","PE","PL","PT","TH","TR","VN","BG","CZ","FI","HR","IE","LT","LV","SI","SK","AL","AT","BE","EE","GR","HU","CY","LU","RO","RS","UA","AR","GE","BA","KZ","CN","NP","LK","UZ","BH","QA","JO","OM","KW","IL","MA","TN","RW","BW","TZ","ZM","KH","UY","PY","PA","CR","DO","EC","BO","GT","HN","SV","JM","TT","IS","MD","MK","AZ","AM","MT","SN","NA","ET","FJ","PG","UG","MU","WS","SB","VU","ZW","GM","CI","GY","BB","MV","BN","SC","MW","MG","ME","BT","TL","KG","AO","SZ","BS","MN","DZ","BJ","CM","GN","TG","CV","CD","MZ"):
+        for iso in ("KR","US","GB","JP","IN","AU","CA","FR","SG","SA","KE","ZA","PH","BR","ID","DE","ES","NZ","CH","NL","NO","SE","DK","AE","BD","CL","CO","EG","GH","IT","MY","MX","NG","PK","PE","PL","PT","TH","TR","VN","BG","CZ","FI","HR","IE","LT","LV","SI","SK","AL","AT","BE","EE","GR","HU","CY","LU","RO","RS","UA","AR","GE","BA","KZ","CN","NP","LK","UZ","BH","QA","JO","OM","KW","IL","MA","TN","RW","BW","TZ","ZM","KH","UY","PY","PA","CR","DO","EC","BO","GT","HN","SV","JM","TT","IS","MD","MK","AZ","AM","MT","SN","NA","ET","FJ","PG","UG","MU","WS","SB","VU","ZW","GM","CI","GY","BB","MV","BN","SC","MW","MG","ME","BT","TL","KG","AO","SZ","BS","MN","DZ","BJ","CM","GN","TG","CV","CD","MZ","BF","LS","LR","SL","MR","GA","LA","CG","TJ"):
             self.assertGreaterEqual(self.report["country_counts"][iso]["verified"],3,iso)
 
     def test_one_legacy_registry_entry_does_not_count_as_government_verified(self):
