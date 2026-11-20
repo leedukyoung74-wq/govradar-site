@@ -158,6 +158,7 @@ def carry(nm_, got, state, prev, now, stamp, lookup, budget):
     Cancelled / withdrawn / closed at the publisher -> dropped at once. The official deadline always replaces ours, so a
     same-day change of time (earlier or later) is applied."""
     import deadline as DL
+    import time as _clock
     c = {"carried_verified": 0, "carried_stale": 0, "dropped_unverified": 0, "dropped_closed": 0, "dropped_cancelled": 0, "verify_lookups": 0}
     if not (state in ("ERROR", "PARTIAL", "EMPTY_SUCCESS") or nm_ in WINDOWED): return [], c
     have = {_key(x) for x in got} | {x.get("url") for x in got}
@@ -167,7 +168,10 @@ def carry(nm_, got, state, prev, now, stamp, lookup, budget):
         if x.get("source") != nm_ or _key(x) in have or x.get("url") in have: continue
         if not DL.is_open(x, now): c["dropped_closed"] += 1; continue
         x = dict(x); r = None
-        if budget[0] > 0:
+        # Optional second budget slot is a monotonic wall-clock deadline shared
+        # across all sources. When exhausted, carry stays STALE, never verified.
+        can_verify = budget[0] > 0 and (len(budget) < 2 or _clock.monotonic() < budget[1])
+        if can_verify:
             budget[0] -= 1; c["verify_lookups"] += 1
             try: r = lookup(x)
             except Exception: r = None
@@ -212,7 +216,10 @@ def main():
     except Exception: status = {}
     groups = []
     import verify_samples as VS
-    budget = [VERIFY_CAP]
+    import time as _clock
+    # The entire carry-verification stage gets a shared 120-second envelope.
+    # A timed-out lookup cannot turn unverified notices into open opportunities.
+    budget = [VERIFY_CAP, _clock.monotonic() + 120]
     # FM.canada is written and tested but not run: canadabuys.canada.ca robots.txt disallows all agents except search engines
     for src in (worldbank, FM.ted, FM.uk, FM.ukcf, FM.prozorro, FM.dapa, FM.sam):
         nm_ = SRC_NAME[src.__name__]
