@@ -1,0 +1,67 @@
+name: WMM Tender Disclosure Source QA (Review Only)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'build.py'
+      - 'pages3.py'
+      - 'tests/test_tender_disclosure_source.py'
+      - 'tests/test_tender_disclosure_generated.py'
+      - 'tests/fixtures/create_tender_fixture.py'
+      - 'tools/check_export_inputs.py'
+      - 'tests/test_export_inputs.py'
+      - 'tools/check_research_coverage.py'
+      - 'tests/test_research_coverage.py'
+      - 'tools/check_public_fixture_leak.py'
+      - 'tests/test_public_fixture_leak.py'
+      - 'tools/check_build_consistency.py'
+      - 'tests/test_build_consistency.py'
+      - 'tools/publish_cf.sh'
+      - 'tests/test_publish_export_preflight.py'
+      - '.github/workflows/wmm_tender_disclosure_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check Python syntax without importing production modules
+        run: python -m py_compile build.py pages3.py
+      - name: Assert tender claim and expiry safety
+        run: python -m unittest discover -s tests -p 'test_tender_disclosure_source.py' -v
+      - name: Verify export freshness gate in isolation
+        run: python -m unittest discover -s tests -p 'test_export_inputs.py' -v
+      - name: Verify known country research completeness in isolation
+        run: python -m unittest discover -s tests -p 'test_research_coverage.py' -v
+      - name: Verify safe opt-in preflight in deploy shell (never execute deploy)
+        run: python -m unittest discover -s tests -p 'test_publish_export_preflight.py' -v
+      - name: Verify release fixture scanner in isolation
+        run: python -m unittest discover -s tests -p 'test_public_fixture_leak.py' -v
+      - name: Verify build-to-input consistency gate in isolation
+        run: python -m unittest discover -s tests -p 'test_build_consistency.py' -v
+  generated-mdb-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inject synthetic tender fixtures (offline, QA-only)
+        run: python tests/fixtures/create_tender_fixture.py
+      - name: Verify fixture freshness (synthetic-only threshold, never production policy)
+        run: python tools/check_export_inputs.py --min-countries 1 --max-age-days 3
+      - name: Build local static preview only (not deployed)
+        run: python build.py --base https://radar.wmm-hoa.com
+      - name: Check rendered tender disclosure in seven languages
+        env:
+          WMM_GENERATED_QA: '1'
+        run: python -m unittest discover -s tests -p 'test_tender_disclosure_generated.py' -v
+      - name: Verify synthetic source/export parity with all seven generated country pages
+        run: python tools/check_build_consistency.py --export-dir export/countries --public-dir dist --min-researched 1
