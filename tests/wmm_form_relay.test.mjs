@@ -119,3 +119,31 @@ test("multipart form data is forwarded byte-for-byte",async()=>{
   assert.equal(response.status,303);
   assert.equal(new TextDecoder().decode(calls[0][1].body),body);
 });
+
+test("missing, unknown and duplicate form-name values are never relayed",async()=>{
+  for(const body of ["email=x%40example.org","form-name=unknown&email=x%40example.org",
+    "form-name=order&form-name=feedback&email=x%40example.org"]) {
+    const {response,calls}=await run(post("/ko/thanks/",body),
+      async()=>{throw new Error("should not reach Netlify");});
+    assert.equal(response.status,400,body);
+    assert.equal(calls.length,0,body);
+  }
+});
+
+test("each registered live form name is accepted by the relay",async()=>{
+  for(const name of ["consortium","contract-request","expert-apply","feedback",
+    "gcsme-member","order","partner-apply","unlock"]) {
+    const body="form-name="+encodeURIComponent(name)+"&email=a%40example.org";
+    const {response,calls}=await run(post("/ko/thanks/",body),
+      async()=>new Response(null,{status:303,headers:{location:"/"}}));
+    assert.equal(response.status,303,name);
+    assert.equal(calls.length,1,name);
+  }
+});
+
+test("broken multipart form-name cannot masquerade as a valid submission",async()=>{
+  const {response,calls}=await run(post("/ko/thanks/","broken","multipart/form-data; boundary=test"),
+    async()=>{throw new Error("should not reach Netlify");});
+  assert.equal(response.status,400);
+  assert.equal(calls.length,0);
+});
