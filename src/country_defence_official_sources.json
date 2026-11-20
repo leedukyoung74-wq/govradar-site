@@ -3,7 +3,7 @@
   "reviewed_on": "2026-11-21",
   "scope": "193 sovereign states only; autonomous/special regions separately maintained in territory_official_sources.json",
   "target_minimum_sites_per_country": 3,
-  "policy": "Public official defence institution links only. The three entries must be meaningful, distinguishable official military/defence organizations or service branches, not copies of a single publisher section. Do not assume all sovereign states maintain standing armies. Empty records indicate pending research, not military absence. These links are not verified live military intelligence or alert feeds. No geolocation of troops, installations, operations or weapons.",
+  "policy": "Public official defence institution links only. The three entries must be meaningful, distinguishable official military/defence organizations or service branches, not copies of a single publisher section. Do not assume all sovereign states maintain standing armies. Empty records indicate pending research, not military absence. These links are not verified live military intelligence or alert feeds. No geolocation of troops, installations, operations or weapons. Important: countries with no standing military may have civilian security/defence-responsibility information records; these MUST NOT be counted as distinct military branches or used to claim three military entities exist.",
   "countries": {
     "DZ": {
       "name_en": "Algeria",
@@ -239,9 +239,39 @@
     "MU": {
       "name_en": "Mauritius",
       "name_ko": "모리셔스",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "no_regular_armed_forces",
+      "official_sites": [
+        {
+          "agency_name": "Mauritius Police Force",
+          "url": "https://police.govmu.org/police/",
+          "role": "national_police_with_paramilitary_units",
+          "evidence_url": "https://police.govmu.org/police/?page_id=4897",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Mauritius Police Special Mobile Force",
+          "url": "https://police.govmu.org/police/?page_id=4926",
+          "role": "police_paramilitary_unit",
+          "evidence_url": "https://police.govmu.org/police/?page_id=4897",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Mauritius Police National Coast Guard",
+          "url": "https://police.govmu.org/police/?page_id=4922",
+          "role": "police_coast_guard",
+          "evidence_url": "https://police.govmu.org/police/?page_id=4897",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "nonstanding_force_structure_documented",
+      "structure_evidence_url": "https://police.govmu.org/police/?page_id=4897",
+      "notes": "Mauritius has no separate regular military forces; SMF and NCG are within Mauritius Police Force, so these are three public-security pages NOT three independent defence organisations."
     },
     "MA": {
       "name_en": "Morocco",
@@ -1480,9 +1510,30 @@
     "IS": {
       "name_en": "Iceland",
       "name_ko": "아이슬란드",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "no_standing_army",
+      "official_sites": [
+        {
+          "agency_name": "Iceland government national security policy",
+          "url": "https://eng.menntamalaraduneyti.is/topics/foreign-affairs/national-security/",
+          "role": "civilian_defence_authority",
+          "evidence_url": "https://eng.menntamalaraduneyti.is/topics/foreign-affairs/national-security/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Icelandic Coast Guard",
+          "url": "https://www.lhg.is/en/",
+          "role": "civilian_coast_guard_with_defence_tasks",
+          "evidence_url": "https://www.lhg.is/en/security-and-defence/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "nonstanding_force_structure_documented",
+      "structure_evidence_url": "https://eng.menntamalaraduneyti.is/topics/foreign-affairs/national-security/",
+      "notes": "Iceland has no standing armed forces. Ministry of Foreign Affairs handles defence policy; Coast Guard carries operational defence duties. No army/navy/air force webpages should be invented."
     },
     "IE": {
       "name_en": "Ireland",
@@ -1583,9 +1634,30 @@
     "LI": {
       "name_en": "Liechtenstein",
       "name_ko": "리히텐슈타인",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "no_standing_army",
+      "official_sites": [
+        {
+          "agency_name": "Liechtenstein Government security policy",
+          "url": "https://www.regierung.li/thema/17090/sicherheitsstrategie?id=234494",
+          "role": "civilian_security_policy",
+          "evidence_url": "https://www.regierung.li/medienportal-medium/16182/234495/medienmitteilung",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Liechtenstein National Police",
+          "url": "https://www.landespolizei.li/en",
+          "role": "national_police",
+          "evidence_url": "https://www.landespolizei.li/en/about-us",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "nonstanding_force_structure_documented",
+      "structure_evidence_url": "https://www.regierung.li/medienportal-medium/16182/234495/medienmitteilung",
+      "notes": "Liechtenstein has no national army. These are civil public safety/policy authorities, NOT armed forces."
     },
     "LT": {
       "name_en": "Lithuania",
@@ -2227,9 +2299,39 @@
     "CR": {
       "name_en": "Costa Rica",
       "name_ko": "코스타리카",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "no_standing_army",
+      "official_sites": [
+        {
+          "agency_name": "Costa Rica Ministry of Public Security",
+          "url": "https://www.seguridadpublica.go.cr/",
+          "role": "civilian_security_ministry",
+          "evidence_url": "https://www.seguridadpublica.go.cr/estructura/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Costa Rica Fuerza Pública",
+          "url": "https://www.seguridadpublica.go.cr/estructura/viceministrour/fuerza_publica/",
+          "role": "national_police",
+          "evidence_url": "https://www.seguridadpublica.go.cr/estructura/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Costa Rica National Coast Guard",
+          "url": "https://siseco.seguridadpublica.go.cr/estructura/viceministroCPE-UC/guardacostas/index.aspx",
+          "role": "civilian_coast_guard",
+          "evidence_url": "https://www.seguridadpublica.go.cr/estructura/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "nonstanding_force_structure_documented",
+      "structure_evidence_url": "https://www.wipo.int/wipolex/en/legislation/details/21141",
+      "notes": "Constitution Article 12 prohibits a permanent army. Three links are civil security units and cannot be treated as three military services."
     },
     "CU": {
       "name_en": "Cuba",
@@ -2318,9 +2420,30 @@
     "PA": {
       "name_en": "Panama",
       "name_ko": "파나마",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "no_standing_army",
+      "official_sites": [
+        {
+          "agency_name": "Panama Ministry of Public Security",
+          "url": "https://www.minseg.gob.pa/",
+          "role": "civilian_security_ministry",
+          "evidence_url": "https://www.minseg.gob.pa/sala-de-prensa/directorio-gubernamental/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Panama SENAN / Aeronaval Service ministry information",
+          "url": "https://www.minseg.gob.pa/minseg-anuncia-el-ascenso-de-1098-oficiales-en-los-rangos-de-mayor-capitan-y-teniente/",
+          "role": "civilian_aeronaval_police",
+          "evidence_url": "https://www.minseg.gob.pa/2024/07/subir-la-moral-y-depuracion-prioridades-del-presidente-mulino/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "nonstanding_force_structure_documented",
+      "structure_evidence_url": "https://www.constituteproject.org/constitution/Panama_2004",
+      "notes": "Constitution excludes an army. SENAN and SENAFRONT are security/policing institutions; second link is a ministry press notice, not a dedicated service portal. Must not count as military institutions."
     },
     "PY": {
       "name_en": "Paraguay",
