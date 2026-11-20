@@ -108,6 +108,12 @@ class MemberRekeyTests(unittest.TestCase):
         self.assertFalse((self.priv/".wmm-member-rekey.lock").exists())
         self.assertEqual(self.vault.read_bytes(),b'{"protected-existing-data":true}')
 
+    def test_direct_master_overwrite_is_forbidden(self):
+        with self.assertRaisesRegex(RuntimeError, "Unsafe direct master overwrite"):
+            member._master(new=True)
+        self.assertEqual(member._master(),self.old_k)
+        self.assertEqual((self.out/"m"/"ko"/"brief.json").read_bytes(),self.original_data)
+
     def test_rotation_without_removal_changes_key_for_all_active_members(self):
         result=member.rekey()
         self.assertEqual(result["remaining_members"],2)
