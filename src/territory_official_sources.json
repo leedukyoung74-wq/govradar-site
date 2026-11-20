@@ -650,45 +650,357 @@
       "name_ko": "스코틀랜드",
       "parent_iso": "GB",
       "region_type": "dev",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
-      "public_health": [],
-      "critical_infrastructure": [],
-      "status": "research_pending"
+      "government_business": [
+        {
+          "name": "Scottish Government",
+          "url": "https://www.gov.scot/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.scot/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Public Contracts Scotland",
+          "url": "https://www.publiccontractsscotland.gov.uk/",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://www.gov.scot/publications/frameworks-and-contracts/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Scottish Enterprise",
+          "url": "https://www.scottish-enterprise.com/",
+          "authority_scope": "public_business_agency",
+          "evidence_url": "https://www.gov.scot/publications/national-public-bodies-directory/pages/executive-non-departmental-public-bodies/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "BBC Scotland News",
+          "url": "https://www.bbc.com/news/scotland",
+          "authority_scope": "local",
+          "evidence_url": "https://www.bbc.com/news/scotland",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "STV News",
+          "url": "https://news.stv.tv/",
+          "authority_scope": "local",
+          "evidence_url": "https://news.stv.tv/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "The Scotsman",
+          "url": "https://www.scotsman.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.scotsman.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Scottish Environment Protection Agency",
+          "url": "https://www.sepa.org.uk/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://www.gov.scot/publications/national-public-bodies-directory/pages/executive-non-departmental-public-bodies/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "UK Met Office Scotland weather",
+          "url": "https://www.metoffice.gov.uk/weather/forecast/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.metoffice.gov.uk/weather/forecast/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Ready Scotland",
+          "url": "https://ready.scot/",
+          "authority_scope": "local",
+          "evidence_url": "https://ready.scot/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "UK Ministry of Defence",
+          "url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Public Health Scotland",
+          "url": "https://publichealthscotland.scot/",
+          "authority_scope": "local",
+          "evidence_url": "https://publichealthscotland.scot/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Transport Scotland",
+          "url": "https://www.transport.gov.scot/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.transport.gov.scot/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
     },
     "GB-WLS": {
       "name_en": "Wales",
       "name_ko": "웨일스",
       "parent_iso": "GB",
       "region_type": "dev",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
-      "public_health": [],
-      "critical_infrastructure": [],
-      "status": "research_pending"
+      "government_business": [
+        {
+          "name": "Welsh Government",
+          "url": "https://www.gov.wales/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Sell2Wales",
+          "url": "https://www.sell2wales.gov.wales/",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://www.sell2wales.gov.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Business Wales",
+          "url": "https://businesswales.gov.wales/",
+          "authority_scope": "government_business_support",
+          "evidence_url": "https://businesswales.gov.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "BBC News Wales",
+          "url": "https://www.bbc.com/news/wales",
+          "authority_scope": "local",
+          "evidence_url": "https://www.bbc.com/news/wales",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "ITV News Wales",
+          "url": "https://www.itv.com/news/wales",
+          "authority_scope": "local",
+          "evidence_url": "https://www.itv.com/news/wales",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Nation.Cymru",
+          "url": "https://nation.cymru/",
+          "authority_scope": "local",
+          "evidence_url": "https://nation.cymru/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Natural Resources Wales",
+          "url": "https://naturalresources.wales/",
+          "authority_scope": "local_agency",
+          "evidence_url": "https://naturalresources.wales/evidence-and-data/research-and-reports/flooding-reports-evidence-and-data/flood-risk-management-annual-report-2025-to-2026/?lang=en",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "UK Met Office",
+          "url": "https://www.metoffice.gov.uk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.metoffice.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "Wales resilience and risks",
+          "url": "https://www.gov.wales/resilience-risks-in-wales",
+          "authority_scope": "local",
+          "evidence_url": "https://www.gov.wales/resilience-risks-in-wales",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "UK Ministry of Defence",
+          "url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Public Health Wales",
+          "url": "https://phw.nhs.wales/",
+          "authority_scope": "local",
+          "evidence_url": "https://phw.nhs.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Traffic Wales",
+          "url": "https://traffic.wales/",
+          "authority_scope": "local",
+          "evidence_url": "https://traffic.wales/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
     },
     "GB-NIR": {
       "name_en": "Northern Ireland",
       "name_ko": "북아일랜드",
       "parent_iso": "GB",
       "region_type": "dev",
-      "government_business": [],
-      "news_media": [],
-      "environment": [],
-      "meteorology": [],
-      "emergency": [],
-      "defence_security": [],
-      "public_health": [],
-      "critical_infrastructure": [],
-      "status": "research_pending"
+      "government_business": [
+        {
+          "name": "Northern Ireland Executive",
+          "url": "https://www.northernireland.gov.uk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.northernireland.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "eTendersNI procurement",
+          "url": "https://www.finance-ni.gov.uk/topics/etendersni",
+          "authority_scope": "local_procurement",
+          "evidence_url": "https://www.finance-ni.gov.uk/topics/etendersni",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Invest Northern Ireland",
+          "url": "https://www.investni.com/",
+          "authority_scope": "government_business_support",
+          "evidence_url": "https://www.investni.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "news_media": [
+        {
+          "name": "BBC News Northern Ireland",
+          "url": "https://www.bbc.com/news/northern_ireland",
+          "authority_scope": "local",
+          "evidence_url": "https://www.bbc.com/news/northern_ireland",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "Belfast Telegraph",
+          "url": "https://www.belfasttelegraph.co.uk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.belfasttelegraph.co.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        },
+        {
+          "name": "The Irish News",
+          "url": "https://www.irishnews.com/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.irishnews.com/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "environment": [
+        {
+          "name": "Northern Ireland Environment Agency",
+          "url": "https://www.daera-ni.gov.uk/contacts/northern-ireland-environment-agency-niea",
+          "authority_scope": "local",
+          "evidence_url": "https://www.daera-ni.gov.uk/contacts/northern-ireland-environment-agency-niea",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "meteorology": [
+        {
+          "name": "UK Met Office",
+          "url": "https://www.metoffice.gov.uk/",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.metoffice.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "emergency": [
+        {
+          "name": "nidirect emergency information",
+          "url": "https://www.nidirect.gov.uk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.nidirect.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "defence_security": [
+        {
+          "name": "UK Ministry of Defence",
+          "url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "authority_scope": "parent_authority",
+          "evidence_url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "public_health": [
+        {
+          "name": "Public Health Agency NI",
+          "url": "https://www.publichealth.hscni.net/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.publichealth.hscni.net/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "critical_infrastructure": [
+        {
+          "name": "Department for Infrastructure NI",
+          "url": "https://www.infrastructure-ni.gov.uk/",
+          "authority_scope": "local",
+          "evidence_url": "https://www.infrastructure-ni.gov.uk/",
+          "verification": "curated_candidate",
+          "access": "not_live_tested"
+        }
+      ],
+      "status": "curated_candidates_not_live_verified"
     },
     "FR-NC": {
       "name_en": "New Caledonia",
