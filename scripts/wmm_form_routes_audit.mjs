@@ -10,7 +10,7 @@ const BASE = "https://radar.wmm-hoa.com";
 const SAFE_NEXT = /^\/(?:ko|en|es|fr|ar|vi|id)\/(?:thanks|consortium\/thanks)\/$/;
 
 function attr(tag,name) {
-  const match=tag.match(new RegExp("(?:^|\\s)"+name.replace(/[-/\\^$*+?.()|[\]{}]/g,"\\$&")+"\\s*=\\s*([\"'])(.*?)\\1","i"));
+  const match=tag.match(new RegExp("(?:^|\\s)"+name+"\\s*=\\s*([\"'])(.*?)\\1","i"));
   return match?.[2]??null;
 }
 function* htmlFiles(root) {
