@@ -20,9 +20,9 @@ python3 tools/text_wrap.py || exit 1   # Korean line breaking on every page (aft
 python3 tools/cf_variant.py dist cf/public
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public
-# P0 SEO gate: ensure site map & robots are complete AFTER all Cloudflare overlays.
-# Fails closed on missing 7-language pages or fewer than 1000 canonical URLs.
-python3 tools/finalize_sitemap.py cf/public --write || { echo 'STOP: sitemap verification failed. No live push.'; exit 1; }
+# P0 SEO gate: verify the existing generated sitemap and robots after Cloudflare overlays.
+# Read-only; NEVER replace a full XML catalog with a partial re-generation.
+python3 tools/finalize_sitemap.py cf/public || { echo 'STOP: generated sitemap verification failed. No live push.'; exit 1; }
 cd /home/claude/govradar-live
 git fetch -q origin live && git reset -q --soft origin/live
 rm -rf public functions && cp -a /home/claude/site/cf/public /home/claude/site/cf/functions .
