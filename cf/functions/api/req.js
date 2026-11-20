@@ -28,9 +28,20 @@ export async function onRequestGet({ request, env }) {
 export async function onRequestPost({ request, env }) {
   if (!env.GV_DB) return json({ error: "not_configured" }, 503);
   let b; try { b = await request.json(); } catch (e) { return json({ error: "bad" }, 400); }
-  const type = String(b.type || ""), body = String(b.body || "").slice(0, 4000), lang = String(b.lang || "").slice(0, 5);
-  let email = String(b.email || "").trim().toLowerCase();
-  if (!TYPES.includes(type) || !body || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json({ error: "bad" }, 400);
+  // Explicit consent must be verified server-side, not just by the HTML checkbox.
+  // Reject oversized inputs rather than silently truncating a customer's request.
+  if (!b || typeof b !== "object" || Array.isArray(b) || b.privacy_consent !== true) {
+    return json({ error: "privacy_consent_required" }, 400);
+  }
+  const type = typeof b.type === "string" ? b.type : "";
+  const body = typeof b.body === "string" ? b.body.trim() : "";
+  const lang = typeof b.lang === "string" ? b.lang : "en";
+  let email = typeof b.email === "string" ? b.email.trim().toLowerCase() : "";
+  if (!TYPES.includes(type) || !body || body.length > 4000 ||
+      !["ko", "en", "es", "fr", "ar", "vi", "id"].includes(lang) ||
+      email.length > 254 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    return json({ error: "bad" }, 400);
+  }
   const u = await who(request); if (u) email = u.email || email;
   const key = u ? "u:" + u.id : "e:" + (await sha(email)), now = new Date(), month = kstMonth(now), db = env.GV_DB;
   const dedupe = await sha(type + "|" + body + "|" + email);
