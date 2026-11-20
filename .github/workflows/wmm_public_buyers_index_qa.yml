@@ -1,0 +1,28 @@
+name: GOV RADAR official-source procurement organization index QA (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'tools/build_public_procurement_buyers.py'
+      - 'tests/test_public_procurement_buyers.py'
+      - 'tests/test_public_procurement_buyers_html.py'
+      - 'src/web/public_procurement_buyers.html'
+      - '.github/workflows/wmm_public_buyers_index_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-index:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify source allowlist, stale exclusions, deduplication and privacy
+        run: |
+          python -m unittest discover -s tests -p 'test_public_procurement_buyers.py' -v
+          python -m py_compile tools/build_public_procurement_buyers.py
+          python -m unittest discover -s tests -p 'test_public_procurement_buyers_html.py' -v
