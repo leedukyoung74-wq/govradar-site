@@ -32,6 +32,93 @@
         "evidence_url": "https://u.ae/en/information-and-services/finance-and-investment/foreign-direct-investment"
       }
     ],
+    "AL": [
+      {
+        "name_ko": "APP · 알바니아 국가조달 공고",
+        "name_en": "Albanian Public Procurement Agency · Contract Notices",
+        "category": "procurement",
+        "url": "https://www.app.gov.al/contract-notice/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.app.gov.al/contract-notice/"
+      },
+      {
+        "name_ko": "AIDA · 국가투자개발청",
+        "name_en": "Albanian Investment Development Agency",
+        "category": "investment",
+        "url": "https://aida.gov.al/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://aida.gov.al/"
+      },
+      {
+        "name_ko": "e-Albania · 정부 기업 행정서비스",
+        "name_en": "e-Albania · Government Business Services",
+        "category": "support",
+        "url": "https://e-albania.al/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://e-albania.al/"
+      }
+    ],
+    "AR": [
+      {
+        "name_ko": "COMPR.AR · 국가 공공조달",
+        "name_en": "Argentina COMPR.AR · Government Procurement",
+        "category": "procurement",
+        "url": "https://comprar.gob.ar/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.trade.gov/country-commercial-guides/argentina-selling-public-sector"
+      },
+      {
+        "name_ko": "생산경제부 · 중소기업 개발프로그램",
+        "name_en": "Argentina Government · SME Productive Development",
+        "category": "support",
+        "url": "https://www.argentina.gob.ar/servicio/presentar-la-rendicion-del-programa-desarrollo-productivo-pyme",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.argentina.gob.ar/servicio/presentar-la-rendicion-del-programa-desarrollo-productivo-pyme"
+      },
+      {
+        "name_ko": "국가 투자·무역진흥청",
+        "name_en": "Argentina Investment and International Trade Agency",
+        "category": "investment",
+        "url": "https://www.inversionycomercio.ar/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ticaret.gov.tr/yurtdisi-teskilati/guney-amerika/arjantin/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari"
+      }
+    ],
+    "AT": [
+      {
+        "name_ko": "USP · 오스트리아 전자입찰 검색",
+        "name_en": "USP Austria · Government eProcurement Search",
+        "category": "procurement",
+        "url": "https://www.usp.gv.at/en/services/ausschreibungssuche.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.usp.gv.at/en/services/ausschreibungssuche.html"
+      },
+      {
+        "name_ko": "aws · 연방 기업지원은행",
+        "name_en": "Austria Wirtschaftsservice · Federal Business Grants",
+        "category": "support",
+        "url": "https://www.aws.at/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.aws.at/en/about-us/legal-basis-owners/"
+      },
+      {
+        "name_ko": "ABA · 오스트리아 투자진흥청",
+        "name_en": "Austria Business Agency · Invest in Austria",
+        "category": "investment",
+        "url": "https://aba.gv.at/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://aba.gv.at/en/terms-of-use/"
+      }
+    ],
     "AU": [
       {
         "name_ko": "AusTender · 연방 조달",
@@ -61,6 +148,35 @@
         "evidence_url": "https://sellingtogov.finance.gov.au/"
       }
     ],
+    "BA": [
+      {
+        "name_ko": "e-Nabavke · 보스니아 국가조달",
+        "name_en": "Bosnia and Herzegovina e-Procurement",
+        "category": "procurement",
+        "url": "https://next.ejn.gov.ba/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ejn.gov.ba/"
+      },
+      {
+        "name_ko": "FMRPO · 중소기업·공예 지원부",
+        "name_en": "Federation SME and Crafts Development Ministry",
+        "category": "support",
+        "url": "https://fmrpo.gov.ba/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://fmrpo.gov.ba/"
+      },
+      {
+        "name_ko": "FIPA · 국가 외국인투자진흥청",
+        "name_en": "Bosnia and Herzegovina Foreign Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://fipa.gov.ba/en/services",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://fipa.gov.ba/en/services"
+      }
+    ],
     "BD": [
       {
         "name_ko": "방글라데시 공공조달청 · 전자입찰",
@@ -88,6 +204,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://smef.gov.bd/"
+      }
+    ],
+    "BE": [
+      {
+        "name_ko": "BOSA · 벨기에 연방 공공조달",
+        "name_en": "Belgian Federal e-Procurement Platform",
+        "category": "procurement",
+        "url": "https://www.publicprocurement.be/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://business.belgium.be/manage-a-business/your-products-or-services/participate-in-public-procurement-procedures"
+      },
+      {
+        "name_ko": "VLAIO · 플랑드르 정부 기업지원",
+        "name_en": "Flanders Innovation & Entrepreneurship · Subsidies",
+        "category": "support",
+        "url": "https://www.vlaio.be/en/guidance-advice/vlaio-supports-foreign-investors/government-support",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.vlaio.be/en/guidance-advice/vlaio-supports-foreign-investors/government-support"
+      },
+      {
+        "name_ko": "FIT · 플랑드르 국가·지역 무역투자진흥",
+        "name_en": "Flanders Investment & Trade · Export Support",
+        "category": "investment",
+        "url": "https://flandersinvestmentandtrade.be/en/subsidies",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://flandersinvestmentandtrade.be/en/subsidies"
       }
     ],
     "BG": [
@@ -264,6 +409,35 @@
         "evidence_url": "https://procolombia.co/"
       }
     ],
+    "CY": [
+      {
+        "name_ko": "키프로스 정부 · 전자조달",
+        "name_en": "Cyprus Treasury · Government eProcurement",
+        "category": "procurement",
+        "url": "https://publicprocurement.gov.cy/monades/eprocurement/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.cy/en/service/eprocurement/"
+      },
+      {
+        "name_ko": "정부 연구혁신재단 · 자금지원 공모",
+        "name_en": "Cyprus Funding Programmes Portal",
+        "category": "support",
+        "url": "https://www.fundingprogrammesportal.gov.cy/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.fundingprogrammesportal.gov.cy/en/call/public-procurement-of-innovation-for-security-en-2026/"
+      },
+      {
+        "name_ko": "Invest Cyprus · 국가 투자진흥",
+        "name_en": "Invest Cyprus · Government Investment Promotion",
+        "category": "investment",
+        "url": "https://www.investcyprus.org.cy/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investcyprus.org.cy/"
+      }
+    ],
     "CZ": [
       {
         "name_ko": "NEN · 국가전자조달",
@@ -349,6 +523,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://um.dk/sydkorea/en/the-trade-council/invest-in-denmark"
+      }
+    ],
+    "EE": [
+      {
+        "name_ko": "RHR · 에스토니아 국가조달등록부",
+        "name_en": "Estonian Public Procurement Register",
+        "category": "procurement",
+        "url": "https://riigihanked.riik.ee/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://fin.ee/en/public-procurement-state-aid-and-assets/public-procurement-policy/public-procurement-register"
+      },
+      {
+        "name_ko": "EIS · 기업혁신청 지원금",
+        "name_en": "Estonian Business and Innovation Agency · Grants",
+        "category": "support",
+        "url": "https://eis.ee/en/services/development-grant/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://eis.ee/en/services/development-grant/"
+      },
+      {
+        "name_ko": "Invest in Estonia · 국가 투자진흥",
+        "name_en": "Invest in Estonia · Government Investment Agency",
+        "category": "investment",
+        "url": "https://investinestonia.com/business-in-estonia/incentives/our-grants/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investinestonia.com/large-scale-investment-grant/"
       }
     ],
     "EG": [
@@ -496,6 +699,35 @@
         "evidence_url": "https://www.gca.gov.uk/how-to-supply/find-tender-opportunities"
       }
     ],
+    "GE": [
+      {
+        "name_ko": "SPA · 조지아 국가전자조달",
+        "name_en": "Georgia State Procurement Agency · Tenders",
+        "category": "procurement",
+        "url": "https://tenders.procurement.gov.ge/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://tenders.procurement.gov.ge/"
+      },
+      {
+        "name_ko": "Enterprise Georgia · 기업지원",
+        "name_en": "Enterprise Georgia · Government Enterprise Support",
+        "category": "support",
+        "url": "https://www.enterprisegeorgia.gov.ge/en/home",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.enterprisegeorgia.gov.ge/en/home/about"
+      },
+      {
+        "name_ko": "Invest in Georgia · 투자진흥",
+        "name_en": "Invest in Georgia · Official Investment Promotion",
+        "category": "investment",
+        "url": "https://www.investingeorgia.org/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investingeorgia.org/"
+      }
+    ],
     "GH": [
       {
         "name_ko": "GHANEPS · 정부조달",
@@ -525,6 +757,35 @@
         "evidence_url": "https://gipc.gov.gh/about-gipc/"
       }
     ],
+    "GR": [
+      {
+        "name_ko": "ESIDIS · 그리스 정부 전자조달",
+        "name_en": "Greek eProcurement · Promitheus Portal",
+        "category": "procurement",
+        "url": "https://www.eprocurement.gov.gr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://portal.eprocurement.gov.gr/esidisportal/node/368"
+      },
+      {
+        "name_ko": "ESPA · 그리스 EU 공동지원금",
+        "name_en": "ESPA · Greek National EU Funding Framework",
+        "category": "support",
+        "url": "https://www.espa.gr/en/Pages/default.aspx",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.espa.gr/en/pages/operationslist.aspx"
+      },
+      {
+        "name_ko": "Enterprise Greece · 국가 투자진흥",
+        "name_en": "Enterprise Greece · State Investment Promotion",
+        "category": "investment",
+        "url": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-helpdesk/financing-for-your-investment",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-helpdesk/financing-for-your-investment"
+      }
+    ],
     "HR": [
       {
         "name_ko": "EOJN RH · 크로아티아 국가조달",
@@ -552,6 +813,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://investcroatia.gov.hr/en/hamag-bicro/"
+      }
+    ],
+    "HU": [
+      {
+        "name_ko": "Közbeszerzési Hatóság · 헝가리 공공조달청",
+        "name_en": "Hungarian Public Procurement Authority",
+        "category": "procurement",
+        "url": "https://www.kozbeszerzes.hu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.kozbeszerzes.hu/"
+      },
+      {
+        "name_ko": "Pályázat.gov.hu · 정부 사업자금 공모",
+        "name_en": "Palyazat.gov.hu · Hungarian Government Grants",
+        "category": "support",
+        "url": "https://www.palyazat.gov.hu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.palyazat.gov.hu/"
+      },
+      {
+        "name_ko": "HIPA · 국가 투자진흥청",
+        "name_en": "Hungarian Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://hipa.hu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://hipa.hu/news/Hungary-HIPA-investment-incentive-decision-making-restart/"
       }
     ],
     "ID": [
@@ -784,6 +1074,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://investlithuania.com/"
+      }
+    ],
+    "LU": [
+      {
+        "name_ko": "Luxembourg Marchés Publics · 조달공고",
+        "name_en": "Luxembourg Public Contracts Portal",
+        "category": "procurement",
+        "url": "https://marches.public.lu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://guichet.public.lu/en/entreprises/gestion-juridique-comptabilite/marche-public-concession/appel-offre/consulter-annonces-marches-publics.html"
+      },
+      {
+        "name_ko": "Guichet.lu · 중소기업 투자지원",
+        "name_en": "Guichet.lu · Government SME Investment Aid",
+        "category": "support",
+        "url": "https://guichet.public.lu/en/entreprises/financement-aides/regime-pme/aides-generales-pme/aide-investissement.html",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://guichet.public.lu/en/entreprises/financement-aides/regime-pme/aides-generales-pme/aide-investissement.html"
+      },
+      {
+        "name_ko": "Luxinnovation · 경제부 혁신지원",
+        "name_en": "Luxinnovation · National Innovation Agency",
+        "category": "investment",
+        "url": "https://luxinnovation.lu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://guichet.public.lu/en/entreprises/financement-aides/regime-pme/aide-infrastructures-charges-portees-pme.html"
       }
     ],
     "LV": [
@@ -1134,6 +1453,64 @@
         "evidence_url": "https://www.gov.pt/entidades/agencia-para-o-investimento-e-comercio-externo-de-portugal"
       }
     ],
+    "RO": [
+      {
+        "name_ko": "SEAP · 루마니아 공공조달",
+        "name_en": "Romanian SEAP · Public Procurement System",
+        "category": "procurement",
+        "url": "https://www.e-licitatie.ro/pub",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.e-licitatie.ro/pub"
+      },
+      {
+        "name_ko": "MIPE · 루마니아 EU 자금 공모",
+        "name_en": "Romania Ministry of European Investments · Funding",
+        "category": "support",
+        "url": "https://oportunitati-ue.gov.ro/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://oportunitati-ue.gov.ro/"
+      },
+      {
+        "name_ko": "Invest Romania · 국가 투자진흥",
+        "name_en": "Invest Romania · Government Investment Promotion",
+        "category": "investment",
+        "url": "https://investromania.gov.ro/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investromania.gov.ro/"
+      }
+    ],
+    "RS": [
+      {
+        "name_ko": "공공조달청 · 국가입찰포털",
+        "name_en": "Serbia Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://jnportal.ujn.gov.rs/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://jnportal.ujn.gov.rs/"
+      },
+      {
+        "name_ko": "경제부 · 중소기업 보조금 공모",
+        "name_en": "Serbia Ministry of Economy · Public SME Calls",
+        "category": "support",
+        "url": "https://www.privreda.gov.rs/lat/usluge/javni-pozivi",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.privreda.gov.rs/lat/usluge/javni-pozivi/javni-poziv-za-dodelu-bespovratnih-sredstava-po-stvaraoci-srbije-opsti-program-finansijske-podrske"
+      },
+      {
+        "name_ko": "RAS · 개발투자진흥청",
+        "name_en": "Development Agency of Serbia · Government Investment",
+        "category": "investment",
+        "url": "https://ras.gov.rs/en/about-us/our-services",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ras.gov.rs/en/about-us/our-organization"
+      }
+    ],
     "SA": [
       {
         "name_ko": "Etimad · 정부 입찰",
@@ -1335,6 +1712,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.invest.gov.tr/en/pages/who-we-are.aspx"
+      }
+    ],
+    "UA": [
+      {
+        "name_ko": "Prozorro · 우크라이나 전자조달",
+        "name_en": "Ukraine Prozorro Public Procurement",
+        "category": "procurement",
+        "url": "https://prozorro.gov.ua/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.eoiukraine.gov.in/business-cont.php"
+      },
+      {
+        "name_ko": "Diia.Business · 중소기업 보조금",
+        "name_en": "Diia.Business · Government SME Grants",
+        "category": "support",
+        "url": "https://business.diia.gov.ua/finance/grant_na_vlasnu_spravu",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://business.diia.gov.ua/finance/grant_na_vlasnu_spravu"
+      },
+      {
+        "name_ko": "UkraineInvest · 투자진흥청",
+        "name_en": "UkraineInvest · Investment Promotion Office",
+        "category": "investment",
+        "url": "https://ukraineinvest.gov.ua/en/industries/ukraine-investment-portal-eng/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ukraineinvest.gov.ua/en/industries/ukraine-investment-portal-eng/"
       }
     ],
     "US": [
