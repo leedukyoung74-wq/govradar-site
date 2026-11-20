@@ -1143,6 +1143,38 @@
         "evidence_url": "https://procomer.com/"
       }
     ],
+    "CU": [
+      {
+        "name_ko": "관보 · 쿠바 공공계약·외국인투자 법규",
+        "name_en": "Cuba Official Gazette · State Contracting and Investment Regulation",
+        "category": "procurement",
+        "url": "https://www.gacetaoficial.gob.cu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.icex.es/content/dam/es/icex/oficinas/060/documentos/2024/04/anexos/iec-cuba-2024.pdf",
+        "notes": "Official institutional attribution from UNIDO/ICEX; site URLs were not accessible to the verification browser (timeouts). Gazette is legal source, NOT active tender registry. Do not claim operational availability."
+      },
+      {
+        "name_ko": "ProCuba · 국립 무역·기업지원 포털",
+        "name_en": "Cuba ProCuba · Ministry of Foreign Trade Business Support",
+        "category": "support",
+        "url": "https://portalic.mincex.gob.cu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://conabi.cu/blog/para-hacer-negocios-con-cuba-debe-tener-en-cuenta-los-siguientes-aspectos",
+        "notes": "Official institutional attribution from UNIDO/ICEX; site URLs were not accessible to the verification browser (timeouts). Gazette is legal source, NOT active tender registry. Do not claim operational availability."
+      },
+      {
+        "name_ko": "MINCEX · 국가 외국인투자 안내",
+        "name_en": "Cuba MINCEX · Government Foreign Investment Portal",
+        "category": "investment",
+        "url": "https://inviertaencuba.mincex.gob.cu/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://hub.unido.org/news/unido-launches-investment-promotion-platform-cuba",
+        "notes": "Official institutional attribution from UNIDO/ICEX; site URLs were not accessible to the verification browser (timeouts). Gazette is legal source, NOT active tender registry. Do not claim operational availability."
+      }
+    ],
     "CV": [
       {
         "name_ko": "ARAP · 카보베르데 공공조달청",
@@ -1956,6 +1988,38 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.mineco.gob.gt/compras-directas"
+      }
+    ],
+    "GW": [
+      {
+        "name_ko": "ARCP · 기니비사우 국가 조달규제청",
+        "name_en": "Guinea-Bissau ARCP · Public Procurement Regulation and Notices",
+        "category": "procurement",
+        "url": "https://arcp.gw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://arcp.gw/arcp/sobre",
+        "notes": "Institutional affiliation of newer .gw ministry-branded services requires independent governmental/registrar confirmation before release."
+      },
+      {
+        "name_ko": "eCitizen · 정부 사업자등록·행정지원",
+        "name_en": "Guinea-Bissau eCitizen · Public Business Services",
+        "category": "support",
+        "url": "https://ecitizen.mkba.net/home",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ecitizen.mkba.net/about",
+        "notes": "Institutional affiliation of newer .gw ministry-branded services requires independent governmental/registrar confirmation before release."
+      },
+      {
+        "name_ko": "Invest Guinea-Bissau · 공공 투자 포털",
+        "name_en": "Guinea-Bissau Investment Opportunities · Ministry of Justice Initiative",
+        "category": "investment",
+        "url": "https://investingb.gw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investingb.gw/pt/about",
+        "notes": "Institutional affiliation of newer .gw ministry-branded services requires independent governmental/registrar confirmation before release."
       }
     ],
     "GY": [
