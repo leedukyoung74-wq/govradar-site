@@ -74,6 +74,54 @@ test("checked marketing checkbox records an actual consent timestamp",async()=>{
   assert.equal(data.marketing_at,data.marketing_decision_at);
 });
 
+test("existing member choosing No sends marketing:false with cleared consent timestamp",async()=>{
+  const nodes = new Map();
+  for (const id of ["#authm","#authx","#auth-google","#authf","#loginbtn"]) {
+    nodes.set(id,{hidden:false,handlers:{},classList:{toggle(){}},
+      addEventListener(name,fn){this.handlers[name]=fn}});
+  }
+  let modal, openConsentDialog;
+  const documentHandlers = {};
+  const created = tag=>({
+    tag,children:[],style:{},id:"",textContent:"",
+    setAttribute(){},remove(){},
+    appendChild(el){this.children.push(el);}
+  });
+  const doc = {
+    querySelector:id=>nodes.get(id),querySelectorAll:()=>[],
+    getElementById:()=>null,documentElement:{dataset:{}},
+    addEventListener:(name,fn)=>documentHandlers[name]=fn,
+    createElement:created,body:{appendChild(el){if(el.id==="mktask")modal=el;}}
+  };
+  const session={access_token:"mock-session-token",refresh_token:"mock-refresh",
+    expires_at:Date.now()+600000,user:{id:"test-user",user_metadata:{}}};
+  const storage={getItem:()=>JSON.stringify(session),setItem(){},removeItem(){}};
+  const requests=[];
+  const fetchFn=async (url,options)=>{
+    if (!url.endsWith("/user") || options.method!=="PUT") throw Error("Unexpected network call");
+    requests.push(JSON.parse(options.body));
+    return {ok:true,text:async()=>JSON.stringify({id:"test-user",user_metadata:{marketing:false}})};
+  };
+  const win={RADAR_LANG:"en",RADAR_AT:{}};
+  vm.runInNewContext(authSource,{
+    window:win,document:doc,localStorage:storage,sessionStorage:storage,
+    fetch:fetchFn,setTimeout(fn,ms){if(ms===1200)openConsentDialog=fn;return 1;},
+    location:{hash:"",pathname:"/en/",search:""},history:{replaceState(){}},
+    Date,URLSearchParams,Error,JSON,String,encodeURIComponent
+  },{timeout:1000,filename:"auth.js"});
+  documentHandlers.DOMContentLoaded();
+  assert.equal(typeof openConsentDialog,"function");
+  openConsentDialog();
+  assert.ok(modal,"Marketing choice dialog must appear");
+  const buttons=modal.children.find(el=>el.tag==="div").children;
+  assert.equal(buttons.length,2);
+  await buttons[1].onclick();
+  assert.equal(requests.length,1);
+  assert.equal(requests[0].data.marketing,false);
+  assert.equal(requests[0].data.marketing_at,null);
+  assert.match(requests[0].data.marketing_decision_at,/^\d{4}-\d{2}-\d{2}T/);
+});
+
 test("explicit marketing refusal path clears granted-at marker",()=>{
   assert.match(authSource,/marketing_at:\s*v\s*\?\s*decisionAt\s*:\s*null/);
   assert.match(authSource,/marketing_decision_at:\s*decisionAt/);
