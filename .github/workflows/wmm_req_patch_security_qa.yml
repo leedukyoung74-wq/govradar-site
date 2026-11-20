@@ -1,0 +1,31 @@
+name: GOV RADAR buyer intake PATCH security (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - "cf/functions/api/req.js"
+      - "pages_req.py"
+      - "tests/js/req_patch_security_test.mjs"
+      - ".github/workflows/wmm_req_patch_security_qa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  request-security:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify request form generation and server JavaScript
+        run: |
+          python -m py_compile pages_req.py
+          node --check cf/functions/api/req.js
+          node --experimental-sqlite tests/js/req_patch_security_test.mjs
+          node --experimental-sqlite tests/js/req_server_test.mjs
