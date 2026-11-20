@@ -17,11 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          package-manager-cache: false
       - name: Validate Form Pages Function and static auditor syntax
         run: |
           node --check cf/functions/nfform.js
@@ -29,7 +28,7 @@ jobs:
       - name: Test safe relaying and localized form routing (no live submissions)
         run: node --test tests/wmm_form_relay.test.mjs tests/wmm_form_routes_audit.test.mjs
       - name: Checkout existing live files for read-only generated-form audit
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           ref: live
           path: live-branch
