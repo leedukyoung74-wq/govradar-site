@@ -1,6 +1,6 @@
 # GOV RADAR — 193개국 공식 조달·기업지원·투자 기관 카탈로그
 
-**2026-11-21 검토용 등록: 156/193개국 · 468/579개 사이트**. 남은 **37개국·111개**.
+**2026-11-21 검토용 등록: 160/193개국 · 480/579개 사이트**. 남은 **33개국·99개**.
 
 이 표의 '등록'은 정부/공공기관 근거 URL을 명시한 검토용 소스 항목 수를 의미합니다. 해당 기관의 공식 지위·URL 접근·접속 제한·최신 조달 여부 및 API 사용 가능 여부를 전수 확인했다는 뜻은 아닙니다. 옛 HTTP 200 레지스트리 후보는 카운트에서 제외하였으며 운영 사이트에는 배포하지 않았습니다.
 
@@ -187,16 +187,16 @@
 | 미주 | 베네수엘라 / Venezuela | VE | **0** | 3 | — |
 | 오세아니아 | 호주 / Australia | AU | **3** | 0 | [AusTender · Australian Government Tenders](https://www.tenders.gov.au/) · [business.gov.au · Grants Finder](https://business.gov.au/grants-and-programs/) · [Selling to Government · Procurement Guidance](https://sellingtogov.finance.gov.au/) |
 | 오세아니아 | 피지 / Fiji | FJ | **3** | 0 | [Fiji Ministry of Finance · Official e-Tendering](https://portal.tenderlink.com/financefiji/alltenders) · [Fiji Ministry of Trade · Enterprise Support](https://www.mcttt.gov.fj/) · [Investment Fiji · Government Investment Agency](https://investmentfiji.org.fj/) |
-| 오세아니아 | 키리바시 / Kiribati | KI | **0** | 3 | — |
+| 오세아니아 | 키리바시 / Kiribati | KI | **3** | 0 | [Kiribati Central Procurement Unit · Official Tender List](https://www.procurement.gov.ki/tender-list?page=0) · [Kiribati Ministry of Commerce · Business Promotion Centre](https://mtcic.gov.ki/business-promotion-centre/) · [Kiribati Investment Promotion Division · Official](https://www.investinkiribati.mtcic.gov.ki/) |
 | 오세아니아 | 마셜 제도 / Marshall Islands | MH | **0** | 3 | — |
-| 오세아니아 | 미크로네시아 / Micronesia | FM | **0** | 3 | — |
+| 오세아니아 | 미크로네시아 / Micronesia | FM | **3** | 0 | [FSM Department of Finance · Official Procurement Opportunities](https://dofa.gov.fm/opportunity/) · [FSM Development Bank · Public SME Financing](https://www.fsmdb.fm/fsmdb-products/business-term-loans/) · [FSM Department of Resources & Development · Trade and Investment](https://rd.gov.fm/trade-and-investment) |
 | 오세아니아 | 나우루 / Nauru | NR | **0** | 3 | — |
 | 오세아니아 | 뉴질랜드 / New Zealand | NZ | **3** | 0 | [GETS · New Zealand Government Electronic Tenders](https://www.gets.govt.nz/ExternalIndex.htm) · [Business.govt.nz · Government Business Support](https://www.business.govt.nz/) · [NZTE · Government Trade & Enterprise Support](https://www.nzte.govt.nz/) |
-| 오세아니아 | 팔라우 / Palau | PW | **0** | 3 | — |
+| 오세아니아 | 팔라우 / Palau | PW | **3** | 0 | [Palau Government · Official Bids and RFPs](https://www.palaugov.pw/rfp-bids/) · [Palau Government Small Business Development Center](https://www.palaugov.pw/executive-branch/ministries/public-infrastructure/small-business-development-center/) · [Palau Foreign Investment Board · Government](https://www.palaugov.pw/fib/) |
 | 오세아니아 | 파푸아뉴기니 / Papua New Guinea | PG | **3** | 0 | [Papua New Guinea National Procurement Commission](https://npc.gov.pg/tender-advertisement/) · [PNG Small and Medium Enterprises Corporation](https://www.smecorp.gov.pg/) · [PNG Investment Promotion Authority](https://www.ipa.gov.pg/) |
 | 오세아니아 | 사모아 / Samoa | WS | **3** | 0 | [Samoa Ministry of Finance · e-Tendering](https://portal.tenderlink.com/mof_samoa/alltenders/) · [Samoa Ministry of Commerce · SME Industry Development](https://mcil.gov.ws/services/industry) · [Samoa Government Online Business Registries](https://businessregistries.gov.ws/) |
 | 오세아니아 | 솔로몬 제도 / Solomon Islands | SB | **3** | 0 | [Solomon Islands Government Tender Portal](https://solomons.gov.sb/portal_tender/) · [Solomon Islands Commerce Ministry · SME Support](https://commerce.gov.sb/business-and-cooperatives-development/) · [Solomon Islands InvestSolomons · Government Investment](https://www.investsolomons.gov.sb/) |
-| 오세아니아 | 통가 / Tonga | TO | **0** | 3 | — |
+| 오세아니아 | 통가 / Tonga | TO | **3** | 0 | [Tonga Ministry of Finance · Government Procurement](https://www.finance.gov.to/index.php/node/170) · [Tonga Ministry of Trade and Economic Development · Business Support](https://www.mted.gov.to/business-support-marketing-promotion/) · [Invest Tonga · National Investment Promotion](https://www.investtonga.gov.to/) |
 | 오세아니아 | 투발루 / Tuvalu | TV | **0** | 3 | — |
 | 오세아니아 | 바누아투 / Vanuatu | VU | **3** | 0 | [Vanuatu Central Tender Board · Official Notices](https://ctb.gov.vu/en/) · [Vanuatu Ministry of Trade & Commerce · Enterprise Services](https://mtc.gov.vu/) · [Vanuatu Foreign Investment Promotion Agency](https://investvanuatu.vu/) |
 
