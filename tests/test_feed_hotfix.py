@@ -59,6 +59,11 @@ class SafeConcurrentPublication(unittest.TestCase):
         self.assertIn("python ../tools/quality_gate.py .", workflow)
         self.assertNotIn("git push --force", workflow)
 
+    def test_review_runs_have_own_queue_and_live_writer_cannot_be_cancelled(self):
+        workflow = (ROOT / ".github/workflows/feeds.yml").read_text(encoding="utf-8")
+        self.assertIn("github.head_ref || github.ref_name", workflow)
+        self.assertIn('cancel-in-progress: "${{ inputs.dry_run }}"', workflow)
+
     def test_dedicated_hazard_publisher_still_stages_official_json(self):
         workflow = (ROOT / ".github/workflows/wmm_fast_official.yml").read_text(encoding="utf-8")
         self.assertIn("git add hz/official.json", workflow)
