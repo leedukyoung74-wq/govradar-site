@@ -1,116 +1,226 @@
 {
-"note": "Titles translated by Claude for GOV RADAR (not an official translation). Key = original title as in feeds/today.json.",
-"updated": "2026-11-17T00:12Z",
-"items": {
-"Photocopying and offset printing equipment – Új nyomatelőállító eszk. és kapcs. szolg. (FMNY26)": {
-"ko": "복사·오프셋 인쇄 장비 – 신규 인쇄 장비 및 관련 서비스 (FMNY26)",
-"en": "Photocopying and offset printing equipment – new print production equipment and related services (FMNY26)",
-"es": "Equipos de fotocopiado e impresión offset – nuevos equipos de impresión y servicios relacionados (FMNY26)",
-"fr": "Matériel de photocopie et d'impression offset – nouveaux équipements d'impression et services associés (FMNY26)",
-"ar": "معدات النسخ والطباعة الأوفست – معدات طباعة جديدة وخدمات مرتبطة بها (FMNY26)",
-"vi": "Thiết bị photocopy và in offset – thiết bị in mới và dịch vụ liên quan (FMNY26)",
-"id": "Peralatan fotokopi dan cetak offset – peralatan cetak baru dan layanan terkait (FMNY26)",
-"src": "hu"
-},
-"Реконструкція автомобільної дороги М-06 Київ-Чоп (на Будапешт через Львів, Мукачеве, Ужгород) на ділянці км 129,6 – км 151,73, Житомирська о": {
-"ko": "M-06 키이우–촙 도로 재건(르비우·무카체베·우즈호로드 경유 부다페스트 방면), km 129.6~151.73 구간, 지토미르주",
-"en": "Reconstruction of the M-06 Kyiv–Chop road (towards Budapest via Lviv, Mukachevo, Uzhhorod), km 129.6–151.73, Zhytomyr region",
-"es": "Reconstrucción de la carretera M-06 Kiev–Chop (hacia Budapest por Leópolis, Mukachevo y Úzhgorod), km 129,6–151,73, región de Zhitómir",
-"fr": "Reconstruction de la route M-06 Kyiv–Tchop (vers Budapest via Lviv, Moukatchevo, Oujhorod), du km 129,6 au km 151,73, oblast de Jytomyr",
-"ar": "إعادة بناء الطريق M-06 كييف–تشوب (باتجاه بودابست عبر لفيف وموكاتشيفو وأوجهورود)، من الكيلومتر 129.6 إلى 151.73، منطقة جيتومير",
-"vi": "Cải tạo đường M-06 Kyiv–Chop (hướng Budapest qua Lviv, Mukachevo, Uzhhorod), đoạn km 129,6–151,73, tỉnh Zhytomyr",
-"id": "Rekonstruksi jalan M-06 Kyiv–Chop (menuju Budapest melalui Lviv, Mukachevo, Uzhhorod), ruas km 129,6–151,73, wilayah Zhytomyr",
-"src": "uk"
-},
-"Modern Apprenticeship Services - Learning Provider and Employer 2027-2028": {
-"ko": "현대 도제(견습) 훈련 서비스 – 교육기관·고용주 대상, 2027~2028",
-"en": "Modern Apprenticeship Services - Learning Provider and Employer 2027-2028",
-"es": "Servicios de aprendizaje moderno (Modern Apprenticeship) – centro de formación y empleador, 2027-2028",
-"fr": "Services d'apprentissage moderne (Modern Apprenticeship) – organisme de formation et employeur, 2027-2028",
-"ar": "خدمات التلمذة المهنية الحديثة – لمقدمي التدريب وأصحاب العمل، 2027-2028",
-"vi": "Dịch vụ học nghề hiện đại – cho đơn vị đào tạo và người sử dụng lao động, 2027-2028",
-"id": "Layanan magang modern – untuk penyedia pelatihan dan pemberi kerja, 2027-2028",
-"src": "en"
-},
-"Shropshire 0-25 Public Health Nursing Service (PHNS)": {
-"ko": "슈롭셔 0~25세 공중보건 간호 서비스(PHNS)",
-"en": "Shropshire 0-25 Public Health Nursing Service (PHNS)",
-"es": "Servicio de enfermería de salud pública de 0 a 25 años de Shropshire (PHNS)",
-"fr": "Service infirmier de santé publique 0-25 ans du Shropshire (PHNS)",
-"ar": "خدمة تمريض الصحة العامة للفئة العمرية 0-25 في شروبشاير (PHNS)",
-"vi": "Dịch vụ điều dưỡng y tế công cộng cho lứa tuổi 0-25 tại Shropshire (PHNS)",
-"id": "Layanan keperawatan kesehatan masyarakat usia 0-25 di Shropshire (PHNS)",
-"src": "en"
-},
-"ESMASP - Real Estate Agent": {
-"ko": "ESMASP – 부동산 중개인 선정",
-"en": "ESMASP - Real Estate Agent",
-"es": "ESMASP – Agente inmobiliario",
-"fr": "ESMASP – Agent immobilier",
-"ar": "ESMASP – وكيل عقاري",
-"vi": "ESMASP – Đại lý bất động sản",
-"id": "ESMASP – Agen properti",
-"src": "en"
-},
-"Motorway construction works – D55, 5506 Napajedla - Babice": {
-"ko": "고속도로 건설 공사 – D55 고속도로 5506 구간(나파예들라~바비체)",
-"en": "Motorway construction works – D55, 5506 Napajedla - Babice",
-"es": "Obras de construcción de autopista – D55, tramo 5506 Napajedla - Babice",
-"fr": "Travaux de construction d'autoroute – D55, section 5506 Napajedla - Babice",
-"ar": "أعمال إنشاء طريق سريع – D55، المقطع 5506 نابايدلا - بابيتسه",
-"vi": "Thi công đường cao tốc – D55, đoạn 5506 Napajedla - Babice",
-"id": "Pekerjaan konstruksi jalan tol – D55, ruas 5506 Napajedla - Babice",
-"src": "en"
-},
-"Procurement of Transcutaneous Non-Invasive Blood Gas Monitor (7 unit)": {
-"ko": "경피적 비침습 혈액가스 모니터 구매(7대)",
-"en": "Procurement of Transcutaneous Non-Invasive Blood Gas Monitor (7 unit)",
-"es": "Adquisición de monitores transcutáneos no invasivos de gases en sangre (7 unidades)",
-"fr": "Achat de moniteurs transcutanés non invasifs des gaz du sang (7 unités)",
-"ar": "شراء أجهزة مراقبة غازات الدم غير الجراحية عبر الجلد (7 وحدات)",
-"vi": "Mua sắm máy theo dõi khí máu qua da không xâm lấn (7 máy)",
-"id": "Pengadaan monitor gas darah transkutan non-invasif (7 unit)",
-"src": "en"
-},
-"Travaux de six (6) forages de reconnaissance et de six (6) piézomètres": {
-"ko": "탐사 시추공 6개 및 지하수위 관측정(피에조미터) 6개 공사",
-"en": "Works for six (6) exploratory boreholes and six (6) piezometers",
-"es": "Obras de seis (6) sondeos de reconocimiento y seis (6) piezómetros",
-"fr": "Travaux de six (6) forages de reconnaissance et de six (6) piézomètres",
-"ar": "أعمال حفر ستة (6) آبار استكشافية وتركيب ستة (6) بيزومترات لقياس منسوب المياه الجوفية",
-"vi": "Thi công sáu (6) giếng khoan thăm dò và sáu (6) giếng quan trắc mực nước (piezometer)",
-"id": "Pekerjaan enam (6) sumur bor eksplorasi dan enam (6) piezometer",
-"src": "fr"
-},
-"Emergency stocks and Equipment. Lot 1: Supply of emergency stocks and equipment and Lot 2: Supply and Install of Air-Conditioning Units.": {
-"ko": "비상 비축물자·장비 – 1분할: 비상 비축물자·장비 공급, 2분할: 에어컨 공급·설치",
-"en": "Emergency stocks and Equipment. Lot 1: Supply of emergency stocks and equipment and Lot 2: Supply and Install of Air-Conditioning Units.",
-"es": "Existencias y equipos de emergencia. Lote 1: suministro de existencias y equipos de emergencia; Lote 2: suministro e instalación de aparatos de aire acondicionado",
-"fr": "Stocks et équipements d'urgence. Lot 1 : fourniture de stocks et d'équipements d'urgence ; Lot 2 : fourniture et installation de climatiseurs",
-"ar": "مخزونات ومعدات الطوارئ. الحصة 1: توريد مخزونات ومعدات الطوارئ؛ الحصة 2: توريد وتركيب وحدات تكييف الهواء",
-"vi": "Vật tư dự trữ và thiết bị khẩn cấp. Gói 1: cung cấp vật tư dự trữ và thiết bị khẩn cấp; Gói 2: cung cấp và lắp đặt máy điều hòa",
-"id": "Stok dan peralatan darurat. Lot 1: pengadaan stok dan peralatan darurat; Lot 2: pengadaan dan pemasangan unit AC",
-"src": "en"
-},
-"Provision of Generalized Business Development services cohort 3&4 Region 4": {
-"ko": "일반 사업개발 지원 서비스 제공 – 3·4기, 4권역",
-"en": "Provision of Generalized Business Development services cohort 3&4 Region 4",
-"es": "Prestación de servicios generales de desarrollo empresarial, cohortes 3 y 4, Región 4",
-"fr": "Prestation de services généraux de développement des entreprises, cohortes 3 et 4, région 4",
-"ar": "تقديم خدمات عامة لتطوير الأعمال، الدفعتان 3 و4، المنطقة 4",
-"vi": "Cung cấp dịch vụ phát triển kinh doanh tổng quát, khóa 3 và 4, Vùng 4",
-"id": "Penyediaan layanan pengembangan usaha umum, angkatan 3 dan 4, Wilayah 4",
-"src": "en"
-},
-"Provision of Generalized Business Development Services for cohort 3&4 Region 3": {
-"ko": "일반 사업개발 지원 서비스 제공 – 3·4기, 3권역",
-"en": "Provision of Generalized Business Development Services for cohort 3&4 Region 3",
-"es": "Prestación de servicios generales de desarrollo empresarial, cohortes 3 y 4, Región 3",
-"fr": "Prestation de services généraux de développement des entreprises, cohortes 3 et 4, région 3",
-"ar": "تقديم خدمات عامة لتطوير الأعمال، الدفعتان 3 و4، المنطقة 3",
-"vi": "Cung cấp dịch vụ phát triển kinh doanh tổng quát, khóa 3 và 4, Vùng 3",
-"id": "Penyediaan layanan pengembangan usaha umum, angkatan 3 dan 4, Wilayah 3",
-"src": "en"
-}
-}
+ "note": "Titles translated by Claude for GOV RADAR (not an official translation). Key = original title as in feeds/today.json.",
+ "updated": "2026-11-20T22:25Z",
+ "items": {
+  "Photocopying and offset printing equipment – Új nyomatelőállító eszk. és kapcs. szolg. (FMNY26)": {
+   "ko": "복사·오프셋 인쇄 장비 – 신규 인쇄 장비 및 관련 서비스 (FMNY26)",
+   "en": "Photocopying and offset printing equipment – new print production equipment and related services (FMNY26)",
+   "es": "Equipos de fotocopiado e impresión offset – nuevos equipos de impresión y servicios relacionados (FMNY26)",
+   "fr": "Matériel de photocopie et d'impression offset – nouveaux équipements d'impression et services associés (FMNY26)",
+   "ar": "معدات النسخ والطباعة الأوفست – معدات طباعة جديدة وخدمات مرتبطة بها (FMNY26)",
+   "vi": "Thiết bị photocopy và in offset – thiết bị in mới và dịch vụ liên quan (FMNY26)",
+   "id": "Peralatan fotokopi dan cetak offset – peralatan cetak baru dan layanan terkait (FMNY26)",
+   "src": "hu"
+  },
+  "Реконструкція автомобільної дороги М-06 Київ-Чоп (на Будапешт через Львів, Мукачеве, Ужгород) на ділянці км 129,6 – км 151,73, Житомирська о": {
+   "ko": "M-06 키이우–촙 도로 재건(르비우·무카체베·우즈호로드 경유 부다페스트 방면), km 129.6~151.73 구간, 지토미르주",
+   "en": "Reconstruction of the M-06 Kyiv–Chop road (towards Budapest via Lviv, Mukachevo, Uzhhorod), km 129.6–151.73, Zhytomyr region",
+   "es": "Reconstrucción de la carretera M-06 Kiev–Chop (hacia Budapest por Leópolis, Mukachevo y Úzhgorod), km 129,6–151,73, región de Zhitómir",
+   "fr": "Reconstruction de la route M-06 Kyiv–Tchop (vers Budapest via Lviv, Moukatchevo, Oujhorod), du km 129,6 au km 151,73, oblast de Jytomyr",
+   "ar": "إعادة بناء الطريق M-06 كييف–تشوب (باتجاه بودابست عبر لفيف وموكاتشيفو وأوجهورود)، من الكيلومتر 129.6 إلى 151.73، منطقة جيتومير",
+   "vi": "Cải tạo đường M-06 Kyiv–Chop (hướng Budapest qua Lviv, Mukachevo, Uzhhorod), đoạn km 129,6–151,73, tỉnh Zhytomyr",
+   "id": "Rekonstruksi jalan M-06 Kyiv–Chop (menuju Budapest melalui Lviv, Mukachevo, Uzhhorod), ruas km 129,6–151,73, wilayah Zhytomyr",
+   "src": "uk"
+  },
+  "Modern Apprenticeship Services - Learning Provider and Employer 2027-2028": {
+   "ko": "현대 도제(견습) 훈련 서비스 – 교육기관·고용주 대상, 2027~2028",
+   "en": "Modern Apprenticeship Services - Learning Provider and Employer 2027-2028",
+   "es": "Servicios de aprendizaje moderno (Modern Apprenticeship) – centro de formación y empleador, 2027-2028",
+   "fr": "Services d'apprentissage moderne (Modern Apprenticeship) – organisme de formation et employeur, 2027-2028",
+   "ar": "خدمات التلمذة المهنية الحديثة – لمقدمي التدريب وأصحاب العمل، 2027-2028",
+   "vi": "Dịch vụ học nghề hiện đại – cho đơn vị đào tạo và người sử dụng lao động, 2027-2028",
+   "id": "Layanan magang modern – untuk penyedia pelatihan dan pemberi kerja, 2027-2028",
+   "src": "en"
+  },
+  "Shropshire 0-25 Public Health Nursing Service (PHNS)": {
+   "ko": "슈롭셔 0~25세 공중보건 간호 서비스(PHNS)",
+   "en": "Shropshire 0-25 Public Health Nursing Service (PHNS)",
+   "es": "Servicio de enfermería de salud pública de 0 a 25 años de Shropshire (PHNS)",
+   "fr": "Service infirmier de santé publique 0-25 ans du Shropshire (PHNS)",
+   "ar": "خدمة تمريض الصحة العامة للفئة العمرية 0-25 في شروبشاير (PHNS)",
+   "vi": "Dịch vụ điều dưỡng y tế công cộng cho lứa tuổi 0-25 tại Shropshire (PHNS)",
+   "id": "Layanan keperawatan kesehatan masyarakat usia 0-25 di Shropshire (PHNS)",
+   "src": "en"
+  },
+  "ESMASP - Real Estate Agent": {
+   "ko": "ESMASP – 부동산 중개인 선정",
+   "en": "ESMASP - Real Estate Agent",
+   "es": "ESMASP – Agente inmobiliario",
+   "fr": "ESMASP – Agent immobilier",
+   "ar": "ESMASP – وكيل عقاري",
+   "vi": "ESMASP – Đại lý bất động sản",
+   "id": "ESMASP – Agen properti",
+   "src": "en"
+  },
+  "Motorway construction works – D55, 5506 Napajedla - Babice": {
+   "ko": "고속도로 건설 공사 – D55 고속도로 5506 구간(나파예들라~바비체)",
+   "en": "Motorway construction works – D55, 5506 Napajedla - Babice",
+   "es": "Obras de construcción de autopista – D55, tramo 5506 Napajedla - Babice",
+   "fr": "Travaux de construction d'autoroute – D55, section 5506 Napajedla - Babice",
+   "ar": "أعمال إنشاء طريق سريع – D55، المقطع 5506 نابايدلا - بابيتسه",
+   "vi": "Thi công đường cao tốc – D55, đoạn 5506 Napajedla - Babice",
+   "id": "Pekerjaan konstruksi jalan tol – D55, ruas 5506 Napajedla - Babice",
+   "src": "en"
+  },
+  "Procurement of Transcutaneous Non-Invasive Blood Gas Monitor (7 unit)": {
+   "ko": "경피적 비침습 혈액가스 모니터 구매(7대)",
+   "en": "Procurement of Transcutaneous Non-Invasive Blood Gas Monitor (7 unit)",
+   "es": "Adquisición de monitores transcutáneos no invasivos de gases en sangre (7 unidades)",
+   "fr": "Achat de moniteurs transcutanés non invasifs des gaz du sang (7 unités)",
+   "ar": "شراء أجهزة مراقبة غازات الدم غير الجراحية عبر الجلد (7 وحدات)",
+   "vi": "Mua sắm máy theo dõi khí máu qua da không xâm lấn (7 máy)",
+   "id": "Pengadaan monitor gas darah transkutan non-invasif (7 unit)",
+   "src": "en"
+  },
+  "Travaux de six (6) forages de reconnaissance et de six (6) piézomètres": {
+   "ko": "탐사 시추공 6개 및 지하수위 관측정(피에조미터) 6개 공사",
+   "en": "Works for six (6) exploratory boreholes and six (6) piezometers",
+   "es": "Obras de seis (6) sondeos de reconocimiento y seis (6) piezómetros",
+   "fr": "Travaux de six (6) forages de reconnaissance et de six (6) piézomètres",
+   "ar": "أعمال حفر ستة (6) آبار استكشافية وتركيب ستة (6) بيزومترات لقياس منسوب المياه الجوفية",
+   "vi": "Thi công sáu (6) giếng khoan thăm dò và sáu (6) giếng quan trắc mực nước (piezometer)",
+   "id": "Pekerjaan enam (6) sumur bor eksplorasi dan enam (6) piezometer",
+   "src": "fr"
+  },
+  "Emergency stocks and Equipment. Lot 1: Supply of emergency stocks and equipment and Lot 2: Supply and Install of Air-Conditioning Units.": {
+   "ko": "비상 비축물자·장비 – 1분할: 비상 비축물자·장비 공급, 2분할: 에어컨 공급·설치",
+   "en": "Emergency stocks and Equipment. Lot 1: Supply of emergency stocks and equipment and Lot 2: Supply and Install of Air-Conditioning Units.",
+   "es": "Existencias y equipos de emergencia. Lote 1: suministro de existencias y equipos de emergencia; Lote 2: suministro e instalación de aparatos de aire acondicionado",
+   "fr": "Stocks et équipements d'urgence. Lot 1 : fourniture de stocks et d'équipements d'urgence ; Lot 2 : fourniture et installation de climatiseurs",
+   "ar": "مخزونات ومعدات الطوارئ. الحصة 1: توريد مخزونات ومعدات الطوارئ؛ الحصة 2: توريد وتركيب وحدات تكييف الهواء",
+   "vi": "Vật tư dự trữ và thiết bị khẩn cấp. Gói 1: cung cấp vật tư dự trữ và thiết bị khẩn cấp; Gói 2: cung cấp và lắp đặt máy điều hòa",
+   "id": "Stok dan peralatan darurat. Lot 1: pengadaan stok dan peralatan darurat; Lot 2: pengadaan dan pemasangan unit AC",
+   "src": "en"
+  },
+  "Provision of Generalized Business Development services cohort 3&4 Region 4": {
+   "ko": "일반 사업개발 지원 서비스 제공 – 3·4기, 4권역",
+   "en": "Provision of Generalized Business Development services cohort 3&4 Region 4",
+   "es": "Prestación de servicios generales de desarrollo empresarial, cohortes 3 y 4, Región 4",
+   "fr": "Prestation de services généraux de développement des entreprises, cohortes 3 et 4, région 4",
+   "ar": "تقديم خدمات عامة لتطوير الأعمال، الدفعتان 3 و4، المنطقة 4",
+   "vi": "Cung cấp dịch vụ phát triển kinh doanh tổng quát, khóa 3 và 4, Vùng 4",
+   "id": "Penyediaan layanan pengembangan usaha umum, angkatan 3 dan 4, Wilayah 4",
+   "src": "en"
+  },
+  "Provision of Generalized Business Development Services for cohort 3&4 Region 3": {
+   "ko": "일반 사업개발 지원 서비스 제공 – 3·4기, 3권역",
+   "en": "Provision of Generalized Business Development Services for cohort 3&4 Region 3",
+   "es": "Prestación de servicios generales de desarrollo empresarial, cohortes 3 y 4, Región 3",
+   "fr": "Prestation de services généraux de développement des entreprises, cohortes 3 et 4, région 3",
+   "ar": "تقديم خدمات عامة لتطوير الأعمال، الدفعتان 3 و4، المنطقة 3",
+   "vi": "Cung cấp dịch vụ phát triển kinh doanh tổng quát, khóa 3 và 4, Vùng 3",
+   "id": "Penyediaan layanan pengembangan usaha umum, angkatan 3 dan 4, Wilayah 3",
+   "src": "en"
+  },
+  "Repair, maintenance and associated services related to roads and other equipment – BĚŽNÁ A ZIMNÍ ÚDRŽBA SILNIC STŘEDOČESKÉHO KRAJE – OBLAST ": {
+   "ko": "도로 및 기타 설비 관련 보수·유지관리 및 부대 서비스 – 중앙보헤미아주 도로 일상 및 동절기 유지관리 – 구역",
+   "en": "Repair, maintenance and associated services related to roads and other equipment – Routine and winter maintenance of roads in the Central Bohemian Region – Area",
+   "es": "Servicios de reparación, mantenimiento y servicios conexos relacionados con carreteras y otros equipos – Mantenimiento ordinario e invernal de carreteras de la Región de Bohemia Central – Zona",
+   "fr": "Services de réparation, d'entretien et services connexes liés aux routes et autres équipements – Entretien courant et hivernal des routes de la région de Bohême centrale – Secteur",
+   "ar": "خدمات الإصلاح والصيانة والخدمات المرتبطة بالطرق والمعدات الأخرى – الصيانة الدورية والشتوية لطرق إقليم بوهيميا الوسطى – منطقة",
+   "vi": "Dịch vụ sửa chữa, bảo trì và dịch vụ liên quan đến đường bộ và thiết bị khác – Bảo trì thường xuyên và mùa đông đường bộ vùng Trung Bohemia – Khu vực",
+   "id": "Jasa perbaikan, pemeliharaan dan jasa terkait jalan dan peralatan lainnya – Pemeliharaan rutin dan musim dingin jalan di Wilayah Bohemia Tengah – Area",
+   "src": "cs"
+  },
+  "26Т-813_42120000-6 – Насоси та компресори (Комплект газоперекачувального обладнання на базі поршневого компресора з приводом від газопоршнев": {
+   "ko": "26Т-813_42120000-6 – 펌프 및 압축기 (가스피스톤 구동 왕복동 압축기 기반 가스 압송 설비 세트",
+   "en": "26Т-813_42120000-6 – Pumps and compressors (Set of gas pumping equipment based on a piston compressor driven by a gas-piston",
+   "es": "26Т-813_42120000-6 – Bombas y compresores (Conjunto de equipos de bombeo de gas basado en un compresor de pistón accionado por un motor de gas de pistón",
+   "fr": "26Т-813_42120000-6 – Pompes et compresseurs (Ensemble d'équipements de pompage de gaz à base d'un compresseur à piston entraîné par un moteur à gaz à piston",
+   "ar": "26Т-813_42120000-6 – مضخات وضواغط (مجموعة معدات ضخ الغاز تعتمد على ضاغط مكبسي يُدار بمحرك غاز مكبسي",
+   "vi": "26Т-813_42120000-6 – Máy bơm và máy nén (Bộ thiết bị bơm khí dựa trên máy nén piston dẫn động bằng động cơ khí piston",
+   "id": "26Т-813_42120000-6 – Pompa dan kompresor (Set peralatan pemompaan gas berbasis kompresor piston yang digerakkan oleh mesin gas piston",
+   "src": "uk"
+  },
+  "South West Wales Regional Civil Engineering Contractors Framework 2027": {
+   "ko": "사우스웨스트웨일스 지역 토목공사 시공사 프레임워크 2027",
+   "en": "South West Wales Regional Civil Engineering Contractors Framework 2027",
+   "es": "Acuerdo marco regional de contratistas de ingeniería civil de South West Wales 2027",
+   "fr": "Accord-cadre régional des entrepreneurs de génie civil du South West Wales 2027",
+   "ar": "الاتفاقية الإطارية الإقليمية لمقاولي الهندسة المدنية في جنوب غرب ويلز 2027",
+   "vi": "Thỏa thuận khung nhà thầu xây dựng dân dụng khu vực South West Wales 2027",
+   "id": "Perjanjian Kerangka Kontraktor Teknik Sipil Regional South West Wales 2027",
+   "src": "en"
+  },
+  "SZC CWA - Pool Bunker Construction": {
+   "ko": "SZC CWA - 풀 벙커 건설",
+   "en": "SZC CWA - Pool Bunker Construction",
+   "es": "SZC CWA - Construcción de búnker de piscina",
+   "fr": "SZC CWA - Construction du bunker de piscine",
+   "ar": "SZC CWA - إنشاء مخبأ الحوض",
+   "vi": "SZC CWA - Xây dựng hầm bể chứa",
+   "id": "SZC CWA - Konstruksi Bunker Kolam",
+   "src": "en"
+  },
+  "ACQUISITION DES SMARTPHONES ET TABLETTES POUR LA MISE EN OEUVRE DU STSTEME INTEGRE DE GESTION ET D'AMELIORATION DES APPRENTISSAGES (CI-CM2).": {
+   "ko": "통합 학습관리·향상 시스템 시행을 위한 스마트폰 및 태블릿 구매 (CI-CM2)",
+   "en": "Procurement of smartphones and tablets for the implementation of the integrated learning management and improvement system (CI-CM2).",
+   "es": "Adquisición de teléfonos inteligentes y tabletas para la implementación del sistema integrado de gestión y mejora de los aprendizajes (CI-CM2).",
+   "fr": "ACQUISITION DES SMARTPHONES ET TABLETTES POUR LA MISE EN OEUVRE DU STSTEME INTEGRE DE GESTION ET D'AMELIORATION DES APPRENTISSAGES (CI-CM2).",
+   "ar": "اقتناء هواتف ذكية وأجهزة لوحية لتنفيذ النظام المتكامل لإدارة وتحسين التعلّم (CI-CM2).",
+   "vi": "Mua sắm điện thoại thông minh và máy tính bảng để triển khai hệ thống tích hợp quản lý và cải thiện học tập (CI-CM2).",
+   "id": "Pengadaan ponsel pintar dan tablet untuk penerapan sistem terpadu pengelolaan dan peningkatan pembelajaran (CI-CM2).",
+   "src": "fr"
+  },
+  "Road construction works – I/45 Krnov - západní obchvat": {
+   "ko": "도로 건설 공사 – I/45 크르노프 서부 우회도로",
+   "en": "Road construction works – I/45 Krnov - western bypass",
+   "es": "Obras de construcción de carreteras – I/45 Krnov - variante oeste",
+   "fr": "Travaux de construction routière – I/45 Krnov - contournement ouest",
+   "ar": "أعمال إنشاء الطرق – I/45 كرنوف - الطريق الالتفافي الغربي",
+   "vi": "Công trình xây dựng đường – I/45 Krnov - đường tránh phía tây",
+   "id": "Pekerjaan konstruksi jalan – I/45 Krnov - jalan lingkar barat",
+   "src": "cs"
+  },
+  "SUPPLY, DELIVERY AND INSTALLATION OF PRINTING MACHINE": {
+   "ko": "인쇄기 공급·납품 및 설치",
+   "en": "SUPPLY, DELIVERY AND INSTALLATION OF PRINTING MACHINE",
+   "es": "Suministro, entrega e instalación de máquina de impresión",
+   "fr": "Fourniture, livraison et installation de machine d'impression",
+   "ar": "توريد وتسليم وتركيب آلة طباعة",
+   "vi": "Cung cấp, giao hàng và lắp đặt máy in",
+   "id": "Pengadaan, pengiriman dan pemasangan mesin cetak",
+   "src": "en"
+  },
+  "Réalisation de 38 forages à but d'approvisionnement en eau pour la lutte contre les feux en forêt.": {
+   "ko": "산불 진화용 급수를 위한 관정 38곳 굴착",
+   "en": "Drilling of 38 boreholes for water supply for forest firefighting.",
+   "es": "Perforación de 38 pozos para el abastecimiento de agua para la lucha contra incendios forestales.",
+   "fr": "Réalisation de 38 forages à but d'approvisionnement en eau pour la lutte contre les feux en forêt.",
+   "ar": "حفر 38 بئرًا لتوفير المياه لمكافحة حرائق الغابات.",
+   "vi": "Khoan 38 giếng cấp nước phục vụ chữa cháy rừng.",
+   "id": "Pengeboran 38 sumur untuk pasokan air pemadaman kebakaran hutan.",
+   "src": "fr"
+  },
+  "Hiring of Consultant Firm for the Establishment of Digital Content HUB": {
+   "ko": "디지털 콘텐츠 허브 구축을 위한 컨설팅 업체 선정",
+   "en": "Hiring of Consultant Firm for the Establishment of Digital Content HUB",
+   "es": "Contratación de firma consultora para el establecimiento de un HUB de contenidos digitales",
+   "fr": "Recrutement d'un cabinet de conseil pour la mise en place d'un HUB de contenus numériques",
+   "ar": "التعاقد مع شركة استشارية لإنشاء مركز للمحتوى الرقمي",
+   "vi": "Thuê công ty tư vấn thành lập Trung tâm (HUB) nội dung số",
+   "id": "Pengadaan firma konsultan untuk pembentukan HUB Konten Digital",
+   "src": "en"
+  },
+  "Maintenance of road through Piloting of Performance Based Maintenance Contract (PBMC) of Wangdue Zam to Chuserbu (76.3Km) and Lawala to Phob": {
+   "ko": "성과기반 유지관리계약(PBMC) 시범 시행을 통한 도로 유지관리: 왕디 잠~추서부(76.3km) 및 라왈라~Phob",
+   "en": "Maintenance of road through Piloting of Performance Based Maintenance Contract (PBMC) of Wangdue Zam to Chuserbu (76.3Km) and Lawala to Phob",
+   "es": "Mantenimiento de carretera mediante contrato piloto de mantenimiento por desempeño (PBMC) de Wangdue Zam a Chuserbu (76,3 km) y de Lawala a Phob",
+   "fr": "Entretien routier par contrat pilote d'entretien basé sur la performance (PBMC) de Wangdue Zam à Chuserbu (76,3 km) et de Lawala à Phob",
+   "ar": "صيانة الطريق من خلال تجربة عقد الصيانة القائم على الأداء (PBMC) من Wangdue Zam إلى Chuserbu (76.3 كم) ومن Lawala إلى Phob",
+   "vi": "Bảo trì đường thông qua thí điểm hợp đồng bảo trì dựa trên kết quả (PBMC) từ Wangdue Zam đến Chuserbu (76,3 km) và từ Lawala đến Phob",
+   "id": "Pemeliharaan jalan melalui uji coba Kontrak Pemeliharaan Berbasis Kinerja (PBMC) dari Wangdue Zam ke Chuserbu (76,3 km) dan Lawala ke Phob",
+   "src": "en"
+  },
+  "Solarization of Existing Drinking Water Supply Schemes in District Khyber": {
+   "ko": "카이버 지구 기존 식수 공급 시설 태양광 전환",
+   "en": "Solarization of Existing Drinking Water Supply Schemes in District Khyber",
+   "es": "Solarización de los sistemas existentes de abastecimiento de agua potable en el distrito de Khyber",
+   "fr": "Solarisation des systèmes existants d'approvisionnement en eau potable dans le district de Khyber",
+   "ar": "تحويل أنظمة إمدادات مياه الشرب القائمة إلى الطاقة الشمسية في منطقة خيبر",
+   "vi": "Chuyển đổi sang năng lượng mặt trời các hệ thống cấp nước sinh hoạt hiện có tại huyện Khyber",
+   "id": "Solarisasi Skema Penyediaan Air Minum yang Ada di Distrik Khyber",
+   "src": "en"
+  }
+ }
 }
