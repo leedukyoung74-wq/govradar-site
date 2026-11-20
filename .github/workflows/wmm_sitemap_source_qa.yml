@@ -35,7 +35,20 @@ jobs:
           persist-credentials: false
       - name: Repair sitemap only in ephemeral CI live snapshot and validate
         run: |
-          python3 tools/repair_sitemap.py live-branch/public --min-urls 1000 --max-removed 100 --write
-          python3 tools/finalize_sitemap.py live-branch/public --min-urls 1000
+          python3 tools/repair_sitemap.py live-branch/public --min-urls 1000 --max-removed 100 --write > "$RUNNER_TEMP/wmm-sitemap-repair.json"
+          python3 tools/finalize_sitemap.py live-branch/public --min-urls 1000 > "$RUNNER_TEMP/wmm-sitemap-verified.json"
+          cat "$RUNNER_TEMP/wmm-sitemap-repair.json"
+          cat "$RUNNER_TEMP/wmm-sitemap-verified.json"
           git -C live-branch status --short -- public/sitemap.xml public/robots.txt
           echo "IMPORTANT: all changes above are to ephemeral CI checkout, NO PUSH and NO PROD DEPLOY."
+      - name: Preserve review-only repaired sitemap package (not deployed)
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-sitemap-reconciled-review
+          path: |
+            live-branch/public/sitemap.xml
+            live-branch/public/robots.txt
+            ${{ runner.temp }}/wmm-sitemap-repair.json
+            ${{ runner.temp }}/wmm-sitemap-verified.json
+          retention-days: 7
+          if-no-files-found: error
