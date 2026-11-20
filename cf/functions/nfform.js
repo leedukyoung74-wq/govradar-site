@@ -4,7 +4,7 @@ const NETLIFY_FORMS_ENDPOINT = "https://wmm-govradar.netlify.app/";
 const FALLBACK = "/ko/thanks/";
 const SAFE_CONFIRMATION = /^\/(?:ko|en|es|fr|ar|vi|id)\/(?:thanks|consortium\/thanks)\/$/;
 const MAX_FORM_BYTES = 256 * 1024;
-const REGISTERED_FORM_NAMES = new Set([
+export const REGISTERED_FORM_NAMES = new Set([
   "consortium", "contract-request", "expert-apply", "feedback",
   "gcsme-member", "order", "partner-apply", "unlock"
 ]);
