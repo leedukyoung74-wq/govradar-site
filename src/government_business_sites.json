@@ -264,6 +264,35 @@
         "evidence_url": "https://investbg.government.bg/about-iba/"
       }
     ],
+    "BH": [
+      {
+        "name_ko": "Tender Board · 바레인 전자조달",
+        "name_en": "Bahrain Tender Board · Public Tenders",
+        "category": "procurement",
+        "url": "https://etendering.tenderboard.gov.bh/Tenders/publicDash",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://tenderboard.gov.bh/"
+      },
+      {
+        "name_ko": "Tamkeen · 기업지원기관",
+        "name_en": "Bahrain Tamkeen · Enterprise Support",
+        "category": "support",
+        "url": "https://www.tamkeen.bh/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.tamkeen.bh/"
+      },
+      {
+        "name_ko": "Bahrain EDB · 투자진흥청",
+        "name_en": "Bahrain Economic Development Board · Investment",
+        "category": "investment",
+        "url": "https://www.bahrainedb.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.bahrainedb.com/"
+      }
+    ],
     "BR": [
       {
         "name_ko": "PNCP · 국가 조달 공고",
@@ -291,6 +320,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gov.br/contratamaisbrasil/pt-br"
+      }
+    ],
+    "BW": [
+      {
+        "name_ko": "PPRA · 보츠와나 공공조달청",
+        "name_en": "Botswana Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://www.ppadb.co.bw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.government.co.bw/government-programs"
+      },
+      {
+        "name_ko": "CEDA · 기업개발청 사업금융",
+        "name_en": "Botswana Citizen Entrepreneurial Development Agency",
+        "category": "support",
+        "url": "https://www.ceda.co.bw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ceda.co.bw/index.php/about-procurement"
+      },
+      {
+        "name_ko": "BITC · 국가 투자·무역진흥",
+        "name_en": "Botswana Investment and Trade Centre",
+        "category": "investment",
+        "url": "https://www.bitc.co.bw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.bitc.co.bw/"
       }
     ],
     "CA": [
@@ -378,6 +436,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.investchile.gob.cl/es/programs-and-incentives-for-investment/"
+      }
+    ],
+    "CN": [
+      {
+        "name_ko": "중국 재정부 지정 정부조달망",
+        "name_en": "China Government Procurement Network · MOF",
+        "category": "procurement",
+        "url": "https://www.ccgp.gov.cn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ccgp.gov.cn/"
+      },
+      {
+        "name_ko": "공업정보화부 · 중소기업 지원",
+        "name_en": "China MIIT · SME Support Directorate",
+        "category": "support",
+        "url": "https://www.miit.gov.cn/jgsj/qyj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.miit.gov.cn/jgsj/qyj/wjfb/art/2026/art_530edd7abdae47c7a8d281f9c0bb0264.html"
+      },
+      {
+        "name_ko": "상무부 · 투자유치 행정",
+        "name_en": "China Ministry of Commerce · Investment Promotion",
+        "category": "investment",
+        "url": "https://www.mofcom.gov.cn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mofcom.gov.cn/"
       }
     ],
     "CO": [
@@ -902,6 +989,35 @@
         "evidence_url": "https://www.idaireland.com/about-ida-ireland"
       }
     ],
+    "IL": [
+      {
+        "name_ko": "이스라엘 재무부 · 입찰 공고",
+        "name_en": "Israel Government Procurement Tender Search",
+        "category": "procurement",
+        "url": "https://mr.gov.il/ilgstorefront/en/search/?s=TENDER",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mr.gov.il/ilgstorefront/en/search/?s=TENDER"
+      },
+      {
+        "name_ko": "이스라엘 혁신청 · 산업 지원",
+        "name_en": "Israel Innovation Authority · Funding and Programs",
+        "category": "support",
+        "url": "https://innovationisrael.org.il/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://innovationisrael.org.il/en/"
+      },
+      {
+        "name_ko": "경제산업부 · 국가 투자진흥",
+        "name_en": "Invest in Israel · Ministry of Economy and Industry",
+        "category": "investment",
+        "url": "https://investinisrael.gov.il/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investinisrael.gov.il/"
+      }
+    ],
     "IN": [
       {
         "name_ko": "GeM · 정부 전자조달시장",
@@ -958,6 +1074,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.investinitaly.gov.it/en/doing-business/incentives"
+      }
+    ],
+    "JO": [
+      {
+        "name_ko": "정부입찰국 · 공개 발주",
+        "name_en": "Jordan Government Tenders Department · Open Calls",
+        "category": "procurement",
+        "url": "https://www.gtd.gov.jo/AR/modules/tendersunderoffering",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gtd.gov.jo/AR/modules/tendersunderoffering"
+      },
+      {
+        "name_ko": "JEDCO · 기업·수출개발청",
+        "name_en": "Jordan Enterprise Development Corporation",
+        "category": "support",
+        "url": "https://www.jedco.gov.jo/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.jedco.gov.jo/"
+      },
+      {
+        "name_ko": "투자부 · 투자지원",
+        "name_en": "Jordan Ministry of Investment",
+        "category": "investment",
+        "url": "https://www.moin.gov.jo/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.moin.gov.jo/"
       }
     ],
     "JP": [
@@ -1018,6 +1163,35 @@
         "evidence_url": "https://brs.go.ke/"
       }
     ],
+    "KH": [
+      {
+        "name_ko": "공공조달총국 · 조달 공고",
+        "name_en": "Cambodia General Department of Public Procurement",
+        "category": "procurement",
+        "url": "https://gdpp.gov.kh/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gdpp.gov.kh/"
+      },
+      {
+        "name_ko": "Khmer Enterprise · 정부 기업지원",
+        "name_en": "Khmer Enterprise · Government SME Support",
+        "category": "support",
+        "url": "https://www.khmerenterprise.info/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.khmerenterprise.info/"
+      },
+      {
+        "name_ko": "CDC · 캄보디아 개발위원회 투자청",
+        "name_en": "Cambodia Development Council · Investment Board",
+        "category": "investment",
+        "url": "https://www.cib-cdc.gov.kh/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.cib-cdc.gov.kh/"
+      }
+    ],
     "KR": [
       {
         "name_ko": "나라장터 · 국가종합전자조달",
@@ -1045,6 +1219,93 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.k-startup.go.kr/"
+      }
+    ],
+    "KW": [
+      {
+        "name_ko": "CAPT · 쿠웨이트 중앙입찰청",
+        "name_en": "Kuwait Central Agency for Public Tenders",
+        "category": "procurement",
+        "url": "https://capt.gov.kw/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.indembkwt.gov.in/doing-business-kuwait.php"
+      },
+      {
+        "name_ko": "국가중소기업기금 · 사업자금",
+        "name_en": "Kuwait National Fund for SMEs Development",
+        "category": "support",
+        "url": "https://www.nationalfund.gov.kw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.nationalfund.gov.kw/"
+      },
+      {
+        "name_ko": "KDIPA · 국가 직접투자청",
+        "name_en": "Kuwait Direct Investment Promotion Authority",
+        "category": "investment",
+        "url": "https://kdipa.gov.kw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://kdipa.gov.kw/about-kdipa/tenders/"
+      }
+    ],
+    "KZ": [
+      {
+        "name_ko": "카자흐스탄 통합 전자조달",
+        "name_en": "Kazakhstan Unified Government Procurement Platform",
+        "category": "procurement",
+        "url": "https://zakup.gov.kz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://old.goszakup.gov.kz/ru/news/view/1669"
+      },
+      {
+        "name_ko": "Damu · 중소기업 자금지원",
+        "name_en": "Damu Entrepreneurship Fund · Subsidies",
+        "category": "support",
+        "url": "https://damu.kz/ru/programmi/subsidy/enterprise_development/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.kz/org/economy/press/news/details/1287250?lang=en"
+      },
+      {
+        "name_ko": "Kazakh Invest · 국가 투자진흥",
+        "name_en": "Kazakh Invest · National Investment Agency",
+        "category": "investment",
+        "url": "https://invest.gov.kz/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://invest.gov.kz/ru/about-us/purchase/"
+      }
+    ],
+    "LK": [
+      {
+        "name_ko": "재무부 · 공공구매 공고",
+        "name_en": "Sri Lanka Treasury · Government Procurement",
+        "category": "procurement",
+        "url": "https://www.treasury.gov.lk/web/procurement-notices",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.lk/government/web-sites"
+      },
+      {
+        "name_ko": "수출개발청 · 기업·수출지원",
+        "name_en": "Sri Lanka Export Development Board · Enterprise Support",
+        "category": "support",
+        "url": "https://www.srilankabusiness.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.srilankabusiness.com/edb/about-us/"
+      },
+      {
+        "name_ko": "투자위원회 · 국가 투자유치",
+        "name_en": "Sri Lanka Board of Investment · BOI",
+        "category": "investment",
+        "url": "https://investsrilanka.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.srilankabusiness.com/edb/about-us/organisation-structure.html"
       }
     ],
     "LT": [
@@ -1132,6 +1393,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.em.gov.lv/en/article/new-round-large-investment-program-has-started-eu67-million-development-and-export-latvian-companies"
+      }
+    ],
+    "MA": [
+      {
+        "name_ko": "모로코 정부 공식 입찰공고",
+        "name_en": "Morocco Public Procurement Electronic Portal",
+        "category": "procurement",
+        "url": "https://www.marchespublics.gov.ma/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.marchespublics.gov.ma/index.php?AllCons=&EnCours=&domaineActivite=2.14&page=entreprise.EntrepriseAdvancedSearch"
+      },
+      {
+        "name_ko": "Maroc PME · 중소기업 지원",
+        "name_en": "Maroc PME · SME Financial Assistance",
+        "category": "support",
+        "url": "https://marocpme.gov.ma/mowakaba-tpme/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://marocpme.gov.ma/mowakaba-tpme/"
+      },
+      {
+        "name_ko": "AMDIE · 국가 투자·수출진흥청",
+        "name_en": "Moroccan Investment and Export Development Agency",
+        "category": "investment",
+        "url": "https://www.amdie.gov.ma/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.amdie.gov.ma/"
       }
     ],
     "MX": [
@@ -1279,6 +1569,35 @@
         "evidence_url": "https://www.forskningsradet.no/en/call-for-proposals/"
       }
     ],
+    "NP": [
+      {
+        "name_ko": "Bolpatra · 네팔 국가 전자조달",
+        "name_en": "Nepal e-Government Procurement · Bolpatra",
+        "category": "procurement",
+        "url": "https://bolpatra.gov.np/egp/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://bolpatra.gov.np/"
+      },
+      {
+        "name_ko": "산업국 · 기업·산업 허가 및 지원",
+        "name_en": "Nepal Department of Industry · Business Services",
+        "category": "support",
+        "url": "https://www.doind.gov.np/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.doind.gov.np/"
+      },
+      {
+        "name_ko": "투자위원회 · 국가 투자진흥",
+        "name_en": "Investment Board Nepal · Investment Opportunities",
+        "category": "investment",
+        "url": "https://ibn.gov.np/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ibn.gov.np/"
+      }
+    ],
     "NZ": [
       {
         "name_ko": "GETS · 뉴질랜드 정부조달 공고",
@@ -1306,6 +1625,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.nzte.govt.nz/page/about-nzte"
+      }
+    ],
+    "OM": [
+      {
+        "name_ko": "PTLC · 오만 국가 전자조달",
+        "name_en": "Oman eTendering · Projects Tenders Local Content Authority",
+        "category": "procurement",
+        "url": "https://etendering.tenderboard.gov.om/product/publicDash",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://etendering.tenderboard.gov.om/product/publicDash"
+      },
+      {
+        "name_ko": "SME 개발청 · 중소기업 지원",
+        "name_en": "Oman SME Development Authority",
+        "category": "support",
+        "url": "https://www.sme.gov.om/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sme.gov.om/"
+      },
+      {
+        "name_ko": "Invest Oman · 국가 투자안내",
+        "name_en": "Invest Oman · National Investment Portal",
+        "category": "investment",
+        "url": "https://investoman.om/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investoman.om/"
       }
     ],
     "PE": [
@@ -1453,6 +1801,35 @@
         "evidence_url": "https://www.gov.pt/entidades/agencia-para-o-investimento-e-comercio-externo-de-portugal"
       }
     ],
+    "QA": [
+      {
+        "name_ko": "Monaqasat · 재무부 국가조달",
+        "name_en": "Qatar Monaqasat · Ministry of Finance Procurement",
+        "category": "procurement",
+        "url": "https://monaqasat.mof.gov.qa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://hukoomi.gov.qa/en/services/search-for-bids-on-monaqasat-portal-of-mof"
+      },
+      {
+        "name_ko": "QDB · 기업개발금융 지원",
+        "name_en": "Qatar Development Bank · Business Funding",
+        "category": "support",
+        "url": "https://www.qdb.qa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.moci.gov.qa/en/why-qatar"
+      },
+      {
+        "name_ko": "Invest Qatar · 투자진흥청",
+        "name_en": "Invest Qatar · Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://www.invest.qa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.moci.gov.qa/en/why-qatar"
+      }
+    ],
     "RO": [
       {
         "name_ko": "SEAP · 루마니아 공공조달",
@@ -1509,6 +1886,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://ras.gov.rs/en/about-us/our-organization"
+      }
+    ],
+    "RW": [
+      {
+        "name_ko": "Umucyo · 르완다 전자조달",
+        "name_en": "Rwanda Umucyo · Government e-Procurement",
+        "category": "procurement",
+        "url": "https://umucyo.gov.rw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.rppa.gov.rw/faqs"
+      },
+      {
+        "name_ko": "RDB · 개발청 기업지원",
+        "name_en": "Rwanda Development Board · Enterprise Support",
+        "category": "support",
+        "url": "https://rdb.rw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://rdb.rw/"
+      },
+      {
+        "name_ko": "NAEB · 국가 농산업 수출지원청",
+        "name_en": "Rwanda National Agricultural Export Development Board",
+        "category": "investment",
+        "url": "https://naeb.gov.rw/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://naeb.gov.rw/"
       }
     ],
     "SA": [
@@ -1685,6 +2091,35 @@
         "evidence_url": "https://www.ditp.go.th/en"
       }
     ],
+    "TN": [
+      {
+        "name_ko": "TUNEPS · 튀니지 전자조달",
+        "name_en": "Tunisia TUNEPS · Electronic Public Procurement",
+        "category": "procurement",
+        "url": "https://www.tuneps.tn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.tuneps.tn/"
+      },
+      {
+        "name_ko": "APII · 산업·혁신지원청",
+        "name_en": "Tunisia Industry and Innovation Promotion Agency",
+        "category": "support",
+        "url": "https://www.tunisieindustrie.nat.tn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investintunisia.tn/en/tunisia-industry-4-0-tunisia-a-magnet-for-foreign-investment/"
+      },
+      {
+        "name_ko": "FIPA · 국가 외국인투자청",
+        "name_en": "Tunisia Foreign Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://investintunisia.tn/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investintunisia.tn/en/"
+      }
+    ],
     "TR": [
       {
         "name_ko": "EKAP · 전자공공조달",
@@ -1712,6 +2147,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.invest.gov.tr/en/pages/who-we-are.aspx"
+      }
+    ],
+    "TZ": [
+      {
+        "name_ko": "NeST · 탄자니아 국가조달",
+        "name_en": "Tanzania NeST · Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://nepps.ppra.go.tz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nepps.ppra.go.tz/"
+      },
+      {
+        "name_ko": "SIDO · 중소산업개발청",
+        "name_en": "Tanzania Small Industries Development Organisation",
+        "category": "support",
+        "url": "https://www.sido.go.tz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sido.go.tz/"
+      },
+      {
+        "name_ko": "TIC · 국가투자센터",
+        "name_en": "Tanzania Investment Centre",
+        "category": "investment",
+        "url": "https://www.tic.go.tz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.tic.go.tz/"
       }
     ],
     "UA": [
@@ -1772,6 +2236,35 @@
         "evidence_url": "https://www.sba.gov/counseling/get-started/"
       }
     ],
+    "UZ": [
+      {
+        "name_ko": "정부 재정경제부 · 공공조달 정보",
+        "name_en": "Uzbekistan Government · Public Procurement",
+        "category": "procurement",
+        "url": "https://gov.uz/en/pages/davlat_xaridlari",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.uz/en/pages/davlat_xaridlari"
+      },
+      {
+        "name_ko": "MIIT · 투자·기업 지원",
+        "name_en": "Uzbekistan Ministry of Investment, Industry and Trade",
+        "category": "support",
+        "url": "https://gov.uz/en/miit/activity_page/investitsiyalar",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.uz/en/miit/activity_page/investitsiyalar"
+      },
+      {
+        "name_ko": "Invest Uzbekistan · 국가 투자안내",
+        "name_en": "Invest Uzbekistan · Official Government Investment",
+        "category": "investment",
+        "url": "https://invest.gov.uz/en/guide/partnership",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.uz/en/activity_page/investment"
+      }
+    ],
     "VN": [
       {
         "name_ko": "국가전자입찰망 · 재무부",
@@ -1828,6 +2321,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.investsa.gov.za/"
+      }
+    ],
+    "ZM": [
+      {
+        "name_ko": "ZPPA · 잠비아 국가조달",
+        "name_en": "Zambia Public Procurement Authority · e-GP",
+        "category": "procurement",
+        "url": "https://eprocure.zppa.org.zm/epps/home.do",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://eprocure.zppa.org.zm/epps/home.do"
+      },
+      {
+        "name_ko": "CEEC · 기업역량 지원위원회",
+        "name_en": "Zambia Citizens Economic Empowerment Commission",
+        "category": "support",
+        "url": "https://www.ceec.org.zm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ceec.org.zm/"
+      },
+      {
+        "name_ko": "ZDA · 국가개발투자청",
+        "name_en": "Zambia Development Agency · Investment Promotion",
+        "category": "investment",
+        "url": "https://www.zda.org.zm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.zda.org.zm/"
       }
     ]
   }
