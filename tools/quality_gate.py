@@ -35,6 +35,7 @@ def check(new, old, now=None, require_country_summary=False):
     try:
         age = (now - datetime.datetime.strptime(t.get("updated", ""), "%Y-%m-%dT%H:%MZ").replace(tzinfo=datetime.timezone.utc)).total_seconds() / 3600
         if age > 6: bad.append(f"tenders.json stamp is {age:.1f} h old (was it rebuilt?)")
+        if age < -0.1: bad.append(f"tenders.json stamp is {abs(age):.1f} h in the future (clock error)")
     except Exception: bad.append("tenders.json has no valid 'updated' stamp")
     # a source that used to deliver must not silently vanish (an ERROR day carries yesterday's notices instead)
     old_src = {}; new_src = {}
