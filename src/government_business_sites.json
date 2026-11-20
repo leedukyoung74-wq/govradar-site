@@ -351,6 +351,35 @@
         "evidence_url": "https://flandersinvestmentandtrade.be/en/subsidies"
       }
     ],
+    "BF": [
+      {
+        "name_ko": "DGCMEF · 부르키나파소 정부 공공조달",
+        "name_en": "DGCMEF · Burkina Faso Public Procurement Control",
+        "category": "procurement",
+        "url": "https://www.dgcmef.gov.bf/en",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.dgcmef.gov.bf/en"
+      },
+      {
+        "name_ko": "공공 행정서비스 · 기업지원",
+        "name_en": "Service Public Burkina Faso · Government E-Services",
+        "category": "support",
+        "url": "https://service-public.gov.bf/eservices",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://service-public.gov.bf/eservices"
+      },
+      {
+        "name_ko": "ABI · 투자진흥기관",
+        "name_en": "Burkina Faso Investment Agency · ABI",
+        "category": "investment",
+        "url": "https://investburkina.bf/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investburkina.bf/projects/immobilier-9"
+      }
+    ],
     "BG": [
       {
         "name_ko": "CAIS EOP · 공공조달 전자시스템",
@@ -407,6 +436,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.bahrainedb.com/"
+      }
+    ],
+    "BI": [
+      {
+        "name_ko": "ARMP · 부룬디 국가조달청",
+        "name_en": "Burundi Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://armp.gov.bi/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp.gov.bi/"
+      },
+      {
+        "name_ko": "MRMEICT · 산업·상업 지원부",
+        "name_en": "Burundi Ministry of Industry Commerce and Tourism",
+        "category": "support",
+        "url": "https://mrmeict.gov.bi/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://primature.gov.bi/ministere-des-ressources-minieres-energetiques-de-lindustrie-du-commerce-et-du-tourisme/"
+      },
+      {
+        "name_ko": "ADB · 부룬디 국가개발·투자진흥",
+        "name_en": "Burundi Development Agency · Investment Promotion",
+        "category": "investment",
+        "url": "https://investburundi.bi/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investburundi.bi/visions-et-missions/"
       }
     ],
     "BJ": [
@@ -668,6 +726,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://anapi.cd/en/procedures"
+      }
+    ],
+    "CG": [
+      {
+        "name_ko": "ARMP · 콩고 국가조달청",
+        "name_en": "Republic of Congo Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://armp.cg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp.cg/"
+      },
+      {
+        "name_ko": "중소기업·수공업부 · 기업 지원",
+        "name_en": "Congo Ministry of SMEs and Crafts",
+        "category": "support",
+        "url": "https://www.entreprises.gouv.cg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.entreprises.gouv.cg/ova_sev/figa/"
+      },
+      {
+        "name_ko": "API Congo · 국가투자진흥",
+        "name_en": "Republic of Congo Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://apicongo.cg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.apicongo.cg/presentation_api.php?lang=en"
       }
     ],
     "CH": [
@@ -987,6 +1074,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://www.gtai.de/en/meta/about-us"
+      }
+    ],
+    "DJ": [
+      {
+        "name_ko": "정부조달 공고 · 지부티 CNMP",
+        "name_en": "Djibouti Official Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://marchespublics.gouv.dj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cnmp.gouv.dj/plateformes"
+      },
+      {
+        "name_ko": "정부 중소기업 단일창구",
+        "name_en": "Djibouti Government SME Services G2B",
+        "category": "support",
+        "url": "https://entreprendre.dj/portals/g2b",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.entreprendre.dj/portals/g2b"
+      },
+      {
+        "name_ko": "ANPI · 정부 투자진흥청",
+        "name_en": "Djibouti National Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://djib-invest.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.journalofficiel.dj/texte-juridique/arrete-n2026-066-pr-seidsp-portant-approbation-et-rendant-executoire-le-budget-previsionnel-de-lexercice-2026-de-lagence-nationale-pour-la-promotion-des-investissements/"
       }
     ],
     "DK": [
@@ -1973,6 +2089,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.cib-cdc.gov.kh/"
+      }
+    ],
+    "KM": [
+      {
+        "name_ko": "DNCMP · 코모로 국가 공공조달",
+        "name_en": "Comoros Public Procurement Directorate",
+        "category": "procurement",
+        "url": "https://dncmp.km/portail",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dncmp.km/portail"
+      },
+      {
+        "name_ko": "경제·산업부 · 중소기업 정책",
+        "name_en": "Comoros Ministry of Economy and Industry",
+        "category": "support",
+        "url": "https://minecon.egouv.km/fr/contacts/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://minecon.egouv.km/fr/contacts/"
+      },
+      {
+        "name_ko": "ANPI · 투자진흥청",
+        "name_en": "Comoros National Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://www.investcomoros.net/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investcomoros.net/nous-contacter/"
       }
     ],
     "KR": [
@@ -3394,6 +3539,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investeswatini.org.sz/"
+      }
+    ],
+    "TD": [
+      {
+        "name_ko": "ARMP · 차드 공공조달청",
+        "name_en": "Chad Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://armp-tchad.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp-tchad.com/"
+      },
+      {
+        "name_ko": "상무부 · 기업·산업 행정",
+        "name_en": "Chad Ministry of Commerce · Business Services",
+        "category": "support",
+        "url": "https://commerce.salysysteme.com/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://commerce.salysysteme.com/"
+      },
+      {
+        "name_ko": "ANIE · 차드 투자수출진흥청",
+        "name_en": "Chad ANIE · Investment and Export Promotion",
+        "category": "investment",
+        "url": "https://anie.td/opportunites",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://anie.td/a-propos"
       }
     ],
     "TG": [
