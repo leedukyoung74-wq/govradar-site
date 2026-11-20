@@ -30,7 +30,7 @@ def main():
     # positive per-country JSON counters. Emit a current zero-count record
     # for every previously generated ISO page, without deleting old files.
     for fname in os.listdir(d):
-        if re.fullmatch(r"[A-Z]{2}\\.json", fname) and os.path.isfile(os.path.join(d, fname)):
+        if re.fullmatch(r"[A-Z]{2}\.json", fname) and os.path.isfile(os.path.join(d, fname)):
             slot(fname[:2])
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     for iso, s in out.items():
