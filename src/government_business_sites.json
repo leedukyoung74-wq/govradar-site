@@ -27,12 +27,12 @@
       {
         "name_ko": "정부 공식 투명성 포털 · 계약·보조금",
         "name_en": "Andorra Government Transparency · Public Contracts and Grants",
-        "category": "investment",
+        "category": "support",
         "url": "https://transparencia.ad/inici_bo",
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://transparencia.ad/inici_bo",
-        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+        "review_note": "Institutional government source registered; role correctly classified, not a guaranteed funding or investment opportunity"
       }
     ],
     "AE": [
@@ -2310,12 +2310,12 @@
       {
         "name_ko": "경제청 · 중소기업 해외 수출지원",
         "name_en": "Liechtenstein Office of Economic Affairs · Export Support for SMEs",
-        "category": "investment",
+        "category": "support",
         "url": "https://www.llv.li/en/national-administration/office-of-economic-affairs/location-promotion/funding/export-promotion-for-smes",
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.llv.li/en/national-administration/office-of-economic-affairs",
-        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+        "review_note": "Institutional government source registered; role correctly classified, not a guaranteed funding or investment opportunity"
       }
     ],
     "LK": [
@@ -2487,12 +2487,12 @@
       {
         "name_ko": "공식 관보 · 공공 발주 공고",
         "name_en": "Monaco Official Gazette · Public Tender Notices",
-        "category": "investment",
+        "category": "procurement",
         "url": "https://journaldemonaco.gouv.mc/en/Journaux/2026/Journal-8817/Avis-d-appel-a-concurrence-pour-la-passation-d-un-Marche-public-de-services",
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://legimonaco.mc/tnc/ordonnance/2018/12-20-7.264",
-        "review_note": "Public official-page corroboration. Government ownership and functionality require final live release QA."
+        "review_note": "Institutional government source registered; role correctly classified, not a guaranteed funding or investment opportunity"
       }
     ],
     "MD": [
