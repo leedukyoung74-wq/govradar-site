@@ -2117,9 +2117,38 @@
     "UA": {
       "name_en": "Ukraine",
       "name_ko": "우크라이나",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Ukraine Ministry of Defence",
+          "url": "https://mod.gov.ua/en",
+          "role": "defence_ministry",
+          "evidence_url": "https://mod.gov.ua/en/about-us/the-general-staff-of-the-armed-forces-of-ukraine",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Ukraine Land Forces",
+          "url": "https://landforces.mil.gov.ua/en/",
+          "role": "army",
+          "evidence_url": "https://mod.gov.ua/en/press/contacts-for-media",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Armed Forces of Ukraine public website",
+          "url": "https://www.zsu.gov.ua/",
+          "role": "national_armed_forces",
+          "evidence_url": "https://mod.gov.ua/en",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Only ordinary official public websites. Do not collect military unit deployments, operational updates, tactical locations, or vulnerabilities."
     },
     "GB": {
       "name_en": "United Kingdom",
@@ -2229,9 +2258,29 @@
     "MX": {
       "name_en": "Mexico",
       "name_ko": "멕시코",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Mexico Secretariat of National Defence (DEFENSA)",
+          "url": "https://www.gob.mx/defensa",
+          "role": "defence_ministry_and_army_air_force",
+          "evidence_url": "https://www.gob.mx/defensa/que-hacemos",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Mexico Secretariat of the Navy (SEMAR)",
+          "url": "https://www.gob.mx/semar",
+          "role": "navy_ministry",
+          "evidence_url": "https://www.gob.mx/defensa/que-hacemos",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Army and Air Force are under one defence secretariat, separate navy secretariat; do not manufacture a third ministry by renaming a page."
     },
     "AG": {
       "name_en": "Antigua and Barbuda",
@@ -2243,9 +2292,38 @@
     "AR": {
       "name_en": "Argentina",
       "name_ko": "아르헨티나",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Argentina Ministry of Defence",
+          "url": "https://www.argentina.gob.ar/defensa",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.argentina.gob.ar/defensa",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Argentine Army",
+          "url": "https://www.argentina.gob.ar/defensa/ejercito",
+          "role": "army",
+          "evidence_url": "https://www.argentina.gob.ar/ejercito/organizacion",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Argentine Navy",
+          "url": "https://www.argentina.gob.ar/defensa/armada",
+          "role": "navy",
+          "evidence_url": "https://www.argentina.gob.ar/defensa/armada",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "These are three national departments/branches within the official argentina.gob.ar domain, not independent website owners."
     },
     "BS": {
       "name_en": "Bahamas",
@@ -2278,23 +2356,110 @@
     "BR": {
       "name_en": "Brazil",
       "name_ko": "브라질",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Brazil Ministry of Defence",
+          "url": "https://www.gov.br/defesa/pt-br",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.gov.br/defesa/pt-br/acesso-a-informacao/institucional-2/estrutura-organizacional/estrutura-organizacional",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Brazilian Navy",
+          "url": "https://www.marinha.mil.br/",
+          "role": "navy",
+          "evidence_url": "https://www.gov.br/defesa/pt-br/assuntos/estado-maior-conjunto-das-forcas-armadas/forcas-armadas",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Brazilian Army",
+          "url": "https://www.eb.mil.br/",
+          "role": "army",
+          "evidence_url": "https://www.gov.br/defesa/pt-br/assuntos/estado-maior-conjunto-das-forcas-armadas/forcas-armadas",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Brazilian Army official site may reject automated requests; record remains not live verified."
     },
     "CL": {
       "name_en": "Chile",
       "name_ko": "칠레",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Chile Ministry of National Defence",
+          "url": "https://www.gob.cl/ministerios/ministerio-de-defensa-nacional/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.gob.cl/ministerios/ministerio-de-defensa-nacional/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Chilean Army",
+          "url": "https://www.ejercito.cl/",
+          "role": "army",
+          "evidence_url": "https://www.ejercito.cl/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Chilean Navy",
+          "url": "https://www.armada.cl/",
+          "role": "navy",
+          "evidence_url": "https://www.armada.cl/",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Public department and two military service portals."
     },
     "CO": {
       "name_en": "Colombia",
       "name_ko": "콜롬비아",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Colombia Ministry of National Defence",
+          "url": "https://www.mindefensa.gov.co/",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.policia.gov.co/directorio_sector_defensa",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Colombian National Army",
+          "url": "https://www.ejercito.mil.co/",
+          "role": "army",
+          "evidence_url": "https://www.policia.gov.co/directorio_sector_defensa",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Colombian Navy",
+          "url": "https://www.armada.mil.co/",
+          "role": "navy",
+          "evidence_url": "https://www.policia.gov.co/directorio_sector_defensa",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "Ministry/army/navy in public sector agency directory. Direct navy URL may time out during automated lookup."
     },
     "CR": {
       "name_en": "Costa Rica",
@@ -2455,9 +2620,38 @@
     "PE": {
       "name_en": "Peru",
       "name_ko": "페루",
-      "defence_structure": "not_yet_assessed",
-      "official_sites": [],
-      "status": "research_pending"
+      "defence_structure": "national_defence_structure",
+      "official_sites": [
+        {
+          "agency_name": "Peru Ministry of Defence",
+          "url": "https://www.gob.pe/institucion/mindef/institucional",
+          "role": "defence_ministry",
+          "evidence_url": "https://www.gob.pe/institucion/mindef/institucional",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Peruvian Army",
+          "url": "https://www.gob.pe/ejercito",
+          "role": "army",
+          "evidence_url": "https://www.gob.pe/institucion/ejercito/institucional",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        },
+        {
+          "agency_name": "Peruvian Navy",
+          "url": "https://www.gob.pe/marina/",
+          "role": "navy",
+          "evidence_url": "https://www.gob.pe/institucion/marina/institucional",
+          "verification": "official_org_cross_reference",
+          "access": "not_live_tested",
+          "reviewed_on": "2026-11-21"
+        }
+      ],
+      "status": "official_sites_recorded_not_live_tested",
+      "notes": "The official state portal is used by three separate national military organizations; crawler may be blocked by gov.pe."
     },
     "KN": {
       "name_en": "Saint Kitts and Nevis",
