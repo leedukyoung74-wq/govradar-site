@@ -60,5 +60,44 @@ jobs:
                 report['verified_links'],'verified sites;',
                 report['remaining_required_link_slots'],'government-site slots still require review')
           PY
+      - name: Build 193-country source evidence queue for Claude cross-review
+        run: |
+          mkdir -p review-evidence
+          python - <<'PY'
+          import csv, json, sys
+          from pathlib import Path
+          sys.path.insert(0,'tools')
+          from government_business_sites import load_directory
+          sites, report=load_directory(Path('.'))
+          countries=json.loads(Path('src/countries_meta.json').read_text(encoding='utf-8'))
+          countries=sorted(countries,key=lambda r:(r['r'],r['iso']))
+          out=Path('review-evidence/193-government-site-review-queue.csv')
+          with out.open('w',encoding='utf-8-sig',newline='') as f:
+              writer=csv.writer(f)
+              writer.writerow(('iso','country_en','country_ko','region','verified','remaining_to_3',
+                               'legacy_unverified_candidate','candidate_url','last_url_check',
+                               'claim','claude_action'))
+              registry=json.loads(Path('tools/sources/registry.json').read_text(encoding='utf-8'))
+              candidates={x.get('iso'):x for x in registry if x.get('kind')=='national-portal'}
+              for c in countries:
+                  iso=c['iso']
+                  n=report['country_counts'][iso]['verified']
+                  candidate=candidates.get(iso) or {}
+                  writer.writerow((iso,c['en'],c['ko'],c['r'],n,max(0,3-n),
+                                   candidate.get('name',''),candidate.get('url',''),
+                                   candidate.get('checked',''),
+                                   'UNVERIFIED until official primary agency evidence',
+                                   'Find distinct original government procurement, SME, investment portals; verify operator, URL, date'))
+          assert len(countries)==193
+          assert sum(report['country_counts'][x['iso']]['gap'] for x in countries)==report['remaining_required_link_slots']
+          print('REVIEW QUEUE:',len(countries),'countries;',report['remaining_required_link_slots'],'missing verified government sites.')
+          PY
+      - name: Archive public-source Claude review queue only
+        uses: actions/upload-artifact@v4
+        with:
+          name: govradar-193-country-official-sites-review-queue
+          path: review-evidence/193-government-site-review-queue.csv
+          retention-days: 5
+          if-no-files-found: error
       - name: Confirm no deployment or publication
         run: echo 'Read-only GitHub checkout. No production deployment and no paid API.'
