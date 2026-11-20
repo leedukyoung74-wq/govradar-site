@@ -1,0 +1,25 @@
+name: WMM GOV RADAR Form Relay P0 QA (No Deploy)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'cf/functions/nfform.js'
+      - 'tests/wmm_form_relay.test.mjs'
+      - '.github/workflows/wmm_form_relay_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  form-relay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Validate Cloudflare Pages Function syntax
+        run: node --check cf/functions/nfform.js
+      - name: Test Netlify Forms relay with simulated requests (no live submissions)
+        run: node --test tests/wmm_form_relay.test.mjs
