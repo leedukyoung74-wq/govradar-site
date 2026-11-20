@@ -39,3 +39,12 @@ GitHub Actions run `44651693727` passed 14 offline tests and produced a **review
 
 ## Correct operating status
 Code and tests exist in draft PRs; public source deployment, browser-level authentication/CRM QA, and the other three platform builds have NOT been completed here. No source deletion, existing branch overwrite, auto-billing, customer email or production deploy occurred.
+
+## 2026-11-20 follow-up: static opportunity data provenance audit
+- Actual tracked dataset inspection: `data/countries.json` has 193 country records, `data/regions.json` has 23 separately identified special regions, and `data/opps.json` contains 620 opportunities (462 `biz`, 13 `oda`, 145 `tenders`).
+- Six opportunities use special region code `PH-BARMM`. This is a valid special-region reference, **not** an invalid sovereign country ISO. Validation accepts either known country ISO or separate region code, while requiring regions to reference valid parent countries.
+- At the explicit as-of date 2026-11-20, 78/145 tenders had past calendar deadline dates; ten have an equal-date deadline and 57 future dates. Deadline timezone and later amendments are NOT verified; no real-time closure claim.
+- All 620 opportunities lack per-item official source URLs in the tracked file. The displayed rows are **unverified source records**, not independent proof of open live tenders, government budgets, or firm contracting opportunities. Do not invent original links.
+- Added read-only audit module `scripts/wmm_data_quality_audit.mjs`, run with `node scripts/wmm_data_quality_audit.mjs --json --as-of 2026-11-20`. Reports structural errors vs quality warnings without changing datasets. Added `tests/wmm_data_quality_audit.test.mjs` and included it in PR CI.
+- GitHub Actions run **44656122109**: **22/22 tests PASS**, no production deploy. Current CI asserts observed static values as a regression baseline; these are not timeless requirements. When officially verified new source records are added, update baseline tests and retain historical log.
+- P0 production gate: a data importer must store official per-opportunity original URL, agency, fetched/verified timestamp, immutable source ID, application deadline with timezone, amendment/cancellation state, and licensing. Until that evidence exists, labels must distinguish editorial opportunities vs official verified tenders.
