@@ -1137,6 +1137,27 @@ def build():
     # Separate sovereign and subnational read-only directories, not mixed in coverage totals.
     for _source_file in ("territory_official_sources.json", "country_defence_official_sources.json"):
         W("/data/" + _source_file, open(os.path.join(SRC, _source_file), encoding="utf8").read())
+    # Curated-source coverage is independent of live alerts and procurement/news counts.
+    _region_counts = {}
+    for _code, _record in TERRITORY_SOURCE_SITES.items():
+        _counts = {k: len(_record.get(k) or []) for k in (
+            "government_business", "news_media", "environment", "meteorology",
+            "emergency", "defence_security", "public_health", "critical_infrastructure")}
+        _region_counts[_code] = {"name_en": _record["name_en"], "parent_iso": _record["parent_iso"],
+            "counts": _counts, "government_three_recorded": _counts["government_business"] >= 3,
+            "news_three_recorded": _counts["news_media"] >= 3, "live_verified": False}
+    W("/data/territory-source-coverage.json", json.dumps({
+        "regions_total": len(_region_counts),
+        "regions_with_three_government_sources_recorded": sum(x["government_three_recorded"] for x in _region_counts.values()),
+        "regions_with_three_news_sources_recorded": sum(x["news_three_recorded"] for x in _region_counts.values()),
+        "not_live_verified": True, "regions": _region_counts}, ensure_ascii=False))
+    _defence_counts = {iso: len(item["official_sites"]) for iso, item in NATIONAL_DEFENCE_SITES.items()}
+    W("/data/country-defence-coverage.json", json.dumps({
+        "countries_total": len(_defence_counts), "target_official_links": len(_defence_counts) * 3,
+        "registered_official_links": sum(_defence_counts.values()),
+        "countries_with_three_recorded": sum(n >= 3 for n in _defence_counts.values()),
+        "remaining_minimum_slots": sum(max(0, 3 - n) for n in _defence_counts.values()),
+        "not_live_verified": True, "country_counts": _defence_counts}, ensure_ascii=False))
     # Stage documentary, unverified country food profiles independently of tender/region data.
     # Official preparedness references are NOT product or shelf-life certification.
     for _rs_file in ("wmm-food-country-profiles.json", "wmm-food-primary-guidance-reviewed.json"):
