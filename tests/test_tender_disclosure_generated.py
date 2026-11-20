@@ -50,5 +50,22 @@ class TenderDisclosureGeneratedTests(unittest.TestCase):
                 self.assertNotIn('<h2 id="deadlines">Open tenders by deadline</h2>',html)
                 self.assertNotIn('<h2 id="deadlines">마감일 순 열린 입찰</h2>',html)
 
+    def test_synthetic_live_and_expired_tenders_are_separated(self):
+        import json
+        metadata=ROOT/'wmm_qa_fixture_dates.json'
+        self.assertTrue(metadata.is_file(),'Synthetic fixture must be injected before build')
+        dates=json.loads(metadata.read_text(encoding='utf8'))
+        for lang in LANGS:
+            with self.subTest(lang=lang):
+                html=(ROOT/'dist'/lang/'mdb'/'index.html').read_text(encoding='utf8')
+                visible=html_lib.unescape(html)
+                active=visible.split('<h2 id="deadlines">',1)[1].split('<h2 id="past">',1)[0]
+                self.assertIn('WMM_QA_SYNTHETIC_FUTURE_TENDER',active)
+                self.assertNotIn('WMM_QA_SYNTHETIC_PAST_TENDER',active)
+                self.assertIn('data-dl="'+dates['future']+'"',active)
+                self.assertNotIn('data-dl="'+dates['past']+'"',active)
+                self.assertIn('https://example.org/wmm-qa-future',active)
+                self.assertIn(self.labels[lang]['external'],active)
+
 if __name__=="__main__":
     unittest.main()
