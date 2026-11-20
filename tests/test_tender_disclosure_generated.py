@@ -4,6 +4,7 @@ Run after: python build.py --base https://radar.wmm-hoa.com
 No network, deployment, database writes, customer messages, or payments.
 """
 import ast
+import html as html_lib
 import os
 import pathlib
 import unittest
@@ -28,10 +29,15 @@ class TenderDisclosureGeneratedTests(unittest.TestCase):
                 path=ROOT/"dist"/lang/"mdb"/"index.html"
                 self.assertTrue(path.is_file(),f"Missing generated page: {path}")
                 html=path.read_text(encoding="utf8")
-                for key in ("heading","warning","external"):
+                visible=html_lib.unescape(html)
+                for key in ("heading","warning"):
                     value=self.labels[lang][key]
-                    # HTML encoder can escape some punctuation, but text itself should survive.
-                    self.assertIn(value,html,f"{lang}: {key} not found in generated HTML")
+                    self.assertIn(value,visible,f"{lang}: {key} not found in generated HTML")
+                # A build with no currently-open tenders can contain zero source anchors;
+                # ensure links are correctly labelled only when there are rendered source cards.
+                if '<a class="src" href="https://' in visible:
+                    self.assertIn(self.labels[lang]["external"],visible,
+                                  f"{lang}: external source label missing for rendered cards")
                 self.assertIn('id="deadlines"',html)
                 self.assertIn('data-dl=',html)
 
