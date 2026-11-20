@@ -1,8 +1,8 @@
-# GOV RADAR 193개국 공식 정부 사업·조달·투자 출처 — 국가별 수량
+# GOV RADAR 193개국 정부 공공조달·기업지원·투자 출처 — 국가별 수량표
 
-**2026-11-21 검토 브랜치** `review/govradar-81countries-243-official-sites-20261121` · **81/193개국, 243/579건.** 추가 최소 **112개국·336건**. 과거 레지스트리 HTTP 200·비공식 후보는 포함하지 않습니다. 개별 링크 접근성/기관개편은 최종 공개 배포 전 별도 확인해야 하며, 자료에 기록된 정부 공식 근거 URL의 유무를 카탈로그 기준으로 계산합니다.
+2026-11-21 검토 브랜치: `review/govradar-93countries-279-official-sites-20261121`. **93/193개국**, **279/579개 공식 출처 기록**. **100개국·300개 추가 필요**. 여기서 검토용 공식출처는 운영기관/공공기관 근거 URL을 가진 `official_primary` 등록 항목입니다. 실제 최신 접속·리다이렉트·공고 실운영 및 공식기관 소속 확인은 별도 검수해야 합니다. 과거 레지스트리의 HTTP 200 응답은 정부기관 인증이 아닙니다.
 
-| 지역 | 국가 | ISO | 공식 출처 등록 | 부족 | 등록 사이트 |
+| 지역 | 국가 (한국어/영어) | ISO | 공식 등록 | 부족 | 공식 사업·조달·투자 사이트 |
 |---|---|:---:|---:|---:|---|
 | 아프리카 | 알제리 / Algeria | DZ | **0** | 3 | — |
 | 아프리카 | 앙골라 / Angola | AO | **0** | 3 | — |
@@ -156,32 +156,32 @@
 | 미주 | 바하마 / Bahamas | BS | **0** | 3 | — |
 | 미주 | 바베이도스 / Barbados | BB | **0** | 3 | — |
 | 미주 | 벨리즈 / Belize | BZ | **0** | 3 | — |
-| 미주 | 볼리비아 / Bolivia | BO | **0** | 3 | — |
+| 미주 | 볼리비아 / Bolivia | BO | **3** | 0 | [Bolivia SICOES · Public Procurement System](https://www.sicoes.gob.bo/portal/index.php?id=convocatorias) · [PRO-BOLIVIA · Government Enterprise Development](https://www.probolivia.gob.bo/) · [Bolivia Ministry of Productive Development](https://www.produccion.gob.bo/) |
 | 미주 | 브라질 / Brazil | BR | **3** | 0 | [PNCP · National Public Procurement](https://www.gov.br/pncp/pt-br) · [Compras.gov.br · Federal Procurement](https://www.gov.br/compras/pt-br/) · [Contrata+Brasil · Small Business Government Selling](https://www.gov.br/contratamaisbrasil/pt-br) |
 | 미주 | 칠레 / Chile | CL | **3** | 0 | [Mercado Público · Chile State Procurement](https://www.mercadopublico.cl/) · [CORFO · Enterprise Innovation Calls](https://www.corfo.cl/sites/cpp/convocatorias_programas_innovacion) · [InvestChile · Government Investment Agency](https://www.investchile.gob.cl/es/) |
 | 미주 | 콜롬비아 / Colombia | CO | **3** | 0 | [Colombia Compra Eficiente · SECOP Procurement](https://www.colombiacompra.gov.co/secop) · [MiPymes Colombia · Support Calls](https://www.mipymes.gov.co/programas/inclusion-productiva/convocatorias) · [ProColombia · Trade and Investment Promotion](https://procolombia.co/) |
-| 미주 | 코스타리카 / Costa Rica | CR | **0** | 3 | — |
+| 미주 | 코스타리카 / Costa Rica | CR | **3** | 0 | [Costa Rica SICOP · National Procurement Platform](https://www.sicop.go.cr/) · [Costa Rica MEIC · Enterprise Development](https://www.meic.go.cr/) · [Costa Rica PROCOMER · Export and Investment Promotion](https://procomer.com/) |
 | 미주 | 쿠바 / Cuba | CU | **0** | 3 | — |
 | 미주 | 도미니카 연방 / Dominica | DM | **0** | 3 | — |
-| 미주 | 도미니카 공화국 / Dominican Republic | DO | **0** | 3 | — |
-| 미주 | 에콰도르 / Ecuador | EC | **0** | 3 | — |
-| 미주 | 엘살바도르 / El Salvador | SV | **0** | 3 | — |
+| 미주 | 도미니카 공화국 / Dominican Republic | DO | **3** | 0 | [Dominican Republic DGCP · Official Procurement Information](https://datosabiertos.dgcp.gob.do/) · [Dominican Republic PROMIPYME · SME Support](https://promipyme.gob.do/) · [ProDominicana · Government Export and Investment Agency](https://prodominicana.gob.do/) |
+| 미주 | 에콰도르 / Ecuador | EC | **3** | 0 | [Ecuador SERCOP · Official Public Contracting System](https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA/) · [Ecuador Ministry of Production · Enterprise Services](https://www.produccion.gob.ec/servicios-y-tramites-del-ministerio-de-produccion-comercio-exterior-inversiones-y-pesca/) · [PRO ECUADOR · National Trade and Investment Promotion](https://www.proecuador.gob.ec/) |
+| 미주 | 엘살바도르 / El Salvador | SV | **3** | 0 | [El Salvador COMPRASAL · Public Procurement](https://www.comprasal.gob.sv/) · [El Salvador CONAMYPE · National MSME Commission](https://www.conamype.gob.sv/) · [INVEST El Salvador · Government Investment Promotion](https://www.investinelsalvador.gob.sv/) |
 | 미주 | 그레나다 / Grenada | GD | **0** | 3 | — |
-| 미주 | 과테말라 / Guatemala | GT | **0** | 3 | — |
+| 미주 | 과테말라 / Guatemala | GT | **3** | 0 | [Guatemala Guatecompras · State Procurement](https://www.guatecompras.gt/) · [Guatemala Ministry of Economy · SME Programmes](https://www.mineco.gob.gt/) · [Guatemala PRONACOM · Competitiveness and Investment](https://www.pronacom.org/) |
 | 미주 | 가이아나 / Guyana | GY | **0** | 3 | — |
 | 미주 | 아이티 / Haiti | HT | **0** | 3 | — |
-| 미주 | 온두라스 / Honduras | HN | **0** | 3 | — |
-| 미주 | 자메이카 / Jamaica | JM | **0** | 3 | — |
+| 미주 | 온두라스 / Honduras | HN | **3** | 0 | [Honduras Honducompras · Official Public Procurement](https://honducompras.gob.hn/) · [Honduras Ministry of Economic Development](https://sde.gob.hn/) · [Honduras National Investment Council · Investment Facilitation](https://cni.hn/) |
+| 미주 | 자메이카 / Jamaica | JM | **3** | 0 | [Jamaica GOJEP · Government e-Procurement](https://www.gojep.gov.jm/) · [Jamaica Business Development Corporation · SME Services](https://www.jbdc.net/) · [Jamaica JAMPRO · Investment and Export Promotion](https://dobusinessjamaica.com/) |
 | 미주 | 니카라과 / Nicaragua | NI | **0** | 3 | — |
-| 미주 | 파나마 / Panama | PA | **0** | 3 | — |
-| 미주 | 파라과이 / Paraguay | PY | **0** | 3 | — |
+| 미주 | 파나마 / Panama | PA | **3** | 0 | [PanamaCompra · Government Procurement Platform](https://www.panamacompra.gob.pa/) · [Panama AMPYME · Micro and SME Authority](https://ampyme.gob.pa/) · [ProPanama · National Investment Promotion](https://propanama.gob.pa/) |
+| 미주 | 파라과이 / Paraguay | PY | **3** | 0 | [Paraguay DNCP · Government Tender Search](https://contrataciones.gov.py/buscador/licitaciones.html) · [Paraguay Ministry of Industry and Commerce · SME Support](https://www.mic.gov.py/) · [REDIEX · Investment and Exports Network](https://www.rediex.gov.py/) |
 | 미주 | 페루 / Peru | PE | **3** | 0 | [Peru OECE · SEACE Public Procurement Search](https://www.gob.pe/32306-como-acceder-a-los-procesos-de-seleccion-convocados-y-en-curso) · [PRODUCE Más · SME Business Services](https://www.gob.pe/producemas) · [PROINVERSIÓN · Public-Private Investment](https://www.investinperu.pe/) |
 | 미주 | 세인트키츠 네비스 / Saint Kitts and Nevis | KN | **0** | 3 | — |
 | 미주 | 세인트루시아 / Saint Lucia | LC | **0** | 3 | — |
 | 미주 | 세인트빈센트 그레나딘 / Saint Vincent and the Grenadines | VC | **0** | 3 | — |
 | 미주 | 수리남 / Suriname | SR | **0** | 3 | — |
-| 미주 | 트리니다드 토바고 / Trinidad and Tobago | TT | **0** | 3 | — |
-| 미주 | 우루과이 / Uruguay | UY | **0** | 3 | — |
+| 미주 | 트리니다드 토바고 / Trinidad and Tobago | TT | **3** | 0 | [Trinidad and Tobago ProcureTT · Official Procurement Notices](https://oprtt.org/procurett/) · [Trinidad and Tobago Ministry of Trade · SME Programmes](https://tradeind.gov.tt/) · [Trinidad and Tobago Government · Investment Directorate](https://mtti.gov.tt/investment-directorate/) |
+| 미주 | 우루과이 / Uruguay | UY | **3** | 0 | [Uruguay ARCE · State Procurement Regulatory Agency](https://www.gub.uy/agencia-reguladora-compras-estatales/) · [Uruguay ANII · Innovation and Entrepreneurship Grants](https://anii.org.uy/apoyos/innovacion/) · [Uruguay XXI · Investment and Export Promotion](https://www.uruguayxxi.gub.uy/en/) |
 | 미주 | 베네수엘라 / Venezuela | VE | **0** | 3 | — |
 | 오세아니아 | 호주 / Australia | AU | **3** | 0 | [AusTender · Australian Government Tenders](https://www.tenders.gov.au/) · [business.gov.au · Grants Finder](https://business.gov.au/grants-and-programs/) · [Selling to Government · Procurement Guidance](https://sellingtogov.finance.gov.au/) |
 | 오세아니아 | 피지 / Fiji | FJ | **0** | 3 | — |
@@ -198,4 +198,4 @@
 | 오세아니아 | 투발루 / Tuvalu | TV | **0** | 3 | — |
 | 오세아니아 | 바누아투 / Vanuatu | VU | **0** | 3 | — |
 
-공식 근거 URL과 검증일은 `src/government_business_sites.json`의 국가별 각 항목 `evidence_url`, `verified_on`에서 확인하십시오. 원문 계약의 현재 접수 상태·API 제공·접근 조건은 별도입니다.
+개별 사이트의 근거 URL과 등록일은 `src/government_business_sites.json`의 `evidence_url`·`verified_on` 항목을 참조하세요. **운영사이트 반영은 미완료**입니다.
