@@ -6,6 +6,11 @@ on:
       - 'tests/wmm_public_healthcheck.test.mjs'
       - 'tests/wmm_sitemap.test.mjs'
       - 'tests/wmm_headers.test.mjs'
+      - 'scripts/wmm_data_quality_audit.mjs'
+      - 'tests/wmm_data_quality_audit.test.mjs'
+      - 'data/countries.json'
+      - 'data/regions.json'
+      - 'data/opps.json'
       - '_headers'
       - 'scripts/wmm_sitemap_preview.mjs'
       - 'tests/wmm_sitemap_preview.test.mjs'
@@ -25,7 +30,7 @@ jobs:
           node-version: '22'
           package-manager-cache: false
       - name: Run offline unit tests and source route inventory (no network)
-        run: node --test tests/wmm_public_healthcheck.test.mjs tests/wmm_sitemap.test.mjs tests/wmm_headers.test.mjs tests/wmm_sitemap_preview.test.mjs
+        run: node --test tests/wmm_public_healthcheck.test.mjs tests/wmm_sitemap.test.mjs tests/wmm_headers.test.mjs tests/wmm_data_quality_audit.test.mjs tests/wmm_sitemap_preview.test.mjs
       - name: Build review-only source-derived sitemap
         run: |
           node scripts/wmm_sitemap_preview.mjs --output "$RUNNER_TEMP/wmm-sitemap-preview.xml" --json > "$RUNNER_TEMP/wmm-sitemap-preview-summary.json"
