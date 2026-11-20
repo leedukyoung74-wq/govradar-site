@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wmm-hoa.com/schemas/v1/intake-request.json",
+  "title": "WMM cross-site service request - normalized intake v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "site",
+    "service",
+    "message",
+    "privacy_consent",
+    "marketing_consent"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "site": {
+      "enum": [
+        "wmm",
+        "govradar",
+        "gcsme-korea",
+        "playground",
+        "world-miracle-makers",
+        "preparedness"
+      ]
+    },
+    "service": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "message": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 5000
+    },
+    "country_iso": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "locale": {
+      "enum": [
+        "ko",
+        "en",
+        "es",
+        "fr",
+        "ar",
+        "vi",
+        "id"
+      ]
+    },
+    "organization": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "reply_email": {
+      "type": "string",
+      "maxLength": 254,
+      "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+    },
+    "privacy_consent": {
+      "const": true
+    },
+    "marketing_consent": {
+      "type": "boolean"
+    },
+    "source_page": {
+      "type": "string",
+      "maxLength": 400
+    },
+    "urgency": {
+      "enum": [
+        "normal",
+        "time_sensitive"
+      ]
+    },
+    "request_type": {
+      "enum": [
+        "information",
+        "consultation",
+        "partnership",
+        "issue_report",
+        "contribution"
+      ]
+    }
+  },
+  "description": "Draft contract only. Do not expose personal requests in public GitHub. Authentication, secure database, RLS, spam defense, retention and consent versioning must be implemented before production."
+}
