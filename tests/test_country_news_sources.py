@@ -14,10 +14,10 @@ class NewsDirectoryQA(unittest.TestCase):
         self.assertEqual(len(self.sources),193)
         self.assertEqual(self.report["target_links"],579)
         self.assertEqual(len(self.report["country_counts"]),193)
-        self.assertEqual(self.report["registered_publisher_links"],360)
-        self.assertEqual(self.report["countries_with_at_least_three_recorded"],120)
-        self.assertEqual(self.report["remaining_minimum_link_slots"],219)
-        self.assertEqual(len(self.report["uncatalogued_countries"]),73)
+        self.assertEqual(self.report["registered_publisher_links"],450)
+        self.assertEqual(self.report["countries_with_at_least_three_recorded"],150)
+        self.assertEqual(self.report["remaining_minimum_link_slots"],129)
+        self.assertEqual(len(self.report["uncatalogued_countries"]),43)
 
     def test_publishers_distinct_and_not_gov_procurement_numbers(self):
         for iso,rows in self.sources.items():
