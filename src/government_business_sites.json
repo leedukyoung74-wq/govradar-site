@@ -1830,6 +1830,35 @@
         "evidence_url": "https://investcroatia.gov.hr/en/hamag-bicro/"
       }
     ],
+    "HT": [
+      {
+        "name_ko": "CNMP · 아이티 국가공공조달위원회",
+        "name_en": "Haiti CNMP · Official Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://cnmp.gouv.ht/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cnmp.gouv.ht/"
+      },
+      {
+        "name_ko": "MCI · 아이티 상공부 기업행정",
+        "name_en": "Haiti Ministry of Commerce and Industry · SME Services",
+        "category": "support",
+        "url": "https://mci.gouv.ht/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.servicespublics.gouv.ht/site/rsmo/CFI"
+      },
+      {
+        "name_ko": "CFI · 아이티 투자진흥청",
+        "name_en": "Haiti Investment Facilitation Center · CFI",
+        "category": "investment",
+        "url": "https://cfi.ht/en/a-propos/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://cfi.ht/en/2025/10/09/investir-en-haiti-le-role-central-du-centre-de-facilitation-des-investissements/"
+      }
+    ],
     "HU": [
       {
         "name_ko": "Közbeszerzési Hatóság · 헝가리 공공조달청",
@@ -2207,6 +2236,35 @@
         "evidence_url": "https://www.cib-cdc.gov.kh/"
       }
     ],
+    "KN": [
+      {
+        "name_ko": "공공시설부 · 정부 조달 공고",
+        "name_en": "St Kitts & Nevis Government · Public Tender Calls",
+        "category": "procurement",
+        "url": "https://mopieudt.gov.kn/category/work/tenders/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.sknis.gov.kn/2026/05/28/request-for-proposal-acquisition-and-implementation-of-a-budgeting-system/"
+      },
+      {
+        "name_ko": "중소기업부 SBDC · 기업지원",
+        "name_en": "St Kitts & Nevis Government · Small Business Development Centre",
+        "category": "support",
+        "url": "https://www.mosbecce.gov.kn/sbdc/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gov.kn/your-jobs-economy/"
+      },
+      {
+        "name_ko": "SKIPA · 국가 투자진흥청",
+        "name_en": "St Kitts Investment Promotion Agency · Government",
+        "category": "investment",
+        "url": "https://www.edi.gov.kn/st-kitts-investment-and-promotion-agency-skipa/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.edi.gov.kn/st-kitts-investment-and-promotion-agency-skipa/"
+      }
+    ],
     "KR": [
       {
         "name_ko": "나라장터 · 국가종합전자조달",
@@ -2582,6 +2640,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.amdie.gov.ma/"
+      }
+    ],
+    "MC": [
+      {
+        "name_ko": "모나코 관보 · 국가 공공계약 공고",
+        "name_en": "Journal de Monaco · Official Public Tender Notices",
+        "category": "procurement",
+        "url": "https://journaldemonaco.gouv.mc/fr/Journaux/2026/Journal-8817/Avis-d-appel-a-concurrence-pour-la-passation-d-un-Marche-public-de-services",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://legimonaco.mc/tnc/ordonnance/2018/12-20-7.264"
+      },
+      {
+        "name_ko": "MonEntreprise · 왕국 정부 기업지원",
+        "name_en": "Monaco MonEntreprise · Official Business Services",
+        "category": "support",
+        "url": "https://monentreprise.gouv.mc/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.monentreprise.gouv.mc/extended-monaco-entreprises"
+      },
+      {
+        "name_ko": "Monaco Chamber of Commerce · 정부인정 무역개발",
+        "name_en": "Monaco Chamber of Commerce · Government-backed Business Development",
+        "category": "investment",
+        "url": "https://mcc.mc/en/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://mcc.mc/en/news/the-monaco-economic-board-officially-becomes-the-chamber-of-commerce-of-monaco"
       }
     ],
     "MD": [
@@ -3017,6 +3104,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-20",
         "evidence_url": "https://nipc.gov.ng/notifications"
+      }
+    ],
+    "NI": [
+      {
+        "name_ko": "SISCAE · 니카라과 국가조달",
+        "name_en": "Nicaragua SISCAE · Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://www.gestion.nicaraguacompra.gob.ni/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.gestion.nicaraguacompra.gob.ni/siscae/portal/proveedores-gestion/busqueda"
+      },
+      {
+        "name_ko": "MIFIC · 산업·중소기업 지원",
+        "name_en": "Nicaragua Ministry of Industry and Commerce · SME Services",
+        "category": "support",
+        "url": "https://www.mific.gob.ni/Inicio/Fomento/Industria/Fomento-Empresarial-e-Industrial/Direcci%C3%B3n-de-Desarrollo-Empresarial",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mific.gob.ni/Inicio/Fomento/Industria/Proyectos"
+      },
+      {
+        "name_ko": "MIFIC 투자국 · 외국투자진흥",
+        "name_en": "Nicaragua MIFIC Investment Directorate",
+        "category": "investment",
+        "url": "https://www.mific.gob.ni/Inicio/Fomento/Industria/Direcci%C3%B3n-de-Inversiones",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.mific.gob.ni/Inicio/Fomento/Industria/Direcci%C3%B3n-de-Inversiones"
       }
     ],
     "NL": [
@@ -3771,6 +3887,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://ticaret.gov.tr/yurtdisi-teskilati/afrika/senegal/faydali-linkler/ulke-kamu-kurum-ve-meslek-kuruluslari"
+      }
+    ],
+    "SR": [
+      {
+        "name_ko": "수리남 정부 · 공식 입찰공고",
+        "name_en": "Suriname Government · National Tender Notices",
+        "category": "procurement",
+        "url": "https://gov.sr/aanbestedingen/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.sr/aanbestedingen/"
+      },
+      {
+        "name_ko": "경제부 KMO · 정부 중소기업지원기금",
+        "name_en": "Suriname Government · KMO SME Financing Unit",
+        "category": "support",
+        "url": "https://gov.sr/ministeries/ministerie-van-economische-zaken-ondernemerschap-technologische-innovatie/kmo-unit/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://gov.sr/kmo-fonds-beheersovereenkomst-ter-stimulering-van-ondernemerschap-in-suriname-2/"
+      },
+      {
+        "name_ko": "SITA · 국영 투자무역진흥청",
+        "name_en": "Suriname Investment and Trade Agency · State-Owned Promotion",
+        "category": "investment",
+        "url": "https://sita.sr/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://sita.sr/about-us/"
       }
     ],
     "SV": [
