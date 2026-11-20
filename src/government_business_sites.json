@@ -409,6 +409,35 @@
         "evidence_url": "https://www.bahrainedb.com/"
       }
     ],
+    "BJ": [
+      {
+        "name_ko": "DNC · 베냉 공공조달 입찰",
+        "name_en": "Benin National Public Procurement Notices",
+        "category": "procurement",
+        "url": "https://www.marches-publics.bj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp.bj/decret-n2025-169-du-09-avril-2025-portant-mise-en-place-dun-systeme-dinformation-et-de-gestion-electronique-de-la-commande-publique-en-republique-du-benin/"
+      },
+      {
+        "name_ko": "ADPME · 국가 중소기업개발청",
+        "name_en": "Benin ADPME · State Agency for SMEs",
+        "category": "support",
+        "url": "https://adpme.bj/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://adpme.bj/mentions-legales/"
+      },
+      {
+        "name_ko": "APIEx · 국가 투자·수출진흥",
+        "name_en": "Benin Investment and Export Promotion Agency",
+        "category": "investment",
+        "url": "https://investbenin.bj/about/apiex",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://investbenin.bj/about/apiex"
+      }
+    ],
     "BN": [
       {
         "name_ko": "재무경제부 · 공공조달 절차",
@@ -612,6 +641,35 @@
         "evidence_url": "https://ised-isde.canada.ca/site/clean-growth-hub/en/selling-government"
       }
     ],
+    "CD": [
+      {
+        "name_ko": "ARMP RDC · 콩고민주공화국 조달감독청",
+        "name_en": "DR Congo Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://armp-rdc.cd/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://armp-rdc.cd/"
+      },
+      {
+        "name_ko": "GUCE · 정부 기업창업 단일창구",
+        "name_en": "DR Congo Government Business Registration Single Window",
+        "category": "support",
+        "url": "https://economie.gouv.cd/investments/guce",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://economie.gouv.cd/rubrique_creation_entreprise"
+      },
+      {
+        "name_ko": "ANAPI · 국가 투자진흥청",
+        "name_en": "DR Congo ANAPI · National Investment Promotion",
+        "category": "investment",
+        "url": "https://anapi.cd/en/procedures",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://anapi.cd/en/procedures"
+      }
+    ],
     "CH": [
       {
         "name_ko": "simap · 스위스 공식 조달",
@@ -699,6 +757,35 @@
         "evidence_url": "https://www.investchile.gob.cl/es/programs-and-incentives-for-investment/"
       }
     ],
+    "CM": [
+      {
+        "name_ko": "ARMP · 카메룬 공공조달청",
+        "name_en": "Cameroon Public Procurement Regulatory Agency",
+        "category": "procurement",
+        "url": "https://www.armp.cm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.armp.cm/"
+      },
+      {
+        "name_ko": "MINPMEESA · 국가 중소기업·수공업부",
+        "name_en": "Cameroon Ministry of SMEs and Social Economy",
+        "category": "support",
+        "url": "https://minpmeesa.cm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://minpmeesa.cm/"
+      },
+      {
+        "name_ko": "API Cameroon · 정부 투자진흥청",
+        "name_en": "Cameroon Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://www.investincameroon.cm/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.investincameroon.info/en/terms"
+      }
+    ],
     "CN": [
       {
         "name_ko": "중국 재정부 지정 정부조달망",
@@ -784,6 +871,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://procomer.com/"
+      }
+    ],
+    "CV": [
+      {
+        "name_ko": "ARAP · 카보베르데 공공조달청",
+        "name_en": "Cabo Verde Public Procurement Regulatory Authority",
+        "category": "procurement",
+        "url": "https://www.arap.cv/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.arap.cv/"
+      },
+      {
+        "name_ko": "Pro Empresa · 공공기업지원청",
+        "name_en": "Cabo Verde Pro Empresa · MSME and Startup Programmes",
+        "category": "support",
+        "url": "https://www.proempresa.cv/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.proempresa.cv/"
+      },
+      {
+        "name_ko": "Cabo Verde TradeInvest · 투자진흥",
+        "name_en": "Cabo Verde TradeInvest · National Investment Promotion",
+        "category": "investment",
+        "url": "https://www.cvtradeinvest.cv/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.cvtradeinvest.cv/"
       }
     ],
     "CY": [
@@ -929,6 +1045,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://www.gob.do/servicios/oportunidades-comerciales-de-republica-dominicana-en-mercados-internacionales"
+      }
+    ],
+    "DZ": [
+      {
+        "name_ko": "공공조달망 · 알제리 국가입찰",
+        "name_en": "Algeria National Public Procurement Portal",
+        "category": "procurement",
+        "url": "https://www.marches-publics.gov.dz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dgb.mf.gov.dz/?page_id=2520"
+      },
+      {
+        "name_ko": "NESDA · 국가 창업기업 지원청",
+        "name_en": "Algeria NESDA · National Entrepreneurship Development",
+        "category": "support",
+        "url": "https://nesda.dz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://nesda.dz/Home/InscriptionMPDZ"
+      },
+      {
+        "name_ko": "AAPI · 국가 투자진흥청",
+        "name_en": "Algerian Investment Promotion Agency",
+        "category": "investment",
+        "url": "https://aapi.dz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://embnairobi.mfa.gov.dz/news-and-press-releases/welcome-to-the-digital-platform-for-investors"
       }
     ],
     "EC": [
@@ -1277,6 +1422,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://gambia.gov.gm/gambia-investment-and-export-promotion-agency/"
+      }
+    ],
+    "GN": [
+      {
+        "name_ko": "DGCMP · 기니 국가입찰 공고",
+        "name_en": "Guinea Government Public Procurement Directorate",
+        "category": "procurement",
+        "url": "https://dgcmp.gov.gn/appels-doffres/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dgcmp.gov.gn/appels-doffres/"
+      },
+      {
+        "name_ko": "3AE · 정부 중소기업 역량강화청",
+        "name_en": "Guinea 3AE · Public MSME Development",
+        "category": "support",
+        "url": "https://3ae.gov.gn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://3ae.gov.gn/"
+      },
+      {
+        "name_ko": "APIP Guinée · 국가투자청",
+        "name_en": "Guinea Investment Promotion Agency · APIP",
+        "category": "investment",
+        "url": "https://apip.gov.gn/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://apip.gov.gn/"
       }
     ],
     "GR": [
@@ -2352,6 +2526,35 @@
         "evidence_url": "https://www.mida.gov.my/forms-and-guidelines/"
       }
     ],
+    "MZ": [
+      {
+        "name_ko": "UFSA · 모잠비크 공공조달",
+        "name_en": "Mozambique UFSA · Public Procurement Unit",
+        "category": "procurement",
+        "url": "https://ufsa.gov.mz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://ufsa.gov.mz/"
+      },
+      {
+        "name_ko": "IPEME · 정부 중소기업진흥",
+        "name_en": "Mozambique IPEME · Public Enterprise Development Institute",
+        "category": "support",
+        "url": "https://www.ipeme.gov.mz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.ipeme.gov.mz/"
+      },
+      {
+        "name_ko": "APIEX · 국가 투자·수출진흥",
+        "name_en": "Mozambique APIEX · Public Investment and Export Agency",
+        "category": "investment",
+        "url": "https://www.apiex.gov.mz/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://www.embassymozambique.se/en/agency-for-the-promotion-of-investments-and-exports-apiex/"
+      }
+    ],
     "NA": [
       {
         "name_ko": "eProcurement · 나미비아 정부조달",
@@ -3191,6 +3394,35 @@
         "verification": "official_primary",
         "verified_on": "2026-11-21",
         "evidence_url": "https://investeswatini.org.sz/"
+      }
+    ],
+    "TG": [
+      {
+        "name_ko": "DNCCP · 토고 국가 공공조달",
+        "name_en": "Togo National Public Procurement Directorate",
+        "category": "procurement",
+        "url": "https://dnccp.gouv.tg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://dnccp.gouv.tg/a-propos/"
+      },
+      {
+        "name_ko": "FAIEJ · 정부 청년기업 지원기금",
+        "name_en": "Togo FAIEJ · Government Youth Enterprise Fund",
+        "category": "support",
+        "url": "https://www.faiej.tg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://service-public.gouv.tg/service/62197bd433c01793464979ee/justice/beneficier-de-laccompagnement-du-faiej"
+      },
+      {
+        "name_ko": "투자산업부 · 투자진흥·자유구역",
+        "name_en": "Togo Government Ministry of Investment and Industry",
+        "category": "investment",
+        "url": "https://investissement.gouv.tg/",
+        "verification": "official_primary",
+        "verified_on": "2026-11-21",
+        "evidence_url": "https://service-public.gouv.tg/apizf"
       }
     ],
     "TH": [
