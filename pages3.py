@@ -433,6 +433,46 @@ import os as _os
 DLJS = open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "web", "dl.js"), encoding="utf8").read()
 NB = lambda L: '<em class="nb">' + pt("new", L if isinstance(L, str) else ("ko" if L else "en")) + "</em>"
 SV = {"ko": "내 관심 목록에 담기", "en": "Save to my watchlist", "es": "Guardar en mi lista", "fr": "Ajouter à ma liste", "ar": "احفظ في قائمتي", "vi": "Lưu vào danh sách của tôi", "id": "Simpan ke daftar saya"}
+# Disclosure is deliberately separated from issuer verification: link != official notice.
+# Locale wording is provisional translation and does not imply that each notice is verified.
+TENDER_DISCLOSURE = {
+    "ko": {
+        "heading": "입찰 일정 목록 — 실제 접수 상태 재확인",
+        "warning": "표시된 날짜와 외부 링크는 수집 참고정보이며 실제 접수 중임을 보장하지 않습니다. 발주기관 공식 원문에서 마감 시간대·연장·취소·접수 상태를 확인하세요.",
+        "external": "외부 공고 링크",
+    },
+    "en": {
+        "heading": "Tender listings by deadline — confirm live status",
+        "warning": "Listed dates and external links are collected references, not proof of an open tender. Confirm the issuing authority's original notice, deadline timezone, amendments and cancellation before any bid.",
+        "external": "External listing",
+    },
+    "es": {
+        "heading": "Licitaciones por fecha límite — confirme el estado",
+        "warning": "Las fechas y enlaces son referencias, no prueba de que la licitación siga abierta. Compruebe el aviso oficial, la zona horaria, las prórrogas y las cancelaciones.",
+        "external": "Enlace externo",
+    },
+    "fr": {
+        "heading": "Appels d'offres par échéance — vérifiez le statut",
+        "warning": "Les dates et liens sont indicatifs et ne prouvent pas qu'un appel d'offres est ouvert. Vérifiez l'avis officiel, le fuseau horaire, les prolongations et les annulations.",
+        "external": "Lien externe",
+    },
+    "ar": {
+        "heading": "العطاءات حسب الموعد النهائي — تحقق من الحالة",
+        "warning": "التواريخ والروابط معلومات مرجعية ولا تؤكد أن العطاء مفتوح. تحقق من الإعلان الرسمي والمنطقة الزمنية والتمديدات والإلغاءات.",
+        "external": "رابط خارجي",
+    },
+    "vi": {
+        "heading": "Gói thầu theo hạn chót — xác minh trạng thái",
+        "warning": "Ngày và liên kết chỉ để tham khảo, không xác nhận gói thầu còn mở. Hãy kiểm tra thông báo chính thức, múi giờ, gia hạn và hủy bỏ.",
+        "external": "Liên kết bên ngoài",
+    },
+    "id": {
+        "heading": "Tender menurut tenggat — periksa status",
+        "warning": "Tanggal dan tautan hanyalah referensi, bukan bukti tender masih dibuka. Periksa pengumuman resmi, zona waktu, perpanjangan, dan pembatalan.",
+        "external": "Tautan eksternal",
+    },
+}
+
 def deadline_board(L, C, limit=None, home=False):
     ko = L == "ko"; e = C["e"]; T = all_tenders(C["DATA"], C["BY"], C["TODAY"])
     if limit: T = T[:limit]
@@ -449,7 +489,7 @@ def deadline_board(L, C, limit=None, home=False):
     nlk = len(T) - len([i for i in range(len(T)) if i in free])
     rows = "".join(lockrow(x) if i not in free else f'''<li class="{"new" if x.get("new") else ""}" data-s="{" ".join(x["sec"]) or "other"}" data-dl="{x["dl"]}" data-gr="1" data-at="{e(str(x["t"].get("deadline_at") or ""))}"><span class="dd" data-dl="{x["dl"]}" data-at="{e(str(x["t"].get("deadline_at") or ""))}">{x["dl"][5:].replace("-", "/")}{NB(L) if x.get("new") else ""}</span>
 <span class="tt"><a href="{C["url"](L, x["iso"])}#tenders">{C["flag"](x["iso"])} {e(C["nm"](x["iso"], L))}</a><b>{e((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))}</b><small>{e((x["te"].get("buyer") if not ko else None) or x["t"].get("buyer", "") or ("발주처: 원문에서 확인" if ko else "Buyer: see notice"))} · <span class="grl"></span></small></span>
-{f'<a class="src" href="{e(x["t"]["url"])}" target="_blank" rel="noopener nofollow">{"원문" if ko else "Notice"} ↗</a>' if str(x["t"].get("url", "")).startswith("https://") else ""}<button class="sv" type="button" data-act="watch" data-iso="{x["iso"]}" data-title="{e((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))}" data-deadline="{x["dl"]}" title="{SV.get(L, SV["en"])}" aria-label="{SV.get(L, SV["en"])}">☆</button></li>''' for i, x in enumerate(T))
+{f'<a class="src" href="{e(x["t"]["url"])}" target="_blank" rel="noopener nofollow">{TENDER_DISCLOSURE.get(L, TENDER_DISCLOSURE["en"])["external"]} ↗</a>' if str(x["t"].get("url", "")).startswith("https://") else ""}<button class="sv" type="button" data-act="watch" data-iso="{x["iso"]}" data-title="{e((x["te"].get("title") if not ko else None) or x["t"].get("title", ""))}" data-deadline="{x["dl"]}" title="{SV.get(L, SV["en"])}" aria-label="{SV.get(L, SV["en"])}">☆</button></li>''' for i, x in enumerate(T))
     chips = "" if home else (f'<div class="filters dlf"><button class="chip on" data-s="all">{"전체" if ko else "All"}</button>' + "".join(f'<button class="chip" data-s="{k}">{nk if ko else ne}</button>' for k, nk, ne, *_ in SECT) + "</div>")
     js = "<script>" + DLJS + "</script>" + '''<script>(function(){var t=new Date();t.setHours(0,0,0,0);document.querySelectorAll(".dl .dd").forEach(function(s){var I=GRDL.info(s.dataset.at,s.dataset.dl),n=GRDL.days(I);if(I.state==="closed"){s.closest("li").remove();return}if(n==null)return;if(s.closest(".lk"))return;s.insertAdjacentHTML("beforeend","<i>D-"+(n||"day")+"</i>");if(n<=15){s.classList.add("soon");s.closest("li").classList.add("hot")}});
 var cs=document.querySelectorAll(".dlf .chip");function f(k){cs.forEach(function(c){c.classList.toggle("on",c.dataset.s===k)});document.querySelectorAll(".dl li").forEach(function(li){li.hidden=!(k==="all"||li.dataset.s.split(" ").indexOf(k)>=0)})}
