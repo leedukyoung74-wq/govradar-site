@@ -1,6 +1,6 @@
 # GOV RADAR · 193개국 국방·공공안보 공식정보원 전수 수량표 (2026-11-21)
 
-- 주권국가 193개 전부 상태 표시. **58개국 1곳 이상, 43개국에 공개기관 링크 3곳 이상, 총 157개 후보.** 나머지 135개국은 미조사.
+- 주권국가 193개 전부 상태 표시. **65개국 1곳 이상, 47개국에 공개기관 링크 3곳 이상, 총 173개 후보.** 나머지 128개국은 미조사.
 - **3개 링크가 반드시 3개 군 기관을 뜻하지는 않음.** 국방부, 군종, 국방행정, 민간 해안경비/보안기관을 명시적으로 분류. 5개국(IS/LI/CR/PA/MU)은 상비군 없는 법적/운영상 구조이므로 3개 군 조직 요구의 직접 대상이 아님.
 - 579개는 193개국 × 3개 **표면상 슬롯 목표**이며, 모든 국가가 3개 상비군 조직을 가진다는 주장이 아니다.
 - 모든 링크는 홈페이지/공보/기관 등록 후보. 접근 허용·상업적 API 권한·URL 최근 접속·자동 경보 연동은 전수 검사 전이며 검토 브랜치에는 배포하지 않음.
@@ -9,7 +9,7 @@
 | 국가 | ISO | 후보 수 | 3까지 부족 | 군 편제 구분 | 공개 공식기관 후보 링크 |
 |---|:--:|--:|--:|---|---|
 | 안도라 | AD | 0 | 3 | 일반 | 미조사 |
-| 아랍에미리트 | AE | 0 | 3 | 일반 | 미조사 |
+| 아랍에미리트 | AE | 1 | 2 | 일반 | [UAE Ministry of Defence](https://mod.gov.ae/) |
 | 아프가니스탄 | AF | 0 | 3 | 일반 | 미조사 |
 | 앤티가 바부다 | AG | 0 | 3 | 일반 | 미조사 |
 | 알바니아 | AL | 2 | 1 | 일반 | [Albania Ministry of Defence](https://www.mod.gov.al/eng/) · [Albanian Armed Forces](https://mod.gov.al/eng/aaf) |
@@ -59,7 +59,7 @@
 | 알제리 | DZ | 0 | 3 | 일반 | 미조사 |
 | 에콰도르 | EC | 0 | 3 | 일반 | 미조사 |
 | 에스토니아 | EE | 3 | 0 | 일반 | [Estonia Ministry of Defence](https://www.kaitseministeerium.ee/en) · [Estonian Defence Forces](https://mil.ee/en/) · [Estonian Defence League](https://kaitseliit.ee/en/defence-league/general-info/) |
-| 이집트 | EG | 0 | 3 | 일반 | 미조사 |
+| 이집트 | EG | 2 | 1 | 일반 | [Egyptian Armed Forces / Ministry of Defence](https://www.mod.gov.eg/ModWebSite/Default.aspx) · [Egypt Ministry of Military Production](https://www.momp.gov.eg/Home/English) |
 | 에리트레아 | ER | 0 | 3 | 일반 | 미조사 |
 | 스페인 | ES | 3 | 0 | 일반 | [Spanish Ministry of Defence](https://www.defensa.gob.es/) · [Spanish Army](https://ejercito.defensa.gob.es/) · [Spanish Navy](https://armada.defensa.gob.es/) |
 | 에티오피아 | ET | 0 | 3 | 일반 | 미조사 |
@@ -85,7 +85,7 @@
 | 헝가리 | HU | 2 | 1 | 일반 | [Hungary Government Defence Ministry](https://kormany.hu/honvedelmi-miniszterium) · [Hungarian Defence Forces official publication](https://honvedelem.hu/en) |
 | 인도네시아 | ID | 3 | 0 | 일반 | [Indonesia Ministry of Defence](https://www.kemhan.go.id/) · [Indonesian National Armed Forces TNI](https://www.tni.mil.id/) · [Indonesian Army TNI AD](https://tniad.mil.id/) |
 | 아일랜드 | IE | 3 | 0 | 일반 | [Ireland Department of Defence](https://www.gov.ie/en/department-of-defence/) · [Irish Defence Forces](https://www.military.ie/en/) · [Irish Naval Service](https://www.military.ie/en/who-we-are/naval-service/) |
-| 이스라엘 | IL | 0 | 3 | 일반 | 미조사 |
+| 이스라엘 | IL | 3 | 0 | 일반 | [Israel Ministry of Defense](https://www.mod.gov.il/en) · [Israel Defense Forces](https://www.idf.il/en/) · [Israeli Air Force public information](https://www.idf.il/en/mini-sites/israeli-air-force/) |
 | 인도 | IN | 3 | 0 | 일반 | [India Ministry of Defence](https://www.mod.gov.in/) · [India Department of Military Affairs](https://www.dmamod.gov.in/) · [Indian Navy](https://indiannavy.gov.in/) |
 | 이라크 | IQ | 0 | 3 | 일반 | 미조사 |
 | 이란 | IR | 0 | 3 | 일반 | 미조사 |
@@ -94,7 +94,7 @@
 | 자메이카 | JM | 0 | 3 | 일반 | 미조사 |
 | 요르단 | JO | 0 | 3 | 일반 | 미조사 |
 | 일본 | JP | 3 | 0 | 일반 | [Japan Ministry of Defense](https://www.mod.go.jp/en/) · [Japan Ground Self-Defense Force](https://www.mod.go.jp/gsdf/) · [Japan Maritime Self-Defense Force](https://www.mod.go.jp/msdf/) |
-| 케냐 | KE | 0 | 3 | 일반 | 미조사 |
+| 케냐 | KE | 3 | 0 | 일반 | [Kenya Ministry of Defence](https://www.mod.go.ke/) · [Kenya Army](https://www.mod.go.ke/kenya-army/) · [Kenya Navy](https://www.mod.go.ke/kenya-navy/) |
 | 키르기스스탄 | KG | 0 | 3 | 일반 | 미조사 |
 | 캄보디아 | KH | 0 | 3 | 일반 | 미조사 |
 | 키리바시 | KI | 0 | 3 | 일반 | 미조사 |
@@ -131,11 +131,11 @@
 | 몰디브 | MV | 0 | 3 | 일반 | 미조사 |
 | 말라위 | MW | 0 | 3 | 일반 | 미조사 |
 | 멕시코 | MX | 2 | 1 | 일반 | [Mexico Secretariat of National Defence (DEFENSA)](https://www.gob.mx/defensa) · [Mexico Secretariat of the Navy (SEMAR)](https://www.gob.mx/semar) |
-| 말레이시아 | MY | 0 | 3 | 일반 | 미조사 |
+| 말레이시아 | MY | 3 | 0 | 일반 | [Malaysia Ministry of Defence](https://www.mod.gov.my/) · [Malaysian Army](https://army.mil.my/) · [Royal Malaysian Navy](https://navy.mil.my/) |
 | 모잠비크 | MZ | 0 | 3 | 일반 | 미조사 |
 | 나미비아 | NA | 0 | 3 | 일반 | 미조사 |
 | 니제르 | NE | 0 | 3 | 일반 | 미조사 |
-| 나이지리아 | NG | 0 | 3 | 일반 | 미조사 |
+| 나이지리아 | NG | 3 | 0 | 일반 | [Nigeria Ministry of Defence](https://defence.gov.ng/) · [Nigerian Army](https://army.mil.ng/) · [Nigerian Navy](https://www.navy.mil.ng/) |
 | 니카라과 | NI | 0 | 3 | 일반 | 미조사 |
 | 네덜란드 | NL | 3 | 0 | 일반 | [Netherlands Ministry of Defence](https://www.ministryofdefence.nl/) · [Royal Netherlands Army](https://www.defensie.nl/organisatie/landmacht) · [Royal Netherlands Navy](https://www.defensie.nl/organisatie/marine) |
 | 노르웨이 | NO | 3 | 0 | 일반 | [Norway Ministry of Defence](https://www.regjeringen.no/en/dep/fd/id380/) · [Norwegian Armed Forces](https://www.forsvaret.no/en/) · [Norwegian Army](https://www.forsvaret.no/en/organisation/army) |
@@ -157,7 +157,7 @@
 | 세르비아 | RS | 2 | 1 | 일반 | [Serbia Ministry of Defence](https://www.mod.gov.rs/eng/) · [Serbian Armed Forces](https://www.vs.rs/en) |
 | 러시아 | RU | 0 | 3 | 일반 | 미조사 |
 | 르완다 | RW | 0 | 3 | 일반 | 미조사 |
-| 사우디아라비아 | SA | 0 | 3 | 일반 | 미조사 |
+| 사우디아라비아 | SA | 1 | 2 | 일반 | [Saudi Arabia Ministry of Defense](https://www.mod.gov.sa/) |
 | 솔로몬 제도 | SB | 0 | 3 | 일반 | 미조사 |
 | 세이셸 | SC | 0 | 3 | 일반 | 미조사 |
 | 수단 | SD | 0 | 3 | 일반 | 미조사 |
