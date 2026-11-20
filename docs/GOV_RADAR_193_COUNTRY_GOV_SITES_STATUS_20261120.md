@@ -1,6 +1,6 @@
 # GOV RADAR — 193개국 공식 조달·기업지원·투자 기관 카탈로그
 
-**2026-11-21 검토용 등록: 152/193개국 · 456/579개 사이트**. 남은 **41개국·123개**.
+**2026-11-21 검토용 등록: 156/193개국 · 468/579개 사이트**. 남은 **37개국·111개**.
 
 이 표의 '등록'은 정부/공공기관 근거 URL을 명시한 검토용 소스 항목 수를 의미합니다. 해당 기관의 공식 지위·URL 접근·접속 제한·최신 조달 여부 및 API 사용 가능 여부를 전수 확인했다는 뜻은 아닙니다. 옛 HTTP 200 레지스트리 후보는 카운트에서 제외하였으며 운영 사이트에는 배포하지 않았습니다.
 
@@ -10,14 +10,14 @@
 | 아프리카 | 앙골라 / Angola | AO | **3** | 0 | [Angola Ministry of Finance · Public Procurement Portal](https://compraspublicas.minfin.gov.ao/ComprasPublicas/) · [Angola INAPEM · MSME Business Support](https://inapem.gov.ao/) · [Angola AIPEX · Government Investment Promotion](https://gue.gov.ao/portal/investimento-aipex) |
 | 아프리카 | 베냉 / Benin | BJ | **3** | 0 | [Benin National Public Procurement Notices](https://www.marches-publics.bj/) · [Benin ADPME · State Agency for SMEs](https://adpme.bj/) · [Benin Investment and Export Promotion Agency](https://investbenin.bj/about/apiex) |
 | 아프리카 | 보츠와나 / Botswana | BW | **3** | 0 | [Botswana Public Procurement Regulatory Authority](https://www.ppadb.co.bw/) · [Botswana Citizen Entrepreneurial Development Agency](https://www.ceda.co.bw/) · [Botswana Investment and Trade Centre](https://www.bitc.co.bw/) |
-| 아프리카 | 부르키나파소 / Burkina Faso | BF | **0** | 3 | — |
+| 아프리카 | 부르키나파소 / Burkina Faso | BF | **3** | 0 | [Burkina Faso Government Public Procurement Directorate](https://www.dgcmef.gov.bf/fr/plan-de-passation-des-march-s-publics) · [Burkina Faso Official Business Registration and SME Guidance](https://businessprocedures.bf/) · [Agence Burkinabè des Investissements · ABI](https://www.investburkina.bf/) |
 | 아프리카 | 부룬디 / Burundi | BI | **0** | 3 | — |
 | 아프리카 | 카보베르데 / Cabo Verde | CV | **3** | 0 | [Cabo Verde Public Procurement Regulatory Authority](https://www.arap.cv/) · [Cabo Verde Pro Empresa · MSME and Startup Programmes](https://www.proempresa.cv/) · [Cabo Verde TradeInvest · National Investment Promotion](https://www.cvtradeinvest.cv/) |
 | 아프리카 | 카메룬 / Cameroon | CM | **3** | 0 | [Cameroon Public Procurement Regulatory Agency](https://www.armp.cm/) · [Cameroon Ministry of SMEs and Social Economy](https://minpmeesa.cm/) · [Cameroon Investment Promotion Agency](https://www.investincameroon.cm/) |
 | 아프리카 | 중앙아프리카공화국 / Central African Republic | CF | **0** | 3 | — |
-| 아프리카 | 차드 / Chad | TD | **0** | 3 | — |
+| 아프리카 | 차드 / Chad | TD | **3** | 0 | [Chad Public Procurement Regulatory Authority](https://www.armp-tchad.com/) · [Chad Ministry of Commerce and Industry · SME Services](https://commerce.gouv.td/services-aux-entreprises-2/) · [Chad National Investment and Export Agency · ANIE](https://anie.td/promotion-investissements) |
 | 아프리카 | 코모로 / Comoros | KM | **0** | 3 | — |
-| 아프리카 | 콩고 / Congo | CG | **0** | 3 | — |
+| 아프리카 | 콩고 / Congo | CG | **3** | 0 | [Republic of Congo Public Procurement Regulatory Authority](https://armp.cg/) · [Republic of Congo Ministry of Industrial Development · Business Support](https://www.industrie.gouv.cg/) · [Republic of Congo National Investment Promotion Agency](https://apicongo.cg/) |
 | 아프리카 | 콩고민주공화국 / DR Congo | CD | **3** | 0 | [DR Congo Public Procurement Regulatory Authority](https://armp-rdc.cd/) · [DR Congo Government Business Registration Single Window](https://economie.gouv.cd/investments/guce) · [DR Congo ANAPI · National Investment Promotion](https://anapi.cd/en/procedures) |
 | 아프리카 | 코트디부아르 / Côte d'Ivoire | CI | **3** | 0 | [Côte d'Ivoire DGMP · Public Procurement Portal](https://www.marchespublics.ci/accueil/home) · [Côte d'Ivoire PME · State-Owned Enterprise Development](https://cipme.ci/) · [Côte d'Ivoire CEPICI · Government Investment Promotion](https://cepici.ci/) |
 | 아프리카 | 지부티 / Djibouti | DJ | **3** | 0 | [Djibouti Official National Public Procurement Notices](https://marchespublics.gouv.dj/marches) · [Djibouti Economic Development Fund · SME Financing](https://fded.dj/) · [Djibouti National Investment Promotion Agency](https://djib-invest.com/) |
@@ -43,7 +43,7 @@
 | 아프리카 | 모로코 / Morocco | MA | **3** | 0 | [Morocco Public Procurement Electronic Portal](https://www.marchespublics.gov.ma/) · [Maroc PME · SME Financial Assistance](https://marocpme.gov.ma/mowakaba-tpme/) · [Moroccan Investment and Export Development Agency](https://www.amdie.gov.ma/) |
 | 아프리카 | 모잠비크 / Mozambique | MZ | **3** | 0 | [Mozambique UFSA · Public Procurement Unit](https://ufsa.gov.mz/) · [Mozambique IPEME · Public Enterprise Development Institute](https://www.ipeme.gov.mz/) · [Mozambique APIEX · Public Investment and Export Agency](https://www.apiex.gov.mz/) |
 | 아프리카 | 나미비아 / Namibia | NA | **3** | 0 | [Namibia Government e-Procurement](https://www.eprocurement.gov.na/) · [Development Bank of Namibia · Business Finance](https://www.dbn.com.na/) · [Namibia Investment Promotion and Development Board](https://nipdb.com/) |
-| 아프리카 | 니제르 / Niger | NE | **0** | 3 | — |
+| 아프리카 | 니제르 / Niger | NE | **3** | 0 | [Niger Official Public Procurement Notices Portal](https://www.marchespublics.ne/index.php) · [Niger National SME and SMI Support Fund · FONAP](https://fonap.ne/) · [Niger National Private Investment Promotion Agency · ANPIPS](https://www.anpips.ne/) |
 | 아프리카 | 나이지리아 / Nigeria | NG | **3** | 0 | [Bureau of Public Procurement · Nigeria](https://www.bpp.gov.ng/) · [SMEDAN · Nigeria Enterprise Development](https://smedan.gov.ng/our-programs/) · [Nigerian Investment Promotion Commission](https://nipc.gov.ng/) |
 | 아프리카 | 르완다 / Rwanda | RW | **3** | 0 | [Rwanda Umucyo · Government e-Procurement](https://umucyo.gov.rw/) · [Rwanda Development Board · Enterprise Support](https://rdb.rw/) · [Rwanda National Agricultural Export Development Board](https://naeb.gov.rw/) |
 | 아프리카 | 상투메프린시페 / São Tomé and Príncipe | ST | **0** | 3 | — |
