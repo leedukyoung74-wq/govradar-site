@@ -109,11 +109,20 @@ def similar_key(x):
     return "|".join((x.get("iso", ""), x.get("deadline", ""), n(x.get("buyer"))[:40], n(x.get("title"))[:80]))
 
 def classify_state(st):
+    """No attempted request is never proof of successful collection."""
     if st.get("skipped"): return "SKIPPED"
-    if st.get("requests", 0) and st.get("failed", 0) >= st.get("requests", 0): return "ERROR"
-    if st.get("failed", 0): return "PARTIAL"
-    if not st.get("raw", 0): return "EMPTY_SUCCESS"
+    requests, failed, raw = st.get("requests", 0), st.get("failed", 0), st.get("raw", 0)
+    if requests == 0: return "ERROR"
+    # A time-budget stop may be recorded separately from network requests. If
+    # any real rows arrived, preserve PARTIAL rather than claiming total failure.
+    if failed and failed >= requests and not raw: return "ERROR"
+    if failed: return "PARTIAL"
+    if not raw: return "EMPTY_SUCCESS"
     return "SUCCESS"
+
+def source_answered(st):
+    """Evidence of at least one usable upstream reply, never an inferred refresh."""
+    return st.get("raw", 0) > 0 or st.get("requests", 0) > st.get("failed", 0)
 
 def merge(groups, prev=None, now=None):
     """groups: list of (source name, items). Returns (items, per-source counts). Confirmed duplicates are dropped;
@@ -240,8 +249,13 @@ def main():
     for nm_, c in counts.items():
         st = dict(FM.stat(nm_)); st.update(c); st["checked"] = stamp
         st["new_today"] = sum(1 for x in items if x["source"] == nm_ and x["added"] == TODAY.isoformat())
-        if st["state"] in ("SUCCESS", "EMPTY_SUCCESS", "PARTIAL"): st["last_success"] = stamp
-        else: st["last_success"] = (status.get(nm_) or {}).get("last_success", "")
+        # A PARTIAL source can contain valid rows, but a source that never
+        # answered cannot advance its last truly successful check.
+        answered = source_answered(st)
+        if st["state"] in ("SUCCESS", "EMPTY_SUCCESS", "PARTIAL") and answered:
+            st["last_success"] = stamp
+        else:
+            st["last_success"] = (status.get(nm_) or {}).get("last_success", "")
         status[nm_] = st
     if not any(x.get("verify") == "search" for x in items):   # no source answered with a single notice today
         items = all_empty_fallback(prev, now, stamp)
