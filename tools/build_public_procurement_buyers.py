@@ -31,7 +31,7 @@ def safe_official_notice(notice):
     url=notice.get("url")
     if source not in OFFICIAL_HOSTS or not isinstance(url,str):
         return False
-    if any(c in url for c in ("\\n","\\r","\\t")): return False
+    if any(c in url for c in ("\n","\r","\t")): return False
     try:
         u=urlsplit(url)
         return (u.scheme=="https" and u.hostname in OFFICIAL_HOSTS[source]
@@ -42,9 +42,9 @@ def safe_official_notice(notice):
 
 def normalize_organisation(text):
     if not isinstance(text,str): return ""
-    s=re.sub(r"\\s+"," ",text).strip()
+    s=re.sub(r"\s+"," ",text).strip()
     # Avoid indexing obvious direct personal contact or raw phone/email fields.
-    if not (4<=len(s)<=160) or "@" in s or re.search(r"\\+?\\d[\\d\\s()-]{7,}\\d",s):
+    if not (4<=len(s)<=160) or "@" in s or re.search(r"\+?\d[\d\s()-]{7,}\d",s):
         return ""
     return s
 
@@ -63,7 +63,7 @@ def build(items,now=None):
                 and is_listed_open(item,now)
                 and str(item.get("status","")).lower() not in CLOSED):
             continue
-        key=(iso,re.sub(r"\\s+"," ",buyer).casefold())
+        key=(iso,re.sub(r"\s+"," ",buyer).casefold())
         result=index.setdefault(key,{"country_iso":iso,"procurement_entity":buyer,
                                    "source_verified_notice_count":0,"notices":[]})
         evidence={"title":title[:220],"deadline":item.get("deadline",""),
@@ -93,7 +93,7 @@ def main():
     if not isinstance(items,list):raise SystemExit("No validated tender items; refusing to invent buyers")
     result=build(items)
     out=Path(opt.out);out.parent.mkdir(parents=True,exist_ok=True)
-    out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"organisations":len(result["organisations"]),"countries":result["country_count"],
                       "output":str(out),"public_procurement_not_commercial_buyers":True},ensure_ascii=False))
 if __name__=="__main__":
