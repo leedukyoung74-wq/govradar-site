@@ -108,8 +108,18 @@ def parse_england_floods(raw, now):
         if not isinstance(row, dict):
             raise ValueError("ea_invalid_row")
         severity = row.get("severity")
-        if severity == "Warning no Longer in Force":
+        severity_code = row.get("severityLevel")
+        # The official API has used differing capitalization for cancelled alerts.
+        # Severity code 4 is authoritative for "no longer in force" even if the
+        # free-text label is inconsistent. Never send a cancelled alert as active.
+        if severity_code in (4, "4") or (
+            isinstance(severity, str) and
+            severity.casefold().strip() == "warning no longer in force"
+        ):
             continue
+        level_map = {1: "Severe Flood Warning", 2: "Flood Warning", 3: "Flood Alert"}
+        if severity_code in level_map:
+            severity = level_map[severity_code]
         if severity not in VALID_EA_SEVERITY:
             raise ValueError("ea_unknown_severity")
         key = str(row.get("floodAreaID") or row.get("@id") or "")
