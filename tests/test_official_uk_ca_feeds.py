@@ -38,8 +38,10 @@ class OfficialUKCanadaTests(unittest.TestCase):
         self.assertFalse(x["government_website_attack_confirmed"])
 
     def test_empty_feed_is_not_emergency(self):
-        self.assertEqual(M.parse_uk_metoffice(UK.replace(b"<item><title>Amber Rain Warning</title><link>https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings</link><pubDate>Sat, 21 Nov 2026 02:40:00 GMT</pubDate><description>Weather warning summary</description></item>",b""),NOW)["count"],0)
-        self.assertEqual(M.parse_canada_eccc(CA.replace(b"<entry><title>Wind Warning for City of Toronto</title><updated>2026-11-21T02:40:00Z</updated><link href=\"https://weather.gc.ca/en/location/index.html?coords=43.656,-79.383\"/></entry>",b""),NOW)["count"],0)
+        empty_uk=b'<?xml version="1.0"?><rss version="2.0"><channel><title>Met Office UK warnings</title></channel></rss>'
+        empty_ca=b'<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Toronto Alerts</title><updated>2026-11-21T03:00:00Z</updated></feed>'
+        self.assertEqual(M.parse_uk_metoffice(empty_uk,NOW)["count"],0)
+        self.assertEqual(M.parse_canada_eccc(empty_ca,NOW)["count"],0)
 
     def test_stale_entries_do_not_create_live_alerts(self):
         old=UK.replace(b"21 Nov 2026",b"11 Nov 2026")
