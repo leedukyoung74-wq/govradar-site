@@ -1,0 +1,45 @@
+name: GOV RADAR operations review
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'review/operations/**'
+      - '.github/workflows/govradar-operations-review.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: govradar-operations-review-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: source-snapshot
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test intake, freshness and Claude guardrails offline
+        working-directory: review/operations
+        run: |
+          python -m unittest discover -s pipeline -v
+          python -m unittest discover -s claude -v
+          python -m unittest discover -s tests -v
+      - name: Build a review page from published data
+        run: |
+          python review/operations/run_ops.py --repo . --snapshot source-snapshot --state-dir review-output
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: govradar-operations-review-${{ github.run_id }}
+          path: review-output
+          if-no-files-found: ignore
+          retention-days: 7
