@@ -100,11 +100,14 @@
     const sc = (k, v) => `<span class="${v && String(v).slice(1) !== "0" ? "on" : ""}">${k}${esc(String(v || "0").replace(/^[RSG]/, ""))}</span>`;
     c.innerHTML = `<div class="scale">${sc("R", sp.r)}${sc("S", sp.s)}${sc("G", sp.g)}</div>${sp.kp != null ? `<p>${esc(KP)} <b>${esc(sp.kp)}</b></p>` : ""}${sp.text ? `<p class="note">${esc(sp.text)}</p>` : ""}`;
   }
+  // USGS 'tsunami' is a review flag on an earthquake record, NOT a tsunami warning or evacuation order (WMM Fast Radar v2 policy).
+  const TSU = { ko: "해일 검토 표식 · 경보 아님", en: "Tsunami review flag · not a warning", es: "Indicador de revisión de tsunami · no es una alerta", fr: "Indicateur tsunami à vérifier · pas une alerte",
+    ar: "مؤشر مراجعة تسونامي · ليس تحذيرًا", vi: "Cờ xem xét sóng thần · không phải cảnh báo", id: "Penanda tinjauan tsunami · bukan peringatan" }[document.documentElement.lang] || "Tsunami review flag · not a warning";
   // USGS live earthquakes (M4.5+, past 7 days)
   fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson").then(r => r.json()).then(j => {
     window.__liveQuake = true;
     const q = j.features.sort((a, b) => b.properties.mag - a.properties.mag).slice(0, 8);
-    list("quake", q, f => { const p = f.properties, d = new Date(p.time); return `<li><b>M${p.mag.toFixed(1)}</b> ${esc(p.place || "")} <span class="note">${d.toISOString().slice(5, 10)}</span>${p.tsunami ? " 🌊" : ""} <a href="${esc(p.url)}" target="_blank" rel="noopener">↗</a></li>`; });
+    list("quake", q, f => { const p = f.properties, d = new Date(p.time); return `<li><b>M${p.mag.toFixed(1)}</b> ${esc(p.place || "")} <span class="note">${d.toISOString().slice(5, 10)}</span>${p.tsunami ? ` <span class="note tsu-flag" title="${esc(TSU)}">${esc(TSU)}</span>` : ""} <a href="${esc(p.url)}" target="_blank" rel="noopener">↗</a></li>`; });
     // counts of strong quakes in the same 7-day window
     const n6 = j.features.filter(f => f.properties.mag >= 6).length, n7 = j.features.filter(f => f.properties.mag >= 7).length;
     const QL = { ko: ["7일간 규모 6.0 이상", "7.0 이상", "회"], en: ["Past 7 days: M6.0+", "M7.0+", ""], es: ["Últimos 7 días: M6,0+", "M7,0+", ""], fr: ["7 derniers jours : M6,0+", "M7,0+", ""],

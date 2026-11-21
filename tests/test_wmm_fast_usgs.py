@@ -33,6 +33,13 @@ class FastUSGSTests(unittest.TestCase):
         x = F.quake_rows({'features': [event(tsunami=1)]})
         self.assertEqual(x[0]['k'], 'quake')
 
+    def test_tsunami_review_flag_kept_as_flag_only(self):
+        x = F.quake_rows({'features': [event(tsunami=1)]})
+        self.assertIs(x[0]['tsu_flag_review'], True)
+        self.assertFalse(any('warning' in k.lower() for k in x[0]))
+        y = F.quake_rows({'features': [event(tsunami=0)]})
+        self.assertIs(y[0]['tsu_flag_review'], False)
+
     def test_only_usgs_changes(self):
         before = old()
         new, changed = F.transform(before, {'features': [event()]}, NOW)
