@@ -57,6 +57,17 @@ class GlobalCoverageAuditTests(unittest.TestCase):
         self.assertEqual(a["national_defence"]["candidate_links"], 173)
         self.assertFalse(a["production_feed_connected"])
 
+    def test_legacy_collector_registry_distinguishes_registered_vs_successful(self):
+        # A recorded government website is not an actual structured-data collector.
+        a = self.audit["legacy_collector_registry"]
+        self.assertEqual(a["total_registered"], 232)
+        self.assertEqual(a["historically_pass"], 7)
+        self.assertEqual(a["unknown"], 220)
+        self.assertEqual(a["failed"], 5)
+        self.assertEqual(a["national_portal_collector_pass"], 0)
+        self.assertEqual(a["last_probe_date"], "2026-11-16")
+        self.assertFalse(a["evidence_of_live_193_country_feeds"])
+
     def test_export_has_1342_records_and_never_overwrites(self):
         with tempfile.TemporaryDirectory() as d:
             path = Path(d) / "reports"
