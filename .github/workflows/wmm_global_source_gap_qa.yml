@@ -1,0 +1,45 @@
+name: WMM GOV RADAR global sovereign and territory source coverage QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'src/environment_weather_emergency_sites.json'
+      - 'src/government_business_sites.json'
+      - 'src/country_news_sources.json'
+      - 'src/territory_official_sources.json'
+      - 'src/country_defence_official_sources.json'
+      - 'tools/world_source_coverage_audit.py'
+      - 'tests/test_world_source_gap_audit.py'
+      - '.github/workflows/wmm_global_source_gap_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coverage_integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run source coverage and publication safety tests
+        run: |
+          python -m unittest discover -s tests -p 'test_world_source_gap_audit.py' -v
+          python -m unittest discover -s tests -p 'test_environment_weather_emergency_sites.py' -v
+          python -m unittest discover -s tests -p 'test_government_business_sites.py' -v
+          python -m unittest discover -s tests -p 'test_country_news_sources.py' -v
+          python -m unittest discover -s tests -p 'test_territory_and_defence_sources.py' -v
+      - name: Build missing-country and special-region action queue
+        run: python tools/world_source_coverage_audit.py --root . --output /tmp/wmm-global-source-review
+      - name: Publish non-sensitive source gap audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-global-193-23-source-gap-audit
+          path: /tmp/wmm-global-source-review/
+          retention-days: 7
+          if-no-files-found: error
+      - name: Assert this is not production deployment
+        run: echo "Read-only directory audit. No external source probing, no paid APIs and no site deployment."
