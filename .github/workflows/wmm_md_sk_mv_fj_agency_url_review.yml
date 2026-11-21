@@ -50,7 +50,7 @@ jobs:
               status = x.get("http_status") or "—"
               text.append(f"| {x['iso']} | {x['category']} | {x['host']} | {x['outcome']} | {status} |")
           successful = sum(x.get("reachable_http_200") is True for x in records)
-          text.append(f"\n**Reachable HTTP 200 homepages: {successful}/11. Verified live feeds: 0/9.**")
+          text.append(f"\n**Reachable HTTP 200 homepages: {successful}/11. Verified live feeds: 0/11.**")
           print("\n".join(text))
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fh:
               fh.write("\n".join(text) + "\n")
