@@ -28,9 +28,9 @@ class GlobalCoverageAuditTests(unittest.TestCase):
         self.assertEqual(a["government"]["source_evidence_links"], 573)
         self.assertEqual(a["government"]["missing_minimum_slots"], 6)
         self.assertEqual(a["government"]["incomplete_countries"], ["ER", "KP"])
-        self.assertEqual(a["news"]["publisher_links_recorded"], 531)
-        self.assertEqual(a["news"]["countries_with_3"], 177)
-        self.assertEqual(a["news"]["remaining_minimum_slots"], 48)
+        self.assertEqual(a["news"]["publisher_links_recorded"], 540)
+        self.assertEqual(a["news"]["countries_with_3"], 180)
+        self.assertEqual(a["news"]["remaining_minimum_slots"], 39)
         self.assertEqual(a["live_verified_url_count"], 0)
 
     def test_six_new_country_environment_weather_emergency_directories(self):
