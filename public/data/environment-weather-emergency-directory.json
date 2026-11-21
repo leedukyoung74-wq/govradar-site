@@ -1,43 +1,259 @@
 {
   "DZ": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Algeria Ministry of Environment and Quality of Life",
+      "url": "https://www.me.gov.dz/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.me.gov.dz/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "weather": {
+      "name": "Algeria National Meteorological Office (ONM)",
+      "url": "https://www.meteo.dz/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.meteo.dz/assets/files/a_propos_onm.pdf",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "emergency": {
+      "name": "Algeria General Directorate of Civil Protection",
+      "url": "https://dgpc.dz/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://dgpc.dz/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    }
   },
   "AO": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Angola Ministry of Environment",
+      "url": "https://minamb.gov.ao/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://minamb.gov.ao/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "weather": {
+      "name": "Angola INAMET Agroclimate Monitoring",
+      "url": "https://agroclima.inamet.gov.ao/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://agroclima.inamet.gov.ao/pages/a-plataforma/inamet/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "emergency": {
+      "name": "Angola Civil Protection and Firefighters Service (SPCB)",
+      "url": "https://spcb.gov.ao/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://spcb.gov.ao/spcb/missao",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    }
   },
   "BJ": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Benin National Environmental Information System (SISEB)",
+      "url": "https://siseb.gouv.bj/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://siseb.gouv.bj/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "weather": {
+      "name": "Benin National Meteorological Agency (Meteo-Benin)",
+      "url": "https://www.meteobenin.bj/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.meteobenin.bj/organisation/lagence/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "emergency": {
+      "name": "Benin Civil Protection Agency (ABPC)",
+      "url": "https://abpc.bj/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://abpc.bj/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    }
   },
   "BW": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Botswana Ministry of Environment and Tourism",
+      "url": "https://www.gov.bw/ministries/ministry-environment-and-tourism",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.gov.bw/ministries/ministry-environment-and-tourism",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "weather": {
+      "name": "Botswana Department of Meteorological Services",
+      "url": "https://www.meteo.gov.bw/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.meteo.gov.bw/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "emergency": {
+      "name": "Botswana National Disaster Management Service",
+      "url": "https://www.gov.bw/public-safety/assistance-during-national-disasters",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.gov.bw/public-safety/assistance-during-national-disasters",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    }
   },
   "BF": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Burkina Faso Ministry of Environment, Water and Sanitation",
+      "url": "https://www.environnement.gov.bf/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.environnement.gov.bf/ministere/organisation",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "weather": {
+      "name": "Burkina Faso National Meteorological Agency (ANAM)",
+      "url": "https://meteoburkina.bf/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://meteoburkina.bf/organisation/about-us/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "emergency": {
+      "name": "Burkina Faso National Emergency Relief and Rehabilitation Council (CONASUR)",
+      "url": "https://conasur.gov.bf/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://conasur.gov.bf/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    }
   },
   "BI": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Burundi Office for Environmental Protection (OBPE)",
+      "url": "https://obpe.bi/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://obpe.bi/missions/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "weather": {
+      "name": "Burundi Geographical Institute (IGEBU)",
+      "url": "https://www.igebu.bi/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.igebu.bi/organisation/a-propos-de-nous/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    },
+    "emergency": {
+      "name": "Burundi Directorate General of Civil Protection and Disaster Management",
+      "url": "https://mininterinfos.gov.bi/protection-civile/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://mininterinfos.gov.bi/protection-civile/",
+      "researched_on": "2026-11-21",
+      "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+    }
   },
   "CV": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Cabo Verde Ministry of Agriculture and Environment",
+      "url": "https://maa.gov.cv/index.php/ambiente",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://maa.gov.cv/index.php/min-a-a/59-o-ministerio",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    },
+    "weather": {
+      "name": "Cabo Verde National Institute of Meteorology and Geophysics (INMG)",
+      "url": "https://www.inmg.gov.cv/index.php/museu/about-us",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.inmg.gov.cv/index.php/museu/missao",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    },
+    "emergency": {
+      "name": "Cabo Verde National Civil Protection and Fire Service (SNPCB)",
+      "url": "https://snpcb.cv/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://snpcb.cv/",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    }
   },
   "CM": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Cameroon Ministry of Environment, Nature Protection and Sustainable Development",
+      "url": "https://www.minep.gov.cm/index.php?lang=en",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.minep.gov.cm/index.php?lang=en",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    },
+    "weather": {
+      "name": "Cameroon National Meteorological Directorate (DMN)",
+      "url": "https://meteocameroon.gov.cm/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://meteocameroon.gov.cm/services-de-la-dirmet/",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    },
+    "emergency": {
+      "name": "Cameroon Directorate of Civil Protection (MINAT)",
+      "url": "https://minat.gov.cm/departements-directions-du-minat/direction-de-la-protection-civile/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://minat.gov.cm/departements-directions-du-minat/direction-de-la-protection-civile/",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    }
   },
   "CF": {
     "environment": null,
@@ -113,9 +329,36 @@
     "emergency": null
   },
   "ET": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Ethiopia Environmental Protection Authority (EPA)",
+      "url": "https://www.epa.gov.et/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.epa.gov.et/",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    },
+    "weather": {
+      "name": "Ethiopian Meteorological Institute (EMI)",
+      "url": "https://www.ethiomet.gov.et/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.ethiomet.gov.et/organisation/about/",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    },
+    "emergency": {
+      "name": "Ethiopia Disaster Risk Management Commission (EDRMC)",
+      "url": "https://edrmc.gov.et/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://edrmc.gov.et/",
+      "researched_on": "2026-11-21",
+      "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+    }
   },
   "GA": {
     "environment": null,
@@ -651,9 +894,36 @@
     }
   },
   "MV": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Maldives Ministry of Climate Change, Environment and Energy",
+      "url": "https://environment.gov.mv/en",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://environment.gov.mv/en/organization",
+      "researched_on": "2026-11-21",
+      "note": "Official agency corroborated by agency/government material. Actual HTTPS HEAD/GET, structured RSS/CAP feed, usage rights and commercial redistribution NOT verified."
+    },
+    "weather": {
+      "name": "Maldives Meteorological Service (MMS)",
+      "url": "https://www.meteorology.gov.mv/about-us",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.undp.org/maldives/news/new-mms-website-and-moosun-app-bring-weather-information-closer-communities-across-maldives",
+      "researched_on": "2026-11-21",
+      "note": "MMS officially launched new weather website November 2026; CAP alert feed is WMO-listed but is NOT yet wired to WMM, and access/license NOT verified."
+    },
+    "emergency": {
+      "name": "Maldives National Disaster Management Authority (NDMA)",
+      "url": "https://ndma.gov.mv/en",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://ndma.gov.mv/en/mandate",
+      "researched_on": "2026-11-21",
+      "note": "Official agency corroborated by agency/government material. Actual HTTPS HEAD/GET, structured RSS/CAP feed, usage rights and commercial redistribution NOT verified."
+    }
   },
   "MN": {
     "environment": null,
@@ -867,9 +1137,36 @@
     }
   },
   "JO": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Jordan Ministry of Environment",
+      "url": "https://moenv.gov.jo/Default/En",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.moenv.gov.jo/Default/En",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    },
+    "weather": {
+      "name": "Jordan Meteorological Department (JMD)",
+      "url": "https://jmd.gov.jo/en/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://jmd.gov.jo/en/Department",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    },
+    "emergency": {
+      "name": "Jordan National Center for Security and Crises Management (NCSCM)",
+      "url": "https://ncscm.gov.jo/Default/En",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://jordan.gov.jo/EN/ListDetails/Government_Entities/55/6",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    }
   },
   "KW": {
     "environment": null,
@@ -1231,9 +1528,36 @@
     }
   },
   "GE": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Georgia Ministry of Environmental Protection and Agriculture (MEPA)",
+      "url": "https://mepa.gov.ge/En/Page/functionsandgoalsofministry",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://mepa.gov.ge/En/Page/functionsandgoalsofministry",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    },
+    "weather": {
+      "name": "Georgia National Environment Agency — official hydrometeorology (NEA)",
+      "url": "https://nea.gov.ge/En/Departments/Hydrometeorology",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://nea.gov.ge/En/Departments/Hydrometeorology",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    },
+    "emergency": {
+      "name": "Georgia Ministry of Internal Affairs Emergency Management Service",
+      "url": "https://es.gov.ge/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://es.gov.ge/",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    }
   },
   "DE": {
     "environment": {
@@ -1425,9 +1749,36 @@
     }
   },
   "LU": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Luxembourg government environment portal (Ministry and Environmental Administration)",
+      "url": "https://environnement.public.lu/fr.html",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://environnement.public.lu/fr/support/a-propos.html",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    },
+    "weather": {
+      "name": "MeteoLux, national Meteorological Service (ANA)",
+      "url": "https://www.meteolux.lu/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://lu-alert.lu/en/all-about-lu-alert/warning-channels/websites.html",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    },
+    "emergency": {
+      "name": "Luxembourg LU-Alert public warning service",
+      "url": "https://lu-alert.lu/en/all-about-lu-alert/warning-information-system.html",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://lu-alert.lu/en/all-about-lu-alert/warning-information-system.html",
+      "researched_on": "2026-11-21",
+      "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+    }
   },
   "MT": {
     "environment": null,
@@ -1435,9 +1786,36 @@
     "emergency": null
   },
   "MD": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Moldova Ministry of Environment",
+      "url": "https://mediu.gov.md/en",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://mediu.gov.md/en/node/718",
+      "researched_on": "2026-11-21",
+      "note": "Official agency corroborated by agency/government material. Actual HTTPS HEAD/GET, structured RSS/CAP feed, usage rights and commercial redistribution NOT verified."
+    },
+    "weather": {
+      "name": "Moldova State Hydrometeorological Service / Meteorology and Environmental Monitoring Authority",
+      "url": "https://www.meteo.md/index.php/en/about/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.meteo.md/index.php/en/about/",
+      "researched_on": "2026-11-21",
+      "note": "Official agency corroborated by agency/government material. Actual HTTPS HEAD/GET, structured RSS/CAP feed, usage rights and commercial redistribution NOT verified."
+    },
+    "emergency": {
+      "name": "Moldova General Inspectorate for Emergency Situations (IGSU)",
+      "url": "https://igsu.gov.md/en",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://igsu.gov.md/en/press-releases/igsu-launched-new-official-website-igsugovmd",
+      "researched_on": "2026-11-21",
+      "note": "Official agency corroborated by agency/government material. Actual HTTPS HEAD/GET, structured RSS/CAP feed, usage rights and commercial redistribution NOT verified."
+    }
   },
   "MC": {
     "environment": null,
@@ -1603,9 +1981,36 @@
     "emergency": null
   },
   "SK": {
-    "environment": null,
-    "weather": null,
-    "emergency": null
+    "environment": {
+      "name": "Ministry of Environment of the Slovak Republic",
+      "url": "https://www.minzp.sk/en/about-us/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.minzp.sk/en/about-us/",
+      "researched_on": "2026-11-21",
+      "note": "Official agency corroborated by agency/government material. Actual HTTPS HEAD/GET, structured RSS/CAP feed, usage rights and commercial redistribution NOT verified."
+    },
+    "weather": {
+      "name": "Slovak Hydrometeorological Institute (SHMU)",
+      "url": "https://www.shmu.sk/en/index.php?page=1793",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.minzp.sk/en/about-us/contact/organizations-instituted-ministry.html",
+      "researched_on": "2026-11-21",
+      "note": "Official agency corroborated by agency/government material. Actual HTTPS HEAD/GET, structured RSS/CAP feed, usage rights and commercial redistribution NOT verified."
+    },
+    "emergency": {
+      "name": "Ministry of Interior of the Slovak Republic — Civil Protection and Integrated Rescue System",
+      "url": "https://www.minv.sk/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.ujd.gov.sk/activities/emergency-preparedness/emergency-planning/epr-management-authorities/?lang=en",
+      "researched_on": "2026-11-21",
+      "note": "Institution responsible for civil protection confirmed by Slovak nuclear regulator and EU Civil Protection, root ministry URL is a directory candidate; exact alert endpoint and access NOT verified."
+    }
   },
   "SI": {
     "environment": {
@@ -2197,7 +2602,16 @@
     }
   },
   "FJ": {
-    "environment": null,
+    "environment": {
+      "name": "Fiji Ministry of Environment and Climate Change (MECC)",
+      "url": "https://mecc.gov.fj/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://www.fijitradeportal.gov.fj/en-gb/site/display/8",
+      "researched_on": "2026-11-21",
+      "note": "Official agency corroborated by agency/government material. Actual HTTPS HEAD/GET, structured RSS/CAP feed, usage rights and commercial redistribution NOT verified."
+    },
     "weather": {
       "name": "Fiji Meteorological and Hydrological Services",
       "url": "https://www.met.gov.fj/",
@@ -2206,7 +2620,16 @@
       "review": "curated_candidate",
       "evidence_url": "https://www.met.gov.fj/fiji-weather/"
     },
-    "emergency": null
+    "emergency": {
+      "name": "Fiji National Disaster Risk Management Office (NDRMO)",
+      "url": "https://www.ndmo.gov.fj/",
+      "source": "government_agency_curated",
+      "access": "not_live_tested",
+      "review": "curated_candidate",
+      "research_evidence_url": "https://directory.digital.gov.fj/directory/organisation?orgId=132",
+      "researched_on": "2026-11-21",
+      "note": "Fiji government ministry directory confirms the national disaster office; older ndmo.gov.fj URL is a CANDIDATE, site may restrict non-Fiji access; NDRMO naming needs review, feed/permission NOT verified."
+    }
   },
   "KI": {
     "environment": null,
