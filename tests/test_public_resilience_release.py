@@ -68,6 +68,31 @@ class TestPublicVersionSentinel(TestCase):
             state=sentinel.check("https://radar.wmm-hoa.com/data/wmm-food-country-profiles.json",'"local_official_guidance_verified"')
             self.assertEqual(state["product_claim_count"],1)
             self.assertFalse(state["ready"])
+    def test_public_blackout_panel_safe_stove_copy_all_seven_languages(self):
+        # The separate stockpile cards were already safe; the global quick panel
+        # was still offering unsafe "ventilate indoors" advice. Protect both.
+        import ast
+        import json
+        content=json.loads((ROOT/"src/content.json").read_text(encoding="utf8"))
+        row=next(x for x in content["prep"]["scenarios"] if x["id"]=="blackout")
+        self.assertEqual(len(row["ko_items"]),8)
+        self.assertEqual(len(row["en_items"]),8)
+        for lang in ("ko","en"):
+            self.assertNotIn(sentinel.OLD_UNSAFE[lang], row[lang+"_items"][2])
+            self.assertIn(sentinel.SAFE_STOVE[lang],row[lang+"_items"][2])
+        src=(ROOT/"build.py").read_text(encoding="utf8")
+        tree=ast.parse(src,filename="build.py")
+        assigns=[n for n in tree.body if isinstance(n,ast.Assign) and
+                 any(isinstance(t,ast.Name) and t.id=="STOVE_SAFE_BY_LANG" for t in n.targets)]
+        self.assertEqual(len(assigns),1)
+        translations=ast.literal_eval(assigns[0].value)
+        self.assertEqual(set(translations),set(sentinel.LANGS))
+        for lang in sentinel.LANGS:
+            self.assertIn(sentinel.SAFE_STOVE[lang], translations[lang])
+            self.assertNotIn(sentinel.OLD_UNSAFE[lang],translations[lang])
+        self.assertIn("_safe_prep_item(L, x, j, item)",src)
+        self.assertEqual(row["ko_items"].index(row["ko_items"][2]),2)
+
     def test_no_token_or_deploy_endpoint(self):
         source=(ROOT/"tools/verify_public_resilience_release.py").read_text(encoding="utf8")
         for prohibited in ("CLOUDFLARE_API_TOKEN","POST","PUT","DELETE","wrangler pages deploy"):
