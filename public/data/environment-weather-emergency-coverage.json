@@ -2,78 +2,78 @@
   "schema_version": 1,
   "target_countries": 193,
   "target_category_links": 579,
-  "linked_candidate_countries_all_three": 73,
+  "linked_candidate_countries_all_three": 89,
   "candidate_links_by_category": {
-    "environment": 73,
-    "weather": 74,
-    "emergency": 73
+    "environment": 89,
+    "weather": 89,
+    "emergency": 89
   },
-  "linked_candidate_total": 220,
-  "missing_national_category_links": 359,
+  "linked_candidate_total": 267,
+  "missing_national_category_links": 312,
   "live_verified_total": 0,
   "country_counts": {
     "DZ": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "AO": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "BJ": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "BW": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "BF": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "BI": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "CV": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "CM": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "CF": {
@@ -165,11 +165,11 @@
       "live_verified": 0
     },
     "ET": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "GA": {
@@ -565,11 +565,11 @@
       "live_verified": 0
     },
     "MV": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "MN": {
@@ -709,11 +709,11 @@
       "live_verified": 0
     },
     "JO": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "KW": {
@@ -917,11 +917,11 @@
       "live_verified": 0
     },
     "GE": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "DE": {
@@ -997,11 +997,11 @@
       "live_verified": 0
     },
     "LU": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "MT": {
@@ -1013,11 +1013,11 @@
       "live_verified": 0
     },
     "MD": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "MC": {
@@ -1109,11 +1109,11 @@
       "live_verified": 0
     },
     "SK": {
-      "linked_candidates": 0,
-      "missing": 3,
-      "environment": false,
-      "weather": false,
-      "emergency": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
+      "weather": true,
+      "emergency": true,
       "live_verified": 0
     },
     "SI": {
@@ -1453,11 +1453,11 @@
       "live_verified": 0
     },
     "FJ": {
-      "linked_candidates": 1,
-      "missing": 2,
-      "environment": false,
+      "linked_candidates": 3,
+      "missing": 0,
+      "environment": true,
       "weather": true,
-      "emergency": false,
+      "emergency": true,
       "live_verified": 0
     },
     "KI": {
