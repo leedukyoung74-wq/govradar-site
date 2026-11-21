@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-21T23:29:39.676383+00:00",
+  "generated_at_utc": "2026-11-21T23:42:08.369096+00:00",
   "type": "source_backed_public_procurement_organisations",
   "not_commercial_buyer_directory": true,
   "disclaimer_ko": "공식 공개 조달공고의 발주기관 목록입니다. 상업 수입 바이어·거래 의사·연락처 또는 현재 입찰 가능 상태를 보증하지 않습니다. 원문에서 재확인하세요.",
@@ -44,46 +44,9 @@
       ]
     },
     {
-      "country_iso": "AO",
-      "procurement_entity": "Ministry of Social Action, Family and Promotion of Women",
-      "source_backed_notice_count": 6,
-      "notices": [
-        {
-          "title": "Contratacao de empresa para traducao e edicao das politicas e protocolos",
-          "deadline": "2026-11-23",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481656",
-          "source": "World Bank"
-        },
-        {
-          "title": "Contratacao de servicos de comunicacao social (reportagem)",
-          "deadline": "2026-11-23",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481655",
-          "source": "World Bank"
-        },
-        {
-          "title": "Servicos de Consultoria de Empresa para publicidade e propaganda - Divulgacao da politica nacional de protecao social adaptativa",
-          "deadline": "2026-11-23",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481654",
-          "source": "World Bank"
-        },
-        {
-          "title": "Gestao e manutencao do sistema - Servidor",
-          "deadline": "2026-11-30",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478414",
-          "source": "World Bank"
-        },
-        {
-          "title": "Certificacao da formacao para ADECOS - Mecanismo de Gestao de Risco",
-          "deadline": "2026-12-10",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481644",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
       "country_iso": "UA",
       "procurement_entity": "Ministry of Education and Science of Ukraine",
-      "source_backed_notice_count": 6,
+      "source_backed_notice_count": 7,
       "notices": [
         {
           "title": "Procurement of Equipment for the Environmental Monitoring Laboratory",
@@ -113,6 +76,80 @@
           "title": "Online Video Conferencing Systems for Odesa I.I. Mechnikov National University",
           "deadline": "2026-12-04",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482739",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AO",
+      "procurement_entity": "Ministry of Social Action, Family and Promotion of Women",
+      "source_backed_notice_count": 5,
+      "notices": [
+        {
+          "title": "Contratacao de empresa para traducao e edicao das politicas e protocolos",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481656",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contratacao de servicos de comunicacao social (reportagem)",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481655",
+          "source": "World Bank"
+        },
+        {
+          "title": "Servicos de Consultoria de Empresa para publicidade e propaganda - Divulgacao da politica nacional de protecao social adaptativa",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481654",
+          "source": "World Bank"
+        },
+        {
+          "title": "Certificacao da formacao para ADECOS - Mecanismo de Gestao de Risco",
+          "deadline": "2026-12-10",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481644",
+          "source": "World Bank"
+        },
+        {
+          "title": "Aquisicao de material de visibilidade das Accoes da componente 2B",
+          "deadline": "2026-12-10",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481651",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "ET",
+      "procurement_entity": "Somali Regional Project Coordination Unit",
+      "source_backed_notice_count": 5,
+      "notices": [
+        {
+          "title": "Consultancy service for Feasibility Study & Detail Designs for Nine (9) Groundwater Investigation for Borehole Drilling of Harwo,Dambal(two sites),Hadagalo, Shilabo (two sites),Lagahida, Mayumuluko & Dunyar project wored",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481408",
+          "source": "World Bank"
+        },
+        {
+          "title": "\"Consultancy service for Feasibility Study & Detail Designs for Medium Span Bridges and Gravel Access Road in Aware, Kubi, Hadagalo & Hamaro and Guredamole, Mubarak, El-Ogaden, Hararey, Dambal & Shilabo Projects Woredas ",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481406",
+          "source": "World Bank"
+        },
+        {
+          "title": "Consultancy service for Feasibility Study & Detail Designs for Nine (9) Groundwater Investigation for Borehole Drilling of Bilcilbur,Dagahmadow,Goljano,Shabeley, Danot(two sites),Kohle, Mula & Daror project woredas",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481417",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement for the Construction of three (3) Primary Livestock Market Center for Salahad, Dunyar & Danod project woredas.",
+          "deadline": "2026-12-22",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482812",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement for the Construction of three (3) Feed Stores for Hadagala,Jarti and Dekasuftu project woredas",
+          "deadline": "2026-12-22",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482815",
           "source": "World Bank"
         }
       ]
@@ -316,6 +353,37 @@
       ]
     },
     {
+      "country_iso": "PK",
+      "procurement_entity": "Project Management Unit, School Education Department, Government of Balochistan",
+      "source_backed_notice_count": 4,
+      "notices": [
+        {
+          "title": "Procurement of School Furniture for ECE Classrooms under STEP-B.",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480066",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement of ECE-TLM for ECE Classrooms under STEP-B.",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480064",
+          "source": "World Bank"
+        },
+        {
+          "title": "Engagement of a Third-Party Validation (TPV) Firm for Verification of Community-Based School Sites Identified by District Education Groups (DEGs)",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481056",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement of Laptops for Female Scholars under GRADES Balochistan",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482766",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
       "country_iso": "BI",
       "procurement_entity": "Ministry of Communication, Information Technology and Media - Executive Secretariat for ICT (SETIC)",
       "source_backed_notice_count": 3,
@@ -341,26 +409,26 @@
       ]
     },
     {
-      "country_iso": "ET",
-      "procurement_entity": "Somali Regional Project Coordination Unit",
+      "country_iso": "CD",
+      "procurement_entity": "Ministry of Entrepreneurship and Small Medium Enterprises",
       "source_backed_notice_count": 3,
       "notices": [
         {
-          "title": "Consultancy service for Feasibility Study & Detail Designs for Nine (9) Groundwater Investigation for Borehole Drilling of Harwo,Dambal(two sites),Hadagalo, Shilabo (two sites),Lagahida, Mayumuluko & Dunyar project wored",
-          "deadline": "2026-12-04",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481408",
+          "title": "Sélection de deux ONG pour la Mise en œuvre des activités de prévention et réponse aux EAS/HS liés au Projet sur les villes du Lobito",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481784",
           "source": "World Bank"
         },
         {
-          "title": "\"Consultancy service for Feasibility Study & Detail Designs for Medium Span Bridges and Gravel Access Road in Aware, Kubi, Hadagalo & Hamaro and Guredamole, Mubarak, El-Ogaden, Hararey, Dambal & Shilabo Projects Woredas ",
-          "deadline": "2026-12-04",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481406",
+          "title": "Acquisition et installation d'équipements de production et d'autonomie énergétique (Kit photovoltaïque et Générateur) au profit du Centre de PME MAZZARELLO de Mbuji-Mayi (Province du Kasaï Oriental)",
+          "deadline": "2026-12-15",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481930",
           "source": "World Bank"
         },
         {
-          "title": "Consultancy service for Feasibility Study & Detail Designs for Nine (9) Groundwater Investigation for Borehole Drilling of Bilcilbur,Dagahmadow,Goljano,Shabeley, Danot(two sites),Kohle, Mula & Daror project woredas",
-          "deadline": "2026-12-04",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481417",
+          "title": "Fourniture, déploiement et mise en service d’un système intégré de Plateforme GUCE 2.0 pour le Guichet Unique de Création d'Entreprises",
+          "deadline": "2027-01-06",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482702",
           "source": "World Bank"
         }
       ]
@@ -437,31 +505,6 @@
           "deadline": "2027-01-19",
           "notice_url": "https://www.find-tender.service.gov.uk/Notice/109328-2026",
           "source": "UK Find a Tender"
-        }
-      ]
-    },
-    {
-      "country_iso": "PK",
-      "procurement_entity": "Project Management Unit, School Education Department, Government of Balochistan",
-      "source_backed_notice_count": 3,
-      "notices": [
-        {
-          "title": "Procurement of School Furniture for ECE Classrooms under STEP-B.",
-          "deadline": "2026-11-23",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480066",
-          "source": "World Bank"
-        },
-        {
-          "title": "Procurement of ECE-TLM for ECE Classrooms under STEP-B.",
-          "deadline": "2026-11-24",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480064",
-          "source": "World Bank"
-        },
-        {
-          "title": "Engagement of a Third-Party Validation (TPV) Firm for Verification of Community-Based School Sites Identified by District Education Groups (DEGs)",
-          "deadline": "2026-11-27",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481056",
-          "source": "World Bank"
         }
       ]
     },
@@ -568,25 +611,6 @@
           "title": "Supply and delivery of additional biological agents for SIRDI.",
           "deadline": "2026-12-08",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477506",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "CD",
-      "procurement_entity": "Ministry of Entrepreneurship and Small Medium Enterprises",
-      "source_backed_notice_count": 2,
-      "notices": [
-        {
-          "title": "Sélection de deux ONG pour la Mise en œuvre des activités de prévention et réponse aux EAS/HS liés au Projet sur les villes du Lobito",
-          "deadline": "2026-11-27",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481784",
-          "source": "World Bank"
-        },
-        {
-          "title": "Acquisition et installation d'équipements de production et d'autonomie énergétique (Kit photovoltaïque et Générateur) au profit du Centre de PME MAZZARELLO de Mbuji-Mayi (Province du Kasaï Oriental)",
-          "deadline": "2026-12-15",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481930",
           "source": "World Bank"
         }
       ]
@@ -954,6 +978,25 @@
     },
     {
       "country_iso": "MZ",
+      "procurement_entity": "Ministry of Health",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Consulting and supervision of rehabilitation works for ANARME.",
+          "deadline": "2026-12-02",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00464431",
+          "source": "World Bank"
+        },
+        {
+          "title": "Procurement and distribution of NCDs materials",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479873",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
       "procurement_entity": "Ministry of Transport and Communications",
       "source_backed_notice_count": 2,
       "notices": [
@@ -967,6 +1010,25 @@
           "title": "Consultancy Services for Detailed Engineering Design for Construction of Municipal Roads and Stormwater System",
           "deadline": "2026-12-04",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481009",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "National e-Government Institute",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "IT Equipment for ATDI (security Servers) and Interoperability Laboratory",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479380",
+          "source": "World Bank"
+        },
+        {
+          "title": "Colocation Services for ATDI",
+          "deadline": "2026-12-21",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482924",
           "source": "World Bank"
         }
       ]
@@ -1106,6 +1168,25 @@
     },
     {
       "country_iso": "UZ",
+      "procurement_entity": "Ministry of Economy and Finance of the Republic of Uzbekistan",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Independent Verification Agent (IVA) and Technical Quality Assurance (TQA) Services for RIDP-2.",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477175",
+          "source": "World Bank"
+        },
+        {
+          "title": "Office equipment",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480482",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "UZ",
       "procurement_entity": "Project Management Unit (PMU) under The Statistics Agency",
       "source_backed_notice_count": 2,
       "notices": [
@@ -1145,6 +1226,19 @@
           "title": "Consulting Services for the Tourism and Regional Infrastructure Program (TRIP) Project Appraisal",
           "deadline": "2026-11-25",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480874",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AM",
+      "procurement_entity": "Office of the Prime Minister",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of the e-Archive System",
+          "deadline": "2027-01-05",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482803",
           "source": "World Bank"
         }
       ]
@@ -1398,6 +1492,19 @@
     },
     {
       "country_iso": "BI",
+      "procurement_entity": "Burundi Development Agency",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Fourniture et installation des équipements informatiques et d’un logiciel de gestion des services de la Cour d’appel de commerce et de la Chambre spéciale de médiation et d’arbitrage au sein de la CFCIB",
+          "deadline": "2026-12-22",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482794",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BI",
       "procurement_entity": "Ministry of Infrastructure, Equipment and Social Housing",
       "source_backed_notice_count": 1,
       "notices": [
@@ -1405,6 +1512,19 @@
           "title": "Fourniture d' équipements TIC , de bureau et pour entretien pour les communes , OBUHA,OGR ( SP/CNF), SFC",
           "deadline": "2026-12-14",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481726",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BI",
+      "procurement_entity": "Ministry of Mineral Resources, Energy, Industry, Trade and Tourism - PAEPA",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Acquisition de matériel roulant pour les deux UGP du PAEPA et les partenaires d'exécution du Projet",
+          "deadline": "2027-01-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482869",
           "source": "World Bank"
         }
       ]
@@ -1496,6 +1616,19 @@
           "title": "Travaux de renforcement de l’alimentation en eau potable des villes de Korhogo, Ferkessédougou, Napié et localités environnantes",
           "deadline": "2026-12-29",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481956",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "CM",
+      "procurement_entity": "MINISTERE DE L'HABITAT ET DU DEVELOPPEMENT URBAIN",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Prise de vue aérienne et production des Orthophotos des villes de Douala et Yaoundé",
+          "deadline": "2027-01-06",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477135",
           "source": "World Bank"
         }
       ]
@@ -1892,6 +2025,19 @@
     },
     {
       "country_iso": "GB",
+      "procurement_entity": "Metropolitan borough of Bury",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Millgate Shopping Centre Re-Development",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109401-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
       "procurement_entity": "Mid South Essex NHS Foundation Trust",
       "source_backed_notice_count": 1,
       "notices": [
@@ -1924,7 +2070,7 @@
         {
           "title": "Aerial Services including asset inspection and surveys",
           "deadline": "2026-12-17",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/107787-2026",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108455-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -2106,7 +2252,7 @@
         {
           "title": "Virano - ICT Framework",
           "deadline": "2026-12-15",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/107813-2026",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108588-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -2211,6 +2357,19 @@
           "title": "Supply, Delivery, and Installation of IT Equipment and Accessories in lots: Lot 1: Laptop Computers & Accessories Lot 2: Desktop computers & Monitors Lot 3: Printers Lot 4: IT equipment & Accessories",
           "deadline": "2026-11-26",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479159",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "HR",
+      "procurement_entity": "Ministry of Justice",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Contract for IT infrastructure cabling works for 30 cadastral offices",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482858",
           "source": "World Bank"
         }
       ]
@@ -2380,6 +2539,19 @@
           "title": "Package 01 - Civil Works for Improvement and Maintenance of 62 km of the National Road 64 through Output and Performance Based Road Contract (OPBRC)",
           "deadline": "2027-01-05",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478224",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "KZ",
+      "procurement_entity": "Ministry of Ecology and Natural Resources",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Comprehensive climate vision (long-term and short-term) defining ETS evolution",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482865",
           "source": "World Bank"
         }
       ]
@@ -2802,13 +2974,26 @@
     },
     {
       "country_iso": "MZ",
-      "procurement_entity": "Ministry of Health",
+      "procurement_entity": "Ministry of Economy and Finance - DNT",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "Procurement and distribution of NCDs materials",
+          "title": "Assessment of the Archaeological Condition and Preparation of a Conservation Plan for Manyikeni and Chibuene",
+          "deadline": "2026-12-10",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482861",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "MZ",
+      "procurement_entity": "Ministry of Transport and Communication",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Technical assistance services for the Digital Ambassadors Program (DAP) and implementation of large‑scale training in digital skills at the CMCs.",
           "deadline": "2026-12-04",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479873",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482393",
           "source": "World Bank"
         }
       ]
@@ -2822,19 +3007,6 @@
           "title": "Consultancy services for Assessment of Climate Vulnerability along the Nacala Corridor and Supervision of Civil Works.",
           "deadline": "2026-12-18",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477039",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "MZ",
-      "procurement_entity": "National e-Government Institute",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "IT Equipment for ATDI (security Servers) and Interoperability Laboratory",
-          "deadline": "2026-12-04",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479380",
           "source": "World Bank"
         }
       ]
@@ -3010,19 +3182,6 @@
     },
     {
       "country_iso": "PK",
-      "procurement_entity": "KP Sustainable Development Unit, Planning and Development Department",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Supply and Installation of Specialized Museum Showcases at Peshawar Museum",
-          "deadline": "2026-11-25",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478001",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "PK",
       "procurement_entity": "National Health Support Program Sindh",
       "source_backed_notice_count": 1,
       "notices": [
@@ -3121,6 +3280,19 @@
           "title": "Procurement of ambulances",
           "deadline": "2026-12-29",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482046",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SB",
+      "procurement_entity": "PROPER Project, Ministry of Fisheries and Marine Resources",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consultancy Services for the Construction Supervision and Contract Administration of the Ministry of Fisheries and Marine Resources Office in Auki, Malaita Province.",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482761",
           "source": "World Bank"
         }
       ]
@@ -3277,6 +3449,19 @@
           "title": "Design, Supply and Installation of high voltage substations (total number of transformers as follows: 3x300 MVA 400/230 kV, 9x125 MVA 230/66 kV and 17x30 MVA 66/20 kV of combined transformation capacity), including the S",
           "deadline": "2027-02-03",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480092",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "SZ",
+      "procurement_entity": "Ministry of ICT/PIU",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Consulting Services for Provision of Independent Verification Agency (IVA) Services",
+          "deadline": "2026-12-04",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482877",
           "source": "World Bank"
         }
       ]
@@ -3555,19 +3740,6 @@
       ]
     },
     {
-      "country_iso": "UZ",
-      "procurement_entity": "Ministry of Economy and Finance of the Republic of Uzbekistan",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Office equipment",
-          "deadline": "2026-11-23",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480482",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
       "country_iso": "WS",
       "procurement_entity": "Central Bank of Samoa",
       "source_backed_notice_count": 1,
@@ -3594,5 +3766,5 @@
       ]
     }
   ],
-  "country_count": 82
+  "country_count": 86
 }

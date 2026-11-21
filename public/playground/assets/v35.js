@@ -57,3 +57,7 @@ ready(()=>{
   s.forEach(x=>io.observe(x));
 });
 })();
+/* v43 언어별 설명자료(화면 캡처·영상) 바꾸기: data-src-en / data-poster-en */
+(function(){function swap(lang){var en=lang==='en';document.querySelectorAll('[data-src-en]').forEach(function(el){if(!el.dataset.srcKo){el.dataset.srcKo=el.getAttribute('src');if(el.hasAttribute('poster'))el.dataset.posterKo=el.getAttribute('poster')}var want=en?el.dataset.srcEn:el.dataset.srcKo;if(el.getAttribute('src')===want)return;el.setAttribute('src',want);if(el.tagName==='VIDEO'){var pv=en?el.dataset.posterEn:el.dataset.posterKo;if(pv)el.setAttribute('poster',pv);var wasPaused=el.paused&&el.dataset.userPaused==='1';el.load();if(!wasPaused&&el.autoplay){var pr=el.play();if(pr&&pr.catch)pr.catch(function(){})}}})}
+document.addEventListener('wmm:language',function(e){swap(e.detail&&e.detail.lang)});
+function init(){swap(document.documentElement.lang)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();
