@@ -258,3 +258,12 @@ h1,h2,h3{letter-spacing:-.04em!important}
 .wmm-soon h3{letter-spacing:.01em}
 .wp-gold{background:#0D0C0A!important}.wp-gold img{width:100%;height:100%;object-fit:cover}
 .px-brand-art img{position:absolute!important;inset:clamp(18px,3.4vw,40px)!important;width:calc(100% - 2*clamp(18px,3.4vw,40px))!important;height:calc(100% - 2*clamp(18px,3.4vw,40px))!important;max-width:none!important;max-height:none!important;object-fit:contain!important;margin:0!important}
+.wmm-soon .soon-vision{display:block;margin:4px 0 6px;border-radius:14px;overflow:hidden;background:#0D0C0A;text-decoration:none;position:relative}
+.wmm-soon .soon-vision img{display:block;width:100%;height:auto;transition:transform .5s ease}
+.wmm-soon .soon-vision:hover img{transform:scale(1.03)}
+.wmm-soon .soon-vision>span{position:absolute;right:10px;bottom:10px;padding:5px 10px;border-radius:999px;background:rgba(0,0,0,.72);color:#F3E3B5;font-size:12.5px;font-weight:700}
+.wmm-vision{margin:40px auto 0;max-width:1180px}
+.wmm-vision a{display:block;border-radius:22px;overflow:hidden;background:#0D0C0A}
+.wmm-vision img{display:block;width:100%;height:auto}
+.wmm-vision figcaption{display:flex;flex-direction:column;gap:6px;padding:16px 4px 0;font-size:15px;line-height:1.6}
+.wmm-vision figcaption b{font-size:20px}
