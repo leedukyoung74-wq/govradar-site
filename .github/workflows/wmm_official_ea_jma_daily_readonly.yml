@@ -17,7 +17,7 @@ concurrency:
 jobs:
   official_regional_probe:
     runs-on: ubuntu-24.04
-    timeout-minutes: 9
+    timeout-minutes: 12
     steps:
       - name: Checkout independently tested fixed revision, never production website code
         uses: actions/checkout@v4
@@ -92,6 +92,39 @@ jobs:
               out.write("\nNo customer details, no website change, no sensitive data, no cyberattack attribution.\n")
           print("HKO_GEONET_LIVE_PASS hko_rss_items=",r["feeds"]["hko"]["count"],
                 "nz_recent_quakes=",r["feeds"]["geonet"]["count"])
+          PY
+      - name: Checkout proven Met Office UK and Canada Toronto reader code
+        uses: actions/checkout@v4
+        with:
+          ref: e267eb72b0fd9e96a5aa20b03ad38aaff6601a14
+          path: uk_ca
+          persist-credentials: false
+      - name: Test public UK Met Office and Canada Toronto ECCC reader
+        run: python -m unittest discover -s uk_ca/tests -p 'test_official_uk_ca_feeds.py' -v
+      - name: Read official UK-wide RSS and Canadian Toronto region Atom without publishing
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p "$RUNNER_TEMP/wmm-regional-internal"
+          python uk_ca/tools/official_uk_ca_feeds.py --out "$RUNNER_TEMP/wmm-regional-internal/uk-ca.json"
+          SOURCE_UK_CA="$RUNNER_TEMP/wmm-regional-internal/uk-ca.json" python - <<'PY'
+          import json,os
+          from pathlib import Path
+          x=json.loads(Path(os.environ["SOURCE_UK_CA"]).read_text(encoding="utf-8"))
+          assert x["public_publish_allowed"] is False
+          assert x["customer_data_processed"] is False
+          assert x["cyberattack_confirmed"] is False
+          assert all(s["status"]=="OK" for s in x["health"].values())
+          assert x["feeds"]["uk"]["geo_scope"]=="GB"
+          assert x["feeds"]["ca"]["geo_scope"]=="CA-ON-TORONTO"
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as f:
+              f.write("\n### UK Met Office and Canada ECCC additional internal sample\n\n")
+              f.write("| Jurisdiction | What the official endpoint covers | Recent RSS/Atom headlines | Last fetched |\n|---|---|---:|---|\n")
+              f.write(f"| UK (GB) | Met Office nationwide weather warning RSS summary | {x['feeds']['uk']['count']} | {x['health']['uk']['last_success_at']} |\n")
+              f.write(f"| CA-ON-TORONTO | ECCC **Toronto region only** warning Atom | {x['feeds']['ca']['count']} | {x['health']['ca']['last_success_at']} |\n")
+              f.write("\n0 matching records is not collection failure; items are not verified active warnings.\n")
+          print("OFFICIAL_UK_CA_PASS uk_recent=",x["feeds"]["uk"]["count"],
+                "toronto_recent=",x["feeds"]["ca"]["count"])
           PY
       - name: Discard ephemeral official public response data
         if: always()
