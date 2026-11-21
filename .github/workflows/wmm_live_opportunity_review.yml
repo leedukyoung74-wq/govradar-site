@@ -1,0 +1,87 @@
+name: WMM 879 live country briefs exact provenance review (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'ops/verify_live_opportunity_review.py'
+      - 'tests/test_live_opportunity_review.py'
+      - '.github/workflows/wmm_live_opportunity_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent offline fail-closed tests
+        run: python -m unittest discover -s tests -p 'test_live_opportunity_review.py' -v
+      - name: Obtain current published live branch only
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: previous_live
+          persist-credentials: false
+      - name: Obtain 879-record safety annotation proposal only
+        uses: actions/checkout@v4
+        with:
+          ref: review/wmm-live-opps-879-source-warning-20261121
+          path: reviewed_live
+          persist-credentials: false
+      - name: Check seven-language widget JavaScript parses
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          text=Path('reviewed_live/public/widget/index.html').read_text(encoding='utf-8')
+          assert text.count('<script>')==1
+          assert text.count('</script>')==1
+          js=text.split('<script>',1)[1].split('</script>',1)[0]
+          Path('/tmp/wmm-opportunity-widget-review.js').write_text(js,encoding='utf8')
+          PY
+          node --check /tmp/wmm-opportunity-widget-review.js
+          rm -f /tmp/wmm-opportunity-widget-review.js
+      - name: Compare all original records exactly and GET-only check live presence
+        run: |
+          python ops/verify_live_opportunity_review.py \
+            --baseline previous_live --candidate reviewed_live \
+            --probe --out "$RUNNER_TEMP/opportunity_release_verification.json"
+      - name: Publish only review summary, never actual user data
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          d=json.loads((Path(os.environ['RUNNER_TEMP'])/'opportunity_release_verification.json').read_text(encoding='utf-8'))
+          p=d['release_patch']
+          assert p['pass']
+          assert p['alert_eligible_count']==0
+          assert d['site_modified'] is False
+          assert d['customer_alerts_sent'] is False
+          assert d['api_billing_started'] is False
+          assert len(d['public'])==2
+          lines=[
+            '## WMM live business opportunity evidence QA (READ ONLY)',
+            '',
+            f"**Existing real records preserved:** {p['record_count']} / {p['candidate_record_count']}",
+            '',
+            '**Original country, title, classification, deadline and updated timestamp unchanged.**',
+            '',
+            '**Official source proven: 0. Customer alerts eligible: 0.**',
+            '',
+            '| Public host | Publication state |',
+            '|---|---|',
+          ]
+          for x in d['public']:
+            lines.append(f"| {x['host'].replace('https://','')} | {x['status']} |")
+          lines.extend(('', '**NO MERGE / NO DEPLOY / NO CUSTOMER NOTIFICATIONS / NO CHARGES**'))
+          print('\n'.join(lines))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as o:
+            o.write('\n'.join(lines)+'\n')
+          PY
+          rm -f "$RUNNER_TEMP/opportunity_release_verification.json"
