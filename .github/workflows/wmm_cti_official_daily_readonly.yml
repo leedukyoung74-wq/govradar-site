@@ -1,0 +1,69 @@
+name: WMM CTI daily official KEV plus FIRST EPSS internal pilot (READ ONLY)
+# Only official public CISA/FIRST data. No customer inventory, CTI vendors,
+# membership, external notifications, persistent artifacts, or production publish.
+# Repository is public; standard ubuntu-24.04 GitHub-hosted runners are free.
+on:
+  schedule:
+    - cron: '47 22 * * *' # 07:47 Asia/Seoul; scheduler can be delayed
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_cti_official_daily_readonly.yml'
+permissions:
+  contents: read
+concurrency:
+  group: wmm-cti-official-internal-daily
+  cancel-in-progress: false
+jobs:
+  read_only_verification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Pin reviewed isolated CTI implementation (no deploy privilege)
+        uses: actions/checkout@v4
+        with:
+          ref: 83d1cc3316d4c3627b4a73fe2b2048f09c9dba1e
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fail-closed CTI parser and source permission regression tests
+        run: |
+          python -m unittest discover -s tests -p 'test_cti_epss_offline.py' -v
+          python -m unittest discover -s tests -p 'test_cti_provider_audit.py' -v
+      - name: Validate current official CISA and FIRST feeds in temporary storage only
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          d="$(mktemp -d)"
+          trap 'rm -rf "$d"' EXIT
+          python tools/cti_safe_intake.py --out "$d/kev.json"
+          curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' \
+            --retry 1 --max-time 90 --max-filesize 60000000 \
+            https://epss.empiricalsecurity.com/epss_scores-current.csv.gz \
+            --output "$d/epss.csv.gz"
+          python tools/cti_epss_offline.py --kev "$d/kev.json" \
+            --epss "$d/epss.csv.gz" --out "$d/internal.json"
+          WMM_CTI_TMPDIR="$d" python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r=json.loads((Path(os.environ["WMM_CTI_TMPDIR"])/"internal.json").read_text())
+          assert r["public_release_allowed"] is False
+          assert r["darkweb_vendor_connected"] is False
+          assert r["customer_data_processed"] is False
+          assert r["customer_breaches_confirmed"] is False
+          assert r["source_kev_entries"] > 0
+          assert r["matched_count"] > 0
+          print("OFFICIAL_ONLY_INTERNAL_PASS",
+                "KEV=",r["source_kev_entries"],
+                "EPSS_matches=",r["matched_count"],
+                "EPSS_date=",r["epss_score_date"])
+          path=os.environ.get("GITHUB_STEP_SUMMARY")
+          if path:
+              with open(path,"a",encoding="utf-8") as f:
+                  f.write("### WMM GOV RADAR internal official cyber data check\n\n")
+                  f.write("**CHECK SUCCESS** — This is NOT darkweb monitoring, customer vulnerability confirmation or public deployment.\n\n")
+                  f.write(f"CISA KEV: {r['source_kev_entries']} entries; FIRST EPSS: {r['matched_count']} matched, score date: {r['epss_score_date']}.\n\n")
+                  f.write("No private assets, customer records, paid APIs, notifications, Git push, storage artifacts or public feed changes.\n")
+          PY
