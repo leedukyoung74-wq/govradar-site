@@ -30,12 +30,15 @@ jobs:
           code = "\n".join(line[10:] if line.startswith('          ') else line for line in segment.splitlines())
           ast.parse(code, filename='wmm_operations_watch.py')
           required = [
-              'Global open tenders', '193-country notice summary', 'Contract awards',
-              'Verified-open vs all-tenders upper bound', 'max_bytes=2_500_000',
+              'Official-source tender cache', 'Country-summary listed tender estimate', 'Contract awards',
+              'Country-summary listed vs cached tender upper bound', 'max_bytes=2_500_000',
               '30*60', 'sys.exit(1 if failed else 0)',
               # The 879 country brief entries must remain distinct from
               # verified public open tenders and cannot trigger client alerts.
               'Country brief provenance (', 'wmm-radar.pages.dev',
+              'verification_grades', 'search_only_not_individually_confirmed',
+              'publisher_rerecheck_grade_count', 'stale_labeled_cached_records',
+              'only_reviewed_official_hosts', 'not_a_live_confirmed_tender_count',
               'official_notice_verified', 'may_send_business_alert',
               'automated_customer_alerts_allowed', 'seven_language_widget_guard',
           ]
