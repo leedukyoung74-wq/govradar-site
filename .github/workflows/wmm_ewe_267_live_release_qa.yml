@@ -1,0 +1,138 @@
+name: WMM public 193-country EWE directory 267/579 exact release QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - .github/workflows/wmm_ewe_267_live_release_qa.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  read_only_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Read canonical current source (no credentials)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Canonical source coverage contract
+        run: |
+          python -m unittest discover -s tests -p 'test_environment_weather_emergency_sites.py' -v
+          python -m unittest discover -s tests -p 'test_ewe_47_canonical_import.py' -v
+      - name: Existing production reference read only
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: previous_live
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /public/data/environment-weather-emergency-directory.json
+            /public/data/environment-weather-emergency-coverage.json
+      - name: Read two-file target proposal without publication
+        uses: actions/checkout@v4
+        with:
+          ref: review/wmm-live-ewe-267-data-overlay-20261121
+          path: proposed_live
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /public/data/environment-weather-emergency-directory.json
+            /public/data/environment-weather-emergency-coverage.json
+      - name: Verify existing source rows preserved, 47 new candidate slots, and exact statistics
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          source=json.loads(Path('src/environment_weather_emergency_sites.json').read_text(encoding='utf8'))['countries']
+          old=json.loads(Path('previous_live/public/data/environment-weather-emergency-directory.json').read_text(encoding='utf8'))
+          new=json.loads(Path('proposed_live/public/data/environment-weather-emergency-directory.json').read_text(encoding='utf8'))
+          cov=json.loads(Path('proposed_live/public/data/environment-weather-emergency-coverage.json').read_text(encoding='utf8'))
+          oldcov=json.loads(Path('previous_live/public/data/environment-weather-emergency-coverage.json').read_text(encoding='utf8'))
+          cats=('environment','weather','emergency')
+          assert set(source)==set(old)==set(new) and len(source)==193
+          added=[]
+          for iso,fields in source.items():
+              assert set(fields)==set(old[iso])==set(new[iso])==set(cats)
+              assert new[iso]==fields,'public candidate is not canonical source: '+iso
+              for kind in cats:
+                  if old[iso][kind] is not None:
+                      assert new[iso][kind]==old[iso][kind],'previously registered official agency changed'
+                  elif new[iso][kind] is not None:
+                      assert new[iso][kind]['review']=='curated_candidate'
+                      assert new[iso][kind]['access']=='not_live_tested'
+                      added.append((iso,kind))
+          # A second post-merge run should not fail just because the approved
+          # public candidate is already in the live branch.
+          assert len(added) in (0,47)
+          totals={cat:sum(bool(row[cat]) for row in new.values()) for cat in cats}
+          total=sum(totals.values())
+          full=sum(all(row[k] is not None for k in cats) for row in new.values())
+          assert total==267 and full==89
+          assert cov['target_countries']==193 and cov['target_category_links']==579
+          assert cov['candidate_links_by_category']==totals
+          assert cov['linked_candidate_total']==267
+          assert cov['missing_national_category_links']==312
+          assert cov['linked_candidate_countries_all_three']==89
+          assert cov['live_verified_total']==0
+          assert set(cov)==set(oldcov)
+          for iso,row in new.items():
+              n=sum(v is not None for v in row.values())
+              assert cov['country_counts'][iso]=={
+                  'linked_candidates':n,'missing':3-n,
+                  'environment':row['environment'] is not None,
+                  'weather':row['weather'] is not None,
+                  'emergency':row['emergency'] is not None,
+                  'live_verified':0,
+              },iso
+          assert 'not independently live-verified' in cov['warning']
+          print('PASS: 193 exact country records, 267/579 candidates, existing values preserved')
+          print('New slots added relative to current live baseline:',len(added))
+          print('No live CAP/RSS/API subscriptions verified')
+          PY
+      - name: Read-only GET probes of both public candidate registries
+        shell: bash
+        run: |
+          python - <<'PY'
+          import urllib.request,urllib.error,json,os
+          hosts=('radar.wmm-hoa.com','wmm-radar.pages.dev')
+          states=[]
+          for host in hosts:
+              base='https://'+host+'/data/'
+              results=[]
+              for path in ('environment-weather-emergency-directory.json',
+                           'environment-weather-emergency-coverage.json'):
+                  url=base+path
+                  req=urllib.request.Request(url,method='GET',headers={
+                      'User-Agent':'WMM-GOV-RADAR-Agency-Registry-ReadOnly/1.0',
+                      'Cache-Control':'no-cache'})
+                  try:
+                      with urllib.request.urlopen(req,timeout=12) as resp:
+                          if resp.status!=200 or resp.geturl()!=url: raise ValueError('unverified_redirect')
+                          data=resp.read(600000)
+                      j=json.loads(data.decode('utf8'))
+                      if path.endswith('directory.json'):
+                          num=sum(x is not None for row in j.values() for x in row.values())
+                      else:
+                          num=j['linked_candidate_total']
+                      results.append(num)
+                  except (ValueError,TypeError,OSError,urllib.error.URLError,TimeoutError):
+                      results.append(None)
+              state=('NEW_267_VISIBLE' if results==[267,267] else
+                     'OLD_220_VISIBLE' if results==[220,220] else 'MIXED_OR_UNVERIFIED')
+              print(host,state,results)
+              states.append((host,state))
+          lines=['## WMM 193-country official agency source release (read-only)','',
+                 '**Reference 267/579 means curated candidate homepages, not live subscribed warnings.**','',
+                 '| Host | Published public directory and statistics |','|---|---|']
+          lines.extend(f'| {host} | {state} |' for host,state in states)
+          lines.extend(['','Existing country HTML cards are static and separately require rerender.',
+                         'No live deployment, customer notifications, payment or paid API.'])
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
+              f.write('\n'.join(lines)+'\n')
+          PY
