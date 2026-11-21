@@ -48,6 +48,17 @@ class OfficialRegionalFeeds(unittest.TestCase):
         self.assertTrue(result["source_is_official"])
         self.assertFalse(result["government_website_cyberattack_confirmed"])
 
+    def test_ea_official_lowercase_retired_warning_skipped(self):
+        # The EA API reference itself says "Warning no longer in force".
+        retired = dict(EA["items"][1], severity="Warning no longer in force")
+        result = M.parse_england_floods({"items": [EA["items"][0], retired]}, NOW)
+        self.assertEqual(result["count"], 1)
+
+    def test_ea_numeric_severity_level_4_blocks_even_with_ambiguous_label(self):
+        retired = dict(EA["items"][1], severity="Flood Warning", severityLevel=4)
+        result = M.parse_england_floods({"items": [retired]}, NOW)
+        self.assertEqual(result["count"], 0)
+
     def test_england_empty_active_feed_is_not_an_error_or_attack(self):
         result = M.parse_england_floods({"items": []}, NOW)
         self.assertEqual(result["count"], 0)
