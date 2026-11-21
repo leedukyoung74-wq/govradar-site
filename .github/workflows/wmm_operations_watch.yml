@@ -34,7 +34,7 @@ jobs:
               print(json.dumps(obj,ensure_ascii=False,sort_keys=True),flush=True)
           def get(url, github=False, json_only=False, max_bytes=1_000_000):
               host=urllib.parse.urlsplit(url).hostname
-              allowed={'api.github.com'} if github else {'raw.githubusercontent.com','radar.wmm-hoa.com'}
+              allowed={'api.github.com'} if github else {'raw.githubusercontent.com','radar.wmm-hoa.com','wmm-radar.pages.dev'}
               if host not in allowed or not url.startswith('https://'):
                   raise ValueError('host_not_allowlisted')
               headers={'User-Agent':'WMM-GOV-RADAR-Operations-Watch/1.0','Accept':'application/vnd.github+json' if github else '*/*'}
@@ -139,6 +139,34 @@ jobs:
                   record(label,needle in html,{'http':200,'expected_marker_present':needle in html})
               except Exception as exc:
                   record(label,False,type(exc).__name__)
+          # Customer trust: research candidate index is NEVER the verified tender feed.
+          # Existing hourly cron only. No API charges, customer data, mail or deployment.
+          for _host,_label in (('radar.wmm-hoa.com','Custom domain'),('wmm-radar.pages.dev','Cloudflare origin')):
+              try:
+                  _d=get('https://'+_host+'/data/opps.json',json_only=True,max_bytes=1_000_000)
+                  _rows=_d.get('items')
+                  _widget=get('https://'+_host+'/widget/',max_bytes=40_000)
+                  _root_ok=(_d.get('index_kind')=='unverified_country_brief_candidates'
+                      and type(_d.get('verified_official_notice_count')) is int
+                      and _d['verified_official_notice_count']==0
+                      and _d.get('automated_customer_alerts_allowed') is False)
+                  _records_ok=(isinstance(_rows,list) and len(_rows)>=600
+                      and all(isinstance(_x,dict) and
+                          _x.get('source_review_status')=='individual_notice_unverified' and
+                          _x.get('official_notice_verified') is False and
+                          _x.get('may_send_business_alert') is False and
+                          _x.get('is_live_tender') is False for _x in _rows))
+                  _widget_ok=('id="source-disclaimer" role="note"' in _widget
+                      and 'x.official_notice_verified===true&&x.deadline?' in _widget
+                      and 'o.automated_customer_alerts_allowed!==false' in _widget)
+                  record('Country brief provenance ('+_label+')',_root_ok and _records_ok and _widget_ok,
+                      {'records':len(_rows) if isinstance(_rows,list) else None,
+                       'min_expected':600,'official_notices_confirmed':0,
+                       'automated_alerts_allowed':False,
+                       'root_policy_valid':_root_ok,'each_record_unverified':_records_ok,
+                       'seven_language_widget_guard':_widget_ok})
+              except Exception as exc:
+                  record('Country brief provenance ('+_label+')',False,{'error':type(exc).__name__})
           summary_path=os.environ.get('GITHUB_STEP_SUMMARY')
           failed=[x for x in checks if not x['ok']]
           pending=[x for x in checks if x.get('detail',{}).get('pending')]
