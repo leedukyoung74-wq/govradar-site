@@ -1,48 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-21T10:10:22.192711+00:00",
+  "generated_at_utc": "2026-11-21T12:40:22.286350+00:00",
   "type": "source_backed_public_procurement_organisations",
   "not_commercial_buyer_directory": true,
   "disclaimer_ko": "공식 공개 조달공고의 발주기관 목록입니다. 상업 수입 바이어·거래 의사·연락처 또는 현재 입찰 가능 상태를 보증하지 않습니다. 원문에서 재확인하세요.",
   "disclaimer_en": "Procuring entities named in official public notices; NOT a verified importer, sales-buyer or contact directory. Confirm notice status with the original issuer.",
   "organisations": [
-    {
-      "country_iso": "AO",
-      "procurement_entity": "Ministry of Social Action, Family and Promotion of Women",
-      "source_backed_notice_count": 9,
-      "notices": [
-        {
-          "title": "Formacao no ramo de gestão do pessoal do MASFAMU",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480685",
-          "source": "World Bank"
-        },
-        {
-          "title": "Contratacao de empresa para formacao em materia de comunicacao para o pessoal do MASFAMU",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480675",
-          "source": "World Bank"
-        },
-        {
-          "title": "Formação Especializada em materia de CSU dos representantes provinciais",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480682",
-          "source": "World Bank"
-        },
-        {
-          "title": "Contratacao de empresa para traducao e edicao das politicas e protocolos",
-          "deadline": "2026-11-23",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481656",
-          "source": "World Bank"
-        },
-        {
-          "title": "Contratacao de servicos de comunicacao social (reportagem)",
-          "deadline": "2026-11-23",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481655",
-          "source": "World Bank"
-        }
-      ]
-    },
     {
       "country_iso": "KE",
       "procurement_entity": "ICT Authority",
@@ -76,6 +39,43 @@
           "title": "Supply, Delivery, Integration, Support, Capacity Building and Maintenance Support of Hardware, Analysts Computer, Security Software and Technology tools, Support for ICTA’s Government Security Operation Centre (GOVSOC)",
           "deadline": "2027-01-07",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480068",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "AO",
+      "procurement_entity": "Ministry of Social Action, Family and Promotion of Women",
+      "source_backed_notice_count": 6,
+      "notices": [
+        {
+          "title": "Contratacao de empresa para traducao e edicao das politicas e protocolos",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481656",
+          "source": "World Bank"
+        },
+        {
+          "title": "Contratacao de servicos de comunicacao social (reportagem)",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481655",
+          "source": "World Bank"
+        },
+        {
+          "title": "Servicos de Consultoria de Empresa para publicidade e propaganda - Divulgacao da politica nacional de protecao social adaptativa",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481654",
+          "source": "World Bank"
+        },
+        {
+          "title": "Gestao e manutencao do sistema - Servidor",
+          "deadline": "2026-11-30",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478414",
+          "source": "World Bank"
+        },
+        {
+          "title": "Certificacao da formacao para ADECOS - Mecanismo de Gestao de Risco",
+          "deadline": "2026-12-10",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481644",
           "source": "World Bank"
         }
       ]
@@ -155,43 +155,6 @@
       ]
     },
     {
-      "country_iso": "TD",
-      "procurement_entity": "Ministry of National Education- Chad Improving Learning Outcomes Project",
-      "source_backed_notice_count": 5,
-      "notices": [
-        {
-          "title": "Recrutement d'un Auditeur Externe pour les états financiers des Projets PARAEB et RELANCE, exercices 2026 et 2027.",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480001",
-          "source": "World Bank"
-        },
-        {
-          "title": "Construction de 30 écoles dans les provinces du Moyen Chari et du Mandoul",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479842",
-          "source": "World Bank"
-        },
-        {
-          "title": "Construction de 34 écoles dans les provinces du Batha, du Ouaddaï et du Chari Baguirmi",
-          "deadline": "2026-11-24",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479867",
-          "source": "World Bank"
-        },
-        {
-          "title": "Construction de 48 écoles dans les provinces du Lac et de Hadjer Lamis",
-          "deadline": "2026-11-27",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479856",
-          "source": "World Bank"
-        },
-        {
-          "title": "Construction de 26 écoles dans les provinces du Salamat et du Sila",
-          "deadline": "2026-12-17",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479846",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
       "country_iso": "UZ",
       "procurement_entity": "NATIONAL AGENCY FOR SOCIAL PROTECTION UNDER THE PRESIDENT OF THE REPUBLIC OF UZBEKISTAN",
       "source_backed_notice_count": 5,
@@ -255,37 +218,6 @@
           "title": "Contratação de uma empresa para elaboração da engenharia e padronização dos processos e automação",
           "deadline": "2026-11-30",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480129",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "BI",
-      "procurement_entity": "Ministry of Communication, Information Technology and Media - Executive Secretariat for ICT (SETIC)",
-      "source_backed_notice_count": 4,
-      "notices": [
-        {
-          "title": "MFBEN - DSI - AT CABINET- Recrutement d'un consultant pour la formation et la certification des techniciens de la DSI, SETIC et de l'OBR sur l'Audit Système d'information",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478716",
-          "source": "World Bank"
-        },
-        {
-          "title": "MFBEN - DSI - AT CABINET- Recrutement d'un consultant pour la formation et la certification des techniciens de la DSI, SETIC et de l'OBR sur le HACKING FORENSIC INVESTIGATION",
-          "deadline": "2026-11-23",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479014",
-          "source": "World Bank"
-        },
-        {
-          "title": "ARCT: Acquisition des équipements, applications, matériel et logiciels pour le CERT national afin de permettre des capacités de renseignement sur les menaces, de prévention, d'atténuation, de défense et de réponse",
-          "deadline": "2026-12-21",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479796",
-          "source": "World Bank"
-        },
-        {
-          "title": "Acquisition d'une plateforme d'interopérabilité gouvernementale intégrant un système PKI (Infrastructure à clés publiques)",
-          "deadline": "2027-01-11",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482177",
           "source": "World Bank"
         }
       ]
@@ -379,6 +311,31 @@
           "title": "Rehabilitation of the N1 Corridor, Inchope - Gorongosa (70 km) Design and Build Road Project in Sofala Province",
           "deadline": "2027-01-05",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480107",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "BI",
+      "procurement_entity": "Ministry of Communication, Information Technology and Media - Executive Secretariat for ICT (SETIC)",
+      "source_backed_notice_count": 3,
+      "notices": [
+        {
+          "title": "MFBEN - DSI - AT CABINET- Recrutement d'un consultant pour la formation et la certification des techniciens de la DSI, SETIC et de l'OBR sur le HACKING FORENSIC INVESTIGATION",
+          "deadline": "2026-11-23",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479014",
+          "source": "World Bank"
+        },
+        {
+          "title": "ARCT: Acquisition des équipements, applications, matériel et logiciels pour le CERT national afin de permettre des capacités de renseignement sur les menaces, de prévention, d'atténuation, de défense et de réponse",
+          "deadline": "2026-12-21",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479796",
+          "source": "World Bank"
+        },
+        {
+          "title": "Acquisition d'une plateforme d'interopérabilité gouvernementale intégrant un système PKI (Infrastructure à clés publiques)",
+          "deadline": "2027-01-11",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482177",
           "source": "World Bank"
         }
       ]
@@ -504,6 +461,31 @@
           "title": "Engagement of a Third-Party Validation (TPV) Firm for Verification of Community-Based School Sites Identified by District Education Groups (DEGs)",
           "deadline": "2026-11-27",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481056",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "TD",
+      "procurement_entity": "Ministry of National Education- Chad Improving Learning Outcomes Project",
+      "source_backed_notice_count": 3,
+      "notices": [
+        {
+          "title": "Construction de 34 écoles dans les provinces du Batha, du Ouaddaï et du Chari Baguirmi",
+          "deadline": "2026-11-24",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479867",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction de 48 écoles dans les provinces du Lac et de Hadjer Lamis",
+          "deadline": "2026-11-27",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479856",
+          "source": "World Bank"
+        },
+        {
+          "title": "Construction de 26 écoles dans les provinces du Salamat et du Sila",
+          "deadline": "2026-12-17",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479846",
           "source": "World Bank"
         }
       ]
@@ -1047,25 +1029,6 @@
       ]
     },
     {
-      "country_iso": "PK",
-      "procurement_entity": "National Health Support Program Sindh",
-      "source_backed_notice_count": 2,
-      "notices": [
-        {
-          "title": "Services for Logistical & Facilitation: Four Consultative Workshops / Meeting: Logistical and Facilitation Services for activity 1.6.1",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482598",
-          "source": "World Bank"
-        },
-        {
-          "title": "Procurement of IT Equipment / Gadgets for the Implementation of DHIS-2 Daily Reporting in remaining 28 Districts of Sindh",
-          "deadline": "2026-12-17",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481855",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
       "country_iso": "ST",
       "procurement_entity": "Project Fiduciary and Administrative Agency",
       "source_backed_notice_count": 2,
@@ -1468,19 +1431,6 @@
           "title": "Aquisição de mobiliário mesas e cadeiras e ventiladores para os Cursos Piloto de Habilidades Digitais",
           "deadline": "2026-11-23",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479641",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "BR",
-      "procurement_entity": "State Secretariat of Finance of Alagoas",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "RH 2 - Empresa de consultoria para realização de diagnóstico arquivístico, dimensionamento da massa documental, elaboração da estratégia tecnológica e apoio técnico à futura contratação de serviços de digitalização dos r",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00461095",
           "source": "World Bank"
         }
       ]
@@ -2383,19 +2333,6 @@
       ]
     },
     {
-      "country_iso": "IN",
-      "procurement_entity": "Department of Energy",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Removal of debris constituting of grits/pebbles/wooden pieces/silt etc from desilting tank to aqueduct No.2 of 2x11.25MW Ganvi Power House Stage-1 deposited due to heavy flood in Ganvi khad on dated 13/08/2025",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00482379",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
       "country_iso": "JM",
       "procurement_entity": "Ministry of Labour and Social Security",
       "source_backed_notice_count": 1,
@@ -2547,19 +2484,6 @@
           "title": "Acquisition of ICT Equipment, including 211 Laptop Computers and 54 printers for the roll-out and onboarding of additional 50 MACs on the e-GP platform under the Phase III implementation.",
           "deadline": "2026-12-18",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00480568",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "LS",
-      "procurement_entity": "Ministry of Trade and Industry",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Master Plan for Commercialization of Delicious Fruits for LHITC",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479665",
           "source": "World Bank"
         }
       ]
@@ -2969,19 +2893,6 @@
     },
     {
       "country_iso": "NG",
-      "procurement_entity": "Niger State SPIN",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Consultancy services for the Preparation of the required Environmental and Social Instruments for SPIN Rabbah Irrigation Scheme in line with the disclosed Environmental and Social Management Framework (ESMF) and Resettle",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00479744",
-          "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "NG",
       "procurement_entity": "Sustainable Power and Irrigation for Nigeria (SPIN) Project Federal Ministry of Water Resources & Sanitation,",
       "source_backed_notice_count": 1,
       "notices": [
@@ -3106,6 +3017,19 @@
           "title": "Supply and Installation of Specialized Museum Showcases at Peshawar Museum",
           "deadline": "2026-11-25",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00478001",
+          "source": "World Bank"
+        }
+      ]
+    },
+    {
+      "country_iso": "PK",
+      "procurement_entity": "National Health Support Program Sindh",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Procurement of IT Equipment / Gadgets for the Implementation of DHIS-2 Daily Reporting in remaining 28 Districts of Sindh",
+          "deadline": "2026-12-17",
+          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481855",
           "source": "World Bank"
         }
       ]
@@ -3380,19 +3304,6 @@
           "deadline": "2026-11-27",
           "notice_url": "https://ted.europa.eu/en/notice/-/detail/721889-2026",
           "source": "EU TED"
-        }
-      ]
-    },
-    {
-      "country_iso": "TR",
-      "procurement_entity": "Balıkesir Metropolitan Municipality",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Balıkesir Fire Brigade Disaster Management Vehicles Procurement Sub-Project",
-          "deadline": "2026-11-20",
-          "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00473154",
-          "source": "World Bank"
         }
       ]
     },
