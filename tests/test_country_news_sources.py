@@ -14,10 +14,10 @@ class NewsDirectoryQA(unittest.TestCase):
         self.assertEqual(len(self.sources),193)
         self.assertEqual(self.report["target_links"],579)
         self.assertEqual(len(self.report["country_counts"]),193)
-        self.assertEqual(self.report["registered_publisher_links"],531)
-        self.assertEqual(self.report["countries_with_at_least_three_recorded"],177)
-        self.assertEqual(self.report["remaining_minimum_link_slots"],48)
-        self.assertEqual(len(self.report["uncatalogued_countries"]),16)
+        self.assertEqual(self.report["registered_publisher_links"],540)
+        self.assertEqual(self.report["countries_with_at_least_three_recorded"],180)
+        self.assertEqual(self.report["remaining_minimum_link_slots"],39)
+        self.assertEqual(len(self.report["uncatalogued_countries"]),13)
 
     def test_publishers_distinct_and_not_gov_procurement_numbers(self):
         for iso,rows in self.sources.items():
@@ -28,6 +28,14 @@ class NewsDirectoryQA(unittest.TestCase):
                 self.assertTrue(safe_url(record["url"]),(iso,record["url"]))
                 self.assertTrue(safe_url(record["evidence_url"]),(iso,record["evidence_url"]))
         self.assertTrue(self.report["not_government_site_count"])
+        self.assertTrue(self.report["not_live_news_feed"])
+
+    def test_new_three_countries_are_real_distinct_publishers_not_rss(self):
+        for iso in ("LA", "LI", "VU"):
+            self.assertEqual(len(self.sources[iso]), 3)
+            self.assertEqual(self.report["country_counts"][iso]["remaining_to_three"], 0)
+        self.assertEqual(self.sources["LA"][0]["publisher_type"], "state_news_agency")
+        self.assertEqual(self.sources["VU"][1]["publisher_type"], "public_broadcaster")
         self.assertTrue(self.report["not_live_news_feed"])
 
     def test_closed_country_cannot_have_fake_three_news_publishers(self):
