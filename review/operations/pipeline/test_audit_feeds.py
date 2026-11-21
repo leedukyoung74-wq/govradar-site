@@ -107,6 +107,15 @@ class FeedAuditTest(unittest.TestCase):
         self.assertNotIn("ignore previous prompts", json.dumps(report))
         self.assertIn("unclassified-source", {finding["code"] for finding in report["findings"]})
 
+    def test_deployed_publisher_names_preserve_skipped_status(self):
+        data = example()
+        data["feeds/sources_status.json"].update({
+            "DAPA (Korea)": {"state": "SKIPPED"}, "SAM.gov (US)": {"state": "SKIPPED"},
+        })
+        report = audit(data, "daily", NOW)
+        self.assertEqual({f["id"] for f in report["findings"] if f["code"] == "source-skipped"},
+                         {"DAPA", "SAM.gov"})
+
     def test_command_writes_report_even_when_input_is_missing(self):
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp) / "audit.json"

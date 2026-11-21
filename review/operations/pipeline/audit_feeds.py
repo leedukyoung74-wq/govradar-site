@@ -27,8 +27,9 @@ OWNERS = {
 TENDER_PUBLISHERS = {
     "eu ted": "EU TED", "world bank": "World Bank", "uk find a tender": "UK Find a Tender",
     "uk fts": "UK Find a Tender", "uk contracts finder": "UK Contracts Finder",
-    "sam.gov": "SAM.gov", "us sam.gov": "SAM.gov", "kr dapa": "DAPA", "dapa": "DAPA",
-    "oecd": "OECD",
+    "sam.gov": "SAM.gov", "us sam.gov": "SAM.gov", "sam.gov (us)": "SAM.gov",
+    "kr dapa": "DAPA", "dapa": "DAPA", "dapa (korea)": "DAPA",
+    "canadabuys": "CanadaBuys", "prozorro (ukraine)": "Prozorro", "oecd": "OECD",
 }
 LIMIT = 12_000_000
 
