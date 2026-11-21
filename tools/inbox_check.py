@@ -13,7 +13,7 @@ PHONE = re.compile(r"01[016789][-. ]?\d{3,4}[-. ]?\d{4}")
 BANNED = ["수주 보장", "선정 보장", "독점", "유일한", "예언", "prophecy"]
 LANGS = ["es", "fr", "ar", "vi", "id"]
 REQ = ["asof", "summary", "leader", "agenda", "needs", "biz", "watch", "risk", "sources", "_change", "_change_en", "en"]
-ISO = re.compile(r"^[A-Z]{2}$")
+ISO = re.compile(r"^[A-Z]{2}(-[A-Z0-9]{2,6})?$")  # 국가 KE 또는 자치·특별지역 PH-BARMM
 
 
 def texts(o):
