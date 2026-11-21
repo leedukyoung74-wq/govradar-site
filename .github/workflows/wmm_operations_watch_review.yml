@@ -33,6 +33,8 @@ jobs:
               'Global open tenders', '193-country notice summary', 'Contract awards',
               'Verified-open vs all-tenders upper bound', 'max_bytes=2_500_000',
               '30*60', 'sys.exit(1 if failed else 0)',
+              "'DEGRADED'", "'warning_checks'", "'critical':bool(critical)",
+              'critical=False', 'if not x[\'ok\'] and x[\'critical\']',
           ]
           for marker in required:
               assert marker in code, 'missing strict health marker: ' + marker
