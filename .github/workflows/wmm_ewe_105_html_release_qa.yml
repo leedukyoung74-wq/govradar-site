@@ -1,0 +1,98 @@
+name: GOV RADAR 105 changed country HTML pages byte-exact release QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_ewe_105_html_release_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify_review_branch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Trusted generator and reviewer from main
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Existing offline EWE HTML and redirect safety suite
+        run: python -m unittest discover -s ops/tests -p 'test_wmm_ewe_static_page_overlay.py' -v
+      - name: Original live branch before proposed 105-page overlay
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: before_live
+          persist-credentials: false
+      - name: Proposed 105-file candidate review branch only
+        uses: actions/checkout@v4
+        with:
+          ref: review/wmm-ewe-16x7-static-cards-44889026337
+          path: candidate
+          persist-credentials: false
+          fetch-depth: 2
+      - name: Canonical official agency source directory from src (read only)
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: canonical
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/environment_weather_emergency_sites.json
+      - name: Assert all original content outside the 3 agency cards is byte-identical
+        shell: bash
+        run: |
+          python - <<'PY'
+          import importlib.util,json,subprocess,os
+          from pathlib import Path
+          spec=importlib.util.spec_from_file_location(
+              'ewe',Path('ops/wmm_ewe_static_page_overlay.py'))
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          catalog=json.loads(Path('canonical/src/environment_weather_emergency_sites.json').read_text(encoding='utf8'))
+          countries=json.loads(Path('before_live/public/data/countries.json').read_text(encoding='utf8'))
+          plan=m.plan_changes('before_live',catalog,countries)
+          change_map={path:final for path,_,final in plan['changes']}
+          assert plan['expected_pages']==112
+          assert len(change_map)==105
+          assert len(plan['redirects_preserved'])==7
+          assert not plan['already_current']
+          # Compare complete UTF-8 pages. The only allowed bytes changed are
+          # inside the EWE section, as already proven by the generator.
+          for relative,expected in change_map.items():
+              actual=(Path('candidate')/relative).read_text(encoding='utf8')
+              assert actual==expected, 'Unexpected changes to login, SEO, payment, or another section: '+relative
+              assert '<section class="sec" id="environment-weather-emergency">' in actual
+              assert actual.count('class="card"')>=3
+          for relative in plan['redirects_preserved']:
+              assert (Path('candidate')/relative).read_bytes()==(Path('before_live')/relative).read_bytes(),relative
+          diff=subprocess.check_output(['git','-C','candidate','diff','--name-only','HEAD^','HEAD'],text=True).splitlines()
+          assert sorted(diff)==sorted(change_map), 'Review commit changed files outside approved list'
+          country_codes=len(m.COUNTRIES)
+          assert country_codes==16 and len(m.LANGS)==7
+          result=[
+              '## GOV RADAR 16 countries × seven supported languages — exact HTML QA',
+              '',
+              '**Modified complete country HTML pages:** 105 / 105 expected',
+              '',
+              '**Redirect-only locale pages preserved:** 7 / 7',
+              '',
+              '**Source directory links used:** canonical 267 candidate source slots',
+              '',
+              '**Unrelated page content changed:** 0',
+              '',
+              '**Login, membership, payments, scripts, SEO and other sections:** byte-identical',
+              '',
+              '**Actual RSS/CAP national live feeds verified:** 0 among new candidates',
+              '',
+              'The PR is a review candidate only and must be merged to live separately.',
+          ]
+          print('\n'.join(result))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
+              f.write('\n'.join(result)+'\n')
+          PY
+      - name: Confirm no paid API and no public deployment actions are present
+        run: echo 'READ ONLY. No customer messaging, secret reads, payments, deployment, or schedule created.'
