@@ -208,11 +208,26 @@ def head(L, title, desc, path, alt_paths, extra=""):
 <button class="burger" id="burger" aria-label="{e(MENU[L])}" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button></div>
 </div></header><script>(function(){{var h=document.querySelector("header.nav"),l=document.getElementById("navlinks");if(!h||!l)return;function fit(){{h.classList.remove("tight","compact");if(innerWidth<=1020)return;if(l.scrollWidth>l.clientWidth+1){{h.classList.add("tight");if(l.scrollWidth>l.clientWidth+1)h.classList.add("compact")}}}}fit();addEventListener("resize",fit);if(document.fonts)document.fonts.ready.then(fit);function sn(){{var n=document.querySelector(".subnav");if(n)n.classList.toggle("multi",n.offsetHeight>52)}}addEventListener("DOMContentLoaded",sn);addEventListener("resize",sn);if(document.fonts)document.fonts.ready.then(sn)}})()</script><!--SUBNAV-->{_subnav(L, path)}<!--/SUBNAV-->{prepbar(L) if path.endswith("/prepare/") else ""}<main>"""
 
+STOVE_SAFE_BY_LANG = {
+    "ko": "캠핑용 버너는 실외에서만 사용하세요. 실내·차고·텐트에서는 환기하더라도 사용하지 마세요.",
+    "en": "Camping fuel stoves: outdoors only, never indoors, in garages or tents, even with ventilation.",
+    "es": "Cocinas portátiles de camping: solo al aire libre, nunca en casa, garaje ni tienda, aunque haya ventilación.",
+    "fr": "Réchauds de camping : uniquement à l’extérieur, jamais dans une habitation, un garage ou une tente, même ventilés.",
+    "ar": "مواقد التخييم: للاستخدام خارج المباني فقط، وليس داخل المنازل أو المرائب أو الخيام حتى مع التهوية.",
+    "vi": "Bếp dã ngoại chỉ dùng ngoài trời; không dùng trong nhà, ga-ra hoặc lều kể cả khi có thông gió.",
+    "id": "Kompor camping hanya untuk luar ruangan; jangan gunakan di dalam rumah, garasi atau tenda meski ada ventilasi.",
+}
+
+def _safe_prep_item(L, scenario, index, item):
+    # This blackout quick panel is shown on the public /prepare/ route.
+    # Never reintroduce the old claim that ventilation makes camp stoves safe indoors.
+    return STOVE_SAFE_BY_LANG[L] if scenario["id"] == "blackout" and index == 2 else item
+
 def prepbar(L):
     lk = "ko" if L == "ko" else "en"
     nm_ = lambda x: (PREP_T.get(L) or {}).get(x["id"]) or x[lk]
     chips = "".join(f'<button data-pp="{x["id"]}">{e(nm_(x))}</button>' for x in CT["prep"]["scenarios"])
-    panels = "".join(f'<div class="pp" data-pp="{x["id"]}" hidden><h3>{e(x[lk])}</h3><ul>{"".join(f"<li>{e(i)}</li>" for i in x[lk+"_items"])}</ul></div>' for x in CT["prep"]["scenarios"])
+    panels = "".join(f'<div class="pp" data-pp="{x["id"]}" hidden><h3>{e(x[lk])}</h3><ul>{"".join(f"<li>{e(_safe_prep_item(L, x, j, item))}</li>" for j, item in enumerate(x[lk+"_items"]))}</ul></div>' for x in CT["prep"]["scenarios"])
     src = "".join(f'<li><a href="{e(z["url"])}" target="_blank" rel="noopener">{e(_stl(z["title"], z["url"], L))}</a></li>' for z in CT["prep"]["sources"])
     return f'''<div class="prepbar"><div class="in"><b>{e(tx(L,"prep_t"))}</b><a class="pkit" href="/{L}/prepare/">{ {"ko":"비축 키트","en":"Stockpile kit","es":"Kit de reservas","fr":"Kit de réserves","ar":"حقيبة الطوارئ","vi":"Bộ dự trữ","id":"Kit persediaan"}[L] }</a><div class="pchips">{chips}</div><span class="tick" id="htick"></span></div></div>
 <div class="preppanel" id="preppanel" hidden><div class="in"><div>{panels}</div><div><p class="note">{e(tx(L,"prep_src"))}</p><ul class="src">{src}</ul><button class="btn sm" id="pp-x">×</button></div></div></div>'''
