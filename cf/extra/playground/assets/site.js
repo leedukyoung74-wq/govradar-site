@@ -37,8 +37,11 @@ function translateStaticNodes(lang){
   if(node.parentElement&&['SCRIPT','STYLE','NOSCRIPT','TEXTAREA'].includes(node.parentElement.tagName))continue;
   if(!originalText.has(node))originalText.set(node,node.nodeValue);
   const raw=originalText.get(node),trimmed=raw.trim();
+  const koDict=window.WMM_KO_UI||{};
   if(lang==='en'&&Object.prototype.hasOwnProperty.call(dictionary,trimmed)){
     node.nodeValue=raw.replace(trimmed,dictionary[trimmed]);
+  }else if(lang!=='en'&&Object.prototype.hasOwnProperty.call(koDict,trimmed)){
+    node.nodeValue=raw.replace(trimmed,koDict[trimmed]);
   }else{node.nodeValue=raw}
  }
  const labels=['placeholder','aria-label','title','alt'];
@@ -158,7 +161,7 @@ const MISSIONS={
  ]
 };
 function initChallenges(){const list=$('#taskList');if(!list)return;const tab7=$('#tab7'),tab14=$('#tab14');let mode='seven';
- function render(){const english=document.documentElement.lang==='en',data=english?MISSION_EN[mode]:MISSIONS[mode],save=read('tasks_'+mode,{});$('#taskKicker').textContent=mode==='seven'?'7-DAY CHALLENGE':'LAUNCH 14 / EXPERIMENT';$('#taskTitle').textContent=english?(mode==='seven'?'Seven days of small steps':'LAUNCH 14 · Business experiment'):(mode==='seven'?'7일, 작은 시작의 기록':'LAUNCH 14 · 사업 검증 로드맵');$('#taskDesc').textContent=english?(mode==='seven'?'Complete one small action each day.':'Separate market assumptions, prototypes, feedback, and rights.'): (mode==='seven'?'매일 하나의 행동으로 실행하는 7일 미션입니다.':'시장 가설·시제품·고객 반응·권리를 구분하는 14일 실험입니다.');tab7.setAttribute('aria-selected',String(mode==='seven'));tab14.setAttribute('aria-selected',String(mode==='fourteen'));
+ function render(){const english=document.documentElement.lang==='en',data=english?MISSION_EN[mode]:MISSIONS[mode],save=read('tasks_'+mode,{});$('#taskKicker').textContent=english?(mode==='seven'?'7-DAY CHALLENGE':'LAUNCH 14 / EXPERIMENT'):(mode==='seven'?'7일 챌린지':'14일 사업 검증');$('#taskTitle').textContent=english?(mode==='seven'?'Seven days of small steps':'LAUNCH 14 · Business experiment'):(mode==='seven'?'7일, 작은 시작의 기록':'LAUNCH 14 · 사업 검증 로드맵');$('#taskDesc').textContent=english?(mode==='seven'?'Complete one small action each day.':'Separate market assumptions, prototypes, feedback, and rights.'): (mode==='seven'?'매일 하나의 행동으로 실행하는 7일 미션입니다.':'시장 가설·시제품·고객 반응·권리를 구분하는 14일 실험입니다.');tab7.setAttribute('aria-selected',String(mode==='seven'));tab14.setAttribute('aria-selected',String(mode==='fourteen'));
  list.replaceChildren();data.forEach(([title,desc],i)=>{const label=document.createElement('label');label.className='task';const input=document.createElement('input');input.type='checkbox';input.checked=Boolean(save[i]);input.setAttribute('aria-label',`DAY ${i+1} ${title} ${english?'done':'완료'}`);input.addEventListener('change',()=>{const copy=read('tasks_'+mode,{});copy[i]=input.checked;write('tasks_'+mode,copy);updateProgress()});const text=document.createElement('span');const strong=document.createElement('b');strong.textContent=`DAY ${String(i+1).padStart(2,'0')} · ${title}`;const small=document.createElement('small');small.textContent=desc;text.append(strong,small);label.append(input,text);list.append(label)});updateProgress();}
  function updateProgress(){const checked=$$('input:checked',list).length,max=MISSIONS[mode].length,percent=Math.round(checked/max*100);$('#taskProgress').textContent=document.documentElement.lang==='en'?`${checked} / ${max} complete · ${percent}%`:`${checked} / ${max} 완료 · ${percent}%`;$('#progressFill').style.width=percent+'%';$('#progressBar').setAttribute('aria-valuenow',percent);}
  tab7.addEventListener('click',()=>{mode='seven';render()});tab14.addEventListener('click',()=>{mode='fourteen';render()});

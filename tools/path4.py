@@ -41,3 +41,16 @@ for f in sorted((PUB / "welcome").glob("**/index.html")):
     s = s[:m.end()] + strip(L) + s[m.end():]
     f.write_text(s, "utf-8"); n += 1
 print("path4 strip:", n)
+
+# 한국어 화면에 영어로만 남은 장식·제목 문구를 한국어로 (대표 지시 2026-11-22: 한글이면 한글 전부)
+KO_FIX = [(">about</p>", ">소개</p>"), (">Service Area</h2>", ">서비스 분야</h2>"), (">AGENDA</p>", ">아젠다</p>"),
+          (">VIEW</a>", ">자세히 보기</a>"), (">About Radar</h2>", ">레이더 소개</h2>"), ("All rights reserved.", "모든 권리 보유.")]
+LANGS = set(T) - {"ko"}
+k = 0
+for f in (PUB / "welcome").glob("**/index.html"):
+    rel = f.relative_to(PUB / "welcome").parts
+    if rel and rel[0] in LANGS: continue
+    s = f.read_text("utf-8"); s2 = s
+    for a, b in KO_FIX: s2 = s2.replace(a, b)
+    if s2 != s: f.write_text(s2, "utf-8"); k += 1
+print("ko text fix pages:", k)
