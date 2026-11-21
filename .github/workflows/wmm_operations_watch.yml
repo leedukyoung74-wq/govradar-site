@@ -76,8 +76,8 @@ jobs:
           feed_root='https://raw.githubusercontent.com/'+repo+'/data/feeds/'
           observed={}
           for label,filename,minimum in (
-              ('Global open tenders','tenders.json',100),
-              ('193-country notice summary','cty/_summary.json',1),
+              ('Official-source tender cache','tenders.json',100),
+              ('Country-summary listed tender estimate','cty/_summary.json',1),
               ('Contract awards','awards.json',100)):
               try:
                   d=get(feed_root+filename,json_only=True,max_bytes=2_500_000)
@@ -85,15 +85,51 @@ jobs:
                   updated=d.get('updated')
                   good=isinstance(count,int) and count>=minimum and fresh(updated,30*60)
                   if filename=='tenders.json':
-                      good=good and isinstance(d.get('items'),list) and len(d['items'])==count
+                      _items=d.get('items')
+                      good=good and isinstance(_items,list) and len(_items)==count
+                      _known_sources={
+                          'World Bank':'projects.worldbank.org',
+                          'UK Find a Tender':'www.find-tender.service.gov.uk',
+                          'EU TED':'ted.europa.eu',
+                          'Prozorro (Ukraine)':'prozorro.gov.ua',
+                          'UK Contracts Finder':'www.contractsfinder.service.gov.uk'
+                      }
+                      _grades={}
+                      _sources_safe=True
+                      for _rec in _items if isinstance(_items,list) else []:
+                          _grade=str(_rec.get('verify') or 'missing')
+                          _grades[_grade]=_grades.get(_grade,0)+1
+                          _link=urllib.parse.urlsplit(str(_rec.get('url') or ''))
+                          _sources_safe=_sources_safe and (
+                              _link.scheme=='https' and
+                              _link.hostname==_known_sources.get(_rec.get('source')) and
+                              not _link.username and not _link.password and
+                              _link.port is None and not _link.fragment)
+                      good=good and _sources_safe
+                      _publisher_reread=sum(
+                          _rec.get('verify') in ('full','date') and not _rec.get('stale')
+                          for _rec in _items if isinstance(_items,list))
+                      _cached_unconfirmed_search=sum(
+                          _rec.get('verify')=='search'
+                          for _rec in _items if isinstance(_items,list))
+                      _stale_partial=sum(
+                          bool(_rec.get('stale')) for _rec in _items if isinstance(_items,list))
                   observed[filename]=count
-                  record(label,good,{'age_minutes':age_minutes(updated),'items':count,'updated':updated,
-                                    'threshold_minutes':30*60})
+                  _detail={'age_minutes':age_minutes(updated),'items':count,'updated':updated,
+                           'threshold_minutes':30*60}
+                  if filename=='tenders.json':
+                      _detail.update({'verification_grades':_grades,
+                          'search_only_not_individually_confirmed':_cached_unconfirmed_search,
+                          'publisher_rerecheck_grade_count':_publisher_reread,
+                          'stale_labeled_cached_records':_stale_partial,
+                          'only_reviewed_official_hosts':_sources_safe,
+                          'not_a_live_confirmed_tender_count':True})
+                  record(label,good,_detail)
               except Exception as exc:
                   record(label,False,{'error':type(exc).__name__})
           if 'tenders.json' in observed and 'cty/_summary.json' in observed:
               n=observed['tenders.json']; c=observed['cty/_summary.json']
-              record('Verified-open vs all-tenders upper bound',
+              record('Country-summary listed vs cached tender upper bound',
                      isinstance(n,int) and isinstance(c,int) and 0<=c<=n,
                      {'verified_open':c,'all_tenders':n})
           for name,filename,limit in (('US NWS weather','nws_active.json',180),('CISA KEV','cisa_kev.json',10*60)):
