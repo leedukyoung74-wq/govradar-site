@@ -1,0 +1,45 @@
+name: WMM outdoor-only blackout prepbar 7-language QA (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'src/content.json'
+      - 'build.py'
+      - 'tests/test_public_resilience_release.py'
+      - '.github/workflows/wmm_prepbar_outdoor_only_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  safe_copy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test seven locale safety phrases and block unsafe wording
+        run: python -m unittest discover -s tests -p 'test_public_resilience_release.py' -v
+      - name: Syntax and source evidence only, no live publishing
+        shell: bash
+        run: |
+          python -m py_compile build.py
+          python - <<'PY'
+          import ast, json
+          from pathlib import Path
+          src=Path('build.py').read_text(encoding='utf-8')
+          doc=json.loads(Path('src/content.json').read_text(encoding='utf-8'))
+          group=next(x for x in doc['prep']['scenarios'] if x['id']=='blackout')
+          assert len(group['ko_items'])>=3 and len(group['en_items'])>=3
+          assert '실내 사용 시 환기' not in json.dumps(group,ensure_ascii=False)
+          assert 'ventilate indoors' not in json.dumps(group,ensure_ascii=False)
+          assignments=[n for n in ast.parse(src).body if isinstance(n,ast.Assign) and
+              any(isinstance(t,ast.Name) and t.id=='STOVE_SAFE_BY_LANG' for t in n.targets)]
+          assert len(assignments)==1
+          locale=ast.literal_eval(assignments[0].value)
+          assert set(locale)=={'ko','en','es','fr','ar','vi','id'}
+          assert all(len(s)>60 for s in locale.values())
+          print('PASS: 7-language generator source guard, indoor stove old wording removed. NO DEPLOY.')
+          PY
