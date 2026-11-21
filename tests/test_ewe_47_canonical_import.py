@@ -60,7 +60,7 @@ class CanonicalAgencyImportTests(unittest.TestCase):
         self.assertEqual(v["JO"]["emergency"]["access"],"not_live_tested")
         self.assertEqual(v["CV"]["weather"]["access"],"not_live_tested")
         self.assertTrue("source" in v["MD"]["environment"])
-        self.assertEqual(self.raw["policy"]["default_access"],"not_live_tested")
+        self.assertIn("NOT been tested live",self.raw["policy"])
 
 if __name__=="__main__":
     unittest.main()
