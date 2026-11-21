@@ -1,0 +1,142 @@
+name: GOV RADAR 16-country 7-locale EWE cards safe review branch (NO AUTO DEPLOY)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ops/wmm_ewe_static_page_overlay.py'
+      - 'ops/tests/test_wmm_ewe_static_page_overlay.py'
+      - '.github/workflows/wmm_ewe_static_cards_review.yml'
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+concurrency:
+  group: wmm-ewe-static-cards-review-owner
+  cancel-in-progress: false
+jobs:
+  offline_tests:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: No-network 7-language section-only and redirect tests
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_ewe_static_page_overlay.py' -v
+      - name: Confirm no deployment access in pull-request tests
+        run: echo 'Review tests only; no live branches or customer information modified'
+
+  generate_review_branch:
+    if: >-
+      github.event_name == 'issue_comment' &&
+      github.event.issue.number == 68 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.state == 'open' &&
+      github.event.comment.user.login == 'leedukyoung74-wq' &&
+      github.event.comment.author_association == 'OWNER' &&
+      github.event.comment.body == '/govradar-ewe-16x7-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - name: Read trusted reviewed main-branch patcher (no credentials)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: control
+          persist-credentials: false
+      - name: Read only canonical agency candidates from src
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: canonical
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/environment_weather_emergency_sites.json
+      - name: Fetch live site into detached review working tree
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: site
+          persist-credentials: true
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline safety tests before any draft page edit
+        run: python3 -m unittest discover -s control/ops/tests -p 'test_wmm_ewe_static_page_overlay.py' -v
+      - name: Patch only existing 3 national-authority links in full country pages
+        run: |
+          python3 control/ops/wmm_ewe_static_page_overlay.py \
+            --site site \
+            --catalog canonical/src/environment_weather_emergency_sites.json \
+            --countries site/public/data/countries.json \
+            --apply-local \
+            --out "$RUNNER_TEMP/ewe-static-html-review.json"
+      - name: Fail if any modified file differs from strict changed-file manifest
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess
+          from pathlib import Path
+          r=json.loads((Path(os.environ['RUNNER_TEMP'])/'ewe-static-html-review.json').read_text(encoding='utf8'))
+          assert r['status']=='LOCAL_FILES_CHANGED_REVIEW_ONLY'
+          assert r['expected_pages']==112
+          assert r['live_source_feeds_verified']==0
+          assert r['site_published'] is False and r['paid_api_used'] is False
+          actual=subprocess.check_output(['git','-C','site','diff','--name-only','--','public'],text=True).splitlines()
+          assert sorted(actual)==sorted(r['changed_paths'])
+          assert len(actual)+len(r['redirect_pages_preserved'])+len(r['already_current_pages'])==112
+          assert len(actual)>=60, 'Unexpected number of full country pages'
+          assert all(x.startswith('public/') and x.endswith('/index.html') for x in actual)
+          print('PASS: exact EWE-only edits for',len(actual),'real pages; redirects preserved:',len(r['redirect_pages_preserved']))
+          PY
+      - name: Push review-only branch from live (NEVER update live)
+        env:
+          REVIEW_PREFIX: review/wmm-ewe-16x7-static-cards
+        shell: bash
+        run: |
+          set -euo pipefail
+          REVIEW_BRANCH="$REVIEW_PREFIX-$GITHUB_RUN_ID"
+          cd site
+          git config user.name "WMM Source QA Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git switch -c "$REVIEW_BRANCH"
+          git add -u -- public
+          git diff --cached --quiet && { echo 'BLOCKED: no page changes'; exit 1; }
+          git commit -m 'Review-only 16-country 7-language official agency cards; preserve redirects and unrelated page content'
+          git push origin HEAD:"refs/heads/$REVIEW_BRANCH"
+          echo "REVIEW_ONLY_BRANCH=$REVIEW_BRANCH" >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish summary with warnings and no deployment claim
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,json
+          from pathlib import Path
+          p=Path(os.environ['RUNNER_TEMP'])/'ewe-static-html-review.json'
+          if not p.exists():
+              print('No changed HTML manifest')
+              raise SystemExit(0)
+          x=json.loads(p.read_text(encoding='utf8'))
+          summary=[
+              '## WMM GOV RADAR country HTML cards — review branch only',
+              '',
+              f"Target full/redirect page paths: {x['expected_pages']}",
+              f"Real pages with only 3 authority cards modified: {x['updated_country_page_count']}",
+              f"Locale redirect pages left unchanged: {len(x['redirect_pages_preserved'])}",
+              f"Already current pages unchanged: {len(x['already_current_pages'])}",
+              '',
+              'Review branch must be inspected and approved separately before any live merge.',
+              'Agency homepages are only curated candidates, not verified live disaster feeds.',
+              'NO PUBLIC DEPLOY, NO MEMBERSHIP OR PAYMENT CHANGES, NO CUSTOMER NOTIFICATIONS.'
+          ]
+          print('\n'.join(summary))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as fh:
+              fh.write('\n'.join(summary)+'\n')
+          PY
