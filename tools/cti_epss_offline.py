@@ -8,7 +8,7 @@ EPSS daily CSV (or CSV.GZ) already obtained through an approved process.
 """
 import argparse
 import csv
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 import gzip
 import hashlib
@@ -20,7 +20,7 @@ KEV_SCHEMA = "wmm-cti-safe-intake.v1"
 KEV_URL = "https://raw.githubusercontent.com/cisagov/kev-data/refs/heads/develop/known_exploited_vulnerabilities.json"
 EPSS_URL = "https://www.first.org/epss/data"
 CVE = re.compile(r"^CVE-[0-9]{4}-[0-9]{4,19}$")
-SCORE_HEADER = re.compile(r"^#model_version:[\w.-]{1,36},score_date:(\d{4}-\d{2}-\d{2})$")
+SCORE_HEADER = re.compile(r"^#model_version:[\w.-]{1,36},score_date:(\d{4}-\d{2}-\d{2})(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z)?$")
 KEV_FIELDS = {"id", "vendor", "product", "date_added", "ransomware_reported", "evidence_level",
               "source_url", "public_redistribution_approval", "enterprise_impact",
               "victim_or_outage_confirmed", "tlp"}
@@ -95,6 +95,13 @@ def parse_epss(path, wanted, now=None, max_file_bytes=MAX_INPUT_BYTES):
         if not match:
             raise ValueError("Missing official EPSS model/score date header")
         score_date = match.group(1)
+        # FIRST's current daily CSV uses a full UTC score timestamp; earlier
+        # samples may contain only YYYY-MM-DD. Retain the calendar day for joins.
+        published = header.rsplit("score_date:", 1)[-1]
+        if "T" in published:
+            released = datetime.fromisoformat(published.replace("Z", "+00:00"))
+            if released > now.astimezone(timezone.utc) + timedelta(minutes=5):
+                raise ValueError("Future EPSS score timestamp")
         score_age_check(score_date, now)
         columns = next(csv.reader([safe_line()]), [])
         if columns != ["cve", "epss", "percentile"]:

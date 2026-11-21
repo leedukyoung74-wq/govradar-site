@@ -72,6 +72,25 @@ class EpssPilotTests(unittest.TestCase):
             self.assertFalse(report["customer_vulnerabilities_confirmed"])
             self.assertFalse(report["darkweb_vendor_connected"])
 
+    def test_real_first_utc_timestamp_header_accepted(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.make_file(directory, csv_data(score_date="2026-11-20T12:03:05Z"), compressed=True)
+            score_date, scores = parse_epss(path, {CVE}, NOW)
+            self.assertEqual(score_date, "2026-11-20")
+            self.assertEqual(scores[CVE][0], 0.3542)
+
+    def test_future_same_day_official_timestamp_blocked(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.make_file(directory, csv_data(score_date="2026-11-21T19:00:00Z"), compressed=True)
+            with self.assertRaisesRegex(ValueError, "Future EPSS"):
+                parse_epss(path, {CVE}, NOW)
+
+    def test_official_timestamp_invalid_hour_blocked(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.make_file(directory, csv_data(score_date="2026-11-20T29:05:05Z"), compressed=True)
+            with self.assertRaises(ValueError):
+                parse_epss(path, {CVE}, NOW)
+
     def test_missing_score_does_not_claim_low_risk(self):
         with tempfile.TemporaryDirectory() as directory:
             path = self.make_file(directory, csv_data(rows=[("CVE-2025-9999", "0.88", "0.99")]))
