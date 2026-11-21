@@ -1,4 +1,4 @@
-name: WMM regional official EA England + JMA Japan daily internal check (READ ONLY)
+name: WMM regional official EA JMA HKO GeoNet daily check (READ ONLY)
 # Source code frozen to the version passing real official GET checks (2026-11-21).
 # This does not update GOV RADAR public website or any customer records.
 on:
@@ -17,7 +17,7 @@ concurrency:
 jobs:
   official_regional_probe:
     runs-on: ubuntu-24.04
-    timeout-minutes: 6
+    timeout-minutes: 9
     steps:
       - name: Checkout independently tested fixed revision, never production website code
         uses: actions/checkout@v4
@@ -59,6 +59,39 @@ jobs:
           print("REGIONAL_OFFICIAL_LIVE_PASS",
                 "ea_active=",r["feeds"]["ea"]["count"],
                 "jma_bulletins=",r["feeds"]["jma"]["count"])
+          PY
+      - name: Checkout proven Hong Kong SAR and New Zealand official parser code
+        uses: actions/checkout@v4
+        with:
+          ref: 58d9f149917b662a2a4e0381a40530e24f07e1a7
+          path: hk_nz
+          persist-credentials: false
+      - name: Test Hong Kong HKO and New Zealand GeoNet parsers (synthetic fixtures)
+        run: python -m unittest discover -s hk_nz/tests -p 'test_official_hk_nz_feeds.py' -v
+      - name: Read official Hong Kong SAR RSS and New Zealand GeoNet (private/temp only)
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p "$RUNNER_TEMP/wmm-regional-internal"
+          python hk_nz/tools/official_hk_nz_feeds.py --out "$RUNNER_TEMP/wmm-regional-internal/hk-nz.json"
+          WMM_HK_NZ_REPORT="$RUNNER_TEMP/wmm-regional-internal/hk-nz.json" python - <<'PY'
+          import json,os
+          from pathlib import Path
+          r=json.loads(Path(os.environ["WMM_HK_NZ_REPORT"]).read_text(encoding="utf8"))
+          assert r["publication_allowed"] is False
+          assert r["customer_data_processed"] is False
+          assert r["government_website_attack_confirmed"] is False
+          assert all(s["status"]=="OK" for s in r["health"].values())
+          assert r["feeds"]["hko"]["geo_scope"]=="CN-HK"
+          assert r["feeds"]["geonet"]["geo_scope"]=="NZ"
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf8") as out:
+              out.write("\n### Hong Kong SAR and New Zealand additional official sources (not public alerts)\n\n")
+              out.write("| Scope | Data class | Parsed | Last successful read |\n|---|---|---:|---|\n")
+              out.write(f"| Hong Kong SAR (CN-HK) | Official warning SUMMARY (human review before alert) | {r['feeds']['hko']['count']} | {r['health']['hko']['last_success_at']} |\n")
+              out.write(f"| New Zealand (NZ) | Recent quake OBSERVATIONS, not official emergency status | {r['feeds']['geonet']['count']} | {r['health']['geonet']['last_success_at']} |\n")
+              out.write("\nNo customer details, no website change, no sensitive data, no cyberattack attribution.\n")
+          print("HKO_GEONET_LIVE_PASS hko_rss_items=",r["feeds"]["hko"]["count"],
+                "nz_recent_quakes=",r["feeds"]["geonet"]["count"])
           PY
       - name: Discard ephemeral official public response data
         if: always()
