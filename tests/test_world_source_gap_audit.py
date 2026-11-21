@@ -43,12 +43,15 @@ class GlobalCoverageAuditTests(unittest.TestCase):
             self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
             self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
         self.assertFalse(a["production_feed_connected"])
+        for iso in ("MD", "SK", "MV", "FJ"):
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
         for iso in ("JO", "GE", "LU"):
             self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
             self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
-        self.assertEqual(a["environment_weather_emergency"]["complete_countries"], 85)
-        self.assertEqual(a["environment_weather_emergency"]["candidate_links"], 256)
-        self.assertEqual(a["environment_weather_emergency"]["missing_national_category_links"], 323)
+        self.assertEqual(a["environment_weather_emergency"]["complete_countries"], 89)
+        self.assertEqual(a["environment_weather_emergency"]["candidate_links"], 267)
+        self.assertEqual(a["environment_weather_emergency"]["missing_national_category_links"], 312)
 
     def test_territory_counts_are_separate_and_greenland_news_gap_not_filled(self):
         a = self.audit
