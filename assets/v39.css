@@ -246,3 +246,15 @@ h1,h2,h3{letter-spacing:-.04em!important}
   .wp-stage{grid-template-columns:1fr;padding:18px}.wp-stage dl div{grid-template-columns:1fr;gap:4px}
 }
 .wp-flow li:nth-child(5) a b{color:#fff!important}
+
+/* v40.1 로고 표시 보정 + World Miracles Makers 준비 중 카드 */
+.px-brand-art{display:grid!important;place-items:center!important;padding:clamp(20px,4vw,44px)!important;box-sizing:border-box}
+.px-brand-art img{max-width:min(78%,340px)!important;max-height:100%!important;width:auto!important;height:auto!important;object-fit:contain}
+.px-brand-art.dark{background:radial-gradient(120% 90% at 50% 20%,#FFFFFF,#E4E8F0 70%)!important}
+.px-brand-art.dark::before{display:none}
+.wmm-soon .soon-art{position:relative;margin:-8px -8px 22px;border-radius:16px;overflow:hidden;background:#0D0C0A;aspect-ratio:5/3}
+.wmm-soon .soon-art img{display:block;width:100%;height:100%;object-fit:cover}
+.wmm-soon .soon-badge{position:absolute;left:12px;top:12px;padding:6px 12px;border-radius:999px;background:#C9A24A;color:#1A1405;font-size:13px;font-weight:700}
+.wmm-soon h3{letter-spacing:.01em}
+.wp-gold{background:#0D0C0A!important}.wp-gold img{width:100%;height:100%;object-fit:cover}
+.px-brand-art img{position:absolute!important;inset:clamp(18px,3.4vw,40px)!important;width:calc(100% - 2*clamp(18px,3.4vw,40px))!important;height:calc(100% - 2*clamp(18px,3.4vw,40px))!important;max-width:none!important;max-height:none!important;object-fit:contain!important;margin:0!important}
