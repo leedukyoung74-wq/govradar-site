@@ -201,14 +201,68 @@
       }
     },
     "CV": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Cabo Verde Ministry of Agriculture and Environment",
+        "url": "https://maa.gov.cv/index.php/ambiente",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://maa.gov.cv/index.php/min-a-a/59-o-ministerio",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      },
+      "weather": {
+        "name": "Cabo Verde National Institute of Meteorology and Geophysics (INMG)",
+        "url": "https://www.inmg.gov.cv/index.php/museu/about-us",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.inmg.gov.cv/index.php/museu/missao",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      },
+      "emergency": {
+        "name": "Cabo Verde National Civil Protection and Fire Service (SNPCB)",
+        "url": "https://snpcb.cv/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://snpcb.cv/",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      }
     },
     "CM": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Cameroon Ministry of Environment, Nature Protection and Sustainable Development",
+        "url": "https://www.minep.gov.cm/index.php?lang=en",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.minep.gov.cm/index.php?lang=en",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      },
+      "weather": {
+        "name": "Cameroon National Meteorological Directorate (DMN)",
+        "url": "https://meteocameroon.gov.cm/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://meteocameroon.gov.cm/services-de-la-dirmet/",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      },
+      "emergency": {
+        "name": "Cameroon Directorate of Civil Protection (MINAT)",
+        "url": "https://minat.gov.cm/departements-directions-du-minat/direction-de-la-protection-civile/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://minat.gov.cm/departements-directions-du-minat/direction-de-la-protection-civile/",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      }
     },
     "CF": {
       "environment": null,
@@ -284,9 +338,36 @@
       "emergency": null
     },
     "ET": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Ethiopia Environmental Protection Authority (EPA)",
+        "url": "https://www.epa.gov.et/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.epa.gov.et/",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      },
+      "weather": {
+        "name": "Ethiopian Meteorological Institute (EMI)",
+        "url": "https://www.ethiomet.gov.et/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.ethiomet.gov.et/organisation/about/",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      },
+      "emergency": {
+        "name": "Ethiopia Disaster Risk Management Commission (EDRMC)",
+        "url": "https://edrmc.gov.et/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://edrmc.gov.et/",
+        "researched_on": "2026-11-21",
+        "note": "Official institution site located in source research; live feed, automated access and commercial reuse NOT verified."
+      }
     },
     "GA": {
       "environment": null,
