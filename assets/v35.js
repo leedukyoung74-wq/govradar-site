@@ -32,3 +32,18 @@ ready(()=>{
   els.forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight)return;el.classList.add('px-reveal');io.observe(el);});
 });
 })();
+/* v38: 첫 화면 영상 멈춤 버튼, 14일 탭 바로가기 */
+(()=>{'use strict';
+function ready(f){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',f):f();}
+ready(()=>{
+  const v=document.getElementById('pxHeroVideo'),b=document.getElementById('pxHeroPause');
+  if(v&&b){
+    const rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const lab=()=>{const p=v.paused;b.setAttribute('aria-pressed',String(p));b.querySelector('[data-locale="ko"]').textContent=p?'움직임 재생':'움직임 멈춤';b.querySelector('[data-locale="en"]').textContent=p?'Play motion':'Pause motion';};
+    if(rm){v.removeAttribute('autoplay');v.pause();}
+    b.addEventListener('click',()=>{v.paused?v.play().catch(()=>{}):v.pause();});
+    v.addEventListener('play',lab);v.addEventListener('pause',lab);lab();
+  }
+  if(location.hash==='#launch14'){const t=document.getElementById('tab14');if(t)setTimeout(()=>{t.click();t.scrollIntoView({block:'start'});},50);}
+});
+})();
