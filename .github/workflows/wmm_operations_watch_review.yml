@@ -33,6 +33,11 @@ jobs:
               'Global open tenders', '193-country notice summary', 'Contract awards',
               'Verified-open vs all-tenders upper bound', 'max_bytes=2_500_000',
               '30*60', 'sys.exit(1 if failed else 0)',
+              # The 879 country brief entries must remain distinct from
+              # verified public open tenders and cannot trigger client alerts.
+              'Country brief provenance (', 'wmm-radar.pages.dev',
+              'official_notice_verified', 'may_send_business_alert',
+              'automated_customer_alerts_allowed', 'seven_language_widget_guard',
           ]
           for marker in required:
               assert marker in code, 'missing strict health marker: ' + marker
