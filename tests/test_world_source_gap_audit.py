@@ -38,9 +38,14 @@ class GlobalCoverageAuditTests(unittest.TestCase):
         for iso in ("DZ", "AO", "BJ", "BW", "BF", "BI"):
             self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
             self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
-        self.assertEqual(a["environment_weather_emergency"]["complete_countries"], 79)
-        self.assertEqual(a["environment_weather_emergency"]["candidate_links"], 238)
-        self.assertEqual(a["environment_weather_emergency"]["missing_national_category_links"], 341)
+        # CV, CM and ET researched separately; they remain directory candidates, NOT live collectors.
+        for iso in ("CV", "CM", "ET"):
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
+        self.assertFalse(a["production_feed_connected"])
+        self.assertEqual(a["environment_weather_emergency"]["complete_countries"], 82)
+        self.assertEqual(a["environment_weather_emergency"]["candidate_links"], 247)
+        self.assertEqual(a["environment_weather_emergency"]["missing_national_category_links"], 332)
 
     def test_territory_counts_are_separate_and_greenland_news_gap_not_filled(self):
         a = self.audit
