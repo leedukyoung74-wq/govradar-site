@@ -184,7 +184,7 @@ def navhtml_act(L, path):
     seg = (path.strip("/").split("/") + ["", ""])[1]
     if seg in ("ready", "prepare"): key = "ready/"
     return navhtml(L).replace(f'href="/{L}/{key}"', f'href="/{L}/{key}" aria-current="page"', 1)
-_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/intro/?to="+encodeURIComponent("/welcome/"+(l==="ko"?"":l+"/")))})();</script>"""
+_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/welcome/"+(l==="ko"?"":l+"/"))})();</script>"""
 def head(L, title, desc, path, alt_paths, extra=""):
     t = T[L]
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{p}">' for l, p in alt_paths.items())
@@ -1296,7 +1296,7 @@ def build():
     W("/index.html", f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOV RADAR — 193 governments</title>
 <meta name="description" content="{e(T['en']['desc_home'])}"><link rel="canonical" href="{BASE}/en/">{''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}/{l}/">' for l in LANGS)}<link rel="alternate" hreflang="x-default" href="{BASE}/en/">
 <meta property="og:image" content="{BASE}/assets/og.jpg"><link rel="icon" href="/assets/mark.png">
-<script>var n=(navigator.language||"en").slice(0,2).toLowerCase(),L={json.dumps(LANGS)},l=L.indexOf(n)>=0?n:"en",h=location.hash,m=0;if(/access_token|confirmation_token|recovery_token|invite_token|error=/.test(h))m=1;location.replace(m?"/"+l+"/"+h:"/intro/?to="+encodeURIComponent(l==="ko"?"/welcome/":"/welcome/"+l+"/"));</script>
+<script>var n=(navigator.language||"en").slice(0,2).toLowerCase(),L={json.dumps(LANGS)},l=L.indexOf(n)>=0?n:"en",h=location.hash,m=0;if(/access_token|confirmation_token|recovery_token|invite_token|error=/.test(h))m=1;location.replace(m?"/"+l+"/"+h:(l==="ko"?"/welcome/":"/welcome/"+l+"/"));</script>
 <style>body{{background:#0a0a0a;color:#f2f2ef;font-family:system-ui;display:grid;place-items:center;min-height:100vh;margin:0}}a{{color:#f2f2ef;margin:0 8px}}</style></head>
 <body><div><h1>GOV RADAR</h1>{''.join(f'<a href="/{l}/">{LANG_NAME[l]}</a>' for l in LANGS)}</div></body></html>""")
     W("/404.html", home("en").replace("<title>", "<title>404 · ", 1))
