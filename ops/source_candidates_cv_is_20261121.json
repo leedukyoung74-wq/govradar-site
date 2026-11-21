@@ -1,0 +1,160 @@
+{
+  "title": "WMM GOV RADAR review-only candidate sources for Cabo Verde and Iceland",
+  "collected_date": "2026-11-21",
+  "release_state": "CANDIDATES_ONLY_NOT_VERIFIED_NOT_PUBLISHED",
+  "source_status_definition": "A CANDIDATE is a publicly discoverable website, not a continuously working connection, an official tender, or editorial approval.",
+  "sources": [
+    {
+      "id": "CV-G-01",
+      "iso": "CV",
+      "category": "government",
+      "publisher": "Government of Cabo Verde",
+      "url": "https://govt.cv/en/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-G-02",
+      "iso": "CV",
+      "category": "government",
+      "publisher": "Boletim Oficial de Cabo Verde",
+      "url": "https://boe.incv.cv/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-G-03",
+      "iso": "CV",
+      "category": "government",
+      "publisher": "Ministry of Finance eCompras",
+      "url": "https://www.mf.gov.cv/web/ecompras/asset-display-page",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-G-04",
+      "iso": "CV",
+      "category": "government",
+      "publisher": "Public Procurement Regulatory Authority ARAP",
+      "url": "https://arap.cv/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-N-05",
+      "iso": "CV",
+      "category": "news",
+      "publisher": "Inforpress",
+      "url": "https://inforpress.cv/en",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-N-06",
+      "iso": "CV",
+      "category": "news",
+      "publisher": "RTC - Radiotelevisao Caboverdiana",
+      "url": "https://rtc.cv/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-N-07",
+      "iso": "CV",
+      "category": "news",
+      "publisher": "Expresso das Ilhas",
+      "url": "https://expressodasilhas.cv/edicao-impressa",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-W-08",
+      "iso": "CV",
+      "category": "weather",
+      "publisher": "INMG - National Institute of Meteorology and Geophysics",
+      "url": "https://www.inmg.gov.cv/index.php/home",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-E-09",
+      "iso": "CV",
+      "category": "emergency",
+      "publisher": "SNPCB - National Civil Protection and Fire Service",
+      "url": "https://snpcb.cv/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CV-E-10",
+      "iso": "CV",
+      "category": "environment",
+      "publisher": "Cabo Verde Climate Portal",
+      "url": "https://portaldoclima.gov.cv/en/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-G-11",
+      "iso": "IS",
+      "category": "government",
+      "publisher": "Government Offices of Iceland",
+      "url": "https://www.government.is/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-G-12",
+      "iso": "IS",
+      "category": "government",
+      "publisher": "Digital Iceland public services and agencies",
+      "url": "https://island.is/en/o",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-G-13",
+      "iso": "IS",
+      "category": "government",
+      "publisher": "Althingi - Parliament of Iceland",
+      "url": "https://www.althingi.is/english/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-N-14",
+      "iso": "IS",
+      "category": "news",
+      "publisher": "RUV national public broadcaster",
+      "url": "https://www.ruv.is/frettir/efni/news-from-iceland",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-N-15",
+      "iso": "IS",
+      "category": "news",
+      "publisher": "Visir news",
+      "url": "https://www.visir.is/f/frettir",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-N-16",
+      "iso": "IS",
+      "category": "news",
+      "publisher": "Morgunbladid mbl.is",
+      "url": "https://www.mbl.is/frettir/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-W-17",
+      "iso": "IS",
+      "category": "weather",
+      "publisher": "Icelandic Meteorological Office",
+      "url": "https://en.vedur.is/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-E-18",
+      "iso": "IS",
+      "category": "emergency",
+      "publisher": "Almannavarnir civil protection",
+      "url": "https://www.almannavarnir.is/english/about-the-department-of-civil-protection-and-emergency-management/",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "IS-E-19",
+      "iso": "IS",
+      "category": "environment",
+      "publisher": "Iceland Environment and Energy Agency legacy info",
+      "url": "https://www.ust.is/english/",
+      "status": "CANDIDATE"
+    }
+  ]
+}
