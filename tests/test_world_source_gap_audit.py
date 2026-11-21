@@ -50,6 +50,16 @@ class GlobalCoverageAuditTests(unittest.TestCase):
         self.assertEqual(a["territory_coverage"]["news_media_links"], 68)
         self.assertEqual(a["territory_coverage"]["news_media_remaining_to_3"], 1)
 
+    def test_gap_queue_contains_actual_source_urls_per_country_and_region(self):
+        rows = self.audit["records"]
+        def entry(scope, iso, category):
+            return next(x for x in rows if x["scope"] == scope and x["iso"] == iso
+                        and x["category"] == category)
+        self.assertGreaterEqual(len(entry("sovereign", "KR", "government_business")["source_urls"]), 3)
+        self.assertIn("https://www.meteo.dz/", entry("sovereign", "DZ", "weather")["source_urls"])
+        self.assertIn("https://knr.gl/", entry("special_region", "DK-GL", "news_media")["source_urls"])
+        self.assertEqual([], entry("sovereign", "KP", "government_business")["source_urls"])
+
     def test_national_defence_sources_not_mistaken_for_live_alert_feeds(self):
         a = self.audit
         self.assertEqual(a["national_defence"]["countries_with_any_candidate"], 65)
