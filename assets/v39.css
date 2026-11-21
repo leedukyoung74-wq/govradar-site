@@ -333,3 +333,10 @@ h1,h2,h3{letter-spacing:-.04em!important}
 .hx-friends{-webkit-mask-image:none;mask-image:none;box-shadow:0 30px 60px -30px rgba(11,22,51,.6)}
 .hx-card-t,.hx-card-t *{background:none!important;border-radius:0!important;box-shadow:none!important;padding:0!important}
 @media (max-width:520px){.hx-note{font-size:13px}}
+/* v42.1 휴대폰·태블릿: 씨앗 카드가 기울어진 채 겹치던 문제 — 반듯하게 쌓기, 섹션 탭은 고정 해제 */
+@media (max-width:1024px){
+ .seed-slide,.seed-slide.flat{transform:none!important;margin:18px 0 0!important;box-shadow:0 20px 40px -28px rgba(0,0,0,.4)!important}
+ .seed-slide:first-child{margin-top:0!important}
+ .seed-deck{perspective:none;padding-bottom:0}
+}
+@media (max-width:760px){.px-tabs{position:static!important}}
