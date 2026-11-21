@@ -1,0 +1,118 @@
+name: WMM Official public feed gap recovery (USGS NWS CISA)
+# No-cost public-source recovery. No exact 5/15-minute schedule SLA.
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_run:
+    workflows:
+      - WMM GOV RADAR hourly public operations watch
+      - Scheduled feeds
+    types: [completed]
+    branches: [main]
+  issue_comment:
+    types: [created]
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_official_gap_recovery.yml'
+      - 'ops/wmm_official_recovery_due.py'
+      - 'ops/tests/test_wmm_official_recovery_due.py'
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_official_gap_recovery.yml'
+      - 'ops/wmm_official_recovery_due.py'
+      - 'ops/tests/test_wmm_official_recovery_due.py'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Default false: dry-run. True: update existing official public data.'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: wmm-official-gap-recovery-${{ github.event_name == 'pull_request' && 'review' || 'live' }}
+  cancel-in-progress: false
+jobs:
+  test_policy:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Offline fail-closed gate tests
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_official_recovery_due.py' -v
+      - name: PR cannot publish
+        run: echo 'REVIEW ONLY - no source API fetch, publication or alerts'
+  due:
+    if: >-
+      github.event_name != 'pull_request' &&
+      (github.event_name != 'issue_comment' ||
+      (github.event.issue.number == 80 &&
+       !github.event.issue.pull_request &&
+       github.event.issue.state == 'open' &&
+       github.event.comment.user.login == 'leedukyoung74-wq' &&
+       github.event.comment.author_association == 'OWNER' &&
+       github.event.comment.body == '/govradar-refresh-official'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    outputs:
+      usgs: ${{ steps.check.outputs.usgs }}
+      nws_cisa: ${{ steps.check.outputs.nws_cisa }}
+    steps:
+      - name: Check out main's trusted gate without credentials
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: control
+          persist-credentials: false
+      - name: Read only current source-health data
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data_branch
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /hz/official.json
+            /hz/nws_active.json
+            /hz/cisa_kev.json
+      - name: Run policy tests before refresh
+        run: python3 -m unittest discover -s control/ops/tests -p 'test_wmm_official_recovery_due.py' -v
+      - name: Check exact publication freshness
+        id: check
+        env:
+          TRIGGER: ${{ github.event_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$TRIGGER" = 'issue_comment' ] || [ "$TRIGGER" = 'workflow_dispatch' ]; then
+            python3 control/ops/wmm_official_recovery_due.py --data data_branch --force
+          else
+            python3 control/ops/wmm_official_recovery_due.py --data data_branch
+          fi
+      - name: Explain non-SLA scheduling
+        if: always()
+        run: echo 'Backup is best-effort. Verify data branch readback after reuse collector.' >> "$GITHUB_STEP_SUMMARY"
+  recover_usgs:
+    needs: due
+    if: needs.due.result == 'success' && needs.due.outputs.usgs == 'true'
+    permissions:
+      contents: write
+    uses: leedukyoung74-wq/govradar-site/.github/workflows/wmm_fast_official.yml@src
+    with:
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && !inputs.publish }}
+  recover_nws_cisa:
+    needs: [due, recover_usgs]
+    if: >-
+      always() && needs.due.result == 'success' &&
+      needs.due.outputs.nws_cisa == 'true' &&
+      (needs.recover_usgs.result == 'success' || needs.recover_usgs.result == 'skipped')
+    permissions:
+      contents: write
+    uses: leedukyoung74-wq/govradar-site/.github/workflows/wmm_nws_cisa_official.yml@src
+    with:
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && !inputs.publish }}
