@@ -34,6 +34,34 @@ class NationalEnvironmentWeatherEmergencyTests(unittest.TestCase):
             self.assertEqual(meta["live_verified"],0,iso)
         self.assertTrue("not independently live-verified" in self.report["warning"])
 
+    def test_md_sk_mv_fj_eleven_official_agencies_are_review_candidates_not_live(self):
+        from urllib.parse import urlsplit
+        new_pairs={
+            "MD": ("environment","weather","emergency"),
+            "SK": ("environment","weather","emergency"),
+            "MV": ("environment","weather","emergency"),
+            "FJ": ("environment","emergency"),
+        }
+        self.assertEqual(sum(map(len,new_pairs.values())),11)
+        for iso,types in new_pairs.items():
+            self.assertEqual(self.report["country_counts"][iso]["missing"],0,iso)
+            self.assertEqual(self.report["country_counts"][iso]["linked_candidates"],3,iso)
+            self.assertEqual(self.report["country_counts"][iso]["live_verified"],0,iso)
+            rows=self.records[iso]
+            self.assertEqual(len({urlsplit(row["url"]).hostname for row in rows.values()}),3,iso)
+            for kind in types:
+                row=rows[kind]
+                self.assertTrue(safe_https(row["url"]),(iso,kind))
+                self.assertTrue(safe_https(row["research_evidence_url"]),(iso,kind))
+                self.assertEqual(row["review"],"curated_candidate",(iso,kind))
+                self.assertEqual(row["access"],"not_live_tested",(iso,kind))
+                self.assertEqual(row["researched_on"],"2026-11-21",(iso,kind))
+                self.assertIn("NOT verified",row["note"],(iso,kind))
+        self.assertEqual(self.records["FJ"]["weather"]["url"],"https://www.met.gov.fj/")
+        self.assertEqual(self.report["linked_candidate_total"],267)
+        self.assertEqual(self.report["missing_national_category_links"],312)
+        self.assertEqual(self.report["linked_candidate_countries_all_three"],89)
+
     def test_jo_ge_lu_official_agency_provenance_without_live_claim(self):
         from urllib.parse import urlsplit
         for iso in ("JO", "GE", "LU"):
