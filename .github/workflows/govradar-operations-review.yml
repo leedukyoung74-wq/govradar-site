@@ -36,6 +36,7 @@ jobs:
       - name: Build a review page from published data
         run: |
           python review/operations/run_ops.py --repo . --snapshot source-snapshot --state-dir review-output
+          cp -R review/operations/strategy-preview review-output/strategy-preview
       - uses: actions/upload-artifact@v4
         if: always()
         with:

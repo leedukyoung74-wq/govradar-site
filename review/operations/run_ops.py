@@ -96,6 +96,31 @@ th{{font-weight:650}} @media(max-width:430px){{main{{padding:1.6rem .7rem}}th,td
 <tbody>{''.join(rows)}</tbody></table></main></html>""", encoding="utf-8")
 
 
+def monitor_receipts(state, now):
+    results = {}
+    for key, filename in (("cyber_advisories", "cyber"), ("prophecy_links", "prophecy")):
+        try:
+            data = json.loads((state / filename / "latest.json").read_text(encoding="utf-8"))
+            checked = dt.datetime.fromisoformat(data["checked_at_kst"]).astimezone(KST)
+            if checked > now:
+                raise ValueError("future receipt")
+        except (AttributeError, KeyError, OSError, TypeError, ValueError):
+            results[key] = {"status": "not_checked"}
+            continue
+        minutes = int((now - checked).total_seconds() // 60)
+        if key == "cyber_advisories":
+            results[key] = {"checked_at_kst": checked.isoformat(), "status": "delayed" if minutes > 35 else "checked",
+                            "sources": {name: {"status": item["status"], "last_success_kst": item["last_success_kst"]}
+                                        for name, item in data.get("sources", {}).items()},
+                            "confirmed_incident_count": None}
+        else:
+            results[key] = {"checked_at_kst": checked.isoformat(),
+                            "status": "delayed" if minutes > 120 else data["collection_status"],
+                            "today_original_links": len(data["items"]) if checked.date() == now.date() else None,
+                            "claims_verified": False}
+    return results
+
+
 def run(args):
     now = dt.datetime.now(KST)
     day = now.date()
@@ -124,6 +149,7 @@ def run(args):
               "claude": {k: review_result[k] for k in
                          ("status", "reason", "receipt", "assessment", "evidence", "findings", "report_sha256")
                          if k in review_result},
+              "monitors": monitor_receipts(args.state_dir, now),
               "review": {"state": "PREVIEW_READY", "path": "index.html", "publish": "approval_required"},
               "evidence_dir": attempt.name}
     render_status(attempt / "index.html", report, health)
