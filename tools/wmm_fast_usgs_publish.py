@@ -80,7 +80,9 @@ def quake_rows(obj):
         out.append((ms, {'k': 'quake', 't': title, 'date': day,
                          'lvl': level if level in ('orange', 'red') else '',
                          'url': source, 'x': lon, 'y': lat,
-                         'src': 'USGS', 'mag': round(mag, 1)}))
+                         'src': 'USGS', 'mag': round(mag, 1),
+                         # USGS tsunami=1 is a review flag, never a tsunami warning/evacuation order.
+                         'tsu_flag_review': bool(prop.get('tsunami'))}))
     out.sort(key=lambda a: a[0], reverse=True)
     return [x[1] for x in out[:12]]
 
