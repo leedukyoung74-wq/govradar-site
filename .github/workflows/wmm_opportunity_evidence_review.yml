@@ -1,0 +1,69 @@
+name: WMM 620 country brief opportunity evidence gate (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'build.py'
+      - 'tests/test_opportunity_evidence_gate.py'
+      - '.github/workflows/wmm_opportunity_evidence_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify_generated_index:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Check out source review (no deployment keys)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regression test fail-visible opportunity policy
+        run: python -m unittest discover -s tests -p 'test_opportunity_evidence_gate.py' -v
+      - name: Build local static output for inspection only
+        run: python build.py
+      - name: Verify all generated opportunities are explicitly unverified and cannot be sent
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          p=Path('dist/data/opps.json')
+          out=json.loads(p.read_text(encoding='utf-8'))
+          assert out['index_kind']=='unverified_country_brief_candidates'
+          assert out['verified_official_notice_count']==0
+          assert out['automated_customer_alerts_allowed'] is False
+          rows=out.get('items')
+          assert isinstance(rows,list) and len(rows)>0, 'real build must show actual records'
+          for i,x in enumerate(rows):
+              assert x['source_review_status']=='individual_notice_unverified',i
+              assert x['official_notice_verified'] is False,i
+              assert x['may_send_business_alert'] is False,i
+              assert x['is_live_tender'] is False,i
+              assert x['kind'] in ('biz','tenders','oda'),i
+              assert x['iso'] and x['slug'],i
+          widget=Path('dist/widget/index.html').read_text(encoding='utf-8')
+          assert 'id="evidence" role="note"' in widget
+          assert 'warning[L]||warning.en' in widget
+          assert 'automated_customer_alerts_allowed!==false' in widget
+          assert 'li.querySelector(".t").textContent=' in widget
+          summary=[
+            '## Generated business opportunity / tender claim safety (NO DEPLOY)',
+            '',
+            f"Real build index records: **{len(rows)}**",
+            '',
+            f"Official notice individually verified: **{out['verified_official_notice_count']}**",
+            '',
+            'Alerts eligible: **0** (all candidates are explicit research entries)',
+            '',
+            'Widget: seven languages explicitly warn that source and deadline are not verified.',
+            '',
+            '**Site / customer data / email / fee unchanged.**',
+          ]
+          print('\n'.join(summary))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+              f.write('\n'.join(summary)+'\n')
+          PY
