@@ -344,3 +344,4 @@ h1,h2,h3{letter-spacing:-.04em!important}
 .px-door img{background:#0B1633!important;object-fit:cover;aspect-ratio:720/520}
 .px-door.d1 .px-door-tag,.px-door.d2 .px-door-tag,.px-door.d3 .px-door-tag{}
 .wp-art img[src*="logo-door-"]{width:100%;height:100%;object-fit:cover;background:#0B1633}
+.result-box pre{color:#1F2A3D!important;font-family:"NexonLv1Gothic","WMM Nexon",system-ui,sans-serif!important;font-size:14px!important}
