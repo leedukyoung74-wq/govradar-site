@@ -2,8 +2,9 @@
 import json, sys, pathlib, datetime
 TODAY = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=9)).strftime("%Y-%m-%d")
 D = pathlib.Path(__file__).resolve().parent.parent / "export" / "countries"
+RD = D.parent / "regions"  # 자치·특별지역(코드에 "-", 예: PH-BARMM)은 regions 에 저장, parent·type·status 보존
 for iso, v in json.load(open(sys.argv[1], encoding="utf-8")).items():
-    f = D / f"{iso}.json"
+    f = (RD if "-" in iso else D) / f"{iso}.json"
     d = json.load(open(f, encoding="utf-8")) if f.exists() else {}
     risk = d.get("risk") or {}
     if "risk" in v: risk.update(v.pop("risk"))
