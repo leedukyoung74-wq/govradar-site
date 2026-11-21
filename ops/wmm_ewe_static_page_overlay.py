@@ -139,7 +139,7 @@ def plan_changes(site_root,catalog,countries,target_countries=COUNTRIES):
 def run(site_root,catalog_path,countries_path,dry_run=True,out_path=None):
     catalog=json.loads(Path(catalog_path).read_text(encoding="utf8"))
     countries=json.loads(Path(countries_path).read_text(encoding="utf8"))
-    plan=plan_changes(site_root,catalog,countries)
+    plan=plan_changes(site_root,catalog,countries,COUNTRIES)
     assert len(plan["changes"])+len(plan["redirects_preserved"])+len(plan["already_current"])==plan["expected_pages"]
     if not dry_run:
         for _,p,content in plan["changes"]:
