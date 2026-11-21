@@ -190,3 +190,59 @@ h1,h2,h3{letter-spacing:-.04em!important}
 .px-voice h2,.px-voice .px-answer{color:#fff!important}.px-voice .px-answer{color:var(--lime)!important}
 .footer b,.footer strong{color:#fff!important}
 .px-film-frame{background:#fff!important}
+
+/* v40 세 개의 문 + WMM 길 */
+.px-doors{background:#fff;padding:110px 0 100px}
+.px-doors h2{font-size:clamp(32px,4.6vw,64px)!important;line-height:1.14!important;font-weight:700!important;margin:0 0 48px;max-width:20ch}
+.px-doors .px-kicker{color:#2F4FD8!important;font-weight:700}
+.px-door-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;position:relative}
+.px-door{position:relative;display:flex;flex-direction:column;gap:12px;padding:16px 16px 26px;border-radius:24px;border:1px solid var(--px-line);background:#fff;color:var(--nv);text-decoration:none;transition:transform .3s ease,box-shadow .3s ease}
+.px-door:hover{transform:translateY(-6px);box-shadow:0 30px 70px -30px rgba(11,22,51,.35)}
+.px-door img{width:100%;height:auto;border-radius:16px;display:block}
+.px-door-no{position:absolute;top:28px;left:30px;font-size:15px;font-weight:700;color:var(--nv);background:#fff;border-radius:999px;padding:4px 12px;z-index:1}
+.px-door-tag{align-self:flex-start;font-size:13px;padding:5px 12px;border-radius:999px;background:var(--px-panel);color:var(--nv)!important;margin-top:6px}
+.px-door.d1 .px-door-tag{background:var(--lime)}
+.px-door h3{margin:2px 4px 0!important;font-size:clamp(22px,2.2vw,30px)!important;line-height:1.15!important;font-weight:700!important}
+.px-door h3 small{display:block;font-size:.6em;font-weight:400;color:var(--px-sub);margin-top:4px}
+.px-door p{margin:0 4px;font-size:15px;line-height:1.65}
+.px-door-go{margin:auto 4px 0;font-weight:700;color:#2F4FD8!important}
+.px-door-grid::before{content:"";position:absolute;left:8%;right:8%;top:calc(50% - 1px);border-top:2px dashed #C5CCDD;z-index:-1}
+.px-loop{display:inline-block;margin-top:28px;color:var(--nv)!important;font-weight:700;text-decoration:underline;text-underline-offset:5px}
+@media (max-width:900px){.px-door-grid{grid-template-columns:1fr}.px-door-grid::before{display:none}}
+
+.wp-head h1{font-weight:700!important}
+.wp-flow-wrap{padding:60px 0 30px;background:#fff}
+.wp-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:10px}
+.wp-flow a{display:flex;flex-direction:column;gap:4px;padding:22px 24px;border-radius:20px;background:var(--nv);color:#fff!important;text-decoration:none;font-size:clamp(17px,1.6vw,22px);font-weight:700}
+.wp-flow a *{color:inherit!important}
+.wp-flow li:nth-child(3) a{background:#2F4FD8}.wp-flow li:nth-child(5) a{background:#B8325A}
+.wp-flow b{font-size:13px;color:var(--lime)!important}
+.wp-flow small{font-size:13px;font-weight:400;opacity:.9}
+.wp-bridge span{display:inline-block;font-size:12px;color:var(--px-sub);text-align:center;white-space:nowrap;padding-bottom:4px;border-bottom:2px solid var(--nv);position:relative}
+.wp-bridge span::after{content:"▶";position:absolute;right:-10px;bottom:-9px;font-size:12px;color:var(--nv)}
+.wp-loop{margin:18px 0 0;color:var(--px-sub)!important}
+.wp-film{margin-top:36px;border-radius:22px;overflow:hidden;aspect-ratio:16/9;background:var(--nv);box-shadow:0 0 0 1px var(--px-line)}
+.wp-film video{width:100%;height:100%;object-fit:cover;display:block}
+.wp-stages .container{display:grid;gap:28px}
+.wp-stage{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,4vw,56px);align-items:center;padding:28px;border-radius:28px;background:var(--px-panel);scroll-margin-top:120px}
+.wp-art img{width:100%;height:auto;border-radius:18px;display:block}
+.wp-no{font-weight:700;color:#2F4FD8}
+.wp-stage h2{margin:6px 0 18px!important;font-size:clamp(28px,3.6vw,48px)!important;font-weight:700!important;line-height:1.1!important}
+.wp-stage h2 small{display:block;font-size:.42em;font-weight:400;color:var(--px-sub);margin-top:8px}
+.wp-stage dl{margin:0;display:grid;gap:12px}
+.wp-stage dl div{display:grid;grid-template-columns:7em 1fr;gap:12px;padding-top:12px;border-top:1px solid var(--px-line)}
+.wp-stage dt{font-weight:700;color:var(--nv)}
+.wp-stage dd{margin:0;color:var(--px-sub);line-height:1.7}
+.wp-stage.s3{background:#FFF1F4}
+.wp-promise{background:var(--nv);color:#fff;border-radius:28px;padding:clamp(30px,5vw,64px)}
+.wp-promise h2{color:#fff!important;font-weight:700!important;margin:0 0 22px!important}
+.wp-promise ol{margin:0;padding-left:1.3em;display:grid;gap:12px}
+.wp-promise li{color:#D5DCEB!important;line-height:1.7}
+.wp-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.wp-cta .btn.gold{background:var(--lime)!important;border-color:var(--lime)!important;color:var(--nv)!important}.wp-cta .btn.gold *{color:var(--nv)!important}
+.wp-cta .btn.outline{background:transparent!important;border-color:#fff!important;color:#fff!important}.wp-cta .btn.outline *{color:#fff!important}
+@media (max-width:860px){
+  .wp-flow{grid-template-columns:1fr}.wp-bridge{justify-self:center}.wp-bridge span::after{content:"▼";right:auto;left:50%;transform:translateX(-50%);bottom:-14px}
+  .wp-stage{grid-template-columns:1fr;padding:18px}.wp-stage dl div{grid-template-columns:1fr;gap:4px}
+}
+.wp-flow li:nth-child(5) a b{color:#fff!important}
