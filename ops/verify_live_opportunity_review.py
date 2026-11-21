@@ -31,6 +31,10 @@ SUPPORTED=("ko","en","es","fr","ar","vi","id")
 MAX_HTTP_BYTES=1_000_000
 
 
+def exact(actual,expected):
+    return actual is expected if isinstance(expected,bool) else (type(actual) is type(expected) and actual==expected)
+
+
 def read_json(path):
     data=json.loads(Path(path).read_text(encoding="utf-8-sig"))
     if not isinstance(data,dict):
@@ -52,7 +56,7 @@ def check_patch(baseline,candidate):
         "no_baseline_verification_assumptions":not set(SAFE_ROOT).intersection(old),
         "only_expected_root_fields":set(new)==(set(old)|set(SAFE_ROOT)),
         "old_root_fields_unchanged":all(new.get(k)==v for k,v in old.items() if k!="items"),
-        "root_flags_fail_closed":all(k in new and new[k]==v for k,v in SAFE_ROOT.items()),
+        "root_flags_fail_closed":all(k in new and exact(new[k],v) for k,v in SAFE_ROOT.items()),
         "each_original_item_preserved":True,
         "each_item_qualified_unverified":True,
         "no_new_direct_sources_invented":True,
@@ -66,7 +70,7 @@ def check_patch(baseline,candidate):
             details["no_baseline_verification_assumptions"]=False
         if {k:v for k,v in after_row.items() if k not in SAFE_ROW}!=before_row:
             details["each_original_item_preserved"]=False
-        if set(after_row)!=(set(before_row)|set(SAFE_ROW)) or any(after_row.get(k)!=v for k,v in SAFE_ROW.items()):
+        if set(after_row)!=(set(before_row)|set(SAFE_ROW)) or any(k not in after_row or not exact(after_row[k],v) for k,v in SAFE_ROW.items()):
             details["each_item_qualified_unverified"]=False
         if any(k in after_row and k not in before_row for k in ("url","source_url","official_notice_url")):
             details["no_new_direct_sources_invented"]=False
@@ -114,8 +118,8 @@ def public_one(host):
         if not isinstance(rows,list):
             raise ValueError("invalid_index")
         out["record_count"]=len(rows)
-        out["all_items_flagged"]=all(isinstance(x,dict) and all(x.get(k)==v for k,v in SAFE_ROW.items()) for x in rows)
-        out["root_policy_correct"]=all(index.get(k)==v for k,v in SAFE_ROOT.items())
+        out["all_items_flagged"]=all(isinstance(x,dict) and all(k in x and exact(x[k],v) for k,v in SAFE_ROW.items()) for x in rows)
+        out["root_policy_correct"]=all(k in index and exact(index[k],v) for k,v in SAFE_ROOT.items())
         out["widget_warning_visible"]='id="source-disclaimer" role="note"' in widget
         out["status"]="PUBLIC_POLICY_VISIBLE" if all([
             out["all_items_flagged"],out["root_policy_correct"],out["widget_warning_visible"]
