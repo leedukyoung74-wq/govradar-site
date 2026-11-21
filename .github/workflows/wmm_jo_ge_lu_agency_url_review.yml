@@ -1,0 +1,58 @@
+name: WMM JO GE LU nine agency URL reachability (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'ops/verify_jo_ge_lu_agency_urls.py'
+      - 'tests/test_jo_ge_lu_agency_url_probe.py'
+      - 'src/environment_weather_emergency_sites.json'
+      - '.github/workflows/wmm_jo_ge_lu_agency_url_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  directory_reachability:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests first (zero government HTTP requests)
+        run: python -m unittest discover -s tests -p 'test_jo_ge_lu_agency_url_probe.py' -v
+      - name: Validate all nine catalog entries offline
+        run: python ops/verify_jo_ge_lu_agency_urls.py --no-network
+      - name: One read-only HEAD per official agency host (no scraping or credentials)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python ops/verify_jo_ge_lu_agency_urls.py > "$RUNNER_TEMP/wmm_agency_head_checks.json"
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          report = json.loads((Path(os.environ["RUNNER_TEMP"]) / "wmm_agency_head_checks.json").read_text())
+          records = report["results"]
+          assert len(records) == 9
+          assert report["site_published"] is False
+          assert report["commercial_reuse_verified"] is False
+          assert all(x.get("feed_confirmed") is False for x in records)
+          text = [
+              "## GOV RADAR agency homepage HEAD-only evidence",
+              "",
+              "This is **not** an API/RSS subscription, current warning or validated license.",
+              "Each host receives at most one HTTPS HEAD with a 10-second timeout. Redirects remain within the approved institution host.",
+              "",
+              "| Country | Category | Host | HEAD result | HTTP |",
+              "|---|---|---|---|---|",
+          ]
+          for x in records:
+              status = x.get("http_status") or "—"
+              text.append(f"| {x['iso']} | {x['category']} | {x['host']} | {x['outcome']} | {status} |")
+          successful = sum(x.get("reachable_http_200") is True for x in records)
+          text.append(f"\n**Reachable HTTP 200 homepages: {successful}/9. Verified live feeds: 0/9.**")
+          print("\n".join(text))
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fh:
+              fh.write("\n".join(text) + "\n")
+          PY
+          rm -f "$RUNNER_TEMP/wmm_agency_head_checks.json"
