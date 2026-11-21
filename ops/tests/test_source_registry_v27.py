@@ -4,7 +4,7 @@ import unittest
 import tempfile
 from pathlib import Path
 from datetime import date
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'ops'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from source_registry_v27 import source_url_good, parse_date, review_ok, analyze
 
 class RegistryTest(unittest.TestCase):
