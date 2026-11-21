@@ -1,0 +1,143 @@
+{
+  "schema": "wmm.v28.site_candidates.v1",
+  "researched_on": "2026-11-21",
+  "editorial_status": "CANDIDATE_ONLY",
+  "note": "Discovery via public website research; individual URLs not proved safe for automated scraping; no terms, feed, ownership or editorial review approval.",
+  "sources": [
+    {
+      "id": "V28-BJ-01",
+      "iso": "BJ",
+      "category": "government",
+      "publisher": "Government of Benin",
+      "url": "https://www.gouv.bj/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-BJ-02",
+      "iso": "BJ",
+      "category": "government",
+      "publisher": "Benin Public Procurement Portal",
+      "url": "https://www.marches-publics.bj/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-BJ-03",
+      "iso": "BJ",
+      "category": "government",
+      "publisher": "Benin Journal of Public Procurement DNC",
+      "url": "https://sygjmap.finances.bj/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-BJ-04",
+      "iso": "BJ",
+      "category": "environment",
+      "publisher": "Agence Beninoise pour l'Environnement",
+      "url": "https://www.abe.bj/appels-doffres/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-BJ-05",
+      "iso": "BJ",
+      "category": "weather",
+      "publisher": "METEO-BENIN National Weather Agency",
+      "url": "https://www.meteobenin.bj/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-MD-06",
+      "iso": "MD",
+      "category": "government",
+      "publisher": "Moldova Ministry of Finance MTender",
+      "url": "https://mtender.gov.md/en",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-MD-07",
+      "iso": "MD",
+      "category": "government",
+      "publisher": "Moldova Public Procurement Agency",
+      "url": "https://tender.gov.md/ro",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-MD-08",
+      "iso": "MD",
+      "category": "government",
+      "publisher": "Moldova Public Services Agency",
+      "url": "https://www.asp.gov.md/en/transparenta/achizitii-publice",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-MD-09",
+      "iso": "MD",
+      "category": "weather",
+      "publisher": "Moldova Meteorology and Environmental Monitoring Authority",
+      "url": "https://www.meteo.md/en",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-TL-10",
+      "iso": "TL",
+      "category": "government",
+      "publisher": "Timor-Leste Ministry of Finance",
+      "url": "https://www.mof.gov.tl/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-TL-11",
+      "iso": "TL",
+      "category": "government",
+      "publisher": "Timor-Leste eProcurement Portal",
+      "url": "https://www.eprocurement.gov.tl/public/indexeprtl?lang=en",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-TL-12",
+      "iso": "TL",
+      "category": "government",
+      "publisher": "Timor-Leste Ministry of Public Works",
+      "url": "https://mop.gov.tl/en/services/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-VU-13",
+      "iso": "VU",
+      "category": "emergency",
+      "publisher": "Vanuatu National Disaster Management Office",
+      "url": "https://ndmo.gov.vu/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-VU-14",
+      "iso": "VU",
+      "category": "weather",
+      "publisher": "Vanuatu Meteorology and Geo-Hazards Department",
+      "url": "https://www.vmgd.gov.vu/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    },
+    {
+      "id": "V28-VU-15",
+      "iso": "VU",
+      "category": "environment",
+      "publisher": "Vanuatu Ministry of Climate Change",
+      "url": "https://mocca.gov.vu/",
+      "status": "CANDIDATE",
+      "risk": "UNVERIFIED_LIVE_FEED"
+    }
+  ]
+}

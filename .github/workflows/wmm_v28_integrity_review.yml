@@ -1,0 +1,113 @@
+name: WMM GOV RADAR v28 backlog and opportunity verification gate (NO DEPLOY)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ops/v28_integrity_review.py'
+      - 'ops/v28_candidate_sites_bj_md_tl_vu.json'
+      - 'ops/v28_schedule_triage.py'
+      - 'ops/v28_live_feed_integrity.py'
+      - 'ops/tests/test_v28_live_feed_integrity.py'
+      - 'ops/tests/test_v28_integrity_review.py'
+      - 'ops/tests/test_v28_schedule_triage.py'
+      - '.github/workflows/wmm_v28_integrity_review.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  read-only-review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout for inspection only
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Python v28 offline unit tests
+        run: python -m unittest discover -s ops/tests -p 'test_v28_*.py' -v
+      - name: Generate real 73-country and 620-opportunity review queue only
+        run: |
+          python ops/v28_integrity_review.py \
+            --repo-root . \
+            --sources ops/v28_candidate_sites_bj_md_tl_vu.json \
+            --as-of 2026-11-21 \
+            --out-dir audit-results/v28
+      - name: Independent summary and no-release assertions
+        run: |
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          r=Path('audit-results/v28')
+          x=json.loads((r/'summary.json').read_text(encoding='utf-8'))
+          assert x['country_total']==193, x
+          assert x['country_profiles_existing']==120, x
+          assert x['country_profiles_missing']==73, x
+          assert x['missing_country_source_tasks']==657, x
+          assert x['opportunity_total']==620, x
+          assert x['opportunity_kinds']=={'biz':462,'oda':13,'tenders':145}, x
+          assert x['opportunities_missing_primary_source']==620, x
+          assert x['opportunities_missing_deadline']==475, x
+          assert x['candidate_source_urls']==15, x
+          assert not x['operational_publication_authorized'], x
+          for fn,n in [('missing_countries.csv',73),('source_tasks.csv',657),('opportunities_draft_review.csv',620)]:
+              with (r/fn).open(encoding='utf-8-sig',newline='') as stream:
+                  rows=list(csv.DictReader(stream))
+              assert len(rows)==n,(fn,len(rows))
+              if fn=='opportunities_draft_review.csv':
+                  assert all(a['may_publish_as_official']=='False' and a['may_send_business_alert']=='False' for a in rows)
+          print('PASS: 73 country profiles + 657 source slots + 620 unverified opps; 0 official-publish/alert approvals')
+          PY
+      - name: Checkout separate public data branch with sparse files only
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: upstream-data
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /hz/official.json
+            /hz/nws_active.json
+            /hz/cisa_kev.json
+            /feeds/tenders.json
+            /feeds/awards.json
+            /feeds/cty/_summary.json
+      - name: Audit independent real public feeds (never publish)
+        run: |
+          python ops/v28_live_feed_integrity.py \
+            --data-root upstream-data \
+            --as-of "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \
+            --output audit-results/v28/live_feed_status.json
+          python - <<'PY'
+          import json
+          x=json.load(open('audit-results/v28/live_feed_status.json',encoding='utf-8'))
+          assert x['tender_feed']['displayed_records']>=100
+          assert x['tender_feed']['may_auto_certify_currently_open'] is False
+          assert x['alerting_operational_ready'] is False
+          assert x['cisa_kev']['not_realtime_attack_feed'] is True
+          assert x['awards']['displayed_items']>=1
+          print('PASS: live data branch read-only review; no tender certification or customer alerts')
+          PY
+      - name: Publish GitHub Actions review summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '## WMM v28 — review-only proof, never a deployment'
+            echo 'All source candidate URLs and all 620 opportunity records require additional primary-source verification.'
+            echo 'No source data were edited, no fees, no customer alerts, no Cloudflare deployment.'
+            if [ -f audit-results/v28/summary.json ]; then
+              echo '### Source summary'
+              cat audit-results/v28/summary.json
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Archive read-only QA reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v28-missing73-source657-opp620-review
+          path: audit-results/v28
+          retention-days: 14
+          if-no-files-found: warn
