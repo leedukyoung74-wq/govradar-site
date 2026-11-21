@@ -7,6 +7,8 @@ on:
       - 'ops/v28_integrity_review.py'
       - 'ops/v28_candidate_sites_bj_md_tl_vu.json'
       - 'ops/v28_schedule_triage.py'
+      - 'ops/v28_live_feed_integrity.py'
+      - 'ops/tests/test_v28_live_feed_integrity.py'
       - 'ops/tests/test_v28_integrity_review.py'
       - 'ops/tests/test_v28_schedule_triage.py'
       - '.github/workflows/wmm_v28_integrity_review.yml'
@@ -57,6 +59,36 @@ jobs:
               if fn=='opportunities_draft_review.csv':
                   assert all(a['may_publish_as_official']=='False' and a['may_send_business_alert']=='False' for a in rows)
           print('PASS: 73 country profiles + 657 source slots + 620 unverified opps; 0 official-publish/alert approvals')
+          PY
+      - name: Checkout separate public data branch with sparse files only
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: upstream-data
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /hz/official.json
+            /hz/nws_active.json
+            /hz/cisa_kev.json
+            /feeds/tenders.json
+            /feeds/awards.json
+            /feeds/cty/_summary.json
+      - name: Audit independent real public feeds (never publish)
+        run: |
+          python ops/v28_live_feed_integrity.py \
+            --data-root upstream-data \
+            --as-of "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \
+            --output audit-results/v28/live_feed_status.json
+          python - <<'PY'
+          import json
+          x=json.load(open('audit-results/v28/live_feed_status.json',encoding='utf-8'))
+          assert x['tender_feed']['displayed_records']>=100
+          assert x['tender_feed']['may_auto_certify_currently_open'] is False
+          assert x['alerting_operational_ready'] is False
+          assert x['cisa_kev']['not_realtime_attack_feed'] is True
+          assert x['awards']['displayed_items']>=1
+          print('PASS: live data branch read-only review; no tender certification or customer alerts')
           PY
       - name: Publish GitHub Actions review summary
         if: always()
