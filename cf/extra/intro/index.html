@@ -1,6 +1,6 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>GOV RADAR</title><meta name="description" content="GOV RADAR — 193개국 정부 사업·입찰·위험 정보 레이더">
-<link rel="icon" href="/assets/mark.png"><link rel="preload" as="video" href="/intro/gov-radar-intro.mp4" type="video/mp4">
+<link rel="canonical" href="https://radar.wmm-hoa.com/welcome/"><meta name="robots" content="noindex,follow"><link rel="icon" href="/assets/mark.png"><link rel="preload" as="video" href="/intro/gov-radar-intro.mp4" type="video/mp4">
 <style>
 html,body{margin:0;height:100%;background:#04080f}
 body{background:radial-gradient(circle at 50% 42%,#101e36 0,#04080f 62%) #04080f;overflow:hidden;cursor:pointer}
@@ -9,9 +9,12 @@ a.go:focus-visible{box-shadow:inset 0 0 0 3px #8fb4ff}
 video,img{width:min(100vw,100vh);height:min(100vw,100vh);object-fit:contain;display:block;
  -webkit-mask-image:radial-gradient(circle at 50% 45%,#000 58%,transparent 74%);mask-image:radial-gradient(circle at 50% 45%,#000 58%,transparent 74%)}
 @media (orientation:portrait){video,img{width:min(118vw,100vh);height:min(118vw,100vh)}}
+.hint{position:fixed;left:50%;bottom:max(28px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:12px 22px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;font:700 16px/1.2 "NexonLv1Gothic","Noto Sans KR",system-ui,sans-serif;white-space:nowrap;animation:hint 1.8s ease-in-out infinite}
+@keyframes hint{50%{opacity:.6}}@media (prefers-reduced-motion:reduce){.hint{animation:none}}
 </style></head><body>
 <a class="go" id="go" href="/welcome/" aria-label="GOV RADAR 시작하기 — 누르면 GOV RADAR 메인으로 이동합니다">
 <video id="v" autoplay muted loop playsinline preload="auto" poster="/intro/poster.jpg" aria-hidden="true"><source src="/intro/gov-radar-intro.mp4" type="video/mp4"></video>
+<span class="hint" id="hint" aria-hidden="true">화면을 누르면 시작합니다 →</span>
 </a>
 <script>(function(){
 var L=["ko","en","es","fr","ar","vi","id"],q=location.search,to=(q.match(/[?&]to=([^&]+)/)||[])[1],dest;
@@ -20,6 +23,8 @@ if(to&&/^\/welcome\/([a-z]{2}\/)?$/.test(to))dest=to;else{var n=(navigator.langu
 var a=document.getElementById("go");a.href=dest;
 try{if(sessionStorage.getItem("gv_intro")==="1"&&!/[?&]replay=/.test(q)){location.replace(dest);return}sessionStorage.setItem("gv_intro","1")}catch(e){}
 if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){var v=document.getElementById("v");v.removeAttribute("autoplay");v.pause()}
+var H={ko:"화면을 누르면 시작합니다 →",en:"Tap to start →",es:"Toca para empezar →",fr:"Touchez pour commencer →",ar:"اضغط للبدء ←",vi:"Chạm để bắt đầu →",id:"Ketuk untuk mulai →"},dl=(dest.match(/^\/welcome\/([a-z]{2})\//)||[])[1]||"ko";document.getElementById("hint").textContent=H[dl]||H.en;
+setTimeout(function(){location.href=dest},6000);
 document.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();location.href=dest}});
 })();</script>
 </body></html>
