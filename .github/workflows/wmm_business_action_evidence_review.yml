@@ -1,0 +1,86 @@
+name: WMM business review action evidence gate (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'tools/wmm_business_action_preview.py'
+      - 'tests/test_wmm_business_action_preview.py'
+      - 'docs/WMM_BUSINESS_ACTION_EVIDENCE_GATE_20261121.md'
+      - '.github/workflows/wmm_business_action_evidence_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    steps:
+      - name: Checkout review code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Setup standard Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test evidence/expiry/scope/KEV limitations entirely offline
+        run: python -m unittest discover -s tests -p 'test_wmm_business_action_preview.py' -v
+      - name: Read existing published public-source snapshots from data branch
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: existing_data
+          persist-credentials: false
+      - name: Read-only E2E preview on real existing snapshots (no publish)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/wmm_business_action_preview.py \
+            --nws existing_data/hz/nws_active.json \
+            --cisa existing_data/hz/cisa_kev.json \
+            > "$RUNNER_TEMP/business_action_preview.json"
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          output = json.loads((Path(os.environ['RUNNER_TEMP']) / 'business_action_preview.json').read_text(encoding='utf8'))
+          assert output['status'] == 'INTERNAL_PREVIEW_ONLY'
+          assert output['site_published'] is False
+          assert output['customer_notifications_sent'] is False
+          assert output['customer_matching_performed'] is False
+          assert output['paid_api_used'] is False
+          assert len(output['source_modules']) == 2
+          valid_states = {'CURRENT_SNAPSHOT', 'PARTIAL_COVERAGE', 'SOURCE_STALE', 'SOURCE_UNVERIFIED', 'INVALID_SOURCE', 'INPUT_NOT_PROVIDED'}
+          lines = [
+              '## Existing official data → human-only business review (NO DEPLOY)',
+              '',
+              'This is source evidence triage only. It does not confirm enterprise impact, exploit, outage, exposure, legal duty, or location match.',
+              '',
+              '| Source | Status | Human review prompts |',
+              '|---|---|---:|',
+          ]
+          for module in output['source_modules']:
+              assert module['state'] in valid_states
+              cards = module['cards']
+              assert len(cards) <= 12
+              if module['state'] not in ('CURRENT_SNAPSHOT', 'PARTIAL_COVERAGE'):
+                  assert cards == [], 'unverified or stale source cannot yield action prompts'
+              for card in cards:
+                  assert card['notification_allowed'] is False
+                  assert card['source_url'].startswith('https://')
+                  assert '<' not in str(card) and '>' not in str(card)
+                  if module['source'] == 'NWS':
+                      assert card['iso'] == 'US'
+                      assert card['client_impact_confirmed'] is False
+                      assert card['customer_geolocation_matched'] is False
+                  else:
+                      assert card['attack_confirmed'] is False
+                      assert card['business_affected_confirmed'] is False
+                      assert card['due_date_is_universal_business_deadline'] is False
+              lines.append(f"| {module['source']} | {module['state']} | {len(cards)} |")
+          lines.extend(('', '**No customer notifications or site deployment performed.**', '',
+                        'Data are snapshots from the existing GitHub data branch. A valid fixture may become stale; no false all-clear is inferred.'))
+          print('\n'.join(lines))
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as file:
+              file.write('\n'.join(lines) + '\n')
+          PY
+          rm -f "$RUNNER_TEMP/business_action_preview.json"
