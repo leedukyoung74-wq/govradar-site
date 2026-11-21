@@ -11,17 +11,18 @@ class OfficialFeedEvidenceTests(unittest.TestCase):
     def setUpClass(cls):
         cls.data=json.loads((ROOT/"src/official_feed_connection_evidence.json").read_text(encoding="utf-8"))
 
-    def test_six_distinct_official_sources_and_geographic_scopes(self):
+    def test_eight_distinct_official_sources_and_geographic_scopes(self):
         x=self.data
         self.assertEqual(x["schema"],"wmm.official-feed-connection-evidence.v1")
-        self.assertEqual(len(x["providers"]),6)
+        self.assertEqual(len(x["providers"]),8)
         ids=[p["provider_id"] for p in x["providers"]]
         self.assertEqual(len(set(ids)),6)
         scopes={p["provider_id"]:p["geo_scope"] for p in x["providers"]}
         self.assertEqual(scopes,{
             "gb_ea_flood":"GB-ENG","jp_jma_bulletins":"JP",
             "cn_hk_hko_warnings":"CN-HK","nz_geonet_quakes":"NZ",
-            "gb_metoffice_uk":"GB","ca_eccc_toronto":"CA-ON-TORONTO"
+            "gb_metoffice_uk":"GB","ca_eccc_toronto":"CA-ON-TORONTO",
+            "eu_cert_eu_advisories":"EU","au_acsc_alerts":"AU"
         })
 
     def test_each_source_is_official_but_no_live_website_publication(self):
@@ -45,11 +46,18 @@ class OfficialFeedEvidenceTests(unittest.TestCase):
         self.assertTrue(rows["jp_jma_bulletins"]["not_confirmed_active_alerts"])
         self.assertTrue(rows["nz_geonet_quakes"]["not_confirmed_active_alerts"])
 
+    def test_eu_advisories_are_not_sovereign_countries_or_breaches(self):
+        rows={p["provider_id"]:p for p in self.data["providers"]}
+        self.assertFalse(rows["eu_cert_eu_advisories"]["is_sovereign_country"])
+        self.assertTrue(rows["au_acsc_alerts"]["is_sovereign_country"])
+        self.assertEqual(rows["eu_cert_eu_advisories"]["observation_type"],"security_advisory_headlines")
+        self.assertFalse(rows["au_acsc_alerts"]["government_cyberattack_confirmed"])
+
     def test_registry_total_does_not_claim_193_countries_live(self):
         self.assertFalse(self.data["all_193_sovereigns_connected"])
         self.assertFalse(self.data["all_23_special_regions_connected"])
         self.assertFalse(self.data["website_live_feed_published"])
-        self.assertEqual(self.data["actual_internal_feeds_verified"],6)
+        self.assertEqual(self.data["actual_internal_feeds_verified"],8)
         self.assertIn("daily_schedule",self.data)
         self.assertEqual(self.data["daily_schedule"]["time_kst"],"08:05")
 
