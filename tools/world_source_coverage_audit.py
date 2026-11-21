@@ -124,6 +124,27 @@ def build_coverage(root):
             "category_counts": region_counts, "live_feed_verified": False,
         }
 
+    # Older tender API registry: a known URL or an HTTP 200 is not a working collector.
+    legacy = _read(root, "tools/sources/registry.json")
+    if not isinstance(legacy, list):
+        raise ValueError("Legacy registry needs an auditable list of source entries")
+    statuses = [str(row.get("collect", "UNKNOWN")).upper() for row in legacy]
+    if any(x not in {"PASS", "FAIL", "UNKNOWN"} for x in statuses):
+        raise ValueError("Unsupported legacy collection status")
+    dates = [str(row.get("checked", "")) for row in legacy if row.get("checked")]
+    legacy_coverage = {
+        "total_registered": len(legacy),
+        "historically_pass": statuses.count("PASS"),
+        "failed": statuses.count("FAIL"),
+        "unknown": statuses.count("UNKNOWN"),
+        "national_portal_collector_pass": sum(
+            row.get("kind") == "national-portal" and row.get("collect") == "PASS"
+            for row in legacy
+        ),
+        "last_probe_date": max(dates) if dates else "",
+        "evidence_of_live_193_country_feeds": False,
+        "warning": "Historical collector status is not evidence of current runtime success or authorized redistribution.",
+    }
     gov_gaps = sorted(iso for iso, row in countries.items() if row["government_gap_to_three"] > 0)
     return {
         "schema": "wmm-world-source-coverage-offline.v1",
@@ -131,6 +152,7 @@ def build_coverage(root):
         "policy": "Curated directory references and documented agency relationships do NOT verify a live fetch, active alert feed, redistribution rights or government cyber-incident confirmation.",
         "live_verified_url_count": 0,
         "production_feed_connected": False,
+        "legacy_collector_registry": legacy_coverage,
         "government": {
             "source_evidence_countries_with_3": gov_report["verified_countries"],
             "source_evidence_links": gov_report["verified_links"],
