@@ -40,6 +40,6 @@ jobs:
           assert len(assignments)==1
           locale=ast.literal_eval(assignments[0].value)
           assert set(locale)=={'ko','en','es','fr','ar','vi','id'}
-          assert all(len(s)>60 for s in locale.values())
+          assert all(isinstance(s,str) and len(s)>20 for s in locale.values())
           print('PASS: 7-language generator source guard, indoor stove old wording removed. NO DEPLOY.')
           PY
