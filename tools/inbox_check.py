@@ -6,7 +6,7 @@
          <출력>/<이름>.ready.json  (통과한 나라만: {"d1":{ISO:..}, "tr":{언어:{ISO:..}}, "tenders":[...]})
  - 의미 검수(내용이 출처와 맞는지)는 하지 않는다 — 그건 Claude/ChatGPT 표본 검수 몫.
 """
-import json, re, sys, pathlib, urllib.request, ssl
+import hashlib, json, re, sys, pathlib, urllib.request, ssl
 
 HANGUL = re.compile(r"[가-힣]")
 PHONE = re.compile(r"01[016789][-. ]?\d{3,4}[-. ]?\d{4}")
@@ -98,15 +98,29 @@ def run(inbox, out, net=True):
     done = []
     for f in sorted(inbox.glob("GPT_COUNTRY_*.json")):
         name = f.stem
-        if (out / f"{name}.report.json").exists():
-            continue
-        rep = {"file": f.name, "countries": {}, "error": None}
+        report_path = out / f"{name}.report.json"
+        ready_path = out / f"{name}.ready.json"
+        # Same-day corrected documents keep their filename. Re-evaluate by content,
+        # not by the existence of yesterday's/earlier review verdict.
+        digest = hashlib.sha256(f.read_bytes()).hexdigest()
+        if report_path.exists():
+            try:
+                previous = json.loads(report_path.read_text(encoding="utf-8"))
+                if previous.get("sha256") == digest:
+                    continue
+            except (OSError, ValueError, TypeError):
+                pass  # Damaged/old report: re-run from source.
+        # Fail closed: a changed file that fails QA must not leave its former
+        # ready artifact eligible for a downstream importer.
+        if ready_path.exists():
+            ready_path.unlink()
+        rep = {"file": f.name, "sha256": digest, "countries": {}, "error": None}
         try:
             j = json.load(open(f, encoding="utf-8"))
             C, tr = j["countries"], j.get("tr", {})
         except Exception as e:
             rep["error"] = f"JSON 읽기 실패: {e}"
-            json.dump(rep, open(out / f"{name}.report.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            json.dump(rep, open(report_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
             done.append(rep)
             continue
         ready = {"d1": {}, "tr": {L: {} for L in LANGS}, "tenders": []}
@@ -123,9 +137,9 @@ def run(inbox, out, net=True):
                 ready["tenders"].append(t)
         rep["pass"] = len(ok)
         rep["fail"] = len(C) - len(ok)
-        json.dump(rep, open(out / f"{name}.report.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        json.dump(rep, open(report_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         if ok:
-            json.dump(ready, open(out / f"{name}.ready.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            json.dump(ready, open(ready_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         done.append(rep)
     return done
 

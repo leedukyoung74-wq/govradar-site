@@ -31,6 +31,40 @@ class T(unittest.TestCase):
         ready = json.load(open(f"{o}/GPT_COUNTRY_20261123.ready.json", encoding="utf-8"))
         self.assertEqual(list(ready["d1"]), ["KE"]); self.assertEqual(len(ready["tenders"]), 1)
         self.assertEqual(ic.run(d, o, net=False), [])  # 이미 처리한 파일은 다시 안 봄
+    def test_changed_same_day_document_gets_rechecked_and_cannot_keep_old_approval(self):
+        v, tr = good()
+        with tempfile.TemporaryDirectory() as folder:
+            base = pathlib.Path(folder)
+            inbox, out = base / "inbox", base / "report"
+            inbox.mkdir()
+            source = inbox / "GPT_COUNTRY_20261123.json"
+            d = {"countries": {"KE": v}, "tr": tr, "tenders": []}
+            source.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+            first = ic.run(inbox, out, net=False)[0]
+            ready = out / "GPT_COUNTRY_20261123.ready.json"
+            self.assertEqual(first["pass"], 1)
+            self.assertTrue(ready.exists())
+            before = first["sha256"]
+            # Corrected same-day content MUST be re-reviewed despite same filename.
+            d["countries"]["KE"]["summary"] = "새로 검증한 요약"
+            source.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+            second = ic.run(inbox, out, net=False)[0]
+            self.assertEqual(second["pass"], 1)
+            self.assertNotEqual(before, second["sha256"])
+            self.assertEqual(json.loads(ready.read_text(encoding="utf-8"))["d1"]["KE"]["summary"], "새로 검증한 요약")
+            # Revised content is now invalid: the old approved content must vanish.
+            d["countries"]["KE"]["sources"] = []
+            source.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+            third = ic.run(inbox, out, net=False)[0]
+            self.assertEqual(third["fail"], 1)
+            self.assertFalse(ready.exists())
+            self.assertEqual(ic.run(inbox, out, net=False), [])  # unchanged SHA only
+            # A malformed correction also cannot resurrect the earlier approval.
+            source.write_text("{", encoding="utf-8")
+            fourth = ic.run(inbox, out, net=False)[0]
+            self.assertIn("JSON 읽기 실패", fourth["error"])
+            self.assertFalse(ready.exists())
+
     def test_bad_json(self):
         d = tempfile.mkdtemp(); o = tempfile.mkdtemp(); open(f"{d}/GPT_COUNTRY_x.json","w").write("{")
         self.assertIn("JSON 읽기 실패", ic.run(d, o, net=False)[0]["error"])
