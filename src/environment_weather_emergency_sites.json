@@ -9,34 +9,196 @@
   },
   "countries": {
     "DZ": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Algeria Ministry of Environment and Quality of Life",
+        "url": "https://www.me.gov.dz/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.me.gov.dz/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "weather": {
+        "name": "Algeria National Meteorological Office (ONM)",
+        "url": "https://www.meteo.dz/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.meteo.dz/assets/files/a_propos_onm.pdf",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "emergency": {
+        "name": "Algeria General Directorate of Civil Protection",
+        "url": "https://dgpc.dz/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://dgpc.dz/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      }
     },
     "AO": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Angola Ministry of Environment",
+        "url": "https://minamb.gov.ao/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://minamb.gov.ao/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "weather": {
+        "name": "Angola INAMET Agroclimate Monitoring",
+        "url": "https://agroclima.inamet.gov.ao/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://agroclima.inamet.gov.ao/pages/a-plataforma/inamet/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "emergency": {
+        "name": "Angola Civil Protection and Firefighters Service (SPCB)",
+        "url": "https://spcb.gov.ao/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://spcb.gov.ao/spcb/missao",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      }
     },
     "BJ": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Benin National Environmental Information System (SISEB)",
+        "url": "https://siseb.gouv.bj/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://siseb.gouv.bj/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "weather": {
+        "name": "Benin National Meteorological Agency (Meteo-Benin)",
+        "url": "https://www.meteobenin.bj/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.meteobenin.bj/organisation/lagence/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "emergency": {
+        "name": "Benin Civil Protection Agency (ABPC)",
+        "url": "https://abpc.bj/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://abpc.bj/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      }
     },
     "BW": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Botswana Ministry of Environment and Tourism",
+        "url": "https://www.gov.bw/ministries/ministry-environment-and-tourism",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.gov.bw/ministries/ministry-environment-and-tourism",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "weather": {
+        "name": "Botswana Department of Meteorological Services",
+        "url": "https://www.meteo.gov.bw/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.meteo.gov.bw/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "emergency": {
+        "name": "Botswana National Disaster Management Service",
+        "url": "https://www.gov.bw/public-safety/assistance-during-national-disasters",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.gov.bw/public-safety/assistance-during-national-disasters",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      }
     },
     "BF": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Burkina Faso Ministry of Environment, Water and Sanitation",
+        "url": "https://www.environnement.gov.bf/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.environnement.gov.bf/ministere/organisation",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "weather": {
+        "name": "Burkina Faso National Meteorological Agency (ANAM)",
+        "url": "https://meteoburkina.bf/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://meteoburkina.bf/organisation/about-us/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "emergency": {
+        "name": "Burkina Faso National Emergency Relief and Rehabilitation Council (CONASUR)",
+        "url": "https://conasur.gov.bf/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://conasur.gov.bf/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      }
     },
     "BI": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Burundi Office for Environmental Protection (OBPE)",
+        "url": "https://obpe.bi/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://obpe.bi/missions/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "weather": {
+        "name": "Burundi Geographical Institute (IGEBU)",
+        "url": "https://www.igebu.bi/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.igebu.bi/organisation/a-propos-de-nous/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      },
+      "emergency": {
+        "name": "Burundi Directorate General of Civil Protection and Disaster Management",
+        "url": "https://mininterinfos.gov.bi/protection-civile/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://mininterinfos.gov.bi/protection-civile/",
+        "researched_on": "2026-11-21",
+        "note": "Government/institutional primary page; article feed or real-time alerts NOT confirmed."
+      }
     },
     "CV": {
       "environment": null,
