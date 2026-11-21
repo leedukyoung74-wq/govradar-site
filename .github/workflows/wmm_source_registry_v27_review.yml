@@ -1,0 +1,61 @@
+name: WMM Country Sources v27 QA (REVIEW ONLY)
+
+on:
+  pull_request:
+    paths:
+      - 'ops/source_registry_v27.py'
+      - 'ops/source_candidates_cv_is_20261121.json'
+      - 'ops/tests/test_source_registry_v27.py'
+      - '.github/workflows/wmm_source_registry_v27_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-provenance-gate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - name: Check out proposal without persisted credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test with standard-library Python only
+        run: python -m unittest discover -s ops/tests -p 'test_source_registry_v27.py' -v
+      - name: Generate strictly read-only evidence
+        run: |
+          python ops/source_registry_v27.py --repo-root . --sources ops/source_candidates_cv_is_20261121.json --output audit-results/v27_country_source_coverage.json
+          python - <<'PY'
+          import json
+          x=json.load(open('audit-results/v27_country_source_coverage.json', encoding='utf-8'))
+          assert x['country_total']==193
+          assert x['candidate_source_count']==19
+          assert x['human_reviewed_source_count']==0
+          assert x['source_ready_country_count']==0
+          assert x['source_file_status']=='REVIEW_ONLY_NOT_PUBLISHED'
+          print('PASS: 193-country inventory, 19 candidates, 0 approved sources, 0 operational source ready')
+          PY
+      - name: Summarize approval blockers
+        if: always()
+        run: |
+          echo '## v27 source candidate QA — NOT A DEPLOYMENT' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Neither URLs nor legacy done flags establish official, fresh, or working feeds.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Never merge as production source truth without institutional/editorial review.' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f audit-results/v27_country_source_coverage.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          x=json.load(open('audit-results/v27_country_source_coverage.json',encoding='utf-8'))
+          print(f"- Registered countries: {x['country_total']}")
+          print(f"- Missing country profiles: {x['missing_profile_count']}")
+          print(f"- Discovered candidate sites: {x['candidate_source_count']}")
+          print(f"- Independently editorial-reviewed sources: {x['human_reviewed_source_count']}")
+          print(f"- Source-ready countries: {x['source_ready_country_count']}")
+          PY
+          fi
+      - name: Upload review-only evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v27-country-source-review-only
+          path: audit-results/
+          if-no-files-found: warn
+          retention-days: 14
