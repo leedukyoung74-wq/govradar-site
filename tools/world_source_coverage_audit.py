@@ -50,7 +50,7 @@ def build_coverage(root):
 
     government, gov_report = load_government(root)
     news, news_report = load_news(root)
-    _, ewe_report = load_ewe(root)
+    ewe_sources, ewe_report = load_ewe(root)
     defence_raw = _read(root, "src/country_defence_official_sources.json")["countries"]
     territory_raw = _read(root, "src/territory_official_sources.json")
     territories = territory_raw["territories"]
@@ -90,6 +90,15 @@ def build_coverage(root):
             "environment": int(e["environment"]), "weather": int(e["weather"]),
             "emergency": int(e["emergency"]), "defence_security": len(defence),
         }
+        source_urls = {
+            "government_business": [row["url"] for row in government[iso]
+                                    if row.get("verification") == "official_primary"],
+            "news_media": [row["url"] for row in news[iso]],
+            "environment": [ewe_sources[iso]["environment"]["url"]] if ewe_sources[iso]["environment"] else [],
+            "weather": [ewe_sources[iso]["weather"]["url"]] if ewe_sources[iso]["weather"] else [],
+            "emergency": [ewe_sources[iso]["emergency"]["url"]] if ewe_sources[iso]["emergency"] else [],
+            "defence_security": [row["url"] for row in defence],
+        }
         for cat in COUNTRY_CATEGORIES:
             target = 3 if cat in ("government_business", "news_media", "defence_security") else 1
             records.append({
@@ -97,6 +106,7 @@ def build_coverage(root):
                 "category": cat, "registered": counts[cat],
                 "minimum_target": target, "remaining": max(0, target - counts[cat]),
                 "status": "SOURCE_EVIDENCE_NOT_LIVE_VERIFIED",
+                "source_urls": source_urls[cat],
             })
 
     for iso in sorted(region_index):
@@ -115,6 +125,7 @@ def build_coverage(root):
                 "name": t["name_en"], "category": cat, "registered": len(rows),
                 "minimum_target": target, "remaining": max(0, target - len(rows)),
                 "status": "CURATED_CANDIDATE_NOT_LIVE_TESTED",
+                "source_urls": [row["url"] for row in rows],
             })
         territorial_government += region_counts["government_business"]
         territorial_news += region_counts["news_media"]
@@ -209,10 +220,10 @@ def export_coverage(audit, output_dir):
     with queue.open("w", encoding="utf-8-sig", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=(
             "scope", "iso", "parent_iso", "name", "category",
-            "registered", "minimum_target", "remaining", "status"))
+            "registered", "minimum_target", "remaining", "status", "source_urls"))
         writer.writeheader()
         for row in audit["records"]:
-            writer.writerow(row)
+            writer.writerow({**row, "source_urls": " | ".join(row["source_urls"])})
     return {"json": str(report), "csv": str(queue)}
 
 
