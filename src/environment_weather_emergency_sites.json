@@ -1119,9 +1119,36 @@
       }
     },
     "JO": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Jordan Ministry of Environment",
+        "url": "https://moenv.gov.jo/Default/En",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://www.moenv.gov.jo/Default/En",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      },
+      "weather": {
+        "name": "Jordan Meteorological Department (JMD)",
+        "url": "https://jmd.gov.jo/en/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://jmd.gov.jo/en/Department",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      },
+      "emergency": {
+        "name": "Jordan National Center for Security and Crises Management (NCSCM)",
+        "url": "https://ncscm.gov.jo/Default/En",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://jordan.gov.jo/EN/ListDetails/Government_Entities/55/6",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      }
     },
     "KW": {
       "environment": null,
@@ -1483,9 +1510,36 @@
       }
     },
     "GE": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Georgia Ministry of Environmental Protection and Agriculture (MEPA)",
+        "url": "https://mepa.gov.ge/En/Page/functionsandgoalsofministry",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://mepa.gov.ge/En/Page/functionsandgoalsofministry",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      },
+      "weather": {
+        "name": "Georgia National Environment Agency — official hydrometeorology (NEA)",
+        "url": "https://nea.gov.ge/En/Departments/Hydrometeorology",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://nea.gov.ge/En/Departments/Hydrometeorology",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      },
+      "emergency": {
+        "name": "Georgia Ministry of Internal Affairs Emergency Management Service",
+        "url": "https://es.gov.ge/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://es.gov.ge/",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      }
     },
     "DE": {
       "environment": {
@@ -1677,9 +1731,36 @@
       }
     },
     "LU": {
-      "environment": null,
-      "weather": null,
-      "emergency": null
+      "environment": {
+        "name": "Luxembourg government environment portal (Ministry and Environmental Administration)",
+        "url": "https://environnement.public.lu/fr.html",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://environnement.public.lu/fr/support/a-propos.html",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      },
+      "weather": {
+        "name": "MeteoLux, national Meteorological Service (ANA)",
+        "url": "https://www.meteolux.lu/",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://lu-alert.lu/en/all-about-lu-alert/warning-channels/websites.html",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      },
+      "emergency": {
+        "name": "Luxembourg LU-Alert public warning service",
+        "url": "https://lu-alert.lu/en/all-about-lu-alert/warning-information-system.html",
+        "source": "government_agency_curated",
+        "access": "not_live_tested",
+        "review": "curated_candidate",
+        "research_evidence_url": "https://lu-alert.lu/en/all-about-lu-alert/warning-information-system.html",
+        "researched_on": "2026-11-21",
+        "note": "Institution existence cross-checked against a government or official-agency page. Endpoint reachability, article licence and machine-readable alerts are NOT validated."
+      }
     },
     "MT": {
       "environment": null,
