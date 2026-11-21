@@ -47,3 +47,13 @@ ready(()=>{
   if(location.hash==='#launch14'){const t=document.getElementById('tab14');if(t)setTimeout(()=>{t.click();t.scrollIntoView({block:'start'});},50);}
 });
 })();
+/* v39.1: 씨앗 슬라이드 — 화면에 들어오면 반듯하게 */
+(()=>{'use strict';
+function ready(f){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',f):f();}
+ready(()=>{
+  const s=document.querySelectorAll('.seed-slide');if(!s.length)return;
+  if(!('IntersectionObserver' in window)){s.forEach(x=>x.classList.add('flat'));return;}
+  const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('flat',e.isIntersecting&&e.intersectionRatio>0.45)),{threshold:[0,.45,.7]});
+  s.forEach(x=>io.observe(x));
+});
+})();
