@@ -78,6 +78,11 @@ class GlobalCoverageAuditTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 export_coverage(self.audit, path)
 
+    def test_existing_weekly_source_job_includes_gap_export(self):
+        workflow = (ROOT / ".github/workflows/feeds.yml").read_text(encoding="utf-8")
+        self.assertIn("world_source_coverage_audit.py --root . --output review-evidence", workflow)
+        self.assertIn("review-evidence/world-source-gap-queue.csv", workflow)
+
     def test_public_output_refused(self):
         with tempfile.TemporaryDirectory() as d:
             with self.assertRaises(ValueError):
