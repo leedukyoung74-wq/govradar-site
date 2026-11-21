@@ -1,0 +1,80 @@
+name: GOV RADAR canonical official-agency candidate import QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - src/environment_weather_emergency_sites.json
+      - tests/test_ewe_47_canonical_import.py
+      - .github/workflows/wmm_ewe_47_import_review.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout source candidate without stored credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run canonical 193-country registry and new 47-slot regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_environment_weather_emergency_sites.py' -v
+          python -m unittest discover -s tests -p 'test_ewe_47_canonical_import.py' -v
+      - name: Checkout unchanged canonical src baseline for exact no-loss comparison
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: before_import
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/environment_weather_emergency_sites.json
+      - name: Verify 47 explicit slot-only additions, no overwrites or invented live claims
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          before=json.loads(Path('before_import/src/environment_weather_emergency_sites.json').read_text(encoding='utf8'))
+          after=json.loads(Path('src/environment_weather_emergency_sites.json').read_text(encoding='utf8'))
+          assert set(before)==set(after)
+          assert all(after[k]==before[k] for k in before if k!='countries')
+          assert set(before['countries'])==set(after['countries'])
+          kinds=('environment','weather','emergency')
+          changed=[]
+          for iso,b in before['countries'].items():
+              a=after['countries'][iso]
+              assert set(a)==set(b)==set(kinds)
+              for k in kinds:
+                  if b[k] is not None:
+                      assert a[k]==b[k],f'PREEXISTING SOURCE CHANGED: {iso} {k}'
+                  elif a[k] is not None:
+                      assert a[k]['access']=='not_live_tested'
+                      assert a[k]['review']=='curated_candidate'
+                      assert a[k]['url'].startswith('https://')
+                      changed.append((iso,k))
+          actual=sum(bool(x[k]) for x in after['countries'].values() for k in kinds)
+          assert actual==267 and len(changed)==47
+          report=[
+              '## WMM GOV RADAR official agency candidate import — NO DEPLOY',
+              '',
+              '**Canonical candidate coverage:** 220 → 267 / 579 (193 countries × 3 fields)',
+              '',
+              '**Slots added without overwriting existing values:** 47 / 47',
+              '',
+              '**Existing source values changed:** 0',
+              '',
+              '**Live RSS/CAP/API feeds verified:** 0 among these new candidates',
+              '',
+              '**Additional country slots missing after merge:** 312',
+              '',
+              '**No customer messaging, payments, website build, production deploy.**',
+          ]
+          print('\n'.join(report))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
+              f.write('\n'.join(report)+'\n')
+          PY
