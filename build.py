@@ -1095,13 +1095,16 @@ body{margin:0;font-family:"NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun G
 header{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #2b2b2a}header img{height:30px}header a{margin-left:auto;color:#f2f2ef;font-size:12px}
 ul{list-style:none;margin:0;padding:6px 0}li a{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;color:#f2f2ef;text-decoration:none;border-bottom:1px solid #1d1d1c}li a:hover{background:#151515}
 .fi{width:1.4em;line-height:1em;margin-top:3px;flex:none}small{display:block;color:#9a9a96;font-size:12px}b.t{font-size:14px}
-</style></head><body><header><img src="/assets/logo-h.webp" alt="GOV RADAR" style="width:auto;height:30px;filter:none"><a id="more" href="/" target="_blank" rel="noopener">→</a></header><ul id="l"></ul>
+</style></head><body><header><img src="/assets/logo-h.webp" alt="GOV RADAR" style="width:auto;height:30px;filter:none"><a id="more" href="/" target="_blank" rel="noopener">→</a></header><p id="evidence" role="note" style="margin:12px 14px;color:#e8c78f;font-size:12px"></p><ul id="l"></ul>
 <script>
 const p=new URLSearchParams(location.search),L=p.get("lang")||"ko",ind=p.get("industry"),iso=(p.get("iso")||"").toUpperCase();
 document.getElementById("more").href="/"+L+"/";
+const warning={ko:"조사 후보: 개별 공식 공고·신청기한 미검증",en:"Research candidates: official notices and deadlines not verified",es:"Candidatos de investigación: avisos y plazos sin verificar",fr:"Pistes de recherche : avis et échéances non vérifiés",ar:"فرص للبحث فقط: الإعلانات والمواعيد الرسمية غير مؤكدة",vi:"Mục tham khảo: chưa xác minh thông báo và hạn nộp chính thức",id:"Kandidat riset: pengumuman dan tenggat resmi belum diverifikasi"};
+document.getElementById("evidence").textContent=warning[L]||warning.en;
 fetch("/data/opps.json").then(r=>r.json()).then(o=>{let a=o.items;if(iso)a=a.filter(x=>x.iso===iso);if(ind)a=a.filter(x=>(x.ind||[]).includes(ind));
+ if(o.automated_customer_alerts_allowed!==false||o.verified_official_notice_count!==0||o.index_kind!=="unverified_country_brief_candidates")throw new Error("unverified_opportunity_index_policy_mismatch");
  const lk=L==="ko"?"ko":"en";document.getElementById("l").innerHTML=a.slice(0,12).map(x=>`<li><a href="/${L}/${x.slug}/#${x.kind}" target="_blank" rel="noopener"><span class="fi fi-${x.iso.toLowerCase()}"></span><span><b class="t"></b><small></small></span></a></li>`).join("");
- [...document.querySelectorAll("#l li")].forEach((li,i)=>{const x=a[i];li.querySelector(".t").textContent=x[lk]||x.en;li.querySelector("small").textContent=(x.names[L]||x.names.en)+(x.deadline?" · "+x.deadline:"")})});
+ [...document.querySelectorAll("#l li")].forEach((li,i)=>{const x=a[i];li.querySelector(".t").textContent=x[lk]||x.en;li.querySelector("small").textContent=(x.official_notice_verified===false?"⚠ ":"")+(x.names[L]||x.names.en)+(x.deadline?" · "+x.deadline:"")})});
 </script></body></html>""" % FLAGCSS
 
 def embed_js():
@@ -1244,9 +1247,9 @@ def build():
                 xe = arr_en[i] if isinstance(arr_en, list) and i < len(arr_en) and isinstance(arr_en[i], dict) else {}
                 txt = (json.dumps(x, ensure_ascii=False) + json.dumps(xe, ensure_ascii=False)).lower()
                 ind = [k for k, v in INDUSTRIES.items() if any(w.lower() in txt for w in v[2])]
-                oi.append({"iso": iso, "slug": BY[iso]["slug"], "kind": kind, "ko": x.get("title"), "en": xe.get("title") or x.get("title"), "deadline": x.get("deadline", ""), "ind": ind, "names": NAMES[iso], "u": d.get("updated", "")})
+                oi.append({"iso": iso, "slug": BY[iso]["slug"], "kind": kind, "ko": x.get("title"), "en": xe.get("title") or x.get("title"), "deadline": x.get("deadline", ""), "ind": ind, "names": NAMES[iso], "u": d.get("updated", ""), "source_review_status": "individual_notice_unverified", "official_notice_verified": False, "may_send_business_alert": False, "is_live_tender": False})
     oi.sort(key=lambda x: x["u"], reverse=True)
-    W("/data/opps.json", json.dumps({"updated": TODAY, "items": oi}, ensure_ascii=False))
+    W("/data/opps.json", json.dumps({"updated": TODAY, "index_kind": "unverified_country_brief_candidates", "verified_official_notice_count": 0, "automated_customer_alerts_allowed": False, "source_evidence_policy": "Individual official notice URL + current publication deadline must be independently reviewed before publication as a tender", "items": oi}, ensure_ascii=False))
     for iso, d in DATA.items():
         if done(iso):
             def _strip(o):
