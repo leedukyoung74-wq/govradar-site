@@ -1,0 +1,111 @@
+name: WMM P0 live NWS warning expiry one-asset release QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - '.github/workflows/wmm_live_nws_expiry_release_qa.yml'
+      - 'tests/test_nws_public_client_expiry.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact_overlay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - name: Read canonical source QA without credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run real browser JavaScript expiry and future-time safety tests
+        run: python -m unittest discover -s tests -p 'test_nws_public_client_expiry.py' -v
+      - name: Read exact old source pre-patch baseline
+        uses: actions/checkout@v4
+        with:
+          ref: 1b90cd2816730f8f8c2dfcddc5b90ef727f78c28
+          path: baseline_src
+          persist-credentials: false
+      - name: Read currently published branch (before candidate)
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: before_live
+          persist-credentials: false
+      - name: Read one-file production change candidate (not deployed)
+        uses: actions/checkout@v4
+        with:
+          ref: review/wmm-live-nws-expiry-client-overlay-20261121
+          path: proposed_live
+          persist-credentials: false
+      - name: Verify exact old/new equality and browser JS grammar
+        shell: bash
+        run: |
+          set -euo pipefail
+          OLD=before_live/public/assets/wmm-official-sources.js
+          NEW=proposed_live/public/assets/wmm-official-sources.js
+          SOURCE=cf/extra/assets/wmm-official-sources.js
+          BASE=baseline_src/cf/extra/assets/wmm-official-sources.js
+          cmp "$OLD" "$BASE" || {
+            # After the candidate is merged to live, allow the already-applied,
+            # verified canonical source to be checked on later manual reruns.
+            cmp "$OLD" "$SOURCE" || exit 2
+          }
+          cmp "$NEW" "$SOURCE"
+          test "$(sha256sum "$OLD" | cut -d ' ' -f 1)" != "$(sha256sum "$NEW" | cut -d ' ' -f 1)" ||
+            echo "Already merged: old live equals the updated candidate"
+          node --check "$NEW"
+          python - <<'PY'
+          from pathlib import Path
+          before=Path('before_live/public/assets/wmm-official-sources.js').read_text(encoding='utf8')
+          after=Path('proposed_live/public/assets/wmm-official-sources.js').read_text(encoding='utf8')
+          need=('function activeNwsItem(item, now)','expires>now',
+                'issued<=now+5*60*1000','activeNwsItem(item,Date.now())',
+                'n.list.appendChild(el("li","",I.unavailable));return;',
+                '},60*1000);','},10*60*1000);')
+          assert all(x in after for x in need)
+          assert 'Math.abs(Date.now()-d.getTime())' not in after
+          assert 'activeNwsItem(' not in before or before==after
+          assert after.count('fetch(rootUrl+s.file')==1
+          assert after.count('document.addEventListener("DOMContentLoaded",init)')==1
+          print('PASS: exact canonical JS, 1 unchanged feed poll, no added network, date-expiry safeguards')
+          PY
+      - name: Probe two publicly configured hosts once each (GET only, no authentication)
+        shell: bash
+        run: |
+          python - <<'PY'
+          import urllib.request,urllib.error
+          from pathlib import Path
+          src=Path('cf/extra/assets/wmm-official-sources.js').read_bytes()
+          old=Path('baseline_src/cf/extra/assets/wmm-official-sources.js').read_bytes()
+          hosts=('radar.wmm-hoa.com','wmm-radar.pages.dev')
+          rows=[]
+          for host in hosts:
+              url='https://'+host+'/assets/wmm-official-sources.js'
+              req=urllib.request.Request(url,method='GET',headers={
+                  'User-Agent':'WMM-GOV-RADAR-NWS-Release-QA/1.0',
+                  'Cache-Control':'no-cache'})
+              state='UNKNOWN'
+              try:
+                  with urllib.request.urlopen(req,timeout=12) as r:
+                      data=r.read(700000)
+                      redirect=r.geturl()
+                      if r.status!=200 or redirect!=url: state='UNVERIFIED'
+                      elif data==src: state='SAFE_PATCH_VISIBLE'
+                      elif data==old: state='OLD_UNPATCHED_VISIBLE'
+                      else: state='OTHER_VERSION_UNVERIFIED'
+              except (OSError,TimeoutError,urllib.error.URLError,ValueError):
+                  state='UNREACHABLE_OR_RESTRICTED'
+              print(host,state)
+              rows.append((host,state))
+          import os
+          summary=['## NWS public warning expiry overlay (read only)','',
+                   '**QA source integrity + actual browser tests required; these checks do not deploy.**',
+                   '','| Official public host | Current deployed version |','|---|---|']
+          summary.extend(f'| {host} | {state} |' for host,state in rows)
+          summary.extend(['','No customer alerts, payments or new cron schedule.'])
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
+              f.write('\n'.join(summary)+'\n')
+          PY
