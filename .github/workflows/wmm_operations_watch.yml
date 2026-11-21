@@ -28,8 +28,10 @@ jobs:
           repo='leedukyoung74-wq/govradar-site'
           raw='https://raw.githubusercontent.com/'+repo+'/data/hz/'
           checks=[]
-          def record(label, ok, detail):
-              obj={'item':label,'ok':bool(ok),'detail':detail}
+          def record(label, ok, detail, critical=True):
+              # Lost schedules are a degraded cadence, not proof of failed public data.
+              safe_detail=detail if isinstance(detail,dict) else {'error':str(detail)}
+              obj={'item':label,'ok':bool(ok),'critical':bool(critical),'detail':safe_detail}
               checks.append(obj)
               print(json.dumps(obj,ensure_ascii=False,sort_keys=True),flush=True)
           def get(url, github=False, json_only=False, max_bytes=1_000_000):
@@ -126,9 +128,9 @@ jobs:
                   ok=bool(recent and age is not None and -5<=age<=limit and recent.get('conclusion')=='success')
                   record(label,ok,{'state':'verified' if recent else 'missing','last_run_id':recent.get('id') if recent else None,
                                    'last_conclusion':recent.get('conclusion') if recent else None,
-                                   'minutes_since_last_scheduled_run':age})
+                                   'minutes_since_last_scheduled_run':age},critical=False)
           except Exception as exc:
-              record('GitHub scheduled events check',False,type(exc).__name__)
+              record('GitHub scheduled events check',False,type(exc).__name__,critical=False)
           for label,path,needle in (
               ('KO cyber website','/cyber/?stay=1','wmm-official-sources.js'),
               ('EN cyber website','/cyber/en/?stay=1','wmm-official-sources.js'),
@@ -140,18 +142,22 @@ jobs:
               except Exception as exc:
                   record(label,False,type(exc).__name__)
           summary_path=os.environ.get('GITHUB_STEP_SUMMARY')
-          failed=[x for x in checks if not x['ok']]
-          pending=[x for x in checks if x.get('detail',{}).get('pending')]
-          result='FAIL' if failed else ('PENDING' if pending else 'PASS')
+          failed=[x for x in checks if not x['ok'] and x['critical']]
+          warning_checks=[x for x in checks if not x['ok'] and not x['critical']]
+          pending=[x for x in checks if x['detail'].get('pending')]
+          result='FAIL' if failed else ('DEGRADED' if warning_checks else ('PENDING' if pending else 'PASS'))
           table=['## WMM GOV RADAR hourly public health: '+result,'',
                  '| Check | Result |','|---|---|']
-          for x in checks:table.append('| '+x['item']+' | '+('PENDING' if x.get('detail',{}).get('pending') else ('PASS' if x['ok'] else 'FAIL'))+' |')
+          for x in checks:
+              status='PENDING' if x['detail'].get('pending') else ('PASS' if x['ok'] else ('FAIL' if x['critical'] else 'WARNING'))
+              table.append('| '+x['item']+' | '+status+' |')
           table.append('')
           table.append('Data are public-source only. GitHub scheduled runs may be delayed; a PASS cannot guarantee exact five-minute execution.')
           if summary_path:
               with open(summary_path,'a',encoding='utf-8') as f:
                   f.write('\n'.join(table)+'\n')
           print(json.dumps({'result':result,'failed_checks':[x['item'] for x in failed],'checked':len(checks),
+                            'warning_checks':[x['item'] for x in warning_checks],
                             'pending_checks':[x['item'] for x in pending], 'checked_at_utc':now.isoformat()},ensure_ascii=False))
           sys.exit(1 if failed else 0)
           PY
