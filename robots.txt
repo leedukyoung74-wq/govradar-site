@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# PREVIEW: publication + legal review required before search indexing.

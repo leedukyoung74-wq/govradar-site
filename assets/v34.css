@@ -1,0 +1,62 @@
+/* WMM PLAYGROUND v34 — design & reliability layer (Claude, 2026-11-21)
+   v32/v33 원본 파일은 그대로 두고 이 파일만 덧씌운다. 서버 호출·외부 글꼴·추적 없음. */
+
+/* 1. 대표 서체: 넥슨Lv1고딕 (한글·영문 모두). 사이트 자체 호스팅 woff2 서브셋 */
+@font-face{font-family:"WMM Nexon";src:url("fonts/NexonLv1Gothic-Light.woff2") format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"WMM Nexon";src:url("fonts/NexonLv1Gothic-Regular.woff2") format("woff2");font-weight:400 600;font-display:swap}
+@font-face{font-family:"WMM Nexon";src:url("fonts/NexonLv1Gothic-Bold.woff2") format("woff2");font-weight:700 900;font-display:swap}
+:root{--wmm-font:"WMM Nexon","NEXON Lv1 Gothic","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+html,body,body *:not(code):not(pre):not(kbd){font-family:var(--wmm-font)!important}
+.step .num{width:auto!important;min-width:2.2em;white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
+body{font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;word-break:keep-all;overflow-wrap:anywhere}
+h1,h2,h3{font-weight:700;letter-spacing:-.035em!important;word-break:keep-all}
+p,li,.field-help,.muted{line-height:1.72}
+
+/* 2. 숨김 속성은 어떤 컴포넌트 스타일보다 우선 (스튜디오 빈 배지 등) */
+[hidden]{display:none!important}
+
+/* 3. 작은 라벨: 읽히는 크기·자간으로 */
+.eyebrow{font-size:12px!important;letter-spacing:.08em!important;font-weight:700!important;line-height:1.5}
+.seq,.wmm-showcase-tile .seq{letter-spacing:.06em!important}
+
+/* 4. 본문 대비와 문단 폭 */
+.section-head p,.page-head p,.hero p,.wmm-showcase-heading p{color:#C7CDD8;max-width:62ch}
+.footer-desc,.catalog-card p{color:#BAC2CE}
+
+/* 5. 'MAKE IT REAL' 구성: 글자와 연결도 겹침 해소 */
+.feature-visual{background-position:right -140px center!important;background-size:auto 104%!important}
+.feature-visual .big-type{font-size:clamp(46px,4.4vw,78px)!important;top:24%!important}
+.feature-visual .big-type{text-shadow:0 2px 28px rgba(8,10,14,.95)!important;font-weight:700;letter-spacing:-.05em!important}
+@media (max-width:690px){
+  .feature-visual{background-position:right -150px center!important;background-size:auto 92%!important;min-height:400px!important}
+  .feature-visual .big-type{top:20%!important;font-size:clamp(44px,13vw,64px)!important}
+}
+
+/* 6. 카드: 정적 그림자 대신 반응형 상태만 */
+.world-card,.wmm-showcase-tile,.catalog-card,.benefit-card,.match-card,.workspace-item{transition:transform .18s ease,border-color .18s ease,background-color .18s ease}
+@media (hover:hover){
+  .world-card:hover,.wmm-showcase-tile:hover,.catalog-card:hover,.benefit-card:hover{transform:translateY(-3px);border-color:rgba(233,199,140,.55)}
+}
+.tile-icon{display:block;object-fit:contain}
+
+/* 7. 솔루션 찾기 결과 영역: 빈 화면 방지 */
+#matchResults:empty{min-height:0}
+#matchResults:empty::before{content:"조건을 고르면 이곳에 추천이 표시됩니다.";display:block;padding:28px;border:1px dashed rgba(233,199,140,.3);border-radius:18px;color:#C7CDD8}
+html[lang="en"] #matchResults:empty::before{content:"Choose your conditions and recommendations appear here."}
+
+/* 8. 입력·버튼 터치 영역과 포커스 */
+input,select,textarea{font-size:16px!important}
+.btn,button{min-height:44px}
+:focus-visible{outline:3px solid #9EE2DC!important;outline-offset:3px}
+
+/* 9. 인쇄: 기획서·계획을 종이로 */
+@media print{
+  .announcement,.header,.wmm-pathbar,.footer,.result-actions,.mobile-panel,.toast{display:none!important}
+  body{background:#fff!important;color:#111!important}
+  .preview-paper,.mini-form,.card,.catalog-card{background:#fff!important;color:#111!important;border-color:#ccc!important}
+}
+
+/* 10. 움직임 최소화 설정 존중 */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
