@@ -310,6 +310,7 @@ def main():
             v["status"] == "OK" for v in r["feed_health"].values()),
         "feeds": {k: {"status": r["feed_health"][k]["status"],
                        "last_success_at": r["feed_health"][k]["last_success_at"],
+                       "error_category": r["feed_health"][k]["last_error"],
                        "record_count": (r["feeds"][k].get("count") if r["feed_health"][k]["status"] == "OK" else None)}
                   for k in ("ea", "jma")},
         "external_customer_data": False,
