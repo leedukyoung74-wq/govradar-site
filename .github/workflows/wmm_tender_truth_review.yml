@@ -1,0 +1,119 @@
+name: WMM official procurement deadline and source-truth evidence (NO DEPLOY)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ops/wmm_tender_truth_review.py'
+      - 'ops/tests/test_wmm_tender_truth_review.py'
+      - '.github/workflows/wmm_tender_truth_review.yml'
+  workflow_run:
+    workflows:
+      - Scheduled feeds
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - name: Checkout review code with no credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ten offline fail-closed source-truth tests
+        run: python -m unittest discover -s ops/tests -p 'test_wmm_tender_truth_review.py' -v
+      - name: Read current real production public country-brief index
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: live_snapshot
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /public/data/opps.json
+      - name: Read already published official procurement feeds
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: feed_snapshot
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /feeds/tenders.json
+            /feeds/cty/_summary.json
+      - name: Read canonical deadline rule from current generation source
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: canonical_source
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /tools/deadline.py
+      - name: Reconcile source search grades and open counts against canonical time-zone rules
+        run: |
+          mkdir -p review-evidence
+          python ops/wmm_tender_truth_review.py \
+            --live-index live_snapshot/public/data/opps.json \
+            --tenders feed_snapshot/feeds/tenders.json \
+            --country-summary feed_snapshot/feeds/cty/_summary.json \
+            --canonical-deadline canonical_source/tools/deadline.py \
+            --out review-evidence/procurement-source-truth.json
+      - name: Produce audit-only summary; customer sends and site publishing forbidden
+        if: always()
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path('review-evidence/procurement-source-truth.json')
+          if not p.exists():
+              print('BLOCKED: audit evidence missing')
+              raise SystemExit(1)
+          r=json.loads(p.read_text(encoding='utf8'))
+          b=r['country_brief_index'];f=r['official_procurement_feed']
+          assert r['site_modified'] is False
+          assert r['notifications_sent']==0 and r['paid_api_calls']==0
+          s=[
+              '## WMM procurement data provenance — read-only review',
+              '',
+              f"Country-brief tender hypotheses (NO primary source verification): **{b['tender_candidate_rows']}**",
+              '',
+              f"Official-source feed cached records: **{f['records']}**",
+              '',
+              f"Search vs recheck grade: {f['verification_grades']}",
+              '',
+              f"Country summary recorded open count: **{f['country_summary_reported_count']}**",
+              '',
+              f"Count recomputed at summary timestamp: **{f['listed_at_country_summary_time']}**",
+              '',
+              f"Current canonical deadline states: {f['deadline_states_at_check_utc']}",
+              '',
+              'Date-only closing is conservative UTC-12, NOT a verified local deadline.',
+              'A search result or accessible URL is not a source-by-source open-tender certification.',
+              '',
+              '| Safety assertion | Status |',
+              '|---|---|',
+          ]
+          for key,passed in r['invariants'].items():
+              s.append(f"| {key} | {'PASS' if passed else 'FAIL'} |")
+          s.append('')
+          s.append('No recipient data, customer alerts, payments, source scraping, publishing or site changes.')
+          print('\n'.join(s))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as fh:
+              fh.write('\n'.join(s)+'\n')
+          assert r['all_checks_pass'], 'official procurement-source evidence inconsistency'
+          PY
+      - name: Retain small, provenance-only evidence for independent owner/Claude QA
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-procurement-source-truth-review
+          path: review-evidence/procurement-source-truth.json
+          if-no-files-found: ignore
+          retention-days: 5
