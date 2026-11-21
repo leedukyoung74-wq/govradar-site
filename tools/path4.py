@@ -54,3 +54,19 @@ for f in (PUB / "welcome").glob("**/index.html"):
     for a, b in KO_FIX: s2 = s2.replace(a, b)
     if s2 != s: f.write_text(s2, "utf-8"); k += 1
 print("ko text fix pages:", k)
+
+# 추가 한국어 라벨(소개·서비스·로그인·실시간 띠) + 외국어 화면의 한글 회사명
+KO_FIX2 = [(">VISION<", ">비전<"), (">HISTORY<", ">연혁<"), ("01 · COUNTRY", "01 · 국가"), ("02 · TENDER", "02 · 입찰"),
+           ("03 · SITUATION", "03 · 상황"), ("04 · READY", "04 · 대비"), (">MEMBER LOGIN<", ">회원 로그인<"), ("<i></i>LIVE<span>", "<i></i>실시간<span>")]
+LANG_RE = re.compile(r'<html[^>]*\blang="([a-zA-Z-]+)"')
+k2 = 0
+for f in PUB.rglob("*.html"):
+    if "playground" in f.parts: continue
+    s = f.read_text("utf-8"); m = LANG_RE.search(s[:2000]); L = (m.group(1) if m else "ko").lower()[:2]
+    s2 = s
+    if L == "ko":
+        for a, b in KO_FIX2: s2 = s2.replace(a, b)
+    else:
+        s2 = s2.replace("월드메이킹멤버스 주식회사", "WORLD MAKING MEMBERS Co., Ltd.")
+    if s2 != s: f.write_text(s2, "utf-8"); k2 += 1
+print("lang fix pages:", k2)
