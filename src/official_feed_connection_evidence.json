@@ -1,16 +1,16 @@
 {
   "schema": "wmm.official-feed-connection-evidence.v1",
-  "as_of_utc": "2026-11-21T03:25:03Z",
-  "actual_internal_feeds_verified": 6,
+  "as_of_utc": "2026-11-21T03:30:41Z",
+  "actual_internal_feeds_verified": 8,
   "website_live_feed_published": false,
   "all_193_sovereigns_connected": false,
   "all_23_special_regions_connected": false,
-  "notes": "Proven internal-only HTTPS GET sources. Recorded results are point-in-time evidence, NOT currently active disaster events, government website attacks, or public customer alerts. Site source registries and operational data collectors are separate.",
+  "notes": "Eight proven internal-only official HTTP GET sources. They are not 193 sovereign-country collectors, not current confirmed emergency warnings, not government cyber incident verification, and not public client alerts. CERT-EU is an EU-level body (NOT a sovereign country).",
   "daily_schedule": {
     "time_kst": "08:05",
     "cadence": "daily_GitHub_Actions_delay_possible",
     "workflow_url": "https://github.com/leedukyoung74-wq/govradar-site/blob/main/.github/workflows/wmm_official_ea_jma_daily_readonly.yml",
-    "last_successful_read_only_run": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44860987241",
+    "last_successful_read_only_run": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895",
     "public_publish_allowed": false
   },
   "providers": [
@@ -33,8 +33,8 @@
       "gov_radar_public_page_published": false,
       "customer_alerts_active": false,
       "government_cyberattack_confirmed": false,
-      "accessed_at_utc": "2026-11-21T03:25:03Z",
-      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44860987241"
+      "accessed_at_utc": "2026-11-21T03:30:41Z",
+      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895"
     },
     {
       "provider_id": "jp_jma_bulletins",
@@ -55,8 +55,8 @@
       "gov_radar_public_page_published": false,
       "customer_alerts_active": false,
       "government_cyberattack_confirmed": false,
-      "accessed_at_utc": "2026-11-21T03:25:03Z",
-      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44860987241"
+      "accessed_at_utc": "2026-11-21T03:30:41Z",
+      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895"
     },
     {
       "provider_id": "cn_hk_hko_warnings",
@@ -77,8 +77,8 @@
       "gov_radar_public_page_published": false,
       "customer_alerts_active": false,
       "government_cyberattack_confirmed": false,
-      "accessed_at_utc": "2026-11-21T03:25:03Z",
-      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44860987241"
+      "accessed_at_utc": "2026-11-21T03:30:41Z",
+      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895"
     },
     {
       "provider_id": "nz_geonet_quakes",
@@ -99,8 +99,8 @@
       "gov_radar_public_page_published": false,
       "customer_alerts_active": false,
       "government_cyberattack_confirmed": false,
-      "accessed_at_utc": "2026-11-21T03:25:03Z",
-      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44860987241"
+      "accessed_at_utc": "2026-11-21T03:30:41Z",
+      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895"
     },
     {
       "provider_id": "gb_metoffice_uk",
@@ -121,8 +121,8 @@
       "gov_radar_public_page_published": false,
       "customer_alerts_active": false,
       "government_cyberattack_confirmed": false,
-      "accessed_at_utc": "2026-11-21T03:25:03Z",
-      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44860987241"
+      "accessed_at_utc": "2026-11-21T03:30:41Z",
+      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895"
     },
     {
       "provider_id": "ca_eccc_toronto",
@@ -143,8 +143,54 @@
       "gov_radar_public_page_published": false,
       "customer_alerts_active": false,
       "government_cyberattack_confirmed": false,
-      "accessed_at_utc": "2026-11-21T03:25:03Z",
-      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44860987241"
+      "accessed_at_utc": "2026-11-21T03:30:41Z",
+      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895"
+    },
+    {
+      "provider_id": "eu_cert_eu_advisories",
+      "geo_scope": "EU",
+      "country_iso2": null,
+      "special_region_parent": null,
+      "is_sovereign_country": false,
+      "agency": "CERT-EU (EU institutions)",
+      "api_url": "https://cert.europa.eu/publications/security-advisories-rss",
+      "rights_source_url": "https://cert.europa.eu/blog/read-feed-and-lead-fresh-features-for-our-cyber-fans",
+      "rights_note": "RSS public advisory headlines; check publisher rights before external redistribution",
+      "coverage_note": "EU institutions and bodies, not a sovereign country and not a 193-state completion",
+      "observation_type": "security_advisory_headlines",
+      "observed_records": 0,
+      "not_confirmed_active_alerts": true,
+      "code_commit": "def40900c044cf964aa13a69abaf04a8022b842a",
+      "connection_state": "ACTUAL_OFFICIAL_GET_VERIFIED_INTERNAL_ONLY",
+      "official_source_verified": true,
+      "gov_radar_public_page_published": false,
+      "customer_alerts_active": false,
+      "government_cyberattack_confirmed": false,
+      "accessed_at_utc": "2026-11-21T03:30:41Z",
+      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895"
+    },
+    {
+      "provider_id": "au_acsc_alerts",
+      "geo_scope": "AU",
+      "country_iso2": "AU",
+      "special_region_parent": null,
+      "is_sovereign_country": true,
+      "agency": "Australian Cyber Security Centre",
+      "api_url": "https://www.cyber.gov.au/rss/alerts",
+      "rights_source_url": "https://www.cyber.gov.au/alerts-and-advisories",
+      "rights_note": "Public advisories; rights and source attribution review before publishing",
+      "coverage_note": "Australia ACSC advisory headlines are not government site compromise findings",
+      "observation_type": "security_advisory_headlines",
+      "observed_records": 10,
+      "not_confirmed_active_alerts": true,
+      "code_commit": "def40900c044cf964aa13a69abaf04a8022b842a",
+      "connection_state": "ACTUAL_OFFICIAL_GET_VERIFIED_INTERNAL_ONLY",
+      "official_source_verified": true,
+      "gov_radar_public_page_published": false,
+      "customer_alerts_active": false,
+      "government_cyberattack_confirmed": false,
+      "accessed_at_utc": "2026-11-21T03:30:41Z",
+      "test_result_url": "https://github.com/leedukyoung74-wq/govradar-site/actions/runs/44861455895"
     }
   ]
 }
