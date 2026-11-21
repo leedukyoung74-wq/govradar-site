@@ -75,6 +75,8 @@ h1 { max-width: 13ch; font-size: clamp(2.85rem, 6.6vw, 5.9rem); letter-spacing: 
 .briefing-stack article { padding-block: 1.1rem; }
 .briefing-stack h3 { margin-top: .6rem; }
 .briefing-stack p, .intro { color: var(--muted); }
+.case-list { display: grid; gap: .55rem; padding-inline-start: 1.15rem; margin: .75rem 0 0; }
+.case-list span { display: block; color: var(--muted); font-size: .85rem; }
 .minor-links { display: flex; flex-wrap: wrap; gap: .4rem .8rem; margin-top: .7rem; }
 .minor-links a, .text-link { color: var(--deep-teal); font-weight: 760; }
 .preparedness { background: #e4ede9; border-block: 1px solid var(--line); }
@@ -86,6 +88,12 @@ fieldset { margin: 1rem 0 .45rem; padding: .65rem .85rem .8rem; border: 1px soli
 legend { padding-inline: .35rem; font-weight: 760; }
 fieldset label { display: flex; align-items: flex-start; gap: .55rem; padding-block: .24rem; }
 input[type=checkbox] { width: 1.15rem; height: 1.15rem; margin: .25rem 0 0; accent-color: #0b6b5d; flex: none; }
+.recovery { margin-top: 1rem; padding: clamp(1rem, 3vw, 1.7rem); border: 1px solid var(--line); border-radius: .65rem; background: #fff; }
+.recovery p { color: var(--muted); margin-top: .4rem; }
+.recovery-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; max-width: 33rem; margin-top: .8rem; }
+.recovery-metrics label { display: grid; gap: .3rem; min-width: 0; font-weight: 650; }
+.recovery-metrics input { width: 100%; min-height: 44px; border: 1px solid #687e78; padding: .4rem .55rem; border-radius: .35rem; font: inherit; color: inherit; background: #f5fbf9; }
+#recovery-result { display: block; margin-top: .65rem; overflow-wrap: anywhere; }
 .check-actions { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
 output { font-weight: 760; }
 button { padding: .35rem .55rem; border: 1px solid #829a91; border-radius: .25rem; background: #f5faf8; color: var(--ink); font: inherit; cursor: pointer; }

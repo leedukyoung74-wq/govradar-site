@@ -57,9 +57,17 @@
         <div class="briefing-stack">
           <article>
             <div class="incident-meta"><span class="tag advisory">공식 보안 권고</span></div>
-            <h3>미국·세계 사이버 공지</h3>
-            <p>새 취약점 권고와 공개적으로 확인된 기관·기업 사고를 구분합니다. 공개 자료에는 지역과 공개 시차가 있습니다.</p>
-            <div class="minor-links"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">미국 CISA 권고</a><a href="https://cert.europa.eu/publications/security-advisories/">EU CERT-EU 권고</a><a href="https://www.kagin.co.jp/important/20261120_094.html">일본 결제 서비스 사고</a><a href="https://audiovisual.ec.europa.eu/en/media/video/I-298222">EU 집행위 사고 브리핑</a></div>
+            <h3>미국·유럽 보안 권고</h3>
+            <p>기관의 권고를 확인하고 사용 중인 제품이나 서비스에 해당하는지 점검하세요.</p>
+            <div class="minor-links"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">미국 CISA 권고</a><a href="https://cert.europa.eu/publications/security-advisories/">EU CERT-EU 권고</a></div>
+          </article>
+          <article>
+            <div class="incident-meta"><span class="tag confirmed">기관·당사자 확인</span></div>
+            <h3>공개 확인된 국제 사고</h3>
+            <ul class="case-list">
+              <li><a href="https://www.kagin.co.jp/important/20261120_094.html">일본 Payどん 결제 서비스</a><span>11월 19일 탐지 · 11월 20일 공개</span></li>
+              <li><a href="https://audiovisual.ec.europa.eu/en/media/video/I-298222">EU 집행위 사이버 사고</a><span>10월 22일 탐지 · 10월 26일 확인 · 11월 19일 브리핑</span></li>
+            </ul>
           </article>
           <article>
             <div class="incident-meta"><span class="tag outlook">편집 전망 · 종교적 해석</span></div>
@@ -116,6 +124,16 @@
           <div><p class="eyebrow">회원 협업</p><h3>시장·입찰·파트너 탐색</h3><p>진출 후보, 입찰 자격, 협력사 확인 사항을 한 장으로 정리합니다.</p><p class="deliverable"><strong>산출물</strong> 지역별 검토표와 상담 질문 목록</p><a href="https://wmm-hoa.com/membership/" class="text-link">WMM 멤버십 소개 ↗</a></div>
         </article>
       </div>
+
+      <section class="recovery" aria-labelledby="recovery-title">
+        <h3 id="recovery-title">백업 복구 훈련 시간 확인</h3>
+        <p id="recovery-guide">핵심 업무 하나를 고르고, 백업 복원을 시작한 시점부터 해당 업무가 다시 정상 작동할 때까지 시간을 잽니다. 입력값은 이 화면에서만 계산합니다.</p>
+        <div class="recovery-metrics" aria-describedby="recovery-guide">
+          <label for="recovery-target">목표 복구 시간(분)<input id="recovery-target" type="number" min="1" max="10080" step="1" inputmode="numeric"></label>
+          <label for="recovery-actual">실제 소요 시간(분)<input id="recovery-actual" type="number" min="1" max="10080" step="1" inputmode="numeric"></label>
+        </div>
+        <output id="recovery-result" for="recovery-target recovery-actual" aria-live="polite">목표와 실제 소요 시간을 입력하면 결과를 표시합니다.</output>
+      </section>
 
       <div class="industry">
         <div>

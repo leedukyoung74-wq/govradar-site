@@ -42,3 +42,25 @@ sector.addEventListener("change", () => {
   label.textContent = name;
   action.replaceChildren(label, document.createTextNode(" " + advice));
 });
+
+const targetTime = document.querySelector("#recovery-target");
+const actualTime = document.querySelector("#recovery-actual");
+const recoveryResult = document.querySelector("#recovery-result");
+
+function updateRecoveryResult() {
+  if (!targetTime.validity.valid || !actualTime.validity.valid) {
+    recoveryResult.textContent = "1분에서 10,080분 사이의 정수를 입력하세요.";
+    return;
+  }
+  if (targetTime.value === "" || actualTime.value === "") {
+    recoveryResult.textContent = "목표와 실제 소요 시간을 입력하면 결과를 표시합니다.";
+    return;
+  }
+  const minutesOver = actualTime.valueAsNumber - targetTime.valueAsNumber;
+  recoveryResult.textContent = minutesOver <= 0
+    ? `목표 이내에 복구했습니다. 실제 소요 시간 ${actualTime.valueAsNumber.toLocaleString("ko-KR")}분.`
+    : `목표를 ${minutesOver.toLocaleString("ko-KR")}분 초과했습니다. 지연 원인을 확인하고 다시 시험하세요.`;
+}
+
+targetTime.addEventListener("input", updateRecoveryResult);
+actualTime.addEventListener("input", updateRecoveryResult);
