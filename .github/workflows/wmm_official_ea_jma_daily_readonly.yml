@@ -1,0 +1,66 @@
+name: WMM regional official EA England + JMA Japan daily internal check (READ ONLY)
+# Source code frozen to the version passing real official GET checks (2026-11-21).
+# This does not update GOV RADAR public website or any customer records.
+on:
+  schedule:
+    - cron: '05 23 * * *' # 08:05 Asia/Seoul. GitHub schedule may be delayed.
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_official_ea_jma_daily_readonly.yml'
+permissions:
+  contents: read
+concurrency:
+  group: wmm-regional-ea-jma-internal
+  cancel-in-progress: false
+jobs:
+  official_regional_probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - name: Checkout independently tested fixed revision, never production website code
+        uses: actions/checkout@v4
+        with:
+          ref: 558f9a263cf1b027bcadac0a31fd9b52d35e9868
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify denial of untrusted links and source-to-customer overclaim
+        run: python -m unittest discover -s tests -p 'test_official_regional_feeds.py' -v
+      - name: Fetch official EA England + JMA Japan once (private temp only)
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p "$RUNNER_TEMP/wmm-regional-internal"
+          python tools/official_regional_feeds.py --out "$RUNNER_TEMP/wmm-regional-internal/report.json"
+          WMM_SOURCE_REPORT="$RUNNER_TEMP/wmm-regional-internal/report.json" python - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path(os.environ["WMM_SOURCE_REPORT"])
+          r=json.loads(p.read_text(encoding="utf-8"))
+          assert r["public_publish_allowed"] is False
+          assert r["customer_data_processed"] is False
+          assert r["cyberattack_confirmed"] is False
+          assert r["customer_impact_confirmed"] is False
+          assert all(h["status"]=="OK" for h in r["feed_health"].values())
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as o:
+              o.write("### WMM GOV RADAR — official regional pilot (internal only)\n\n")
+              o.write("| Region | Type | Results | Last successful fetch |\n|---|---|---:|---|\n")
+              for provider,region,category in [
+                  ("ea","England (GB-ENG)","ACTIVE flood warnings"),
+                  ("jma","Japan (JP)","RECENT JMA bulletin index; NOT confirmed active warnings")
+              ]:
+                  feed=r["feeds"][provider]
+                  h=r["feed_health"][provider]
+                  o.write(f"| {region} | {category} | {feed['count']} | {h['last_success_at']} |\n")
+              o.write("\nNo customer/secret data, no cyberincident attribution, no published alerts or paid APIs.\n")
+          print("REGIONAL_OFFICIAL_LIVE_PASS",
+                "ea_active=",r["feeds"]["ea"]["count"],
+                "jma_bulletins=",r["feeds"]["jma"]["count"])
+          PY
+      - name: Discard ephemeral official public response data
+        if: always()
+        shell: bash
+        run: rm -rf "$RUNNER_TEMP/wmm-regional-internal"
