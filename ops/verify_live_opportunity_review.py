@@ -51,7 +51,7 @@ def check_patch(baseline,candidate):
         "same_original_item_count":len(before)==len(after) and len(before)>0,
         "no_baseline_verification_assumptions":not set(SAFE_ROOT).intersection(old),
         "only_expected_root_fields":set(new)==(set(old)|set(SAFE_ROOT)),
-        "old_root_fields_unchanged":all(new.get(k)==v for k,v in old.items()),
+        "old_root_fields_unchanged":all(new.get(k)==v for k,v in old.items() if k!="items"),
         "root_flags_fail_closed":all(k in new and new[k]==v for k,v in SAFE_ROOT.items()),
         "each_original_item_preserved":True,
         "each_item_qualified_unverified":True,
