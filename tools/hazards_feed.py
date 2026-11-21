@@ -60,7 +60,9 @@ def main(src, out):
             if ko: item[k] = {"ko": ko[:3], "en": en[:3]}
         if any(k in item for k in ("conflict", "disaster", "epidemic")): ctry.append(item)
     ctry.sort(key=lambda x: (x["level"] != "high", x["iso"]))
-    feed = {"v": 1, "updated": max(conf.get("updated", ""), (cur.get("checked") or "")[:10]),
+    editorial_updated = conf.get("updated") or ""
+    feed = {"v": 1, "updated": max(editorial_updated, (cur.get("checked") or "")[:10]),
+            "editorial_updated": editorial_updated,
             "checked": cur.get("checked"), "summary_ko": conf.get("summary_ko"), "summary_en": conf.get("summary_en"),
             "hotspots": hot, "disasters": dis, "countries": ctry}
     os.makedirs(os.path.join(out, "hz"), exist_ok=True)

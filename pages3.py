@@ -336,7 +336,7 @@ def tier_table(L):
 
 WMM_MS = "https://www.wmm-hoa.com/membership/"
 def wmm_ladder(L):
-    """GOV RADAR -> WMM membership: one shared ladder; upper grades join and pay on wmm-hoa.com."""
+    """GOV RADAR -> WMM membership: one shared ladder; WMM accepts applications for higher grades."""
     ko = L == "ko"
     rows = ([("GOV RADAR 무료 가입 · M0", "요약 열람", "193개국 지도·요약·상황판을 보고, 사업·입찰·일정은 앞부분만 봅니다."),
              ("분석 회원 · 공통 입문 등급", "월 19,800원", "유망 사업의 이유·대상 바이어, 관심 나라 알림. WMM 멤버십의 공통 입문 단계입니다."),
@@ -348,13 +348,13 @@ def wmm_ladder(L):
              ("WMM membership M4–M5", "Main project build", "We form partners and a consortium and build and run the actual project with you.")])
     li = "".join(f'<tr><th>{a}</th><td><b>{b}</b></td><td style="text-align:left">{c}</td></tr>' for a, b, c in rows)
     h = "정보에서 실제 프로젝트까지 — WMM 멤버십 등급" if ko else "From information to a real project — WMM membership grades"
-    n = ("GOV RADAR와 WMM 멤버십은 같은 등급 체계를 씁니다. 상위 등급(M1–M5)의 가입·결제는 WMM 홈페이지에서 합니다." if ko else
-         "GOV RADAR and WMM membership share one grade system. Upper grades (M1–M5) are joined and paid for on the WMM website.")
+    n = ("GOV RADAR와 WMM 멤버십은 같은 등급 체계를 씁니다. 상위 등급(M1–M5)은 WMM 홈페이지에서 신청하세요. WMM이 신청 내용을 확인한 뒤 계약과 결제 방법을 안내합니다." if ko else
+         "GOV RADAR and WMM membership share one grade system. Apply for higher grades (M1–M5) on the WMM website. WMM reviews your application and explains the contract and payment process.")
     n += f'</p><p class="note" style="color:#c62828;font-weight:700;border-top:2px dashed #d32f2f;padding-top:10px">{REVIEW["ko" if ko else "en"]}' 
-    b = "WMM 멤버십 가입·결제 (www.wmm-hoa.com) →" if ko else "Join and pay for WMM membership (www.wmm-hoa.com) →"
+    b = "WMM 멤버십 신청 →" if ko else "Apply for WMM membership →"
     return (f'<section class="band" id="wmm-membership"><div class="in"><h2>{h}</h2><p class="note">{n}</p>'
             f'<div class="tscroll"><table class="tiers">{li}</table></div>'
-            f'<p class="cta"><a class="btn pri" href="{WMM_MS}{"?lang=ko" if ko else "?lang=en"}" target="_blank" rel="noopener">{b}</a> <a class="btn" href="/{L}/membership/">{"멤버십 등급·혜택 자세히 보기" if ko else "Membership grades & benefits in detail"}</a></p></div></section>')
+            f'<p class="cta"><a class="btn pri" href="{WMM_MS}{"?lang=ko" if ko else "?lang=en"}#apply" target="_blank" rel="noopener">{b}</a> <a class="btn" href="/{L}/membership/">{"멤버십 등급·혜택 자세히 보기" if ko else "Membership grades & benefits in detail"}</a></p></div></section>')
 # Customers outside Korea (2026-11-14 review: reply language, reply time, support countries, Korea vs overseas) — conservative wording
 GLOBAL_INFO = [
  ("응대 언어", "Languages we answer in", "문의 답변과 결과물은 한국어 또는 영어로 드립니다. 스페인어·프랑스어·아랍어·베트남어·인도네시아어 화면은 읽기용 번역이며, 상담은 한국어·영어로 합니다.",
@@ -904,7 +904,7 @@ MS_TX = {
          ("M3 BUSINESS", "Empresas ya validadas", "Preparación de contrapartes, consulta prioritaria, conversaciones con inversores (desde la revisión)", "₩390.000/mes"),
          ("M4 PROJECT", "Entrada en un país concreto", "Validación de mercado de 6 semanas, agenda local, conversaciones con inversores", "desde ₩1,9 M"),
          ("M5 STRATEGIC", "Contratos públicos o grandes", "Desde la preparación de la oferta hasta el contrato, conversaciones con inversores", "3–5 % del contrato")],
-   note="IVA no incluido · Propuesta v2.0, se confirmará. No garantizamos inversión, contratos ni ventas.", btn="Unirse y pagar en www.wmm-hoa.com →", c="Contacto"),
+   note="IVA no incluido · Propuesta v2.0, se confirmará. No garantizamos inversión, contratos ni ventas.", btn="Solicitar la membresía de WMM →", c="Contacto"),
  "fr": dict(t="Adhésion WMM", h="Adhésion WMM — du premier regard à l’exécution", lede="Nous accompagnons les entreprises à l’international, du diagnostic à l’exécution.", tbl="Niveaux et tarifs",
    head=("Niveau", "Pour", "Avantages clés", "Tarif"),
    rows=[("M0 OPEN", "Entreprises qui découvrent", "Carte, synthèses et tableau de situation · premiers éléments des programmes, appels d’offres et événements", "Gratuit"),
@@ -913,7 +913,7 @@ MS_TX = {
          ("M3 BUSINESS", "Entreprises validées", "Préparation des contreparties, consultation prioritaire, échanges avec des investisseurs (dès l’examen)", "390 000 ₩/mois"),
          ("M4 PROJECT", "Entrée dans un pays précis", "Validation de marché en 6 semaines, agenda local, échanges avec des investisseurs", "à partir de 1,9 M₩"),
          ("M5 STRATEGIC", "Marchés publics ou grands contrats", "De la préparation de l’offre au contrat, échanges avec des investisseurs", "3–5 % du contrat")],
-   note="TVA non comprise · Proposition v2.0, à confirmer. Nous ne garantissons ni investissement, ni contrat, ni chiffre d’affaires.", btn="Adhérer et payer sur www.wmm-hoa.com →", c="Contact"),
+   note="TVA non comprise · Proposition v2.0, à confirmer. Nous ne garantissons ni investissement, ni contrat, ni chiffre d’affaires.", btn="Demander l’adhésion à WMM →", c="Contact"),
  "ar": dict(t="عضوية WMM", h="عضوية WMM — من النظرة الأولى إلى التنفيذ", lede="نرافق الشركات في توسعها الخارجي من التشخيص حتى التنفيذ.", tbl="المستويات والأسعار",
    head=("المستوى", "لمن", "المزايا الأساسية", "السعر"),
    rows=[("M0 OPEN", "شركات تلقي نظرة أولى", "الخريطة والملخصات ولوحة الأوضاع · أول البنود من البرامج والمناقصات والفعاليات", "مجاني"),
@@ -922,7 +922,7 @@ MS_TX = {
          ("M3 BUSINESS", "شركات اجتازت التحقق", "التحضير للشركاء، استشارة ذات أولوية، نقاش مع المستثمرين (منذ بدء المراجعة)", "390,000 وون/شهريًا"),
          ("M4 PROJECT", "دخول دولة محددة", "تحقق من السوق خلال 6 أسابيع، جدولة محلية، نقاش مع المستثمرين", "من 1.9 مليون وون"),
          ("M5 STRATEGIC", "عقود عامة أو كبيرة", "من إعداد العطاء حتى العقد، نقاش مع المستثمرين", "3–5% من قيمة العقد")],
-   note="غير شامل ضريبة القيمة المضافة · مقترح v2.0 وسيتم تأكيده. لا نضمن الاستثمار أو العقود أو المبيعات.", btn="الانضمام والدفع عبر www.wmm-hoa.com ←", c="التواصل"),
+   note="غير شامل ضريبة القيمة المضافة · مقترح v2.0 وسيتم تأكيده. لا نضمن الاستثمار أو العقود أو المبيعات.", btn="التقدم لعضوية WMM ←", c="التواصل"),
  "vi": dict(t="Thành viên WMM", h="Thành viên WMM — từ tìm hiểu đến triển khai", lede="Chúng tôi đồng hành cùng doanh nghiệp ra nước ngoài, từ chẩn đoán đến triển khai.", tbl="Hạng và mức phí",
    head=("Hạng", "Dành cho", "Quyền lợi chính", "Mức phí"),
    rows=[("M0 OPEN", "Doanh nghiệp mới tìm hiểu", "Bản đồ, tóm tắt và bảng tình hình · vài mục đầu của dự án, đấu thầu và sự kiện", "Miễn phí"),
@@ -931,7 +931,7 @@ MS_TX = {
          ("M3 BUSINESS", "Doanh nghiệp đã được xác minh", "Chuẩn bị đối tác, tư vấn ưu tiên, trao đổi với nhà đầu tư (từ khi xét duyệt)", "₩390.000/tháng"),
          ("M4 PROJECT", "Gia nhập một quốc gia cụ thể", "Kiểm chứng thị trường 6 tuần, sắp xếp lịch tại chỗ, trao đổi với nhà đầu tư", "từ ₩1,9 triệu"),
          ("M5 STRATEGIC", "Hợp đồng công hoặc quy mô lớn", "Từ chuẩn bị hồ sơ thầu đến ký hợp đồng, trao đổi với nhà đầu tư", "3–5% giá trị hợp đồng")],
-   note="Chưa gồm VAT · Đề xuất v2.0, sẽ được xác nhận. Chúng tôi không bảo đảm đầu tư, hợp đồng hay doanh thu.", btn="Tham gia và thanh toán tại www.wmm-hoa.com →", c="Liên hệ"),
+   note="Chưa gồm VAT · Đề xuất v2.0, sẽ được xác nhận. Chúng tôi không bảo đảm đầu tư, hợp đồng hay doanh thu.", btn="Đăng ký thành viên WMM →", c="Liên hệ"),
  "id": dict(t="Keanggotaan WMM", h="Keanggotaan WMM — dari melihat pertama hingga eksekusi", lede="Kami mendampingi perusahaan ke luar negeri, dari diagnosis hingga eksekusi.", tbl="Tingkat dan harga",
    head=("Tingkat", "Untuk", "Manfaat utama", "Harga"),
    rows=[("M0 OPEN", "Perusahaan yang baru melihat", "Peta, ringkasan dan papan situasi · beberapa item pertama program, tender dan acara", "Gratis"),
@@ -940,7 +940,7 @@ MS_TX = {
          ("M3 BUSINESS", "Perusahaan yang sudah tervalidasi", "Persiapan mitra, konsultasi prioritas, pembicaraan dengan investor (sejak peninjauan)", "₩390.000/bulan"),
          ("M4 PROJECT", "Masuk ke negara tertentu", "Validasi pasar 6 minggu, penjadwalan lokal, pembicaraan dengan investor", "mulai ₩1,9 juta"),
          ("M5 STRATEGIC", "Kontrak publik atau besar", "Dari persiapan tender hingga kontrak, pembicaraan dengan investor", "3–5% nilai kontrak")],
-   note="Belum termasuk PPN · Usulan v2.0, akan dikonfirmasi. Kami tidak menjamin investasi, kontrak, atau penjualan.", btn="Bergabung dan bayar di www.wmm-hoa.com →", c="Kontak"),
+   note="Belum termasuk PPN · Usulan v2.0, akan dikonfirmasi. Kami tidak menjamin investasi, kontrak, atau penjualan.", btn="Ajukan keanggotaan WMM →", c="Kontak"),
 }
 
 # ---------------------------------------------------------------- WMM membership introduction (from the owner's deck v2.0, 2026-11-15)
@@ -978,7 +978,7 @@ def membership_page(L, C):
         _r = rows.split("</tr>"); rows = "</tr>".join(_r[:2]) + "</tr>" + review_row(L, 4) + "</tr>".join(_r[2:])
         hd = "<tr>" + "".join(f"<th>{h}</th>" for h in X["head"]) + "</tr>"
         body = (f'<style>.tiers td,.tiers th{{text-align:start}}</style>{MS_LUX}<section class="mlux"><div class="in"><div><h1>{X["h"]}</h1><p class="lede">{X["lede"]}</p>'
-                f'<p class="cta"><a class="btn gold" href="https://www.wmm-hoa.com/membership/" target="_blank" rel="noopener">{X["btn"]}</a></p></div>'
+                f'<p class="cta"><a class="btn gold" href="{WMM_MS}#apply" target="_blank" rel="noopener">{X["btn"]}</a></p></div>'
                 f'<figure><img src="/assets/wmm-card.webp" alt="WMM" width="1408" height="768"><figcaption>{CONCEPT.get(L, "Concept image")}</figcaption></figure></div></section>'
                 f'<section class="band" id="tiers"><div class="in"><h2>{X["tbl"]}</h2><div class="tscroll"><table class="tiers">{hd}{rows}</table></div><p class="note">{X["note"]}</p>'
                 f'<p class="note">{X["c"]} · 73036396@naver.com · WORLD MAKING MEMBERS (WMM)</p></div></section>')
@@ -1044,7 +1044,7 @@ def membership_page(L, C):
     body = f'''{css}<section class="mlux"><div class="in"><div><p class="crumb"><a href="/{L}/">GOV RADAR</a> › <a href="/{L}/pricing/">{T("주문·요금", "Pricing")}</a></p>
 <h1>{T("하나의 멤버십으로, 정보에서 수주까지", "One membership, from information to contract")}</h1>
 <p class="lede">{T("WMM 멤버십은 193개국 정부 정보를 보는 데서 시작해, 영문 서류·시장 검증·파트너 연결·공공 수주까지 한 팀으로 함께 갑니다.", "WMM membership starts with government intelligence on 193 countries and carries on, as one team, through English documents, market validation, partner introductions and public contracts.")}</p>
-<p class="cta"><a class="btn gold" href="https://www.wmm-hoa.com/membership/{hs}" target="_blank" rel="noopener">{T("멤버십 가입하기", "Join the membership")}</a> <a class="btn ghost" href="#ladder">{T("등급 살펴보기", "See the grades")}</a></p></div>
+<p class="cta"><a class="btn gold" href="{WMM_MS}{hs}#apply" target="_blank" rel="noopener">{T("멤버십 신청하기", "Apply for membership")}</a> <a class="btn ghost" href="#ladder">{T("등급 살펴보기", "See the grades")}</a></p></div>
 <figure><img src="/assets/wmm-card.webp" alt="{T("WMM 멤버십 카드", "WMM membership card")}" width="1408" height="768" fetchpriority="high"><figcaption>{T("콘셉트 이미지", "Concept image")}</figcaption></figure></div></section>
 <section class="mlux-ladder" id="ladder"><div class="in"><h2>{T("등급마다 열리는 문이 다릅니다", "Each grade opens a different door")}</h2>
 <div class="lad">{"".join(f'<div class="g{" top" if k >= 2 else ""}"><b>{a}</b><h3>{b}</h3><p>{c}</p><strong>{d}</strong></div>' + (f'<div class="mrv">{REVIEW["ko" if ko else "en"]}</div>' if k == 1 else "") for k, (a, b, c, d) in enumerate(tiers[:6]))}</div></div></section>
@@ -1059,7 +1059,7 @@ def membership_page(L, C):
 <h3 style="margin-top:34px">{T("한 단계 오를 때마다 더해지는 것", "What each level adds")}</h3><div class="mstep">{steps}</div></div></section>
 <section class="band alt"><div class="in"><h2>{T("멤버십으로 쓰는 두 개의 창구", "Two doors, one membership")}</h2><div class="mdoor">
 <a href="/{L}/"><b>radar.wmm-hoa.com · GOV RADAR</b><p>{T("세계 정부 아젠다, 공공 입찰, 제재 동향, 재난 대비 정보를 나라별로 모아 보여 줍니다. 분석 의뢰와 입찰 적합도 판정도 여기서 신청합니다.", "Government agendas, public tenders, sanctions and disaster preparedness by country. Analysis requests and tender fit assessments are ordered here.")}</p></a>
-<a href="https://www.wmm-hoa.com/{hs}" target="_blank" rel="noopener"><b>www.wmm-hoa.com · WMM</b><p>{T("글로벌 진출 진단, 영문 서류, 6주 시장 검증, 교육·웨비나, 국가 브리핑을 안내합니다. 멤버십 가입·결제와 프로젝트 상담은 이곳에서 합니다.", "Entry diagnosis, English documents, 6-week market validation, training, webinars and country briefings. Membership sign-up, payment and project consultations happen here.")}</p></a></div>
+<a href="https://www.wmm-hoa.com/{hs}" target="_blank" rel="noopener"><b>www.wmm-hoa.com · WMM</b><p>{T("글로벌 진출 진단, 영문 서류, 6주 시장 검증, 교육·웨비나, 국가 브리핑을 안내합니다. 멤버십 신청과 프로젝트 상담은 이곳에서 받습니다. 신청 검토 후 계약과 결제 방법을 안내합니다.", "Entry diagnosis, English documents, 6-week market validation, training, webinars and country briefings. Apply for membership or request a project consultation here. WMM explains the contract and payment process after reviewing your application.")}</p></a></div>
 <p class="note">{T("두 사이트를 하나의 회원 계정으로 쓰도록 연결하는 작업을 준비하고 있습니다.", "We are preparing to link both sites to a single member account.")}</p></div></section>
 <section class="band"><div class="in"><h2>{T("필요할 때만 더하는 별도 상품", "Add-ons when you need them")}</h2><div class="mac">{alch}</div>
 <p class="note">{T("회원 분석 의뢰는 참고용 정리이고, 판정은 특정 입찰 참여 여부를 검토하는 별도 상품입니다. 부가세 별도. 상세 범위와 일정은 견적서에 적어 드립니다.", "Member analysis requests are reference summaries; the fit assessment is a separate product reviewing whether to bid on a specific tender. VAT excluded. Scope and timing are set out in the quote.")}</p></div></section>
@@ -1067,11 +1067,11 @@ def membership_page(L, C):
 <section class="band"><div class="in"><h2>{T("FOUNDING CIRCLE — 시작하는 기업을 위한 혜택", "Founding Circle — for early companies")}</h2><div class="mfc">{fch}</div>
 <p class="note">{T("CONNECT 50% 할인은 파운딩 고객 10곳에만 적용되며, 선정 기준과 기간은 신청 후 안내합니다.", "The 50% CONNECT discount applies to 10 founding clients only; criteria and period are shared after you apply.")}</p></div></section>
 <section class="band alt"><div class="in"><h2>{T("우리가 약속하지 않는 것", "What we do not promise")}</h2><div class="mpr">{prh}</div></div></section>
-<section class="band alt"><div class="in"><h2>{T("무료 가입으로 시작해 보세요", "Start with a free sign-up")}</h2>
-<p class="cta"><a class="btn pri" href="https://www.wmm-hoa.com/membership/{hs}" target="_blank" rel="noopener">{T("WMM 멤버십 가입·결제 →", "Join WMM membership →")}</a> <a class="btn" href="/{L}/pricing/">{T("GOV RADAR 요금 보기", "GOV RADAR pricing")}</a></p>
+<section class="band alt"><div class="in"><h2>{T("가입 방법을 확인하세요", "See how to apply")}</h2>
+<p class="cta"><a class="btn pri" href="{WMM_MS}{hs}#apply" target="_blank" rel="noopener">{T("WMM 멤버십 신청 →", "Apply for WMM membership →")}</a> <a class="btn" href="/{L}/pricing/">{T("GOV RADAR 요금 보기", "GOV RADAR pricing")}</a></p>
 <p class="note">{T("문의", "Contact")} 73036396@naver.com · {T("월드메이킹멤버스(WMM)", "WORLD MAKING MEMBERS (WMM)")}</p>{credit([r[0] for r in MROWS["en"]], ko)}</div></section>'''
     return C["head"](L, T("WMM 멤버십", "WMM Membership") + " · GOV RADAR",
-                     T("WMM 멤버십 M0–M5: 정보 탐색부터 서류 준비, 시장 검증, 공공 수주까지. 가입·결제는 wmm-hoa.com.", "WMM membership M0–M5: from information to documents, market validation and public contracts. Join at wmm-hoa.com."),
+                     T("WMM 멤버십 M0–M5: 정보 탐색부터 서류 준비, 시장 검증, 공공 수주까지. 멤버십 신청은 wmm-hoa.com.", "WMM membership M0–M5: from information to documents, market validation and public contracts. Apply at wmm-hoa.com."),
                      f"/{L}/membership/", {l: f"/{l}/membership/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
 
 # ---------------------------------------------------------------- WMM emergency kits (owner's product images, 2026-11-15)

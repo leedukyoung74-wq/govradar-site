@@ -278,6 +278,25 @@ window.gvLang = function (sel) {
   };
   var t = Object.assign({}, T.en, T[L] || {}); window.__gvT = t; t.k = (T[L] && T[L].k) || T.en.k; t.c = (T[L] && T[L].c) || T.en.c;
   function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
+  var editorialLabels = {
+    ko: ["해설 갱신", "해설 갱신 지연 · 최신 상황은 기관 원문 확인", "해설 갱신 시각 미확인 · 기관 원문 확인"],
+    en: ["Editorial update", "Editorial update delayed. Check the official sources for current information.", "Editorial update time unverified. Check official sources."],
+    es: ["Actualización editorial", "Resumen desactualizado. Consulte las fuentes oficiales.", "Fecha del resumen sin verificar. Consulte las fuentes oficiales."],
+    fr: ["Mise à jour éditoriale", "Résumé ancien. Consultez les sources officielles.", "Date du résumé non vérifiée. Consultez les sources officielles."],
+    ar: ["تحديث الملخص", "تأخر تحديث الملخص. راجع المصادر الرسمية.", "وقت تحديث الملخص غير مؤكد. راجع المصادر الرسمية."],
+    vi: ["Cập nhật bản tin", "Bản tin cập nhật chậm. Hãy kiểm tra nguồn chính thức.", "Chưa xác minh thời điểm cập nhật. Hãy kiểm tra nguồn chính thức."],
+    id: ["Pembaruan ringkasan", "Pembaruan ringkasan terlambat. Periksa sumber resmi.", "Waktu pembaruan belum terverifikasi. Periksa sumber resmi."]
+  };
+  function editorialStatus(d, now) {
+    var labels = editorialLabels[L] || editorialLabels.en;
+    var stamp = d.editorial_updated || d.updated || "";
+    var when = /^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(stamp) ? Date.parse(stamp) : NaN;
+    var age = now - when;
+    if (!Number.isFinite(when) || age < 0) return labels[2];
+    var timeUncertainty = stamp.length === 10 ? 24 * 60 * 60 * 1000 : 0;
+    if (age - timeUncertainty > 30 * 60 * 60 * 1000) return labels[1];
+    return d.editorial_updated ? labels[0] + " " + stamp : labels[2];
+  }
   /* animated hazard overlays drawn over the radar map */
   var FX = {
     flood: '<svg viewBox="0 0 160 100" preserveAspectRatio="none"><g class="fl-rise"><path class="fl-w1" d="M-160 62 Q-140 54 -120 62 T-80 62 T-40 62 T0 62 T40 62 T80 62 T120 62 T160 62 T200 62 T240 62 T280 62 T320 62 V100 H-160Z"/><path class="fl-w2" d="M-160 70 Q-140 63 -120 70 T-80 70 T-40 70 T0 70 T40 70 T80 70 T120 70 T160 70 T200 70 T240 70 T280 70 T320 70 V100 H-160Z"/></g><g class="rain">' + Array.apply(null, Array(14)).map(function (_, i) { return '<line x1="' + (i * 12 + 4) + '" y1="-10" x2="' + (i * 12) + '" y2="6" style="animation-delay:' + (i % 5) * .17 + 's"/>'; }).join("") + '</g></svg>',
@@ -352,7 +371,7 @@ window.gvLang = function (sel) {
         var names = {}; try { names = JSON.parse(b.getAttribute("data-names")); } catch (e) {}
         var home = b.getAttribute("data-mode") === "home";
         function cn(iso) { var n = names[iso]; if (n && !n[1]) return flag(iso) + " " + esc(n[0]); return n ? '<a href="/' + L + "/" + n[1] + '/#risk">' + flag(iso) + " " + esc(n[0]) + "</a>" : flag(iso) + " " + esc(iso || ""); }
-        var h = '<p class="lb-asof"><b>' + t.asof + " " + esc((d.checked || d.updated || "").replace("T", " ")) + "</b>" + (d.summary_ko ? " · " + esc(ko ? d.summary_ko : tr(d.summary_en || "")).slice(0, home ? 220 : 600) + (home ? "…" : "") : "") + "</p>";
+        var h = '<p class="lb-asof"><b>' + esc(editorialStatus(d, Date.now())) + "</b>" + (d.summary_ko ? " · " + esc(ko ? d.summary_ko : tr(d.summary_en || "")).slice(0, home ? 220 : 600) + (home ? "…" : "") : "") + "</p>";
         h += '<h3>' + t.hot + '</h3><div class="lb-grid">' + d.hotspots.map(function (x) {
           return '<div class="lb-card"><p><b>' + cn(x.iso) + "</b> <span class=\"lv " + esc(x.level) + '">' + (t[x.level] || "") + "</span></p><p><b>" + esc(pick(x)) + "</b></p>" +
             (home ? "" : "<ul>" + x.facts.map(function (f) { return "<li>" + esc(pick(f)) + (f.v === "official" ? ' <small class="note">(' + t.off + ")</small>" : "") + "</li>"; }).join("") + "</ul>") + "</div>";
