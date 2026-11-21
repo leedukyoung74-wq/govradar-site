@@ -75,6 +75,21 @@ class LiveOpportunityGateTests(unittest.TestCase):
         self.assertFalse(x["pass"])
         self.assertFalse(x["checks"]["visible_source_warning"])
 
+    def test_after_live_merge_identical_review_snapshot_passes_fail_closed(self):
+        original=self.new/M.INDEX_PATH
+        widget=self.new/M.WIDGET_PATH
+        (self.old/M.INDEX_PATH).write_text(original.read_text(encoding="utf8"),encoding="utf8")
+        (self.old/M.WIDGET_PATH).write_text(widget.read_text(encoding="utf8"),encoding="utf8")
+        result=M.check_patch(self.old,self.new)
+        self.assertTrue(result["pass"],result)
+        self.assertTrue(result["already_applied"])
+        self.assertEqual(result["alert_eligible_count"],0)
+        # Safety policy corruption should never be accepted merely because
+        # a corrupted baseline and candidate are now identical.
+        self.set_item(0,"may_send_business_alert",True)
+        (self.old/M.INDEX_PATH).write_text((self.new/M.INDEX_PATH).read_text(encoding="utf8"),encoding="utf8")
+        self.assertFalse(M.check_patch(self.old,self.new)["pass"])
+
     def test_no_network_until_explicit_probe(self):
         with mock.patch.object(M.urllib.request,"urlopen",side_effect=AssertionError("network forbidden")):
             out=M.run(self.old,self.new,probe=False)
