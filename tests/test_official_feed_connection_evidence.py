@@ -16,7 +16,7 @@ class OfficialFeedEvidenceTests(unittest.TestCase):
         self.assertEqual(x["schema"],"wmm.official-feed-connection-evidence.v1")
         self.assertEqual(len(x["providers"]),8)
         ids=[p["provider_id"] for p in x["providers"]]
-        self.assertEqual(len(set(ids)),6)
+        self.assertEqual(len(set(ids)),8)
         scopes={p["provider_id"]:p["geo_scope"] for p in x["providers"]}
         self.assertEqual(scopes,{
             "gb_ea_flood":"GB-ENG","jp_jma_bulletins":"JP",
