@@ -1,0 +1,120 @@
+name: GOV RADAR public 105 nation-cards + 7 redirects live HTTP inspection (READ ONLY)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_ewe_105_public_smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live_read_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout control review (no write token)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Get actual currently deployed branch HTML for expected content
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: live_snapshot
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /public/data/countries.json
+            /public/ko
+            /public/en
+            /public/es
+            /public/fr
+            /public/ar
+            /public/vi
+            /public/id
+      - name: Only read 112 primary site HTML pages plus seven secondary samples
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,html,json,os,re,urllib.request,urllib.error
+          from collections import Counter
+          from pathlib import Path
+          LANGS=('ko','en','es','fr','ar','vi','id')
+          ISO=('DZ','AO','BJ','BW','BF','BI','CV','CM','ET','MV','JO','GE','LU','MD','SK','FJ')
+          SECTION=re.compile(r'<section class="sec" id="environment-weather-emergency">.*?</section>',re.S)
+          countries=json.loads(Path('live_snapshot/public/data/countries.json').read_text(encoding='utf8'))
+          slugs={x['iso']:x['slug'] for x in countries if x.get('iso') in ISO}
+          assert len(slugs)==16
+          assert len(ISO)*len(LANGS)==112
+          samples=(('DZ','ar'),('JO','en'),('FJ','ko'),('MD','fr'),('SK','vi'),('BJ','es'),('MV','id'))
+          jobs=[('radar.wmm-hoa.com',iso,lang) for iso in ISO for lang in LANGS]
+          jobs += [('wmm-radar.pages.dev',iso,lang) for iso,lang in samples]
+          def verify(job):
+              host,iso,lang=job
+              slug=slugs[iso]
+              rel=f'public/{lang}/{slug}/index.html'
+              before=Path('live_snapshot')/rel
+              expected=before.read_text(encoding='utf8')
+              expected_section=SECTION.search(expected)
+              is_redirect=(expected_section is None and 'http-equiv="refresh"' in expected
+                           and 'name="robots" content="noindex"' in expected
+                           and 'location.replace' in expected)
+              if not expected_section and not is_redirect:
+                  return (host,iso,lang,'INVALID_LOCAL_EXPECTATION')
+              url=f'https://{host}/{lang}/{slug}/'
+              req=urllib.request.Request(url,method='GET',headers={
+                'User-Agent':'WMM-GOV-RADAR-Agency-Cards-ReadOnly/1.0',
+                'Cache-Control':'no-cache'})
+              try:
+                  with urllib.request.urlopen(req,timeout=11) as r:
+                      if r.status!=200 or r.geturl()!=url:
+                          return (host,iso,lang,'UNEXPECTED_HTTP_REDIRECT')
+                      raw=r.read(800000)
+                  if len(raw)>790000:
+                      return (host,iso,lang,'HTML_TOO_LARGE')
+                  actual=raw.decode('utf8','replace')
+                  found=SECTION.search(actual)
+                  if expected_section is not None:
+                      ok=bool(found and found.group(0)==expected_section.group(0))
+                      return (host,iso,lang,'EWE_CARDS_MATCH' if ok else 'OLD_OR_MISMATCHED_HTML')
+                  ok=(found is None and 'http-equiv="refresh"' in actual
+                      and 'location.replace' in actual
+                      and 'name="robots" content="noindex"' in actual)
+                  return (host,iso,lang,'REDIRECT_PRESERVED' if ok else 'REDIRECT_MISMATCH')
+              except (OSError,TimeoutError,ValueError,UnicodeError,urllib.error.URLError):
+                  return (host,iso,lang,'FETCH_UNVERIFIED')
+          with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+              results=list(pool.map(verify,jobs))
+          main=[r for r in results if r[0]=='radar.wmm-hoa.com']
+          secondary=[r for r in results if r[0]=='wmm-radar.pages.dev']
+          primary_pass=sum(r[3]=='EWE_CARDS_MATCH' for r in main)
+          primary_redirect=sum(r[3]=='REDIRECT_PRESERVED' for r in main)
+          secondary_pass=sum(r[3] in ('EWE_CARDS_MATCH','REDIRECT_PRESERVED') for r in secondary)
+          status_counts=Counter(r[3] for r in main)
+          print('PRIMARY',len(main),'EWE_SECTION_VERIFIED',primary_pass,
+                'REDIRECT_PRESERVED',primary_redirect,'STATUS',dict(status_counts))
+          print('SECONDARY',len(secondary),'MATCHED',secondary_pass)
+          errors=[r for r in results if r[3] not in ('EWE_CARDS_MATCH','REDIRECT_PRESERVED')]
+          for row in errors[:30]:
+              print('UNVERIFIED',row)
+          summary=[
+             '## GOV RADAR actually public country-level cards — HTTP read only',
+             '',
+             f'Primary domain updated real full pages: **{primary_pass}/105**',
+             '',
+             f'Primary domain locale redirects preserved: **{primary_redirect}/7**',
+             '',
+             f'Cloudflare secondary host representative pages: **{secondary_pass}/7**',
+             '',
+             'These links are curated agency candidates, not actual national RSS/CAP live alerts.',
+             'This job does not access customer data or deploy files and has no paid API usage.',
+          ]
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
+              f.write('\n'.join(summary)+'\n')
+          assert len(main)==112 and len(secondary)==7
+          assert primary_pass==105 and primary_redirect==7, 'primary public site not fully matching verified live branch'
+          assert secondary_pass==7, 'secondary site sample failed'
+          PY
