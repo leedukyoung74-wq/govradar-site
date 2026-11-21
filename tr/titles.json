@@ -1,6 +1,6 @@
 {
  "note": "Titles translated by Claude for GOV RADAR (not an official translation). Key = original title as in feeds/today.json.",
- "updated": "2026-11-20T22:25Z",
+ "updated": "2026-11-21T22:24Z",
  "items": {
   "Photocopying and offset printing equipment – Új nyomatelőállító eszk. és kapcs. szolg. (FMNY26)": {
    "ko": "복사·오프셋 인쇄 장비 – 신규 인쇄 장비 및 관련 서비스 (FMNY26)",
@@ -221,6 +221,126 @@
    "vi": "Chuyển đổi sang năng lượng mặt trời các hệ thống cấp nước sinh hoạt hiện có tại huyện Khyber",
    "id": "Solarisasi Skema Penyediaan Air Minum yang Ada di Distrik Khyber",
    "src": "en"
+  },
+  "NEPRO Four": {
+   "ko": "NEPRO Four",
+   "en": "NEPRO Four",
+   "es": "NEPRO Four",
+   "fr": "NEPRO Four",
+   "ar": "NEPRO Four",
+   "vi": "NEPRO Four",
+   "id": "NEPRO Four",
+   "src": "en"
+  },
+  "Underground railway station – I.D pražského metra – stanice Libuš včetně dokončení tunelu (ND) – LI – stavební část": {
+   "ko": "지하철역 – 프라하 지하철 D선 1구간 – 리부시역(터널 완공 포함, ND) – LI – 토목·건축 부문",
+   "en": "Underground railway station – Prague Metro Line D, section I – Libuš station including tunnel completion (ND) – LI – construction part",
+   "es": "Estación de metro – Línea D del metro de Praga, tramo I – estación Libuš, incluida la finalización del túnel (ND) – LI – parte de obra civil",
+   "fr": "Station de métro – Ligne D du métro de Prague, section I – station Libuš, y compris l’achèvement du tunnel (ND) – LI – partie construction",
+   "ar": "محطة مترو أنفاق – الخط D لمترو براغ، القسم I – محطة Libuš بما في ذلك استكمال النفق (ND) – LI – الجزء الإنشائي",
+   "vi": "Ga tàu điện ngầm – Tuyến D metro Praha, đoạn I – ga Libuš bao gồm hoàn thiện đường hầm (ND) – LI – phần xây dựng",
+   "id": "Stasiun kereta bawah tanah – Jalur D Metro Praha, seksi I – stasiun Libuš termasuk penyelesaian terowongan (ND) – LI – bagian konstruksi",
+   "src": "cs"
+  },
+  "Електрична енергія": {
+   "ko": "전력",
+   "en": "Electricity",
+   "es": "Energía eléctrica",
+   "fr": "Énergie électrique",
+   "ar": "الطاقة الكهربائية",
+   "vi": "Điện năng",
+   "id": "Energi listrik",
+   "src": "uk"
+  },
+  "Services for Logistical & Facilitation: Four Consultative Workshops / Meeting: Logistical and Facilitation Services for activity 1.6.1": {
+   "ko": "물류·진행 지원 용역: 자문 워크숍/회의 4회 – 활동 1.6.1 물류 및 진행 지원 용역",
+   "en": "Services for Logistical & Facilitation: Four Consultative Workshops / Meeting: Logistical and Facilitation Services for activity 1.6.1",
+   "es": "Servicios de logística y facilitación: cuatro talleres/reuniones consultivas – servicios de logística y facilitación para la actividad 1.6.1",
+   "fr": "Services de logistique et de facilitation : quatre ateliers/réunions consultatifs – services de logistique et de facilitation pour l’activité 1.6.1",
+   "ar": "خدمات لوجستية وتيسير: أربع ورش عمل/اجتماعات تشاورية – خدمات لوجستية وتيسير للنشاط 1.6.1",
+   "vi": "Dịch vụ hậu cần và điều phối: bốn hội thảo/cuộc họp tham vấn – dịch vụ hậu cần và điều phối cho hoạt động 1.6.1",
+   "id": "Jasa logistik dan fasilitasi: empat lokakarya/pertemuan konsultatif – jasa logistik dan fasilitasi untuk kegiatan 1.6.1",
+   "src": "en"
+  },
+  "Diagnostic and Capital Equipment and Related Accessories and Services": {
+   "ko": "진단 장비 및 자본 장비와 관련 부속품·서비스",
+   "en": "Diagnostic and Capital Equipment and Related Accessories and Services",
+   "es": "Equipos de diagnóstico y bienes de capital, con accesorios y servicios conexos",
+   "fr": "Équipements de diagnostic et équipements lourds, accessoires et services connexes",
+   "ar": "معدات تشخيصية ومعدات رأسمالية والملحقات والخدمات ذات الصلة",
+   "vi": "Thiết bị chẩn đoán, thiết bị cơ bản cùng phụ kiện và dịch vụ liên quan",
+   "id": "Peralatan diagnostik dan peralatan modal beserta aksesori dan layanan terkait",
+   "src": "en"
+  },
+  "Construction work for highways, roads – I/55 Břeclav, obchvat": {
+   "ko": "고속도로·도로 건설공사 – I/55 브제츨라프 우회도로",
+   "en": "Construction work for highways, roads – I/55 Břeclav, bypass",
+   "es": "Obras de construcción de autopistas y carreteras – I/55 Břeclav, variante",
+   "fr": "Travaux de construction d’autoroutes et de routes – I/55 Břeclav, contournement",
+   "ar": "أعمال إنشاء الطرق السريعة والطرق – I/55 Břeclav، الطريق الالتفافي",
+   "vi": "Thi công đường cao tốc, đường bộ – I/55 Břeclav, đường tránh",
+   "id": "Pekerjaan konstruksi jalan raya dan jalan – I/55 Břeclav, jalan lingkar",
+   "src": "cs"
+  },
+  "Maitrise d’œuvre des travaux de traitement des points critiques des pistes littorales au nord-ouest de Tuléar - Région Atsimo Andrefana": {
+   "ko": "툴레아르 북서부 해안 비포장도로 취약 구간 정비공사 감리·설계 – Atsimo Andrefana 지역",
+   "en": "Project supervision of works to treat critical points on coastal tracks north-west of Tuléar – Atsimo Andrefana Region",
+   "es": "Dirección de obra de los trabajos de tratamiento de puntos críticos de las pistas litorales al noroeste de Tuléar – Región Atsimo Andrefana",
+   "fr": "Maitrise d’œuvre des travaux de traitement des points critiques des pistes littorales au nord-ouest de Tuléar - Région Atsimo Andrefana",
+   "ar": "الإشراف على أعمال معالجة النقاط الحرجة في المسالك الساحلية شمال غرب Tuléar – منطقة Atsimo Andrefana",
+   "vi": "Tư vấn giám sát thi công xử lý các điểm xung yếu trên các tuyến đường đất ven biển phía tây bắc Tuléar – Vùng Atsimo Andrefana",
+   "id": "Pengawasan pekerjaan penanganan titik kritis jalan tanah pesisir di barat laut Tuléar – Wilayah Atsimo Andrefana",
+   "src": "fr"
+  },
+  "Feasibility Study & Detail Designs of 8 (Eight ) Water Supply & Sanitation schemes from existing Boreholes .": {
+   "ko": "기존 시추공 활용 상수도·위생 사업 8건 타당성 조사 및 상세설계",
+   "en": "Feasibility Study & Detail Designs of 8 (Eight ) Water Supply & Sanitation schemes from existing Boreholes .",
+   "es": "Estudio de viabilidad y diseños de detalle de 8 (ocho) sistemas de abastecimiento de agua y saneamiento a partir de pozos existentes",
+   "fr": "Étude de faisabilité et études détaillées de 8 (huit) systèmes d’adduction d’eau et d’assainissement à partir de forages existants",
+   "ar": "دراسة جدوى وتصاميم تفصيلية لـ 8 (ثمانية) مشاريع لإمدادات المياه والصرف الصحي من آبار قائمة",
+   "vi": "Nghiên cứu khả thi và thiết kế chi tiết 8 (tám) hệ thống cấp nước và vệ sinh từ các giếng khoan hiện có",
+   "id": "Studi kelayakan dan desain rinci 8 (delapan) skema air bersih dan sanitasi dari sumur bor yang ada",
+   "src": "en"
+  },
+  "Construction de 30 écoles dans les provinces du Moyen Chari et du Mandoul": {
+   "ko": "Moyen Chari 및 Mandoul 주 학교 30개소 건설",
+   "en": "Construction of 30 schools in the provinces of Moyen Chari and Mandoul",
+   "es": "Construcción de 30 escuelas en las provincias de Moyen Chari y Mandoul",
+   "fr": "Construction de 30 écoles dans les provinces du Moyen Chari et du Mandoul",
+   "ar": "بناء 30 مدرسة في مقاطعتي Moyen Chari وMandoul",
+   "vi": "Xây dựng 30 trường học tại các tỉnh Moyen Chari và Mandoul",
+   "id": "Pembangunan 30 sekolah di Provinsi Moyen Chari dan Mandoul",
+   "src": "fr"
+  },
+  "Matériel de communication MEH": {
+   "ko": "MEH 통신 장비",
+   "en": "MEH communication equipment",
+   "es": "Material de comunicación MEH",
+   "fr": "Matériel de communication MEH",
+   "ar": "معدات اتصال MEH",
+   "vi": "Thiết bị truyền thông MEH",
+   "id": "Peralatan komunikasi MEH",
+   "src": "fr"
+  },
+  "Matériel roulant de MEH (2 motos et un véhicule)": {
+   "ko": "MEH 차량 장비(오토바이 2대 및 차량 1대)",
+   "en": "MEH rolling stock (2 motorcycles and one vehicle)",
+   "es": "Material rodante de MEH (2 motocicletas y un vehículo)",
+   "fr": "Matériel roulant de MEH (2 motos et un véhicule)",
+   "ar": "مركبات MEH (دراجتان ناريتان ومركبة واحدة)",
+   "vi": "Phương tiện của MEH (2 xe máy và một ô tô)",
+   "id": "Kendaraan MEH (2 sepeda motor dan satu kendaraan)",
+   "src": "fr"
+  },
+  "Acquisition de matériel de communication et de support de visibilité en 2 Lots du Projet DECIM": {
+   "ko": "DECIM 사업 통신 장비 및 홍보물 구매(2개 분할)",
+   "en": "Procurement of communication equipment and visibility materials in 2 Lots for the DECIM Project",
+   "es": "Adquisición de material de comunicación y soportes de visibilidad en 2 Lotes del Proyecto DECIM",
+   "fr": "Acquisition de matériel de communication et de support de visibilité en 2 Lots du Projet DECIM",
+   "ar": "اقتناء معدات اتصال ومواد للتعريف والظهور في حصتين لمشروع DECIM",
+   "vi": "Mua sắm thiết bị truyền thông và vật phẩm quảng bá gồm 2 Lô của Dự án DECIM",
+   "id": "Pengadaan peralatan komunikasi dan materi visibilitas dalam 2 Lot Proyek DECIM",
+   "src": "fr"
   }
  }
 }
