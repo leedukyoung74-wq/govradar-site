@@ -8,6 +8,8 @@ on:
       - 'tests/test_cti_internal_review.py'
       - 'tools/cti_asset_match.py'
       - 'tests/test_cti_asset_match.py'
+      - 'tools/cti_epss_offline.py'
+      - 'tests/test_cti_epss_offline.py'
       - 'tools/cti_provider_audit.py'
       - 'tests/test_cti_provider_audit.py'
       - 'ops/cti_provider_registry.json'
@@ -30,6 +32,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_cti_internal_review.py' -v
       - name: Test approved inventory candidate-only matching (no scanning)
         run: python -m unittest discover -s tests -p 'test_cti_asset_match.py' -v
+      - name: Validate free offline EPSS enrichment with synthetic data (no HTTP)
+        run: python -m unittest discover -s tests -p 'test_cti_epss_offline.py' -v
       - name: Assert nine CTI providers stay disabled without license and authorization
         run: |
           python -m unittest discover -s tests -p 'test_cti_provider_audit.py' -v
@@ -63,6 +67,29 @@ jobs:
           assert d['freshness'] == 'REVIEW_REQUIRED'
           assert 1 <= d['recent_30d_entries'] <= d['source_entries']
           print("PASS: private, non-publication review with freshness guard")
+          PY
+      - name: Test FIRST's real daily EPSS CSV with CISA KEV, ephemeral and INTERNAL ONLY
+        shell: bash
+        run: |
+          curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' --retry 1 --max-time 120 --max-filesize 60000000 \
+            'https://epss.empiricalsecurity.com/epss_scores-current.csv.gz' \
+            --output /tmp/wmm-cti-audit/epss-current.csv.gz
+          python tools/cti_epss_offline.py \
+            --kev /tmp/wmm-cti-audit/kev-internal.json \
+            --epss /tmp/wmm-cti-audit/epss-current.csv.gz \
+            --out /tmp/wmm-cti-audit/epss-private-review.json
+          python - <<'PY'
+          import json
+          report=json.load(open('/tmp/wmm-cti-audit/epss-private-review.json',encoding='utf8'))
+          assert report['public_release_allowed'] is False
+          assert report['darkweb_vendor_connected'] is False
+          assert report['customer_breaches_confirmed'] is False
+          assert report['customer_data_processed'] is False
+          assert report['source_kev_entries']>0
+          assert report['matched_count']>0
+          print('FIRST+KEV REAL-FEED EPHEMERAL VALIDATION PASS; matching CVEs:',report['matched_count'],
+                'missing score count:',report['missing_score_count'],'EPSS date:',report['epss_score_date'])
+          print('NO customer data, NO darkweb vendors, NO publication, NO stored artifacts.')
           PY
       - name: Ensure unpublished internal data is deleted at runner shutdown
         if: always()
