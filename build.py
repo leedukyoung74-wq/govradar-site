@@ -1007,6 +1007,13 @@ def home(L):
     _tn = P3._today_n()[0].get("open")
     if isinstance(_tn, int): n_t = _tn   # same number the live refresh shows (open tenders in the daily feed), not only those in country reports
     O = opps(); n_b = len(O); last = max([max(d.get("updated", "") or "", ((d.get("risk") or {}).get("checked") or "")) for d in DATA.values()] or [""])
+    # 최근 갱신: 국가 자료뿐 아니라 매일 자동 갱신(data 브랜치 feeds/today.json)의 날짜도 반영 — JS를 못 읽는 검색엔진·AI도 최신 날짜를 보게 (2026-11-22)
+    try:
+        _td = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data_branch", "feeds", "today.json"), encoding="utf-8"))
+        _u = datetime.datetime.fromisoformat(str(_td.get("updated", "")).replace("Z", "+00:00")) + datetime.timedelta(hours=9)
+        last = max(last, _u.strftime("%Y-%m-%d"))
+    except Exception:
+        pass
     regions = "".join(f'<button class="chip" data-r="{k}">{e(v)}</button>' for k, v in t["regions"].items())
     grid = "".join(f'<a class="flag {"done" if done(c["iso"]) else ""}" data-r="{c["r"]}" data-n="{e((nm(c["iso"],L)+" "+c["en"]+" "+c["ko"]).lower())}" href="{url(L,c["iso"])}">{flag(c["iso"])}<span>{e(nm(c["iso"],L))}</span>{f"<i class=rk data-l={lvl(c[chr(105)+chr(115)+chr(111)])}></i>" if lvl(c["iso"]) in ("high","medium") else ""}</a>'
                    for c in sorted(META, key=lambda c: nm(c["iso"], L)))
