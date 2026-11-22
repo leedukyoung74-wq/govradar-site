@@ -111,7 +111,7 @@ def data():
     return {"upd": hz.get("checked") or hz.get("updated") or cf.get("updated"), "cupd": cf.get("updated"),
             "sum": {"ko": hz.get("summary_ko") or cf.get("summary_ko"), "en": hz.get("summary_en") or cf.get("summary_en")},
             "adv": {"ko": cf.get("advice_ko"), "en": cf.get("advice_en")},
-            "hot": hot, "all": allc, "un": un, "dis": dis, "epi": epi, "ast": ast, "ctry": ctry, "cy": cy, "hist": hist, "src": srcs, "pts": pts, "nm": nm}
+            "hot": hot, "all": allc, "un": un, "dis": dis, "epi": epi, "ast": ast, "ctry": ctry, "cy": cy, "hist": hist, "src": srcs, "pts": pts, "nm": nm, "cen": {k: [round(v[0], 1), round(v[1], 1)] for k, v in cen.items()}}
 
 
 CSS = r"""
@@ -226,8 +226,22 @@ document.documentElement.style.setProperty("--P",P+"s");
 // clocks
 function clk(){var d=new Date(),k=new Date(d.getTime()+9*3600e3);function f(x){return x.toISOString().slice(11,19)}document.getElementById("cu").textContent=f(d);document.getElementById("ck").textContent=f(k)}
 clk();setInterval(clk,1000);
-Promise.all([fetch("/live/data.json").then(function(r){return r.json()}),fetch("/map/world.json").then(function(r){return r.json()})]).then(function(a){
+var RAW="https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/hazards.json";
+Promise.all([fetch("/live/data.json").then(function(r){return r.json()}),fetch("/map/world.json").then(function(r){return r.json()}),fetch(RAW,{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})]).then(function(a){
 var D=a[0],W=topojson.feature(a[1],a[1].objects.countries);
+// 매일 자동 수집·해설 갱신된 최신 자료(data 브랜치)를 열 때마다 직접 반영 — 사이트를 다시 게시하지 않아도 최신
+(function(H){if(!H||!H.hotspots)return;var C=D.cen||{};
+ if((H.checked||H.updated||"")<(D.upd||""))return;
+ D.upd=H.checked||H.updated;if(H.summary_ko)D.sum={ko:H.summary_ko,en:H.summary_en};
+ var hot=H.hotspots.map(function(h){return{iso:h.iso,lv:h.level,ko:h.ko,en:h.en,sko:h.status_ko,sen:h.status_en,f:(h.facts||[]).slice(0,4).map(function(f){return{ko:f.ko,en:f.en}})}}),hs={};hot.forEach(function(h){hs[h.iso]=1});
+ D.hot=hot.concat(D.hot.filter(function(h){return !hs[h.iso]}));
+ var dis=[],epi=[],ast=[];(H.disasters||[]).forEach(function(d){var r={k:d.kind,iso:d.iso||"",d:d.date,ko:d.ko,en:d.en,u:d.url,src:d.src};(d.kind==="asteroid"?ast:d.kind==="epidemic"?epi:dis).push(r)});
+ if(dis.length||epi.length){D.dis=dis;D.epi=epi;D.ast=ast}
+ if(H.countries&&H.countries.length)D.ctry=H.countries.map(function(c){return{iso:c.iso,lv:c.level,ck:c.checked||"",c:c.conflict||{},d:c.disaster||{},e:c.epidemic||{}}});
+ var keep=D.pts.filter(function(p){return !/^(hot|dis|epi)-/.test(p.r||"")}),np=[];
+ function P(iso,l,ko,en,r,s){var c=C[iso];if(c)np.push({x:c[1],y:c[0],l:l,ko:ko,en:en,r:r,s:s,i:iso})}
+ D.hot.forEach(function(h,i){P(h.iso,h.lv==="war"?"war":"conflict",h.ko,h.en,"hot-"+i,3)});D.dis.forEach(function(d,i){P(d.iso,"disaster",d.ko,d.en,"dis-"+i,2)});D.epi.forEach(function(d,i){P(d.iso,"epidemic",d.ko,d.en,"epi-"+i,2)});
+ D.pts=np.concat(keep)})(a[2]);
 document.getElementById("upd").textContent=(D.upd||"").replace("T"," ")+" KST";
 // ---------- lists ----------
 var S=U.S,html="";
