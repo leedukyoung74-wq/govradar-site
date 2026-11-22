@@ -50,7 +50,7 @@ class UKTimeoutFallbackTests(unittest.TestCase):
         self.assertIn("partial_48h",FM.stat(SOURCE)["notes"][-1])
 
     def test_rate_limited_source_never_tries_more_requests(self):
-        with patch.object(FM,"_ocds",side_effect=lambda source,url,mk: self._fail("HTTPError: HTTP Error 429")) as call:
+        with patch.object(FM,"_ocds",side_effect=lambda source,url,mk,**kwargs: self._fail("HTTPError: HTTP Error 429")) as call:
             self.assertEqual([],FM.uk())
         self.assertEqual(1,call.call_count)
 
