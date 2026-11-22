@@ -66,11 +66,58 @@ def subnav(L, path, group=None, active=None):
     a = "".join(f'<a href="{_e(h)}"{" aria-current=\"page\"" if k == act else ""}>{_e(t)}</a>' for k, h, t in items(L, g))
     return f'<nav class="subnav" aria-label="sub"><div class="in">{a}</div></nav>'
 
+# ---- 2026-11-22 개편: 상단 메뉴 5개 + 펼침 목록 + '솔루션 요청' 버튼 (정적 페이지와 gvhdr.js 공용) ----
+P2G = {"#map": "map", "mdb/": "biz", "solutions/": "go", "conflict/": "world", "pricing/": "member"}
+CTA = {"ko":"솔루션 요청","en":"Request solutions","es":"Solicitar soluciones","fr":"Demander des solutions","ar":"طلب الحلول","vi":"Yêu cầu giải pháp","id":"Minta solusi"}
+
+def cta_href(L):
+    return f"/{L}/?stay=1#solutions"
+
+def navgroups(L, NAV, cur_group=None):
+    out = []
+    for p, lbl in NAV[L]:
+        g = P2G.get(p, "map")
+        top = f"/{L}/{p}"
+        sub = "".join(f'<a href="{_e(h)}">{_e(t)}</a>' for k, h, t in items(L, g) if h != top)
+        cur = ' aria-current="page"' if g == cur_group else ""
+        out.append(f'<div class="nvg"><a href="{_e(top)}"{cur}>{_e(lbl)}</a><div class="nvd">{sub}</div></div>')
+    return "".join(out)
+
+SITECSS = """
+/* site-light 2026-11-22: 흰 바탕 통일 */
+body{background:#fff!important;background-image:none!important}
+body::before{display:none!important}
+.chero:not(.img-cons):not(.img-proj):not(.img-cf){background:#F5F6F8!important;color:#0B1526!important;border-bottom:1px solid #E3E7ED}
+.chero:not(.img-cons):not(.img-proj):not(.img-cf) :is(.alt,.meta,.crumb,.crumb a,.lede){color:#4A5568!important}
+.chero:not(.img-cons):not(.img-proj):not(.img-cf) a{color:#0B1526}
+.chero:not(.img-cons):not(.img-proj):not(.img-cf) .badge,.chero:not(.img-cons):not(.img-proj):not(.img-cf) [class*=lvl]{border-color:#0B1526}
+"""
+
+NAVCSS = """
+/* nav-renew 2026-11-22 */
+.nvg{position:relative;display:flex;align-items:center}
+.nvd{display:none;position:absolute;top:100%;left:0;z-index:80;min-width:210px;padding:8px;background:#fff;border:1px solid #E3E7ED;border-radius:12px;box-shadow:0 16px 40px rgba(11,21,38,.14);flex-direction:column}
+[dir=rtl] .nvd{left:auto;right:0}
+.nvd a{display:block;white-space:nowrap;font-size:14px!important;padding:9px 12px!important;color:#0B1526!important;border-radius:8px!important;border:0!important;text-decoration:none;background:transparent!important}
+.nvd a:hover{background:#F5F6F8!important}
+.nvg:hover>.nvd,.nvg:focus-within>.nvd{display:flex}
+.navcta{display:inline-flex;align-items:center;white-space:nowrap;background:#0B1526;color:#fff!important;border-radius:999px;padding:8px 16px;font-weight:700;font-size:13.5px;text-decoration:none}
+.navcta:hover{background:#1d2b44}
+@media (max-width:1020px){.nvg{flex-direction:column;align-items:stretch}.nvd{display:flex;position:static;box-shadow:none;border:0;padding:0 0 8px 14px;min-width:0;background:transparent}[dir=rtl] .nvd{padding:0 14px 8px 0}.nvd a{font-size:14.5px!important;padding:8px 6px!important;color:#4A5568!important}.navcta{display:none}}
+.nav,.gvh .gtop{background:#fff!important}
+.subnav{background:#fff!important;border-bottom:1px solid #E3E7ED!important}
+.subnav .in{flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none}
+.subnav a{color:#4A5568!important;background:transparent!important}
+.subnav a:hover{background:#F5F6F8!important;color:#0B1526!important}
+.subnav a[aria-current]{background:#0B1526!important;color:#fff!important}
+.nav.compact .nvg{flex-direction:column;align-items:stretch}.nav.compact .nvd{display:flex;position:static;box-shadow:none;border:0;padding:0 0 8px 14px;background:transparent}
+"""
+
 def gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU):
     data = {"nav": {}, "sub": {}, "lang": LANG_NAME, "short": LANG_SHORT,
-            "login": {L: AT[L]["login"] for L in LANG_NAME}, "menu": MENU}
+            "login": {L: AT[L]["login"] for L in LANG_NAME}, "menu": MENU, "cta": CTA}
     for L in LANG_NAME:
-        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else "/signals/en/") if p == "@signals" else ("/cyber/" if L == "ko" else f"/cyber/{L}/") if p == "@cyber" else f"/{L}/{p}", lbl, p] for p, lbl in NAV[L]]
+        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else "/signals/en/") if p == "@signals" else ("/cyber/" if L == "ko" else f"/cyber/{L}/") if p == "@cyber" else f"/{L}/{p}", lbl, P2G.get(p, "map")] for p, lbl in NAV[L]]
         data["sub"][L] = {g: [[k, h, t] for k, h, t in items(L, g)] for g in GROUPS}
     css = r"""
 .gvh,.gvh *{box-sizing:border-box}
@@ -101,15 +148,16 @@ var s=document.currentScript,L=s.getAttribute("data-l")||"ko";if(L==="auto")L=ne
 if(!D.nav[L])L="en";
 function e(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 var st=document.createElement("style");st.textContent=__CSS__+__SUBCSS__;document.head.appendChild(st);
-var nav=D.nav[L].map(function(x){var cur=(A==="hazards"&&x[2]==="@hazards")||(A==="signals"&&x[2]==="@signals")||(A==="cyber"&&x[2]==="@cyber")||(G==="world"&&x[2]==="conflict/"&&!A);return'<a href="'+e(x[0])+'"'+(cur?' aria-current="page"':'')+'>'+e(x[1])+'</a>'}).join("");
+var nav=D.nav[L].map(function(x){var g=x[2],sub=(D.sub[L][g]||[]).filter(function(y){return y[1]!==x[0]}).map(function(y){return'<a href="'+e(y[1])+'">'+e(y[2])+'</a>'}).join("");return'<div class="nvg"><a href="'+e(x[0])+'"'+(g===G?' aria-current="page"':'')+'>'+e(x[1])+'</a><div class="nvd">'+sub+'</div></div>'}).join("");
 var CS=window.GVH_SUB?window.GVH_SUB(L):null;var sub=CS?CS.map(function(x){return'<a href="'+e(x[0])+'">'+e(x[1])+'</a>'}).join(""):(D.sub[L][G]||[]).map(function(x){return'<a href="'+e(x[1])+'"'+(x[0]===A?' aria-current="page"':'')+'>'+e(x[2])+'</a>'}).join("");
 var opts=Object.keys(D.lang).map(function(l){return'<option value="'+l+'"'+(l===L?' selected':'')+'>'+e(D.lang[l])+'</option>'}).join("");
-var h='<div class="gvh" id="gvh"><div class="gtop"><div class="gin"><a class="gbrand" href="/'+L+'/"><img src="/assets/logo-h.webp" alt="GOV RADAR" width="120" height="40"></a><nav class="glinks" id="gvhl">'+nav+'</nav><div class="gr"><select aria-label="Language" id="gvhs">'+opts+'</select><a class="glog" href="/'+L+'/account/">'+e(D.login[L])+'</a><button class="gbur" id="gvhb" aria-label="'+e(D.menu[L])+'" aria-expanded="false"><span></span><span></span><span></span></button></div></div></div><nav class="subnav'+(CS?' toc':'')+'"><div class="in">'+sub+'</div></nav></div>';
+var h='<div class="gvh" id="gvh"><div class="gtop"><div class="gin"><a class="gbrand" href="/'+L+'/"><img src="/assets/logo-h.webp" alt="GOV RADAR" width="120" height="40"></a><nav class="glinks" id="gvhl">'+nav+'</nav><div class="gr"><a class="navcta" href="/'+L+'/?stay=1#solutions">'+e(D.cta[L])+'</a><select aria-label="Language" id="gvhs">'+opts+'</select><a class="glog" href="/'+L+'/account/">'+e(D.login[L])+'</a><button class="gbur" id="gvhb" aria-label="'+e(D.menu[L])+'" aria-expanded="false"><span></span><span></span><span></span></button></div></div></div><nav class="subnav'+(CS?' toc':'')+'"><div class="in">'+sub+'</div></nav></div>';
 document.write(h);
 document.getElementById("gvhs").onchange=function(){var l=this.value,u=window.GVH_LANG_URL?window.GVH_LANG_URL(l):("/"+l+"/");location.href=u};
 var b=document.getElementById("gvhb"),n=document.getElementById("gvhl");b.onclick=function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)};
 })();
 __SPY__"""
+    css = css + NAVCSS
     return js.replace("__SPY__", SPYJS).replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__CSS__", json.dumps(css)).replace("__SUBCSS__", json.dumps(SUBCSS))
 
 SPYJS = '(function(){function spy(){var n=document.querySelector(".subnav.toc");if(!n)return;var box=n.querySelector(".in")||n,A=[].slice.call(n.querySelectorAll(\'a[href^="#"]\'));if(!A.length)return;\nvar S=A.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)))}),cur=-1,lock=0,vis={};\nfunction mark(k){if(k===cur)return;cur=k;A.forEach(function(a,i){if(i===k)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")});var a=A[k];if(a){var l=a.offsetLeft-(box.clientWidth-a.offsetWidth)/2;box.scrollTo({left:Math.max(0,l),behavior:"smooth"})}}\nA.forEach(function(a,i){a.addEventListener("click",function(ev){var s=S[i];if(!s||s.offsetParent===null)return;ev.preventDefault();lock=Date.now()+900;mark(i);var y=s.getBoundingClientRect().top+scrollY-118;scrollTo({top:y,behavior:"smooth"});try{history.replaceState(null,"",a.getAttribute("href"))}catch(e){}})});\nif(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[S.indexOf(e.target)]=e.isIntersecting});if(Date.now()<lock)return;var k=-1;for(var i=S.length-1;i>=0;i--)if(vis[i]&&S[i].offsetParent!==null){k=i;break}if(k<0){var y=scrollY+130;S.forEach(function(s,i){if(s&&s.offsetParent!==null&&s.getBoundingClientRect().top+scrollY<=y)k=i})}if(k<0&&scrollY<80)k=0;if(k>=0)mark(k)},{rootMargin:"-118px 0px -55% 0px"});S.forEach(function(s){if(s)io.observe(s)});}\nif(document.readyState==="loading")document.addEventListener("DOMContentLoaded",spy);else spy();})();'

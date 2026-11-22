@@ -174,16 +174,12 @@ FONTLINK = {
  "vi": "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap",
 }
 # en/es/fr/id use the house font (WMM Nexon) only; vi/ar keep a fallback for glyphs Nexon lacks
-from subnav import toc_post as _toc_post, subnav as _subnav, gvhdr_js as _gvhdr_js, SUBCSS as _SUBCSS, group_of as _group_of
+from subnav import navgroups as _navgroups, NAVCSS as _NAVCSS, SITECSS as _SITECSS, CTA as _CTA, toc_post as _toc_post, subnav as _subnav, gvhdr_js as _gvhdr_js, SUBCSS as _SUBCSS, group_of as _group_of
 def navhtml(L):
-    items = "".join((f'<a href="/hazards/{"" if L == "ko" else "?l="+L}">{e(lbl)}</a>' if p == "@hazards" else f'<a href="/signals/{"" if L == "ko" else "en/"}">{e(lbl)}</a>' if p == "@signals" else f'<a href="/cyber/{"" if L == "ko" else "en/"}">{e(lbl)}</a>' if p == "@cyber" else f'<a href="/{L}/{p}">{e(lbl)}</a>') for p, lbl in NAV[L])
-    return items
+    return _navgroups(L, NAV)
 def navhtml_act(L, path):
     g, _ = _group_of(path)
-    key = {"biz": "mdb/", "go": "solutions/", "world": "conflict/", "member": "pricing/", "map": "#map"}[g]
-    seg = (path.strip("/").split("/") + ["", ""])[1]
-    if seg in ("ready", "prepare"): key = "ready/"
-    return navhtml(L).replace(f'href="/{L}/{key}"', f'href="/{L}/{key}" aria-current="page"', 1)
+    return _navgroups(L, NAV, g)
 _GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/map/"+(l==="ko"?"":l+"/"))})();</script>"""
 def _open_first(x):
     """입찰 미리보기: 열린 입찰을 마감 가까운 순으로 먼저, 마감된 건은 뒤로 (2026-11-22)."""
@@ -210,7 +206,7 @@ def head(L, title, desc, path, alt_paths, extra=""):
 <a class="brand" href="/{L}/"><img src="/assets/logo-h.webp" alt="GOV RADAR" width="132" height="44"></a>
 <nav class="links" id="navlinks">{navhtml_act(L, path)}</nav>
 <div class="navr"><label class="langw"><span class="lcode">{LANG_SHORT[L]}</span><select class="langsel" aria-label="{e(t['lang'])}" onchange="gvLang(this)">{''.join(f'<option value="{e(p)}" data-l="{l}" {"selected" if l==L else ""}>{LANG_NAME[l]}</option>' for l,p in alt_paths.items())}</select></label>
-<button class="btn sm" id="loginbtn">{e(AT[L]['login'])}</button>
+<a class="navcta" href="/{L}/?stay=1#solutions">{e(_CTA[L])}</a><button class="btn sm" id="loginbtn">{e(AT[L]['login'])}</button>
 <button class="burger" id="burger" aria-label="{e(MENU[L])}" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button></div>
 </div></header><script>(function(){{var h=document.querySelector("header.nav"),l=document.getElementById("navlinks");if(!h||!l)return;function fit(){{h.classList.remove("tight","compact");if(innerWidth<=1020)return;if(l.scrollWidth>l.clientWidth+1){{h.classList.add("tight");if(l.scrollWidth>l.clientWidth+1)h.classList.add("compact")}}}}fit();addEventListener("resize",fit);if(document.fonts)document.fonts.ready.then(fit);function sn(){{var n=document.querySelector(".subnav");if(n)n.classList.toggle("multi",n.offsetHeight>52)}}addEventListener("DOMContentLoaded",sn);addEventListener("resize",sn);if(document.fonts)document.fonts.ready.then(sn)}})()</script><!--SUBNAV-->{_subnav(L, path)}<!--/SUBNAV-->{prepbar(L) if path.endswith("/prepare/") else ""}<main>"""
 
@@ -1388,6 +1384,9 @@ def build():
     # cache-busting: /assets/* is cached 7 days, so stamp CSS/JS links with a content hash
     import hashlib
     ver = {}
+    _sc = os.path.join(OUT, "assets", "site.css")
+    if os.path.exists(_sc) and "nav-renew" not in open(_sc, encoding="utf-8").read():
+        open(_sc, "a", encoding="utf-8").write(_NAVCSS + _SITECSS)
     for f in ["site.css", "site.js", "hotmap.js", "auth.js", "config.js"]:
         fp = os.path.join(OUT, "assets", f)
         if os.path.exists(fp): ver[f] = hashlib.md5(open(fp, "rb").read()).hexdigest()[:8]
