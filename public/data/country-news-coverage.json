@@ -5,9 +5,9 @@
   "target_countries": 193,
   "minimum_per_country": 3,
   "target_links": 579,
-  "countries_with_at_least_three_recorded": 177,
-  "registered_publisher_links": 531,
-  "remaining_minimum_link_slots": 48,
+  "countries_with_at_least_three_recorded": 180,
+  "registered_publisher_links": 540,
+  "remaining_minimum_link_slots": 39,
   "country_counts": {
     "AD": {
       "publisher_links_recorded": 3,
@@ -394,8 +394,8 @@
       "remaining_to_three": 0
     },
     "LA": {
-      "publisher_links_recorded": 0,
-      "remaining_to_three": 3
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
     },
     "LB": {
       "publisher_links_recorded": 3,
@@ -406,8 +406,8 @@
       "remaining_to_three": 0
     },
     "LI": {
-      "publisher_links_recorded": 0,
-      "remaining_to_three": 3
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
     },
     "LK": {
       "publisher_links_recorded": 3,
@@ -758,8 +758,8 @@
       "remaining_to_three": 0
     },
     "VU": {
-      "publisher_links_recorded": 0,
-      "remaining_to_three": 3
+      "publisher_links_recorded": 3,
+      "remaining_to_three": 0
     },
     "WS": {
       "publisher_links_recorded": 3,
@@ -791,13 +791,10 @@
     "KI",
     "KM",
     "KP",
-    "LA",
-    "LI",
     "MH",
     "NR",
     "PW",
     "ST",
-    "TV",
-    "VU"
+    "TV"
   ]
 }
