@@ -89,6 +89,10 @@ SITECSS = """
 /* site-light 2026-11-22: 흰 바탕 통일 */
 body{background:#fff!important;background-image:none!important}
 body::before{display:none!important}
+.prepbar{background:#F5F6F8!important;color:#0B1526!important;border-bottom:1px solid #E3E7ED}
+.prepbar b{color:#C7362E!important}
+.pchips button{border-color:#D5DAE1!important;color:#4A5568!important;background:#fff!important}
+.pchips button.on,.prepbar .pkit{background:#0B1526!important;color:#fff!important;border-color:#0B1526!important}
 .chero:not(.img-cons):not(.img-proj):not(.img-cf){background:#F5F6F8!important;color:#0B1526!important;border-bottom:1px solid #E3E7ED}
 .chero:not(.img-cons):not(.img-proj):not(.img-cf) :is(.alt,.meta,.crumb,.crumb a,.lede){color:#4A5568!important}
 .chero:not(.img-cons):not(.img-proj):not(.img-cf) a{color:#0B1526}

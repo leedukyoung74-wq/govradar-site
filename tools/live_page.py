@@ -17,6 +17,8 @@ PUB = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "cf", "public")
 OUT = os.path.join(PUB, "live")
 LANGS = ["ko", "en", "es", "fr", "ar", "vi", "id"]
 
+PREP = {"ko": {"h": "미리 대비하라 — 지금 할 일", "sub": "레이더에 뜬 위험마다, 집과 회사가 오늘 바로 할 수 있는 일입니다. 공식기관 지침(행정안전부 국민재난안전포털, 미국 Ready.gov 등)을 바탕으로 정리했습니다.", "kit": "우리 집 비상 키트 보기", "ctr": "재난 대비센터(맞춤 계획·계산기)", "biz": "회사 대비(사업 연속성) 상담", "c": [["war", "전쟁·무력충돌", ["가까운 민방위 대피소 위치를 미리 확인하세요(안전디딤돌 앱·국민재난안전포털).", "가족이 흩어졌을 때의 연락 방법과 모일 장소를 정해 두세요.", "신분증·여권 사본, 현금 일부, 상비약을 한 가방에 넣어 두세요."]], ["cyber", "대정전·사이버 공격", ["손전등·건전지·보조배터리·휴대용 라디오를 준비하세요.", "중요한 파일은 인터넷과 분리된 곳에 백업하세요.", "업무·금융 계정은 비밀번호를 바꾸고 2단계 인증을 켜세요."]], ["disaster", "지진·해일·화산", ["무거운 가구는 벽에 고정하고, 잠자리 옆에 신발과 손전등을 두세요.", "흔들림이 멈추면 엘리베이터 대신 계단으로 나가세요.", "바닷가에서 강한 흔들림을 느끼면 경보를 기다리지 말고 높은 곳으로 가세요."]], ["disaster", "태풍·홍수·산불", ["재난문자와 기상특보를 켜 두세요.", "지하 공간·하천변·저지대는 피하고, 배수구를 미리 치우세요.", "산불 때는 바람 반대 방향, 큰길 쪽으로 대피하세요."]], ["epidemic", "감염병", ["손 씻기와 마스크를 생활화하고, 증상이 있으면 외출을 줄이세요.", "상비약과 체온계를 준비하고, 질병관리청 공지를 확인하세요.", "재택근무·비대면 업무가 가능한지 미리 점검하세요."]], ["unrest", "경제위기·물가·식량", ["장기 보관 식품을 사서 먹은 만큼 다시 채우는 방식으로 1~2주분을 유지하세요.", "필수 지출과 비상금을 따로 정리해 두세요.", "원자재·물류 의존이 큰 회사는 대체 공급처를 한 곳 이상 확보하세요."]]], "base": "기본 72시간: 물은 한 사람 하루 약 4리터(미국 Ready.gov 기준) 최소 3일분, 조리 없이 먹을 수 있는 음식 3일분, 손전등·라디오·보조배터리·구급약·현금·신분증 사본."}, "en": {"h": "Prepare now — what to do today", "sub": "For each risk on the radar, what a household or company can do today. Based on official guidance (Korea's national disaster safety portal, US Ready.gov and others).", "kit": "See the home emergency kit", "ctr": "Disaster preparedness centre (plans, calculator)", "biz": "Business continuity consultation", "c": [["war", "War and armed conflict", ["Find your nearest public shelter in advance.", "Agree how your family will reach each other and where to meet if separated.", "Keep ID and passport copies, some cash and basic medicines in one bag."]], ["cyber", "Blackouts and cyberattacks", ["Keep a torch, batteries, a power bank and a portable radio.", "Back up important files somewhere disconnected from the internet.", "Change passwords on work and bank accounts and turn on two-step login."]], ["disaster", "Earthquake, tsunami, volcano", ["Fix heavy furniture to walls; keep shoes and a torch by the bed.", "When shaking stops, leave by the stairs, not the lift.", "On the coast, if you feel strong shaking, go to high ground without waiting for a warning."]], ["disaster", "Typhoon, flood, wildfire", ["Turn on emergency alerts and weather warnings.", "Avoid basements, riverbanks and low ground; clear drains in advance.", "In a wildfire, evacuate upwind towards wide roads."]], ["epidemic", "Epidemics", ["Wash hands, wear a mask and stay home when ill.", "Keep basic medicines and a thermometer; follow public-health notices.", "Check in advance that remote work is possible."]], ["unrest", "Economic crisis, prices, food", ["Keep 1–2 weeks of long-life food, eating and replacing it as you go.", "Separate essential spending and an emergency fund.", "Firms reliant on raw materials or shipping should line up at least one alternative supplier."]]], "base": "Basic 72 hours: about 4 litres of water per person per day (US Ready.gov) for at least 3 days, 3 days of food that needs no cooking, torch, radio, power bank, first-aid kit, cash and ID copies."}}
+
 UI = {
  "ko": dict(title="실시간 세계 상황판 — 전쟁·분쟁·재난·감염병·사이버 공격 · GOV RADAR", desc="세계지도 레이더 한 화면에 전쟁·무력분쟁·시위·자연재해·감염병·사이버 공격을 실시간으로 표시하고, 모든 항목을 한 페이지에 순서대로 정리했습니다.",
    live="실시간", h1="지금 세계에서 일어나는 일", sub="전쟁부터 재난·감염병·사이버 공격까지, 레이더가 도는 동안 한 화면에서 봅니다.",
@@ -172,6 +174,17 @@ a{color:inherit}
  .chips{position:relative;left:auto;right:auto;bottom:auto;padding:10px 16px 14px}.hint{display:none}.tick{position:relative}}
 @media (min-width:761px){.stage .mapbox{position:absolute;inset:0}}
 @media (prefers-reduced-motion:reduce){.run .sw{animation-duration:calc(var(--P)*2)}.tick .rl{animation:none}}
+
+.prep{background:#fff;border-bottom:1px solid var(--line);padding-block:56px}
+.prep h2{margin:0 0 8px;font-size:clamp(26px,3vw,38px);letter-spacing:-.02em;display:flex;align-items:center;gap:12px}.prep h2 i{width:12px;height:12px;border-radius:50%;background:#12805C;box-shadow:0 0 0 6px rgba(18,128,92,.15)}
+.prep .ps{color:var(--ink2);margin:0 0 22px;max-width:52em}
+.pg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.pc{border:1px solid var(--line);border-top:4px solid var(--c);border-radius:12px;padding:18px 20px;background:#fff;min-width:0}
+.pc h3{margin:0 0 8px;font-size:18px}.pc ol{margin:0;padding-inline-start:20px;font-size:15px;line-height:1.6}.pc li{margin:5px 0}
+.pbase{margin:18px 0 0;padding:16px 18px;background:#F1F8F4;border-radius:12px;font-size:15.5px}.pbase b{color:#12805C}
+.pacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.pacts a{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;text-decoration:none;border-radius:999px;padding:12px 20px;border:1.5px solid var(--ink);color:var(--ink)}.pacts a.p1{background:#12805C;border-color:#12805C;color:#fff}.pacts a.p3{background:var(--ink);color:#fff}
+.tl .pgo{display:inline-block;margin-top:14px;pointer-events:auto;background:#12805C;color:#fff;font-weight:700;font-size:15px;text-decoration:none;border-radius:999px;padding:11px 18px;box-shadow:0 6px 20px rgba(18,128,92,.45)}
+@media (max-width:1000px){.pg{grid-template-columns:1fr 1fr}}@media (max-width:640px){.pg{grid-template-columns:1fr}}
 /* ---- list ---- */
 .wrap{max-width:1180px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left)) max(16px,env(safe-area-inset-right))}
 .sec{padding-block:64px;border-bottom:1px solid var(--line)}
@@ -249,7 +262,7 @@ function sec(id,key,col,count,body,go){return '<section class="sec" id="'+id+'" 
 var GO=window.LIVE_GO;
 html+=sec("s-sum","sum",null,null,'<p class="lead">'+e(T(D.sum))+'</p>');
 html+='<section class="sec" id="s-brief" style="--c:#B7800F" hidden><div class="wrap"><h2><i></i>'+e(S.brief)+' <em id="bfw"></em></h2><p class="gl" id="bfm"></p><div class="cards" id="bfc"></div></div></section>';
-html+=sec("s-news","news","#FF3B4E",null,'<div data-newsbox="tabs:war,cyber,disaster,epidemic,prep" data-n="15"></div>');
+html+=sec("s-news","news","#FF3B4E",null,'<div data-newsbox="tabs:war,cyber,disaster,epidemic,prep" data-n="15" data-nohead></div>');
 html+=sec("s-hot","hot",COL.war,D.hot.length,'<div class="cards">'+D.hot.map(function(h,i){return '<article class="cd" id="hot-'+i+'" style="--c:'+(h.lv==="war"?COL.war:COL.conflict)+'"><h3>'+fl(h.iso)+' '+e(tx(h,""))+'</h3><p class="m"><span class="lvb">'+e(U.lv[h.lv]||h.lv)+'</span>'+e(tx(h,"s"))+'</p>'+(h.f.length?'<ul>'+h.f.map(function(f){return '<li>'+e(T(f))+'</li>'}).join("")+'</ul>':'')+'</article>'}).join("")+'</div>',GO.hot);
 html+=sec("s-all","all",COL.conflict,D.all.length,'<div class="tbl"><table><thead><tr><th>'+U.th.map(e).join("</th><th>")+'</th></tr></thead><tbody>'+D.all.map(function(c,i){var lc=c.lv==="war"?COL.war:COL.conflict;return '<tr id="all-'+i+'"><td><span class="lvb" style="--c:'+lc+'">'+e(U.lv[c.lv]||c.lv)+'</span>'+e(tx(c,""))+'<br><small>'+c.iso.map(fl).join(" ")+'</small></td><td class="n">'+e(c.st||"")+'</td><td class="n">'+e(c.d25||"–")+'</td><td class="n">'+e(c.d26||"–")+'</td></tr>'}).join("")+'</tbody></table></div>',GO.all);
 html+=sec("s-un","unrest",COL.unrest,D.un.length,'<div class="cards">'+D.un.map(function(u,i){return '<article class="cd" id="un-'+i+'" style="--c:'+COL.unrest+'"><h3>'+fl(u.iso)+' '+e(tx(u,""))+'</h3><p class="m">'+e(tx(u,"w"))+'</p><p>'+e(tx(u,"t"))+'</p></article>'}).join("")+'</div>',GO.unrest);
@@ -343,10 +356,16 @@ def page(L, D_js):
     u = UI[L]
     up = lambda k: "/hazards/" + ("" if L == "ko" else "?l=" + L) if k == "@hazards" else ("/cyber/" if L == "ko" else f"/cyber/{L}/") if k == "@cyber" else f"/{L}/{k}"
     go = {k: up(v) for k, v in GO.items()}
-    sub = [["#stage", u["live"]], ["#s-brief", u["S"]["brief"]], ["#s-news", u["S"]["news"]], ["#s-hot", u["S"]["hot"]], ["#s-all", u["S"]["all"]], ["#s-un", u["S"]["unrest"]], ["#s-feed", u["S"]["livefeed"]], ["#s-dis", u["S"]["dis"]],
+    sub = [["#stage", u["live"]], ["#s-prep", (PREP.get(L) or PREP["en"])["h"].split(" — ")[0]], ["#s-brief", u["S"]["brief"]], ["#s-news", u["S"]["news"]], ["#s-hot", u["S"]["hot"]], ["#s-all", u["S"]["all"]], ["#s-un", u["S"]["unrest"]], ["#s-feed", u["S"]["livefeed"]], ["#s-dis", u["S"]["dis"]],
            ["#s-epi", u["S"]["epi"]], ["#s-cy", u["S"]["cyber"]], ["#s-kinds", u["S"]["kinds"]], ["#s-ctry", u["S"]["ctry"]], ["#s-stat", u["S"]["stat"]], ["#s-src", u["S"]["src"]]]
-    alts = "".join(f'<link rel="alternate" hreflang="{l}" href="https://radar.wmm-hoa.com/live/{"" if l == "ko" else l + "/"}">' for l in LANGS)
     esc = lambda s: s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;")
+    PR = PREP.get(L) or PREP["en"]
+    COLP = {"war": "#FF3B4E", "cyber": "#B78CFF", "disaster": "#3FD0FF", "epidemic": "#3FE08A", "unrest": "#FFB238"}
+    lk = "/ko/" if L == "ko" else f"/{L}/"
+    prep_html = (f'<section class="prep" id="s-prep"><div class="wrap"><h2><i></i>{esc(PR["h"])}</h2><p class="ps">{esc(PR["sub"])}</p><div class="pg">'
+                 + "".join(f'<article class="pc" style="--c:{COLP[c[0]]}"><h3>{esc(c[1])}</h3><ol>' + "".join(f"<li>{esc(x)}</li>" for x in c[2]) + "</ol></article>" for c in PR["c"])
+                 + f'</div><p class="pbase"><b>✓</b> {esc(PR["base"])}</p><div class="pacts"><a class="p1" href="{lk}prepare/">{esc(PR["kit"])} →</a><a href="{lk}ready/">{esc(PR["ctr"])} →</a><a class="p3" href="{lk}?stay=1#solutions">{esc(PR["biz"])} →</a></div></div></section>')
+    alts = "".join(f'<link rel="alternate" hreflang="{l}" href="https://radar.wmm-hoa.com/live/{"" if l == "ko" else l + "/"}">' for l in LANGS)
     return f"""<!doctype html><html lang="{L}" dir="{'rtl' if L == 'ar' else 'ltr'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{esc(u['title'])}</title><meta name="description" content="{esc(u['desc'])}">{alts}
 <link rel="canonical" href="https://radar.wmm-hoa.com/live/{'' if L == 'ko' else L + '/'}"><meta property="og:image" content="https://radar.wmm-hoa.com/assets/og.jpg">
@@ -355,12 +374,12 @@ def page(L, D_js):
 <script>window.GVH_LANG_URL=function(l){{return l==="ko"?"/live/":"/live/"+l+"/"}};window.GVH_SUB=function(){{return {json.dumps(sub, ensure_ascii=False)}}};</script><script src="/assets/gvhdr.js" data-l="{L}" data-g="world" data-a="live"></script>
 <main>
 <section class="stage" id="stage" aria-label="{esc(u['h1'])}"><div class="mapbox" id="mapbox"><svg class="map" id="map" aria-hidden="true"></svg><div class="sw" id="sw"></div><svg class="pts" id="pts" role="img" aria-label="{esc(u['h1'])}"></svg><div class="tip" id="tip"></div></div>
-<div class="hud tl"><span class="lv"><i></i>{esc(u['live'])} · GOV RADAR</span><h1>{esc(u['h1'])}</h1><p>{esc(u['sub'])}</p></div>
+<div class="hud tl"><span class="lv"><i></i>{esc(u['live'])} · GOV RADAR</span><h1>{esc(u['h1'])}</h1><p>{esc(u['sub'])}</p><a class="pgo" href="#s-prep">{esc(PR['h'].split(' — ')[0])} ↓</a></div>
 <div class="hud tr"><span>{u['utc']}</span><b id="cu">--:--:--</b><span>{esc(u['kst'])}</span><b id="ck">--:--:--</b><div class="u">{esc(u['upd'])} <span id="upd"></span></div></div>
 <div class="hud chips" id="chips"></div><div class="hud hint">{esc(u['tap'])}</div>
 <div class="hud tick"><span class="tg">{esc(u['live'])}</span><div class="rl" id="rl"></div></div>
 </section>
-<div id="list"></div>
+{prep_html}<div id="list"></div>
 </main>
 <script>window.LIVE_UI={json.dumps(u, ensure_ascii=False)};window.LIVE_GO={json.dumps(go)};</script>
 <script src="/map/d3.min.js"></script><script src="/map/topojson.min.js"></script><script src="/hazards/hzfx.js"></script><script src="/hazards/hzfx2.js"></script>
