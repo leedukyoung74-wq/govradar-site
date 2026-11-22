@@ -1,10 +1,10 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOV RADAR widget</title>
+<!doctype html><html><head><link rel="icon" type="image/png" sizes="32x32" href="/assets/gr-icon-32.png"><link rel="icon" type="image/png" sizes="256x256" href="/assets/gr-icon-512.png"><link rel="apple-touch-icon" href="/assets/gr-icon-180.png"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOV RADAR widget</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"><style>
 body{margin:0;font-family:"NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;background:#0a0a0a;color:#f2f2ef}
 header{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #2b2b2a}header img{height:30px}header a{margin-left:auto;color:#f2f2ef;font-size:12px}
 ul{list-style:none;margin:0;padding:6px 0}li a{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;color:#f2f2ef;text-decoration:none;border-bottom:1px solid #1d1d1c}li a:hover{background:#151515}
 .fi{width:1.4em;line-height:1em;margin-top:3px;flex:none}small{display:block;color:#9a9a96;font-size:12px}b.t{font-size:14px}
-</style></head><body><header><img src="/assets/logo-h.webp" alt="GOV RADAR" style="width:auto;height:30px;filter:none"><a id="more" href="/" target="_blank" rel="noopener">→</a></header><p id="source-disclaimer" role="note" style="margin:12px 14px;color:#e8c78f;font-size:12px"></p><ul id="l"></ul>
+</style><script src="/assets/flagfix.js" defer></script></head><body><header><img src="/assets/logo-h.webp" alt="GOV RADAR" style="width:auto;height:30px;filter:none"><a id="more" href="/" target="_blank" rel="noopener">→</a></header><p id="source-disclaimer" role="note" style="margin:12px 14px;color:#e8c78f;font-size:12px"></p><ul id="l"></ul>
 <script>
 const p=new URLSearchParams(location.search),L=p.get("lang")||"ko",ind=p.get("industry"),iso=(p.get("iso")||"").toUpperCase();
 document.getElementById("more").href="/"+L+"/";
