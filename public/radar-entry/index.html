@@ -9,7 +9,18 @@
   <link rel="stylesheet" href="/radar-entry/entry.css">
   <script src="/radar-entry/motion.js" defer></script>
 </head>
-<body>
+<body><!-- WMM four doors bar (2026-11-22) -->
+<style>
+.wmm-db{position:relative;z-index:9999;display:flex;align-items:center;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;height:40px;padding:0 max(16px,env(safe-area-inset-left,0px));background:#fff;border-bottom:1px solid #E3E7ED;font:500 13.5px/1 "NEXONLv1","NexonLv1","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color:#4A5568}
+.wmm-db::-webkit-scrollbar{display:none}
+.wmm-db a{color:#4A5568;text-decoration:none;white-space:nowrap;padding:7px 10px;border-radius:999px}
+.wmm-db a:hover{color:#0B1526;background:#F2F4F7}
+.wmm-db a.on{color:#fff;background:#0B1526}
+.wmm-db .home{font-weight:700;color:#0B1526;margin-right:6px}
+.wmm-db i{font-style:normal;color:#C8901A;margin-right:4px}
+</style>
+<nav class="wmm-db" aria-label="WMM 네 개의 문"><a class="home" href="/">WMM · 네 개의 문</a><a href="https://radar.wmm-hoa.com/playground/"><i>1</i>시험하기 · PLAYGROUND</a><a href="https://radar.wmm-hoa.com/map/"><i>2</i>확인하기 · GOV RADAR</a><a href="/home.html"><i>3</i>실행하기 · WMM 한 팀</a><a href="/membership/"><i>4</i>나누기 · 멤버십·World Miracles Makers</a></nav>
+<!--wmm-path-->
   <header>
     <a href="/#gov-radar">← WMM 홈페이지</a>
     <a href="/radar-entry/en/" lang="en" hreflang="en">English</a>
