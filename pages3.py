@@ -1156,6 +1156,12 @@ CI = {
  "vi": ["Gói thầu và trao thầu tại quốc gia này", "Cập nhật hằng ngày. Gói thầu đang mở lấy từ Ngân hàng Thế giới, TED của EU và Find a Tender của Anh; dự án trước đấu thầu và trao thầu lấy từ Ngân hàng Thế giới.", "Gói thầu đang mở", "Dự án trước đấu thầu", "Trao thầu gần đây", "do doanh nghiệp địa phương thắng", "Dự án sắp mời thầu (chờ Ngân hàng Thế giới phê duyệt)", "Trao thầu gần đây — ai thắng, giá bao nhiêu", "Hạn", "Chưa có dữ liệu cho quốc gia này. Xem các nước lân cận trên bảng thầu.", "Xem tất cả tại trung tâm thắng thầu", "Xem xét mức phù hợp cho một thông báo ở đây (₩100.000)", "Nguồn: API Ngân hàng Thế giới · TED của EU · Find a Tender của Anh · cập nhật", "Quy mô là tổng vốn dự án của Ngân hàng Thế giới, không phải một gói thầu.", "Doanh nghiệp Hàn Quốc", "Dự án Ngân hàng Thế giới đang triển khai", "Dự án đang triển khai (lớn nhất trước)", "kết thúc"],
  "id": ["Tender dan pemenang di negara ini", "Diperbarui setiap hari. Tender terbuka berasal dari Bank Dunia, TED Uni Eropa, dan Find a Tender Inggris; proyek pra-tender dan pemenang dari Bank Dunia.", "Tender terbuka", "Proyek pra-tender", "Pemenang terbaru", "dimenangkan perusahaan lokal", "Proyek yang segera ditenderkan (menunggu persetujuan Bank Dunia)", "Pemenang terbaru — siapa dan berapa nilainya", "Tutup", "Belum ada data untuk negara ini. Lihat negara tetangga di papan tender.", "Lihat semua di pusat memenangkan tender", "Tinjauan kesesuaian untuk pengumuman di sini (₩100.000)", "Sumber: API Bank Dunia · TED Uni Eropa · Find a Tender Inggris · diperbarui", "Nilai adalah total proyek Bank Dunia, bukan satu tender.", "Perusahaan Korea", "Proyek Bank Dunia yang berjalan", "Proyek berjalan (terbesar dulu)", "berakhir"],
 }
+def _cty_fetch(iso):
+    """data 브랜치에 이 나라 파일이 있을 때만 불러옴 — 없는 나라에서 404 오류가 나던 문제 (2026-11-22 전수 점검)."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    if os.path.exists(os.path.join(here, "data_branch", "feeds", "cty", f"{iso}.json")):
+        return 'fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/cty/' + iso + '.json",{cache:"no-store"})'
+    return "Promise.resolve({ok:false})"
 def cty_intel(iso, L):
     s = CI.get(L) or CI["en"]; S = _json.dumps(s, ensure_ascii=False)
     return f'''<section class="ci" id="tender-intel" data-iso="{iso}"><h2>{s[0]}</h2><p class="note">{s[1]}</p>
@@ -1167,7 +1173,7 @@ def cty_intel(iso, L):
 function E(x){{return String(x==null?"":x).replace(/[&<>"]/g,function(c){{return{{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}}[c]}})}}
 function U(v){{v=+v||0;return v>=1e9?"US$"+(v/1e9).toFixed(1)+"bn":v>=1e6?"US$"+(v/1e6).toFixed(1)+"M":v>0?"US$"+Math.round(v/1e3)+"k":""}}
 function $(i){{return document.getElementById(i)}}
-fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/cty/{iso}.json",{{cache:"no-store"}}).then(function(r){{if(!r.ok)throw 0;return r.json()}}).then(function(d){{
+{_cty_fetch(iso)}.then(function(r){{if(!r.ok)throw 0;return r.json()}}).then(function(d){{
 $("ci-t").textContent=d.t.n;$("ci-p").textContent=d.p.n;$("ci-a").textContent=d.a.n;
 if(d.p.usd)$("ci-pu").textContent=U(d.p.usd);var v=d.v||{{n:0,usd:0,items:[]}};$("ci-v").textContent=v.n;if(v.usd)$("ci-vu").textContent=U(v.usd);
 $("ci-vl").innerHTML=v.items.length?v.items.map(function(x){{return'<li dir="auto"><a href="'+E(x.url)+'" target="_blank" rel="noopener">'+E(x.title)+'</a><small>'+U(x.usd)+(x.close&&x.close>=new Date().toISOString().slice(0,10)?" · "+S[17]+" "+E(x.close):"")+(x.sec&&x.sec.length?" · "+E(x.sec.join(", ")):"")+'</small></li>'}}).join(""):'<li>—</li>';

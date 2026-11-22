@@ -9,7 +9,8 @@ git clone -q --depth 1 -b src $G site
 git clone -q --depth 1 -b data $G site/data_branch
 cd site && python3 tools/feed_tenders.py
 python3 tools/feed_official.py || echo "공식 상황 수집 일부 실패(이전 자료 유지)"
-cd data_branch && git add feeds hz/official.json
+python3 tools/hz_disasters.py || echo "상황판 재해 갱신 실패(이전 자료 유지)"
+cd data_branch && git add feeds hz/official.json hz/hazards.json
 if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
 git -c user.name="GOV RADAR bot" -c user.email="73036396@naver.com" commit -qm "Tender + official situation feed $(date +%F)"
 git push -q origin HEAD:data && echo "입찰 자동 수집 게시 완료"
