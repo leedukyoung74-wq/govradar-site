@@ -40,6 +40,9 @@ jobs:
       - name: Official situation feed (USGS, GDACS, NASA EONET, WHO, NASA JPL, NOAA) — no AI
         if: inputs.task == 'daily'
         run: python tools/feed_official.py || echo "official feed partly failed; failed agencies keep their last good items"
+      - name: Situation board disasters from the official feed (no AI) — keeps the editorial summary as is
+        if: inputs.task == 'daily'
+        run: python tools/hz_disasters.py || echo "situation board refresh failed; keeping the last board"
       - name: Country economy feed (World Bank indicators, exchange rates) — no AI
         if: inputs.task == 'daily'
         run: python tools/feed_econ.py || echo "economy feed failed; keeping the last good values"
@@ -74,7 +77,7 @@ jobs:
           # Both the six-agency daily snapshot and tenders must reach data/.
           # If the fast USGS updater wrote concurrently, merge by source freshness,
           # NOT by overwriting or discarding other agencies' data.
-          git add feeds hz/official.json
+          git add feeds hz/official.json hz/hazards.json
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           collected_official="$(mktemp)"
           trap 'rm -f "$collected_official"' EXIT
@@ -94,7 +97,7 @@ jobs:
             python ../tools/merge_official_sources.py hz/official.json "$collected_official"
             # Run the strict gate again against the NEW remote base before retrying.
             python ../tools/quality_gate.py .
-            git add feeds hz/official.json
+            git add feeds hz/official.json hz/hazards.json
             if git diff --cached --quiet; then echo "already published"; exit 0; fi
             git commit -m "Feed ${{ inputs.task }} reconciled $(date -u +%FT%H:%MZ)"
           done
