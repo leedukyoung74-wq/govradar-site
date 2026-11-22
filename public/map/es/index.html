@@ -81,6 +81,41 @@ a{color:inherit}button,select{font:inherit;color:inherit}
  .dh{padding:22px 20px 14px}.kpis{margin:0 20px}.sec{padding:22px 20px 4px}.full{margin:24px 20px 10px}.full2{margin:0 20px 32px}.dh h1{font-size:28px}
  .legend{display:none}
 }
+
+/* --- 담기·요청함·안내 (2026-11-22) --- */
+.howto{position:absolute;top:84px;left:max(24px,env(safe-area-inset-left,0px));z-index:8;width:min(360px,calc(100% - 48px));background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px 16px;box-shadow:0 14px 34px rgba(11,21,38,.10)}
+[dir=rtl] .howto{left:auto;right:max(24px,env(safe-area-inset-right,0px))}
+.howto h2{margin:0 0 8px;font-size:17px;font-weight:700}
+.howto ol{margin:0 0 12px;padding-inline-start:20px;color:var(--ink2);font-size:14.5px}
+.howto ol li{margin:3px 0}
+.howto .tops{border-top:1px solid var(--line);padding-top:10px}
+.howto .tops b{display:block;font-size:13px;color:var(--ink3);font-weight:400;margin-bottom:6px}
+.howto .tops button{display:flex;justify-content:space-between;width:100%;background:none;border:0;padding:6px 0;cursor:pointer;font-size:14.5px;text-align:start}
+.howto .tops button:hover{color:var(--gold)}
+.howto .tops span.n{color:var(--gold);font-weight:700}
+.howto .x2{position:absolute;top:10px;right:12px;background:none;border:0;font-size:18px;cursor:pointer;color:var(--ink3)}
+[dir=rtl] .howto .x2{right:auto;left:12px}
+.bk-btn{position:relative;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer;white-space:nowrap}
+.bk-btn b{display:inline-block;min-width:20px;margin-inline-start:6px;background:#F2C063;color:#0B1526;border-radius:999px;padding:0 6px;font-size:12.5px}
+.add{float:inline-end;margin-inline-start:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:13px;cursor:pointer;color:var(--ink)}
+.add.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.addc{display:block;margin:20px 32px 0;width:calc(100% - 64px);padding:13px;border-radius:999px;border:1.5px solid var(--ink);background:#fff;font-weight:700;cursor:pointer}
+.addc.on{background:var(--ink);color:#fff}
+.basket{position:fixed;inset:0;z-index:60;background:rgba(11,21,38,.35);display:flex;justify-content:flex-end}
+.bk{width:min(520px,100%);height:100%;background:#fff;overflow-y:auto;padding:28px 32px calc(28px + env(safe-area-inset-bottom,0px))}
+.bk h2{margin:0 0 4px;font-size:26px}.bk .lead{color:var(--ink2);margin:0 0 18px;font-size:15px}
+.bk .grp{margin:0 0 14px}.bk .grp h3{margin:0 0 6px;font-size:16px}
+.bk .grp li{list-style:none;display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
+.bk .grp ul{margin:0;padding:0}
+.bk .rm{background:none;border:0;color:var(--ink3);cursor:pointer;font-size:13px;white-space:nowrap}
+.bk form{margin-top:18px;border-top:2px solid var(--ink);padding-top:18px;display:grid;gap:10px}
+.bk label{display:grid;gap:4px;font-size:14px;color:var(--ink2)}
+.bk input,.bk textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+.bk .chk{display:flex;gap:8px;align-items:flex-start;font-size:13.5px}
+.bk .send{background:var(--ink);color:#fff;border:0;border-radius:999px;padding:14px;font-weight:700;font-size:16px;cursor:pointer}
+.bk .x3{float:inline-end;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;cursor:pointer;font-size:20px}
+.bk .muted{font-size:13px}
+@media (max-width:640px){.howto{top:auto;bottom:calc(12px + env(safe-area-inset-bottom,0px));left:12px;right:12px;width:auto}.bk{padding:22px 18px}.addc{margin:18px 20px 0;width:calc(100% - 40px)}.bk-btn{padding:7px 12px}}
 </style>
 </head>
 <body>
@@ -91,6 +126,7 @@ a{color:inherit}button,select{font:inherit;color:inherit}
   <div class="seg" role="group"><button data-m="opp" aria-pressed="true" id="m1"></button><button data-m="risk" aria-pressed="false" id="m2"></button></div>
   <nav class="nav" id="nav"></nav>
   <select class="lang desk-lang" id="lang" aria-label="Language"></select>
+  <button class="bk-btn" id="bkBtn" type="button"></button>
   <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false">☰</button>
 </header>
 <div class="sheet" id="sheet" hidden></div>
@@ -99,6 +135,8 @@ a{color:inherit}button,select{font:inherit;color:inherit}
 <div class="legend" id="legend"></div>
 <div class="hint" id="hint"></div>
 <aside class="drawer" id="drawer" aria-live="polite"></aside>
+<section class="howto" id="howto" hidden></section>
+<div class="basket" id="basket" hidden><div class="bk" id="bk" role="dialog" aria-modal="true"></div></div>
 <script src="/map/d3.min.js"></script>
 <script src="/map/topojson.min.js"></script>
 <script>
@@ -113,6 +151,16 @@ ar:{q:"ابحث عن دولة",m1:"الفرص",m2:"المخاطر",hint:"اضغ�
 vi:{q:"Tìm quốc gia",m1:"Cơ hội",m2:"Rủi ro",hint:"Chạm vào một quốc gia · <b>{n}</b> gói thầu đang mở",lgO:"Gói thầu đang mở",lgR:"Mức rủi ro",few:"ít",many:"nhiều",low:"thấp",high:"cao",agenda:"Chương trình của chính phủ",needs:"Nhu cầu",biz:"Kinh doanh triển vọng",tenders:"Gói thầu",proj:"Dự án lớn",risk:"Rủi ro",src:"Nguồn",kO:"Cơ hội",kT:"Thầu đang mở",kU:"Cập nhật",none:"Hiện chưa có gói thầu mở.",more:"Thêm {n} gói dành cho hội viên.",full:"Trang đầy đủ của quốc gia",join:"Xem tất cả với tư cách hội viên",sum:"Tóm tắt",war:"Chiến tranh",tension:"Căng thẳng",watch:"Theo dõi",rl:{low:"Thấp",medium:"Trung bình",high:"Cao"},closed:"đã đóng",nav:[["Toàn bộ trang","/vi/?stay=1"],["Bảng giá","/vi/pricing/?stay=1"],["Đăng nhập","/vi/?auth=login"]]},
 id:{q:"Cari negara",m1:"Peluang",m2:"Risiko",hint:"Ketuk negara · <b>{n}</b> tender terbuka",lgO:"Tender terbuka",lgR:"Tingkat risiko",few:"sedikit",many:"banyak",low:"rendah",high:"tinggi",agenda:"Agenda pemerintah",needs:"Yang dibutuhkan",biz:"Bisnis menjanjikan",tenders:"Tender",proj:"Proyek besar",risk:"Risiko",src:"Sumber",kO:"Peluang",kT:"Tender terbuka",kU:"Diperbarui",none:"Belum ada tender terbuka.",more:"{n} lainnya untuk anggota.",full:"Halaman lengkap negara",join:"Lihat semua sebagai anggota",sum:"Ringkasan",war:"Perang",tension:"Ketegangan",watch:"Pantauan",rl:{low:"Rendah",medium:"Sedang",high:"Tinggi"},closed:"ditutup",nav:[["Situs lengkap","/id/?stay=1"],["Harga","/id/pricing/?stay=1"],["Masuk","/id/?auth=login"]]}
 };
+
+var X2={
+ko:{bk:"요청함",how:"GOV RADAR 쓰는 법",h1:"지도에서 나라를 누르세요",h2:"필요한 입찰·사업을 <b>+ 담기</b>",h3:"요청함에서 한 번에 상담 요청 (무료 회신)",tops:"지금 열린 입찰이 많은 나라",add:"+ 담기",added:"✓ 담음",addc:"+ 이 나라 진출 검토 요청 담기",addcd:"✓ 이 나라 검토 요청 담음",bkT:"내 요청함",bkL:"담은 내용을 한 번에 보내면 WMM이 1영업일 안에 무엇을, 어떻게, 얼마에 할 수 있는지 회신합니다.",empty:"아직 담은 것이 없습니다. 나라를 눌러 입찰이나 사업을 담아 보세요.",rm:"빼기",org:"회사·기관명",nm:"담당자 이름",em:"업무용 이메일",fd:"분야 (예: IT, 에너지, 보건)",nd:"더 알리고 싶은 내용",pv:"개인정보 처리방침에 동의합니다 (필수)",send:"담은 내용으로 상담 요청",cty:"나라 검토",note:"회원 월 20,000원(VAT 별도) · 그 밖의 일은 상담 후 견적"},
+en:{bk:"Requests",how:"How GOV RADAR works",h1:"Tap a country on the map",h2:"<b>+ Add</b> the tenders and projects you need",h3:"Send them in one request (free reply)",tops:"Most open tenders now",add:"+ Add",added:"✓ Added",addc:"+ Add a market-entry review for this country",addcd:"✓ Country review added",bkT:"My requests",bkL:"Send everything you added at once. WMM replies within one business day with what we can do, how and at what cost.",empty:"Nothing added yet. Tap a country and add tenders or projects.",rm:"Remove",org:"Company or organisation",nm:"Your name",em:"Work email",fd:"Field (e.g. IT, energy, health)",nd:"Anything else we should know",pv:"I agree to the privacy policy (required)",send:"Send my request",cty:"Country review",note:"Membership ₩20,000/month (VAT excl.) · other work by quote"},
+es:{bk:"Solicitudes",how:"Cómo funciona GOV RADAR",h1:"Toque un país en el mapa",h2:"<b>+ Añada</b> las licitaciones y proyectos que necesita",h3:"Envíelos en una sola solicitud (respuesta gratuita)",tops:"Más licitaciones abiertas ahora",add:"+ Añadir",added:"✓ Añadido",addc:"+ Añadir revisión de entrada a este país",addcd:"✓ Revisión del país añadida",bkT:"Mis solicitudes",bkL:"Envíe todo lo añadido de una vez. WMM responde en un día hábil con qué, cómo y a qué coste.",empty:"Aún no ha añadido nada. Toque un país y añada licitaciones o proyectos.",rm:"Quitar",org:"Empresa u organización",nm:"Su nombre",em:"Correo de trabajo",fd:"Sector (p. ej. TI, energía, salud)",nd:"Algo más que debamos saber",pv:"Acepto la política de privacidad (obligatorio)",send:"Enviar mi solicitud",cty:"Revisión del país",note:"Membresía ₩20.000/mes (sin IVA) · lo demás según presupuesto"},
+fr:{bk:"Demandes",how:"Comment fonctionne GOV RADAR",h1:"Touchez un pays sur la carte",h2:"<b>+ Ajoutez</b> les appels d'offres et projets utiles",h3:"Envoyez-les en une seule demande (réponse gratuite)",tops:"Le plus d'appels ouverts",add:"+ Ajouter",added:"✓ Ajouté",addc:"+ Ajouter une étude d'entrée sur ce pays",addcd:"✓ Étude du pays ajoutée",bkT:"Mes demandes",bkL:"Envoyez tout en une fois. WMM répond sous un jour ouvré : quoi, comment et à quel coût.",empty:"Rien d'ajouté pour l'instant. Touchez un pays et ajoutez des appels d'offres ou des projets.",rm:"Retirer",org:"Entreprise ou organisme",nm:"Votre nom",em:"E-mail professionnel",fd:"Secteur (ex. IT, énergie, santé)",nd:"Autre chose à nous dire",pv:"J'accepte la politique de confidentialité (obligatoire)",send:"Envoyer ma demande",cty:"Étude pays",note:"Adhésion 20 000 ₩/mois (hors TVA) · le reste sur devis"},
+ar:{bk:"الطلبات",how:"كيف يعمل GOV RADAR",h1:"اضغط على دولة في الخريطة",h2:"<b>+ أضف</b> المناقصات والمشاريع التي تحتاجها",h3:"أرسلها في طلب واحد (رد مجاني)",tops:"أكثر الدول مناقصات مفتوحة الآن",add:"+ أضف",added:"✓ أضيف",addc:"+ أضف طلب دراسة دخول هذه الدولة",addcd:"✓ أضيفت دراسة الدولة",bkT:"طلباتي",bkL:"أرسل كل ما أضفته مرة واحدة. تردّ WMM خلال يوم عمل بما يمكن فعله وكيف وبأي تكلفة.",empty:"لم تُضف شيئًا بعد. اضغط على دولة وأضف مناقصات أو مشاريع.",rm:"إزالة",org:"الشركة أو الجهة",nm:"الاسم",em:"البريد الإلكتروني للعمل",fd:"المجال (مثل التقنية، الطاقة، الصحة)",nd:"أي شيء آخر نود معرفته",pv:"أوافق على سياسة الخصوصية (إلزامي)",send:"أرسل طلبي",cty:"دراسة الدولة",note:"العضوية 20,000 وون شهريًا (دون الضريبة) · غير ذلك حسب عرض السعر"},
+vi:{bk:"Yêu cầu",how:"Cách dùng GOV RADAR",h1:"Chạm vào một quốc gia trên bản đồ",h2:"<b>+ Thêm</b> các gói thầu, dự án bạn cần",h3:"Gửi tất cả trong một yêu cầu (phản hồi miễn phí)",tops:"Nhiều gói thầu mở nhất",add:"+ Thêm",added:"✓ Đã thêm",addc:"+ Thêm yêu cầu đánh giá thâm nhập quốc gia này",addcd:"✓ Đã thêm đánh giá quốc gia",bkT:"Yêu cầu của tôi",bkL:"Gửi tất cả một lần. WMM trả lời trong một ngày làm việc: làm gì, làm thế nào và chi phí.",empty:"Chưa có mục nào. Chạm vào một quốc gia và thêm gói thầu hoặc dự án.",rm:"Bỏ",org:"Công ty hoặc tổ chức",nm:"Họ tên",em:"Email công việc",fd:"Lĩnh vực (VD: CNTT, năng lượng, y tế)",nd:"Thông tin thêm",pv:"Tôi đồng ý với chính sách bảo mật (bắt buộc)",send:"Gửi yêu cầu",cty:"Đánh giá quốc gia",note:"Hội viên ₩20.000/tháng (chưa VAT) · việc khác theo báo giá"},
+id:{bk:"Permintaan",how:"Cara memakai GOV RADAR",h1:"Ketuk negara di peta",h2:"<b>+ Tambahkan</b> tender dan proyek yang Anda perlukan",h3:"Kirim semuanya dalam satu permintaan (balasan gratis)",tops:"Tender terbuka terbanyak saat ini",add:"+ Tambah",added:"✓ Ditambahkan",addc:"+ Tambah kajian masuk pasar negara ini",addcd:"✓ Kajian negara ditambahkan",bkT:"Permintaan saya",bkL:"Kirim semuanya sekaligus. WMM membalas dalam satu hari kerja: apa, bagaimana dan berapa biayanya.",empty:"Belum ada yang ditambahkan. Ketuk negara lalu tambahkan tender atau proyek.",rm:"Hapus",org:"Perusahaan atau lembaga",nm:"Nama Anda",em:"Email kerja",fd:"Bidang (mis. TI, energi, kesehatan)",nd:"Hal lain yang perlu kami ketahui",pv:"Saya setuju dengan kebijakan privasi (wajib)",send:"Kirim permintaan saya",cty:"Kajian negara",note:"Keanggotaan ₩20.000/bulan (belum PPN) · lainnya sesuai penawaran"}};
+Object.keys(X2).forEach(function(l){if(T[l])for(var k in X2[l])T[l][k]=X2[l][k]});
 if(!T[L])L="en";
 var t=function(k){return T[L][k]},D={},X={},W=null,mode="opp",sel=null,TODAY=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -138,8 +186,43 @@ var reqs=[fetch("/map/countries.json").then(function(r){return r.json()}),fetch(
 if(L!=="ko"&&L!=="en")reqs.push(fetch("/map/i18n-"+L+".json").then(function(r){return r.json()}).catch(function(){return{}}));
 Promise.all(reqs).then(function(a){D=a[0];X=a[2]||{};W=topojson.feature(a[1],a[1].objects.countries);
   var tn=0;Object.keys(D).forEach(function(k){tn+=nOpen(D[k])});document.getElementById("hint").innerHTML=t("hint").replace("{n}",tn);
-  build();var h=(location.hash||"").replace("#","").toUpperCase();if(D[h])showCountry(h);
+  build();howto();var h=(location.hash||"").replace("#","").toUpperCase();if(D[h])showCountry(h);
 });
+
+// ---- 요청함 (localStorage) ----
+var BK=[];try{BK=JSON.parse(localStorage.getItem("gr.basket")||"[]")}catch(e){BK=[]}
+function bkSave(){try{localStorage.setItem("gr.basket",JSON.stringify(BK))}catch(e){}bkBtn()}
+function bkHas(id){return BK.some(function(x){return x.id===id})}
+function bkToggle(it){var i=BK.findIndex(function(x){return x.id===it.id});if(i>=0)BK.splice(i,1);else BK.push(it);bkSave()}
+function bkBtn(){document.getElementById("bkBtn").innerHTML=esc(t("bk"))+"<b>"+BK.length+"</b>"}
+bkBtn();
+document.getElementById("bkBtn").onclick=openBasket;
+function openBasket(){
+  var by={};BK.forEach(function(x){(by[x.iso]=by[x.iso]||[]).push(x)});
+  var h='<button class="x3" id="bkx" aria-label="close">×</button><h2>'+esc(t("bkT"))+'</h2><p class="lead">'+esc(t("bkL"))+'</p>';
+  if(!BK.length)h+='<p class="muted">'+esc(t("empty"))+'</p>';
+  Object.keys(by).forEach(function(i){h+='<div class="grp"><h3>'+flag(i)+' '+esc(nm(i))+'</h3><ul>'+by[i].map(function(x){return'<li><span>'+esc(x.k==="c"?t("cty"):x.t)+(x.d?' <span class="muted">· '+esc(md(x.d))+'</span>':'')+'</span><button class="rm" data-id="'+esc(x.id)+'">'+esc(t("rm"))+'</button></li>'}).join("")+'</ul></div>'});
+  var need=BK.map(function(x){return"["+(D[x.iso]?D[x.iso].n.en:x.iso)+"] "+(x.k==="c"?"Country review":x.t)+(x.d?" (due "+x.d+")":"")+(x.u?" "+x.u:"")}).join("\n");
+  var ctys=Object.keys(by).map(function(i){return D[i]?D[i].n.en:i}).join(", ");
+  h+='<form method="POST" action="/nfform?next=/'+L+'/thanks/" id="bkf"><input type="hidden" name="form-name" value="order"><p hidden><input name="hp"></p><input type="hidden" name="lang" value="'+L+'"><input type="hidden" name="product" value="partner"><input type="hidden" name="countries" value="'+esc(ctys||"-")+'">'
+   +'<label>'+esc(t("org"))+'<input name="org" required></label><label>'+esc(t("nm"))+'<input name="name" required></label><label>'+esc(t("em"))+'<input name="email" type="email" required></label><label>'+esc(t("fd"))+'<input name="field"></label>'
+   +'<label>'+esc(t("nd"))+'<textarea name="need" rows="5" maxlength="2000" id="bkneed"></textarea></label>'
+   +'<label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> <span><a href="/'+L+'/legal/privacy/?stay=1" target="_blank">'+esc(t("pv"))+'</a></span></label>'
+   +'<button class="send" type="submit">'+esc(t("send"))+'</button><p class="muted">'+esc(t("note"))+' · 73036396@naver.com</p></form>';
+  var bk=document.getElementById("bk");bk.innerHTML=h;document.getElementById("basket").hidden=false;
+  document.getElementById("bkx").onclick=closeBasket;
+  bk.querySelectorAll(".rm").forEach(function(b){b.onclick=function(){BK=BK.filter(function(x){return x.id!==b.dataset.id});bkSave();openBasket();if(sel)showCountry(sel,true)}});
+  document.getElementById("bkf").onsubmit=function(){var ta=document.getElementById("bkneed");ta.value=(need?need+"\n\n":"")+ta.value;try{localStorage.removeItem("gr.basket")}catch(e){}};
+}
+function closeBasket(){document.getElementById("basket").hidden=true}
+document.getElementById("basket").addEventListener("click",function(e){if(e.target.id==="basket")closeBasket()});
+// ---- 안내 + 추천 나라 ----
+function howto(){var hw=document.getElementById("howto");try{if(localStorage.getItem("gr.howto")==="0"){hw.hidden=true;return}}catch(e){}
+  var top=Object.keys(D).filter(function(k){return nOpen(D[k])>0}).sort(function(a,b){return nOpen(D[b])-nOpen(D[a])}).slice(0,5);
+  hw.innerHTML='<button class="x2" id="hwx" aria-label="close">×</button><h2>'+esc(t("how"))+'</h2><ol><li>'+esc(t("h1"))+'</li><li>'+t("h2")+'</li><li>'+esc(t("h3"))+'</li></ol><div class="tops"><b>'+esc(t("tops"))+'</b>'+top.map(function(k){return'<button data-k="'+k+'"><span>'+flag(k)+' '+esc(nm(k))+'</span><span class="n">'+nOpen(D[k])+'</span></button>'}).join("")+'</div>';
+  hw.hidden=false;hw.querySelectorAll(".tops button").forEach(function(b){b.onclick=function(){showCountry(b.dataset.k)}});
+  document.getElementById("hwx").onclick=function(){hw.hidden=true;try{localStorage.setItem("gr.howto","0")}catch(e){}};
+}
 var svg,g,proj,path,zoom;
 function build(){
   svg=d3.select("#map");g=svg.append("g");var el=document.getElementById("map"),w=el.clientWidth,h=el.clientHeight;
@@ -165,20 +248,22 @@ function zoomTo(i){var f=W.features.find(function(x){return x.id===i});if(!f)ret
   var narrow=w<640,rtl=document.documentElement.dir==="rtl",aw=narrow?w:w-Math.min(520,w),ah=narrow?h*.22:h,k=Math.max(1,Math.min(4,.5/Math.max(dx/aw,dy/ah)));
   var cx=(b[0][0]+b[1][0])/2,cy=(b[0][1]+b[1][1])/2,ox=(rtl&&!narrow)?w-aw/2:aw/2;
   svg.transition().duration(750).call(zoom.transform,d3.zoomIdentity.translate(ox-k*cx,(narrow?ah*.6:h/2)-k*cy).scale(k))}
+
+function addBtn(i,k,title,d,u){var id=i+":"+k+":"+String(title).slice(0,80);var on=bkHas(id);return'<button class="add'+(on?' on':'')+'" data-add="'+esc(id)+'" data-t="'+esc(title)+'" data-d="'+esc(d||"")+'" data-u="'+esc(u||"")+'">'+esc(on?t("added"):t("add"))+'</button>'}
 function li(a,fn){return a&&a.length?"<ul>"+a.map(fn).join("")+"</ul>":""}
 function md(d){return d?d.slice(5).replace("-","/"):""}
 function showCountry(i,keep){
-  sel=i;paint();var c=D[i],b=body(i),dr=document.getElementById("drawer");document.getElementById("hint").style.opacity=0;
+  sel=i;paint();var c=D[i],b=body(i),dr=document.getElementById("drawer");if(innerWidth<1100)document.getElementById("howto").hidden=true;document.getElementById("hint").style.opacity=0;
   var sub=[L==="en"?c.n.ko:c.n.en,b.ld].filter(Boolean).join(" · ");
   var h='<div class="dh"><button class="x" id="dx" aria-label="close">×</button><div class="flag">'+flag(i)+'</div><h1>'+esc(nm(i))+'</h1><div class="sub">'+esc(sub)+'</div></div>';
-  h+='<div class="kpis"><div><b>'+opp(c)+'</b><span>'+esc(t("kO"))+'</span></div><div><b>'+nOpen(c)+'</b><span>'+esc(t("kT"))+'</span></div><div><b>'+esc(md(c.up)||"–")+'</b><span>'+esc(t("kU"))+'</span></div></div>';
+  var cid=i+':c';h+='<button class="addc'+(bkHas(cid)?' on':'')+'" data-add="'+cid+'">'+esc(bkHas(cid)?t('addcd'):t('addc'))+'</button>';h+='<div class="kpis"><div><b>'+opp(c)+'</b><span>'+esc(t("kO"))+'</span></div><div><b>'+nOpen(c)+'</b><span>'+esc(t("kT"))+'</span></div><div><b>'+esc(md(c.up)||"–")+'</b><span>'+esc(t("kU"))+'</span></div></div>';
   if(b.s)h+='<div class="sec"><h2>'+esc(t("sum"))+'</h2><p>'+esc(b.s)+'</p></div>';
   var td=tdOf(i,b),shown=td.filter(function(x){return(x.d||"9999")>=TODAY}).length;
-  h+='<div class="sec"><h2>'+esc(t("tenders"))+'</h2>'+(td.length?li(td,function(x){var past=(x.d||"9999")<TODAY;return'<li><span class="dl'+(past?" past":"")+'">'+esc(past?md(x.d)+" "+t("closed"):md(x.d))+'</span>'+(x.u?'<a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+'</a>':esc(x.t))+'<span class="m">'+esc(x.b||"")+'</span></li>'}):"")+(nOpen(c)?"":'<p class="muted">'+esc(t("none"))+'</p>')+(nOpen(c)>shown?'<p class="muted">'+esc(t("more").replace("{n}",nOpen(c)-shown))+'</p>':"")+'</div>';
-  if(b.bz&&b.bz.length)h+='<div class="sec"><h2>'+esc(t("biz"))+'</h2>'+li(b.bz,function(x){return"<li>"+esc(x)+"</li>"})+'</div>';
+  h+='<div class="sec"><h2>'+esc(t("tenders"))+'</h2>'+(td.length?li(td,function(x){var past=(x.d||"9999")<TODAY;return'<li>'+(past?'':addBtn(i,'t',x.t,x.d,x.u))+'<span class="dl'+(past?" past":"")+'">'+esc(past?md(x.d)+" "+t("closed"):md(x.d))+'</span>'+(x.u?'<a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+'</a>':esc(x.t))+'<span class="m">'+esc(x.b||"")+'</span></li>'}):"")+(nOpen(c)?"":'<p class="muted">'+esc(t("none"))+'</p>')+(nOpen(c)>shown?'<p class="muted">'+esc(t("more").replace("{n}",nOpen(c)-shown))+'</p>':"")+'</div>';
+  if(b.bz&&b.bz.length)h+='<div class="sec"><h2>'+esc(t("biz"))+'</h2>'+li(b.bz,function(x){return"<li>"+addBtn(i,"b",x)+esc(x)+"</li>"})+'</div>';
   if(b.ag&&b.ag.length)h+='<div class="sec"><h2>'+esc(t("agenda"))+'</h2>'+li(b.ag,function(x){return"<li>"+esc(x)+"</li>"})+'</div>';
   if(b.nd&&b.nd.length)h+='<div class="sec"><h2>'+esc(t("needs"))+'</h2>'+li(b.nd,function(x){return"<li>"+esc(x)+"</li>"})+'</div>';
-  if(b.pj&&b.pj.length)h+='<div class="sec"><h2>'+esc(t("proj"))+'</h2>'+li(b.pj,function(x){return"<li>"+esc(x.t)+'<span class="m">'+esc([x.m,x.g].filter(Boolean).join(" · "))+"</span></li>"})+'</div>';
+  if(b.pj&&b.pj.length)h+='<div class="sec"><h2>'+esc(t("proj"))+'</h2>'+li(b.pj,function(x){return"<li>"+addBtn(i,"p",x.t)+esc(x.t)+'<span class="m">'+esc([x.m,x.g].filter(Boolean).join(" · "))+"</span></li>"})+'</div>';
   var rk=(c.hz?'<span class="risk-hot">'+esc(t(c.hz))+'</span> · ':"")+esc(t("rl")[c.rk]||"");
   if(rk||(b.rc&&b.rc.length))h+='<div class="sec"><h2>'+esc(t("risk"))+'</h2>'+(rk?'<p>'+rk+'</p>':"")+li(b.rc,function(x){return"<li>"+esc(x)+"</li>"})+'</div>';
   if(c.sr&&c.sr.length)h+='<div class="sec"><h2>'+esc(t("src"))+'</h2>'+li(c.sr,function(x){return'<li><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+"</a></li>"})+'</div>';
@@ -186,6 +271,7 @@ function showCountry(i,keep){
   h+='<a class="full2" href="/'+L+'/pricing/?stay=1">'+esc(t("join"))+'</a>';
   dr.innerHTML=h;dr.classList.add("open");if(!keep){dr.scrollTop=0;zoomTo(i)}
   document.getElementById("dx").onclick=closeCountry;
+  dr.querySelectorAll("[data-add]").forEach(function(btn){btn.onclick=function(){var id=btn.dataset.add,k=id.split(":")[1];bkToggle({id:id,iso:i,k:k,t:btn.dataset.t||"",d:btn.dataset.d||"",u:btn.dataset.u||""});showCountry(i,true)}});
   try{history.replaceState(null,"","#"+i.toLowerCase())}catch(e){}
 }
 function closeCountry(){sel=null;document.getElementById("drawer").classList.remove("open");paint();if(svg)svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity);try{history.replaceState(null,"",location.pathname)}catch(e){}}
