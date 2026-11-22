@@ -1,8 +1,8 @@
 @font-face{font-family:"WMM Cyr";font-display:swap;src:local("Arial"),local("Helvetica Neue"),local("Roboto"),local("Noto Sans"),local("DejaVu Sans");unicode-range:U+0370-03FF,U+0400-052F,U+1C80-1C8F,U+2DE0-2DFF,U+A640-A69F}
 /* GOV RADAR public site — black & white, map keeps its colours */
-@font-face{font-family:"WMM Cyr","WMM Nexon";font-weight:300;font-display:swap;src:local("NEXON Lv1 Gothic Light"),local("NEXONLv1Gothic-Light"),local("NEXON Lv1 Gothic OTF Light"),url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff")}
-@font-face{font-family:"WMM Cyr","WMM Nexon";font-weight:400;font-display:swap;src:local("NEXON Lv1 Gothic"),local("NEXONLv1Gothic"),local("NEXON Lv1 Gothic OTF"),url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff")}
-@font-face{font-family:"WMM Cyr","WMM Nexon";font-weight:700;font-display:swap;src:local("NEXON Lv1 Gothic Bold"),local("NEXONLv1Gothic-Bold"),local("NEXON Lv1 Gothic OTF Bold"),url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:300;font-display:swap;src:local("NEXON Lv1 Gothic Light"),local("NEXONLv1Gothic-Light"),local("NEXON Lv1 Gothic OTF Light"),url("/assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:400;font-display:swap;src:local("NEXON Lv1 Gothic"),local("NEXONLv1Gothic"),local("NEXON Lv1 Gothic OTF"),url("/assets/fonts/NEXONLv1GothicOTF.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff")}
+@font-face{font-family:"WMM Nexon";font-weight:700;font-display:swap;src:local("NEXON Lv1 Gothic Bold"),local("NEXONLv1Gothic-Bold"),local("NEXON Lv1 Gothic OTF Bold"),url("/assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff"),url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff")}
 :root{--bg:#F5F5F2;--panel:#fff;--panel2:#EDEDEA;--ink:#0B0B0B;--muted:#5C5C5A;--line:#D7D7D3;
  --m-sea:#E7EEEC;--m-land:#C9D3D0;--m-done:#2F8A71;--m-hover:#E0A33A;--m-sel:#2C5BD6;--m-high:#C2412D;--m-mid:#E0A33A;--m-low:#7FB7A4;
  --f:"WMM Nexon","NEXON Lv1 Gothic OTF","Apple SD Gothic Neo","Malgun Gothic","Noto Sans",system-ui,sans-serif;color-scheme:light}
@@ -896,3 +896,29 @@ html{scroll-padding-top:116px}
 /* my countries (2026-11-17) */
 .mycs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.myc{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--bg2,#f3f5f8);color:inherit;text-decoration:none;font-weight:700}.myc .fi{width:24px;height:18px;border-radius:3px}
 /*kw:start*/:lang(ko){word-break:keep-all;overflow-wrap:break-word}h1,h2,h3,h4,.lede{text-wrap:balance}p,li,dd,figcaption,blockquote{text-wrap:pretty}.code,pre,code{word-break:break-all;text-wrap:wrap}/*kw:end*/
+
+/* nav-renew 2026-11-22 */
+.nvg{position:relative;display:flex;align-items:center}
+.nvd{display:none;position:absolute;top:100%;left:0;z-index:80;min-width:210px;padding:8px;background:#fff;border:1px solid #E3E7ED;border-radius:12px;box-shadow:0 16px 40px rgba(11,21,38,.14);flex-direction:column}
+[dir=rtl] .nvd{left:auto;right:0}
+.nvd a{display:block;white-space:nowrap;font-size:14px!important;padding:9px 12px!important;color:#0B1526!important;border-radius:8px!important;border:0!important;text-decoration:none;background:transparent!important}
+.nvd a:hover{background:#F5F6F8!important}
+.nvg:hover>.nvd,.nvg:focus-within>.nvd{display:flex}
+.navcta{display:inline-flex;align-items:center;white-space:nowrap;background:#0B1526;color:#fff!important;border-radius:999px;padding:8px 16px;font-weight:700;font-size:13.5px;text-decoration:none}
+.navcta:hover{background:#1d2b44}
+@media (max-width:1020px){.nvg{flex-direction:column;align-items:stretch}.nvd{display:flex;position:static;box-shadow:none;border:0;padding:0 0 8px 14px;min-width:0;background:transparent}[dir=rtl] .nvd{padding:0 14px 8px 0}.nvd a{font-size:14.5px!important;padding:8px 6px!important;color:#4A5568!important}.navcta{display:none}}
+.nav,.gvh .gtop{background:#fff!important}
+.subnav{background:#fff!important;border-bottom:1px solid #E3E7ED!important}
+.subnav .in{flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none}
+.subnav a{color:#4A5568!important;background:transparent!important}
+.subnav a:hover{background:#F5F6F8!important;color:#0B1526!important}
+.subnav a[aria-current]{background:#0B1526!important;color:#fff!important}
+.nav.compact .nvg{flex-direction:column;align-items:stretch}.nav.compact .nvd{display:flex;position:static;box-shadow:none;border:0;padding:0 0 8px 14px;background:transparent}
+
+/* site-light 2026-11-22: 흰 바탕 통일 */
+body{background:#fff!important;background-image:none!important}
+body::before{display:none!important}
+.chero:not(.img-cons):not(.img-proj):not(.img-cf){background:#F5F6F8!important;color:#0B1526!important;border-bottom:1px solid #E3E7ED}
+.chero:not(.img-cons):not(.img-proj):not(.img-cf) :is(.alt,.meta,.crumb,.crumb a,.lede){color:#4A5568!important}
+.chero:not(.img-cons):not(.img-proj):not(.img-cf) a{color:#0B1526}
+.chero:not(.img-cons):not(.img-proj):not(.img-cf) .badge,.chero:not(.img-cons):not(.img-proj):not(.img-cf) [class*=lvl]{border-color:#0B1526}
