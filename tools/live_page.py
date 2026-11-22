@@ -22,7 +22,7 @@ UI = {
    live="실시간", h1="지금 세계에서 일어나는 일", sub="전쟁부터 재난·감염병·사이버 공격까지, 레이더가 도는 동안 한 화면에서 봅니다.",
    upd="자료 갱신", feed="지진·산불·폭풍은 열 때마다 원 기관에서 받아 옵니다", tap="점을 누르면 내용이 열립니다",
    L=dict(war="전쟁", conflict="무력분쟁", unrest="시위·폭동", disaster="자연재해", epidemic="감염병", cyber="사이버 공격"),
-   S=dict(sum="지금 요약", news="실시간 뉴스 — 자동 수집", hot="전쟁·주요 분쟁 현장", all="진행 중인 무력분쟁 전체", unrest="폭동·대규모 시위", dis="자연재해 — 최근", livefeed="지금 들어온 소식 (원 기관 실시간)",
+   S=dict(sum="지금 요약", news="실시간 뉴스 — 자동 수집", brief="이번 주 브리프 — 한국 기업에 주는 영향과 할 일", bi="영향", bo="기회", ba="지금 할 일", bc="WMM이 도울 수 있는 것", bl="필요한 솔루션 요청", hot="전쟁·주요 분쟁 현장", all="진행 중인 무력분쟁 전체", unrest="폭동·대규모 시위", dis="자연재해 — 최근", livefeed="지금 들어온 소식 (원 기관 실시간)",
           epi="감염병", cyber="사이버 공격 — 최근 사건", hist="사이버 공격 — 역대 주요 사건", ast="지구에 가까이 오는 천체", kinds="재난·분쟁 21가지 — 움직이는 화면", ctry="나라별 위험", prep="지금 준비할 것", src="출처"),
    th=["분쟁", "시작", "2025 사망", "2026 사망"], more="자세히", since="부터", v=dict(atk="실제 공격", susp="조사 중·의심", no="공격 아님", vuln="취약점", hist="역대"),
    lv=dict(war="전쟁", tension="긴장", high="높음", elevated="주의", watch="관찰", conflict="분쟁", minor="소규모", skirmish="충돌"), go="상세 페이지", nofeed="원 기관 연결이 안 돼 매일 갱신 자료로 보여 줍니다.", utc="UTC", kst="서울",
@@ -31,7 +31,7 @@ UI = {
    live="LIVE", h1="What is happening in the world now", sub="From wars to disasters, epidemics and cyberattacks — one screen, while the radar turns.",
    upd="Data updated", feed="Earthquakes, wildfires and storms load straight from the source each time", tap="Tap a dot to open it",
    L=dict(war="War", conflict="Armed conflict", unrest="Unrest", disaster="Natural disaster", epidemic="Epidemic", cyber="Cyberattack"),
-   S=dict(sum="Summary now", news="Live news — collected automatically", hot="Wars and major conflict zones", all="All armed conflicts under way", unrest="Riots and mass protests", dis="Natural disasters — recent", livefeed="Just in (live from the source)",
+   S=dict(sum="Summary now", news="Live news — collected automatically", brief="This week’s brief — what it means for businesses and what to do", bi="Impact", bo="Opportunities", ba="Do now", bc="How WMM can help", bl="Request a solution", hot="Wars and major conflict zones", all="All armed conflicts under way", unrest="Riots and mass protests", dis="Natural disasters — recent", livefeed="Just in (live from the source)",
           epi="Epidemics", cyber="Cyberattacks — recent incidents", hist="Cyberattacks — landmark cases", ast="Objects passing close to Earth", kinds="21 hazards — animated", ctry="Risk by country", prep="What to prepare now", src="Sources"),
    th=["Conflict", "Since", "Deaths 2025", "Deaths 2026"], more="More", since="since", v=dict(atk="Confirmed attack", susp="Under investigation", no="Not an attack", vuln="Vulnerability", hist="Landmark"),
    lv=dict(war="War", tension="Tension", high="High", elevated="Elevated", watch="Watch", conflict="Conflict", minor="Minor", skirmish="Skirmish"), go="Full page", nofeed="Could not reach the source; showing the daily update instead.", utc="UTC", kst="Seoul",
@@ -248,6 +248,7 @@ var S=U.S,html="";
 function sec(id,key,col,count,body,go){return '<section class="sec" id="'+id+'" style="--c:'+(col||"#0B1526")+'"><div class="wrap"><h2><i></i>'+e(S[key])+(count!=null?' <em>'+count+'</em>':'')+'</h2>'+(go?'<p class="gl"><a href="'+go+'">'+e(U.go)+' →</a></p>':'<p class="gl"></p>')+body+'</div></section>'}
 var GO=window.LIVE_GO;
 html+=sec("s-sum","sum",null,null,'<p class="lead">'+e(T(D.sum))+'</p>');
+html+='<section class="sec" id="s-brief" style="--c:#B7800F" hidden><div class="wrap"><h2><i></i>'+e(S.brief)+' <em id="bfw"></em></h2><p class="gl" id="bfm"></p><div class="cards" id="bfc"></div></div></section>';
 html+=sec("s-news","news","#FF3B4E",null,'<div data-newsbox="tabs:war,cyber,disaster,epidemic,prep" data-n="15"></div>');
 html+=sec("s-hot","hot",COL.war,D.hot.length,'<div class="cards">'+D.hot.map(function(h,i){return '<article class="cd" id="hot-'+i+'" style="--c:'+(h.lv==="war"?COL.war:COL.conflict)+'"><h3>'+fl(h.iso)+' '+e(tx(h,""))+'</h3><p class="m"><span class="lvb">'+e(U.lv[h.lv]||h.lv)+'</span>'+e(tx(h,"s"))+'</p>'+(h.f.length?'<ul>'+h.f.map(function(f){return '<li>'+e(T(f))+'</li>'}).join("")+'</ul>':'')+'</article>'}).join("")+'</div>',GO.hot);
 html+=sec("s-all","all",COL.conflict,D.all.length,'<div class="tbl"><table><thead><tr><th>'+U.th.map(e).join("</th><th>")+'</th></tr></thead><tbody>'+D.all.map(function(c,i){var lc=c.lv==="war"?COL.war:COL.conflict;return '<tr id="all-'+i+'"><td><span class="lvb" style="--c:'+lc+'">'+e(U.lv[c.lv]||c.lv)+'</span>'+e(tx(c,""))+'<br><small>'+c.iso.map(fl).join(" ")+'</small></td><td class="n">'+e(c.st||"")+'</td><td class="n">'+e(c.d25||"–")+'</td><td class="n">'+e(c.d26||"–")+'</td></tr>'}).join("")+'</tbody></table></div>',GO.all);
@@ -263,7 +264,10 @@ html+=sec("s-kinds","kinds","#0B1526",21,'<div class="gal" id="gal"></div>',GO.k
 html+=sec("s-ctry","ctry","#B7800F",D.ctry.length,'<div class="cg">'+D.ctry.map(function(c){var lc={war:COL.war,high:COL.conflict,elevated:COL.unrest}[c.lv]||"#8A94A6";var it=[].concat(T(c.c)||[],T(c.d)||[],T(c.e)||[]);return '<article class="cd" style="--c:'+lc+'"><h3>'+fl(c.iso)+' '+e(nm(D,c.iso))+'</h3><p class="m"><span class="lvb">'+e(U.lv[c.lv]||c.lv)+'</span>'+e(c.ck)+'</p>'+(it.length?'<ul>'+it.slice(0,3).map(function(t){return '<li>'+e(t)+'</li>'}).join("")+'</ul>':'')+'</article>'}).join("")+'</div>');
 html+=sec("s-prep","prep","#12805C",null,'<p class="lead">'+e(T(D.adv))+'</p>',GO.prep);
 html+=sec("s-src","src","#4A5568",D.src.length,'<ol class="srcs">'+D.src.map(function(s){return '<li><a href="'+e(s.u)+'" target="_blank" rel="noopener">'+e(s.t)+'</a></li>'}).join("")+'</ol><p class="note">'+e(U.note)+'</p>');
-document.getElementById("list").innerHTML=html;if(window.NEWSBOX)document.querySelectorAll("#list [data-newsbox]").forEach(window.NEWSBOX);
+document.getElementById("list").innerHTML=html;fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/brief.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(B){if(!B)return;var X=B[LG]||B.en||B.ko;if(!X)return;var K=[["impacts",S.bi],["opps",S.bo],["actions",S.ba]];
+ document.getElementById("bfw").textContent=B.week||"";document.getElementById("bfm").innerHTML=e((LG==="ko"?"갱신 ":"Updated ")+(B.updated||""))+(B.src&&B.src.length?' · '+B.src.slice(0,6).map(function(x){return '<a href="'+e(x.u)+'" target="_blank" rel="noopener" style="border:0;font-weight:400">'+e(x.t)+'</a>'}).join(" · "):"");
+ document.getElementById("bfc").innerHTML=K.map(function(k){var a=X[k[0]]||[];return a.length?'<article class="cd" style="--c:#B7800F"><h3>'+e(k[1])+'</h3><ul>'+a.map(function(t){return '<li>'+e(t)+'</li>'}).join("")+'</ul></article>':""}).join("")+(X.cta?'<article class="cd" style="--c:#0B1526"><h3>'+e(S.bc)+'</h3><p>'+e(X.cta)+'</p><p><a href="'+(LG==="ko"?"/ko/":"/"+L+"/")+'?stay=1#solutions" style="font-weight:700">'+e(S.bl)+' →</a></p></article>':"");
+ document.getElementById("s-brief").hidden=false}).catch(function(){});if(window.NEWSBOX)document.querySelectorAll("#list [data-newsbox]").forEach(window.NEWSBOX);
 // 21 animated hazards (reuse the hazard map clips)
 var X=window.HZFX;if(X&&X.card){var hl=X.NM[L]?L:"en";document.getElementById("gal").innerHTML=(X.G||X.K).map(function(k){return X.card(k,"none",X.NM[hl][k],X.NM[hl][k],"")}).join("")}
 // ---------- radar map ----------
@@ -330,7 +334,7 @@ def page(L, D_js):
     u = UI[L]
     up = lambda k: "/hazards/" + ("" if L == "ko" else "?l=" + L) if k == "@hazards" else ("/cyber/" if L == "ko" else f"/cyber/{L}/") if k == "@cyber" else f"/{L}/{k}"
     go = {k: up(v) for k, v in GO.items()}
-    sub = [["#stage", u["live"]], ["#s-news", u["S"]["news"]], ["#s-hot", u["S"]["hot"]], ["#s-all", u["S"]["all"]], ["#s-un", u["S"]["unrest"]], ["#s-feed", u["S"]["livefeed"]], ["#s-dis", u["S"]["dis"]],
+    sub = [["#stage", u["live"]], ["#s-brief", u["S"]["brief"]], ["#s-news", u["S"]["news"]], ["#s-hot", u["S"]["hot"]], ["#s-all", u["S"]["all"]], ["#s-un", u["S"]["unrest"]], ["#s-feed", u["S"]["livefeed"]], ["#s-dis", u["S"]["dis"]],
            ["#s-epi", u["S"]["epi"]], ["#s-cy", u["S"]["cyber"]], ["#s-kinds", u["S"]["kinds"]], ["#s-ctry", u["S"]["ctry"]], ["#s-src", u["S"]["src"]]]
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="https://radar.wmm-hoa.com/live/{"" if l == "ko" else l + "/"}">' for l in LANGS)
     esc = lambda s: s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;")
