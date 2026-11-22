@@ -23,7 +23,7 @@ class WorldAhead2027(unittest.TestCase):
         self.assertIsNotNone(embedded)
         self.assertEqual(10,len(json.loads(embedded.group(1))["items"]))
         self.assertIn("https://www.economist.com/syndication/permissions",html)
-        self.assertIn("2027 표지는 예언인가",html)
+        self.assertIn("2027 표지는 미래 예고인가",html)
         self.assertNotIn('content="noindex,nofollow"',html)
         self.assertNotIn("sk-proj-",html)
         for row in data["items"]:
