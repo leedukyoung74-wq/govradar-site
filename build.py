@@ -184,7 +184,13 @@ def navhtml_act(L, path):
     seg = (path.strip("/").split("/") + ["", ""])[1]
     if seg in ("ready", "prepare"): key = "ready/"
     return navhtml(L).replace(f'href="/{L}/{key}"', f'href="/{L}/{key}" aria-current="page"', 1)
-_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/welcome/"+(l==="ko"?"":l+"/"))})();</script>"""
+_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/map/"+(l==="ko"?"":l+"/"))})();</script>"""
+def _open_first(x):
+    """입찰 미리보기: 열린 입찰을 마감 가까운 순으로 먼저, 마감된 건은 뒤로 (2026-11-22)."""
+    dl = str((x or {}).get("deadline") or "") if isinstance(x, dict) else ""
+    ok = bool(re.match(r"\d{4}-\d{2}-\d{2}$", dl))
+    past = ok and dl < TODAY
+    return (past, (dl if ok else "9999") if not past else "".join(chr(255 - ord(ch)) for ch in dl))
 def head(L, title, desc, path, alt_paths, extra=""):
     t = T[L]
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{p}">' for l, p in alt_paths.items())
@@ -490,7 +496,7 @@ def country_page(iso, L):
             _hot = (not _past) and bool(re.match(r"\d{4}-\d{2}-\d{2}$", _dl)) and (datetime.date.fromisoformat(_dl) - datetime.date.fromisoformat(TODAY)).days <= 15
             _mk = ("📁 " + P3.pt("closed", L) + " · ") if _past else ""
             return f'<li class="{"tpast" if _past else ("thot" if _hot else "")}{" tnew" if _new else ""}">{_mk}<b>{e(x.get("title"))}</b>{P3.NB(L) if _new else ""}<span class="note"> · {e(x.get("buyer",""))}{" · "+e(t["deadline"])+" "+e(x.get("deadline")) if x.get("deadline") else ""}</span> <button class="btn xs member" data-act="watch" data-iso="{iso}" data-title="{e(x.get("title"))}" data-deadline="{e(x.get("deadline",""))}">{e(t["watch"])}</button></li>'
-        tds = [x for x in (G(d, "tenders", L) or []) if x]
+        tds = sorted([x for x in (G(d, "tenders", L) or []) if x], key=_open_first)
         body.append(sec("tenders", t["tenders"], mlock(L, iso, "tenders", [td(x) for x in tds])))
         def oda(x): return f'<li><b>{e(x.get("title"))}</b><span class="note"> · {e(" · ".join(str(v) for v in [x.get("program"), x.get("stage"), x.get("amount")] if v))}</span></li>'
         body.append(sec("oda", t["oda"], mlock(L, iso, "oda", [oda(x) for x in (G(d, "oda", L) or []) if x])))
@@ -1281,6 +1287,7 @@ def build():
             c = _strip(d)
             _subs = [c] + [v for v in ([c.get("en")] + list((c.get("i18n") or {}).values())) if isinstance(v, dict)]
             for _x in _subs:
+                if isinstance(_x.get("tenders"), list): _x["tenders"] = sorted(_x["tenders"], key=_open_first)
                 for _k, _n in (("agenda", 3), ("projects", 2), ("tenders", 2), ("oda", 2), ("krwins", 2), ("krsupport", 2)):
                     if isinstance(_x.get(_k), list): _x[_k] = _x[_k][:_n]
                 if isinstance(_x.get("gov"), dict) and isinstance(_x["gov"].get("notices"), list): _x["gov"]["notices"] = _x["gov"]["notices"][:2]
@@ -1303,7 +1310,7 @@ def build():
     W("/index.html", f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOV RADAR — 193 governments</title>
 <meta name="description" content="{e(T['en']['desc_home'])}"><link rel="canonical" href="{BASE}/en/">{''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}/{l}/">' for l in LANGS)}<link rel="alternate" hreflang="x-default" href="{BASE}/en/">
 <meta property="og:image" content="{BASE}/assets/og.jpg"><link rel="icon" href="/assets/mark.png">
-<script>var n=(navigator.language||"en").slice(0,2).toLowerCase(),L={json.dumps(LANGS)},l=L.indexOf(n)>=0?n:"en",h=location.hash,m=0;if(/access_token|confirmation_token|recovery_token|invite_token|error=/.test(h))m=1;location.replace(m?"/"+l+"/"+h:(l==="ko"?"/welcome/":"/welcome/"+l+"/"));</script>
+<script>var n=(navigator.language||"en").slice(0,2).toLowerCase(),L={json.dumps(LANGS)},l=L.indexOf(n)>=0?n:"en",h=location.hash,m=0;if(/access_token|confirmation_token|recovery_token|invite_token|error=/.test(h))m=1;location.replace(m?"/"+l+"/"+h:(l==="ko"?"/map/":"/map/"+l+"/"));</script>
 <style>body{{background:#0a0a0a;color:#f2f2ef;font-family:system-ui;display:grid;place-items:center;min-height:100vh;margin:0}}a{{color:#f2f2ef;margin:0 8px}}</style></head>
 <body><div><h1>GOV RADAR</h1>{''.join(f'<a href="/{l}/">{LANG_NAME[l]}</a>' for l in LANGS)}</div></body></html>""")
     W("/404.html", home("en").replace("<title>", "<title>404 · ", 1))
