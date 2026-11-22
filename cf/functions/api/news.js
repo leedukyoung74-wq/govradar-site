@@ -21,19 +21,28 @@ export async function onRequestGet(ctx) {
   else return J({ error: "bad topic" }, 60);
   const key = new Request(`https://radar.wmm-hoa.com/api/news?k=${encodeURIComponent(l + "|" + (c || t))}&v=1`), cache = caches.default;
   const hit = await cache.match(key); if (hit) return hit;
-  let items = [];
-  try {
-    const r = await fetch(`https://news.google.com/rss/search?q=${encodeURIComponent(q)}&${ED[l]}`, { headers: { "user-agent": "Mozilla/5.0 (GOV RADAR news board; +https://radar.wmm-hoa.com)" } });
-    const x = await r.text(), seen = new Set();
+  let items = [], src = "Google News";
+  const parse = (x, bing) => {
+    const out = [], seen = new Set();
     for (const m of x.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
       const it = m[1], g = k => { const mm = it.match(new RegExp(`<${k}[^>]*>([\\s\\S]*?)</${k}>`)); return mm ? dec(mm[1]) : ""; };
-      const src = g("source"); let title = g("title"); if (src && title.endsWith(" - " + src)) title = title.slice(0, -(src.length + 3));
+      const s = g(bing ? "News:Source" : "source"); let title = g("title"); if (s && title.endsWith(" - " + s)) title = title.slice(0, -(s.length + 3));
+      let link = g("link"); if (bing) { try { link = new URL(link).searchParams.get("url") || link; } catch (e) {} }
       const k2 = title.slice(0, 40); if (!title || seen.has(k2)) continue; seen.add(k2);
-      items.push({ t: title, s: src, u: g("link"), d: Date.parse(g("pubDate")) || 0 });
+      out.push({ t: title, s, u: link, d: Date.parse(g("pubDate")) || 0 });
     }
-    items.sort((a, b) => b.d - a.d); items = items.slice(0, 25);
-  } catch (e) { return J({ at: new Date().toISOString(), items: [], ok: false }, 60); }
-  const res = J({ at: new Date().toISOString(), items, ok: true, src: "Google News" }, 900);
+    return out;
+  };
+  const UA = { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36", "accept-language": l };
+  try { const r = await fetch(`https://news.google.com/rss/search?q=${encodeURIComponent(q)}&${ED[l]}`, { headers: UA }); if (r.ok) items = parse(await r.text(), false); } catch (e) {}
+  if (!items.length) {
+    const MK = { ko: "ko-KR", en: "en-US", es: "es-ES", fr: "fr-FR", ar: "ar-XA", vi: "vi-VN", id: "id-ID" };
+    const bq = q.replace(/\s*when:\d+d/, "");
+    try { const r = await fetch(`https://www.bing.com/news/search?q=${encodeURIComponent(bq)}&format=rss&sortbydate=1&setlang=${l}&mkt=${MK[l]}`, { headers: UA }); if (r.ok) { items = parse(await r.text(), true); src = "Bing News"; } } catch (e) {}
+  }
+  const cut = Date.now() - (c ? 7 : 3) * 864e5;
+  items = items.filter(x => !x.d || x.d > cut).sort((a, b) => b.d - a.d).slice(0, 25);
+  const res = J({ at: new Date().toISOString(), items, ok: items.length > 0, src }, items.length ? 900 : 120);
   if (items.length) ctx.waitUntil(cache.put(key, res.clone()));
   return res;
 }
