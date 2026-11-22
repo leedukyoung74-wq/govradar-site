@@ -31,6 +31,25 @@ class T(unittest.TestCase):
         ready = json.load(open(f"{o}/GPT_COUNTRY_20261123.ready.json", encoding="utf-8"))
         self.assertEqual(list(ready["d1"]), ["KE"]); self.assertEqual(len(ready["tenders"]), 1)
         self.assertEqual(ic.run(d, o, net=False), [])  # 이미 처리한 파일은 다시 안 봄
+    def test_malformed_country_gets_a_verdict_and_does_not_stop_other_countries(self):
+        valid, translations = good()
+        malformed = {**valid, "biz": ["사업 메모"], "risk": ["위험 메모"]}
+        translations = {lang: {**rows, "TZ": rows["KE"]} for lang, rows in translations.items()}
+        with tempfile.TemporaryDirectory() as folder:
+            base = pathlib.Path(folder)
+            inbox, out = base / "inbox", base / "report"
+            inbox.mkdir()
+            name = "GPT_COUNTRY_20261122"
+            (inbox / f"{name}.json").write_text(
+                json.dumps({"countries": {"TZ": malformed, "KE": valid}, "tr": translations}), encoding="utf-8"
+            )
+            result = ic.run(inbox, out, net=False)[0]
+            self.assertEqual((result["pass"], result["fail"]), (1, 1))
+            self.assertEqual(result["countries"]["TZ"]["verdict"], "FAIL")
+            self.assertIn("biz 항목은 객체여야 함", result["countries"]["TZ"]["why"])
+            self.assertIn("risk 형식 오류", result["countries"]["TZ"]["why"])
+            self.assertEqual(list(json.loads((out / f"{name}.ready.json").read_text(encoding="utf-8"))["d1"]), ["KE"])
+
     def test_changed_same_day_document_gets_rechecked_and_cannot_keep_old_approval(self):
         v, tr = good()
         with tempfile.TemporaryDirectory() as folder:

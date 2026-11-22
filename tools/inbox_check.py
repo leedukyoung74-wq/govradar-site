@@ -42,6 +42,8 @@ def reach(url, timeout=12):
 
 
 def check_country(iso, v, tr, net=True):
+    if not isinstance(v, dict):
+        return ["국가 항목은 객체여야 함"]
     why = []
     if not ISO.match(iso):
         why.append("ISO 코드 형식 아님")
@@ -51,33 +53,56 @@ def check_country(iso, v, tr, net=True):
     if why:
         return why
     en = v["en"]
+    for key in ("agenda", "needs", "biz", "sources"):
+        if not isinstance(v[key], list):
+            why.append(f"{key} 형식 오류")
+    if not isinstance(en, dict):
+        why.append("en 형식 오류")
+    if not isinstance(v["_change_en"], str):
+        why.append("_change_en 형식 오류")
+    if why:
+        return why
     if any(HANGUL.search(t) for t in texts(en)) or HANGUL.search(v.get("_change_en", "")):
         why.append("en 안에 한글이 있음")
     for k in ("agenda", "needs", "biz"):
         n = len(v[k])
-        if len(en.get(k, [])) != n:
-            why.append(f"{k} 개수 불일치(한국어 {n}, en {len(en.get(k, []))})")
+        translated = en.get(k, [])
+        if not isinstance(translated, list):
+            why.append(f"en.{k} 형식 오류")
+        elif len(translated) != n:
+            why.append(f"{k} 개수 불일치(한국어 {n}, en {len(translated)})")
     nb = len(v["biz"])
+    translations = []
     for L in LANGS:
-        t = (tr.get(L) or {}).get(iso)
+        lang = tr.get(L) or {}
+        t = lang.get(iso) if isinstance(lang, dict) else None
         if not t:
             why.append(f"{L} 번역 없음")
             continue
+        if not isinstance(t, dict):
+            why.append(f"{L} 번역 형식 오류")
+            continue
+        translations.append(t)
         for key, n in (("a", len(v["agenda"])), ("n", len(v["needs"])), ("b", nb), ("w", nb), ("t", nb)):
-            if len(t.get(key, [])) != n:
+            section = t.get(key, [])
+            if not isinstance(section, list):
+                why.append(f"{L}.{key} 형식 오류")
+            elif len(section) != n:
                 why.append(f"{L}.{key} 개수 불일치")
-    for b in v["biz"]:
-        if b.get("fit") not in ("high", "medium", "low"):
-            why.append("biz.fit 값 오류")
-            break
-    if (v["risk"] or {}).get("level") not in ("high", "medium", "low"):
+    if not all(isinstance(b, dict) for b in v["biz"]):
+        why.append("biz 항목은 객체여야 함")
+    elif any(b.get("fit") not in ("high", "medium", "low") for b in v["biz"]):
+        why.append("biz.fit 값 오류")
+    if not isinstance(v["risk"], dict):
+        why.append("risk 형식 오류")
+    elif v["risk"].get("level") not in ("high", "medium", "low"):
         why.append("risk.level 값 오류")
     src = [s.get("url", "") for s in v["sources"] if isinstance(s, dict)]
     if len(src) < 2:
         why.append("출처 2개 미만")
-    if any(not u.startswith("https://") for u in src):
+    if any(not isinstance(u, str) or not u.startswith("https://") for u in src):
         why.append("https 아닌 출처")
-    allt = " ".join(texts(v)) + " " + " ".join(texts({L: (tr.get(L) or {}).get(iso) for L in LANGS}))
+    allt = " ".join(texts(v)) + " " + " ".join(texts(translations))
     for w in BANNED:
         if w in allt:
             why.append(f"금지어: {w}")
@@ -118,6 +143,8 @@ def run(inbox, out, net=True):
         try:
             j = json.load(open(f, encoding="utf-8"))
             C, tr = j["countries"], j.get("tr", {})
+            if not isinstance(C, dict) or not isinstance(tr, dict):
+                raise ValueError("countries·tr는 객체여야 함")
         except Exception as e:
             rep["error"] = f"JSON 읽기 실패: {e}"
             json.dump(rep, open(report_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
