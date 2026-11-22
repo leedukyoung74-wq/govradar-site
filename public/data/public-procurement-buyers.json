@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-22T00:12:12.074711+00:00",
+  "generated_at_utc": "2026-11-22T00:17:49.708314+00:00",
   "type": "source_backed_public_procurement_organisations",
   "not_commercial_buyer_directory": true,
   "disclaimer_ko": "공식 공개 조달공고의 발주기관 목록입니다. 상업 수입 바이어·거래 의사·연락처 또는 현재 입찰 가능 상태를 보증하지 않습니다. 원문에서 재확인하세요.",
@@ -166,15 +166,15 @@
           "source": "EU TED"
         },
         {
-          "title": "Site preparation work – CT3056/2026 - TENDER FOR THE DESIGN, BUILD, SUPPLY AND INSTALLATION OF AN ENERGY EFFICIENT AND ENVIRONMENTALLY SUSTAINABLE FOOD INNOVATION HUB FOR THE MALTA FOOD AGENCY",
-          "deadline": "2026-11-30",
-          "notice_url": "https://ted.europa.eu/en/notice/-/detail/738133-2026",
+          "title": "Various medicinal products – CT2273/2026 - FRAMEWORK CONTRACT FOR THE SUPPLY OF ORAL CYCLIN-DEPENDENT KINASE 4/6 (CDK 4/6) INHIBITOR",
+          "deadline": "2026-11-27",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/768258-2026",
           "source": "EU TED"
         },
         {
-          "title": "Supply services of office personnel – CT2381/2026 - SERVICES – TENDER FOR THE PROVISION OF SECURITY SERVICES FOR THE COURT SERVICES AGENCY",
-          "deadline": "2026-12-01",
-          "notice_url": "https://ted.europa.eu/en/notice/-/detail/731522-2026",
+          "title": "Site preparation work – CT3056/2026 - TENDER FOR THE DESIGN, BUILD, SUPPLY AND INSTALLATION OF AN ENERGY EFFICIENT AND ENVIRONMENTALLY SUSTAINABLE FOOD INNOVATION HUB FOR THE MALTA FOOD AGENCY",
+          "deadline": "2026-11-30",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/738133-2026",
           "source": "EU TED"
         },
         {
@@ -484,31 +484,6 @@
       ]
     },
     {
-      "country_iso": "GB",
-      "procurement_entity": "SUPPLY CHAIN COORDINATION LIMITED",
-      "source_backed_notice_count": 3,
-      "notices": [
-        {
-          "title": "Diagnostic and Capital Equipment and Related Accessories and Services",
-          "deadline": "2026-12-21",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108075-2026",
-          "source": "UK Find a Tender"
-        },
-        {
-          "title": "Infant Feeding and Associated Accessories",
-          "deadline": "2027-01-13",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108334-2026",
-          "source": "UK Find a Tender"
-        },
-        {
-          "title": "Vascular Therapy and Associated Products 2028",
-          "deadline": "2027-01-19",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109328-2026",
-          "source": "UK Find a Tender"
-        }
-      ]
-    },
-    {
       "country_iso": "TD",
       "procurement_entity": "Ministry of National Education- Chad Improving Learning Outcomes Project",
       "source_backed_notice_count": 3,
@@ -707,6 +682,25 @@
           "deadline": "2026-11-30",
           "notice_url": "https://ted.europa.eu/en/notice/-/detail/747021-2026",
           "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Metropolitan borough of Bury",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Millgate Shopping Centre Re-Development",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109401-2026",
+          "source": "UK Find a Tender"
+        },
+        {
+          "title": "High Needs Supported Accommodation Service for Young People Aged From 16 Years - Strategic Partner",
+          "deadline": "2026-12-21",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110336-2026",
+          "source": "UK Find a Tender"
         }
       ]
     },
@@ -1091,6 +1085,44 @@
       ]
     },
     {
+      "country_iso": "NO",
+      "procurement_entity": "Oslo kommune v/ Økonomi- og forvaltningsetaten",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Food, beverages, tobacco and related products – Framework agreement for the procurement of food and drink - Detailed agreement",
+          "deadline": "2026-12-04",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/759720-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Food, beverages, tobacco and related products – Framework agreement for the procurement of food and drink - Detailed agreement",
+          "deadline": "2026-12-08",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/767877-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "SE",
+      "procurement_entity": "HALMSTADS KOMMUN",
+      "source_backed_notice_count": 2,
+      "notices": [
+        {
+          "title": "Financial leasing services – Finansiell leasing",
+          "deadline": "2026-12-01",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757015-2026",
+          "source": "EU TED"
+        },
+        {
+          "title": "Construction work – Entreprenad Tullkammarkajen",
+          "deadline": "2026-12-18",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757708-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
       "country_iso": "ST",
       "procurement_entity": "Project Fiduciary and Administrative Agency",
       "source_backed_notice_count": 2,
@@ -1466,19 +1498,6 @@
     },
     {
       "country_iso": "BE",
-      "procurement_entity": "European Defence Agency",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Telecommunications services – Service FWC for the Provision of Satellite Communication, related Services and Supplies (26.ISE.JP.001)",
-          "deadline": "2027-01-22",
-          "notice_url": "https://ted.europa.eu/en/notice/-/detail/732645-2026",
-          "source": "EU TED"
-        }
-      ]
-    },
-    {
-      "country_iso": "BE",
       "procurement_entity": "European Parliament, SG - Directorate-General for Infrastructure and Logistics",
       "source_backed_notice_count": 1,
       "notices": [
@@ -1630,19 +1649,6 @@
           "deadline": "2027-01-06",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00477135",
           "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "CY",
-      "procurement_entity": "Electricity Authority of Cyprus",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Electric motors, generators and transformers – 025/2026 Supply of Ground Mounted Distribution Transformers",
-          "deadline": "2026-12-02",
-          "notice_url": "https://ted.europa.eu/en/notice/-/detail/730484-2026",
-          "source": "EU TED"
         }
       ]
     },
@@ -1817,6 +1823,19 @@
     },
     {
       "country_iso": "ES",
+      "procurement_entity": "EJIE, S.A. - Sociedad Informática del Gobierno Vasco - EJIE-Sociedad Informática del Gobierno Vasco",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Software package and information systems – Compra conjunta de suscripciones de Productos Microsoft y servicios asociados 2027-2030",
+          "deadline": "2026-12-07",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/769304-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "ES",
       "procurement_entity": "Área de Gobierno de Urbanismo, Medio Ambiente y Movilidad del Ayuntamiento de Madrid",
       "source_backed_notice_count": 1,
       "notices": [
@@ -1868,6 +1887,32 @@
       ]
     },
     {
+      "country_iso": "FR",
+      "procurement_entity": "Ville de Paris - SHNC",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction work – CONCESSION DE TRAVAUX POUR LA RENOVATION ET L'EXPLOITATION DU CENTRE HIPPIQUE BOIS DE BOULOGNE",
+          "deadline": "2027-01-15",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/769792-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Birmingham City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "P3435 - A38 New Cycle Route",
+          "deadline": "2027-01-15",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109187-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
       "country_iso": "GB",
       "procurement_entity": "Carmarthenshire County Council",
       "source_backed_notice_count": 1,
@@ -1882,13 +1927,13 @@
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "Central Bedfordshire Council",
+      "procurement_entity": "City & County of Swansea",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "CBC-2107-FW-SK -  Alternative Education and Provision",
-          "deadline": "2026-12-16",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108613-2026",
+          "title": "Framework Agreement for the Supply and Delivery of Electrical Goods and Associated Materials",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109757-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -1921,13 +1966,13 @@
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "Fusion 21 Foundation",
+      "procurement_entity": "Gloucestershire County Council",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "Fusion21 Construction & Refurbishment Framework (2027-31)",
-          "deadline": "2027-01-22",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/107851-2026",
+          "title": "Gloucestershire County Council Supported Accommodation at Trevone House (Updated)",
+          "deadline": "2026-11-30",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110003-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -1940,20 +1985,7 @@
         {
           "title": "Tender for Residential and Nursing Care Home Partnership Framework in Herefordshire",
           "deadline": "2027-01-04",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108686-2026",
-          "source": "UK Find a Tender"
-        }
-      ]
-    },
-    {
-      "country_iso": "GB",
-      "procurement_entity": "Hertfordshire County Council",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "TPPL & HCC Vehicle Purchase Framework 2027",
-          "deadline": "2026-12-18",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108528-2026",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109847-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -1965,8 +1997,8 @@
       "notices": [
         {
           "title": "Planned Maintenance Contract",
-          "deadline": "2026-12-04",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109105-2026",
+          "deadline": "2026-12-14",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109960-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -1981,6 +2013,19 @@
           "deadline": "2026-12-03",
           "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/60a48dfe-b2c0-461e-a34c-50e398cc9c9a",
           "source": "UK Contracts Finder"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Lancashire County Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Plant & Vehicle Hire (Operated & Non-Operated) and Associated Services",
+          "deadline": "2026-12-01",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109473-2026",
+          "source": "UK Find a Tender"
         }
       ]
     },
@@ -2012,26 +2057,13 @@
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "London Borough of Harrow",
+      "procurement_entity": "Mayor's Office For Policing And Crime",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "Home Care Framework Tender",
-          "deadline": "2026-12-18",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108319-2026",
-          "source": "UK Find a Tender"
-        }
-      ]
-    },
-    {
-      "country_iso": "GB",
-      "procurement_entity": "Metropolitan borough of Bury",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Millgate Shopping Centre Re-Development",
-          "deadline": "2026-12-18",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109401-2026",
+          "title": "London's Violence Reduction Unit - Pan London Tertiary Service",
+          "deadline": "2026-12-16",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110238-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -2064,19 +2096,6 @@
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "NETWORK RAIL INFRASTRUCTURE LIMITED",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Aerial Services including asset inspection and surveys",
-          "deadline": "2026-12-17",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108455-2026",
-          "source": "UK Find a Tender"
-        }
-      ]
-    },
-    {
-      "country_iso": "GB",
       "procurement_entity": "North Lanarkshire Council",
       "source_backed_notice_count": 1,
       "notices": [
@@ -2090,26 +2109,26 @@
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "Northern Housing Consortium Ltd",
+      "procurement_entity": "Oldham Metropolitan Borough Council",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "Electronic Payment Services 2027-2031",
-          "deadline": "2027-01-27",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108046-2026",
+          "title": "Extra Care Housing Support Services",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110081-2026",
           "source": "UK Find a Tender"
         }
       ]
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "NORTHERN TRAINS LIMITED",
+      "procurement_entity": "Oxfordshire County Council",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "Provision of Customer Information Solution (CIS) Software, Support & Maintenance",
-          "deadline": "2026-12-14",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108683-2026",
+          "title": "I-4988: ECH - 6 Schemes (2027)",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110039-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -2129,13 +2148,13 @@
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "Scottish Government",
+      "procurement_entity": "Scottish Borders Council",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "General Office Supplies 2027",
-          "deadline": "2026-12-17",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108333-2026",
+          "title": "Road Materials, Aggregates (Dry) & Ready-Mix Cement Framework Agreement",
+          "deadline": "2027-01-05",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110019-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -2168,26 +2187,26 @@
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "St Helens Council",
+      "procurement_entity": "SUPPLY CHAIN COORDINATION LIMITED",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "021707 - St Helens Healthy Child Programme 0-19 years",
-          "deadline": "2026-12-14",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108616-2026",
+          "title": "Vascular Therapy and Associated Products 2028",
+          "deadline": "2027-01-19",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109328-2026",
           "source": "UK Find a Tender"
         }
       ]
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "The Common Services Agency (more commonly known as Public Services Delivery Scotland) (PSD Scotland)",
+      "procurement_entity": "The Common Services Agency (more commonly known as NHS National Services Scotland) (NSS)",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "NP50427 - Ophthalmology Consumables and Associated Equipment",
-          "deadline": "2026-12-16",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108491-2026",
+          "title": "Ophthalmology Equipment",
+          "deadline": "2026-11-27",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/101509-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -2207,13 +2226,39 @@
     },
     {
       "country_iso": "GB",
-      "procurement_entity": "The Council of the City of Wakefield",
+      "procurement_entity": "The Mayor's Office for Policing and Crime (MOPAC)",
       "source_backed_notice_count": 1,
       "notices": [
         {
-          "title": "Flexible Framework Agreement for the Provision of Home Care Services",
-          "deadline": "2026-12-14",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108685-2026",
+          "title": "Support for Victims of Technology-Facilitated Violence Against Women and Girls (TFVAWG)",
+          "deadline": "2027-01-15",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110098-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "Thurrock Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Principal Contractor for the Redevelopment and Improvement Works to Construct 33 Affordable Homes at Broxburn Drive, South Ockendon",
+          "deadline": "2026-12-18",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109681-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "United Kingdom National Nuclear Laboratory",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "NNLC703F - Fabrication, Machining, Associated Supplies and Services Open Framework",
+          "deadline": "2026-12-15",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/109622-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -2241,19 +2286,6 @@
           "deadline": "2026-11-25",
           "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/4b0cfa78-7a75-418d-a17d-4af9633137b7",
           "source": "UK Contracts Finder"
-        }
-      ]
-    },
-    {
-      "country_iso": "GB",
-      "procurement_entity": "VIRANO FRAMEWORKS LTD",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Virano - ICT Framework",
-          "deadline": "2026-12-15",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/108588-2026",
-          "source": "UK Find a Tender"
         }
       ]
     },
@@ -2292,6 +2324,19 @@
           "title": "Housing Maintenance Support Contract",
           "deadline": "2027-01-07",
           "notice_url": "https://www.find-tender.service.gov.uk/Notice/109405-2026",
+          "source": "UK Find a Tender"
+        }
+      ]
+    },
+    {
+      "country_iso": "GB",
+      "procurement_entity": "YORKSHIRE WATER SERVICES LIMITED",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Tier 2 Mains Renewal Delivery & Resilience Framework",
+          "deadline": "2027-01-25",
+          "notice_url": "https://www.find-tender.service.gov.uk/Notice/110376-2026",
           "source": "UK Find a Tender"
         }
       ]
@@ -2422,6 +2467,19 @@
           "title": "Air-charter services – RFT for the provision of Charter Flights and Associated Support Services for the purpose of Return Operations",
           "deadline": "2026-12-07",
           "notice_url": "https://ted.europa.eu/en/notice/-/detail/767123-2026",
+          "source": "EU TED"
+        }
+      ]
+    },
+    {
+      "country_iso": "IE",
+      "procurement_entity": "Dublin City Council",
+      "source_backed_notice_count": 1,
+      "notices": [
+        {
+          "title": "Construction work – Multi Party Framework Agreement for Minor Repair and Maintenance Works to occupied properties owned or managed by Dublin City Council",
+          "deadline": "2026-12-04",
+          "notice_url": "https://ted.europa.eu/en/notice/-/detail/769406-2026",
           "source": "EU TED"
         }
       ]
@@ -2682,19 +2740,6 @@
           "title": "Technical assistance services – Green Gateway Advisory Programme II",
           "deadline": "2026-11-30",
           "notice_url": "https://ted.europa.eu/en/notice/-/detail/748543-2026",
-          "source": "EU TED"
-        }
-      ]
-    },
-    {
-      "country_iso": "LU",
-      "procurement_entity": "European Parliament, SG - Directorate-General for Infrastructure and Logistics",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Cupboards – Fourniture et installation de vestiaires métalliques",
-          "deadline": "2026-11-25",
-          "notice_url": "https://ted.europa.eu/en/notice/-/detail/732347-2026",
           "source": "EU TED"
         }
       ]
@@ -3130,19 +3175,6 @@
     },
     {
       "country_iso": "NO",
-      "procurement_entity": "Oslo kommune v/ Økonomi- og forvaltningsetaten",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Food, beverages, tobacco and related products – Framework agreement for the procurement of food and drink - Detailed agreement",
-          "deadline": "2026-12-04",
-          "notice_url": "https://ted.europa.eu/en/notice/-/detail/759720-2026",
-          "source": "EU TED"
-        }
-      ]
-    },
-    {
-      "country_iso": "NO",
       "procurement_entity": "The Norwegian Defence Materiel Agency",
       "source_backed_notice_count": 1,
       "notices": [
@@ -3190,19 +3222,6 @@
           "deadline": "2026-12-17",
           "notice_url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481855",
           "source": "World Bank"
-        }
-      ]
-    },
-    {
-      "country_iso": "PT",
-      "procurement_entity": "Secretaria-Geral do Ministério da Defesa Nacional",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Software maintenance and repair services – Atualização das Licenças do Sistema Integrado de Gestão da Defesa Nacional (SIGDN) para 2027 e 2028",
-          "deadline": "2026-11-29",
-          "notice_url": "https://ted.europa.eu/en/notice/-/detail/763304-2026",
-          "source": "EU TED"
         }
       ]
     },
@@ -3306,19 +3325,6 @@
           "title": "Food, beverages, tobacco and related products – Livsmedel Grossist 2027",
           "deadline": "2026-12-22",
           "notice_url": "https://ted.europa.eu/en/notice/-/detail/766266-2026",
-          "source": "EU TED"
-        }
-      ]
-    },
-    {
-      "country_iso": "SE",
-      "procurement_entity": "HALMSTADS KOMMUN",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Construction work – Entreprenad Tullkammarkajen",
-          "deadline": "2026-12-18",
-          "notice_url": "https://ted.europa.eu/en/notice/-/detail/757708-2026",
           "source": "EU TED"
         }
       ]
@@ -3766,5 +3772,5 @@
       ]
     }
   ],
-  "country_count": 86
+  "country_count": 84
 }
