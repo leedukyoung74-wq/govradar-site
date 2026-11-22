@@ -24,7 +24,7 @@
     el.classList.add("nbx"); if (dark) el.classList.add("dark");
     if (spec.indexOf("tabs:") === 0) { tabs = spec.slice(5).split(","); cur = "t:" + tabs[0]; } else cur = spec;
     var head = el.getAttribute("data-title") || (cur.indexOf("c:") === 0 ? T.c : tabs ? T.live : T[cur.slice(2)] || T.live);
-    el.innerHTML = '<p class="nbh"><i></i>' + e(head) + '</p>' + (tabs ? '<div class="nbt">' + tabs.map(function (k, i) { return '<button type="button" data-k="' + k + '" aria-pressed="' + (i === 0) + '">' + e(T[k] || k) + '</button>'; }).join("") + '</div>' : "") + '<ul></ul><p class="nbn"></p>';
+    el.innerHTML = (el.hasAttribute("data-nohead") ? "" : '<p class="nbh"><i></i>' + e(head) + '</p>') + (tabs ? '<div class="nbt">' + tabs.map(function (k, i) { return '<button type="button" data-k="' + k + '" aria-pressed="' + (i === 0) + '">' + e(T[k] || k) + '</button>'; }).join("") + '</div>' : "") + '<ul></ul><p class="nbn"></p>';
     var ul = el.querySelector("ul"), nb = el.querySelector(".nbn");
     function load() {
       var q = cur.indexOf("c:") === 0 ? "c=" + cur.slice(2) : "t=" + cur.slice(2);
