@@ -12,7 +12,7 @@ import html, os, re, sys
 
 PUB = sys.argv[1] if len(sys.argv) > 1 else "cf/public"
 LANGS = ["ko", "en", "es", "fr", "ar", "vi", "id"]
-MAIN = ["hero", "tick", "@solutions", "today", "deadlines", "board", "map", "world-now", "access"]
+MAIN = ["hero", "tick", "@solutions", "today", "deadlines", "board", "map", "world-now", "@cyber", "access"]
 
 TX = {
  "ko": dict(t="필요한 솔루션을 고르세요", l="여러 개를 함께 골라 한 번에 요청하면, 1영업일 안에 무엇을·어떻게·얼마에 할 수 있는지 회신합니다. 상담은 무료입니다.",
@@ -101,6 +101,42 @@ def _cssv():
     return "1"
 
 
+
+CY = {
+ "ko": dict(h="사이버 공격 — 지금", l="실제 공격과 단순 장애를 구분합니다. 랜섬웨어 피해 주장과 미국 CISA의 '실제 악용 확인 취약점'은 10분마다, 확인된 사건은 매일 갱신합니다.",
+   k1="랜섬웨어 피해 주장 (최근 7일)", k2="한국 관련 주장", k3="주장이 많은 나라", k4="CISA 새 악용 취약점", rec="최근 확인된 사건 — 한국 중심", news="지금 들어온 사이버 뉴스",
+   v={"atk": "실제 공격", "susp": "조사 중·의심", "no": "공격 아님", "vuln": "취약점"}, todo="회사가 지금 할 일",
+   t=["업무·금융·공공 시스템 계정은 비밀번호를 바꾸고 2단계 인증을 켜세요.", "CISA 악용 확인 목록과 회사 장비·소프트웨어를 대조해 해당 제품은 바로 업데이트하세요.", "백업은 네트워크와 분리해 보관하고, 복구 연습을 한 번 해 두세요."],
+   b1="사이버 공격 전체 보기", b2="보안 점검·대비 상담", note="랜섬웨어 피해 주장은 범죄 조직이 올린 주장이며 사실 확인 전입니다. 피해 기관 이름은 싣지 않습니다.", cl="/cyber/"),
+ "en": dict(h="Cyberattacks — now", l="We separate real attacks from simple outages. Ransomware claims and US CISA's known-exploited vulnerabilities refresh every 10 minutes; confirmed incidents daily.",
+   k1="Ransomware claims (last 7 days)", k2="Claims involving Korea", k3="Most-claimed countries", k4="New CISA exploited flaws", rec="Recent confirmed incidents", news="Cyber news just in",
+   v={"atk": "Confirmed attack", "susp": "Under investigation", "no": "Not an attack", "vuln": "Vulnerability"}, todo="What companies should do now",
+   t=["Change passwords on work, bank and public-system accounts and turn on two-step login.", "Compare CISA's known-exploited list with your equipment and software and update at once.", "Keep backups off the network and rehearse a restore once."],
+   b1="See all cyberattacks", b2="Security review consultation", note="Ransomware claims are posted by criminal groups and are unverified. We do not name victims.", cl="/cyber/{L}/"),
+}
+
+
+def cyber(lang):
+    import sys as _s
+    _s.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import cyber_data as C
+    c = CY.get(lang) or CY["en"]
+    ko = lang == "ko"
+    cl = c["cl"].replace("{L}", lang)
+    rows = "".join(f'<li><span class="cd">{html.escape(r[0])}</span><span class="ct">{html.escape(r[5][0] if ko else r[5][1])}<small> · {html.escape(r[1][0] if ko else r[1][1])}</small></span><span class="cv v-{r[3]}">{html.escape(c["v"].get(r[3], r[3]))}</span></li>' for r in C.REC[:6])
+    todo = "".join(f"<li>{html.escape(x)}</li>" for x in c["t"])
+    return f'''<section class="hc-cy" id="cyber-now"><div class="in">
+<h2><i></i>{html.escape(c["h"])}</h2><p class="hc-lead">{html.escape(c["l"])}</p>
+<div class="cyk"><div><b id="cyk1">–</b><span>{html.escape(c["k1"])}</span></div><div><b id="cyk2">–</b><span>{html.escape(c["k2"])}</span></div><div><b id="cyk3" class="sm">–</b><span>{html.escape(c["k3"])}</span></div><div><b id="cyk4" class="sm">–</b><span>{html.escape(c["k4"])}</span></div></div>
+<div class="cyg"><div><h3>{html.escape(c["rec"])}</h3><ul class="cyl">{rows}</ul></div><div><h3>{html.escape(c["news"])}</h3><div data-newsbox="t:cyber" data-n="6" data-nohead></div></div></div>
+<div class="cyt"><h3>{html.escape(c["todo"])}</h3><ol>{todo}</ol></div>
+<div class="cyb"><a class="b1" href="{cl}">{html.escape(c["b1"])} →</a><a class="b2" href="#solutions">{html.escape(c["b2"])} →</a></div>
+<p class="cyn">{html.escape(c["note"])}</p></div>
+<script>(function(){{var K={"true" if ko else "false"},dn;try{{dn=new Intl.DisplayNames([K?"ko":"{lang}"],{{type:"region"}})}}catch(e){{}}function n(c){{try{{return dn?dn.of(c):c}}catch(e){{return c}}}}
+fetch("/api/cyberlive").then(function(r){{return r.json()}}).then(function(j){{var rw=j.rw||[],by={{}};rw.forEach(function(x){{if(x.c)by[x.c]=(by[x.c]||0)+1}});
+document.getElementById("cyk1").textContent=rw.length;document.getElementById("cyk2").textContent=by.KR||0;
+var top=Object.keys(by).sort(function(a,b){{return by[b]-by[a]}}).slice(0,3);document.getElementById("cyk3").textContent=top.map(function(c){{return String.fromCodePoint.apply(null,c.split("").map(function(x){{return 127397+x.charCodeAt(0)}}))+" "+n(c)+" "+by[c]}}).join(" · ")||"–";
+var k=(j.kev||[])[0];document.getElementById("cyk4").textContent=k?(k.d+" · "+k.v+" "+k.p):"–"}}).catch(function(){{}})}})()</script></section>'''
 def main():
     global CSSV
     CSSV = _cssv()
@@ -131,6 +167,8 @@ def main():
         for k in MAIN:
             if k == "@solutions":
                 order.append(solutions(lang))
+            elif k == "@cyber":
+                order.append(cyber(lang))
             elif k in got:
                 order.append(got[k]); used.add(k)
         rest = [v for k, v in parts if k not in used]
@@ -146,6 +184,10 @@ def main():
                 pos = s.find(f'id="{a_[0]}"')
                 if pos >= 0 and (d0 < 0 or pos < d0):
                     keep.append(f'<a href="#{a_[0]}">{a_[1]}</a>')
+            cyl = f'<a href="#cyber-now">{html.escape((CY.get(lang) or CY["en"])["h"].split(" — ")[0])}</a>' if 'id="cyber-now"' in s else ""
+            wi = next((i for i, x in enumerate(keep) if '#world-now"' in x), len(keep) - 2)
+            if cyl:
+                keep.insert(wi + 1, cyl)
             links = f'<a href="#solutions">{html.escape(TX[lang]["sn"])}</a>' + "".join(keep) + (f'<a href="#more">{html.escape(TX[lang]["mo"])}</a>' if d0 >= 0 else "")
             s = s[:m.start()] + m.group(1) + links + m.group(3) + s[m.end():]
         s = s.replace('<details class="hc-more">', '<details class="hc-more" id="more">', 1)
