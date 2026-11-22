@@ -33,14 +33,25 @@ class GlobalCoverageAuditTests(unittest.TestCase):
         self.assertEqual(a["news"]["remaining_minimum_slots"], 48)
         self.assertEqual(a["live_verified_url_count"], 0)
 
-    def test_six_new_country_environment_weather_emergency_directories(self):
+    def test_new_country_environment_weather_emergency_directories(self):
         a = self.audit
         for iso in ("DZ", "AO", "BJ", "BW", "BF", "BI"):
             self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
             self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
-        self.assertEqual(a["environment_weather_emergency"]["complete_countries"], 79)
-        self.assertEqual(a["environment_weather_emergency"]["candidate_links"], 238)
-        self.assertEqual(a["environment_weather_emergency"]["missing_national_category_links"], 341)
+        # CV, CM and ET researched separately; they remain directory candidates, NOT live collectors.
+        for iso in ("CV", "CM", "ET"):
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
+        self.assertFalse(a["production_feed_connected"])
+        for iso in ("MD", "SK", "MV", "FJ"):
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
+        for iso in ("JO", "GE", "LU"):
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["candidate_total"], 3, iso)
+            self.assertEqual(a["environment_weather_emergency"]["countries"][iso]["missing"], 0, iso)
+        self.assertEqual(a["environment_weather_emergency"]["complete_countries"], 89)
+        self.assertEqual(a["environment_weather_emergency"]["candidate_links"], 267)
+        self.assertEqual(a["environment_weather_emergency"]["missing_national_category_links"], 312)
 
     def test_territory_counts_are_separate_and_greenland_news_gap_not_filled(self):
         a = self.audit
