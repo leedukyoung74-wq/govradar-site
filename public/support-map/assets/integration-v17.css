@@ -1,0 +1,17 @@
+@font-face{font-family:WMMNexon;src:url('/fonts/NEXONLv1GothicRegular.ttf');font-display:swap}@font-face{font-family:WMMNexon;src:url('/fonts/NEXONLv1GothicBold.ttf');font-weight:700;font-display:swap}body,#wmm-business-radar,button,input,select{font-family:WMMNexon,Arial,sans-serif!important} [hidden],#wr-map-earth{display:none!important}#wmm-business-radar .wr-region-dot .wr-hit{fill:transparent;stroke:none;filter:none} :focus-visible{outline:3px solid #bda775;outline-offset:4px}body{margin:0} .wr-auth-layout>*{min-width:0} @media(max-width:620px){.wr-auth-top{flex-wrap:wrap}.wr-auth-title{overflow-wrap:anywhere}} @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.wr-teaser-map{position:relative;width:100%;height:100%;z-index:2}.wr-teaser-map image{opacity:.35}.wr-teaser-map circle{fill:#111;stroke:#bda775;stroke-width:1.5}.wr-teaser-map text{fill:#eee;font-size:12px;font-weight:bold}.wr-teaser-map a:hover circle,.wr-teaser-map a:focus circle{fill:#675a42}.wr-preview-label{pointer-events:none}
+.wr-auth-gate{background:#101010!important;background-image:radial-gradient(ellipse at 78% 24%,#292722 0%,transparent 42%),linear-gradient(115deg,#090909,#191919 80%)!important}.wr-auth-preview{background:radial-gradient(ellipse at 56% 49%,#36332c 0%,#20201e 48%,#111 80%)}
+
+/* Embedded content must never size itself from iframe viewport height. */
+body.wr-embed-mode{height:auto;min-height:0;overflow-x:hidden}
+body.wr-embed-mode .wr-auth-gate{min-height:0!important;height:auto!important}
+body.wr-embed-mode .wr-auth-layout{flex:none;min-height:0;padding-block:32px}
+body.wr-embed-mode .wr-auth-bottom{margin-top:24px}
+body.wr-embed-mode .wr-auth-preview{height:560px;min-height:0}
+.wr-auth-content h1,.wr-auth-description{word-break:keep-all;overflow-wrap:break-word}
+@media(max-width:1120px){body.wr-embed-mode .wr-auth-preview{height:480px}}
+@media(max-width:700px){body.wr-embed-mode .wr-auth-preview{height:380px}.wr-auth-content h1{font-size:32px!important}.wr-auth-top{line-height:1.6}.wr-auth-benefits{flex-wrap:wrap}}
+
+/* Navigation is available before, during and after authentication. */
+.wr-site-return{display:flex;flex-wrap:wrap;gap:12px 24px;padding:16px 24px;background:#111;color:#fff;font:inherit;position:relative;z-index:20}.wr-site-return a{color:#fff;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}.wr-site-return a:hover,.wr-site-return a:focus-visible{color:#decba1;text-decoration:underline}.wr-site-return a:focus-visible{outline:2px solid #decba1;outline-offset:4px}

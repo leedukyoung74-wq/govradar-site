@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#101a22" name="theme-color"/>
+<meta content="수출 준비 중소기업을 위한 3분 해외진출 진단, 수출바우처 준비 체크리스트, 무료 상담. WMM × GCSME" name="description"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icon-192.png" rel="icon"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="WMM 해외진출" name="apple-mobile-web-app-title"/>
+<style>html{padding-top:env(safe-area-inset-top,0px);padding-bottom:0;background:#101a22}body{margin:0}</style>
+<title>WMM 해외진출</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+/* Layout: 휴대폰 한 화면 앱. 위 상태줄 + 가운데 화면 + 아래 탭 4개(홈·진단·체크·상담). 데스크톱에선 가운데 폰 크기 기둥. 의도적으로 어두운 단일 테마(수출 항로의 밤바다). */
+:root{
+  --night:#0c1d24; --deck:#122a33; --card:#173540; --line:#244752;
+  --sea:#2bb3a3; --sea-deep:#0f8a7c; --glow:#7fe3d4; --buoy:#f2a23a;
+  --text:#eef5f3; --soft:#9db7b5;
+  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--night);color:var(--text);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+*{box-sizing:border-box}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,p{margin:0}
+h1,h2{letter-spacing:-.03em;line-height:1.3;text-wrap:balance}
+:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
+
+.app{max-width:480px;height:100%;margin:0 auto;display:grid;grid-template-rows:auto 1fr auto;background:var(--night);position:relative;overflow:hidden}
+@media (min-width:600px){.app{border-left:1px solid var(--line);border-right:1px solid var(--line)}}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:12px max(18px,env(safe-area-inset-right,0px)) 10px max(18px,env(safe-area-inset-left,0px))}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}
+.mark{width:32px;height:32px;display:block}
+.bar small{font-size:11px;color:var(--soft);letter-spacing:.12em}
+.barR{display:flex;align-items:center;gap:10px}
+.lang{display:flex;background:var(--deck);border:1px solid var(--line);border-radius:999px;padding:2px}
+.lang button{background:none;border:0;border-radius:999px;padding:4px 10px;font:600 12px var(--sans);color:var(--soft);cursor:pointer;min-width:34px}
+.lang button[aria-pressed="true"]{background:var(--sea);color:#04201c}
+
+.screens{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px max(18px,env(safe-area-inset-right,0px)) 24px max(18px,env(safe-area-inset-left,0px))}
+.screen{display:none;animation:in .28s ease}
+.screen.on{display:block}
+@keyframes in{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* tabs */
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);background:var(--deck);border-top:1px solid var(--line);padding:6px max(6px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px))}
+.tab{display:grid;justify-items:center;gap:2px;background:none;border:0;padding:8px 0;font-size:11px;color:var(--soft);cursor:pointer}
+.tab svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab.on{color:var(--glow)}
+
+/* home */
+.hero{position:relative;border-radius:22px;overflow:hidden;padding:26px 22px 22px;background:radial-gradient(120% 90% at 85% 0%,#1f5a5f 0%,transparent 60%),linear-gradient(180deg,#143640,#0f2830);border:1px solid var(--line)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.hero>*{position:relative}
+.seal{position:absolute !important;right:-18px;top:-18px;width:132px;height:132px;opacity:.9;transform:rotate(-8deg);pointer-events:none}
+.hero .kicker,.hero h1{max-width:72%}
+.kicker{font:600 11px var(--mono);letter-spacing:.16em;color:var(--glow)}
+.hero h1{font-size:30px;margin:12px 0 10px}
+.hero h1 em{font-style:normal;color:var(--glow)}
+.hero p{color:var(--soft);font-size:15px}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:20px;padding:16px;border:0;border-radius:14px;background:var(--sea);color:#04201c;font-weight:700;font-size:16px;cursor:pointer;transition:transform .12s,background .15s}
+.cta:active{transform:scale(.98)}
+.cta:hover{background:var(--glow)}
+.cta.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--line)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.tile{display:grid;gap:6px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;cursor:pointer}
+.tile b{font-size:15px}
+.tile span{font-size:13px;color:var(--soft);line-height:1.5}
+.tile i{font-style:normal;font:600 12px var(--mono);color:var(--buoy)}
+.route{margin-top:22px}
+.route h3{font-size:14px;color:var(--soft);font-weight:500;margin-bottom:10px}
+.route ol{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.route li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.route li b{font:600 13px var(--mono);color:var(--glow)}
+.route li p{font-size:13px;color:var(--soft)}
+.route li strong{display:block;font-size:15px}
+.install{margin-top:18px;font-size:12px;color:var(--soft);background:var(--deck);border-radius:12px;padding:12px 14px;border:1px dashed var(--line)}
+
+/* diagnosis */
+.prog{height:6px;border-radius:6px;background:var(--deck);overflow:hidden;margin:6px 0 18px}
+.prog div{height:100%;background:linear-gradient(90deg,var(--sea-deep),var(--glow));transition:width .3s}
+.qhead{display:flex;justify-content:space-between;font:600 12px var(--mono);color:var(--soft);letter-spacing:.06em}
+.qtext{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.4;margin:10px 0 22px;text-wrap:balance}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;width:100%;padding:16px;border-radius:14px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:16px;transition:border-color .15s,background .15s}
+.opt .n{flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;font:600 12px var(--mono);background:var(--deck);color:var(--soft)}
+.opt.sel{border-color:var(--sea);background:#16443f}
+.opt.sel .n{background:var(--sea);color:#04201c}
+.back{margin-top:16px;background:none;border:0;color:var(--soft);font-size:14px;cursor:pointer;padding:8px 0}
+.ringbox{display:grid;justify-items:center;gap:6px;margin:6px 0 18px}
+.ringbox svg{width:180px;height:180px}
+.ringbox .stage{font-size:20px;font-weight:700}
+.ringbox .sub{font-size:13px;color:var(--soft)}
+.bars{display:grid;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.brow{display:grid;grid-template-columns:5.2em 1fr 2.4em;gap:10px;align-items:center;font-size:13px;color:var(--soft)}
+.btrack{height:8px;border-radius:8px;background:var(--deck);overflow:hidden}
+.bfill{height:100%;border-radius:8px;background:var(--sea);transition:width .5s}
+.bfill.low{background:var(--buoy)}
+.brow span:last-child{text-align:right;color:var(--text);font:600 13px var(--mono)}
+.advice{margin-top:14px;background:linear-gradient(180deg,#1c3e2f00,#1c3e2f00),var(--deck);border-left:3px solid var(--buoy);border-radius:4px 14px 14px 4px;padding:14px 16px;font-size:14px;color:var(--soft)}
+.advice b{display:block;color:var(--text);margin-bottom:4px}
+
+/* checklist */
+.sect-h{font-size:24px;margin:6px 0 6px}
+.sect-p{color:var(--soft);font-size:14px;margin-bottom:16px}
+.meter{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.meter .btrack{flex:1;height:10px}
+.meter b{font:600 14px var(--mono);color:var(--glow)}
+.checks{display:grid;gap:10px}
+.check{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;cursor:pointer}
+.check input{appearance:none;width:24px;height:24px;border-radius:8px;border:2px solid var(--line);margin:2px 0 0;display:grid;place-items:center;cursor:pointer;background:var(--deck)}
+.check input:checked{background:var(--sea);border-color:var(--sea)}
+.check input:checked::after{content:"";width:7px;height:12px;border:solid #04201c;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.check b{display:block;font-size:15px}
+.check span{font-size:13px;color:var(--soft)}
+.check:has(input:checked) b{color:var(--soft);text-decoration:line-through}
+.src{margin-top:12px;font-size:11px;color:var(--soft)}
+.src a{color:var(--soft)}
+
+/* contact */
+.form{display:grid;gap:12px}
+.form label{display:grid;gap:6px;font-size:13px;color:var(--soft)}
+.form input,.form select,.form textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;font-size:16px}
+.form textarea{min-height:120px;resize:vertical}
+.agree{display:flex !important;grid-template-columns:none;gap:10px;align-items:flex-start;font-size:13px}
+.agree input{width:20px !important;height:20px;flex:0 0 auto;margin-top:2px;accent-color:var(--sea);padding:0}
+.err{color:#ffb4a8;font-size:13px}
+.done{background:var(--card);border:1px solid var(--sea);border-radius:14px;padding:14px;display:grid;gap:10px;font-size:14px}
+.done pre{white-space:pre-wrap;margin:0;font:13px/1.6 var(--sans);background:var(--deck);padding:12px;border-radius:10px;color:var(--soft)}
+.mail{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--deck);border-radius:12px;padding:12px 14px;margin-top:6px;font:600 14px var(--mono);user-select:all}
+.mail button{background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:500 12px var(--sans);color:var(--text);cursor:pointer}
+.foot{margin-top:22px;font-size:11px;color:var(--soft);line-height:1.6}
+@media (prefers-reduced-motion:reduce){.screen{animation:none}.cta,.bfill,.prog div{transition:none}}
+</style>
+<style id="wmm-chatgpt-design">
+/* ChatGPT design review: CSS only. Content, IDs, translations and scripts unchanged. */
+:root{--night:#101a22;--deck:#172630;--card:#1b2e39;--line:#33454e;--sea:#d4b780;--sea-deep:#a68a58;--glow:#ead8b5;--buoy:#d4b780;--text:#f6f4ef;--soft:#b0bdc2}
+body{background:radial-gradient(ellipse at 50% 0,#263c48 0,#101a22 58%);letter-spacing:-.015em}
+.app{max-width:480px;background:#101a22}
+.bar{padding-top:19px;padding-bottom:18px;border-bottom:1px solid rgba(212,183,128,.15);background:#101a22;gap:12px}
+.logo{gap:10px;font-size:14px;line-height:1.4;min-width:0}.mark{width:36px;height:36px;object-fit:contain}.logo>span{display:flex;flex-direction:column;gap:3px}.bar small{font-size:9px;letter-spacing:.15em}.barR{gap:8px;flex-shrink:0}.lang{background:#0c151c;border-color:#3b4a50;padding:3px}.lang button{padding:5px 9px;min-height:30px}.lang button[aria-pressed=true]{background:#d4b780;color:#17232a}
+.screens{padding-top:18px;padding-bottom:28px;scrollbar-width:thin;scrollbar-color:#44565e transparent}
+.hero{padding:28px 23px 24px;border-radius:20px;background:radial-gradient(ellipse at 100% 0,rgba(212,183,128,.11),transparent 65%),linear-gradient(145deg,#223b48,#132631);border-color:#4b554f;box-shadow:0 12px 35px #0002}
+.hero canvas{opacity:.22}.seal{opacity:.85;width:118px;height:118px;right:-14px;top:-14px}
+.hero .kicker,.hero h1{max-width:74%}.kicker{font-size:10px;letter-spacing:.2em;color:#d4b780}.hero h1{font-size:34px;line-height:1.28;letter-spacing:-.045em;margin:20px 0 16px}.hero h1 em{color:#ead8b5}.hero p{font-size:14px;line-height:1.85;color:#c2ced0;max-width:31em}
+.cta{border-radius:10px;padding:15px 16px;min-height:54px;background:linear-gradient(115deg,#e4cea5,#c6a46d);color:#17232a;box-shadow:0 5px 15px #0002;font-size:15px;line-height:1.55;margin-top:24px}.cta:hover{background:#ead8b5}.cta.ghost{background:transparent;color:#e1e6e5;box-shadow:inset 0 0 0 1px #4c5b60}.cta.ghost:hover{background:#1d303a}
+.tiles{gap:12px;margin-top:16px}.tile{background:#182932;border-color:#35474f;border-radius:13px;padding:18px 15px;gap:9px;box-shadow:0 5px 16px #0001;transition:border-color .2s,background .2s}.tile:hover{background:#213741;border-color:#a88d60}.tile i{font-size:10px;letter-spacing:.14em;color:#d4b780}.tile b{font-size:14px;line-height:1.55;word-break:keep-all}.tile span{font-size:12px;line-height:1.7}
+.route{margin-top:30px;padding:0 3px}.route h3{font-size:12px;letter-spacing:.025em;margin-bottom:15px;color:#c2c9c8}.route li{grid-template-columns:32px 1fr;gap:12px;padding:16px 0;border-color:#2c3b43}.route li b{font-size:11px;color:#d4b780;padding-top:4px}.route li strong{font-size:14px;font-weight:500}.route li p{font-size:12px;line-height:1.8;margin-top:4px}.install{background:#15242d;border:1px solid #2b3e47;border-radius:10px;color:#b0bdc2;line-height:1.8;font-size:11px;padding:14px 16px}
+.tabs{background:#13222b;border-color:#35454d;padding-top:8px;box-shadow:0 -10px 25px #0002}.tab{gap:5px;padding:9px 0;border-radius:10px;margin:0 3px;font-size:10px;min-height:58px;transition:background .15s}.tab.on{background:#263a43;color:#ead8b5}.tab svg{width:21px;height:21px;stroke-width:1.6}
+#s-diag,#s-check,#s-ask{padding-top:8px}.qhead{font-size:10px;letter-spacing:.09em}.prog{height:4px;margin:13px 0 25px}.qtext{font-size:25px;line-height:1.48;margin-bottom:25px;word-break:keep-all}.opts{gap:12px}.opt{border-radius:12px;background:#192c36;border-color:#3b4c54;padding:18px 16px;font-size:15px;line-height:1.65;min-height:68px}.opt:hover{border-color:#b39b71;background:#213741}.opt .n{border:1px solid #435660;background:#13232c;color:#c5cecF;width:28px;height:28px;font-size:11px}.opt.sel{background:#35413c;border-color:#d4b780}.opt.sel .n{background:#d4b780;color:#17232a;border-color:#d4b780}.back{font-size:12px;padding:12px 0}
+.ringbox{padding:15px 0;margin-bottom:24px;gap:10px}.ringbox svg{width:168px;height:168px;filter:drop-shadow(0 8px 20px #0003)}#ringArc{stroke:#d4b780}.ringbox .stage{font-size:21px}.ringbox .sub{font-size:12px}.bars{padding:21px 18px;border-radius:12px;background:#192c36;gap:17px}.brow{font-size:12px}.btrack{height:5px}.bfill{background:#d4b780}.bfill.low{background:#bc8d5a}.advice{border-left-color:#d4b780;background:#1b2d36;border-radius:2px 10px 10px 2px;padding:18px;font-size:13px;line-height:1.85}.advice b{color:#ead8b5;margin-bottom:7px}
+.sect-h{font-size:26px;line-height:1.4;margin-bottom:12px;word-break:keep-all}.sect-p{font-size:13px;line-height:1.85;margin-bottom:24px}.meter{padding:15px 0;margin-bottom:16px}.meter .btrack{height:5px}.meter b{font-size:12px}.check{background:#192c36;border-color:#35474f;border-radius:12px;padding:18px 16px;gap:13px}.check b{font-size:14px;line-height:1.6;margin-bottom:4px}.check span{font-size:12px;line-height:1.8}.check input{border:1px solid #6b7d83;border-radius:6px}.check:has(input:checked){border-color:#87785d;background:#273830}.src{font-size:10px;line-height:1.9;margin-top:20px}.src a{text-underline-offset:3px}
+.form{gap:18px}.form label{font-size:12px;gap:9px}.form input,.form select,.form textarea{border-color:#3a4d57;background:#172a35;border-radius:9px;padding:14px;min-height:50px}.form input::placeholder,.form textarea::placeholder{color:#8f9fa7;opacity:1}.form input:focus,.form select:focus,.form textarea:focus{border-color:#d4b780;outline:2px solid #d4b78055;outline-offset:2px}.form textarea{min-height:150px;line-height:1.8}.form .agree{font-size:12px;line-height:1.8}.agree input{min-height:20px}.done{background:#1b302e;border-color:#948363;border-radius:10px;line-height:1.8}.done[hidden]{display:none}.mail{border:1px solid #35474f;background:#142630;border-radius:9px;padding:14px 12px;margin-top:20px;font-size:12px;flex-wrap:wrap}.mail button{min-height:36px;border-color:#5a6258;color:#ead8b5}.foot{font-size:10px;line-height:1.9;color:#a4b2b8;margin-top:24px}
+html[lang=en] .hero h1{font-size:32px;letter-spacing:-.035em}html[lang=en] .logo{font-size:12px}html[lang=en] .qtext{font-size:23px}html[lang=en] .tile b{font-size:13px}
+@media(min-width:600px){.app{height:calc(100dvh - 48px);margin:24px auto;border:1px solid #46545a;border-radius:26px;box-shadow:0 28px 100px #0006}.screens{padding-left:22px;padding-right:22px}.bar{padding-left:22px;padding-right:22px}}
+@media(max-width:359px){.bar{padding-left:14px;padding-right:14px}.barR>small{display:none}.screens{padding-left:14px;padding-right:14px}.hero{padding:24px 18px}.hero h1{font-size:30px}.tile{padding:15px 12px}.logo{font-size:12px}.qtext{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.tile,.tab,.opt{transition:none}}
+/* Claude review: readability floor (min 11px), seal restored, header contrast */
+.bar small{font-size:11px}.kicker{font-size:11px}.tile i{font-size:11px}.route h3{font-size:13px}.route li b{font-size:12px}
+.install{font-size:12px}.tab{font-size:11px}.qhead{font-size:11px}.back{font-size:13px}.brow{font-size:13px}.meter b{font-size:13px}
+.src{font-size:11px}.foot{font-size:11px}.mail{font-size:13px}.form .agree{font-size:13px}.ringbox .sub{font-size:13px}
+html[lang=en] .hero h1{font-size:30px}
+@media(max-width:359px){.hero .kicker,.hero h1{max-width:100%}.seal{opacity:.35}}
+
+
+</style>
+<link href="/design-system.css?v=20261029" rel="stylesheet"/></head>
+<body class="wmm-clean clean-app">
+<div class="app">
+<header class="bar">
+<a class="logo" href="/"><img alt="WMM" class="mark" src="logo-mark.png"/><span><span data-i18n="brand">해외진출</span> <small>× GCSME</small></span></a>
+<div class="barR">
+<small id="whereLabel">HOME</small>
+<div aria-label="Language" class="lang" role="group">
+<button aria-pressed="true" data-lang="ko" type="button">한</button>
+<button aria-pressed="false" data-lang="en" type="button">EN</button>
+</div>
+</div>
+</header>
+<main class="screens" id="screens">
+<!-- HOME -->
+<section aria-label="홈" class="screen on" data-i18n-aria="aHome" id="s-home">
+<div class="hero">
+<canvas aria-hidden="true" id="sea"></canvas>
+<img alt="WORLD MAKING MEMBERS — Europe · Middle East · Africa · Asia" class="seal" src="logo-seal.png"/>
+<p class="kicker">EXPORT READINESS</p>
+<h1 data-i18n="h1">수출,<br/><em>어디서부터</em> 할까요?</h1>
+<p data-i18n="heroP">3분 진단으로 지금 단계와 먼저 채울 빈칸을 알려 드려요. 영국 GCSME 본부 연계로 현지 검토까지 이어집니다.</p>
+<button class="cta" data-go="diag" data-i18n="heroCta" type="button">3분 무료 진단 시작 →</button>
+</div>
+<div class="tiles">
+<button class="tile" data-go="check" type="button"><i>D-CHECK</i><b data-i18n="t1b">2027 수출바우처 준비</b><span data-i18n="t1s">공고 전에 해 둘 5가지</span></button>
+<button class="tile" data-go="ask" type="button"><i>15 MIN</i><b data-i18n="t2b">무료 상담 신청</b><span data-i18n="t2s">1영업일 안에 회신</span></button>
+</div>
+<div class="route">
+<h3 data-i18n="routeH">WMM이 함께하는 길</h3>
+<ol>
+<li><b>01</b><div><strong data-i18n="r1">진출 진단</strong><p data-i18n="r1p">1개국 × 1개 제품군: 시장·인증·경쟁·진입 경로</p></div></li>
+<li><b>02</b><div><strong data-i18n="r2">영문 기업자료</strong><p data-i18n="r2p">회사소개서·역량표·국가별 제안서</p></div></li>
+<li><b>03</b><div><strong data-i18n="r3">시장 검증</strong><p data-i18n="r3p">후보 바이어·파트너 조사와 현지 검토</p></div></li>
+<li><b>04</b><div><strong data-i18n="r4">GCSME 공식레터</strong><p data-i18n="r4p">발송부터 회신 추적까지</p></div></li>
+</ol>
+</div>
+<p class="install" data-i18n="install" id="installHint">휴대폰에 앱으로 두기: 아이폰은 사파리 공유 버튼 → '홈 화면에 추가', 안드로이드는 크롬 메뉴 → '앱 설치'.</p>
+<nav class="clean-portal"><a href="/"><span class="bi" data-en="WMM Home" data-ko="WMM 홈페이지">WMM 홈페이지</span></a><a href="/membership/"><span class="bi" data-en="Membership" data-ko="멤버십">멤버십</span></a><a href="/business-studio/"><span class="bi" data-en="Business studio" data-ko="사업운영 소개">사업운영 소개</span></a></nav></section>
+<!-- DIAGNOSIS -->
+<section aria-label="자가진단" class="screen" data-i18n-aria="aDiag" id="s-diag">
+<div id="quiz">
+<div class="qhead"><span id="qArea"></span><span id="qNum"></span></div>
+<div class="prog"><div id="qBar" style="width:0"></div></div>
+<p class="qtext" id="qText"></p>
+<div class="opts" id="qOpts" role="radiogroup"></div>
+<button class="back" data-i18n="back" id="qBack" type="button">← 이전 문항</button>
+</div>
+<div hidden="" id="result">
+<div class="ringbox">
+<svg aria-labelledby="ringT" role="img" viewbox="0 0 200 200">
+<title data-i18n="ringT" id="ringT">준비도 점수</title>
+<circle cx="100" cy="100" fill="none" r="84" stroke="#122a33" stroke-width="16"></circle>
+<circle cx="100" cy="100" fill="none" id="ringArc" r="84" stroke="#2bb3a3" stroke-dasharray="0 528" stroke-linecap="round" stroke-width="16" transform="rotate(-90 100 100)"></circle>
+<text fill="#eef5f3" font-family="IBM Plex Mono, monospace" font-size="48" font-weight="600" id="ringNum" text-anchor="middle" x="100" y="104">0</text>
+<text fill="#9db7b5" font-size="13" text-anchor="middle" x="100" y="132">/ 100</text>
+</svg>
+<p class="stage" id="rStage"></p>
+<p class="sub" data-i18n="ringSub">해외진출 준비도</p>
+</div>
+<div class="bars" id="rBars"></div>
+<div class="advice" id="rAdvice"></div>
+<button class="cta" data-i18n="rAsk" id="rAsk" type="button">이 결과로 무료 상담 받기</button>
+<button class="cta ghost" data-i18n="rRetry" id="rRetry" style="margin-top:10px" type="button">다시 진단하기</button>
+<p class="foot" data-i18n="rFoot">준비 상태를 스스로 점검하는 참고 도구이며, 정부 지원 선정이나 해외 수주를 보장하지 않습니다. 답변은 이 기기에만 남습니다.</p>
+</div>
+</section>
+<!-- CHECKLIST -->
+<section aria-label="수출바우처 준비" class="screen" data-i18n-aria="aCheck" id="s-check">
+<h2 class="sect-h" data-i18n="cH">2027 수출바우처, 공고 전에 할 5가지</h2>
+<p class="sect-p" data-i18n="cP">예년엔 12월 중순 접수가 시작돼 1월 초에 마감됐어요. 체크하면 이 기기에 저장됩니다.</p>
+<div class="meter"><div class="btrack"><div class="bfill" id="cBar" style="width:0"></div></div><b id="cNum">0/5</b></div>
+<div class="checks" id="checks"></div>
+<button class="cta" data-go="ask" data-i18n="cCta" style="margin-top:16px" type="button">준비가 막히면 상담 받기</button>
+<p class="src" data-i18n="cSrc">참고: 2026년 중기부 수출바우처 1차 접수 2025.12.17~2026.1.9, 약 2,000개사 선정 (<a href="https://www.hankyung.com/article/202512120601i" rel="noopener" target="_blank">한국경제</a>). 2027년 일정은 공식 공고를 확인하세요.</p>
+</section>
+<!-- CONTACT -->
+<section aria-label="상담 신청" class="screen" data-i18n-aria="aAsk" id="s-ask">
+<h2 class="sect-h" data-i18n="aH">15분 무료 상담</h2>
+<p class="sect-p" data-i18n="aP">지금 가진 자료와 목표 국가를 알려 주세요. 1영업일 안에 이메일로 회신드립니다.</p>
+<form class="form" id="askForm" novalidate="">
+<label for="aOrg"><span data-i18n="fOrg">회사명 *</span><input autocomplete="organization" data-i18n-ph="phOrg" id="aOrg" placeholder="○○산업"/></label>
+<label for="aName"><span data-i18n="fName">담당자 *</span><input autocomplete="name" data-i18n-ph="phName" id="aName" placeholder="김○○ 팀장"/></label>
+<label for="aEmail"><span data-i18n="fEmail">회신 이메일 *</span><input autocomplete="email" id="aEmail" inputmode="email" placeholder="name@company.com" type="email"/></label>
+<label for="aSvc"><span data-i18n="fSvc">관심 서비스</span><select id="aSvc">
+<option data-i18n="o1" value="dx">해외진출 진단</option><option data-i18n="o2" value="docs">영문 기업자료</option><option data-i18n="o3" value="sales">제안서·영업자료</option><option data-i18n="o4" value="voucher">수출바우처 준비</option><option data-i18n="o5" value="unsure">아직 모르겠음</option></select></label>
+<label for="aMsg"><span data-i18n="fMsg">내용 *</span><textarea data-i18n-ph="phMsg" id="aMsg" placeholder="예: 베트남 바이어에게 보낼 영문 회사소개서가 필요해요."></textarea></label>
+<input aria-hidden="true" autocomplete="off" id="aTrap" style="position:absolute;left:-9999px;width:1px;height:1px" tabindex="-1"/>
+<label class="agree" for="aAgree"><input id="aAgree" type="checkbox"/><span data-i18n="fAgree">상담 회신을 위해 위 정보를 이용하는 데 동의합니다.</span></label>
+<p class="err" hidden="" id="aErr"></p>
+<button class="cta" data-i18n="fSend" id="aSend" style="margin-top:4px" type="submit">상담 신청 내용 만들기</button>
+<div class="done" hidden="" id="aDone"><span id="aDoneMsg"></span><pre id="aText"></pre></div>
+</form>
+<div class="mail"><span>73036396@naver.com</span><button data-i18n="copy" id="copyMail" type="button">복사</button></div>
+<p class="foot" data-i18n="aFoot">월드메이킹멤버스 주식회사 · 대표 이덕영 · 사업자등록번호 589-88-01039<br/>WMM AI BUSINESS STUDIO · <a href="https://www.wmm-hoa.com" rel="noopener" style="color:inherit" target="_blank">www.wmm-hoa.com</a></p>
+</section>
+</main>
+<nav aria-label="앱 메뉴" class="tabs" data-i18n-aria="aTabs">
+<button class="tab on" data-go="home" type="button"><svg viewbox="0 0 24 24"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path></svg><span data-i18n="tabHome">홈</span></button>
+<button class="tab" data-go="diag" type="button"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span data-i18n="tabDiag">진단</span></button>
+<button class="tab" data-go="check" type="button"><svg viewbox="0 0 24 24"><rect height="16" rx="3" width="16" x="4" y="4"></rect><path d="M8 12l3 3 5-6"></path></svg><span data-i18n="tabCheck">바우처</span></button>
+<button class="tab" data-go="ask" type="button"><svg viewbox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"></path></svg><span data-i18n="tabAsk">상담</span></button>
+</nav>
+</div>
+<script>
+(function(){
+  'use strict';
+  /* 자동 접수 주소(선택): Apps Script 웹 앱 주소를 넣으면 앱에서 바로 접수됩니다. 비우면 복사해서 이메일로 보내는 방식. */
+  var INTAKE_URL='';
+  var INBOX='73036396@naver.com';
+  var $=function(id){return document.getElementById(id)};
+  var store={get:function(k,d){try{var v=localStorage.getItem('wmm_'+k);return v?JSON.parse(v):d}catch(e){return d}},
+             set:function(k,v){try{localStorage.setItem('wmm_'+k,JSON.stringify(v))}catch(e){}}};
+
+  /* ---------- 언어 (한국어 / English) ---------- */
+  var EN={
+    brand:'Global Expansion', h1:'Going global?<br><em>Where</em> do you start?',
+    heroP:'A 3-minute check shows your readiness and the first gaps to fill. Backed by GCSME headquarters in London, through to on-the-ground review.',
+    heroCta:'Start the free 3-minute check →', t1b:'Export Voucher 2027', t1s:'5 things to do before the call opens',
+    t2b:'Free consultation', t2s:'Reply within 1 business day', routeH:'How WMM works with you',
+    r1:'Market entry diagnosis', r1p:'1 country × 1 product line: market, certification, competition, entry route',
+    r2:'English company documents', r2p:'Company profile, capability statement, country proposal',
+    r3:'Market validation', r3p:'Buyer and partner research with local review',
+    r4:'GCSME official letter', r4p:'From sending to tracking replies',
+    install:'Keep it as an app: on iPhone tap Share in Safari → "Add to Home Screen"; on Android open the Chrome menu → "Install app".',
+    back:'← Previous question', ringT:'Readiness score', ringSub:'Export readiness', rAsk:'Get a free consultation with this result',
+    rRetry:'Take the check again', rFoot:'A self-check tool for reference only. It does not guarantee government support or overseas contracts. Your answers stay on this device.',
+    cH:'Export Voucher 2027: 5 things to do before the call opens',
+    cP:'Korea\'s export voucher program has opened applications in mid-December and closed in early January. Your ticks are saved on this device.',
+    cCta:'Stuck? Get a consultation',
+    cSrc:'Reference: the 2026 MSS Export Voucher first round ran Dec 17, 2025 – Jan 9, 2026, selecting about 2,000 firms (<a href="https://www.hankyung.com/article/202512120601i" target="_blank" rel="noopener">Korea Economic Daily</a>). Check the official notice for 2027 dates.',
+    aH:'Free 15-minute consultation', aP:'Tell us what materials you have and your target country. We reply by email within 1 business day.',
+    fOrg:'Company *', fName:'Contact person *', fEmail:'Reply email *', fSvc:'Service of interest', fMsg:'Message *',
+    phOrg:'Company name', phName:'Your name and title', phMsg:'e.g. We need an English company profile for a buyer in Vietnam.',
+    o1:'Market entry diagnosis', o2:'English company documents', o3:'Proposals & sales materials', o4:'Export voucher preparation', o5:'Not sure yet',
+    fAgree:'I agree to the use of this information to reply to my inquiry.', fSend:'Create my request', copy:'Copy',
+    aFoot:'WORLD MAKING MEMBERS Co., Ltd. · CEO Lee Duk Young · Business Reg. No. 589-88-01039<br>WMM AI BUSINESS STUDIO · <a href="https://www.wmm-hoa.com" target="_blank" rel="noopener" style="color:inherit">www.wmm-hoa.com</a>',
+    tabHome:'Home', tabDiag:'Check', tabCheck:'Voucher', tabAsk:'Contact',
+    aHome:'Home', aDiag:'Self-check', aCheck:'Export voucher', aAsk:'Consultation', aTabs:'App menu'
+  };
+  var KO={};
+  document.querySelectorAll('[data-i18n]').forEach(function(el){KO[el.getAttribute('data-i18n')]=el.innerHTML});
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(el){KO[el.getAttribute('data-i18n-ph')]=el.getAttribute('placeholder')});
+  document.querySelectorAll('[data-i18n-aria]').forEach(function(el){KO[el.getAttribute('data-i18n-aria')]=el.getAttribute('aria-label')});
+  var saved=store.get('lang',null);
+  var qlang=new URLSearchParams(location.search).get('lang');
+  var lang=(['ko','en'].includes(qlang)?qlang:null)||saved||((navigator.language||'ko').toLowerCase().indexOf('ko')===0?'ko':'en');
+  var L=function(ko,en){return lang==='en'?en:ko};
+
+  function applyLang(){
+    var D=lang==='en'?EN:KO;
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n'); if(D[k]!=null) el.innerHTML=D[k]});
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){var k=el.getAttribute('data-i18n-ph'); if(D[k]!=null) el.setAttribute('placeholder',D[k])});
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){var k=el.getAttribute('data-i18n-aria'); if(D[k]!=null) el.setAttribute('aria-label',D[k])});
+    document.querySelectorAll('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-lang')===lang?'true':'false')});
+    document.title=L('WMM 해외진출','WMM Global Expansion');
+    if(!$('quiz').hidden) renderQ(); else if(last) showResult(true);
+    renderC();
+    if(INTAKE_URL) $('aSend').textContent=L('상담 신청 보내기','Send my request');
+  }
+  document.querySelectorAll('[data-lang]').forEach(function(b){
+    b.addEventListener('click',function(){lang=b.getAttribute('data-lang');store.set('lang',lang);applyLang()});
+  });
+
+  /* ---------- 화면 전환 ---------- */
+  var LABEL={home:'HOME',diag:'DIAGNOSIS',check:'VOUCHER',ask:'CONTACT'};
+  function go(name){
+    document.querySelectorAll('.screen').forEach(function(s){s.classList.toggle('on',s.id==='s-'+name)});
+    document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.getAttribute('data-go')===name)});
+    $('whereLabel').textContent=LABEL[name]; $('screens').scrollTop=0;
+  }
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-go]'); if(b){go(b.getAttribute('data-go'))}});
+
+  /* ---------- 홈 배경: 항로 물결 ---------- */
+  var cv=$('sea'), cx=cv.getContext&&cv.getContext('2d'), still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function drawSea(t){
+    if(!cx)return; var w=cv.clientWidth,h=cv.clientHeight,dpr=window.devicePixelRatio||1;
+    if(cv.width!==w*dpr){cv.width=w*dpr;cv.height=h*dpr}
+    cx.setTransform(dpr,0,0,dpr,0,0); cx.clearRect(0,0,w,h);
+    for(var i=0;i<6;i++){
+      cx.beginPath(); var y0=h*0.45+i*h*0.09;
+      for(var x=0;x<=w;x+=6){var y=y0+Math.sin(x/58+t/1400+i)*6*(1+i*0.25); x?cx.lineTo(x,y):cx.moveTo(x,y)}
+      cx.strokeStyle='rgba(127,227,212,'+(0.10+i*0.05)+')'; cx.lineWidth=1; cx.stroke();
+    }
+    cx.setLineDash([3,7]); cx.beginPath(); cx.moveTo(w*0.12,h*0.86); cx.quadraticCurveTo(w*0.55,h*0.22,w*0.9,h*0.3);
+    cx.strokeStyle='rgba(242,162,58,.7)'; cx.lineWidth=1.5; cx.stroke(); cx.setLineDash([]);
+    var p=((t/6000)%1); var bx=(1-p)*(1-p)*w*0.12+2*(1-p)*p*w*0.55+p*p*w*0.9, by=(1-p)*(1-p)*h*0.86+2*(1-p)*p*h*0.22+p*p*h*0.3;
+    cx.beginPath(); cx.arc(bx,by,3.5,0,7); cx.fillStyle='#f2a23a'; cx.fill();
+  }
+  function loop(t){drawSea(t); if(!still) requestAnimationFrame(loop)}
+  requestAnimationFrame(loop);
+
+  /* ---------- 진단 ---------- */
+  var AREAS={market:['시장 정보','Market insight'],docs:['영문 자료','English materials'],cert:['인증·규제','Certification & rules'],exec:['실행 체력','Execution capacity']};
+  var A=function(k){return L(AREAS[k][0],AREAS[k][1])};
+  var Q=[
+    {a:'market',t:['진출할 나라가 정해져 있나요?','Have you chosen a target country?'],o:[['아직 없음','Not yet'],['후보가 여러 곳','Several candidates'],['1~2곳으로 좁힘','Narrowed to 1–2'],['1곳 확정','One confirmed']]},
+    {a:'market',t:['그 나라의 시장 규모·경쟁사·가격대를 아나요?','Do you know its market size, competitors and price range?'],o:[['모름','No'],['감으로만','Only a rough idea'],['일부 조사함','Partly researched'],['숫자로 정리함','Documented with figures']]},
+    {a:'docs',t:['영문 회사소개서가 있나요?','Do you have an English company profile?'],o:[['없음','No'],['번역만 해 둠','Only a translation'],['2년 넘게 됨','Over 2 years old'],['최신본으로 사용 중','Up to date and in use']]},
+    {a:'docs',t:['사양·단가·MOQ를 영문 한 장으로 줄 수 있나요?','Can you share specs, price and MOQ on one English page?'],o:[['없음','No'],['사양만 있음','Specs only'],['사양+단가','Specs + price'],['모두 있음','All of it']]},
+    {a:'cert',t:['대상국에 필요한 인증(CE·FDA·할랄 등)을 아나요?','Do you know the certifications required (CE, FDA, Halal, etc.)?'],o:[['모름','No'],['확인 중','Checking'],['무엇인지 앎','We know which'],['취득·진행 중','Obtained or in progress']]},
+    {a:'cert',t:['관세율과 라벨·원산지 규제를 확인했나요?','Have you checked tariffs, labelling and origin rules?'],o:[['아니오','No'],['들어 봄','Heard of them'],['일부 확인','Partly checked'],['HS코드로 확인','Checked by HS code']]},
+    {a:'exec',t:['해외 업무 담당자와 1년 예산이 있나요?','Do you have an export lead and a 1-year budget?'],o:[['둘 다 없음','Neither'],['대표가 겸업','CEO covers it'],['둘 중 하나','One of the two'],['둘 다 있음','Both']]},
+    {a:'exec',t:['수출 실적이나 해외 문의 경험이 있나요?','Any export sales or overseas inquiries so far?'],o:[['없음','None'],['문의만 받아 봄','Inquiries only'],['샘플·소량 거래','Samples or small orders'],['정기 거래','Regular trade']]}
+  ];
+  var NEXT={
+    market:[['시장 숫자부터','대상국 1곳의 시장 규모·경쟁·진입 경로를 숫자로 확인하는 게 먼저예요. 1개국 진출 진단이 맞습니다.'],['Start with market numbers','Confirm the market size, competition and entry route for one target country first. A single-country entry diagnosis fits best.']],
+    docs:[['영문 자료부터','바이어에게 바로 보낼 회사소개 2쪽과 제품 1장 요약이 먼저예요.'],['Start with English materials','First prepare a 2-page company profile and a 1-page product summary you can send to buyers.']],
+    cert:[['인증·관세부터','HS코드 기준으로 필요한 인증과 라벨, 관세를 먼저 정리하세요. 비용이 크게 달라집니다.'],['Start with certification & tariffs','Map the certifications, labelling and tariffs by HS code first. They change your costs significantly.']],
+    exec:[['담당자와 예산부터','해외 업무 담당과 1년 예산을 정하면 수출바우처 같은 지원도 계획할 수 있어요.'],['Start with people & budget','Assign an export lead and a 1-year budget; then you can plan for support such as export vouchers.']]
+  };
+  var STAGES=[['1단계 · 탐색 전','Stage 1 · Exploring'],['2단계 · 준비 시작','Stage 2 · Getting ready'],['3단계 · 진출 직전','Stage 3 · Almost ready'],['4단계 · 실행 가능','Stage 4 · Ready to go']];
+  var ans=store.get('ans',[]), qi=0, last=null;
+  function renderQ(){
+    var q=Q[qi]; $('qArea').textContent=A(q.a);
+    $('qNum').textContent=(qi+1)+' / '+Q.length; $('qBar').style.width=(qi/Q.length*100)+'%';
+    $('qText').textContent=L(q.t[0],q.t[1]); var box=$('qOpts'); box.textContent='';
+    q.o.forEach(function(label,v){
+      var b=document.createElement('button'); b.type='button'; b.className='opt'+(ans[qi]===v?' sel':''); b.setAttribute('role','radio'); b.setAttribute('aria-checked',ans[qi]===v?'true':'false');
+      var n=document.createElement('span'); n.className='n'; n.textContent=String.fromCharCode(65+v);
+      b.appendChild(n); b.appendChild(document.createTextNode(L(label[0],label[1])));
+      b.addEventListener('click',function(){
+        ans[qi]=v; store.set('ans',ans); renderQ();
+        setTimeout(function(){ if(qi<Q.length-1){qi++;renderQ()} else showResult() },180);
+      });
+      box.appendChild(b);
+    });
+    $('qBack').style.visibility=qi?'visible':'hidden';
+  }
+  $('qBack').addEventListener('click',function(){if(qi>0){qi--;renderQ()}});
+  function compute(){
+    var per={},k,tot=0,max=0,pct={};
+    for(k in AREAS)per[k]={s:0,m:0};
+    Q.forEach(function(q,i){per[q.a].m+=3;per[q.a].s+=(ans[i]||0)});
+    for(k in per){pct[k]=Math.round(per[k].s/per[k].m*100);tot+=per[k].s;max+=per[k].m}
+    var score=Math.round(tot/max*100);
+    var si=score<35?0:score<60?1:score<80?2:3;
+    var weak=Object.keys(pct).sort(function(a,b){return pct[a]-pct[b]});
+    return {pct:pct,score:score,si:si,weak:weak};
+  }
+  function showResult(noAnim){
+    var r=compute(); last=r; $('qBar').style.width='100%';
+    $('quiz').hidden=true; $('result').hidden=false;
+    $('rStage').textContent=L(STAGES[r.si][0],STAGES[r.si][1]);
+    var bars=$('rBars'); bars.textContent='';
+    for(var k in AREAS){
+      var row=document.createElement('div');row.className='brow';
+      var n=document.createElement('span');n.textContent=A(k);
+      var tr=document.createElement('div');tr.className='btrack';
+      var f=document.createElement('div');f.className='bfill'+(r.pct[k]<50?' low':'');f.style.width=noAnim?r.pct[k]+'%':'0';tr.appendChild(f);
+      var v=document.createElement('span');v.textContent=r.pct[k];
+      row.appendChild(n);row.appendChild(tr);row.appendChild(v);bars.appendChild(row);
+      if(!noAnim)(function(el,w){setTimeout(function(){el.style.width=w+'%'},60)})(f,r.pct[k]);
+    }
+    var nx=NEXT[r.weak[0]][lang==='en'?1:0];
+    var adv=$('rAdvice'); adv.textContent=''; var b=document.createElement('b'); b.textContent=L('먼저 할 일: ','First step: ')+nx[0];
+    adv.appendChild(b); adv.appendChild(document.createTextNode(nx[1]+L(' 다음으로 약한 곳은 '+A(r.weak[1])+'입니다.',' Your next weakest area is '+A(r.weak[1])+'.')));
+    var arc=$('ringArc'), num=$('ringNum'), C=528;
+    if(noAnim||still){arc.setAttribute('stroke-dasharray',(C*r.score/100)+' '+C); num.textContent=r.score; return}
+    var start=null;
+    function anim(ts){ if(!start)start=ts; var p=Math.min(1,(ts-start)/900), e=1-Math.pow(1-p,3), s=Math.round(r.score*e);
+      arc.setAttribute('stroke-dasharray',(C*s/100)+' '+C); num.textContent=s; if(p<1)requestAnimationFrame(anim) }
+    requestAnimationFrame(anim);
+  }
+  $('rRetry').addEventListener('click',function(){ans=[];store.set('ans',ans);qi=0;last=null;$('result').hidden=true;$('quiz').hidden=false;renderQ()});
+  $('rAsk').addEventListener('click',function(){
+    var r=last; $('aSvc').value='dx';
+    $('aMsg').value=L('[자가진단] ','[Self-check] ')+r.score+'/100, '+L(STAGES[r.si][0],STAGES[r.si][1])+'\n'+Object.keys(AREAS).map(function(k){return A(k)+' '+r.pct[k]}).join(' · ')+'\n'+L('먼저 채울 빈칸: ','Gaps to fill first: ')+A(r.weak[0])+', '+A(r.weak[1])+'\n'+L('관심 국가·제품: ','Target country / product: ');
+    go('ask'); setTimeout(function(){$('aOrg').focus()},300);
+  });
+
+  /* ---------- 바우처 체크리스트 ---------- */
+  var C5=[
+    [['진출 국가 1~2곳으로 좁히기','"동남아"보다 "베트남 B2B 유통"처럼 구체적으로'],['Narrow to 1–2 target countries','Be specific: "B2B distribution in Vietnam", not "Southeast Asia"']],
+    [['HS코드로 관세·인증 확인','CE·FDA·할랄 등 필요한 인증과 라벨 규정'],['Check tariffs & certification by HS code','Required certifications (CE, FDA, Halal…) and labelling rules']],
+    [['영문 자료 준비','회사소개 2쪽 + 제품 사양·단가·MOQ 1쪽'],['Prepare English materials','2-page company profile + 1-page specs, price and MOQ']],
+    [['예산과 담당자 정하기','자부담 비용과 해외 업무 담당을 미리'],['Set budget and owner','Plan your co-payment and who leads export work']],
+    [['우리 회사 준비도 점검','3분 진단으로 빈칸 확인'],['Check your readiness','Find your gaps with the 3-minute check']]
+  ];
+  var done=store.get('chk',[]);
+  function renderC(){
+    var box=$('checks'); box.textContent=''; var cnt=0;
+    C5.forEach(function(c,i){
+      var t=c[lang==='en'?1:0];
+      var l=document.createElement('label'); l.className='check'; l.htmlFor='chk'+i;
+      var inp=document.createElement('input'); inp.type='checkbox'; inp.id='chk'+i; inp.checked=!!done[i]; if(done[i])cnt++;
+      inp.addEventListener('change',function(){done[i]=inp.checked;store.set('chk',done);renderC()});
+      var d=document.createElement('div'); var b=document.createElement('b'); b.textContent=t[0]; var s=document.createElement('span'); s.textContent=t[1];
+      d.appendChild(b); d.appendChild(s); l.appendChild(inp); l.appendChild(d); box.appendChild(l);
+    });
+    $('cBar').style.width=(cnt/5*100)+'%'; $('cNum').textContent=cnt+'/5';
+  }
+
+  /* ---------- 상담 ---------- */
+  function v(id){return $(id).value.trim()}
+  function svcText(){var o=$('aSvc').selectedOptions[0];return o?o.textContent:''}
+  function copy(text,ok,fail){try{navigator.clipboard.writeText(text).then(ok,fail)}catch(e){fail()}}
+  $('copyMail').addEventListener('click',function(){var b=this;copy(INBOX,function(){b.textContent=L('복사됨','Copied')},function(){b.textContent=L('길게 눌러 복사','Press and hold')})});
+  $('askForm').addEventListener('submit',function(e){
+    e.preventDefault(); var miss=[];
+    if(!v('aOrg'))miss.push(L('회사명','company')); if(!v('aName'))miss.push(L('담당자','contact person'));
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('aEmail')))miss.push(L('이메일','email')); if(!v('aMsg'))miss.push(L('내용','message'));
+    if(!$('aAgree').checked)miss.push(L('정보 이용 동의','consent'));
+    if(miss.length){$('aErr').textContent=L('확인해 주세요: ','Please check: ')+miss.join(', ');$('aErr').hidden=false;return}
+    $('aErr').hidden=true;
+    var text=[L('[WMM 앱 상담 요청]','[WMM app inquiry]'),L('회사: ','Company: ')+v('aOrg'),L('담당자: ','Contact: ')+v('aName'),L('회신 이메일: ','Reply email: ')+v('aEmail'),L('관심: ','Interest: ')+svcText(),L('언어: 한국어','Language: English'),'',L('내용:','Message:'),v('aMsg')].join('\n');
+    function fallback(prefix){
+      $('aDone').hidden=false; $('aText').textContent=text;
+      copy(text,function(){$('aDoneMsg').textContent=(prefix||'')+L('신청 내용을 복사했어요. '+INBOX+' 으로 보내 주시면 1영업일 안에 회신드립니다.','Your request is copied. Send it to '+INBOX+' and we will reply within 1 business day.')},
+               function(){$('aDoneMsg').textContent=(prefix||'')+L('아래 내용을 길게 눌러 복사해 '+INBOX+' 으로 보내 주세요.','Press and hold to copy the text below, then send it to '+INBOX+'.')});
+    }
+    if(!INTAKE_URL){fallback('');return}
+    var btn=$('aSend'); btn.disabled=true; btn.textContent=L('보내는 중…','Sending…');
+    fetch(INTAKE_URL,{method:'POST',body:JSON.stringify({org:v('aOrg'),person:v('aName'),email:v('aEmail'),service:svcText(),message:'['+lang.toUpperCase()+'] '+v('aMsg'),consent:true,website:$('aTrap').value})})
+      .then(function(r){return r.json()})
+      .then(function(res){ if(res&&res.ok){$('aDone').hidden=false;$('aText').textContent='';$('aDoneMsg').textContent=L('접수되었어요. 접수번호 ','Received. Reference ')+(res.id||'')+L(' · 입력하신 이메일로 확인 메일을 보냈습니다.',' · A confirmation email is on its way.');$('askForm').reset()} else fallback(L('자동 접수가 안 됐어요. ','Automatic submission failed. ')) })
+      .catch(function(){fallback(L('네트워크 문제로 자동 접수가 안 됐어요. ','Network problem — automatic submission failed. '))})
+      .finally(function(){btn.disabled=false;btn.textContent=L('상담 신청 보내기','Send my request')});
+  });
+
+  /* ---------- 시작 ---------- */
+  if(ans.length===Q.length && ans.every(function(x){return x!==null&&x!==undefined})){showResult(true)} else {qi=Math.min(ans.filter(function(x){return x!==null&&x!==undefined}).length,Q.length-1);renderQ()}
+  applyLang();
+
+  /* ---------- 설치(PWA) ---------- */
+  if('serviceWorker' in navigator && location.protocol==='https:' && !/claudeusercontent|claude\.ai/.test(location.hostname)){
+    try{navigator.serviceWorker.register('sw.js').catch(function(){})}catch(e){}
+  }
+  if(window.matchMedia&&matchMedia('(display-mode: standalone)').matches){$('installHint').hidden=true}
+})();
+</script>
+<script defer="" src="/site-navigation.js?v=20261029"></script></body>
+</html>

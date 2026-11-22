@@ -1,0 +1,28 @@
+:root { font-family: system-ui, "Malgun Gothic", sans-serif; color: #18211e; background: #f1f4f0; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { width: min(100% - clamp(28px, 8vw, 112px), 1050px); margin-inline: auto; }
+.top { background: #122722; color: #fff; }
+.top nav { min-height: 66px; display: flex; align-items: center; flex-wrap: wrap; gap: .55rem 1.15rem; padding-block: .45rem; }
+.top a { color: #f0f8f4; display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: .23em; }
+.brand { margin-inline-end: auto; font-weight: 850; font-size: 1.17rem; letter-spacing: .045em; text-decoration: none; }
+.intro { color: #fff; background: linear-gradient(97deg,#132922 23%,#142b26eb 55%,#142b2699), url("/media/manufacturing.jpg") center 54% / cover; padding-block: clamp(2rem, 7vw, 4.7rem); }
+.intro .shell > p { max-width: 36rem; line-height: 1.65; margin: .6rem 0; color: #e9efeb; word-break: keep-all; }
+.intro h1 { font-size: clamp(2.35rem, 6.1vw, 4.65rem); line-height: 1.07; letter-spacing: -.065em; margin: .55rem 0 .95rem; }
+.intro .intro-label, .intro .edition { color: #dbeabc; font-size: .9rem; }
+.board { padding-block: 1.45rem 2.4rem; }
+.board ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; padding: 0; margin: 0; list-style: none; }
+.notice { padding: clamp(1rem, 2.5vw, 1.5rem); border: 1px solid #d0ddd5; border-radius: .55rem; background: #fff; }
+.notice-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .25rem .5rem; }
+.notice-top p { margin: 0; font-size: .86rem; }
+.notice-category { color: #41554b; }
+.notice-state { background: #e2ece5; color: #284d37; border-radius: .3rem; padding: .15rem .45rem; }
+.notice h2 { font-size: clamp(1.17rem, 2.35vw, 1.42rem); line-height: 1.4; margin: .65rem 0 .9rem; letter-spacing: -.035em; }
+dl { margin-block: .7rem; }
+dl div { display: grid; grid-template-columns: minmax(5.8rem, .5fr) 1fr; gap: .25rem .65rem; padding-block: .36rem; border-top: 1px solid #e5ebe7; line-height: 1.5; font-size: .88rem; }
+dt { color: #40574a; font-weight: 700; }
+dd { margin: 0; }
+.notice-link { color: #214d3b; min-height: 44px; display: inline-flex; align-items: center; font-weight: 750; text-underline-offset: .24em; }
+.footnote { font-size: .88rem; color: #46594d; line-height: 1.65; }
+a:focus-visible { outline: 3px solid #72a06c; outline-offset: 4px; }
+@media (max-width: 650px) { .board ul { grid-template-columns: 1fr; } }

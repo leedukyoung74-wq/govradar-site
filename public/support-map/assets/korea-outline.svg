@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="620" viewBox="0 0 520 620" role="img" aria-label="대한민국 남한 개략 윤곽 - Natural Earth 기반. 행정·법적 경계 또는 실사 위성영상 아님">
+<defs>
+  <linearGradient id="land" x1="0.12" y1="0" x2="0.82" y2="1"><stop stop-color="#8c9e87"/><stop offset=".38" stop-color="#596c5b"/><stop offset=".67" stop-color="#465d50"/><stop offset="1" stop-color="#859584"/></linearGradient>
+  <radialGradient id="coastlight" cx="50%" cy="36%"><stop stop-color="#d8d8aa" stop-opacity=".16"/><stop offset="1" stop-color="#d8d8aa" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+  <filter id="relief"><feTurbulence type="fractalNoise" baseFrequency=".033" numOctaves="3" seed="8" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="mono"/><feComponentTransfer in="mono"><feFuncA type="linear" slope=".18"/></feComponentTransfer></filter>
+  <clipPath id="ko"><path d="M105.32,143.87 L110.93,134.87 L150.95,138.41 L185.88,93.63 L249.24,88.83 L287.41,82.30 L300.32,58.31 L377.71,175.35 L399.90,239.65 L400.61,353.93 L366.81,408.46 L285.63,427.51 L213.96,468.65 L133.20,477.15 L123.18,423.13 L139.79,348.73 L100.18,245.47 L166.77,228.76 L105.32,143.87Z"/><ellipse cx="134" cy="566" rx="23" ry="9" transform="rotate(-11 134 566)"/></clipPath>
+</defs>
+<g opacity=".75"><path d="M105.32,143.87 L110.93,134.87 L150.95,138.41 L185.88,93.63 L249.24,88.83 L287.41,82.30 L300.32,58.31 L377.71,175.35 L399.90,239.65 L400.61,353.93 L366.81,408.46 L285.63,427.51 L213.96,468.65 L133.20,477.15 L123.18,423.13 L139.79,348.73 L100.18,245.47 L166.77,228.76 L105.32,143.87Z" fill="#c1ae84" stroke="#d8c898" stroke-width="6" filter="url(#glow)"/></g>
+<g clip-path="url(#ko)"><rect x="70" y="25" width="390" height="590" fill="url(#land)"/><rect x="70" y="25" width="390" height="590" filter="url(#relief)" opacity=".7"/><rect x="70" y="25" width="390" height="590" fill="url(#coastlight)"/>
+<path d="M 286 110 C 265 205 341 264 315 365 S 310 435 260 465" stroke="#e9dfc2" stroke-opacity=".24" stroke-width="9" fill="none"/>
+<path d="M 286 110 C 265 205 341 264 315 365 S 310 435 260 465" stroke="#0e231d" stroke-opacity=".44" stroke-width="1" fill="none"/>
+</g>
+<path d="M105.32,143.87 L110.93,134.87 L150.95,138.41 L185.88,93.63 L249.24,88.83 L287.41,82.30 L300.32,58.31 L377.71,175.35 L399.90,239.65 L400.61,353.93 L366.81,408.46 L285.63,427.51 L213.96,468.65 L133.20,477.15 L123.18,423.13 L139.79,348.73 L100.18,245.47 L166.77,228.76 L105.32,143.87Z" fill="none" stroke="#d1cfaf" stroke-width="1.8" stroke-linejoin="round"/>
+<ellipse cx="134" cy="566" rx="23" ry="9" transform="rotate(-11 134 566)" fill="#617263" stroke="#d1cfaf" stroke-width="1.8"/>
+<text x="105" y="596" font-family="sans-serif" font-size="9" fill="#d9d8c2" opacity=".45">KOREA · GENERALIZED OUTLINE</text>
+</svg>

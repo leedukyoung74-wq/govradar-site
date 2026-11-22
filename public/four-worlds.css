@@ -1,0 +1,192 @@
+.wmm-worlds {
+  --worlds-ink: #20201e;
+  --worlds-muted: #4b4b46;
+  --worlds-line: #d4cfc4;
+  --worlds-paper: #f6f5f1;
+  scroll-margin-top: 6rem;
+  padding: clamp(2.6rem, 6vw, 5.25rem) clamp(1rem, 5vw, 4rem);
+  background: var(--worlds-paper);
+  color: var(--worlds-ink);
+  border-block-end: 1px solid var(--worlds-line);
+}
+.wmm-worlds__inner { max-width: 78rem; margin-inline: auto; }
+.wmm-worlds__lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(1.25rem, 4vw, 4rem);
+  margin-bottom: 1.65rem;
+}
+.wmm-worlds h2 { font-size: clamp(1.9rem, 4.3vw, 3.65rem); letter-spacing: -.055em; line-height: 1.13; margin: 0 0 .7rem; }
+.wmm-worlds h3 { font-size: clamp(1.15rem, 1.8vw, 1.43rem); margin: 0; line-height: 1.35; letter-spacing: -.032em; }
+.wmm-worlds__intro, .wmm-worlds__path p, .wmm-worlds__card > p:not(.wmm-worlds__status), .wmm-worlds__programs dd {
+  color: var(--worlds-muted);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.wmm-worlds__intro { max-width: 35rem; }
+.wmm-worlds__path { border-inline-start: 3px solid #917545; padding-inline-start: .9rem; }
+.wmm-worlds__path strong { display: block; margin-bottom: .25rem; }
+.wmm-worlds__links { display: flex; flex-wrap: wrap; gap: .15rem 1rem; margin-top: .35rem; }
+.wmm-worlds__links a { min-height: 44px; display: inline-flex; align-items: center; color: #523d1f; text-decoration: underline; text-underline-offset: .22em; }
+.wmm-worlds__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wmm-worlds__card, .wmm-worlds__panel {
+  min-width: 0;
+  padding: clamp(1rem, 2.2vw, 1.65rem);
+  border: 1px solid var(--worlds-line);
+  background: #fff;
+  border-radius: .65rem;
+}
+.wmm-worlds__card { display: flex; flex-direction: column; align-items: flex-start; gap: .65rem; border-block-start: 4px solid var(--worlds-accent); }
+.wmm-worlds__card > p:not(.wmm-worlds__status) { flex: 1; }
+.wmm-worlds__card--business { --worlds-accent: #9b793c; background: #242421; color: #fff; }
+.wmm-worlds__card--business h3 { color: #fff; }
+.wmm-worlds__card--business > p:not(.wmm-worlds__status) { color: #eeebe3; }
+.wmm-worlds__card--play {
+  --worlds-accent: #bd9cf7;
+  --worlds-feature-text: #eee3f8;
+  --worlds-feature-border: #584879;
+  --worlds-feature-background: radial-gradient(ellipse at 73% 48%, #524674, #211a38 54%, #170f2c 96%);
+}
+.wmm-worlds__card--radar {
+  --worlds-accent: #5d9ad6;
+  --worlds-feature-text: #d7e3f2;
+  --worlds-feature-border: #374d64;
+  --worlds-feature-background: radial-gradient(ellipse at 78% 42%, #162944, #09111e 69%);
+  scroll-margin-top: 7rem;
+}
+.wmm-worlds__card--feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 21rem;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  background: var(--worlds-feature-background);
+  border-color: var(--worlds-feature-border);
+  border-block-start-color: var(--worlds-accent);
+}
+.wmm-worlds__feature-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.3rem, 3vw, 2.8rem) clamp(1rem, 2.3vw, 2.1rem);
+}
+.wmm-worlds__feature-copy .wmm-worlds__action { margin-block-start: auto; }
+.wmm-worlds__card--feature h3 { color: #fff; font-size: clamp(1.55rem, 2.5vw, 2.3rem); line-height: 1.16; margin-block: .7rem; word-break: keep-all; }
+.wmm-worlds__card--radar h3 { font-size: clamp(2rem, 3.6vw, 3.5rem); }
+.wmm-worlds__feature-copy p:not(.wmm-worlds__status) { color: var(--worlds-feature-text); line-height: 1.65; margin: .65rem 0 1.15rem; }
+.wmm-worlds__feature-media { position: relative; align-self: stretch; display: grid; place-items: center; min-width: 0; }
+.wmm-worlds__feature-media video {
+  display: block;
+  width: min(100%, 22rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  mask-image: radial-gradient(circle, #000 50%, transparent 73%);
+}
+.wmm-worlds__playground-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(96%, 20rem);
+  aspect-ratio: 1;
+  background: radial-gradient(circle at 50% 47%, #b0a2d14d, #8174b331 46%, transparent 68%);
+}
+.wmm-worlds__playground-art::before {
+  position: absolute;
+  inset: 6%;
+  border: 1px solid #c7b5fb61;
+  border-block-start-color: #ecddff;
+  border-inline-end-color: #8ac6ef;
+  border-radius: 50%;
+  box-shadow: 0 0 1.2rem #c7b1fe35, inset 0 0 1.4rem #c7b1fe2b;
+  content: "";
+  animation: wmm-playground-orbit 16s linear infinite paused;
+}
+.wmm-worlds__playground-art img {
+  display: block;
+  z-index: 1;
+  width: 74%;
+  height: auto;
+  filter: brightness(1.26) drop-shadow(0 .7rem 1.15rem #120d29b3);
+  animation: wmm-playground-logo 7s ease-in-out infinite paused;
+}
+.wmm-worlds__feature-media.is-playing .wmm-worlds__playground-art::before,
+.wmm-worlds__feature-media.is-playing .wmm-worlds__playground-art img { animation-play-state: running; }
+@keyframes wmm-playground-orbit { to { transform: rotate(360deg); } }
+@keyframes wmm-playground-logo { 50% { transform: translateY(-.33rem); } }
+.wmm-worlds__motion-toggle {
+  position: absolute;
+  right: .7rem;
+  bottom: .7rem;
+  min-height: 44px;
+  padding: .25rem .65rem;
+  border: 1px solid #879db5;
+  border-radius: .375rem;
+  background: #0a1424;
+  color: #eef6ff;
+  font: inherit;
+  font-size: .82rem;
+  cursor: pointer;
+}
+.wmm-worlds__motion-toggle:focus-visible { outline: 2px solid #e1d4ff; outline-offset: 2px; }
+.wmm-worlds__card--play .wmm-worlds__motion-toggle { border-color: #b59bd5; background: #24183a; color: #f5ecff; }
+.wmm-worlds__card--miracle { --worlds-accent: #56745f; }
+.delivery-steps .delivery-number { white-space: nowrap; min-width: 2.6ch; }
+.wmm-worlds .wmm-worlds__status { color: #49443b; background: #ece8df; font-size: .875rem; padding: .08rem .5rem; border-radius: .25rem; margin: 0; }
+.wmm-worlds__card--feature .wmm-worlds__status { display: inline-block; }
+.wmm-worlds .wmm-worlds__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  max-width: 100%;
+  width: fit-content;
+  padding: .35rem .72rem;
+  border: 1px solid #827b6e;
+  background: #fff;
+  color: #282620;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+  border-radius: .4rem;
+  cursor: pointer;
+}
+.wmm-worlds .wmm-worlds__action:hover { background: #f0e9d9; border-color: #776037; }
+.wmm-worlds .wmm-worlds__action:focus-visible { outline: 3px solid #906a2b; outline-offset: 3px; }
+.wmm-worlds__card--feature .wmm-worlds__action { gap: .55rem; }
+.wmm-worlds__card--play .wmm-worlds__action { border-color: #eee1ff; background: #f0e7ff; color: #28173f; }
+.wmm-worlds__card--radar .wmm-worlds__action { border-color: #d4e7ff; background: #e1efff; color: #10243e; }
+.wmm-worlds__card--feature .wmm-worlds__action:hover { background: #fff; }
+.wmm-worlds .wmm-worlds__card--feature .wmm-worlds__action:focus-visible { outline-color: var(--worlds-accent); }
+.wmm-worlds__card--business .wmm-worlds__action { background: #eadbbd; border-color: #eadbbd; }
+.wmm-worlds .wmm-worlds__link--en, html[lang="en"] .wmm-worlds .wmm-worlds__link--ko { display: none; }
+html[lang="en"] .wmm-worlds .wmm-worlds__link--en { display: inline-flex; }
+.wmm-worlds__panels { margin-top: .85rem; }
+.wmm-worlds__panel { scroll-margin-top: 6rem; }
+.wmm-worlds__panel h3 { margin-bottom: .7rem; }
+.wmm-worlds__note { color: #565249; font-size: .875rem; line-height: 1.55; margin: .5rem 0 .7rem; }
+.wmm-worlds__programs { margin: 0; padding: 0; }
+.wmm-worlds__programs div { padding: .42rem 0; border-bottom: 1px solid var(--worlds-line); }
+.wmm-worlds__programs dt { font-weight: 750; }
+@media (max-width: 50rem) {
+  .wmm-worlds__lead, .wmm-worlds__grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 34rem) {
+  .wmm-worlds__card--feature { grid-template-columns: minmax(0, 1fr); }
+  .wmm-worlds__feature-media { grid-row: 1; }
+  .wmm-worlds__feature-media video, .wmm-worlds__playground-art { width: min(80%, 18rem); }
+  .wmm-worlds__feature-copy { padding-block-start: .65rem; }
+}

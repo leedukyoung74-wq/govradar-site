@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>WORLD MAKING MEMBERS · 네 개의 문</title>
+<meta name="description" content="월드메이킹멤버스(WMM) — 아이디어를 시험하고, 세계 정부의 공고를 확인하고, 한 팀으로 실행하고, 그 결실을 나눕니다.">
+<link rel="canonical" href="https://www.wmm-hoa.com/">
+<link rel="icon" href="/app/icon-192.png">
+<meta property="og:title" content="WORLD MAKING MEMBERS · 네 개의 문">
+<meta property="og:description" content="시험하고, 확인하고, 실행하고, 나눕니다.">
+<meta property="og:image" content="https://www.wmm-hoa.com/doors/wmm-team.webp">
+<script>
+// 예전 주소(www.wmm-hoa.com/#request 등)로 들어오면 기존 홈페이지의 그 위치로
+(function(){var h=location.hash;if(h&&h.length>1){location.replace("/home.html"+location.search+h)}})();
+</script>
+<style>
+@font-face{font-family:"NexonLv1";font-weight:300;font-display:swap;src:url(/fonts/NEXONLv1GothicLight.ttf) format("truetype")}
+@font-face{font-family:"NexonLv1";font-weight:400;font-display:swap;src:url(/fonts/NEXONLv1GothicRegular.ttf) format("truetype")}
+@font-face{font-family:"NexonLv1";font-weight:700;font-display:swap;src:url(/fonts/NEXONLv1GothicBold.ttf) format("truetype")}
+:root{--bg:#FFFFFF;--bg2:#F5F6F8;--bg3:#ECEFF3;--ink:#0B1526;--ink2:#4A5568;--ink3:#8A94A6;--line:#E3E7ED;--land:#E9EDF2;--gold:#C8901A;--navy:#0B1526;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"NexonLv1","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:20px;height:68px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:.02em;font-size:15px;white-space:nowrap}
+.brand img{width:34px;height:34px}
+.sp{flex:1}
+.nav{display:flex;gap:22px;font-size:15px}.nav a{text-decoration:none;color:var(--ink2)}.nav a:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink2)}
+.lang button[aria-pressed=true]{background:var(--navy);color:#fff}
+.hero{position:relative;overflow:hidden;padding-top:72px;padding-bottom:48px}
+#heroMap{position:absolute;inset:0;width:100%;height:100%}
+.hero-in{position:relative;max-width:1180px;margin:0 auto}
+.hero h1{margin:0;font-weight:700;font-size:clamp(44px,7vw,100px);line-height:1.05;letter-spacing:-.03em;text-wrap:balance}
+.hero p.lead{margin:24px 0 0;font-size:clamp(18px,1.6vw,22px);color:var(--ink2);max-width:36em;font-weight:300}
+.live{margin-top:28px;display:flex;flex-wrap:wrap;gap:28px;color:var(--ink2);font-size:15px}
+.live b{display:block;color:var(--ink);font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.doors{max-width:calc(1180px + 2*max(16px,env(safe-area-inset-left,0px)));margin:0 auto;padding-bottom:88px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.door{display:flex;flex-direction:column;min-height:420px;background:var(--bg2);text-decoration:none;border-radius:4px;overflow:hidden;transition:background .25s,transform .25s}
+.door:hover,.door:focus-visible{background:var(--bg3);outline:none;transform:translateY(-3px)}
+.door .pic{height:200px;background:#0C1626 center/cover no-repeat}
+.door .txt{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.door .step{font-size:15px;color:var(--ink3)}
+.door h2{margin:6px 0 10px;font-size:27px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
+.door p{margin:0;color:var(--ink2);font-size:15.5px;flex:1}
+.door .go{margin-top:22px;font-size:15px;font-weight:700}
+.door.main{background:var(--navy);color:#fff}.door.main:hover{background:#16243B}
+.door.main .step,.door.main p{color:#C9D1DD}.door.main .go{color:#F2C063}
+.note{font-size:12px;color:var(--ink3);margin:6px 0 0}
+.foot{border-top:1px solid var(--line);padding-block:32px;color:var(--ink3);font-size:14px}
+.foot .in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:baseline}
+.foot strong{color:var(--ink);font-size:18px;letter-spacing:.02em}
+.foot a{color:var(--ink2)}
+@media (max-width:1000px){.doors{grid-template-columns:repeat(2,1fr)}.door{min-height:360px}.nav{display:none}}
+@media (max-width:640px){
+ .bar{height:60px;gap:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+ .brand span{display:none}
+ .hero{padding-top:200px}
+ #heroMap{height:200px;top:12px;bottom:auto}
+ .doors{grid-template-columns:1fr;gap:12px;padding-bottom:56px}
+ .door{min-height:0;flex-direction:row}
+ .door .pic{width:112px;height:auto;flex:none}
+ .door .txt{padding:18px}
+ .door h2{font-size:21px}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="/"><img src="/images/wmm-logo-black.png" alt=""><span>WORLD MAKING MEMBERS</span></a>
+  <div class="sp"></div>
+  <nav class="nav"><a href="/home.html" data-t="n1">회사 소개</a><a href="/membership/" data-t="n2">멤버십</a><a href="/home.html#request" data-t="n3">상담 신청</a></nav>
+  <div class="lang" role="group" aria-label="Language"><button data-l="ko" aria-pressed="true">한국어</button><button data-l="en" aria-pressed="false">EN</button></div>
+</header>
+<main>
+<section class="hero wrap">
+  <svg id="heroMap" aria-hidden="true"></svg>
+  <div class="hero-in">
+    <h1 data-t="h1">세계로 가는 길,<br>네 개의 문.</h1>
+    <p class="lead" data-t="lead">아이디어를 시험하고, 세계 정부의 공고를 확인하고, 한 팀으로 실행하고, 그 결실을 나눕니다.</p>
+    <div class="live"><div><b>193</b><span data-t="k1">개국 정부 정보</span></div><div><b id="kT">–</b><span data-t="k2">건 열린 입찰</span></div></div>
+  </div>
+</section>
+<nav class="doors wrap" aria-label="WMM">
+  <a class="door" href="https://radar.wmm-hoa.com/playground/">
+    <div class="pic" style="background-image:url(/doors/hero-people.webp)"></div>
+    <div class="txt"><span class="step" data-t="s1">첫째 문 · 시험하기</span><h2>WMM PLAYGROUND</h2><p data-t="d1">아이디어 고르기부터 한 장 기획서, 7일 실천까지. 무료, 가입 없이.</p><span class="note" data-t="cc">콘셉트 이미지</span><span class="go" data-t="g1">놀이터 열기 →</span></div>
+  </a>
+  <a class="door main" href="https://radar.wmm-hoa.com/map/" id="dRadar">
+    <div class="pic" style="background-image:url(/doors/door-radar.webp);background-color:#1A3260;background-size:auto 100%"></div>
+    <div class="txt"><span class="step" data-t="s2">둘째 문 · 확인하기</span><h2>GOV RADAR</h2><p data-t="d2">세계지도 한 장. 나라를 누르면 정부 과제, 입찰, 위험이 모두 열립니다.</p><span class="go" data-t="g2">지도 열기 →</span></div>
+  </a>
+  <a class="door" href="/home.html">
+    <div class="pic" style="background-image:url(/doors/wmm-team.webp)"></div>
+    <div class="txt"><span class="step" data-t="s3">셋째 문 · 실행하기</span><h2 data-t="n3h">WMM 한 팀</h2><p data-t="d3">진단, 영문 서류, 시장 검증, 제안, 영업까지 한 팀으로. 회원은 월 20,000원(VAT 별도).</p><span class="note" data-t="cc3">콘셉트 이미지</span><span class="go" data-t="g3">들어가기 →</span></div>
+  </a>
+  <a class="door" href="/membership/">
+    <div class="pic" style="background-image:url(/doors/logo-wmm-miracles-gold.webp)"></div>
+    <div class="txt"><span class="step" data-t="s4">넷째 문 · 나누기</span><h2>World Miracles Makers</h2><p data-t="d4">수익의 일부로 하는 선행. 지금은 준비 중이며 후원금은 받지 않습니다.</p><span class="go" data-t="g4">구상 보기 →</span></div>
+  </a>
+</nav>
+</main>
+<footer class="foot wrap"><div class="in"><strong>WORLD MAKING MEMBERS</strong><span>월드메이킹멤버스 주식회사 · 통신판매업신고 제2024-서울서초-2185호 · <a href="mailto:73036396@naver.com">73036396@naver.com</a> · leedukyoung74@gmail.com</span></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+(function(){
+var T={ko:null,en:{n1:"About",n2:"Membership",n3:"Contact",h1:"The way to the world,<br>four doors.",lead:"Test an idea, check what governments are buying, deliver as one team, and share what it earns.",k1:"countries covered",k2:"open tenders",
+ s1:"Door one · Test",d1:"Pick an idea, write a one-page plan, act for seven days. Free, no sign-up.",cc:"Concept image",g1:"Open the playground →",
+ s2:"Door two · Check",d2:"One world map. Tap a country to see its agenda, tenders and risks.",g2:"Open the map →",
+ s3:"Door three · Deliver",n3h:"WMM, one team",d3:"Diagnosis, English documents, market tests, proposals and sales as one team. Membership ₩20,000/month (VAT excl.).",g3:"Enter →",cc3:"Concept image",
+ s4:"Door four · Share",d4:"Good work funded by part of our revenue. In preparation; we accept no donations.",g4:"See the plan →"}};
+var KO={};document.querySelectorAll("[data-t]").forEach(function(e){KO[e.dataset.t]=e.innerHTML});T.ko=KO;
+var L=/[?&]lang=en/.test(location.search)?"en":"ko";try{if(!/[?&]lang=/.test(location.search)&&localStorage.getItem("wmm.lang")==="en")L="en"}catch(e){}
+function apply(){document.documentElement.lang=L;document.querySelectorAll("[data-t]").forEach(function(e){var v=T[L][e.dataset.t];if(v!=null)e.innerHTML=v});
+ document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===L)});
+ document.getElementById("dRadar").href="https://radar.wmm-hoa.com/map/"+(L==="en"?"en/":"");
+ document.querySelectorAll('a[href^="/home.html"],a[href^="/membership/"]').forEach(function(a){var u=a.getAttribute("href").split("#");a.setAttribute("href",u[0].split("?")[0]+(L==="en"?"?lang=en":"?lang=ko")+(u[1]?"#"+u[1]:""))})}
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){L=b.dataset.l;try{localStorage.setItem("wmm.lang",L)}catch(e){}apply()}});
+apply();
+Promise.all([fetch("https://radar.wmm-hoa.com/map/countries.json").then(function(r){return r.json()}),fetch("https://radar.wmm-hoa.com/map/world.json").then(function(r){return r.json()})]).then(function(a){
+ var D=a[0],W=topojson.feature(a[1],a[1].objects.countries),tn=0;Object.keys(D).forEach(function(k){tn+=D[k].to||0});document.getElementById("kT").textContent=tn;
+ var el=document.getElementById("heroMap"),w=el.clientWidth,h=el.clientHeight,narrow=innerWidth<640,svg=d3.select(el).attr("viewBox","0 0 "+w+" "+h).attr("preserveAspectRatio",narrow?"xMidYMin meet":"xMidYMid slice");
+ var pr=d3.geoNaturalEarth1().fitExtent(narrow?[[w*.02,h*.04],[w*.98,h*.96]]:[[w*.36,h*.06],[w*.99,h*.94]],W),pa=d3.geoPath(pr);
+ svg.append("g").selectAll("path").data(W.features).join("path").attr("d",pa).attr("fill","#EEF1F5").attr("stroke","#fff").attr("stroke-width",.6);
+ var pts=W.features.filter(function(f){return D[f.id]&&D[f.id].to});
+ svg.append("g").selectAll("circle").data(pts).join("circle").attr("cx",function(f){return pr(d3.geoCentroid(f))[0]}).attr("cy",function(f){return pr(d3.geoCentroid(f))[1]}).attr("r",function(f){return (narrow?1.6:2.5)+Math.sqrt(D[f.id].to)*(narrow?.9:1.6)}).attr("fill","#D9A12E");
+}).catch(function(){document.getElementById("kT").parentNode.style.display="none"});
+})();
+</script>
+</body>
+</html>
