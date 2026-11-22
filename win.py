@@ -57,7 +57,7 @@ STEPS = [
   [("입찰 전 사업 보기", "See pre-tender projects", "#pipe")]),
  ("fit", ("이길 수 있는지 판단", "Decide if you can win"), ("자격 요건(유사 실적·매출·인력·장비)을 회사 자료와 한 줄씩 대조하고, 같은 분야 과거 낙찰자와 낙찰가를 확인합니다.", "Check each eligibility requirement (similar experience, turnover, staff, equipment) against your records, and look up past winners and prices in the same field."),
   [],
-  ("입찰 적합도 검토(공고 1건 100,000원, VAT 별도)로 참여 여부·부족한 자격·보완 방법을 판정해 드립니다. 아래 낙찰 분석으로 경쟁사를 미리 봅니다.", "A tender fit review (₩100,000 per notice, VAT excl.) gives a go/no-go, the gaps and how to close them. The award analysis below shows competitors."),
+  ("입찰 적합도 검토(상담 후 견적)로 참여 여부·부족한 자격·보완 방법을 판정해 드립니다. 아래 낙찰 분석으로 경쟁사를 미리 봅니다.", "A tender fit review (by quote) gives a go/no-go, the gaps and how to close them. The award analysis below shows competitors."),
   [("적합도 검토 주문", "Order a fit review", "pricing/?p=fit#order"), ("낙찰·경쟁사 보기", "See awards", "#awards")]),
  ("docs", ("서류·제안서", "Documents and proposal"), ("입찰보증서, 실적증명, 최근 3년 재무제표, 인증서를 영문으로 준비하고 기술제안서를 평가 기준 순서대로 씁니다.", "Prepare the bid security, experience certificates, three years of financial statements and certificates in English, and write the technical proposal in the order of the evaluation criteria."),
   [],
@@ -82,9 +82,9 @@ PLAN = [
  (("5–8주", "Weeks 5–8"), ("회사 자료 영문화와 파트너", "English company file and partners"), ("실적표·인증·재무제표 영문 정리, 현지 파트너 후보 3곳 접촉, 협력 의향서·NDA", "English track record, certificates and financials; contact three local partner candidates; letter of intent and NDA")),
  (("9–12주", "Weeks 9–12"), ("첫 제출", "First submission"), ("적합도 검토로 1건 선택 → 관심표명서(EOI) 또는 입찰서 제출 → 결과와 낙찰가 기록", "Choose one with a fit review → submit an EOI or bid → record the result and the winning price")),
 ]
-ORD = [("fit", ("입찰 적합도 검토", "Tender fit review"), ("공고 1건 · 100,000원(VAT 별도)", "One notice · ₩100,000 (VAT excl.)")),
+ORD = [("fit", ("입찰 적합도 검토", "Tender fit review"), ("공고 1건 · 상담 후 견적", "One notice · by quote")),
        ("brief", ("국가 진출 브리프", "Market-entry brief"), ("나라 1곳 · 견적", "One country · by quote")),
-       ("member", ("분석 회원", "Analysis member"), ("월 19,800원 · 전체 목록·알림", "₩19,800/month · full lists and alerts")),
+       ("member", ("분석 회원", "Analysis member"), ("월 20,000원 · 전체 목록·알림", "₩20,000/month · full lists and alerts")),
        ("partner", ("프로젝트 파트너십", "Project partnership"), ("첫 상담 무료 · 수주까지", "First consultation free · through delivery"))]
 
 def _usd(v, ko):

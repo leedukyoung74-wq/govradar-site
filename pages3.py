@@ -283,9 +283,9 @@ def solutions_page(L, C):
 # ---------------------------------------------------------------- membership tiers (what each tier unlocks)
 TIERS = [  # id, ko name, en name, ko price, en price
     ("free", "무료 가입 (M0)", "Free sign-up (M0)", "0원", "Free"),
-    ("member", "분석 회원 (M1)", "Analysis member (M1)", "월 19,800원", "₩19,800/mo"),
+    ("member", "분석 회원 (M1)", "Analysis member (M1)", "월 20,000원", "₩20,000/mo"),
     ("partner", "프로젝트 파트너십", "Project partnership", "첫 상담 무료 · 비용은 상담 후 결정", "First consultation free · fees agreed after it"),
-    ("inst", "기관 라이선스", "Institutional licence", "연 300만 원부터", "from ₩3M/yr"),
+    ("inst", "기관 라이선스", "Institutional licence", "상담 후 견적", "By quote"),
 ]
 TIER_ROWS = [  # ko, en, free, member, partner, inst
     ("193개국 지도·나라별 요약·상황판·재난 대비", "Map, country summaries, situation board and preparedness for 193 countries", "✓", "✓", "✓", "✓"),
@@ -296,7 +296,7 @@ TIER_ROWS = [  # ko, en, free, member, partner, inst
     ("관심 나라 주간 요약·마감 임박 알림 (이메일, 담당자 검수 후 발송)", "Weekly summary and closing-soon alerts (email, sent after staff review)", "—", "10개국", "무제한", "무제한"),
     ("호르무즈·중동 리스크 브리프 (중요한 변화가 있을 때)", "Hormuz & Middle East risk brief (when there is a significant change)", "—", "✓", "✓", "✓"),
     ("월 1회 해외 정부사업 설명회·파트너 매칭 모임", "Monthly briefing and partner-matching meet-up", "✓ (사전 신청)", "✓ 우선 좌석", "✓", "✓"),
-    ("입찰 적합도 판정·프로젝트 랩 참여자 구성", "Tender fit verdicts and Project Lab participant line-ups", "—", "건당 10만 원", "포함", "분기 브리프"),
+    ("입찰 적합도 판정·프로젝트 랩 참여자 구성", "Tender fit verdicts and Project Lab participant line-ups", "—", "상담 후 견적", "포함", "분기 브리프"),
     ("파트너 연결·컨소시엄·현지 등록·제안서 동행", "Partner introductions, consortium, local registration and proposal support", "—", "—", "✓", "상담"),
     ("담당자 교육·견적서·세금계산서 일괄", "Staff training, quote and tax invoice pack", "—", "—", "—", "✓"),
 ]
@@ -326,9 +326,9 @@ def tier_cta(L, need, iso="", n=None):
             f'<span class="go">{"바로 신청 →" if ko else "Start now →"}</span></a>')
 def tier_table(L):
     ko = L == "ko"
-    SUB = {"member": ("VAT 포함 · 연 198,000원", "VAT incl. · ₩198,000/yr"), "inst": ("VAT 별도 · 300만·600만·990만 원", "VAT excl. · ₩3M / 6M / 9.9M")}
+    SUB = {"member": ("VAT 별도 · 연 200,000원", "VAT excl. · ₩200,000/yr")}
     head = "".join(f'<th data-t="{i}">{nk if ko else ne}<small>{pk if ko else pe}</small>' + (f'<small class="vat">{SUB[i][0] if ko else SUB[i][1]}</small>' if i in SUB else "") + '</th>' for i, nk, ne, pk, pe in TIERS)
-    EN = {"항목별 앞 2건": "First 2 per section", "나라별 앞 2건": "First 2 per country", "3건": "3", "주 1건": "1 a week", "전체": "All", "10개국": "10 countries", "무제한": "Unlimited", "✓ (사전 신청)": "✓ (register)", "✓ 우선 좌석": "✓ priority seat", "건당 10만 원": "₩100,000 each", "포함": "Included", "분기 브리프": "Quarterly brief", "상담": "On request"}
+    EN = {"항목별 앞 2건": "First 2 per section", "나라별 앞 2건": "First 2 per country", "3건": "3", "주 1건": "1 a week", "전체": "All", "10개국": "10 countries", "무제한": "Unlimited", "✓ (사전 신청)": "✓ (register)", "✓ 우선 좌석": "✓ priority seat", "상담 후 견적": "By quote", "포함": "Included", "분기 브리프": "Quarterly brief", "상담": "On request"}
     rows = "".join(f'<tr><th>{r[0] if ko else r[1]}</th>' + "".join(f'<td data-t="{TIERS[j][0]}">{(v if ko else EN.get(v, v))}</td>' for j, v in enumerate(r[2:])) + "</tr>" for r in TIER_ROWS)
     lab = {"member": ("신청", "Choose"), "partner": ("무료 상담 신청", "Book a free consultation"), "inst": ("견적 요청", "Request a quote")}
     sign = "".join(f'<td data-t="{i}">' + ("" if i == "free" else f'<a class="btn sm{" pri" if i == "partner" else ""}" href="?t={i}#order" data-pick="{i}">{lab[i][0] if ko else lab[i][1]}</a>') + "</td>" for i, *_ in TIERS)
@@ -339,11 +339,11 @@ def wmm_ladder(L):
     """GOV RADAR -> WMM membership: one shared ladder; WMM accepts applications for higher grades."""
     ko = L == "ko"
     rows = ([("GOV RADAR 무료 가입 · M0", "요약 열람", "193개국 지도·요약·상황판을 보고, 사업·입찰·일정은 앞부분만 봅니다."),
-             ("분석 회원 · 공통 입문 등급", "월 19,800원", "유망 사업의 이유·대상 바이어, 관심 나라 알림. WMM 멤버십의 공통 입문 단계입니다."),
+             ("분석 회원 · 공통 입문 등급", "월 20,000원", "유망 사업의 이유·대상 바이어, 관심 나라 알림. WMM 멤버십의 공통 입문 단계입니다."),
              ("WMM 멤버십 M1–M3", "오프라인 사업자료", "고른 나라·사업으로 회사소개서·제안서·사업계획 같은 실제 사업자료를 함께 만듭니다."),
              ("WMM 멤버십 M4–M5", "메인 프로젝트 구축", "파트너·컨소시엄을 꾸려 실제 프로젝트를 구축하고 실행까지 함께 갑니다.")] if ko else
             [("GOV RADAR free sign-up · M0", "Summaries", "Map, summaries and situation board for 193 countries; the first items of programmes, tenders and events."),
-             ("Analysis member · shared entry grade", "₩19,800/month", "Why-now, target buyers and alerts for your countries. The common entry step of WMM membership."),
+             ("Analysis member · shared entry grade", "₩20,000/month", "Why-now, target buyers and alerts for your countries. The common entry step of WMM membership."),
              ("WMM membership M1–M3", "Offline business materials", "We build real materials with you for the chosen country and deal: company profile, proposal, business plan."),
              ("WMM membership M4–M5", "Main project build", "We form partners and a consortium and build and run the actual project with you.")])
     li = "".join(f'<tr><th>{a}</th><td><b>{b}</b></td><td style="text-align:left">{c}</td></tr>' for a, b, c in rows)
@@ -363,8 +363,8 @@ GLOBAL_INFO = [
   "We confirm receipt within one to two business days, Korea time (KST, UTC+9). Weekends and Korean public holidays are not business days."),
  ("지원 방식과 나라", "How and where we help", "지원은 온라인으로 합니다. 분석은 193개국의 공개 자료를 근거로 하며, 모든 나라에서 같은 현지 지원을 하지는 않습니다. 현지 파트너 연결은 상담 뒤 가능한 나라에서만 안내합니다.",
   "Support is online. Analysis draws on public information for 193 countries; we do not offer the same local support everywhere. Local partner introductions are offered after a consultation, only where available."),
- ("가격과 결제", "Prices and payment", "가격은 원화 기준입니다(분석 회원 월 19,800원). 해외 기업은 견적을 요청하면 통화와 결제 방법을 견적서로 안내합니다. GCSME 회원사는 회원가 페이지를 이용하세요.",
-  "Prices are in Korean won (analysis membership KRW 19,800 a month). Companies outside Korea receive the currency and payment method on the quote. GCSME member companies can use the member-price page."),
+ ("가격과 결제", "Prices and payment", "가격은 원화 기준입니다(분석 회원 월 20,000원). 해외 기업은 견적을 요청하면 통화와 결제 방법을 견적서로 안내합니다. GCSME 회원사는 회원가 페이지를 이용하세요.",
+  "Prices are in Korean won (analysis membership KRW 20,000 a month). Companies outside Korea receive the currency and payment method on the quote. GCSME member companies can use the member-price page."),
 ]
 def global_info(L, e):
     ko = L == "ko"
@@ -382,18 +382,18 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
      ("meetup", "월 1회 해외 정부사업 설명회·파트너 매칭 모임", "Monthly briefing & partner-matching meet-up", "무료 · 사전 신청 (서울 오프라인 + 온라인 동시, 장소는 신청자에게 안내)", "Free · registration required (Seoul in person + online; venue sent to registrants)",
       "이달의 주요 정부 사업·입찰을 함께 보고, 같은 나라·분야를 노리는 기업·전문가와 직접 만나는 자리입니다. 프로젝트 파트너십 상담도 현장에서 받습니다.",
       "We walk through this month's key government programmes and tenders, and you meet companies and experts targeting the same countries and sectors. Partnership consultations are available on site.", "city"),
-     ("member", "분석 회원", "Analysis membership", "월 19,800원 · 연 198,000원 (VAT 포함, 자동갱신 없음)", "₩19,800/month · ₩198,000/year (VAT incl., no auto-renewal)",
+     ("member", "분석 회원", "Analysis membership", "월 20,000원 · 연 200,000원 (VAT 별도, 자동갱신 없음)", "₩20,000/month · ₩200,000/year (VAT excl., no auto-renewal)",
       "가입하면 요약은 무료로 보고, 분석 회원은 모든 나라의 전체 목록과 AI가 분석하고 사람이 검수한 '왜 지금인지·누가 살 사람인지'를 모든 나라에서 보고, 관심 나라 10곳의 주간 요약과 마감 임박 알림을 이메일로 받고(담당자 검수 후 발송), 중동 정세에 중요한 변화가 있으면 리스크 브리프를 받습니다. 설명회 우선 좌석도 드립니다.",
       "Summaries are free with sign-up. Analysis members see full lists plus the AI-analysed, human-reviewed why-now and target buyers for every country, get a weekly email summary with closing-soon alerts for 10 countries (sent after staff review), and a Middle East risk brief when there is a significant change. Priority seats at the meet-ups too.", "earth"),
-     ("brief", "국가 진출 브리프", "Market-entry brief", "300,000원부터 (VAT 별도, 신청 당일 견적)", "From ₩300,000 (VAT excl., quote the same day)",
+     ("brief", "국가 진출 브리프", "Market-entry brief", "상담 후 견적", "By quote",
       "한 나라에 대해: 정부 우선 과제와 예산, 지금 열린 입찰, 쓸 수 있는 한국 지원제도, 위험·제재, 권장 진입 경로와 다음 행동. 고객 업종에 맞추고 모든 수치에 출처를 붙입니다. 납기는 견적 때 확정합니다(보통 5~10영업일).",
       "For one country, tailored to your sector: priorities and budgets, open tenders, Korean support you can use, risks and sanctions, a recommended entry route and next steps. Every figure is sourced. Turnaround is confirmed with the quote (usually 5–10 business days).", "site"),
-     ("fit", "입찰 적합도 검토", "Tender fit review", "100,000원 (공고 1건, VAT 별도)", "₩100,000 per tender (VAT excl.)",
+     ("fit", "입찰 적합도 검토", "Tender fit review", "상담 후 견적", "By quote",
       "공고 1건에 대해: 참여 자격, 필요 서류, 현지 파트너 필요 여부, 일정, 참여 권장 여부를 원문 공고와 대조해 사람이 판단합니다. 영업일 3일.",
       "For one tender: eligibility, required documents, need for a local partner, timeline and a go/no-go recommendation, judged by a person against the original notice. Three business days.", "sign"),
-     ("inst", "기관 라이선스 (연간)", "Institutional licence (annual)", "연 300만 · 600만 · 990만 원 (VAT 별도)", "₩3M · 6M · 9.9M a year (VAT excl.)",
-      "지자체·테크노파크·공공기관·은행용입니다. 세 단계 모두 견적서 한 장으로 결재할 수 있는 금액이며, 견적서·사업자등록증·통장 사본·전자세금계산서를 바로 드립니다.<span class=\"itier\"><b>300만 원</b> 사용자 5명 · 분석 회원 기능 · 분기 브리프 1건</span><span class=\"itier\"><b>600만 원</b> 사용자 15명 · 분기 브리프 · 담당자 교육 1회 · 회원사 설명회 1회</span><span class=\"itier\"><b>990만 원</b> 사용자 무제한 · 월 브리프 · 맞춤 국가 10개 · 회원사 설명회 2회</span>",
-      "For local governments, technoparks, public bodies and banks; every tier can be approved on a single quote.<span class=\"itier\"><b>₩3M</b> 5 users · analysis features · 1 brief a quarter</span><span class=\"itier\"><b>₩6M</b> 15 users · quarterly brief · 1 staff training · 1 member briefing</span><span class=\"itier\"><b>₩9.9M</b> unlimited users · monthly brief · 10 custom countries · 2 member briefings</span>", "hand"),
+     ("inst", "기관 라이선스 (연간)", "Institutional licence (annual)", "상담 후 견적", "By quote",
+      "지자체·테크노파크·공공기관·은행용입니다. 세 단계 모두 견적서 한 장으로 결재할 수 있는 금액이며, 견적서·사업자등록증·통장 사본·전자세금계산서를 바로 드립니다.<span class=\"itier\"><b>기본</b> 사용자 5명 · 분석 회원 기능 · 분기 브리프 1건</span><span class=\"itier\"><b>표준</b> 사용자 15명 · 분기 브리프 · 담당자 교육 1회 · 회원사 설명회 1회</span><span class=\"itier\"><b>확장</b> 사용자 무제한 · 월 브리프 · 맞춤 국가 10개 · 회원사 설명회 2회</span>",
+      "For local governments, technoparks, public bodies and banks; every tier can be approved on a single quote.<span class=\"itier\"><b>Basic</b> 5 users · analysis features · 1 brief a quarter</span><span class=\"itier\"><b>Standard</b> 15 users · quarterly brief · 1 staff training · 1 member briefing</span><span class=\"itier\"><b>Extended</b> unlimited users · monthly brief · 10 custom countries · 2 member briefings</span>", "hand"),
     ]
     orows = "".join(f'''<article class="offer">{img(ph, nk if ko else ne, 720, 480)}<div><h3>{nk if ko else ne}</h3><p class="price">{pk if ko else pe}</p><p>{dk if ko else de}</p>
 <a class="btn pri" href="?p={pid}#order">{({"partner": "무료 상담 신청", "meetup": "설명회 신청"}.get(pid, "신청하기")) if ko else ({"partner": "Book a free consultation", "meetup": "Register"}.get(pid, "Request"))}</a>{(' <a class="btn" href="/'+L+'/sample/">'+("샘플 보기" if ko else "See a sample")+'</a>') if pid in ("brief","inst") else ""}{(' <a class="btn" href="/'+L+'/contracts/#connect">'+("계약 조건 보기" if ko else "Contract terms")+'</a>') if pid == "partner" else ""}</div></article>''' for pid, nk, ne, pk, pe, dk, de, ph in offers)
@@ -401,12 +401,12 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
     steps = (["신청서를 보내면 같은 날 견적서를 이메일로 보내 드립니다", "견적을 확인하고 회사 계좌로 입금합니다 (세금계산서·현금영수증 발행)", "입금 확인 후 영업일 2일 안에 작업을 시작합니다", "AI 초안을 사람이 검수해 이메일로 보내 드립니다"] if ko else
              ["Submit the form and we will email you a quote the same day", "Confirm the quote and pay by bank transfer (a tax invoice is issued)", "Work begins within two business days of payment", "A person reviews the AI draft, and we email you the result"])
     tier_opts = ""
-    prod_opts = tier_opts + "".join(f'<option value="{pid}">{nk if ko else ne}</option>' for pid, nk, ne, *_ in offers) + f'<option value="uni">{"UNI 대학 (학과 연 49만 원 · 대학 전체 연 99만 원부터)" if ko else "UNI university (department ₩490k/yr · whole university from ₩990k/yr)"}</option><option value="member-year">{"분석 회원 연간 (198,000원)" if ko else "Analysis membership, annual (₩198,000)"}</option><option value="gcsme">{"GCSME 회원가 (20% 할인, 기업)" if ko else "GCSME member price (20% off, companies)"}</option><option value="other">{"기타 문의" if ko else "Other"}</option>'
+    prod_opts = tier_opts + "".join(f'<option value="{pid}">{nk if ko else ne}</option>' for pid, nk, ne, *_ in offers) + f'<option value="uni">{"UNI 대학·기관 (상담 후 견적)" if ko else "UNI university (by quote)"}</option><option value="member-year">{"분석 회원 연간 (200,000원)" if ko else "Analysis membership, annual (₩200,000)"}</option><option value="gcsme">{"GCSME 회원가 (20% 할인, 기업)" if ko else "GCSME member price (20% off, companies)"}</option><option value="other">{"기타 문의" if ko else "Other"}</option>'
     body = f'''<section class="phero short">{img("sign", "", 1800, 700, "bg", True)}<div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p>
 <h1>{"필요한 만큼 주문하세요" if ko else "Order what you need"}</h1>
-<p class="lede">{"무료 가입으로 193개국 요약을 보고, 전체 목록·분석·알림은 합리적인 월 19,800원에, 실제 사업은 직접 만나 프로젝트 파트너십으로 함께합니다. 카드 결제를 열기 전까지는 견적·계좌이체로 받고, 자동갱신은 하지 않습니다." if ko else "Sign up free for summaries of 193 countries. Full lists, analysis and alerts cost a fair ₩19,800/month, and real deals are done in person through a project partnership. Until card payment opens, we take orders by quote and bank transfer, with no auto-renewal."}</p></div></section>
-<section class="band" id="tier"><div class="in"><div class="needban" id="needban" hidden></div><p class="cta" style="margin:0 0 18px"><a class="btn pri" href="/{L}/request/">{"회원 분석 의뢰 4가지 — 범위·한도·처리 기준 보고 보내기 →" if ko else "Member analysis requests — see scope, limit and handling before you send →"}</a></p><p class="note" style="margin:-8px 0 18px">{"분석 회원은 회원 의뢰(빠른 검토)를 매달 2건 포함합니다. 아래 표의 '입찰 적합도 판정(건당 10만 원)'은 서류 목록·컨소시엄 구성안까지 들어가는 상세판으로, 회원 포함 의뢰와 별개입니다." if ko else "Analysis members get two member requests (quick checks) a month. The per-tender fit assessment (KRW 100,000) below is a separate, detailed product with document list and consortium plan."}</p>
-<h2>{"무료·분석 회원·파트너십 비교" if ko else "Free, analysis membership and partnership"}</h2><p class="note"><a href="/{L}/how/">{"신청 후 진행 순서·납기·고객 약속 보기 →" if ko else "How it works: steps, turnaround and our promises →"}</a></p><p class="note">{"무료로 가입하면 193개국 지도·요약·상황판·재난 대비를 보고, 각 나라의 사업·입찰·일정은 앞부분만 볼 수 있습니다. 전체 목록과 AI 분석·알림은 분석 회원(M1, 월 19,800원)부터, 사람이 하는 판단(적합도·브리프)과 직접 만나 함께하는 프로젝트 파트너십은 별도입니다." if ko else "Free sign-up shows the map, summaries, situation board and preparedness for 193 countries, plus the first items of each country's programmes, tenders and events. Full lists, AI analysis and alerts start at the analysis membership (M1, ₩19,800/month); human judgement (fit reviews, briefs) and in-person project partnerships are separate."}</p>{tier_table(L)}</div></section>
+<p class="lede">{"무료 가입으로 193개국 요약을 보고, 전체 목록·분석·알림은 합리적인 월 20,000원에, 실제 사업은 직접 만나 프로젝트 파트너십으로 함께합니다. 카드 결제를 열기 전까지는 견적·계좌이체로 받고, 자동갱신은 하지 않습니다." if ko else "Sign up free for summaries of 193 countries. Full lists, analysis and alerts cost a fair ₩20,000/month, and real deals are done in person through a project partnership. Until card payment opens, we take orders by quote and bank transfer, with no auto-renewal."}</p></div></section>
+<section class="band" id="tier"><div class="in"><div class="needban" id="needban" hidden></div><p class="cta" style="margin:0 0 18px"><a class="btn pri" href="/{L}/request/">{"회원 분석 의뢰 4가지 — 범위·한도·처리 기준 보고 보내기 →" if ko else "Member analysis requests — see scope, limit and handling before you send →"}</a></p><p class="note" style="margin:-8px 0 18px">{"분석 회원은 회원 의뢰(빠른 검토)를 매달 2건 포함합니다. 아래 표의 '입찰 적합도 판정(상담 후 견적)'은 서류 목록·컨소시엄 구성안까지 들어가는 상세판으로, 회원 포함 의뢰와 별개입니다." if ko else "Analysis members get two member requests (quick checks) a month. The per-tender fit assessment (KRW 100,000) below is a separate, detailed product with document list and consortium plan."}</p>
+<h2>{"무료·분석 회원·파트너십 비교" if ko else "Free, analysis membership and partnership"}</h2><p class="note"><a href="/{L}/how/">{"신청 후 진행 순서·납기·고객 약속 보기 →" if ko else "How it works: steps, turnaround and our promises →"}</a></p><p class="note">{"무료로 가입하면 193개국 지도·요약·상황판·재난 대비를 보고, 각 나라의 사업·입찰·일정은 앞부분만 볼 수 있습니다. 전체 목록과 AI 분석·알림은 분석 회원(M1, 월 20,000원)부터, 사람이 하는 판단(적합도·브리프)과 직접 만나 함께하는 프로젝트 파트너십은 별도입니다." if ko else "Free sign-up shows the map, summaries, situation board and preparedness for 193 countries, plus the first items of each country's programmes, tenders and events. Full lists, AI analysis and alerts start at the analysis membership (M1, ₩20,000/month); human judgement (fit reviews, briefs) and in-person project partnerships are separate."}</p>{tier_table(L)}</div></section>
 {wmm_ladder(L)}<section class="band"><div class="in"><h2>{"지금 주문할 수 있는 것" if ko else "Available now"}</h2><div class="offers">{orows}</div></div></section>
 <section class="band alt"><div class="in"><h2>{"주문하면 이렇게 진행됩니다" if ko else "How an order works"}</h2><ol class="flow">{"".join(f"<li>{x}</li>" for x in steps)}</ol></div></section>
 {global_info(L, e)}<section class="band alt" id="order"><div class="in narrow"><h2>{"신청서" if ko else "Request form"}</h2>
@@ -419,13 +419,13 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> <span>{f'<a href="/{L}/legal/privacy/" target="_blank">개인정보 처리방침</a>에 동의합니다 (필수)' if ko else f'I agree to the <a href="/{L}/legal/privacy/" target="_blank">Privacy Policy</a> (required)'}</span></label>
 <label class="chk"><input type="checkbox" name="marketing" value="yes"> {"새 공고·소식 이메일(광고)을 받겠습니다 (선택)" if ko else "Send me news and offers by email (optional)"}</label>
 <button class="btn pri" type="submit">{"견적 요청 보내기" if ko else "Request a quote"}</button></form>
-<p class="note">{"분석 회원은 VAT 포함, 기업·기관 상품은 VAT 별도 · 자동갱신 없음 · 결제일부터 7일 안에 유료 자료를 쓰지 않았다면 전액 환불 · 이용을 시작한 뒤 해지하면 남은 기간까지 이용 · 연간 선납은 이용한 달을 월 요금으로 계산해 뺀 금액 환불 · 맞춤 보고서는 작업 시작 전까지 전액 환불, 받은 뒤에는 청약철회 제한 · 학생·NGO(19세 이상) 50% 할인 · 결과물은 'AI 작성 + 사람 검수'로 표시합니다 · " if ko else "Analysis membership includes VAT; company and institutional products exclude VAT · no auto-renewal · full refund within 7 days of payment if no paid material was used · after use starts, cancel and keep access to the end of the period · annual prepay refunds the balance after charging the months used at the monthly price · custom reports are fully refundable until work starts, and cannot be withdrawn once delivered · 50% off for students and NGOs (19+) · deliverables are labelled 'AI-drafted, human-reviewed' · "}<a href="/{L}/legal/refund/">{"환불 정책" if ko else "Refund policy"}</a> · <a href="/{L}/legal/terms/">{"이용약관" if ko else "Terms"}</a> · 73036396@naver.com</p>
+<p class="note">{"모든 가격 VAT 별도 · 자동갱신 없음 · 결제일부터 7일 안에 유료 자료를 쓰지 않았다면 전액 환불 · 이용을 시작한 뒤 해지하면 남은 기간까지 이용 · 연간 선납은 이용한 달을 월 요금으로 계산해 뺀 금액 환불 · 맞춤 보고서는 작업 시작 전까지 전액 환불, 받은 뒤에는 청약철회 제한 · 학생·NGO(19세 이상) 50% 할인 · 결과물은 'AI 작성 + 사람 검수'로 표시합니다 · " if ko else "All prices exclude VAT · no auto-renewal · full refund within 7 days of payment if no paid material was used · after use starts, cancel and keep access to the end of the period · annual prepay refunds the balance after charging the months used at the monthly price · custom reports are fully refundable until work starts, and cannot be withdrawn once delivered · 50% off for students and NGOs (19+) · deliverables are labelled 'AI-drafted, human-reviewed' · "}<a href="/{L}/legal/refund/">{"환불 정책" if ko else "Refund policy"}</a> · <a href="/{L}/legal/terms/">{"이용약관" if ko else "Terms"}</a> · 73036396@naver.com</p>
 {credit(["sign"] + [o[-1] for o in offers], ko)}</div></section>
 <script>(function(){{var NEED={json.dumps({k: [v[0], v[1] if ko else v[2]] for k, v in NEED.items()}, ensure_ascii=False)},TP={json.dumps({x[0]: (x[1]+" "+x[3]) if ko else (x[2]+" "+x[4]) for x in TIERS}, ensure_ascii=False)};var q=new URLSearchParams(location.search),p=q.get("p")||q.get("t"),c=q.get("c"),nd=q.get("need"),t=q.get("t");
 if(t&&TP[t]){{document.querySelectorAll('.tiers [data-t="'+t+'"]').forEach(function(x){{x.classList.add("hit")}});var b=document.getElementById("needban");if(b){{var w=nd&&NEED[nd]?NEED[nd][1]:"";b.innerHTML="<span>"+(w?({json.dumps('보려는 내용: ' if ko else 'You want: ')}+"<b>"+w+"</b><br>"):"")+{json.dumps('가장 저렴한 등급' if ko else 'Lowest plan')}+"</span><span class=p>"+TP[t]+"</span><a class='btn pri' href='#order' data-pick='"+t+"'>"+{json.dumps('이 등급으로 신청' if ko else 'Request this plan')}+"</a>";b.hidden=false;}}}}
 document.addEventListener("click",function(ev){{var a=ev.target.closest("[data-pick]");if(!a)return;ev.preventDefault();var s=document.getElementById("o-prod");if(s&&s.querySelector('option[value="'+a.dataset.pick+'"]'))s.value=a.dataset.pick;document.getElementById("order").scrollIntoView({{behavior:"smooth"}});}});if(p){{var s=document.getElementById("o-prod");if(s&&s.querySelector('option[value="'+p+'"]'))s.value=p;}}if(c){{var i=document.getElementById("o-cty");if(i)i.value=c;}}document.querySelectorAll('.offer a[href^="?p="]').forEach(function(a){{a.addEventListener("click",function(ev){{ev.preventDefault();var v=a.getAttribute("href").slice(3).split("#")[0];var s=document.getElementById("o-prod");if(s)s.value=v;document.getElementById("order").scrollIntoView({{behavior:"smooth"}});}});}});}})();</script>'''
     return C["head"](L, ("주문·요금" if ko else "Orders & pricing") + " · GOV RADAR",
-                     "정보 무료 · 분석 회원 월 19,800원 · 국가 진출 브리프 · 적합도 검토 · 프로젝트 파트너십(첫 상담 무료)" if ko else "Free data · ₩19,800/month analysis · market-entry briefs · fit reviews · project partnership (first consultation free)",
+                     "정보 무료 · 분석 회원 월 20,000원 · 국가 진출 브리프 · 적합도 검토 · 프로젝트 파트너십(첫 상담 무료)" if ko else "Free data · ₩20,000/month analysis · market-entry briefs · fit reviews · project partnership (first consultation free)",
                      f"/{L}/pricing/", {l: f"/{l}/pricing/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
 
 # ---------------------------------------------------------------- deadline board (top of /L/mdb/)
@@ -520,12 +520,12 @@ GRDL.watch(L);var on=document.querySelector(".dlf .chip.on");if(on)f(on.dataset.
 
 
 PREP_JS = r"""<script>(function(){GRDL.watch(document.documentElement.lang||"en");var ul=document.querySelector(".dl[data-feed]");if(!ul)return;var L=ul.dataset.l,ko=L==="ko";
-var W=ko?{btn:"준비할 것",type:{CW:"공사",GO:"물품",CS:"컨설팅",NC:"일반 용역"},tl:"유형",gs:"제목으로 판단",sch:"마감까지 역산 일정",docs:"보통 필요한 서류",jv:"파트너",fit:"적합도 검토 주문 (100,000원)",par:"현지 파트너 찾기",win:"수주 7단계 보기",
+var W=ko?{btn:"준비할 것",type:{CW:"공사",GO:"물품",CS:"컨설팅",NC:"일반 용역"},tl:"유형",gs:"제목으로 판단",sch:"마감까지 역산 일정",docs:"보통 필요한 서류",jv:"파트너",fit:"적합도 검토 주문 (상담 후 견적)",par:"현지 파트너 찾기",win:"수주 7단계 보기",
  s:[[21,"참여 여부 판단: 자격 요건과 회사 실적 대조"],[14,"자격 서류 확보 · 현지 파트너 확정"],[7,"제안서·입찰서 완성"],[3,"내부 검토 · 입찰보증서 발급"],[1,"제출 (시간대 확인)"]],
  short:"남은 기간이 짧습니다. 오늘 참여 여부를 정하고 서류부터 모으세요.",
  d:{CW:["입찰보증서","최근 5년 유사 공사 실적","최근 3년 재무제표","장비·핵심 인력 계획","현지 등록 또는 공동수급(JV) 협약서"],GO:["기술사양 적합표","제조사 공급 승인서(MAF)","가격·납기 견적","유사 납품 실적","제품 인증서"],CS:["관심표명서(EOI) 또는 제안서","회사 유사 실적","핵심 인력 이력서","방법론·업무 계획","현지 협력사 협약"],NC:["회사 실적","인력·장비 계획","가격 견적","보험·면허 증빙"]},
  jvy:"공사·대형 사업은 현지 등록업체와 공동수급(JV)을 검토하세요.",jvn:"현지 협력사가 있으면 평가·실행에 유리한 경우가 많습니다."}
-:{btn:"What to prepare",type:{CW:"Works",GO:"Goods",CS:"Consulting",NC:"Non-consulting"},tl:"Type",gs:"judged from the title",sch:"Schedule counted back from the deadline",docs:"Documents usually required",jv:"Partner",fit:"Order a fit review (₩100,000)",par:"Find a local partner",win:"See the 7 steps",
+:{btn:"What to prepare",type:{CW:"Works",GO:"Goods",CS:"Consulting",NC:"Non-consulting"},tl:"Type",gs:"judged from the title",sch:"Schedule counted back from the deadline",docs:"Documents usually required",jv:"Partner",fit:"Order a fit review (by quote)",par:"Find a local partner",win:"See the 7 steps",
  s:[[21,"Go/no-go: check eligibility against your record"],[14,"Collect eligibility documents · confirm local partner"],[7,"Finish the proposal or bid"],[3,"Internal review · issue the bid security"],[1,"Submit (check the time zone)"]],
  short:"Little time left. Decide today and start with the documents.",
  d:{CW:["Bid security","Similar works in the last 5 years","Financial statements, last 3 years","Equipment and key staff plan","Local registration or joint-venture agreement"],GO:["Technical compliance sheet","Manufacturer's authorisation (MAF)","Price and delivery quote","Similar supply record","Product certificates"],CS:["Expression of interest or proposal","Similar assignments","CVs of key experts","Methodology and work plan","Agreement with a local firm"],NC:["Company record","Staff and equipment plan","Price quote","Insurance and licences"]},
@@ -619,7 +619,7 @@ IND = [
  ("p_free", "프리랜서 컨설턴트·1인 창업자", "Freelance consultants & founders", "정부 사업을 고객에게 소개하는 일",
   "Bringing government work to your clients", "193개국 정부 과제·예산·입찰을 근거로 고객에게 사업 기회를 제안하고, 컨소시엄에 고객사를 연결합니다. 모든 수치에 출처가 붙어 있어 그대로 인용하기 좋습니다.",
   "Propose opportunities to your clients based on government priorities, budgets and tenders in 193 countries, and bring them into consortia. Every figure is sourced, so it is easy to cite.",
-  "보기 무료 · 분석 회원 월 19,800원", "Browsing is free · analysis membership ₩19,800/mo", "pricing/", "주문·요금 보기", "Orders & pricing"),
+  "보기 무료 · 분석 회원 월 20,000원", "Browsing is free · analysis membership ₩20,000/mo", "pricing/", "주문·요금 보기", "Orders & pricing"),
  ("p_study", "대학생·청년·청소년", "Students & young people", "누구나 같은 무료",
   "Free for everyone", "실제 각국 정부 데이터로 국제개발·통상을 공부하고, 프로젝트 랩의 사업 아이디어로 제안서를 연습합니다. 만 14~18세는 열람·학습만 할 수 있고, 유료 작업은 만 19세부터입니다.",
   "Study international development and trade with real government data and practise writing proposals using Project Lab ideas. Those aged 14–18 can read and learn; paid work starts at 19.",
@@ -666,15 +666,15 @@ PROMISES = [
 ]
 WHO_GETS = [
  ("무료 회원", "Free", ["193개국 정부 과제·사업·위험", "열린 입찰 전체 (발주처·마감일·원문)", "유망 사업 이번 주 공개 1건", "월 1회 설명회 (사전 신청)"], ["Priorities, projects and risk for 193 countries", "Every open tender with buyer, deadline and link", "One fully opened opportunity a week", "Monthly meet-up (registration)"]),
- ("분석 회원 · 월 19,800원", "Analysis member · ₩19,800/mo", ["모든 나라 유망 사업의 이유·대상 바이어", "관심 나라 10곳 주간 요약·마감 임박 알림 (이메일)", "중동 리스크 브리프(중요한 변화 시), 설명회 우선 좌석"], ["Why-now and target buyers for every country", "Weekly email: 10-country summary and closing-soon alerts", "Middle East brief on significant change, priority meet-up seats"]),
+ ("분석 회원 · 월 20,000원", "Analysis member · ₩20,000/mo", ["모든 나라 유망 사업의 이유·대상 바이어", "관심 나라 10곳 주간 요약·마감 임박 알림 (이메일)", "중동 리스크 브리프(중요한 변화 시), 설명회 우선 좌석"], ["Why-now and target buyers for every country", "Weekly email: 10-country summary and closing-soon alerts", "Middle East brief on significant change, priority meet-up seats"]),
  ("프로젝트 파트너십 · 상담 후 결정", "Project partnership · after consultation", ["첫 상담 무료 (온라인 또는 서울 30분)", "파트너·컨소시엄 연결, 현지 등록·서류·제안서 동행", "성과 중심 보수 (성공보수)"], ["First 30-minute consultation free", "Partner and consortium introductions, registration, documents and proposal", "Fees weighted toward success"]),
- ("기관 라이선스 · 연 300만~990만 원", "Institutional · ₩3M–9.9M/yr", ["착수 회의와 담당자 교육", "정기 브리프, 회원사 대상 설명회", "견적서·세금계산서·사업자 서류 일괄"], ["Kick-off meeting and staff training", "Regular briefs and briefings for your member firms", "Quote, tax invoice and company documents in one pack"]),
+ ("기관 라이선스 · 상담 후 견적", "Institutional · By quote", ["착수 회의와 담당자 교육", "정기 브리프, 회원사 대상 설명회", "견적서·세금계산서·사업자 서류 일괄"], ["Kick-off meeting and staff training", "Regular briefs and briefings for your member firms", "Quote, tax invoice and company documents in one pack"]),
 ]
 FAQ = [
  ("결제는 어떻게 하나요?", "How do I pay?", "지금은 견적서를 받은 뒤 계좌이체로 결제합니다. 카드 결제는 준비 중입니다.", "For now, by bank transfer after you receive a quote. Card payment is coming."),
  ("관심 나라를 바꿀 수 있나요?", "Can I change my countries?", "언제든 이메일로 알려 주시면 다음 주 요약부터 바뀝니다.", "Yes, email us any time and the next weekly summary will reflect it."),
  ("여러 명이 같이 써도 되나요?", "Can several people use it?", "분석 회원은 1명 기준입니다. 여러 명이 쓰려면 기관 라이선스를 권합니다.", "An analysis membership is for one person. For teams, choose an institutional licence."),
- ("무료 가입으로는 어디까지 보나요?", "What does a free sign-up show?", "193개국 지도·나라별 요약·상황판·재난 대비는 모두 보고, 각 나라의 정부 사업·입찰·일정은 앞부분(항목별 2건, 일정 3건)만 봅니다. 전체 목록과 분석·알림은 분석 회원(M1, 월 19,800원)부터 열립니다.", "The map, country summaries, situation board and preparedness for 193 countries, plus the first items of each country's programmes, tenders and events (2 per section, 3 events). Full lists, analysis and alerts open from the analysis membership (M1, ₩19,800/month)."),
+ ("무료 가입으로는 어디까지 보나요?", "What does a free sign-up show?", "193개국 지도·나라별 요약·상황판·재난 대비는 모두 보고, 각 나라의 정부 사업·입찰·일정은 앞부분(항목별 2건, 일정 3건)만 봅니다. 전체 목록과 분석·알림은 분석 회원(M1, 월 20,000원)부터 열립니다.", "The map, country summaries, situation board and preparedness for 193 countries, plus the first items of each country's programmes, tenders and events (2 per section, 3 events). Full lists, analysis and alerts open from the analysis membership (M1, ₩20,000/month)."),
  ("정보가 틀리면요?", "What if something is wrong?", "73036396@naver.com 으로 알려 주세요. 영업일 2일 안에 확인해 고치고 정정 기록을 남깁니다.", "Email 73036396@naver.com. We check and correct within two business days and log the correction."),
  ("한국 밖에서도 이용할 수 있나요?", "Can I use it from outside Korea?", "네. 무료 가입과 열람은 어느 나라에서나 같습니다. 상담과 결과물은 한국어 또는 영어로, 접수 확인은 한국 시간 기준 영업일 1~2일 안에 드립니다. 지원은 온라인이며 현지 파트너 연결은 가능한 나라에서만 안내합니다.", "Yes. Sign-up and browsing are the same everywhere. Consultations and deliverables are in Korean or English, and we confirm receipt within one to two business days, Korea time. Support is online; local partner introductions are offered only where available."),
  ("해외 기업은 어떻게 결제하나요?", "How do companies outside Korea pay?", "견적을 요청하시면 통화와 결제 방법을 견적서로 안내합니다. GCSME 회원사는 회원가 페이지에서 신청하세요.", "Request a quote and we state the currency and payment method on it. GCSME member companies can apply on the member-price page."),
@@ -763,7 +763,7 @@ def sample_page(L, C, iso="ZA"):
 {sec("8. " + ("다음 행동" if ko else "Next steps"), "<ol>" + "".join(f"<li>{e(x)}</li>" for x in nxt) + "</ol>")}
 {sec(("출처" if ko else "Sources"), "<ul>" + src + "</ul>")}
 <div class="lockbox"><p><b>{"내 업종에 맞춘 브리프를 받으시겠어요?" if ko else "Want one tailored to your business?"}</b></p>
-<p class="cta"><a class="btn pri" href="/{L}/pricing/?p=brief#order">{"국가 진출 브리프 신청 (300,000원부터)" if ko else "Order a brief (from ₩300,000)"}</a> <a class="btn" href="{paylink(L, "biz", iso)}">{"모든 나라 이유·바이어 — 분석 회원 월 19,800원" if ko else "All countries — analysis member ₩19,800/mo"}</a></p></div>
+<p class="cta"><a class="btn pri" href="/{L}/pricing/?p=brief#order">{"국가 진출 브리프 상담 신청" if ko else "Request a brief"}</a> <a class="btn" href="{paylink(L, "biz", iso)}">{"모든 나라 이유·바이어 — 분석 회원 월 20,000원" if ko else "All countries — analysis member ₩20,000/mo"}</a></p></div>
 </div>"""
     title = ("샘플 국가 진출 브리프 — " if ko else "Sample market-entry brief — ") + nm
     return C["head"](L, title, title, f"/{L}/sample/", {l: f"/{l}/sample/" for l in C["LANGS"]}) + body + C["foot"](L)
@@ -787,8 +787,8 @@ def unlock_page(L, C):
 # ---------------------------------------------------------------- GCSME members (/L/gcsme/) — alternative A
 def gcsme_page(L, C):
     ko = L == "ko"
-    rows = [("Analysis membership", "US$15/mo", "월 19,800원 → 회원가 약 20% 할인", "All why-now & target buyers, weekly alerts for 10 countries"),
-            ("Market-entry brief", "from US$220", "300,000원부터 → 회원가", "One country, human-reviewed, turnaround confirmed with the quote"),
+    rows = [("Analysis membership", "₩20,000/mo", "월 20,000원 (VAT 별도)", "All why-now & target buyers, weekly alerts for 10 countries"),
+            ("Market-entry brief", "By quote", "상담 후 견적", "One country, human-reviewed, turnaround confirmed with the quote"),
             ("Project partnership", "free first call", "첫 상담 무료 · 비용은 상담 후 결정", "Introductions to Korean partners and consortia; fees agreed after the first call")]
     tr = "".join(f"<tr><th>{a}</th><td><b>{b}</b></td><td>{c if ko else d}</td></tr>" for a, b, c, d in rows)
     body = f"""<section class="phero short">{img("hand", "", 1800, 700, "bg", True)}<div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p>
@@ -845,7 +845,7 @@ def member_page(L, C):
 <form id="mform" class="mform" onsubmit="return false"><label>{"열람 코드" if ko else "Access code"}<input id="mcode" autocomplete="off" placeholder="XXXX-XXXX-XXXX-XXXX" style="text-transform:uppercase"></label>
 <p class="cta"><button class="btn pri" id="mgo" type="button">{"열기" if ko else "Unlock"}</button> <button class="btn" id="mout" type="button">{"이 브라우저에서 해제" if ko else "Sign out on this browser"}</button></p></form>
 <p class="note">{"코드는 본인만 쓰세요. 여러 사람이 함께 쓰려면 기관 라이선스를 이용해 주세요. 코드를 잃어버렸으면 73036396@naver.com으로 연락 주세요." if ko else "Keep the code to yourself. For several users, choose an institutional licence. Lost your code? Write to 73036396@naver.com."}</p>
-<p class="cta"><a class="btn" href="/{L}/pricing/?p=member#order">{"분석 회원 신청 (월 19,800원)" if ko else "Become an analysis member (₩19,800/mo)"}</a></p>
+<p class="cta"><a class="btn" href="/{L}/pricing/?p=member#order">{"분석 회원 신청 (월 20,000원)" if ko else "Become an analysis member (₩20,000/mo)"}</a></p>
 </div></section>'''
     return C["head"](L, ("분석 회원 열람" if ko else "Analysis member access") + " · GOV RADAR",
                      "분석 회원 개인 열람 코드로 잠긴 분석을 엽니다" if ko else "Open member-only analysis with your personal access code",
@@ -862,13 +862,13 @@ ACCESS = [
   ["나라별 '정부에 파는 법'(조달 등록·현지 파트너 요건)", "한국 기업 수주 실적 전체", "입찰 참가 조건 상세(매출·실적·인증·컨소시엄)", "관심 나라 저장·내 입찰 담기"],
   ["How to sell to each government (registration, local-partner rules)", "All past Korean wins", "Detailed tender eligibility (revenue, track record, certificates, consortium)", "Save countries and keep your own tender list"],
   "", "무료 가입", "Sign up free", "signup"),
- ("member", "분석 회원", "Analysis member", "월 19,800원", "₩19,800/mo",
+ ("member", "분석 회원", "Analysis member", "월 20,000원", "₩20,000/mo",
   ["모든 나라의 '왜 지금·누가 살 사람·근거' 전체", "주간 맞춤 이메일: 관심 10개국 요약·마감 임박 알림", "중동 리스크 브리프 (중요한 변화 시)", "회원에게 맞는 본사 프로젝트 개인 안내·설명회 우선 좌석"],
   ["Why-now, target buyers and basis for every country", "Weekly email: 10-country summary and closing-soon alerts", "Middle East risk brief (on significant change)", "Personal invitations to matching HQ projects, priority meet-up seats"],
   "pricing/?p=member#order", "분석 회원 신청", "Become a member", ""),
  ("order", "주문형 · 사람이 함께", "On request · with a person", "상담 후", "After a call",
-  ["국가 진출 브리프 30만 원부터", "입찰 적합도 검토 10만 원", "프로젝트 파트너십: 첫 상담 무료, 착수금·성공보수는 상담 후 결정"],
-  ["Market-entry brief from ₩300,000", "Tender fit review ₩100,000", "Project partnership: first call free, fees agreed after it"],
+  ["국가 진출 브리프 · 상담 후 견적", "입찰 적합도 검토 · 상담 후 견적", "프로젝트 파트너십: 첫 상담 무료, 착수금·성공보수는 상담 후 결정"],
+  ["Market-entry brief · by quote", "Tender fit review · by quote", "Project partnership: first call free, fees agreed after it"],
   "pricing/?p=partner#order", "무료 상담 신청", "Book a free call", ""),
 ]
 def access_html(L):
@@ -899,47 +899,47 @@ MS_TX = {
  "es": dict(t="Membresía WMM", h="Membresía WMM — de la primera mirada a la ejecución", lede="Acompañamos a las empresas en su salida al exterior, desde el diagnóstico hasta la ejecución.", tbl="Niveles y precios",
    head=("Nivel", "Para", "Beneficios clave", "Precio"),
    rows=[("M0 OPEN", "Empresas que dan un primer vistazo", "Mapa, resúmenes y panel de situación · primeros elementos de programas, licitaciones y eventos", "Gratis"),
-         ("M1 MEMBER", "Empresas que siguen los datos", "Todas las listas completas + 2 solicitudes de análisis al mes", "₩19.800/mes"),
-         ("M2 PRO", "Empresas que preparan su entrada", "Alertas por país, apoyo con documentos en inglés", "₩149.000/mes"),
-         ("M3 BUSINESS", "Empresas ya validadas", "Preparación de contrapartes, consulta prioritaria, conversaciones con inversores (desde la revisión)", "₩390.000/mes"),
-         ("M4 PROJECT", "Entrada en un país concreto", "Validación de mercado de 6 semanas, agenda local, conversaciones con inversores", "desde ₩1,9 M"),
-         ("M5 STRATEGIC", "Contratos públicos o grandes", "Desde la preparación de la oferta hasta el contrato, conversaciones con inversores", "3–5 % del contrato")],
+         ("M1 MEMBER", "Empresas que siguen los datos", "Todas las listas completas + 2 solicitudes de análisis al mes", "₩20.000/mes"),
+         ("M2 PRO", "Empresas que preparan su entrada", "Alertas por país, apoyo con documentos en inglés", "Según presupuesto"),
+         ("M3 BUSINESS", "Empresas ya validadas", "Preparación de contrapartes, consulta prioritaria, conversaciones con inversores (desde la revisión)", "Según presupuesto"),
+         ("M4 PROJECT", "Entrada en un país concreto", "Validación de mercado de 6 semanas, agenda local, conversaciones con inversores", "Según presupuesto"),
+         ("M5 STRATEGIC", "Contratos públicos o grandes", "Desde la preparación de la oferta hasta el contrato, conversaciones con inversores", "Según presupuesto")],
    note="IVA no incluido · Propuesta v2.0, se confirmará. No garantizamos inversión, contratos ni ventas.", btn="Solicitar la membresía de WMM →", c="Contacto"),
  "fr": dict(t="Adhésion WMM", h="Adhésion WMM — du premier regard à l’exécution", lede="Nous accompagnons les entreprises à l’international, du diagnostic à l’exécution.", tbl="Niveaux et tarifs",
    head=("Niveau", "Pour", "Avantages clés", "Tarif"),
    rows=[("M0 OPEN", "Entreprises qui découvrent", "Carte, synthèses et tableau de situation · premiers éléments des programmes, appels d’offres et événements", "Gratuit"),
-         ("M1 MEMBER", "Entreprises qui suivent les données", "Toutes les listes complètes + 2 demandes d’analyse par mois", "19 800 ₩/mois"),
-         ("M2 PRO", "Entreprises qui préparent leur entrée", "Alertes pays, aide aux documents en anglais", "149 000 ₩/mois"),
-         ("M3 BUSINESS", "Entreprises validées", "Préparation des contreparties, consultation prioritaire, échanges avec des investisseurs (dès l’examen)", "390 000 ₩/mois"),
-         ("M4 PROJECT", "Entrée dans un pays précis", "Validation de marché en 6 semaines, agenda local, échanges avec des investisseurs", "à partir de 1,9 M₩"),
-         ("M5 STRATEGIC", "Marchés publics ou grands contrats", "De la préparation de l’offre au contrat, échanges avec des investisseurs", "3–5 % du contrat")],
+         ("M1 MEMBER", "Entreprises qui suivent les données", "Toutes les listes complètes + 2 demandes d’analyse par mois", "20 000 ₩/mois"),
+         ("M2 PRO", "Entreprises qui préparent leur entrée", "Alertes pays, aide aux documents en anglais", "Sur devis"),
+         ("M3 BUSINESS", "Entreprises validées", "Préparation des contreparties, consultation prioritaire, échanges avec des investisseurs (dès l’examen)", "Sur devis"),
+         ("M4 PROJECT", "Entrée dans un pays précis", "Validation de marché en 6 semaines, agenda local, échanges avec des investisseurs", "Sur devis"),
+         ("M5 STRATEGIC", "Marchés publics ou grands contrats", "De la préparation de l’offre au contrat, échanges avec des investisseurs", "Sur devis")],
    note="TVA non comprise · Proposition v2.0, à confirmer. Nous ne garantissons ni investissement, ni contrat, ni chiffre d’affaires.", btn="Demander l’adhésion à WMM →", c="Contact"),
  "ar": dict(t="عضوية WMM", h="عضوية WMM — من النظرة الأولى إلى التنفيذ", lede="نرافق الشركات في توسعها الخارجي من التشخيص حتى التنفيذ.", tbl="المستويات والأسعار",
    head=("المستوى", "لمن", "المزايا الأساسية", "السعر"),
    rows=[("M0 OPEN", "شركات تلقي نظرة أولى", "الخريطة والملخصات ولوحة الأوضاع · أول البنود من البرامج والمناقصات والفعاليات", "مجاني"),
-         ("M1 MEMBER", "شركات تتابع البيانات", "جميع القوائم كاملة + طلبا تحليل شهريًا", "19,800 وون/شهريًا"),
-         ("M2 PRO", "شركات تستعد للدخول", "تنبيهات الدول، دعم المستندات بالإنجليزية", "149,000 وون/شهريًا"),
-         ("M3 BUSINESS", "شركات اجتازت التحقق", "التحضير للشركاء، استشارة ذات أولوية، نقاش مع المستثمرين (منذ بدء المراجعة)", "390,000 وون/شهريًا"),
-         ("M4 PROJECT", "دخول دولة محددة", "تحقق من السوق خلال 6 أسابيع، جدولة محلية، نقاش مع المستثمرين", "من 1.9 مليون وون"),
-         ("M5 STRATEGIC", "عقود عامة أو كبيرة", "من إعداد العطاء حتى العقد، نقاش مع المستثمرين", "3–5% من قيمة العقد")],
+         ("M1 MEMBER", "شركات تتابع البيانات", "جميع القوائم كاملة + طلبا تحليل شهريًا", "20,000 وون/شهريًا"),
+         ("M2 PRO", "شركات تستعد للدخول", "تنبيهات الدول، دعم المستندات بالإنجليزية", "حسب عرض السعر"),
+         ("M3 BUSINESS", "شركات اجتازت التحقق", "التحضير للشركاء، استشارة ذات أولوية، نقاش مع المستثمرين (منذ بدء المراجعة)", "حسب عرض السعر"),
+         ("M4 PROJECT", "دخول دولة محددة", "تحقق من السوق خلال 6 أسابيع، جدولة محلية، نقاش مع المستثمرين", "حسب عرض السعر"),
+         ("M5 STRATEGIC", "عقود عامة أو كبيرة", "من إعداد العطاء حتى العقد، نقاش مع المستثمرين", "حسب عرض السعر")],
    note="غير شامل ضريبة القيمة المضافة · مقترح v2.0 وسيتم تأكيده. لا نضمن الاستثمار أو العقود أو المبيعات.", btn="التقدم لعضوية WMM ←", c="التواصل"),
  "vi": dict(t="Thành viên WMM", h="Thành viên WMM — từ tìm hiểu đến triển khai", lede="Chúng tôi đồng hành cùng doanh nghiệp ra nước ngoài, từ chẩn đoán đến triển khai.", tbl="Hạng và mức phí",
    head=("Hạng", "Dành cho", "Quyền lợi chính", "Mức phí"),
    rows=[("M0 OPEN", "Doanh nghiệp mới tìm hiểu", "Bản đồ, tóm tắt và bảng tình hình · vài mục đầu của dự án, đấu thầu và sự kiện", "Miễn phí"),
-         ("M1 MEMBER", "Doanh nghiệp theo dõi dữ liệu", "Toàn bộ danh sách + 2 yêu cầu phân tích mỗi tháng", "₩19.800/tháng"),
-         ("M2 PRO", "Doanh nghiệp chuẩn bị gia nhập", "Cảnh báo theo quốc gia, hỗ trợ tài liệu tiếng Anh", "₩149.000/tháng"),
-         ("M3 BUSINESS", "Doanh nghiệp đã được xác minh", "Chuẩn bị đối tác, tư vấn ưu tiên, trao đổi với nhà đầu tư (từ khi xét duyệt)", "₩390.000/tháng"),
-         ("M4 PROJECT", "Gia nhập một quốc gia cụ thể", "Kiểm chứng thị trường 6 tuần, sắp xếp lịch tại chỗ, trao đổi với nhà đầu tư", "từ ₩1,9 triệu"),
-         ("M5 STRATEGIC", "Hợp đồng công hoặc quy mô lớn", "Từ chuẩn bị hồ sơ thầu đến ký hợp đồng, trao đổi với nhà đầu tư", "3–5% giá trị hợp đồng")],
+         ("M1 MEMBER", "Doanh nghiệp theo dõi dữ liệu", "Toàn bộ danh sách + 2 yêu cầu phân tích mỗi tháng", "₩20.000/tháng"),
+         ("M2 PRO", "Doanh nghiệp chuẩn bị gia nhập", "Cảnh báo theo quốc gia, hỗ trợ tài liệu tiếng Anh", "Theo báo giá"),
+         ("M3 BUSINESS", "Doanh nghiệp đã được xác minh", "Chuẩn bị đối tác, tư vấn ưu tiên, trao đổi với nhà đầu tư (từ khi xét duyệt)", "Theo báo giá"),
+         ("M4 PROJECT", "Gia nhập một quốc gia cụ thể", "Kiểm chứng thị trường 6 tuần, sắp xếp lịch tại chỗ, trao đổi với nhà đầu tư", "Theo báo giá"),
+         ("M5 STRATEGIC", "Hợp đồng công hoặc quy mô lớn", "Từ chuẩn bị hồ sơ thầu đến ký hợp đồng, trao đổi với nhà đầu tư", "Theo báo giá")],
    note="Chưa gồm VAT · Đề xuất v2.0, sẽ được xác nhận. Chúng tôi không bảo đảm đầu tư, hợp đồng hay doanh thu.", btn="Đăng ký thành viên WMM →", c="Liên hệ"),
  "id": dict(t="Keanggotaan WMM", h="Keanggotaan WMM — dari melihat pertama hingga eksekusi", lede="Kami mendampingi perusahaan ke luar negeri, dari diagnosis hingga eksekusi.", tbl="Tingkat dan harga",
    head=("Tingkat", "Untuk", "Manfaat utama", "Harga"),
    rows=[("M0 OPEN", "Perusahaan yang baru melihat", "Peta, ringkasan dan papan situasi · beberapa item pertama program, tender dan acara", "Gratis"),
-         ("M1 MEMBER", "Perusahaan yang mengikuti data", "Semua daftar lengkap + 2 permintaan analisis per bulan", "₩19.800/bulan"),
-         ("M2 PRO", "Perusahaan yang bersiap masuk", "Peringatan negara, dukungan dokumen bahasa Inggris", "₩149.000/bulan"),
-         ("M3 BUSINESS", "Perusahaan yang sudah tervalidasi", "Persiapan mitra, konsultasi prioritas, pembicaraan dengan investor (sejak peninjauan)", "₩390.000/bulan"),
-         ("M4 PROJECT", "Masuk ke negara tertentu", "Validasi pasar 6 minggu, penjadwalan lokal, pembicaraan dengan investor", "mulai ₩1,9 juta"),
-         ("M5 STRATEGIC", "Kontrak publik atau besar", "Dari persiapan tender hingga kontrak, pembicaraan dengan investor", "3–5% nilai kontrak")],
+         ("M1 MEMBER", "Perusahaan yang mengikuti data", "Semua daftar lengkap + 2 permintaan analisis per bulan", "₩20.000/bulan"),
+         ("M2 PRO", "Perusahaan yang bersiap masuk", "Peringatan negara, dukungan dokumen bahasa Inggris", "Sesuai penawaran"),
+         ("M3 BUSINESS", "Perusahaan yang sudah tervalidasi", "Persiapan mitra, konsultasi prioritas, pembicaraan dengan investor (sejak peninjauan)", "Sesuai penawaran"),
+         ("M4 PROJECT", "Masuk ke negara tertentu", "Validasi pasar 6 minggu, penjadwalan lokal, pembicaraan dengan investor", "Sesuai penawaran"),
+         ("M5 STRATEGIC", "Kontrak publik atau besar", "Dari persiapan tender hingga kontrak, pembicaraan dengan investor", "Sesuai penawaran")],
    note="Belum termasuk PPN · Usulan v2.0, akan dikonfirmasi. Kami tidak menjamin investasi, kontrak, atau penjualan.", btn="Ajukan keanggotaan WMM →", c="Kontak"),
 }
 
@@ -997,18 +997,18 @@ def membership_page(L, C):
               ("BUILD · " + T("준비", "Build"), "M2 — M3", T("서류와 검증을 갖추고, 상대를 만날 수 있는 회사로 준비합니다.", "Get your documents and validation ready so you can meet counterparts.")),
               ("EXECUTE · " + T("실행", "Execute"), "M4 — M5", T("특정 국가 프로젝트와 공공 수주를 실제로 추진합니다.", "Carry out a country project or a public contract bid for real."))]
     tiers = ([("M0 OPEN · 오픈", "처음 둘러보는 기업", "193개국 지도·요약·상황판, 사업·입찰·일정은 앞부분만", "무료"),
-              ("M1 MEMBER · 분석 회원", "정보를 꾸준히 보는 기업", "모든 나라 전체 목록 + 분석 의뢰 월 2건", "월 19,800원"),
-              ("M2 PRO · 프로", "진출을 준비하는 기업", "관심 국가 알림·영문 서류 지원", "월 149,000원"),
-              ("M3 BUSINESS · 비즈니스", "검증을 마친 기업", "상대 연결 준비·우선 상담·투자자 협의(심사 중부터)", "월 390,000원"),
-              ("M4 PROJECT · 진출 패키지", "특정 국가 진출 실행", "6주 시장 검증·현지 일정 조율·투자자 협의", "190만 원부터"),
-              ("M5 STRATEGIC · 수주 대행", "공공·대형 수주 추진", "입찰 준비부터 계약까지 동행·투자자 협의", "수주액 3~5%"),
+              ("M1 MEMBER · 분석 회원", "정보를 꾸준히 보는 기업", "모든 나라 전체 목록 + 분석 의뢰 월 2건", "월 20,000원"),
+              ("M2 PRO · 프로", "진출을 준비하는 기업", "관심 국가 알림·영문 서류 지원", "상담 후 견적"),
+              ("M3 BUSINESS · 비즈니스", "검증을 마친 기업", "상대 연결 준비·우선 상담·투자자 협의(심사 중부터)", "상담 후 견적"),
+              ("M4 PROJECT · 진출 패키지", "특정 국가 진출 실행", "6주 시장 검증·현지 일정 조율·투자자 협의", "상담 후 견적"),
+              ("M5 STRATEGIC · 수주 대행", "공공·대형 수주 추진", "입찰 준비부터 계약까지 동행·투자자 협의", "상담 후 견적"),
               ("FC FOUNDING CIRCLE", "초기 10곳 한정 초청", "CONNECT 50% 할인·운영 자문 참여", "별도 협의")] if ko else
              [("M0 OPEN", "Companies taking a first look", "Map, summaries and situation board; first items of programmes, tenders and events", "Free"),
-              ("M1 MEMBER · Analysis", "Companies following the data", "Every list in full + 2 analysis requests a month", "₩19,800/month"),
-              ("M2 PRO", "Companies preparing to enter", "Country alerts, English document support", "₩149,000/month"),
-              ("M3 BUSINESS", "Companies that have validated", "Counterpart preparation, priority consultation, investor discussions (from review)", "₩390,000/month"),
-              ("M4 PROJECT · Entry package", "Entering a specific country", "6-week market validation, local scheduling, investor discussions", "from ₩1.9M"),
-              ("M5 STRATEGIC · Bid support", "Public or large contracts", "With you from bid preparation to contract, investor discussions", "3–5% of contract value"),
+              ("M1 MEMBER · Analysis", "Companies following the data", "Every list in full + 2 analysis requests a month", "₩20,000/month"),
+              ("M2 PRO", "Companies preparing to enter", "Country alerts, English document support", "By quote"),
+              ("M3 BUSINESS", "Companies that have validated", "Counterpart preparation, priority consultation, investor discussions (from review)", "By quote"),
+              ("M4 PROJECT · Entry package", "Entering a specific country", "6-week market validation, local scheduling, investor discussions", "By quote"),
+              ("M5 STRATEGIC · Bid support", "Public or large contracts", "With you from bid preparation to contract, investor discussions", "By quote"),
               ("FC FOUNDING CIRCLE", "First 10 companies, by invitation", "50% off CONNECT, input on operations", "By agreement")])
     trows = "".join(f"<tr><th>{a}</th><td>{b}</td><td>{c}</td><td><b>{d}</b></td></tr>" for a, b, c, d in tiers)
     _r = trows.split("</tr>"); trows = "</tr>".join(_r[:2]) + "</tr>" + review_row(L, 4) + "</tr>".join(_r[2:])
@@ -1018,9 +1018,9 @@ def membership_page(L, C):
             [("M1", "Information", "Full radar and member analysis requests"), ("M2", "Preparation", "Country alerts, English documents"), ("M3", "Connection-ready", "Counterpart shortlist, priority consultation"),
              ("M4", "Execution", "6-week market validation and local scheduling"), ("M5", "Contracts", "From bid preparation to contract")])
     steps = "".join(f"<div><b>{a}</b><h3 style='font-size:16px;margin:4px 0'>{b}</h3><p class='note'>{c}</p></div>" for a, b, c in adds)
-    alc = [("CONNECT · " + T("연결", "Connect"), [(T("후보 숏리스트", "Candidate shortlist"), T("150만 원", "₩1.5M")), (T("소개·첫 미팅", "Introduction & first meeting"), T("300만 원", "₩3M")), (T("90일 스프린트", "90-day sprint"), T("1,200만 원부터", "from ₩12M")), (T("성공보수", "Success fee"), "3~5%")]),
-           ("TRANSLATE · " + T("번역", "Translate"), [(T("전문 번역", "Professional translation"), T("쪽당 3.5만 원", "₩35,000/page")), (T("원어민 검수", "Native review"), T("39만 원", "₩390,000")), (T("번역 패키지", "Translation package"), T("129만 원", "₩1.29M"))]),
-           ("CHECK · " + T("판정", "Check"), [(T("입찰 적합도 판정", "Tender fit assessment"), T("건당 10만 원", "₩100,000 each"))])]
+    alc = [("CONNECT · " + T("연결", "Connect"), [(T("후보 숏리스트", "Candidate shortlist"), T("상담 후 견적", "By quote")), (T("소개·첫 미팅", "Introduction & first meeting"), T("상담 후 견적", "By quote")), (T("90일 스프린트", "90-day sprint"), T("상담 후 견적", "By quote")), (T("성공보수", "Success fee"), T("상담 후 견적", "By quote"))]),
+           ("TRANSLATE · " + T("번역", "Translate"), [(T("전문 번역", "Professional translation"), T("상담 후 견적", "By quote")), (T("원어민 검수", "Native review"), T("상담 후 견적", "By quote")), (T("번역 패키지", "Translation package"), T("상담 후 견적", "By quote"))]),
+           ("CHECK · " + T("판정", "Check"), [(T("입찰 적합도 판정", "Tender fit assessment"), T("상담 후 견적", "By quote"))])]
     alch = "".join(f"<div><h3>{h}</h3><div class='tscroll'><table class='tiers'>" + "".join(f"<tr><th>{a}</th><td><b>{b}</b></td></tr>" for a, b in rows) + "</table></div></div>" for h, rows in alc)
     journey = ([("무료 가입", "M0로 레이더와 브리핑을 둘러봅니다."), ("관심 등록", "관심 국가와 업종을 고릅니다."), ("구독 선택", "M1~M3 중 고르고 첫 달은 무료입니다."),
                 ("회사 확인", "사업자 정보와 자료를 확인합니다."), ("프로젝트 상담", "M4 범위와 견적을 정합니다."), ("실행", "검증·연결·수주를 함께 진행합니다.")] if ko else
@@ -1055,7 +1055,7 @@ def membership_page(L, C):
 <div><h3>{T("연결이 닿지 않는다", "Connections are hard to reach")}</h3><p>{T("믿을 만한 현지 상대를 만나기까지 시간과 비용이 큽니다.", "Meeting a trustworthy local counterpart takes time and money.")}</p></div></div></div></section>
 <section class="band" id="tiers"><div class="in"><h2>{T("멤버십 등급 v2.0", "Membership grades v2.0")}</h2>
 <details class="mfull"><summary>{T("등급별 전체 비교표 열기", "Open the full grade table")}</summary><div class="tscroll"><table class="tiers">{thead}{trows}</table></div></details>
-<p class="note">{T("M1은 GOV RADAR 분석 회원(월 19,800원)과 같은 등급입니다. 부가세 별도, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다. 투자 유치·계약·매출을 보장하지 않습니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩19,800/month). VAT excluded; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed. We do not guarantee investment, contracts or sales.")}</p>
+<p class="note">{T("M1은 GOV RADAR 분석 회원(월 20,000원)과 같은 등급입니다. 부가세 별도, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다. 투자 유치·계약·매출을 보장하지 않습니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩20,000/month). VAT excluded; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed. We do not guarantee investment, contracts or sales.")}</p>
 <h3 style="margin-top:34px">{T("한 단계 오를 때마다 더해지는 것", "What each level adds")}</h3><div class="mstep">{steps}</div></div></section>
 <section class="band alt"><div class="in"><h2>{T("멤버십으로 쓰는 두 개의 창구", "Two doors, one membership")}</h2><div class="mdoor">
 <a href="/{L}/"><b>radar.wmm-hoa.com · GOV RADAR</b><p>{T("세계 정부 아젠다, 공공 입찰, 제재 동향, 재난 대비 정보를 나라별로 모아 보여 줍니다. 분석 의뢰와 입찰 적합도 판정도 여기서 신청합니다.", "Government agendas, public tenders, sanctions and disaster preparedness by country. Analysis requests and tender fit assessments are ordered here.")}</p></a>
@@ -1148,8 +1148,8 @@ def wmm_kits(L):
 
 # ---------------------------------------------------------------- country tender intel (feeds/cty/{ISO}.json)
 CI = {
- "ko": ["이 나라 입찰·수주 데이터", "매일 갱신합니다. 열린 입찰은 세계은행·EU 조달공보(TED)·영국 정부조달에서, 공고 전 사업과 낙찰 결과는 세계은행에서 가져옵니다.", "열린 입찰", "공고 전 사업", "최근 낙찰", "현지 기업 낙찰", "곧 입찰이 나올 사업 (세계은행 승인 대기)", "최근 낙찰 — 누가, 얼마에", "마감", "이 나라 데이터가 아직 없습니다. 입찰 보드에서 주변국 공고를 보세요.", "수주 센터에서 전체 보기", "이 나라 공고 적합도 검토 (10만 원)", "출처: 세계은행 API · EU TED · 영국 Find a Tender · 갱신", "사업 규모는 세계은행 사업 총액이며 입찰 1건 금액이 아닙니다.", "한국 기업", "진행 중인 세계은행 사업", "진행 중 사업 (약정액 큰 순)", "종료 예정"],
- "en": ["Tenders and awards in this country", "Updated daily. Open tenders come from the World Bank, EU TED and UK Find a Tender; pre-tender projects and awards from the World Bank.", "Open tenders", "Pre-tender projects", "Recent awards", "won by local firms", "Projects that will tender soon (awaiting World Bank approval)", "Recent awards — who won, for how much", "Closes", "No data for this country yet. See nearby countries on the tender board.", "See everything in the win centre", "Fit review for a notice here (₩100,000)", "Sources: World Bank API · EU TED · UK Find a Tender · updated", "Project size is the World Bank project total, not a single tender.", "Korean firms", "Active World Bank projects", "Active projects (largest first)", "ends"],
+ "ko": ["이 나라 입찰·수주 데이터", "매일 갱신합니다. 열린 입찰은 세계은행·EU 조달공보(TED)·영국 정부조달에서, 공고 전 사업과 낙찰 결과는 세계은행에서 가져옵니다.", "열린 입찰", "공고 전 사업", "최근 낙찰", "현지 기업 낙찰", "곧 입찰이 나올 사업 (세계은행 승인 대기)", "최근 낙찰 — 누가, 얼마에", "마감", "이 나라 데이터가 아직 없습니다. 입찰 보드에서 주변국 공고를 보세요.", "수주 센터에서 전체 보기", "이 나라 공고 적합도 검토 (상담 후 견적)", "출처: 세계은행 API · EU TED · 영국 Find a Tender · 갱신", "사업 규모는 세계은행 사업 총액이며 입찰 1건 금액이 아닙니다.", "한국 기업", "진행 중인 세계은행 사업", "진행 중 사업 (약정액 큰 순)", "종료 예정"],
+ "en": ["Tenders and awards in this country", "Updated daily. Open tenders come from the World Bank, EU TED and UK Find a Tender; pre-tender projects and awards from the World Bank.", "Open tenders", "Pre-tender projects", "Recent awards", "won by local firms", "Projects that will tender soon (awaiting World Bank approval)", "Recent awards — who won, for how much", "Closes", "No data for this country yet. See nearby countries on the tender board.", "See everything in the win centre", "Fit review for a notice here (by quote)", "Sources: World Bank API · EU TED · UK Find a Tender · updated", "Project size is the World Bank project total, not a single tender.", "Korean firms", "Active World Bank projects", "Active projects (largest first)", "ends"],
  "es": ["Licitaciones y adjudicaciones en este país", "Actualizado a diario. Las licitaciones abiertas vienen del Banco Mundial, TED de la UE y Find a Tender del Reino Unido; los proyectos previos y adjudicaciones, del Banco Mundial.", "Licitaciones abiertas", "Proyectos previos", "Adjudicaciones recientes", "ganadas por empresas locales", "Proyectos que licitarán pronto (pendientes de aprobación del Banco Mundial)", "Adjudicaciones recientes — quién ganó y por cuánto", "Cierre", "Aún no hay datos de este país. Vea países vecinos en el tablero.", "Ver todo en el centro para ganar licitaciones", "Revisión de idoneidad de un anuncio aquí (₩100.000)", "Fuentes: API del Banco Mundial · TED de la UE · Find a Tender (Reino Unido) · actualizado", "El tamaño es el total del proyecto del Banco Mundial, no una sola licitación.", "Empresas coreanas", "Proyectos activos del Banco Mundial", "Proyectos activos (mayores primero)", "finaliza"],
  "fr": ["Appels d'offres et attributions dans ce pays", "Mis à jour chaque jour. Les appels d'offres ouverts viennent de la Banque mondiale, du TED de l'UE et de Find a Tender (Royaume-Uni) ; projets en amont et attributions, de la Banque mondiale.", "Appels d'offres ouverts", "Projets en amont", "Attributions récentes", "remportées par des entreprises locales", "Projets bientôt en appel d'offres (en attente d'approbation de la Banque mondiale)", "Attributions récentes — qui a gagné, pour combien", "Clôture", "Pas encore de données pour ce pays. Voir les pays voisins sur le tableau.", "Tout voir dans le centre des appels d'offres", "Examen d'adéquation d'un avis ici (100 000 ₩)", "Sources : API de la Banque mondiale · TED (UE) · Find a Tender (Royaume-Uni) · mis à jour", "Le montant est le total du projet de la Banque mondiale, pas un seul appel d'offres.", "Entreprises coréennes", "Projets actifs de la Banque mondiale", "Projets actifs (les plus grands d'abord)", "fin prévue"],
  "ar": ["المناقصات والترسيات في هذا البلد", "تُحدَّث يوميًا. المناقصات المفتوحة من البنك الدولي وTED الأوروبي وFind a Tender البريطاني، والمشاريع قبل الطرح والترسيات من البنك الدولي.", "مناقصات مفتوحة", "مشاريع قبل الطرح", "ترسيات حديثة", "فازت بها شركات محلية", "مشاريع ستُطرح قريبًا (بانتظار موافقة البنك الدولي)", "ترسيات حديثة — من فاز وبكم", "الإغلاق", "لا توجد بيانات لهذا البلد بعد. اطّلع على الدول المجاورة في لوحة المناقصات.", "اعرض الكل في مركز الفوز بالمناقصات", "مراجعة ملاءمة لإعلان هنا (100,000 وون)", "المصادر: واجهة البنك الدولي · TED الأوروبي · Find a Tender البريطاني · آخر تحديث", "الحجم هو إجمالي مشروع البنك الدولي وليس مناقصة واحدة.", "شركات كورية", "مشروعات البنك الدولي الجارية", "المشروعات الجارية (الأكبر أولًا)", "الانتهاء المتوقع"],
