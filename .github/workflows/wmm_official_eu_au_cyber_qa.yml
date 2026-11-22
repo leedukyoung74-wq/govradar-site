@@ -1,0 +1,46 @@
+name: WMM official CERT-EU and Australia ACSC cybersecurity RSS GET test (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'tools/official_eu_au_cyber_rss.py'
+      - 'tests/test_official_eu_au_cyber_rss.py'
+      - '.github/workflows/wmm_official_eu_au_cyber_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verified_official_cyber_rss:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests for official cyber headline evidence and no false incident claims
+        run: python -m unittest discover -s tests -p 'test_official_eu_au_cyber_rss.py' -v
+      - name: Attempt exactly one read-only GET per official cyber advisory feed
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p "$RUNNER_TEMP/wmm-cyber-official"
+          python tools/official_eu_au_cyber_rss.py --out "$RUNNER_TEMP/wmm-cyber-official/evidence.json"
+          EVIDENCE="$RUNNER_TEMP/wmm-cyber-official/evidence.json" python - <<'PY'
+          import json,os
+          from pathlib import Path
+          r=json.loads(Path(os.environ["EVIDENCE"]).read_text())
+          assert not r["public_release_allowed"]
+          assert not r["customer_data_processed"]
+          assert not r["cyberattack_confirmed"]
+          assert all(s["status"]=="OK" for s in r["health"].values())
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a") as out:
+              out.write("### Official cyber advisory RSS internal check (NOT an active cyberattack feed)\n\n")
+              for k in ("cert_eu","acsc_au"):
+                  out.write(f"- {k}: official GET success, {r['feeds'][k]['count']} recent publication headlines. Scope: {r['feeds'][k]['geo_scope']}.\n")
+              out.write("\nNo customer data, no darkweb source, no incident/victim attribution, no public publication.\n")
+          PY
+      - name: Delete ephemeral unpublished data
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/wmm-cyber-official"

@@ -49,6 +49,9 @@ jobs:
       - name: Home "today's changes" summary — no AI
         if: inputs.task == 'daily'
         run: python tools/feed_today.py
+      - name: Reconcile 193 countries and 23 regions against registered source gaps (offline)
+        if: inputs.task == 'sources'
+        run: python tools/world_source_coverage_audit.py --root . --output review-evidence
       - name: Weekly source registry check
         if: inputs.task == 'sources'
         run: python tools/probe_sources.py data_branch/feeds/sources_registry.json
@@ -117,5 +120,7 @@ jobs:
             data_branch/feeds/verify_samples.json
             data_branch/feeds/site_check.json
             data_branch/feeds/sources_registry.json
+            review-evidence/world-source-coverage.json
+            review-evidence/world-source-gap-queue.csv
           if-no-files-found: ignore
           retention-days: 30

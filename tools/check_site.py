@@ -38,7 +38,20 @@ def main(out):
         res["local"] = {"items": len(items), "missing_fields": {k: v for k, v in missing.items() if v}, "sources": sorted({x["source"] for x in items})}
     except Exception as ex:
         res["local"] = {"error": type(ex).__name__}
-    for v in res["feeds"].values(): v["fresh"] = v["age_hours"] is not None and v["age_hours"] <= MAX_AGE_HOURS
+    # Do not accept future-dated feeds as fresh; they can be caused by a clock or timestamp bug.
+    for v in res["feeds"].values():
+        v["fresh"] = v["age_hours"] is not None and -0.1 <= v["age_hours"] <= MAX_AGE_HOURS
+        v["issue"] = ("unreachable" if v["status"] != 200 else
+                      "invalid_or_future_timestamp" if v["age_hours"] is None or v["age_hours"] < -0.1 else
+                      "stale_publication" if not v["fresh"] else
+                      "empty_feed" if (v["count"] or 0) <= 0 else "ok")
+    if res["local"].get("missing_fields"):
+        res["local"]["issue"] = "invalid_new_items"
+    elif res["local"].get("error"):
+        res["local"]["issue"] = "local_collection_unavailable"
+    else:
+        res["local"]["issue"] = "ok"
+    res["failed_public_feeds"] = [name for name, item in res["feeds"].items() if item["issue"] != "ok"]
     ok = all(p["status"] == 200 and p["reads_feed"] for p in res["pages"]) and all(v["status"] == 200 and (v["count"] or 0) > 0 and v["fresh"] for v in res["feeds"].values()) \
          and not res["local"].get("missing_fields") and not res["local"].get("error")
     res["result"] = "PASS" if ok else "FAIL"

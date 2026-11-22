@@ -47,6 +47,18 @@ def _retry(src, fn, tries=3):
         try: return fn()
         except Exception as ex:
             code = getattr(ex, "code", None)
+            # A 429 means the UK official endpoint has explicitly refused more
+            # requests for this run. Deferring the rest is safer than retrying
+            # 2 minutes later and continuing the same already-too-large scan.
+            if code == 429 and src == "UK Find a Tender":
+                raw = (getattr(ex, "headers", None) or {}).get("Retry-After")
+                try: seconds = max(0, min(86400, int(raw)))
+                except (TypeError, ValueError): seconds = None
+                stat(src)["failed"] += 1
+                stat(src)["notes"].append("upstream_429_deferred: retry_after_seconds=" +
+                                          str(seconds if seconds is not None else "unknown") +
+                                          "; no further requests this run")
+                raise
             retryable = code is None or code == 429 or code >= 500
             if i < tries - 1 and retryable:
                 wait = 5 if i == 0 else 15
@@ -182,7 +194,7 @@ def ted_item(n, minv=0):
             "url": f"https://ted.europa.eu/en/notice/-/detail/{pn}", "sid": pn, "source": S, "type": "Contract notice", "project": "",
             "pm": "", "pmn": "", "pg": PG.get(nat, ""), "ma": "", "est": str(round(val)) if val else "", "cur": cur, "eur": round(eur)}
 
-def _ocds(S, url, mk, *, max_pages=40, timeout=30, tries=2, time_budget=140):
+def _ocds(S, url, mk, *, max_pages=40, timeout=30, tries=2, time_budget=140, min_interval=0):
     """Bound pagination and forbid cross-origin/downgrade/repeating source URLs."""
     import time
     base = urllib.parse.urlsplit(url)
@@ -192,6 +204,7 @@ def _ocds(S, url, mk, *, max_pages=40, timeout=30, tries=2, time_budget=140):
         return []
     out, seen = [], set()
     deadline = time.monotonic() + time_budget
+    last_request_at = None
     for _ in range(max_pages):
         parsed = urllib.parse.urlsplit(url)
         if (parsed.scheme != "https" or parsed.hostname != base.hostname
@@ -203,9 +216,26 @@ def _ocds(S, url, mk, *, max_pages=40, timeout=30, tries=2, time_budget=140):
             stat(S)["failed"] += 1
             stat(S)["notes"].append("source_time_budget_exceeded: OCDS partial results")
             break
+        # Pace official API requests. A strict time budget takes precedence;
+        # if we cannot wait politely, mark PARTIAL rather than press the API.
+        if min_interval and last_request_at is not None:
+            wait = max(0, min_interval - (time.monotonic() - last_request_at))
+            if time.monotonic() + wait >= deadline:
+                stat(S)["failed"] += 1
+                stat(S)["notes"].append("rate_pacing_time_budget: OCDS partial results")
+                break
+            if wait: time.sleep(wait)
+        last_request_at = time.monotonic()
         seen.add(url)
+        before_failed = stat(S)["failed"]
         try: j = json.loads(_get(S, url, tries=tries, timeout=timeout))
-        except Exception: break
+        except Exception as ex:
+            # If a test adapter or unexpected upstream error skips _retry,
+            # still treat a mid-pagination exception as PARTIAL, not SUCCESS.
+            if stat(S)["failed"] == before_failed:
+                stat(S)["failed"] += 1
+                stat(S)["notes"].append("ocds_request_exception: " + type(ex).__name__)
+            break
         rels = j.get("releases") or []; stat(S)["raw"] += len(rels)
         for r in rels:
             it = mk(r)
@@ -248,7 +278,11 @@ def uk():
         {"limit": 100, "updatedFrom": (cutoff - datetime.timedelta(days=21)).strftime("%Y-%m-%dT%H:%M:%SZ"),
          "updatedTo": cutoff.strftime("%Y-%m-%dT%H:%M:%SZ")})
     mk = lambda r: _ocds_item(S, r, f"https://www.find-tender.service.gov.uk/Notice/{r.get('id')}")
-    out = _ocds(S, url, mk)
+    # Cap to a polite number of source calls per scheduled run. If the
+    # cursor still has more pages, _ocds records PARTIAL (never false success).
+    # A 21-day backfill needs a separately approved incremental cursor job.
+    out = _ocds(S, url, mk, max_pages=12, timeout=20, tries=2,
+                time_budget=110, min_interval=2)
     st = stat(S)
     # A 21-day first-page *timeout* should not permanently disable the entire
     # UK source. Retry once in a bounded 48-hour window with smaller packages.

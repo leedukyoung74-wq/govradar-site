@@ -1,0 +1,54 @@
+name: WMM Cloudflare Sitemap Reconciliation QA (No Deploy)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'tools/finalize_sitemap.py'
+      - 'tools/repair_sitemap.py'
+      - 'tools/publish_cf.sh'
+      - 'tests/test_finalize_sitemap.py'
+      - 'tests/test_repair_sitemap.py'
+      - '.github/workflows/wmm_sitemap_source_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Check Python syntax and deployment script syntax
+        run: |
+          python3 -m py_compile tools/finalize_sitemap.py tools/repair_sitemap.py
+          bash -n tools/publish_cf.sh
+      - name: Run full offline sitemap tests
+        run: python3 -m unittest discover -s tests -p 'test_*sitemap.py' -v
+      - name: Checkout disposable copy of existing live branch
+        uses: actions/checkout@v7
+        with:
+          ref: live
+          path: live-branch
+          persist-credentials: false
+      - name: Repair sitemap only in ephemeral CI live snapshot and validate
+        run: |
+          python3 tools/repair_sitemap.py live-branch/public --min-urls 1000 --max-removed 100 --write > "$RUNNER_TEMP/wmm-sitemap-repair.json"
+          python3 tools/finalize_sitemap.py live-branch/public --min-urls 1000 > "$RUNNER_TEMP/wmm-sitemap-verified.json"
+          cat "$RUNNER_TEMP/wmm-sitemap-repair.json"
+          cat "$RUNNER_TEMP/wmm-sitemap-verified.json"
+          git -C live-branch status --short -- public/sitemap.xml public/robots.txt
+          echo "IMPORTANT: all changes above are to ephemeral CI checkout, NO PUSH and NO PROD DEPLOY."
+      - name: Preserve review-only repaired sitemap package (not deployed)
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-sitemap-reconciled-review
+          path: |
+            live-branch/public/sitemap.xml
+            live-branch/public/robots.txt
+            ${{ runner.temp }}/wmm-sitemap-repair.json
+            ${{ runner.temp }}/wmm-sitemap-verified.json
+          retention-days: 7
+          if-no-files-found: error
