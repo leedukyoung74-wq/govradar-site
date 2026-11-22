@@ -1,0 +1,70 @@
+{
+ "week": "2026-11-23 주간",
+ "updated": "2026-11-23 00:40 KST",
+ "ko": {
+  "impacts": [
+   "호르무즈 해협에서 11월 14일 이후 유조선 약 25척이 피격됐고 11월 21일에도 2척이 맞았습니다. 중동산 원유·LNG 운송과 걸프 지역 물류가 있는 기업은 운송 일정·보험 조건이 바뀔 수 있습니다.",
+   "국내에서 한전 '한전ON·조달시스템' 해킹으로 고객·직원 약 150만 명의 개인정보(주민·계좌·카드번호 포함)가 유출됐다고 한전이 사과했습니다. 공공기관·협력사 시스템을 함께 쓰는 기업도 계정·접근 권한 점검이 필요합니다.",
+   "랜섬웨어 조직이 유출 사이트에 올린 피해 주장이 최근 7일 100건을 넘었습니다(ransomware.live, 사실 확인 전). 미국 CISA는 11월 18~20일 아파치 롤러·VMware vCenter·SAP NetWeaver·시스코 Expressway 등 실제 공격에 쓰인 취약점을 새로 올렸습니다.",
+   "우크라이나에서는 11월 16~22일 한 주 동안 러시아 무인기 약 2,700기·미사일 165발이 날아왔고 에너지 시설 공격이 이어집니다. 유럽 에너지·전력망 관련 일정에 영향이 있을 수 있습니다."
+  ],
+  "opps": [
+   "보안 점검·백업·복구 수요: 개인정보 유출이 잇따르면서 기관·기업의 보안 진단, 접근 권한 정리, 오프라인 백업 수요가 커지고 있습니다.",
+   "공공조달: GOV RADAR에 지금 열린 입찰이 1,000건이 넘습니다(109개국). 관심 분야 마감 순 목록에서 바로 확인할 수 있습니다.",
+   "비상 대비 물자·서비스: 유럽·일본·캐나다 등 30곳 넘는 나라가 가정에 72시간~1주일 비상물자를 권고하고 있습니다."
+  ],
+  "actions": [
+   "중동·해상 운송이 있으면 전쟁 위험 보험, 유가·지연 조항, 대체 항로를 계약서에서 확인하세요.",
+   "CISA의 '실제 악용 취약점' 목록과 회사 장비·소프트웨어를 대조해 해당 제품은 바로 업데이트하세요. 백업은 네트워크와 분리해 보관하세요.",
+   "공공·협력사 시스템 계정은 비밀번호를 바꾸고 2단계 인증을 켜세요.",
+   "관심 나라 페이지의 '이 나라 최신 뉴스'와 입찰 마감을 매주 확인하세요."
+  ],
+  "cta": "나라 진출 검토, 입찰 적합도·참가 준비, 영문 서류, 현지 파트너 찾기를 한 번에 골라 요청할 수 있습니다. 1영업일 안에 무엇을·어떻게·얼마에 할 수 있는지 회신합니다."
+ },
+ "en": {
+  "impacts": [
+   "About 25 tankers have been hit in or near the Strait of Hormuz since 14 Nov, two more on 21 Nov. Firms shipping Gulf crude or LNG, or running Gulf logistics, may see schedules and insurance terms change.",
+   "In Korea, KEPCO apologised after a hack of its KEPCO ON and procurement systems exposed data on about 1.5 million customers and staff, including ID, bank and card numbers. Firms sharing public or partner systems should review accounts and access rights.",
+   "Ransomware groups posted more than 100 victim claims on their leak sites in the past seven days (ransomware.live, unverified). On 18–20 Nov US CISA added actively exploited flaws in Apache Roller, VMware vCenter, SAP NetWeaver and Cisco Expressway.",
+   "In Ukraine, Russia launched about 2,700 drones and 165 missiles in the week of 16–22 Nov, with attacks on energy sites continuing. European energy and grid schedules may be affected."
+  ],
+  "opps": [
+   "Security reviews, backup and recovery: repeated data breaches are raising demand for security checks, access clean-ups and offline backups.",
+   "Public procurement: more than 1,000 tenders are open on GOV RADAR across 109 countries, listed by deadline.",
+   "Emergency supplies and services: over 30 countries, including in Europe, Japan and Canada, advise households to hold 72 hours to a week of supplies."
+  ],
+  "actions": [
+   "If you ship via the Middle East, check war-risk insurance, fuel and delay clauses, and alternative routes.",
+   "Compare CISA's known-exploited list with your equipment and software and patch at once; keep backups off the network.",
+   "Change passwords and turn on two-step login for public and partner system accounts.",
+   "Check 'Latest news on this country' and tender deadlines for your target countries every week."
+  ],
+  "cta": "Pick country entry review, tender fit and bid preparation, English documents and local partners in one request. We reply within one business day with what, how and how much."
+ },
+ "src": [
+  {
+   "t": "Al Jazeera — Iran's escalation in the Gulf (22 Nov)",
+   "u": "https://www.aljazeera.com/news/2026/11/22/whats-behind-irans-escalation-of-attacks-in-the-gulf"
+  },
+  {
+   "t": "Al Jazeera — Zelenskyy urges US to release Patriots (22 Nov)",
+   "u": "https://www.aljazeera.com/news/2026/11/22/zelenskyy-urges-us-to-release-patriot-missiles"
+  },
+  {
+   "t": "뉴시스 — 한전, 사이버 침해로 고객 개인정보 유출…대국민 사과",
+   "u": "https://www.msn.com/ko-kr/news/news/%ED%95%9C%EC%A0%84-%EC%82%AC%EC%9D%B4%EB%B2%84-%EC%B9%A8%ED%95%B4%EB%A1%9C"
+  },
+  {
+   "t": "CISA Known Exploited Vulnerabilities",
+   "u": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+  },
+  {
+   "t": "ransomware.live",
+   "u": "https://www.ransomware.live/"
+  },
+  {
+   "t": "GOV RADAR 입찰·사업",
+   "u": "https://radar.wmm-hoa.com/ko/mdb/"
+  }
+ ]
+}
