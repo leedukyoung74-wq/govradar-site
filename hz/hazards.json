@@ -1,7 +1,7 @@
 {
  "v": 1,
  "updated": "2026-11-22",
- "checked": "2026-11-22T09:15",
+ "checked": "2026-11-22T10:07",
  "summary_ko": "지금 실제로 진행 중인 큰 무력충돌은 미국·이스라엘–이란 전쟁(2026년 2월 28일 시작)과 러시아–우크라이나 전쟁입니다. 11월 17일 이란 무인기가 바레인의 미군 사용 시설을 노렸으나 요격됐고, 미국은 같은 날 케심섬 미사일 발사장을 타격했습니다. 11월 19~21일 오만 카사브 인근에서 유조선이 잇따라 미확인 발사체에 맞았고(UKMTO), 종전 협상은 진전이 없습니다. 우크라이나는 11월 10~11일 아부다비 협상 뒤 다음 회차 날짜가 정해지지 않았고, 러시아의 에너지·도시 공습과 우크라이나의 러시아 정유시설 공격이 이어집니다. 북한은 11월 4일 미사일 여러 발을 쐈습니다. 자연재해·감염병은 아래 공식 기관 원문(USGS·GDACS·NASA·WHO)을 매일 자동 반영합니다. 각국의 가정 비축 권고는 정례 대비 정책이며, 특정 전쟁이 임박했다는 공식 경고는 확인되지 않았습니다.",
  "summary_en": "The major armed conflicts under way are the US–Israel war with Iran (began 28 Feb 2026) and Russia–Ukraine. On 17 Nov Iranian drones targeted facilities used by US forces in Bahrain and were intercepted; the same day the US struck a missile launch site on Qeshm Island. Tankers were repeatedly hit by unknown projectiles near Khasab, Oman on 19–21 Nov (UKMTO), and talks to end the war remain stalled. No date has been set for the next round of Ukraine talks after Abu Dhabi on 10–11 Nov; Russian strikes on energy and cities and Ukrainian strikes on Russian refineries continue. North Korea fired multiple missiles on 4 Nov. Natural disasters and outbreaks below are taken daily from the agencies' own feeds (USGS, GDACS, NASA, WHO). Household-stockpile advice in various countries is routine preparedness policy; no official warning of an imminent specific war has been found.",
  "hotspots": [
@@ -146,15 +146,6 @@
  "disasters": [
   {
    "kind": "quake",
-   "iso": "CN",
-   "date": "11-21",
-   "ko": "USGS: 지진 — M5.9 238 km SW of Yanglong, China",
-   "en": "USGS: M5.9 238 km SW of Yanglong, China",
-   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucly",
-   "src": "USGS"
-  },
-  {
-   "kind": "quake",
    "iso": "TL",
    "date": "11-21",
    "ko": "USGS: 지진 — M6.8 105 km NE of Lospalos, Timor Leste",
@@ -163,12 +154,21 @@
    "src": "USGS"
   },
   {
-   "kind": "quake",
+   "kind": "tsunami",
    "iso": "PE",
    "date": "11-21",
-   "ko": "USGS: 지진 — M6.7 9 km NE of Carhuamayo, Peru",
+   "ko": "USGS: 해일 경보 지진 — M6.7 9 km NE of Carhuamayo, Peru",
    "en": "USGS: M6.7 9 km NE of Carhuamayo, Peru",
    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfm",
+   "src": "USGS"
+  },
+  {
+   "kind": "quake",
+   "iso": "CN",
+   "date": "11-21",
+   "ko": "USGS: 지진 — M5.9 238 km SW of Yanglong, China",
+   "en": "USGS: M5.9 238 km SW of Yanglong, China",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucly",
    "src": "USGS"
   },
   {
@@ -1361,5 +1361,5 @@
   }
  ],
  "editorial_updated": "2026-11-22T10:01+09:00",
- "disasters_checked": "2026-11-22T09:15"
+ "disasters_checked": "2026-11-22T10:07"
 }
