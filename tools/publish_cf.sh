@@ -44,6 +44,7 @@ python3 tools/cf_variant.py dist cf/public
 python3 tools/path4.py cf/public || exit 1   # WMM 길 네 단계 띠 (welcome 메인)
 python3 tools/map_page.py cf/public || exit 1   # 지도 첫 화면 /map/ (2026-11-22 대표 승인)
 python3 tools/home_clean.py cf/public || exit 1   # 메인 정리: 솔루션 고르기 + 더 보기 (2026-11-22)
+python3 tools/live_page.py cf/public || exit 1   # 실시간 세계 상황판 /live/ (2026-11-22)
 python3 tools/buyers_page.py || exit 1   # 공공조달 발주기관 검색(/buyers/, PR #111)
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public
