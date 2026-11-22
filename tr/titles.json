@@ -1,6 +1,6 @@
 {
  "note": "Titles translated by Claude for GOV RADAR (not an official translation). Key = original title as in feeds/today.json.",
- "updated": "2026-11-21T22:24Z",
+ "updated": "2026-11-22T22:24Z",
  "items": {
   "Photocopying and offset printing equipment – Új nyomatelőállító eszk. és kapcs. szolg. (FMNY26)": {
    "ko": "복사·오프셋 인쇄 장비 – 신규 인쇄 장비 및 관련 서비스 (FMNY26)",
@@ -341,6 +341,116 @@
    "vi": "Mua sắm thiết bị truyền thông và vật phẩm quảng bá gồm 2 Lô của Dự án DECIM",
    "id": "Pengadaan peralatan komunikasi dan materi visibilitas dalam 2 Lot Proyek DECIM",
    "src": "fr"
+  },
+  "Tender for Residential and Nursing Care Home Partnership Framework in Herefordshire": {
+   "ko": "헤리퍼드셔 주거·요양 시설 파트너십 프레임워크 입찰",
+   "en": "Tender for Residential and Nursing Care Home Partnership Framework in Herefordshire",
+   "es": "Licitación del acuerdo marco de colaboración para residencias y centros de cuidados de enfermería en Herefordshire",
+   "fr": "Appel d'offres pour l'accord-cadre de partenariat des maisons de retraite et de soins infirmiers dans le Herefordshire",
+   "ar": "مناقصة الاتفاقية الإطارية للشراكة لدور الرعاية السكنية والتمريضية في هيريفوردشاير",
+   "vi": "Mời thầu thỏa thuận khung hợp tác nhà dưỡng lão và chăm sóc điều dưỡng tại Herefordshire",
+   "id": "Tender kerangka kerja kemitraan panti perawatan residensial dan keperawatan di Herefordshire",
+   "src": "en"
+  },
+  "Програмне забезпечення (ПЗ) разом із невиключними правами (невиключними ліцензіями) на використання ПЗ для фінансової та банківської компані": {
+   "ko": "소프트웨어(SW) 및 금융·은행 회사용 SW 사용에 대한 비독점적 권리(비독점 라이선스) 포함",
+   "en": "Software (SW) together with non-exclusive rights (non-exclusive licences) to use the SW for the financial and banking compan",
+   "es": "Software (SW) junto con derechos no exclusivos (licencias no exclusivas) de uso del SW para la compañía financiera y banc",
+   "fr": "Logiciel (LO) avec droits non exclusifs (licences non exclusives) d'utilisation du logiciel pour la société financière et banc",
+   "ar": "برمجيات مع حقوق غير حصرية (تراخيص غير حصرية) لاستخدام البرمجيات لصالح الشركة المالية والمصرفـ",
+   "vi": "Phần mềm (PM) kèm quyền không độc quyền (giấy phép không độc quyền) sử dụng PM cho công ty tài chính và ngân hàn",
+   "id": "Perangkat lunak (PL) beserta hak non-eksklusif (lisensi non-eksklusif) penggunaan PL untuk perusahaan keuangan dan perbank",
+   "src": "uk"
+  },
+  "Public road transport services – Zajištění dopravní obslužnosti Moravskoslezského kraje – oblast Karvinsko a Orlovsko": {
+   "ko": "도로 대중교통 서비스 – 모라바슬레스코주 교통 서비스 제공 – 카르비나·오를로바 지역",
+   "en": "Public road transport services – Provision of transport services for the Moravian-Silesian Region – Karviná and Orlová area",
+   "es": "Servicios de transporte público por carretera – Prestación de servicios de transporte en la Región de Moravia-Silesia – zona de Karviná y Orlová",
+   "fr": "Services de transport routier public – Desserte de transport de la région de Moravie-Silésie – secteur de Karviná et Orlová",
+   "ar": "خدمات النقل العام البري – توفير خدمات النقل في إقليم مورافيا-سيليزيا – منطقة كارفينا وأورلوفا",
+   "vi": "Dịch vụ vận tải công cộng đường bộ – Bảo đảm dịch vụ giao thông vùng Moravia-Silesia – khu vực Karviná và Orlová",
+   "id": "Layanan transportasi umum jalan – Penyediaan layanan transportasi Wilayah Moravia-Silesia – area Karviná dan Orlová",
+   "src": "cs"
+  },
+  "Planned Maintenance Contract": {
+   "ko": "계획 유지보수 계약",
+   "en": "Planned Maintenance Contract",
+   "es": "Contrato de mantenimiento planificado",
+   "fr": "Contrat de maintenance planifiée",
+   "ar": "عقد الصيانة المخططة",
+   "vi": "Hợp đồng bảo trì theo kế hoạch",
+   "id": "Kontrak pemeliharaan terencana",
+   "src": "en"
+  },
+  "Послуги з переробки (збагаченню) рядового вугілля": {
+   "ko": "원탄 가공(선탄) 서비스",
+   "en": "Run-of-mine coal processing (beneficiation) services",
+   "es": "Servicios de procesamiento (beneficio) de carbón bruto",
+   "fr": "Services de traitement (enrichissement) du charbon brut",
+   "ar": "خدمات معالجة (تركيز) الفحم الخام",
+   "vi": "Dịch vụ chế biến (tuyển) than nguyên khai",
+   "id": "Layanan pengolahan (benefisiasi) batu bara mentah",
+   "src": "uk"
+  },
+  "Construction work – Realizace protipovodňových opatření města Brna - Etapy IX,X,XI – výběr zhotovitele": {
+   "ko": "건설 공사 – 브르노시 홍수 방지 대책 시행 - IX, X, XI단계 – 시공사 선정",
+   "en": "Construction work – Implementation of flood protection measures for the city of Brno - Stages IX, X, XI – selection of contractor",
+   "es": "Obras de construcción – Ejecución de medidas de protección contra inundaciones de la ciudad de Brno - Etapas IX, X, XI – selección del contratista",
+   "fr": "Travaux de construction – Réalisation des mesures de protection contre les inondations de la ville de Brno - Étapes IX, X, XI – choix de l'entrepreneur",
+   "ar": "أعمال إنشاء – تنفيذ تدابير الحماية من الفيضانات لمدينة برنو - المراحل IX وX وXI – اختيار المقاول",
+   "vi": "Công trình xây dựng – Thực hiện các biện pháp chống lũ của thành phố Brno - Giai đoạn IX, X, XI – lựa chọn nhà thầu",
+   "id": "Pekerjaan konstruksi – Pelaksanaan langkah pengendalian banjir Kota Brno - Tahap IX, X, XI – pemilihan kontraktor",
+   "src": "cs"
+  },
+  "Supply, Installation, Testing, Configuration, and Integration of Next-Generation Firewall (NGFW) including Migration of Settings for MOSD": {
+   "ko": "MOSD용 차세대 방화벽(NGFW) 공급·설치·시험·구성·통합 및 설정 이전",
+   "en": "Supply, Installation, Testing, Configuration, and Integration of Next-Generation Firewall (NGFW) including Migration of Settings for MOSD",
+   "es": "Suministro, instalación, pruebas, configuración e integración de cortafuegos de nueva generación (NGFW), incluida la migración de configuraciones, para el MOSD",
+   "fr": "Fourniture, installation, test, configuration et intégration d'un pare-feu de nouvelle génération (NGFW), y compris la migration des paramètres, pour le MOSD",
+   "ar": "توريد وتركيب واختبار وتهيئة ودمج جدار حماية من الجيل التالي (NGFW) مع ترحيل الإعدادات لصالح MOSD",
+   "vi": "Cung cấp, lắp đặt, kiểm thử, cấu hình và tích hợp tường lửa thế hệ mới (NGFW), bao gồm chuyển đổi cấu hình, cho MOSD",
+   "id": "Pengadaan, pemasangan, pengujian, konfigurasi, dan integrasi Next-Generation Firewall (NGFW) termasuk migrasi pengaturan untuk MOSD",
+   "src": "en"
+  },
+  "Audit financier et comptable des exercices 2026, 2027 et de clôture du PASEM": {
+   "ko": "PASEM 2026·2027 회계연도 및 종료 재무·회계 감사",
+   "en": "Financial and accounting audit of the 2026 and 2027 financial years and closing of PASEM",
+   "es": "Auditoría financiera y contable de los ejercicios 2026, 2027 y de cierre del PASEM",
+   "fr": "Audit financier et comptable des exercices 2026, 2027 et de clôture du PASEM",
+   "ar": "التدقيق المالي والمحاسبي للسنتين الماليتين 2026 و2027 وإقفال مشروع PASEM",
+   "vi": "Kiểm toán tài chính và kế toán các năm tài chính 2026, 2027 và kết thúc dự án PASEM",
+   "id": "Audit keuangan dan akuntansi tahun buku 2026, 2027 dan penutupan PASEM",
+   "src": "fr"
+  },
+  "Restructuring work – Requalificação da Escola E.B. 2,3 de Castro Marim": {
+   "ko": "개보수 공사 – 카스트루마링 E.B. 2,3 학교 리모델링",
+   "en": "Restructuring work – Requalification of the E.B. 2,3 School of Castro Marim",
+   "es": "Obras de reestructuración – Rehabilitación de la Escuela E.B. 2,3 de Castro Marim",
+   "fr": "Travaux de restructuration – Requalification de l'école E.B. 2,3 de Castro Marim",
+   "ar": "أعمال إعادة هيكلة – إعادة تأهيل مدرسة E.B. 2,3 في كاسترو مارين",
+   "vi": "Công trình cải tạo – Nâng cấp Trường E.B. 2,3 Castro Marim",
+   "id": "Pekerjaan restrukturisasi – Revitalisasi Sekolah E.B. 2,3 Castro Marim",
+   "src": "pt"
+  },
+  "Automated Peritoneal Dialysis (11 unit)": {
+   "ko": "자동 복막투석기 (11대)",
+   "en": "Automated Peritoneal Dialysis (11 unit)",
+   "es": "Diálisis peritoneal automatizada (11 unidades)",
+   "fr": "Dialyse péritonéale automatisée (11 unités)",
+   "ar": "غسيل الكلى البريتوني الآلي (11 وحدة)",
+   "vi": "Máy thẩm phân phúc mạc tự động (11 máy)",
+   "id": "Dialisis peritoneal otomatis (11 unit)",
+   "src": "en"
+  },
+  "Серверне обладнання": {
+   "ko": "서버 장비",
+   "en": "Server equipment",
+   "es": "Equipos de servidor",
+   "fr": "Équipements serveurs",
+   "ar": "معدات الخوادم",
+   "vi": "Thiết bị máy chủ",
+   "id": "Peralatan server",
+   "src": "uk"
   }
  }
 }
