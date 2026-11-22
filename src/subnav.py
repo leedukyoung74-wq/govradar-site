@@ -18,6 +18,7 @@ LBL = {
  "request":   {"ko":"분석 의뢰","en":"Request analysis","es":"Solicitar análisis","fr":"Demander une analyse","ar":"طلب تحليل","vi":"Yêu cầu phân tích","id":"Minta analisis"},
  "sample":    {"ko":"결과물 샘플","en":"Samples","es":"Ejemplos","fr":"Exemples","ar":"نماذج","vi":"Mẫu","id":"Contoh"},
  "contracts": {"ko":"계약서","en":"Contracts","es":"Contratos","fr":"Contrats","ar":"العقود","vi":"Hợp đồng","id":"Kontrak"},
+ "live":      {"ko":"실시간 상황판","en":"Live board","es":"Panel en vivo","fr":"Tableau en direct","ar":"اللوحة المباشرة","vi":"Bảng trực tiếp","id":"Papan langsung"},
  "conflict":  {"ko":"세계 상황","en":"World watch","es":"Situación mundial","fr":"Veille mondiale","ar":"الوضع العالمي","vi":"Tình hình","id":"Situasi dunia"},
  "hazards":   {"ko":"재난 지도","en":"Hazard map","es":"Mapa de riesgos","fr":"Carte des risques","ar":"خريطة المخاطر","vi":"Bản đồ thảm họa","id":"Peta bahaya"},
  "cyber":     {"ko":"사이버 공격","en":"Cyberattacks","es":"Ciberataques","fr":"Cyberattaques","ar":"الهجمات السيبرانية","vi":"Tấn công mạng","id":"Serangan siber"},
@@ -35,7 +36,7 @@ GROUPS = {
  "map":    ["map", "list", "sample", "request", "notices"],
  "biz":    ["mdb", "win", "projects", "consortium", "experts", "partners", "notices"],
  "go":     ["solutions", "gcsme", "request", "sample", "contracts"],
- "world":  ["conflict", "hazards", "cyber", "alerts", "ready", "prepare", "signals"],
+ "world":  ["live", "conflict", "hazards", "cyber", "alerts", "ready", "prepare", "signals"],
  "member": ["pricing", "member", "account", "request", "about", "legal"],
 }
 SEG2G = {"mdb":"biz","win":"biz","projects":"biz","consortium":"biz","experts":"biz","partners":"biz","notices":"biz",
@@ -49,6 +50,7 @@ def href(L, k):
     if k == "hazards": return "/hazards/" if L == "ko" else f"/hazards/?l={L}"
     if k == "signals": return "/signals/" if L == "ko" else "/signals/en/"
     if k == "cyber": return "/cyber/" if L == "ko" else f"/cyber/{L}/"
+    if k == "live": return "/live/" if L == "ko" else f"/live/{L}/"
     if k == "alerts": return "/alerts/" if L == "ko" else f"/alerts/{L}/"
     if k == "legal": return f"/{L}/legal/terms/"
     return f"/{L}/{k}/"
@@ -77,7 +79,7 @@ def navgroups(L, NAV, cur_group=None):
     out = []
     for p, lbl in NAV[L]:
         g = P2G.get(p, "map")
-        top = f"/{L}/{p}"
+        top = href(L, "live") if g == "world" else f"/{L}/{p}"
         sub = "".join(f'<a href="{_e(h)}">{_e(t)}</a>' for k, h, t in items(L, g) if h != top)
         cur = ' aria-current="page"' if g == cur_group else ""
         out.append(f'<div class="nvg"><a href="{_e(top)}"{cur}>{_e(lbl)}</a><div class="nvd">{sub}</div></div>')
@@ -117,7 +119,7 @@ def gvhdr_js(NAV, LANG_NAME, LANG_SHORT, AT, MENU):
     data = {"nav": {}, "sub": {}, "lang": LANG_NAME, "short": LANG_SHORT,
             "login": {L: AT[L]["login"] for L in LANG_NAME}, "menu": MENU, "cta": CTA}
     for L in LANG_NAME:
-        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else "/signals/en/") if p == "@signals" else ("/cyber/" if L == "ko" else f"/cyber/{L}/") if p == "@cyber" else f"/{L}/{p}", lbl, P2G.get(p, "map")] for p, lbl in NAV[L]]
+        data["nav"][L] = [[("/hazards/" if L == "ko" else f"/hazards/?l={L}") if p == "@hazards" else ("/signals/" if L == "ko" else "/signals/en/") if p == "@signals" else ("/cyber/" if L == "ko" else f"/cyber/{L}/") if p == "@cyber" else (href(L, "live") if P2G.get(p) == "world" else f"/{L}/{p}"), lbl, P2G.get(p, "map")] for p, lbl in NAV[L]]
         data["sub"][L] = {g: [[k, h, t] for k, h, t in items(L, g)] for g in GROUPS}
     css = r"""
 .gvh,.gvh *{box-sizing:border-box}
