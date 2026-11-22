@@ -14,7 +14,7 @@ OLD = re.compile(r'<link\b[^>]*\brel=["\'](?:shortcut icon|icon|apple-touch-icon
 FLAG = '<script src="/assets/flagfix.js" defer></script>'
 
 def main():
-    for f in ("gr-icon-32.png", "gr-icon-180.png", "gr-icon-512.png", "flagfix.js", "newsbox.js"):
+    for f in ("gr-icon-32.png", "gr-icon-180.png", "gr-icon-512.png", "flagfix.js", "newsbox.js", "livesum.js"):
         src = os.path.join(ROOT, "cf", "extra", "assets", f)
         if os.path.exists(src): shutil.copy(src, os.path.join(PUB, "assets", f))
     try:
@@ -35,6 +35,19 @@ def main():
             mc = re.search(r'data-iso="([A-Z]{2})"', t)
             if mc and '<section class="glance">' in t and "data-newsbox" not in t:
                 t = t.replace('<section class="glance">', f'<div data-newsbox="c:{mc.group(1)}" data-n="8" style="margin:8px 0 34px"></div><section class="glance">', 1)
+            rel = os.path.relpath(p, PUB).replace(os.sep, "/")
+            if "data-livesum" not in t:
+                if re.match(r"^[a-z]{2}/conflict/index\.html$", rel) and '<section class="chero' in t:
+                    i = t.find("</section>", t.find('<section class="chero')) + 10
+                    t = t[:i] + '<div data-livesum style="margin-top:28px"></div>' + t[i:]
+                elif re.match(r"^[a-z]{2}/index\.html$", rel) and 'id="world-now"' in t:
+                    i = t.find(">", t.find('id="world-now"')) + 1
+                    t = t[:i] + '<div data-livesum style="margin-top:8px"></div>' + t[i:]
+                elif rel == "hazards/index.html" and "</section>" in t:
+                    i = t.find("</section>") + 10
+                    t = t[:i] + '<div data-livesum style="margin-top:28px"></div>' + t[i:]
+            if "data-livesum" in t and "/assets/livesum.js" not in t and "</body>" in t:
+                t = t.replace("</body>", '<script src="/assets/livesum.js" defer></script></body>', 1)
             if "data-newsbox" in t and "/assets/newsbox.js" not in t and "</body>" in t:
                 t = t.replace("</body>", '<script src="/assets/newsbox.js" defer></script></body>', 1)
             if "/assets/flagfix.js" not in t:
