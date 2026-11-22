@@ -60,6 +60,16 @@ def main():
         if r:
             slugs.setdefault(r.group(1), p.split(os.sep)[-2])
 
+    # 2026-11-23: 지도 입찰 수를 메인 대시보드와 같은 원본(data 브랜치 feeds/tenders.json, 마감 전)으로 센다
+    feed = {}
+    tp = os.path.join(ROOT, "data_branch", "feeds", "tenders.json")
+    if os.path.exists(tp):
+        for x in json.load(open(tp, encoding="utf-8")).get("items") or []:
+            if isinstance(x, dict) and x.get("iso") and (x.get("deadline") or "9999") >= TODAY:
+                f = feed.setdefault(x["iso"], {"n": 0, "full": 0, "partial": 0, "search": 0})
+                if x.get("verify") != "partial":
+                    f["n"] += 1   # 메인 대시보드(today.json open)와 같은 기준: 재확인 필요(partial)는 따로
+                f[x.get("verify") if x.get("verify") in ("full", "partial") else "search"] += 1
     base, per = {}, {l: {} for l in LANGS[2:]}
     for p in sorted(glob.glob(os.path.join(PUB, "data", "c", "*.json"))):
         d = json.load(open(p, encoding="utf-8"))
@@ -79,11 +89,13 @@ def main():
             to = sum(1 for x in ed.get("tenders") or [] if isinstance(x, dict) and (x.get("deadline") or "9999") >= TODAY)
         else:
             to = sum(1 for r in tenders(d.get("tenders")) if (r["d"] or "9999") >= TODAY)
+        if feed:
+            to = feed.get(iso, {}).get("n", 0)
         rk = d.get("risk") or {}
         rke = d.get("risk_en") or {}
         base[iso] = {
             "n": {l: nm.get(l) or nm.get("en") or d.get("name") for l in LANGS},
-            "sl": slugs.get(iso, ""), "up": d.get("updated", ""), "to": to, "hz": hot.get(iso, ""), "rk": rk.get("level", ""),
+            "sl": slugs.get(iso, ""), "up": d.get("updated", ""), "to": to, "tv": [feed.get(iso, {}).get("full", 0), feed.get(iso, {}).get("partial", 0), feed.get(iso, {}).get("search", 0)], "hz": hot.get(iso, ""), "rk": rk.get("level", ""),
             "ko": {"s": d.get("summary", ""), "ld": d.get("leader", ""), "ag": L(d.get("agenda"), 4), "nd": L(d.get("needs"), 4),
                    "bz": [tit(b) for b in L(d.get("biz"), 5)], "pj": projects(d.get("projects")), "td": tenders(d.get("tenders"))[:6],
                    "rc": L(rk.get("conflict"), 2) + L(rk.get("disaster"), 1)},
