@@ -24,18 +24,18 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 331,
-  "checked": "2026-11-21T23:33Z",
-  "new_today": 42,
-  "last_success": "2026-11-21T23:33Z"
+  "checked": "2026-11-22T00:12Z",
+  "new_today": 0,
+  "last_success": "2026-11-22T00:12Z"
  },
  "EU TED": {
   "requests": 13,
   "failed": 0,
   "raw": 3176,
   "filtered": {
-   "below-size": 1515,
-   "closed": 22,
-   "country-cap": 1047
+   "below-size": 1498,
+   "closed": 12,
+   "country-cap": 1077
   },
   "notes": [],
   "state": "SUCCESS",
@@ -46,47 +46,45 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 592,
+  "in": 589,
   "rejected": {},
   "duplicates": 3,
   "flagged_similar": 0,
-  "kept": 589,
-  "checked": "2026-11-21T23:33Z",
-  "new_today": 64,
-  "last_success": "2026-11-21T23:33Z"
+  "kept": 586,
+  "checked": "2026-11-22T00:12Z",
+  "new_today": 53,
+  "last_success": "2026-11-22T00:12Z"
  },
  "UK Find a Tender": {
-  "requests": 26,
+  "requests": 12,
   "failed": 1,
-  "raw": 2500,
+  "raw": 1200,
   "filtered": {
-   "no-deadline": 78,
-   "not-active": 1888,
-   "below-size": 327,
-   "closed": 20,
-   "same-notice-update": 20,
-   "source-cap": 127
+   "no-deadline": 33,
+   "not-active": 927,
+   "below-size": 149,
+   "same-notice-update": 8,
+   "source-cap": 43
   },
   "notes": [
-   "retry 1 after 120s: HTTPError: HTTP Error 429: Too Many Requests",
-   "HTTPError: HTTP Error 429: Too Many Requests"
+   "source_page_cap_reached: OCDS partial results"
   ],
   "state": "PARTIAL",
-  "carried_verified": 0,
-  "carried_stale": 53,
+  "carried_verified": 5,
+  "carried_stale": 57,
   "dropped_unverified": 0,
-  "dropped_closed": 1,
+  "dropped_closed": 0,
   "dropped_cancelled": 0,
-  "verify_lookups": 0,
-  "carried_from_yesterday": 53,
-  "in": 93,
+  "verify_lookups": 21,
+  "carried_from_yesterday": 62,
+  "in": 102,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 93,
-  "checked": "2026-11-21T23:33Z",
-  "new_today": 16,
-  "last_success": "2026-11-21T23:33Z"
+  "kept": 102,
+  "checked": "2026-11-22T00:12Z",
+  "new_today": 12,
+  "last_success": "2026-11-22T00:12Z"
  },
  "UK Contracts Finder": {
   "requests": 2,
@@ -97,9 +95,7 @@
    "closed": 47,
    "same-notice-update": 1
   },
-  "notes": [
-   "retry 1 after 120s: HTTPError: HTTP Error 429: Too Many Requests"
-  ],
+  "notes": [],
   "state": "SUCCESS",
   "carried_verified": 0,
   "carried_stale": 0,
@@ -113,23 +109,23 @@
   "duplicates": 0,
   "flagged_similar": 1,
   "kept": 15,
-  "checked": "2026-11-21T23:33Z",
+  "checked": "2026-11-22T00:12Z",
   "new_today": 0,
-  "last_success": "2026-11-21T23:33Z"
+  "last_success": "2026-11-22T00:12Z"
  },
  "Prozorro (Ukraine)": {
   "requests": 425,
   "failed": 0,
   "raw": 25000,
   "filtered": {
-   "below-size": 1287,
-   "not-checked-yet": 632
+   "below-size": 1680,
+   "not-checked-yet": 232
   },
   "notes": [],
   "candidates": 1958,
   "checked_now": 400,
-  "rechecked_changed": 44,
-  "unchecked": 632,
+  "rechecked_changed": 0,
+  "unchecked": 232,
   "state": "SUCCESS",
   "carried_verified": 0,
   "carried_stale": 0,
@@ -138,14 +134,14 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 39,
+  "in": 46,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 39,
-  "checked": "2026-11-21T23:33Z",
-  "new_today": 20,
-  "last_success": "2026-11-21T23:33Z"
+  "kept": 46,
+  "checked": "2026-11-22T00:12Z",
+  "new_today": 7,
+  "last_success": "2026-11-22T00:12Z"
  },
  "DAPA (Korea)": {
   "requests": 0,
@@ -167,7 +163,7 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 0,
-  "checked": "2026-11-21T23:33Z",
+  "checked": "2026-11-22T00:12Z",
   "new_today": 0,
   "last_success": ""
  },
@@ -191,7 +187,7 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 0,
-  "checked": "2026-11-21T23:33Z",
+  "checked": "2026-11-22T00:12Z",
   "new_today": 0,
   "last_success": ""
  }
