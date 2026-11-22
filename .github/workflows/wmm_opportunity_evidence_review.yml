@@ -46,7 +46,8 @@ jobs:
               assert x['kind'] in ('biz','tenders','oda'),i
               assert x['iso'] and x['slug'],i
           widget=Path('dist/widget/index.html').read_text(encoding='utf-8')
-          assert 'id="evidence" role="note"' in widget
+          assert 'id="source-disclaimer" role="note"' in widget
+          assert 'x.official_notice_verified===true&&x.deadline' in widget
           assert 'warning[L]||warning.en' in widget
           assert 'automated_customer_alerts_allowed!==false' in widget
           assert 'li.querySelector(".t").textContent=' in widget

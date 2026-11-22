@@ -34,15 +34,18 @@ class OpportunityEvidenceGateTests(unittest.TestCase):
 
     def test_widget_warns_all_seven_supported_languages(self):
         import re
-        match = re.search(r'const warning=\{(.*?)\};\s*document\.getElementById\("evidence"\)',self.source,re.S)
+        match = re.search(r'const warning=\{(.*?)\};\s*document\.getElementById\("source-disclaimer"\)',self.source,re.S)
         self.assertIsNotNone(match)
         for language in ("ko","en","es","fr","ar","vi","id"):
             self.assertIn(language + ':', match.group(1))
-        self.assertIn('document.getElementById("evidence").textContent=warning[L]||warning.en',self.source)
+        self.assertIn('document.getElementById("source-disclaimer").textContent=warning[L]||warning.en',self.source)
 
     def test_user_facing_badge_marks_unverified_individual_entry(self):
         self.assertIn('x.official_notice_verified===false?"⚠ ":""',self.source)
-        self.assertIn('id="evidence" role="note"',self.source)
+        self.assertIn('id="source-disclaimer" role="note"',self.source)
+
+    def test_widget_hides_deadlines_for_unverified_candidates(self):
+        self.assertIn('x.official_notice_verified===true&&x.deadline', self.source)
 
     def test_widget_still_uses_textcontent_for_untrusted_titles(self):
         self.assertIn('li.querySelector(".t").textContent=x[lk]||x.en',self.source)
