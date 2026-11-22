@@ -47,14 +47,14 @@ AT["id"] = _tr("en", login="Masuk", signup="Buat akun", reset="Atur ulang sandi"
    need_terms="Harap setujui Ketentuan.", pw_short="Minimal 8 karakter.", check_mail="Email konfirmasi telah dikirim.", welcome="Selamat datang, Anda sudah masuk.", bad_login="Email atau sandi salah.", not_enabled="Login sedang dipelihara. Kontak: 73036396@naver.com")
 
 # short top menu: (anchor/path, label)
-NAV = {
- "ko": [('#map', '나라 찾기'), ('mdb/', '입찰·사업'), ('solutions/', '진출 지원'), ('conflict/', '세계 상황'), ('@hazards', '재난 지도'), ('@cyber', '사이버 공격'), ('ready/', '재난 대비'), ('@signals', '표지·풍자'), ('pricing/', '요금·회원')],
- "en": [('#map', 'Countries'), ('mdb/', 'Tenders'), ('solutions/', 'Go global'), ('conflict/', 'World watch'), ('@hazards', 'Hazard map'), ('@cyber', 'Cyberattacks'), ('ready/', 'Preparedness'), ('@signals', 'Covers & satire'), ('pricing/', 'Pricing')],
- "es": [('#map', 'Países'), ('mdb/', 'Licitaciones'), ('solutions/', 'Expansión'), ('conflict/', 'Situación mundial'), ('@hazards', 'Mapa de riesgos'), ('@cyber', 'Ciberataques'), ('ready/', 'Preparación'), ('@signals', 'Portadas'), ('pricing/', 'Precios')],
- "fr": [('#map', 'Pays'), ('mdb/', "Appels d'offres"), ('solutions/', "S'implanter"), ('conflict/', 'Veille mondiale'), ('@hazards', 'Carte des risques'), ('@cyber', 'Cyberattaques'), ('ready/', 'Préparation'), ('@signals', 'Couvertures'), ('pricing/', 'Tarifs')],
- "ar": [('#map', 'الدول'), ('mdb/', 'المناقصات'), ('solutions/', 'التوسع الدولي'), ('conflict/', 'الوضع العالمي'), ('@hazards', 'خريطة المخاطر'), ('@cyber', 'الهجمات السيبرانية'), ('ready/', 'الاستعداد'), ('@signals', 'الأغلفة'), ('pricing/', 'الأسعار')],
- "vi": [('#map', 'Quốc gia'), ('mdb/', 'Đấu thầu'), ('solutions/', 'Ra quốc tế'), ('conflict/', 'Tình hình'), ('@hazards', 'Bản đồ thảm họa'), ('@cyber', 'Tấn công mạng'), ('ready/', 'Phòng chống'), ('@signals', 'Bìa báo'), ('pricing/', 'Bảng giá')],
- "id": [('#map', 'Negara'), ('mdb/', 'Tender'), ('solutions/', 'Ekspansi global'), ('conflict/', 'Situasi dunia'), ('@hazards', 'Peta bahaya'), ('@cyber', 'Serangan siber'), ('ready/', 'Kesiapsiagaan'), ('@signals', 'Sampul'), ('pricing/', 'Harga')],
+NAV = {  # 2026-11-22 개편: 고객 흐름 5단계(찾기→입찰→진출→위험→요금), 나머지는 각 메뉴의 펼침 목록으로
+ "ko": [('#map', '나라 찾기'), ('mdb/', '입찰·사업'), ('solutions/', '진출 지원'), ('conflict/', '세계 상황·대비'), ('pricing/', '요금·회원')],
+ "en": [('#map', 'Countries'), ('mdb/', 'Tenders'), ('solutions/', 'Go global'), ('conflict/', 'World & safety'), ('pricing/', 'Pricing')],
+ "es": [('#map', 'Países'), ('mdb/', 'Licitaciones'), ('solutions/', 'Expansión'), ('conflict/', 'Mundo y seguridad'), ('pricing/', 'Precios')],
+ "fr": [('#map', 'Pays'), ('mdb/', "Appels d'offres"), ('solutions/', "S'implanter"), ('conflict/', 'Monde et sécurité'), ('pricing/', 'Tarifs')],
+ "ar": [('#map', 'الدول'), ('mdb/', 'المناقصات'), ('solutions/', 'التوسع الدولي'), ('conflict/', 'العالم والسلامة'), ('pricing/', 'الأسعار')],
+ "vi": [('#map', 'Quốc gia'), ('mdb/', 'Đấu thầu'), ('solutions/', 'Ra quốc tế'), ('conflict/', 'Thế giới & an toàn'), ('pricing/', 'Bảng giá')],
+ "id": [('#map', 'Negara'), ('mdb/', 'Tender'), ('solutions/', 'Ekspansi global'), ('conflict/', 'Dunia & keselamatan'), ('pricing/', 'Harga')],
 }
 MENU = {"ko":"메뉴","en":"Menu","es":"Menú","fr":"Menu","ar":"القائمة","vi":"Menu","id":"Menu"}
 PREP_T = {  # prep-bar chip names for languages without full content

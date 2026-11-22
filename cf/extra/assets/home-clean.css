@@ -14,7 +14,6 @@ body{background:#fff}
 .hero .pz-b{background:var(--hc-bg2)!important;border:1px solid var(--hc-line)!important;box-shadow:none!important}
 .hero .pz-b:first-child{background:var(--hc-ink)!important;border-color:var(--hc-ink)!important}
 .hero .pz-b:first-child :is(b,span){color:#fff!important}
-.hero .htg,.hero .hbl,.hero .hsw,.hero .hp{display:none!important}
 .hero .hradar img{filter:none!important;opacity:1}
 .hero .kpis{background:transparent!important;border-top:1px solid var(--hc-line)!important}
 .hero .kpis div{background:transparent!important;border-color:var(--hc-line)!important}
@@ -57,8 +56,11 @@ body{background:#fff}
 @media (max-width:900px){.sols{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.sols,.hc-row{grid-template-columns:1fr}.hc-go{width:100%}}
 .hc-form label.sol{display:flex}
-.subnav{background:#fff!important;border-bottom:1px solid var(--hc-line)!important}
-.subnav a{color:var(--hc-ink2)!important;background:transparent!important}
-.subnav a:first-child{color:#fff!important;background:var(--hc-ink)!important;border-radius:999px}
-.subnav a:hover{color:var(--hc-ink)!important}
 @media (max-width:700px){.subnav .in{flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none}.subnav a{flex:none;white-space:nowrap}}
+/* 레이더 로고: 흰 바탕용 (회전 빛줄기·파동·점·태그) */
+.hero .hradar img{filter:drop-shadow(0 10px 30px rgba(11,21,38,.18))!important}
+.hero .hsw{mix-blend-mode:multiply!important;background:conic-gradient(from 0deg,rgba(30,90,200,0) 0deg,rgba(30,90,200,0) 285deg,rgba(30,90,200,.18) 325deg,rgba(20,80,200,.7) 359deg,rgba(30,90,200,0) 360deg)!important}
+.hero .hp{border-color:rgba(20,80,200,.45)!important}
+.hero .hbl{background:#1F6FEB!important;box-shadow:0 0 10px 3px rgba(31,111,235,.55)!important}
+.hero .htg{color:#fff!important;background:#0B1526!important;border-color:#0B1526!important}
+.hero .htg.t1{left:4%!important}.hero .htg.t2{left:0!important}.hero .htg.t3{right:0!important}.hero .htg.t4{right:4%!important}
