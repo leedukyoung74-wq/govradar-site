@@ -1,0 +1,80 @@
+name: WMM P0 live overlay safe release gate (READ ONLY, NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'ops/verify_live_prepbar_release_gate.py'
+      - 'tests/test_live_prepbar_release_gate.py'
+      - '.github/workflows/wmm_p0_live_overlay_safety_gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence_gate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Load audited review code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test release gate without network
+        run: python -m unittest discover -s tests -p 'test_live_prepbar_release_gate.py' -v
+      - name: Get unchanged production branch source
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: previous_live
+          persist-credentials: false
+      - name: Get seven-file proposed safety patch, never live
+        uses: actions/checkout@v4
+        with:
+          ref: review/wmm-p0-live-overlay-stove-7lang-20261121
+          path: proposed_live
+          persist-credentials: false
+      - name: Compare one HTML fragment in each locale and GET-only probe two hosts
+        run: |
+          python ops/verify_live_prepbar_release_gate.py \
+            --baseline previous_live --candidate proposed_live \
+            --probe-live --out p0-safety-evidence.json
+      - name: Show status without falsely claiming public release
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          v=json.loads(Path('p0-safety-evidence.json').read_text(encoding='utf-8'))
+          assert v['release_patch_source_ok']
+          assert not v['site_modified']
+          assert not v['customer_messages_sent']
+          assert not v['paid_api_used']
+          report=[
+            '## GOV RADAR 7-language source diff and read-only live deployment evidence',
+            '',
+            f"**Draft exact patch integrity:** {sum(x['pass'] for x in v['source_checks'])}/7",
+            '',
+            f"**Patch currently visible on public hosts:** {v['public_patch_visible_count']}/14",
+            '',
+            '**Note:** 0/14 would not mean the draft is wrong. It means the public pages have not yet been verified as the patched version.',
+            '',
+            '| Host | Locale | Current state | HTTP |',
+            '|---|---|---|---|',
+          ]
+          for x in v['public_checks']:
+              state=x['release_state']
+              assert state in ('SAFE_PATCH_VISIBLE', 'OLD_UNSAFE_COPY_VISIBLE', 'VERSION_MISMATCH', 'UNVERIFIED','UNREACHABLE_OR_RESTRICTED')
+              report.append(f"| {x['host'].replace('https://','')} | {x['lang']} | {state} | {x['http_status'] or '-'} |")
+          report.extend(('', '**NO MERGE, NO DEPLOY, NO API BILLING, NO CUSTOMER NOTICES.**'))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
+              f.write('\n'.join(report)+'\n')
+          print('\n'.join(report))
+          PY
+      - name: Preserve small status report only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-p0-prepbar-release-readonly
+          path: p0-safety-evidence.json
+          if-no-files-found: ignore
+          retention-days: 5
