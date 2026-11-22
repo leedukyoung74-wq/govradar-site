@@ -1158,8 +1158,8 @@ CI = {
 }
 def _cty_fetch(iso):
     """data 브랜치에 이 나라 파일이 있을 때만 불러옴 — 없는 나라에서 404 오류가 나던 문제 (2026-11-22 전수 점검)."""
-    here = os.path.dirname(os.path.abspath(__file__))
-    if os.path.exists(os.path.join(here, "data_branch", "feeds", "cty", f"{iso}.json")):
+    here = _os.path.dirname(_os.path.abspath(__file__))
+    if _os.path.exists(_os.path.join(here, "data_branch", "feeds", "cty", f"{iso}.json")):
         return 'fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/cty/' + iso + '.json",{cache:"no-store"})'
     return "Promise.resolve({ok:false})"
 def cty_intel(iso, L):
