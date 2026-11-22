@@ -64,3 +64,6 @@ body{background:#fff}
 .hero .hbl{background:#1F6FEB!important;box-shadow:0 0 10px 3px rgba(31,111,235,.55)!important}
 .hero .htg{color:#fff!important;background:#0B1526!important;border-color:#0B1526!important}
 .hero .htg.t1{left:4%!important}.hero .htg.t2{left:0!important}.hero .htg.t3{right:0!important}.hero .htg.t4{right:4%!important}
+/* 국기 크게 (2026-11-22) */
+:is(#deadlines,#board) .fi{width:1.8em!important;height:1.3em!important;background-size:cover!important;background-position:center!important;border-radius:3px;vertical-align:-.3em;box-shadow:0 0 0 1px rgba(0,0,0,.12);margin-inline-end:4px}
+#world-now .fx.fi{width:1.8em;height:1.3em;vertical-align:-.28em}
