@@ -1,0 +1,50 @@
+name: WMM HK SAR official warning + NZ GeoNet official earthquake live pilot (NO DEPLOY)
+on:
+  pull_request:
+    paths:
+      - 'tools/official_hk_nz_feeds.py'
+      - 'tests/test_official_hk_nz_feeds.py'
+      - '.github/workflows/wmm_official_hk_nz_live_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  official_sources_read_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify official HKO and GeoNet source safety
+        run: |
+          python -m unittest discover -s tests -p 'test_official_hk_nz_feeds.py' -v
+          python -m unittest discover -s tests -p 'test_official_regional_feeds.py' -v
+      - name: Read official sources exactly once and assess metadata
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p "$RUNNER_TEMP/wmm-hk-nz-pilot"
+          python tools/official_hk_nz_feeds.py --out "$RUNNER_TEMP/wmm-hk-nz-pilot/health.json"
+          WMM_RESULT="$RUNNER_TEMP/wmm-hk-nz-pilot/health.json" python - <<'PY'
+          import json,os
+          from pathlib import Path
+          x=json.loads(Path(os.environ["WMM_RESULT"]).read_text(encoding="utf-8"))
+          assert not x["publication_allowed"] and not x["customer_data_processed"]
+          assert not x["government_website_attack_confirmed"]
+          assert all(v["status"]=="OK" for v in x["health"].values())
+          assert x["feeds"]["hko"]["geo_scope"]=="CN-HK"
+          assert x["feeds"]["geonet"]["geo_scope"]=="NZ"
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as f:
+              f.write("### WMM GOV RADAR HK SAR + NZ internal official feed check\n\n")
+              f.write("| Jurisdiction | Type | Parsed items | Last check |\n|---|---|---:|---|\n")
+              f.write(f"| CN-HK (Hong Kong SAR, parent CN) | Official RSS warning summary; NOT CAP-verified | {x['feeds']['hko']['count']} | {x['health']['hko']['last_success_at']} |\n")
+              f.write(f"| NZ (New Zealand) | Recent earthquake observations, not emergency declaration | {x['feeds']['geonet']['count']} | {x['health']['geonet']['last_success_at']} |\n")
+              f.write("\nNo customer data, no public alerts, no cyberattack inference, no paid API.\n")
+          PY
+      - name: Delete temporary provider data
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/wmm-hk-nz-pilot"
