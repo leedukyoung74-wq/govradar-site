@@ -67,3 +67,22 @@ body{background:#fff}
 /* 국기 크게 (2026-11-22) */
 :is(#deadlines,#board) .fi{width:1.8em!important;height:1.3em!important;background-size:cover!important;background-position:center!important;border-radius:3px;vertical-align:-.3em;box-shadow:0 0 0 1px rgba(0,0,0,.12);margin-inline-end:4px}
 #world-now .fx.fi{width:1.8em;height:1.3em;vertical-align:-.28em}
+/* 사이버 공격 — 지금 (2026-11-23) */
+.hc-cy{background:#fff;border-top:1px solid var(--hc-line);border-bottom:1px solid var(--hc-line);padding-block:64px}
+.hc-cy h2{margin:0 0 8px;font-size:clamp(26px,3vw,38px);letter-spacing:-.02em;display:flex;align-items:center;gap:12px;color:var(--hc-ink)}
+.hc-cy h2 i{width:12px;height:12px;border-radius:50%;background:#7B4BD6;box-shadow:0 0 0 6px rgba(123,75,214,.15)}
+.cyk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0 26px}
+.cyk div{background:#F6F2FD;border-radius:12px;padding:16px 18px;min-width:0}
+.cyk b{display:block;font-size:34px;line-height:1.1;color:#4B2A99;font-variant-numeric:tabular-nums}.cyk b.sm{font-size:16px;line-height:1.45;color:#2E1A66}
+.cyk span{display:block;font-size:13.5px;color:var(--hc-ink2);margin-top:6px}
+.cyg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px}
+.cyg h3,.cyt h3{margin:0 0 10px;font-size:18px;color:var(--hc-ink)}
+.cyl{list-style:none;margin:0;padding:0;border-top:1px solid var(--hc-line)}
+.cyl li{display:grid;grid-template-columns:92px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:11px 2px;border-bottom:1px solid var(--hc-line);font-size:15px}
+.cyl .cd{color:var(--hc-ink2);font-size:13.5px;font-variant-numeric:tabular-nums}.cyl small{color:var(--hc-ink3)}
+.cyl .cv{font-size:12px;font-weight:700;color:#fff;border-radius:999px;padding:2px 9px;white-space:nowrap;background:#8A94A6}.cyl .v-atk{background:#C7362E}.cyl .v-susp{background:#B7800F}.cyl .v-no{background:#2B7BB9}.cyl .v-vuln{background:#7B4BD6}
+.cyt{margin-top:26px;background:#F5F6F8;border-radius:12px;padding:18px 22px}.cyt ol{margin:0;padding-inline-start:20px}.cyt li{margin:5px 0}
+.cyb{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.cyb a{font-weight:700;text-decoration:none;border-radius:999px;padding:12px 20px}.cyb .b1{background:#4B2A99;color:#fff}.cyb .b2{border:1.5px solid var(--hc-ink);color:var(--hc-ink)}
+.cyn{font-size:13px;color:var(--hc-ink3);margin:14px 0 0}
+@media (max-width:900px){.cyk{grid-template-columns:1fr 1fr}.cyg{grid-template-columns:1fr}}
+@media (max-width:520px){.cyl li{grid-template-columns:78px minmax(0,1fr)}.cyl .cv{grid-column:2;justify-self:start}}
