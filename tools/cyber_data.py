@@ -1,6 +1,6 @@
 # GOV RADAR — cyber page data (2026-11-15). Each text is (ko, en).
 # v: verdict  atk = confirmed intrusion/attack · susp = suspected / under investigation · no = outage or accident, not an attack · vuln = vulnerability disclosure
-UPDATED = "2026-11-15"
+UPDATED = "2026-11-23"
 
 TYPES = [
  ("ransom", ("랜섬웨어", "Ransomware"), ("데이터를 암호화하거나 빼낸 뒤 돈을 요구합니다. 요즘은 먼저 빼내고 협박하는 '이중 갈취'가 많습니다.", "Encrypts or steals data and demands payment. Today it is often 'double extortion': steal first, then threaten to publish."),
@@ -43,6 +43,10 @@ TYPES = [
 
 # Recent incidents. (date, region, iso_list, verdict, type, title(ko,en), what(ko,en), judge(ko,en), src_idx_list)
 REC = [
+ ("2026-11-22", ("한국", "Korea"), ["KR"], "atk", "",
+  ("한전 '한전ON'·전자조달시스템 침입 — 개인정보 약 152만 건", "KEPCO's 'KEPCO ON' and e-procurement systems breached — about 1.52 million records"),
+  ("한전이 11월 20일 무단 접근을 파악하고 22일 발표. 한전ON 이용자 65만여 명(주민번호·요금 납부 계좌·카드번호 등 12개 항목)과 전자조달시스템 이용자 약 87만 명(기업 대표자 등록번호, 직원 이름·사번 등)이 대상. 외부 접속 차단, 일부 서비스 중단, 경찰 수사 의뢰, 국정원 등과 합동 조사 중.", "KEPCO detected unauthorised access on 20 Nov and announced it on 22 Nov. About 650,000 KEPCO ON users (12 fields incl. resident numbers and payment account/card numbers) and about 870,000 e-procurement users (company representatives' registration numbers, staff names and IDs) affected. External access blocked, some services suspended, police and a joint NIS-led investigation under way."),
+  ("실제 침해(한전 발표). 공격 주체는 아직 밝혀지지 않음. 2차 피해는 현재까지 확인되지 않음.", "Confirmed breach (KEPCO statement). Attacker not yet identified; no secondary harm confirmed so far."), [26, 27]),
  ("2026-11-15", ("한국 외 10개국", "Korea + 9 countries"), ["KR","US","JP","IN"], "susp", "malware",
   ("북한 연계 추정 조직, PHP 취약점으로 서버 216곳 표적", "Suspected North Korea-linked group targets 216 servers via PHP flaw"),
   ("보안업체 사이퍼마 보고서: 패치 안 된 웹서버를 노려 웹셸 설치를 시도. 표적은 미국 49·일본 47·인도 31·한국 30곳(정부·금융·통신·물류·제조). 공격자는 표적을 581곳으로 늘렸다고 주장.", "Cipherma report: unpatched web servers targeted for web shells. Targets: US 49, Japan 47, India 31, Korea 30 (government, finance, telecom, logistics, manufacturing). Attackers claim 581 targets."),
@@ -251,6 +255,8 @@ SRC = [
  ("MTN — 2026 상반기 침해사고 1,236건 (과기정통부·KISA)", "https://news.mtn.co.kr/news-detail/2026073017241228361"),
  ("FCC — 2026년 11월 17일 전국 비상경보 시험 공지 (DA 26-989)", "https://docs.fcc.gov/public/attachments/DA-26-989A1.txt"),
  ("CISA — 올즈마 정수장 침해 권고 (AA21-042A)", "https://www.cisa.gov/news-events/alerts/2021/02/11/compromise-us-water-treatment-facility"),
+ ("보안뉴스 — 한전ON·조달망 뚫려 개인정보 152만여건 유출 (2026-11-22)", "https://www.boannews.com/news/articleView.html?idxno=147429"),
+ ("파이낸셜뉴스 — 한전서 개인정보 약 152만건 유출 (2026-11-22)", "https://www.fnnews.com/news/202611221824548243")
 ]
 
 # Free-licence related photos (Unsplash License) — not photos of the incidents themselves.
@@ -264,7 +270,7 @@ PH = {"srv": ("photo-1762163516269-3c143e04175c", "server-rack-with-blinking-gre
       "ship": ("photo-1560134025-a119c071bf16", "a-large-cargo-ship-in-the-middle-of-the-ocean-EHt9VrQnUc8"),
       "tower": ("photo-1782999236858-32f90b3f121e", "modern-airport-control-tower-with-a-radar-dome-WGyw9o5wZDA"),
       "board": ("photo-1490430657723-4d607c1503fc", "a-low-angle-shot-of-a-departure-board-at-an-airport-9qQTUYm4ss4")}
-REC_PH = ["srv", "lap", "rack", "btc", "atm", "lap", "lap", "btc", "shop", "blood", "rack", "srv", "lap", "lap", "rack", "lap", "srv", "ship", "tower", "lap", "board", "atm", "atm", "tower", "ship"]
+REC_PH = ["srv", "srv", "lap", "rack", "btc", "atm", "lap", "lap", "btc", "shop", "blood", "rack", "srv", "lap", "lap", "rack", "lap", "srv", "ship", "tower", "lap", "board", "atm", "atm", "tower", "ship"]
 assert len(REC_PH) == len(REC)
 
 # Where to report, by country (checked 2026-11-15 against official sites where marked ✓). (iso, name(ko,en), [(contact, desc(ko,en))])
@@ -292,6 +298,7 @@ CALLW = [
 # Map points (lon, lat, place ko, place en) per REC entry, same order as REC. [] = global, no single location.
 SEO = (126.98, 37.57, "서울", "Seoul")
 REC_PTS = [
+ [(126.71, 35.02, "나주(한전 본사)", "Naju (KEPCO HQ)")],
  [SEO, (-77.04, 38.90, "미국", "US"), (139.69, 35.69, "도쿄", "Tokyo"), (77.21, 28.61, "뉴델리", "New Delhi")],
  [SEO], [SEO, (128.88, 35.23, "김해(인제대)", "Gimhae"), (127.38, 36.35, "대전(조폐공사)", "Daejeon")], [SEO], [SEO], [SEO], [SEO],
  [(125.75, 39.03, "평양 (FBI 지목)", "Pyongyang (FBI attribution)")],
