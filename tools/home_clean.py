@@ -93,7 +93,17 @@ def solutions(lang):
 </div></section>'''
 
 
+def _cssv():
+    import hashlib
+    for c in (os.path.join(PUB, "assets", "home-clean.css"), os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "cf", "extra", "assets", "home-clean.css")):
+        if os.path.exists(c):
+            return hashlib.md5(open(c, "rb").read()).hexdigest()[:8]
+    return "1"
+
+
 def main():
+    global CSSV
+    CSSV = _cssv()
     n = 0
     for lang in LANGS:
         p = os.path.join(PUB, lang, "index.html")
@@ -140,7 +150,7 @@ def main():
             s = s[:m.start()] + m.group(1) + links + m.group(3) + s[m.end():]
         s = s.replace('<details class="hc-more">', '<details class="hc-more" id="more">', 1)
         s = s.replace("</body>", '<script>(function(){function o(){var h=location.hash.slice(1);if(!h)return;var e=document.getElementById(h);if(!e)return;var d=e.closest("details");if(d&&!d.open){d.open=true;setTimeout(function(){e.scrollIntoView()},50)}}addEventListener("hashchange",o);o()})()</script></body>', 1)
-        s = s.replace("</head>", '<link rel="stylesheet" href="/assets/home-clean.css"></head>', 1)
+        s = s.replace("</head>", f'<link rel="stylesheet" href="/assets/home-clean.css?v={CSSV}"></head>', 1)
         open(p, "w", encoding="utf-8").write(s)
         n += 1
     print(f"home_clean: {n} home pages")
