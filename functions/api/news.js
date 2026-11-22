@@ -10,7 +10,7 @@ const Q = {
   epidemic: { ko: "감염병 OR 전염병 OR 집단감염 OR 질병관리청 OR WHO", en: "outbreak OR epidemic OR WHO OR virus cases", es: "brote OR epidemia OR OMS", fr: "épidémie OR OMS OR flambée", ar: "تفشي OR وباء OR منظمة الصحة العالمية", vi: "\"dịch bệnh\" OR \"bùng phát\" OR WHO", id: "wabah OR epidemi OR WHO" },
   prep: { ko: "비상 대비 권고 OR 비상용품 OR \"72시간\" OR 대피 요령 OR 민방위 OR 재난문자", en: "\"emergency kit\" OR \"emergency preparedness\" OR \"urges residents\" OR \"stockpile\"", es: "\"kit de emergencia\" OR \"72 horas\" OR \"recomienda a la población\"", fr: "\"kit d'urgence\" OR \"72 heures\" OR \"se préparer\" gouvernement", ar: "\"حقيبة الطوارئ\" OR \"72 ساعة\" OR الاستعداد", vi: "\"72 giờ\" OR \"chuẩn bị\" khẩn cấp chính phủ", id: "\"72 jam\" OR \"tas siaga\" OR siaga bencana pemerintah" },
 };
-const dec = s => s.replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim();
+const dec = s => s.replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&#(\d+);/g, (m, n) => String.fromCharCode(+n)).replace(/&#x([0-9a-f]+);/gi, (m, n) => String.fromCharCode(parseInt(n, 16))).trim();
 const J = (o, ttl) => new Response(JSON.stringify(o), { headers: { "content-type": "application/json; charset=utf-8", "cache-control": `public, max-age=${ttl || 300}` } });
 export async function onRequestGet(ctx) {
   const u = new URL(ctx.request.url), l = LANGS.includes(u.searchParams.get("l")) ? u.searchParams.get("l") : "en";
@@ -37,7 +37,9 @@ export async function onRequestGet(ctx) {
   try { const r = await fetch(`https://news.google.com/rss/search?q=${encodeURIComponent(q)}&${ED[l]}`, { headers: UA }); if (r.ok) items = parse(await r.text(), false); } catch (e) {}
   if (!items.length) {
     const MK = { ko: "ko-KR", en: "en-US", es: "es-ES", fr: "fr-FR", ar: "ar-XA", vi: "vi-VN", id: "id-ID" };
-    const terms = c ? [q.replace(/\s*when:\d+d/, "").replace(/"/g, "")] : (Q[t][l] || Q[t].en).split(" OR ").map(x => x.replace(/[()"]/g, "").trim()).filter(Boolean).slice(0, 4);
+    const GW = { ko: ["정부", "경제", "정책"], en: ["government", "economy"], es: ["gobierno", "economía"], fr: ["gouvernement", "économie"], ar: ["حكومة", "اقتصاد"], vi: ["chính phủ", "kinh tế"], id: ["pemerintah", "ekonomi"] };
+    const nm = c ? (NAMES[c][LANGS.indexOf(l)] || NAMES[c][1]) : "";
+    const terms = c ? GW[l].map(w => nm + " " + w) : (Q[t][l] || Q[t].en).split(" OR ").map(x => x.replace(/[()"]/g, "").trim()).filter(Boolean).slice(0, 4);
     const res = await Promise.allSettled(terms.map(term => fetch(`https://www.bing.com/news/search?q=${encodeURIComponent(term)}&format=rss&setlang=${l}&mkt=${MK[l]}&qft=${encodeURIComponent('interval="8"')}`, { headers: UA }).then(r => r.ok ? r.text() : "")));
     const seen = new Set();
     for (const r of res) if (r.status === "fulfilled") for (const x of parse(r.value, true)) { const k = x.t.slice(0, 40); if (!seen.has(k)) { seen.add(k); items.push(x); } }
