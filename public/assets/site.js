@@ -279,7 +279,7 @@ window.gvLang = function (sel) {
     vi: { war: "Chiến tranh", tension: "Căng thẳng", watch: "Theo dõi", high: "Cao", medium: "Trung bình", hot: "Xung đột đang diễn ra", dis: "Thiên tai và dịch bệnh (7 ngày qua)", ctry: "Cảnh báo theo quốc gia", asof: "Tính đến", off: "chính thức", more: "Thêm" , ne: "Gần Trái Đất", k: { tsunami: "Sóng thần", quake: "Động đất", storm: "Bão", flood: "Lũ lụt", volcano: "Núi lửa", weather: "Thời tiết cực đoan", fire: "Cháy rừng", epidemic: "Dịch bệnh", asteroid: "Tiểu hành tinh / sao chổi" }, c: { conflict: "Xung đột", disaster: "Thiên tai", epidemic: "Dịch bệnh" } },
     id: { war: "Perang", tension: "Ketegangan", watch: "Pantauan", high: "Tinggi", medium: "Sedang", hot: "Konflik berlangsung", dis: "Bencana dan wabah (7 hari terakhir)", ctry: "Peringatan per negara", asof: "Per", off: "resmi", more: "Lainnya" , ne: "Dekat Bumi", k: { tsunami: "Tsunami", quake: "Gempa", storm: "Topan", flood: "Banjir", volcano: "Gunung api", weather: "Cuaca ekstrem", fire: "Kebakaran hutan", epidemic: "Wabah", asteroid: "Asteroid / komet" }, c: { conflict: "Konflik", disaster: "Bencana", epidemic: "Wabah" } }
   };
-  var t = Object.assign({}, T.en, T[L] || {}); window.__gvT = t; t.k = (T[L] && T[L].k) || T.en.k; t.c = (T[L] && T[L].c) || T.en.c;
+  var t = Object.assign({}, T.en, T[L] || {}); window.__gvT = t; t.k = (T[L] && T[L].k) || T.en.k; t.k = Object.assign({ drought: { ko: "가뭄", es: "Sequía", fr: "Sécheresse", ar: "جفاف", vi: "Hạn hán", id: "Kekeringan" }[L] || "Drought" }, t.k); t.c = (T[L] && T[L].c) || T.en.c;
   function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
   var editorialLabels = {
     ko: ["해설 갱신", "해설 갱신 지연 · 최신 상황은 기관 원문 확인", "해설 갱신 시각 미확인 · 기관 원문 확인"],
@@ -358,7 +358,7 @@ window.gvLang = function (sel) {
   function clip(k) { return '<div class="hzc-v v2 lb-clip"><i class="hzc-sw"></i><i class="hzc-rg"></i><canvas class="hzcv" data-k="' + (KM[k] || "quake") + '" aria-hidden="true"></canvas></div>'; }
   function hzCard(x, cn, label, home) {
     hzLoad();
-    return '<div class="lb-hz hz-' + x.kind + '" data-hzk="' + (KM[x.kind] || "quake") + '" data-hzl="' + L + '"><div class="hz-vis">' + clip(x.kind) + '<span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : "🌍 " + (window.__gvT && window.__gvT.ne || "Near Earth")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
+    return '<div class="lb-hz hz-' + x.kind + '" data-hzk="' + (KM[x.kind] || "quake") + '" data-hzl="' + L + '"><div class="hz-vis">' + clip(x.kind) + '<span class="hz-tag">' + esc(label) + '</span></div><div class="hz-txt"><p><b>' + (x.iso ? cn(x.iso) : (x.kind === "asteroid" ? "🌍 " + (window.__gvT && window.__gvT.ne || "Near Earth") : "🌍")) + '</b> <small class="note">' + esc(x.date || "") + '</small></p><p>' + esc(pick(x)) + (x.url && !home ? ' <a href="' + esc(x.url) + '" target="_blank" rel="noopener">↗</a>' : "") + '</p></div></div>';
   }
 
   var TR = {};
