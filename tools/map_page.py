@@ -108,6 +108,11 @@ def main():
         d = OUT if l == "ko" else os.path.join(OUT, l)
         os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(html)
+    hp = os.path.join(PUB, "_headers")
+    rule = "/map/*\n  Access-Control-Allow-Origin: *\n"
+    old = open(hp, encoding="utf-8").read() if os.path.exists(hp) else ""
+    if "/map/*" not in old:
+        open(hp, "w", encoding="utf-8").write(rule + old)  # www.wmm-hoa.com 첫 화면이 지도 자료(공개)를 읽도록
     print(f"map_page: {len(base)} countries, {sum(v['to'] for v in base.values())} open tenders, {len(geoms)} shapes")
 
 
