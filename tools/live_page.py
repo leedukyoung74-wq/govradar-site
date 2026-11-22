@@ -283,7 +283,7 @@ function draw(onlyPts){
 }
 var off={};
 function show(ev,p){var r=box.getBoundingClientRect(),x=ev.clientX-r.left,y=ev.clientY-r.top;
- tip.style.setProperty("--c",COL[p.l]);tip.innerHTML='<small>'+e(U.L[p.l])+'</small><b>'+(p.i?fl(p.i)+' ':'')+e(LG==="ko"?p.ko:p.en)+'</b>'+(p.r?'<a href="#'+p.r+'">'+e(U.more)+' ↓</a>':'')+(p.u?'<br><a href="'+e(p.u)+'" target="_blank" rel="noopener">USGS / NASA ↗</a>':'');
+ tip.style.setProperty("--c",COL[p.l]);tip.innerHTML='<small>'+e(U.L[p.l])+'</small><b>'+(p.i?fl(p.i)+' ':'')+e(LG==="ko"?p.ko:p.en)+'</b>'+(p.r?'<a href="#'+p.r+'">'+e(U.more)+' ↓</a>':'')+(p.u?'<br><a href="'+e(p.u)+'" target="_blank" rel="noopener">'+e(p.l==="cyber"?"ransomware.live":"USGS / NASA")+' ↗</a>':'');
  tip.style.display="block";var tw=tip.offsetWidth,th=tip.offsetHeight;tip.style.left=Math.min(Math.max(8,x+14),r.width-tw-8)+"px";tip.style.top=Math.min(Math.max(8,y+14),r.height-th-8)+"px"}
 box.addEventListener("click",function(ev){if(!ev.target.closest(".pt"))tip.style.display="none"});
 tip.addEventListener("click",function(ev){var a=ev.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute("href").slice(1));if(t){document.querySelectorAll(".hl").forEach(function(x){x.classList.remove("hl")});t.classList.add("hl")}});
@@ -303,6 +303,8 @@ var QK=ko?"지진":"Earthquake";
 fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson").then(function(r){return r.json()}).then(function(j){addFeed((j.features||[]).map(function(f){var c=f.geometry.coordinates,m=f.properties.mag;return{x:c[0],y:c[1],t:QK+" M"+(m!=null?m.toFixed(1):"?")+" — "+f.properties.place,ts:f.properties.time,u:f.properties.url,src:"USGS",s:m>=6?3:m>=5?2:1}}))}).catch(function(){nf()});
 var EC={wildfires:ko?"산불":"Wildfire",severeStorms:ko?"폭풍":"Storm",volcanoes:ko?"화산":"Volcano",floods:ko?"홍수":"Flood",landslides:ko?"산사태":"Landslide"};
 fetch("https://eonet.gsfc.nasa.gov/api/v3/events?status=open&days=10&limit=80").then(function(r){return r.json()}).then(function(j){addFeed((j.events||[]).filter(function(v){return v.categories&&EC[v.categories[0].id]&&v.geometry&&v.geometry.length}).map(function(v){var g=v.geometry[v.geometry.length-1],c=g.type==="Point"?g.coordinates:(g.coordinates[0]&&g.coordinates[0][0])||[0,0];return{x:c[0],y:c[1],t:EC[v.categories[0].id]+" — "+v.title,ts:Date.parse(g.date)||Date.now(),u:(v.sources&&v.sources[0]&&v.sources[0].url)||"https://eonet.gsfc.nasa.gov/",src:"NASA EONET",s:1}}))}).catch(function(){nf()});
+fetch("/api/cyberlive").then(function(r){return r.json()}).then(function(j){var by={};(j.rw||[]).forEach(function(x){if(x.la==null)return;(by[x.c]=by[x.c]||{c:x.c,la:x.la,lo:x.lo,n:0,g:{}}).n++;by[x.c].g[x.g]=1});
+ Object.keys(by).forEach(function(k){var q=by[k],gs=Object.keys(q.g).slice(0,3).join(", ");pts.push({x:q.lo+1.2,y:q.la-1,l:"cyber",ko:"랜섬웨어 피해 주장 "+q.n+"건 (최근 7일, 확인 전) · "+gs,en:q.n+" ransomware claims (last 7 days, unverified) · "+gs,r:"",s:Math.min(3,1+Math.floor(q.n/5)),i:q.c,u:"https://www.ransomware.live/"})});if(Object.keys(by).length)draw(true)}).catch(function(){});
 var nfn=0;function nf(){if(++nfn===2){document.getElementById("feed").innerHTML='<p class="gl">'+e(U.nofeed)+'</p>'}}
 }).catch(function(err){console.log("live",err)});
 })();
