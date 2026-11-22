@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GOV RADAR · World map</title>
+<meta name="description" content="GOV RADAR — 193 countries on one map. Tap a country for its government agenda, open tenders, promising business and risks, with sources.">
+<link rel="canonical" href="https://radar.wmm-hoa.com/map/">
+<link rel="icon" href="/favicon.ico">
+<style>
+@font-face{font-family:"NexonLv1";font-weight:300;font-display:swap;src:url(/playground/assets/fonts/NexonLv1Gothic-Light.woff2) format("woff2")}
+@font-face{font-family:"NexonLv1";font-weight:400;font-display:swap;src:url(/playground/assets/fonts/NexonLv1Gothic-Regular.woff2) format("woff2")}
+@font-face{font-family:"NexonLv1";font-weight:700;font-display:swap;src:url(/playground/assets/fonts/NexonLv1Gothic-Bold.woff2) format("woff2")}
+:root{--bg:#FFFFFF;--bg2:#FFFFFF;--bg3:#F2F4F7;--ink:#0B1526;--ink2:#4A5568;--ink3:#8A94A6;--line:#E3E7ED;--land:#E7EBF1;--accent:#0B1526;--accent-ink:#FFFFFF;--hot:#D9443C;--a1:#F3DEA6;--a2:#E8BD5C;--a3:#D29A26;--a4:#9E680A;--gold:#B7800F;color-scheme:light}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:"NexonLv1","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow:hidden}
+a{color:inherit}button,select{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.bar{border-bottom:1px solid var(--line);position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;gap:16px;height:68px;padding-top:env(safe-area-inset-top,0px);padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));background:var(--bg)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:.04em;font-size:17px;white-space:nowrap}
+.brand img{width:30px;height:30px;border-radius:50%}
+.search{position:relative;flex:0 1 320px}
+.search input{width:100%;background:var(--bg3);border:1px solid var(--line);border-radius:999px;color:var(--ink);padding:9px 16px;font:inherit;font-size:15px}
+.search input::placeholder{color:var(--ink3)}
+.sugg{position:absolute;top:44px;left:0;right:0;background:var(--bg2);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(11,21,38,.12);z-index:5}
+.sugg button{display:block;width:100%;text-align:start;background:none;border:0;padding:10px 16px;cursor:pointer;font-size:15px}
+.sugg button:hover,.sugg button.on{background:var(--bg3)}
+.sp{flex:1}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{background:none;border:0;padding:7px 16px;font-size:14px;cursor:pointer;color:var(--ink2);white-space:nowrap}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.nav{display:flex;gap:18px;font-size:15px;white-space:nowrap}
+.nav a{text-decoration:none;color:var(--ink2)}.nav a:hover{color:var(--ink)}
+.lang{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:14px}
+#map{position:absolute;inset:68px 0 0 0;width:100%;height:calc(100% - 68px);touch-action:none}
+#map path.c{vector-effect:non-scaling-stroke;stroke:#FFFFFF;stroke-width:.6;cursor:pointer;transition:fill .25s}
+#map path.c:hover{stroke:var(--ink);stroke-width:1}
+#map path.c.sel{stroke:var(--ink);stroke-width:1.6}
+#map path.c.nodata{cursor:default}
+.legend{position:absolute;left:max(24px,env(safe-area-inset-left,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));font-size:13px;color:var(--ink2);pointer-events:none}
+[dir=rtl] .legend{left:auto;right:max(24px,env(safe-area-inset-right,0px))}
+.legend .sw{display:flex;gap:2px;margin-top:6px}.legend .sw i{display:block;width:34px;height:8px}
+.legend .ends{display:flex;justify-content:space-between;margin-top:4px;color:var(--ink3)}
+.hint{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(26px + env(safe-area-inset-bottom,0px));font-size:15px;color:var(--ink2);pointer-events:none;transition:opacity .4s;text-align:center}
+.hint b{color:var(--ink);font-weight:700}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font-size:14px;padding:6px 10px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-130%);font-weight:700;z-index:4}
+.tip small{font-weight:400;margin-inline-start:6px}
+.drawer{position:absolute;top:68px;right:0;bottom:0;width:min(520px,100%);background:var(--bg2);overflow-y:auto;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);box-shadow:-18px 0 50px rgba(11,21,38,.12);border-inline-start:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:10}
+.drawer.open{transform:none}
+.drawer:not(.open){box-shadow:none;visibility:hidden;transition:transform .35s,visibility 0s .35s}
+.dh{position:sticky;top:0;background:var(--bg2);padding:28px 32px 18px;z-index:2}
+.dh .x{position:absolute;right:20px;top:20px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;cursor:pointer;font-size:20px;line-height:1}
+[dir=rtl] .dh .x{right:auto;left:20px}
+.dh .flag{font-size:40px;line-height:1}
+.dh h1{margin:10px 0 2px;font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1.15}
+.dh .sub{color:var(--ink2);font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:0 32px}
+.kpis div{background:var(--bg3);padding:14px 16px}.kpis b{display:block;font-size:26px;line-height:1.1;letter-spacing:-.02em}.kpis span{font-size:13px;color:var(--ink2)}
+.sec{padding:26px 32px 4px}.sec h2{margin:0 0 12px;font-size:19px;font-weight:700}.sec p{margin:0 0 10px}
+.sec ul{margin:0;padding:0;list-style:none}.sec li{padding:11px 0;border-top:1px solid var(--line);font-size:15.5px}.sec li:first-child{border-top:0;padding-top:0}
+.sec li .m{display:block;color:var(--ink2);font-size:14px;margin-top:2px}
+.dl{display:inline-block;min-width:74px;font-weight:700;color:var(--gold)}.dl.past{color:var(--ink3);font-weight:400}
+.risk-hot{color:var(--hot);font-weight:700}
+.full{display:block;margin:28px 32px 12px;padding:16px 20px;text-align:center;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;border-radius:999px}
+.full2{display:block;margin:0 32px 36px;padding:14px 20px;text-align:center;border:1px solid var(--line);text-decoration:none;border-radius:999px;color:var(--ink2);font-size:15px}
+.muted{color:var(--ink3);font-size:14px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:14px}
+.sheet{position:fixed;top:60px;right:12px;left:12px;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:8px;z-index:40;box-shadow:0 20px 50px rgba(11,21,38,.14)}
+.sheet a{display:block;padding:12px 14px;text-decoration:none;border-radius:8px}.sheet a:hover{background:var(--bg3)}
+.sheet select{margin:8px 14px 10px}
+@media (max-width:980px){.nav{display:none}.menu-btn{display:block}.desk-lang{display:none}}
+@media (max-width:640px){
+ .bar{height:60px;gap:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+ .brand span{display:none}.sp{display:none}
+ .search{flex:1 1 0;min-width:0}.search input{padding:9px 12px}
+ .seg button{padding:6px 10px;font-size:13px}
+ #map{inset:60px 0 0 0;height:calc(100% - 60px)}
+ .drawer{top:auto;height:78%;width:100%;transform:translateY(100%);border-radius:18px 18px 0 0;box-shadow:0 -16px 40px rgba(11,21,38,.16)}
+ .drawer.open{transform:none}
+ .dh{padding:22px 20px 14px}.kpis{margin:0 20px}.sec{padding:22px 20px 4px}.full{margin:24px 20px 10px}.full2{margin:0 20px 32px}.dh h1{font-size:28px}
+ .legend{display:none}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="./"><img src="/assets/govradar-logo.webp" alt=""><span>GOV RADAR</span></a>
+  <div class="search"><input id="q" type="search" autocomplete="off" aria-label="search"><div class="sugg" id="sugg" hidden></div></div>
+  <div class="sp"></div>
+  <div class="seg" role="group"><button data-m="opp" aria-pressed="true" id="m1"></button><button data-m="risk" aria-pressed="false" id="m2"></button></div>
+  <nav class="nav" id="nav"></nav>
+  <select class="lang desk-lang" id="lang" aria-label="Language"></select>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false">☰</button>
+</header>
+<div class="sheet" id="sheet" hidden></div>
+<svg id="map" role="img"></svg>
+<div class="tip" id="tip" hidden></div>
+<div class="legend" id="legend"></div>
+<div class="hint" id="hint"></div>
+<aside class="drawer" id="drawer" aria-live="polite"></aside>
+<script src="/map/d3.min.js"></script>
+<script src="/map/topojson.min.js"></script>
+<script>
+(function(){
+var L=document.documentElement.lang||"ko",LANGS=["ko","en","es","fr","ar","vi","id"],LN={ko:"한국어",en:"English",es:"Español",fr:"Français",ar:"العربية",vi:"Tiếng Việt",id:"Indonesia"};
+var T={
+ko:{q:"나라 찾기",m1:"사업 기회",m2:"위험",hint:"나라를 누르세요 · <b>{n}</b>건 열린 입찰",lgO:"열린 입찰 수",lgR:"위험 수준",few:"적음",many:"많음",low:"낮음",high:"높음",agenda:"정부가 지금 하는 일",needs:"필요로 하는 것",biz:"유망 사업",tenders:"입찰",proj:"큰 사업과 예산",risk:"위험",src:"출처",kO:"사업 기회",kT:"열린 입찰",kU:"최근 갱신",none:"지금 열린 입찰이 없습니다.",more:"나머지 {n}건은 회원에게 열립니다.",full:"이 나라 전체 페이지",join:"회원으로 전체 입찰 보기",sum:"요약",war:"전쟁",tension:"긴장",watch:"주시",rl:{low:"낮음",medium:"보통",high:"높음"},closed:"마감",nav:[["전체 보기","/ko/?stay=1"],["상황판","/ko/conflict/?stay=1"],["요금","/ko/pricing/?stay=1"],["로그인","/ko/?auth=login"]]},
+en:{q:"Find a country",m1:"Opportunities",m2:"Risk",hint:"Tap a country · <b>{n}</b> open tenders",lgO:"Open tenders",lgR:"Risk level",few:"few",many:"many",low:"low",high:"high",agenda:"Government agenda",needs:"What they need",biz:"Promising business",tenders:"Tenders",proj:"Major projects",risk:"Risk",src:"Sources",kO:"Opportunities",kT:"Open tenders",kU:"Updated",none:"No open tenders right now.",more:"{n} more are open to members.",full:"Full country page",join:"See all tenders as a member",sum:"Summary",war:"War",tension:"Tension",watch:"Watch",rl:{low:"Low",medium:"Medium",high:"High"},closed:"closed",nav:[["Full site","/en/?stay=1"],["Situation","/en/conflict/?stay=1"],["Pricing","/en/pricing/?stay=1"],["Log in","/en/?auth=login"]]},
+es:{q:"Buscar un país",m1:"Oportunidades",m2:"Riesgo",hint:"Toque un país · <b>{n}</b> licitaciones abiertas",lgO:"Licitaciones abiertas",lgR:"Nivel de riesgo",few:"pocas",many:"muchas",low:"bajo",high:"alto",agenda:"Agenda del gobierno",needs:"Lo que necesitan",biz:"Negocios prometedores",tenders:"Licitaciones",proj:"Grandes proyectos",risk:"Riesgo",src:"Fuentes",kO:"Oportunidades",kT:"Licitaciones abiertas",kU:"Actualizado",none:"No hay licitaciones abiertas ahora.",more:"{n} más para miembros.",full:"Página completa del país",join:"Ver todas como miembro",sum:"Resumen",war:"Guerra",tension:"Tensión",watch:"Vigilancia",rl:{low:"Bajo",medium:"Medio",high:"Alto"},closed:"cerrada",nav:[["Sitio completo","/es/?stay=1"],["Precios","/es/pricing/?stay=1"],["Entrar","/es/?auth=login"]]},
+fr:{q:"Trouver un pays",m1:"Opportunités",m2:"Risque",hint:"Touchez un pays · <b>{n}</b> appels d'offres ouverts",lgO:"Appels d'offres ouverts",lgR:"Niveau de risque",few:"peu",many:"beaucoup",low:"faible",high:"élevé",agenda:"Programme du gouvernement",needs:"Leurs besoins",biz:"Affaires prometteuses",tenders:"Appels d'offres",proj:"Grands projets",risk:"Risque",src:"Sources",kO:"Opportunités",kT:"Appels ouverts",kU:"Mis à jour",none:"Aucun appel d'offres ouvert.",more:"{n} de plus pour les membres.",full:"Page complète du pays",join:"Tout voir en tant que membre",sum:"Résumé",war:"Guerre",tension:"Tension",watch:"Veille",rl:{low:"Faible",medium:"Moyen",high:"Élevé"},closed:"clos",nav:[["Site complet","/fr/?stay=1"],["Tarifs","/fr/pricing/?stay=1"],["Connexion","/fr/?auth=login"]]},
+ar:{q:"ابحث عن دولة",m1:"الفرص",m2:"المخاطر",hint:"اضغط على دولة · <b>{n}</b> مناقصة مفتوحة",lgO:"المناقصات المفتوحة",lgR:"مستوى المخاطر",few:"قليل",many:"كثير",low:"منخفض",high:"مرتفع",agenda:"أجندة الحكومة",needs:"ما يحتاجونه",biz:"أعمال واعدة",tenders:"المناقصات",proj:"المشاريع الكبرى",risk:"المخاطر",src:"المصادر",kO:"الفرص",kT:"مناقصات مفتوحة",kU:"آخر تحديث",none:"لا توجد مناقصات مفتوحة الآن.",more:"{n} أخرى متاحة للأعضاء.",full:"صفحة الدولة كاملة",join:"شاهد الكل كعضو",sum:"ملخص",war:"حرب",tension:"توتر",watch:"مراقبة",rl:{low:"منخفض",medium:"متوسط",high:"مرتفع"},closed:"مغلقة",nav:[["الموقع الكامل","/ar/?stay=1"],["الأسعار","/ar/pricing/?stay=1"],["دخول","/ar/?auth=login"]]},
+vi:{q:"Tìm quốc gia",m1:"Cơ hội",m2:"Rủi ro",hint:"Chạm vào một quốc gia · <b>{n}</b> gói thầu đang mở",lgO:"Gói thầu đang mở",lgR:"Mức rủi ro",few:"ít",many:"nhiều",low:"thấp",high:"cao",agenda:"Chương trình của chính phủ",needs:"Nhu cầu",biz:"Kinh doanh triển vọng",tenders:"Gói thầu",proj:"Dự án lớn",risk:"Rủi ro",src:"Nguồn",kO:"Cơ hội",kT:"Thầu đang mở",kU:"Cập nhật",none:"Hiện chưa có gói thầu mở.",more:"Thêm {n} gói dành cho hội viên.",full:"Trang đầy đủ của quốc gia",join:"Xem tất cả với tư cách hội viên",sum:"Tóm tắt",war:"Chiến tranh",tension:"Căng thẳng",watch:"Theo dõi",rl:{low:"Thấp",medium:"Trung bình",high:"Cao"},closed:"đã đóng",nav:[["Toàn bộ trang","/vi/?stay=1"],["Bảng giá","/vi/pricing/?stay=1"],["Đăng nhập","/vi/?auth=login"]]},
+id:{q:"Cari negara",m1:"Peluang",m2:"Risiko",hint:"Ketuk negara · <b>{n}</b> tender terbuka",lgO:"Tender terbuka",lgR:"Tingkat risiko",few:"sedikit",many:"banyak",low:"rendah",high:"tinggi",agenda:"Agenda pemerintah",needs:"Yang dibutuhkan",biz:"Bisnis menjanjikan",tenders:"Tender",proj:"Proyek besar",risk:"Risiko",src:"Sumber",kO:"Peluang",kT:"Tender terbuka",kU:"Diperbarui",none:"Belum ada tender terbuka.",more:"{n} lainnya untuk anggota.",full:"Halaman lengkap negara",join:"Lihat semua sebagai anggota",sum:"Ringkasan",war:"Perang",tension:"Ketegangan",watch:"Pantauan",rl:{low:"Rendah",medium:"Sedang",high:"Tinggi"},closed:"ditutup",nav:[["Situs lengkap","/id/?stay=1"],["Harga","/id/pricing/?stay=1"],["Masuk","/id/?auth=login"]]}
+};
+if(!T[L])L="en";
+var t=function(k){return T[L][k]},D={},X={},W=null,mode="opp",sel=null,TODAY=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function flag(i){return i.replace(/./g,function(c){return String.fromCodePoint(127397+c.charCodeAt(0))})}
+function nm(i){var c=D[i];return c?(c.n[L]||c.n.en):i}
+function nOpen(c){return c.to||0}
+function body(i){var c=D[i];if(L==="ko")return c.ko;var e=c.en,x=X[i];if(L==="en"||!x)return e;return{s:x.s||e.s,ld:x.ld||e.ld,ag:(x.ag&&x.ag.length)?x.ag:e.ag,nd:e.nd,bz:(x.bz&&x.bz.length)?x.bz:e.bz,pj:(x.pj&&x.pj.length)?x.pj:e.pj,td:e.td,rc:e.rc}}
+function tdOf(i,b){return (b.td&&b.td.length)?b.td:(D[i].ko.td||[])}
+function opp(c){var b=L==="ko"?c.ko:c.en;return (b.bz||[]).length+(b.pj||[]).length+nOpen(c)}
+// chrome
+document.getElementById("q").placeholder=t("q");document.getElementById("m1").textContent=t("m1");document.getElementById("m2").textContent=t("m2");
+var navH=t("nav").map(function(a){return'<a href="'+a[1]+'">'+esc(a[0])+'</a>'}).join("");document.getElementById("nav").innerHTML=navH;
+var opts=LANGS.map(function(l){return'<option value="'+l+'"'+(l===L?" selected":"")+'>'+LN[l]+'</option>'}).join("");
+var ls=document.getElementById("lang");ls.innerHTML=opts;
+function goLang(v){try{localStorage.setItem("wmm.lang",v)}catch(e){}location.href="/map/"+(v==="ko"?"":v+"/")+location.hash}
+ls.onchange=function(){goLang(ls.value)};
+var sheet=document.getElementById("sheet"),mb=document.getElementById("menuBtn");
+sheet.innerHTML=navH+'<select class="lang" id="lang2" aria-label="Language">'+opts+'</select>';
+document.getElementById("lang2").onchange=function(){goLang(this.value)};
+mb.onclick=function(){sheet.hidden=!sheet.hidden;mb.setAttribute("aria-expanded",!sheet.hidden)};
+// data
+var reqs=[fetch("/map/countries.json").then(function(r){return r.json()}),fetch("/map/world.json").then(function(r){return r.json()})];
+if(L!=="ko"&&L!=="en")reqs.push(fetch("/map/i18n-"+L+".json").then(function(r){return r.json()}).catch(function(){return{}}));
+Promise.all(reqs).then(function(a){D=a[0];X=a[2]||{};W=topojson.feature(a[1],a[1].objects.countries);
+  var tn=0;Object.keys(D).forEach(function(k){tn+=nOpen(D[k])});document.getElementById("hint").innerHTML=t("hint").replace("{n}",tn);
+  build();var h=(location.hash||"").replace("#","").toUpperCase();if(D[h])showCountry(h);
+});
+var svg,g,proj,path,zoom;
+function build(){
+  svg=d3.select("#map");g=svg.append("g");var el=document.getElementById("map"),w=el.clientWidth,h=el.clientHeight;
+  proj=d3.geoNaturalEarth1().fitExtent([[12,12],[w-12,h-12]],W);path=d3.geoPath(proj);
+  g.selectAll("path").data(W.features).join("path").attr("class",function(f){return"c"+(D[f.id]?"":" nodata")}).attr("d",path)
+   .on("mousemove",function(ev,f){if(!D[f.id])return;var tip=document.getElementById("tip"),c=D[f.id];tip.hidden=false;tip.style.left=ev.clientX+"px";tip.style.top=ev.clientY+"px";
+     tip.innerHTML=esc(flag(f.id)+" "+nm(f.id))+"<small>"+(mode==="opp"?nOpen(c)+" · "+esc(t("kT")):esc(c.hz?t(c.hz):(t("rl")[c.rk]||"")))+"</small>"})
+   .on("mouseleave",function(){document.getElementById("tip").hidden=true})
+   .on("click",function(ev,f){if(D[f.id])showCountry(f.id)});
+  zoom=d3.zoom().scaleExtent([1,8]).on("zoom",function(ev){g.attr("transform",ev.transform)});svg.call(zoom);
+  paint();legend();
+}
+function paint(){if(!g)return;
+  var sc=function(n){return n>=6?"var(--a4)":n>=3?"var(--a3)":n>=2?"var(--a2)":n>=1?"var(--a1)":"var(--land)"};
+  var rs=function(c){if(c.hz==="war")return"#C7362E";if(c.hz)return"#E0665E";return c.rk==="high"?"#EE9A94":c.rk==="medium"?"#F7CFCB":"var(--land)"};
+  g.selectAll("path").attr("fill",function(f){var c=D[f.id];if(!c)return"#F3F5F8";return mode==="opp"?sc(nOpen(c)):rs(c)}).classed("sel",function(f){return f.id===sel});
+}
+function legend(){var o=mode==="opp",cs=o?["var(--a1)","var(--a2)","var(--a3)","var(--a4)"]:["#F7CFCB","#EE9A94","#E0665E","#C7362E"];
+  document.getElementById("legend").innerHTML=esc(o?t("lgO"):t("lgR"))+'<div class="sw">'+cs.map(function(c){return'<i style="background:'+c+'"></i>'}).join("")+'</div><div class="ends"><span>'+esc(o?t("few"):t("low"))+"</span><span>"+esc(o?t("many"):t("high"))+"</span></div>"}
+document.querySelectorAll(".seg button").forEach(function(b){b.onclick=function(){mode=b.dataset.m;document.querySelectorAll(".seg button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});paint();legend()}});
+function zoomTo(i){var f=W.features.find(function(x){return x.id===i});if(!f)return;
+  var el=document.getElementById("map"),w=el.clientWidth,h=el.clientHeight,b=path.bounds(f),dx=b[1][0]-b[0][0],dy=b[1][1]-b[0][1];
+  var narrow=w<640,rtl=document.documentElement.dir==="rtl",aw=narrow?w:w-Math.min(520,w),ah=narrow?h*.22:h,k=Math.max(1,Math.min(4,.5/Math.max(dx/aw,dy/ah)));
+  var cx=(b[0][0]+b[1][0])/2,cy=(b[0][1]+b[1][1])/2,ox=(rtl&&!narrow)?w-aw/2:aw/2;
+  svg.transition().duration(750).call(zoom.transform,d3.zoomIdentity.translate(ox-k*cx,(narrow?ah*.6:h/2)-k*cy).scale(k))}
+function li(a,fn){return a&&a.length?"<ul>"+a.map(fn).join("")+"</ul>":""}
+function md(d){return d?d.slice(5).replace("-","/"):""}
+function showCountry(i,keep){
+  sel=i;paint();var c=D[i],b=body(i),dr=document.getElementById("drawer");document.getElementById("hint").style.opacity=0;
+  var sub=[L==="en"?c.n.ko:c.n.en,b.ld].filter(Boolean).join(" · ");
+  var h='<div class="dh"><button class="x" id="dx" aria-label="close">×</button><div class="flag">'+flag(i)+'</div><h1>'+esc(nm(i))+'</h1><div class="sub">'+esc(sub)+'</div></div>';
+  h+='<div class="kpis"><div><b>'+opp(c)+'</b><span>'+esc(t("kO"))+'</span></div><div><b>'+nOpen(c)+'</b><span>'+esc(t("kT"))+'</span></div><div><b>'+esc(md(c.up)||"–")+'</b><span>'+esc(t("kU"))+'</span></div></div>';
+  if(b.s)h+='<div class="sec"><h2>'+esc(t("sum"))+'</h2><p>'+esc(b.s)+'</p></div>';
+  var td=tdOf(i,b),shown=td.filter(function(x){return(x.d||"9999")>=TODAY}).length;
+  h+='<div class="sec"><h2>'+esc(t("tenders"))+'</h2>'+(td.length?li(td,function(x){var past=(x.d||"9999")<TODAY;return'<li><span class="dl'+(past?" past":"")+'">'+esc(past?md(x.d)+" "+t("closed"):md(x.d))+'</span>'+(x.u?'<a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+'</a>':esc(x.t))+'<span class="m">'+esc(x.b||"")+'</span></li>'}):"")+(nOpen(c)?"":'<p class="muted">'+esc(t("none"))+'</p>')+(nOpen(c)>shown?'<p class="muted">'+esc(t("more").replace("{n}",nOpen(c)-shown))+'</p>':"")+'</div>';
+  if(b.bz&&b.bz.length)h+='<div class="sec"><h2>'+esc(t("biz"))+'</h2>'+li(b.bz,function(x){return"<li>"+esc(x)+"</li>"})+'</div>';
+  if(b.ag&&b.ag.length)h+='<div class="sec"><h2>'+esc(t("agenda"))+'</h2>'+li(b.ag,function(x){return"<li>"+esc(x)+"</li>"})+'</div>';
+  if(b.nd&&b.nd.length)h+='<div class="sec"><h2>'+esc(t("needs"))+'</h2>'+li(b.nd,function(x){return"<li>"+esc(x)+"</li>"})+'</div>';
+  if(b.pj&&b.pj.length)h+='<div class="sec"><h2>'+esc(t("proj"))+'</h2>'+li(b.pj,function(x){return"<li>"+esc(x.t)+'<span class="m">'+esc([x.m,x.g].filter(Boolean).join(" · "))+"</span></li>"})+'</div>';
+  var rk=(c.hz?'<span class="risk-hot">'+esc(t(c.hz))+'</span> · ':"")+esc(t("rl")[c.rk]||"");
+  if(rk||(b.rc&&b.rc.length))h+='<div class="sec"><h2>'+esc(t("risk"))+'</h2>'+(rk?'<p>'+rk+'</p>':"")+li(b.rc,function(x){return"<li>"+esc(x)+"</li>"})+'</div>';
+  if(c.sr&&c.sr.length)h+='<div class="sec"><h2>'+esc(t("src"))+'</h2>'+li(c.sr,function(x){return'<li><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+"</a></li>"})+'</div>';
+  if(c.sl)h+='<a class="full" href="/'+L+'/'+esc(c.sl)+'/?stay=1">'+esc(t("full"))+' →</a>';
+  h+='<a class="full2" href="/'+L+'/pricing/?stay=1">'+esc(t("join"))+'</a>';
+  dr.innerHTML=h;dr.classList.add("open");if(!keep){dr.scrollTop=0;zoomTo(i)}
+  document.getElementById("dx").onclick=closeCountry;
+  try{history.replaceState(null,"","#"+i.toLowerCase())}catch(e){}
+}
+function closeCountry(){sel=null;document.getElementById("drawer").classList.remove("open");paint();if(svg)svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity);try{history.replaceState(null,"",location.pathname)}catch(e){}}
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeCountry()});
+var q=document.getElementById("q"),sg=document.getElementById("sugg"),hits=[],hi=0;
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(!v){sg.hidden=true;return}
+  hits=Object.keys(D).filter(function(k){var n=D[k].n;return Object.keys(n).some(function(l){return String(n[l]||"").toLowerCase().indexOf(v)>=0})||k.toLowerCase()===v}).slice(0,7);hi=0;draw()};
+function draw(){if(!hits.length){sg.hidden=true;return}sg.hidden=false;sg.innerHTML=hits.map(function(k,j){return'<button class="'+(j===hi?"on":"")+'" data-k="'+k+'">'+flag(k)+" "+esc(nm(k))+"</button>"}).join("");
+  sg.querySelectorAll("button").forEach(function(b){b.onmousedown=function(e){e.preventDefault();pick(b.dataset.k)}})}
+function pick(k){sg.hidden=true;q.value="";q.blur();showCountry(k)}
+q.onkeydown=function(e){if(sg.hidden)return;if(e.key==="ArrowDown"){hi=Math.min(hits.length-1,hi+1);draw();e.preventDefault()}else if(e.key==="ArrowUp"){hi=Math.max(0,hi-1);draw();e.preventDefault()}else if(e.key==="Enter"&&hits[hi])pick(hits[hi])};
+q.onblur=function(){setTimeout(function(){sg.hidden=true},120)};
+})();
+</script>
+</body>
+</html>

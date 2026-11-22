@@ -83,8 +83,6 @@ function localizePrefilledStudio(lang){
 }
 function setLang(lang){
  const v=lang==='en'?'en':'ko';document.documentElement.lang=v;
- const radarEntry = 'https://www.wmm-hoa.com/radar-entry/' + (v === 'en' ? 'en/' : '');
- $$('a[data-radar-entry]').forEach(link => { link.href = radarEntry; });
  $$('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(i18n[v][k])el.textContent=i18n[v][k]});
  translateStaticNodes(v);
  localizeCatalogCards(v);

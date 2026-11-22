@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-22T01:16:04.224792+00:00",
+  "generated_at_utc": "2026-11-22T07:24:49.002355+00:00",
   "type": "source_backed_public_procurement_organisations",
   "not_commercial_buyer_directory": true,
   "disclaimer_ko": "공식 공개 조달공고의 발주기관 목록입니다. 상업 수입 바이어·거래 의사·연락처 또는 현재 입찰 가능 상태를 보증하지 않습니다. 원문에서 재확인하세요.",
@@ -2194,19 +2194,6 @@
           "title": "Vascular Therapy and Associated Products 2028",
           "deadline": "2027-01-19",
           "notice_url": "https://www.find-tender.service.gov.uk/Notice/109328-2026",
-          "source": "UK Find a Tender"
-        }
-      ]
-    },
-    {
-      "country_iso": "GB",
-      "procurement_entity": "The Common Services Agency (more commonly known as NHS National Services Scotland) (NSS)",
-      "source_backed_notice_count": 1,
-      "notices": [
-        {
-          "title": "Ophthalmology Equipment",
-          "deadline": "2026-11-27",
-          "notice_url": "https://www.find-tender.service.gov.uk/Notice/101509-2026",
           "source": "UK Find a Tender"
         }
       ]
