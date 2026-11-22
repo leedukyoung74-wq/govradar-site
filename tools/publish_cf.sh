@@ -45,6 +45,9 @@ python3 tools/path4.py cf/public || exit 1   # WMM 길 네 단계 띠 (welcome �
 python3 tools/buyers_page.py || exit 1   # 공공조달 발주기관 검색(/buyers/, PR #111)
 python3 tools/lang_guard.py cf/public
 python3 tools/asset_version.py cf/public
+# P0 SEO gate (#72): 생성된 사이트맵에서 noindex·비정규 주소 제거 후 검증 (live 푸시 전)
+python3 tools/repair_sitemap.py cf/public --min-urls 1000 --max-removed 100 --write || { echo 'STOP: unsafe sitemap reconciliation. No live push.'; exit 1; }
+python3 tools/finalize_sitemap.py cf/public --min-urls 1000 || { echo 'STOP: generated sitemap verification failed. No live push.'; exit 1; }
 # When explicitly enabled, the finished staging output must match the exported country source.
 # Keep this after all overlays and before touching the live repository.
 if [ "${WMM_EXPORT_PREFLIGHT:-off}" = "required" ]; then
