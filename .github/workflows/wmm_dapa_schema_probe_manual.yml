@@ -1,0 +1,57 @@
+name: WMM DAPA response field inspection (NO PUBLISH)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check official list field shapes without exposing API key
+        shell: bash
+        env:
+          DAPA_KEY: ${{ secrets.DAPA_KEY }}
+        run: |
+          python - <<'PY'
+          import os,urllib.request,urllib.parse,xml.etree.ElementTree as ET,datetime as dt,re
+          key=os.environ.get("DAPA_KEY","")
+          if not key: raise SystemExit("MISSING_KEY")
+          t=dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
+          p={"serviceKey":key,"pageNo":1,"numOfRows":8,
+             "inqryBgnDt":(t-dt.timedelta(days=45)).strftime("%Y%m%d"),
+             "inqryEndDt":t.strftime("%Y%m%d")}
+          url="https://apis.data.go.kr/1690000/DCAIBidInfoService/getDCAIBidInfoList?"+urllib.parse.urlencode(p,safe="%")
+          try:
+              with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"WMM-DAPA-schema-probe"}),timeout=30) as r:
+                  root=ET.fromstring(r.read(200000))
+          except Exception:
+              raise SystemExit("LIST_FAILED_URL_AND_ERROR_HIDDEN")
+          rows=root.findall(".//item")
+          print("DAPA_LIST_ROWS="+str(len(rows)))
+          if not rows: raise SystemExit("LIST_EMPTY")
+          keys=sorted({c.tag.rsplit("}",1)[-1] for x in rows for c in x})
+          print("DAPA_LIST_FIELD_NAMES="+",".join(keys))
+          for i,x in enumerate(rows[:5]):
+              d={c.tag.rsplit("}",1)[-1]:(c.text or "").strip() for c in x}
+              def safe(v):return re.sub("[^A-Za-z0-9가-힣.,/ :_+\\-]","",str(v or ""))[:80]
+              print("ROW_"+str(i)+"_bidTo="+safe(d.get("bidTo","")))
+              print("ROW_"+str(i)+"_bidNameEng="+safe(d.get("bidNameEng","")))
+              print("ROW_"+str(i)+"_infoAcquireFrom="+safe(d.get("infoAcquireFrom","")))
+          seq=next(({c.tag.rsplit("}",1)[-1]:(c.text or "").strip() for c in r}.get("seqn") for r in rows if r.find("seqn") is not None),None)
+          if seq:
+              q=urllib.parse.urlencode({"serviceKey":key,"seqn":seq},safe="%")
+              durl="https://apis.data.go.kr/1690000/DCAIBidInfoService/getDCAIBidInfoDetail?"+q
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(durl,headers={"User-Agent":"WMM-DAPA-schema-probe"}),timeout=25) as r:
+                      detail=ET.fromstring(r.read(200000))
+                  dd=detail.find(".//item")
+                  if dd is not None:
+                      print("DAPA_DETAIL_FIELDS="+",".join(sorted({c.tag.rsplit("}",1)[-1] for c in dd})))
+                      for c in dd:
+                          k=c.tag.rsplit("}",1)[-1]
+                          if re.search("cntry|country|nation|ntn|bidto|url|link|region|area|due|deadline",k,re.I):
+                              print("DAPA_DETAIL_RELEVANT_"+re.sub("[^A-Za-z0-9_]","",k)[:50]+"="+re.sub("[^A-Za-z0-9가-힣.,/ :_+\\-]","",str(c.text or ""))[:100])
+                  else:print("DAPA_DETAIL_ROOT="+detail.tag.rsplit("}",1)[-1][:50])
+              except Exception:print("DAPA_DETAIL_FETCH_FAILED_NO_SECRET_EXPOSED")
+          PY
