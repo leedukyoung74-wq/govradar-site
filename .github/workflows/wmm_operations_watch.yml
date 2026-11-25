@@ -144,13 +144,13 @@ jobs:
                                   'source_error':h.get('last_error'),'source_health_ok':h.get('ok')})
               except Exception as exc:
                   record(name,False,type(exc).__name__)
-          url='https://api.github.com/repos/'+repo+'/actions/runs?event=schedule&per_page=100'
+          url='https://api.github.com/repos/'+repo+'/actions/runs?event=schedule&per_page=30'
           first_nws=dt.datetime(2026,11,19,4,54,tzinfo=UTC)
           expected=(
               ('USGS five-minute schedule','WMM GOV RADAR fast official data publishing',150,dt.datetime(2026,11,19,4,39,tzinfo=UTC)),
               ('NWS/CISA 15-minute schedule','WMM Official NWS + CISA KEV public updates',180,first_nws))
           try:
-              runs=get(url,github=True,json_only=True).get('workflow_runs',[])
+              runs=get(url,github=True,json_only=True,max_bytes=2_000_000).get('workflow_runs',[])
               for label,name,limit,start in expected:
                   found=sorted((r for r in runs if r.get('name')==name and r.get('event')=='schedule'),key=lambda r:r.get('created_at') or '',reverse=True)
                   if not found and (now-start).total_seconds()<3*3600:
@@ -163,8 +163,11 @@ jobs:
                   record(label,ok,{'state':'verified' if recent else 'missing','last_run_id':recent.get('id') if recent else None,
                                    'last_conclusion':recent.get('conclusion') if recent else None,
                                    'minutes_since_last_scheduled_run':age})
+          except ValueError as exc:
+              code=str(exc)
+              record('GitHub scheduled events check',False,{'error':'ValueError','reason':code if code in ('host_not_allowlisted','redirect_not_allowlisted','response_too_large') else 'unexpected_value_error'})
           except Exception as exc:
-              record('GitHub scheduled events check',False,type(exc).__name__)
+              record('GitHub scheduled events check',False,{'error':type(exc).__name__})
           for label,path,needle in (
               ('KO cyber website','/cyber/?stay=1','wmm-official-sources.js'),
               ('EN cyber website','/cyber/en/?stay=1','wmm-official-sources.js'),
@@ -205,11 +208,11 @@ jobs:
                   record('Country brief provenance ('+_label+')',False,{'error':type(exc).__name__})
           summary_path=os.environ.get('GITHUB_STEP_SUMMARY')
           failed=[x for x in checks if not x['ok']]
-          pending=[x for x in checks if x.get('detail',{}).get('pending')]
+          pending=[x for x in checks if isinstance(x.get('detail'),dict) and x['detail'].get('pending')]
           result='FAIL' if failed else ('PENDING' if pending else 'PASS')
           table=['## WMM GOV RADAR hourly public health: '+result,'',
                  '| Check | Result |','|---|---|']
-          for x in checks:table.append('| '+x['item']+' | '+('PENDING' if x.get('detail',{}).get('pending') else ('PASS' if x['ok'] else 'FAIL'))+' |')
+          for x in checks:table.append('| '+x['item']+' | '+('PENDING' if isinstance(x.get('detail'),dict) and x['detail'].get('pending') else ('PASS' if x['ok'] else 'FAIL'))+' |')
           table.append('')
           table.append('Data are public-source only. GitHub scheduled runs may be delayed; a PASS cannot guarantee exact five-minute execution.')
           if summary_path:
