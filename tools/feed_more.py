@@ -50,6 +50,12 @@ def _retry(src, fn, tries=3):
             # A 429 means the UK official endpoint has explicitly refused more
             # requests for this run. Deferring the rest is safer than retrying
             # 2 minutes later and continuing the same already-too-large scan.
+            if code == 429 and src == "SAM.gov (US)":
+                # Respect provider rate limits: one 429 is enough to defer.
+                # Repeated retries worsen exhausted daily free quotas.
+                stat(src)["failed"] += 1
+                stat(src)["notes"].append("upstream_429_deferred: await provider quota reset")
+                raise
             if code == 429 and src == "UK Find a Tender":
                 raw = (getattr(ex, "headers", None) or {}).get("Retry-After")
                 try: seconds = max(0, min(86400, int(raw)))

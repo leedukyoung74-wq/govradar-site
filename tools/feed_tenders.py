@@ -248,7 +248,9 @@ def main():
         d = datetime.date.fromisoformat(x["deadline"]); x["urgent"] = (d - TODAY).days <= 2
     for nm_, c in counts.items():
         st = dict(FM.stat(nm_)); st.update(c); st["checked"] = stamp
-        st["new_today"] = sum(1 for x in items if x["source"] == nm_ and x["added"] == TODAY.isoformat())
+        st["new_today"] = sum(1 for x in items if x["source"] == nm_ and
+                              x.get("added") == TODAY.isoformat() and
+                              not x.get("stale") and x.get("verify") != "partial")
         # A PARTIAL source can contain valid rows, but a source that never
         # answered cannot advance its last truly successful check.
         answered = source_answered(st)
