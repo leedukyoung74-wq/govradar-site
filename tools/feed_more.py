@@ -443,7 +443,18 @@ def dapa():
     stat(S)["notes"].append("upstream_total=" + str(total) + "; latest_page=" + str(last_page))
     dates = [_dapa_day(x.get("bidTo")) for x in latest]
     if dates:
-        stat(S)["notes"].append("latest_page_max_bidTo=" + max(dates))
+        sampled_latest = max(dates)
+        stat(S)["notes"].append("latest_page_max_bidTo=" + sampled_latest)
+        # This is a fact about the sampled LAST page, not proof that every
+        # record in the provider's archive has been scanned.
+        stat(S)["sampled_latest_bid_to"] = sampled_latest
+        if sampled_latest < today.isoformat():
+            stat(S)["data_freshness"] = "HISTORICAL_SAMPLE"
+            stat(S)["notes"].append("upstream_historical_sample: latest sampled deadline is past")
+    stat(S)["coverage"] = "FIRST_AND_LAST_PAGES_ONLY"
+    stat(S)["date_filter_verified"] = False
+    # The date-filter parameters previously returned the same 7,205 historic
+    # rows with and without filters. Do not assert that the provider applied them.
     # First and last pages give a bounded sample without exhausting the free quota.
     # A skipped or failed page is not proof there are zero open bids elsewhere.
     candidates = list(latest) + (first if last_page > 1 else [])
@@ -483,24 +494,90 @@ def dapa():
     return out
 
 def sam():
-    """US SAM.gov Get Opportunities public API — runs only when the SAM_KEY secret is set."""
+    """SAM.gov public solicitations: preserve official active state, posted/deadline filters,
+    bounded pagination and explicitly report incomplete provider coverage.
+    3 requests/day, maximum 1000 rows/request; NEVER imply the first 80
+    records represent all U.S. procurement opportunities.
+    """
     S = "SAM.gov (US)"; key = os.environ.get("SAM_KEY")
     if not key:
         stat(S)["skipped"] = True
         stat(S)["notes"].append("not_configured:SAM_KEY")
         return []
     f = lambda d: d.strftime("%m/%d/%Y")
-    q = {"api_key": key, "postedFrom": f(TODAY - datetime.timedelta(days=30)), "postedTo": f(TODAY), "ptype": "o,k", "limit": 1000}
-    try: j = json.loads(_get(S, "https://api.sam.gov/opportunities/v2/search?" + urllib.parse.urlencode(q)))
-    except Exception: return []
-    rows = j.get("opportunitiesData") or []; stat(S)["raw"] += len(rows); out = []
-    for r in rows:
-        raw = str(r.get("responseDeadLine") or r.get("reponseDeadLine") or "")
-        if not _keep(S, raw[:25].replace(" ", "T") if raw else ""): continue
-        out.append({"iso": "US", "title": str(r.get("title") or "")[:220], "buyer": str(r.get("fullParentPathName") or "")[:160],
-                    "deadline": raw[:10], "deadline_at": raw, "url": r.get("uiLink") or "https://sam.gov", "sid": str(r.get("noticeId") or ""),
-                    "source": S, "type": str(r.get("type") or "")[:40], "project": "", "pm": "", "pmn": "", "pg": "", "ma": "", "est": "", "cur": ""})
-    return out[:80]
+    per_page, max_pages, cap = 1000, 3, 80
+    # Date filtering is supported in the official v2 API. We focus on recently
+    # posted solicitations closing within 180 days, not archival awards.
+    base = {"api_key": key, "postedFrom": f(TODAY - datetime.timedelta(days=30)),
+            "postedTo": f(TODAY), "rdlfrom": f(TODAY),
+            "rdlto": f(TODAY + datetime.timedelta(days=180)),
+            "ptype": "o,k", "limit": per_page}
+    collected = {}
+    total = None
+    scanned_pages = 0
+    for page in range(max_pages):
+        if total is not None and page * per_page >= total: break
+        q = dict(base, offset=page * per_page)
+        try:
+            result = json.loads(_get(S, "https://api.sam.gov/opportunities/v2/search?" + urllib.parse.urlencode(q),
+                                     tries=2, timeout=35))
+            if not isinstance(result, dict) or not isinstance(result.get("opportunitiesData"), list):
+                stat(S)["failed"] += 1
+                stat(S)["notes"].append("sam_unexpected_response_schema")
+                break
+        except Exception:
+            break
+        rows = result["opportunitiesData"]
+        scanned_pages += 1
+        stat(S)["raw"] += len(rows)
+        if total is None:
+            try: total = max(0, int(result.get("totalRecords", len(rows))))
+            except (TypeError, ValueError): total = len(rows)
+        for r in rows:
+            # The response's 'active' field denotes official current state.
+            # Unknown state must NOT be quietly advertised as active.
+            active = str(r.get("active") or "").strip().lower()
+            if active not in ("yes", "true"):
+                drop(S, "inactive" if active in ("no", "false") else "active-unverified")
+                continue
+            raw = str(r.get("responseDeadLine") or r.get("reponseDeadLine") or "").strip()
+            if not _keep(S, raw[:25].replace(" ", "T") if raw else ""): continue
+            url = str(r.get("uiLink") or "").strip()
+            parsed = urllib.parse.urlsplit(url)
+            if parsed.scheme != "https" or parsed.hostname not in ("sam.gov", "www.sam.gov"):
+                drop(S, "nonofficial-or-missing-url")
+                continue
+            sid = str(r.get("noticeId") or "").strip()
+            title = str(r.get("title") or "").strip()
+            if not sid or not title:
+                drop(S, "missing-id-or-title")
+                continue
+            # If the same notice appears twice, latest API version is published.
+            collected[sid] = {"iso": "US", "title": title[:220],
+                              "buyer": str(r.get("fullParentPathName") or "")[:160],
+                              "deadline": raw[:10], "deadline_at": raw,
+                              "url": url, "sid": sid, "source": S,
+                              "type": str(r.get("type") or "")[:40],
+                              "project": "", "pm": "", "pmn": "",
+                              "pg": "", "ma": "", "est": "", "cur": ""}
+        if len(rows) < per_page: break
+    out = sorted(collected.values(), key=lambda r: (r["deadline"], r["sid"]))
+    st = stat(S)
+    st["upstream_total"] = total if total is not None else 0
+    st["pages_scanned"] = scanned_pages
+    st["rows_scanned"] = st["raw"]
+    st["selection_cap"] = cap
+    st["search_window_days"] = 30
+    st["closing_window_days"] = 180
+    st["coverage"] = "BOUNDED_PAGES_NOT_ALL_US_NOTICES"
+    st["coverage_partial"] = bool(total is not None and total > st["raw"])
+    if st["coverage_partial"]:
+        st["notes"].append("upstream_pagination_not_exhaustive; not an all-US count")
+    if len(out) > cap:
+        for unused in out[cap:]: drop(S, "source-cap")
+    # Some official uiLink pages require SAM.gov login/role; this is not
+    # evidence that an unauthenticated visitor can open the record.
+    return out[:cap]
 
 def canada():
     """CanadaBuys open tender notices (open data CSV) — NOT RUN: canadabuys.canada.ca robots.txt allows only search engines.
