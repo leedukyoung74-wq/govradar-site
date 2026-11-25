@@ -27,7 +27,7 @@ class DapaRealSchemaTest(unittest.TestCase):
 
     def test_archive_is_not_published_as_current(self):
         old={"seqn":"1","bidTo":"20190318","orgPlace":"US","bidNameEng":"Old US bid"}
-        def fake(url, **kwargs):
+        def fake(src,url, **kwargs):
             return xml([old],501)
         with patch.dict("os.environ",{"DAPA_KEY":"test-not-real"}),patch.object(FM,"_get",side_effect=fake) as g:
             self.assertEqual(FM.dapa(), [])
@@ -41,7 +41,7 @@ class DapaRealSchemaTest(unittest.TestCase):
         new={"seqn":"501","bidTo":future,"orgPlace":"US","orgPlaceNm":"United States",
              "bidNameEng":"Recent US bid","anucTypeNm":"Bid"}
         detail="<response><body><items><item><oriUrl>https://official.example.gov/notice/501</oriUrl><orderOrgan>Agency A</orderOrgan><bidTo>"+future+"</bidTo></item></items></body></response>"
-        def fake(url,**kwargs):
+        def fake(src,url,**kwargs):
             if "getDCAIBidInfoDetail" in url: return detail
             q=parse_qs(urlsplit(url).query)
             return xml([new] if q["pageNo"]==["2"] else [old],501)
