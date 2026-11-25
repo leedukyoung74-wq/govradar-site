@@ -3,9 +3,9 @@
 name: Daily tender feed (no AI)
 on:
   workflow_dispatch:
-  push:
-    branches: [src]
-    paths: [".github/workflows/tenders.yml", ".github/workflows/feeds.yml", "tools/feed_tenders.py", "tools/feed_intel.py", "tools/feed_cty.py", "tools/feed_more.py"]
+  # Review/code merges must NOT cause unplanned production API bursts.
+  # Production refresh is dispatched only from main/.github/workflows/schedule.yml.
+  # Manual invocation remains available for owner-approved recovery.
 permissions:
   contents: write
 jobs:
