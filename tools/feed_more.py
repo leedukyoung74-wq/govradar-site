@@ -517,7 +517,8 @@ def sam():
     scanned_pages = 0
     for page in range(max_pages):
         if total is not None and page * per_page >= total: break
-        q = dict(base, offset=page * per_page)
+        # SAM.gov offset is the zero-based PAGE INDEX, not an absolute row offset.
+        q = dict(base, offset=page)
         try:
             result = json.loads(_get(S, "https://api.sam.gov/opportunities/v2/search?" + urllib.parse.urlencode(q),
                                      tries=2, timeout=35))
