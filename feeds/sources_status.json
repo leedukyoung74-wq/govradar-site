@@ -24,18 +24,18 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 317,
-  "checked": "2026-11-25T14:47Z",
+  "checked": "2026-11-25T23:14Z",
   "new_today": 43,
-  "last_success": "2026-11-25T14:47Z"
+  "last_success": "2026-11-25T23:14Z"
  },
  "EU TED": {
   "requests": 13,
   "failed": 0,
   "raw": 3177,
   "filtered": {
-   "below-size": 1465,
-   "closed": 113,
-   "country-cap": 1012
+   "below-size": 1440,
+   "closed": 151,
+   "country-cap": 999
   },
   "notes": [],
   "state": "SUCCESS",
@@ -51,49 +51,49 @@
   "duplicates": 3,
   "flagged_similar": 0,
   "kept": 584,
-  "checked": "2026-11-25T14:47Z",
-  "new_today": 58,
-  "last_success": "2026-11-25T14:47Z"
+  "checked": "2026-11-25T23:14Z",
+  "new_today": 62,
+  "last_success": "2026-11-25T23:14Z"
  },
  "UK Find a Tender": {
   "requests": 12,
   "failed": 1,
   "raw": 1200,
   "filtered": {
+   "not-active": 1017,
    "below-size": 118,
-   "not-active": 1020,
-   "no-deadline": 8,
-   "closed": 2,
+   "no-deadline": 9,
+   "closed": 1,
    "same-notice-update": 4,
-   "source-cap": 8
+   "source-cap": 11
   },
   "notes": [
    "source_page_cap_reached: OCDS partial results"
   ],
   "state": "PARTIAL",
-  "carried_verified": 13,
-  "carried_stale": 42,
+  "carried_verified": 15,
+  "carried_stale": 51,
   "dropped_unverified": 0,
   "dropped_closed": 0,
   "dropped_cancelled": 0,
-  "verify_lookups": 21,
-  "carried_from_yesterday": 55,
-  "in": 95,
+  "verify_lookups": 22,
+  "carried_from_yesterday": 66,
+  "in": 106,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 95,
-  "checked": "2026-11-25T14:47Z",
-  "new_today": 38,
-  "last_success": "2026-11-25T14:47Z"
+  "kept": 106,
+  "checked": "2026-11-25T23:14Z",
+  "new_today": 49,
+  "last_success": "2026-11-25T23:14Z"
  },
  "UK Contracts Finder": {
   "requests": 2,
   "failed": 0,
   "raw": 144,
   "filtered": {
-   "below-size": 77,
-   "closed": 53,
+   "below-size": 76,
+   "closed": 55,
    "same-notice-update": 1
   },
   "notes": [],
@@ -101,30 +101,30 @@
   "carried_verified": 0,
   "carried_stale": 2,
   "dropped_unverified": 0,
-  "dropped_closed": 0,
+  "dropped_closed": 1,
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 2,
-  "in": 15,
+  "in": 14,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 15,
-  "checked": "2026-11-25T14:47Z",
+  "kept": 14,
+  "checked": "2026-11-25T23:14Z",
   "new_today": 0,
-  "last_success": "2026-11-25T14:47Z"
+  "last_success": "2026-11-25T23:14Z"
  },
  "Prozorro (Ukraine)": {
-  "requests": 382,
+  "requests": 413,
   "failed": 0,
   "raw": 25000,
   "filtered": {
-   "below-size": 1119
+   "below-size": 1343
   },
   "notes": [],
-  "candidates": 1150,
-  "checked_now": 357,
-  "rechecked_changed": 7,
+  "candidates": 1379,
+  "checked_now": 388,
+  "rechecked_changed": 105,
   "unchecked": 0,
   "state": "SUCCESS",
   "carried_verified": 0,
@@ -134,14 +134,14 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 31,
+  "in": 36,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 31,
-  "checked": "2026-11-25T14:47Z",
-  "new_today": 31,
-  "last_success": "2026-11-25T14:47Z"
+  "kept": 36,
+  "checked": "2026-11-25T23:14Z",
+  "new_today": 36,
+  "last_success": "2026-11-25T23:14Z"
  },
  "DAPA (Korea)": {
   "requests": 2,
@@ -154,8 +154,13 @@
   "notes": [
    "upstream_total=7205; latest_page=15",
    "latest_page_max_bidTo=2019-04-09",
+   "upstream_historical_sample: latest sampled deadline is past",
    "no_verified_open_notice_in_bounded_pages"
   ],
+  "sampled_latest_bid_to": "2019-04-09",
+  "data_freshness": "HISTORICAL_SAMPLE",
+  "coverage": "FIRST_AND_LAST_PAGES_ONLY",
+  "date_filter_verified": false,
   "state": "SUCCESS",
   "carried_verified": 0,
   "carried_stale": 0,
@@ -169,33 +174,42 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 0,
-  "checked": "2026-11-25T14:47Z",
+  "checked": "2026-11-25T23:14Z",
   "new_today": 0,
-  "last_success": "2026-11-25T14:47Z"
+  "last_success": "2026-11-25T23:14Z"
  },
  "SAM.gov (US)": {
   "requests": 1,
-  "failed": 0,
-  "raw": 1000,
-  "filtered": {
-   "closed": 26
-  },
-  "notes": [],
-  "state": "SUCCESS",
+  "failed": 1,
+  "raw": 0,
+  "filtered": {},
+  "notes": [
+   "retry 1 after 60s: HTTPError: HTTP Error 429: Too Many Requests",
+   "HTTPError: HTTP Error 429: Too Many Requests"
+  ],
+  "upstream_total": 0,
+  "pages_scanned": 0,
+  "rows_scanned": 0,
+  "selection_cap": 80,
+  "search_window_days": 30,
+  "closing_window_days": 180,
+  "coverage": "BOUNDED_PAGES_NOT_ALL_US_NOTICES",
+  "coverage_partial": false,
+  "state": "ERROR",
   "carried_verified": 0,
-  "carried_stale": 0,
+  "carried_stale": 77,
   "dropped_unverified": 0,
-  "dropped_closed": 0,
+  "dropped_closed": 3,
   "dropped_cancelled": 0,
   "verify_lookups": 0,
-  "carried_from_yesterday": 0,
-  "in": 80,
+  "carried_from_yesterday": 77,
+  "in": 77,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 80,
-  "checked": "2026-11-25T14:47Z",
-  "new_today": 80,
+  "kept": 77,
+  "checked": "2026-11-25T23:14Z",
+  "new_today": 77,
   "last_success": "2026-11-25T14:47Z"
  }
 }
