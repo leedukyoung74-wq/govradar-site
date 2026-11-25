@@ -37,7 +37,7 @@ class OfficialKeyedSourcesTests(unittest.TestCase):
             "reponseDeadLine": deadline,
             "fullParentPathName": "US Government",
             "uiLink": "https://sam.gov/opportunities",
-            "type": "Solicitation"
+            "type": "Solicitation", "active": "Yes"
         }]}
         with mock.patch.dict(os.environ, {"SAM_KEY": "fixture-only-no-network"}, clear=False), \
              mock.patch.object(FM, "_get", return_value=json.dumps(fixture)) as get:
