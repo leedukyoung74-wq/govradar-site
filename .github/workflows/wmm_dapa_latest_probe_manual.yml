@@ -1,0 +1,48 @@
+name: WMM DAPA latest-page probe (NO PUBLISH)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Identify DAPA latest page / dates without exposing credentials
+        env:
+          DAPA_KEY: ${{ secrets.DAPA_KEY }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os,re,sys,math,datetime as dt,urllib.parse as u,urllib.request as req
+          import xml.etree.ElementTree as ET
+          key=os.environ.get("DAPA_KEY","")
+          if not key:raise SystemExit("DAPA_KEY_MISSING")
+          today=dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
+          def run(page,n):
+              params={"serviceKey":key,"pageNo":page,"numOfRows":n,
+                  "inqryBgnDt":(today-dt.timedelta(days=60)).strftime("%Y%m%d"),
+                  "inqryEndDt":today.strftime("%Y%m%d")}
+              url="https://apis.data.go.kr/1690000/DCAIBidInfoService/getDCAIBidInfoList?"+u.urlencode(params,safe="%")
+              try:
+                  with req.urlopen(req.Request(url,headers={"User-Agent":"WMM-DAPA-latest-probe"}),timeout=25) as r:
+                      root=ET.fromstring(r.read(300000))
+              except Exception:
+                  raise SystemExit("HTTP_OR_PARSE_ERROR_SECRET_HIDDEN")
+              cnt=root.findtext(".//totalCount")
+              out=[]
+              for it in root.findall(".//item"):
+                  d={c.tag.rsplit("}",1)[-1]:(c.text or "").strip() for c in it}
+                  out.append(d)
+              print("PAGE_NO="+str(page))
+              print("TOTAL_COUNT="+str(cnt))
+              print("ROWS="+str(len(out)))
+              for i,v in enumerate(out[:3]):
+                  for f in ("bidTo","orgPlace","orgPlaceNm","region","regionNm","seqn"):
+                      raw=str(v.get(f,""))
+                      print("ITEM_"+str(i)+"_"+f+"="+re.sub("[^a-zA-Z0-9가-힣._ /:-]","",raw)[:80])
+              return int(cnt or 0),out
+          total,first=run(1,10)
+          if total>10:
+              run(min(20000,math.ceil(total/10)),10)
+          PY
