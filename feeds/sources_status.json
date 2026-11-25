@@ -24,9 +24,9 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 317,
-  "checked": "2026-11-25T14:41Z",
+  "checked": "2026-11-25T14:47Z",
   "new_today": 43,
-  "last_success": "2026-11-25T14:41Z"
+  "last_success": "2026-11-25T14:47Z"
  },
  "EU TED": {
   "requests": 13,
@@ -51,41 +51,41 @@
   "duplicates": 3,
   "flagged_similar": 0,
   "kept": 584,
-  "checked": "2026-11-25T14:41Z",
+  "checked": "2026-11-25T14:47Z",
   "new_today": 58,
-  "last_success": "2026-11-25T14:41Z"
+  "last_success": "2026-11-25T14:47Z"
  },
  "UK Find a Tender": {
   "requests": 12,
   "failed": 1,
   "raw": 1200,
   "filtered": {
+   "below-size": 118,
    "not-active": 1020,
-   "below-size": 117,
    "no-deadline": 8,
    "closed": 2,
    "same-notice-update": 4,
-   "source-cap": 9
+   "source-cap": 8
   },
   "notes": [
    "source_page_cap_reached: OCDS partial results"
   ],
   "state": "PARTIAL",
-  "carried_verified": 14,
-  "carried_stale": 40,
+  "carried_verified": 13,
+  "carried_stale": 42,
   "dropped_unverified": 0,
   "dropped_closed": 0,
   "dropped_cancelled": 0,
-  "verify_lookups": 19,
-  "carried_from_yesterday": 54,
-  "in": 94,
+  "verify_lookups": 21,
+  "carried_from_yesterday": 55,
+  "in": 95,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 94,
-  "checked": "2026-11-25T14:41Z",
-  "new_today": 37,
-  "last_success": "2026-11-25T14:41Z"
+  "kept": 95,
+  "checked": "2026-11-25T14:47Z",
+  "new_today": 38,
+  "last_success": "2026-11-25T14:47Z"
  },
  "UK Contracts Finder": {
   "requests": 2,
@@ -101,7 +101,7 @@
   "carried_verified": 0,
   "carried_stale": 2,
   "dropped_unverified": 0,
-  "dropped_closed": 1,
+  "dropped_closed": 0,
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 2,
@@ -110,23 +110,22 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 15,
-  "checked": "2026-11-25T14:41Z",
+  "checked": "2026-11-25T14:47Z",
   "new_today": 0,
-  "last_success": "2026-11-25T14:41Z"
+  "last_success": "2026-11-25T14:47Z"
  },
  "Prozorro (Ukraine)": {
-  "requests": 425,
+  "requests": 382,
   "failed": 0,
   "raw": 25000,
   "filtered": {
-   "below-size": 786,
-   "not-checked-yet": 333
+   "below-size": 1119
   },
   "notes": [],
-  "candidates": 1142,
-  "checked_now": 400,
-  "rechecked_changed": 15,
-  "unchecked": 333,
+  "candidates": 1150,
+  "checked_now": 357,
+  "rechecked_changed": 7,
+  "unchecked": 0,
   "state": "SUCCESS",
   "carried_verified": 0,
   "carried_stale": 0,
@@ -135,14 +134,14 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 23,
+  "in": 31,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 23,
-  "checked": "2026-11-25T14:41Z",
-  "new_today": 23,
-  "last_success": "2026-11-25T14:41Z"
+  "kept": 31,
+  "checked": "2026-11-25T14:47Z",
+  "new_today": 31,
+  "last_success": "2026-11-25T14:47Z"
  },
  "DAPA (Korea)": {
   "requests": 2,
@@ -170,9 +169,9 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 0,
-  "checked": "2026-11-25T14:41Z",
+  "checked": "2026-11-25T14:47Z",
   "new_today": 0,
-  "last_success": "2026-11-25T14:41Z"
+  "last_success": "2026-11-25T14:47Z"
  },
  "SAM.gov (US)": {
   "requests": 1,
@@ -195,8 +194,8 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 80,
-  "checked": "2026-11-25T14:41Z",
+  "checked": "2026-11-25T14:47Z",
   "new_today": 80,
-  "last_success": "2026-11-25T14:41Z"
+  "last_success": "2026-11-25T14:47Z"
  }
 }
