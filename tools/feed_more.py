@@ -404,7 +404,10 @@ def prozorro():
 
 def dapa():
     S = "DAPA (Korea)"; key = os.environ.get("DAPA_KEY")
-    if not key: stat(S)["skipped"] = True; return []
+    if not key:
+        stat(S)["skipped"] = True
+        stat(S)["notes"].append("not_configured:DAPA_KEY")
+        return []
     q = {"serviceKey": key, "pageNo": 1, "numOfRows": 500,
          "inqryBgnDt": (TODAY - datetime.timedelta(days=60)).strftime("%Y%m%d"), "inqryEndDt": TODAY.strftime("%Y%m%d")}
     try: x = _get(S, "https://apis.data.go.kr/1690000/DCAIBidInfoService/getDCAIBidInfoList?" + urllib.parse.urlencode(q, safe="%"))
@@ -431,14 +434,17 @@ def dapa():
 def sam():
     """US SAM.gov Get Opportunities public API — runs only when the SAM_KEY secret is set."""
     S = "SAM.gov (US)"; key = os.environ.get("SAM_KEY")
-    if not key: stat(S)["skipped"] = True; return []
+    if not key:
+        stat(S)["skipped"] = True
+        stat(S)["notes"].append("not_configured:SAM_KEY")
+        return []
     f = lambda d: d.strftime("%m/%d/%Y")
     q = {"api_key": key, "postedFrom": f(TODAY - datetime.timedelta(days=30)), "postedTo": f(TODAY), "ptype": "o,k", "limit": 1000}
     try: j = json.loads(_get(S, "https://api.sam.gov/opportunities/v2/search?" + urllib.parse.urlencode(q)))
     except Exception: return []
     rows = j.get("opportunitiesData") or []; stat(S)["raw"] += len(rows); out = []
     for r in rows:
-        raw = str(r.get("responseDeadLine") or "")
+        raw = str(r.get("responseDeadLine") or r.get("reponseDeadLine") or "")
         if not _keep(S, raw[:25].replace(" ", "T") if raw else ""): continue
         out.append({"iso": "US", "title": str(r.get("title") or "")[:220], "buyer": str(r.get("fullParentPathName") or "")[:160],
                     "deadline": raw[:10], "deadline_at": raw, "url": r.get("uiLink") or "https://sam.gov", "sid": str(r.get("noticeId") or ""),
