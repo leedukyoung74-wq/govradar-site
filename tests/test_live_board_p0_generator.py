@@ -35,13 +35,10 @@ class LivePageGeneratorP0Tests(unittest.TestCase):
             'if(!r.ok)throw Error("USGS HTTP "',
             'if(!r.ok)throw Error("NASA HTTP "',
             '["prescribed fire","prescribed burn","controlled burn","pile burn","rx burn"]',
-            'if(v.state==="SKIPPED"',
+            'v.state==="SKIPPED"',
             'v.state==="PARTIAL"',
             'F0[7]',
-            'D.disasters_checked',
         ):
-            if expected == 'D.disasters_checked':
-                continue
             self.assertIn(expected, js)
         self.assertIn('H.disasters_checked', js)
         self.assertIn('H.editorial_updated', js)
