@@ -402,33 +402,84 @@ def prozorro():
     for _ in out[60:]: drop(S, "source-cap")
     return out[:60]
 
+def _dapa_day(raw):
+    """DAPA GW uses bidTo='YYYYMMDD', not generic EndDt aliases."""
+    digits = re.sub(r"[^0-9]", "", str(raw or ""))[:8]
+    if len(digits) != 8: return ""
+    try: return datetime.date(int(digits[:4]), int(digits[4:6]), int(digits[6:])).isoformat()
+    except ValueError: return ""
+
+
 def dapa():
+    """DAPA overseas tenders: list seqn/bidTo/orgPlace; resolve official oriUrl via detail ONLY for open rows.
+    The upstream list is historical (observed latest pages in 2019 during 2026-11-25 audit).
+    Do not relabel archived 2015–2019 bids as newly open, and never fabricate notice links.
+    """
     S = "DAPA (Korea)"; key = os.environ.get("DAPA_KEY")
     if not key:
         stat(S)["skipped"] = True
         stat(S)["notes"].append("not_configured:DAPA_KEY")
         return []
-    q = {"serviceKey": key, "pageNo": 1, "numOfRows": 500,
-         "inqryBgnDt": (TODAY - datetime.timedelta(days=60)).strftime("%Y%m%d"), "inqryEndDt": TODAY.strftime("%Y%m%d")}
-    try: x = _get(S, "https://apis.data.go.kr/1690000/DCAIBidInfoService/getDCAIBidInfoList?" + urllib.parse.urlencode(q, safe="%"))
-    except Exception: return []
-    try: root = ET.fromstring(x)
-    except Exception: stat(S)["notes"].append("not XML: " + mask(x[:200])); stat(S)["failed"] += 1; return []
-    items = root.findall(".//item"); stat(S)["raw"] += len(items)
-    if items: stat(S)["notes"].append("fields: " + ",".join(c.tag for c in items[0]))
-    out = []
-    from feed_tenders import iso_of
-    for it in items:
-        d = {c.tag: (c.text or "").strip() for c in it}
-        g = lambda *ks: next((d[k] for k in d for kk in ks if kk.lower() in k.lower() and d[k]), "")
-        dd = re.sub(r"\D", "", g("EndDt", "endDate", "clseDt", "Deadline"))[:8]
-        raw = f"{dd[:4]}-{dd[4:6]}-{dd[6:8]}" if len(dd) == 8 else ""
-        if not _keep(S, raw): continue
-        cn = g("ntnNm", "cntry", "country", "nation"); iso = iso_of(cn) or ISO3.get(cn.upper())
-        if not iso: drop(S, "no-country"); continue
-        out.append({"iso": iso, "title": (g("EngNm", "engTitle", "Eng") or g("Nm", "title"))[:220], "buyer": g("ordrInst", "agency", "dmnd")[:160],
-                    "deadline": raw, "deadline_at": raw, "url": g("url", "Url", "link") or "https://www.dapa.go.kr", "sid": g("bidNo", "ntceNo", "No", "id"),
-                    "source": S, "type": g("ntceType", "type", "Form") or "Bid notice", "project": "", "pm": "", "pmn": "", "pg": "GO", "ma": "", "est": "", "cur": ""})
+    today = TODAY
+    def get_list(page, rows=500):
+        q = {"serviceKey": key, "pageNo": page, "numOfRows": rows,
+             "inqryBgnDt": (today-datetime.timedelta(days=60)).strftime("%Y%m%d"),
+             "inqryEndDt": today.strftime("%Y%m%d")}
+        raw = _get(S, "https://apis.data.go.kr/1690000/DCAIBidInfoService/getDCAIBidInfoList?" + urllib.parse.urlencode(q, safe="%"))
+        root = ET.fromstring(raw)
+        items = [{c.tag.rsplit("}", 1)[-1]: (c.text or "").strip() for c in item} for item in root.findall(".//item")]
+        stat(S)["raw"] += len(items)
+        return items, int(root.findtext(".//totalCount") or len(items))
+    try:
+        first, total = get_list(1)
+    except Exception:
+        stat(S)["notes"].append("list_first_page_failed")
+        return []
+    last_page = max(1, (total + 499) // 500)
+    latest = first
+    if last_page > 1:
+        try: latest, _ = get_list(last_page)
+        except Exception: stat(S)["notes"].append("list_latest_page_failed")
+    stat(S)["notes"].append("upstream_total=" + str(total) + "; latest_page=" + str(last_page))
+    dates = [_dapa_day(x.get("bidTo")) for x in latest]
+    if dates:
+        stat(S)["notes"].append("latest_page_max_bidTo=" + max(dates))
+    # First and last pages give a bounded sample without exhausting the free quota.
+    # A skipped or failed page is not proof there are zero open bids elsewhere.
+    candidates = list(latest) + (first if last_page > 1 else [])
+    seen_seq = set(); out = []
+    for row in candidates:
+        seqn = str(row.get("seqn") or "").strip()
+        if not seqn or seqn in seen_seq: continue
+        seen_seq.add(seqn)
+        deadline = _dapa_day(row.get("bidTo"))
+        if not _keep(S, deadline): continue
+        place = (row.get("orgPlace") or "").upper()
+        iso = place if len(place) == 2 and place.isalpha() else ISO3.get(place)
+        if not iso:
+            drop(S, "no-country"); continue
+        title = (row.get("bidNameEng") or row.get("bidNameKor") or "").strip()
+        if not title:
+            drop(S, "no-title"); continue
+        # List responses do NOT include an original notice URL; official detail does.
+        q = urllib.parse.urlencode({"serviceKey": key, "seqn": seqn}, safe="%")
+        try:
+            xml = _get(S, "https://apis.data.go.kr/1690000/DCAIBidInfoService/getDCAIBidInfoDetail?" + q, tries=2)
+            item = ET.fromstring(xml).find(".//item")
+            det = {c.tag.rsplit("}", 1)[-1]: (c.text or "").strip() for c in item} if item is not None else {}
+        except Exception:
+            drop(S, "detail-failed"); continue
+        original = str(det.get("oriUrl") or "").strip()
+        parts = urllib.parse.urlsplit(original)
+        if parts.scheme not in ("http", "https") or not parts.netloc:
+            drop(S, "missing-official-original-url"); continue
+        verified_end = _dapa_day(det.get("bidTo") or row.get("bidTo"))
+        if not _keep(S, verified_end): continue
+        out.append({"iso": iso, "title": title[:220], "buyer": (det.get("orderOrgan") or row.get("orgPlaceNm") or "DAPA")[:160],
+                    "deadline": verified_end, "deadline_at": verified_end, "url": original, "sid": seqn,
+                    "source": S, "type": (row.get("anucTypeNm") or "Bid notice")[:80], "project": "",
+                    "pm": "", "pmn": "", "pg": "", "ma": "", "est": "", "cur": ""})
+    if not out: stat(S)["notes"].append("no_verified_open_notice_in_bounded_pages")
     return out
 
 def sam():
