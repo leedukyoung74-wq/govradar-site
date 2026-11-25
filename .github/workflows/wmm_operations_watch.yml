@@ -128,6 +128,32 @@ jobs:
                   record(label,good,_detail)
               except Exception as exc:
                   record(label,False,{'error':type(exc).__name__})
+          # Source-level ingestion health is separate from cached tender URL safety.
+          # Never treat stale carried SAM notices as a successful fresh collection.
+          try:
+              provider=get(feed_root+'sources_status.json',json_only=True,max_bytes=500_000)
+              s=provider.get('SAM.gov (US)',{})
+              state=str(s.get('state') or 'UNKNOWN')
+              success_age=age_minutes(s.get('last_success'))
+              latest_ok=state in ('SUCCESS','EMPTY_SUCCESS','PARTIAL') and success_age is not None and -5<=success_age<=36*60
+              record('US SAM.gov verified ingestion',latest_ok,{
+                  'state':state,
+                  'last_success_age_minutes':success_age,
+                  'checked':s.get('checked'),
+                  'confirmed_new_today':s.get('new_today'),
+                  'provider_last_error':'RATE_LIMITED_429' if any('429' in str(n) for n in s.get('notes',[])) else None,
+                  'sampled_records_stale':s.get('carried_stale',0)})
+              d=provider.get('DAPA (Korea)',{})
+              provenance=bool(d.get('state') in ('SUCCESS','PARTIAL') and d.get('date_filter_verified') is False and
+                             d.get('data_freshness')=='HISTORICAL_SAMPLE')
+              record('Korea DAPA archival provenance',provenance,{
+                  'state':d.get('state'),
+                  'sampling':d.get('coverage'),
+                  'sample_latest_deadline':d.get('sampled_latest_bid_to'),
+                  'verified_current_notices':d.get('kept',0),
+                  'not_a_current_tender_feed':True})
+          except Exception as exc:
+              record('DAPA/SAM source-specific ingestion',False,{'error':type(exc).__name__})
           if 'tenders.json' in observed and 'cty/_summary.json' in observed:
               n=observed['tenders.json']; c=observed['cty/_summary.json']
               record('Country-summary listed vs cached tender upper bound',
