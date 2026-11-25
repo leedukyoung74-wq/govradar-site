@@ -23,8 +23,8 @@ function get(name){return fetch(base+name,{cache:"no-store",credentials:"omit"})
 function ok(q){
   if(!q||q.stale||q.verify==="partial")return false;
   var v=String(q.deadline_at||q.deadline||"").trim().replace(" ","T");
-  if(!/^\\d{4}-\\d{2}-\\d{2}/.test(v))return false;
-  var hasOffset=/(?:Z|[+-]\\d{2}:?\\d{2})$/.test(v);
+  if(!/^\d{4}-\d{2}-\d{2}/.test(v))return false;
+  var hasOffset=/(?:Z|[+-]\d{2}:?\d{2})$/.test(v);
   var date=hasOffset?Date.parse(v):Date.parse(v.slice(0,10)+"T23:59:59-12:00");
   return Number.isFinite(date)&&date>Date.now();
 }
@@ -33,7 +33,7 @@ var states=v[0],data=v[1];if(!states||!Array.isArray(data.items))throw Error("ba
 function update(card,name){var st=states[name]||{},arr=data.items.filter(function(q){return q.source===name&&ok(q)});card.p.textContent=t[2]+": "+(st.state||"UNKNOWN")+" · "+t[3]+": "+(st.last_success||"—");var label=t[4]+": "+arr.length;
 if(name==="DAPA (Korea)"&&arr.length===0&&st.state==="SUCCESS"){
   var notes=Array.isArray(st.notes)?st.notes.join(" "):"";
-  var sample=String(st.sampled_latest_bid_to||"")||((notes.match(/latest_page_max_bidTo=(\\d{4}-\\d{2}-\\d{2})/)||[])[1]||"");
+  var sample=String(st.sampled_latest_bid_to||"")||((notes.match(/latest_page_max_bidTo=(\d{4}-\d{2}-\d{2})/)||[])[1]||"");
   label+=" · "+t[6]+(sample?" · "+(lang==="ko"?"표본 최신 마감":lang==="en"?"Latest sampled deadline":"Last sampled deadline")+": "+sample:"");
 }
 if(name==="SAM.gov (US)"&&st.coverage_partial){
