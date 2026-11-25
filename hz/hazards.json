@@ -1,7 +1,7 @@
 {
  "v": 1,
  "updated": "2026-11-22",
- "checked": "2026-11-24T14:20",
+ "checked": "2026-11-25T13:08",
  "summary_ko": "지금 실제로 진행 중인 큰 무력충돌은 미국·이스라엘–이란 전쟁(2026년 2월 28일 시작)과 러시아–우크라이나 전쟁입니다. 11월 21일 혁명수비대가 바레인의 미군 기지를 공격했다고 주장했고, 바레인은 이란 공격으로 시트라의 민간 시설에 불이 났다고 밝혔습니다. 같은 날 호르무즈 해협을 빠져나가던 유조선 2척이 미확인 발사체에 맞았고(UKMTO), 11월 14일 이후 피격 유조선은 약 25척입니다. 공식 휴전은 없고 종전 협상은 진전이 없습니다. 우크라이나에서는 11월 22일 키이우주 디메르 아파트가 공습으로 무너져 2명이 숨지고 11명이 실종됐으며, 한 주 동안 러시아 무인기 약 2,700기가 날아왔습니다. 11월 21일에는 핀란드만에서 러시아 화물선이 무인기에 맞았습니다. 북한은 11월 4일 미사일 여러 발을 쐈습니다. 자연재해·감염병은 공식 기관 원문(USGS·GDACS·NASA·WHO)을 매일 자동 반영합니다. 각국의 가정 비축 권고는 정례 대비 정책이며, 특정 전쟁이 임박했다는 공식 경고는 확인되지 않았습니다.",
  "summary_en": "The major armed conflicts under way are the US–Israel war with Iran (began 28 Feb 2026) and Russia–Ukraine. On 21 Nov the IRGC said it struck US bases in Bahrain; Bahrain said an Iranian attack set fire to a civilian facility in Sitra. The same day two tankers leaving the Strait of Hormuz were hit by unknown projectiles (UKMTO); about 25 tankers have been hit since 14 Nov. There is no formal ceasefire and talks have not advanced. In Ukraine a strike on 22 Nov partly collapsed an apartment block in Dymer, Kyiv region (2 dead, 11 missing), and Russia launched about 2,700 drones in a week. On 21 Nov a Russian cargo ship was hit by drones in the Gulf of Finland. North Korea fired multiple missiles on 4 Nov. Natural disasters and outbreaks are taken daily from the agencies' own feeds (USGS, GDACS, NASA, WHO). Household-stockpile advice in various countries is routine preparedness policy; no official warning of an imminent specific war has been found.",
  "hotspots": [
@@ -186,6 +186,33 @@
  ],
  "disasters": [
   {
+   "kind": "quake",
+   "iso": "",
+   "date": "11-25",
+   "ko": "USGS: 지진 — M5.9 Balleny Islands region",
+   "en": "USGS: M5.9 Balleny Islands region",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udd1",
+   "src": "USGS"
+  },
+  {
+   "kind": "quake",
+   "iso": "MU",
+   "date": "11-24",
+   "ko": "USGS: 지진 — M6.4 Mauritius - Reunion region",
+   "en": "USGS: M6.4 Mauritius - Reunion region",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud6h",
+   "src": "USGS"
+  },
+  {
+   "kind": "epidemic",
+   "iso": "US",
+   "date": "11-24",
+   "ko": "WHO: 감염병 발생 소식 — Influenza A(H5N1) - United States of America",
+   "en": "WHO: Influenza A(H5N1) - United States of America",
+   "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON629",
+   "src": "WHO"
+  },
+  {
    "kind": "tsunami",
    "iso": "VU",
    "date": "11-23",
@@ -211,6 +238,15 @@
    "en": "NASA EONET: Tropical Cyclone Xavier",
    "url": "https://www.metoc.navy.mil/jtwc/products/sh0427.tcw",
    "src": "NASA EONET"
+  },
+  {
+   "kind": "epidemic",
+   "iso": "",
+   "date": "11-23",
+   "ko": "WHO: 감염병 발생 소식 — Circulating vaccine-derived poliovirus type 1 – Syrian Arab Republic",
+   "en": "WHO: Circulating vaccine-derived poliovirus type 1 – Syrian Arab Republic",
+   "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON628",
+   "src": "WHO"
   },
   {
    "kind": "drought",
@@ -321,15 +357,6 @@
    "src": "WHO"
   },
   {
-   "kind": "storm",
-   "iso": "",
-   "date": "11-19",
-   "ko": "NASA EONET: 열대저기압 — Tropical Cyclone Akvan",
-   "en": "NASA EONET: Tropical Cyclone Akvan",
-   "url": "https://www.metoc.navy.mil/jtwc/products/io0526.tcw",
-   "src": "NASA EONET"
-  },
-  {
    "kind": "quake",
    "iso": "",
    "date": "11-18",
@@ -354,24 +381,6 @@
    "ko": "USGS: 지진 — M5.8 40 km N of Ruteng, Indonesia",
    "en": "USGS: M5.8 40 km N of Ruteng, Indonesia",
    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyxi",
-   "src": "USGS"
-  },
-  {
-   "kind": "quake",
-   "iso": "PG",
-   "date": "11-18",
-   "ko": "USGS: 지진 — M5.8 99 km ESE of Madang, Papua New Guinea",
-   "en": "USGS: M5.8 99 km ESE of Madang, Papua New Guinea",
-   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyx2",
-   "src": "USGS"
-  },
-  {
-   "kind": "quake",
-   "iso": "GU",
-   "date": "11-18",
-   "ko": "USGS: 지진 — M5.8 150 km SW of Merizo Village, Guam",
-   "en": "USGS: M5.8 150 km SW of Merizo Village, Guam",
-   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tywi",
    "src": "USGS"
   },
   {
@@ -1411,5 +1420,5 @@
   }
  ],
  "editorial_updated": "2026-11-23T00:20+09:00",
- "disasters_checked": "2026-11-24T14:20"
+ "disasters_checked": "2026-11-25T13:08"
 }
