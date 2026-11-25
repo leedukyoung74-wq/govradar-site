@@ -31,6 +31,22 @@ class OfficialSourcePanelTest(unittest.TestCase):
         for language in ('ko:', 'en:', 'es:', 'fr:', 'ar:', 'vi:', 'id:'):
             self.assertIn(language,body)
         self.assertIn('grid-template-columns:repeat(auto-fit',body)
+    def test_deadline_filter_includes_future_but_not_expired(self):
+        if not shutil.which("node"): self.skipTest("node missing")
+        js=JS.read_text("utf-8")
+        start=js.index("function ok(q){")
+        end=js.index("Promise.all(",start)
+        logic=js[start:end]
+        runner=logic+'''
+if(!ok({deadline:"2099-12-01",source:"SAM.gov (US)"}))process.exit(11);
+if(ok({deadline:"2000-01-01",source:"SAM.gov (US)"}))process.exit(12);
+if(ok({deadline_at:"2000-01-01T15:00:00-04:00",deadline:"2000-01-01"}))process.exit(13);
+if(!ok({deadline_at:"2099-12-01T15:00:00-04:00",deadline:"2099-12-01"}))process.exit(14);
+if(ok({deadline:"2099-12-01",stale:true}))process.exit(15);
+'''
+        p=subprocess.run(["node","-e",runner],capture_output=True,text=True,timeout=15)
+        self.assertEqual(p.returncode,0,p.stderr)
+
     def test_valid_javascript_syntax(self):
         if not shutil.which("node"): self.skipTest("node missing")
         result=subprocess.run(["node","--check",str(JS)],capture_output=True,text=True,timeout=15)
