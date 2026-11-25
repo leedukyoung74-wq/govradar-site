@@ -1,0 +1,96 @@
+# NO-PUBLISH; one-off diagnostic bounded to five DAPA GETs and one SAM GET.
+name: WMM Official Tender DAPA SAM bounded diagnostics (NO PUBLISH)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Inspect safe public tender metadata, no source mutations
+        shell: bash
+        env:
+          DAPA_KEY: ${{ secrets.DAPA_KEY }}
+          SAM_KEY: ${{ secrets.SAM_KEY }}
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          import os
+          import re
+          import urllib.parse
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from collections import Counter
+
+          now = dt.datetime.now(dt.timezone.utc)
+          t = now.astimezone(dt.timezone(dt.timedelta(hours=9))).date()
+          def get(url):
+              # The URL includes a secret. NEVER print exception messages or request URLs.
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"WMM-GOV-RADAR-safe-official-data-check/1.0"}),timeout=25) as f:
+                      return f.read(1000000),f.status
+              except Exception as ex:
+                  return None,getattr(ex,"code",0)
+          def field(item,name):
+              for c in item:
+                  if isinstance(c.tag,str) and c.tag.rsplit("}",1)[-1].lower()==name.lower():
+                      return (c.text or "").strip()
+              return ""
+          key=os.getenv("DAPA_KEY","").strip()
+          if not key:
+              print("DAPA_SECRET=NOT_CONFIGURED")
+          else:
+              print("DAPA_SECRET=PRESENT_HIDDEN")
+              qbase={"serviceKey":key}
+              test=[
+                  ("filter_p1_10",1,10,True),
+                  ("no_filter_p1_10",1,10,False),
+                  ("filter_p2_10",2,10,True),
+                  ("filter_p1_500",1,500,True),
+                  ("filter_p15_500",15,500,True)
+              ]
+              for name,page,rows,filtered in test:
+                  q={**qbase,"pageNo":page,"numOfRows":rows}
+                  if filtered:
+                      q.update({"inqryBgnDt":(t-dt.timedelta(days=60)).strftime("%Y%m%d"),"inqryEndDt":t.strftime("%Y%m%d")})
+                  url="https://apis.data.go.kr/1690000/DCAIBidInfoService/getDCAIBidInfoList?"+urllib.parse.urlencode(q)
+                  data,status=get(url)
+                  if data is None:
+                      print("DAPA_PROBE="+name+" HTTP="+str(status)+" ERROR_NO_BODY_OUTPUT")
+                      continue
+                  try:
+                      root=ET.fromstring(data)
+                      got=root.findall(".//item")
+                      total=int(root.findtext(".//totalCount") or len(got))
+                      values=[field(x,"bidTo") for x in got]
+                      dates=[s for s in values if re.fullmatch(r"\d{8}",s)]
+                      fields=Counter(c.tag.rsplit("}",1)[-1] for i in got[:2] for c in i)
+                      # Only print field NAMES, no title, email, URL or other contents.
+                      code=(root.findtext(".//resultCode") or "")[:12]
+                      print("DAPA_PROBE="+name+" HTTP="+str(status)+" TOTAL="+str(total)+" ROWS="+str(len(got))+" MIN_BIDTO="+(min(dates) if dates else "none")+" MAX_BIDTO="+(max(dates) if dates else "none")+" CODE="+re.sub("[^0-9A-Za-z_-]","",code)+" FIELDS="+",".join(sorted(fields.keys())[:22]))
+                  except Exception:
+                      print("DAPA_PROBE="+name+" PARSE_OR_SCHEMA_ERROR")
+          sam=os.getenv("SAM_KEY","").strip()
+          if not sam:
+              print("SAM_SECRET=NOT_CONFIGURED")
+          else:
+              f=lambda d:d.strftime("%m/%d/%Y")
+              q={"api_key":sam,"postedFrom":f(t-dt.timedelta(days=30)),"postedTo":f(t),"ptype":"o,k","limit":10,"offset":0}
+              data,status=get("https://api.sam.gov/opportunities/v2/search?"+urllib.parse.urlencode(q))
+              if data is None:
+                  print("SAM_PROBE_HTTP="+str(status)+" ERROR_NO_BODY_OUTPUT")
+              else:
+                  try:
+                      d=json.loads(data)
+                      rows=d.get("opportunitiesData") or []
+                      flags=Counter(str(v.get("active") or "missing")[:20] for v in rows)
+                      n_deadline=sum(bool(v.get("responseDeadLine") or v.get("reponseDeadLine")) for v in rows)
+                      n_samurl=sum(str(v.get("uiLink") or "").startswith("https://sam.gov/") for v in rows)
+                      print("SAM_PROBE_HTTP="+str(status)+" TOTAL="+str(d.get("totalRecords"))+" SAMPLE="+str(len(rows))+" ACTIVE_FLAGS="+json.dumps(flags,sort_keys=True)+" DEADLINE_PRESENT="+str(n_deadline)+" OFFICIAL_UI_LINKS="+str(n_samurl))
+                  except Exception:
+                      print("SAM_PROBE_PARSE_ERROR")
+          print("SAFE_DIAGNOSTIC_COMPLETE; no raw documents, URLs containing secrets, or publication")
+          PY
