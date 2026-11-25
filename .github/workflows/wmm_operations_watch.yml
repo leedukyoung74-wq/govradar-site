@@ -92,7 +92,8 @@ jobs:
                           'UK Find a Tender':'www.find-tender.service.gov.uk',
                           'EU TED':'ted.europa.eu',
                           'Prozorro (Ukraine)':'prozorro.gov.ua',
-                          'UK Contracts Finder':'www.contractsfinder.service.gov.uk'
+                          'UK Contracts Finder':'www.contractsfinder.service.gov.uk',
+                          'SAM.gov (US)':'sam.gov'
                       }
                       _grades={}
                       _sources_safe=True
