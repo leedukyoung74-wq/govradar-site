@@ -72,6 +72,7 @@ class CountrySourceAccuracy(unittest.TestCase):
         with mock.patch.dict(os.environ,{"SAM_KEY":"fixture-not-real"}),mock.patch.object(FM,"_get",side_effect=fake) as get:
             rows=FM.sam()
         self.assertEqual(get.call_count,2)
+        self.assertEqual([parse_qs(urlsplit(c.args[1]).query)["offset"][0] for c in get.call_args_list],["0","1"])
         self.assertEqual([r["sid"] for r in rows],["soon","late"])
         st=FM.stat("SAM.gov (US)")
         self.assertEqual(st["raw"],1001)
