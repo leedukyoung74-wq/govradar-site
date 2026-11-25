@@ -1,0 +1,48 @@
+name: WMM DAPA SAM new collector preview (NO PUBLISH)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/dapa-upstream-stale-sam-active-paging-20261126
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check P0 keyed source offline tests
+        run: python -m unittest discover -s tests -p "test_keyed_source_current_notice_rules.py"
+      - name: Collect only DAPA and SAM in memory, show aggregate metadata
+        env:
+          DAPA_KEY: ${{ secrets.DAPA_KEY }}
+          SAM_KEY: ${{ secrets.SAM_KEY }}
+        run: |
+          python - <<'PY'
+          import datetime
+          import sys
+          sys.path.insert(0, "tools")
+          import feed_more as F
+          F.TODAY = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date()
+          for name,fun in (("DAPA",F.dapa),("SAM",F.sam)):
+              try:
+                  records=fun()
+              except Exception:
+                  print(name+"_COLLECTOR_STATUS=EXCEPTION_REDACTED")
+                  sys.exit(1)
+              st=F.stat("DAPA (Korea)" if name=="DAPA" else "SAM.gov (US)")
+              print(name+"_COLLECTOR_STATUS=SUCCESS" if not st.get("failed") else name+"_COLLECTOR_STATUS=PARTIAL")
+              for k in ("requests","failed","raw","data_freshness","sampled_latest_bid_to","coverage","upstream_total","pages_scanned","rows_scanned","coverage_partial","selection_cap"):
+                  if k in st:
+                      print(name+"_"+k.upper()+"="+str(st[k]))
+              print(name+"_VERIFIED_OUTPUT_COUNT="+str(len(records)))
+              bad=sum(1 for r in records if not F.still_open(r.get("deadline_at") or r.get("deadline")))
+              print(name+"_CLOSED_OUTPUT_COUNT="+str(bad))
+              if bad:
+                  print(name+"_CHECK=BLOCKED_EXPIRED_NOTICE")
+                  sys.exit(1)
+          print("PREVIEW_ONLY_NO_DATA_PUBLISHED=TRUE")
+          PY
