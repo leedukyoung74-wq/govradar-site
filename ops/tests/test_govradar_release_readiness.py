@@ -24,7 +24,10 @@ class AuditTest(unittest.TestCase):
               ("UK Find a Tender","DAPA (Korea)","SAM.gov (US)")})
         for f in ("nws_active.json","cisa_kev.json"):
             store(self.d,"hz/"+f,{"source_health":{"ok":True,"stale":False,"last_ok":"2026-11-20T13:50Z"}})
-        store(self.l,"public/ko/index.html",'<b id="kp-t">1013</b>')
+        for lang in ("ko","en","es","fr","ar","vi","id"):
+            store(self.l,f"public/{lang}/index.html",
+                  '<b id="kp-t">—</b><b id="kp-u">—</b><b id="td-open">—</b>'
+                  '<script>fetch("data/feeds/today.json");var ageLimit=108000000;</script>')
         for s,l in (("web/auth.js","public/assets/auth.js"),
                     ("cf/functions/nfform.js","functions/nfform.js"),
                     ("cf/functions/api/req.js","functions/api/req.js")):
@@ -64,6 +67,17 @@ class AuditTest(unittest.TestCase):
         self.assertEqual("historical_archive_not_live_notice",states["kr_dapa"]["detail"]["reason"])
         self.assertEqual("pass",states["us_sam"]["status"])
         self.assertTrue(states["us_sam"]["detail"]["coverage_partial"])
+
+    def test_missing_locale_or_dynamic_fetch_blocks_static_count_guard(self):
+        self.store(self.l,"public/ar/index.html",'<b id="kp-t">—</b>')
+        st=self.states()["public_static_open_count"]
+        self.assertEqual("block",st["status"])
+        self.assertIn("ar",st["detail"]["failed_locales"])
+
+    def test_seven_locale_dash_not_rejected_as_missing_verified_count(self):
+        st=self.states()["public_static_open_count"]
+        self.assertEqual("pass",st["status"])
+        self.assertEqual(7,st["detail"]["placeholder_lc_covered"])
 
     def test_stale_public_html_and_code_drift_are_independent(self):
         self.store(self.l,"public/ko/index.html",'<b id="kp-t">235</b>')
