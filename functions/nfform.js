@@ -82,7 +82,7 @@ export async function onRequestPost({request}) {
     }
     for (const [name, value] of fields) {
       if (typeof value === "string" &&
-          /^\s*member\s+code\s*:/im.test(value)) {
+          /^\s*(?:member\s+code|رمز\s+العضوية)\s*:/im.test(value)) {
         return new Response("Remove access codes from your request", {status: 400});
       }
     }
