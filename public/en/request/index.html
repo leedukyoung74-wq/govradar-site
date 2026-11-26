@@ -30,7 +30,7 @@
 <div class="rq-f" data-t="tender"><label>Notice link or title *<input data-k="tender" type="text" data-req></label><label>Industry and main product *<input data-k="industry" type="text" data-req></label><label>Annual revenue (USD)<input data-k="revenue" type="text"></label><label>Public or overseas record (brief)<textarea data-k="record" rows="3"></textarea></label><label>Certifications<input data-k="certs" type="text"></label></div><div class="rq-f" data-t="country" hidden><label>Industry and main product *<input data-k="industry" type="text" data-req></label><label>Preferred way in (export, local partner, tender, investment…)<input data-k="mode" type="text"></label><label>What you want to know<textarea data-k="goal" rows="3"></textarea></label></div><div class="rq-f" data-t="family" hidden><label>Where you live (city or district only) *<input data-k="area" type="text" data-req></label><label>Household size *<input data-k="people" type="number" data-req></label><label>Infants, elderly, pets (only what applies)<input data-k="care" type="text"></label><label>Anything special (optional; health details only as needed)<textarea data-k="note" rows="3"></textarea></label></div><div class="rq-f" data-t="partner" hidden><label>Who you seek (buyer, manufacturer, local agent…) *<input data-k="seek" type="text" data-req></label><label>Your product or technology *<input data-k="offer" type="text" data-req></label><label>Conditions or timing (optional)<textarea data-k="note" rows="3"></textarea></label></div>
 <div class="two"><label>Email *<input name="email" type="email" required></label><label>Name or contact person *<input name="name" required></label></div>
 <div class="two"><label>Company or organisation (optional)<input name="org"></label><label>Country of interest<input name="countries"></label></div>
-<label>Member code (if any)<input data-k="code" autocomplete="off"></label>
+
 <h2 id="s3">3. Check and send</h2>
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> I agree to the collection and use of my details to handle this request (kept for one year)</label>
 <p><button class="btn pri" type="submit">Send request</button> <span class="rq-msg note" role="status"></span></p>
@@ -50,7 +50,7 @@ function paint(){var a=load(),u=document.querySelector(".rq-mine");u.innerHTML=a
 function hash(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return String(h)}
 f.addEventListener("submit",function(ev){var t=cur(),box=f.querySelector('.rq-f[data-t="'+t+'"]'),lines=[],ok=true;
 box.querySelectorAll("[data-k]").forEach(function(i){var v=(i.value||"").trim();if(i.hasAttribute("data-req")&&!v)ok=false;if(v)lines.push(i.parentNode.firstChild.textContent.replace(" *","")+": "+v)});
-var code=(f.querySelector('[data-k=code]').value||"").trim();if(code)lines.push("member code: "+code);
+// Membership credentials must never be inserted into the inquiry text.
 if(!ok){ev.preventDefault();msg.textContent=K.req;return}
 var h=hash(t+lines.join("|")+f.email.value),a=load(),prev=a.filter(function(x){return x.h===h&&Date.now()-x.ts<6e5})[0];
 if(prev&&!prev.relay_failed){ev.preventDefault();msg.textContent=K.dup+" "+prev.id;return}
