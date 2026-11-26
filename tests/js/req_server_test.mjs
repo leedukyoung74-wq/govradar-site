@@ -38,10 +38,10 @@ const anon = await patch(req("PATCH", { req_no: ownNo, ok: true }));
 const invalid = await patch(req("PATCH", { req_no: "bad", ok: true }, "m1"));
 const mine = await patch(req("PATCH", { req_no: ownNo, ok: true }, "m1"));
 const stored = raw.prepare("select status from requests where req_no=?").get(ownNo);
-const failed = await patch(req("PATCH", { req_no: r3.req_no, ok: false }, "m1"));
-const failedState = raw.prepare("select status from requests where req_no=?").get(r3.req_no)?.status;
-const retry = await patch(req("PATCH", { req_no: r3.req_no, ok: true }, "m1"));
-const retriedState = raw.prepare("select status from requests where req_no=?").get(r3.req_no)?.status;
+const failed = await patch(req("PATCH", { req_no: r4.req_no, ok: false }, "m1"));
+const failedState = raw.prepare("select status from requests where req_no=?").get(r4.req_no)?.status;
+const retry = await patch(req("PATCH", { req_no: r4.req_no, ok: true }, "m1"));
+const retriedState = raw.prepare("select status from requests where req_no=?").get(r4.req_no)?.status;
 
 out.push(["patch", [cross.status, anon.status, invalid.status, mine.status, stored?.status].join(" ")]);
 // Concurrent member submissions for a new user must receive at most 2 included slots.
