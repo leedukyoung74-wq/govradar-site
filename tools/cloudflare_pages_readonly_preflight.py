@@ -23,7 +23,13 @@ def summarize(project):
     owner = source_config.get("owner") or ""
     repo_name = source_config.get("repo_name") or ""
     repo = (owner + "/" + repo_name).strip("/")
+    production = ((project.get("deployment_configs") or {}).get("production") or {})
+    d1 = production.get("d1_databases") or {}
+    # Only the binding presence is reported. Never serialize D1 IDs, values or tokens.
+    binding = d1.get("GV_DB") if isinstance(d1,dict) else None
+    d1_configured = bool(isinstance(binding,dict) and binding.get("id"))
     result = {
+        "production_d1_gv_db_binding_present": d1_configured,
         "project_name": project.get("name"),
         "production_branch": project.get("production_branch") or None,
         "source_type": source.get("type") or "direct_upload_or_unspecified",
@@ -44,17 +50,22 @@ def summarize(project):
         issues.append("Connected repository differs from WMM GOV RADAR.")
     if result["source_type"] not in ("github","direct_upload_or_unspecified"):
         issues.append("Unknown or unsupported source type.")
-    if result["production_branch"] not in ("src",None):
-        issues.append("Production branch is not src; changing branches requires explicit review.")
+    if result["production_branch"] != "live":
+        issues.append("Production branch is not the verified live branch; do not change it without review.")
     if result["source_type"] == "github":
         if result["repository"] != "leedukyoung74-wq/govradar-site":
             issues.append("GitHub source repository is not confirmed.")
-        if result["build_command"] != "python3 build.py --base https://radar.wmm-hoa.com":
-            issues.append("Build command differs from expected source build.")
-        if result["destination_dir"] != "dist":
-            issues.append("Output directory is not dist.")
+        # The deployed site is a generated static 'live' tree, NOT the src build.
+        # Avoid imposing an obsolete src build command/directory on production.
+        if result["build_command"] == "python3 build.py --base https://radar.wmm-hoa.com":
+            issues.append("Unexpected source-branch build command on live; confirm complete site output.")
+        if result["destination_dir"] == "dist":
+            issues.append("Unexpected source-build destination on live; verify generated tree and Functions.")
     else:
         issues.append("Direct Upload or unspecified project: DO NOT assume git push triggers a website deploy.")
+    if not result["production_d1_gv_db_binding_present"]:
+        issues.append("Production GV_DB D1 binding absent or not confirmed from project read-only metadata.")
+    issues.append("A binding shown in configuration is NOT proof the requests table exists or D1 writes succeed.")
     issues.append("Manual owner sign-off and production rollback target are required before publishing.")
     return result, issues
 
