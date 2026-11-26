@@ -8,6 +8,8 @@ on:
     paths:
       - 'ops/govradar_release_readiness.py'
       - 'ops/tests/test_govradar_release_readiness.py'
+      - 'ops/live_routes_readonly.py'
+      - 'ops/tests/test_live_routes_readonly.py'
       - '.github/workflows/wmm_govradar_release_readiness.yml'
 permissions:
   contents: read
@@ -85,6 +87,21 @@ jobs:
               with open(summary,'a',encoding='utf-8') as f:
                   f.write('\\n### D1 request endpoint (anonymous GET only)\\n')
                   f.write('\\n**'+str(state)+'** — not proof of login, storage, paid quota or inbox receipt.\\n')
+          PY
+      - name: Check ten live public HTML paths (GET only)
+        run: |
+          python -m unittest discover -s ops/tests -p test_live_routes_readonly.py -v
+          python ops/live_routes_readonly.py > audit-evidence/public-locales.json
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          d=json.loads(Path('audit-evidence/public-locales.json').read_text())
+          print("Public locales:",d['result'], "routes checked:",d['checked_routes'])
+          summary=os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary:
+              with open(summary,'a',encoding='utf-8') as f:
+                  f.write("\\n### Live public routes (GET only)\\n")
+                  f.write("**"+d['result']+"** across "+str(d['checked_routes'])+" homepage/form paths. No mobile or form POST was tested.\\n")
           PY
       - name: Store limited evidence; never publish or access private customer records
         if: always()
