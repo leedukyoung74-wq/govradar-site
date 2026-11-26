@@ -26,6 +26,20 @@ def js_same(src, live):
     return bool(a is not None and b is not None and hashlib.sha256(a).digest()==hashlib.sha256(b).digest())
 
 
+def auth_proxy_equivalent(source_path, live_path):
+    """Permit only the intended Cloudflare /nfid vs Netlify direct endpoint.
+    All other source/live auth JS bytes must remain identical.
+    """
+    source, live = read(source_path), read(live_path)
+    if source is None or live is None:
+        return False
+    src_anchor = b'const API = "/.netlify/identity", KEY = "wmm.auth.v1";'
+    live_anchor = b'const API = "/nfid", KEY = "wmm.auth.v1";'
+    if source.count(src_anchor) != 1 or live.count(live_anchor) != 1:
+        return False
+    return source.replace(src_anchor, live_anchor) == live
+
+
 def parse_time(s):
     if not isinstance(s,str) or not s:return None
     try:
@@ -97,8 +111,10 @@ def inspect(src,live,data,now=None):
     for key,a,b in (("live_auth_js",src/"web"/"auth.js",live/"public"/"assets"/"auth.js"),
                     ("live_form_relay",src/"cf"/"functions"/"nfform.js",live/"functions"/"nfform.js"),
                     ("live_request_api",src/"cf"/"functions"/"api"/"req.js",live/"functions"/"api"/"req.js")):
-        matches=js_same(a,b)
-        add(key,"pass" if matches else "block",{"code_identical":matches})
+        matches=(auth_proxy_equivalent(a,b) if key=="live_auth_js" else js_same(a,b))
+        add(key,"pass" if matches else "block",
+            {"code_parity_validated":matches,
+             "expected_proxy_difference_only":key=="live_auth_js"})
     for key,filename,max_minutes in (("nws_source","nws_active.json",180),
                                       ("cisa_kev_source","cisa_kev.json",600)):
         doc=json_file(data/"hz"/filename) or {}
