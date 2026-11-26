@@ -17,22 +17,70 @@ async function rw() {
   out.sort((x, y) => y.t - x.t);
   return out.slice(0, 120);
 }
+// CISA KEV is an official *exploited vulnerability catalog*, not a live breach feed.
+// Read the independently validated GitHub Actions public snapshot from the data branch
+// instead of assuming the Cloudflare edge can always reach cisa.gov (403 is common).
+const SNAPSHOT = "https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/hz/cisa_kev.json";
+function mapKev(v) {
+  const id = String(v.cve || v.cveID || "");
+  if (!/^CVE-\d{4}-\d{4,19}$/.test(id)) return null;
+  return { d: String(v.date_added || v.dateAdded || "").slice(0, 10), id,
+    v: String(v.vendor || v.vendorProject || "").slice(0, 120),
+    p: String(v.product || "").slice(0, 130),
+    n: String(v.name || v.vulnerabilityName || "").slice(0, 230),
+    r: String(v.ransomware_use || v.knownRansomwareCampaignUse || "") === "Known" };
+}
 async function kev() {
-  const r = await fetch("https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json", { headers: { "user-agent": "GOV-RADAR/1.0", accept: "application/json" } });
-  if (!r.ok) throw new Error("kev " + r.status);
-  const j = await r.json();
-  return (j.vulnerabilities || []).sort((a, b) => (b.dateAdded || "").localeCompare(a.dateAdded || "")).slice(0, 15)
-    .map(v => ({ d: v.dateAdded, id: v.cveID, v: v.vendorProject, p: v.product, n: v.vulnerabilityName, r: v.knownRansomwareCampaignUse === "Known" }));
+  try {
+    const r = await fetch(SNAPSHOT, { headers: { accept: "application/json" } });
+    if (!r.ok) throw new Error("snapshot " + r.status);
+    const j = await r.json(), h = j && j.source_health;
+    if (!j || j.kind !== "known_exploited_vulnerabilities" ||
+        !Array.isArray(j.items) || !h || typeof h.ok !== "boolean" ||
+        typeof h.stale !== "boolean" || !(j.total_vulnerabilities >= 1000))
+      throw new Error("snapshot_schema");
+    const last = Date.parse(h.last_ok || "");
+    if (!Number.isFinite(last) || last > Date.now() + 600000 ||
+        Date.now() - last > 14 * 864e5)
+      throw new Error("snapshot_too_old");
+    const items = j.items.map(mapKev).filter(Boolean).slice(0, 15);
+    if (!items.length) throw new Error("snapshot_no_kevs");
+    // Never label 15-minute data as a real-time exploit. Surface source age.
+    return { items, source: "validated_official_snapshot", last_ok: new Date(last).toISOString(),
+      stale: h.stale || !h.ok || Date.now() - last > 12 * 3600e3 };
+  } catch (e) {
+    // Last-resort direct official source if the public snapshot is inaccessible.
+    const r = await fetch("https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      { headers: { "user-agent": "GOV-RADAR/1.0", accept: "application/json" } });
+    if (!r.ok) throw new Error("CISA_KEV_UNAVAILABLE");
+    const j = await r.json();
+    if (!j || !Array.isArray(j.vulnerabilities) || j.vulnerabilities.length < 1000)
+      throw new Error("CISA_KEV_BAD_SCHEMA");
+    const items = j.vulnerabilities.sort((a,b)=>
+      String(b.dateAdded || "").localeCompare(String(a.dateAdded || "")))
+      .map(mapKev).filter(Boolean).slice(0, 15);
+    return { items, source: "cisa_official_direct", last_ok: new Date().toISOString(), stale: false };
+  }
 }
 export async function onRequestGet(ctx) {
-  const cache = caches.default, key = new Request("https://radar.wmm-hoa.com/api/cyberlive?v=1");
+  const cache = caches.default, key = new Request("https://radar.wmm-hoa.com/api/cyberlive?v=2");
   const hit = await cache.match(key);
   if (hit) return hit;
-  const [a, b] = await Promise.allSettled([rw(), kev()]);
-  const body = { at: new Date().toISOString(), rw: a.status === "fulfilled" ? a.value : [], kev: b.status === "fulfilled" ? b.value : [],
-    ok: { rw: a.status === "fulfilled", kev: b.status === "fulfilled" },
-    src: { rw: "https://www.ransomware.live/", kev: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog" } };
-  const res = new Response(JSON.stringify(body), { headers: { "content-type": "application/json; charset=utf-8", "cache-control": `public, max-age=${TTL}`, "access-control-allow-origin": "*" } });
-  if (body.ok.rw || body.ok.kev) ctx.waitUntil(cache.put(key, res.clone()));
+  const [a,b] = await Promise.allSettled([rw(),kev()]);
+  const ready = b.status === "fulfilled" ? b.value : null;
+  const body = { at: new Date().toISOString(),
+    rw: a.status === "fulfilled" ? a.value : [], kev: ready ? ready.items : [],
+    ok: { rw: a.status === "fulfilled", kev: !!ready },
+    status: { rw: a.status === "fulfilled" ? "ok" : "unavailable",
+      kev: !ready ? "unavailable" : ready.stale ? "delayed" : "ok" },
+    kev_last_ok: ready ? ready.last_ok : null, kev_source: ready ? ready.source : null,
+    not_realtime_attack_feed: true,
+    src: { rw: "https://www.ransomware.live/",
+      kev: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog" } };
+  const res = new Response(JSON.stringify(body), {
+    headers: { "content-type":"application/json; charset=utf-8",
+      "cache-control": "public, max-age=" + TTL,
+      "access-control-allow-origin":"*" } });
+  if (body.ok.rw || body.ok.kev) ctx.waitUntil(cache.put(key,res.clone()));
   return res;
 }
