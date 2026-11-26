@@ -38,6 +38,11 @@ const anon = await patch(req("PATCH", { req_no: ownNo, ok: true }));
 const invalid = await patch(req("PATCH", { req_no: "bad", ok: true }, "m1"));
 const mine = await patch(req("PATCH", { req_no: ownNo, ok: true }, "m1"));
 const stored = raw.prepare("select status from requests where req_no=?").get(ownNo);
+const failed = await patch(req("PATCH", { req_no: r3.req_no, ok: false }, "m1"));
+const failedState = raw.prepare("select status from requests where req_no=?").get(r3.req_no)?.status;
+const retry = await patch(req("PATCH", { req_no: r3.req_no, ok: true }, "m1"));
+const retriedState = raw.prepare("select status from requests where req_no=?").get(r3.req_no)?.status;
+
 out.push(["patch", [cross.status, anon.status, invalid.status, mine.status, stored?.status].join(" ")]);
 // Concurrent member submissions for a new user must receive at most 2 included slots.
 const concurrent = await Promise.all(["Q1","Q2","Q3","Q4","Q5"].map(body =>
@@ -58,5 +63,6 @@ if (out.find(x=>x[0]==="arabic_secret")?.[1]?.error!=="secret_in_request") fail.
 if (out[7][1].split(" ")[0] !== "3") {}
 if (out[8][1] !== 1) fail.push("refund");
 if (out[9][1] !== 503) fail.push("nodb");
-if (out.find(x => x[0] === "patch")?.[1] !== "404 401 400 200 relayed") fail.push("patch-ownership");
+if (out.find(x => x[0] === "patch")?.[1] !== "404 401 400 200 gateway_reported") fail.push("patch-ownership");
+if (failed.status!==200 || failedState!=="gateway_failed_reported" || retry.status!==200 || retriedState!=="gateway_reported") fail.push("gateway-retry");
 if (fail.length) { console.error("FAIL", fail.join(",")); process.exit(1); } else console.log("req_server OK");
