@@ -61,7 +61,8 @@ class CloudflarePreflightSafetyTest(unittest.TestCase):
         p["build_config"]["destination_dir"]="public"
         _,issues=preflight.summarize(p)
         self.assertTrue(any("repository" in x.lower() for x in issues))
-        self.assertTrue(any("directory" in x.lower() for x in issues))
+        self.assertFalse(any("directory" in x.lower() for x in issues),
+                         "Generated live uses a different build layout from source; do not force dist")
     def test_no_credentials_no_calls(self):
         with patch.dict("os.environ",{},clear=True):
             self.assertEqual(preflight.main(),2)
