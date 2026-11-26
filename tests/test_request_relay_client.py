@@ -45,6 +45,14 @@ class RequestRelayClientTests(unittest.TestCase):
                 self.assertIn("gateway_only?K.gateway",html)
                 self.assertIn("else relayWithoutD1();",html)
 
+    def test_member_access_codes_never_enter_any_locale_request(self):
+        for lang in LANGS:
+            with self.subTest(lang=lang):
+                html=page(lang)
+                self.assertNotIn('data-k="code"',html)
+                self.assertNotIn('lines.push("member code: "',html)
+                self.assertIn("Membership is determined by verified sign-in",html)
+
     @unittest.skipUnless(shutil.which("node"),"node unavailable")
     def test_all_locales_inline_js_syntax(self):
         for lang in LANGS:

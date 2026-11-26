@@ -74,7 +74,7 @@ def request_page(L, head, foot, LANGS):
 {fields}
 <div class="two"><label>{e(k["email"])} *<input name="email" type="email" required></label><label>{e(k["name"])} *<input name="name" required></label></div>
 <div class="two"><label>{e(k["org"])}<input name="org"></label><label>{e(k["country"])}<input name="countries"></label></div>
-<label>{e(k["code"])}<input data-k="code" autocomplete="off"></label>
+
 <h2>{e(k["send"])}</h2>
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> {e(k["agree"])}</label>
 <p><button class="btn pri" type="submit">{e(k["btn"])}</button> <span class="rq-msg note" role="status"></span></p>
@@ -91,7 +91,7 @@ function paint(){{var a=load(),u=document.querySelector(".rq-mine");u.innerHTML=
 function hash(s){{var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return String(h)}}
 f.addEventListener("submit",function(ev){{var t=cur(),box=f.querySelector('.rq-f[data-t="'+t+'"]'),lines=[],ok=true;
 box.querySelectorAll("[data-k]").forEach(function(i){{var v=(i.value||"").trim();if(i.hasAttribute("data-req")&&!v)ok=false;if(v)lines.push(i.parentNode.firstChild.textContent.replace(" *","")+": "+v)}});
-var code=(f.querySelector('[data-k=code]').value||"").trim();if(code)lines.push("member code: "+code);
+// Membership is determined by verified sign-in, never a secret code in an inquiry.
 if(!ok){{ev.preventDefault();msg.textContent=K.req;return}}
 var h=hash(t+lines.join("|")+f.email.value),a=load(),prev=a.filter(function(x){{return x.h===h&&Date.now()-x.ts<6e5}})[0];
 if(prev&&!prev.relay_failed){{ev.preventDefault();msg.textContent=K.dup+" "+prev.id;return}}

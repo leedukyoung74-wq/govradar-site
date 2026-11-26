@@ -68,6 +68,27 @@ export async function onRequestPost({request}) {
   if (!REGISTERED_FORM_NAMES.has(formName)) {
     return new Response("Unknown or invalid form name", {status: 400});
   }
+  // Cached client builds formerly appended a member access code to 'need'.
+  // Reject before forwarding to Netlify Forms, so a credential is never emailed.
+  try {
+    let fields;
+    if (/^application\/x-www-form-urlencoded/i.test(type)) {
+      fields = new URLSearchParams(new TextDecoder().decode(body));
+    } else {
+      const formReq = new Request(NETLIFY_FORMS_ENDPOINT, {
+        method: "POST", headers: {"content-type": type}, body
+      });
+      fields = await formReq.formData();
+    }
+    for (const [name, value] of fields) {
+      if (typeof value === "string" &&
+          /^\s*(?:member\s+code|رمز\s+العضوية)\s*:/im.test(value)) {
+        return new Response("Remove access codes from your request", {status: 400});
+      }
+    }
+  } catch {
+    return new Response("Cannot validate form fields", {status: 400});
+  }
 
   let response;
   const controller = new AbortController();
