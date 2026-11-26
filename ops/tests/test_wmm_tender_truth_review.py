@@ -89,6 +89,24 @@ class TenderTruthReviewTests(unittest.TestCase):
         self.assertFalse(r["invariants"]["no_unapproved_source_hosts"])
         self.assertFalse(r["all_checks_pass"])
 
+    def test_exact_sam_gov_domain_is_accepted(self):
+        self.official_rows[10]["source"]="SAM.gov (US)"
+        self.official_rows[10]["url"]="https://sam.gov/workspace/contract/opp/1234567890abcdef1234567890abcdef/view"
+        self.assertTrue(self.audit()["invariants"]["no_unapproved_source_hosts"])
+
+    def test_sam_gov_spoof_or_subdomain_is_rejected(self):
+        self.official_rows[10]["source"]="SAM.gov (US)"
+        for url in (
+            "https://sam.gov.evil.example/workspace/contract/opp/abc/view",
+            "https://www.sam.gov/workspace/contract/opp/abc/view",
+            "http://sam.gov/workspace/contract/opp/abc/view",
+            "https://sam.gov:444/workspace/contract/opp/abc/view",
+            "https://user@sam.gov/workspace/contract/opp/abc/view",
+        ):
+            with self.subTest(url=url):
+                self.official_rows[10]["url"]=url
+                self.assertFalse(self.audit()["invariants"]["no_unapproved_source_hosts"])
+
     def test_any_customer_alert_flag_for_unverified_country_brief_fails(self):
         self.live["items"][7]["may_send_business_alert"]=True
         r=self.audit()
