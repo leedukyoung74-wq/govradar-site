@@ -2,7 +2,7 @@
    Email + password sign-up/sign-in, password reset, Google sign-in when enabled.
    Membership level comes from app_metadata.roles (m1…m5, edu, youth, uni, admin). */
 (function () {
-  const API = "/.netlify/identity", KEY = "wmm.auth.v1";
+  const API = /(?:^|\\.)netlify\\.app$/.test(location.hostname) ? "/.netlify/identity" : "/nfid", KEY = "wmm.auth.v1";
   // Preserve in-site navigation across third-party Google OAuth round trips.
   // Only current same-origin localized paths are permitted (never external URLs).
   const RETURN_KEY = "wmm.auth.return.v1";
