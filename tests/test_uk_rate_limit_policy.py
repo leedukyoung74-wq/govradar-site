@@ -58,6 +58,31 @@ class UKRateSafety(unittest.TestCase):
         self.assertEqual("PARTIAL",FT.classify_state(FM.stat(SRC)))
         self.assertTrue(any("page_cap" in x for x in FM.stat(SRC)["notes"]))
 
+    def test_malformed_provider_page_cannot_be_success(self):
+        for payload in ({"error":"upstream"}, {"releases":None},
+                        {"releases":[],"links":"invalid"}):
+            with self.subTest(payload=payload):
+                FM.STATS.clear()
+                with patch.object(FM,"_get",return_value=json.dumps(payload)):
+                    rows=FM._ocds(SRC,URL,lambda x:x,max_pages=2)
+                self.assertEqual([],rows)
+                self.assertEqual("ERROR",FT.classify_state(FM.stat(SRC)))
+                self.assertTrue(any("malformed_ocds" in n for n in FM.stat(SRC)["notes"]))
+
+    def test_empty_page_with_next_cursor_marks_partial(self):
+        pages=[
+            {"releases":[{"id":"first"}],"links":{"next":"?page=2"}},
+            {"releases":[],"links":{"next":"?page=3"}}]
+        def fake(_source,_url,**kwargs):
+            FM.stat(SRC)["requests"]+=1
+            return json.dumps(pages.pop(0))
+        with patch.object(FM,"_get",side_effect=fake):
+            rows=FM._ocds(SRC,URL,lambda x:x,max_pages=4)
+        self.assertEqual(len(rows),1)
+        self.assertEqual("PARTIAL",FT.classify_state(FM.stat(SRC)))
+        self.assertTrue(any("empty_ocds_page_with_next_cursor" in n
+                            for n in FM.stat(SRC)["notes"]))
+
     def test_429_after_first_page_never_confirms_complete(self):
         calls=[0]
         def source(_name,_url,**kw):
