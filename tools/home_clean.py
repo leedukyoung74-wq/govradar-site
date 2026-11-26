@@ -193,6 +193,15 @@ def main():
         s = s.replace('<details class="hc-more">', '<details class="hc-more" id="more">', 1)
         s = s.replace("</body>", '<script>(function(){function o(){var h=location.hash.slice(1);if(!h)return;var e=document.getElementById(h);if(!e)return;var d=e.closest("details");if(d&&!d.open){d.open=true;setTimeout(function(){e.scrollIntoView()},50)}}addEventListener("hashchange",o);o()})()</script></body>', 1)
         s = s.replace("</head>", f'<link rel="stylesheet" href="/assets/home-clean.css?v={CSSV}"></head>', 1)
+        # Numbers hardcoded into the generated HTML are build-time placeholders,
+        # not today's verified counts. Remove them so network failure/disabled
+        # JavaScript cannot present obsolete business data as current.
+        for element_id in ("kp-t", "kp-u", "td-new", "td-urg", "td-open", "td-al"):
+            s = re.sub(
+                r'(<b id="' + re.escape(element_id) + r'">)[^<]*(</b>)',
+                lambda match: match.group(1) + "—" + match.group(2),
+                s, count=1,
+            )
         # Transparent DAPA/SAM status is assembled client-side from verified data-branch feeds.
         # Keep the script in the generator so a subsequent site rebuild does not erase it.
         s = s.replace("</body>", '<script src="/assets/official-procurement-status.js?v=20261126c" defer></script></body>', 1)
