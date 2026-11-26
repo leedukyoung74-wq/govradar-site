@@ -151,7 +151,8 @@ test("broken multipart form-name cannot masquerade as a valid submission",async(
 test("member access codes are rejected before Netlify transport",async()=>{
   for(const payload of [
     "form-name=order&need="+encodeURIComponent("member code: ABCD-EFGH"),
-    "form-name=order&need="+encodeURIComponent("Project\n member code: ABCD-EFGH")
+    "form-name=order&need="+encodeURIComponent("Project\n member code: ABCD-EFGH"),
+    "form-name=order&need="+encodeURIComponent("رمز العضوية: ABCD-EFGH")
   ]){
     const {response,calls}=await run(post("/ko/thanks/",payload),
       async()=>{throw new Error("must never reach provider");});
