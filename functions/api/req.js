@@ -32,7 +32,7 @@ export async function onRequestPost({ request, env }) {
   let email = String(b.email || "").trim().toLowerCase();
   if (!TYPES.includes(type) || !body || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json({ error: "bad" }, 400);
   // Never persist or relay membership access credentials supplied by older cached forms.
-  if (/^\s*member\s+code\s*:/im.test(body)) return json({ error: "secret_in_request" }, 400);
+  if (/^\s*(?:member\s+code|رمز\s+العضوية)\s*:/im.test(body)) return json({ error: "secret_in_request" }, 400);
   const u = await who(request); if (u) email = u.email || email;
   const key = u ? "u:" + u.id : "e:" + (await sha(email)), now = new Date(), month = kstMonth(now), db = env.GV_DB;
   const dedupe = await sha(type + "|" + body + "|" + email);
