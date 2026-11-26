@@ -1,11 +1,47 @@
-# Proves the scheduled job works end to end on this branch without publishing anything.
+# PR checks must not impersonate a production collector using unavailable API keys.
+# Production keeps the original fail-closed quality gate in feeds.yml.
 name: Feeds dry run (no publish)
 on:
   pull_request:
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
-  daily:
+  # Safe, reliable review: no private credentials, live provider traffic,
+  # production counts, artifact publication, or data branch writes.
+  offline-review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline collector and quality-gate regressions (NO REAL API)
+        run: |
+          python -m unittest discover -s tests -p 'test_dapa_real_schema.py' -v
+          python -m unittest discover -s tests -p 'test_keyed_source_current_notice_rules.py' -v
+          python -m unittest discover -s tests -p 'test_uk_rate_limit_policy.py' -v
+          python -m unittest discover -s tests -p 'test_uk_timeout_fallback.py' -v
+          python -m unittest discover -s tests -p 'test_quality_gate_summary.py' -v
+      - name: State precisely what was NOT verified
+        run: |
+          echo 'PR_OFFLINE_REVIEW=PASS; KEYED_DAPA_SAM_INTEGRATION=UNVERIFIED; LIVE_SOURCE_COUNTS=UNVERIFIED; PUBLICATION=DISABLED'
+          echo 'Never interpret missing-key PR environment as a production decrease in official notices.'
+  # A separate intentional dispatch, not a PR, may run actual keyed providers.
+  # Reuse the unchanged fail-closed quality gate, keep every write to data disabled.
+  manual-keyed-preview:
+    if: github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
     uses: ./.github/workflows/feeds.yml
-    with: { task: daily, code_ref: "${{ github.head_ref || github.ref_name }}", dry_run: true }
+    with:
+      task: daily
+      code_ref: "${{ github.ref_name }}"
+      dry_run: true
+    secrets:
+      DAPA_KEY: "${{ secrets.DAPA_KEY }}"
+      SAM_KEY: "${{ secrets.SAM_KEY }}"
