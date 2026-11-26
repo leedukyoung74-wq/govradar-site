@@ -1,0 +1,25 @@
+name: GOV RADAR D1 and form endpoint READ ONLY readiness
+on:
+  pull_request:
+    paths:
+      - 'tools/readonly_request_health.py'
+      - 'tests/test_readonly_request_health.py'
+      - '.github/workflows/wmm_readonly_request_health.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-get-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate probe with offline fixtures
+        run: python -m unittest discover -s tests -p test_readonly_request_health.py -v
+      - name: Probe anonymous public GET status only (NO CUSTOMER SUBMISSION)
+        run: python tools/readonly_request_health.py
