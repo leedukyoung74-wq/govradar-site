@@ -2,7 +2,7 @@
    Email + password sign-up/sign-in, password reset, Google sign-in when enabled.
    Membership level comes from app_metadata.roles (m1…m5, edu, youth, uni, admin). */
 (function () {
-  const API = "/.netlify/identity", KEY = "wmm.auth.v1";
+  const API = (location.hostname === "netlify.app" || location.hostname.endsWith(".netlify.app")) ? "/.netlify/identity" : "/nfid", KEY = "wmm.auth.v1";
   // Preserve in-site navigation across third-party Google OAuth round trips.
   // Only current same-origin localized paths are permitted (never external URLs).
   const RETURN_KEY = "wmm.auth.return.v1";
@@ -54,7 +54,14 @@
   async function refresh() {
     if (!S || !S.refresh_token) return null;
     try { const tok = await j("/token", { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded" }, body: "grant_type=refresh_token&refresh_token=" + encodeURIComponent(S.refresh_token) }); return await withTokens(tok); }
-    catch (e) { save(null); return null; }
+    catch (e) {
+      // Only an explicitly rejected refresh credential ends the session.
+      // A transient network, 5xx or rate-limit failure must not erase the saved
+      // refresh token; it grants NO access until a later verification succeeds.
+      if (e.status === 400 || e.status === 401 || e.status === 403) save(null);
+      else save(S, false);
+      return null;
+    }
   }
   async function verifyStoredSession() {
     if (!S || !S.access_token) return null;
@@ -69,7 +76,7 @@
       return null;
     }
   }
-  async function token() { if (!S) return null; if (!VERIFIED) await verifyStoredSession(); if (!S) return null; if (Date.now() > S.expires_at - 60000) await refresh(); return VERIFIED && S ? S.access_token : null; }
+  async function token() { if (!S) return null; if (!VERIFIED) await verifyStoredSession(); if (!S || !VERIFIED) return null; if (Date.now() > S.expires_at - 60000) await refresh(); return VERIFIED && S ? S.access_token : null; }
   async function login(email, password) {
     const tok = await j("/token", { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded" }, body: "grant_type=password&username=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password) });
     return withTokens(tok);
