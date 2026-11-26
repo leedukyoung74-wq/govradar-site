@@ -62,11 +62,35 @@ jobs:
               with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
                   f.write('\n'.join(lines)+'\n')
           PY
+      - name: Check live D1 API using anonymous GET ONLY
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          cmd=['python','snapshot-src/tools/readonly_request_health.py']
+          try:
+              p=subprocess.run(cmd, capture_output=True, text=True, timeout=40)
+              report=json.loads(p.stdout)
+          except (ValueError, OSError, subprocess.TimeoutExpired):
+              report={'classification':'ANONYMOUS_READ_ONLY_API_PROBE',
+                      'status':'INCONCLUSIVE_PROBE_ERROR','submission_tested':False}
+          Path('audit-evidence').mkdir(exist_ok=True)
+          Path('audit-evidence/d1-public-get.json').write_text(
+              json.dumps(report, ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+          state=report.get('d1_binding_evidence', report.get('status','INCONCLUSIVE'))
+          print('D1 public GET only:',state)
+          summary=os.environ.get('GITHUB_STEP_SUMMARY')
+          if summary:
+              with open(summary,'a',encoding='utf-8') as f:
+                  f.write('\\n### D1 request endpoint (anonymous GET only)\\n')
+                  f.write('\\n**'+str(state)+'** — not proof of login, storage, paid quota or inbox receipt.\\n')
+          PY
       - name: Store limited evidence; never publish or access private customer records
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: govradar-5-p0-readonly-readiness
-          path: audit-evidence/report.json
+          path: audit-evidence/
           retention-days: 2
           if-no-files-found: warn

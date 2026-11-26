@@ -74,13 +74,26 @@ def inspect(src,live,data,now=None):
             {"source_state":state or "MISSING","last_success":item.get("last_success"),
              "reason":reason,"data_freshness":item.get("data_freshness"),
              "coverage_partial":item.get("coverage_partial") is True})
-    homepage=read(live/"public"/"ko"/"index.html")
-    html=homepage.decode("utf-8","replace") if homepage is not None else ""
-    old=re.search(r'id="kp-t">([0-9][0-9,]*)<',html)
-    published=int(old.group(1).replace(",","")) if old else None
-    add("public_static_open_count","pass" if fresh and published==opening else "block",
-        {"static_open":published,"verified_open":opening,
-         "note":"Build-time HTML must match current public data; JS refresh alone is not sufficient."})
+    # Live home pages now intentionally show an unverified dash until today's
+    # publicly fetched JSON has passed freshness checks in the browser.
+    # Any old pre-rendered number is unsafe even if it happened to match today.
+    langs=("ko","en","es","fr","ar","vi","id")
+    placeholders=[]
+    for lang in langs:
+        blob=read(live/"public"/lang/"index.html")
+        html=blob.decode("utf-8","replace") if blob is not None else ""
+        safe=(bool(re.search(r'<b id="kp-t">—</b>',html))
+              and bool(re.search(r'<b id="kp-u">—</b>',html))
+              and bool(re.search(r'<b id="td-open">—</b>',html))
+              and 'data/feeds/today.json' in html
+              and '108000000' in html)
+        placeholders.append({"lang":lang,"safe":safe})
+    good=all(x["safe"] for x in placeholders)
+    add("public_static_open_count","pass" if good else "block",
+        {"placeholder_lc_covered":sum(x["safe"] for x in placeholders),
+         "expected_locales":len(langs),
+         "failed_locales":[x["lang"] for x in placeholders if not x["safe"]],
+         "note":"Safe initial placeholders; live JSON is separately freshness-gated. No fixed tender counts before verified fetch."})
     for key,a,b in (("live_auth_js",src/"web"/"auth.js",live/"public"/"assets"/"auth.js"),
                     ("live_form_relay",src/"cf"/"functions"/"nfform.js",live/"functions"/"nfform.js"),
                     ("live_request_api",src/"cf"/"functions"/"api"/"req.js",live/"functions"/"api"/"req.js")):
