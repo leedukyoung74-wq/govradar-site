@@ -61,9 +61,19 @@ def inspect(src,live,data,now=None):
     for source,tag in (("UK Find a Tender","uk_fts"),("DAPA (Korea)","kr_dapa"),("SAM.gov (US)","us_sam")):
         item=raw.get(source,{})
         state=item.get("state")
-        add(tag, "pass" if state=="SUCCESS" else "block",
+        # HTTP success does not prove current notices or exhaustive coverage.
+        # Keep evidence-based degradation separate from a transport-layer success.
+        stale_archive=(tag=="kr_dapa" and item.get("data_freshness")=="HISTORICAL_SAMPLE")
+        rate_limited=item.get("last_error")=="RATE_LIMITED_429"
+        degraded=stale_archive or rate_limited
+        reason=("historical_archive_not_live_notice" if stale_archive else
+                "rate_limited_429" if rate_limited else
+                "partial_upstream_or_missing_optional_key" if state in ("PARTIAL","SKIPPED") else
+                "see_public_source_health")
+        add(tag, "pass" if state=="SUCCESS" and not degraded else "block",
             {"source_state":state or "MISSING","last_success":item.get("last_success"),
-             "reason":"partial_upstream_or_missing_optional_key" if state in ("PARTIAL","SKIPPED") else "see_public_source_health"})
+             "reason":reason,"data_freshness":item.get("data_freshness"),
+             "coverage_partial":item.get("coverage_partial") is True})
     homepage=read(live/"public"/"ko"/"index.html")
     html=homepage.decode("utf-8","replace") if homepage is not None else ""
     old=re.search(r'id="kp-t">([0-9][0-9,]*)<',html)
