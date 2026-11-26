@@ -33,6 +33,8 @@ class AuditTest(unittest.TestCase):
                     ("cf/functions/api/req.js","functions/api/req.js")):
             store(self.s,s,"working program")
             store(self.l,l,"working program")
+        store(self.s,"web/auth.js",'const API = "/.netlify/identity", KEY = "wmm.auth.v1";')
+        store(self.l,"public/assets/auth.js",'const API = "/nfid", KEY = "wmm.auth.v1";')
         store(self.s,"src/government_business_sites.json",{"countries":{("XX"+str(i)): [1,2,3] for i in range(193)}})
 
     def states(self):
