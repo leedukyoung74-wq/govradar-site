@@ -22,6 +22,7 @@ out.push(["4", await call(P, "POST", { type: "family", body: "C", email: "x@ex.c
 out.push(["5", await call(P, "POST", { type: "partner", body: "D", email: "y@ex.com" }, "m0")]);
 out.push(["6", await call(P, "POST", { type: "partner", body: "E", email: "z@ex.com" })]);
 out.push(["7", await call(P, "POST", { type: "x", body: "E", email: "z@ex.com" })]);
+out.push(["secret",await call(P,"POST",{type:"partner",body:"Partner request\nmember code: ABCD-EFGH",email:"x@ex.com"},"m1")]);
 const h = await call(G, "GET", null, "m1"); out.push(["8", String(h.items.length) + " " + h.left]);
 raw.exec("update requests set counted=0, status='failed' where type='country'");
 out.push(["9", (await call(G, "GET", null, "m1")).left]);
@@ -44,6 +45,7 @@ if (!(r3.counted && r3.left === 0)) fail.push("second");
 if (!(r4.quote && !r4.counted)) fail.push("over");
 if (!(r5.quote && !r5.member)) fail.push("nonmember");
 if (r7.error !== "bad") fail.push("bad");
+if (out.find(x=>x[0]==="secret")?.[1]?.error!=="secret_in_request") fail.push("secret-leak");
 if (out[7][1].split(" ")[0] !== "3") {}
 if (out[8][1] !== 1) fail.push("refund");
 if (out[9][1] !== 503) fail.push("nodb");
