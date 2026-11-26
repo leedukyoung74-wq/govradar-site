@@ -28,9 +28,22 @@ function ok(q){
   var date=hasOffset?Date.parse(v):Date.parse(v.slice(0,10)+"T23:59:59-12:00");
   return Number.isFinite(date)&&date>Date.now();
 }
+// A successful HTTP fetch of an old GitHub snapshot is NOT a fresh source check.
+// Reject invalid, future-dated or older-than-36h feed timestamps, while retaining
+// a plain-language delayed status and a direct link to each official provider.
+function recentStamp(raw){
+  var ms=Date.parse(String(raw||""));
+  var age=Date.now()-ms;
+  return Number.isFinite(age)&&age>=-5*60*1000&&age<=36*60*60*1000;
+}
 Promise.all([get("sources_status.json"),get("tenders.json")]).then(function(v){
 var states=v[0],data=v[1];if(!states||!Array.isArray(data.items))throw Error("bad schema");
-function update(card,name){var st=states[name]||{},arr=data.items.filter(function(q){return q.source===name&&ok(q)});card.p.textContent=t[2]+": "+(st.state||"UNKNOWN")+" · "+t[3]+": "+(st.last_success||"—");var label=t[4]+": "+arr.length;
+var feedFresh=recentStamp(data.updated);
+function update(card,name){var st=states[name]||{},arr=data.items.filter(function(q){return q.source===name&&ok(q)});
+var current=feedFresh&&recentStamp(st.last_success)&&st.state==="SUCCESS";
+var status=!feedFresh||!recentStamp(st.last_success)?(lang==="ko"?"갱신 지연 · 마지막 기록":lang==="en"?"Delayed · last known snapshot":"Delayed · last snapshot"):(st.state||"UNKNOWN");
+card.p.textContent=t[2]+": "+status+" · "+t[3]+": "+(st.last_success||"—");
+var label=t[4]+": "+(current?arr.length:(lang==="ko"?"확인 불가 (기록 "+arr.length+"건)":lang==="en"?"Unverified (cached "+arr.length+")":"Unverified (cached "+arr.length+")"));
 if(name==="DAPA (Korea)"&&arr.length===0&&st.state==="SUCCESS"){
   var notes=Array.isArray(st.notes)?st.notes.join(" "):"";
   var sample=String(st.sampled_latest_bid_to||"")||((notes.match(/latest_page_max_bidTo=(\d{4}-\d{2}-\d{2})/)||[])[1]||"");
@@ -41,7 +54,7 @@ if(name==="SAM.gov (US)"&&st.coverage_partial){
 }
 card.c.textContent=label}
 update(sam,"SAM.gov (US)");update(dapa,"DAPA (Korea)");
-var list=s.querySelector(".wmm-src-list");data.items.filter(function(q){return q.source==="SAM.gov (US)"&&ok(q)}).slice(0,5).forEach(function(q){
+var list=s.querySelector(".wmm-src-list");data.items.filter(function(q){return feedFresh&&recentStamp((states["SAM.gov (US)"]||{}).last_success)&&q.source==="SAM.gov (US)"&&ok(q)}).slice(0,5).forEach(function(q){
 var li=document.createElement("li");li.style.cssText="margin:8px 0;padding:12px;border:1px solid #dae2ef;background:white;border-radius:10px";var b=document.createElement("b"),p=document.createElement("p"),a=document.createElement("a");
 b.textContent=String(q.title||"").slice(0,180);p.textContent=(q.deadline||"")+" · "+String(q.buyer||"").slice(0,110);
 try{var u=new URL(q.url);if(u.protocol==="https:"&&(u.hostname==="sam.gov"||u.hostname.endsWith(".sam.gov"))){a.href=u.href;a.textContent=t[5];a.target="_blank";a.rel="noopener noreferrer"}}catch(e){}
