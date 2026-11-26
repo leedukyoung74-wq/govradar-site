@@ -30,7 +30,7 @@
 <div class="rq-f" data-t="tender"><label>공고 링크 또는 제목 *<input data-k="tender" type="text" data-req></label><label>업종·주력 제품 *<input data-k="industry" type="text" data-req></label><label>연 매출 (억 원)<input data-k="revenue" type="number"></label><label>공공·해외 실적 (간단히)<textarea data-k="record" rows="3"></textarea></label><label>보유 인증<input data-k="certs" type="text"></label></div><div class="rq-f" data-t="country" hidden><label>업종·주력 제품 *<input data-k="industry" type="text" data-req></label><label>원하는 방식 (수출·현지 파트너·입찰·투자 등)<input data-k="mode" type="text"></label><label>알고 싶은 것<textarea data-k="goal" rows="3"></textarea></label></div><div class="rq-f" data-t="family" hidden><label>사는 지역 (시·군 단위까지만) *<input data-k="area" type="text" data-req></label><label>가족 수 *<input data-k="people" type="number" data-req></label><label>영유아·고령자·반려동물 (해당하는 것만)<input data-k="care" type="text"></label><label>특별히 챙길 점 (선택, 건강 정보는 꼭 필요한 만큼만)<textarea data-k="note" rows="3"></textarea></label></div><div class="rq-f" data-t="partner" hidden><label>찾는 상대 (바이어·제조사·현지 대리인 등) *<input data-k="seek" type="text" data-req></label><label>우리 제품·기술 *<input data-k="offer" type="text" data-req></label><label>조건·일정 (선택)<textarea data-k="note" rows="3"></textarea></label></div>
 <div class="two"><label>이메일 *<input name="email" type="email" required></label><label>이름 또는 담당자 *<input name="name" required></label></div>
 <div class="two"><label>회사·단체명 (선택)<input name="org"></label><label>관심 국가<input name="countries"></label></div>
-<label>회원 코드 (있으면)<input data-k="code" autocomplete="off"></label>
+
 <h2 id="s3">3. 확인하고 보내기</h2>
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> 개인정보 수집·이용(의뢰 처리 목적, 처리 후 1년 보관)에 동의합니다</label>
 <p><button class="btn pri" type="submit">의뢰 보내기</button> <span class="rq-msg note" role="status"></span></p>
@@ -50,7 +50,7 @@ function paint(){var a=load(),u=document.querySelector(".rq-mine");u.innerHTML=a
 function hash(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return String(h)}
 f.addEventListener("submit",function(ev){var t=cur(),box=f.querySelector('.rq-f[data-t="'+t+'"]'),lines=[],ok=true;
 box.querySelectorAll("[data-k]").forEach(function(i){var v=(i.value||"").trim();if(i.hasAttribute("data-req")&&!v)ok=false;if(v)lines.push(i.parentNode.firstChild.textContent.replace(" *","")+": "+v)});
-var code=(f.querySelector('[data-k=code]').value||"").trim();if(code)lines.push("member code: "+code);
+// Membership credentials must never be inserted into the inquiry text.
 if(!ok){ev.preventDefault();msg.textContent=K.req;return}
 var h=hash(t+lines.join("|")+f.email.value),a=load(),prev=a.filter(function(x){return x.h===h&&Date.now()-x.ts<6e5})[0];
 if(prev&&!prev.relay_failed){ev.preventDefault();msg.textContent=K.dup+" "+prev.id;return}
