@@ -27,6 +27,7 @@ raw.exec("update requests set counted=0, status='failed' where type='country'");
 out.push(["9", (await call(G, "GET", null, "m1")).left]);
 out.push(["10", (await mod.onRequestPost({ request: req("POST", {}, "m1").request, env: {} })).status]);
 out.push(["secret",await call(P,"POST",{type:"partner",body:"Partner request\nmember code: ABCD-EFGH",email:"x@ex.com"},"m1")]);
+out.push(["arabic_secret",await call(P,"POST",{type:"partner",body:"رمز العضوية: ABCD-EFGH",email:"x@ex.com"},"m1")]);
 
 const [r1,r2,r3,r4,r5,r6,r7,,,] = out.map(x=>x[1]);
 // PATCH must reject anonymous, cross-user and malformed status changes.
@@ -46,6 +47,7 @@ if (!(r4.quote && !r4.counted)) fail.push("over");
 if (!(r5.quote && !r5.member)) fail.push("nonmember");
 if (r7.error !== "bad") fail.push("bad");
 if (out.find(x=>x[0]==="secret")?.[1]?.error!=="secret_in_request") fail.push("secret-leak");
+if (out.find(x=>x[0]==="arabic_secret")?.[1]?.error!=="secret_in_request") fail.push("arabic-secret-leak");
 if (out[7][1].split(" ")[0] !== "3") {}
 if (out[8][1] !== 1) fail.push("refund");
 if (out[9][1] !== 503) fail.push("nodb");
