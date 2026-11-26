@@ -31,7 +31,19 @@ class RequestRelayClientTests(unittest.TestCase):
                 self.assertIn("a[0].relay_failed=true",html)
                 self.assertIn("msg.textContent=K.sending+\" \"+id",html)
                 self.assertIn("}).catch(relayFailed);",html)
-                self.assertIn("x.relay_failed?K.delivery_failed:K.st",html)
+                self.assertIn("x.relay_failed?K.delivery_failed:(x.gateway_only?K.gateway:K.st)",html)
+
+    def test_d1_missing_fallback_is_verified_not_native_submission(self):
+        for lang in LANGS:
+            with self.subTest(lang=lang):
+                html=page(lang)
+                self.assertIn("if(r.status===503){SRV=false",html)
+                self.assertIn("function relayWithoutD1()",html)
+                self.assertIn('r.status!==303',html)
+                self.assertNotIn("f.submit()",html)
+                self.assertIn("gateway_only=true",html)
+                self.assertIn("gateway_only?K.gateway",html)
+                self.assertIn("else relayWithoutD1();",html)
 
     @unittest.skipUnless(shutil.which("node"),"node unavailable")
     def test_all_locales_inline_js_syntax(self):
