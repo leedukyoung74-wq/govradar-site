@@ -47,6 +47,30 @@ if(ok({deadline:"2099-12-01",stale:true}))process.exit(15);
         p=subprocess.run(["node","-e",runner],capture_output=True,text=True,timeout=15)
         self.assertEqual(p.returncode,0,p.stderr)
 
+    def test_stale_snapshot_guard(self):
+        if not shutil.which("node"): self.skipTest("node missing")
+        js=JS.read_text("utf-8")
+        start=js.index("function recentStamp(raw){")
+        end=js.index("Promise.all(",start)
+        logic=js[start:end]
+        runner=logic+'''
+const now=Date.now();
+if(!recentStamp(new Date(now-1000).toISOString()))process.exit(21);
+if(recentStamp(new Date(now-37*60*60*1000).toISOString()))process.exit(22);
+if(recentStamp(new Date(now+10*60*1000).toISOString()))process.exit(23);
+if(recentStamp("not-a-date"))process.exit(24);
+'''
+        p=subprocess.run(["node","-e",runner],capture_output=True,text=True,timeout=15)
+        self.assertEqual(p.returncode,0,p.stderr)
+
+    def test_stale_counts_not_presented_as_live(self):
+        js=JS.read_text("utf-8")
+        self.assertIn("feedFresh&&recentStamp(st.last_success)",js)
+        self.assertIn('st.state==="SUCCESS"',js)
+        self.assertIn("current?arr.length",js)
+        self.assertIn("feedFresh&&recentStamp((states",js)
+        self.assertIn("갱신 지연",js)
+
     def test_valid_javascript_syntax(self):
         if not shutil.which("node"): self.skipTest("node missing")
         result=subprocess.run(["node","--check",str(JS)],capture_output=True,text=True,timeout=15)
