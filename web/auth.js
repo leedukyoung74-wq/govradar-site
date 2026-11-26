@@ -76,7 +76,7 @@
       return null;
     }
   }
-  async function token() { if (!S) return null; if (!VERIFIED) await verifyStoredSession(); if (!S) return null; if (Date.now() > S.expires_at - 60000) await refresh(); return VERIFIED && S ? S.access_token : null; }
+  async function token() { if (!S) return null; if (!VERIFIED) await verifyStoredSession(); if (!S || !VERIFIED) return null; if (Date.now() > S.expires_at - 60000) await refresh(); return VERIFIED && S ? S.access_token : null; }
   async function login(email, password) {
     const tok = await j("/token", { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded" }, body: "grant_type=password&username=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password) });
     return withTokens(tok);
