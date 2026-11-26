@@ -31,7 +31,7 @@ class RequestRelayClientTests(unittest.TestCase):
                 self.assertIn("a[0].relay_failed=true",html)
                 self.assertIn("msg.textContent=K.sending+\" \"+id",html)
                 self.assertIn("}).catch(relayFailed);",html)
-                self.assertIn("x.relay_failed?K.delivery_failed:K.st",html)
+                self.assertIn("x.relay_failed?K.delivery_failed:(x.gateway_only?K.gateway:K.st)",html)
 
     def test_d1_missing_fallback_is_verified_not_native_submission(self):
         for lang in LANGS:
