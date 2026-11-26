@@ -40,11 +40,21 @@ export async function onRequestPost({ request, env }) {
     .bind(key, dedupe, new Date(now.getTime() - 6e5).toISOString()).first();
   const member = !!u && u.grade !== "m0";
   if (prev) { const n = await used(db, key, month); return json({ req_no: prev.req_no, duplicate: true, counted: !!prev.counted, member, left: member ? Math.max(0, LIMIT - n) : 0 }); }
-  const n = await used(db, key, month), counted = member && n < LIMIT ? 1 : 0;   // over the limit or not a member -> quote first, not counted
-  const d = new Date(now.getTime() + 9 * 3600e3), req = "RQ-" + d.toISOString().slice(2, 10).replace(/-/g, "") + "-" + (await sha(dedupe + now.toISOString())).slice(0, 4).toUpperCase();
-  await db.prepare("insert into requests (req_no, created_at, month, user_key, email, grade, type, lang, body, dedupe, counted) values (?,?,?,?,?,?,?,?,?,?,?)")
-    .bind(req, now.toISOString(), month, key, email, u ? u.grade : null, type, lang, body, dedupe, counted).run();
-  return json({ req_no: req, duplicate: false, counted: !!counted, member, quote: !counted, left: member ? Math.max(0, LIMIT - n - counted) : 0 });
+  const d = new Date(now.getTime() + 9 * 3600e3), req = "RQ-" + d.toISOString().slice(2, 10).replace(/-/g, "") + "-" + crypto.randomUUID().replace(/-/g, "").slice(0, 4).toUpperCase();
+  // Quota decision and insert MUST happen in the same D1/SQLite write statement.
+  // A separate used() read followed by a regular INSERT can over-allocate the
+  // two monthly included analyses when multiple requests arrive together.
+  const quotaSql = "insert into requests (req_no, created_at, month, user_key, email, grade, type, lang, body, dedupe, counted) "
+    + "select ?,?,?,?,?,?,?,?,?,?, case when ?=1 and "
+    + "(select count(*) from requests where user_key=? and month=? and counted=1) < ? then 1 else 0 end";
+  await db.prepare(quotaSql)
+    .bind(req, now.toISOString(), month, key, email, u ? u.grade : null, type, lang, body, dedupe,
+      member ? 1 : 0, key, month, LIMIT).run();
+  const inserted = await db.prepare("select counted from requests where req_no=? and user_key=?").bind(req, key).first();
+  const counted = !!(inserted && inserted.counted === 1);
+  const totalUsed = await used(db, key, month);
+  return json({ req_no: req, duplicate: false, counted, member, quote: !counted,
+    left: member ? Math.max(0, LIMIT - totalUsed) : 0 });
 }
 // The page reports whether the Netlify form went through, so a failed alert is visible to the owner.
 export async function onRequestPatch({ request, env }) {
