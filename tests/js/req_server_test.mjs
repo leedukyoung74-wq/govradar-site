@@ -39,8 +39,15 @@ const invalid = await patch(req("PATCH", { req_no: "bad", ok: true }, "m1"));
 const mine = await patch(req("PATCH", { req_no: ownNo, ok: true }, "m1"));
 const stored = raw.prepare("select status from requests where req_no=?").get(ownNo);
 out.push(["patch", [cross.status, anon.status, invalid.status, mine.status, stored?.status].join(" ")]);
+// Concurrent member submissions for a new user must receive at most 2 included slots.
+const concurrent = await Promise.all(["Q1","Q2","Q3","Q4","Q5"].map(body =>
+  call(P, "POST", { type:"country", body, email:"quota@ex.com" }, "m1-quota")));
+const quotaRows = raw.prepare("select count(*) as n, sum(counted) as used from requests where user_key=?").get("u:user-m1-quota");
+const quotaIncluded = concurrent.filter(x => x.counted).length;
+// Concurrent duplicate submissions are still to be guarded independently.
 const fail = [];
 if (!(r1.counted && r1.left === 1)) fail.push("first");
+if (quotaRows.n!==5 || quotaRows.used!==2 || quotaIncluded!==2) fail.push("atomic-quota");
 if (!(r2.duplicate && r2.req_no === r1.req_no)) fail.push("dup");
 if (!(r3.counted && r3.left === 0)) fail.push("second");
 if (!(r4.quote && !r4.counted)) fail.push("over");
