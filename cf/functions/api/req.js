@@ -47,8 +47,19 @@ export async function onRequestPost({ request, env }) {
 // The page reports whether the Netlify form went through, so a failed alert is visible to the owner.
 export async function onRequestPatch({ request, env }) {
   if (!env.GV_DB) return json({ error: "not_configured" }, 503);
+  // A request number is not proof of ownership. Anonymous/other-user callers
+  // must never alter the relay status of a stored customer request.
+  const u = await who(request);
+  if (!u || !u.id) return json({ error: "login" }, 401);
   let b; try { b = await request.json(); } catch (e) { return json({ error: "bad" }, 400); }
+  const reqNo = typeof b.req_no === "string" ? b.req_no : "";
+  if (!/^RQ-[0-9]{6}-[A-F0-9]{4}$/.test(reqNo) || typeof b.ok !== "boolean")
+    return json({ error: "bad" }, 400);
+  const key = "u:" + u.id;
+  const owned = await env.GV_DB.prepare("select req_no from requests where req_no=? and user_key=?").bind(reqNo, key).first();
+  if (!owned) return json({ error: "not_found" }, 404);
   const st = b.ok ? "relayed" : "relay_failed";
-  await env.GV_DB.prepare("update requests set status=? where req_no=? and status in ('received','relay_failed')").bind(st, String(b.req_no || "")).run();
+  await env.GV_DB.prepare("update requests set status=? where req_no=? and user_key=? and status in ('received','relay_failed')")
+    .bind(st, reqNo, key).run();
   return json({ ok: true });
 }
