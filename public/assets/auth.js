@@ -54,7 +54,14 @@
   async function refresh() {
     if (!S || !S.refresh_token) return null;
     try { const tok = await j("/token", { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded" }, body: "grant_type=refresh_token&refresh_token=" + encodeURIComponent(S.refresh_token) }); return await withTokens(tok); }
-    catch (e) { save(null); return null; }
+    catch (e) {
+      // Only an explicitly rejected refresh credential ends the session.
+      // A transient network, 5xx or rate-limit failure must not erase the saved
+      // refresh token; it grants NO access until a later verification succeeds.
+      if (e.status === 400 || e.status === 401 || e.status === 403) save(null);
+      else save(S, false);
+      return null;
+    }
   }
   async function verifyStoredSession() {
     if (!S || !S.access_token) return null;
