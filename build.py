@@ -201,7 +201,8 @@ def head(L, title, desc, path, alt_paths, extra=""):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>{f'<link rel="stylesheet" href="{FONTLINK[L]}">' if L in FONTLINK else ''}
 <link rel="stylesheet" href="{FLAGCSS}"><link rel="stylesheet" href="/assets/site.css">
 <link rel="alternate" type="application/rss+xml" title="GOV RADAR" href="/feeds/{L if L in ('ko','en') else 'en'}/all.xml">
-{extra}</head><body>
+{extra}
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "57b3c9c0155f448bb4697880e474765e"}}'></script><!-- End Cloudflare Web Analytics --></head><body>
 <header class="nav"><div class="in">
 <a class="brand" href="/{L}/"><img src="/assets/logo-h.webp" alt="GOV RADAR" width="132" height="44"></a>
 <nav class="links" id="navlinks">{navhtml_act(L, path)}</nav>
