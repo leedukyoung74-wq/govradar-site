@@ -28,6 +28,15 @@ out.push(["9", (await call(G, "GET", null, "m1")).left]);
 out.push(["10", (await mod.onRequestPost({ request: req("POST", {}, "m1").request, env: {} })).status]);
 
 const [r1,r2,r3,r4,r5,r6,r7,,,] = out.map(x=>x[1]);
+// PATCH must reject anonymous, cross-user and malformed status changes.
+const patch = mod.onRequestPatch;
+const ownNo = r1.req_no;
+const cross = await patch(req("PATCH", { req_no: ownNo, ok: true }, "m0"));
+const anon = await patch(req("PATCH", { req_no: ownNo, ok: true }));
+const invalid = await patch(req("PATCH", { req_no: "bad", ok: true }, "m1"));
+const mine = await patch(req("PATCH", { req_no: ownNo, ok: true }, "m1"));
+const stored = raw.prepare("select status from requests where req_no=?").get(ownNo);
+out.push(["patch", [cross.status, anon.status, invalid.status, mine.status, stored?.status].join(" ")]);
 const fail = [];
 if (!(r1.counted && r1.left === 1)) fail.push("first");
 if (!(r2.duplicate && r2.req_no === r1.req_no)) fail.push("dup");
@@ -38,4 +47,5 @@ if (r7.error !== "bad") fail.push("bad");
 if (out[7][1].split(" ")[0] !== "3") {}
 if (out[8][1] !== 1) fail.push("refund");
 if (out[9][1] !== 503) fail.push("nodb");
+if (out.find(x => x[0] === "patch")?.[1] !== "404 401 400 200 relayed") fail.push("patch-ownership");
 if (fail.length) { console.error("FAIL", fail.join(",")); process.exit(1); } else console.log("req_server OK");
