@@ -53,6 +53,14 @@ class RequestRelayClientTests(unittest.TestCase):
                 self.assertNotIn('lines.push("member code: "',html)
                 self.assertIn("Membership is determined by verified sign-in",html)
 
+    def test_gateway_receipt_never_claims_staff_delivery(self):
+        for lang in LANGS:
+            with self.subTest(lang=lang):
+                html=page(lang)
+                self.assertIn('"gateway_reported":',html)
+                self.assertIn('"gateway_failed_reported":',html)
+                self.assertIn('staff receipt unverified' if lang != "ko" else '관리자 확인 전',html)
+
     @unittest.skipUnless(shutil.which("node"),"node unavailable")
     def test_all_locales_inline_js_syntax(self):
         for lang in LANGS:

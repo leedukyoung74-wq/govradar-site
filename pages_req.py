@@ -16,7 +16,7 @@ K = {
   agree="개인정보 수집·이용(의뢰 처리 목적, 처리 후 1년 보관)에 동의합니다", btn="의뢰 보내기", sending="보내는 중…",
   done="접수되었습니다. 요청번호", dup="같은 내용을 방금 보내셨습니다. 요청번호", mine="이 브라우저에서 보낸 의뢰", mine_n="아직 보낸 의뢰가 없습니다.",
   st="접수됨 — 확인 메일을 기다려 주세요", req="필수 항목을 채워 주세요.", left="이번 달 남은 의뢰 {n}건", over="이번 달 포함 건수(2건)를 넘어 견적을 먼저 보내 드립니다", quote="회원이 아니어서 견적을 먼저 이메일로 보내 드립니다", sent="접수 완료", delivery_failed="전달을 확인하지 못했습니다. 다시 보내 주세요. 요청번호", retry="다시 보내기",
-  S={"received": "접수됨", "relayed": "접수됨 · 담당자 전달", "relay_failed": "접수됨 · 알림 재확인 중", "in_progress": "처리 중", "done": "완료 · 이메일 확인", "failed": "처리 불가 · 한도 반환", "cancelled": "취소 · 한도 반환"},
+  S={"received": "서버 기록됨 · 관리자 확인 전", "gateway_reported": "중계 성공 보고 · 관리자 확인 전", "gateway_failed_reported": "중계 실패 보고 · 재확인 필요", "relayed": "과거 중계 보고 · 관리자 수신 미확인", "relay_failed": "과거 중계 실패 보고 · 재확인 필요", "in_progress": "처리 중", "done": "완료 · 이메일 확인", "failed": "처리 불가 · 한도 반환", "cancelled": "취소 · 한도 반환"},
   types=[
    ("tender", "이 입찰에 우리 회사가 참여할 수 있는지 검토", "참가 자격·필요 서류·부족한 조건을 정리한 참가 조건표와 참여 권고(예·조건부·아니오)", "공고 링크 또는 제목, 업종, 연 매출, 공공·해외 실적, 보유 인증",
     [("tender", "공고 링크 또는 제목", "text", True), ("industry", "업종·주력 제품", "text", True), ("revenue", "연 매출 (억 원)", "number", False), ("record", "공공·해외 실적 (간단히)", "textarea", False), ("certs", "보유 인증", "text", False)]),
@@ -38,7 +38,7 @@ K = {
   agree="I agree to the collection and use of my details to handle this request (kept for one year)", btn="Send request", sending="Sending…",
   done="Received. Request number", dup="You just sent the same request. Request number", mine="Requests sent from this browser", mine_n="No requests yet.",
   st="Received — watch for our confirmation email", req="Please fill in the required fields.", left="{n} requests left this month", over="Over this month's two included requests — we will send a quote first", quote="Not a member — we will email a quote first", sent="Received", delivery_failed="Delivery not confirmed. Please retry. Request number", retry="Retry sending",
-  S={"received": "Received", "relayed": "Received · passed to staff", "relay_failed": "Received · alert being re-checked", "in_progress": "In progress", "done": "Done · check your email", "failed": "Could not be done · allowance returned", "cancelled": "Cancelled · allowance returned"},
+  S={"received": "Server recorded · staff receipt unverified", "gateway_reported": "Gateway success reported · staff receipt unverified", "gateway_failed_reported": "Gateway failure reported · recheck needed", "relayed": "Legacy gateway report · staff receipt unverified", "relay_failed": "Legacy failure report · recheck needed", "in_progress": "In progress", "done": "Done · check your email", "failed": "Could not be done · allowance returned", "cancelled": "Cancelled · allowance returned"},
   types=[
    ("tender", "Can our company bid on this tender?", "An entry-conditions table (eligibility, documents, gaps) and a recommendation: yes, conditional or no", "Notice link or title, industry, annual revenue, public or overseas record, certifications",
     [("tender", "Notice link or title", "text", True), ("industry", "Industry and main product", "text", True), ("revenue", "Annual revenue (USD)", "text", False), ("record", "Public or overseas record (brief)", "textarea", False), ("certs", "Certifications", "text", False)]),

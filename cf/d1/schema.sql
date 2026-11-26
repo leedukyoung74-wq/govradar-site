@@ -12,7 +12,7 @@ create table if not exists requests (
   body       text not null,                 -- the request text (no health details are asked for)
   dedupe     text not null,                 -- hash of type+body+email: same request within 10 minutes is not counted twice
   counted    integer not null default 0,    -- 1 = uses one of the monthly requests
-  status     text not null default 'received', -- received | relayed | relay_failed | in_progress | done | failed | cancelled
+  status     text not null default 'received', -- received | gateway_reported | gateway_failed_reported | relayed (legacy) | relay_failed (legacy) | in_progress | done | failed | cancelled
   note       text
 );
 create index if not exists req_user_month on requests(user_key, month);
