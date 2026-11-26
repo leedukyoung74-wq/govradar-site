@@ -22,6 +22,7 @@ SOURCE_HOSTS={
     "EU TED":"ted.europa.eu",
     "Prozorro (Ukraine)":"prozorro.gov.ua",
     "UK Contracts Finder":"www.contractsfinder.service.gov.uk",
+    "SAM.gov (US)":"sam.gov",
 }
 GOOD_SOURCE_GRADES={"full","date"}
 MAX_INPUT_BYTES=3_000_000
