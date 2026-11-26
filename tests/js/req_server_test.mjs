@@ -9,7 +9,7 @@ const raw = new DatabaseSync(":memory:"); raw.exec(sql);
 const D1 = { prepare(q) { const st = raw.prepare(q); let args = []; const o = { bind(...a) { args = a; return o; }, async first() { return st.get(...args) ?? null; }, async all() { return { results: st.all(...args) }; }, async run() { st.run(...args); return {}; } }; return o; } };
 // fake identity: token "m1" -> member, "m0" -> signed-in non-member
 globalThis.fetch = async (url, opt) => { const t = (opt.headers.authorization || "").split(" ")[1]; if (!t) return { ok: false };
-  return { ok: true, json: async () => ({ id: "user-" + t, email: t + "@ex.com", app_metadata: { roles: t === "m1" ? ["m1"] : [] } }) }; };
+  return { ok: true, json: async () => ({ id: "user-" + t, email: t + "@ex.com", app_metadata: { roles: t.startsWith("m1") ? ["m1"] : [] } }) }; };
 const mod = await import(ROOT + "/cf/functions/api/req.js");
 const env = { GV_DB: D1 };
 const req = (method, body, tok) => ({ request: { headers: { get: k => (k === "authorization" && tok ? "Bearer " + tok : null) }, json: async () => body } , env });
