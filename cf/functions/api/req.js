@@ -70,8 +70,10 @@ export async function onRequestPatch({ request, env }) {
   const key = "u:" + u.id;
   const owned = await env.GV_DB.prepare("select req_no from requests where req_no=? and user_key=?").bind(reqNo, key).first();
   if (!owned) return json({ error: "not_found" }, 404);
-  const st = b.ok ? "relayed" : "relay_failed";
-  await env.GV_DB.prepare("update requests set status=? where req_no=? and user_key=? and status in ('received','relay_failed')")
+  // Browser feedback is an untrusted transport report, NOT proof of
+  // receipt by staff/CRM or successful Netlify Forms persistence.
+  const st = b.ok ? "gateway_reported" : "gateway_failed_reported";
+  await env.GV_DB.prepare("update requests set status=? where req_no=? and user_key=? and status in ('received','relay_failed','gateway_failed_reported')")
     .bind(st, reqNo, key).run();
   return json({ ok: true });
 }
