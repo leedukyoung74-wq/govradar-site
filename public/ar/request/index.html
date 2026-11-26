@@ -30,7 +30,7 @@
 <div class="rq-f" data-t="tender"><label>رابط الإعلان أو عنوانه *<input data-k="tender" type="text" data-req></label><label>القطاع والمنتج الرئيسي *<input data-k="industry" type="text" data-req></label><label>الإيرادات السنوية (دولار أمريكي)<input data-k="revenue" type="text"></label><label>السجل في القطاع العام أو الخارج (باختصار)<textarea data-k="record" rows="3"></textarea></label><label>الشهادات<input data-k="certs" type="text"></label></div><div class="rq-f" data-t="country" hidden><label>القطاع والمنتج الرئيسي *<input data-k="industry" type="text" data-req></label><label>طريقة الدخول المفضلة (تصدير، شريك محلي، مناقصة، استثمار…)<input data-k="mode" type="text"></label><label>ما تريد معرفته<textarea data-k="goal" rows="3"></textarea></label></div><div class="rq-f" data-t="family" hidden><label>مكان سكنك (المدينة أو الحي فقط) *<input data-k="area" type="text" data-req></label><label>عدد أفراد الأسرة *<input data-k="people" type="number" data-req></label><label>الرضع وكبار السن والحيوانات الأليفة (ما ينطبق فقط)<input data-k="care" type="text"></label><label>أي شيء خاص (اختياري؛ التفاصيل الصحية عند الحاجة فقط)<textarea data-k="note" rows="3"></textarea></label></div><div class="rq-f" data-t="partner" hidden><label>من تبحث عنه (مشترٍ، مصنّع، وكيل محلي…) *<input data-k="seek" type="text" data-req></label><label>منتجك أو تقنيتك *<input data-k="offer" type="text" data-req></label><label>الشروط أو التوقيت (اختياري)<textarea data-k="note" rows="3"></textarea></label></div>
 <div class="two"><label>البريد الإلكتروني *<input name="email" type="email" required></label><label>الاسم أو الشخص المسؤول *<input name="name" required></label></div>
 <div class="two"><label>الشركة أو المؤسسة (اختياري)<input name="org"></label><label>الدولة المهتم بها<input name="countries"></label></div>
-<label>رمز العضوية (إن وجد)<input data-k="code" autocomplete="off"></label>
+
 <h2 id="s3">3. راجع وأرسل</h2>
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> أوافق على جمع بياناتي واستخدامها لمعالجة هذا الطلب (تُحفظ لمدة عام)</label>
 <p><button class="btn pri" type="submit">إرسال الطلب</button> <span class="rq-msg note" role="status"></span></p>
@@ -50,7 +50,7 @@ function paint(){var a=load(),u=document.querySelector(".rq-mine");u.innerHTML=a
 function hash(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return String(h)}
 f.addEventListener("submit",function(ev){var t=cur(),box=f.querySelector('.rq-f[data-t="'+t+'"]'),lines=[],ok=true;
 box.querySelectorAll("[data-k]").forEach(function(i){var v=(i.value||"").trim();if(i.hasAttribute("data-req")&&!v)ok=false;if(v)lines.push(i.parentNode.firstChild.textContent.replace(" *","")+": "+v)});
-var code=(f.querySelector('[data-k=code]').value||"").trim();if(code)lines.push("رمز العضوية: "+code);
+// Membership credentials must never be inserted into inquiry text.
 if(!ok){ev.preventDefault();msg.textContent=K.req;return}
 var h=hash(t+lines.join("|")+f.email.value),a=load(),prev=a.filter(function(x){return x.h===h&&Date.now()-x.ts<6e5})[0];
 if(prev&&!prev.relay_failed){ev.preventDefault();msg.textContent=K.dup+" "+prev.id;return}
