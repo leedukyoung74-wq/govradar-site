@@ -23,6 +23,11 @@ out.push(["5", await call(P, "POST", { type: "partner", body: "D", email: "y@ex.
 out.push(["6", await call(P, "POST", { type: "partner", body: "E", email: "z@ex.com" })]);
 out.push(["7", await call(P, "POST", { type: "x", body: "E", email: "z@ex.com" })]);
 const h = await call(G, "GET", null, "m1"); out.push(["8", String(h.items.length) + " " + h.left]);
+raw.exec("update requests set counted=0, status='failed' where type='country'");
+out.push(["9", (await call(G, "GET", null, "m1")).left]);
+out.push(["10", (await mod.onRequestPost({ request: req("POST", {}, "m1").request, env: {} })).status]);
+
+const [r1,r2,r3,r4,r5,r6,r7,,,] = out.map(x=>x[1]);
 // PATCH must reject anonymous, cross-user and malformed status changes.
 const patch = mod.onRequestPatch;
 const ownNo = r1.req_no;
@@ -32,11 +37,6 @@ const invalid = await patch(req("PATCH", { req_no: "bad", ok: true }, "m1"));
 const mine = await patch(req("PATCH", { req_no: ownNo, ok: true }, "m1"));
 const stored = raw.prepare("select status from requests where req_no=?").get(ownNo);
 out.push(["patch", [cross.status, anon.status, invalid.status, mine.status, stored?.status].join(" ")]);
-raw.exec("update requests set counted=0, status='failed' where type='country'");
-out.push(["9", (await call(G, "GET", null, "m1")).left]);
-out.push(["10", (await mod.onRequestPost({ request: req("POST", {}, "m1").request, env: {} })).status]);
-
-const [r1,r2,r3,r4,r5,r6,r7,,,] = out.map(x=>x[1]);
 const fail = [];
 if (!(r1.counted && r1.left === 1)) fail.push("first");
 if (!(r2.duplicate && r2.req_no === r1.req_no)) fail.push("dup");
