@@ -447,16 +447,25 @@ def dapa():
         try: latest, _ = get_list(last_page)
         except Exception: stat(S)["notes"].append("list_latest_page_failed")
     stat(S)["notes"].append("upstream_total=" + str(total) + "; latest_page=" + str(last_page))
-    dates = [_dapa_day(x.get("bidTo")) for x in latest]
-    if dates:
-        sampled_latest = max(dates)
-        stat(S)["notes"].append("latest_page_max_bidTo=" + sampled_latest)
-        # This is a fact about the sampled LAST page, not proof that every
-        # record in the provider's archive has been scanned.
+    # The upstream's sort order is not guaranteed. A historic last page
+    # does NOT prove the first page (or unscanned middle pages) are historic.
+    first_dates = [_dapa_day(x.get("bidTo")) for x in first]
+    last_dates = [_dapa_day(x.get("bidTo")) for x in latest]
+    first_dates = [d for d in first_dates if d]
+    last_dates = [d for d in last_dates if d]
+    if first_dates:
+        stat(S)["sampled_first_page_max_bid_to"] = max(first_dates)
+    if last_dates:
+        stat(S)["notes"].append("latest_page_max_bidTo=" + max(last_dates))
+        stat(S)["sampled_last_page_max_bid_to"] = max(last_dates)
+    sampled_dates = first_dates + (last_dates if last_page > 1 else [])
+    if sampled_dates:
+        sampled_latest = max(sampled_dates)
         stat(S)["sampled_latest_bid_to"] = sampled_latest
+        # A status applies only to the bounded sample, never to all DAPA.
         if sampled_latest < today.isoformat():
             stat(S)["data_freshness"] = "HISTORICAL_SAMPLE"
-            stat(S)["notes"].append("upstream_historical_sample: latest sampled deadline is past")
+            stat(S)["notes"].append("upstream_historical_sample: both sampled pages have no future deadline")
     stat(S)["coverage"] = "FIRST_AND_LAST_PAGES_ONLY"
     stat(S)["date_filter_verified"] = False
     # The date-filter parameters previously returned the same 7,205 historic

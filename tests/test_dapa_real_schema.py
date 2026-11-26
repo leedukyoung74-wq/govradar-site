@@ -35,6 +35,28 @@ class DapaRealSchemaTest(unittest.TestCase):
         self.assertTrue(any("no_verified_open_notice" in note for note in FM.stat("DAPA (Korea)")["notes"]))
         self.assertTrue(any("latest_page_max_bidTo=2019-03-18" in note for note in FM.stat("DAPA (Korea)")["notes"]))
 
+    def test_first_page_current_last_page_historical_does_not_false_flag(self):
+        future=(datetime.date.today()+datetime.timedelta(days=25)).strftime("%Y%m%d")
+        first={"seqn":"501","bidTo":future,"orgPlace":"US",
+               "bidNameEng":"Current first-page notice"}
+        last={"seqn":"1","bidTo":"20190318","orgPlace":"US",
+              "bidNameEng":"Archived last-page notice"}
+        detail=xml([{"oriUrl":"https://official.example.gov/notice/501",
+                     "orderOrgan":"Agency A","bidTo":future}],1)
+        def fake(src,url,**kwargs):
+            if "getDCAIBidInfoDetail" in url:
+                return detail
+            q=parse_qs(urlsplit(url).query)
+            return xml([last] if q["pageNo"]==["2"] else [first],501)
+        with patch.dict("os.environ",{"DAPA_KEY":"fixture-not-real"}),patch.object(FM,"_get",side_effect=fake):
+            rows=FM.dapa()
+        st=FM.stat("DAPA (Korea)")
+        self.assertEqual(len(rows),1)
+        self.assertNotIn("data_freshness",st)
+        self.assertEqual(st["sampled_first_page_max_bid_to"],FM._dapa_day(future))
+        self.assertEqual(st["sampled_last_page_max_bid_to"],"2019-03-18")
+        self.assertEqual(st["coverage"],"FIRST_AND_LAST_PAGES_ONLY")
+
     def test_only_current_detail_with_real_link_can_publish(self):
         future=(datetime.date.today()+datetime.timedelta(days=25)).strftime("%Y%m%d")
         old={"seqn":"1","bidTo":"20190318","orgPlace":"US","bidNameEng":"Old US bid"}
