@@ -51,6 +51,20 @@ class AuditTest(unittest.TestCase):
         for key in ("uk_fts","us_sam","kr_dapa"):
             self.assertEqual("block",states[key]["status"])
 
+    def test_dapa_historical_sample_is_not_ready_even_when_http_success(self):
+        obj=json.loads((self.d/"feeds/sources_status.json").read_text())
+        obj["DAPA (Korea)"].update({
+            "state":"SUCCESS","data_freshness":"HISTORICAL_SAMPLE",
+            "sampled_latest_bid_to":"2019-04-09","in":0})
+        obj["SAM.gov (US)"].update({"state":"SUCCESS",
+            "coverage_partial":True,"coverage":"BOUNDED_PAGES_NOT_ALL_US_NOTICES"})
+        self.store(self.d,"feeds/sources_status.json",obj)
+        states=self.states()
+        self.assertEqual("block",states["kr_dapa"]["status"])
+        self.assertEqual("historical_archive_not_live_notice",states["kr_dapa"]["detail"]["reason"])
+        self.assertEqual("pass",states["us_sam"]["status"])
+        self.assertTrue(states["us_sam"]["detail"]["coverage_partial"])
+
     def test_stale_public_html_and_code_drift_are_independent(self):
         self.store(self.l,"public/ko/index.html",'<b id="kp-t">235</b>')
         self.store(self.l,"public/assets/auth.js","old auth")
