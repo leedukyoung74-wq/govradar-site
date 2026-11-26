@@ -242,11 +242,22 @@ def _ocds(S, url, mk, *, max_pages=40, timeout=30, tries=2, time_budget=140, min
                 stat(S)["failed"] += 1
                 stat(S)["notes"].append("ocds_request_exception: " + type(ex).__name__)
             break
-        rels = j.get("releases") or []; stat(S)["raw"] += len(rels)
+        # A provider error object or a malformed/empty cursor page must not
+        # look like a successful complete scan after earlier valid pages.
+        if (not isinstance(j, dict) or not isinstance(j.get("releases"), list)
+                or not isinstance(j.get("links", {}), dict)):
+            stat(S)["failed"] += 1
+            stat(S)["notes"].append("malformed_ocds_release_page: partial results")
+            break
+        rels = j["releases"]; stat(S)["raw"] += len(rels)
+        nxt = j.get("links", {}).get("next")
+        if not rels and nxt:
+            stat(S)["failed"] += 1
+            stat(S)["notes"].append("empty_ocds_page_with_next_cursor: partial results")
+            break
         for r in rels:
             it = mk(r)
             if it: out.append(it)
-        nxt = (j.get("links") or {}).get("next")
         if not nxt or not rels: break
         url = urllib.parse.urljoin(url, str(nxt))
     else:
