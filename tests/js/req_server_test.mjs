@@ -22,11 +22,11 @@ out.push(["4", await call(P, "POST", { type: "family", body: "C", email: "x@ex.c
 out.push(["5", await call(P, "POST", { type: "partner", body: "D", email: "y@ex.com" }, "m0")]);
 out.push(["6", await call(P, "POST", { type: "partner", body: "E", email: "z@ex.com" })]);
 out.push(["7", await call(P, "POST", { type: "x", body: "E", email: "z@ex.com" })]);
-out.push(["secret",await call(P,"POST",{type:"partner",body:"Partner request\nmember code: ABCD-EFGH",email:"x@ex.com"},"m1")]);
 const h = await call(G, "GET", null, "m1"); out.push(["8", String(h.items.length) + " " + h.left]);
 raw.exec("update requests set counted=0, status='failed' where type='country'");
 out.push(["9", (await call(G, "GET", null, "m1")).left]);
 out.push(["10", (await mod.onRequestPost({ request: req("POST", {}, "m1").request, env: {} })).status]);
+out.push(["secret",await call(P,"POST",{type:"partner",body:"Partner request\nmember code: ABCD-EFGH",email:"x@ex.com"},"m1")]);
 
 const [r1,r2,r3,r4,r5,r6,r7,,,] = out.map(x=>x[1]);
 // PATCH must reject anonymous, cross-user and malformed status changes.
