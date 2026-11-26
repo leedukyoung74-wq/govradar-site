@@ -33,6 +33,8 @@ class AuditTest(unittest.TestCase):
                     ("cf/functions/api/req.js","functions/api/req.js")):
             store(self.s,s,"working program")
             store(self.l,l,"working program")
+        store(self.s,"web/auth.js",'const API = "/.netlify/identity", KEY = "wmm.auth.v1";')
+        store(self.l,"public/assets/auth.js",'const API = "/nfid", KEY = "wmm.auth.v1";')
         store(self.s,"src/government_business_sites.json",{"countries":{("XX"+str(i)): [1,2,3] for i in range(193)}})
 
     def states(self):
@@ -78,6 +80,17 @@ class AuditTest(unittest.TestCase):
         st=self.states()["public_static_open_count"]
         self.assertEqual("pass",st["status"])
         self.assertEqual(7,st["detail"]["placeholder_lc_covered"])
+
+    def test_exact_auth_proxy_rewrite_is_expected_not_a_drift(self):
+        # Site is served by Cloudflare Pages /nfid relay rather than Netlify
+        # /.netlify/identity directly; everything else must match exactly.
+        source='const API = "/.netlify/identity", KEY = "wmm.auth.v1";'
+        target='const API = "/nfid", KEY = "wmm.auth.v1";'
+        self.store(self.s,"web/auth.js",source)
+        self.store(self.l,"public/assets/auth.js",target)
+        self.assertEqual("pass",self.states()["live_auth_js"]["status"])
+        self.store(self.l,"public/assets/auth.js",target+" window.evil=1;")
+        self.assertEqual("block",self.states()["live_auth_js"]["status"])
 
     def test_stale_public_html_and_code_drift_are_independent(self):
         self.store(self.l,"public/ko/index.html",'<b id="kp-t">235</b>')
