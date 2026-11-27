@@ -7,8 +7,14 @@ Scope: www.wmm-hoa.com, wmm-hoa.com, www.gcsme.kr, gcsme.kr. Review only, no dep
 - This alone cannot exclude dynamic JS injection or prove that a beacon request was/was not sent. The web analytics dashboard is the authority for actual recorded RUM data.
 - Existing local PowerShell collector `Refresh_Analytics.ps1` already allows all four production WMM/GCSME hosts in the Cloudflare GraphQL query. No need to recreate the account token.
 
+## Follow-up verified on 2026-11-27
+- Runtime Chromium test https://github.com/leedukyoung74-wq/govradar-site/actions/runs/45948229725: WMM/GCSME HTTPS 200; Cloudflare beacon request: false; beacon DOM node: false; attempted RUM POST: false. This audit did **not** post synthetic RUM events.
+- DNS NS (https://github.com/leedukyoung74-wq/govradar-site/actions/runs/45948328460): both apex domains use Gabia authoritative DNS nameservers (`ns.gabia.co.kr`, `ns.gabia.net`, `ns1.gabia.co.kr`).
+- Therefore the CF-Ray response alone is likely a Cloudflare edge in the **platform hosting chain**, not proof that either site is a proxied zone under the user's Cloudflare Analytics account. Treat automatic beacon injection in that account as **unverified, likely unavailable**; do not switch nameservers or DNS just to enable analytics.
+- ChatGPT Sites has its **own native analytics**, but those historical unique visitor/page view figures are a separate dataset and not a direct substitute for authorized Cloudflare GraphQL metrics (https://learn.chatgpt.com/docs/sites/managing-a-site).
+
 ## Safe next change (requires live site/Cloudflare ownership permissions)
-1. Open the Cloudflare Web Analytics entries for each site. Verify if the Cloudflare zone in this account offers **automatic Web Analytics injection** for proxied hostnames; if available, prefer this over an additional manual tag. Confirm per-site mode and avoid duplicates.
+1. Both domains' authoritative nameservers are Gabia; inspect Cloudflare Web Analytics **Manage site** to verify actual injection mode. Do NOT presume automatic insertion from Cloudflare edge HTTP headers. If this Cloudflare account does not control a proxied zone, use manual snippet installation in ChatGPT Sites instead.
 2. Otherwise, in **each ChatGPT Sites editor** insert the exact **site-specific** copied Cloudflare Web Analytics snippet once in the shared head/body template, respecting editor's supported HTML embedding. Never reuse GCSME token on WMM or vice versa. Do not post any unrelated Cloudflare API token, password, or private analytics account ID in site source.
 3. Where Sites does not allow external script embedding, document the limitation and use only a supported edge injection or first-party host setting after a staging test; do **not** change DNS, proxies or production routing speculatively.
 4. Verify CSP script-src/connect-src as per Cloudflare docs, on staging first if changes are needed.
