@@ -134,9 +134,22 @@ def main():
     # Missing KONEPS_KEY must result in zero network requests.
     key = (os.environ.get("KONEPS_KEY") or "").strip()
     result = probe(key)
+    # A successful GitHub Actions job must NEVER mean "all four endpoints
+    # returned HTTP 403". Gate the job status on all four upstream responses;
+    # even a clean probe is only schema/transport evidence, not production
+    # publishing permission or confirmed currently open notices.
+    all_responded = (
+        result.get("operations_attempted") == len(OPERATIONS)
+        and result.get("operations_succeeded") == len(OPERATIONS)
+        and result.get("schema_accepted_for_review") is True
+    )
+    result["authorization_probe_gate"] = (
+        "SCHEMA_REVIEW_ONLY_NOT_LIVE" if all_responded else
+        "BLOCKED_NO_KEY" if result.get("classification") == "NO_APPROVED_KEY" else
+        "BLOCKED_UPSTREAM_RESPONSE"
+    )
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
-    # An unauthorized result remains an honest report, not a working feed.
-    return 0
+    return 0 if all_responded else 2
 
 
 if __name__ == "__main__":
