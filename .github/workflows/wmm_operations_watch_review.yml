@@ -41,6 +41,11 @@ jobs:
               'only_reviewed_official_hosts', 'not_a_live_confirmed_tender_count',
               'official_notice_verified', 'may_send_business_alert',
               'automated_customer_alerts_allowed', 'seven_language_widget_guard',
+              # Best-effort GitHub cron gaps must not mask official feed
+              # staleness, or turn a verified failed workflow into a PASS.
+              'SCHEDULE_GAP_UNVERIFIED', 'SCHEDULE_JOB_FAILED',
+              'source_freshness_checked_separately', 'pending=True',
+              'USGS official fast', 'US NWS weather', 'CISA KEV',
           ]
           for marker in required:
               assert marker in code, 'missing strict health marker: ' + marker

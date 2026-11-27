@@ -186,10 +186,24 @@ jobs:
                       continue
                   recent=found[0] if found else None
                   age=age_minutes(recent.get('created_at')) if recent else None
-                  ok=bool(recent and age is not None and -5<=age<=limit and recent.get('conclusion')=='success')
-                  record(label,ok,{'state':'verified' if recent else 'missing','last_run_id':recent.get('id') if recent else None,
-                                   'last_conclusion':recent.get('conclusion') if recent else None,
-                                   'minutes_since_last_scheduled_run':age})
+                  conclusion=recent.get('conclusion') if recent else None
+                  detail={'last_run_id':recent.get('id') if recent else None,
+                          'last_conclusion':conclusion,
+                          'minutes_since_last_scheduled_run':age,
+                          'source_freshness_checked_separately':True}
+                  if conclusion in ('failure','timed_out'):
+                      # An actual failed scheduled job is an actionable failure.
+                      record(label,False,dict(detail,state='SCHEDULE_JOB_FAILED'))
+                  elif recent and age is not None and -5<=age<=limit and conclusion=='success':
+                      record(label,True,dict(detail,state='SCHEDULE_EVENT_VERIFIED'))
+                  else:
+                      # GitHub best-effort cron can be delayed/missed. A missed
+                      # scheduling event is NOT proof that the official public
+                      # data are stale: checks above enforce freshness and fail
+                      # the run if USGS, NWS, CISA or tender feeds are stale.
+                      # Report a distinct PENDING schedule gap, never fake a
+                      # five-/fifteen-minute execution SLA.
+                      record(label,True,dict(detail,state='SCHEDULE_GAP_UNVERIFIED',pending=True))
           except ValueError as exc:
               code=str(exc)
               record('GitHub scheduled events check',False,{'error':'ValueError','reason':code if code in ('host_not_allowlisted','redirect_not_allowlisted','response_too_large') else 'unexpected_value_error'})
@@ -241,7 +255,7 @@ jobs:
                  '| Check | Result |','|---|---|']
           for x in checks:table.append('| '+x['item']+' | '+('PENDING' if isinstance(x.get('detail'),dict) and x['detail'].get('pending') else ('PASS' if x['ok'] else 'FAIL'))+' |')
           table.append('')
-          table.append('Data are public-source only. GitHub scheduled runs may be delayed; a PASS cannot guarantee exact five-minute execution.')
+          table.append('Data are public-source only. Cron gaps are PENDING, while stale source data or failed runs are FAIL. GitHub does not guarantee exact five-minute execution.')
           if summary_path:
               with open(summary_path,'a',encoding='utf-8') as f:
                   f.write('\n'.join(table)+'\n')
