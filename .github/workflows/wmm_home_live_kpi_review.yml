@@ -1,0 +1,25 @@
+name: WMM GOV RADAR homepage KPI fail-closed review (NO DEPLOY)
+on:
+  push:
+    branches: [wmm-home-kpi-failclosed-review-20261127]
+    paths:
+      - 'build.py'
+      - 'tests/test_home_live_kpi_failclosed.py'
+      - '.github/workflows/wmm_home_live_kpi_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  home_kpi_source_test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate generator syntax and safe initial KPI placeholders
+        run: |
+          python3 -m py_compile build.py
+          python3 -m unittest discover -s tests -p 'test_home_live_kpi_failclosed.py' -v
+      - name: Record no deployment and real count outstanding
+        run: echo 'Source review only. No live site modified. Public JS readback and source freshness still required.' >> "$GITHUB_STEP_SUMMARY"
