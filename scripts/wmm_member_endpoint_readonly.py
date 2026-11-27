@@ -3,6 +3,8 @@
 from urllib.request import Request,urlopen
 from urllib.error import HTTPError,URLError
 from datetime import datetime,timezone
+from html.parser import HTMLParser
+from hashlib import sha256
 import json,os,ssl
 
 TARGETS=(
@@ -12,16 +14,22 @@ TARGETS=(
  ("GOV RADAR account page","https://radar.wmm-hoa.com/ko/account/"),
  ("GOV RADAR business request page","https://radar.wmm-hoa.com/ko/request/"),
  ("GOV RADAR English business request","https://radar.wmm-hoa.com/en/request/"),
+ ("GOV RADAR control missing route","https://radar.wmm-hoa.com/ko/route-audit-missing-20261127/"),
 )
 def probe(name,url):
     result={"service":name,"url":url,"http":None,"content_type":None,
-            "redirect":None,"json_object":False,"identity_settings_keys":[],"error":None}
+            "redirect":None,"json_object":False,"identity_settings_keys":[],"html_hash":None,"html_has_form":None,"error":None}
     try:
       request=Request(url,headers={"Accept":"application/json,text/html","User-Agent":"WMM-ReadOnly-EndpointAudit/1.0"})
       with urlopen(request,timeout=15,context=ssl.create_default_context()) as r:
         result["http"]=r.status
         result["content_type"]=(r.headers.get("content-type") or "")[:90]
         result["redirect"]=r.geturl() if r.geturl()!=url else None
+        if "text/html" in result["content_type"].lower():
+          body=r.read(1000000)
+          # Compare public rendered HTML with an intentionally nonexistent route; do not store body.
+          result["html_hash"]=sha256(body).hexdigest()[:16]
+          result["html_has_form"]=b"<form" in body.lower()
         if name=="Netlify Identity settings" and "application/json" in result["content_type"].lower():
           b=r.read(8192)
           try:
