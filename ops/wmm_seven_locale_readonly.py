@@ -64,11 +64,19 @@ def fetch(language, opener=None):
 def check(opener=None):
     rows={code:fetch(code,opener) for code in LANGS}
     bad=[x for x,y in rows.items() if y["status"] != "PASS"]
+    # A 200 HTML response is reachability, not proof that the reviewed
+    # privacy/provenance copy is deployed. Treat missing audited copy as
+    # PENDING rather than green, but never call a good site an outage.
+    undeployed=[x for x in ("ko","en") if
+                rows.get(x,{}).get("status") == "PASS" and
+                rows[x].get("snapshot_disclosure_present") is False]
+    result="FAIL" if bad else "PENDING_COPY_NOT_DEPLOYED" if undeployed else "PASS"
     return {
         "scope":"PUBLIC_SEVEN_LANGUAGE_GET_ONLY_SMOKE",
-        "result":"FAIL" if bad else "PASS",
+        "result":result,
         "locales":rows,
         "failed_locales":bad,
+        "locales_missing_curated_research_copy":undeployed,
         "mobile_browser_verified":False,
         "registered_forms_verified":False,
         "identity_roles_verified":False,
