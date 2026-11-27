@@ -25,6 +25,18 @@ class KonepsSecretShapeTests(unittest.TestCase):
                          "PERCENT_ENCODED_OR_PERCENT_CONTAINING")
         self.assertEqual(s.classify("SYNTHETIC%ZZ"), "INVALID_PERCENT_ESCAPE")
 
+    def test_invisible_unicode_vs_visible_unicode_vs_embedded_whitespace(self):
+        self.assertEqual(s.classify("ABC" + chr(0x200b) + "123"),
+                         "INVISIBLE_FORMAT_CHARACTERS")
+        self.assertEqual(s.classify("ABC" + chr(0xfeff) + "123"),
+                         "INVISIBLE_FORMAT_CHARACTERS")
+        self.assertEqual(s.classify("ABC" + chr(0x00a0) + "123"),
+                         "EMBEDDED_WHITESPACE")
+        self.assertEqual(s.classify("ABC" + chr(0xAC00) + "123"),
+                         "VISIBLE_NON_ASCII_CHARACTERS")
+        self.assertEqual(s.classify("ABC" + chr(0x7F) + "123"),
+                         "CONTROL_CHARACTER")
+
     def test_wrapped_url_and_query_parameter(self):
         self.assertEqual(s.classify("https://example.test/?serviceKey=XYZ"),
                          "URL_OR_PARAMETER_INSTEAD_OF_KEY")
