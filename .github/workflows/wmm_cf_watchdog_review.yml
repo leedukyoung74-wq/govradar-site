@@ -30,8 +30,8 @@ jobs:
           assert 'REPLACE_WITH_REVIEWED_KV_NAMESPACE_ID' in c
           assert not Path('ops/cloudflare-watchdog/wrangler.toml').exists()
           w=Path('.github/workflows/wmm_cf_watchdog_review.yml').read_text()
-          assert 'cron:' not in w
-          assert 'wrangler deploy' not in w
-          assert 'secrets.' not in w
+          assert ('cron'+':') not in w
+          assert ('wrangler '+'deploy') not in w
+          assert ('secrets'+'.') not in w
           print('PASS: no auto-deploy, no active new schedule, no account secrets')
           PY
