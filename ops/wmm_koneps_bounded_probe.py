@@ -129,9 +129,10 @@ def probe(key, opener=None, today=None):
 
 
 def main():
-    # Workflow environment contains a secret only after an explicit OWNER
-    # issue comment. Prefer a KONEPS-specific secret if registered.
-    key = (os.environ.get("KONEPS_KEY") or os.environ.get("DAPA_KEY") or "").strip()
+    # Only a KONEPS-specific, explicitly approved secret may authorize a G2B
+    # probe. A DAPA overseas procurement key is not interchangeable.
+    # Missing KONEPS_KEY must result in zero network requests.
+    key = (os.environ.get("KONEPS_KEY") or "").strip()
     result = probe(key)
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
     # An unauthorized result remains an honest report, not a working feed.
