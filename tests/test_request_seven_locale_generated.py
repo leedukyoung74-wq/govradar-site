@@ -13,7 +13,7 @@ class LocalizedRequestTests(unittest.TestCase):
                 self.assertIn(TEXT[lang],k["t"])
                 self.assertEqual(len(k["types"]),4)
                 self.assertEqual([x[0] for x in k["types"]],["tender","country","family","partner"])
-                self.assertIn("19",k["who"])
+                self.assertIn({"ko":"20,000","en":"20,000","es":"20.000","fr":"20 000","ar":"20,000","vi":"20.000","id":"20.000"}[lang],k["who"])
                 self.assertEqual(len(k["S"]),9)
                 self.assertIn("{n}",k["left"])
                 for original,localized in zip(pages_req.K["en"]["types"],k["types"]):
