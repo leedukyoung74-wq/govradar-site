@@ -21,9 +21,10 @@ class Resp:
     def read(self,n):return self.text[:n]
 
 class FakeOpen:
-    def __init__(self,bad=None):
+    def __init__(self,bad=None,missing_copy=False):
         self.urls=[]
         self.bad=bad
+        self.missing_copy=missing_copy
     def open(self,req,timeout=0):
         self.urls.append(req.full_url)
         assert req.get_method()=="GET"
@@ -32,8 +33,8 @@ class FakeOpen:
         if locale == self.bad:
             raise HTTPError(req.full_url,503,"Unavailable",None,None)
         s=f'<!doctype html><html lang="{locale}"><head><title>GOV RADAR</title></head><body>'
-        if locale=="ko":s+="조사·제안 아이디어 · 실시간 입찰 아님"
-        if locale=="en":s+="Curated research ideas · not live tenders"
+        if locale=="ko" and not self.missing_copy:s+="조사·제안 아이디어 · 실시간 입찰 아님"
+        if locale=="en" and not self.missing_copy:s+="Curated research ideas · not live tenders"
         return Resp(s+"</body></html>")
 
 class LocaleSmokeTests(unittest.TestCase):
@@ -51,6 +52,15 @@ class LocaleSmokeTests(unittest.TestCase):
         self.assertTrue(out["locales"]["ko"]["snapshot_disclosure_present"])
         self.assertTrue(out["locales"]["en"]["snapshot_disclosure_present"])
         self.assertEqual(out["customer_posts"],0)
+
+    def test_seven_available_but_undeployed_copy_is_pending(self):
+        op=FakeOpen(missing_copy=True)
+        out=P.check(op)
+        self.assertEqual(out["failed_locales"],[])
+        self.assertEqual(out["result"],"PENDING_COPY_NOT_DEPLOYED")
+        self.assertEqual(out["locales_missing_curated_research_copy"],["ko","en"])
+        self.assertTrue(all(x["status"]=="PASS" for x in out["locales"].values()))
+        self.assertFalse(out["payment_checkout_verified"])
 
     def test_one_bad_locale_is_full_failure(self):
         op=FakeOpen(bad="ar")
