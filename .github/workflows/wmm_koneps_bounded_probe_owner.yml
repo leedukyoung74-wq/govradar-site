@@ -43,7 +43,7 @@ jobs:
       - name: Up to four official G2B GETs; no source records printed
         env:
           KONEPS_KEY: \${{ secrets.KONEPS_KEY }}
-          DAPA_KEY: \${{ secrets.DAPA_KEY }}
+
         run: python3 ops/wmm_koneps_bounded_probe.py
       - name: Document boundary
         if: always()
