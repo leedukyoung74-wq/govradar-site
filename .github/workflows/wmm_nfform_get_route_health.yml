@@ -1,0 +1,54 @@
+name: WMM form relay GET/HEAD route health (NO CUSTOMER SUBMISSIONS)
+on:
+  pull_request:
+    branches: [live]
+    paths:
+      - 'functions/nfform.js'
+      - 'tests/nfform-method-gate.test.cjs'
+      - '.github/workflows/wmm_nfform_get_route_health.yml'
+  push:
+    branches: [live]
+    paths:
+      - 'functions/nfform.js'
+      - 'tests/nfform-method-gate.test.cjs'
+      - '.github/workflows/wmm_nfform_get_route_health.yml'
+permissions:
+  contents: read
+jobs:
+  verify_method_guard:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Unit-test only GET/HEAD handler; never invoke POST
+        run: node --test tests/nfform-method-gate.test.cjs
+      - name: Verify live anonymous GET returns 405 after merge only
+        if: github.event_name == 'push' && github.ref == 'refs/heads/live'
+        run: |
+          python3 - <<'PY'
+          import time, urllib.request, urllib.error
+          url='https://radar.wmm-hoa.com/nfform'
+          for attempt in range(4):
+              req=urllib.request.Request(url,headers={'User-Agent':'WMM-GET-only-route-monitor/1.0'},method='GET')
+              try:
+                  with urllib.request.urlopen(req,timeout=12) as r:
+                      status=r.status
+                      allow=r.headers.get('Allow','')
+              except urllib.error.HTTPError as e:
+                  status=e.code
+                  allow=e.headers.get('Allow','')
+              print('ANONYMOUS_GET_ROUTE',attempt+1,'status',status,'allow',allow,flush=True)
+              if status==405 and 'POST' in allow:
+                  print('PASS: Cloudflare relay handler responds to GET health checks, POST was NEVER attempted')
+                  print('NOT VERIFIED: Netlify dashboard inbox, D1 writes, email receipt, checkout')
+                  break
+              if attempt==3:
+                  raise SystemExit('ROUTE NOT VERIFIED: 405 with Allow: POST missing')
+              time.sleep(9)
+          PY
+      - name: Record read-only semantics
+        if: always()
+        run: |
+          echo 'GET/HEAD only. No customer POST, cookies, identity, billing, Netlify inbox, D1 or CRM writes.' >> "$GITHUB_STEP_SUMMARY"
