@@ -691,6 +691,7 @@ def how_page(L, C):
 <label>{"가장 도움이 된 것" if ko else "What helped most"}<input name="best"></label>
 <label>{"고쳐야 할 것 · 틀린 정보 신고" if ko else "What to improve · report an error"}<textarea name="improve" rows="3"></textarea></label>
 <label>{"답변 받을 이메일 (선택)" if ko else "Email for a reply (optional)"}<input name="email" type="email"></label>
+<label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> <span>{"개인정보 수집·이용에 동의합니다(의견 확인 및 답변 목적)." if ko else "I agree to the privacy policy (feedback and replies only)."} <a href="/{L}/legal/privacy/" target="_blank" rel="noopener">{"개인정보처리방침" if ko else "Privacy policy"}</a></span></label>
 <button class="btn pri" type="submit">{"보내기" if ko else "Send"}</button><p class="note">{"이메일은 답변을 드릴 때만 쓰고, 답변 후 삭제합니다." if L=="ko" else "We use your email only to reply and delete it afterwards."}</p></form>"""
     body = f"""<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a> · <a href="/{L}/pricing/">{"요금" if ko else "Pricing"}</a></p>
 <h1>{"서비스는 이렇게 진행됩니다" if ko else "How the service works"}</h1>
