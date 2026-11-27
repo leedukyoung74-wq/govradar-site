@@ -71,13 +71,13 @@ LANG_SHORT = {"ko":"KO","en":"EN","es":"ES","fr":"FR","ar":"AR","vi":"VI","id":"
 # WMM Membership public price list (council decision 2026-10-31: no student tier; everyone 14+ free; top tier by quote until track record)
 PLANS = {
  "ko": [("FREE 무료 가입 · M0","무료","만 14세 이상 누구나: 193개국 지도·요약·분쟁 상황판 열람, 사업·입찰·일정은 앞부분만. 학생·청년·청소년 모두 무료 (만 19세 미만은 열람·학습 전용)"),
-        ("분석 회원 · M1","월 19,800원","모든 나라 전체 목록, 유망 사업 이유·대상 바이어 전체, 관심 나라 10곳 월요일 알림"),
+        ("분석 회원 · M1","월 20,000원","모든 나라 전체 목록, 유망 사업 이유·대상 바이어 전체, 관심 나라 10곳 월요일 알림"),
         ("국가 진출 브리프","상담 후 견적","한 나라, 고객 업종 맞춤, 사람 검수"),
         ("프로젝트 파트너십","첫 상담 무료","파트너 연결·컨소시엄·현지 등록 동행, 비용은 상담 후 결정"),
         ("UNI 대학·기관","상담 후 견적","교직원·학생 계정 일괄(기관 코드), 컨소시엄 정식 참여, 강의 자료"),
         ("EXECUTE","개별 견적","리포트 납품·제안서·온라인 원격 검토·CONNECT 연결 (사람이 검수해 납품)")],
  "en": [("FREE sign-up · M0","Free","Anyone 14+: map, summaries, conflict watch; first items of programmes, tenders and events. Students and youth included (under-19s: reading and learning only)"),
-        ("Analysis member","₩19,800/mo","All why-now and target buyers, Monday alerts for 10 countries"),
+        ("Analysis member","₩20,000/mo","All why-now and target buyers, Monday alerts for 10 countries"),
         ("Market-entry brief","By quote","One country, tailored to your sector, human-reviewed"),
         ("Project partnership","free first consultation","Partner introductions, consortium and local registration; fees agreed after the consultation"),
         ("UNI","By quote","Institution code for staff & student seats, consortium membership"),
