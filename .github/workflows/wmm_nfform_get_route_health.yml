@@ -66,7 +66,7 @@ jobs:
                       with urllib.request.urlopen(req,timeout=9) as r:
                           body=r.read(180000).decode('utf8','replace')
                           if r.status!=200:raise ValueError('non_200')
-                      form=re.search(r'<form\\b[^>]*name="feedback"[^>]*>[\\s\\S]*?</form>',body)
+                      form=re.search(r'<form\b[^>]*name="feedback"[^>]*>[\s\S]*?</form>',body)
                       if not form or 'name="privacy_agree" value="yes" required' not in form.group(0):
                           errors.append(lang+':consent_missing')
                       elif f'/{lang}/legal/privacy/' not in form.group(0):
