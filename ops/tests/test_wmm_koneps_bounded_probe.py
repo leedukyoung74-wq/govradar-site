@@ -122,6 +122,49 @@ class KonepsOfficialProbeTests(unittest.TestCase):
                     self.assertEqual(P.main(), 2)
         probe_mock.assert_called_once_with("")
 
+    def test_403_official_denial_code_safe_without_raw_secret(self):
+        raw = b"<error>SERVICE_ACCESS_DENIED_ERROR?serviceKey=SECRET-CANNOT-LOG</error>"
+        error = HTTPError("https://apis.data.go.kr/?serviceKey=SECRET-CANNOT-LOG",
+                          403, "Forbidden", None, io.BytesIO(raw))
+        result = P.classify_http_error(error)
+        self.assertEqual(result["state"], "HTTP_DENIED_OR_ERROR")
+        self.assertEqual(result["http_status"], 403)
+        self.assertEqual(result["provider_error"], "SERVICE_ACCESS_DENIED_ERROR")
+        self.assertNotIn("SECRET-CANNOT-LOG", json.dumps(result))
+        self.assertNotIn("serviceKey", json.dumps(result))
+
+    def test_403_unknown_body_never_echoes_provider_text(self):
+        error = HTTPError("https://apis.data.go.kr/?serviceKey=VERY-PRIVATE",
+                          403, "Forbidden", None,
+                          io.BytesIO(b"<html>unexpected body VERY-PRIVATE</html>"))
+        result = P.classify_http_error(error)
+        self.assertEqual(result["provider_error"], "UNSPECIFIED_HTTP_ERROR")
+        self.assertNotIn("VERY-PRIVATE", json.dumps(result))
+
+    def test_403_no_body_and_oversized_body_fail_closed(self):
+        empty = HTTPError("https://apis.data.go.kr/secure", 403,
+                          "Forbidden", None, None)
+        large = HTTPError("https://apis.data.go.kr/secure", 403,
+                          "Forbidden", None,
+                          io.BytesIO(b"SERVICE_ACCESS_DENIED_ERROR" + b"x" * 32769))
+        self.assertEqual(P.classify_http_error(empty)["provider_error"],
+                         "UNSPECIFIED_HTTP_ERROR")
+        self.assertEqual(P.classify_http_error(large)["provider_error"],
+                         "UNSPECIFIED_HTTP_ERROR")
+
+    def test_403_error_classification_in_four_call_probe(self):
+        class DenialOpener:
+            def open(self, req, timeout=0):
+                raise HTTPError(req.full_url, 403, "Forbidden", None,
+                                io.BytesIO(b"<result>SERVICE_KEY_IS_NOT_REGISTERED_ERROR</result>"))
+        result = P.probe("FAKE-TEST-KEY", DenialOpener(), DATE)
+        self.assertEqual(result["operations_succeeded"], 0)
+        self.assertEqual(result["operations_attempted"], 4)
+        for value in result["results"].values():
+            self.assertEqual(value["provider_error"],
+                             "SERVICE_KEY_IS_NOT_REGISTERED_ERROR")
+        self.assertNotIn("FAKE-TEST-KEY", json.dumps(result))
+
     def test_403_live_job_fails_not_green(self):
         denied = {"classification": "OWNER_APPROVED_READ_ONLY_KONEPS_PROBE",
                   "operations_attempted": 4, "operations_succeeded": 0,
