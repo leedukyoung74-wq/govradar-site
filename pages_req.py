@@ -1,7 +1,7 @@
 """Member analysis requests (doc 2026-11-14 §2–3): four fixed-scope requests.
 Flow: pick a request → see output, limit and handling rule before sending → fill only what is needed →
 request number issued, double submit blocked → lands in the Netlify "order" form (same inbox and Gmail-draft alert).
-Copy is Korean and English; the other five languages show the English copy."""
+Copy is localized for seven site languages; API field identifiers remain stable."""
 from html import escape as e
 
 K = {
@@ -52,6 +52,124 @@ K = {
 }
 
 
+# Five additional full request-page languages. Keep the underlying field IDs,
+# request type IDs, quota, consent and Cloudflare/Netlify client logic unchanged.
+# Editors may review the translated text without touching any storage schema.
+_LOCALIZED_REQUESTS = {
+ "es": dict(
+  t="Solicitudes de análisis para miembros",
+  lede="Elija uno de cuatro análisis definidos. Antes de enviarlo verá el resultado, el límite y las condiciones de tramitación.",
+  who="Los miembros de análisis (19.800 KRW al mes) incluyen dos solicitudes al mes. Para no miembros o solicitudes adicionales enviaremos primero un presupuesto y no comenzaremos sin su aceptación.",
+  pick="1. Elija el análisis",fill="2. Facilite solo los datos necesarios",send="3. Revise y envíe",
+  out="Resultado",need="Datos necesarios",rule="Tramitación",
+  limit="Dos solicitudes al mes por miembro; las no utilizadas no se acumulan. La confirmación indicará el plazo estimado (habitualmente 7–10 días hábiles). Ampliaciones y preguntas adicionales cuentan como otra solicitud. Este servicio orientativo basado en fuentes públicas no garantiza resultados legales, de inversión o licitación. La evaluación detallada de una licitación (100.000 KRW) se contrata por separado.",
+  rule_all="Confirmaremos la recepción por correo en 1–2 días hábiles. El informe explica las conclusiones, las fuentes, las incertidumbres y los próximos pasos. Si no podemos realizar el análisis, explicaremos el motivo.",
+  email="Correo electrónico",name="Nombre o persona de contacto",org="Empresa u organización (opcional)",country="País de interés",code="Código de miembro (si existe)",
+  agree="Acepto la recopilación y el uso de mis datos para tramitar esta solicitud (conservación durante un año).",btn="Enviar solicitud",sending="Enviando…",
+  done="Solicitud recibida. Número",dup="Esta solicitud acaba de enviarse. Número",mine="Solicitudes enviadas desde este navegador",mine_n="Todavía no hay solicitudes.",
+  st="Recibida — espere el correo de confirmación",req="Complete los campos obligatorios.",left="Solicitudes restantes este mes: {n}",over="Supera las dos solicitudes incluidas: enviaremos primero un presupuesto",quote="No tiene membresía: enviaremos primero un presupuesto",sent="Recibido",delivery_failed="No se ha confirmado la entrega. Vuelva a intentarlo. Número",retry="Reintentar",
+  gateway="La pasarela recibió la solicitud; recepción por el personal no verificada. Número",
+  S={"received":"Registrada en el servidor · pendiente de revisión","gateway_reported":"Pasarela confirmada · recepción por el personal no verificada","gateway_failed_reported":"Error de pasarela · revisar","relayed":"Registro anterior · recepción no verificada","relay_failed":"Error de envío anterior · revisar","in_progress":"En trámite","done":"Finalizada · revise su correo","failed":"No se puede tramitar · cuota restituida","cancelled":"Cancelada · cuota restituida"},
+  type_text=[
+   ("¿Puede nuestra empresa participar en esta licitación?","Tabla de requisitos, documentos y carencias, con recomendación: sí, condicionado o no","Enlace o título del anuncio, actividad, facturación anual, experiencia pública o exterior y certificaciones",["Enlace o título de la licitación","Sector y producto principal","Ingresos anuales (USD)","Experiencia en contratación pública o internacional","Certificaciones"]),
+   ("Oportunidades de negocio en un país","Entre cinco y diez oportunidades relevantes (prioridades públicas, proyectos financiados, licitaciones y AOD) y orden de actuación","País, sector o producto y modalidad de acceso",["Sector y producto principal","Modalidad (exportación, socio local, licitación, inversión…)","Qué desea averiguar"]),
+   ("Plan familiar de preparación ante emergencias","Plan de 30 días: suministros y cantidades, contactos, evacuación y revisiones","Zona (solo ciudad/distrito), número de convivientes, menores, mayores o animales",["Zona donde vive (solo ciudad o distrito)","Número de convivientes","Menores, mayores o animales (si procede)","Necesidades especiales (solo lo imprescindible)"]),
+   ("Socios y vías de apoyo para su proyecto","Tipo de socio, cómo encontrar candidatos, programas públicos de apoyo y primer contacto","Tipo de socio, producto o tecnología y región",["Socio deseado (comprador, fabricante, representante…)","Producto o tecnología","Condiciones o calendario (opcional)"]),
+  ]),
+ "fr": dict(
+  t="Demandes d’analyse des membres",
+  lede="Choisissez parmi quatre analyses au périmètre défini. Avant l’envoi, consultez le livrable, le quota et les conditions de traitement.",
+  who="Les membres Analyse (19 800 KRW par mois) disposent de deux demandes mensuelles. Pour les non-membres ou les demandes supplémentaires, un devis est envoyé et aucun travail ne débute sans acceptation.",
+  pick="1. Choisir une analyse",fill="2. Fournir uniquement les informations utiles",send="3. Vérifier et envoyer",
+  out="Livrable",need="Informations nécessaires",rule="Traitement",
+  limit="Deux demandes par mois, non reportables. L’accusé de réception précisera le délai (généralement 7 à 10 jours ouvrés). Les questions supplémentaires ou l’élargissement du périmètre constituent une nouvelle demande. Cette analyse indicative fondée sur des données publiques ne garantit aucun résultat juridique, financier ou d’appel d’offres. L’évaluation détaillée d’un appel d’offres (100 000 KRW) est vendue séparément.",
+  rule_all="Nous confirmons la réception par e-mail sous 1 à 2 jours ouvrés. Le livrable indique la conclusion, les sources, les incertitudes et les prochaines actions. Toute impossibilité est expliquée.",
+  email="E-mail",name="Nom ou responsable",org="Entreprise ou organisation (facultatif)",country="Pays ciblé",code="Code membre (si disponible)",
+  agree="J’accepte la collecte et l’utilisation de mes données pour traiter la demande (conservation pendant un an).",btn="Envoyer la demande",sending="Envoi en cours…",
+  done="Demande reçue. Référence",dup="Cette demande vient d’être envoyée. Référence",mine="Demandes envoyées depuis ce navigateur",mine_n="Aucune demande pour le moment.",
+  st="Reçue — attendez l’e-mail de confirmation",req="Renseignez les champs obligatoires.",left="Demandes restantes ce mois-ci : {n}",over="Deux demandes incluses dépassées : un devis sera envoyé",quote="Sans adhésion : un devis sera envoyé",sent="Reçue",delivery_failed="Livraison non confirmée. Réessayez. Référence",retry="Réessayer",
+  gateway="La passerelle a accepté la demande ; réception par l’équipe non vérifiée. Référence",
+  S={"received":"Enregistrée sur le serveur · à vérifier","gateway_reported":"Passerelle signalée · réception non vérifiée","gateway_failed_reported":"Échec de passerelle · contrôle requis","relayed":"Transfert antérieur · réception non vérifiée","relay_failed":"Échec de transfert · contrôle requis","in_progress":"En cours","done":"Terminée · consultez vos e-mails","failed":"Impossible · quota rétabli","cancelled":"Annulée · quota rétabli"},
+  type_text=[
+   ("Notre entreprise peut-elle répondre à cet appel d’offres ?","Tableau des conditions, pièces et manques, avec recommandation : oui, sous condition ou non","Lien ou titre de l’avis, activité, chiffre d’affaires annuel, références publiques ou étrangères, certifications",["Lien ou titre de l’avis","Secteur et produit principal","Chiffre d’affaires annuel (USD)","Références publiques ou internationales","Certifications"]),
+   ("Opportunités commerciales dans un pays","Cinq à dix opportunités pertinentes (priorités publiques, projets financés, appels d’offres, APD) et un plan d’approche","Pays, secteur ou produit, mode d’entrée envisagé",["Secteur et produit principal","Mode d’entrée (export, partenaire, appel d’offres, investissement…)","Ce que vous souhaitez savoir"]),
+   ("Plan familial de préparation aux catastrophes","Plan de 30 jours : réserves et quantités, contacts, évacuation et contrôles","Zone (ville ou district seulement), taille du foyer, enfants, personnes âgées, animaux",["Lieu de vie (ville ou district seulement)","Nombre de personnes au foyer","Enfants, personnes âgées, animaux (si pertinent)","Besoin particulier (données sensibles au strict minimum)"]),
+   ("Partenaires et dispositifs de soutien","Types de partenaires, recherche de candidats, aides publiques et méthode de premier contact","Partenaires recherchés, produit ou technologie et région",["Partenaire recherché (acheteur, fabricant, agent local…)","Votre produit ou technologie","Conditions ou calendrier (facultatif)"]),
+  ]),
+ "ar": dict(
+  t="طلبات التحليل للأعضاء",
+  lede="اختر واحداً من أربعة طلبات ذات مخرجات محددة. ستعرف المخرجات والحد الشهري وآلية المعالجة قبل الإرسال.",
+  who="تشمل عضوية التحليل (19,800 وون كوري شهرياً) طلبين شهرياً. يُرسل عرض سعر مسبقاً لغير الأعضاء والطلبات الإضافية، ولا نبدأ العمل إلا بعد الموافقة.",
+  pick="١. اختر نوع الطلب",fill="٢. أدخل المعلومات الضرورية فقط",send="٣. راجع وأرسل",
+  out="ما ستحصل عليه",need="المعلومات المطلوبة",rule="آلية المعالجة",
+  limit="طلبان شهرياً للعضو، ولا تُرحَّل الطلبات غير المستخدمة. يوضح تأكيد الاستلام المدة المتوقعة (عادةً ٧–١٠ أيام عمل). تُحتسب الأسئلة الإضافية وتوسيع النطاق طلباً جديداً. هذه مراجعة استرشادية تعتمد على المصادر العامة ولا تضمن نتائج قانونية أو استثمارية أو نتائج المناقصات. تقييم المناقصة المفصل (100,000 وون) خدمة منفصلة.",
+  rule_all="نرسل تأكيد الاستلام خلال يوم أو يومي عمل بالبريد الإلكتروني. يوضح التقرير النتيجة والأدلة وما تعذّر التحقق منه والخطوة التالية. سنشرح السبب إذا تعذّر تنفيذ الطلب.",
+  email="البريد الإلكتروني",name="الاسم أو مسؤول التواصل",org="الشركة أو المؤسسة (اختياري)",country="الدولة المعنية",code="رمز العضوية (إن وجد)",
+  agree="أوافق على جمع بياناتي واستخدامها لمعالجة الطلب (الاحتفاظ لمدة سنة واحدة).",btn="إرسال الطلب",sending="جارٍ الإرسال…",
+  done="تم الاستلام. رقم الطلب",dup="أُرسل الطلب نفسه للتو. رقمه",mine="الطلبات المرسلة من هذا المتصفح",mine_n="لا توجد طلبات بعد.",
+  st="تم الاستلام — انتظر رسالة التأكيد",req="يرجى تعبئة الحقول المطلوبة.",left="الطلبات المتبقية هذا الشهر: {n}",over="تجاوزت الطلبين المشمولين — سنرسل عرض سعر أولاً",quote="لست عضواً — سنرسل عرض سعر أولاً",sent="تم الاستلام",delivery_failed="تعذّر تأكيد التسليم. حاول مجدداً. رقم الطلب",retry="إعادة المحاولة",
+  gateway="استقبلت بوابة الإرسال الطلب؛ لم يُتحقق من وصوله إلى الموظفين. رقم الطلب",
+  S={"received":"سُجّل في الخادم · بانتظار المراجعة","gateway_reported":"تم الإبلاغ عن نجاح البوابة · الاستلام غير مؤكد","gateway_failed_reported":"خطأ بوابة · يلزم التحقق","relayed":"إرسال سابق · غير مؤكد","relay_failed":"خطأ إرسال سابق · يلزم التحقق","in_progress":"قيد المعالجة","done":"مكتمل · راجع بريدك","failed":"تعذّر التنفيذ · تمت إعادة الحصة","cancelled":"ملغى · تمت إعادة الحصة"},
+  type_text=[
+   ("هل يمكن لشركتنا المشاركة في هذه المناقصة؟","جدول الأهلية والمستندات والنواقص وتوصية بالمشاركة أو المشاركة المشروطة أو عدمها","رابط أو عنوان الإعلان والقطاع والإيراد السنوي والخبرة والشهادات",["رابط أو عنوان المناقصة","القطاع والمنتج الرئيسي","الإيراد السنوي (دولار أمريكي)","الخبرة في المناقصات العامة أو الدولية","الشهادات"]),
+   ("فرص الأعمال في دولة معينة","٥–١٠ فرص مناسبة من الأولويات والمشاريع الحكومية والمناقصات والمساعدات، وترتيب خطوات الدخول","الدولة والقطاع أو المنتج وطريقة الدخول",["القطاع والمنتج الرئيسي","طريقة الدخول (تصدير، شريك محلي، مناقصة، استثمار…)","ما تريد معرفته"]),
+   ("خطة استعداد الأسرة للطوارئ","خطة لمدة ٣٠ يوماً: المخزون والكميات والاتصال والإخلاء والفحص الدوري","المنطقة (المدينة أو الحي فقط) وعدد الأفراد والأطفال وكبار السن والحيوانات",["مكان السكن (مدينة أو حي فقط)","عدد أفراد الأسرة","أطفال أو كبار سن أو حيوانات (عند الحاجة)","احتياجات خاصة (بالحد الأدنى اللازم)"]),
+   ("الشركاء ومسارات الدعم المناسبة","أنواع الشركاء وطرق إيجادهم وبرامج الدعم الحكومي وكيفية بدء التواصل","نوع الشريك والمنتج أو التقنية والمنطقة",["الشريك المطلوب (مشترٍ أو مصنع أو وكيل محلي…)","المنتج أو التقنية","الشروط أو المواعيد (اختياري)"]),
+  ]),
+ "vi": dict(
+  t="Yêu cầu phân tích dành cho thành viên",
+  lede="Chọn một trong bốn loại yêu cầu có đầu ra xác định. Xem trước kết quả, hạn mức và quy trình xử lý trước khi gửi.",
+  who="Thành viên Phân tích (19.800 KRW/tháng) được bao gồm hai yêu cầu mỗi tháng. Người chưa là thành viên hoặc yêu cầu vượt hạn mức sẽ nhận báo giá trước; chỉ bắt đầu khi bạn đồng ý.",
+  pick="1. Chọn yêu cầu",fill="2. Chỉ điền thông tin cần thiết",send="3. Kiểm tra và gửi",
+  out="Kết quả nhận được",need="Thông tin cần cung cấp",rule="Quy trình xử lý",
+  limit="Hai yêu cầu mỗi tháng, không chuyển phần chưa dùng sang tháng sau. Email xác nhận sẽ nêu thời gian dự kiến (thường 7–10 ngày làm việc). Câu hỏi bổ sung hoặc mở rộng phạm vi tính thành yêu cầu mới. Kết quả chỉ mang tính tham khảo dựa trên nguồn công khai, không bảo đảm kết quả pháp lý, đầu tư hay trúng thầu. Đánh giá hồ sơ thầu chuyên sâu (100.000 KRW) là dịch vụ riêng.",
+  rule_all="Chúng tôi xác nhận tiếp nhận qua email trong 1–2 ngày làm việc. Báo cáo nêu kết luận, căn cứ, nội dung chưa xác minh và bước tiếp theo. Nếu không thể xử lý, chúng tôi sẽ giải thích lý do.",
+  email="Email",name="Họ tên hoặc người phụ trách",org="Công ty hoặc tổ chức (không bắt buộc)",country="Quốc gia quan tâm",code="Mã thành viên (nếu có)",
+  agree="Tôi đồng ý cho thu thập và sử dụng thông tin để xử lý yêu cầu (lưu giữ trong một năm).",btn="Gửi yêu cầu",sending="Đang gửi…",
+  done="Đã tiếp nhận. Mã yêu cầu",dup="Bạn vừa gửi yêu cầu trùng. Mã yêu cầu",mine="Yêu cầu đã gửi từ trình duyệt này",mine_n="Chưa có yêu cầu.",
+  st="Đã tiếp nhận — vui lòng chờ email xác nhận",req="Vui lòng điền các mục bắt buộc.",left="Số yêu cầu còn lại tháng này: {n}",over="Vượt hai yêu cầu đã bao gồm — chúng tôi sẽ báo giá trước",quote="Chưa là thành viên — chúng tôi sẽ báo giá trước",sent="Đã nhận",delivery_failed="Chưa xác nhận gửi thành công. Hãy thử lại. Mã yêu cầu",retry="Thử gửi lại",
+  gateway="Cổng tiếp nhận đã nhận yêu cầu; chưa xác minh nhân viên đã nhận. Mã yêu cầu",
+  S={"received":"Đã ghi trên máy chủ · chờ kiểm tra","gateway_reported":"Cổng báo thành công · chưa xác minh nhân viên nhận","gateway_failed_reported":"Cổng báo lỗi · cần kiểm tra","relayed":"Chuyển tiếp cũ · chưa xác minh nhận","relay_failed":"Chuyển tiếp lỗi · cần kiểm tra","in_progress":"Đang xử lý","done":"Hoàn thành · kiểm tra email","failed":"Không thể xử lý · hoàn hạn mức","cancelled":"Đã hủy · hoàn hạn mức"},
+  type_text=[
+   ("Công ty chúng tôi có đủ điều kiện dự thầu không?","Bảng điều kiện tham gia, tài liệu cần có và thiếu sót; kết luận có, có điều kiện hoặc không","Đường dẫn hoặc tên thông báo, ngành, doanh thu, kinh nghiệm trong/ngoài nước và chứng nhận",["Liên kết hoặc tên gói thầu","Ngành và sản phẩm chính","Doanh thu hằng năm (USD)","Kinh nghiệm đấu thầu công hoặc quốc tế","Chứng nhận"]),
+   ("Cơ hội kinh doanh tại một quốc gia","5–10 cơ hội phù hợp từ ưu tiên chính phủ, dự án có vốn, đấu thầu và ODA cùng thứ tự tiếp cận","Quốc gia, ngành hoặc sản phẩm và hình thức thâm nhập",["Ngành và sản phẩm chính","Cách tiếp cận (xuất khẩu, đối tác, thầu, đầu tư…)","Điều bạn muốn tìm hiểu"]),
+   ("Kế hoạch chuẩn bị thiên tai cho gia đình","Kế hoạch 30 ngày về vật tư và số lượng, liên hệ, sơ tán và kiểm tra định kỳ","Khu vực (chỉ thành phố/quận), số người, trẻ nhỏ, người cao tuổi, thú nuôi",["Nơi ở (chỉ thành phố/quận)","Số người trong gia đình","Trẻ em, người già, thú nuôi (nếu có)","Điều cần lưu ý (chỉ thông tin cần thiết)"]),
+   ("Đối tác và kênh hỗ trợ cho dự án","Loại đối tác, cách tìm ứng viên, chương trình hỗ trợ công và cách liên hệ ban đầu","Đối tác cần tìm, sản phẩm/công nghệ và khu vực",["Đối tác cần tìm (người mua, nhà sản xuất, đại lý…)","Sản phẩm hoặc công nghệ","Điều kiện hoặc thời gian (không bắt buộc)"]),
+  ]),
+ "id": dict(
+  t="Permintaan analisis untuk anggota",
+  lede="Pilih satu dari empat permintaan dengan hasil yang sudah ditentukan. Tinjau hasil, kuota, dan proses sebelum mengirim.",
+  who="Anggota Analisis (KRW 19.800 per bulan) memperoleh dua permintaan per bulan. Nonanggota atau permintaan tambahan akan menerima penawaran harga terlebih dahulu, dan pekerjaan baru dimulai setelah persetujuan.",
+  pick="1. Pilih analisis",fill="2. Isi hanya informasi yang diperlukan",send="3. Periksa dan kirim",
+  out="Hasil yang diterima",need="Informasi yang dibutuhkan",rule="Proses",
+  limit="Dua permintaan per bulan; sisa kuota tidak dibawa ke bulan berikutnya. Email konfirmasi memuat estimasi waktu (biasanya 7–10 hari kerja). Pertanyaan tambahan atau perluasan lingkup merupakan permintaan baru. Tinjauan berdasarkan sumber publik ini tidak menjamin hasil hukum, investasi, atau tender. Penilaian tender terperinci (KRW 100.000) merupakan layanan terpisah.",
+  rule_all="Kami mengirim konfirmasi penerimaan dalam 1–2 hari kerja melalui email. Setiap laporan memuat kesimpulan, sumber, hal yang belum diverifikasi dan langkah selanjutnya. Jika permintaan tidak dapat ditangani, alasannya akan dijelaskan.",
+  email="Email",name="Nama atau penanggung jawab",org="Perusahaan atau organisasi (opsional)",country="Negara tujuan",code="Kode anggota (jika ada)",
+  agree="Saya setuju data dikumpulkan dan digunakan untuk memproses permintaan ini (disimpan selama satu tahun).",btn="Kirim permintaan",sending="Mengirim…",
+  done="Permintaan diterima. Nomor",dup="Permintaan yang sama baru saja dikirim. Nomor",mine="Permintaan dari peramban ini",mine_n="Belum ada permintaan.",
+  st="Diterima — tunggu email konfirmasi",req="Lengkapi bidang wajib.",left="Sisa permintaan bulan ini: {n}",over="Melebihi dua permintaan termasuk paket — kami akan mengirim penawaran harga terlebih dahulu",quote="Bukan anggota — penawaran harga akan dikirim terlebih dahulu",sent="Diterima",delivery_failed="Pengiriman belum dapat dikonfirmasi. Silakan ulangi. Nomor",retry="Kirim ulang",
+  gateway="Gateway menerima permintaan, tetapi penerimaan oleh staf belum terverifikasi. Nomor",
+  S={"received":"Dicatat di server · menunggu pemeriksaan","gateway_reported":"Gateway melaporkan berhasil · penerimaan staf belum terverifikasi","gateway_failed_reported":"Gateway gagal · perlu pemeriksaan","relayed":"Diteruskan sebelumnya · penerimaan belum diverifikasi","relay_failed":"Penerusan sebelumnya gagal · perlu pemeriksaan","in_progress":"Diproses","done":"Selesai · periksa email","failed":"Tidak dapat diproses · kuota dikembalikan","cancelled":"Dibatalkan · kuota dikembalikan"},
+  type_text=[
+   ("Bisakah perusahaan kami mengikuti tender ini?","Tabel kelayakan, dokumen, kesenjangan dan rekomendasi: bisa, bersyarat atau tidak","Tautan atau judul tender, bidang usaha, pendapatan tahunan, pengalaman publik atau luar negeri, sertifikasi",["Tautan atau judul tender","Sektor dan produk utama","Pendapatan tahunan (USD)","Pengalaman tender publik atau internasional","Sertifikasi"]),
+   ("Peluang bisnis di suatu negara","5–10 peluang yang cocok dari prioritas pemerintah, proyek didanai, tender dan ODA serta urutan pendekatannya","Negara, sektor atau produk dan cara memasuki pasar",["Sektor dan produk utama","Cara masuk (ekspor, mitra lokal, tender, investasi…)","Hal yang ingin diketahui"]),
+   ("Rencana kesiapsiagaan bencana keluarga","Rencana 30 hari: persediaan, jumlah, kontak, evakuasi dan pemeriksaan berkala","Area (hanya kota/kecamatan), jumlah anggota keluarga, anak, lansia atau hewan",["Lokasi tinggal (hanya kota/kecamatan)","Jumlah anggota keluarga","Anak, lansia, hewan peliharaan (jika ada)","Kebutuhan khusus (seperlunya saja)"]),
+   ("Mitra dan jalur dukungan yang diperlukan","Jenis mitra, cara mencari kandidat, program dukungan pemerintah dan cara kontak pertama","Mitra yang dicari, produk/teknologi dan wilayah",["Mitra yang dicari (pembeli, produsen, agen lokal…)","Produk atau teknologi Anda","Syarat atau jadwal (opsional)"]),
+  ]),
+}
+for _lang, _copy in _LOCALIZED_REQUESTS.items():
+    _names = []
+    for _base, _translated in zip(K["en"]["types"], _copy["type_text"]):
+        _id, _, _, _, _fields = _base
+        _title, _deliverable, _requirements, _labels = _translated
+        assert len(_fields) == len(_labels), (_lang, _id)
+        _names.append((_id, _title, _deliverable, _requirements,
+                       [(f[0], label, f[2], f[3]) for f, label in zip(_fields, _labels)]))
+    K[_lang] = dict(K["en"], **{k:v for k,v in _copy.items() if k!="type_text"})
+    K[_lang]["types"] = _names
+
+
+
 def request_page(L, head, foot, LANGS):
     k = K.get(L) or K["en"]
     ko = L == "ko"
@@ -81,7 +199,7 @@ def request_page(L, head, foot, LANGS):
 </form>
 <h3>{e(k["mine"])}</h3><ul class="rq-mine"></ul>
 </div></section>
-<script>(function(){{var K={json.dumps({"names": names, "done": k["done"], "dup": k["dup"], "st": k["st"], "none": k["mine_n"], "req": k["req"], "sending": k["sending"], "left": k.get("left", "이번 달 남은 의뢰 {n}건"), "over": k.get("over", "이번 달 포함 건수를 넘어 견적을 먼저 보내 드립니다"), "quote": k.get("quote", "견적을 먼저 이메일로 보내 드립니다"), "sent": k.get("sent", "접수 완료"), "gateway": ("전송 서버가 요청을 받았습니다. 관리자 확인 전입니다. 요청번호" if L == "ko" else "Gateway accepted the request; staff receipt not verified. Request number"), "delivery_failed": k.get("delivery_failed", "Delivery not confirmed. Please retry. Request number"), "retry": k.get("retry", "Retry sending"), "S": k.get("S", {})}, ensure_ascii=False)};
+<script>(function(){{var K={json.dumps({"names": names, "done": k["done"], "dup": k["dup"], "st": k["st"], "none": k["mine_n"], "req": k["req"], "sending": k["sending"], "left": k.get("left", "이번 달 남은 의뢰 {n}건"), "over": k.get("over", "이번 달 포함 건수를 넘어 견적을 먼저 보내 드립니다"), "quote": k.get("quote", "견적을 먼저 이메일로 보내 드립니다"), "sent": k.get("sent", "접수 완료"), "gateway": k.get("gateway", "Gateway accepted the request; staff receipt not verified. Request number"), "delivery_failed": k.get("delivery_failed", "Delivery not confirmed. Please retry. Request number"), "retry": k.get("retry", "Retry sending"), "S": k.get("S", {})}, ensure_ascii=False)};
 var f=document.querySelector(".rq-form"),msg=f.querySelector(".rq-msg"),btn=f.querySelector("button[type=submit]");
 function cur(){{return (document.querySelector("input[name=rqt]:checked")||{{}}).value}}
 document.querySelectorAll("input[name=rqt]").forEach(function(r){{r.addEventListener("change",function(){{f.querySelectorAll(".rq-f").forEach(function(d){{d.hidden=d.dataset.t!==cur()}})}})}});
