@@ -1,4 +1,5 @@
 """Seven-language generated homepage must not claim unsupported live-interval SLA."""
+import html
 import re
 import unittest
 from pathlib import Path
@@ -35,7 +36,7 @@ class HomepageSourceTruthTests(unittest.TestCase):
                 self.assertNotIn('>EN DIRECT<',ticker)
                 self.assertNotIn('>TRỰC TIẾP<',ticker)
                 self.assertNotIn('>LANGSUNG<',ticker)
-                self.assertIn(NOTICES[lang],page)
+                self.assertIn(html.escape(NOTICES[lang], quote=True),page)
 
     def test_generated_business_notice_not_equated_with_last_feed_update(self):
         for lang in LANGS:
@@ -43,7 +44,7 @@ class HomepageSourceTruthTests(unittest.TestCase):
                 text=(ROOT/"dist"/lang/"index.html").read_text(encoding="utf-8")
                 m=re.search(r'<div class="kpis">.*?</div></div>',text,re.S)
                 self.assertIsNotNone(m)
-                self.assertIn(NOTICES[lang],text)
+                self.assertIn(html.escape(NOTICES[lang], quote=True),text)
                 self.assertIn('id="kp-u"',text)
                 self.assertIn('id="kp-t"',text)
 
