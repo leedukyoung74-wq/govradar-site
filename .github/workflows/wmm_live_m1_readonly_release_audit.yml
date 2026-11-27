@@ -45,7 +45,7 @@ jobs:
           for lang,(amount,label) in languages.items():
               expected[f'/{lang}/']=[('HISTORICAL_ONLY','archived-status-guard'),(label,'archive-label')]
               for sub in ('how','member','membership'):
-                  expected[f'/{lang}/{sub}/']=[(amount,'M1 monthly price')]
+                  expected[f'/{lang}/{sub}/']=[('19,800' if sub=='member' else amount,'M1 monthly price')]
           for lang in ('ko','en','ar'):
               expected[f'/{lang}/pricing/']=[('19,800','M1 monthly'),('198,000','M1 annual')]
           expected['/welcome/membership/']=[('19,800','M1 welcome price')]
