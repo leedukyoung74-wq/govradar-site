@@ -43,7 +43,7 @@ def public_source_state(name, record):
         if (name == "DAPA (Korea)" and
                 record.get("data_freshness") == "HISTORICAL_SAMPLE" and
                 record.get("date_filter_verified") is False and
-                int(record.get("kept") or 0) == 0):
+                record.get("kept", 0) in (0, "0")):
             return "HISTORICAL_ONLY"
         if (name == "SAM.gov (US)" and
                 (record.get("coverage_partial") is True or
