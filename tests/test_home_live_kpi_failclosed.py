@@ -21,9 +21,9 @@ class HomepageSafeFallbackTests(unittest.TestCase):
         self.assertNotIn('replace(/Z$/,":00Z")',self.source)
 
     def test_member_price_consistent_with_published_krw(self):
-        self.assertIn('분석 회원 월 19,800원',self.source)
-        self.assertIn('analysis member ₩19,800/mo',self.source)
-        self.assertNotIn('분석 회원 월 20,000원',self.source)
+        self.assertIn('분석 회원 월 20,000원',self.source)
+        self.assertIn('analysis member ₩20,000/mo',self.source)
+        self.assertNotIn('분석 회원 월 19,800원',self.source)
 
 if __name__=="__main__":
     unittest.main()

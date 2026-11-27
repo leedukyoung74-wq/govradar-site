@@ -72,10 +72,10 @@ class RequestRelayClientTests(unittest.TestCase):
     def test_member_request_price_matches_live_krw_pricing(self):
         ko=page("ko")
         en=page("en")
-        self.assertIn("월 19,800원",ko)
-        self.assertNotIn("월 20,000원",ko)
-        self.assertIn("KRW 19,800",en)
-        self.assertNotIn("KRW 20,000",en)
+        self.assertIn("월 20,000원",ko)
+        self.assertNotIn("월 19,800원",ko)
+        self.assertIn("KRW 20,000",en)
+        self.assertNotIn("KRW 19,800",en)
 
     @unittest.skipUnless(shutil.which("node"),"node unavailable")
     def test_all_locales_inline_js_syntax(self):

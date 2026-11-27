@@ -7,7 +7,7 @@ from html import escape as e
 K = {
  "ko": dict(
   t="회원 분석 의뢰", lede="결과물의 범위가 정해진 네 가지 의뢰부터 받습니다. 보내기 전에 받게 될 결과물, 한도 차감, 처리 기준을 먼저 보여 드립니다.",
-  who="대상: 분석 회원(월 19,800원). 매달 2건까지 포함됩니다. 회원이 아니거나 2건을 넘으면 건당 견적을 먼저 이메일로 보내 드리고, 동의하신 뒤에 시작합니다.",
+  who="대상: 분석 회원(월 20,000원). 매달 2건까지 포함됩니다. 회원이 아니거나 2건을 넘으면 건당 견적을 먼저 이메일로 보내 드리고, 동의하신 뒤에 시작합니다.",
   pick="1. 의뢰 고르기", fill="2. 필요한 정보만 입력", send="3. 확인하고 보내기",
   out="받는 결과물", need="필요한 정보", rule="처리 기준",
   limit="한도: 분석 회원은 매달 2건까지이며, 쓰지 않은 건수는 다음 달로 넘어가지 않습니다. 처리 기간은 의뢰 내용과 자료 범위에 따라 다르며, 접수 확인 메일에서 예상 기간을 먼저 알려 드립니다(보통 7~10영업일). 추가 질문이나 범위 변경은 별도 의뢰로 접수합니다. 결과물은 공개 자료에 근거한 참고용 검토이며 법률·투자·입찰 결과를 보장하지 않습니다. 요금표의 '입찰 적합도 판정(건당 10만 원)'은 서류 목록·컨소시엄 구성안까지 들어가는 상세판이고, 여기의 회원 의뢰는 참가 가능 여부와 부족한 조건을 정리하는 빠른 검토입니다.",
@@ -29,7 +29,7 @@ K = {
   ]),
  "en": dict(
   t="Member analysis requests", lede="We start with four requests whose output is fixed in advance. Before you send, you see what you will receive, how it counts against your limit, and how it is handled.",
-  who="For analysis members (KRW 19,800 a month): two requests a month are included. Non-members and extra requests get a quote by email first, and we start only after you agree.",
+  who="For analysis members (KRW 20,000 a month): two requests a month are included. Non-members and extra requests get a quote by email first, and we start only after you agree.",
   pick="1. Choose a request", fill="2. Give only what is needed", send="3. Check and send",
   out="You receive", need="We need", rule="Handling",
   limit="Limit: two requests a month for analysis members; unused requests do not carry over. Turnaround depends on the request and the material, and our confirmation email gives the expected time first (usually 7–10 business days). Follow-up questions or a wider scope count as a new request. Results are a reference review based on public information and do not guarantee legal, investment or tender outcomes. The per-tender fit assessment (KRW 100,000) on the pricing page is the detailed version with document list and consortium plan; member requests are a quick check of eligibility and gaps.",
@@ -59,7 +59,7 @@ _LOCALIZED_REQUESTS = {
  "es": dict(
   t="Solicitudes de análisis para miembros",
   lede="Elija uno de cuatro análisis definidos. Antes de enviarlo verá el resultado, el límite y las condiciones de tramitación.",
-  who="Los miembros de análisis (19.800 KRW al mes) incluyen dos solicitudes al mes. Para no miembros o solicitudes adicionales enviaremos primero un presupuesto y no comenzaremos sin su aceptación.",
+  who="Los miembros de análisis (20.000 KRW al mes) incluyen dos solicitudes al mes. Para no miembros o solicitudes adicionales enviaremos primero un presupuesto y no comenzaremos sin su aceptación.",
   pick="1. Elija el análisis",fill="2. Facilite solo los datos necesarios",send="3. Revise y envíe",
   out="Resultado",need="Datos necesarios",rule="Tramitación",
   limit="Dos solicitudes al mes por miembro; las no utilizadas no se acumulan. La confirmación indicará el plazo estimado (habitualmente 7–10 días hábiles). Ampliaciones y preguntas adicionales cuentan como otra solicitud. Este servicio orientativo basado en fuentes públicas no garantiza resultados legales, de inversión o licitación. La evaluación detallada de una licitación (100.000 KRW) se contrata por separado.",
@@ -79,7 +79,7 @@ _LOCALIZED_REQUESTS = {
  "fr": dict(
   t="Demandes d’analyse des membres",
   lede="Choisissez parmi quatre analyses au périmètre défini. Avant l’envoi, consultez le livrable, le quota et les conditions de traitement.",
-  who="Les membres Analyse (19 800 KRW par mois) disposent de deux demandes mensuelles. Pour les non-membres ou les demandes supplémentaires, un devis est envoyé et aucun travail ne débute sans acceptation.",
+  who="Les membres Analyse (20 000 KRW par mois) disposent de deux demandes mensuelles. Pour les non-membres ou les demandes supplémentaires, un devis est envoyé et aucun travail ne débute sans acceptation.",
   pick="1. Choisir une analyse",fill="2. Fournir uniquement les informations utiles",send="3. Vérifier et envoyer",
   out="Livrable",need="Informations nécessaires",rule="Traitement",
   limit="Deux demandes par mois, non reportables. L’accusé de réception précisera le délai (généralement 7 à 10 jours ouvrés). Les questions supplémentaires ou l’élargissement du périmètre constituent une nouvelle demande. Cette analyse indicative fondée sur des données publiques ne garantit aucun résultat juridique, financier ou d’appel d’offres. L’évaluation détaillée d’un appel d’offres (100 000 KRW) est vendue séparément.",
@@ -99,7 +99,7 @@ _LOCALIZED_REQUESTS = {
  "ar": dict(
   t="طلبات التحليل للأعضاء",
   lede="اختر واحداً من أربعة طلبات ذات مخرجات محددة. ستعرف المخرجات والحد الشهري وآلية المعالجة قبل الإرسال.",
-  who="تشمل عضوية التحليل (19,800 وون كوري شهرياً) طلبين شهرياً. يُرسل عرض سعر مسبقاً لغير الأعضاء والطلبات الإضافية، ولا نبدأ العمل إلا بعد الموافقة.",
+  who="تشمل عضوية التحليل (20,000 وون كوري شهرياً) طلبين شهرياً. يُرسل عرض سعر مسبقاً لغير الأعضاء والطلبات الإضافية، ولا نبدأ العمل إلا بعد الموافقة.",
   pick="١. اختر نوع الطلب",fill="٢. أدخل المعلومات الضرورية فقط",send="٣. راجع وأرسل",
   out="ما ستحصل عليه",need="المعلومات المطلوبة",rule="آلية المعالجة",
   limit="طلبان شهرياً للعضو، ولا تُرحَّل الطلبات غير المستخدمة. يوضح تأكيد الاستلام المدة المتوقعة (عادةً ٧–١٠ أيام عمل). تُحتسب الأسئلة الإضافية وتوسيع النطاق طلباً جديداً. هذه مراجعة استرشادية تعتمد على المصادر العامة ولا تضمن نتائج قانونية أو استثمارية أو نتائج المناقصات. تقييم المناقصة المفصل (100,000 وون) خدمة منفصلة.",
@@ -119,7 +119,7 @@ _LOCALIZED_REQUESTS = {
  "vi": dict(
   t="Yêu cầu phân tích dành cho thành viên",
   lede="Chọn một trong bốn loại yêu cầu có đầu ra xác định. Xem trước kết quả, hạn mức và quy trình xử lý trước khi gửi.",
-  who="Thành viên Phân tích (19.800 KRW/tháng) được bao gồm hai yêu cầu mỗi tháng. Người chưa là thành viên hoặc yêu cầu vượt hạn mức sẽ nhận báo giá trước; chỉ bắt đầu khi bạn đồng ý.",
+  who="Thành viên Phân tích (20.000 KRW/tháng) được bao gồm hai yêu cầu mỗi tháng. Người chưa là thành viên hoặc yêu cầu vượt hạn mức sẽ nhận báo giá trước; chỉ bắt đầu khi bạn đồng ý.",
   pick="1. Chọn yêu cầu",fill="2. Chỉ điền thông tin cần thiết",send="3. Kiểm tra và gửi",
   out="Kết quả nhận được",need="Thông tin cần cung cấp",rule="Quy trình xử lý",
   limit="Hai yêu cầu mỗi tháng, không chuyển phần chưa dùng sang tháng sau. Email xác nhận sẽ nêu thời gian dự kiến (thường 7–10 ngày làm việc). Câu hỏi bổ sung hoặc mở rộng phạm vi tính thành yêu cầu mới. Kết quả chỉ mang tính tham khảo dựa trên nguồn công khai, không bảo đảm kết quả pháp lý, đầu tư hay trúng thầu. Đánh giá hồ sơ thầu chuyên sâu (100.000 KRW) là dịch vụ riêng.",
@@ -139,7 +139,7 @@ _LOCALIZED_REQUESTS = {
  "id": dict(
   t="Permintaan analisis untuk anggota",
   lede="Pilih satu dari empat permintaan dengan hasil yang sudah ditentukan. Tinjau hasil, kuota, dan proses sebelum mengirim.",
-  who="Anggota Analisis (KRW 19.800 per bulan) memperoleh dua permintaan per bulan. Nonanggota atau permintaan tambahan akan menerima penawaran harga terlebih dahulu, dan pekerjaan baru dimulai setelah persetujuan.",
+  who="Anggota Analisis (KRW 20.000 per bulan) memperoleh dua permintaan per bulan. Nonanggota atau permintaan tambahan akan menerima penawaran harga terlebih dahulu, dan pekerjaan baru dimulai setelah persetujuan.",
   pick="1. Pilih analisis",fill="2. Isi hanya informasi yang diperlukan",send="3. Periksa dan kirim",
   out="Hasil yang diterima",need="Informasi yang dibutuhkan",rule="Proses",
   limit="Dua permintaan per bulan; sisa kuota tidak dibawa ke bulan berikutnya. Email konfirmasi memuat estimasi waktu (biasanya 7–10 hari kerja). Pertanyaan tambahan atau perluasan lingkup merupakan permintaan baru. Tinjauan berdasarkan sumber publik ini tidak menjamin hasil hukum, investasi, atau tender. Penilaian tender terperinci (KRW 100.000) merupakan layanan terpisah.",
