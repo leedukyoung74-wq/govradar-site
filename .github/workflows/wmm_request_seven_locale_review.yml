@@ -5,6 +5,7 @@ on:
     paths:
       - 'pages_req.py'
       - 'tests/test_request_seven_locale_generated.py'
+      - 'tests/test_request_relay_client.py'
       - '.github/workflows/wmm_request_seven_locale_review.yml'
   workflow_dispatch:
 permissions:
