@@ -8,6 +8,8 @@ on:
       - 'ops/tests/test_wmm_public_source_truth_report.py'
       - 'ops/wmm_seven_locale_readonly.py'
       - 'ops/tests/test_wmm_seven_locale_readonly.py'
+      - 'ops/wmm_schedule_event_coverage.py'
+      - 'ops/tests/test_wmm_schedule_event_coverage.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -65,3 +67,5 @@ jobs:
         run: python3 -m unittest discover -s ops/tests -p 'test_wmm_public_source_truth_report.py' -v
       - name: Test public seven-language GET-only smoke without any network
         run: python3 -m unittest discover -s ops/tests -p 'test_wmm_seven_locale_readonly.py' -v
+      - name: Test schedule-gap audit using offline synthetic GitHub runs
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_schedule_event_coverage.py' -v
