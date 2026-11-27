@@ -5,7 +5,22 @@ from urllib.error import HTTPError,URLError
 from datetime import datetime,timezone
 from html.parser import HTMLParser
 from hashlib import sha256
+from urllib.parse import urlsplit
 import json,os,ssl
+
+class FormScan(HTMLParser):
+    def __init__(self):
+      super().__init__()
+      self.forms=[]
+    def handle_starttag(self,tag,attrs):
+      if tag=="form" and len(self.forms)<10:
+        a=dict(attrs)
+        action=a.get("action","")
+        u=urlsplit(action)
+        self.forms.append({"method":a.get("method","GET").upper(),
+          "action_host":u.hostname or "",
+          "action_path":u.path or "(same-page)",
+          "netlify_form":("data-netlify" in a or "netlify" in a)})
 
 TARGETS=(
  ("Netlify Identity settings","https://radar.wmm-hoa.com/.netlify/identity/settings"),
@@ -18,7 +33,7 @@ TARGETS=(
 )
 def probe(name,url):
     result={"service":name,"url":url,"http":None,"content_type":None,
-            "redirect":None,"json_object":False,"identity_settings_keys":[],"html_hash":None,"html_has_form":None,"error":None}
+            "redirect":None,"json_object":False,"identity_settings_keys":[],"html_hash":None,"html_has_form":None,"forms":[],"error":None}
     try:
       request=Request(url,headers={"Accept":"application/json,text/html","User-Agent":"WMM-ReadOnly-EndpointAudit/1.0"})
       with urlopen(request,timeout=15,context=ssl.create_default_context()) as r:
@@ -30,6 +45,7 @@ def probe(name,url):
           # Compare public rendered HTML with an intentionally nonexistent route; do not store body.
           result["html_hash"]=sha256(body).hexdigest()[:16]
           result["html_has_form"]=b"<form" in body.lower()
+          fp=FormScan();fp.feed(body.decode("utf-8",errors="replace"));result["forms"]=fp.forms
         if name=="Netlify Identity settings" and "application/json" in result["content_type"].lower():
           b=r.read(8192)
           try:
