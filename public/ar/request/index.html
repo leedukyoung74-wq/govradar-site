@@ -51,7 +51,7 @@ function hash(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;r
 f.addEventListener("submit",function(ev){var t=cur(),box=f.querySelector('.rq-f[data-t="'+t+'"]'),lines=[],ok=true;
 box.querySelectorAll("[data-k]").forEach(function(i){var v=(i.value||"").trim();if(i.hasAttribute("data-req")&&!v)ok=false;if(v)lines.push(i.parentNode.firstChild.textContent.replace(" *","")+": "+v)});
 // Membership credentials must never be inserted into inquiry text.
-if(!ok){ev.preventDefault();msg.textContent=K.req;return}
+if(!ok||!f.querySelector('input[name="privacy_agree"]').checked){ev.preventDefault();msg.textContent=K.req;return}
 var h=hash(t+lines.join("|")+f.email.value),a=load(),prev=a.filter(function(x){return x.h===h&&Date.now()-x.ts<6e5})[0];
 if(prev&&!prev.relay_failed){ev.preventDefault();msg.textContent=K.dup+" "+prev.id;return}
 var d=new Date(),id="RQ-"+String(d.getFullYear()).slice(2)+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+"-"+Math.random().toString(36).slice(2,6).toUpperCase();
@@ -65,7 +65,7 @@ if(r.type!=="opaqueredirect"&&r.status!==303)throw Error("relay-not-accepted");
 a[0].relay_failed=false;a[0].gateway_only=true;save(a);msg.textContent=K.gateway+" "+id;btn.textContent=K.sent;paint();
 }).catch(function(){a[0].relay_failed=true;save(a);msg.textContent=K.delivery_failed+" "+id;btn.disabled=false;btn.textContent=K.retry;paint()})}
 if(SRV){
-fetch("/api/req",{method:"POST",headers:hdr({"content-type":"application/json"}),body:JSON.stringify({type:t,body:sendBody,email:f.email.value,lang:L})}).then(function(r){if(r.status===503){SRV=false;throw Error("D1_UNAVAILABLE")}if(!r.ok)throw Error("REQUEST_API_ERROR");return r.json()}).then(function(j){
+fetch("/api/req",{method:"POST",headers:hdr({"content-type":"application/json"}),body:JSON.stringify({type:t,body:sendBody,email:f.email.value,lang:L,privacy_consent:f.querySelector('input[name="privacy_agree"]').checked})}).then(function(r){if(r.status===503){SRV=false;throw Error("D1_UNAVAILABLE")}if(!r.ok)throw Error("REQUEST_API_ERROR");return r.json()}).then(function(j){
 if(!j.req_no)throw 0;id=j.req_no;a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\n"+sendBody;
 var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{n}",j.left):" · "+K.over):" · "+K.quote);msg.textContent=K.sending+" "+id;
 function relayFailed(){a[0].relay_failed=true;save(a);msg.textContent=K.delivery_failed+" "+id;btn.disabled=false;btn.textContent=K.retry;paint()}
