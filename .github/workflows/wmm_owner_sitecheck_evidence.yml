@@ -1,0 +1,53 @@
+# Owner-only recovery of public site health evidence, without recollecting
+# official tenders or charging external API quotas. No customer POST.
+name: GOV RADAR owner-only fresh site health (GET + site_check evidence)
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+jobs:
+  probe:
+    if: ${{ github.event.issue.number == 80 && !github.event.issue.pull_request && github.event.issue.state == 'open' && github.event.comment.user.login == 'leedukyoung74-wq' && github.event.comment.author_association == 'OWNER' && github.event.comment.body == '/govradar-sitecheck' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Read official checker code from canonical src
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Read data branch for safe checker inputs and report-only authenticated push
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data_branch
+          fetch-depth: 20
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check public homepage and official feeds with anonymous GET only
+        id: site_probe
+        continue-on-error: true
+        run: python3 tools/check_site.py data_branch/feeds/site_check.json
+      - name: Publish current PASS or FAIL evidence only
+        if: always()
+        run: python3 tools/publish_site_check.py data_branch
+      - name: Mark failed site probe RED even if failure evidence was saved
+        if: always()
+        run: |
+          if [ "${{ steps.site_probe.outcome }}" != "success" ]; then
+            echo 'SITE HEALTH FAIL/ERROR: see published site_check report and this run artifact.' >&2
+            exit 1
+          fi
+          echo 'SITE HEALTH PASS, report published or newer report already available.'
+      - name: Preserve evidence for owner (read-only external data)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-site-health-${{ github.run_id }}
+          path: data_branch/feeds/site_check.json
+          retention-days: 3
+          if-no-files-found: warn
