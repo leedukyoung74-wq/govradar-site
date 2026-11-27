@@ -1,0 +1,38 @@
+name: WMM M1 seven-locale regeneration QA (NO DEPLOY)
+on:
+  push:
+    branches: [wmm-source-m1-vat-regression-20261127]
+    paths:
+      - 'pages3.py'
+      - 'tests/test_member_price_generated_review.py'
+      - '.github/workflows/wmm_m1_regeneration_review.yml'
+  pull_request:
+    branches: [src]
+    paths:
+      - 'pages3.py'
+      - 'tests/test_member_price_generated_review.py'
+      - '.github/workflows/wmm_m1_regeneration_review.yml'
+permissions:
+  contents: read
+jobs:
+  test_generated_m1:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate site into ephemeral runner only (no publish)
+        run: |
+          python3 build.py --base https://radar.wmm-hoa.com
+          python3 tools/cf_variant.py dist cf/public
+      - name: Check 7-locale membership, price and VAT regression
+        run: python3 -m unittest discover -s tests -p 'test_member_price_generated_review.py' -v
+      - name: Run full offline unit suite after generation
+        run: python3 -m unittest discover -s tests -v
+      - name: Record release boundary
+        if: always()
+        run: echo 'NO DEPLOY: disposable static build, no secrets/API/payment/customer data, no published site changes.' >> "$GITHUB_STEP_SUMMARY"
