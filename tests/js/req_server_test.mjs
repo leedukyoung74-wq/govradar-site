@@ -12,7 +12,7 @@ globalThis.fetch = async (url, opt) => { const t = (opt.headers.authorization ||
   return { ok: true, json: async () => ({ id: "user-" + t, email: t + "@ex.com", app_metadata: { roles: t.startsWith("m1") ? ["m1"] : [] } }) }; };
 const mod = await import(ROOT + "/cf/functions/api/req.js");
 const env = { GV_DB: D1 };
-const req = (method, body, tok) => ({ request: { headers: { get: k => (k === "authorization" && tok ? "Bearer " + tok : null) }, json: async () => body } , env });
+const req = (method, body, tok) => ({ request: { headers: { get: k => (k === "authorization" && tok ? "Bearer " + tok : null) }, json: async () => method === "POST" && body && typeof body === "object" ? { privacy_consent: true, ...body } : body } , env });
 const call = async (fn, ...a) => (await (await fn(req(...a))).json());
 const P = mod.onRequestPost, G = mod.onRequestGet;
 out.push(["1", await call(P, "POST", { type: "tender", body: "A", email: "x@ex.com" }, "m1")]);
@@ -29,6 +29,16 @@ out.push(["10", (await mod.onRequestPost({ request: req("POST", {}, "m1").reques
 out.push(["secret",await call(P,"POST",{type:"partner",body:"Partner request\nmember code: ABCD-EFGH",email:"x@ex.com"},"m1")]);
 out.push(["arabic_secret",await call(P,"POST",{type:"partner",body:"رمز العضوية: ABCD-EFGH",email:"x@ex.com"},"m1")]);
 
+
+const missingConsent = await mod.onRequestPost({request: {
+  headers: {get: () => null}, json: async () => ({ type:"partner",body:"No consent",email:"missing@ex.com" })
+}, env});
+const missingConsentJson = await missingConsent.json();
+const deniedConsent = await call(P,"POST",{type:"partner",body:"No consent",email:"deny@ex.com",privacy_consent:false});
+const oversizedBody = await call(P,"POST",{type:"partner",body:"x".repeat(4001),email:"large@ex.com"});
+const oversizedEmail = await call(P,"POST",{type:"partner",body:"Valid",email:"x".repeat(255)+"@ex.com"});
+const missingConsentRows = raw.prepare("select count(*) as n from requests where user_key like ?").get("e:%").n;
+// No direct write may be recorded without verified consent.
 const [r1,r2,r3,r4,r5,r6,r7,,,] = out.map(x=>x[1]);
 // PATCH must reject anonymous, cross-user and malformed status changes.
 const patch = mod.onRequestPatch;
@@ -51,6 +61,8 @@ const quotaRows = raw.prepare("select count(*) as n, sum(counted) as used from r
 const quotaIncluded = concurrent.filter(x => x.counted).length;
 // Concurrent duplicate submissions are still to be guarded independently.
 const fail = [];
+if (missingConsent.status!==400 || missingConsentJson.error!=="consent_required" || deniedConsent.error!=="consent_required" || missingConsentRows!==1) fail.push("consent-required-before-write");
+if (oversizedBody.error!=="bad" || oversizedEmail.error!=="bad") fail.push("input-length-rejection");
 if (!(r1.counted && r1.left === 1)) fail.push("first");
 if (quotaRows.n!==5 || quotaRows.used!==2 || quotaIncluded!==2) fail.push("atomic-quota");
 if (!(r2.duplicate && r2.req_no === r1.req_no)) fail.push("dup");
