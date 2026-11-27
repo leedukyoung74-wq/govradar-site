@@ -306,3 +306,11 @@ jobs:
                             'pending_checks':[x['item'] for x in pending], 'checked_at_utc':now.isoformat()},ensure_ascii=False))
           sys.exit(1 if failed else 0)
           PY
+      - name: Read-only checkout for provenance report (no deployment)
+        if: always()
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Detect manual snapshots and search-level tender verification
+        if: always()
+        run: python3 ops/wmm_public_source_truth_report.py
