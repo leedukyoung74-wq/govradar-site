@@ -50,6 +50,38 @@ jobs:
                   raise SystemExit('ROUTE NOT VERIFIED: 405 with Allow: POST missing')
               time.sleep(9)
           PY
+      - name: Verify published seven-language feedback consent via GET only
+        if: github.event_name == 'push' && github.ref == 'refs/heads/live'
+        run: |
+          python3 - <<'PY'
+          import re,time,urllib.request
+          languages=('ko','en','es','fr','ar','vi','id')
+          last=[]
+          for attempt in range(1,4):
+              errors=[]
+              for lang in languages:
+                  url=f'https://radar.wmm-hoa.com/{lang}/how/?wmm_privacy_audit={attempt}'
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'WMM-GET-only-privacy-audit/1.0'},method='GET')
+                      with urllib.request.urlopen(req,timeout=9) as r:
+                          body=r.read(180000).decode('utf8','replace')
+                          if r.status!=200:raise ValueError('non_200')
+                      form=re.search(r'<form\\b[^>]*name="feedback"[^>]*>[\\s\\S]*?</form>',body)
+                      if not form or 'name="privacy_agree" value="yes" required' not in form.group(0):
+                          errors.append(lang+':consent_missing')
+                      elif f'/{lang}/legal/privacy/' not in form.group(0):
+                          errors.append(lang+':policy_missing')
+                  except Exception as exc:
+                      errors.append(lang+':'+type(exc).__name__)
+              print('LIVE_FEEDBACK_PRIVACY_GET',attempt,'pass',len(languages)-len(errors),'of',len(languages),'remaining',errors,flush=True)
+              last=errors
+              if not errors:
+                  print('PASS: seven production feedback forms have required privacy consent; only GET used')
+                  print('NOT VERIFIED: Netlify dashboard receipt, email or D1 writes')
+                  break
+              if attempt<3:time.sleep(9)
+          if last:raise SystemExit('Production feedback privacy incomplete')
+          PY
       - name: Record read-only semantics
         if: always()
         run: |
