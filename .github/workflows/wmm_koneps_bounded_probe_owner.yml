@@ -42,7 +42,7 @@ jobs:
         run: python3 -m unittest discover -s ops/tests -p 'test_wmm_koneps_bounded_probe.py' -v
       - name: Up to four official G2B GETs; no source records printed
         env:
-          KONEPS_KEY: \${{ secrets.KONEPS_KEY }}
+          KONEPS_KEY: ${{ secrets.KONEPS_KEY }}
 
         run: python3 ops/wmm_koneps_bounded_probe.py
       - name: Document boundary
