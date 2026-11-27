@@ -7,7 +7,7 @@ from html import escape as e
 K = {
  "ko": dict(
   t="회원 분석 의뢰", lede="결과물의 범위가 정해진 네 가지 의뢰부터 받습니다. 보내기 전에 받게 될 결과물, 한도 차감, 처리 기준을 먼저 보여 드립니다.",
-  who="대상: 분석 회원(월 20,000원). 매달 2건까지 포함됩니다. 회원이 아니거나 2건을 넘으면 건당 견적을 먼저 이메일로 보내 드리고, 동의하신 뒤에 시작합니다.",
+  who="대상: 분석 회원(월 19,800원). 매달 2건까지 포함됩니다. 회원이 아니거나 2건을 넘으면 건당 견적을 먼저 이메일로 보내 드리고, 동의하신 뒤에 시작합니다.",
   pick="1. 의뢰 고르기", fill="2. 필요한 정보만 입력", send="3. 확인하고 보내기",
   out="받는 결과물", need="필요한 정보", rule="처리 기준",
   limit="한도: 분석 회원은 매달 2건까지이며, 쓰지 않은 건수는 다음 달로 넘어가지 않습니다. 처리 기간은 의뢰 내용과 자료 범위에 따라 다르며, 접수 확인 메일에서 예상 기간을 먼저 알려 드립니다(보통 7~10영업일). 추가 질문이나 범위 변경은 별도 의뢰로 접수합니다. 결과물은 공개 자료에 근거한 참고용 검토이며 법률·투자·입찰 결과를 보장하지 않습니다. 요금표의 '입찰 적합도 판정(건당 10만 원)'은 서류 목록·컨소시엄 구성안까지 들어가는 상세판이고, 여기의 회원 의뢰는 참가 가능 여부와 부족한 조건을 정리하는 빠른 검토입니다.",
@@ -29,7 +29,7 @@ K = {
   ]),
  "en": dict(
   t="Member analysis requests", lede="We start with four requests whose output is fixed in advance. Before you send, you see what you will receive, how it counts against your limit, and how it is handled.",
-  who="For analysis members (KRW 20,000 a month): two requests a month are included. Non-members and extra requests get a quote by email first, and we start only after you agree.",
+  who="For analysis members (KRW 19,800 a month): two requests a month are included. Non-members and extra requests get a quote by email first, and we start only after you agree.",
   pick="1. Choose a request", fill="2. Give only what is needed", send="3. Check and send",
   out="You receive", need="We need", rule="Handling",
   limit="Limit: two requests a month for analysis members; unused requests do not carry over. Turnaround depends on the request and the material, and our confirmation email gives the expected time first (usually 7–10 business days). Follow-up questions or a wider scope count as a new request. Results are a reference review based on public information and do not guarantee legal, investment or tender outcomes. The per-tender fit assessment (KRW 100,000) on the pricing page is the detailed version with document list and consortium plan; member requests are a quick check of eligibility and gaps.",
@@ -92,7 +92,7 @@ function hash(s){{var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;
 f.addEventListener("submit",function(ev){{var t=cur(),box=f.querySelector('.rq-f[data-t="'+t+'"]'),lines=[],ok=true;
 box.querySelectorAll("[data-k]").forEach(function(i){{var v=(i.value||"").trim();if(i.hasAttribute("data-req")&&!v)ok=false;if(v)lines.push(i.parentNode.firstChild.textContent.replace(" *","")+": "+v)}});
 // Membership is determined by verified sign-in, never a secret code in an inquiry.
-if(!ok){{ev.preventDefault();msg.textContent=K.req;return}}
+if(!ok||!f.querySelector('input[name="privacy_agree"]').checked){{ev.preventDefault();msg.textContent=K.req;return}}
 var h=hash(t+lines.join("|")+f.email.value),a=load(),prev=a.filter(function(x){{return x.h===h&&Date.now()-x.ts<6e5}})[0];
 if(prev&&!prev.relay_failed){{ev.preventDefault();msg.textContent=K.dup+" "+prev.id;return}}
 var d=new Date(),id="RQ-"+String(d.getFullYear()).slice(2)+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+"-"+Math.random().toString(36).slice(2,6).toUpperCase();
@@ -106,7 +106,7 @@ if(r.type!=="opaqueredirect"&&r.status!==303)throw Error("relay-not-accepted");
 a[0].relay_failed=false;a[0].gateway_only=true;save(a);msg.textContent=K.gateway+" "+id;btn.textContent=K.sent;paint();
 }}).catch(function(){{a[0].relay_failed=true;save(a);msg.textContent=K.delivery_failed+" "+id;btn.disabled=false;btn.textContent=K.retry;paint()}})}}
 if(SRV){{
-fetch("/api/req",{{method:"POST",headers:hdr({{"content-type":"application/json"}}),body:JSON.stringify({{type:t,body:sendBody,email:f.email.value,lang:L}})}}).then(function(r){{if(r.status===503){{SRV=false;throw Error("D1_UNAVAILABLE")}}if(!r.ok)throw Error("REQUEST_API_ERROR");return r.json()}}).then(function(j){{
+fetch("/api/req",{{method:"POST",headers:hdr({{"content-type":"application/json"}}),body:JSON.stringify({{type:t,body:sendBody,email:f.email.value,lang:L,privacy_consent:f.querySelector('input[name="privacy_agree"]').checked}})}}).then(function(r){{if(r.status===503){{SRV=false;throw Error("D1_UNAVAILABLE")}}if(!r.ok)throw Error("REQUEST_API_ERROR");return r.json()}}).then(function(j){{
 if(!j.req_no)throw 0;id=j.req_no;a[0].id=id;save(a);f.product.value="request:"+t+" "+id;f.need.value="["+id+"] "+(K.names[t]||t)+"\\n"+sendBody;
 var info=j.duplicate?K.dup+" "+id:K.done+" "+id+(j.member?(j.counted?" · "+K.left.replace("{{n}}",j.left):" · "+K.over):" · "+K.quote);msg.textContent=K.sending+" "+id;
 function relayFailed(){{a[0].relay_failed=true;save(a);msg.textContent=K.delivery_failed+" "+id;btn.disabled=false;btn.textContent=K.retry;paint()}}

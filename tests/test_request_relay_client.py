@@ -61,6 +61,22 @@ class RequestRelayClientTests(unittest.TestCase):
                 self.assertIn('"gateway_failed_reported":',html)
                 self.assertIn('staff receipt unverified' if lang != "ko" else '관리자 확인 전',html)
 
+    def test_explicit_privacy_consent_sent_and_checked_in_all_locales(self):
+        for lang in LANGS:
+            with self.subTest(lang=lang):
+                html=page(lang)
+                self.assertIn('if(!ok||!f.querySelector(\'input[name="privacy_agree"]\').checked)',html)
+                self.assertIn('privacy_consent:f.querySelector(\'input[name="privacy_agree"]\').checked',html)
+                self.assertIn('name="privacy_agree" value="yes" required',html)
+
+    def test_member_request_price_matches_live_krw_pricing(self):
+        ko=page("ko")
+        en=page("en")
+        self.assertIn("월 19,800원",ko)
+        self.assertNotIn("월 20,000원",ko)
+        self.assertIn("KRW 19,800",en)
+        self.assertNotIn("KRW 20,000",en)
+
     @unittest.skipUnless(shutil.which("node"),"node unavailable")
     def test_all_locales_inline_js_syntax(self):
         for lang in LANGS:
