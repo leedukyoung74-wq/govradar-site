@@ -818,9 +818,9 @@ def sample_band(L):
     return f'''<section class="band sbnd"><div class="in sbnd-g"><div><h2>{e(h)}</h2><p class="sbnd-p">{e(p_)}</p><ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul><p class="cta"><a class="btn pri" href="/{L}/sample/">{e(b1)}</a> <a class="btn" href="/{L}/request/">{e(b2)}</a></p></div>
 <a class="sbnd-img" href="/{L}/sample/"><img src="/assets/{im}" alt="{e(b1)}" width="1290" height="1530" loading="lazy"></a></div></section>'''
 
-TK = {"ko": ("LIVE", "마감 임박 입찰 · 공식 경보"), "en": ("LIVE", "Closing tenders · official alerts"), "es": ("EN VIVO", "Licitaciones por cerrar · alertas oficiales"),
- "fr": ("EN DIRECT", "Appels d'offres proches · alertes officielles"), "ar": ("مباشر", "مناقصات تقترب · تنبيهات رسمية"), "vi": ("TRỰC TIẾP", "Gói thầu sắp hết hạn · cảnh báo chính thức"),
- "id": ("LANGSUNG", "Tender segera tutup · peringatan resmi")}
+TK = {"ko": ("정기 갱신", "마감 입찰 · 공식 경보 (원문 확인)"), "en": ("PERIODIC", "Tender deadlines · official alerts (verify source)"), "es": ("PERIÓDICO", "Plazos de licitación y alertas · verificar fuente"),
+ "fr": ("PÉRIODIQUE", "Échéances et alertes officielles · vérifier la source"), "ar": ("تحديث دوري", "مواعيد المناقصات والتنبيهات · تحقق من المصدر"), "vi": ("ĐỊNH KỲ", "Hạn thầu và cảnh báo chính thức · kiểm tra nguồn"),
+ "id": ("BERKALA", "Tenggat tender dan peringatan · cek sumber")}
 def ticker(L):
     a, b = TK.get(L) or TK["en"]
     return f'<section class="tick" aria-label="{e(b)}" data-l="{L}"><div class="tick-l"><i></i>{e(a)}<span>{e(b)}</span></div><div class="tick-w"><div class="tick-t" id="tickt"></div></div></section>'
@@ -1004,6 +1004,19 @@ def region_block(L):
     h = RG_H.get(L) or tx(L, "rg_h"); para = RG_P.get(L) or tx(L, "rg_p")
     return f'<h3 class="regh" id="regions">{e(h)} <small>{nd}/{len(REGS)}</small></h3><p class="note">{e(para)}</p><div class="grid regs">{cards}</div>'
 
+# Home-page opportunity ideas are curated country research, not a live list of
+# verified bids or buyer requests. Do not merge the today's live feed timestamp
+# with this prebuilt research count or imply five-minute continuous updates.
+BIZ_SNAPSHOT_NOTICE = {
+    "ko": "조사·제안 아이디어 · 실시간 입찰 아님",
+    "en": "Curated research ideas · not live tenders",
+    "es": "Ideas de estudio · no son licitaciones en vivo",
+    "fr": "Pistes de recherche · pas des appels d'offres en direct",
+    "ar": "أفكار بحثية · ليست مناقصات مباشرة",
+    "vi": "Ý tưởng nghiên cứu · không phải gói thầu trực tiếp",
+    "id": "Ide riset terkurasi · bukan tender langsung",
+}
+
 def home(L):
     t = T[L]; path = f"/{L}/"; alts = {l: f"/{l}/" for l in LANGS}
     n_done = sum(done(i) for i in BY if not is_reg(i)); n_t = sum(len(DATA.get(i, {}).get("tenders") or []) for i in BY)
@@ -1033,7 +1046,7 @@ def home(L):
 {hsearch(L)}{purpose3(L)}
 <p class="byline"><img src="/assets/emblem.png" alt="" width="24" height="24">WORLD MAKING MEMBERS × GCSME</p></div>
 <a class="hradar" href="#map" aria-label="GOV RADAR"><span class="hp"></span><span class="hp p2"></span><img src="/assets/govradar-logo.webp" alt="GOV RADAR" width="640" height="709"><span class="hsw"></span><span class="hbl b1"></span><span class="hbl b2"></span><span class="hbl b3"></span><span class="hbl b4"></span>{"".join(f'<span class="htg t{i+1}">{x}</span>' for i, x in enumerate((["🇻🇳 정부 사업", "🇰🇪 입찰 마감 D-7", "🇸🇦 ODA", "🌐 세계은행 공고"] if L=="ko" else ["🇻🇳 Programmes", "🇰🇪 Tender D-7", "🇸🇦 Aid projects", "🌐 World Bank"])))}</a>
-<div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b id="kp-t">—</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span></div><div><b id="kp-u">—</b><span>{e(t['k_last'])}</span></div></div><script>/* live numbers from the daily no-AI refresh (data/feeds/today.json): open tenders and refresh date */fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/today.json",{{cache:"no-store"}}).then(function(r){{return r.ok?r.json():null}}).then(function(d){{if(!d||!d.n)return;var stamp=Date.parse(String(d.updated||""));var age=Date.now()-stamp;if(!Number.isFinite(stamp)||age< -300000||age>108000000)return;var a=document.getElementById("kp-t"),b=document.getElementById("kp-u");if(a&&Number.isInteger(d.n.open)&&d.n.open>=0)a.textContent=new Intl.NumberFormat("{L}"==="ar"?"ar-u-nu-latn":"{L}").format(d.n.open);var u=new Date(String(d.updated||""));if(b&&!isNaN(u)){{var k=new Date(u.getTime()+9*3600e3);b.textContent=(k.getUTCMonth()+1)+"/"+k.getUTCDate()}}}}).catch(function(){{}})</script>
+<div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b id="kp-t">—</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span><small>{e(BIZ_SNAPSHOT_NOTICE.get(L, BIZ_SNAPSHOT_NOTICE["en"]))}</small></div><div><b id="kp-u">—</b><span>{e(t['k_last'])}</span></div></div><script>/* live numbers from the daily no-AI refresh (data/feeds/today.json): open tenders and refresh date */fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/today.json",{{cache:"no-store"}}).then(function(r){{return r.ok?r.json():null}}).then(function(d){{if(!d||!d.n)return;var stamp=Date.parse(String(d.updated||""));var age=Date.now()-stamp;if(!Number.isFinite(stamp)||age< -300000||age>108000000)return;var a=document.getElementById("kp-t"),b=document.getElementById("kp-u");if(a&&Number.isInteger(d.n.open)&&d.n.open>=0)a.textContent=new Intl.NumberFormat("{L}"==="ar"?"ar-u-nu-latn":"{L}").format(d.n.open);var u=new Date(String(d.updated||""));if(b&&!isNaN(u)){{var k=new Date(u.getTime()+9*3600e3);b.textContent=(k.getUTCMonth()+1)+"/"+k.getUTCDate()}}}}).catch(function(){{}})</script>
 </div></section>
 {ticker(L)}
 {P3.today_band(L)}
