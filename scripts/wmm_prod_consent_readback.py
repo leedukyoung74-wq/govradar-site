@@ -22,17 +22,22 @@ def main():
     results=[]
     status,body,_=get("/api/req")
     results.append({"check":"anonymous GET /api/req","http":status,"ok":status==401 and '"login"' in body})
-    for lang in ("ko","en","ar"):
+    request_heading={"ko":"회원 분석 의뢰","en":"Member analysis requests",
+       "es":"Solicitudes de análisis","fr":"Demandes d’analyse","ar":"طلبات التحليل",
+       "vi":"Yêu cầu phân tích","id":"Permintaan analisis"}
+    for lang,heading in request_heading.items():
         path=f"/{lang}/request/"
         status,body,dest=get(path)
-        good=(status==200 and "privacy_consent:f.querySelector(" in body and
-              'if(!ok||!f.querySelector(' in body and 'name="privacy_agree" value="yes" required' in body)
-        results.append({"check":path,"http":status,"ok":good,"specific_consent":good})
-    for lang in ("es","fr","vi","id"):
-        path=f"/{lang}/request/"
-        status,body,dest=get(path)
-        good=status==200 and "http-equiv=\"refresh\"" in body and "/en/request/" in body
-        results.append({"check":path,"http":status,"ok":good,"expected_lang_redirect":good})
+        good=(status==200 and heading in body and
+              "privacy_consent:f.querySelector(" in body and
+              'if(!ok||!f.querySelector(' in body and
+              'name="privacy_agree" value="yes" required' in body and
+              f'name="lang" value="{lang}"' in body and
+              'name="form-name" value="order"' in body and
+              '/nfform?next=' in body and
+              'fetch("/api/req"' in body and
+              'http-equiv="refresh"' not in body)
+        results.append({"check":path+" local form","http":status,"ok":good,"heading":heading,"native_form":good})
     # Home presentation only: no checkout, account access, scripts executed or synthetic analytics.
     locale_price={"ko":("19,800원","VAT 포함"),"en":("₩19,800","VAT incl."),
        "es":("₩19.800","IVA incluido"),"fr":("19 800 ₩","TVA comprise"),
