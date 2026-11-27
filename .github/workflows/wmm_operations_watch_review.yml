@@ -41,6 +41,12 @@ jobs:
               'only_reviewed_official_hosts', 'not_a_live_confirmed_tender_count',
               'official_notice_verified', 'may_send_business_alert',
               'automated_customer_alerts_allowed', 'seven_language_widget_guard',
+              'M1 published payment backend KRW/VAT price parity',
+              'checkout_enabled', 'live_payment_and_entitlement_verified',
+              'Anonymous form relay GET refused (POST-only)',
+              'Anonymous member request GET denied',
+              'Anonymous member secret GET denied',
+              'NoAnonymousRedirect', 'no_credentials_or_customer_post',
               # Best-effort GitHub cron gaps must not mask official feed
               # staleness, or turn a verified failed workflow into a PASS.
               'SCHEDULE_GAP_UNVERIFIED', 'SCHEDULE_JOB_FAILED',
