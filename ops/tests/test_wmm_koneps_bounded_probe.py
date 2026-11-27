@@ -102,6 +102,13 @@ class KonepsOfficialProbeTests(unittest.TestCase):
         self.assertTrue(all(x["http_status"]==403 for x in result["results"].values()))
         self.assertNotIn("SECRET-FAKE-KEY",json.dumps(result))
 
+    def test_workflow_passes_only_unescaped_koneps_secret(self):
+        path = Path(__file__).resolve().parents[2] / ".github" / "workflows" / "wmm_koneps_bounded_probe_owner.yml"
+        workflow = path.read_text(encoding="utf-8")
+        self.assertIn("KONEPS_KEY: " + "${{ secrets.KONEPS_KEY }}", workflow)
+        self.assertNotIn("KONEPS_KEY: " + chr(92) + "${{ secrets.KONEPS_KEY }}", workflow)
+        self.assertNotIn("DAPA_KEY:", workflow)
+
     def test_dapa_key_only_never_selects_a_koneps_credential(self):
         # The unrelated DAPA service key must not cause four denied G2B GETs.
         with mock.patch.dict(P.os.environ, {"DAPA_KEY": "DAPA-ONLY-SYNTHETIC"}, clear=True):
