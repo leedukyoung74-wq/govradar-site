@@ -1,0 +1,43 @@
+name: WMM GOV RADAR coordinated production release preview (NO DEPLOY)
+on:
+  push:
+    branches: [wmm-release-readiness-integration-20261127]
+    paths:
+      - '.github/workflows/wmm_release_readiness_integration_review.yml'
+      - 'tests/test_release_integrated_source.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: live
+          path: live-reference
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Full offline unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Generated website snapshot (isolated runner only; not published)
+        run: |
+          python3 build.py --base https://radar.wmm-hoa.com
+          python3 tools/cf_variant.py dist cf/public
+      - name: Check all seven languages, source+generated consent, safe home KPI and live route drift
+        run: |
+          python3 -m unittest discover -s tests -p 'test_release_integrated_source.py' -v
+          node --check cf/functions/api/req.js
+      - name: CI outcome note
+        if: always()
+        run: |
+          echo "Preview checks only. NO production Pages deployment, DB writes, secrets, personal data or payments." >> "$GITHUB_STEP_SUMMARY"
