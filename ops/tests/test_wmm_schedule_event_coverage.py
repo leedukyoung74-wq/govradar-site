@@ -81,6 +81,10 @@ class ScheduleEvidenceTests(unittest.TestCase):
         wf=(ROOT/".github"/"workflows"/"wmm_operations_watch.yml").read_text()
         self.assertIn("cron: '17 * * * *'",wf)
         self.assertIn("ops/wmm_schedule_event_coverage.py",wf)
+        for path in ("ops/wmm_public_source_truth_report.py",
+                     "ops/wmm_seven_locale_readonly.py",
+                     "ops/wmm_schedule_event_coverage.py"):
+            self.assertIn("      - "+path,wf.split("permissions:")[0])
         self.assertIn("GH_TOKEN:",wf)
         code=(ROOT/"ops"/"wmm_schedule_event_coverage.py").read_text()
         self.assertNotIn("POST",code.split("def api_get")[1].split("def summarize")[0])

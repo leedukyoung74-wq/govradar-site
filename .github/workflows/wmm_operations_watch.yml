@@ -7,6 +7,9 @@ on:
     branches: [main]
     paths:
       - .github/workflows/wmm_operations_watch.yml
+      - ops/wmm_public_source_truth_report.py
+      - ops/wmm_seven_locale_readonly.py
+      - ops/wmm_schedule_event_coverage.py
 permissions:
   contents: read
   actions: read
