@@ -364,7 +364,7 @@ GLOBAL_INFO = [
  ("지원 방식과 나라", "How and where we help", "지원은 온라인으로 합니다. 분석은 193개국의 공개 자료를 근거로 하며, 모든 나라에서 같은 현지 지원을 하지는 않습니다. 현지 파트너 연결은 상담 뒤 가능한 나라에서만 안내합니다.",
   "Support is online. Analysis draws on public information for 193 countries; we do not offer the same local support everywhere. Local partner introductions are offered after a consultation, only where available."),
  ("가격과 결제", "Prices and payment", "가격은 원화 기준입니다(분석 회원 월 19,800원). 해외 기업은 견적을 요청하면 통화와 결제 방법을 견적서로 안내합니다. GCSME 회원사는 회원가 페이지를 이용하세요.",
-  "Prices are in Korean won (analysis membership KRW 20,000 a month). Companies outside Korea receive the currency and payment method on the quote. GCSME member companies can use the member-price page."),
+  "Prices are in Korean won (analysis membership KRW 19,800 a month, VAT included). Companies outside Korea receive the currency and payment method on the quote. GCSME member companies can use the member-price page."),
 ]
 def global_info(L, e):
     ko = L == "ko"
@@ -1055,7 +1055,7 @@ def membership_page(L, C):
 <div><h3>{T("연결이 닿지 않는다", "Connections are hard to reach")}</h3><p>{T("믿을 만한 현지 상대를 만나기까지 시간과 비용이 큽니다.", "Meeting a trustworthy local counterpart takes time and money.")}</p></div></div></div></section>
 <section class="band" id="tiers"><div class="in"><h2>{T("멤버십 등급 v2.0", "Membership grades v2.0")}</h2>
 <details class="mfull"><summary>{T("등급별 전체 비교표 열기", "Open the full grade table")}</summary><div class="tscroll"><table class="tiers">{thead}{trows}</table></div></details>
-<p class="note">{T("M1은 GOV RADAR 분석 회원(월 19,800원)과 같은 등급입니다. 부가세 별도, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다. 투자 유치·계약·매출을 보장하지 않습니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩19,800/month). VAT excluded; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed. We do not guarantee investment, contracts or sales.")}</p>
+<p class="note">{T("M1은 GOV RADAR 분석 회원(월 19,800원)과 같은 등급입니다. 부가세 포함, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다. 투자 유치·계약·매출을 보장하지 않습니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩19,800/month). VAT included; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed. We do not guarantee investment, contracts or sales.")}</p>
 <h3 style="margin-top:34px">{T("한 단계 오를 때마다 더해지는 것", "What each level adds")}</h3><div class="mstep">{steps}</div></div></section>
 <section class="band alt"><div class="in"><h2>{T("멤버십으로 쓰는 두 개의 창구", "Two doors, one membership")}</h2><div class="mdoor">
 <a href="/{L}/"><b>radar.wmm-hoa.com · GOV RADAR</b><p>{T("세계 정부 아젠다, 공공 입찰, 제재 동향, 재난 대비 정보를 나라별로 모아 보여 줍니다. 분석 의뢰와 입찰 적합도 판정도 여기서 신청합니다.", "Government agendas, public tenders, sanctions and disaster preparedness by country. Analysis requests and tender fit assessments are ordered here.")}</p></a>
