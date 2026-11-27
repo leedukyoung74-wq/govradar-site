@@ -32,8 +32,11 @@ def check(name,path):
             count=o.get("count")
             if not isinstance(count,int) or isinstance(count,bool) or count<0: raise ValueError("invalid count")
             rows=o.get("items")
-            if not isinstance(rows,list) or len(rows)!=count: raise ValueError("count does not match items")
-            r.update(updated=o["updated"],count=count)
+            if not isinstance(rows,list): raise ValueError("invalid items list")
+            if name=="tenders" and len(rows)!=count: raise ValueError("tender count does not match items")
+            if name=="awards" and (len(rows)>count or (count>0 and len(rows)==0)): raise ValueError("award items exceed count or missing sample")
+            if name=="awards" and len(rows)<count: r["notes"].append(f"AWARDS_LIST_CAPPED:{len(rows)}/{count}")
+            r.update(updated=o["updated"],count=count,listed=len(rows))
         elif name=="countries":
             stamp=parse_date(o.get("updated"))
             r.update(updated=o["updated"],count=o.get("t",{}).get("n"))
