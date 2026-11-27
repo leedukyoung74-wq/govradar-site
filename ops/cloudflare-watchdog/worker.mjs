@@ -21,15 +21,13 @@ export function classify(official,nws,kev,now) {
   const us=timestamp(official?.usgs_fast_checked,true);
   const nw=timestamp(nws?.source_health?.last_ok);
   const ke=timestamp(kev?.source_health?.last_ok);
-  const ok=(t,limit,healthy)=>t!==null && healthy && now>=t && now-t>limit;
-  const hasUS=official?.sources?.usgs?.ok===true;
-  const hasNWS=nws?.source_health?.ok===true && nws.source_health.stale===false;
-  const hasKEV=kev?.source_health?.ok===true && kev.source_health.stale===false;
+  const overdue=(t,limit)=>t!==null && now>=t && now-t>limit;
   return {
-    usgs:ok(us,TARGETS.usgs.maxAge,hasUS),
-    nws_cisa:ok(nw,45*60_000,hasNWS)||ok(ke,6*3600_000,hasKEV),
-    failClosed:us===null || nw===null || ke===null ||
-      !hasUS || !hasNWS || !hasKEV
+    // A last successful but now stale source remains eligible for bounded
+    // retry even when the most recent failed attempt marked ok=false.
+    usgs:overdue(us,TARGETS.usgs.maxAge),
+    nws_cisa:overdue(nw,45*60_000)||overdue(ke,6*3600_000),
+    failClosed:us===null || nw===null || ke===null
   };
 }
 async function jsonGet(name,fetcher) {
