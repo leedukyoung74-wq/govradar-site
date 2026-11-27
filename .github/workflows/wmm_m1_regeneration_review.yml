@@ -35,4 +35,5 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Record release boundary
         if: always()
-        run: echo 'NO DEPLOY: disposable static build, no secrets/API/payment/customer data, no published site changes.' >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo 'NO DEPLOY: disposable static build, no secrets/API/payment/customer data, no published site changes.' >> "$GITHUB_STEP_SUMMARY"
