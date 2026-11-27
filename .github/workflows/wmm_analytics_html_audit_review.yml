@@ -19,3 +19,8 @@ jobs:
           persist-credentials: false
       - name: Inspect publicly served HTML for Cloudflare Web Analytics beacon (no JS execution, no POST)
         run: python3 scripts/wmm_analytics_html_audit_review.py
+
+      - name: Inspect browser-injected RUM without recording automated visits
+        run: |
+          python3 -m pip install --disable-pip-version-check playwright==1.58.0
+          python3 scripts/wmm_analytics_browser_audit_review.py
