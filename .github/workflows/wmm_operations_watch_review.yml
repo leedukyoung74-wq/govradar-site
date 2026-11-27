@@ -6,6 +6,8 @@ on:
       - '.github/workflows/wmm_operations_watch_review.yml'
       - 'ops/wmm_public_source_truth_report.py'
       - 'ops/tests/test_wmm_public_source_truth_report.py'
+      - 'ops/wmm_seven_locale_readonly.py'
+      - 'ops/tests/test_wmm_seven_locale_readonly.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -61,3 +63,5 @@ jobs:
           PY
       - name: Verify manual-snapshot/official-source classification offline (NO DEPLOY)
         run: python3 -m unittest discover -s ops/tests -p 'test_wmm_public_source_truth_report.py' -v
+      - name: Test public seven-language GET-only smoke without any network
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_seven_locale_readonly.py' -v
