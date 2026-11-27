@@ -4,11 +4,11 @@
   "failed": 0,
   "raw": 3000,
   "filtered": {
-   "award-notice": 2153,
-   "individual-consultant": 221,
-   "no-deadline": 12,
+   "closed": 224,
+   "award-notice": 2131,
+   "individual-consultant": 249,
    "no-country": 67,
-   "closed": 230
+   "no-deadline": 12
   },
   "notes": [],
   "state": "SUCCESS",
@@ -24,18 +24,18 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 317,
-  "checked": "2026-11-26T03:29Z",
-  "new_today": 0,
-  "last_success": "2026-11-26T03:29Z"
+  "checked": "2026-11-27T03:35Z",
+  "new_today": 20,
+  "last_success": "2026-11-27T03:35Z"
  },
  "EU TED": {
   "requests": 13,
   "failed": 0,
-  "raw": 3183,
+  "raw": 3190,
   "filtered": {
-   "below-size": 1521,
-   "closed": 22,
-   "country-cap": 1049
+   "below-size": 1511,
+   "closed": 24,
+   "country-cap": 1051
   },
   "notes": [],
   "state": "SUCCESS",
@@ -46,86 +46,86 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 591,
+  "in": 604,
   "rejected": {},
   "duplicates": 4,
   "flagged_similar": 0,
-  "kept": 587,
-  "checked": "2026-11-26T03:29Z",
-  "new_today": 59,
-  "last_success": "2026-11-26T03:29Z"
+  "kept": 600,
+  "checked": "2026-11-27T03:35Z",
+  "new_today": 106,
+  "last_success": "2026-11-27T03:35Z"
  },
  "UK Find a Tender": {
   "requests": 12,
   "failed": 1,
   "raw": 1200,
   "filtered": {
-   "below-size": 119,
-   "not-active": 1017,
-   "no-deadline": 9,
-   "closed": 1,
-   "same-notice-update": 4,
-   "source-cap": 10
+   "not-active": 990,
+   "below-size": 132,
+   "no-deadline": 8,
+   "same-notice-update": 5,
+   "source-cap": 25
   },
   "notes": [
    "source_page_cap_reached: OCDS partial results"
   ],
   "state": "PARTIAL",
-  "carried_verified": 16,
-  "carried_stale": 49,
-  "dropped_unverified": 0,
-  "dropped_closed": 1,
-  "dropped_cancelled": 0,
-  "verify_lookups": 19,
-  "carried_from_yesterday": 65,
-  "in": 105,
+  "carried_verified": 12,
+  "carried_stale": 62,
+  "dropped_unverified": 8,
+  "dropped_closed": 0,
+  "dropped_cancelled": 1,
+  "verify_lookups": 21,
+  "carried_from_yesterday": 74,
+  "in": 114,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 105,
-  "checked": "2026-11-26T03:29Z",
-  "new_today": 0,
-  "last_success": "2026-11-26T03:29Z"
+  "kept": 114,
+  "checked": "2026-11-27T03:35Z",
+  "new_today": 18,
+  "last_success": "2026-11-27T03:35Z"
  },
  "UK Contracts Finder": {
   "requests": 2,
   "failed": 0,
-  "raw": 134,
+  "raw": 128,
   "filtered": {
-   "below-size": 70,
-   "closed": 51,
+   "below-size": 64,
+   "closed": 53,
    "same-notice-update": 1
   },
   "notes": [],
   "state": "SUCCESS",
   "carried_verified": 0,
   "carried_stale": 2,
-  "dropped_unverified": 0,
+  "dropped_unverified": 2,
   "dropped_closed": 0,
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 2,
-  "in": 14,
+  "in": 12,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 14,
-  "checked": "2026-11-26T03:29Z",
+  "kept": 12,
+  "checked": "2026-11-27T03:35Z",
   "new_today": 0,
-  "last_success": "2026-11-26T03:29Z"
+  "last_success": "2026-11-27T03:35Z"
  },
  "Prozorro (Ukraine)": {
-  "requests": 27,
+  "requests": 425,
   "failed": 0,
   "raw": 25000,
   "filtered": {
-   "below-size": 1345
+   "below-size": 381,
+   "not-checked-yet": 917
   },
   "notes": [],
-  "candidates": 1381,
-  "checked_now": 2,
-  "rechecked_changed": 0,
-  "unchecked": 0,
+  "candidates": 1317,
+  "checked_now": 400,
+  "rechecked_changed": 354,
+  "unchecked": 917,
   "state": "SUCCESS",
   "carried_verified": 0,
   "carried_stale": 0,
@@ -134,14 +134,14 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 36,
+  "in": 19,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 36,
-  "checked": "2026-11-26T03:29Z",
-  "new_today": 0,
-  "last_success": "2026-11-26T03:29Z"
+  "kept": 19,
+  "checked": "2026-11-27T03:35Z",
+  "new_today": 12,
+  "last_success": "2026-11-27T03:35Z"
  },
  "DAPA (Korea)": {
   "requests": 2,
@@ -154,9 +154,11 @@
   "notes": [
    "upstream_total=7205; latest_page=15",
    "latest_page_max_bidTo=2019-04-09",
-   "upstream_historical_sample: latest sampled deadline is past",
+   "upstream_historical_sample: both sampled pages have no future deadline",
    "no_verified_open_notice_in_bounded_pages"
   ],
+  "sampled_first_page_max_bid_to": "2016-06-30",
+  "sampled_last_page_max_bid_to": "2019-04-09",
   "sampled_latest_bid_to": "2019-04-09",
   "data_freshness": "HISTORICAL_SAMPLE",
   "coverage": "FIRST_AND_LAST_PAGES_ONLY",
@@ -174,21 +176,22 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 0,
-  "checked": "2026-11-26T03:29Z",
+  "checked": "2026-11-27T03:35Z",
   "new_today": 0,
-  "last_success": "2026-11-26T03:29Z"
+  "last_success": "2026-11-27T03:35Z"
  },
  "SAM.gov (US)": {
   "requests": 3,
   "failed": 0,
   "raw": 3000,
   "filtered": {
-   "source-cap": 2920
+   "closed": 1,
+   "source-cap": 2919
   },
   "notes": [
    "upstream_pagination_not_exhaustive; not an all-US count"
   ],
-  "upstream_total": 6625,
+  "upstream_total": 7198,
   "pages_scanned": 3,
   "rows_scanned": 3000,
   "selection_cap": 80,
@@ -209,8 +212,8 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 80,
-  "checked": "2026-11-26T03:29Z",
-  "new_today": 80,
-  "last_success": "2026-11-26T03:29Z"
+  "checked": "2026-11-27T03:35Z",
+  "new_today": 51,
+  "last_success": "2026-11-27T03:35Z"
  }
 }
