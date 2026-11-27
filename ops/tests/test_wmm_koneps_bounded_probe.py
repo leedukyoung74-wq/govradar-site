@@ -119,8 +119,51 @@ class KonepsOfficialProbeTests(unittest.TestCase):
                 "items_published": 0,
             }) as probe_mock:
                 with mock.patch("builtins.print"):
-                    self.assertEqual(P.main(), 0)
+                    self.assertEqual(P.main(), 2)
         probe_mock.assert_called_once_with("")
+
+    def test_403_live_job_fails_not_green(self):
+        denied = {"classification": "OWNER_APPROVED_READ_ONLY_KONEPS_PROBE",
+                  "operations_attempted": 4, "operations_succeeded": 0,
+                  "schema_accepted_for_review": False,
+                  "ready_for_live_ingestion": False,
+                  "results": {n: {"state": "HTTP_DENIED_OR_ERROR",
+                                  "http_status": 403} for n in P.OPERATIONS},
+                  "items_published": 0}
+        with mock.patch.dict(P.os.environ, {"KONEPS_KEY": "FAKE-KEY"}, clear=True):
+            with mock.patch.object(P, "probe", return_value=denied) as probe_mock:
+                with mock.patch("builtins.print") as output:
+                    self.assertEqual(P.main(), 2)
+        probe_mock.assert_called_once_with("FAKE-KEY")
+        printed = json.loads(output.call_args.args[0])
+        self.assertEqual(printed["authorization_probe_gate"], "BLOCKED_UPSTREAM_RESPONSE")
+        self.assertFalse(printed["ready_for_live_ingestion"])
+        self.assertNotIn("FAKE-KEY", output.call_args.args[0])
+
+    def test_all_four_api_envelopes_pass_transport_but_not_live(self):
+        synthetic = {"classification": "OWNER_APPROVED_READ_ONLY_KONEPS_PROBE",
+                     "operations_attempted": 4, "operations_succeeded": 4,
+                     "schema_accepted_for_review": True,
+                     "ready_for_live_ingestion": False, "items_published": 0}
+        with mock.patch.dict(P.os.environ, {"KONEPS_KEY": "FAKE-KEY"}, clear=True):
+            with mock.patch.object(P, "probe", return_value=synthetic):
+                with mock.patch("builtins.print") as output:
+                    self.assertEqual(P.main(), 0)
+        printed = json.loads(output.call_args.args[0])
+        self.assertEqual(printed["authorization_probe_gate"],
+                         "SCHEMA_REVIEW_ONLY_NOT_LIVE")
+        self.assertEqual(printed["items_published"], 0)
+        self.assertFalse(printed["ready_for_live_ingestion"])
+
+    def test_partial_four_categories_never_green(self):
+        partial = {"classification": "OWNER_APPROVED_READ_ONLY_KONEPS_PROBE",
+                   "operations_attempted": 4, "operations_succeeded": 3,
+                   "schema_accepted_for_review": True,
+                   "ready_for_live_ingestion": False, "items_published": 0}
+        with mock.patch.dict(P.os.environ, {"KONEPS_KEY": "FAKE-KEY"}, clear=True):
+            with mock.patch.object(P, "probe", return_value=partial):
+                with mock.patch("builtins.print"):
+                    self.assertEqual(P.main(), 2)
 
     def test_empty_response_is_not_proof_of_customer_ready(self):
         payload={"response":{"header":{"resultCode":"00"},"body":{
