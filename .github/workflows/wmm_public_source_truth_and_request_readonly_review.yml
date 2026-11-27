@@ -1,4 +1,5 @@
 name: GOV RADAR source coverage + buyer/request GET QA (NO DEPLOY)
+# Recheck against canonical src after CI build-prerequisite fix, with no publish.
 on:
   pull_request:
     branches: [src]
