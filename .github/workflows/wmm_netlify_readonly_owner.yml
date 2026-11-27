@@ -1,0 +1,45 @@
+name: WMM Netlify Forms + Identity GET-only evidence audit
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_netlify_readonly_owner.yml'
+      - 'ops/wmm_netlify_readonly_probe.py'
+      - 'ops/tests/test_wmm_netlify_readonly_probe.py'
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+jobs:
+  offline_review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest discover -s ops/tests -p 'test_wmm_netlify_readonly_probe.py' -v
+  owner_readonly:
+    if: >-
+      github.event_name == 'issue_comment' &&
+      github.event.issue.number == 80 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.state == 'open' &&
+      github.event.comment.user.login == 'leedukyoung74-wq' &&
+      github.event.comment.author_association == 'OWNER' &&
+      github.event.comment.body == '/govradar-check-netlify'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Validate safe read-only classifications without network
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_netlify_readonly_probe.py' -v
+      - name: Only GET public Netlify home and public identity settings; no form POST
+        run: python3 ops/wmm_netlify_readonly_probe.py
+      - name: No customer-data or payment actions
+        if: always()
+        run: echo 'No POST, member logins, D1 writes, Netlify inbox reads, email dispatch, or payment.' >> "$GITHUB_STEP_SUMMARY"
