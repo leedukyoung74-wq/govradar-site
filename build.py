@@ -1017,6 +1017,29 @@ BIZ_SNAPSHOT_NOTICE = {
     "id": "Ide riset terkurasi · bukan tender langsung",
 }
 
+# Country pages being present, or having an agenda paragraph, is NOT proof
+# of independent official-source verification or working live source imports.
+# Legacy country completion flags and generated country reports differ; this
+# label intentionally describes coverage without asserting verified depth.
+COUNTRY_SCOPE_LINE = {
+    "ko": "193개국 개요 제공 · 출처 검증 수준은 국가별로 다릅니다",
+    "en": "193 country overviews · source verification varies",
+    "es": "193 fichas nacionales · verificación variable",
+    "fr": "193 fiches pays · vérification variable",
+    "ar": "ملفات 193 دولة · يختلف التحقق من المصادر",
+    "vi": "Hồ sơ 193 quốc gia · mức xác minh khác nhau",
+    "id": "193 profil negara · verifikasi sumber bervariasi",
+}
+COUNTRY_SCOPE_KPI = {
+    "ko": "등록된 국가별 개요 · 검증 수준 상이",
+    "en": "Country overviews · verification varies",
+    "es": "Fichas de países · verificación variable",
+    "fr": "Fiches de pays · vérification variable",
+    "ar": "ملفات الدول · مستوى التحقق متفاوت",
+    "vi": "Hồ sơ quốc gia · xác minh khác nhau",
+    "id": "Profil negara · tingkat verifikasi bervariasi",
+}
+
 def home(L):
     t = T[L]; path = f"/{L}/"; alts = {l: f"/{l}/" for l in LANGS}
     n_done = sum(done(i) for i in BY if not is_reg(i)); n_t = sum(len(DATA.get(i, {}).get("tenders") or []) for i in BY)
@@ -1041,12 +1064,12 @@ def home(L):
     jl = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "GOV RADAR", "url": BASE + "/", "inLanguage": L, "publisher": ORG, "description": t["desc_home"]})
     return head(L, t["title_home"], t["desc_home"], path, alts, jl + JSVM + '<script src="/assets/hotmap.js" defer></script>') + f"""
 <section class="hero"><div class="in"><div>
-<p class="eb"><i class="live"></i>{({"ko":"193개국 추적 · {n}개국 심층 조사","es":"193 gobiernos seguidos · {n} analizados a fondo","fr":"193 gouvernements suivis · {n} étudiés en détail","ar":"نتابع 193 حكومة · {n} مدروسة بعمق","vi":"Theo dõi 193 chính phủ · {n} nước nghiên cứu sâu","id":"Memantau 193 pemerintah · {n} diteliti mendalam"}.get(L,"Tracking 193 governments · {n} researched in depth")).replace("{n}",str(n_done))}</p>
+<p class="eb"><i class="live"></i>{e(COUNTRY_SCOPE_LINE.get(L, COUNTRY_SCOPE_LINE["en"]))}</p>
 <h1>{e(t['tagline']).replace('정부가 ','정부가<br>',1)}</h1><p class="lede">{e(t['lede']).replace('모았습니다. ','모았습니다.<br>',1)}</p>
 {hsearch(L)}{purpose3(L)}
 <p class="byline"><img src="/assets/emblem.png" alt="" width="24" height="24">WORLD MAKING MEMBERS × GCSME</p></div>
 <a class="hradar" href="#map" aria-label="GOV RADAR"><span class="hp"></span><span class="hp p2"></span><img src="/assets/govradar-logo.webp" alt="GOV RADAR" width="640" height="709"><span class="hsw"></span><span class="hbl b1"></span><span class="hbl b2"></span><span class="hbl b3"></span><span class="hbl b4"></span>{"".join(f'<span class="htg t{i+1}">{x}</span>' for i, x in enumerate((["🇻🇳 정부 사업", "🇰🇪 입찰 마감 D-7", "🇸🇦 ODA", "🌐 세계은행 공고"] if L=="ko" else ["🇻🇳 Programmes", "🇰🇪 Tender D-7", "🇸🇦 Aid projects", "🌐 World Bank"])))}</a>
-<div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(t['k_done'])}</span></div><div><b id="kp-t">—</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span><small>{e(BIZ_SNAPSHOT_NOTICE.get(L, BIZ_SNAPSHOT_NOTICE["en"]))}</small></div><div><b id="kp-u">—</b><span>{e(t['k_last'])}</span></div></div><script>/* live numbers from the daily no-AI refresh (data/feeds/today.json): open tenders and refresh date */fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/today.json",{{cache:"no-store"}}).then(function(r){{return r.ok?r.json():null}}).then(function(d){{if(!d||!d.n)return;var stamp=Date.parse(String(d.updated||""));var age=Date.now()-stamp;if(!Number.isFinite(stamp)||age< -300000||age>108000000)return;var a=document.getElementById("kp-t"),b=document.getElementById("kp-u");if(a&&Number.isInteger(d.n.open)&&d.n.open>=0)a.textContent=new Intl.NumberFormat("{L}"==="ar"?"ar-u-nu-latn":"{L}").format(d.n.open);var u=new Date(String(d.updated||""));if(b&&!isNaN(u)){{var k=new Date(u.getTime()+9*3600e3);b.textContent=(k.getUTCMonth()+1)+"/"+k.getUTCDate()}}}}).catch(function(){{}})</script>
+<div class="kpis"><div><b>{n_done}<small>/193</small></b><span>{e(COUNTRY_SCOPE_KPI.get(L, COUNTRY_SCOPE_KPI["en"]))}</span></div><div><b id="kp-t">—</b><span>{e(t['k_tend'])}</span></div><div><b>{n_b}</b><span>{e(t['k_biz'])}</span><small>{e(BIZ_SNAPSHOT_NOTICE.get(L, BIZ_SNAPSHOT_NOTICE["en"]))}</small></div><div><b id="kp-u">—</b><span>{e(t['k_last'])}</span></div></div><script>/* live numbers from the daily no-AI refresh (data/feeds/today.json): open tenders and refresh date */fetch("https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/today.json",{{cache:"no-store"}}).then(function(r){{return r.ok?r.json():null}}).then(function(d){{if(!d||!d.n)return;var stamp=Date.parse(String(d.updated||""));var age=Date.now()-stamp;if(!Number.isFinite(stamp)||age< -300000||age>108000000)return;var a=document.getElementById("kp-t"),b=document.getElementById("kp-u");if(a&&Number.isInteger(d.n.open)&&d.n.open>=0)a.textContent=new Intl.NumberFormat("{L}"==="ar"?"ar-u-nu-latn":"{L}").format(d.n.open);var u=new Date(String(d.updated||""));if(b&&!isNaN(u)){{var k=new Date(u.getTime()+9*3600e3);b.textContent=(k.getUTCMonth()+1)+"/"+k.getUTCDate()}}}}).catch(function(){{}})</script>
 </div></section>
 {ticker(L)}
 {P3.today_band(L)}
