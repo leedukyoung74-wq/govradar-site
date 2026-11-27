@@ -1,0 +1,82 @@
+name: GOV RADAR source coverage + buyer/request GET QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'tools/feed_today.py'
+      - 'tests/test_today_public_source_truth.py'
+      - '.github/workflows/wmm_public_source_truth_and_request_readonly_review.yml'
+  push:
+    branches: [wmm-p0-public-source-truth-readonly-20261127]
+    paths:
+      - 'tools/feed_today.py'
+      - 'tests/test_today_public_source_truth.py'
+      - '.github/workflows/wmm_public_source_truth_and_request_readonly_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline_source_truth:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Source state and feed schema offline unit tests
+        run: |
+          python3 -m py_compile tools/feed_today.py
+          python3 -m unittest discover -s tests -p 'test_today_public_source_truth.py' -v
+          python3 -m unittest discover -s tests -p 'test_public_procurement_buyers.py' -v
+          python3 -m unittest discover -s tests -p 'test_readonly_request_health.py' -v
+      - name: Public production data discrepancy audit (GET only, informational)
+        run: |
+          python3 - <<'PY'
+          import datetime as dt, json, urllib.request
+          base='https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/'
+          def read(name):
+              with urllib.request.urlopen(urllib.request.Request(base+name,
+                    headers={'User-Agent':'WMM-source-truth-GET-only/1.0'}), timeout=18) as r:
+                  return json.load(r)
+          statuses=read('sources_status.json')
+          today=read('today.json')
+          older=read('site_check.json')
+          d=statuses.get('DAPA (Korea)',{})
+          s=statuses.get('SAM.gov (US)',{})
+          public={p.get('name'):p for p in today.get('src',[]) if isinstance(p,dict)}
+          checked=dt.datetime.fromisoformat(str(older.get('checked')).replace('Z','+00:00'))
+          age=round((dt.datetime.now(dt.timezone.utc)-checked).total_seconds()/3600,1)
+          print('CURRENT_PRODUCTION_DAPA',json.dumps({
+              'actual_feed_state':d.get('state'),'historical_only':d.get('data_freshness')=='HISTORICAL_SAMPLE',
+              'latest_sample_deadline':d.get('sampled_latest_bid_to'),
+              'public_state':(public.get('DAPA (Korea)') or {}).get('state')},sort_keys=True))
+          print('CURRENT_PRODUCTION_SAM',json.dumps({
+              'actual_feed_state':s.get('state'),'coverage_partial':s.get('coverage_partial'),
+              'pages_scanned':s.get('pages_scanned'),'public_state':(public.get('SAM.gov (US)') or {}).get('state')},sort_keys=True))
+          print('SITE_CHECK_EVIDENCE',json.dumps({
+              'last_run_utc':older.get('checked'),'hours_old':age,
+              'historical_pass_not_current_certificate':age>48},sort_keys=True))
+          assert isinstance(today.get('src'),list)
+          assert isinstance(statuses,dict)
+          print('AUDIT COMPLETED: source truth may require next scheduled feed build; no data branch writes')
+          PY
+      - name: Record no-publish contract
+        if: always()
+        run: |
+          echo 'READ ONLY: no customer POST/PATCH, payment, provider keys, site deployment, schedules, or data branch edits.' >> "$GITHUB_STEP_SUMMARY"
+  anonymous_request_get:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Anonymous GET probes for request D1 and relay endpoints only
+        run: python3 tools/readonly_request_health.py
+      - name: Record non-delivery boundary
+        if: always()
+        run: |
+          echo 'GET-only endpoint status never proves D1 submission or Netlify staff receipt; no customer data transmitted.' >> "$GITHUB_STEP_SUMMARY"
