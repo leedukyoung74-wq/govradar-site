@@ -63,6 +63,25 @@ jobs:
           assert isinstance(statuses,dict)
           print('AUDIT COMPLETED: source truth may require next scheduled feed build; no data branch writes')
           PY
+      - name: Validate real public procuring-organisation index in memory (NO PUBLISH)
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request
+          from tools.build_public_procurement_buyers import build
+          url='https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/tenders.json'
+          with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'WMM-public-buyer-audit-GET-only/1.0'}), timeout=20) as r:
+              data=json.load(r)
+          items=data.get('items',[])
+          assert isinstance(items,list) and len(items)==data.get('count')
+          result=build(items)
+          assert result.get('not_commercial_buyer_directory') is True
+          assert result.get('type')=='source_backed_public_procurement_organisations'
+          assert result.get('country_count')==len({x['country_iso'] for x in result['organisations']})
+          assert result.get('organisations'), 'No official public procuring entities found; cannot claim buyer finder ready'
+          assert all('email' not in x and 'phone' not in x for x in result['organisations'])
+          print('OFFICIAL_PUBLIC_PROCUREMENT_INDEX',json.dumps({'feed_updated':data.get('updated'),'input_notices':len(items),'procuring_organisations':len(result['organisations']),'countries':result['country_count'],'commercial_importer_contacts_verified':False,'customer_contacts_sent':False,'public_site_deployed':False},sort_keys=True))
+          PY
       - name: Record no-publish contract
         if: always()
         run: |
