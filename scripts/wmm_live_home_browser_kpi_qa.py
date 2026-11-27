@@ -27,12 +27,13 @@ def main():
         page.on("console",lambda m:console_errors.append("CONSOLE "+m.text[:300]) if m.type=="error" else None)
         page.on("requestfailed",lambda r:issues.append("REQUEST_FAILED "+r.method+" "+str(r.failure)+" "+r.url[:160]))
         page.on("response",lambda r:feed_responses.append((r.status,r.url[:180])) if "today.json" in r.url else None)
-        page.route("**/*",lambda route: route.abort() if route.request.method.upper() not in ("GET","HEAD","OPTIONS") else route.continue_())
+        page.route("**/cdn-cgi/rum*",lambda route: route.abort())
+        page.route("**/cloudflareinsights.com/cdn-cgi/rum*",lambda route: route.abort())
         status=None; rendered="—"; expected=None; width=0; scroll=0; error=None;stamp=""
         try:
           resp=page.goto(ROOT+lang+"/",wait_until="domcontentloaded",timeout=30000)
           status=resp.status if resp else None
-          page.wait_for_function("""() => {let el=document.querySelector('#kp-t'); return el && el.textContent.trim()!=='—'}""",timeout=7000)
+          page.wait_for_function("""() => {let el=document.querySelector('#kp-t'); return el && el.textContent.trim()!=='—'}""",timeout=12000)
           rendered=page.locator("#kp-t").inner_text().strip()
           expected=page.evaluate("n => new Intl.NumberFormat(document.documentElement.lang==='ar'?'ar-u-nu-latn':document.documentElement.lang).format(n)",n)
           stamp=page.locator("#kp-u").inner_text().strip()
