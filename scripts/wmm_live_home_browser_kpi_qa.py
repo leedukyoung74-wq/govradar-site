@@ -22,10 +22,10 @@ def main():
       for lang in LANGS:
         context=browser.new_context(viewport={"width":390,"height":844},service_workers="block",user_agent="WMM-ReadOnly-KPI-QA/1.0")
         page=context.new_page()
-        issues=[];feed_responses=[]
+        issues=[];console_errors=[];feed_responses=[]
         page.on("pageerror",lambda e:issues.append("PAGEERROR "+str(e)[:300]))
-        page.on("console",lambda m:issues.append("CONSOLE "+m.text[:300]) if m.type=="error" else None)
-        page.on("requestfailed",lambda r:issues.append("REQUEST_FAILED "+r.url[:220]))
+        page.on("console",lambda m:console_errors.append("CONSOLE "+m.text[:300]) if m.type=="error" else None)
+        page.on("requestfailed",lambda r:issues.append("REQUEST_FAILED "+r.method+" "+str(r.failure)+" "+r.url[:160]))
         page.on("response",lambda r:feed_responses.append((r.status,r.url[:180])) if "today.json" in r.url else None)
         page.route("**/*",lambda route: route.abort() if route.request.method.upper() not in ("GET","HEAD","OPTIONS") else route.continue_())
         status=None; rendered="—"; expected=None; width=0; scroll=0; error=None;stamp=""
@@ -47,7 +47,7 @@ def main():
           except Exception:pass
         ok=(status==200 and rendered==expected and stamp not in ("","—") and scroll<=width+6)
         rows.append({"lang":lang,"http":status,"open_feed":n,"rendered":rendered,"expected":expected,
-            "updated_label":stamp,"viewport_width":width,"document_width":scroll,"ok":ok,"error":error,"issues":issues[:15],"feed_responses":feed_responses[:10]})
+            "updated_label":stamp,"viewport_width":width,"document_width":scroll,"ok":ok,"error":error,"issues":issues[:20],"console_errors":console_errors[:10],"feed_responses":feed_responses[:10]})
         context.close()
       browser.close()
     result={"tested_at":datetime.now(timezone.utc).isoformat(),"feed_updated":j.get("updated"),"age_hours":round(age,2),"results":rows,"all_pass":all(x["ok"] for x in rows)}
