@@ -95,6 +95,18 @@ export async function onRequestPost({request}) {
       });
       fields = await formReq.formData();
     }
+    // Browser required checkboxes can be bypassed with a direct HTTP POST.
+    // All published accepted forms require exactly one explicit opt-in.
+    const privacy = fields.getAll("privacy_agree");
+    if (privacy.length !== 1 || privacy[0] !== "yes") {
+      return new Response("Privacy consent required", {status: 400});
+    }
+    // Honor the published Netlify honeypot at the server as well.
+    // Missing hp is tolerated for cached clients; a filled hp is not.
+    const trap = fields.getAll("hp");
+    if (trap.some(v => typeof v === "string" && v.trim() !== "")) {
+      return new Response("Invalid form submission", {status: 400});
+    }
     for (const [name, value] of fields) {
       if (typeof value === "string" &&
           /^\s*(?:member\s+code|رمز\s+العضوية)\s*:/im.test(value)) {
