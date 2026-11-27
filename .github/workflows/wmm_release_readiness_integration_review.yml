@@ -27,12 +27,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Full offline unit tests
-        run: python3 -m unittest discover -s tests -v
       - name: Generated website snapshot (isolated runner only; not published)
         run: |
           python3 build.py --base https://radar.wmm-hoa.com
           python3 tools/cf_variant.py dist cf/public
+      - name: Full offline unit tests (including integrated generated HTML checks)
+        run: python3 -m unittest discover -s tests -v
       - name: Check all seven languages, source+generated consent, safe home KPI and live route drift
         run: |
           python3 -m unittest discover -s tests -p 'test_release_integrated_source.py' -v
