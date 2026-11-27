@@ -1,0 +1,35 @@
+name: GOV RADAR 7-locales KRW price/VAT consistency full build (NO DEPLOY)
+on:
+  push:
+    branches: [wmm-price-vat-consistency-review-20261127]
+    paths:
+      - 'pages3.py'
+      - 'src/i18n.py'
+      - 'src/i18n2.py'
+      - 'tests/test_member_price_generated_review.py'
+      - '.github/workflows/wmm_member_price_vat_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pricing_generated:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build full site in disposable preview workspace
+        run: |
+          python3 build.py --base https://radar.wmm-hoa.com
+          python3 tools/cf_variant.py dist cf/public
+      - name: Check canonical membership prices and all generated locales
+        run: |
+          python3 -m unittest discover -s tests -p 'test_member_price_generated_review.py' -v
+          python3 -m unittest discover -s tests -v
+      - name: No release
+        if: always()
+        run: echo "No live site, subscription, tax policy, or payment provider was changed." >> "$GITHUB_STEP_SUMMARY"
