@@ -1,0 +1,59 @@
+name: WMM M1 20000/200000 full price copy audit (READ ONLY)
+on:
+  pull_request:
+    branches: [live]
+    paths:
+      - 'public/**'
+      - '.github/workflows/wmm_m1_20000_price_audit.yml'
+  push:
+    branches: [live, wmm-price-20000-audit-20261127]
+    paths:
+      - 'public/**'
+      - '.github/workflows/wmm_m1_20000_price_audit.yml'
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          path: live
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          ref: src
+          path: src
+      - name: Inventory all live HTML and source generator price references (NO DEPLOY)
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib,re,collections
+          legacy=re.compile(r'(?<!\d)(?:19[, .]?800|198[, .]?000)(?!\d)')
+          old=re.compile(r'(?<!\d)(?:20[, .]?000|200[, .]?000)(?!\d)')
+          for root,extensions in (('live/public',{'.html','.js','.json'}),('src',{'.py','.html','.js','.json','.yml'})):
+              rows=[]
+              for p in pathlib.Path(root).rglob('*'):
+                  if not p.is_file() or p.suffix not in extensions or '/.git/' in str(p):continue
+                  if root=='src' and ('/public/' in str(p) or '/cf/' in str(p) or '/data_branch/' in str(p)):continue
+                  try:s=p.read_text('utf8')
+                  except (UnicodeError,OverflowError):continue
+                  a=list(legacy.finditer(s))
+                  if not a:continue
+                  groups=collections.Counter(m.group(0) for m in a)
+                  rows.append((str(p),sum(groups.values()),dict(groups),[(s[max(0,m.start()-45):m.end()+45].replace('\n',' '))[:120] for m in a[:2]]))
+              print('PRICE_INVENTORY',root,'MATCHED_FILES',len(rows),'TOTAL_OCCURRENCES',sum(x[1] for x in rows),flush=True)
+              for path,num,groups,samples in sorted(rows):
+                  print('MATCH',path,'COUNT',num,'TOKENS',repr(groups),'CONTEXT',repr(samples),flush=True)
+              print('PRICE_INVENTORY_END',root,flush=True)
+              if root=='live/public' and rows:
+                  raise SystemExit('ERROR: superseded M1 KRW 19,800/198,000 still present in public HTML')
+              if root=='src' and any(not row[0].startswith('src/tests/') for row in rows):
+                  raise SystemExit('ERROR: old M1 values are still embedded in production source, risking rebuild regression')
+          PY
+      - name: Confirm no publish or client operations
+        if: always()
+        run: |
+          echo 'INVENTORY ONLY: no live deploy, no payment/checkout, no customer data, no secrets or data-branch writes' >> "$GITHUB_STEP_SUMMARY"

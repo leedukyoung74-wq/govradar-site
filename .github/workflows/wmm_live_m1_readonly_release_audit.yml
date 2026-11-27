@@ -37,26 +37,26 @@ jobs:
 
           base='https://radar.wmm-hoa.com'
           local=pathlib.Path('public')
-          languages={'ko':('19,800','과거 자료만'),'en':('19,800','Archive only'),
-                     'es':('19.800','Solo histórico'),'fr':('19 800','Archives uniquement'),
-                     'ar':('19,800','أرشيف فقط'),'vi':('19.800','Chỉ dữ liệu cũ'),
-                     'id':('19.800','Hanya arsip')}
+          languages={'ko':('20,000','과거 자료만'),'en':('20,000','Archive only'),
+                     'es':('20.000','Solo histórico'),'fr':('20 000','Archives uniquement'),
+                     'ar':('20,000','أرشيف فقط'),'vi':('20.000','Chỉ dữ liệu cũ'),
+                     'id':('20.000','Hanya arsip')}
           expected={}
           for lang,(amount,label) in languages.items():
               expected[f'/{lang}/']=[('HISTORICAL_ONLY','archived-status-guard'),(label,'archive-label')]
               for sub in ('how','member','membership'):
-                  expected[f'/{lang}/{sub}/']=[('19,800' if sub=='member' else amount,'M1 monthly price')]
+                  expected[f'/{lang}/{sub}/']=[('20,000' if sub=='member' else amount,'M1 monthly price')]
           for lang in ('ko','en','ar'):
-              expected[f'/{lang}/pricing/']=[('19,800','M1 monthly'),('198,000','M1 annual')]
-          expected['/welcome/membership/']=[('19,800','M1 welcome price')]
+              expected[f'/{lang}/pricing/']=[('20,000','M1 monthly'),('200,000','M1 annual')]
+          expected['/welcome/membership/']=[('20,000','M1 welcome price')]
           expected['/ko/pricing/'].append(('VAT 포함','M1 VAT included'))
           expected['/en/pricing/'].append(('VAT incl.','M1 VAT included'))
           expected['/ar/pricing/'].append(('VAT incl.','M1 VAT included'))
-          legacy=re.compile(r'(?<![0-9])(?:20[, .]000|200[, .]000)(?![0-9])')
+          legacy=re.compile(r'(?<![0-9])(?:19[, .]800|198[, .]000)(?![0-9])')
           def check(route, body):
               problems=[label+'_missing' for value,label in expected[route] if value not in body]
               if route not in [f'/{lang}/' for lang in languages] and legacy.search(body):
-                  problems.append('legacy_M1_price_present')
+                  problems.append('superseded_M1_price_present')
               return problems
           def relpath(route):
               return local/route.lstrip('/')/'index.html'
