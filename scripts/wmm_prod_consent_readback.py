@@ -33,6 +33,19 @@ def main():
         status,body,dest=get(path)
         good=status==200 and "http-equiv=\"refresh\"" in body and "/en/request/" in body
         results.append({"check":path,"http":status,"ok":good,"expected_lang_redirect":good})
+    # Home presentation only: no checkout, account access, scripts executed or synthetic analytics.
+    locale_price={"ko":("19,800원","VAT 포함"),"en":("₩19,800","VAT incl."),
+       "es":("₩19.800","IVA incluido"),"fr":("19 800 ₩","TVA comprise"),
+       "ar":("19,800 وون","شامل ضريبة"),"vi":("₩19.800","đã gồm VAT"),
+       "id":("₩19.800","termasuk PPN")}
+    for lang,(price,tax) in locale_price.items():
+        status,body,_=get(f"/{lang}/")
+        good=(status==200 and price in body and tax in body and
+              'id="kp-t">—' in body and 'id="kp-u">—' in body and
+              'Date.parse(String(d.updated||""))' in body and
+              '.replace(/Z$/,":00Z")' not in body and
+              not any(old in body for old in ("20,000원","₩20,000","₩20.000","20 000 ₩","20,000 وون")))
+        results.append({"check":f"/{lang}/ home pricing + freshness","http":status,"ok":good})
     print(json.dumps({"checked_at":datetime.now(timezone.utc).isoformat(),"results":results,"all_pass":all(x["ok"] for x in results),
     "note":"No POST, login, or client event measurement; no real receipt/DB write tested."},indent=2))
     s=os.environ.get("GITHUB_STEP_SUMMARY")
