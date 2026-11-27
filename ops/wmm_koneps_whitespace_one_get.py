@@ -41,6 +41,7 @@ def one_get(raw, opener=None):
         "items_published": 0,
         "live_ingestion_enabled": False,
         "provider_authorization_verified": False,
+        "single_endpoint_schema_accepted": False,
     }
     if not key:
         out["outcome"] = "BLOCKED_KEY_FORMAT"
@@ -67,8 +68,8 @@ def one_get(raw, opener=None):
     except Exception as exc:
         parsed = {"state": "NETWORK_ERROR", "error_type": type(exc).__name__}
     out["response"] = parsed
-    out["provider_authorization_verified"] = parsed.get("state") in ("OK_ROWS", "OK_EMPTY")
-    out["outcome"] = ("TRANSPORT_SCHEMA_ONLY_NOT_LIVE" if out["provider_authorization_verified"]
+    out["single_endpoint_schema_accepted"] = parsed.get("state") in ("OK_ROWS", "OK_EMPTY")
+    out["outcome"] = ("TRANSPORT_SCHEMA_ONLY_NOT_LIVE" if out["single_endpoint_schema_accepted"]
                       else "BLOCKED_UPSTREAM")
     # Parsed result includes schema names/counts; never real tender content.
     return out
@@ -77,7 +78,7 @@ def one_get(raw, opener=None):
 def main():
     result = one_get(os.environ.get("KONEPS_KEY"))
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
-    return 0 if result["provider_authorization_verified"] else 2
+    return 0 if result["single_endpoint_schema_accepted"] else 2
 
 
 if __name__ == "__main__":
