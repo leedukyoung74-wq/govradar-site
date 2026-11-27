@@ -1,0 +1,20 @@
+name: WMM BM3 v1.7 Public Feed QA (READ ONLY)
+on:
+  push:
+    branches: [wmm-bm3-v17-feed-qa-20261127]
+    paths:
+      - 'scripts/wmm_bm3_v17_feed_qa.py'
+      - '.github/workflows/wmm_bm3_v17_feed_qa_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public_feed_qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check live public feeds and localhost CORS without production writes
+        run: python3 scripts/wmm_bm3_v17_feed_qa.py
