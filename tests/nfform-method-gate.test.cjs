@@ -100,3 +100,55 @@ test("synthetic wrong content type cannot forward", async () => {
       body: JSON.stringify({"form-name":"order"}) })});
   assert.equal(result.status,415);
 });
+
+test("synthetic direct POST cannot bypass required privacy consent or honeypot", async () => {
+  const mod = await load();
+  const originalFetch = global.fetch;
+  let calls=0;
+  global.fetch=async () => { calls++; return new Response("",{status:200}); };
+  try {
+    const noConsent = new URLSearchParams({
+      "form-name":"order","email":"qa-synthetic@invalid.test","hp":""
+    });
+    const missing = await mod.onRequestPost({
+      request: new Request("https://radar.wmm-hoa.com/nfform",{
+        method:"POST", headers:{"content-type":"application/x-www-form-urlencoded"},
+        body:noConsent.toString()
+      })
+    });
+    assert.equal(missing.status,400);
+    assert.match(await missing.text(),/Privacy consent required/);
+    const refused = await mod.onRequestPost({
+      request: syntheticRequest({privacy_agree:"no"})
+    });
+    assert.equal(refused.status,400);
+    const trap = await mod.onRequestPost({
+      request: syntheticRequest({hp:"bot"})
+    });
+    assert.equal(trap.status,400);
+    assert.equal(calls,0);
+  } finally { global.fetch=originalFetch; }
+});
+
+test("feedback synthetic consent works and omission fails without upstream", async () => {
+  const mod=await load();
+  const originalFetch=global.fetch;
+  let calls=0;
+  global.fetch=async () => { calls++; return new Response("synthetic",{status:200}); };
+  try {
+    const result=await mod.onRequestPost({
+      request: syntheticRequest({"form-name":"feedback"})
+    });
+    assert.equal(result.status,303);
+    assert.equal(calls,1);
+    const bad=new URLSearchParams({"form-name":"feedback","email":"qa-synthetic@invalid.test"});
+    const refused=await mod.onRequestPost({
+      request:new Request("https://radar.wmm-hoa.com/nfform",{
+        method:"POST", headers:{"content-type":"application/x-www-form-urlencoded"},
+        body:bad.toString()
+      })
+    });
+    assert.equal(refused.status,400);
+    assert.equal(calls,1);
+  } finally { global.fetch=originalFetch; }
+});
