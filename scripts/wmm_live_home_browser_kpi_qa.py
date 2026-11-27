@@ -7,7 +7,7 @@ import json,shutil,os,sys
 
 ROOT="https://radar.wmm-hoa.com/"
 DATA="https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/today.json"
-LANGS=("ko","en","es","fr","ar","vi","id")
+LANGS=("ko",) # diagnostic mode; return to seven locales after pinpointing error
 def main():
     with urlopen(Request(DATA,headers={"User-Agent":"WMM-Public-KPI-QA/1.0"}),timeout=20) as r:j=json.loads(r.read(300000))
     n=j.get("n",{}).get("open")
@@ -22,21 +22,32 @@ def main():
       for lang in LANGS:
         context=browser.new_context(viewport={"width":390,"height":844},service_workers="block",user_agent="WMM-ReadOnly-KPI-QA/1.0")
         page=context.new_page()
+        issues=[];feed_responses=[]
+        page.on("pageerror",lambda e:issues.append("PAGEERROR "+str(e)[:300]))
+        page.on("console",lambda m:issues.append("CONSOLE "+m.text[:300]) if m.type=="error" else None)
+        page.on("requestfailed",lambda r:issues.append("REQUEST_FAILED "+r.url[:220]))
+        page.on("response",lambda r:feed_responses.append((r.status,r.url[:180])) if "today.json" in r.url else None)
         page.route("**/*",lambda route: route.abort() if route.request.method.upper() not in ("GET","HEAD","OPTIONS") else route.continue_())
         status=None; rendered="—"; expected=None; width=0; scroll=0; error=None;stamp=""
         try:
           resp=page.goto(ROOT+lang+"/",wait_until="domcontentloaded",timeout=30000)
           status=resp.status if resp else None
-          page.wait_for_function("""() => {let el=document.querySelector('#kp-t'); return el && el.textContent.trim()!=='—'}""",timeout=12000)
+          page.wait_for_function("""() => {let el=document.querySelector('#kp-t'); return el && el.textContent.trim()!=='—'}""",timeout=7000)
           rendered=page.locator("#kp-t").inner_text().strip()
           expected=page.evaluate("n => new Intl.NumberFormat(document.documentElement.lang==='ar'?'ar-u-nu-latn':document.documentElement.lang).format(n)",n)
           stamp=page.locator("#kp-u").inner_text().strip()
           width=page.evaluate("window.innerWidth")
           scroll=page.evaluate("document.documentElement.scrollWidth")
-        except Exception as e:error=type(e).__name__
+        except Exception as e:
+          error=type(e).__name__
+          try:
+            rendered=page.locator("#kp-t").inner_text().strip()
+            width=page.evaluate("window.innerWidth");scroll=page.evaluate("document.documentElement.scrollWidth")
+            expected=page.evaluate("n => new Intl.NumberFormat(document.documentElement.lang).format(n)",n)
+          except Exception:pass
         ok=(status==200 and rendered==expected and stamp not in ("","—") and scroll<=width+6)
         rows.append({"lang":lang,"http":status,"open_feed":n,"rendered":rendered,"expected":expected,
-            "updated_label":stamp,"viewport_width":width,"document_width":scroll,"ok":ok,"error":error})
+            "updated_label":stamp,"viewport_width":width,"document_width":scroll,"ok":ok,"error":error,"issues":issues[:15],"feed_responses":feed_responses[:10]})
         context.close()
       browser.close()
     result={"tested_at":datetime.now(timezone.utc).isoformat(),"feed_updated":j.get("updated"),"age_hours":round(age,2),"results":rows,"all_pass":all(x["ok"] for x in rows)}
