@@ -48,6 +48,26 @@ class HomepageSourceTruthTests(unittest.TestCase):
                 self.assertIn('id="kp-u"',text)
                 self.assertIn('id="kp-t"',text)
 
+    def test_193_country_coverage_never_means_verified_live_connections(self):
+        expected={
+            "ko":"193개국 개요 제공 · 출처 검증 수준은 국가별로 다릅니다",
+            "en":"193 country overviews · source verification varies",
+            "es":"193 fichas nacionales · verificación variable",
+            "fr":"193 fiches pays · vérification variable",
+            "ar":"ملفات 193 دولة · يختلف التحقق من المصادر",
+            "vi":"Hồ sơ 193 quốc gia · mức xác minh khác nhau",
+            "id":"193 profil negara · verifikasi sumber bervariasi",
+        }
+        for lang in LANGS:
+            with self.subTest(lang=lang):
+                page=(ROOT/"dist"/lang/"index.html").read_text(encoding="utf-8")
+                self.assertIn(html.escape(expected[lang],quote=True),page)
+                self.assertIn('small>/193</small>',page)
+        en=(ROOT/"dist"/"en"/"index.html").read_text(encoding="utf-8")
+        self.assertNotIn("193 researched in depth",en)
+        ko=(ROOT/"dist"/"ko"/"index.html").read_text(encoding="utf-8")
+        self.assertNotIn("193개국 심층 조사",ko)
+
     def test_source_does_not_change_checkout_or_public_data(self):
         code=(ROOT/"build.py").read_text(encoding="utf-8")
         self.assertIn('BIZ_SNAPSHOT_NOTICE',code)
