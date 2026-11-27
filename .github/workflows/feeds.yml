@@ -35,26 +35,65 @@ jobs:
           python3 tools/cf_variant.py dist cf/public
       - name: Offline tests first (stop before touching data if the code is broken)
         run: python -m unittest discover -s tests
+      - name: Initialize per-run optional collector evidence (no customer data)
+        if: inputs.task == 'daily'
+        run: : > "$RUNNER_TEMP/wmm_optional_collectors.tsv"
       - name: Collect tenders (keys are optional; sources without a key are SKIPPED)
         if: inputs.task == 'daily'
         run: python tools/feed_tenders.py
         env: { DAPA_KEY: "${{ secrets.DAPA_KEY }}", SAM_KEY: "${{ secrets.SAM_KEY }}" }
       - if: inputs.task == 'daily'
-        run: python tools/feed_intel.py || echo "intel feed failed; keeping yesterday's files"
+        run: |
+          if python3 tools/feed_intel.py; then
+            printf 'feed_intel\tPASS\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+          else
+            printf 'feed_intel\tFAIL\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+            echo "::warning title=WMM collector degraded::feed_intel failed; last good files may be retained. See redacted run artifact."
+          fi
       - if: inputs.task == 'daily'
-        run: python tools/feed_cty.py || echo "country files failed"
+        run: |
+          if python3 tools/feed_cty.py; then
+            printf 'feed_cty\tPASS\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+          else
+            printf 'feed_cty\tFAIL\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+            echo "::warning title=WMM collector degraded::feed_cty failed; last good files may be retained. See redacted run artifact."
+          fi
       - name: Official situation feed (USGS, GDACS, NASA EONET, WHO, NASA JPL, NOAA) — no AI
         if: inputs.task == 'daily'
-        run: python tools/feed_official.py || echo "official feed partly failed; failed agencies keep their last good items"
+        run: |
+          if python3 tools/feed_official.py; then
+            printf 'feed_official\tPASS\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+          else
+            printf 'feed_official\tFAIL\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+            echo "::warning title=WMM collector degraded::feed_official failed; last good files may be retained. See redacted run artifact."
+          fi
       - name: Situation board disasters from the official feed (no AI) — keeps the editorial summary as is
         if: inputs.task == 'daily'
-        run: python tools/hz_disasters.py || echo "situation board refresh failed; keeping the last board"
+        run: |
+          if python3 tools/hz_disasters.py; then
+            printf 'hz_disasters\tPASS\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+          else
+            printf 'hz_disasters\tFAIL\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+            echo "::warning title=WMM collector degraded::hz_disasters failed; last good files may be retained. See redacted run artifact."
+          fi
       - name: Country economy feed (World Bank indicators, exchange rates) — no AI
         if: inputs.task == 'daily'
-        run: python tools/feed_econ.py || echo "economy feed failed; keeping the last good values"
+        run: |
+          if python3 tools/feed_econ.py; then
+            printf 'feed_econ\tPASS\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+          else
+            printf 'feed_econ\tFAIL\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+            echo "::warning title=WMM collector degraded::feed_econ failed; last good files may be retained. See redacted run artifact."
+          fi
       - name: Sanctions lists (UN, US OFAC, EU, UK) — no AI
         if: inputs.task == 'daily'
-        run: python tools/feed_sanctions.py || echo "sanctions feed failed; keeping the last good numbers"
+        run: |
+          if python3 tools/feed_sanctions.py; then
+            printf 'feed_sanctions\tPASS\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+          else
+            printf 'feed_sanctions\tFAIL\n' >> "$RUNNER_TEMP/wmm_optional_collectors.tsv"
+            echo "::warning title=WMM collector degraded::feed_sanctions failed; last good files may be retained. See redacted run artifact."
+          fi
       - name: Home "today's changes" summary — no AI
         if: inputs.task == 'daily'
         run: python tools/feed_today.py
@@ -125,6 +164,12 @@ jobs:
       - name: Persist current site probe PASS or FAIL to data branch
         if: ${{ always() && inputs.task == 'daily' && !inputs.dry_run && steps.publish_feeds.outcome == 'success' }}
         run: python3 tools/publish_site_check.py data_branch
+      - name: Summarize any optional collector failure without suppressing the publish evidence
+        if: ${{ always() && inputs.task == 'daily' }}
+        run: |
+          python3 tools/optional_collector_health.py report \
+            "$RUNNER_TEMP/wmm_optional_collectors.tsv" \
+            "$RUNNER_TEMP/wmm_optional_collectors.json"
       - name: Keep the outputs of this run
         if: always()
         uses: actions/upload-artifact@v4
@@ -139,5 +184,9 @@ jobs:
             data_branch/feeds/sources_registry.json
             review-evidence/world-source-coverage.json
             review-evidence/world-source-gap-queue.csv
+            ${{ runner.temp }}/wmm_optional_collectors.json
           if-no-files-found: ignore
           retention-days: 30
+      - name: Fail closed if optional collectors failed or did not run
+        if: ${{ always() && inputs.task == 'daily' }}
+        run: python3 tools/optional_collector_health.py gate "$RUNNER_TEMP/wmm_optional_collectors.json"
