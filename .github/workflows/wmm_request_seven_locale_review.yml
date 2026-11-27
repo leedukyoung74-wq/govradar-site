@@ -1,0 +1,40 @@
+name: WMM GOV RADAR full seven-language request generation (NO DEPLOY)
+on:
+  push:
+    branches: [wmm-request-7language-source-20261127]
+    paths:
+      - 'pages_req.py'
+      - 'tests/test_request_seven_locale_generated.py'
+      - 'tests/test_request_relay_client.py'
+      - '.github/workflows/wmm_request_seven_locale_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  seven_locale_request:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build 7-language generated HTML without production writes
+        run: |
+          python3 -m py_compile pages_req.py
+          python3 build.py --base https://radar.wmm-hoa.com
+          python3 tools/cf_variant.py dist cf/public
+      - name: Verify the 7-language form schema, privacy and status
+        run: |
+          python3 -m unittest discover -s tests -p 'test_request_seven_locale_generated.py' -v
+          python3 -m unittest discover -s tests -p 'test_request_relay_client.py' -v
+          python3 -m unittest discover -s tests -p 'test_req_server.py' -v
+          node --experimental-sqlite tests/js/req_server_test.mjs
+      - name: No live deployment or customer action
+        if: always()
+        run: echo 'No production website, DB, authentication, contact records or payment modifications performed by this review workflow.' >> "$GITHUB_STEP_SUMMARY"

@@ -59,7 +59,7 @@ class RequestRelayClientTests(unittest.TestCase):
                 html=page(lang)
                 self.assertIn('"gateway_reported":',html)
                 self.assertIn('"gateway_failed_reported":',html)
-                self.assertIn('staff receipt unverified' if lang != "ko" else '관리자 확인 전',html)
+                self.assertIn(pages_req.K[lang].get("gateway", "전송 서버가 요청을 받았습니다. 관리자 확인 전입니다. 요청번호" if lang == "ko" else "Gateway accepted the request; staff receipt not verified. Request number"),html)
 
     def test_explicit_privacy_consent_sent_and_checked_in_all_locales(self):
         for lang in LANGS:
