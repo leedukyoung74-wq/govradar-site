@@ -1,0 +1,19 @@
+# TEMPLATE ONLY — do not rename to wrangler.toml or deploy without account review.
+name = "wmm-govradar-official-watchdog"
+main = "worker.mjs"
+compatibility_date = "2026-11-28"
+workers_dev = false
+
+# Must confirm existing Cloudflare Free account's other Worker cron count first.
+# A single Cron Trigger is enough; source-specific rates are code-gated.
+[triggers]
+crons = ["*/5 * * * *"]
+
+[vars]
+DISPATCH_ENABLED = "false"
+
+# Bind an existing/new free-tier KV namespace only after checking account quotas.
+# Never commit actual account IDs or GitHub PAT to this repository.
+[[kv_namespaces]]
+binding = "WMM_CRON_STATE"
+id = "REPLACE_WITH_REVIEWED_KV_NAMESPACE_ID"
