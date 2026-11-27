@@ -1,0 +1,22 @@
+name: GOV RADAR live homepage DOM mobile KPI seven languages (READ ONLY)
+on:
+  push:
+    branches: [wmm-actual-home-browser-kpi-qa-20261127]
+    paths:
+      - 'scripts/wmm_live_home_browser_kpi_qa.py'
+      - '.github/workflows/wmm_live_home_browser_kpi_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  actual_dom:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install isolated free browser test harness (no runtime services)
+        run: python3 -m pip install --disable-pip-version-check playwright==1.58.0
+      - name: Verify seven mobile home DOM counts and format, all POST blocked
+        run: python3 scripts/wmm_live_home_browser_kpi_qa.py
