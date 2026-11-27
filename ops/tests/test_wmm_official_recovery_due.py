@@ -61,6 +61,26 @@ class RecoveryTests(unittest.TestCase):
   with self.assertRaises(ValueError):needs(self.root,dt.datetime(2026,11,21,5,0))
  def test_limits(self):
   self.assertEqual((USGS_LIMIT,NWS_LIMIT,CISA_LIMIT),(2100,4500,28800))
+ def test_owner_comment_does_not_force_recovery(self):
+  workflow=(Path(__file__).resolve().parents[2]/'.github'/'workflows'/
+            'wmm_official_gap_recovery.yml').read_text(encoding='utf-8')
+  self.assertIn("github.event.comment.body == '/govradar-refresh-official'",workflow)
+  self.assertIn("OWNER_EXPLICIT_FORCE:",workflow)
+  self.assertIn("inputs.force && 'true' || 'false'",workflow)
+  self.assertIn("if [ \"$TRIGGER\" = 'workflow_dispatch' ] && [ \"$OWNER_EXPLICIT_FORCE\" = 'true' ]; then",workflow)
+  self.assertNotIn("if [ \"$TRIGGER\" = 'issue_comment' ] || [ \"$TRIGGER\" = 'workflow_dispatch' ]; then",workflow)
+  self.assertIn("python3 control/ops/wmm_official_recovery_due.py --data data_branch\n",workflow)
+
+ def test_stale_only_gate_does_not_mutate(self):
+  self.fill(5, 5, 5)
+  before=[(self.root/'hz'/n).read_bytes() for n in
+          ('official.json','nws_active.json','cisa_kev.json')]
+  self.assertFalse(needs(self.root,NOW)['usgs'])
+  self.assertFalse(needs(self.root,NOW)['nws_cisa'])
+  after=[(self.root/'hz'/n).read_bytes() for n in
+         ('official.json','nws_active.json','cisa_kev.json')]
+  self.assertEqual(before,after)
+
  def test_source_unchanged(self):
   p=self.root/'hz'/'official.json';b=p.read_bytes();needs(self.root,NOW)
   self.assertEqual(p.read_bytes(),b)
