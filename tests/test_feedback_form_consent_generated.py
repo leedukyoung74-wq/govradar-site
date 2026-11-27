@@ -17,7 +17,7 @@ class FeedbackConsentRelease(unittest.TestCase):
         for lang in LANGS:
             with self.subTest(lang=lang):
                 s=(ROOT/"cf"/"public"/lang/"how"/"index.html").read_text("utf8")
-                m=re.search(r'<form\\b[^>]*name="feedback"[^>]*>[\\s\\S]*?</form>',s)
+                m=re.search(r'<form\b[^>]*name="feedback"[^>]*>[\s\S]*?</form>',s)
                 self.assertIsNotNone(m,"feedback form missing")
                 form=m.group(0)
                 self.assertIn('name="privacy_agree" value="yes" required',form)
