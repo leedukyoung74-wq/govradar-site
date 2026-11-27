@@ -10,6 +10,8 @@ TARGETS=(
  ("GOV RADAR AI ask endpoint GET","https://radar.wmm-hoa.com/api/ask"),
  ("GOV RADAR member page","https://radar.wmm-hoa.com/ko/member/"),
  ("GOV RADAR account page","https://radar.wmm-hoa.com/ko/account/"),
+ ("GOV RADAR business request page","https://radar.wmm-hoa.com/ko/request/"),
+ ("GOV RADAR English business request","https://radar.wmm-hoa.com/en/request/"),
 )
 def probe(name,url):
     result={"service":name,"url":url,"http":None,"content_type":None,
