@@ -314,3 +314,6 @@ jobs:
       - name: Detect manual snapshots and search-level tender verification
         if: always()
         run: python3 ops/wmm_public_source_truth_report.py
+      - name: GET-only seven-language homepage and source copy check
+        if: always()
+        run: python3 ops/wmm_seven_locale_readonly.py
