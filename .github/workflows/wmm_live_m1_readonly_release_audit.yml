@@ -44,7 +44,7 @@ jobs:
           expected={}
           for lang,(amount,label) in languages.items():
               expected[f'/{lang}/']=[('HISTORICAL_ONLY','archived-status-guard'),(label,'archive-label')]
-              for sub in ('how','member','membership'):
+              for sub in ('how','member','membership','request'):
                   expected[f'/{lang}/{sub}/']=[('20,000' if sub=='member' else amount,'M1 monthly price')]
           for lang in ('ko','en','ar'):
               expected[f'/{lang}/pricing/']=[('20,000','M1 monthly'),('200,000','M1 annual')]
@@ -99,7 +99,7 @@ jobs:
           if failed:
               print('FAIL: published site is not yet verified; static branch change alone is insufficient')
               sys.exit(1)
-          print('PASS: 32 GET-only public HTML routes match M1 pricing and 7-language archival-source labels.')
+          print('PASS: 39 GET-only public HTML routes match M1 pricing, request and 7-language archival-source labels.')
           print('Not verified: checkout, taxes on invoices, customer form POST, account login or payment.')
           PY
       - name: Retain explicit scope and cost boundary
