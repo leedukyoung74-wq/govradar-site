@@ -1,0 +1,52 @@
+# Owner-only four-GET official source probe. NO publication.
+name: WMM official KONEPS G2B key authorization probe (READ ONLY)
+on:
+  issue_comment:
+    types: [created]
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/wmm_koneps_bounded_probe_owner.yml
+      - ops/wmm_koneps_bounded_probe.py
+      - ops/tests/test_wmm_koneps_bounded_probe.py
+permissions:
+  contents: read
+jobs:
+  offline_review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test offline only; no approved key or source API requests
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_koneps_bounded_probe.py' -v
+  bounded_official_probe:
+    if: >-
+      github.event_name == 'issue_comment' &&
+      github.event.issue.number == 80 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.state == 'open' &&
+      github.event.comment.user.login == 'leedukyoung74-wq' &&
+      github.event.comment.author_association == 'OWNER' &&
+      github.event.comment.body == '/govradar-probe-koneps'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Verify read-only source script against synthetic mock first
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_koneps_bounded_probe.py' -v
+      - name: Up to four official G2B GETs; no source records printed
+        env:
+          KONEPS_KEY: \${{ secrets.KONEPS_KEY }}
+          DAPA_KEY: \${{ secrets.DAPA_KEY }}
+        run: python3 ops/wmm_koneps_bounded_probe.py
+      - name: Document boundary
+        if: always()
+        run: |
+          echo "Checked official dataset 15129394 authorization without publishing data." >> "$GITHUB_STEP_SUMMARY"
+          echo "A probe success alone does NOT approve current notices, active membership, customer submissions or payment." >> "$GITHUB_STEP_SUMMARY"
