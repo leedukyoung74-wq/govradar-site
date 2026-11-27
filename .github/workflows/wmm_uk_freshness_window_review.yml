@@ -1,0 +1,30 @@
+name: GOV RADAR UK FTS 48h recent + bounded backfill source review (NO DEPLOY)
+on:
+  push:
+    branches: [wmm-uk-freshness-window-review-20261127]
+    paths:
+      - 'tools/feed_more.py'
+      - 'tests/test_uk_rate_limit_policy.py'
+      - 'tests/test_uk_timeout_fallback.py'
+      - '.github/workflows/wmm_uk_freshness_window_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  uk_review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Offline full UK OCDS, 429, timeout and source state tests
+        run: |
+          python3 -m py_compile tools/feed_more.py
+          python3 -m unittest discover -s tests -p 'test_uk_rate_limit_policy.py' -v
+          python3 -m unittest discover -s tests -p 'test_uk_timeout_fallback.py' -v
+          python3 -m unittest discover -s tests -p 'test_uk_modern_notices.py' -v
+          python3 -m unittest discover -s tests -p 'test_tender*.py' -v
+      - name: Confirm no API request or data branch modification
+        if: always()
+        run: echo 'Mocked/offline tests only. Do not assume 21-day UK notices are complete. No production collector, API key, public data or bill changed.' >> "$GITHUB_STEP_SUMMARY"
