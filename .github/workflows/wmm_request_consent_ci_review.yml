@@ -1,0 +1,40 @@
+name: WMM request consent source review (NO DEPLOY)
+on:
+  push:
+    branches:
+      - wmm-request-consent-source-review-20261127
+    paths:
+      - 'cf/functions/api/req.js'
+      - 'pages_req.py'
+      - 'tests/js/req_server_test.mjs'
+      - 'tests/test_req_server.py'
+      - 'tests/test_request_relay_client.py'
+      - '.github/workflows/wmm_request_consent_ci_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  server_and_form_tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate syntax and seven locale form outputs (offline)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check cf/functions/api/req.js
+          python3 -m py_compile pages_req.py
+          python3 -m unittest discover -s tests -p 'test_request_relay_client.py' -v
+      - name: Test server-side consent, input lengths, quota and request ownership (offline SQLite)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests -p 'test_req_server.py' -v
+      - name: Mark no production deployment and no customer tests
+        run: echo 'Local fixture/unit tests ONLY. No live submissions, no secrets, no deployment.' >> "$GITHUB_STEP_SUMMARY"
