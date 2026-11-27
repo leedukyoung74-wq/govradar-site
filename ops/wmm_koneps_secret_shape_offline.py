@@ -25,8 +25,17 @@ def classify(value):
         if re.search(r"%(?![0-9a-fA-F]{2})", value):
             return "INVALID_PERCENT_ESCAPE"
         return "PERCENT_ENCODED_OR_PERCENT_CONTAINING"
-    if any(ord(c) < 33 or ord(c) > 126 for c in value):
-        return "NON_ASCII_OR_CONTROL_CHARACTER"
+    # Differentiate invisible Unicode copied from websites/PDFs from an
+    # entire label or other visible non-ASCII content, without printing
+    # characters, positions, lengths or secret-derived digests.
+    if any(c in ("\\u200b", "\\u200c", "\\u200d", "\\ufeff", "\\u2060") for c in value):
+        return "INVISIBLE_FORMAT_CHARACTERS"
+    if any(c.isspace() for c in value):
+        return "EMBEDDED_WHITESPACE"
+    if any(ord(c) < 33 or ord(c) == 127 for c in value):
+        return "CONTROL_CHARACTER"
+    if any(ord(c) > 126 for c in value):
+        return "VISIBLE_NON_ASCII_CHARACTERS"
     return "PLAIN_OPAQUE_KEY_SHAPE"
 
 
