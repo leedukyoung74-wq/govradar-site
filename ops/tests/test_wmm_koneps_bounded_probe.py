@@ -4,6 +4,7 @@ import io
 import json
 import sys
 import unittest
+from unittest import mock
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.parse import urlsplit, parse_qs
@@ -100,6 +101,26 @@ class KonepsOfficialProbeTests(unittest.TestCase):
         self.assertEqual(len(opener.urls),4)
         self.assertTrue(all(x["http_status"]==403 for x in result["results"].values()))
         self.assertNotIn("SECRET-FAKE-KEY",json.dumps(result))
+
+    def test_workflow_passes_only_unescaped_koneps_secret(self):
+        path = Path(__file__).resolve().parents[2] / ".github" / "workflows" / "wmm_koneps_bounded_probe_owner.yml"
+        workflow = path.read_text(encoding="utf-8")
+        self.assertIn("KONEPS_KEY: " + "${{ secrets.KONEPS_KEY }}", workflow)
+        self.assertNotIn("KONEPS_KEY: " + chr(92) + "${{ secrets.KONEPS_KEY }}", workflow)
+        self.assertNotIn("DAPA_KEY:", workflow)
+
+    def test_dapa_key_only_never_selects_a_koneps_credential(self):
+        # The unrelated DAPA service key must not cause four denied G2B GETs.
+        with mock.patch.dict(P.os.environ, {"DAPA_KEY": "DAPA-ONLY-SYNTHETIC"}, clear=True):
+            with mock.patch.object(P, "probe", return_value={
+                "classification": "NO_APPROVED_KEY",
+                "operations_attempted": 0,
+                "ready_for_live_ingestion": False,
+                "items_published": 0,
+            }) as probe_mock:
+                with mock.patch("builtins.print"):
+                    self.assertEqual(P.main(), 0)
+        probe_mock.assert_called_once_with("")
 
     def test_empty_response_is_not_proof_of_customer_ready(self):
         payload={"response":{"header":{"resultCode":"00"},"body":{
