@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Report per-run optional collector exit states without publishing stale false-green data.
+"""Report optional subprocess failures and per-provider status from runner-local data.
 
-No source/API requests, no GitHub credentials, no customer data. This tool only
-reads six fixed collector names and PASS/FAIL events in a runner-local TSV.
-It does not assert that a provider returned fresh data; per-source freshness
-and public readback must be validated separately.
+No network, no credential echo, no website publishing. PASS only proves that
+six subprocesses exited 0 and 16 fixed source flags reported ok=true; it never
+proves record-level correctness, source freshness or public CDN readback.
 """
 import datetime as dt
 import json
@@ -12,37 +11,73 @@ import os
 from pathlib import Path
 import sys
 
-EXPECTED = (
-    "feed_intel", "feed_cty", "feed_official", "hz_disasters",
-    "feed_econ", "feed_sanctions",
-)
+EXPECTED = ("feed_intel", "feed_cty", "feed_official",
+            "hz_disasters", "feed_econ", "feed_sanctions")
+PROVIDER_FEEDS = {
+    "official": ("hz/official.json", "sources",
+                 ("usgs", "gdacs", "eonet", "who", "cneos", "swpc")),
+    "econ": ("feeds/econ.json", "src",
+             ("pop", "gdp", "pc", "gr", "cpi", "fx")),
+    "sanctions": ("feeds/sanctions.json", "src",
+                  ("un", "us", "eu", "uk")),
+}
 
 
-def report(raw):
+def source_states(data_root):
+    if data_root is None:
+        return {}
+    base = Path(data_root)
+    result = {}
+    for group, (rel, parent, sources) in PROVIDER_FEEDS.items():
+        try:
+            value = json.loads((base / rel).read_text(encoding="utf-8"))
+            rows = value.get(parent) if isinstance(value, dict) else None
+        except (OSError, ValueError, UnicodeError, TypeError):
+            rows = None
+        for name in sources:
+            info = rows.get(name) if isinstance(rows, dict) else None
+            ok = info.get("ok") if isinstance(info, dict) else None
+            result[group + "." + name] = (
+                "PASS" if ok is True else
+                "FAIL" if ok is False else "NOT_REPORTED"
+            )
+    return result
+
+
+def report(raw, data_root=None):
     seen = {}
     invalid = False
     for line in raw.splitlines():
-        cells = line.split("\t")
-        if len(cells) != 2:
+        fields = line.split("\t")
+        if len(fields) != 2:
             invalid = True
             continue
-        name, status = cells
+        name, status = fields
         if name not in EXPECTED or status not in ("PASS", "FAIL") or name in seen:
             invalid = True
             continue
         seen[name] = status
-    missing = [name for name in EXPECTED if name not in seen]
-    failing = [name for name in EXPECTED if seen.get(name) == "FAIL"]
-    state = "INCOMPLETE" if invalid or missing else ("DEGRADED" if failing else "PASS")
+    missing = [k for k in EXPECTED if k not in seen]
+    failed = [k for k in EXPECTED if seen.get(k) == "FAIL"]
+    upstream = source_states(data_root)
+    upstream_fail = [k for k, v in upstream.items() if v == "FAIL"]
+    upstream_unknown = [k for k, v in upstream.items() if v == "NOT_REPORTED"]
+    complete = len(upstream) == 16 and not upstream_unknown
+    state = ("INCOMPLETE" if invalid or missing or not complete else
+             "DEGRADED" if failed or upstream_fail else "PASS")
     return {
-        "schema_version": 1,
-        "scope": "OPTIONAL_COLLECTOR_PROCESS_EXIT_ONLY",
+        "schema_version": 2,
+        "scope": "PROCESS_EXIT_AND_PROVIDER_OK_FLAG_ONLY",
         "state": state,
         "checked_at_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "results": {name: seen.get(name, "NOT_RUN") for name in EXPECTED},
-        "failed_collectors": failing,
+        "results": {k: seen.get(k, "NOT_RUN") for k in EXPECTED},
+        "failed_collectors": failed,
         "not_run_collectors": missing,
         "invalid_or_duplicate_events": invalid,
+        "provider_status_only": upstream,
+        "provider_failure_sources": upstream_fail,
+        "provider_not_reported_sources": upstream_unknown,
+        "provider_status_complete": complete,
         "source_freshness_verified": False,
         "public_site_readback_verified": False,
         "provider_access_verified": False,
@@ -52,47 +87,51 @@ def report(raw):
 
 
 def main(args):
-    if len(args) not in (2, 3):
-        raise SystemExit("usage: optional_collector_health.py report <tsv> <json> | gate <json>")
-    mode = args[0]
-    if mode == "report" and len(args) == 3:
-        path, output = (Path(args[1]), Path(args[2]))
+    if args[:1] == ["report"] and len(args) == 4:
+        raw_file, output, data_root = map(Path, args[1:])
         try:
-            raw = path.read_text(encoding="utf-8")
+            raw = raw_file.read_text(encoding="utf-8")
         except (FileNotFoundError, OSError, UnicodeError):
             raw = ""
-        result = report(raw)
+        value = report(raw, data_root)
         output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n",
-                          encoding="utf-8")
-        # Both log and summary contain only fixed whitelisted collector names.
-        print(json.dumps({"optional_collector_state": result["state"],
-                          "failed_collectors": result["failed_collectors"],
-                          "not_run_collectors": result["not_run_collectors"]},
+        output.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        # Only allowlisted fixed source names; do not copy error text or URLs.
+        print(json.dumps({"optional_collector_state": value["state"],
+                          "failed_collectors": value["failed_collectors"],
+                          "not_run_collectors": value["not_run_collectors"],
+                          "provider_failure_sources": value["provider_failure_sources"],
+                          "provider_not_reported_sources": value["provider_not_reported_sources"]},
                          ensure_ascii=False, sort_keys=True))
         summary = os.environ.get("GITHUB_STEP_SUMMARY")
         if summary:
             with Path(summary).open("a", encoding="utf-8") as fp:
-                fp.write("\n## Optional collector exit status: " + result["state"] + "\n\n")
-                fp.write("| Collector | Run result |\n|---|---|\n")
-                for name, state in result["results"].items():
+                fp.write("\n## Daily collector and official provider status: " + value["state"] + "\n\n")
+                fp.write("| Collector process | Exit result |\n|---|---|\n")
+                for name, state in value["results"].items():
                     fp.write(f"| {name} | {state} |\n")
-                fp.write("\nPASS means process exit 0, **not** provider freshness, official-item verification, or successful public deployment.\n")
+                fp.write("\n| Official data source | Returned ok flag |\n|---|---|\n")
+                for name, state in value["provider_status_only"].items():
+                    fp.write(f"| {name} | {state} |\n")
+                fp.write("\nProcess success and provider flags do **not** prove source freshness, individual notice validity or public CDN readback.\n")
         return 0
-    if mode == "gate" and len(args) == 2:
+    if args[:1] == ["gate"] and len(args) == 2:
         try:
-            result = json.loads(Path(args[1]).read_text(encoding="utf-8"))
+            value = json.loads(Path(args[1]).read_text(encoding="utf-8"))
         except (OSError, UnicodeError, ValueError):
             print("BLOCKED: collector status artifact missing or invalid")
             return 1
-        if (result.get("state") == "PASS" and
-                set(result.get("results", {})) == set(EXPECTED) and
-                all(result["results"].get(k) == "PASS" for k in EXPECTED)):
-            print("PASS: six optional collector processes exited successfully; source freshness is a separate check")
+        if (value.get("state") == "PASS"
+            and set(value.get("results", {})) == set(EXPECTED)
+            and all(value["results"][k] == "PASS" for k in EXPECTED)
+            and value.get("provider_status_complete") is True
+            and len(value.get("provider_status_only") or {}) == 16
+            and all(v == "PASS" for v in value["provider_status_only"].values())):
+            print("PASS: six subprocesses and sixteen provider flags; source freshness is a separate check")
             return 0
-        print("DEGRADED: optional collector failures or incomplete run. Last-good data may still be displayed.")
+        print("DEGRADED: optional collector or provider incomplete/failed; previous-good data may still be displayed")
         return 1
-    raise SystemExit("invalid command")
+    raise SystemExit("usage: optional_collector_health.py report <events.tsv> <result.json> <data_branch> | gate <result.json>")
 
 
 if __name__ == "__main__":
