@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "policy_status": "PROPOSED_NOT_LIVE",
+  "region_routing": "user_explicit_country_and_currency_choice; never use inferred IP country to charge",
+  "payment_live": false,
+  "auto_renew": false,
+  "tax_note": "Final required total, taxes and any fees must be displayed in payment currency before confirmation; no automatic sales tax assumptions.",
+  "catalog": [
+    {
+      "id": "analysis_month",
+      "interval": "month",
+      "billing_mode": "prepay_manual_nonrecurring",
+      "country_offers": [
+        {
+          "region": "KR",
+          "currency": "KRW",
+          "unit_amount": 19800,
+          "status": "CURRENT_PUBLISHED",
+          "tax_policy": "VAT_INCLUDED"
+        },
+        {
+          "region": "INTERNATIONAL",
+          "currency": "USD",
+          "unit_amount": 1900,
+          "status": "PROPOSED",
+          "tax_policy": "TAX_TO_BE_DETERMINED_AT_CHECKOUT"
+        }
+      ]
+    },
+    {
+      "id": "analysis_year",
+      "interval": "year",
+      "billing_mode": "prepay_manual_nonrecurring",
+      "country_offers": [
+        {
+          "region": "KR",
+          "currency": "KRW",
+          "unit_amount": 198000,
+          "status": "CURRENT_PUBLISHED",
+          "tax_policy": "VAT_INCLUDED"
+        },
+        {
+          "region": "INTERNATIONAL",
+          "currency": "USD",
+          "unit_amount": 19000,
+          "status": "PROPOSED",
+          "tax_policy": "TAX_TO_BE_DETERMINED_AT_CHECKOUT"
+        }
+      ]
+    },
+    {
+      "id": "tender_fit",
+      "interval": "one_time",
+      "billing_mode": "invoice_quote",
+      "country_offers": [
+        {
+          "region": "KR",
+          "currency": "KRW",
+          "unit_amount": 100000,
+          "status": "CURRENT_PUBLISHED",
+          "tax_policy": "VAT_EXCLUDED"
+        },
+        {
+          "region": "INTERNATIONAL",
+          "currency": "USD",
+          "unit_amount": null,
+          "status": "QUOTE_REQUIRED",
+          "tax_policy": "TAX_TO_BE_DETERMINED_AT_CHECKOUT"
+        }
+      ]
+    },
+    {
+      "id": "market_entry_brief",
+      "interval": "one_time",
+      "billing_mode": "invoice_quote",
+      "country_offers": [
+        {
+          "region": "KR",
+          "currency": "KRW",
+          "unit_amount": 300000,
+          "status": "CURRENT_PUBLISHED_STARTING_AT",
+          "tax_policy": "VAT_EXCLUDED"
+        },
+        {
+          "region": "INTERNATIONAL",
+          "currency": "USD",
+          "unit_amount": null,
+          "status": "QUOTE_REQUIRED",
+          "tax_policy": "TAX_TO_BE_DETERMINED_AT_CHECKOUT"
+        }
+      ]
+    },
+    {
+      "id": "institution_annual",
+      "interval": "year",
+      "billing_mode": "invoice_quote",
+      "country_offers": [
+        {
+          "region": "KR",
+          "currency": "KRW",
+          "unit_amount": null,
+          "status": "CURRENT_PUBLISHED_TIERS_3M_6M_9M9",
+          "tax_policy": "VAT_EXCLUDED"
+        },
+        {
+          "region": "INTERNATIONAL",
+          "currency": "USD",
+          "unit_amount": null,
+          "status": "QUOTE_REQUIRED",
+          "tax_policy": "TAX_TO_BE_DETERMINED_AT_CHECKOUT"
+        }
+      ]
+    }
+  ],
+  "settlement_rules": {
+    "order_price_is_immutable": true,
+    "store_minor_units": true,
+    "preserve_original_currency": true,
+    "store_real_payment_provider_id_only_after_verified_webhook": true,
+    "exchange_rate": "SNAPSHOT_FOR_REPORTING_ONLY_NEVER_REPRICE_CONFIRMED_ORDER",
+    "payment_confirmation": "VERIFIED_SERVER_SIDE_ONLY",
+    "no_admin_secrets_in_git": true,
+    "no_personal_data_in_analytics": true
+  }
+}
