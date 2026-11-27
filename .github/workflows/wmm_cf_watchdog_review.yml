@@ -1,0 +1,37 @@
+name: WMM Cloudflare Cron watchdog OFFLINE review (NO DEPLOY)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'ops/cloudflare-watchdog/**'
+      - '.github/workflows/wmm_cf_watchdog_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify fail-closed Cron watchdog with synthetic OFFLINE fixtures
+        run: node --test ops/cloudflare-watchdog/worker.test.mjs
+      - name: Verify no accidental deploy or enabled real GitHub dispatch
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          c=Path('ops/cloudflare-watchdog/wrangler.toml.example').read_text()
+          assert 'DISPATCH_ENABLED = "false"' in c
+          assert 'REPLACE_WITH_REVIEWED_KV_NAMESPACE_ID' in c
+          assert not Path('ops/cloudflare-watchdog/wrangler.toml').exists()
+          w=Path('.github/workflows/wmm_cf_watchdog_review.yml').read_text()
+          assert ('cron'+':') not in w
+          assert ('wrangler '+'deploy') not in w
+          assert ('secrets'+'.') not in w
+          print('PASS: no auto-deploy, no active new schedule, no account secrets')
+          PY
