@@ -49,4 +49,5 @@ jobs:
           PY
       - name: Confirm no publish or client operations
         if: always()
-        run: echo 'INVENTORY ONLY: no live deploy, no payment/checkout, no customer data, no secrets or data-branch writes' >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo 'INVENTORY ONLY: no live deploy, no payment/checkout, no customer data, no secrets or data-branch writes' >> "$GITHUB_STEP_SUMMARY"
