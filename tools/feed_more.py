@@ -286,18 +286,35 @@ def _ocds_item(S, r, url, minv_eur=1.2e6):
             "pg": PG.get(t.get("mainProcurementCategory"), ""), "ma": "", "est": str(round(amt)) if amt else "", "cur": v.get("currency", ""),
             "est_gross": gross_only}
 
-def uk():
-    """Prioritize the newest 48h, then a bounded 19-day backfill.
+def uk_backfill_shard(cutoff, *, pieces=4):
+    """Choose one rotating slice of the 19-day historical UK update window.
 
-    The old 21-day single cursor always hit its first-1,200-record page cap,
-    potentially starving newly updated notices. We still fail closed for any
-    incomplete page/cursor and never claim this covers all UK opportunities.
+    Four successive UTC days use all four relative slices while respecting the
+    upstream's reported 12-request/2-minute throttling. Every single-day result
+    is PARTIAL: shards rotate with each day and are never an exhaustive scan.
+    """
+    if cutoff.tzinfo is None or pieces < 1:
+        raise ValueError("cutoff must be timezone-aware and pieces positive")
+    recent_start = cutoff - datetime.timedelta(days=2)
+    older_start = cutoff - datetime.timedelta(days=21)
+    slot = cutoff.date().toordinal() % pieces
+    span = recent_start - older_start
+    start = older_start + span * slot / pieces
+    end = older_start + span * (slot + 1) / pieces
+    return slot, start, end
+
+
+def uk():
+    """Latest 48h first; rotate four historical 19-day shards without extra calls.
+
+    Never claim a single run exhaustively covers UK opportunities. Source
+    cap, provider 429, and skip policies remain strict.
     """
     S = "UK Find a Tender"
     endpoint = "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?"
     cutoff = datetime.datetime.now(datetime.timezone.utc)
     recent_start = cutoff - datetime.timedelta(days=2)
-    older_start = cutoff - datetime.timedelta(days=21)
+    shard, shard_from, shard_to = uk_backfill_shard(cutoff)
     fmt = lambda d: d.strftime("%Y-%m-%dT%H:%M:%SZ")
     recent_url = endpoint + urllib.parse.urlencode({
         "limit": 100, "updatedFrom": fmt(recent_start), "updatedTo": fmt(cutoff)})
@@ -306,7 +323,13 @@ def uk():
     out = _ocds(S, recent_url, mk, max_pages=8, timeout=20, tries=2,
                 time_budget=70, min_interval=2)
     st = stat(S)
-    st["notes"].append("split_48h_recent_plus_19d_backfill: at_most_12_source_pages")
+    st["coverage"] = "RECENT_48H_PLUS_ONE_OF_FOUR_ROTATING_19D_BACKFILL_SHARDS"
+    st["coverage_partial"] = True
+    st["backfill_shard_index"] = shard + 1
+    st["backfill_shard_total"] = 4
+    st["backfill_window_start"] = fmt(shard_from)
+    st["backfill_window_end"] = fmt(shard_to)
+    st["notes"].append("split_48h_recent_plus_rotating_19d_backfill: at_most_12_source_pages; not a full UK scan")
 
     timeout_seen = any("TimeoutError" in n or "timed out" in n.lower() for n in st["notes"])
     rate_limited = any("429" in n or "upstream_429_deferred" in n for n in st["notes"])
@@ -322,7 +345,7 @@ def uk():
         # No older 19d scan after a failure: don't amplify load on a slow source.
     elif not rate_limited and st["requests"] < 12:
         older_url = endpoint + urllib.parse.urlencode({
-            "limit": 100, "updatedFrom": fmt(older_start), "updatedTo": fmt(recent_start)})
+            "limit": 100, "updatedFrom": fmt(shard_from), "updatedTo": fmt(shard_to)})
         spare_pages = min(4, 12 - st["requests"])
         if spare_pages > 0:
             out.extend(_ocds(S, older_url, mk, max_pages=spare_pages, timeout=20,

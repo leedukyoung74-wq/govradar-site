@@ -61,15 +61,26 @@ class UKTimeoutFallbackTests(unittest.TestCase):
         return []
 
     def test_good_recent_source_still_checks_bounded_older_window(self):
-        with patch.object(FM,"_ocds",return_value=[self.example()]) as call:
+        def responded(source, url, mk, **kwargs):
+            FM.stat(source)["requests"] += 1
+            FM.stat(source)["raw"] += 1
+            return [self.example()]
+        with patch.object(FM,"_ocds",side_effect=responded) as call:
             result=FM.uk()
         self.assertEqual(1,len(result))
         self.assertEqual(2,call.call_count)
         recent=parse_qs(urlsplit(call.call_args_list[0][0][1]).query)
         older=parse_qs(urlsplit(call.call_args_list[1][0][1]).query)
-        self.assertEqual(recent["updatedFrom"],older["updatedTo"])
+        # Backfill is one rotating 19-day shard, not a full 19-day scan.
+        # The shard must end no later than the newest 48h window begins.
+        self.assertLessEqual(older["updatedTo"][0],recent["updatedFrom"][0])
+        self.assertLess(older["updatedFrom"][0],older["updatedTo"][0])
         self.assertEqual(recent["limit"],["100"])
         self.assertEqual(older["limit"],["100"])
+        st=FM.stat(SOURCE)
+        self.assertTrue(st["coverage_partial"])
+        self.assertEqual(4,st["backfill_shard_total"])
+        self.assertEqual("PARTIAL",FT.classify_state(st))
 
     def test_no_reply_is_not_labeled_success(self):
         with patch.object(FM,"_ocds",side_effect=lambda source,url,mk:self._fail("TimeoutError")):

@@ -191,7 +191,7 @@ class FindATenderTimeout(unittest.TestCase):
             urllib.request.urlopen, time.sleep = real_open, real_sleep
         self.assertEqual(len(got), 1); self.assertEqual(got[0]["title"], "Bridge works")
         st = FM.stat("UK Find a Tender")
-        self.assertEqual(st["failed"], 0); self.assertEqual(FT.classify_state(st), "SUCCESS")
+        self.assertEqual(st["failed"], 0); self.assertEqual(FT.classify_state(st), "PARTIAL")  # recovered HTTP is not complete UK coverage
         self.assertTrue(any(n.startswith("retry 1") for n in st["notes"]))
 
     def test_rate_limit_waits_for_retry_after(self):

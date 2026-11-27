@@ -117,6 +117,9 @@ def classify_state(st):
     # any real rows arrived, preserve PARTIAL rather than claiming total failure.
     if failed and failed >= requests and not raw: return "ERROR"
     if failed: return "PARTIAL"
+    # A successfully contacted bounded sample is not complete coverage.
+    # UK rotating shards and SAM.gov page caps must never claim full success.
+    if st.get("coverage_partial") is True: return "PARTIAL"
     if not raw: return "EMPTY_SUCCESS"
     return "SUCCESS"
 
