@@ -317,3 +317,8 @@ jobs:
       - name: GET-only seven-language homepage and source copy check
         if: always()
         run: python3 ops/wmm_seven_locale_readonly.py
+      - name: Audit 24-hour 5min and 15min scheduled-run gaps (GET-only)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 ops/wmm_schedule_event_coverage.py
