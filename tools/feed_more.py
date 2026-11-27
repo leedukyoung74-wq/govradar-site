@@ -287,36 +287,52 @@ def _ocds_item(S, r, url, minv_eur=1.2e6):
             "est_gross": gross_only}
 
 def uk():
+    """Prioritize the newest 48h, then a bounded 19-day backfill.
+
+    The old 21-day single cursor always hit its first-1,200-record page cap,
+    potentially starving newly updated notices. We still fail closed for any
+    incomplete page/cursor and never claim this covers all UK opportunities.
+    """
     S = "UK Find a Tender"
     endpoint = "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?"
     cutoff = datetime.datetime.now(datetime.timezone.utc)
-    # Freeze the upper bound for cursor-consistent source windows.
-    url = endpoint + urllib.parse.urlencode(
-        {"limit": 100, "updatedFrom": (cutoff - datetime.timedelta(days=21)).strftime("%Y-%m-%dT%H:%M:%SZ"),
-         "updatedTo": cutoff.strftime("%Y-%m-%dT%H:%M:%SZ")})
+    recent_start = cutoff - datetime.timedelta(days=2)
+    older_start = cutoff - datetime.timedelta(days=21)
+    fmt = lambda d: d.strftime("%Y-%m-%dT%H:%M:%SZ")
+    recent_url = endpoint + urllib.parse.urlencode({
+        "limit": 100, "updatedFrom": fmt(recent_start), "updatedTo": fmt(cutoff)})
     mk = lambda r: _ocds_item(S, r, f"https://www.find-tender.service.gov.uk/Notice/{r.get('id')}")
-    # Cap to a polite number of source calls per scheduled run. If the
-    # cursor still has more pages, _ocds records PARTIAL (never false success).
-    # A 21-day backfill needs a separately approved incremental cursor job.
-    out = _ocds(S, url, mk, max_pages=12, timeout=20, tries=2,
-                time_budget=110, min_interval=2)
+
+    out = _ocds(S, recent_url, mk, max_pages=8, timeout=20, tries=2,
+                time_budget=70, min_interval=2)
     st = stat(S)
-    # A 21-day first-page *timeout* should not permanently disable the entire
-    # UK source. Retry once in a bounded 48-hour window with smaller packages.
-    # Preserve the failed original request: classifying the result as PARTIAL
-    # is mandatory and cannot be mistaken for complete source coverage.
+    st["notes"].append("split_48h_recent_plus_19d_backfill: at_most_12_source_pages")
+
     timeout_seen = any("TimeoutError" in n or "timed out" in n.lower() for n in st["notes"])
-    rate_limited = any("429" in n for n in st["notes"])
+    rate_limited = any("429" in n or "upstream_429_deferred" in n for n in st["notes"])
     if not out and st["raw"] == 0 and st["failed"] and timeout_seen and not rate_limited:
-        st["notes"].append("partial_48h_fallback_after_21d_timeout: not full 21-day coverage")
-        short_url = endpoint + urllib.parse.urlencode(
-            {"limit": 10, "updatedFrom": (cutoff - datetime.timedelta(days=2)).strftime("%Y-%m-%dT%H:%M:%SZ"),
-             "updatedTo": cutoff.strftime("%Y-%m-%dT%H:%M:%SZ")})
-        out = _ocds(S, short_url, mk, max_pages=6, timeout=20, tries=1, time_budget=60)
+        # Preserve existing resilience with a smaller 48-hour page.
+        st["notes"].append("partial_48h_fallback_after_recent_timeout: coverage incomplete")
+        fallback_url = endpoint + urllib.parse.urlencode({
+            "limit": 10, "updatedFrom": fmt(recent_start), "updatedTo": fmt(cutoff)})
+        spare_pages = max(0, min(4, 12 - st["requests"]))
+        if spare_pages:
+            out = _ocds(S, fallback_url, mk, max_pages=spare_pages,
+                        timeout=20, tries=1, time_budget=40, min_interval=2)
+        # No older 19d scan after a failure: don't amplify load on a slow source.
+    elif not rate_limited and st["requests"] < 12:
+        older_url = endpoint + urllib.parse.urlencode({
+            "limit": 100, "updatedFrom": fmt(older_start), "updatedTo": fmt(recent_start)})
+        spare_pages = min(4, 12 - st["requests"])
+        if spare_pages > 0:
+            out.extend(_ocds(S, older_url, mk, max_pages=spare_pages, timeout=20,
+                             tries=1, time_budget=40, min_interval=2))
+    # The UK source releases can contain several updates for the same OCDS ID.
+    # Keep only the latest encountered release, without inventing a complete scan.
     seen = {}
     for x in out:
         if x["sid"] in seen: drop(S, "same-notice-update")
-        seen[x["sid"]] = x  # the latest release of a notice wins
+        seen[x["sid"]] = x
     res = sorted(seen.values(), key=lambda x: -float(x["est"] or 0))
     for _ in res[40:]: drop(S, "source-cap")
     return res[:40]
