@@ -27,6 +27,12 @@ jobs:
         with: { ref: data, path: data_branch, fetch-depth: 50 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
+      # Generated-page tests require the same local static preview built by tests.yml.
+      # Both outputs are disposable runner files; never upload or deploy these pages.
+      - name: Build static preview needed by offline tests (NO DEPLOY)
+        run: |
+          python3 build.py --base https://radar.wmm-hoa.com
+          python3 tools/cf_variant.py dist cf/public
       - name: Offline tests first (stop before touching data if the code is broken)
         run: python -m unittest discover -s tests
       - name: Collect tenders (keys are optional; sources without a key are SKIPPED)
