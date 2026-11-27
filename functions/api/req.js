@@ -3,7 +3,7 @@
 //       block the same request sent twice within 10 minutes, return the request number. The page then also sends
 //       the Netlify form as before (owner inbox + Gmail draft alert); if that fails, the record stays here.
 // GET:  signed-in users get their own requests from any device, plus how many are left this month.
-// No GV_DB binding yet -> 503 not_configured, and the page keeps working the old way (browser-only list).
+// Without a GV_DB binding return 503. Front end may use a separate Netlify Forms fallback; never imply that a 503 means the request was stored.
 const IDENTITY = "https://wmm-govradar.netlify.app/.netlify/identity/user";
 const MEMBER = ["m1", "m2", "m3", "m4", "m5", "admin", "owner"], LIMIT = 2, TYPES = ["tender", "country", "family", "partner"];
 const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "content-type": "application/json", "cache-control": "no-store" } });
@@ -28,7 +28,15 @@ export async function onRequestGet({ request, env }) {
 export async function onRequestPost({ request, env }) {
   if (!env.GV_DB) return json({ error: "not_configured" }, 503);
   let b; try { b = await request.json(); } catch (e) { return json({ error: "bad" }, 400); }
-  const type = String(b.type || ""), body = String(b.body || "").slice(0, 4000), lang = String(b.lang || "").slice(0, 5);
+  if (!b || typeof b !== "object" || Array.isArray(b)) return json({ error: "bad" }, 400);
+  // The visible HTML checkbox is NOT sufficient: unauthenticated direct POST can
+  // bypass browser form validation. Require explicit consent before any DB write.
+  if (b.privacy_consent !== true) return json({ error: "consent_required" }, 400);
+  if (typeof b.body !== "string" || !b.body.trim() || b.body.length > 4000 ||
+      typeof b.email !== "string" || b.email.length > 254 ||
+      (b.lang !== undefined && (typeof b.lang !== "string" || b.lang.length > 5)))
+    return json({ error: "bad" }, 400);
+  const type = String(b.type || ""), body = b.body.trim(), lang = String(b.lang || "");
   let email = String(b.email || "").trim().toLowerCase();
   if (!TYPES.includes(type) || !body || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json({ error: "bad" }, 400);
   // Never persist or relay membership access credentials supplied by older cached forms.
