@@ -1,0 +1,21 @@
+name: WMM USD KRW billing review tests (NO DEPLOY)
+on:
+  push:
+    branches: [wmm-usd-krw-billing-review-20261127]
+    paths:
+      - 'config/wmm_currency_pricing_review.json'
+      - 'scripts/wmm_usd_krw_billing_policy_test.py'
+      - '.github/workflows/wmm_usd_krw_billing_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pricing_review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate locale pricing and non-billing international offer safely
+        run: python3 scripts/wmm_usd_krw_billing_policy_test.py
