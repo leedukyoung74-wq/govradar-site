@@ -36,11 +36,15 @@ class UKRateSafety(unittest.TestCase):
     def test_uk_main_scan_is_paced_and_bounded(self):
         with patch.object(FM,"_ocds",return_value=[]) as fn:
             FM.uk()
-        self.assertEqual(fn.call_count,1)
-        self.assertEqual(fn.call_args.kwargs["max_pages"],12)
-        self.assertEqual(fn.call_args.kwargs["tries"],2)
-        self.assertGreaterEqual(fn.call_args.kwargs["min_interval"],1)
-        self.assertLessEqual(fn.call_args.kwargs["time_budget"],120)
+        self.assertEqual(fn.call_count,2)
+        recent,backfill=fn.call_args_list
+        self.assertEqual(recent.kwargs["max_pages"],8)
+        self.assertEqual(backfill.kwargs["max_pages"],4)
+        self.assertEqual(recent.kwargs["tries"],2)
+        self.assertEqual(backfill.kwargs["tries"],1)
+        self.assertGreaterEqual(recent.kwargs["min_interval"],1)
+        self.assertGreaterEqual(backfill.kwargs["min_interval"],1)
+        self.assertLessEqual(recent.kwargs["time_budget"]+backfill.kwargs["time_budget"],120)
 
     def test_pacing_sleep_and_page_cap_remain_partial(self):
         urls=[]
