@@ -1,0 +1,101 @@
+name: GOV RADAR stage only five native request locales in live-clone (NO PROD DEPLOY)
+on:
+  push:
+    branches: [wmm-seven-language-release-stage-20261127]
+    paths:
+      - '.github/workflows/wmm_stage_seven_request_locale_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  stage_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: src
+          path: source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: wmm-live-seven-language-request-preview-20261127
+          path: candidate
+          persist-credentials: true
+          fetch-depth: 10
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build source snapshot in runner (never publish)
+        run: |
+          cd source
+          python3 build.py --base https://radar.wmm-hoa.com
+          python3 tools/cf_variant.py dist cf/public
+          python3 -m unittest discover -s tests -p 'test_request_seven_locale_generated.py' -v
+          python3 -m unittest discover -s tests -p 'test_request_relay_client.py' -v
+      - name: Copy only 5 request pages into live-clone and validate contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re,shutil,subprocess,tempfile
+          src=Path("source/cf/public"); dst=Path("candidate/public")
+          labels={"ar":"طلبات التحليل","es":"Solicitudes de análisis","fr":"Demandes d’analyse","vi":"Yêu cầu phân tích","id":"Permintaan analisis"}
+          for lang,title in labels.items():
+              rel=Path(lang)/"request/index.html"
+              source=(src/rel).read_text(encoding="utf8")
+              assert title in source,lang
+              assert 'name="privacy_agree" value="yes" required' in source,lang
+              assert 'privacy_consent:f.querySelector(' in source,lang
+              assert 'method="POST"' in source and 'name="form-name" value="order"' in source
+              assert '/nfform?next=' in source
+              assert 'fetch("/api/req"' in source
+              assert f'name="lang" value="{lang}"' in source
+              assert 'http-equiv="refresh"' not in source,lang
+              for request_type in ("tender","country","family","partner"):
+                  assert f'name="rqt" value="{request_type}"' in source,lang
+              for attrs,script in re.findall(r'<script([^>]*)>(.*?)</script>',source,re.S|re.I):
+                  if "application/ld+json" in attrs:continue
+                  with tempfile.NamedTemporaryFile("w",suffix=".js",encoding="utf8") as f:
+                      f.write(script);f.flush()
+                      res=subprocess.run(["node","--check",f.name],capture_output=True,text=True)
+                      assert res.returncode==0,(lang,res.stderr[:350])
+              original=(dst/rel).read_text(encoding="utf8")
+              if lang=="ar":
+                  assert 16000<=len(original)<=40000,("unexpected Arabic live baseline",len(original))
+                  assert abs(len(source)-len(original))<10000,(lang,len(source),len(original))
+              else:
+                  assert len(original)<1500 and "refresh" in original,(lang,"not redirect source")
+              (dst/rel).write_text(source,encoding="utf8")
+              print("PASS",lang,"generated",len(source),"original",len(original))
+          for lang in ("ko","en"):
+              assert (dst/lang/"request/index.html").read_bytes(),lang
+              assert 'privacy_consent:f.querySelector(' in (dst/lang/"request/index.html").read_text(encoding="utf8"),lang
+          assert (Path("candidate/functions/api/req.js").read_text().find('b.privacy_consent !== true')>=0)
+          PY
+      - name: Verify exactly five HTML files changed; commit to nonproduction preview branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd candidate
+          test "$(git branch --show-current)" = "wmm-live-seven-language-request-preview-20261127"
+          git diff --name-only > /tmp/wmm-stage-diff
+          python3 - <<'PY'
+          from pathlib import Path
+          got=set(Path("/tmp/wmm-stage-diff").read_text().splitlines())
+          expected={f"public/{lang}/request/index.html" for lang in ("ar","es","fr","vi","id")}
+          assert got==expected,(got,expected)
+          print("PASS only 5 request page differences; no D1, OAuth, billing or routing changes")
+          PY
+          git config user.name "WMM review workflow"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/ar/request/index.html public/es/request/index.html public/fr/request/index.html public/vi/request/index.html public/id/request/index.html
+          git commit -m "feat(preview): stage five native-language request forms, preserve live baseline"
+          git push origin HEAD:refs/heads/wmm-live-seven-language-request-preview-20261127
+      - name: Report that no live production changes were made
+        if: always()
+        run: echo "Source site built and five request pages staged ONLY in preview branch. Production live, D1 and forms remain unchanged." >> "$GITHUB_STEP_SUMMARY"
