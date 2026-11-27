@@ -29,6 +29,10 @@ on:
         description: 'Default false: dry-run. True: update existing official public data.'
         type: boolean
         default: false
+      force:
+        description: 'Default false: only refresh if source stale. True: force one bounded refresh when explicitly dispatched.'
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -86,10 +90,15 @@ jobs:
         id: check
         env:
           TRIGGER: ${{ github.event_name }}
+          OWNER_EXPLICIT_FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force && 'true' || 'false' }}
         shell: bash
         run: |
           set -euo pipefail
-          if [ "$TRIGGER" = 'issue_comment' ] || [ "$TRIGGER" = 'workflow_dispatch' ]; then
+          # Issue comments may request a due-check, but never bypass the
+          # source cooldown. Only a deliberate workflow_dispatch force can
+          # override freshness thresholds; publication remains separately
+          # gated by the existing publish=false default.
+          if [ "$TRIGGER" = 'workflow_dispatch' ] && [ "$OWNER_EXPLICIT_FORCE" = 'true' ]; then
             python3 control/ops/wmm_official_recovery_due.py --data data_branch --force
           else
             python3 control/ops/wmm_official_recovery_due.py --data data_branch
