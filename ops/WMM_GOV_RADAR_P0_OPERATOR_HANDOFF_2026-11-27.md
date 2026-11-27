@@ -20,6 +20,7 @@ Updated 2026-11-27 (KST). Intended for owner, ChatGPT and Claude.
 ## Blocks requiring third-party owner account access
 
 ### Korean current procurement — REQUIRED BEFORE PUBLISH
+**2026-11-27 code correction:** PR [#326](https://github.com/leedukyoung74-wq/govradar-site/pull/326) removed the incorrect DAPA credential fallback and repaired secret interpolation. PR [#327](https://github.com/leedukyoung74-wq/govradar-site/pull/327) changed the owner probe to fail rather than display green on HTTP 403, missing key or mixed errors; offline CI passed. An authenticated post-fix owner probe has **not** yet established provider approval. Follow [the exact owner-only KONEPS activation runbook](WMM_KONEPS_G2B_OWNER_ACTIVATION_RUNBOOK_2026-11-27.md) and do not infer that a current Korean bid was ingested.
 Official API https://www.data.go.kr/data/15129394/openapi.do. Ask the owner of the data.go.kr account to apply specifically for the PPS KONEPS Bid Public Info Service. A DAPA overseas-bid API key does not imply access. Check the account approval and allowed server IP. Store the authorized service key as GitHub Actions secret KONEPS_KEY — NEVER paste in chat, tickets, code or logs. Rerun only owner issue #80 comment /govradar-probe-koneps. HTTP 403 is access denied but does not distinguish approval from network policy. After permission, separately validate recent source dates, official notice URLs, cancellation/revision rules, 7-day query window and page coverage before actual publishing.
 
 ### Netlify customer inquiry — STILL NOT VERIFIED
