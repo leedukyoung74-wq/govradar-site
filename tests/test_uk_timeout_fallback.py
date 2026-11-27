@@ -61,7 +61,11 @@ class UKTimeoutFallbackTests(unittest.TestCase):
         return []
 
     def test_good_recent_source_still_checks_bounded_older_window(self):
-        with patch.object(FM,"_ocds",return_value=[self.example()]) as call:
+        def responded(source, url, mk, **kwargs):
+            FM.stat(source)["requests"] += 1
+            FM.stat(source)["raw"] += 1
+            return [self.example()]
+        with patch.object(FM,"_ocds",side_effect=responded) as call:
             result=FM.uk()
         self.assertEqual(1,len(result))
         self.assertEqual(2,call.call_count)
