@@ -25,6 +25,29 @@ jobs:
           python3 -m unittest discover -s tests -p 'test_uk_timeout_fallback.py' -v
           python3 -m unittest discover -s tests -p 'test_uk_modern_notices.py' -v
           python3 -m unittest discover -s tests -p 'test_tender*.py' -v
+      - name: Probe two official FTS window first pages read-only (at most 2 GETs)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import datetime,json,sys,time,urllib.parse
+          sys.path.insert(0,"tools")
+          import feed_more as F
+          now=datetime.datetime.now(datetime.timezone.utc)
+          fmt=lambda d:d.strftime("%Y-%m-%dT%H:%M:%SZ")
+          ep="https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?"
+          windows=[
+            ("recent_48h",now-datetime.timedelta(days=2),now),
+            ("older_19d",now-datetime.timedelta(days=21),now-datetime.timedelta(days=2))
+          ]
+          for ix,(label,frm,to) in enumerate(windows):
+            url=ep+urllib.parse.urlencode({"limit":100,"updatedFrom":fmt(frm),"updatedTo":fmt(to)})
+            j=json.loads(F._get("UK Find a Tender",url,tries=1,timeout=25))
+            assert isinstance(j,dict) and isinstance(j.get("releases"),list) and isinstance(j.get("links",{}),dict)
+            print("OFFICIAL FTS WINDOW",label,"first_page_releases",len(j["releases"]),"next_page",bool(j.get("links",{}).get("next")))
+            if ix==0:time.sleep(2)
+          print("PROBE PASS: 2 bounded official GET requests, never claim 21 days complete")
+          PY
       - name: Confirm no API request or data branch modification
         if: always()
-        run: echo 'Mocked/offline tests only. Do not assume 21-day UK notices are complete. No production collector, API key, public data or bill changed.' >> "$GITHUB_STEP_SUMMARY"
+        run: echo 'Mocked unit tests plus two official public first-page GET checks only. Do not assume 21-day UK notices are complete. No production collector, API key, public data or bill changed.' >> "$GITHUB_STEP_SUMMARY"
