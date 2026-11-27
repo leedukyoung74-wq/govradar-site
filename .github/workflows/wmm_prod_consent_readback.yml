@@ -1,0 +1,20 @@
+name: WMM production consent readback (GET ONLY)
+on:
+  push:
+    branches: [wmm-live-consent-acceptance-readonly-20261127]
+    paths:
+      - 'scripts/wmm_prod_consent_readback.py'
+      - '.github/workflows/wmm_prod_consent_readback.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public_readback:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check public consent marker and anonymous auth guard (GET-only)
+        run: python3 scripts/wmm_prod_consent_readback.py
