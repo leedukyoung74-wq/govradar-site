@@ -74,6 +74,7 @@ jobs:
         if: inputs.task == 'daily'
         run: python tools/quality_gate.py data_branch
       - name: Publish to data branch
+        id: publish_feeds
         if: ${{ !inputs.dry_run }}
         run: |
           set -euo pipefail
@@ -117,6 +118,13 @@ jobs:
       - name: Check the public site reads fresh feeds (strict; stale = FAIL)
         if: inputs.task == 'daily' && always()
         run: python tools/check_site.py data_branch/feeds/site_check.json
+      # Feed data is committed earlier. The post-publish report was left as a
+      # local artifact only, leaving public site_check.json stuck at 2026-11-16.
+      # Publish only current PASS/FAIL evidence; never force-push or overwrite
+      # concurrently updated USGS/NWS/data snapshots.
+      - name: Persist current site probe PASS or FAIL to data branch
+        if: ${{ always() && inputs.task == 'daily' && !inputs.dry_run && steps.publish_feeds.outcome == 'success' }}
+        run: python3 tools/publish_site_check.py data_branch
       - name: Keep the outputs of this run
         if: always()
         uses: actions/upload-artifact@v4
