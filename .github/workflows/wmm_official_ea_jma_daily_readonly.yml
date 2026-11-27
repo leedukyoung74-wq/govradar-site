@@ -139,7 +139,20 @@ jobs:
         run: |
           set -Eeuo pipefail
           mkdir -p "$RUNNER_TEMP/wmm-regional-internal"
-          python cyber/tools/official_eu_au_cyber_rss.py --out "$RUNNER_TEMP/wmm-regional-internal/eu-au.json"
+          # Bounded retry for transient official RSS timeouts; fail closed after three tries.
+          # The reader emits per-source health even if its process exit code is zero.
+          for attempt in 1 2 3; do
+            if python cyber/tools/official_eu_au_cyber_rss.py --out "$RUNNER_TEMP/wmm-regional-internal/eu-au.json"; then
+              if WMM_CYBER_REPORT="$RUNNER_TEMP/wmm-regional-internal/eu-au.json" python -c 'import json,os,sys; r=json.load(open(os.environ["WMM_CYBER_REPORT"],encoding="utf8")); sys.exit(0 if all(s.get("status")=="OK" for s in r.get("health",{}).values()) and len(r.get("health",{}))==2 else 1)'; then
+                break
+              fi
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "::error::CERT-EU/ACSC official RSS remained unhealthy after 3 attempts (no publishing)."
+              exit 1
+            fi
+            sleep 5
+          done
           WMM_CYBER_REPORT="$RUNNER_TEMP/wmm-regional-internal/eu-au.json" python - <<'PY'
           import json,os
           from pathlib import Path
