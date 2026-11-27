@@ -33,7 +33,7 @@ class Scripts(HTMLParser):
 
 def probe(label, url):
     result = {"site":label, "url":url, "http":None, "final":None,
-              "html":False,"script":"UNKNOWN","csp":"UNKNOWN","error":None}
+              "html":False,"script":"UNKNOWN","csp":"UNKNOWN","cloudflare_edge":"UNKNOWN","server":"UNKNOWN","error":None}
     try:
         req = Request(url, headers={"User-Agent":"WMM-Analytics-ReadOnly-Check/1.0"})
         with urlopen(req, timeout=20, context=ssl.create_default_context()) as response:
@@ -47,6 +47,8 @@ def probe(label, url):
             if len(raw) > 2_000_000:
                 result["error"] = "HTML exceeds 2MB inspection cap"
                 return result
+            result["cloudflare_edge"] = "CF_RAY_PRESENT" if response.headers.get("CF-Ray") else "NO_CF_RAY"
+            result["server"] = (response.headers.get("Server") or "NOT_SET")[:60]
             result["html"] = True
             charset = response.headers.get_content_charset() or "utf-8"
             parser = Scripts()
@@ -69,9 +71,9 @@ def main():
         with open(summary,"a",encoding="utf-8") as f:
             f.write("## WMM + GCSME Cloudflare beacon audit (READ ONLY)\n\n")
             f.write("Checked: "+now+"\n\n")
-            f.write("| Site | HTTP | Final URL | Beacon in initial HTML | CSP header | Error |\n|---|---|---|---|---|---|\n")
+            f.write("| Site | HTTP | Final URL | Cloudflare edge | Server | Beacon in initial HTML | CSP header | Error |\n|---|---|---|---|---|---|---|\n")
             for r in data:
-                f.write("| {site} | {http} | \`{final}\` | {script} | {csp} | {error} |\n".format(**{k:(str(v).replace("|","/") if v is not None else "-") for k,v in r.items()}))
+                f.write("| {site} | {http} | \`{final}\` | {cloudflare_edge} | {server} | {script} | {csp} | {error} |\n".format(**{k:(str(v).replace("|","/") if v is not None else "-") for k,v in r.items()}))
             f.write("\n**LIMIT:** HTML inspection cannot prove whether the beacon executes or delivers a request. 'NOT_IN_INITIAL_HTML' may still allow runtime injection by a client script. No browser script execution, metric POST, API credentials, DNS edits, or deployment performed. Manual Cloudflare dashboard/Network validation is still required.\n")
     # Diagnostic output is evidence, not operational success. No fake PASS/FAIL.
 if __name__ == "__main__":
