@@ -524,3 +524,64 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
     }).catch(function () {});
   }, 250);
 })();
+
+/* Cyber cross-page freshness disclosure.
+   Country-specific examples are editorial archives, never automatically refreshed
+   or evidence of a current breach. World board shows only verified API health.
+   Reuses existing publicly cached /api/cyberlive; no API keys or paid services. */
+(function(){
+  function go(){
+    var lang=(document.documentElement.lang||"en").slice(0,2);
+    var msg={
+      ko:"이 나라의 사건 사례는 날짜별 검토 자료이며 자동 갱신되지 않습니다. 최근 공식 CISA KEV는 국가별 공격 건수가 아닌, 악용 확인 취약점 목록입니다.",
+      en:"Country incident examples below are dated editorial records, not a live-updating feed. CISA KEV lists exploited vulnerabilities, not country breach counts.",
+      es:"Los incidentes de este país son casos fechados, no noticias en directo. CISA KEV enumera vulnerabilidades explotadas, no ataques por país.",
+      fr:"Ces incidents nationaux sont des cas datés, sans mise à jour automatique. CISA KEV répertorie des failles exploitées, pas des attaques par pays.",
+      ar:"الحوادث القطرية أدناه أمثلة مؤرخة وليست تحديثات مباشرة. فهرس CISA KEV يعرض ثغرات مستغلة ولا يمثل عدد الهجمات في كل بلد.",
+      vi:"Các vụ việc theo quốc gia là dữ liệu theo ngày, không tự cập nhật. CISA KEV liệt kê lỗ hổng bị khai thác, không phải số vụ tấn công theo quốc gia.",
+      id:"Kasus per negara di bawah adalah arsip bertanggal, bukan umpan langsung. CISA KEV mencatat kerentanan yang dieksploitasi, bukan jumlah serangan per negara."
+    };
+    var section=document.querySelector("section#cyber");
+    if(section&&!document.getElementById("wmm-country-cyber-note")){
+      var p=document.createElement("p");
+      p.id="wmm-country-cyber-note";
+      p.className="note";
+      p.style.cssText="border-left:3px solid #c9973f;padding:9px 12px;margin:12px 0;color:inherit;background:rgba(160,140,60,.08)";
+      p.appendChild(document.createTextNode(msg[lang]||msg.en+" "));
+      var a=document.createElement("a");a.href="/cyber/";
+      a.textContent=lang==="ko"?"공식 사이버 자료 보기 →":"Official cyber data →";
+      p.appendChild(document.createTextNode(" "));p.appendChild(a);
+      var h=section.querySelector("h2");if(h)h.insertAdjacentElement("afterend",p);
+    }
+    if(!/^\/(?:ko|en|es|fr|ar|vi|id)\/conflict\/?$/.test(location.pathname))return;
+    var hero=document.querySelector("main section.chero");
+    if(!hero||document.getElementById("wmm-conflict-cyber-health"))return;
+    var box=document.createElement("section");box.id="wmm-conflict-cyber-health";
+    box.setAttribute("aria-label","Cyber source status");
+    box.style.cssText="max-width:1100px;margin:22px auto;padding:16px 20px;border:1px solid #ccd4df;border-radius:10px;background:#f8fafc;color:#14243a;font-size:15px;line-height:1.6";
+    var title=document.createElement("strong");
+    title.textContent=lang==="ko"?"사이버 공격 · 공식 데이터 연결":"Cybersecurity · official data connection";
+    var t=document.createElement("p");
+    t.style.cssText="margin:5px 0 8px";
+    t.textContent=lang==="ko"?"CISA KEV 공식 자료를 확인하고 있습니다.":"Checking official CISA KEV data.";
+    var link=document.createElement("a");link.href="/cyber/";
+    link.textContent=lang==="ko"?"사이버 공격 상세 →":"Cyber details →";
+    box.appendChild(title);box.appendChild(t);box.appendChild(link);
+    hero.insertAdjacentElement("afterend",box);
+    fetch("/api/cyberlive",{cache:"no-store"})
+      .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()})
+      .then(function(j){
+        var rw=!!(j.ok&&j.ok.rw&&Array.isArray(j.rw));
+        var kev=!!(j.ok&&j.ok.kev&&Array.isArray(j.kev));
+        var last=Date.parse(j.kev_last_ok||"");
+        var lastLabel=Number.isFinite(last)?new Date(last).toLocaleString(lang==="ko"?"ko-KR":"en-GB",{timeZone:"Asia/Seoul"}):"—";
+        t.textContent=lang==="ko"?
+          ("랜섬웨어 미확인 공개 주장 "+(rw?j.rw.length+"건":"연결 실패")+" · CISA 악용 확인 취약점 "+(kev?j.kev.length+"건":"연결 실패")+(j.status&&j.status.kev==="delayed"?" (갱신 지연)":"")+" · CISA 최근 성공: "+lastLabel+" KST · 실제 침해사고 건수와 다릅니다."):
+          ("Unverified ransomware claims "+(rw?j.rw.length:"unavailable")+" · CISA exploited vulnerabilities "+(kev?j.kev.length:"unavailable")+(j.status&&j.status.kev==="delayed"?" (delayed)":"")+" · CISA last successful collection: "+lastLabel+" KST · not confirmed incident counts.");
+      }).catch(function(){
+        t.textContent=lang==="ko"?"현재 사이버 데이터 조회에 실패했습니다. 0건이라는 뜻은 아닙니다.":"Cyber data is currently unavailable. This does not mean zero incidents.";
+      });
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);
+  else go();
+})();
