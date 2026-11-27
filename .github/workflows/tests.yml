@@ -9,9 +9,14 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: python -m unittest discover -s tests -v
+      - name: Generate static preview required by generated-page tests (NO DEPLOY)
+        run: |
+          python3 build.py --base https://radar.wmm-hoa.com
+          python3 tools/cf_variant.py dist cf/public
+      - name: Run offline unit suite against generated preview
+        run: python3 -m unittest discover -s tests -v
