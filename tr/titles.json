@@ -1,7 +1,127 @@
 {
  "note": "Titles translated by Claude for GOV RADAR (not an official translation). Key = original title as in feeds/today.json.",
- "updated": "2026-11-22T22:24Z",
+ "updated": "2026-11-27T22:24Z",
  "items": {
+  "Cardiac valve – ZP – Dodávky transkatétrové srdeční chlopně (THV) pro TAVI proceduru": {
+   "ko": "심장 판막 – ZP – TAVI 시술용 경카테터 심장 판막(THV) 공급",
+   "en": "Cardiac valve – ZP – Supply of transcatheter heart valves (THV) for TAVI procedures",
+   "es": "Válvula cardíaca – ZP – Suministro de válvulas cardíacas transcatéter (THV) para procedimientos TAVI",
+   "fr": "Valve cardiaque – ZP – Fourniture de valves cardiaques transcathéter (THV) pour procédures TAVI",
+   "ar": "صمام قلبي – ZP – توريد صمامات قلبية عبر القسطرة (THV) لإجراءات TAVI",
+   "vi": "Van tim – ZP – Cung cấp van tim qua ống thông (THV) cho thủ thuật TAVI",
+   "id": "Katup jantung – ZP – Pengadaan katup jantung transkateter (THV) untuk prosedur TAVI",
+   "src": "cs"
+  },
+  "Електрична енергія для компенсації технологічних втрат\n": {
+   "ko": "기술적 손실 보전용 전력",
+   "en": "Electricity to compensate for technological losses",
+   "es": "Energía eléctrica para compensar pérdidas tecnológicas",
+   "fr": "Énergie électrique pour la compensation des pertes technologiques",
+   "ar": "طاقة كهربائية لتعويض الفاقد التقني",
+   "vi": "Điện năng bù tổn thất kỹ thuật",
+   "id": "Energi listrik untuk kompensasi susut teknis",
+   "src": "uk"
+  },
+  "Construction Materials and Managed Services": {
+   "ko": "건설 자재 및 관리형 서비스",
+   "en": "Construction Materials and Managed Services",
+   "es": "Materiales de construcción y servicios gestionados",
+   "fr": "Matériaux de construction et services gérés",
+   "ar": "مواد البناء والخدمات المُدارة",
+   "vi": "Vật liệu xây dựng và dịch vụ quản lý",
+   "id": "Material konstruksi dan layanan terkelola",
+   "src": "en"
+  },
+  "66--INDICATOR LIGHT ASSEMB": {
+   "ko": "66--표시등 조립",
+   "en": "66--INDICATOR LIGHT ASSEMB",
+   "es": "66--CONJUNTO DE LUZ INDICADORA",
+   "fr": "66--ENSEMBLE DE VOYANT LUMINEUX",
+   "ar": "66--مجموعة مصباح مؤشر",
+   "vi": "66--CỤM ĐÈN BÁO",
+   "id": "66--RAKITAN LAMPU INDIKATOR",
+   "src": "en"
+  },
+  "Supply, Installation, Testing and Commissioning of Asset Performance Management System (APMS) in PESCO Mardan & Swabi Operation Circles Khyb": {
+   "ko": "PESCO 마르단·스와비 운영권역 자산성과관리시스템(APMS) 공급·설치·시험·시운전, Khyb",
+   "en": "Supply, Installation, Testing and Commissioning of Asset Performance Management System (APMS) in PESCO Mardan & Swabi Operation Circles Khyb",
+   "es": "Suministro, instalación, pruebas y puesta en servicio del Sistema de Gestión del Rendimiento de Activos (APMS) en los círculos operativos de PESCO Mardan y Swabi, Khyb",
+   "fr": "Fourniture, installation, essais et mise en service d’un système de gestion de la performance des actifs (APMS) dans les cercles d’exploitation PESCO de Mardan et Swabi, Khyb",
+   "ar": "توريد وتركيب واختبار وتشغيل نظام إدارة أداء الأصول (APMS) في دائرتي تشغيل PESCO في Mardan وSwabi، Khyb",
+   "vi": "Cung cấp, lắp đặt, thử nghiệm và vận hành Hệ thống quản lý hiệu suất tài sản (APMS) tại các khu vận hành PESCO Mardan & Swabi, Khyb",
+   "id": "Pengadaan, pemasangan, pengujian, dan commissioning Sistem Manajemen Kinerja Aset (APMS) di Wilayah Operasi PESCO Mardan & Swabi, Khyb",
+   "src": "en"
+  },
+  "Tramway passenger coaches – Dodávka až 40 ks obousměrných velkokapacitních tramvají": {
+   "ko": "트램 객차 – 양방향 대용량 트램 최대 40대 공급",
+   "en": "Tramway passenger coaches – Supply of up to 40 bidirectional high-capacity trams",
+   "es": "Coches de pasajeros de tranvía – Suministro de hasta 40 tranvías bidireccionales de gran capacidad",
+   "fr": "Voitures de tramway – Fourniture de jusqu’à 40 tramways bidirectionnels à grande capacité",
+   "ar": "عربات ترام للركاب – توريد ما يصل إلى 40 ترامًا ثنائي الاتجاه عالي السعة",
+   "vi": "Toa tàu điện chở khách – Cung cấp tối đa 40 xe điện hai chiều sức chứa lớn",
+   "id": "Gerbong penumpang trem – Pengadaan hingga 40 unit trem dua arah berkapasitas besar",
+   "src": "cs"
+  },
+  "Contratação de uma Empresa para a implementação da estratégia de capacitação dos jovens empreendedores com potencial de crescimento (Impleme": {
+   "ko": "성장 잠재력 있는 청년 창업가 역량강화 전략 이행 업체 선정 (Impleme",
+   "en": "Hiring of a firm to implement the capacity-building strategy for young entrepreneurs with growth potential (Impleme",
+   "es": "Contratación de una empresa para la implementación de la estrategia de capacitación de jóvenes emprendedores con potencial de crecimiento (Impleme",
+   "fr": "Recrutement d’une entreprise pour la mise en œuvre de la stratégie de renforcement des capacités des jeunes entrepreneurs à potentiel de croissance (Impleme",
+   "ar": "التعاقد مع شركة لتنفيذ استراتيجية بناء قدرات رواد الأعمال الشباب ذوي إمكانات النمو (Impleme",
+   "vi": "Thuê công ty triển khai chiến lược nâng cao năng lực cho doanh nhân trẻ có tiềm năng tăng trưởng (Impleme",
+   "id": "Pengadaan perusahaan untuk pelaksanaan strategi peningkatan kapasitas wirausaha muda berpotensi tumbuh (Impleme",
+   "src": "pt"
+  },
+  "Development of a National Strategy and Implementation Roadmap for Montenegro's Participation in Euro system TARGET Services": {
+   "ko": "몬테네그로의 유로시스템 TARGET 서비스 참여를 위한 국가전략 및 이행 로드맵 수립",
+   "en": "Development of a National Strategy and Implementation Roadmap for Montenegro's Participation in Euro system TARGET Services",
+   "es": "Elaboración de una estrategia nacional y hoja de ruta de implementación para la participación de Montenegro en los servicios TARGET del Eurosistema",
+   "fr": "Élaboration d’une stratégie nationale et d’une feuille de route de mise en œuvre pour la participation du Monténégro aux services TARGET de l’Eurosystème",
+   "ar": "إعداد استراتيجية وطنية وخارطة طريق تنفيذية لمشاركة الجبل الأسود في خدمات TARGET لنظام اليورو",
+   "vi": "Xây dựng chiến lược quốc gia và lộ trình triển khai cho việc Montenegro tham gia dịch vụ TARGET của Hệ thống Euro",
+   "id": "Penyusunan strategi nasional dan peta jalan implementasi partisipasi Montenegro dalam layanan TARGET Eurosystem",
+   "src": "en"
+  },
+  "RECRUTEMENT D’UN CONSULTANT/FIRME POUR LA REALISATION DES ÉTUDES ARCHITECTURALES, TECHNIQUES (PTF/APS/APD/DAO), ENVIRONNEMENTALES (EIESA) ET": {
+   "ko": "건축·기술(PTF/APS/APD/DAO)·환경(EIESA) 조사 및… 수행 컨설턴트/업체 선정",
+   "en": "RECRUITMENT OF A CONSULTANT/FIRM TO CARRY OUT ARCHITECTURAL, TECHNICAL (PTF/APS/APD/DAO), ENVIRONMENTAL (EIESA) AND",
+   "es": "CONTRATACIÓN DE UN CONSULTOR/EMPRESA PARA LA REALIZACIÓN DE ESTUDIOS ARQUITECTÓNICOS, TÉCNICOS (PTF/APS/APD/DAO), AMBIENTALES (EIESA) Y",
+   "fr": "RECRUTEMENT D’UN CONSULTANT/FIRME POUR LA REALISATION DES ÉTUDES ARCHITECTURALES, TECHNIQUES (PTF/APS/APD/DAO), ENVIRONNEMENTALES (EIESA) ET",
+   "ar": "توظيف استشاري/شركة لإنجاز الدراسات المعمارية والفنية (PTF/APS/APD/DAO) والبيئية (EIESA) و",
+   "vi": "TUYỂN CHỌN TƯ VẤN/CÔNG TY THỰC HIỆN CÁC NGHIÊN CỨU KIẾN TRÚC, KỸ THUẬT (PTF/APS/APD/DAO), MÔI TRƯỜNG (EIESA) VÀ",
+   "id": "REKRUTMEN KONSULTAN/PERUSAHAAN UNTUK PELAKSANAAN STUDI ARSITEKTUR, TEKNIS (PTF/APS/APD/DAO), LINGKUNGAN (EIESA) DAN",
+   "src": "fr"
+  },
+  "Procurement and installation of Trijunction Pillars Faisalabad Division": {
+   "ko": "삼경계 표석(Trijunction Pillars) 조달 및 설치 – 파이살라바드 디비전",
+   "en": "Procurement and installation of Trijunction Pillars Faisalabad Division",
+   "es": "Adquisición e instalación de pilares de triple frontera, Faisalabad Division",
+   "fr": "Acquisition et installation de bornes de tri-jonction, Faisalabad Division",
+   "ar": "شراء وتركيب أعمدة نقاط الالتقاء الثلاثية، Faisalabad Division",
+   "vi": "Mua sắm và lắp đặt cột mốc điểm giao ba, Faisalabad Division",
+   "id": "Pengadaan dan pemasangan pilar titik temu tiga batas, Faisalabad Division",
+   "src": "en"
+  },
+  "Procurement and installation of Trijunction Pillars, DG Khan Division": {
+   "ko": "삼경계 표석(Trijunction Pillars) 조달 및 설치 – DG Khan 디비전",
+   "en": "Procurement and installation of Trijunction Pillars, DG Khan Division",
+   "es": "Adquisición e instalación de pilares de triple frontera, DG Khan Division",
+   "fr": "Acquisition et installation de bornes de tri-jonction, DG Khan Division",
+   "ar": "شراء وتركيب أعمدة نقاط الالتقاء الثلاثية، DG Khan Division",
+   "vi": "Mua sắm và lắp đặt cột mốc điểm giao ba, DG Khan Division",
+   "id": "Pengadaan dan pemasangan pilar titik temu tiga batas, DG Khan Division",
+   "src": "en"
+  },
+  "Procurement and installation of Trijunction Pillars, Bahawalpur Division": {
+   "ko": "삼경계 표석(Trijunction Pillars) 조달 및 설치 – 바하왈푸르 디비전",
+   "en": "Procurement and installation of Trijunction Pillars, Bahawalpur Division",
+   "es": "Adquisición e instalación de pilares de triple frontera, Bahawalpur Division",
+   "fr": "Acquisition et installation de bornes de tri-jonction, Bahawalpur Division",
+   "ar": "شراء وتركيب أعمدة نقاط الالتقاء الثلاثية، Bahawalpur Division",
+   "vi": "Mua sắm và lắp đặt cột mốc điểm giao ba, Bahawalpur Division",
+   "id": "Pengadaan dan pemasangan pilar titik temu tiga batas, Bahawalpur Division",
+   "src": "en"
+  },
   "Photocopying and offset printing equipment – Új nyomatelőállító eszk. és kapcs. szolg. (FMNY26)": {
    "ko": "복사·오프셋 인쇄 장비 – 신규 인쇄 장비 및 관련 서비스 (FMNY26)",
    "en": "Photocopying and offset printing equipment – new print production equipment and related services (FMNY26)",
