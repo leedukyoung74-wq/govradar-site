@@ -28,7 +28,7 @@ def classify(value):
     # Differentiate invisible Unicode copied from websites/PDFs from an
     # entire label or other visible non-ASCII content, without printing
     # characters, positions, lengths or secret-derived digests.
-    if any(c in ("\\u200b", "\\u200c", "\\u200d", "\\ufeff", "\\u2060") for c in value):
+    if any(c in ("\u200b", "\u200c", "\u200d", "\ufeff", "\u2060") for c in value):
         return "INVISIBLE_FORMAT_CHARACTERS"
     if any(c.isspace() for c in value):
         return "EMBEDDED_WHITESPACE"
