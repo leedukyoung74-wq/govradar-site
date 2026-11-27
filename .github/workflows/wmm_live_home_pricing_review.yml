@@ -1,0 +1,74 @@
+name: WMM live homepage seven-locale small price + ISO atomic QA (NO DEPLOY)
+on:
+  push:
+    branches: [wmm-live-home-pricing-patch-20261127]
+    paths:
+      - 'public/**/index.html'
+      - '.github/workflows/wmm_live_home_pricing_review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview_7_locales:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          path: preview
+      - uses: actions/checkout@v4
+        with:
+          ref: live
+          persist-credentials: false
+          path: baseline
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify no altered routing, unknown metrics on stale data, price and tax consistency
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re,subprocess,tempfile
+          p=Path("preview/public");q=Path("baseline/public")
+          names={"ko":"VAT 포함","en":"VAT incl.","es":"IVA incluido","fr":"TVA comprise","ar":"شامل ضريبة","vi":"đã gồm VAT","id":"termasuk PPN"}
+          for lang,tax in names.items():
+              a=(p/lang/"index.html").read_text("utf8")
+              b=(q/lang/"index.html").read_text("utf8")
+              assert abs(len(a)-len(b))<1000,(lang,len(a),len(b))
+              assert 'id="kp-t">—' in a and 'id="kp-u">—' in a,lang
+              assert "data/feeds/today.json" in a
+              assert '.replace(/Z$/,":00Z")' not in a
+              assert 'Date.parse(String(d.updated||""))' in a
+              assert tax in a,lang
+              assert not re.search(r'(?:20,000원|₩20,000|₩20\.000|20 000 ₩|20,000 وون)',a),lang
+              assert "privacy_consent" not in a or "privacy_consent" in b,lang
+              # Each inline JS fragment is still syntactically valid in all locales.
+              for snippet in re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',a,re.S|re.I):
+                  with tempfile.NamedTemporaryFile(mode="w",suffix=".js",encoding="utf8") as f:
+                      f.write(snippet);f.flush()
+                      run=subprocess.run(["node","--check",f.name],capture_output=True,text=True)
+                      assert run.returncode==0,(lang,run.stderr[:220])
+              print("PASS",lang,"KRW/VAT/freshness")
+          for path in ("_routes.json","_headers","_redirects","assets/auth.js"):
+              assert (p/path).read_bytes()==(q/path).read_bytes(),path
+          PY
+      - name: Ensure diff is exactly 7 homepage HTML files and temporary CI
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -C preview fetch origin live --depth=1
+          git -C preview diff --name-only origin/live..HEAD > /tmp/changed
+          python3 - <<'PY'
+          from pathlib import Path
+          got=set(Path("/tmp/changed").read_text().splitlines())
+          want={f"public/{x}/index.html" for x in ("ko","en","es","fr","ar","vi","id")}
+          want.add(".github/workflows/wmm_live_home_pricing_review.yml")
+          assert got==want,(got,want)
+          print("PASS: seven index files only; no JS/CSS/Auth/D1/DB/Payments edits")
+          PY
+      - name: No production deployment
+        if: always()
+        run: echo "Review only. Do not infer checkout, user payments or production deployment." >> "$GITHUB_STEP_SUMMARY"
