@@ -247,6 +247,49 @@ jobs:
                        'seven_language_widget_guard':_widget_ok})
               except Exception as exc:
                   record('Country brief provenance ('+_label+')',False,{'error':type(exc).__name__})
+          # M1 billing truth: public amount must match backend's real
+          # authoritative product table. A GET-only audit never charges or
+          # grants memberships; disabled payment is reported, NOT auto-enabled.
+          try:
+              _cfg=get('https://radar.wmm-hoa.com/pay/config',
+                       json_only=True,max_bytes=8_000)
+              _prices=_cfg.get('products',{})
+              _month=(_prices.get('analysis-month') or {}).get('amount')
+              _annual=(_prices.get('analysis-year') or {}).get('amount')
+              _price_good=(type(_month) is int and type(_annual) is int
+                           and _month==20000 and _annual==200000)
+              record('M1 published payment backend KRW/VAT price parity',
+                     _price_good,{'monthly_krw':_month,'annual_krw':_annual,
+                                  'checkout_enabled':_cfg.get('enabled') is True,
+                                  'live_payment_and_entitlement_verified':False})
+          except Exception as exc:
+              record('M1 published payment backend KRW/VAT price parity',
+                     False,{'error_type':type(exc).__name__})
+          # Anonymous GET status is a security sentinel only. It cannot prove
+          # Netlify Forms POST delivery, D1 writes, role assignment, or billing.
+          class NoAnonymousRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self,req,fp,code,msg,headers,newurl):
+                  return None
+          _gate=urllib.request.build_opener(NoAnonymousRedirect)
+          for _route,_required,_label in (
+              ('/nfform',405,'Anonymous form relay GET refused (POST-only)'),
+              ('/api/req',401,'Anonymous member request GET denied'),
+              ('/mkey',401,'Anonymous member secret GET denied')):
+              try:
+                  _req=urllib.request.Request(
+                      'https://radar.wmm-hoa.com'+_route,
+                      method='GET',headers={'User-Agent':'WMM-no-auth-GET-security-gate/1.0'})
+                  try:
+                      with _gate.open(_req,timeout=12) as _r:
+                          _status=_r.status
+                  except urllib.error.HTTPError as _e:
+                      _status=_e.code
+                  record(_label,_status==_required,{
+                      'http_status':_status,'required':_required,
+                      'no_credentials_or_customer_post':True,
+                      'end_to_end_backend_verified':False})
+              except Exception as exc:
+                  record(_label,False,{'error_type':type(exc).__name__})
           summary_path=os.environ.get('GITHUB_STEP_SUMMARY')
           failed=[x for x in checks if not x['ok']]
           pending=[x for x in checks if isinstance(x.get('detail'),dict) and x['detail'].get('pending')]
