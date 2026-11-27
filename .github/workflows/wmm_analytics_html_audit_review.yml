@@ -1,0 +1,21 @@
+name: WMM GCSME Web Analytics read-only audit (NO DEPLOY)
+on:
+  push:
+    branches:
+      - wmm-webanalytics-readonly-audit-20261127
+    paths:
+      - '.github/workflows/wmm_analytics_html_audit_review.yml'
+      - 'scripts/wmm_analytics_html_audit_review.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public_html_readonly:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inspect publicly served HTML for Cloudflare Web Analytics beacon (no JS execution, no POST)
+        run: python3 scripts/wmm_analytics_html_audit_review.py
