@@ -32,6 +32,26 @@ def iso_date(v):
         except ValueError: pass
     return ""
 
+def public_source_state(name, record):
+    """Public coverage label, not merely whether the provider HTTP call succeeded.
+
+    Preserve raw ingestion status separately. Historical samples are not current
+    opportunities, and bounded US pagination is not comprehensive US coverage.
+    """
+    raw = str(record.get("state") or "UNKNOWN")
+    if raw in ("SUCCESS", "EMPTY_SUCCESS", "PARTIAL"):
+        if (name == "DAPA (Korea)" and
+                record.get("data_freshness") == "HISTORICAL_SAMPLE" and
+                record.get("date_filter_verified") is False and
+                int(record.get("kept") or 0) == 0):
+            return "HISTORICAL_ONLY"
+        if (name == "SAM.gov (US)" and
+                (record.get("coverage_partial") is True or
+                 record.get("coverage") == "BOUNDED_PAGES_NOT_ALL_US_NOTICES")):
+            return "PARTIAL"
+    return raw
+
+
 def build():
     today = NOW.date().isoformat()
     items = (load("feeds/tenders.json").get("items") or [])
@@ -53,7 +73,11 @@ def build():
     src = []
     for k, v in (load("feeds/sources_status.json") or {}).items():
         if not isinstance(v, dict) or v.get("state") == "SKIPPED": continue
-        src.append({"name": k, "state": v.get("state", "UNKNOWN"), "kept": v.get("kept", 0), "new": v.get("new_today", 0)})
+        src.append({"name": k, "state": public_source_state(k, v),
+                    "ingestion_state": v.get("state", "UNKNOWN"),
+                    "coverage": v.get("coverage"),
+                    "data_freshness": v.get("data_freshness"),
+                    "kept": v.get("kept", 0), "new": v.get("new_today", 0)})
     for k, v in (off.get("sources") or {}).items():
         src.append({"name": k.upper(), "state": "SUCCESS" if v.get("ok") else "ERROR", "kept": v.get("n", 0), "new": None})
     for f, nm in (("feeds/econ.json", "World Bank indicators / FX"), ("feeds/sanctions.json", "Sanctions lists")):
