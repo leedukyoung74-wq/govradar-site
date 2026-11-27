@@ -44,7 +44,7 @@ class UKTimeoutFallbackTests(unittest.TestCase):
         self.assertEqual(["10"],second["limit"])
         self.assertIn("updatedTo",first)
         self.assertEqual(first["updatedTo"],second["updatedTo"])
-        self.assertEqual(6,calls[1][1]["max_pages"])
+        self.assertEqual(4,calls[1][1]["max_pages"])
         self.assertEqual(20,calls[1][1]["timeout"])
         self.assertEqual("PARTIAL",FT.classify_state(FM.stat(SOURCE)))
         self.assertIn("partial_48h",FM.stat(SOURCE)["notes"][-1])
@@ -60,11 +60,16 @@ class UKTimeoutFallbackTests(unittest.TestCase):
         st["notes"].append(note)
         return []
 
-    def test_good_primary_source_skips_fallback(self):
+    def test_good_recent_source_still_checks_bounded_older_window(self):
         with patch.object(FM,"_ocds",return_value=[self.example()]) as call:
             result=FM.uk()
         self.assertEqual(1,len(result))
-        self.assertEqual(1,call.call_count)
+        self.assertEqual(2,call.call_count)
+        recent=parse_qs(urlsplit(call.call_args_list[0][0][1]).query)
+        older=parse_qs(urlsplit(call.call_args_list[1][0][1]).query)
+        self.assertEqual(recent["updatedFrom"],older["updatedTo"])
+        self.assertEqual(recent["limit"],["100"])
+        self.assertEqual(older["limit"],["100"])
 
     def test_no_reply_is_not_labeled_success(self):
         with patch.object(FM,"_ocds",side_effect=lambda source,url,mk:self._fail("TimeoutError")):
