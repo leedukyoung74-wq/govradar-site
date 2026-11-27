@@ -92,6 +92,45 @@ def parse_reply(body):
             "items": len(rows), "total": n, "fields": names}
 
 
+# Official data.go.kr published authentication and gateway error names. Return
+# ONLY an allowlisted classification; never echo a raw HTTP error document,
+# redirected URL, submitted key, provider text, arbitrary result code or headers.
+KNOWN_GATEWAY_ERRORS = (
+    "SERVICE_ACCESS_DENIED_ERROR",
+    "SERVICE_KEY_IS_NOT_REGISTERED_ERROR",
+    "SERVICE_KEY_IS_NULL",
+    "PERMISSION_DENIED",
+    "DEADLINE_HAS_EXPIRED_ERROR",
+    "BLACKLIST_IP_ACCESS_ERROR",
+    "LIMITED_NUMBER_OF_SERVICE_REQUESTS_EXCEEDS_ERROR",
+    "LIMITED_NUMBER_OF_SERVICE_REQUESTS_PER_SECOND_EXCEEDS_ERROR",
+    "INVALID_REQUEST_PARAMETER_ERROR",
+    "NO_OPENAPI_SERVICE_ERROR",
+    "HTTP_ERROR",
+    "SERVICETIMEOUT_ERROR",
+    "APPLICATION_ERROR",
+)
+
+
+def classify_http_error(exc):
+    result = {"state": "HTTP_DENIED_OR_ERROR", "http_status": int(exc.code),
+              "provider_error": "UNSPECIFIED_HTTP_ERROR"}
+    try:
+        raw = exc.read(32769)
+    except Exception:
+        return result
+    # A provider may echo an entire request URL in HTML. Never log it.
+    if not isinstance(raw, bytes) or len(raw) > 32768:
+        return result
+    body = raw.decode("utf-8", "replace")
+    for code in KNOWN_GATEWAY_ERRORS:
+        if re.search(r"(?<![A-Z0-9_])" + re.escape(code) + r"(?![A-Z0-9_])",
+                     body, flags=re.I):
+            result["provider_error"] = code
+            break
+    return result
+
+
 def probe(key, opener=None, today=None):
     if not key:
         return {"classification": "NO_APPROVED_KEY", "operations_attempted": 0,
@@ -112,7 +151,7 @@ def probe(key, opener=None, today=None):
                     results[cat] = (parse_reply(raw) if len(raw) <= 450000 else
                                     {"state": "RESPONSE_TOO_LARGE"})
         except urllib.error.HTTPError as exc:
-            results[cat] = {"state": "HTTP_DENIED_OR_ERROR", "http_status": int(exc.code)}
+            results[cat] = classify_http_error(exc)
         except Exception as exc:
             # Do not print the exception: HTTPError and URLError can include
             # a complete URL with the serviceKey query parameter.
