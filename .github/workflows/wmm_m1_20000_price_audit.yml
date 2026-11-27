@@ -46,6 +46,8 @@ jobs:
               for path,num,groups,samples in sorted(rows):
                   print('MATCH',path,'COUNT',num,'TOKENS',repr(groups),'CONTEXT',repr(samples),flush=True)
               print('PRICE_INVENTORY_END',root,flush=True)
+              if root=='live/public' and rows:
+                  raise SystemExit('ERROR: superseded M1 KRW 19,800/198,000 still present in public HTML')
           PY
       - name: Confirm no publish or client operations
         if: always()
