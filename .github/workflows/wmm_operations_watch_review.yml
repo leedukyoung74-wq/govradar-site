@@ -4,6 +4,8 @@ on:
     paths:
       - '.github/workflows/wmm_operations_watch.yml'
       - '.github/workflows/wmm_operations_watch_review.yml'
+      - 'ops/wmm_public_source_truth_report.py'
+      - 'ops/tests/test_wmm_public_source_truth_report.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -57,3 +59,5 @@ jobs:
               assert marker in code, 'missing strict health marker: ' + marker
           print('PASS: watcher inline Python compiles; GOV RADAR freshness checks are present; no deployment')
           PY
+      - name: Verify manual-snapshot/official-source classification offline (NO DEPLOY)
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_public_source_truth_report.py' -v
