@@ -1,0 +1,60 @@
+name: WMM M1 payment server prices (read-only GET + synthetic tests)
+on:
+  pull_request:
+    branches: [live]
+    paths:
+      - 'functions/pay/**'
+      - 'tests/pay-m1-server-sync.test.cjs'
+      - '.github/workflows/wmm_live_m1_payment_server_truth.yml'
+  push:
+    branches: [live]
+    paths:
+      - 'functions/pay/**'
+      - 'tests/pay-m1-server-sync.test.cjs'
+      - '.github/workflows/wmm_live_m1_payment_server_truth.yml'
+permissions:
+  contents: read
+jobs:
+  safe_price_truth:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Synthetic in-memory verification; no real payment POST
+        run: node --test tests/pay-m1-server-sync.test.cjs
+      - name: Actual public GET-only /pay/config amounts after live merge
+        if: github.event_name == 'push' && github.ref == 'refs/heads/live'
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request,time
+          url='https://radar.wmm-hoa.com/pay/config'
+          for attempt in range(1,6):
+              try:
+                  req=urllib.request.Request(url,method='GET',headers={
+                      'User-Agent':'WMM-readonly-public-price-audit/1.0'})
+                  with urllib.request.urlopen(req,timeout=12) as res:
+                      obj=json.load(res)
+                      monthly=int(obj['products']['analysis-month']['amount'])
+                      annual=int(obj['products']['analysis-year']['amount'])
+                      status=res.status
+                      enabled=bool(obj.get('enabled'))
+                  print('M1_PUBLIC_SERVER_PRICE_GET',attempt,status,
+                        'monthly',monthly,'annual',annual,
+                        'payment_enabled',enabled,flush=True)
+                  if status==200 and monthly==20000 and annual==200000:
+                      print('PASS: server product config equals public M1 prices (VAT included)')
+                      print('NOT VERIFIED: actual checkout, invoice, Netlify receipt or entitlement')
+                      break
+              except (ValueError,KeyError,OSError) as exc:
+                  print('M1_PUBLIC_SERVER_PRICE_GET',attempt,
+                        'error_type',type(exc).__name__,flush=True)
+              if attempt==5:
+                  raise SystemExit('FAIL: published payment backend prices not verified')
+              time.sleep(8)
+          PY
+      - name: Preserve payment safety boundaries
+        if: always()
+        run: |
+          echo "GET-only to production, no payment approval, charge, API keys or test customer POST." >> "$GITHUB_STEP_SUMMARY"
