@@ -71,6 +71,21 @@ class RecoveryTests(unittest.TestCase):
   self.assertNotIn("if [ \"$TRIGGER\" = 'issue_comment' ] || [ \"$TRIGGER\" = 'workflow_dispatch' ]; then",workflow)
   self.assertIn("python3 control/ops/wmm_official_recovery_due.py --data data_branch\n",workflow)
 
+ def test_independent_nws_cisa_recovery_after_usgs_failure(self):
+  workflow=(Path(__file__).resolve().parents[2]/'.github'/'workflows'/
+            'wmm_official_gap_recovery.yml').read_text(encoding='utf-8')
+  block=workflow.split('  recover_nws_cisa:\n',1)[1]
+  self.assertIn('needs: [due, recover_usgs]',block)
+  self.assertIn("always() && needs.due.result == 'success'",block)
+  self.assertIn("needs.due.outputs.nws_cisa == 'true'",block)
+  for outcome in ('success','skipped','failure'):
+   self.assertIn("needs.recover_usgs.result == '"+outcome+"'",block)
+  self.assertNotIn("needs.recover_usgs.result == 'cancelled'",block)
+  self.assertIn('wmm_nws_cisa_official.yml@src',block)
+  self.assertIn('dry_run:',block)
+  self.assertEqual(workflow.count("    - cron:"),1)
+  self.assertIn("cron: '7,37 * * * *'",workflow)
+
  def test_stale_only_gate_does_not_mutate(self):
   self.fill(5, 5, 5)
   before=[(self.root/'hz'/n).read_bytes() for n in

@@ -116,10 +116,15 @@ jobs:
       dry_run: ${{ github.event_name == 'workflow_dispatch' && !inputs.publish }}
   recover_nws_cisa:
     needs: [due, recover_usgs]
+    # Recovery must wait for USGS completion to prevent concurrent data writes,
+    # but a failed USGS does not make independent NWS/CISA source calls invalid.
+    # Cancelled upstream remains blocked.
     if: >-
       always() && needs.due.result == 'success' &&
       needs.due.outputs.nws_cisa == 'true' &&
-      (needs.recover_usgs.result == 'success' || needs.recover_usgs.result == 'skipped')
+      (needs.recover_usgs.result == 'success' ||
+       needs.recover_usgs.result == 'skipped' ||
+       needs.recover_usgs.result == 'failure')
     permissions:
       contents: write
     uses: leedukyoung74-wq/govradar-site/.github/workflows/wmm_nws_cisa_official.yml@src
