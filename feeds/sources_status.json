@@ -4,11 +4,11 @@
   "failed": 0,
   "raw": 3000,
   "filtered": {
-   "closed": 224,
-   "award-notice": 2131,
-   "individual-consultant": 249,
-   "no-country": 67,
-   "no-deadline": 12
+   "award-notice": 2136,
+   "individual-consultant": 248,
+   "closed": 226,
+   "no-deadline": 13,
+   "no-country": 61
   },
   "notes": [],
   "state": "SUCCESS",
@@ -19,23 +19,23 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 317,
+  "in": 316,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 317,
-  "checked": "2026-11-27T10:16Z",
-  "new_today": 20,
-  "last_success": "2026-11-27T10:16Z"
+  "kept": 316,
+  "checked": "2026-11-28T00:24Z",
+  "new_today": 23,
+  "last_success": "2026-11-28T00:24Z"
  },
  "EU TED": {
   "requests": 13,
   "failed": 0,
-  "raw": 3190,
+  "raw": 3177,
   "filtered": {
-   "below-size": 1481,
-   "closed": 90,
-   "country-cap": 1020
+   "below-size": 1470,
+   "closed": 23,
+   "country-cap": 1086
   },
   "notes": [],
   "state": "SUCCESS",
@@ -46,25 +46,26 @@
   "dropped_cancelled": 0,
   "verify_lookups": 0,
   "carried_from_yesterday": 0,
-  "in": 599,
+  "in": 598,
   "rejected": {},
   "duplicates": 4,
   "flagged_similar": 0,
-  "kept": 595,
-  "checked": "2026-11-27T10:16Z",
-  "new_today": 115,
-  "last_success": "2026-11-27T10:16Z"
+  "kept": 594,
+  "checked": "2026-11-28T00:24Z",
+  "new_today": 79,
+  "last_success": "2026-11-28T00:24Z"
  },
  "UK Find a Tender": {
   "requests": 12,
   "failed": 2,
   "raw": 1200,
   "filtered": {
-   "not-active": 993,
-   "below-size": 128,
-   "no-deadline": 8,
-   "same-notice-update": 5,
-   "source-cap": 26
+   "not-active": 965,
+   "below-size": 141,
+   "no-deadline": 4,
+   "closed": 11,
+   "same-notice-update": 4,
+   "source-cap": 35
   },
   "notes": [
    "source_page_cap_reached: OCDS partial results",
@@ -73,67 +74,69 @@
   ],
   "coverage": "RECENT_48H_PLUS_ONE_OF_FOUR_ROTATING_19D_BACKFILL_SHARDS",
   "coverage_partial": true,
-  "backfill_shard_index": 4,
+  "backfill_shard_index": 1,
   "backfill_shard_total": 4,
-  "backfill_window_start": "2026-11-20T16:16:52Z",
-  "backfill_window_end": "2026-11-25T10:16:52Z",
+  "backfill_window_start": "2026-11-07T00:24:44Z",
+  "backfill_window_end": "2026-11-11T18:24:44Z",
   "state": "PARTIAL",
-  "carried_verified": 10,
-  "carried_stale": 56,
-  "dropped_unverified": 0,
-  "dropped_closed": 1,
+  "carried_verified": 12,
+  "carried_stale": 47,
+  "dropped_unverified": 27,
+  "dropped_closed": 2,
   "dropped_cancelled": 0,
-  "verify_lookups": 25,
-  "carried_from_yesterday": 66,
-  "in": 106,
+  "verify_lookups": 20,
+  "carried_from_yesterday": 59,
+  "in": 99,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 106,
-  "checked": "2026-11-27T10:16Z",
-  "new_today": 18,
-  "last_success": "2026-11-27T10:16Z"
+  "kept": 99,
+  "checked": "2026-11-28T00:24Z",
+  "new_today": 26,
+  "last_success": "2026-11-28T00:24Z"
  },
  "UK Contracts Finder": {
   "requests": 2,
   "failed": 0,
-  "raw": 131,
+  "raw": 136,
   "filtered": {
-   "below-size": 67,
-   "closed": 53,
+   "below-size": 65,
+   "closed": 59,
    "same-notice-update": 1
   },
   "notes": [],
   "state": "SUCCESS",
   "carried_verified": 0,
-  "carried_stale": 2,
+  "carried_stale": 3,
   "dropped_unverified": 0,
-  "dropped_closed": 0,
+  "dropped_closed": 1,
   "dropped_cancelled": 0,
   "verify_lookups": 0,
-  "carried_from_yesterday": 2,
-  "in": 12,
-  "rejected": {},
+  "carried_from_yesterday": 3,
+  "in": 14,
+  "rejected": {
+   "far-deadline": 1
+  },
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 12,
-  "checked": "2026-11-27T10:16Z",
-  "new_today": 0,
-  "last_success": "2026-11-27T10:16Z"
+  "kept": 13,
+  "checked": "2026-11-28T00:24Z",
+  "new_today": 2,
+  "last_success": "2026-11-28T00:24Z"
  },
  "Prozorro (Ukraine)": {
   "requests": 425,
   "failed": 0,
   "raw": 25000,
   "filtered": {
-   "below-size": 976,
-   "not-checked-yet": 265
+   "below-size": 740,
+   "not-checked-yet": 938
   },
   "notes": [],
-  "candidates": 1277,
+  "candidates": 1714,
   "checked_now": 400,
-  "rechecked_changed": 111,
-  "unchecked": 265,
+  "rechecked_changed": 379,
+  "unchecked": 938,
   "state": "SUCCESS",
   "carried_verified": 0,
   "carried_stale": 0,
@@ -147,9 +150,9 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 36,
-  "checked": "2026-11-27T10:16Z",
-  "new_today": 34,
-  "last_success": "2026-11-27T10:16Z"
+  "checked": "2026-11-28T00:24Z",
+  "new_today": 13,
+  "last_success": "2026-11-28T00:24Z"
  },
  "DAPA (Korea)": {
   "requests": 2,
@@ -184,22 +187,21 @@
   "duplicates": 0,
   "flagged_similar": 0,
   "kept": 0,
-  "checked": "2026-11-27T10:16Z",
+  "checked": "2026-11-28T00:24Z",
   "new_today": 0,
-  "last_success": "2026-11-27T10:16Z"
+  "last_success": "2026-11-28T00:24Z"
  },
  "SAM.gov (US)": {
   "requests": 3,
   "failed": 0,
   "raw": 3000,
   "filtered": {
-   "closed": 2,
-   "source-cap": 2918
+   "source-cap": 2920
   },
   "notes": [
    "upstream_pagination_not_exhaustive; not an all-US count"
   ],
-  "upstream_total": 7194,
+  "upstream_total": 5846,
   "pages_scanned": 3,
   "rows_scanned": 3000,
   "selection_cap": 80,
@@ -209,19 +211,19 @@
   "coverage_partial": true,
   "state": "PARTIAL",
   "carried_verified": 0,
-  "carried_stale": 0,
+  "carried_stale": 49,
   "dropped_unverified": 0,
-  "dropped_closed": 1,
+  "dropped_closed": 31,
   "dropped_cancelled": 0,
   "verify_lookups": 0,
-  "carried_from_yesterday": 0,
-  "in": 80,
+  "carried_from_yesterday": 49,
+  "in": 129,
   "rejected": {},
   "duplicates": 0,
   "flagged_similar": 0,
-  "kept": 80,
-  "checked": "2026-11-27T10:16Z",
-  "new_today": 51,
-  "last_success": "2026-11-27T10:16Z"
+  "kept": 129,
+  "checked": "2026-11-28T00:24Z",
+  "new_today": 80,
+  "last_success": "2026-11-28T00:24Z"
  }
 }
