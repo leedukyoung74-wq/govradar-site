@@ -37,4 +37,14 @@ assert.match(builder,/src[^\n]*customer-support\.html|customer-support\.html/);
 assert.ok(builder.includes('href="/support/?lang={L}"'));
 assert.match(html,/This page does not issue support tickets/);
 assert.match(html,/لا يتم إنشاء تذكرة تلقائيًا/);
+const extraMatch=html.match(/const EXTRA_FAQ=(\{[\s\S]*\});\nfor\(const lang of valid\)/);
+assert.ok(extraMatch,"eight extra localized customer questions are present");
+const extra=JSON.parse(extraMatch[1]);
+assert.deepEqual(Object.keys(extra).sort(),languages.slice().sort());
+for (const lang of languages) {
+  assert.equal(extra[lang].length,8,lang+": expected 8 new customer solutions");
+  for (const [question,answer] of extra[lang]) {
+    assert.ok(question.length>=8 && answer.length>=30,"not actionable enough "+lang);
+  }
+}
 console.log('PASS: seven locale customer help, safe client search, explicit non-ticket status, source build and shared footer link (READ ONLY)');
