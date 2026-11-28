@@ -24,6 +24,7 @@ def page(lang,*,extra="",form="/nfform?next=/ko/thanks/"):
         f'<span>{P.PERIODIC[lang]}</span>'
         f'<p>{P.COUNTRY[lang]}</p>'
         f'<small>{P.COPY[lang]}</small>'
+        f'<p>{P.MONTHLY_LABEL[lang]}</p>'
         '<b id="kp-t">—</b><span id="kp-u"></span>'
         f'<form method="POST" action="{form}"></form>{extra}</main></body></html>'
     )
@@ -89,6 +90,42 @@ class SevenHomeCandidateTests(unittest.TestCase):
             self.assertEqual(set(r["blocked_locales"]),{"ar","ko"})
             self.assertFalse(r["checks"]["ar"]["check_results"]["html_direction"])
             self.assertFalse(r["checks"]["ko"]["check_results"]["research_disclosure"])
+
+    def test_obsolete_price_variants_block_all_seven_locales(self):
+        variants={"ko":"19,800", "en":"₩19,800", "es":"₩19.800",
+                  "fr":"19 800 ₩", "ar":"19,800", "vi":"₩19.800",
+                  "id":"₩19.800"}
+        with tempfile.TemporaryDirectory() as temp:
+            base=Path(temp);src=base/"candidate";live=base/"live";out=base/"out"
+            self.fixtures(src,live)
+            for lang,bad in variants.items():
+                current=(src/lang/"index.html").read_text(encoding="utf-8")
+                (src/lang/"index.html").write_text(current+"<p>"+bad+"</p>",encoding="utf-8")
+            r=P.build(src,live,out)
+            self.assertEqual(set(r["blocked_locales"]),set(P.LANGS))
+            for lang in P.LANGS:
+                self.assertFalse(r["checks"][lang]["check_results"]["obsolete_monthly_krw_19800_absent"])
+                self.assertTrue(r["checks"][lang]["check_results"]["canonical_monthly_krw_20000"])
+
+    def test_missing_canonical_price_blocks_even_without_legacy_price(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base=Path(temp);src=base/"candidate";live=base/"live";out=base/"out"
+            self.fixtures(src,live)
+            (src/"en"/"index.html").write_text(
+                page("en").replace(P.MONTHLY_LABEL["en"],""),encoding="utf-8")
+            r=P.build(src,live,out)
+            self.assertIn("en",r["blocked_locales"])
+            self.assertFalse(r["checks"]["en"]["check_results"]["canonical_monthly_krw_20000"])
+
+    def test_live_old_price_is_reported_not_counted_as_source_approval(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base=Path(temp);src=base/"candidate";live=base/"live";out=base/"out"
+            self.fixtures(src,live)
+            (live/"ko"/"index.html").write_text(
+                page("ko")+"<p>월 19,800원</p>",encoding="utf-8")
+            r=P.build(src,live,out)
+            self.assertEqual(r["state"],"OWNER_RELEASE_REVIEW_REQUIRED")
+            self.assertEqual(r["checks"]["ko"]["existing_live_obsolete_19800_mentions"],1)
 
     def test_release_workflow_does_not_deploy_or_create_cron(self):
         s=(ROOT/".github"/"workflows"/"wmm_seven_home_release_candidate.yml").read_text()
