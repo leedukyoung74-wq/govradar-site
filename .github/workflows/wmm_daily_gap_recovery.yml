@@ -1,0 +1,91 @@
+name: WMM Daily missed feed recovery (KST, source gap only)
+# No new cron. Existing hourly watch completion is the best-effort trigger.
+# No forced runs; read-only gate, 2 attempts/day and 3h cooldown.
+on:
+  workflow_run:
+    workflows:
+      - WMM GOV RADAR hourly public operations watch
+    types: [completed]
+    branches: [main]
+  issue_comment:
+    types: [created]
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_daily_gap_recovery.yml'
+      - '.github/workflows/schedule.yml'
+      - 'ops/wmm_daily_gap_due.py'
+      - 'ops/tests/test_wmm_daily_gap_due.py'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: wmm-daily-gap-recovery-${{ github.event_name == 'pull_request' && 'review' || 'live' }}
+  cancel-in-progress: false
+jobs:
+  review_offline:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Offline bounded daily failover test, no real provider call
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_daily_gap_due.py' -v
+      - name: Explicitly preserve public site, secrets, and payments
+        run: echo 'NO PUBLISH; NO API KEYS; NO CUSTOMER POST; NO NEW CRON'
+  due:
+    if: >-
+      github.event_name == 'workflow_run' ||
+      (github.event_name == 'issue_comment' &&
+       github.event.issue.number == 80 &&
+       !github.event.issue.pull_request &&
+       github.event.issue.state == 'open' &&
+       github.event.comment.user.login == 'leedukyoung74-wq' &&
+       github.event.comment.author_association == 'OWNER' &&
+       github.event.comment.body == '/govradar-refresh-daily-if-missed')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      due: ${{ steps.status.outputs.due }}
+    steps:
+      - name: Trusted main preflight
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: control
+          persist-credentials: false
+      - name: Public data branch; only two freshness manifests
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data_branch
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /feeds/tenders.json
+            /feeds/today.json
+      - name: Verify date/backoff/cap semantics before any live ingestion
+        run: python3 -m unittest discover -s control/ops/tests -p 'test_wmm_daily_gap_due.py' -v
+      - name: Fail-closed KST publication and GH run cooldown check
+        id: status
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 control/ops/wmm_daily_gap_due.py --mode fallback --data data_branch
+  refresh:
+    needs: due
+    if: needs.due.result == 'success' && needs.due.outputs.due == 'true'
+    permissions:
+      contents: write
+    uses: leedukyoung74-wq/govradar-site/.github/workflows/feeds.yml@src
+    with:
+      task: daily
+      code_ref: src
+      dry_run: false
+    secrets:
+      DAPA_KEY: ${{ secrets.DAPA_KEY }}
+      SAM_KEY: ${{ secrets.SAM_KEY }}
