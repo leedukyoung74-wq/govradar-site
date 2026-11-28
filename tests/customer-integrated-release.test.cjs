@@ -27,6 +27,17 @@ for(const l of langs){
 }
 const support=read("public/support/index.html");
 assert.ok(support.includes('id="faqs"'));
+const extraMatch=support.match(/const EXTRA_FAQ=(\{[\s\S]*\});\nfor\(const lang of valid\)/);
+assert.ok(extraMatch,"eight extra localized customer questions are present");
+const extra=JSON.parse(extraMatch[1]);
+assert.deepEqual(Object.keys(extra).sort(),langs.slice().sort());
+for (const lang of langs) {
+  assert.equal(extra[lang].length,8,lang+": expected 8 new customer solutions");
+  for (const [question,answer] of extra[lang]) {
+    assert.ok(question.length>=8 && answer.length>=30,"not actionable enough "+lang);
+  }
+}
+
 assert.ok(support.includes('mailto:73036396@naver.com'));
 assert.ok(support.includes("does not issue support tickets"));
 assert.ok(!/<form\b/i.test(support));
