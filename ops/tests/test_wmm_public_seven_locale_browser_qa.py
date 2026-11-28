@@ -62,8 +62,7 @@ class PublicMobileBrowserPolicyTests(unittest.TestCase):
         self.assertEqual(y["copy_review"],"PENDING_NOT_DEPLOYED")
 
     def test_no_paid_checkouts_or_schedule_created(self):
-        wf=(ROOT/".github"/"workflows"/"wmm_seven_locale_mobile_browser_qa.yml")
-        .read_text(encoding="utf-8")
+        wf=(ROOT/".github"/"workflows"/"wmm_seven_locale_mobile_browser_qa.yml").read_text(encoding="utf-8")
         self.assertIn("workflow_dispatch:",wf)
         self.assertIn("branches: [main]",wf)
         self.assertNotIn("  schedule:",wf)
