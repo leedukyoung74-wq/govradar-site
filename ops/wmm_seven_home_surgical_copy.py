@@ -95,6 +95,7 @@ def patch(locale,src,live):
         "country_kpi_label_replaced":True,
         "research_disclaimer_added":True,
         "forms_byte_identical":True,
+        "source_generated_form_changes_intentionally_excluded":FORM.findall(src)!=FORM.findall(live),
         "scripts_byte_identical":True,
         "static_resources_byte_identical":True,
         "original_numeric_kpis_preserved":(
