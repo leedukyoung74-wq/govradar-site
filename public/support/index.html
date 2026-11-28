@@ -133,6 +133,247 @@ id:{title:"Bantuan pelanggan dan pertanyaan umum",intro:"Cari jawaban WMM dan GO
 ]}
 };
 const valid=['ko','en','es','fr','ar','vi','id'];
+const EXTRA_FAQ={
+ "ko": [
+  [
+   "무료로 확인할 수 있는 정보는?",
+   "무료 회원은 국가 개요와 상황판, 공고 일부를 볼 수 있습니다. 전체 목록·심화 분석은 해당 상품의 실제 이용 가능 여부와 권한을 확인하세요."
+  ],
+  [
+   "관심 국가 알림 이메일이 안 옵니다.",
+   "스팸함, 가입 이메일, 국가 설정 및 실제 회원 권한을 확인한 뒤 WMM 고객지원으로 연락하세요. 자동 알림이 정상 발송됐다고 가정하지 마세요."
+  ],
+  [
+   "해외 바이어 연결이나 입찰 수주가 보장되나요?",
+   "아닙니다. 현지 파트너 확인·자격 심사·계약 체결은 별도 절차이며 수주·투자·매출을 보장하지 않습니다."
+  ],
+  [
+   "나라장터·SAM.gov 공고가 없거나 다르게 보이면?",
+   "공식 조달 포털의 공고번호·원문·게시일·마감일을 직접 확인하세요. WMM 수집이 늦거나 일부 공고가 누락될 수 있으므로 원문 링크를 보내 오류를 신고할 수 있습니다."
+  ],
+  [
+   "제재 또는 제한 국가의 사업에 참여할 수 있나요?",
+   "국가별 제재·수출통제·거래 제한을 관계 당국 원문과 전문가에게 확인하세요. 이 사이트의 정보 제공이 거래 가능성이나 법률상 적격성을 보장하지 않습니다."
+  ],
+  [
+   "휴대전화에서 검색·신청 화면이 이상합니다.",
+   "페이지 주소, 사용 언어, 기기·브라우저, 오류 발생 시각과 재현 순서를 알려 주세요. 비밀번호·인증번호가 보이는 화면은 공유하지 마세요."
+  ],
+  [
+   "개인정보를 삭제하거나 수신 동의를 철회하려면?",
+   "개인정보 처리방침을 확인한 뒤 계정 이메일과 삭제·철회 대상 서비스를 WMM 고객지원에 알려 주세요. 본인 확인 후 담당자가 처리 여부를 안내하며 이 FAQ에서는 직접 삭제하지 않습니다."
+  ],
+  [
+   "가짜 결제 링크나 사칭 연락을 받았습니다.",
+   "요청받은 링크에서 송금하지 말고 WMM 공식 도메인과 발행된 견적서를 확인하세요. 비밀번호·OTP·카드 전체번호를 제공하지 말고 관련 URL만 고객지원에 신고하세요."
+  ]
+ ],
+ "en": [
+  [
+   "What information is free?",
+   "Free access covers country overviews, situation pages and a limited preview. Check actual account permissions and service readiness before expecting full notices or analysis."
+  ],
+  [
+   "I am not receiving country alert emails.",
+   "Check spam, registered address, country preferences and verified membership access. Ask WMM to check delivery; do not assume the alert job has run."
+  ],
+  [
+   "Are buyer introductions, contracts or tenders guaranteed?",
+   "No. Partner verification, bid eligibility, contracts, investment and sales require separate due diligence and human agreement. Outcomes are never guaranteed."
+  ],
+  [
+   "I cannot find a tender in KONEPS or SAM.gov.",
+   "Verify notice identifiers, source links, publication and closing dates on the official procurement portals. WMM may lag or omit some records; report the source URL for review."
+  ],
+  [
+   "Can my company trade with sanctioned jurisdictions?",
+   "Check current sanctions, export controls and licensing rules with competent authorities and counsel. An informational listing is not legal clearance to transact."
+  ],
+  [
+   "The page is broken on my phone.",
+   "Send the URL, display language, device/browser, approximate time and reproduction steps. Redact passwords, access tokens and personal details in screenshots."
+  ],
+  [
+   "How can I delete data or withdraw marketing consent?",
+   "Review the privacy policy and contact WMM with the relevant account email and requested scope. Identity verification and staff action may be needed; this FAQ cannot delete records."
+  ],
+  [
+   "I received a suspicious payment link or message.",
+   "Do not pay or share OTPs and full card details. Verify the published domain and signed quote directly, and report the suspicious URL to WMM."
+  ]
+ ],
+ "es": [
+  [
+   "¿Qué información es gratuita?",
+   "El acceso gratuito incluye resúmenes por país y una vista parcial. Compruebe los permisos reales antes de esperar análisis completos."
+  ],
+  [
+   "No recibo alertas por correo.",
+   "Revise spam, cuenta, países seleccionados y permiso de miembro. Pida comprobar la entrega; no presuponga que el sistema de avisos está activo."
+  ],
+  [
+   "¿Se garantizan compradores o contratos?",
+   "No. La verificación de socios, los requisitos de licitación y los acuerdos son procesos separados. No se garantiza una adjudicación o inversión."
+  ],
+  [
+   "No encuentro un aviso en KONEPS o SAM.gov.",
+   "Compruebe identificador, fecha y enlace en el portal oficial. WMM puede tener retrasos u omisiones; comunique la URL original."
+  ],
+  [
+   "¿Se permite operar en países sancionados?",
+   "Compruebe sanciones, controles de exportación y licencias con autoridades y expertos. La información no autoriza operaciones."
+  ],
+  [
+   "La página falla en el móvil.",
+   "Envíe URL, idioma, dispositivo, navegador, hora y pasos del error. Oculte contraseñas y datos personales."
+  ],
+  [
+   "¿Cómo elimino mis datos o retiro el consentimiento?",
+   "Consulte la política de privacidad y escriba a WMM con el correo de cuenta y el alcance. Se puede requerir verificación de identidad."
+  ],
+  [
+   "Recibí un enlace de pago sospechoso.",
+   "No pague ni comparta códigos o datos completos de tarjeta. Verifique el dominio oficial y reporte la URL."
+  ]
+ ],
+ "fr": [
+  [
+   "Quelles informations sont gratuites ?",
+   "L'accès gratuit couvre les résumés pays, les tableaux de situation et quelques annonces. Vérifiez vos droits avant de compter sur les analyses complètes."
+  ],
+  [
+   "Je ne reçois pas les alertes par courriel.",
+   "Vérifiez les indésirables, le compte, les pays suivis et les droits effectifs. Demandez une vérification de l'envoi; ne présumez pas qu'il fonctionne."
+  ],
+  [
+   "Les partenaires ou contrats sont-ils garantis ?",
+   "Non. Vérification des partenaires, éligibilité et contrats nécessitent des contrôles indépendants. Aucun marché ni investissement n'est garanti."
+  ],
+  [
+   "Je ne trouve pas un appel d'offres KONEPS/SAM.gov.",
+   "Contrôlez l'identifiant, les dates et l'avis sur le portail officiel. Signalez l'URL si WMM accuse un retard ou une omission."
+  ],
+  [
+   "Peut-on commercer avec des pays sanctionnés ?",
+   "Vérifiez les sanctions, contrôles à l'exportation et licences auprès des autorités et d'un spécialiste. L'information ne vaut pas autorisation."
+  ],
+  [
+   "La page fonctionne mal sur mobile.",
+   "Indiquez URL, langue, appareil, navigateur, heure et étapes du problème. Masquez toute information sensible."
+  ],
+  [
+   "Comment supprimer mes données ou retirer le consentement ?",
+   "Consultez la politique de confidentialité et contactez WMM avec l'adresse de compte et la demande précise. Une vérification d'identité peut être nécessaire."
+  ],
+  [
+   "J'ai reçu un lien de paiement suspect.",
+   "Ne payez pas et ne partagez aucun code ou numéro de carte complet. Vérifiez le domaine officiel et signalez le lien."
+  ]
+ ],
+ "ar": [
+  [
+   "ما المعلومات المتاحة مجانًا؟",
+   "تشمل الخدمة المجانية ملخصات الدول ولوحات المتابعة وبعض الإعلانات. تحقق من صلاحيات الحساب قبل الاعتماد على التحليل الكامل."
+  ],
+  [
+   "لا تصلني رسائل التنبيه.",
+   "افحص البريد غير المرغوب فيه وعنوان الحساب والدول المختارة وصلاحية العضوية. اطلب التحقق من التسليم ولا تفترض عمل التنبيهات تلقائيًا."
+  ],
+  [
+   "هل تضمنون الشركاء أو الفوز بالمناقصات؟",
+   "لا. التحقق من الشركاء وأهلية التقديم والعقود والاستثمار إجراءات مستقلة، ولا يُضمن الفوز أو العائد."
+  ],
+  [
+   "لا أجد إعلانًا في KONEPS أو SAM.gov.",
+   "تحقق من رقم الإعلان والتواريخ والرابط في البوابة الرسمية. قد يتأخر الجمع أو تنقص بعض السجلات؛ أرسل الرابط الأصلي للتصحيح."
+  ],
+  [
+   "هل يمكن التعامل مع دول خاضعة للعقوبات؟",
+   "تحقق من العقوبات وضوابط التصدير والتراخيص لدى الجهات الرسمية والمختصين. نشر المعلومة لا يعني السماح بالتعامل."
+  ],
+  [
+   "الصفحة لا تعمل جيدًا على الهاتف.",
+   "أرسل رابط الصفحة واللغة والجهاز والمتصفح والوقت وخطوات تكرار المشكلة دون كشف كلمات المرور أو بيانات شخصية."
+  ],
+  [
+   "كيف أحذف بياناتي أو ألغي موافقة التسويق؟",
+   "راجع سياسة الخصوصية واتصل بـ WMM مع بريد الحساب ونطاق الطلب. قد تتطلب المعالجة التحقق من الهوية."
+  ],
+  [
+   "وصلني رابط دفع أو رسالة مشبوهة.",
+   "لا تدفع أو تشارك رموز التحقق أو بيانات البطاقة الكاملة. تحقق من الموقع الرسمي وأبلغ عن الرابط المشبوه."
+  ]
+ ],
+ "vi": [
+  [
+   "Những thông tin nào miễn phí?",
+   "Tài khoản miễn phí xem tổng quan quốc gia, bảng tình hình và một phần thông báo. Hãy xác nhận quyền truy cập trước khi dùng danh sách đầy đủ."
+  ],
+  [
+   "Tôi không nhận được email cảnh báo.",
+   "Kiểm tra thư rác, email đăng ký, quốc gia quan tâm và quyền hội viên. Liên hệ WMM để kiểm tra gửi thư; đừng mặc định thông báo đã hoạt động."
+  ],
+  [
+   "WMM có bảo đảm khách mua hoặc trúng thầu không?",
+   "Không. Việc xác minh đối tác, điều kiện dự thầu và ký hợp đồng cần thẩm định riêng. Không bảo đảm hợp đồng, đầu tư hoặc doanh thu."
+  ],
+  [
+   "Không thấy thông báo KONEPS hoặc SAM.gov.",
+   "Đối chiếu mã, ngày đăng và hạn chót trên cổng mua sắm chính thức. Dữ liệu WMM có thể trễ hoặc thiếu; hãy gửi URL nguồn."
+  ],
+  [
+   "Có được kinh doanh với quốc gia bị trừng phạt không?",
+   "Kiểm tra biện pháp trừng phạt, kiểm soát xuất khẩu và giấy phép với cơ quan chính thức và chuyên gia. Thông tin trên trang không phải giấy phép giao dịch."
+  ],
+  [
+   "Trang web bị lỗi trên điện thoại.",
+   "Gửi URL, ngôn ngữ, thiết bị, trình duyệt, thời gian và cách tái hiện; che thông tin đăng nhập và dữ liệu cá nhân."
+  ],
+  [
+   "Làm sao xóa dữ liệu hay rút đồng ý quảng cáo?",
+   "Xem chính sách riêng tư và liên hệ WMM với email tài khoản cùng phạm vi yêu cầu. Có thể cần xác thực danh tính."
+  ],
+  [
+   "Tôi nhận được liên kết thanh toán đáng ngờ.",
+   "Không thanh toán hoặc chia sẻ OTP, số thẻ đầy đủ. Xác minh tên miền chính thức và báo cáo URL đáng ngờ."
+  ]
+ ],
+ "id": [
+  [
+   "Informasi apa yang gratis?",
+   "Akses gratis mencakup ringkasan negara, papan situasi dan cuplikan pengumuman. Periksa izin akun sebelum mengandalkan analisis penuh."
+  ],
+  [
+   "Email peringatan negara tidak masuk.",
+   "Periksa folder spam, alamat akun, pilihan negara dan hak anggota. Minta WMM memeriksa pengiriman; jangan anggap notifikasi otomatis sudah berjalan."
+  ],
+  [
+   "Apakah pembeli, kontrak atau tender dijamin?",
+   "Tidak. Verifikasi mitra, kelayakan tender dan kontrak perlu pemeriksaan terpisah. Kemenangan, investasi dan penjualan tidak dijamin."
+  ],
+  [
+   "Saya tidak menemukan tender KONEPS atau SAM.gov.",
+   "Periksa nomor, tanggal dan tautan di portal pengadaan resmi. Data WMM dapat terlambat atau tidak lengkap; laporkan URL sumber."
+  ],
+  [
+   "Bolehkah berbisnis dengan wilayah terkena sanksi?",
+   "Periksa sanksi, kontrol ekspor dan izin pada pihak berwenang dan penasihat. Daftar informasi bukan izin transaksi."
+  ],
+  [
+   "Halaman bermasalah di ponsel.",
+   "Kirim URL, bahasa, perangkat, browser, waktu dan langkah mengulang kesalahan. Sembunyikan kata sandi dan data pribadi."
+  ],
+  [
+   "Bagaimana menghapus data atau mencabut persetujuan pemasaran?",
+   "Tinjau kebijakan privasi lalu hubungi WMM dengan email akun dan lingkup permintaan. Verifikasi identitas mungkin diperlukan."
+  ],
+  [
+   "Saya menerima tautan pembayaran mencurigakan.",
+   "Jangan membayar atau membagikan OTP dan nomor kartu lengkap. Verifikasi domain resmi dan laporkan URL tersebut."
+  ]
+ ]
+};
+for(const lang of valid){if(EXTRA_FAQ[lang]?.length!==8)throw new Error('FAQ locale incomplete');COPY[lang].faqs.push(...EXTRA_FAQ[lang]);}
 const params=new URLSearchParams(location.search);
 let current=params.get('lang')||((navigator.language||'ko').slice(0,2));
 if(!valid.includes(current))current='en';
