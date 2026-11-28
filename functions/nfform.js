@@ -4,21 +4,6 @@ const NETLIFY_FORMS_ENDPOINT = "https://wmm-govradar.netlify.app/";
 const FALLBACK = "/ko/thanks/";
 const SAFE_CONFIRMATION = /^\/(?:ko|en|es|fr|ar|vi|id)\/(?:thanks|consortium\/thanks)\/$/;
 const MAX_FORM_BYTES = 256 * 1024;
-
- // GET is a non-invasive health probe; do NOT accept or simulate any submission.
- // A 405 proves the Pages route is mounted, not Netlify inbox persistence.
- export function onRequestGet() {
-   return new Response("POST required for customer forms", {
-     status: 405,
-     headers: { "Allow": "POST", "Cache-Control": "no-store",
-                "Content-Type": "text/plain; charset=utf-8" }
-   });
- }
- export function onRequestHead() {
-   return new Response(null, {
-     status: 405, headers: { "Allow": "POST", "Cache-Control": "no-store" }
-   });
- }
 export const REGISTERED_FORM_NAMES = new Set([
   "consortium", "contract-request", "expert-apply", "feedback",
   "gcsme-member", "order", "partner-apply", "unlock"
@@ -94,18 +79,6 @@ export async function onRequestPost({request}) {
         method: "POST", headers: {"content-type": type}, body
       });
       fields = await formReq.formData();
-    }
-    // Browser required checkboxes can be bypassed with a direct HTTP POST.
-    // All published accepted forms require exactly one explicit opt-in.
-    const privacy = fields.getAll("privacy_agree");
-    if (privacy.length !== 1 || privacy[0] !== "yes") {
-      return new Response("Privacy consent required", {status: 400});
-    }
-    // Honor the published Netlify honeypot at the server as well.
-    // Missing hp is tolerated for cached clients; a filled hp is not.
-    const trap = fields.getAll("hp");
-    if (trap.some(v => typeof v === "string" && v.trim() !== "")) {
-      return new Response("Invalid form submission", {status: 400});
     }
     for (const [name, value] of fields) {
       if (typeof value === "string" &&
