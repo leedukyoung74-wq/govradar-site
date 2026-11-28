@@ -41,7 +41,7 @@ python3 tools/i18n_build.py || exit 1
 python3 tools/hz_i18n.py || exit 1
 python3 tools/text_wrap.py || exit 1   # Korean line breaking on every page (after the page generators)
 python3 tools/cf_variant.py dist cf/public
-python3 tools/path4.py cf/public || exit 1   # WMM 길 네 단계 띠 (welcome 메인)
+# python3 tools/path4.py cf/public   # WMM 길 네 단계 띠 — 2026-11-28 대표 요청으로 GOV RADAR 메인에서 제거
 python3 tools/map_page.py cf/public || exit 1   # 지도 첫 화면 /map/ (2026-11-22 대표 승인)
 python3 tools/home_clean.py cf/public || exit 1   # 메인 정리: 솔루션 고르기 + 더 보기 (2026-11-22)
 python3 tools/live_page.py cf/public || exit 1   # 실시간 세계 상황판 /live/ (2026-11-22)
