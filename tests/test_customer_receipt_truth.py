@@ -36,8 +36,8 @@ class SourceReceiptTruth(unittest.TestCase):
         self.assertIn("W(\"/support/index.html\", _support.read())",source)
         self.assertIn('href="/support/?lang={L}"',source)
         self.assertIn('(legal|member|pay|mdb)',source)
-        for segment in ["thanks","pricing","how","request","consortium"]:
-            self.assertIn("|"+segment,source)
+        self.assertIn("(thanks|pricing|how|request|",source)
+        self.assertIn("|consortium|",source)
         self.assertNotRegex(source,r"\|about\)\)")
 
 if __name__=="__main__":unittest.main()
