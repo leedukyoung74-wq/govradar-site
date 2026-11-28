@@ -1,0 +1,37 @@
+name: WMM customer integrated release candidate QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [live]
+    paths:
+      - 'functions/nfform.js'
+      - 'functions/pay/**'
+      - 'public/**'
+      - 'tests/customer-integrated-release.test.cjs'
+      - 'ops/wmm_customer_route_matrix.py'
+      - 'tests/customer-public-live-gate.test.cjs'
+      - 'tests/customer-faq-live.test.cjs'
+      - '.github/workflows/wmm_customer_integrated_qa.yml'
+permissions:
+  contents: read
+jobs:
+  customer_release_candidate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout review branch only
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Seven-language combined customer release invariant checks
+        run: node tests/customer-integrated-release.test.cjs
+      - name: Inspect 140 customer/legal routes and disclose 8 English-only fallbacks
+        run: python3 ops/wmm_customer_route_matrix.py --root public
+      - name: Static browser-navigation and FAQ scripts
+        run: |
+          node tests/customer-public-live-gate.test.cjs
+          node tests/customer-faq-live.test.cjs
+      - name: Form POST method, privacy consent and product price synthetic tests
+        run: node --test tests/nfform-method-gate.test.cjs tests/nfform-privacy-consent.test.cjs tests/pay-m1-server-sync.test.cjs
+      - name: Non-release boundary
+        if: always()
+        run: echo 'NO PRODUCTION DEPLOY; no customer POST, paid API, live payment enablement, customer account mutation or secrets'

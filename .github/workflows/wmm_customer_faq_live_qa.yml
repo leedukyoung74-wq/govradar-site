@@ -1,0 +1,29 @@
+name: WMM public customer FAQ seven-language QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [live]
+    paths:
+      - 'public/support/index.html'
+      - 'public/ko/index.html'
+      - 'public/en/index.html'
+      - 'public/es/index.html'
+      - 'public/fr/index.html'
+      - 'public/ar/index.html'
+      - 'public/vi/index.html'
+      - 'public/id/index.html'
+      - 'tests/customer-faq-live.test.cjs'
+      - '.github/workflows/wmm_customer_faq_live_qa.yml'
+permissions:
+  contents: read
+jobs:
+  faq_accessibility_static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Offline customer FAQ and no-send gate
+        run: node tests/customer-faq-live.test.cjs
+      - name: Review only
+        run: echo 'NO DEPLOY, NO API, NO CUSTOMER POST, NO EMAIL, NO PAYMENT'

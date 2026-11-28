@@ -1,0 +1,26 @@
+name: GOV RADAR public customer navigation QA (LIVE REVIEW ONLY)
+on:
+  pull_request:
+    branches: [live]
+    paths:
+      - 'public/**/thanks/index.html'
+      - 'public/**/pricing/index.html'
+      - 'public/**/how/index.html'
+      - 'public/**/request/index.html'
+      - 'public/**/consortium/index.html'
+      - 'tests/customer-public-live-gate.test.cjs'
+      - '.github/workflows/wmm_customer_live_anon_qa.yml'
+permissions:
+  contents: read
+jobs:
+  verify_no_customer_redirect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test static pages with simulated anonymous browser, no HTTP requests
+        run: node tests/customer-public-live-gate.test.cjs
+      - name: Confirm read-only scope
+        run: echo 'NO POST, no payment, no customer records, no real deployment'

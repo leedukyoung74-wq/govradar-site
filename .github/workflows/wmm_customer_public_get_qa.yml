@@ -1,0 +1,41 @@
+name: WMM public customer journey GET-only evidence (NO DEPLOY)
+on:
+  pull_request:
+    branches: [live]
+    paths:
+      - 'ops/wmm_customer_public_get_watch.py'
+      - '.github/workflows/wmm_customer_public_get_qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public_get_facts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Current production site comparison via 14 anonymous GET requests only
+        run: python3 ops/wmm_customer_public_get_watch.py
+      - name: Report live gaps separately from PR proposal success
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path('customer_public_get_review.json')
+          if not p.exists():raise SystemExit('no public GET report: UNKNOWN')
+          d=json.loads(p.read_text('utf-8'))
+          rows=['## Live customer UX GET-only evidence',
+                '',
+                'This read-only job checks published websites, **not** the proposed PR build. It never tests customer records, POST submissions or payment.',
+                '',
+                '| Target | HTTP | Public classification |',
+                '|---|---:|---|']
+          for x in d['results']:
+              rows.append(f"| {x['name']} | {x['http_status']} | {x['kind']} |")
+          rows+=['',f"**Public mismatches:** {len(d['mismatches_found'])}",
+                 '**Customer submission and paid checkout:** NOT TESTED',
+                 '**Production release:** NOT AUTHORIZED']
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:out.write('\n'.join(rows)+'\n')
+          PY
