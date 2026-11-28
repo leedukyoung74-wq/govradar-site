@@ -9,3 +9,47 @@
   Content-Security-Policy: frame-ancestors *
 /*
   X-Content-Type-Options: nosniff
+
+# WMM: non-public workflow routes should not be indexed (not an access-control rule)
+/ko/account/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/ko/thanks/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/ko/unlock/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/en/account/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/en/thanks/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/en/unlock/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/es/account/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/es/thanks/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/es/unlock/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/fr/account/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/fr/thanks/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/fr/unlock/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/ar/account/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/ar/thanks/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/ar/unlock/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/vi/account/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/vi/thanks/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/vi/unlock/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/id/account/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/id/thanks/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/id/unlock/*
+  X-Robots-Tag: noindex, nofollow, noarchive
