@@ -6,6 +6,7 @@ and the state of every data source. Nothing here is estimated: every number is a
 import datetime as dt, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from deadline import is_listed_open as is_open, state as DLs
+from reporting_clock import reporting_day
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch")
@@ -53,7 +54,7 @@ def public_source_state(name, record):
 
 
 def build():
-    today = NOW.date().isoformat()
+    today = reporting_day(NOW).isoformat()
     items = (load("feeds/tenders.json").get("items") or [])
     open_ = [x for x in items if is_open(x, NOW)]   # real closing time (deadline_at), not just the date
     new = [x for x in open_ if x.get("added") == today]
@@ -67,9 +68,11 @@ def build():
             if by[k] and len(pick) < 6: pick.append(by[k].pop(0))
     off = load("hz/official.json")
     cut = (NOW - dt.timedelta(hours=48)).date().isoformat()
+    # Alert event timestamps remain UTC; never promote tomorrow UTC as an observed past alert.
+    alert_utc_today = NOW.date().isoformat()
     # alerts dated in the last 48 h (future dates, e.g. an asteroid's approach day, are not "new")
     alerts = sorted([dict(a, date=iso_date(a.get("date"))) for v in (off.get("items") or {}).values() for a in v
-                     if cut <= iso_date(a.get("date")) <= today], key=lambda a: a["date"], reverse=True)
+                     if cut <= iso_date(a.get("date")) <= alert_utc_today], key=lambda a: a["date"], reverse=True)
     src = []
     for k, v in (load("feeds/sources_status.json") or {}).items():
         if not isinstance(v, dict) or v.get("state") == "SKIPPED": continue
