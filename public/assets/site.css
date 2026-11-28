@@ -914,7 +914,7 @@ html{scroll-padding-top:116px}
 .subnav a:hover{background:#F5F6F8!important;color:#0B1526!important}
 .subnav a[aria-current]{background:#0B1526!important;color:#fff!important}
 .nav.compact .nvg{flex-direction:column;align-items:stretch}.nav.compact .nvd{display:flex;position:static;box-shadow:none;border:0;padding:0 0 8px 14px;background:transparent}
-
+small{overflow-wrap:anywhere}
 /* site-light 2026-11-22: 흰 바탕 통일 */
 body{background:#fff!important;background-image:none!important}
 body::before{display:none!important}
