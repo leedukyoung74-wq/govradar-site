@@ -11,9 +11,9 @@ P=importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(P)
 
 
-def classify(lang="ko", **kwargs):
-    params=dict(label=lang,code=200,lang=lang,
-                direction="rtl" if lang=="ar" else "ltr",
+def classify(locale="ko", **kwargs):
+    params=dict(label=locale,code=200,lang=locale,
+                direction="rtl" if locale=="ar" else "ltr",
                 viewport=True,h1=True,main_count=1,
                 overflow_px=0,denied_posts=False,copy_present=True)
     params.update(kwargs)
