@@ -86,7 +86,7 @@ def read_one(row):
             except (ValueError,TypeError,AttributeError):
                 check["kind"]="PAYMENT_CONFIG_UNREADABLE"
         elif key.startswith("wmm_"):
-            if re.search(r"(?:20,000(?:원)?|200,000(?:원)?)[^<>]{0,100}VAT\\s*별도|VAT\\s*별도[^<>]{0,100}(?:20,000(?:원)?|200,000(?:원)?)",body):
+            if re.search(r"(?:20,000(?:원)?|200,000(?:원)?)[^<>]{0,100}VAT\s*별도|VAT\s*별도[^<>]{0,100}(?:20,000(?:원)?|200,000(?:원)?)",body):
                 check["kind"]="WMM_PRICE_VAT_CONTRADICTION"
             elif "20,000" in body:
                 check["kind"]="WMM_PRICE_PRESENT_REVIEW_TAX_CONTEXT"
