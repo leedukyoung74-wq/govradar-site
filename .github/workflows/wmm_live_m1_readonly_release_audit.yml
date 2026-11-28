@@ -51,13 +51,40 @@ jobs:
           expected['/welcome/membership/']=[('20,000','M1 welcome price')]
           expected['/ko/pricing/'].append(('VAT 포함','M1 VAT included'))
           expected['/en/pricing/'].append(('VAT incl.','M1 VAT included'))
-          expected['/ar/pricing/'].append(('VAT incl.','M1 VAT included'))
+          expected['/ar/pricing/'].append(('شامل الضريبة','M1 VAT included'))
+          # Four request routes are intentional HTML redirects, not localized forms.
+          request_aliases={f'/{lang}/request/':'/en/request/' for lang in ('es','fr','vi','id')}
+          for route,target in request_aliases.items():
+              expected[route]=[]
           legacy=re.compile(r'(?<![0-9])(?:19[, .]800|198[, .]000)(?![0-9])')
           def check(route, body):
+              if route in request_aliases:
+                  target=request_aliases[route]
+                  # Check the actual meta, canonical, JS and fallback link. The
+                  # destination price is checked separately as /en/request/.
+                  markers=(
+                      f'<meta http-equiv="refresh" content="0;url={target}">',
+                      f'<link rel="canonical" href="{base}{target}">',
+                      f'location.replace("{target}"+location.search+location.hash)',
+                      f'<a href="{target}">'
+                  )
+                  return ['request_alias_target_missing'] if not all(x in body for x in markers) else []
               problems=[label+'_missing' for value,label in expected[route] if value not in body]
               if route not in [f'/{lang}/' for lang in languages] and legacy.search(body):
                   problems.append('superseded_M1_price_present')
               return problems
+          # Synthetic sentinels keep this exception narrow and fail closed.
+          for route,target in request_aliases.items():
+              fixture=(f'<meta http-equiv="refresh" content="0;url={target}">'
+                       f'<link rel="canonical" href="{base}{target}">'
+                       f'<script>location.replace("{target}"+location.search+location.hash)</script>'
+                       f'<a href="{target}">English</a>')
+              assert not check(route,fixture)
+              assert check(route,fixture.replace(target,'/ko/request/'))
+              assert check(route,'20,000')
+          assert not check('/ar/pricing/','20,000 200,000 شامل الضريبة')
+          assert check('/ar/pricing/','20,000 200,000 VAT incl.')
+          assert check('/en/request/','19,800')
           def relpath(route):
               return local/route.lstrip('/')/'index.html'
           source_errors=[]
@@ -84,6 +111,12 @@ jobs:
                       if response.status!=200:return route,['http_'+str(response.status)]
                       body=response.read(600_001)
                       if len(body)>600_000:return route,['body_too_large']
+                      actual_path=urllib.parse.urlsplit(actual).path
+                      # HTTP redirect to the exact approved destination is also
+                      # acceptable, but must validate the actual English page.
+                      if route in request_aliases and actual_path==request_aliases[route]:
+                          return route,check(actual_path,body.decode('utf-8','replace'))
+                      if actual_path!=route:return route,['unexpected_redirect_path']
                       return route,check(route,body.decode('utf-8','replace'))
               except Exception as err:
                   return route,[type(err).__name__]
@@ -99,7 +132,7 @@ jobs:
           if failed:
               print('FAIL: published site is not yet verified; static branch change alone is insufficient')
               sys.exit(1)
-          print('PASS: 39 GET-only public HTML routes match M1 pricing, request and 7-language archival-source labels.')
+          print('PASS: 39 GET-only routes checked, including four English-request aliases; no claim of localized request forms.')
           print('Not verified: checkout, taxes on invoices, customer form POST, account login or payment.')
           PY
       - name: Retain explicit scope and cost boundary
