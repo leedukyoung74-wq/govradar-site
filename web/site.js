@@ -258,7 +258,7 @@ window.gvLang = function (sel) {
     } catch (e) {
       var m = e && e.message;
       if (m === "nokey" || m === "expired") { ls("gv_code", null); try { sessionStorage.removeItem("gv_k"); } catch (x) {} }
-      if (page) say(m === "expired" ? (ko ? "이용 기간이 끝났습니다. 연장은 73036396@naver.com으로 연락 주세요." : "Your access has expired. Write to 73036396@naver.com to renew.")
+      if (page) say(m === "expired" ? (ko ? "이용 기간이 끝났습니다. 연장은 leedukyoung74@gmail.com으로 연락 주세요." : "Your access has expired. Write to leedukyoung74@gmail.com to renew.")
         : m === "nokey" ? (ko ? "코드를 찾을 수 없습니다. 다시 확인해 주세요." : "Code not found. Please check it.")
         : (ko ? "잠시 연결이 안 됩니다. 잠시 후 다시 시도해 주세요." : "Could not connect. Please try again shortly."));
     }

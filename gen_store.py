@@ -39,7 +39,7 @@ def section():
     rows=rows.replace('<tr><td><b>M0','<tr class="grp"><td colspan="4">EXPLORE</td></tr><tr><td><b>M0',1).replace('<tr><td><b>M1','<tr class="grp"><td colspan="4">BUILD</td></tr><tr><td><b>M1',1).replace('<tr><td><b>M4','<tr class="grp"><td colspan="4">EXECUTE</td></tr><tr><td><b>M4',1)
     groups=""
     for g,items in PRODUCTS:
-        cards="".join(f'<div class="wms-card"><span class="k">{e(g)}</span><h4>{e(n)}</h4><p>{e(d)}</p><span class="pr">{e(p)}</span>'+(f'<a href="{e(u)}" target="_blank" rel="noopener">바로 보기 ↗</a>' if u!="mailto" else '<small>신청: 73036396@naver.com</small>')+'</div>' for n,d,u,p in items)
+        cards="".join(f'<div class="wms-card"><span class="k">{e(g)}</span><h4>{e(n)}</h4><p>{e(d)}</p><span class="pr">{e(p)}</span>'+(f'<a href="{e(u)}" target="_blank" rel="noopener">바로 보기 ↗</a>' if u!="mailto" else '<small>신청: leedukyoung74@gmail.com</small>')+'</div>' for n,d,u,p in items)
         groups+=f'<div class="wms-sec"><h3>{e(g)}</h3><div class="wms-grid">{cards}</div></div>'
     rules="".join(f"<li>{e(r)}</li>" for r in RULES)
     return f"""<section class="wms" id="wmm-membership-store"><div class="wms-in">
@@ -49,7 +49,7 @@ def section():
 <div class="wms-sec"><h3>WMM 멤버십 등급</h3><div class="wms-tw"><table><thead><tr><th>등급</th><th>확인하는 것</th><th>이용 범위</th><th>요금</th></tr></thead><tbody>{rows}</tbody></table></div></div>
 {groups}
 <div class="wms-sec"><h3>공통 규정</h3><ul class="wms-rules">{rules}</ul></div>
-<div class="wms-cta"><b>신청·구매 문의</b><span>원하는 등급이나 상품, 회사명, 관심 국가를 적어 이메일로 보내 주세요. 영업일 2일 안에 견적과 절차를 안내합니다.</span><span class="wms-mail">73036396@naver.com</span><a class="wms-btn pri" href="{R}" target="_blank" rel="noopener">GOV RADAR 무료로 보기</a><a class="wms-btn" href="https://www.gcsme.kr" target="_blank" rel="noopener">GCSME KOREA</a></div>
+<div class="wms-cta"><b>신청·구매 문의</b><span>원하는 등급이나 상품, 회사명, 관심 국가를 적어 이메일로 보내 주세요. 영업일 2일 안에 견적과 절차를 안내합니다.</span><span class="wms-mail">leedukyoung74@gmail.com</span><a class="wms-btn pri" href="{R}" target="_blank" rel="noopener">GOV RADAR 무료로 보기</a><a class="wms-btn" href="https://www.gcsme.kr" target="_blank" rel="noopener">GCSME KOREA</a></div>
 </div></section>"""
 if __name__=="__main__":
     sn="<!-- WMM 멤버십 · 자료·상품 section (ko) — wmm-hoa.com 메인 또는 /membership 페이지에 붙여 넣기. Self-contained; class prefix wms- -->\n"+CSS+"\n"+section()+"\n"

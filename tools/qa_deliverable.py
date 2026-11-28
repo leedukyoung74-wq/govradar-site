@@ -55,8 +55,8 @@ def check(text):
     add("https", "UNKNOWN" if plain else "PASS", "http links (check they are official): " + ", ".join(plain[:3]) if plain else "all https")
     found = [why for w, why in BANNED if w in body] + (["휴대폰 번호"] if PHONE.search(body) else [])
     add("banned", "FAIL" if found else "PASS", ", ".join(sorted(set(found))) or "none")
-    emails = set(re.findall(r"[\w.+-]+@[\w-]+\.[\w.]+", body)) - {"73036396@naver.com"}
-    add("contact", "FAIL" if emails else "PASS", "other e-mail addresses: " + ", ".join(sorted(emails)) if emails else "only 73036396@naver.com")
+    emails = set(re.findall(r"[\w.+-]+@[\w-]+\.[\w.]+", body)) - {"leedukyoung74@gmail.com"}
+    add("contact", "FAIL" if emails else "PASS", "other e-mail addresses: " + ", ".join(sorted(emails)) if emails else "only leedukyoung74@gmail.com")
     bad_dates = re.findall(r"\b\d{1,2}/\d{1,2}/\d{4}\b|\b\d{4}\.\d{1,2}\.\d{1,2}\b", body)
     add("dates", "FAIL" if bad_dates else "PASS", "use YYYY-MM-DD: " + ", ".join(bad_dates[:3]) if bad_dates else "YYYY-MM-DD")
     src_part = body.split("출처")[-1] if prod else ""

@@ -33,7 +33,7 @@ async function run(env) {
       ...hits.map(o => `[${o.names[ko ? "ko" : "en"] || o.iso}] ${ko ? o.ko : o.en}${o.deadline ? " · " + o.deadline : ""} — ${env.SITE}/${ko ? "ko" : "en"}/${o.slug}/#${o.kind}`)
     ];
     const subject = ko ? `[GOV RADAR] 새 기회 ${hits.length}건${due.length ? ` · 마감 임박 ${due.length}건` : ""}` : `[GOV RADAR] ${hits.length} new opportunities${due.length ? ` · ${due.length} deadlines` : ""}`;
-    const footer = ko ? "\n\nWORLD MAKING MEMBERS × GCSME · 73036396@naver.com\n알림 설정은 GOV RADAR 내 정보에서 바꿀 수 있습니다." : "\n\nWORLD MAKING MEMBERS × GCSME · 73036396@naver.com\nChange alerts in your GOV RADAR account.";
+    const footer = ko ? "\n\nWORLD MAKING MEMBERS × GCSME · leedukyoung74@gmail.com\n알림 설정은 GOV RADAR 내 정보에서 바꿀 수 있습니다." : "\n\nWORLD MAKING MEMBERS × GCSME · leedukyoung74@gmail.com\nChange alerts in your GOV RADAR account.";
     const text = lines.join("\n") + footer;
     if (p.alert_email && p.email && env.RESEND_API_KEY)
       await fetch("https://api.resend.com/emails", { method: "POST", headers: { authorization: `Bearer ${env.RESEND_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ from: env.MAIL_FROM, to: [p.email], subject, text }) });

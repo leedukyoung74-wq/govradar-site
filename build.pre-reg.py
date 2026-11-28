@@ -89,7 +89,7 @@ def foot(L):
     return f"""</main><footer><div class="in">
 <img src="/assets/emblem.png" alt="" width="44" height="44" class="femb">
 <div class="lic"><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=5898801039" target="_blank" rel="noopener">{e(t['biz_info'])}</a><span class="bar"></span><span>ONLINE LICENCE : 제2024-서울서초-2185호</span></div>
-<p class="corp">{e(t['foot_corp'])} · E-mail 73036396@naver.com</p>
+<p class="corp">{e(t['foot_corp'])} · E-mail leedukyoung74@gmail.com</p>
 <div class="sites"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><b>WORLD MAKING MEMBERS</b><span>www.wmm-hoa.com ↗</span></a><a href="https://www.gcsme.kr" target="_blank" rel="noopener"><b>GCSME KOREA</b><span>www.gcsme.kr ↗</span></a></div>
 <p class="corp"><a href="/{L}/feeds/">{e(t['feed'])}</a> · <a href="/{L}/embed/">{e(t['embed'])}</a></p>
 <p class="corp">{e(t['disc'])}</p></div></footer>
@@ -100,7 +100,7 @@ def foot(L):
 <script src="/assets/config.js"></script><script src="/assets/site.js" defer></script></body></html>"""
 
 def ld(obj): return f'<script type="application/ld+json">{json.dumps(obj, ensure_ascii=False)}</script>'
-ORG = {"@type": "Organization", "name": "WORLD MAKING MEMBERS Co., Ltd.", "alternateName": ["월드메이킹멤버스", "WMM"], "url": "https://www.wmm-hoa.com", "logo": BASE + "/assets/emblem.png", "email": "73036396@naver.com"}
+ORG = {"@type": "Organization", "name": "WORLD MAKING MEMBERS Co., Ltd.", "alternateName": ["월드메이킹멤버스", "WMM"], "url": "https://www.wmm-hoa.com", "logo": BASE + "/assets/emblem.png", "email": "leedukyoung74@gmail.com"}
 
 # ---------------------------------------------------------------- country page
 def lst(items, fmt):
@@ -386,7 +386,7 @@ def build():
         sm.append(f"<url><loc>{BASE}{p}</loc><lastmod>{lm}</lastmod>" + "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{BASE}{a}"/>' for l, a in alts.items()) + "</url>")
     sm.append("</urlset>"); W("/sitemap.xml", "".join(sm))
     W("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /widget/\n\nSitemap: {BASE}/sitemap.xml\n")
-    llms = [f"# GOV RADAR (WMM × GCSME)", "", f"> {T['en']['desc_home']}", "", "Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME Club (London). Contact 73036396@naver.com", "", "## Countries (English)"]
+    llms = [f"# GOV RADAR (WMM × GCSME)", "", f"> {T['en']['desc_home']}", "", "Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME Club (London). Contact leedukyoung74@gmail.com", "", "## Countries (English)"]
     llms += [f"- [{c['en']}]({BASE}{url('en', c['iso'])}): {((DATA.get(c['iso']) or {}).get('en') or {}).get('summary', '')[:160]}" for c in META if done(c["iso"])]
     llms += ["", "## 국가 (한국어)"] + [f"- [{c['ko']}]({BASE}{url('ko', c['iso'])})" for c in META if done(c["iso"])]
     W("/llms.txt", "\n".join(llms) + "\n")

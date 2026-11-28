@@ -166,7 +166,7 @@ def page(L, C):
 <section class="ab-co" id="company" data-toc="{e(toc[5])}"><div class="w"><h2>{e(t["w_h"])}</h2><div class="ab-org">{orgs}</div>
 <div class="ab-prm"><div><h3>{e(t["prom_h"])}</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in t["proms"])}</ul></div>
 <div><h3>{e(t["src_h"])}</h3><table class="ab-src"><thead><tr>{"".join(f"<th>{e(x)}</th>" for x in t["src_c"])}</tr></thead><tbody>{srcs}</tbody></table><p class="fine">{e(t["src_note"])}</p>
-<p class="fine">{e(t["contact"])}: <a href="mailto:73036396@naver.com">73036396@naver.com</a></p></div></div></div></section>
+<p class="fine">{e(t["contact"])}: <a href="mailto:leedukyoung74@gmail.com">leedukyoung74@gmail.com</a></p></div></div></div></section>
 <section class="ab-end">{ph}<div class="w"><h2>{t["f_h"]}</h2><p>{e(t["f_p"])}</p><div class="ab-cta"><button class="ab-b" data-auth="signup">{e(t["cta1"])}</button><a class="ab-l" href="{C["paylink"](L, "fit")}">{e(t["f_b2"])} {AR}</a></div>
 <div class="pc">{C["credit"](["port"], L == "ko")}</div></div></section></div>
 <script>{JS}</script>'''

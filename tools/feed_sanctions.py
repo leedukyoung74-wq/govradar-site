@@ -17,7 +17,7 @@ import xml.etree.ElementTree as ET
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data_branch", "feeds", "sanctions.json")
 NAMES = json.load(open(os.path.join(ROOT, "tools", "country_names.json")))
-UA = {"User-Agent": "GOV-RADAR-feed/1.0 (73036396@naver.com)"}
+UA = {"User-Agent": "GOV-RADAR-feed/1.0 (leedukyoung74@gmail.com)"}
 URL = {"un": "https://scsanctions.un.org/resources/xml/en/consolidated.xml",
        "us": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV",
        "us_add": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ADD.CSV",

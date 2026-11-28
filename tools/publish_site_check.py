@@ -110,7 +110,7 @@ def publish(branch_dir, report_file):
                     print("SITE_CHECK_NO_CHANGE=YES")
                     return
                 git(worktree, "config", "user.name", "GOV RADAR bot")
-                git(worktree, "config", "user.email", "73036396@naver.com")
+                git(worktree, "config", "user.email", "leedukyoung74@gmail.com")
                 git(worktree, "commit", "-m",
                     "Site check " + current["result"] + " " + current["checked"])
                 push = git(worktree, "push", "origin", "HEAD:refs/heads/data",

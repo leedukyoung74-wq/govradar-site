@@ -15,7 +15,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data_branch", "feeds", "econ.json")
 ISO3 = json.load(open(os.path.join(ROOT, "tools", "iso3.json")))
 CUR = json.load(open(os.path.join(ROOT, "tools", "currency.json")))
-UA = {"User-Agent": "GOV-RADAR-feed/1.0 (73036396@naver.com)"}
+UA = {"User-Agent": "GOV-RADAR-feed/1.0 (leedukyoung74@gmail.com)"}
 IND = {"pop": "SP.POP.TOTL", "gdp": "NY.GDP.MKTP.CD", "pc": "NY.GDP.PCAP.CD", "gr": "NY.GDP.MKTP.KD.ZG", "cpi": "FP.CPI.TOTL.ZG"}
 NOW = dt.datetime.now(dt.timezone.utc)
 

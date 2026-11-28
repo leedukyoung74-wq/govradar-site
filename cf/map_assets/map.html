@@ -208,7 +208,7 @@ function openBasket(){
    +'<label>'+esc(t("org"))+'<input name="org" required></label><label>'+esc(t("nm"))+'<input name="name" required></label><label>'+esc(t("em"))+'<input name="email" type="email" required></label><label>'+esc(t("fd"))+'<input name="field"></label>'
    +'<label>'+esc(t("nd"))+'<textarea name="need" rows="5" maxlength="2000" id="bkneed"></textarea></label>'
    +'<label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> <span><a href="/'+L+'/legal/privacy/?stay=1" target="_blank">'+esc(t("pv"))+'</a></span></label>'
-   +'<button class="send" type="submit">'+esc(t("send"))+'</button><p class="muted">'+esc(t("note"))+' · 73036396@naver.com</p></form>';
+   +'<button class="send" type="submit">'+esc(t("send"))+'</button><p class="muted">'+esc(t("note"))+' · leedukyoung74@gmail.com</p></form>';
   var bk=document.getElementById("bk");bk.innerHTML=h;document.getElementById("basket").hidden=false;
   document.getElementById("bkx").onclick=closeBasket;
   bk.querySelectorAll(".rm").forEach(function(b){b.onclick=function(){BK=BK.filter(function(x){return x.id!==b.dataset.id});bkSave();openBasket();if(sel)showCountry(sel,true)}});
