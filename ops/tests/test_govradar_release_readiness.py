@@ -39,6 +39,12 @@ class AuditTest(unittest.TestCase):
         prices='export const PRODUCTS = { "analysis-month": {name:"Monthly",amount: 20000}, "analysis-year": {name:"Annual",amount: 200000} };'
         store(self.s,"cf/functions/pay/_products.js",prices)
         store(self.l,"functions/pay/_products.js",prices)
+        config='const enabled = env.WMM_PAYMENT_LIVE_ENABLED === "true" && !!(ck && env.TOSS_SECRET_KEY); return {clientKey: enabled ? ck : ""};'
+        confirm='if (env.WMM_PAYMENT_LIVE_ENABLED !== "true" || !env.TOSS_CLIENT_KEY || !env.TOSS_SECRET_KEY) return;'
+        store(self.s,"cf/functions/pay/config.js",config)
+        store(self.l,"functions/pay/config.js",config)
+        store(self.s,"cf/functions/pay/confirm.js",confirm)
+        store(self.l,"functions/pay/confirm.js",confirm)
 
 
     def states(self):
@@ -105,6 +111,23 @@ class AuditTest(unittest.TestCase):
         self.assertEqual({"month":20000,"year":200000},state["detail"]["expected_final_krw"])
         self.assertEqual({"month":22000,"year":220000},state["detail"]["published_live_final_krw"])
         self.assertFalse(state["detail"]["real_charge_executed"])
+
+    def test_source_flag_alone_cannot_make_live_payment_default_off(self):
+        self.assertEqual("pass",self.states()["payment_default_off_code_parity"]["status"])
+        self.store(self.l,"functions/pay/config.js",
+                   "const enabled=!!(ck && env.TOSS_SECRET_KEY); return {clientKey:ck};")
+        gate=self.states()["payment_default_off_code_parity"]
+        self.assertEqual("block",gate["status"])
+        self.assertTrue(gate["detail"]["source_and_live_guards"]["source_config"])
+        self.assertFalse(gate["detail"]["source_and_live_guards"]["live_config"])
+        self.assertFalse(gate["detail"]["actual_live_env_switch_verified"])
+
+    def test_live_confirm_must_reject_no_explicit_flag(self):
+        self.store(self.l,"functions/pay/confirm.js",
+                   'if (!env.TOSS_SECRET_KEY) return;')
+        gate=self.states()["payment_default_off_code_parity"]
+        self.assertEqual("block",gate["status"])
+        self.assertFalse(gate["detail"]["source_and_live_guards"]["live_confirm"])
 
     def test_missing_malformed_or_duplicate_product_file_is_not_approved(self):
         self.store(self.s,"cf/functions/pay/_products.js",
