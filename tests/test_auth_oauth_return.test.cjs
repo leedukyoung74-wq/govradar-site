@@ -10,7 +10,7 @@ function storage(initial={}) {
   return {getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,String(v)),
     removeItem:k=>m.delete(k),data:m};
 }
-function browser({pathname="/ko/",search="",hash="",sess=storage(),fetchUser=true}) {
+function browser({pathname="/ko/",search="",hash="",hostname="radar.wmm-hoa.com",sess=storage(),fetchUser=true}) {
   const elements=new Map();
   for (const id of ["#authm","#authx","#auth-google","#authf","#loginbtn"]) {
     elements.set(id,{hidden:false,classList:{toggle(){}},
@@ -24,7 +24,7 @@ function browser({pathname="/ko/",search="",hash="",sess=storage(),fetchUser=tru
     body:{appendChild(){}},
     addEventListener(name,fn){handlers[name]=fn;}
   };
-  const location={origin:"https://radar.wmm-hoa.com",pathname,search,hash,href:"",
+  const location={origin:"https://"+hostname,hostname,pathname,search,hash,href:"",
     replace(url){redirects.push(url);}};
   const local=storage();
   const window={RADAR_LANG:"ko",RADAR_AT:{}};
@@ -47,7 +47,16 @@ test("Google OAuth remembers the actual local route and query, not third-party U
   const b=browser({pathname:"/ko/ghana/",search:"?sector=energy",sess});
   b.elements.get("#auth-google").handlers.click();
   assert.equal(sess.getItem(KEY),"/ko/ghana/?sector=energy");
-  assert.equal(b.location.href,"/.netlify/identity/authorize?provider=google");
+  assert.equal(b.location.href,"/nfid/authorize?provider=google");
+});
+
+test("Netlify-host OAuth uses its identity endpoint; RADAR Cloudflare uses /nfid",()=>{
+  const hosted=browser({hostname:"wmm-govradar.netlify.app"});
+  hosted.elements.get("#auth-google").handlers.click();
+  assert.equal(hosted.location.href,"/.netlify/identity/authorize?provider=google");
+  const cloud=browser({});
+  cloud.elements.get("#auth-google").handlers.click();
+  assert.equal(cloud.location.href,"/nfid/authorize?provider=google");
 });
 
 test("post-OAuth callback returns to exact in-site route after validating user token",async()=>{
