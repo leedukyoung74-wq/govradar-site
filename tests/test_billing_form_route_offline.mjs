@@ -7,11 +7,11 @@ import { onRequestGet as billingConfig } from "../cf/functions/pay/config.js";
 import { onRequestPost as paymentConfirm } from "../cf/functions/pay/confirm.js";
 import { onRequestGet as formProbe, onRequestPost as formSubmit } from "../cf/functions/nfform.js";
 
-test("source products match previously agreed final customer price VAT included", () => {
+test("source products charge KRW 22,000/220,000 (20,000/200,000 + 10% VAT, owner decision 2026-11-28)", () => {
   assert.deepEqual(Object.keys(PRODUCTS).sort(),
     ["analysis-month","analysis-year"]);
-  assert.equal(PRODUCTS["analysis-month"].amount,20000);
-  assert.equal(PRODUCTS["analysis-year"].amount,200000);
+  assert.equal(PRODUCTS["analysis-month"].amount,22000);
+  assert.equal(PRODUCTS["analysis-year"].amount,220000);
 });
 
 test("missing Toss keys keep real checkout disabled; GET config remains accurate", async () => {
@@ -20,8 +20,8 @@ test("missing Toss keys keep real checkout disabled; GET config remains accurate
   const info=await response.json();
   assert.equal(info.enabled,false);
   assert.equal(info.clientKey,"");
-  assert.equal(info.products["analysis-month"].amount,20000);
-  assert.equal(info.products["analysis-year"].amount,200000);
+  assert.equal(info.products["analysis-month"].amount,22000);
+  assert.equal(info.products["analysis-year"].amount,220000);
   assert.equal(response.headers.get("cache-control"),"no-store");
 });
 
@@ -31,10 +31,10 @@ test("even both Toss credentials cannot activate payment without explicit operat
   const info=await response.json();
   assert.equal(info.enabled,false);
   assert.equal(info.clientKey,"");
-  assert.equal(info.products["analysis-month"].amount,20000);
+  assert.equal(info.products["analysis-month"].amount,22000);
   const request=new Request("https://radar.wmm-hoa.com/pay/confirm",{
     method:"POST",headers:{"content-type":"application/json"},
-    body:JSON.stringify({item:"analysis-month",amount:20000,
+    body:JSON.stringify({item:"analysis-month",amount:22000,
       paymentKey:"FAKE",orderId:"analysis-month-FAKE"})
   });
   const confirm=await paymentConfirm({request,env});
@@ -56,7 +56,7 @@ test("explicit flag cannot activate checkout if either credential missing", asyn
 test("real payment confirmation stays disabled with missing secret", async () => {
   const request=new Request("https://radar.wmm-hoa.com/pay/confirm",{
     method:"POST",headers:{"content-type":"application/json"},
-    body:JSON.stringify({item:"analysis-month",amount:20000})
+    body:JSON.stringify({item:"analysis-month",amount:22000})
   });
   const response=await paymentConfirm({request,env:{}});
   assert.equal(response.status,503);
@@ -65,11 +65,11 @@ test("real payment confirmation stays disabled with missing secret", async () =>
   assert.equal(result.code,"NOT_READY");
 });
 
-test("the previous VAT-added amount fails the backend price equality check", async () => {
+test("a VAT-less 20,000 amount fails the backend price equality check", async () => {
   const request=new Request("https://radar.wmm-hoa.com/pay/confirm",{
     method:"POST",headers:{"content-type":"application/json"},
     body:JSON.stringify({paymentKey:"TEST_ONLY",orderId:"analysis-month-fake",
-                         item:"analysis-month",amount:22000,email:"no@invalid.test"})
+                         item:"analysis-month",amount:20000,email:"no@invalid.test"})
   });
   const response=await paymentConfirm({request,env:{WMM_PAYMENT_LIVE_ENABLED:"true",TOSS_CLIENT_KEY:"TEST_PUBLIC",TOSS_SECRET_KEY:"DUMMY_TEST_ONLY"}});
   assert.equal(response.status,400);

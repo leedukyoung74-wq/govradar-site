@@ -85,7 +85,7 @@ def navgroups(L, NAV, cur_group=None):
         out.append(f'<div class="nvg"><a href="{_e(top)}"{cur}>{_e(lbl)}</a><div class="nvd">{sub}</div></div>')
     return "".join(out)
 
-SITECSS = """
+SITECSS = """small{overflow-wrap:anywhere}
 /* site-light 2026-11-22: 흰 바탕 통일 */
 body{background:#fff!important;background-image:none!important}
 body::before{display:none!important}
