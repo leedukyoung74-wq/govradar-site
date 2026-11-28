@@ -16,8 +16,61 @@ on:
 permissions:
   contents: write
 jobs:
+  preflight_daily:
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '10 21 * * *') ||
+      (github.event_name == 'workflow_dispatch' && inputs.task == 'daily')
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    outputs:
+      due: ${{ steps.status.outputs.due }}
+    steps:
+      - name: Read trusted approved main gate
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: control
+          persist-credentials: false
+      - name: Read published public feed dates (no credentials)
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data_branch
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /feeds/tenders.json
+            /feeds/today.json
+      - name: Check date and dedup policy offline
+        run: python3 -m unittest discover -s control/ops/tests -p 'test_wmm_daily_gap_due.py' -v
+      - name: Official scheduled attempt only if today's KST feed is missing
+        if: github.event_name == 'schedule'
+        id: scheduled
+        run: python3 control/ops/wmm_daily_gap_due.py --mode scheduled --data data_branch
+      - name: Preserve existing owner-selected manual dry-run behavior
+        if: github.event_name == 'workflow_dispatch'
+        id: manual
+        run: echo 'due=true' >> "$GITHUB_OUTPUT"
+      - name: Bind single due output
+        id: status
+        env:
+          SCHEDULED: ${{ steps.scheduled.outputs.due }}
+          MANUAL: ${{ steps.manual.outputs.due }}
+        run: |
+          if [ "$SCHEDULED" = "true" ] || [ "$MANUAL" = "true" ]; then
+            echo "due=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "due=false" >> "$GITHUB_OUTPUT"
+          fi
   daily:
-    if: github.event_name == 'schedule' && github.event.schedule == '10 21 * * *' || github.event_name == 'workflow_dispatch' && inputs.task == 'daily'
+    needs: preflight_daily
+    if: >-
+      needs.preflight_daily.result == 'success' &&
+      needs.preflight_daily.outputs.due == 'true' &&
+      ((github.event_name == 'schedule' && github.event.schedule == '10 21 * * *') ||
+       (github.event_name == 'workflow_dispatch' && inputs.task == 'daily'))
     uses: leedukyoung74-wq/govradar-site/.github/workflows/feeds.yml@src
     with: { task: daily, code_ref: src, dry_run: "${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}" }
     secrets: { DAPA_KEY: "${{ secrets.DAPA_KEY }}", SAM_KEY: "${{ secrets.SAM_KEY }}" }
