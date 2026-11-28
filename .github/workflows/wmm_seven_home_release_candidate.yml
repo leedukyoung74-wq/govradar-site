@@ -1,0 +1,99 @@
+name: WMM GOV RADAR seven-homepage candidate ZIP (NO DEPLOY)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ops/wmm_seven_home_release_candidate.py'
+      - 'ops/tests/test_wmm_seven_home_release_candidate.py'
+      - '.github/workflows/wmm_seven_home_release_candidate.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wmm_seven_home_release_candidate.yml'
+      - 'ops/wmm_seven_home_release_candidate.py'
+      - 'ops/tests/test_wmm_seven_home_release_candidate.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline_review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic no-deploy form, copy, locale and resource regression
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_seven_home_release_candidate.py' -v
+  candidate_zip_only:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify release safeguard policy before preparing ZIP
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_seven_home_release_candidate.py' -v
+      - name: Obtain source branch for offline generation only
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: source-snapshot
+          persist-credentials: false
+      - name: Obtain public live branch for read-only comparison
+        uses: actions/checkout@v4
+        with:
+          ref: live
+          path: live-snapshot
+          persist-credentials: false
+      - name: Build reviewed Cloudflare-variant HTML locally (NO PUBLISH)
+        run: |
+          cd source-snapshot
+          python3 build.py --base https://radar.wmm-hoa.com
+          python3 tools/cf_variant.py dist cf/public
+      - name: Package only seven homepages and all source/live drift evidence
+        run: |
+          python3 ops/wmm_seven_home_release_candidate.py \
+            --candidate source-snapshot/cf/public \
+            --live live-snapshot/public \
+            --out review-release
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          r=json.loads(Path('review-release/manifest.json').read_text(encoding='utf-8'))
+          lines=[
+            '## Seven-language homepage candidate ZIP — NOT DEPLOYED',
+            '', '**'+r['state']+'**','',
+            '| Locale | New source copy | Form unchanged | Asset refs missing | Existing live copy |',
+            '|---|---|---|---:|---|'
+          ]
+          for lang,entry in r['checks'].items():
+            q=entry['check_results']
+            lines.append('| '+lang+' | '+str(q['research_disclosure'])+
+              ' | '+str(entry['form_tags_identical'])+
+              ' | '+str(len(entry['new_local_asset_refs_missing_in_live']))+
+              ' | '+str(entry['reviewed_research_copy_already_live'])+' |')
+          lines+=['','Archive is for owner review only. No public site change, no billing, no forms, no customer accounts, no DNS or deployment.']
+          summary=os.environ.get('GITHUB_STEP_SUMMARY')
+          if summary:
+            with Path(summary).open('a',encoding='utf-8') as f:
+              f.write('\n'.join(lines)+'\n')
+          print('\n'.join(lines))
+          PY
+      - name: Attach reviewed HTML ZIP and blocker manifest, NO production upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wmm-7-homepages-CANDIDATE-NO-DEPLOY-${{ github.run_id }}
+          path: review-release/*
+          retention-days: 7
+          if-no-files-found: ignore
