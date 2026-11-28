@@ -10,6 +10,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/wmm_seven_locale_mobile_browser_qa.yml'
+      - 'ops/wmm_public_seven_locale_browser_qa.py'
+      - 'ops/tests/test_wmm_public_seven_locale_browser_qa.py'
   workflow_dispatch:
 permissions:
   contents: read
