@@ -15,7 +15,7 @@ ISO3 = json.load(open(os.path.join(ROOT, "src", "iso3.json")))
 FEEDS = os.path.join(ROOT, "data_branch", "feeds")
 TODAY = datetime.date.today()
 MIN_DL = TODAY.isoformat()  # D-0 notices stay; still_open() drops those whose published deadline has passed
-UA = {"User-Agent": "GOV RADAR tender collector (73036396@naver.com)"}
+UA = {"User-Agent": "GOV RADAR tender collector (leedukyoung74@gmail.com)"}
 EEA = "AUT BEL BGR HRV CYP CZE DNK EST FIN FRA DEU GRC HUN IRL ITA LVA LTU LUX MLT NLD POL PRT ROU SVK SVN ESP SWE NOR ISL LIE CHE".split()
 # rough EUR rates, only to rank and filter by size (labelled "approx." on the site)
 EUR = {"EUR": 1, "SEK": .087, "NOK": .085, "DKK": .134, "PLN": .23, "CZK": .04, "RON": .2, "HUF": .0025, "BGN": .51, "CHF": 1.05,

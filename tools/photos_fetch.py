@@ -8,7 +8,7 @@ from capitals import CAP, ALT, ALT3
 MINW = int(os.environ.get('MINW', '1400')); ROUND2 = os.environ.get('ROUND2') == '1'
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "src", "photos.json")
-UA = {"User-Agent": "GOV-RADAR-photos/1.0 (https://radar.wmm-hoa.com; 73036396@naver.com)"}
+UA = {"User-Agent": "GOV-RADAR-photos/1.0 (https://radar.wmm-hoa.com; leedukyoung74@gmail.com)"}
 API = "https://en.wikipedia.org/w/api.php?"
 
 def call(params, tries=14):

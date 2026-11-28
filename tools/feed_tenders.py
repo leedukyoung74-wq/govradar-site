@@ -45,7 +45,7 @@ def iso_of(name, desc=""):
     return None
 
 def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "GOV RADAR tender collector (73036396@naver.com)"})
+    req = urllib.request.Request(url, headers={"User-Agent": "GOV RADAR tender collector (leedukyoung74@gmail.com)"})
     with urllib.request.urlopen(req, timeout=60) as r: return json.loads(r.read().decode("utf8", "replace"))
 
 def worldbank():

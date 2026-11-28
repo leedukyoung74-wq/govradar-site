@@ -29,7 +29,7 @@ version: 1
 2. OFAC 검색 — https://sanctionssearch.ofac.treas.gov/ (T1)
 ---
 AI 작성 + 사람 검수 · 검수자 홍길동 · 2026-11-16
-공개 자료 기준이며, 계약·투자 전에는 원문을 확인하세요. 문의 73036396@naver.com
+공개 자료 기준이며, 계약·투자 전에는 원문을 확인하세요. 문의 leedukyoung74@gmail.com
 """
 
 def res(t): return {x["id"]: x["result"] for x in Q.check(t)}

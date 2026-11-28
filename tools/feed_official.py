@@ -14,7 +14,7 @@ OUT = os.path.join(ROOT, "data_branch", "hz", "official.json")
 ISO3 = json.load(open(os.path.join(ROOT, "tools", "iso3.json")))
 KST = dt.timezone(dt.timedelta(hours=9))
 NOW = dt.datetime.now(dt.timezone.utc)
-UA = {"User-Agent": "GOV-RADAR-feed/1.0 (73036396@naver.com)"}
+UA = {"User-Agent": "GOV-RADAR-feed/1.0 (leedukyoung74@gmail.com)"}
 
 
 def get(url, t=40):

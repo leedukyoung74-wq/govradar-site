@@ -419,7 +419,7 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> <span>{f'<a href="/{L}/legal/privacy/" target="_blank">개인정보 처리방침</a>에 동의합니다 (필수)' if ko else f'I agree to the <a href="/{L}/legal/privacy/" target="_blank">Privacy Policy</a> (required)'}</span></label>
 <label class="chk"><input type="checkbox" name="marketing" value="yes"> {"새 공고·소식 이메일(광고)을 받겠습니다 (선택)" if ko else "Send me news and offers by email (optional)"}</label>
 <button class="btn pri" type="submit">{"견적 요청 보내기" if ko else "Request a quote"}</button></form>
-<p class="note">{"분석 회원과 기업·기관 상품 모두 VAT 별도 · 자동갱신 없음 · 결제일부터 7일 안에 유료 자료를 쓰지 않았다면 전액 환불 · 이용을 시작한 뒤 해지하면 남은 기간까지 이용 · 연간 선납은 이용한 달을 월 요금으로 계산해 뺀 금액 환불 · 맞춤 보고서는 작업 시작 전까지 전액 환불, 받은 뒤에는 청약철회 제한 · 결과물은 'AI 작성 + 사람 검수'로 표시합니다 · " if ko else "Analysis membership and business products: VAT excluded · no auto-renewal · full refund within 7 days of payment if no paid material was used · after use starts, cancel and keep access to the end of the period · annual prepay refunds the balance after charging the months used at the monthly price · custom reports are fully refundable until work starts, and cannot be withdrawn once delivered · deliverables are labelled 'AI-drafted, human-reviewed' · "}<a href="/{L}/legal/refund/">{"환불 정책" if ko else "Refund policy"}</a> · <a href="/{L}/legal/terms/">{"이용약관" if ko else "Terms"}</a> · 73036396@naver.com</p>
+<p class="note">{"분석 회원과 기업·기관 상품 모두 VAT 별도 · 자동갱신 없음 · 결제일부터 7일 안에 유료 자료를 쓰지 않았다면 전액 환불 · 이용을 시작한 뒤 해지하면 남은 기간까지 이용 · 연간 선납은 이용한 달을 월 요금으로 계산해 뺀 금액 환불 · 맞춤 보고서는 작업 시작 전까지 전액 환불, 받은 뒤에는 청약철회 제한 · 결과물은 'AI 작성 + 사람 검수'로 표시합니다 · " if ko else "Analysis membership and business products: VAT excluded · no auto-renewal · full refund within 7 days of payment if no paid material was used · after use starts, cancel and keep access to the end of the period · annual prepay refunds the balance after charging the months used at the monthly price · custom reports are fully refundable until work starts, and cannot be withdrawn once delivered · deliverables are labelled 'AI-drafted, human-reviewed' · "}<a href="/{L}/legal/refund/">{"환불 정책" if ko else "Refund policy"}</a> · <a href="/{L}/legal/terms/">{"이용약관" if ko else "Terms"}</a> · leedukyoung74@gmail.com</p>
 {credit(["sign"] + [o[-1] for o in offers], ko)}</div></section>
 <script>(function(){{var NEED={json.dumps({k: [v[0], v[1] if ko else v[2]] for k, v in NEED.items()}, ensure_ascii=False)},TP={json.dumps({x[0]: (x[1]+" "+x[3]) if ko else (x[2]+" "+x[4]) for x in TIERS}, ensure_ascii=False)};var q=new URLSearchParams(location.search),p=q.get("p")||q.get("t"),c=q.get("c"),nd=q.get("need"),t=q.get("t");
 if(t&&TP[t]){{document.querySelectorAll('.tiers [data-t="'+t+'"]').forEach(function(x){{x.classList.add("hit")}});var b=document.getElementById("needban");if(b){{var w=nd&&NEED[nd]?NEED[nd][1]:"";b.innerHTML="<span>"+(w?({json.dumps('보려는 내용: ' if ko else 'You want: ')}+"<b>"+w+"</b><br>"):"")+{json.dumps('가장 저렴한 등급' if ko else 'Lowest plan')}+"</span><span class=p>"+TP[t]+"</span><a class='btn pri' href='#order' data-pick='"+t+"'>"+{json.dumps('이 등급으로 신청' if ko else 'Request this plan')}+"</a>";b.hidden=false;}}}}
@@ -592,7 +592,7 @@ def notices_page(L, C):
     body = f'''<section class="chero"><div class="in"><p class="crumb"><a href="/{L}/">GOV RADAR</a></p><h1>{"본사 프로젝트 공지" if ko else "Headquarters project notices"}</h1>
 <p class="lede" style="color:#d9d7d0;max-width:62ch">{"WMM(월드메이킹멤버스)과 GCSME KOREA와 GCSME 영국 본사가 직접 올리는 프로젝트·모집·주문 안내입니다." if ko else "Project, recruitment and order notices posted directly by WMM (World Making Members), GCSME KOREA and GCSME's UK headquarters."}</p></div></section>
 <div class="in stock">{notice_items(L, C)}
-<p class="note">{"이 공지란은 WMM·GCSME KOREA·GCSME 영국 본사만 올립니다. 공지를 내세워 돈을 요구하는 연락을 받으면 73036396@naver.com으로 먼저 확인하세요. WMM은 참여자에게 가입비·교육비를 받지 않습니다." if ko else "Only WMM, GCSME KOREA and GCSME's UK headquarters post here. If anyone asks you for money in connection with these notices, please check with 73036396@naver.com first. WMM never charges participants any fees."}</p></div>'''
+<p class="note">{"이 공지란은 WMM·GCSME KOREA·GCSME 영국 본사만 올립니다. 공지를 내세워 돈을 요구하는 연락을 받으면 leedukyoung74@gmail.com으로 먼저 확인하세요. WMM은 참여자에게 가입비·교육비를 받지 않습니다." if ko else "Only WMM, GCSME KOREA and GCSME's UK headquarters post here. If anyone asks you for money in connection with these notices, please check with leedukyoung74@gmail.com first. WMM never charges participants any fees."}</p></div>'''
     return C["head"](L, ("본사 프로젝트 공지" if ko else "Headquarters notices") + " · GOV RADAR",
                      "WMM · GCSME KOREA · GCSME 영국 본사가 직접 올리는 프로젝트·모집 공지" if ko else "Project and recruitment notices from WMM, GCSME KOREA and GCSME's UK headquarters",
                      f"/{L}/notices/", {l: f"/{l}/notices/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
@@ -675,7 +675,7 @@ FAQ = [
  ("관심 나라를 바꿀 수 있나요?", "Can I change my countries?", "언제든 이메일로 알려 주시면 다음 주 요약부터 바뀝니다.", "Yes, email us any time and the next weekly summary will reflect it."),
  ("여러 명이 같이 써도 되나요?", "Can several people use it?", "분석 회원은 1명 기준입니다. 여러 명이 쓰려면 기관 라이선스를 권합니다.", "An analysis membership is for one person. For teams, choose an institutional licence."),
  ("무료 가입으로는 어디까지 보나요?", "What does a free sign-up show?", "193개국 지도·나라별 요약·상황판·재난 대비는 모두 보고, 각 나라의 정부 사업·입찰·일정은 앞부분(항목별 2건, 일정 3건)만 봅니다. 전체 목록과 분석·알림은 분석 회원(M1, 월 20,000원)부터 열립니다.", "The map, country summaries, situation board and preparedness for 193 countries, plus the first items of each country's programmes, tenders and events (2 per section, 3 events). Full lists, analysis and alerts open from the analysis membership (M1, ₩20,000/month)."),
- ("정보가 틀리면요?", "What if something is wrong?", "73036396@naver.com 으로 알려 주세요. 영업일 2일 안에 확인해 고치고 정정 기록을 남깁니다.", "Email 73036396@naver.com. We check and correct within two business days and log the correction."),
+ ("정보가 틀리면요?", "What if something is wrong?", "leedukyoung74@gmail.com 으로 알려 주세요. 영업일 2일 안에 확인해 고치고 정정 기록을 남깁니다.", "Email leedukyoung74@gmail.com. We check and correct within two business days and log the correction."),
  ("한국 밖에서도 이용할 수 있나요?", "Can I use it from outside Korea?", "네. 무료 가입과 열람은 어느 나라에서나 같습니다. 상담과 결과물은 한국어 또는 영어로, 접수 확인은 한국 시간 기준 영업일 1~2일 안에 드립니다. 지원은 온라인이며 현지 파트너 연결은 가능한 나라에서만 안내합니다.", "Yes. Sign-up and browsing are the same everywhere. Consultations and deliverables are in Korean or English, and we confirm receipt within one to two business days, Korea time. Support is online; local partner introductions are offered only where available."),
  ("해외 기업은 어떻게 결제하나요?", "How do companies outside Korea pay?", "견적을 요청하시면 통화와 결제 방법을 견적서로 안내합니다. GCSME 회원사는 회원가 페이지에서 신청하세요.", "Request a quote and we state the currency and payment method on it. GCSME member companies can apply on the member-price page."),
  ("해외 입찰을 대신 내 주나요?", "Do you submit bids for us?", "입찰 참여 결정과 제출은 고객이 합니다. 우리는 정보·적합도 검토·제안서 초안·파트너 연결을 돕습니다.", "You decide and submit. We help with information, fit reviews, draft proposals and partner introductions."),
@@ -723,7 +723,7 @@ def edge_html(L):
 def thanks2_page(L, C):
     ko = L == "ko"
     steps = [("영업일 1일 안에 견적서와 일정을 이메일로 보냅니다.", "Within one business day we email a quote and schedule."),
-             ("메일이 안 보이면 스팸함을 확인하시거나 73036396@naver.com 으로 알려 주세요.", "If you can't find it, check spam or write to 73036396@naver.com."),
+             ("메일이 안 보이면 스팸함을 확인하시거나 leedukyoung74@gmail.com 으로 알려 주세요.", "If you can't find it, check spam or write to leedukyoung74@gmail.com."),
              ("입금이 확인되면 영업일 1일 안에 시작합니다. 맞춤 작업은 착수 질문 5개를 함께 보냅니다.", "Work starts within one business day of payment; custom work comes with a 5-question kick-off form."),
              ("무료 신청(이유 받기·의견)은 받은 순서대로 이메일로 답합니다.", "Free requests (unlock, feedback) are answered by email in order received.")]
     li = "".join(f"<li>{a if ko else b}</li>" for a, b in steps)
@@ -845,7 +845,7 @@ def member_page(L, C):
 <div id="mstate" class="note" role="status"></div>
 <form id="mform" class="mform" onsubmit="return false"><label>{"열람 코드" if ko else "Access code"}<input id="mcode" autocomplete="off" placeholder="XXXX-XXXX-XXXX-XXXX" style="text-transform:uppercase"></label>
 <p class="cta"><button class="btn pri" id="mgo" type="button">{"열기" if ko else "Unlock"}</button> <button class="btn" id="mout" type="button">{"이 브라우저에서 해제" if ko else "Sign out on this browser"}</button></p></form>
-<p class="note">{"코드는 본인만 쓰세요. 여러 사람이 함께 쓰려면 기관 라이선스를 이용해 주세요. 코드를 잃어버렸으면 73036396@naver.com으로 연락 주세요." if ko else "Keep the code to yourself. For several users, choose an institutional licence. Lost your code? Write to 73036396@naver.com."}</p>
+<p class="note">{"코드는 본인만 쓰세요. 여러 사람이 함께 쓰려면 기관 라이선스를 이용해 주세요. 코드를 잃어버렸으면 leedukyoung74@gmail.com으로 연락 주세요." if ko else "Keep the code to yourself. For several users, choose an institutional licence. Lost your code? Write to leedukyoung74@gmail.com."}</p>
 <p class="cta"><a class="btn" href="/{L}/pricing/?p=member#order">{"분석 회원 신청 (월 20,000원)" if ko else "Become an analysis member (₩20,000/mo)"}</a></p>
 </div></section>'''
     return C["head"](L, ("분석 회원 열람" if ko else "Analysis member access") + " · GOV RADAR",
@@ -982,7 +982,7 @@ def membership_page(L, C):
                 f'<p class="cta"><a class="btn gold" href="{WMM_MS}#apply" target="_blank" rel="noopener">{X["btn"]}</a></p></div>'
                 f'<figure><img src="/assets/wmm-card.webp" alt="WMM" width="1408" height="768"><figcaption>{CONCEPT.get(L, "Concept image")}</figcaption></figure></div></section>'
                 f'<section class="band" id="tiers"><div class="in"><h2>{X["tbl"]}</h2><div class="tscroll"><table class="tiers">{hd}{rows}</table></div><p class="note">{X["note"]}</p>'
-                f'<p class="note">{X["c"]} · 73036396@naver.com · WORLD MAKING MEMBERS (WMM)</p></div></section>')
+                f'<p class="note">{X["c"]} · leedukyoung74@gmail.com · WORLD MAKING MEMBERS (WMM)</p></div></section>')
         return C["head"](L, X["t"] + " · GOV RADAR", X["lede"], f"/{L}/membership/", {l: f"/{l}/membership/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
     css = ('<style>.mtr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}'
            '.mtr>div,.mpr>div,.mfc>div{background:var(--card,#fff);padding:22px;border-radius:6px}'
@@ -1069,7 +1069,7 @@ def membership_page(L, C):
 <section class="band alt"><div class="in"><h2>{T("우리가 약속하지 않는 것", "What we do not promise")}</h2><div class="mpr">{prh}</div></div></section>
 <section class="band alt"><div class="in"><h2>{T("가입 방법을 확인하세요", "See how to apply")}</h2>
 <p class="cta"><a class="btn pri" href="{WMM_MS}{hs}#apply" target="_blank" rel="noopener">{T("WMM 멤버십 신청 →", "Apply for WMM membership →")}</a> <a class="btn" href="/{L}/pricing/">{T("GOV RADAR 요금 보기", "GOV RADAR pricing")}</a></p>
-<p class="note">{T("문의", "Contact")} 73036396@naver.com · {T("월드메이킹멤버스(WMM)", "WORLD MAKING MEMBERS (WMM)")}</p>{credit([r[0] for r in MROWS["en"]], ko)}</div></section>'''
+<p class="note">{T("문의", "Contact")} leedukyoung74@gmail.com · {T("월드메이킹멤버스(WMM)", "WORLD MAKING MEMBERS (WMM)")}</p>{credit([r[0] for r in MROWS["en"]], ko)}</div></section>'''
     return C["head"](L, T("WMM 멤버십", "WMM Membership") + " · GOV RADAR",
                      T("WMM 멤버십 M0–M5: 정보 탐색부터 서류 준비, 시장 검증, 공공 수주까지. 멤버십 신청은 wmm-hoa.com.", "WMM membership M0–M5: from information to documents, market validation and public contracts. Apply at wmm-hoa.com."),
                      f"/{L}/membership/", {l: f"/{l}/membership/" for l in C["LANGS"]}) + LTR(L, body) + C["foot"](L)
@@ -1081,31 +1081,31 @@ KIT_TX = {
      ("Kit de emergencia para el hogar · 2 personas, 3 días","24 L de agua (2 L × 12), 18 comidas no perecederas, radio a pilas, 2 luces LED, 2 baterías externas, kit de higiene de emergencia, 2 mantas, caja de almacenamiento y guía (8 artículos)"),
      ("Kit de emergencia para el coche · 24 horas","Funda resistente al calor, chaleco reflectante, linterna, kit de primeros auxilios e higiene, manta y lámina térmica, tarjeta de contacto y silbato (6 artículos)")],
   g=["HOME3 · 24 L de agua · 18 comidas · radio a pilas","GO72 · mochila de 28 L · linterna frontal · batería externa","Radio portátil · manta térmica · poncho","Silbato · funda para documentos · kit de higiene","Kit de apósitos · tentempiés · tarjeta de contacto · embalaje inspeccionado","HOME3 · 2 luces LED · 2 baterías externas · kit de higiene","HOME3 · 2 mantas · caja de almacenamiento y guía","CAR24 · funda resistente al calor · chaleco reflectante · linterna","CAR24 · botiquín · manta · tarjeta de contacto y silbato"],
-  n="Las imágenes son conceptuales. El contenido es orientativo antes del lanzamiento y puede cambiar. Pedidos para grupos: 73036396@naver.com"),
+  n="Las imágenes son conceptuales. El contenido es orientativo antes del lanzamiento y puede cambiar. Pedidos para grupos: leedukyoung74@gmail.com"),
 "fr": dict(h="Kits d’urgence WMM — GO72 · HOME3 · CAR24", p="Un sac à emporter, une boîte pour la maison et un sac pour la voiture : trois kits pour trois situations.", alt="Contenu de GO72, HOME3 et CAR24",
   k=[("Sac de survie individuel · 1 personne, 2–3 jours","Sac à dos étanche 28 L, lampe frontale LED, batterie externe 10 000 mAh, radio portable, couverture de survie, poncho, sifflet, pochette étanche pour documents, kit hygiène et masques, kit pansements, en-cas, carte de contact et guide, emballage et contrôle (13 articles)"),
      ("Kit d’urgence pour la maison · 2 personnes, 3 jours","24 L d’eau (2 L × 12), 18 repas longue conservation, radio à piles, 2 lampes LED, 2 batteries externes, kit hygiène d’urgence, 2 couvertures, boîte de rangement et guide (8 articles)"),
      ("Kit d’urgence pour la voiture · 24 heures","Pochette résistante à la chaleur, gilet réfléchissant, lampe torche, trousse de secours et d’hygiène, couverture et feuille de survie, carte de contact et sifflet (6 articles)")],
   g=["HOME3 · 24 L d’eau · 18 repas · radio à piles","GO72 · sac à dos 28 L · lampe frontale · batterie externe","Radio portable · couverture de survie · poncho","Sifflet · pochette à documents · kit hygiène","Kit pansements · en-cas · carte de contact · emballage contrôlé","HOME3 · 2 lampes LED · 2 batteries externes · kit hygiène","HOME3 · 2 couvertures · boîte de rangement et guide","CAR24 · pochette résistante à la chaleur · gilet réfléchissant · lampe torche","CAR24 · trousse de secours · couverture · carte de contact et sifflet"],
-  n="Images conceptuelles. Le contenu est indicatif avant le lancement et peut changer. Commandes groupées : 73036396@naver.com"),
+  n="Images conceptuelles. Le contenu est indicatif avant le lancement et peut changer. Commandes groupées : leedukyoung74@gmail.com"),
 "ar": dict(h="حقائب الطوارئ من WMM — GO72 · HOME3 · CAR24", p="حقيبة ظهر للخروج، وصندوق للمنزل، وحقيبة للسيارة: ثلاث حقائب لثلاثة مواقف.", alt="محتويات GO72 وHOME3 وCAR24",
   k=[("حقيبة نجاة شخصية · شخص واحد، 2–3 أيام","حقيبة ظهر مقاومة للماء 28 لترًا، مصباح رأس LED، بطارية متنقلة 10,000 مللي أمبير، راديو محمول، بطانية حرارية، معطف مطر، صفارة، حافظة وثائق مقاومة للماء، عدة نظافة وكمامات، عدة ضمادات، وجبات خفيفة، بطاقة اتصال ودليل، تغليف وفحص (13 قطعة)"),
      ("حقيبة طوارئ منزلية · شخصان، 3 أيام","24 لترًا من الماء (2 لتر × 12)، 18 وجبة لا تحتاج تبريدًا، راديو بالبطاريات، مصباحا LED، بطاريتان متنقلتان، عدة نظافة للطوارئ، بطانيتان، صندوق تخزين ودليل (8 قطع)"),
      ("حقيبة طوارئ للسيارة · 24 ساعة","حافظة مقاومة للحرارة، سترة عاكسة، مصباح يدوي، عدة إسعافات ونظافة، بطانية وغطاء حراري، بطاقة اتصال وصفارة (6 قطع)")],
   g=["HOME3 · ماء 24 لترًا · 18 وجبة · راديو بالبطاريات","GO72 · حقيبة ظهر 28 لترًا · مصباح رأس · بطارية متنقلة","راديو محمول · بطانية حرارية · معطف مطر","صفارة · حافظة وثائق · عدة نظافة","عدة ضمادات · وجبات خفيفة · بطاقة اتصال · تغليف مفحوص","HOME3 · مصباحا LED · بطاريتان متنقلتان · عدة نظافة","HOME3 · بطانيتان · صندوق تخزين ودليل","CAR24 · حافظة مقاومة للحرارة · سترة عاكسة · مصباح يدوي","CAR24 · عدة إسعافات · بطانية · بطاقة اتصال وصفارة"],
-  n="الصور تصورية. المحتويات إرشادية قبل الإطلاق وقد تتغير. الطلبات الجماعية: 73036396@naver.com"),
+  n="الصور تصورية. المحتويات إرشادية قبل الإطلاق وقد تتغير. الطلبات الجماعية: leedukyoung74@gmail.com"),
 "vi": dict(h="Bộ dụng cụ khẩn cấp WMM — GO72 · HOME3 · CAR24", p="Ba lô mang theo, hộp để ở nhà và túi để trên xe: ba bộ cho ba tình huống.", alt="Thành phần của GO72, HOME3 và CAR24",
   k=[("Ba lô sinh tồn cá nhân · 1 người, 2–3 ngày","Ba lô chống nước 28 L, đèn pin đội đầu LED, sạc dự phòng 10.000 mAh, radio cầm tay, chăn giữ nhiệt, áo mưa, còi, túi đựng giấy tờ chống nước, bộ vệ sinh và khẩu trang, bộ băng gạc, đồ ăn nhẹ, thẻ liên lạc và hướng dẫn, đóng gói và kiểm tra (13 món)"),
      ("Bộ khẩn cấp gia đình · 2 người, 3 ngày","24 L nước (2 L × 12), 18 bữa ăn bảo quản thường, radio dùng pin, 2 đèn LED, 2 sạc dự phòng, bộ vệ sinh khẩn cấp, 2 chăn, hộp đựng và hướng dẫn (8 món)"),
      ("Bộ khẩn cấp cho ô tô · 24 giờ","Túi chịu nhiệt, áo phản quang, đèn pin, bộ sơ cứu và vệ sinh, chăn và tấm giữ nhiệt, thẻ liên lạc và còi (6 món)")],
   g=["HOME3 · 24 L nước · 18 bữa ăn · radio dùng pin","GO72 · ba lô 28 L · đèn đội đầu · sạc dự phòng","Radio cầm tay · chăn giữ nhiệt · áo mưa","Còi · túi giấy tờ · bộ vệ sinh","Bộ băng gạc · đồ ăn nhẹ · thẻ liên lạc · đóng gói đã kiểm tra","HOME3 · 2 đèn LED · 2 sạc dự phòng · bộ vệ sinh","HOME3 · 2 chăn · hộp đựng và hướng dẫn","CAR24 · túi chịu nhiệt · áo phản quang · đèn pin","CAR24 · bộ sơ cứu · chăn · thẻ liên lạc và còi"],
-  n="Hình ảnh mang tính minh họa. Thành phần là thông tin trước khi ra mắt và có thể thay đổi. Đặt hàng số lượng lớn: 73036396@naver.com"),
+  n="Hình ảnh mang tính minh họa. Thành phần là thông tin trước khi ra mắt và có thể thay đổi. Đặt hàng số lượng lớn: leedukyoung74@gmail.com"),
 "id": dict(h="Kit darurat WMM — GO72 · HOME3 · CAR24", p="Tas punggung untuk dibawa pergi, kotak untuk rumah, dan tas untuk mobil: tiga kit untuk tiga situasi.", alt="Isi GO72, HOME3, dan CAR24",
   k=[("Tas bertahan hidup pribadi · 1 orang, 2–3 hari","Tas punggung tahan air 28 L, senter kepala LED, power bank 10.000 mAh, radio portabel, selimut termal, jas hujan ponco, peluit, kantong dokumen tahan air, paket kebersihan dan masker, paket perban, camilan, kartu kontak dan panduan, pengemasan dan pemeriksaan (13 item)"),
      ("Kit darurat rumah · 2 orang, 3 hari","Air 24 L (2 L × 12), 18 porsi makanan tahan simpan, radio baterai, 2 lampu LED, 2 power bank, paket kebersihan darurat, 2 selimut, kotak penyimpanan dan panduan (8 item)"),
      ("Kit darurat mobil · 24 jam","Kantong tahan panas, rompi reflektif, senter, paket P3K dan kebersihan, selimut dan lembar termal, kartu kontak dan peluit (6 item)")],
   g=["HOME3 · air 24 L · 18 porsi makanan · radio baterai","GO72 · tas 28 L · senter kepala · power bank","Radio portabel · selimut termal · ponco","Peluit · kantong dokumen · paket kebersihan","Paket perban · camilan · kartu kontak · kemasan terperiksa","HOME3 · 2 lampu LED · 2 power bank · paket kebersihan","HOME3 · 2 selimut · kotak penyimpanan dan panduan","CAR24 · kantong tahan panas · rompi reflektif · senter","CAR24 · paket P3K · selimut · kartu kontak dan peluit"],
-  n="Gambar bersifat konsep. Isi merupakan panduan sebelum peluncuran dan dapat berubah. Pemesanan dalam jumlah besar: 73036396@naver.com"),
+  n="Gambar bersifat konsep. Isi merupakan panduan sebelum peluncuran dan dapat berubah. Pemesanan dalam jumlah besar: leedukyoung74@gmail.com"),
 }
 
 def wmm_kits(L):
@@ -1139,12 +1139,12 @@ def wmm_kits(L):
            '.wk-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}.wk-g figure{margin:0;min-width:0}.wk-g img{width:100%;height:auto;display:block;border-radius:6px}.wk-g figcaption{font-size:13px;margin-top:6px;opacity:.8}'
            '.wk-n{font-size:13px;opacity:.75}'
            '@media(max-width:900px){.wk-ks,.wk-g{grid-template-columns:1fr 1fr}}@media(max-width:560px){.wk-ks,.wk-g{grid-template-columns:1fr}}</style>')
-    if X: T = lambda a, b, _m={"WMM 비상 키트 — GO72 · HOME3 · CAR24": X["h"], "들고 나가는 배낭, 집에 두는 상자, 차에 싣는 가방. 상황에 맞춰 세 가지로 준비했습니다.": X["p"], "GO72·HOME3·CAR24 구성품": X["alt"], "사진은 콘셉트 이미지입니다. 구성은 출시 전 안내용이며 바뀔 수 있습니다. 단체 주문 문의: 73036396@naver.com": X["n"]}: _m.get(a, b)
+    if X: T = lambda a, b, _m={"WMM 비상 키트 — GO72 · HOME3 · CAR24": X["h"], "들고 나가는 배낭, 집에 두는 상자, 차에 싣는 가방. 상황에 맞춰 세 가지로 준비했습니다.": X["p"], "GO72·HOME3·CAR24 구성품": X["alt"], "사진은 콘셉트 이미지입니다. 구성은 출시 전 안내용이며 바뀔 수 있습니다. 단체 주문 문의: leedukyoung74@gmail.com": X["n"]}: _m.get(a, b)
     return (css + f'<h2>{T("WMM 비상 키트 — GO72 · HOME3 · CAR24", "WMM emergency kits — GO72 · HOME3 · CAR24")}</h2>'
             f'<p>{T("들고 나가는 배낭, 집에 두는 상자, 차에 싣는 가방. 상황에 맞춰 세 가지로 준비했습니다.", "A pack to grab, a box for home and a bag for the car — three kits for three situations.")}</p>'
             f'<img class="wk-main" src="/assets/kit-overview.webp" alt="{T("GO72·HOME3·CAR24 구성품", "GO72, HOME3 and CAR24 contents")}" width="1600" height="900" loading="lazy" decoding="async">'
             f'<div class="wk-ks">{kc}</div><div class="wk-g">{gh}</div>'
-            f'<p class="wk-n">{T("사진은 콘셉트 이미지입니다. 구성은 출시 전 안내용이며 바뀔 수 있습니다. 단체 주문 문의: 73036396@naver.com", "Images are concept images. Contents are pre-launch guidance and may change. Bulk enquiries: 73036396@naver.com")}</p>')
+            f'<p class="wk-n">{T("사진은 콘셉트 이미지입니다. 구성은 출시 전 안내용이며 바뀔 수 있습니다. 단체 주문 문의: leedukyoung74@gmail.com", "Images are concept images. Contents are pre-launch guidance and may change. Bulk enquiries: leedukyoung74@gmail.com")}</p>')
 
 # ---------------------------------------------------------------- country tender intel (feeds/cty/{ISO}.json)
 CI = {

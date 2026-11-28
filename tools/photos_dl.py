@@ -4,7 +4,7 @@ import json, os, sys, time, io, urllib.request
 from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = json.load(open(os.path.join(ROOT, "src", "photos.json")))
-UA = {"User-Agent": "GOV-RADAR-photos/1.0 (https://radar.wmm-hoa.com; 73036396@naver.com)"}
+UA = {"User-Agent": "GOV-RADAR-photos/1.0 (https://radar.wmm-hoa.com; leedukyoung74@gmail.com)"}
 ok = bad = 0
 for iso, x in P.items():
     out = os.path.join(ROOT, "web", f"c-{iso.lower()}.webp")

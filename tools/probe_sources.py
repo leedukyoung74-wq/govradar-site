@@ -4,7 +4,7 @@ proof that tenders can be collected; the "collect" field changes only when a col
 import json, os, sys, datetime, urllib.request, urllib.parse, urllib.robotparser, concurrent.futures as cf
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REG = os.path.join(ROOT, "tools", "sources", "registry.json")
-UA = "GOV RADAR source check (73036396@naver.com)"
+UA = "GOV RADAR source check (leedukyoung74@gmail.com)"
 
 def head(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA})

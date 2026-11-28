@@ -5,7 +5,7 @@ Run: python tools/verify_samples.py [n_per_source]"""
 import json, os, re, sys, time, urllib.request, urllib.parse
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEEDS = os.path.join(ROOT, "data_branch", "feeds")
-UA = {"User-Agent": "GOV RADAR sample check (73036396@naver.com)"}
+UA = {"User-Agent": "GOV RADAR sample check (leedukyoung74@gmail.com)"}
 
 BROWSER = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"}
 TRACE = []   # every official-record lookup of the current notice: url, HTTP status, content type, ids read back

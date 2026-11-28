@@ -7,7 +7,7 @@ import datetime, json, os, sys, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://radar.wmm-hoa.com"
 RAW = "https://raw.githubusercontent.com/leedukyoung74-wq/govradar-site/data/feeds/"
-UA = {"User-Agent": "Mozilla/5.0 (GOV RADAR site check; 73036396@naver.com)"}
+UA = {"User-Agent": "Mozilla/5.0 (GOV RADAR site check; leedukyoung74@gmail.com)"}
 MAX_AGE_HOURS = 30  # the daily run is at 06:10 KST; older than this means a missed run
 BOARD_FIELDS = ["iso", "title", "buyer", "deadline", "url", "source", "slug", "n", "added", "sec", "pg"]
 

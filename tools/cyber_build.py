@@ -192,7 +192,7 @@ T = {
    ph="지금 준비할 것 — 가정·기업·정부", pl="공격을 안 당하는 것보다, 당하거나 장애가 나도 필수 기능을 빨리 되살리는 것이 핵심입니다.", pth=["분야","개인·가정","기업·기관","정부·지자체"],
    cwh="나라별 사이버 피해 신고처", cwn="✓ 표시는 2026년 11월 15일 각국 공식 사이트에서 확인한 번호입니다. 생명이 위험하면 먼저 각국 긴급번호(한국 112·119, 미국 911, 유럽 112)로 연락하세요.", tp="개인·가정 먼저 할 일", tb="기업·기관 먼저 할 일", tg="정부·지자체 먼저 할 일", callh="한국에서 피해를 입었다면 바로 신고",
    sh="출처", sn="사건 사진은 언론사 저작권 때문에 싣지 않고, 내용과 관련된 무료 라이선스(Unsplash) 이미지를 넣었습니다. 이 페이지는 공개 보도와 기관 발표를 바탕으로 정리했습니다. 조사 중인 사건은 결론이 바뀔 수 있습니다. 배후 귀속은 발표 기관의 판단을 그대로 옮겼습니다.",
-   foot="GOV RADAR · 월드메이킹멤버스(WMM) · 문의 73036396@naver.com", other="English"),
+   foot="GOV RADAR · 월드메이킹멤버스(WMM) · 문의 leedukyoung74@gmail.com", other="English"),
  "en": dict(title="Cyberattacks — what is happening now and how to prepare · GOV RADAR", desc="Twelve kinds of cyberattack, recent incidents worldwide (real attacks vs plain outages), landmark cases and what households, companies and governments should do — GOV RADAR",
    crumb="Hazard map", h1="Cyberattacks<br>what is happening, and how to prepare", lead="Hacking, DDoS and ransomware can stop power, money, water, food and healthcare. We separate real attacks from plain outages in incidents from September to November 2026, and set out what households, companies and governments can do now.",
    cap="Cyberattack · motion graphic", rel="Related image, not the incident", upd="As of", xh="What can be attacked remotely — the key 12", xl="Anything connected to a network can be reached from outside. From aircraft, ships and cars to power, water and medical devices, each comes with a case that happened or was confirmed. The drawings are explanatory animations of how it works.", xw="How it is reached", xc="Real case", xd="What to do", xs="Source",
@@ -207,7 +207,7 @@ T = {
    ph="What to prepare — households, companies, governments", pl="The goal is not to never be hit, but to restore essential functions quickly when an attack or outage happens.", pth=["Area","Households","Companies","Government"],
    cwh="Where to report, by country", cwn="✓ = checked on official sites on 15 Nov 2026. If life is at risk, call the local emergency number first (112 in Europe and Korea, 911 in the US).", tp="Households: first steps", tb="Companies: first steps", tg="Government: first steps", callh="If you are hit in Korea, report it",
    sh="Sources", sn="News photos are copyrighted, so each incident shows a related free-licence (Unsplash) image instead. Compiled from public reporting and official statements. Conclusions on open investigations may change. Attributions are as stated by the named agency or company.",
-   foot="GOV RADAR · WORLD MAKING MEMBERS (WMM) · 73036396@naver.com", other="한국어")}
+   foot="GOV RADAR · WORLD MAKING MEMBERS (WMM) · leedukyoung74@gmail.com", other="한국어")}
 
 def page(L):
     t = T[L]; i = 0 if L == "ko" else 1

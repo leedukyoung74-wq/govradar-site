@@ -8,5 +8,5 @@ let r;try{r=await (await fetch('/pay/confirm',{method:'POST',headers:{'content-t
 if(r.ok){T.textContent='결제가 완료되었습니다';M.innerHTML='';const s=(x)=>{const p=document.createElement('p');p.textContent=x;M.appendChild(p);};
  s(r.item+' · '+r.amount.toLocaleString('ko-KR')+'원');s('주문번호 '+r.orderId);s('회원 코드는 영업일 기준 1일 안에 '+(body.email||'입력하신 이메일')+'로 보내 드립니다.');
  if(r.receipt){const a=document.createElement('a');a.href=r.receipt;a.target='_blank';a.rel='noopener';a.textContent='카드 영수증 보기';M.appendChild(a);}
-}else{T.textContent='결제를 완료하지 못했습니다';M.textContent=(r.message||'다시 시도해 주세요.')+' 카드 승인이 났는데 이 화면이 보이면 73036396@naver.com 으로 주문번호와 함께 알려 주세요.';}})();
+}else{T.textContent='결제를 완료하지 못했습니다';M.textContent=(r.message||'다시 시도해 주세요.')+' 카드 승인이 났는데 이 화면이 보이면 leedukyoung74@gmail.com 으로 주문번호와 함께 알려 주세요.';}})();
 </script></body></html>

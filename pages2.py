@@ -2,7 +2,7 @@
 import json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 CO = dict(name_ko="월드메이킹멤버스 주식회사", name_en="WORLD MAKING MEMBERS Co., Ltd.", ceo_ko="대표이사 이덕영", ceo_en="CEO Lee Duk-young",
-          brn="589-88-01039", mail_order="제2024-서울서초-2185호", email="73036396@naver.com", web="https://www.wmm-hoa.com", site="https://radar.wmm-hoa.com")
+          brn="589-88-01039", mail_order="제2024-서울서초-2185호", email="leedukyoung74@gmail.com", web="https://www.wmm-hoa.com", site="https://radar.wmm-hoa.com")
 UPDATED = "2026-10-31"
 
 def co_block(ko=True):
@@ -30,7 +30,7 @@ LEGAL = {
    ("제9조 (컨소시엄·연결)", "회사는 참여자 사이의 연결과 온라인 협의를 지원합니다. 참여자 사이의 계약은 당사자가 직접 체결하며, 회사는 별도 계약이 없는 한 그 이행을 보증하지 않습니다. 컨소시엄 관심 등록은 법적 구속력이 없는 협력 의향 표시이며, 기관명은 검증과 서면 동의 후에만 공개합니다."),
    ("제10조 (지식재산)", "서비스의 편집물·디자인·소프트웨어의 권리는 회사에 있습니다. 출처 원문의 권리는 각 원저작자에게 있으며 서비스는 짧은 요약과 링크만 제공합니다."),
    ("제11조 (책임의 제한)", "회사는 고의 또는 중대한 과실이 없는 한, 서비스 정보를 이용해 내린 결정으로 생긴 손해에 책임지지 않습니다. 천재지변·통신 장애·외부 사이트 변경으로 인한 서비스 중단도 같습니다."),
-   ("제12조 (분쟁 해결)", "분쟁은 먼저 이메일(73036396@naver.com)로 협의합니다. 소송은 대한민국 법을 따르며 민사소송법상 관할 법원에 제기합니다."),
+   ("제12조 (분쟁 해결)", "분쟁은 먼저 이메일(leedukyoung74@gmail.com)로 협의합니다. 소송은 대한민국 법을 따르며 민사소송법상 관할 법원에 제기합니다."),
    ("부칙", f"이 약관은 {UPDATED}부터 적용합니다.")]),
   "en": ("Terms of Service", [
    ("1. Purpose", "These terms govern use of GOV RADAR (radar.wmm-hoa.com, the 'Service') operated by WORLD MAKING MEMBERS Co., Ltd. (the 'Company')."),
@@ -47,7 +47,7 @@ LEGAL = {
    ("9. Consortium and introductions", "We facilitate introductions and online discussion. Contracts between participants are made directly between them; unless agreed in writing we do not guarantee performance. Consortium registration is a non-binding expression of interest; organisation names are shown only after verification and written consent."),
    ("10. Intellectual property", "Our compilation, design and software belong to the Company. Source content belongs to its owners; we provide short summaries and links only."),
    ("11. Limitation of liability", "Except for intent or gross negligence, we are not liable for decisions made using the Service, or for interruptions caused by force majeure, network failures or third-party sites."),
-   ("12. Disputes", "Contact 73036396@naver.com first. Korean law applies; courts with jurisdiction under the Korean Civil Procedure Act."),
+   ("12. Disputes", "Contact leedukyoung74@gmail.com first. Korean law applies; courts with jurisdiction under the Korean Civil Procedure Act."),
    ("Effective", f"From {UPDATED}. The Korean version prevails in case of conflict.")]),
  },
  "privacy": {
@@ -58,10 +58,10 @@ LEGAL = {
    ("4. 제3자 제공", "법령에 근거가 있거나 이용자가 동의한 경우 외에는 제3자에게 제공하지 않습니다. 컨소시엄 연결은 양측이 동의한 범위의 정보만 상대방에게 전달합니다."),
    ("5. 처리 위탁과 국외 이전", "회원 인증·웹 호스팅·양식 저장: Netlify, Inc.(미국) — 서비스 이용 시 암호화 통신으로 전송, 회원 탈퇴 또는 위탁 종료 시까지 보관. 결제 대행(도입 시): 국내 전자결제대행사. 이전을 원하지 않으면 가입하지 않거나 탈퇴할 수 있으나 이 경우 회원 기능을 쓸 수 없습니다."),
    ("6. 만 14세 미만", "만 14세 미만 아동의 개인정보는 법정대리인 동의를 받은 경우에만 처리합니다."),
-   ("7. 이용자의 권리", "언제든 열람·정정·삭제·처리정지·동의 철회를 요청할 수 있습니다. '내 정보'에서 직접 고치거나 73036396@naver.com으로 요청하면 10일 안에 처리합니다."),
+   ("7. 이용자의 권리", "언제든 열람·정정·삭제·처리정지·동의 철회를 요청할 수 있습니다. '내 정보'에서 직접 고치거나 leedukyoung74@gmail.com으로 요청하면 10일 안에 처리합니다."),
    ("8. 안전성 확보 조치", "비밀번호 암호화, 전송 구간 암호화(HTTPS), 접근 권한 최소화, 접속 기록 보관."),
    ("9. 쿠키와 저장소", "로그인 유지를 위해 브라우저 저장소에 인증 토큰을 저장합니다. 광고 추적 쿠키는 쓰지 않습니다."),
-   ("10. 개인정보 보호책임자", "월드메이킹멤버스 주식회사 대표이사 이덕영 · 73036396@naver.com. 침해 신고: 개인정보침해신고센터(privacy.kisa.or.kr, 118), 개인정보분쟁조정위원회(kopico.go.kr)."),
+   ("10. 개인정보 보호책임자", "월드메이킹멤버스 주식회사 대표이사 이덕영 · leedukyoung74@gmail.com. 침해 신고: 개인정보침해신고센터(privacy.kisa.or.kr, 118), 개인정보분쟁조정위원회(kopico.go.kr)."),
    ("시행일", f"{UPDATED}")]),
   "en": ("Privacy Policy", [
    ("1. What we collect", "Required: email, password (stored hashed), age group, time of consent. Optional: name or organisation, company details, alert channels (email, mobile for KakaoTalk, Slack/Teams webhooks), marketing consent (optional — we send news and promotional email only if you agree, and you can withdraw at any time). If you sign up or log in with Google, we receive the name, email and profile photo Google provides. Consortium/contact forms: name, organisation, title, email, country, interests."),
@@ -70,10 +70,10 @@ LEGAL = {
    ("4. Sharing", "Not shared except by law or with your consent. Consortium introductions share only what both sides agreed to."),
    ("5. Processors and transfers abroad", "Authentication, hosting and form storage: Netlify, Inc. (USA), over encrypted connections, kept until account closure or end of service. Payment processor (when introduced): a licensed Korean PG."),
    ("6. Children", "Data of under-14s is processed only with a parent's consent."),
-   ("7. Your rights", "Access, correct, delete, restrict or withdraw consent at any time via My account or 73036396@naver.com (answered within 10 days)."),
+   ("7. Your rights", "Access, correct, delete, restrict or withdraw consent at any time via My account or leedukyoung74@gmail.com (answered within 10 days)."),
    ("8. Security", "Hashed passwords, HTTPS, least-privilege access, access logs."),
    ("9. Cookies and storage", "A sign-in token is kept in your browser storage. No advertising trackers."),
-   ("10. Privacy officer", "Lee Duk-young, CEO · 73036396@naver.com. The Korean version prevails."),
+   ("10. Privacy officer", "Lee Duk-young, CEO · leedukyoung74@gmail.com. The Korean version prevails."),
    ("Effective", UPDATED)]),
  },
  "refund": {
@@ -83,14 +83,14 @@ LEGAL = {
    ("디지털 자료", "이미 받은 보고서·계약서 서식 등 디지털 자료는 열람 또는 다운로드 후에는 청약철회가 제한됩니다(전자상거래법 제17조 제2항). 회사는 구매 전에 이 사실을 표시합니다."),
    ("맞춤 보고서·검토", "국가 진출 브리프·입찰 적합도 검토 같은 맞춤 작업은 작업을 시작하기 전까지 전액 환불하고, 작업을 시작한 뒤에는 진행한 만큼을 뺀 금액을 환불합니다. 완성본을 받은 뒤에는 디지털 자료 규정을 따릅니다."),
    ("서비스 문제", "회사 사정으로 서비스를 연속 72시간 이상 쓰지 못했다면 그 기간만큼 이용 기간을 연장하거나 환불합니다."),
-   ("신청 방법", "73036396@naver.com으로 가입 이메일과 결제일을 보내 주세요. 영업일 3일 안에 처리합니다.")]),
+   ("신청 방법", "leedukyoung74@gmail.com으로 가입 이메일과 결제일을 보내 주세요. 영업일 3일 안에 처리합니다.")]),
   "en": ("Refund Policy", [
    ("Access starts at once; withdrawal limited", "Paid membership is digital content: member-only analysis opens as soon as you pay (or your grade is granted). We tell you this and ask for your consent before payment, and once access has started the right of withdrawal (refund) no longer applies (Korean E-Commerce Act Art. 17(2)(5)). If you have not opened any member-only analysis within 7 days of payment, we refund in full."),
    ("Cancelling after use", "Monthly fees are not refunded; cancel before the next billing date to stop future charges and keep access until then. Annual plans are refunded, as the law requires, minus the months used at the monthly rate."),
    ("Digital materials", "Reports and templates already opened or downloaded cannot be withdrawn (Korean E-Commerce Act Art. 17(2)); this is shown before purchase."),
    ("Custom reports and reviews", "Custom work such as market-entry briefs and tender fit reviews is fully refundable until work starts; after that, we refund the balance minus work done. Once delivered, the digital-materials rule applies."),
    ("Outages", "If the Service is unavailable for 72+ consecutive hours due to us, we extend or refund that period."),
-   ("How", "Email 73036396@naver.com with your account email and payment date; handled within 3 business days.")]),
+   ("How", "Email leedukyoung74@gmail.com with your account email and payment date; handled within 3 business days.")]),
  },
  "disclaimer": {
   "ko": ("정보 이용 안내와 면책", [
@@ -100,7 +100,7 @@ LEGAL = {
    ("가정 시나리오", "'대비 시나리오'는 위기 대비 연습용 가정이며 특정 사건이 일어난다는 예측이 아닙니다."),
    ("외부 링크", "외부 사이트의 내용과 가용성은 회사가 통제하지 않습니다."),
    ("안전 정보", "실제 재난·공습 상황에서는 정부 경보(국민재난안전포털, 안전디딤돌 앱)와 외교부 해외안전여행 공지를 먼저 따르세요."),
-   ("문의·정정 요청", "틀린 내용은 73036396@naver.com으로 알려 주세요. 확인 후 고치고 정정 기록을 남깁니다.")]),
+   ("문의·정정 요청", "틀린 내용은 leedukyoung74@gmail.com으로 알려 주세요. 확인 후 고치고 정정 기록을 남깁니다.")]),
   "en": ("Information use and disclaimer", [
    ("Information only", "Everything on GOV RADAR is a summary of public information, not investment, legal, tax, security or medical advice."),
    ("Verification badges", "Each item carries a verdict such as Confirmed, Official statement, Party claim or Single source. Even 'Confirmed' can change if sources change."),
@@ -108,7 +108,7 @@ LEGAL = {
    ("Scenarios", "Preparedness scenarios are planning hypotheses, not predictions."),
    ("External links", "We do not control third-party sites."),
    ("Safety", "In a real emergency follow official government alerts and travel advisories first."),
-   ("Corrections", "Report errors to 73036396@naver.com; we fix them and log the correction.")]),
+   ("Corrections", "Report errors to leedukyoung74@gmail.com; we fix them and log the correction.")]),
  },
 }
 LEGAL_ORDER = ["terms", "privacy", "refund", "disclaimer"]
@@ -176,7 +176,7 @@ def consortium_page(L, head, foot, e, LANGS):
 <label class="chk"><input type="checkbox" name="adult" value="yes" required> {T("만 19세 이상입니다.","I am 19 or older.")}</label>
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> <span>{T('<a href="/ko/legal/privacy/" target="_blank">개인정보 처리방침</a>에 따라 신청 정보를 수집·이용하는 데 동의합니다. (필수)','I agree to the collection and use of this information under the <a href="/en/legal/privacy/" target="_blank">Privacy Policy</a>. (required)')}</span></label>
 <button class="btn pri" type="submit">{T("신청하기","Submit")}</button></form>
-<p class="note">{T("신청 후 영업일 5일 안에 이메일로 결과를 알려 드립니다. 문의: 73036396@naver.com","We reply by email within 5 business days. Contact: 73036396@naver.com")}</p>
+<p class="note">{T("신청 후 영업일 5일 안에 이메일로 결과를 알려 드립니다. 문의: leedukyoung74@gmail.com","We reply by email within 5 business days. Contact: leedukyoung74@gmail.com")}</p>
 </div>"""
     jl = '<script type="application/ld+json">' + json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"GOV RADAR Global Consortium","inLanguage":L}, ensure_ascii=False) + '</script>'
     return head(L, T("글로벌 컨소시엄","Global Consortium") + " · GOV RADAR", T("대학·기관·기업·전문가 온라인 컨소시엄","Online consortium for universities, institutions, companies and experts"), f"/{L}/consortium/", {l: f"/{l}/consortium/" for l in LANGS}, jl) + body + foot(L)

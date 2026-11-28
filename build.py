@@ -253,7 +253,7 @@ def foot(L):
     return f"""</main><footer><div class="in">
 <div class="flogos"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener" class="flogo"><img src="/assets/wmm-logo.png" alt="{'월드메이킹멤버스 주식회사 로고' if L=='ko' else 'WORLD MAKING MEMBERS logo'}" width="52" height="52" class="wmm"><span><b>{'월드메이킹멤버스 주식회사' if L=='ko' else 'WORLD MAKING MEMBERS Co., Ltd.'}</b><small>{'WORLD MAKING MEMBERS' if L=='ko' else '월드메이킹멤버스 주식회사'}</small></span></a><a href="https://www.gcsme.kr" target="_blank" rel="noopener" class="flogo"><img src="/assets/gcsme-logo.jpg" alt="GCSME KOREA 로고" width="52" height="52" class="gc"><span><b>GCSME KOREA</b><small>Global &amp; Commonwealth SME Club</small></span></a><a href="https://www.gcsme.club" target="_blank" rel="noopener" class="flogo"><img src="/assets/gcsme-club.webp" alt="Global &amp; Commonwealth SME Club 로고" width="76" height="52" class="gclub"><span><b>Global &amp; Commonwealth SME Club</b><small>www.gcsme.club</small></span></a></div>
 <div class="lic"><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=5898801039" target="_blank" rel="noopener">{e(t['biz_info'])}</a><span class="bar"></span><span>ONLINE LICENCE : {'제2024-서울서초-2185호' if L=='ko' else 'No. 2024-Seoul Seocho-2185'}</span></div>
-<p class="corp">{e(t['foot_corp'])} · E-mail 73036396@naver.com</p>
+<p class="corp">{e(t['foot_corp'])} · E-mail leedukyoung74@gmail.com</p>
 <div class="sites"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><b>WORLD MAKING MEMBERS</b><span>www.wmm-hoa.com ↗</span></a><a href="https://www.gcsme.kr" target="_blank" rel="noopener"><b>GCSME KOREA</b><span>www.gcsme.kr ↗</span></a><a href="https://www.gcsme.club" target="_blank" rel="noopener"><b>GLOBAL &amp; COMMONWEALTH SME CLUB</b><span>www.gcsme.club ↗</span></a></div>
 {footcols(L)}<p class="corp">{e(t['disc'])}</p></div></footer>
 <div class="fband"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><img src="/assets/wmm-logo-white.png" alt="WORLD MAKING MEMBERS" width="150" height="150"></a></div>
@@ -273,7 +273,7 @@ def foot(L):
 <script src="/assets/config.js"></script><script src="/assets/auth.js"></script><script src="/assets/site.js" defer></script></body></html>"""
 
 def ld(obj): return f'<script type="application/ld+json">{json.dumps(obj, ensure_ascii=False)}</script>'
-ORG = {"@type": "Organization", "name": "WORLD MAKING MEMBERS Co., Ltd.", "alternateName": ["월드메이킹멤버스", "WMM"], "url": "https://www.wmm-hoa.com", "logo": BASE + "/assets/emblem.png", "email": "73036396@naver.com"}
+ORG = {"@type": "Organization", "name": "WORLD MAKING MEMBERS Co., Ltd.", "alternateName": ["월드메이킹멤버스", "WMM"], "url": "https://www.wmm-hoa.com", "logo": BASE + "/assets/emblem.png", "email": "leedukyoung74@gmail.com"}
 
 # ---------------------------------------------------------------- country page
 def lst(items, fmt):
@@ -1134,7 +1134,7 @@ def account_page(L):
 <h1>{e(t['member_area'])}</h1>
 <div id="acct-out"><p class="note">{e(t['members_only'])}</p><p><button class="btn pri" data-auth="login">{e(AT[L]['login'])}</button> <button class="btn" data-auth="signup">{e(AT[L]['signup'])}</button></p></div>
 <div id="acct-in" hidden><p><b id="acct-st"></b> · <span class="lv watch" id="acct-tier"></span> <button class="btn sm" id="acct-logout" type="button">{e(t['logout'])}</button></p>
-<p class="note">{lab('등급 변경·결제는 73036396@naver.com 으로 문의하세요. 등급은 다음 로그인 때 반영됩니다.','To change plan or pay, contact 73036396@naver.com. Plan changes apply at your next sign-in.')}</p>
+<p class="note">{lab('등급 변경·결제는 leedukyoung74@gmail.com 으로 문의하세요. 등급은 다음 로그인 때 반영됩니다.','To change plan or pay, contact leedukyoung74@gmail.com. Plan changes apply at your next sign-in.')}</p>
 <p><a class="btn pri" href="/{L}/request/">{lab('분석 의뢰하기 (4가지)','Request an analysis (4 types)')}</a></p><h3>{lab('내 입찰 관심 목록','My watchlist')}</h3><ul id="acct-watch"></ul><h3>{lab('관심 나라','Followed countries')}</h3><p id="acct-follow" class="note">—</p></div>
 <form id="acct" hidden>
 <label>{lab('회사명','Company')}<input name="company"></label>
@@ -1360,7 +1360,7 @@ def build():
         im = Image.open(os.path.join(OUT, "assets", "mark.png")).convert("RGBA"); im.save(os.path.join(OUT, "favicon.ico"), sizes=[(16,16),(32,32),(48,48)])
     except Exception as ex: print("favicon skipped", ex)
     W("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /widget/\n\nSitemap: {BASE}/sitemap.xml\n")
-    llms = [f"# GOV RADAR (WMM × GCSME)", "", f"> {T['en']['desc_home']}", "", "Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME Club (London). Contact 73036396@naver.com", "", "## Countries (English)"]
+    llms = [f"# GOV RADAR (WMM × GCSME)", "", f"> {T['en']['desc_home']}", "", "Publisher: WORLD MAKING MEMBERS Co., Ltd. (Seoul) with Global & Commonwealth SME Club (London). Contact leedukyoung74@gmail.com", "", "## Countries (English)"]
     llms += [f"- [{c['en']}]({BASE}{url('en', c['iso'])}): {((DATA.get(c['iso']) or {}).get('en') or {}).get('summary', '')[:160]}" for c in META if done(c["iso"])]
     llms += ["", "## Autonomous & special regions"] + [f"- [{x['en']}]({BASE}{url('en', x['iso'])}) — {BY[x['parent']]['en']}: {((DATA.get(x['iso']) or {}).get('en') or {}).get('summary', '')[:160]}" for x in REGS]
     llms += ["", "## 국가 (한국어)"] + [f"- [{c['ko']}]({BASE}{url('ko', c['iso'])})" for c in META if done(c["iso"])]

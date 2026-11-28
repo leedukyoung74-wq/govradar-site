@@ -22,7 +22,7 @@ T = {
   biz_info="사업자정보확인", foot_corp="월드메이킹멤버스 주식회사 · 대표 이덕영 · 사업자등록번호 589-88-01039 · 통신판매업신고 제2024-서울서초-2185호",
   title_cty="{c} 정부 사업·입찰·ODA 동향 | GOV RADAR", desc_cty="{c} 정부의 핵심 국정 과제, 예산 사업, 공개 입찰, 한국 ODA·EDCF, 위험 정보를 매주 갱신합니다.",
   title_home="GOV RADAR — 193개국 정부 사업·입찰·ODA 레이더", desc_home="193개국 정부의 국정 과제, 예산 사업, 입찰 공고, ODA·EDCF, 재해·분쟁 위험을 매주 갱신하는 한국 기업용 해외 정부 사업 레이더.",
-  feed="업종별 피드(RSS)", lang="언어", member_area="내 정보", email="이메일", send_link="로그인 링크 받기", link_sent="이메일로 로그인 링크를 보냈습니다.", login_soon="로그인은 곧 열립니다. 문의: 73036396@naver.com",
+  feed="업종별 피드(RSS)", lang="언어", member_area="내 정보", email="이메일", send_link="로그인 링크 받기", link_sent="이메일로 로그인 링크를 보냈습니다.", login_soon="로그인은 곧 열립니다. 문의: leedukyoung74@gmail.com",
   powered="WMM × GCSME", embed="이 레이더를 우리 사이트에 넣기",
 ),
 "en": dict(
@@ -43,7 +43,7 @@ T = {
   biz_info="Business information", foot_corp="WORLD MAKING MEMBERS Co., Ltd. · CEO Lee Duk-young · Business Reg. No. 589-88-01039 · Mail-order No. 2024-Seoul Seocho-2185",
   title_cty="{c} government projects, tenders and ODA | GOV RADAR", desc_cty="{c}: national agenda, funded programmes, open tenders, Korean ODA/EDCF and risk, updated weekly.",
   title_home="GOV RADAR — government projects, tenders and ODA in 193 countries", desc_home="Weekly radar of national agendas, funded programmes, tenders, ODA and risk in 193 countries, built for companies going global.",
-  feed="Industry feeds (RSS)", lang="Language", member_area="My account", email="Email", send_link="Email me a sign-in link", link_sent="We emailed you a sign-in link.", login_soon="Sign-in opens soon. Contact: 73036396@naver.com",
+  feed="Industry feeds (RSS)", lang="Language", member_area="My account", email="Email", send_link="Email me a sign-in link", link_sent="We emailed you a sign-in link.", login_soon="Sign-in opens soon. Contact: leedukyoung74@gmail.com",
   powered="WMM × GCSME", embed="Embed this radar on your site",
 ),
 "es": dict(
@@ -64,7 +64,7 @@ T = {
   biz_info="Información de la empresa", foot_corp="WORLD MAKING MEMBERS Co., Ltd. · CEO Lee Duk-young · Registro 589-88-01039 · Venta a distancia 2024-Seoul Seocho-2185",
   title_cty="{c}: proyectos de gobierno, licitaciones y ODA | GOV RADAR", desc_cty="{c}: agenda nacional, programas, licitaciones abiertas, ODA coreana y riesgos, actualizado cada semana.",
   title_home="GOV RADAR — proyectos de gobierno y licitaciones en 193 países", desc_home="Radar semanal de agendas nacionales, programas, licitaciones, ODA y riesgos en 193 países.",
-  feed="Feeds por sector (RSS)", lang="Idioma", member_area="Mi cuenta", email="Correo", send_link="Enviar enlace de acceso", link_sent="Te enviamos un enlace de acceso.", login_soon="El acceso abre pronto. Contacto: 73036396@naver.com",
+  feed="Feeds por sector (RSS)", lang="Idioma", member_area="Mi cuenta", email="Correo", send_link="Enviar enlace de acceso", link_sent="Te enviamos un enlace de acceso.", login_soon="El acceso abre pronto. Contacto: leedukyoung74@gmail.com",
   powered="WMM × GCSME", embed="Inserta este radar en tu web",
 ),
 "fr": dict(
@@ -85,7 +85,7 @@ T = {
   biz_info="Informations société", foot_corp="WORLD MAKING MEMBERS Co., Ltd. · PDG Lee Duk-young · Immatriculation 589-88-01039 · Vente à distance 2024-Seoul Seocho-2185",
   title_cty="{c} : projets publics, appels d'offres et ODA | GOV RADAR", desc_cty="{c} : priorités nationales, programmes, appels d'offres ouverts, ODA coréenne et risques, mis à jour chaque semaine.",
   title_home="GOV RADAR — projets publics et appels d'offres dans 193 pays", desc_home="Radar hebdomadaire des priorités nationales, programmes, appels d'offres, ODA et risques dans 193 pays.",
-  feed="Flux sectoriels (RSS)", lang="Langue", member_area="Mon compte", email="E-mail", send_link="Recevoir un lien de connexion", link_sent="Lien de connexion envoyé.", login_soon="La connexion ouvre bientôt. Contact : 73036396@naver.com",
+  feed="Flux sectoriels (RSS)", lang="Langue", member_area="Mon compte", email="E-mail", send_link="Recevoir un lien de connexion", link_sent="Lien de connexion envoyé.", login_soon="La connexion ouvre bientôt. Contact : leedukyoung74@gmail.com",
   powered="WMM × GCSME", embed="Intégrer ce radar à votre site",
 ),
 "ar": dict(
@@ -106,7 +106,7 @@ T = {
   biz_info="معلومات الشركة", foot_corp="WORLD MAKING MEMBERS Co., Ltd. · الرئيس التنفيذي Lee Duk-young · رقم التسجيل 589-88-01039",
   title_cty="{c}: المشاريع الحكومية والمناقصات والمساعدات | GOV RADAR", desc_cty="{c}: الأولويات الوطنية والبرامج والمناقصات المفتوحة والمساعدات الكورية والمخاطر، تحديث أسبوعي.",
   title_home="GOV RADAR — المشاريع الحكومية والمناقصات في 193 دولة", desc_home="رادار أسبوعي للأولويات الوطنية والبرامج والمناقصات والمساعدات والمخاطر في 193 دولة.",
-  feed="خلاصات القطاعات (RSS)", lang="اللغة", member_area="حسابي", email="البريد الإلكتروني", send_link="أرسل رابط الدخول", link_sent="أرسلنا رابط الدخول إلى بريدك.", login_soon="يفتح تسجيل الدخول قريبًا. للتواصل: 73036396@naver.com",
+  feed="خلاصات القطاعات (RSS)", lang="اللغة", member_area="حسابي", email="البريد الإلكتروني", send_link="أرسل رابط الدخول", link_sent="أرسلنا رابط الدخول إلى بريدك.", login_soon="يفتح تسجيل الدخول قريبًا. للتواصل: leedukyoung74@gmail.com",
   powered="WMM × GCSME", embed="ضع هذا الرادار في موقعك",
 ),
 "vi": dict(
@@ -127,7 +127,7 @@ T = {
   biz_info="Thông tin doanh nghiệp", foot_corp="WORLD MAKING MEMBERS Co., Ltd. · CEO Lee Duk-young · Mã số 589-88-01039",
   title_cty="{c}: dự án chính phủ, gói thầu và ODA | GOV RADAR", desc_cty="{c}: ưu tiên quốc gia, chương trình, gói thầu đang mở, ODA Hàn Quốc và rủi ro, cập nhật hằng tuần.",
   title_home="GOV RADAR — dự án chính phủ và gói thầu tại 193 quốc gia", desc_home="Radar hằng tuần về ưu tiên quốc gia, chương trình, gói thầu, ODA và rủi ro tại 193 quốc gia.",
-  feed="Nguồn tin theo ngành (RSS)", lang="Ngôn ngữ", member_area="Tài khoản", email="Email", send_link="Gửi liên kết đăng nhập", link_sent="Đã gửi liên kết đăng nhập.", login_soon="Sắp mở đăng nhập. Liên hệ: 73036396@naver.com",
+  feed="Nguồn tin theo ngành (RSS)", lang="Ngôn ngữ", member_area="Tài khoản", email="Email", send_link="Gửi liên kết đăng nhập", link_sent="Đã gửi liên kết đăng nhập.", login_soon="Sắp mở đăng nhập. Liên hệ: leedukyoung74@gmail.com",
   powered="WMM × GCSME", embed="Gắn radar này vào website của bạn",
 ),
 "id": dict(
@@ -148,7 +148,7 @@ T = {
   biz_info="Informasi perusahaan", foot_corp="WORLD MAKING MEMBERS Co., Ltd. · CEO Lee Duk-young · No. Registrasi 589-88-01039",
   title_cty="{c}: proyek pemerintah, tender, dan ODA | GOV RADAR", desc_cty="{c}: agenda nasional, program, tender terbuka, ODA Korea, dan risiko, diperbarui tiap minggu.",
   title_home="GOV RADAR — proyek pemerintah dan tender di 193 negara", desc_home="Radar mingguan agenda nasional, program, tender, ODA, dan risiko di 193 negara.",
-  feed="Umpan per industri (RSS)", lang="Bahasa", member_area="Akun saya", email="Email", send_link="Kirim tautan masuk", link_sent="Tautan masuk telah dikirim.", login_soon="Fitur masuk segera dibuka. Kontak: 73036396@naver.com",
+  feed="Umpan per industri (RSS)", lang="Bahasa", member_area="Akun saya", email="Email", send_link="Kirim tautan masuk", link_sent="Tautan masuk telah dikirim.", login_soon="Fitur masuk segera dibuka. Kontak: leedukyoung74@gmail.com",
   powered="WMM × GCSME", embed="Pasang radar ini di situs Anda",
 ),
 }
