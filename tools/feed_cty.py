@@ -3,6 +3,7 @@ Small files so each country page fetches only its own numbers."""
 import json, os, sys, datetime, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from deadline import is_listed_open as is_open
+from reporting_clock import reporting_day
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEEDS = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data_branch", "feeds")
 CAP = 20e9  # drop implausible project totals (data-entry outliers)
@@ -16,7 +17,7 @@ def main():
     out = {}
     def slot(iso):
         return out.setdefault(iso, {"t": [], "p": [], "a": [], "v": []})
-    today = datetime.date.today().isoformat()
+    today = reporting_day().isoformat()
     for x in t.get("items", []):
         if x.get("iso") and is_open(x): slot(x["iso"])["t"].append(x)   # real closing time (deadline_at), not just the date
     for x in p.get("items", []):
