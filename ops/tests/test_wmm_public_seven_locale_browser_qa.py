@@ -15,7 +15,7 @@ def classify(locale="ko", **kwargs):
     params=dict(label=locale,code=200,lang=locale,
                 direction="rtl" if locale=="ar" else "ltr",
                 viewport=True,h1=True,main_count=1,
-                overflow_px=0,denied_posts=False,copy_present=True)
+                overflow_px=0,denied_posts=[],copy_present=True)
     params.update(kwargs)
     return P.classify(**params)
 
@@ -48,11 +48,23 @@ class PublicMobileBrowserPolicyTests(unittest.TestCase):
                       classify(h1=False)["failures"])
 
     def test_background_post_blocking_is_not_silent(self):
-        self.assertIn("BACKGROUND_POST_BLOCKED",
-                      classify(denied_posts=True)["failures"])
+        self.assertIn("UNEXPECTED_NON_GET_BLOCKED",
+                      classify(denied_posts=["UNEXPECTED_NON_GET"])["failures"])
         self.assertIn('route.request.method.upper() != "GET"',
                       (ROOT/"ops"/"wmm_public_seven_locale_browser_qa.py")
                       .read_text(encoding="utf-8"))
+
+    def test_cloudflare_rum_analytics_is_blocked_but_not_user_form_failure(self):
+        safe=P.safe_post_category("https://cloudflareinsights.com/cdn-cgi/rum?secret=NEVER_ECHO")
+        same=P.safe_post_category("https://radar.wmm-hoa.com/cdn-cgi/rum")
+        assert safe == same == "CLOUDFLARE_RUM"
+        item=classify(denied_posts=[safe])
+        self.assertEqual(item["status"],"PASS")
+        self.assertEqual(item["failures"],[])
+        bad=P.safe_post_category("https://radar.wmm-hoa.com/api/req?token=NEVER_ECHO")
+        self.assertEqual(bad,"UNEXPECTED_NON_GET")
+        self.assertNotIn("NEVER_ECHO",safe)
+        self.assertNotIn("NEVER_ECHO",bad)
 
     def test_undeployed_reviewed_copy_is_pending_not_page_outage(self):
         x=classify("ko",copy_present=False)
