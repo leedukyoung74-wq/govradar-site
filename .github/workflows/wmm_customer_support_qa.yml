@@ -1,0 +1,24 @@
+name: WMM seven-language customer FAQ safety QA (NO DEPLOY)
+on:
+  pull_request:
+    branches: [src]
+    paths:
+      - 'src/customer-support.html'
+      - 'tests/customer-support.test.cjs'
+      - 'build.py'
+      - '.github/workflows/wmm_customer_support_qa.yml'
+permissions:
+  contents: read
+jobs:
+  customer_faq_review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Checkout proposal without write credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Offline seven-language support/safety gate
+        run: node tests/customer-support.test.cjs
+      - name: Confirm no deployment or customer submissions
+        run: echo 'Review only; no live data, no API, no customer POST or automatic email'
