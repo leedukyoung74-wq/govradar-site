@@ -119,7 +119,12 @@ jobs:
     if: >-
       always() && needs.due.result == 'success' &&
       needs.due.outputs.nws_cisa == 'true' &&
-      (needs.recover_usgs.result == 'success' || needs.recover_usgs.result == 'skipped')
+      # Source collectors are independent: even when USGS failed, NWS/CISA
+      # must remain eligible after USGS has finished (avoid data-branch race).
+      # Do not run if upstream was cancelled or has not completed.
+      (needs.recover_usgs.result == 'success' ||
+       needs.recover_usgs.result == 'skipped' ||
+       needs.recover_usgs.result == 'failure')
     permissions:
       contents: write
     uses: leedukyoung74-wq/govradar-site/.github/workflows/wmm_nws_cisa_official.yml@src
