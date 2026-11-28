@@ -56,13 +56,25 @@ async function readBoundedBody(request) {
 // submissions, Netlify, secrets or form fields. A 405 proves the Pages
 // Function route is deployed; it never proves that POST submission is delivered.
 export function onRequestGet() {
-  return new Response("Method Not Allowed", {
+  return new Response("POST required", {
     status: 405,
     headers: {
       "allow": "POST",
       "cache-control": "no-store",
       "x-content-type-options": "nosniff",
       "content-type": "text/plain; charset=utf-8"
+    }
+  });
+}
+
+// HEAD must be explicitly closed as well; never read or forward form data.
+export function onRequestHead() {
+  return new Response(null, {
+    status: 405,
+    headers: {
+      "allow": "POST",
+      "cache-control": "no-store",
+      "x-content-type-options": "nosniff"
     }
   });
 }
@@ -94,6 +106,16 @@ export async function onRequestPost({request}) {
         method: "POST", headers: {"content-type": type}, body
       });
       fields = await formReq.formData();
+    }
+    // A browser's required checkbox is not an authorization control.
+    // Reject direct POSTs which bypass privacy consent (incl. duplicates/files).
+    const consent = fields.getAll("privacy_agree");
+    if (consent.length !== 1 || consent[0] !== "yes") {
+      return new Response("Privacy consent required", {status: 400});
+    }
+    const traps = fields.getAll("hp");
+    if (traps.some(value => typeof value !== "string" || value.trim() !== "")) {
+      return new Response("Spam blocked", {status: 400});
     }
     for (const [name, value] of fields) {
       if (typeof value === "string" &&
