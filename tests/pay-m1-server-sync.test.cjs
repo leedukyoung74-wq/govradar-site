@@ -46,6 +46,23 @@ test("live secret absent: confirmation returns 503 without any external action",
     assert.equal(calls,0);
   } finally{global.fetch=old;}
 });
+test("payment remains disabled even if both keys are accidentally configured",async()=>{
+  const {onRequestGet}=await load("config");
+  const {onRequestPost}=await load("confirm");
+  const env={TOSS_CLIENT_KEY:"TEST-CLIENT-NOT-REAL",TOSS_SECRET_KEY:"TEST-SECRET-NOT-REAL"};
+  const cfg=await (await onRequestGet({env})).json();
+  assert.equal(cfg.enabled,false);
+  assert.equal(cfg.clientKey,"");
+  const originalFetch=global.fetch;
+  let calls=0;
+  global.fetch=async()=>{calls++;throw Error("MUST NOT CALL");};
+  try {
+    const res=await onRequestPost({request:paymentRequest("analysis-month",20000),env});
+    assert.equal(res.status,503);
+    assert.equal(calls,0);
+  } finally { global.fetch=originalFetch; }
+});
+
 test("old 22000/220000 and mismatched amounts fail before any Toss API call",async()=>{
   const {onRequestPost}=await load("confirm");
   const old=global.fetch;
@@ -54,7 +71,7 @@ test("old 22000/220000 and mismatched amounts fail before any Toss API call",asy
     for (const [item,amt] of [["analysis-month",22000],["analysis-year",220000],
                              ["analysis-month",19999],["analysis-year",200001]]) {
       const r=await onRequestPost({request:paymentRequest(item,amt),
-        env:{TOSS_SECRET_KEY:"TEST-SECRET-NOT-REAL"}});
+        env:{WMM_PAYMENT_LIVE_ENABLED:"true",TOSS_CLIENT_KEY:"TEST-CLIENT-NOT-REAL",TOSS_SECRET_KEY:"TEST-SECRET-NOT-REAL"}});
       assert.equal(r.status,400);
       assert.equal((await r.json()).code,"AMOUNT_MISMATCH");
     }
@@ -75,7 +92,7 @@ test("synthetic valid amounts use ONLY mocked processor and mocked form gateway"
   try{
     for (const [item,amt] of [["analysis-month",20000],["analysis-year",200000]]) {
       const r=await onRequestPost({request:paymentRequest(item,amt),
-        env:{TOSS_SECRET_KEY:"TEST-SECRET-NOT-REAL"}});
+        env:{WMM_PAYMENT_LIVE_ENABLED:"true",TOSS_CLIENT_KEY:"TEST-CLIENT-NOT-REAL",TOSS_SECRET_KEY:"TEST-SECRET-NOT-REAL"}});
       assert.equal(r.status,200);
       const result=await r.json();
       assert.equal(result.ok,true);
