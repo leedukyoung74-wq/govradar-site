@@ -18,12 +18,14 @@ function check(path,lang,search='',hash=''){
 const publicRoutes=['/ko/thanks/','/ko/consortium/thanks/','/en/pricing/','/ko/pricing/',
   '/es/how/','/fr/request/','/ar/consortium/','/vi/legal/refund/',
   '/id/membership/','/ko/help/','/en/help/','/ko/solutions/','/en/contracts/',
-  '/ko/ready/','/ko/about/','/ko/verify/'];
+  '/ko/ready/'];
 for(const path of publicRoutes){
   const lang=path.split('/')[1];
   assert.equal(check(path,lang).redirect,null,'must show anonymous customer page: '+path);
 }
 assert.equal(check('/ko/vietnam/','ko').redirect,'/map/');
+assert.equal(check('/ko/about/','ko').redirect,'/map/');
+assert.equal(check('/ar/about/','ar').redirect,'/map/ar/');
 assert.equal(check('/en/united-states/','en').redirect,'/map/en/');
 assert.equal(check('/ko/account/','ko','?auth=login').redirect,null);
 assert.equal(check('/ko/pricing/','ko','?stay=1').redirect,null);
