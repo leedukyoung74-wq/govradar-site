@@ -419,7 +419,7 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> <span>{f'<a href="/{L}/legal/privacy/" target="_blank">개인정보 처리방침</a>에 동의합니다 (필수)' if ko else f'I agree to the <a href="/{L}/legal/privacy/" target="_blank">Privacy Policy</a> (required)'}</span></label>
 <label class="chk"><input type="checkbox" name="marketing" value="yes"> {"새 공고·소식 이메일(광고)을 받겠습니다 (선택)" if ko else "Send me news and offers by email (optional)"}</label>
 <button class="btn pri" type="submit">{"견적 요청 보내기" if ko else "Request a quote"}</button></form>
-<p class="note">{"분석 회원과 기업·기관 상품 모두 VAT 별도 · 자동갱신 없음 · 결제일부터 7일 안에 유료 자료를 쓰지 않았다면 전액 환불 · 이용을 시작한 뒤 해지하면 남은 기간까지 이용 · 연간 선납은 이용한 달을 월 요금으로 계산해 뺀 금액 환불 · 맞춤 보고서는 작업 시작 전까지 전액 환불, 받은 뒤에는 청약철회 제한 · 학생·NGO(19세 이상) 50% 할인 · 결과물은 'AI 작성 + 사람 검수'로 표시합니다 · " if ko else "Analysis membership and business products: VAT excluded · no auto-renewal · full refund within 7 days of payment if no paid material was used · after use starts, cancel and keep access to the end of the period · annual prepay refunds the balance after charging the months used at the monthly price · custom reports are fully refundable until work starts, and cannot be withdrawn once delivered · 50% off for students and NGOs (19+) · deliverables are labelled 'AI-drafted, human-reviewed' · "}<a href="/{L}/legal/refund/">{"환불 정책" if ko else "Refund policy"}</a> · <a href="/{L}/legal/terms/">{"이용약관" if ko else "Terms"}</a> · 73036396@naver.com</p>
+<p class="note">{"분석 회원과 기업·기관 상품 모두 VAT 별도 · 자동갱신 없음 · 결제일부터 7일 안에 유료 자료를 쓰지 않았다면 전액 환불 · 이용을 시작한 뒤 해지하면 남은 기간까지 이용 · 연간 선납은 이용한 달을 월 요금으로 계산해 뺀 금액 환불 · 맞춤 보고서는 작업 시작 전까지 전액 환불, 받은 뒤에는 청약철회 제한 · 결과물은 'AI 작성 + 사람 검수'로 표시합니다 · " if ko else "Analysis membership and business products: VAT excluded · no auto-renewal · full refund within 7 days of payment if no paid material was used · after use starts, cancel and keep access to the end of the period · annual prepay refunds the balance after charging the months used at the monthly price · custom reports are fully refundable until work starts, and cannot be withdrawn once delivered · deliverables are labelled 'AI-drafted, human-reviewed' · "}<a href="/{L}/legal/refund/">{"환불 정책" if ko else "Refund policy"}</a> · <a href="/{L}/legal/terms/">{"이용약관" if ko else "Terms"}</a> · 73036396@naver.com</p>
 {credit(["sign"] + [o[-1] for o in offers], ko)}</div></section>
 <script>(function(){{var NEED={json.dumps({k: [v[0], v[1] if ko else v[2]] for k, v in NEED.items()}, ensure_ascii=False)},TP={json.dumps({x[0]: (x[1]+" "+x[3]) if ko else (x[2]+" "+x[4]) for x in TIERS}, ensure_ascii=False)};var q=new URLSearchParams(location.search),p=q.get("p")||q.get("t"),c=q.get("c"),nd=q.get("need"),t=q.get("t");
 if(t&&TP[t]){{document.querySelectorAll('.tiers [data-t="'+t+'"]').forEach(function(x){{x.classList.add("hit")}});var b=document.getElementById("needban");if(b){{var w=nd&&NEED[nd]?NEED[nd][1]:"";b.innerHTML="<span>"+(w?({json.dumps('보려는 내용: ' if ko else 'You want: ')}+"<b>"+w+"</b><br>"):"")+{json.dumps('가장 저렴한 등급' if ko else 'Lowest plan')}+"</span><span class=p>"+TP[t]+"</span><a class='btn pri' href='#order' data-pick='"+t+"'>"+{json.dumps('이 등급으로 신청' if ko else 'Request this plan')}+"</a>";b.hidden=false;}}}}
@@ -998,14 +998,14 @@ def membership_page(L, C):
               ("BUILD · " + T("준비", "Build"), "M2 — M3", T("서류와 검증을 갖추고, 상대를 만날 수 있는 회사로 준비합니다.", "Get your documents and validation ready so you can meet counterparts.")),
               ("EXECUTE · " + T("실행", "Execute"), "M4 — M5", T("특정 국가 프로젝트와 공공 수주를 실제로 추진합니다.", "Carry out a country project or a public contract bid for real."))]
     tiers = ([("M0 OPEN · 오픈", "처음 둘러보는 기업", "193개국 지도·요약·상황판, 사업·입찰·일정은 앞부분만", "무료"),
-              ("M1 MEMBER · 분석 회원", "정보를 꾸준히 보는 기업", "모든 나라 전체 목록 + 분석 의뢰 월 2건", "월 20,000원"),
+              ("M1 MEMBER · 분석 회원", "정보를 꾸준히 보는 기업", "모든 나라 전체 목록 + AI 빠른 검토 월 2건", "월 20,000원"),
               ("M2 PRO · 프로", "진출을 준비하는 기업", "관심 국가 알림·영문 서류 지원", "상담 후 견적"),
               ("M3 BUSINESS · 비즈니스", "검증을 마친 기업", "상대 연결 준비·우선 상담·투자자 협의(심사 중부터)", "상담 후 견적"),
               ("M4 PROJECT · 진출 패키지", "특정 국가 진출 실행", "6주 시장 검증·현지 일정 조율·투자자 협의", "상담 후 견적"),
               ("M5 STRATEGIC · 수주 대행", "공공·대형 수주 추진", "입찰 준비부터 계약까지 동행·투자자 협의", "상담 후 견적"),
               ("FC FOUNDING CIRCLE", "초기 10곳 한정 초청", "CONNECT 50% 할인·운영 자문 참여", "별도 협의")] if ko else
              [("M0 OPEN", "Companies taking a first look", "Map, summaries and situation board; first items of programmes, tenders and events", "Free"),
-              ("M1 MEMBER · Analysis", "Companies following the data", "Every list in full + 2 analysis requests a month", "₩20,000/month"),
+              ("M1 MEMBER · Analysis", "Companies following the data", "Every list in full + 2 AI quick reviews a month", "₩20,000/month"),
               ("M2 PRO", "Companies preparing to enter", "Country alerts, English document support", "By quote"),
               ("M3 BUSINESS", "Companies that have validated", "Counterpart preparation, priority consultation, investor discussions (from review)", "By quote"),
               ("M4 PROJECT · Entry package", "Entering a specific country", "6-week market validation, local scheduling, investor discussions", "By quote"),
@@ -1023,13 +1023,12 @@ def membership_page(L, C):
            ("TRANSLATE · " + T("번역", "Translate"), [(T("전문 번역", "Professional translation"), T("상담 후 견적", "By quote")), (T("원어민 검수", "Native review"), T("상담 후 견적", "By quote")), (T("번역 패키지", "Translation package"), T("상담 후 견적", "By quote"))]),
            ("CHECK · " + T("판정", "Check"), [(T("입찰 적합도 판정", "Tender fit assessment"), T("상담 후 견적", "By quote"))])]
     alch = "".join(f"<div><h3>{h}</h3><div class='tscroll'><table class='tiers'>" + "".join(f"<tr><th>{a}</th><td><b>{b}</b></td></tr>" for a, b in rows) + "</table></div></div>" for h, rows in alc)
-    journey = ([("무료 가입", "M0로 레이더와 브리핑을 둘러봅니다."), ("관심 등록", "관심 국가와 업종을 고릅니다."), ("구독 선택", "M1~M3 중 고르고 첫 달은 무료입니다."),
+    journey = ([("무료 가입", "M0로 레이더와 브리핑을 둘러봅니다."), ("관심 등록", "관심 국가와 업종을 고릅니다."), ("구독 선택", "M1을 고르고, M2~M3는 심사 후 견적을 받습니다."),
                 ("회사 확인", "사업자 정보와 자료를 확인합니다."), ("프로젝트 상담", "M4 범위와 견적을 정합니다."), ("실행", "검증·연결·수주를 함께 진행합니다.")] if ko else
-               [("Free sign-up", "Browse the radar and briefings as M0."), ("Register interests", "Choose countries and sectors."), ("Choose a plan", "Pick M1–M3; the first month is free."),
+               [("Free sign-up", "Browse the radar and briefings as M0."), ("Register interests", "Choose countries and sectors."), ("Choose a plan", "Pick M1; M2–M3 are quoted after review."),
                 ("Company check", "We confirm your business details and materials."), ("Project consultation", "Agree M4 scope and quote."), ("Execution", "Validation, connection and bids, together.")])
     jr = "".join(f"<li><b>{a}</b> — {b}</li>" for a, b in journey)
     fc = [("50%", T("CONNECT 할인", "off CONNECT"), T("파운딩 고객 10곳 한정", "First 10 founding clients only")),
-          (T("1개월", "1 month"), T("구독 무료", "free subscription"), T("BUILD 구독 첫 달", "First month of a BUILD plan")),
           (T("2개월", "2 months"), T("연간 결제 혜택", "annual-plan bonus"), T("연간 결제 시 무료 기간", "Free months when paying annually"))]
     fch = "".join(f"<div><strong>{a}</strong><b>{b}</b><p class='note'>{c}</p></div>" for a, b, c in fc)
     pr = ([("성과를 보장하지 않습니다", "수주, 계약, 매출은 기업과 상대의 결정입니다. 우리는 준비와 과정을 돕습니다."),
