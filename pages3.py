@@ -1,7 +1,7 @@
 import json
 # GOV RADAR — conversion pages (2026-10-31 council round 3):
 # who-it's-for segments with photos, business areas, tender deadline board, pricing/order page, country "next steps" box.
-import re, datetime
+import re, datetime, os
 
 # Free-licence photos from Unsplash (hot-linked; credited on the pages that use them)
 PH = {
@@ -722,12 +722,14 @@ def edge_html(L):
 
 def thanks2_page(L, C):
     ko = L == "ko"
+    with open(os.path.join(os.path.dirname(__file__), "src", "customer_receipts.json"), encoding="utf-8") as _receipt_file:
+        _receipt = json.load(_receipt_file)[L]
     steps = [("영업일 1일 안에 견적서와 일정을 이메일로 보냅니다.", "Within one business day we email a quote and schedule."),
              ("메일이 안 보이면 스팸함을 확인하시거나 73036396@naver.com 으로 알려 주세요.", "If you can't find it, check spam or write to 73036396@naver.com."),
              ("입금이 확인되면 영업일 1일 안에 시작합니다. 맞춤 작업은 착수 질문 5개를 함께 보냅니다.", "Work starts within one business day of payment; custom work comes with a 5-question kick-off form."),
              ("무료 신청(이유 받기·의견)은 받은 순서대로 이메일로 답합니다.", "Free requests (unlock, feedback) are answered by email in order received.")]
     li = "".join(f"<li>{a if ko else b}</li>" for a, b in steps)
-    body = f"""<section class="chero"><div class="in"><h1>{"신청을 받았습니다. 감사합니다" if ko else "Thank you — we've got your request"}</h1>
+    body = f"""<section class="chero"><div class="in"><h1>{_receipt["title"]}</h1><p class="note" role="status">{_receipt["notice"]}</p>
 <p class="lede" style="color:#d9d7d0">{"다음 순서로 진행합니다." if ko else "Here is what happens next."}</p></div></section>
 <div class="in stock narrow"><ol class="hsteps" style="padding-left:20px;list-style:decimal">{li}</ol>
 <p class="cta"><a class="btn pri" href="/{L}/how/">{"진행 방식·고객 약속 보기" if ko else "How it works"}</a> <a class="btn" href="/{L}/sample/">{"샘플 브리프" if ko else "Sample brief"}</a> <a class="btn" href="/{L}/">{"홈으로" if ko else "Home"}</a></p></div>"""

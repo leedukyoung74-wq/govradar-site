@@ -180,7 +180,7 @@ def navhtml(L):
 def navhtml_act(L, path):
     g, _ = _group_of(path)
     return _navgroups(L, NAV, g)
-_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay|mdb)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/map/"+(l==="ko"?"":l+"/"))})();</script>"""
+_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/((legal|member|pay|mdb)|(thanks|pricing|how|request|solutions|membership|partners|gcsme|consortium|contracts|experts|unlock|ready|individuals|help))\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/map/"+(l==="ko"?"":l+"/"))})();</script>"""
 def _open_first(x):
     """입찰 미리보기: 열린 입찰을 마감 가까운 순으로 먼저, 마감된 건은 뒤로 (2026-11-22)."""
     dl = str((x or {}).get("deadline") or "") if isinstance(x, dict) else ""
@@ -255,7 +255,7 @@ def foot(L):
 <div class="lic"><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=5898801039" target="_blank" rel="noopener">{e(t['biz_info'])}</a><span class="bar"></span><span>ONLINE LICENCE : {'제2024-서울서초-2185호' if L=='ko' else 'No. 2024-Seoul Seocho-2185'}</span></div>
 <p class="corp">{e(t['foot_corp'])} · E-mail 73036396@naver.com</p>
 <div class="sites"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><b>WORLD MAKING MEMBERS</b><span>www.wmm-hoa.com ↗</span></a><a href="https://www.gcsme.kr" target="_blank" rel="noopener"><b>GCSME KOREA</b><span>www.gcsme.kr ↗</span></a><a href="https://www.gcsme.club" target="_blank" rel="noopener"><b>GLOBAL &amp; COMMONWEALTH SME CLUB</b><span>www.gcsme.club ↗</span></a></div>
-{footcols(L)}<p class="corp">{e(t['disc'])}</p></div></footer>
+{footcols(L)}<p class="corp"><a href="/support/?lang={L}">{e({"ko":"고객지원·자주 묻는 질문","en":"Customer Help & FAQ","es":"Ayuda al cliente","fr":"Assistance client","ar":"مساعدة العملاء","vi":"Hỗ trợ khách hàng","id":"Bantuan pelanggan"}[L])}</a></p><p class="corp">{e(t['disc'])}</p></div></footer>
 <div class="fband"><a href="https://www.wmm-hoa.com" target="_blank" rel="noopener"><img src="/assets/wmm-logo-white.png" alt="WORLD MAKING MEMBERS" width="150" height="150"></a></div>
 <div class="modal" id="authm" hidden><div class="mbox"><button class="x" id="authx" aria-label="close">×</button><h3 id="auth-h">{e(AT[L]['login'])}</h3>
 <p class="note" id="authsoon" hidden></p>
@@ -1338,6 +1338,9 @@ def build():
                 with open(os.path.join(_pm, _L, iso + ".json"), "w", encoding="utf8") as _f: json.dump(_o, _f, ensure_ascii=False)
         if (_L, "_home") in MORE:
             with open(os.path.join(_pm, _L, "_home.json"), "w", encoding="utf8") as _f: json.dump({"more": MORE[(_L, "_home")]}, _f, ensure_ascii=False)
+    # Standalone local FAQ: zero backend, 7 language options, no member gate or customer POST.
+    with open(os.path.join(SRC, "customer-support.html"), encoding="utf8") as _support:
+        W("/support/index.html", _support.read())
     W("/widget/index.html", widget()); W("/embed.js", embed_js())
     # root: language pick
     W("/index.html", f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOV RADAR — 193 governments</title>
