@@ -7,6 +7,7 @@ on:
       - 'functions/pay/**'
       - 'public/**'
       - 'tests/customer-integrated-release.test.cjs'
+      - 'ops/wmm_customer_route_matrix.py'
       - 'tests/customer-public-live-gate.test.cjs'
       - 'tests/customer-faq-live.test.cjs'
       - '.github/workflows/wmm_customer_integrated_qa.yml'
@@ -23,6 +24,8 @@ jobs:
           persist-credentials: false
       - name: Seven-language combined customer release invariant checks
         run: node tests/customer-integrated-release.test.cjs
+      - name: Inspect 140 customer/legal routes and disclose 8 English-only fallbacks
+        run: python3 ops/wmm_customer_route_matrix.py --root public
       - name: Static browser-navigation and FAQ scripts
         run: |
           node tests/customer-public-live-gate.test.cjs
