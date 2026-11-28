@@ -55,6 +55,40 @@ MONTHLY_LABEL = {
 OBSOLETE_PRICE = re.compile(r"(?<![0-9])19[,.\u00a0\u202f ]800(?![0-9])")
 
 
+VAT_INCLUDED = {
+    "ko": "VAT 포함",
+    "en": "VAT incl.",
+    "es": "IVA incluido",
+    "fr": "TTC",
+    "ar": "شامل الضريبة",
+    "vi": "đã gồm VAT",
+    "id": "termasuk PPN",
+}
+VAT_EXCLUDED = {
+    "ko": "VAT 별도",
+    "en": "VAT excl.",
+    "es": "sin IVA",
+    "fr": "(HT)",
+    "ar": "دون الضريبة",
+    "vi": "chưa VAT",
+    "id": "belum PPN",
+}
+
+
+def membership_option(page):
+    """Return only the analysis membership selector, not unrelated B2B VAT text."""
+    field = re.search(
+        r'<input\b[^>]*\bvalue=["\x27]Analysis membership["\x27][^>]*>',
+        page, re.I,
+    )
+    if not field:
+        return ""
+    close = page.find("</label>", field.end())
+    if close < 0 or close - field.end() > 2000:
+        return ""
+    return page[field.start():close + len("</label>")]
+
+
 def sha(data):
     return hashlib.sha256(data).hexdigest()
 
@@ -94,6 +128,11 @@ def assess(locale,source,existing,live_root):
         "existing_dynamic_last_update":'id="kp-u"' in src,
         "canonical_monthly_krw_20000":MONTHLY_LABEL[locale] in src,
         "obsolete_monthly_krw_19800_absent":OBSOLETE_PRICE.search(src) is None,
+        "member_card_vat_included":(
+            bool(membership_option(src)) and
+            VAT_INCLUDED[locale] in membership_option(src) and
+            VAT_EXCLUDED[locale] not in membership_option(src)
+        ),
     }
     assets=local_assets(src)
     missing=[path for path in assets if not (live_root/path).is_file()]
@@ -103,6 +142,7 @@ def assess(locale,source,existing,live_root):
         "html_changed":source!=existing,
         "reviewed_research_copy_already_live":COPY[locale] in live,
         "existing_live_obsolete_19800_mentions":len(OBSOLETE_PRICE.findall(live)),
+        "existing_live_membership_vat_excluded":VAT_EXCLUDED[locale] in membership_option(live),
         "form_tag_count_before":len(form_tags(existing)),
         "form_tag_count_after":len(form_tags(source)),
         "form_tags_identical":form_tags(source)==form_tags(existing),
