@@ -116,12 +116,12 @@ jobs:
       dry_run: ${{ github.event_name == 'workflow_dispatch' && !inputs.publish }}
   recover_nws_cisa:
     needs: [due, recover_usgs]
+    # Recovery must wait for USGS completion to prevent concurrent data writes,
+    # but a failed USGS does not make independent NWS/CISA source calls invalid.
+    # Cancelled upstream remains blocked.
     if: >-
       always() && needs.due.result == 'success' &&
       needs.due.outputs.nws_cisa == 'true' &&
-      # Source collectors are independent: even when USGS failed, NWS/CISA
-      # must remain eligible after USGS has finished (avoid data-branch race).
-      # Do not run if upstream was cancelled or has not completed.
       (needs.recover_usgs.result == 'success' ||
        needs.recover_usgs.result == 'skipped' ||
        needs.recover_usgs.result == 'failure')
