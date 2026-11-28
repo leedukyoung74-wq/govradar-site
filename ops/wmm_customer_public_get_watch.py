@@ -79,12 +79,14 @@ def read_one(row):
                 enabled=obj.get("enabled") is True
                 check["kind"]="PAYMENT_CONFIG_SAFE" if right and not enabled else "PAYMENT_CONFIG_REVIEW"
                 check["public_amounts_correct"]=right
+                check["monthly_price_krw"]=am.get("amount") if isinstance(am.get("amount"),int) else None
+                check["annual_price_krw"]=ay.get("amount") if isinstance(ay.get("amount"),int) else None
                 check["live_checkout_enabled"]=enabled
                 # NEVER store or print a client key from provider config.
             except (ValueError,TypeError,AttributeError):
                 check["kind"]="PAYMENT_CONFIG_UNREADABLE"
         elif key.startswith("wmm_"):
-            if "VAT 별도" in body and ("20,000" in body or "200,000" in body):
+            if re.search(r"(?:20,000(?:원)?|200,000(?:원)?)[^<>]{0,100}VAT\\s*별도|VAT\\s*별도[^<>]{0,100}(?:20,000(?:원)?|200,000(?:원)?)",body):
                 check["kind"]="WMM_PRICE_VAT_CONTRADICTION"
             elif "20,000" in body:
                 check["kind"]="WMM_PRICE_PRESENT_REVIEW_TAX_CONTEXT"
@@ -106,6 +108,12 @@ def read_one(row):
                 body=err.read(MAX_BYTES).decode("utf-8","replace")
                 check["kind"]="FORM_GET_METHOD_OK" if "POST required" in body else "FORM_405_UNKNOWN_HANDLER"
             except Exception:check["kind"]="FORM_405_UNREADABLE"
+        elif key=="support_hub" and err.code==404:
+            check["http_status"]=404
+            check["kind"]="SUPPORT_ROUTE_NOT_PUBLISHED"
+        elif key=="form_get" and err.code==404:
+            check["http_status"]=404
+            check["kind"]="FORM_GET_ROUTE_NOT_DEPLOYED"
         else:
             check["http_status"]=err.code
             check["kind"]="HTTP_ERROR_NOT_PROOF_OF_SITE_OUTAGE"
@@ -121,6 +129,7 @@ def main():
         entries=list(ex.map(read_one,CHECKS))
     problems=[x["name"] for x in entries if x["kind"] in {
         "M1_VAT_INCORRECT","M1_SELECTOR_NOT_FOUND","FAQ_NOT_VERIFIED",
+        "SUPPORT_ROUTE_NOT_PUBLISHED","FORM_GET_ROUTE_NOT_DEPLOYED",
         "FORM_GET_NOT_VERIFIED","FORM_405_UNKNOWN_HANDLER","PAYMENT_CONFIG_REVIEW",
         "PAYMENT_CONFIG_UNREADABLE","WMM_PRICE_VAT_CONTRADICTION",
         "GCSME_KR_OLD_WMM_LINK_PRESENT"}]
