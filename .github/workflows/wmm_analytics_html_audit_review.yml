@@ -1,0 +1,37 @@
+name: WMM GCSME Web Analytics read-only audit (NO DEPLOY)
+on:
+  push:
+    branches:
+      - wmm-webanalytics-readonly-audit-20261127
+    paths:
+      - '.github/workflows/wmm_analytics_html_audit_review.yml'
+      - 'scripts/wmm_analytics_html_audit_review.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public_html_readonly:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inspect publicly served HTML for Cloudflare Web Analytics beacon (no JS execution, no POST)
+        run: python3 scripts/wmm_analytics_html_audit_review.py
+
+      - name: Inspect browser-injected RUM without recording automated visits
+        run: |
+          python3 -m pip install --disable-pip-version-check playwright==1.58.0
+          python3 scripts/wmm_analytics_browser_audit_review.py
+
+      - name: Resolve authoritative DNS nameservers without changing settings
+        shell: bash
+        run: |
+          echo '## Authoritative DNS nameservers (public, read-only)' >> "$GITHUB_STEP_SUMMARY"
+          for domain in wmm-hoa.com gcsme.kr; do
+            ns="$(dig +short NS "$domain" | sort | tr '\n' ',' | sed 's/,$//')"
+            echo "$domain : $ns"
+            echo "- $domain: \`$ns\`" >> "$GITHUB_STEP_SUMMARY"
+          done
+          echo 'DNS nameservers do not establish which Cloudflare account owns an upstream proxy. Automatic injection requires the zone be managed and proxied in the relevant account.' >> "$GITHUB_STEP_SUMMARY"
