@@ -81,7 +81,7 @@ test("anonymous GET form relay reveals only method 405, not any customer data", 
   assert.equal(response.status,405);
   assert.equal(response.headers.get("allow"),"POST");
   assert.equal(response.headers.get("cache-control"),"no-store");
-  assert.equal(await response.text(),"Method Not Allowed");
+  assert.equal(await response.text(),"POST required");
 });
 
 test("invalid empty form cannot forward anything to Netlify", async () => {

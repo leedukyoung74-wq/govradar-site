@@ -183,7 +183,9 @@ def consortium_page(L, head, foot, e, LANGS):
 
 def thanks_page(L, head, foot, e, LANGS):
     ko = L == "ko"
-    body = f"""<section class="chero"><div class="in"><h1>{"신청을 받았습니다" if ko else "Thank you — application received"}</h1><p class="lede">{"영업일 5일 안에 이메일로 연락드립니다." if ko else "We will reply by email within 5 business days."}</p><p><a class="btn" href="/{L}/projects/">{"프로젝트 랩 보기" if ko else "See the Project Lab"}</a></p></div></section>"""
+    with open(os.path.join(HERE, "src", "customer_receipts.json"), encoding="utf-8") as _receipt_file:
+        _receipt = json.load(_receipt_file)[L]
+    body = f"""<section class="chero"><div class="in"><h1>{e(_receipt["title"])}</h1><p class="note" role="status">{e(_receipt["notice"])}</p><p class="lede">{"영업일 5일 안에 이메일로 연락드립니다." if ko else "We will reply by email within 5 business days."}</p><p><a class="btn" href="/{L}/projects/">{"프로젝트 랩 보기" if ko else "See the Project Lab"}</a></p></div></section>"""
     return head(L, "GOV RADAR", "thanks", f"/{L}/consortium/thanks/", {l: f"/{l}/consortium/thanks/" for l in LANGS}, '<meta name="robots" content="noindex">') + body + foot(L)
 
 # ---------------------------------------------------------------- project lab

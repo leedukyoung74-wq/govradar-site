@@ -1,0 +1,30 @@
+{
+  "ko": {
+    "title": "요청 제출 안내 · 실제 접수 확인 필요",
+    "notice": "이 화면은 직접 열 수도 있으므로 문의 저장·담당 배정·접수번호 발급을 증명하지 않습니다. 문의를 보내셨다면 73036396@naver.com으로 실제 접수 여부를 확인하세요."
+  },
+  "en": {
+    "title": "Submission guidance — confirm actual receipt",
+    "notice": "This page is accessible directly and does not prove that a form was stored, assigned or ticketed. If you submitted an enquiry, verify it at 73036396@naver.com."
+  },
+  "es": {
+    "title": "Guía de envío — recepción por confirmar",
+    "notice": "Esta página puede abrirse directamente y no prueba que la solicitud esté guardada o asignada. Confirme la recepción en 73036396@naver.com."
+  },
+  "fr": {
+    "title": "Envoi de demande — réception à confirmer",
+    "notice": "Cette page est accessible directement et ne prouve pas l'enregistrement ou l'attribution de votre demande. Confirmez la réception à 73036396@naver.com."
+  },
+  "ar": {
+    "title": "إرشادات إرسال الطلب — تأكيد الاستلام مطلوب",
+    "notice": "يمكن فتح هذه الصفحة مباشرة، ولا تثبت حفظ الطلب أو تعيين مسؤول أو إصدار رقم متابعة. تحقق من الاستلام عبر 73036396@naver.com."
+  },
+  "vi": {
+    "title": "Hướng dẫn gửi yêu cầu — cần xác nhận tiếp nhận",
+    "notice": "Có thể mở trực tiếp trang này; trang không chứng minh yêu cầu đã được lưu, phân công hoặc cấp mã. Hãy xác nhận qua 73036396@naver.com."
+  },
+  "id": {
+    "title": "Panduan pengajuan — penerimaan belum terverifikasi",
+    "notice": "Halaman ini dapat dibuka langsung dan bukan bukti formulir telah tersimpan, ditugaskan, atau diberi nomor tiket. Konfirmasikan ke 73036396@naver.com."
+  }
+}

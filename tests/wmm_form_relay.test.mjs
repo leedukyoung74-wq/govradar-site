@@ -12,6 +12,9 @@ const origin = "https://radar.wmm-hoa.com";
 const provider = "https://wmm-govradar.netlify.app/";
 
 function post(next="/ko/thanks/", body="form-name=order&email=test%40example.org",contentType="application/x-www-form-urlencoded") {
+  // All synthetic valid sends include the exact browser consent field.
+  // The transport safety test never bypasses the newer server-side gate.
+  if (contentType==="application/x-www-form-urlencoded" && body && !body.includes("privacy_agree=")) body+="&privacy_agree=yes";
   return new Request(origin+"/nfform?next="+encodeURIComponent(next),{
     method:"POST",headers:{"content-type":contentType},body
   });
@@ -50,7 +53,7 @@ test("normal Netlify Forms 303 returns local 303 and preserves original form byt
   assert.equal(calls[0][0],provider);
   assert.equal(calls[0][1].method,"POST");
   assert.equal(calls[0][1].redirect,"manual");
-  assert.equal(new TextDecoder().decode(calls[0][1].body),"form-name=consortium&contact=Lee");
+  assert.equal(new TextDecoder().decode(calls[0][1].body),"form-name=consortium&contact=Lee&privacy_agree=yes");
 });
 
 test("successful 200 response is a valid transport acceptance only",async()=>{
@@ -113,7 +116,7 @@ test("oversized form payloads are rejected before reaching provider",async()=>{
 });
 
 test("multipart form data is forwarded byte-for-byte",async()=>{
-  const body="--test-boundary\r\ncontent-disposition: form-data; name=\"form-name\"\r\n\r\norder\r\n--test-boundary--\r\n";
+  const body="--test-boundary\r\ncontent-disposition: form-data; name=\"form-name\"\r\n\r\norder\r\n--test-boundary\r\ncontent-disposition: form-data; name=\"privacy_agree\"\r\n\r\nyes\r\n--test-boundary\r\ncontent-disposition: form-data; name=\"hp\"\r\n\r\n\r\n--test-boundary--\r\n";
   const {response,calls}=await run(post("/ko/thanks/",body,"multipart/form-data; boundary=test-boundary"),
     async()=>new Response(null,{status:303,headers:{location:"/"}}));
   assert.equal(response.status,303);
