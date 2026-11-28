@@ -1,0 +1,21 @@
+name: WMM GOV RADAR Identity endpoint read-only audit (NO DEPLOY)
+on:
+  push:
+    branches:
+      - wmm-member-endpoint-readonly-20261127
+    paths:
+      - 'scripts/wmm_member_endpoint_readonly.py'
+      - '.github/workflows/wmm_member_endpoint_readonly.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public_endpoints:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: GET-only public connectivity checks
+        run: python3 scripts/wmm_member_endpoint_readonly.py
