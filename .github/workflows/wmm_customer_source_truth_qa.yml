@@ -8,6 +8,8 @@ on:
       - 'pages3.py'
       - 'src/customer_receipts.json'
       - 'src/customer-support.html'
+      - 'cf/functions/nfform.js'
+      - 'tests/source-nfform-method-gate.test.cjs'
       - 'tests/test_customer_receipt_truth.py'
       - 'tests/customer-support.test.cjs'
       - 'tests/customer-public-route-gate.test.cjs'
@@ -26,6 +28,8 @@ jobs:
         run: |
           python3 -m py_compile build.py pages2.py pages3.py
           python3 -m unittest discover -s tests -p 'test_customer_receipt_truth.py' -v
+      - name: Rebuild-safe form relay GET HEAD privacy and upstream mock tests
+        run: node --test tests/source-nfform-method-gate.test.cjs
       - name: Shared first-time visitor and local-only FAQ checks
         run: |
           node tests/customer-public-route-gate.test.cjs
