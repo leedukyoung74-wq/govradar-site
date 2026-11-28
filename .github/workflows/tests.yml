@@ -20,3 +20,8 @@ jobs:
           python3 tools/cf_variant.py dist cf/public
       - name: Run offline unit suite against generated preview
         run: python3 -m unittest discover -s tests -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify VAT-inclusive server pricing and GET-only form sentinel (OFFLINE)
+        run: node --experimental-default-type=module --test tests/test_billing_form_route_offline.mjs

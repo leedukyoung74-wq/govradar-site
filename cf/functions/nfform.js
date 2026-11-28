@@ -52,6 +52,21 @@ async function readBoundedBody(request) {
   }
 }
 
+// Public GET-only operations sentinel. It deliberately does not access user
+// submissions, Netlify, secrets or form fields. A 405 proves the Pages
+// Function route is deployed; it never proves that POST submission is delivered.
+export function onRequestGet() {
+  return new Response("Method Not Allowed", {
+    status: 405,
+    headers: {
+      "allow": "POST",
+      "cache-control": "no-store",
+      "x-content-type-options": "nosniff",
+      "content-type": "text/plain; charset=utf-8"
+    }
+  });
+}
+
 export async function onRequestPost({request}) {
   const requestUrl = new URL(request.url);
   const next = safeConfirmationPath(requestUrl.searchParams.get("next"));

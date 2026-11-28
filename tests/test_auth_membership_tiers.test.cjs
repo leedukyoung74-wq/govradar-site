@@ -27,7 +27,7 @@ async function caseFor({storedRoles=["admin"],serverRoles=["m1"],failure=null,ex
   };
   vm.runInNewContext(source,{window:win,document:doc,localStorage:local,sessionStorage:{removeItem(){}},
     fetch:fetchFn,Date,URL,URLSearchParams,JSON,Error,String,
-    encodeURIComponent,setTimeout(){return 1;},location:{origin:"https://radar.wmm-hoa.com",pathname:"/ko/",search:"",hash:""},
+    encodeURIComponent,setTimeout(){return 1;},location:{origin:"https://radar.wmm-hoa.com",hostname:"radar.wmm-hoa.com",pathname:"/ko/",search:"",hash:""},
     history:{replaceState(){}},
   },{filename:"auth.js",timeout:1000});
   const auth=win.WMMAuth;
