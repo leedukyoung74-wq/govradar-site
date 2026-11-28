@@ -1,18 +1,52 @@
 {
  "v": 1,
- "updated": "2026-11-22",
+ "updated": "2026-11-28T09:51+09:00",
  "checked": "2026-11-28T09:28",
- "summary_ko": "지금 실제로 진행 중인 큰 무력충돌은 미국·이스라엘–이란 전쟁(2026년 2월 28일 시작)과 러시아–우크라이나 전쟁입니다. 11월 21일 혁명수비대가 바레인의 미군 기지를 공격했다고 주장했고, 바레인은 이란 공격으로 시트라의 민간 시설에 불이 났다고 밝혔습니다. 같은 날 호르무즈 해협을 빠져나가던 유조선 2척이 미확인 발사체에 맞았고(UKMTO), 11월 14일 이후 피격 유조선은 약 25척입니다. 공식 휴전은 없고 종전 협상은 진전이 없습니다. 우크라이나에서는 11월 22일 키이우주 디메르 아파트가 공습으로 무너져 2명이 숨지고 11명이 실종됐으며, 한 주 동안 러시아 무인기 약 2,700기가 날아왔습니다. 11월 21일에는 핀란드만에서 러시아 화물선이 무인기에 맞았습니다. 북한은 11월 4일 미사일 여러 발을 쐈습니다. 자연재해·감염병은 공식 기관 원문(USGS·GDACS·NASA·WHO)을 매일 자동 반영합니다. 각국의 가정 비축 권고는 정례 대비 정책이며, 특정 전쟁이 임박했다는 공식 경고는 확인되지 않았습니다.",
- "summary_en": "The major armed conflicts under way are the US–Israel war with Iran (began 28 Feb 2026) and Russia–Ukraine. On 21 Nov the IRGC said it struck US bases in Bahrain; Bahrain said an Iranian attack set fire to a civilian facility in Sitra. The same day two tankers leaving the Strait of Hormuz were hit by unknown projectiles (UKMTO); about 25 tankers have been hit since 14 Nov. There is no formal ceasefire and talks have not advanced. In Ukraine a strike on 22 Nov partly collapsed an apartment block in Dymer, Kyiv region (2 dead, 11 missing), and Russia launched about 2,700 drones in a week. On 21 Nov a Russian cargo ship was hit by drones in the Gulf of Finland. North Korea fired multiple missiles on 4 Nov. Natural disasters and outbreaks are taken daily from the agencies' own feeds (USGS, GDACS, NASA, WHO). Household-stockpile advice in various countries is routine preparedness policy; no official warning of an imminent specific war has been found.",
+ "summary_ko": "지금 실제로 진행 중인 큰 무력충돌은 미국·이스라엘–이란 전쟁(2026년 2월 28일 시작)과 러시아–우크라이나 전쟁입니다. 11월 26일 미군은 이란 항만 봉쇄를 돌파하려던 상선 1척을 오만만에서 무력화했고(미 중부사령부), 27일 혁명수비대는 봉쇄를 돌파하겠다고 주장했습니다. 같은 날 쿠웨이트 무인기 공격으로 이탈리아인 2명이 숨졌고 이란은 관여를 부인했습니다. 한국은 11월 26일 이란에 청해부대 임무 확대가 전쟁 불개입 원칙 아래의 국민 보호 조치라고 설명했습니다. 우크라이나에서는 11월 25~26일 기반시설 공습이 이어졌고, 자포리자 원전이 외부 전력을 잃어 IAEA가 복구용 국지 휴전을 협의하고 있으며, 우크라이나는 27일 흑해 휴전을 제안했습니다. 자연재해·감염병은 공식 기관 원문(USGS·GDACS·NASA·WHO)을 매일 자동 반영합니다. 각국의 가정 비축 권고는 정례 대비 정책이며, 특정 전쟁이 임박했다는 공식 경고는 확인되지 않았습니다.",
+ "summary_en": "The major armed conflicts under way are the US–Israel war with Iran (began 28 Feb 2026) and Russia–Ukraine. On 26 Nov US forces disabled a ship in the Gulf of Oman that allegedly tried to breach the blockade of Iranian ports (CENTCOM), and on 27 Nov the IRGC vowed to break the blockade. The same day a drone attack in Kuwait killed two Italians; Iran denied involvement. On 26 Nov South Korea told Iran that the expanded Cheonghae unit mission is to protect citizens under a principle of non-involvement in the war. In Ukraine, strikes on infrastructure continued on 25–26 Nov; the Zaporizhzhia nuclear plant lost off-site power and the IAEA is seeking a local ceasefire for repairs, and on 27 Nov Ukraine proposed a Black Sea ceasefire. Natural disasters and outbreaks are taken daily from the agencies' own feeds (USGS, GDACS, NASA, WHO). Household-stockpile advice in various countries is routine preparedness policy; no official warning of an imminent specific war has been found.",
  "hotspots": [
   {
    "iso": "IR",
    "level": "war",
    "ko": "미국·이스라엘–이란 / 호르무즈 해협",
    "en": "US–Israel vs Iran / Strait of Hormuz",
-   "status_ko": "전쟁 진행 중 · 11-21 혁명수비대 바레인 미군 기지 공격(바레인: 시트라 민간 시설 화재) · 11-20~21 호르무즈 유조선 2척 피격 · 11-14 이후 유조선 약 25척 피격 · 협상 정체",
-   "status_en": "War ongoing · 21 Nov IRGC strikes on US bases in Bahrain (Bahrain: fire at a civilian site in Sitra) · two tankers hit leaving Hormuz (20–21 Nov) · about 25 tankers hit since 14 Nov · talks stalled",
+   "status_ko": "전쟁 진행 중 · 11-26 미군, 봉쇄 돌파 시도 상선 무력화(CENTCOM) · 11-27 혁명수비대 봉쇄 돌파 주장 · 11-26 쿠웨이트 무인기 공격 2명 사망(이란 부인) · 한국 청해부대 임무 확대안 국방위 통과",
+   "status_en": "War ongoing · 26 Nov US disables a ship trying to breach the blockade (CENTCOM) · 27 Nov IRGC vows to break the blockade · 26 Nov drone attack in Kuwait kills 2 (Iran denies) · Korean Cheonghae unit mission expansion passes defence committee",
    "facts": [
+    {
+     "ko": "미 중부사령부: 11월 26일 오만만에서 미군 항공기가 이란 반다르아바스항을 떠나 해상 봉쇄 돌파를 시도한 팔라우 선적 상선 '퍼시픽 아처'호의 선미를 정밀 타격해 추진력을 잃게 했다(승무원 피해 없음). 봉쇄 이후 불응 선박 6척을 무력화하고 158척을 회항시켰다고 밝혔다.",
+     "en": "CENTCOM: on 26 Nov a US aircraft struck the stern of the Palau-flagged M/V Pacific Archer in the Gulf of Oman after it left Bandar Abbas and allegedly tried to breach the blockade, disabling its propulsion (crew unharmed). CENTCOM says it has disabled six non-compliant ships and redirected 158 others.",
+     "v": "official",
+     "src": [
+      "https://www.cbsnews.com/live-updates/iran-war-trump-us-threats-diplomacy-strait-of-hormuz/"
+     ]
+    },
+    {
+     "ko": "11월 27일 마지드 무사비 혁명수비대 항공우주군 사령관은 X에 '적은 공중과 해상에서 우리의 행동을 기다려야 할 것'이라며 미국의 해상 봉쇄를 돌파하겠다고 주장했다(당사자 주장). 미국의 2차 봉쇄는 7월 14일부터 이어지고 있다.",
+     "en": "On 27 Nov IRGC Aerospace Force commander Majid Mousavi said on X that the enemy 'should await our action in the air and at sea' and vowed to break the US blockade (party claim). The second US blockade has been in place since 14 Jul.",
+     "v": "ok",
+     "src": [
+      "https://www.yna.co.kr/view/AKR20261128003300079",
+      "https://news.jkn.co.kr/post/1128532"
+     ]
+    },
+    {
+     "ko": "11월 26일 쿠웨이트에서 무인기 공격으로 이탈리아인 기술자 2명이 숨지고 2명이 다쳤다. 구테흐스 유엔 사무총장은 이란 소행으로 지목된 이 공격을 규탄하며 모든 당사자의 자제를 촉구했고, 이란은 관여를 부인했다.",
+     "en": "On 26 Nov a drone attack in Kuwait killed two Italian technicians and wounded two others. UN Secretary-General Guterres condemned the attack, which was blamed on Iran, and urged all parties to show restraint; Iran denied involvement.",
+     "v": "official",
+     "src": [
+      "https://www.cbsnews.com/live-updates/iran-war-trump-us-threats-diplomacy-strait-of-hormuz/"
+     ]
+    },
+    {
+     "ko": "한국 외교부: 11월 26일 조현 장관이 아라그치 이란 외교장관과 통화해 청해부대 임무 확대는 국민 보호와 경제 이익을 위한 조치이며 전쟁에 개입하지 않는다고 설명했다. 같은 날 국회 국방위원회는 청해부대 임무 구역 확대·파견 연장(2027년 12월 31일까지) 동의안을 의결했다.",
+     "en": "South Korea's foreign ministry: on 26 Nov Minister Cho Hyun told Iranian Foreign Minister Araghchi by phone that the expanded mission of the Cheonghae unit is to protect citizens and economic interests and does not mean involvement in the war. The same day the National Assembly defence committee approved extending the deployment, with a wider mission area, to 31 Dec 2027.",
+     "v": "official",
+     "src": [
+      "https://www.hani.co.kr/arti/politics/politics_general/1289334.html",
+      "https://www.yna.co.kr/view/AKR20261126138600001"
+     ]
+    },
     {
      "ko": "2026년 2월 28일 미국·이스라엘의 이란 공습으로 전쟁이 시작됐고, 이후 이란이 해협 통항을 통제하고 있다.",
      "en": "The war began with US–Israeli strikes on Iran on 28 Feb 2026; Iran has controlled transit through the strait since.",
@@ -26,51 +60,6 @@
       "https://www.aljazeera.com/news/2026/11/22/whats-behind-irans-escalation-of-attacks-in-the-gulf",
       "https://abcnews.com/International/live-updates/iran-live-updates-tanker-attacked-strait-hormuz-ukmto?id=138171071"
      ]
-    },
-    {
-     "ko": "UKMTO: 11월 21일 호르무즈 해협을 빠져나가던 유조선 2척이 미확인 발사체에 맞았다(인명 피해 보고 없음). 알자지라 집계로 11월 14일 이후 호르무즈 일대에서 유조선 약 25척이 피격됐다.",
-     "en": "UKMTO: on 21 Nov two tankers leaving the Strait of Hormuz were hit by unknown projectiles (no casualties reported). By Al Jazeera's count about 25 tankers have been hit in or near Hormuz since 14 Nov.",
-     "v": "official",
-     "src": [
-      "https://abcnews.com/International/live-updates/iran-live-updates-tanker-attacked-strait-hormuz-ukmto?id=138171071",
-      "https://www.aljazeera.com/news/2026/11/22/whats-behind-irans-escalation-of-attacks-in-the-gulf"
-     ]
-    },
-    {
-     "ko": "이란은 11월 20일 걸프 상공에서 미 F-16을 미사일로 맞혔다고 주장했으나 미 중부사령부는 '모든 전투기가 안전하다'며 부인했다. 11월 22일 이란은 호르무즈 동쪽에서 미군 MQ-1 무인기를 또 격추했다고 주장했다(당사자 주장).",
-     "en": "Iran claimed on 20 Nov that it hit a US F-16 over the Gulf; CENTCOM denied it, saying all US jets were safe and accounted for. On 22 Nov Iran claimed another US MQ-1 drone shot down east of Hormuz (party claim).",
-     "v": "part",
-     "src": [
-      "https://www.aljazeera.com/news/2026/11/22/whats-behind-irans-escalation-of-attacks-in-the-gulf",
-      "https://abcnews.com/International/live-updates/iran-live-updates-tanker-attacked-strait-hormuz-ukmto?id=138171071"
-     ]
-    },
-    {
-     "ko": "트럼프 대통령은 11월 21일 이란의 핵무기 보유를 막는 '영구적' 합의 구상이 있다고 말했다. 공식 휴전은 없고 종전 협상은 진전이 없다.",
-     "en": "On 21 Nov President Trump said he had plans for a 'permanent' deal preventing an Iranian nuclear weapon. There is no formal ceasefire and talks to end the war have not advanced.",
-     "v": "ok",
-     "src": [
-      "https://www.aljazeera.com/news/2026/11/22/whats-behind-irans-escalation-of-attacks-in-the-gulf"
-     ]
-    },
-    {
-     "ko": "미국은 이란 항만에 대한 해상 봉쇄를 유지하고 있다(8월 말 기준 상선 83척 회항 조치, CENTCOM).",
-     "en": "The US maintains a naval blockade of Iranian ports (83 vessels redirected as of late Aug, CENTCOM).",
-     "v": "ok"
-    },
-    {
-     "ko": "11월 17일 이란이 바레인의 미군 사용 시설을 무인기로 공격했으나 모두 요격됐다(바레인 국방군·미 중부사령부, 미군 피해 없음). 미국은 같은 날 '자위 조치'로 케심섬의 혁명수비대 미사일 발사장을 정밀 타격했다.",
-     "en": "On 17 Nov Iran launched one-way attack drones at facilities used by US forces in Bahrain; all were intercepted (Bahrain Defence Force, CENTCOM; no US damage). The same day US jets struck an IRGC missile launch site on Qeshm Island in what the US called self-defence.",
-     "v": "ok",
-     "src": [
-      "https://www.airandspaceforces.com/us-fighters-strike-iranian-missile-site/",
-      "https://gulfnews.com/world/mena/us-jets-strike-irgc-missile-site-on-irans-qeshm-island-after-drone-attack-on-bahrain-1.500751334"
-     ]
-    },
-    {
-     "ko": "미국은 11월 3일 호르무즈 해협 인근 케심섬의 이란 방공시설을 제한적으로 타격했다. 트럼프 대통령은 '소규모 공격이며 전쟁은 아니다'라고 했고, 미 당국은 이란의 미군기 사격에 대응한 방어적 조치라고 설명했다.",
-     "en": "On 3 Nov the US conducted limited strikes on an Iranian air-defence site on Qeshm Island near the strait. Trump called it a 'minor attack' that 'wasn't war'; US officials called it defensive after Iranian fire at a US aircraft.",
-     "v": "ok"
     }
    ]
   },
@@ -79,9 +68,43 @@
    "level": "war",
    "ko": "러시아–우크라이나",
    "en": "Russia–Ukraine",
-   "status_ko": "전쟁 진행 중 · 11-22 키이우주 디메르 아파트 공습(사망 2·실종 11) · 11-16~22 러시아 무인기 약 2,700기·미사일 165발 · 11-21 핀란드만 러시아 화물선 무인기 피격 · 협상 다음 회차 미정",
-   "status_en": "War ongoing · 22 Nov strike on an apartment block in Dymer, Kyiv region (2 dead, 11 missing) · ~2,700 Russian drones and 165 missiles on 16–22 Nov · Russian cargo ship hit by drones in the Gulf of Finland on 21 Nov · no date for next talks",
+   "status_ko": "전쟁 진행 중 · 11-25~26 키이우·7개 주 기반시설 공습 · 11-25 자포리자 원전 외부 전력 상실(IAEA 국지 휴전 협의) · 11-27 우크라이나 흑해 휴전 제안, 러시아 답 대기",
+   "status_en": "War ongoing · 25–26 Nov strikes on infrastructure in Kyiv and seven regions · 25 Nov Zaporizhzhia nuclear plant loses off-site power (IAEA seeks local ceasefire) · 27 Nov Ukraine proposes Black Sea ceasefire, awaits Russia's reply",
    "facts": [
+    {
+     "ko": "IAEA: 11월 25일 자포리자 원전이 외부 전력을 잃어 비상 디젤발전기로 냉각을 유지하고 있다(전쟁 이후 28번째). IAEA는 송전선 복구를 위한 국지 휴전을 러시아·우크라이나와 협의하고 있으며, 연료는 10일 이상 버틸 수 있다고 밝혔다.",
+     "en": "IAEA: on 25 Nov the Zaporizhzhia nuclear plant lost off-site power and is relying on emergency diesel generators for cooling (the 28th time since the war began). The IAEA is consulting Russia and Ukraine on a local ceasefire to repair the line and says fuel will last more than ten days.",
+     "v": "official",
+     "src": [
+      "https://www.world-nuclear-news.org/articles/iaea-seeks-fresh-local-ceasefire-for-zaporizhzhia-power-line-repairs",
+      "https://sana.sy/en/international/2362250/"
+     ]
+    },
+    {
+     "ko": "우크라이나 정부: 11월 25~26일 밤 러시아가 키이우와 7개 주의 상수도·난방망·상가·주택을 공격했다. 하르키우에서 2명, 자포리자에서 경찰 4명이 숨졌고, 25일에는 5개 지역에서 정전이 났다.",
+     "en": "Ukrainian government: overnight on 25–26 Nov Russia struck water, heating, shopping and residential sites in Kyiv and seven regions. Two people were killed in Kharkiv and four police officers in Zaporizhzhia; power cuts hit five regions on 25 Nov.",
+     "v": "official",
+     "src": [
+      "https://www.fnnews.com/news/202611262347551076",
+      "https://www.newspim.com/news/view/20261127000087"
+     ]
+    },
+    {
+     "ko": "11월 27일 시비하 우크라이나 외교장관은 흑해 휴전 조건을 협력국을 통해 러시아에 전달했고 답을 기다리고 있다고 밝혔다. 러시아는 영구 평화협정 없이 흑해 임시 합의에 응하지 않는다는 입장이다.",
+     "en": "On 27 Nov Ukrainian Foreign Minister Sybiha said Kyiv had passed its terms for a Black Sea ceasefire to Russia through partners and was awaiting a reply. Russia has refused an interim Black Sea deal without a permanent peace agreement.",
+     "v": "official",
+     "src": [
+      "https://ua.news/en/war-vs-rf/ukrayina-ochikuie-vid-rosiyi-vidpovidi-na-propozitsiiu-pro-peremiria-v-chornomu-mori"
+     ]
+    },
+    {
+     "ko": "11월 26일 트럼프 대통령과 뤼터 NATO 사무총장은 공동성명에서 러시아가 전쟁을 확대하는 어떠한 행동도 피하고 평화적 해결을 서둘러야 한다고 밝혔다.",
+     "en": "In a joint statement on 26 Nov President Trump and NATO Secretary General Rutte said Russia must avoid any action that widens the war and that a peaceful settlement should be reached as soon as possible.",
+     "v": "official",
+     "src": [
+      "https://www.newspim.com/news/view/20261127000087"
+     ]
+    },
     {
      "ko": "11월 22일 새벽 러시아 공격으로 키이우주 디메르의 5층 아파트가 일부 무너져 2명이 숨지고 어린이 2명을 포함한 11명이 실종됐다(인테르팍스·자유유럽방송). 같은 날 자포리자에서도 1명이 숨졌다.",
      "en": "Early on 22 Nov a Russian strike partly collapsed a five-storey apartment block in Dymer, Kyiv region: two people were found dead and 11, including two children, were missing (Interfax, Radio Liberty). One person was killed in Zaporizhzhia the same day.",
@@ -91,45 +114,8 @@
      ]
     },
     {
-     "ko": "젤렌스키 대통령: 11월 16~22일 한 주 동안 러시아가 공격 무인기 약 2,700기, 유도폭탄 약 1,460발, 미사일 165발을 20개 주에 쐈다. 그는 이미 비용이 지불된 패트리엇 요격미사일을 미국이 승인해 달라고 요청했다.",
-     "en": "President Zelenskyy: in the week of 16–22 Nov Russia launched about 2,700 attack drones, 1,460 guided bombs and 165 missiles at 20 regions. He urged the US to approve delivery of Patriot interceptors already paid for by partners.",
-     "v": "official",
-     "src": [
-      "https://www.aljazeera.com/news/2026/11/22/zelenskyy-urges-us-to-release-patriot-missiles"
-     ]
-    },
-    {
-     "ko": "11월 21일 핀란드만 고글란드섬 서쪽 공해에서 러시아 국방부 물류용 화물선 '스파르타 II'가 무인기에 맞아 불이 났다. 승무원 16명은 모두 대피했고, 핀란드군은 우크라이나의 공격일 가능성이 높다고 봤다.",
-     "en": "On 21 Nov the Russian cargo ship Sparta II, which carries logistics for Russia's defence ministry, was hit by drones in international waters west of Gogland in the Gulf of Finland and caught fire; all 16 crew were evacuated. Finland's military said Ukraine likely carried out the strike.",
-     "v": "ok",
-     "src": [
-      "https://www.aljazeera.com/news/2026/11/22/russian-cargo-ship-still-on-fire-off-finland-after-drone-attack"
-     ]
-    },
-    {
      "ko": "11월 10~11일 미국 중재로 아부다비에서 열린 러시아·우크라이나 협상(9개월 만의 직접 협상)에서 양측은 대규모 포로 교환에 원칙적으로 합의했으나 규모는 발표되지 않았다. 영토 문제가 최대 쟁점으로 남았고, 다음 회차 날짜는 정해지지 않았다(Reuters·AFP·AP).",
      "en": "At US-mediated Russia–Ukraine talks in Abu Dhabi on 10–11 Nov (the first direct talks in nine months), the sides agreed in principle on a major prisoner exchange, with numbers not announced. Territory remains the main sticking point and no date was set for the next round (Reuters, AFP, AP).",
-     "v": "ok"
-    },
-    {
-     "ko": "유엔 인권감시단: 2026년 10월 우크라이나 민간인 최소 372명이 숨지고 1,981명이 다쳤다(전년 같은 달보다 약 95% 많음). 11월 18일 오데사 공격으로 4명이 숨졌다.",
-     "en": "UN Human Rights Monitoring Mission: at least 372 civilians were killed and 1,981 injured in Ukraine in October 2026, about 95% more than in October 2025. A strike on Odesa on 18 Nov killed four people.",
-     "v": "ok",
-     "src": [
-      "https://www.opb.org/article/2026/11/18/ukraine-says-it-hit-2-russian-oil-refineries-as-zelenskyy-hails-domestically-made-weapons/"
-     ]
-    },
-    {
-     "ko": "우크라이나 총참모부는 11월 18일 러시아 크라스노다르 지역 정유시설 2곳을 타격했다고 밝혔다(당사자 발표). 11월 16일에는 케르치 다리를 장거리 무인기·미사일로 공격했다.",
-     "en": "Ukraine's General Staff said it hit two refineries in Russia's Krasnodar region on 18 Nov (party statement); on 16 Nov Ukraine attacked the Kerch Bridge with long-range drones and missiles.",
-     "v": "official",
-     "src": [
-      "https://www.opb.org/article/2026/11/18/ukraine-says-it-hit-2-russian-oil-refineries-as-zelenskyy-hails-domestically-made-weapons/"
-     ]
-    },
-    {
-     "ko": "러시아는 '소규모·국지 휴전'에는 열려 있다고 밝혔으나 공격은 이어지고 있다.",
-     "en": "Russia says it is open to limited local ceasefires, while attacks continue.",
      "v": "ok"
     }
    ]
@@ -1374,6 +1360,6 @@
    }
   }
  ],
- "editorial_updated": "2026-11-23T00:20+09:00",
+ "editorial_updated": "2026-11-28T09:51+09:00",
  "disasters_checked": "2026-11-28T09:28"
 }
