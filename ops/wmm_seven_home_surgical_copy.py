@@ -19,7 +19,7 @@ import zipfile
 
 LANGS=("ko","en","es","fr","ar","vi","id")
 HERO=re.compile(r'<p class="eb"><i class="live"></i>.*?</p>',re.S)
-TICK=re.compile(r'<section class="tick"\b[^>]*>.*?</section>',re.S)
+TICK=re.compile(r'<section class="tick"[^>]*>.*?</section>',re.S)
 KPI=re.compile(r'<div class="kpis">(?P<inner>(?:<div>.*?</div>){4})</div>',re.S)
 KID=re.compile(r'<div>.*?</div>',re.S)
 SPAN=re.compile(r'<span>[^<]*</span>',re.S)
