@@ -5,6 +5,8 @@ on:
     paths:
       - 'ops/wmm_seven_home_release_candidate.py'
       - 'ops/tests/test_wmm_seven_home_release_candidate.py'
+      - 'ops/wmm_seven_home_surgical_copy.py'
+      - 'ops/tests/test_wmm_seven_home_surgical_copy.py'
       - '.github/workflows/wmm_seven_home_release_candidate.yml'
   push:
     branches: [main]
@@ -12,6 +14,8 @@ on:
       - '.github/workflows/wmm_seven_home_release_candidate.yml'
       - 'ops/wmm_seven_home_release_candidate.py'
       - 'ops/tests/test_wmm_seven_home_release_candidate.py'
+      - 'ops/wmm_seven_home_surgical_copy.py'
+      - 'ops/tests/test_wmm_seven_home_surgical_copy.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -29,6 +33,8 @@ jobs:
           python-version: '3.12'
       - name: Synthetic no-deploy form, copy, locale and resource regression
         run: python3 -m unittest discover -s ops/tests -p 'test_wmm_seven_home_release_candidate.py' -v
+      - name: Verify surgical copy-only generated archive never modifies live forms or scripts
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_seven_home_surgical_copy.py' -v
   candidate_zip_only:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
@@ -43,6 +49,8 @@ jobs:
           python-version: '3.12'
       - name: Verify release safeguard policy before preparing ZIP
         run: python3 -m unittest discover -s ops/tests -p 'test_wmm_seven_home_release_candidate.py' -v
+      - name: Verify surgical copy-only generated archive never modifies live forms or scripts
+        run: python3 -m unittest discover -s ops/tests -p 'test_wmm_seven_home_surgical_copy.py' -v
       - name: Obtain source branch for offline generation only
         uses: actions/checkout@v4
         with:
@@ -89,11 +97,19 @@ jobs:
               f.write('\n'.join(lines)+'\n')
           print('\n'.join(lines))
           PY
+      - name: Generate surgical seven-language copy-only archive (existing live forms untouched)
+        run: |
+          python3 ops/wmm_seven_home_surgical_copy.py \
+            --source source-snapshot/cf/public \
+            --live live-snapshot/public \
+            --out review-release-copy
       - name: Attach reviewed HTML ZIP and blocker manifest, NO production upload
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: wmm-7-homepages-CANDIDATE-NO-DEPLOY-${{ github.run_id }}
-          path: review-release/*
+          path: |
+            review-release/*
+            review-release-copy/*
           retention-days: 7
           if-no-files-found: ignore
