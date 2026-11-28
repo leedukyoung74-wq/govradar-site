@@ -57,6 +57,26 @@ def payment_product_totals(path):
     return {name:int(price) for name,price in found}
 
 
+def payment_switch_guard(path, kind):
+    """Static fail-closed guard; cannot inspect live Cloudflare environment."""
+    blob=read(path)
+    if blob is None:
+        return False
+    try:
+        source=blob.decode("utf-8")
+    except UnicodeError:
+        return False
+    if kind=="config":
+        return ('env.WMM_PAYMENT_LIVE_ENABLED === "true"' in source and
+                'env.TOSS_SECRET_KEY' in source and
+                'clientKey: enabled ? ck : ""' in source)
+    if kind=="confirm":
+        return ('env.WMM_PAYMENT_LIVE_ENABLED !== "true"' in source and
+                '!env.TOSS_CLIENT_KEY' in source and
+                '!env.TOSS_SECRET_KEY' in source)
+    return False
+
+
 def parse_time(s):
     if not isinstance(s,str) or not s:return None
     try:
@@ -147,6 +167,18 @@ def inspect(src,live,data,now=None):
          "VAT_included":True,
          "checkout_tested":False,
          "real_charge_executed":False})
+    _switch_checks={
+        "source_config":payment_switch_guard(src/"cf"/"functions"/"pay"/"config.js","config"),
+        "source_confirm":payment_switch_guard(src/"cf"/"functions"/"pay"/"confirm.js","confirm"),
+        "live_config":payment_switch_guard(live/"functions"/"pay"/"config.js","config"),
+        "live_confirm":payment_switch_guard(live/"functions"/"pay"/"confirm.js","confirm"),
+    }
+    add("payment_default_off_code_parity",
+        "pass" if all(_switch_checks.values()) else "block",
+        {"source_and_live_guards":_switch_checks,
+         "actual_live_env_switch_verified":False,
+         "production_checkout_enabled_observed":None,
+         "note":"Static safeguard only; public /pay/config GET must independently show enabled=false."})
     for key,filename,max_minutes in (("nws_source","nws_active.json",180),
                                       ("cisa_kev_source","cisa_kev.json",600)):
         doc=json_file(data/"hz"/filename) or {}
