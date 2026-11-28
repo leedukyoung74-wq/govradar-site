@@ -49,7 +49,7 @@ async function signupCase(marketingChecked) {
   vm.runInNewContext(authSource, {
     window:win,document:doc,localStorage:storage,sessionStorage:storage,
     fetch:fetchFn,setTimeout(){return 1;},
-    location:{hash:"",pathname:"/en/",search:""},history:{replaceState(){}},
+    location:{origin:"https://radar.wmm-hoa.com",hostname:"radar.wmm-hoa.com",hash:"",pathname:"/en/",search:""},history:{replaceState(){}},
     Date, URLSearchParams, Error, JSON, String, encodeURIComponent
   },{timeout:1000,filename:"auth.js"});
   handlers.DOMContentLoaded();
@@ -108,7 +108,7 @@ test("existing member choosing No sends marketing:false with cleared consent tim
   vm.runInNewContext(authSource,{
     window:win,document:doc,localStorage:storage,sessionStorage:storage,
     fetch:fetchFn,setTimeout(fn,ms){if(ms===1200)openConsentDialog=fn;return 1;},
-    location:{hash:"",pathname:"/en/",search:""},history:{replaceState(){}},
+    location:{origin:"https://radar.wmm-hoa.com",hostname:"radar.wmm-hoa.com",hash:"",pathname:"/en/",search:""},history:{replaceState(){}},
     Date,URLSearchParams,Error,JSON,String,encodeURIComponent
   },{timeout:1000,filename:"auth.js"});
   documentHandlers.DOMContentLoaded();
