@@ -9,6 +9,7 @@ import asyncio
 import json
 import os
 from pathlib import Path
+from urllib.parse import urlsplit
 
 HOST = "https://radar.wmm-hoa.com"
 LOCALES = ("ko", "en", "es", "fr", "ar", "vi", "id")
@@ -18,6 +19,16 @@ COPY_MARKERS = {
     "ko": "조사·제안 아이디어 · 실시간 입찰 아님",
     "en": "Curated research ideas · not live tenders",
 }
+
+
+def safe_post_category(url):
+    # Never log query strings, OAuth tokens, form content, unknown hostnames
+    # or user identifiers. Cloudflare Web Analytics uses POST /cdn-cgi/rum.
+    parsed = urlsplit(url)
+    if parsed.scheme == "https" and parsed.path.rstrip("/") == "/cdn-cgi/rum" and parsed.hostname in (
+            "cloudflareinsights.com", "radar.wmm-hoa.com"):
+        return "CLOUDFLARE_RUM"
+    return "UNEXPECTED_NON_GET"
 
 
 def classify(label, code, lang, direction, viewport, h1, main_count,
@@ -35,8 +46,12 @@ def classify(label, code, lang, direction, viewport, h1, main_count,
         failures.append("MAIN_HEADING_NOT_VISIBLE")
     if overflow_px > 20:
         failures.append("MOBILE_HORIZONTAL_OVERFLOW")
-    if denied_posts:
-        failures.append("BACKGROUND_POST_BLOCKED")
+    # Always block ALL non-GET network requests. Distinguish Cloudflare's
+    # standard performance RUM beacon from unexpected customer/backend POSTs.
+    # An analytics beacon is not a customer form submission or payment.
+    unexpected = [x for x in denied_posts if x != "CLOUDFLARE_RUM"]
+    if unexpected:
+        failures.append("UNEXPECTED_NON_GET_BLOCKED")
     missing_copy = label in COPY_MARKERS and copy_present is False
     return {
         "status": "FAIL" if failures else "PASS",
@@ -65,7 +80,7 @@ async def run():
                 blocked = []
                 async def no_non_get(route):
                     if route.request.method.upper() != "GET":
-                        blocked.append("BLOCKED_NON_GET")
+                        blocked.append(safe_post_category(route.request.url))
                         await route.abort()
                     else:
                         await route.continue_()
@@ -96,7 +111,7 @@ async def run():
                         lang, res.status if res else None,
                         details["lang"], details["dir"], details["viewport"],
                         details["h1"], details["mains"], details["overflow"],
-                        bool(blocked), copied)
+                        blocked, copied)
                     item.update({
                         "http": res.status if res else None,
                         "status": review["status"],
@@ -104,6 +119,8 @@ async def run():
                         "copy_review": review["copy_review"],
                         "overflow_pixels": details["overflow"],
                         "source_copy_deployed": copied,
+                        "non_get_requests_blocked": len(blocked),
+                        "blocked_non_get_categories": sorted(set(blocked)),
                     })
                     # No cookies, customer values or keys are captured in logs.
                     if item["status"] == "PASS":
