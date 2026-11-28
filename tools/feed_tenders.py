@@ -8,8 +8,12 @@ More sources live in feed_more.py. Per-source status goes to feeds/sources_statu
 import datetime, json, os, re, sys, unicodedata, urllib.request, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); sys.path.insert(0, ROOT)
+from reporting_clock import reporting_day, utc_source_day
 OUT = os.path.join(ROOT, "data_branch", "feeds", "tenders.json")
-TODAY = datetime.date.today(); MIN_DL = TODAY.isoformat()
+# Upstream official API windows stay on UTC. Korean user-facing 'new today'
+# and urgent date labels use KST to match the advertised 06:10 KST schedule.
+TODAY = utc_source_day(); MIN_DL = TODAY.isoformat()
+REPORT_DATE = reporting_day()
 NAMES = json.load(open(os.path.join(ROOT, "src", "names.json"), encoding="utf8"))
 META = json.load(open(os.path.join(ROOT, "src", "countries_meta.json"), encoding="utf8"))
 try:
@@ -143,7 +147,7 @@ def merge(groups, prev=None, now=None):
             if sk in sim and sim[sk]["source"] != x["source"]:
                 x["dupc"] = sim[sk]["url"]; c["flagged_similar"] += 1
             sim.setdefault(sk, x)
-            x["added"] = (prev.get(x["url"]) or {}).get("added") or TODAY.isoformat()
+            x["added"] = (prev.get(x["url"]) or {}).get("added") or REPORT_DATE.isoformat()
             items.append(x); c["kept"] += 1
     return items, counts
 
@@ -248,11 +252,11 @@ def main():
     for x in items:
         x["sec"] = classify(x["title"] + " " + x["buyer"] + " " + x.get("project", ""))
         x["n"] = {L: v for L, v in (NAMES.get(x["iso"]) or {}).items()}; x["slug"] = SLUG.get(x["iso"], "")
-        d = datetime.date.fromisoformat(x["deadline"]); x["urgent"] = (d - TODAY).days <= 2
+        d = datetime.date.fromisoformat(x["deadline"]); x["urgent"] = (d - REPORT_DATE).days <= 2
     for nm_, c in counts.items():
         st = dict(FM.stat(nm_)); st.update(c); st["checked"] = stamp
         st["new_today"] = sum(1 for x in items if x["source"] == nm_ and
-                              x.get("added") == TODAY.isoformat() and
+                              x.get("added") == REPORT_DATE.isoformat() and
                               not x.get("stale") and x.get("verify") != "partial")
         # A PARTIAL source can contain valid rows, but a source that never
         # answered cannot advance its last truly successful check.
