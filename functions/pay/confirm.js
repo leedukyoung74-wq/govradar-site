@@ -2,7 +2,7 @@ import { PRODUCTS } from "./_products.js";
 // 결제 승인: 금액 위변조 검사 → 토스페이먼츠 승인 API → 대표에게 주문 알림(Netlify Forms)
 export async function onRequestPost({ request, env }) {
   const j = (o, s = 200) => Response.json(o, { status: s, headers: { "cache-control": "no-store" } });
-  if (!env.TOSS_SECRET_KEY) return j({ ok: false, code: "NOT_READY", message: "결제 준비 중입니다." }, 503);
+  if (env.WMM_PAYMENT_LIVE_ENABLED !== "true" || !env.TOSS_CLIENT_KEY || !env.TOSS_SECRET_KEY) return j({ ok: false, code: "NOT_READY", message: "결제 준비 중입니다." }, 503);
   let b; try { b = await request.json(); } catch { return j({ ok: false, code: "BAD_REQUEST" }, 400); }
   const { paymentKey, orderId, amount, item, email } = b || {};
   const p = PRODUCTS[item];
