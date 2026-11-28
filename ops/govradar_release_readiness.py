@@ -40,6 +40,23 @@ def auth_proxy_equivalent(source_path, live_path):
     return source.replace(src_anchor, live_anchor) == live
 
 
+def payment_product_totals(path):
+    """Extract only two fixed *server* amount literals, never run JS or charge."""
+    blob=read(path)
+    if blob is None:
+        return None
+    try:
+        source=blob.decode("utf-8")
+    except UnicodeError:
+        return None
+    found=re.findall(
+        r'"analysis-(month|year)"\s*:\s*\{[^{}]*?\bamount\s*:\s*(\d+)\b',
+        source, re.S)
+    if len(found)!=2 or {k for k,_ in found}!={"month","year"}:
+        return None
+    return {name:int(price) for name,price in found}
+
+
 def parse_time(s):
     if not isinstance(s,str) or not s:return None
     try:
@@ -115,6 +132,21 @@ def inspect(src,live,data,now=None):
         add(key,"pass" if matches else "block",
             {"code_parity_validated":matches,
              "expected_proxy_difference_only":key=="live_auth_js"})
+    # This release gate compares the server-side amounts shown in production
+    # and the reviewed build tree. A source-only price change is not enough:
+    # a public checkout must never silently retain an old VAT-added amount.
+    src_prices=payment_product_totals(src/"cf"/"functions"/"pay"/"_products.js")
+    live_prices=payment_product_totals(live/"functions"/"pay"/"_products.js")
+    expected={"month":20000,"year":200000}
+    pricing_match=(src_prices==expected and live_prices==expected)
+    add("billing_price_source_live_parity",
+        "pass" if pricing_match else "block",
+        {"expected_final_krw":expected,
+         "source_final_krw":src_prices,
+         "published_live_final_krw":live_prices,
+         "VAT_included":True,
+         "checkout_tested":False,
+         "real_charge_executed":False})
     for key,filename,max_minutes in (("nws_source","nws_active.json",180),
                                       ("cisa_kev_source","cisa_kev.json",600)):
         doc=json_file(data/"hz"/filename) or {}
@@ -137,6 +169,7 @@ def inspect(src,live,data,now=None):
     for key,description in (
         ("member_login_authorized","Real Google login/OAuth redirect and server-side membership authorization"),
         ("member_revoke_authorized","Actual role downgrade/lockout and key rotation on safe test accounts"),
+        ("payment_entitlement_authorized","Sandbox payment amount, receipt, role grant and refund reconciliation using owner-controlled test identity"),
         ("buyer_intake_authorized","Synthetic buyer form -> D1 -> inbox/CRM end-to-end delivery"),
         ("mobile_browser_authorized","Cloudflare live URL / mobile 7-language browser tests after release"),
         ("scheduler_24h_evidence","Two or more actual scheduled collect/publish/public readbacks, GitHub cron best-effort"),

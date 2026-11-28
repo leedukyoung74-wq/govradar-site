@@ -36,6 +36,10 @@ class AuditTest(unittest.TestCase):
         store(self.s,"web/auth.js",'const API = "/.netlify/identity", KEY = "wmm.auth.v1";')
         store(self.l,"public/assets/auth.js",'const API = "/nfid", KEY = "wmm.auth.v1";')
         store(self.s,"src/government_business_sites.json",{"countries":{("XX"+str(i)): [1,2,3] for i in range(193)}})
+        prices='export const PRODUCTS = { "analysis-month": {name:"Monthly",amount: 20000}, "analysis-year": {name:"Annual",amount: 200000} };'
+        store(self.s,"cf/functions/pay/_products.js",prices)
+        store(self.l,"functions/pay/_products.js",prices)
+
 
     def states(self):
         return {r["id"]:r for r in inspect(self.s,self.l,self.d,NOW)["checks"]}
@@ -91,6 +95,28 @@ class AuditTest(unittest.TestCase):
         self.assertEqual("pass",self.states()["live_auth_js"]["status"])
         self.store(self.l,"public/assets/auth.js",target+" window.evil=1;")
         self.assertEqual("block",self.states()["live_auth_js"]["status"])
+
+    def test_source_only_price_fix_does_not_unblock_live_billing(self):
+        self.assertEqual("pass",self.states()["billing_price_source_live_parity"]["status"])
+        self.store(self.l,"functions/pay/_products.js",
+                   'export const PRODUCTS = {"analysis-month":{amount:22000},"analysis-year":{amount:220000}};')
+        state=self.states()["billing_price_source_live_parity"]
+        self.assertEqual("block",state["status"])
+        self.assertEqual({"month":20000,"year":200000},state["detail"]["expected_final_krw"])
+        self.assertEqual({"month":22000,"year":220000},state["detail"]["published_live_final_krw"])
+        self.assertFalse(state["detail"]["real_charge_executed"])
+
+    def test_missing_malformed_or_duplicate_product_file_is_not_approved(self):
+        self.store(self.s,"cf/functions/pay/_products.js",
+                   'export const PRODUCTS = {"analysis-month":{amount:20000},"analysis-month":{amount:20000},"analysis-year":{amount:200000}};')
+        self.assertEqual("block",self.states()["billing_price_source_live_parity"]["status"])
+        (self.s/"cf/functions/pay/_products.js").unlink()
+        self.assertEqual("block",self.states()["billing_price_source_live_parity"]["status"])
+
+    def test_equal_prices_are_not_proof_of_checkout_entitlement(self):
+        report=inspect(self.s,self.l,self.d,NOW)
+        self.assertNotIn("billing_price_source_live_parity",report["blockers"])
+        self.assertIn("payment_entitlement_authorized",report["unverified"])
 
     def test_stale_public_html_and_code_drift_are_independent(self):
         self.store(self.l,"public/ko/index.html",'<b id="kp-t">235</b>')
