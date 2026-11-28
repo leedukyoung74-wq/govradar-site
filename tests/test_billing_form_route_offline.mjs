@@ -25,6 +25,34 @@ test("missing Toss keys keep real checkout disabled; GET config remains accurate
   assert.equal(response.headers.get("cache-control"),"no-store");
 });
 
+test("even both Toss credentials cannot activate payment without explicit operator flag", async () => {
+  const env={TOSS_CLIENT_KEY:"TEST_PUBLIC",TOSS_SECRET_KEY:"TEST_SECRET"};
+  const response=await billingConfig({env});
+  const info=await response.json();
+  assert.equal(info.enabled,false);
+  assert.equal(info.clientKey,"");
+  assert.equal(info.products["analysis-month"].amount,20000);
+  const request=new Request("https://radar.wmm-hoa.com/pay/confirm",{
+    method:"POST",headers:{"content-type":"application/json"},
+    body:JSON.stringify({item:"analysis-month",amount:20000,
+      paymentKey:"FAKE",orderId:"analysis-month-FAKE"})
+  });
+  const confirm=await paymentConfirm({request,env});
+  assert.equal(confirm.status,503);
+  assert.equal((await confirm.json()).code,"NOT_READY");
+});
+
+test("explicit flag cannot activate checkout if either credential missing", async () => {
+  for (const env of [
+    {WMM_PAYMENT_LIVE_ENABLED:"true",TOSS_CLIENT_KEY:"TEST_PUBLIC"},
+    {WMM_PAYMENT_LIVE_ENABLED:"true",TOSS_SECRET_KEY:"TEST_SECRET"},
+    {WMM_PAYMENT_LIVE_ENABLED:"TRUE",TOSS_CLIENT_KEY:"TEST_PUBLIC",TOSS_SECRET_KEY:"TEST_SECRET"}
+  ]) {
+    const cfg=await (await billingConfig({env})).json();
+    assert.equal(cfg.enabled,false);
+  }
+});
+
 test("real payment confirmation stays disabled with missing secret", async () => {
   const request=new Request("https://radar.wmm-hoa.com/pay/confirm",{
     method:"POST",headers:{"content-type":"application/json"},
@@ -43,7 +71,7 @@ test("the previous VAT-added amount fails the backend price equality check", asy
     body:JSON.stringify({paymentKey:"TEST_ONLY",orderId:"analysis-month-fake",
                          item:"analysis-month",amount:22000,email:"no@invalid.test"})
   });
-  const response=await paymentConfirm({request,env:{TOSS_SECRET_KEY:"DUMMY_TEST_ONLY"}});
+  const response=await paymentConfirm({request,env:{WMM_PAYMENT_LIVE_ENABLED:"true",TOSS_CLIENT_KEY:"TEST_PUBLIC",TOSS_SECRET_KEY:"DUMMY_TEST_ONLY"}});
   assert.equal(response.status,400);
   assert.equal((await response.json()).code,"AMOUNT_MISMATCH");
 });
