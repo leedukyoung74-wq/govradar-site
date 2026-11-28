@@ -41,6 +41,20 @@ PERIODIC={
 }
 
 
+# The homepage candidate must match owner-approved VAT-inclusive KRW 20,000/month.
+MONTHLY_LABEL = {
+    "ko": "월 20,000원",
+    "en": "₩20,000/mo",
+    "es": "₩20.000/mes",
+    "fr": "20 000 ₩/mois",
+    "ar": "20,000 وون شهريًا",
+    "vi": "₩20.000/tháng",
+    "id": "₩20.000/bulan",
+}
+# A stale price anywhere in a candidate is a release blocker, not a typo to hide.
+OBSOLETE_PRICE = re.compile(r"(?<![0-9])19[,.\u00a0\u202f ]800(?![0-9])")
+
+
 def sha(data):
     return hashlib.sha256(data).hexdigest()
 
@@ -78,6 +92,8 @@ def assess(locale,source,existing,live_root):
         "periodic_update_badge":PERIODIC[locale] in src,
         "existing_dynamic_tender_placeholder":'id="kp-t"' in src,
         "existing_dynamic_last_update":'id="kp-u"' in src,
+        "canonical_monthly_krw_20000":MONTHLY_LABEL[locale] in src,
+        "obsolete_monthly_krw_19800_absent":OBSOLETE_PRICE.search(src) is None,
     }
     assets=local_assets(src)
     missing=[path for path in assets if not (live_root/path).is_file()]
@@ -86,6 +102,7 @@ def assess(locale,source,existing,live_root):
         "current_live_sha256":sha(existing.encode("utf-8")),
         "html_changed":source!=existing,
         "reviewed_research_copy_already_live":COPY[locale] in live,
+        "existing_live_obsolete_19800_mentions":len(OBSOLETE_PRICE.findall(live)),
         "form_tag_count_before":len(form_tags(existing)),
         "form_tag_count_after":len(form_tags(source)),
         "form_tags_identical":form_tags(source)==form_tags(existing),
