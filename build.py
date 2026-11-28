@@ -180,7 +180,7 @@ def navhtml(L):
 def navhtml_act(L, path):
     g, _ = _group_of(path)
     return _navgroups(L, NAV, g)
-_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||/\/(legal|member|pay|mdb)\//.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/map/"+(l==="ko"?"":l+"/"))})();</script>"""
+_GATE = r"""<script>(function(){try{var q=location.search,a=(q.match(/[?&]auth=(login|signup|reset)/)||[])[1];if(a){document.addEventListener("DOMContentLoaded",function(){window.WMMAuth&&WMMAuth.open(a)});return}if(/[?&]stay=/.test(q)||/(access_token|confirmation_token|recovery_token|invite_token|error_description)=/.test(location.hash)||!/^\/((ko|en|es|fr|ar|vi|id)\/)?(index\.html)?$/.test(location.pathname))return;if(localStorage.getItem("wmm.auth.v1")||localStorage.getItem("gv_code"))return}catch(e){return}var l=document.documentElement.lang||"ko";if(["ko","en","es","fr","ar","vi","id"].indexOf(l)<0)l="en";location.replace("/map/"+(l==="ko"?"":l+"/"))})();</script>"""
 def _open_first(x):
     """입찰 미리보기: 열린 입찰을 마감 가까운 순으로 먼저, 마감된 건은 뒤로 (2026-11-22)."""
     dl = str((x or {}).get("deadline") or "") if isinstance(x, dict) else ""

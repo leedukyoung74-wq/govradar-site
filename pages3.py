@@ -326,7 +326,7 @@ def tier_cta(L, need, iso="", n=None):
             f'<span class="go">{"바로 신청 →" if ko else "Start now →"}</span></a>')
 def tier_table(L):
     ko = L == "ko"
-    SUB = {"member": ("VAT 포함 · 연 200,000원", "VAT incl. · ₩200,000/yr")}
+    SUB = {"member": ("VAT 별도 · 연 200,000원", "VAT excl. · ₩200,000/yr")}
     head = "".join(f'<th data-t="{i}">{nk if ko else ne}<small>{pk if ko else pe}</small>' + (f'<small class="vat">{SUB[i][0] if ko else SUB[i][1]}</small>' if i in SUB else "") + '</th>' for i, nk, ne, pk, pe in TIERS)
     EN = {"항목별 앞 2건": "First 2 per section", "나라별 앞 2건": "First 2 per country", "3건": "3", "주 1건": "1 a week", "전체": "All", "10개국": "10 countries", "무제한": "Unlimited", "✓ (사전 신청)": "✓ (register)", "✓ 우선 좌석": "✓ priority seat", "상담 후 견적": "By quote", "포함": "Included", "분기 브리프": "Quarterly brief", "상담": "On request"}
     rows = "".join(f'<tr><th>{r[0] if ko else r[1]}</th>' + "".join(f'<td data-t="{TIERS[j][0]}">{(v if ko else EN.get(v, v))}</td>' for j, v in enumerate(r[2:])) + "</tr>" for r in TIER_ROWS)
@@ -364,7 +364,7 @@ GLOBAL_INFO = [
  ("지원 방식과 나라", "How and where we help", "지원은 온라인으로 합니다. 분석은 193개국의 공개 자료를 근거로 하며, 모든 나라에서 같은 현지 지원을 하지는 않습니다. 현지 파트너 연결은 상담 뒤 가능한 나라에서만 안내합니다.",
   "Support is online. Analysis draws on public information for 193 countries; we do not offer the same local support everywhere. Local partner introductions are offered after a consultation, only where available."),
  ("가격과 결제", "Prices and payment", "가격은 원화 기준입니다(분석 회원 월 20,000원). 해외 기업은 견적을 요청하면 통화와 결제 방법을 견적서로 안내합니다. GCSME 회원사는 회원가 페이지를 이용하세요.",
-  "Prices are in Korean won (analysis membership KRW 20,000 a month, VAT included). Companies outside Korea receive the currency and payment method on the quote. GCSME member companies can use the member-price page."),
+  "Prices are in Korean won (analysis membership KRW 20,000 a month, VAT excluded). Companies outside Korea receive the currency and payment method on the quote. GCSME member companies can use the member-price page."),
 ]
 def global_info(L, e):
     ko = L == "ko"
@@ -382,7 +382,7 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
      ("meetup", "월 1회 해외 정부사업 설명회·파트너 매칭 모임", "Monthly briefing & partner-matching meet-up", "무료 · 사전 신청 (서울 오프라인 + 온라인 동시, 장소는 신청자에게 안내)", "Free · registration required (Seoul in person + online; venue sent to registrants)",
       "이달의 주요 정부 사업·입찰을 함께 보고, 같은 나라·분야를 노리는 기업·전문가와 직접 만나는 자리입니다. 프로젝트 파트너십 상담도 현장에서 받습니다.",
       "We walk through this month's key government programmes and tenders, and you meet companies and experts targeting the same countries and sectors. Partnership consultations are available on site.", "city"),
-     ("member", "분석 회원", "Analysis membership", "월 20,000원 · 연 200,000원 (VAT 포함, 자동갱신 없음)", "₩20,000/month · ₩200,000/year (VAT incl., no auto-renewal)",
+     ("member", "분석 회원", "Analysis membership", "월 20,000원 · 연 200,000원 (VAT 별도, 자동갱신 없음)", "₩20,000/month · ₩200,000/year (VAT excl., no auto-renewal)",
       "가입하면 요약은 무료로 보고, 분석 회원은 모든 나라의 전체 목록과 AI가 분석하고 사람이 검수한 '왜 지금인지·누가 살 사람인지'를 모든 나라에서 보고, 관심 나라 10곳의 주간 요약과 마감 임박 알림을 이메일로 받고(담당자 검수 후 발송), 중동 정세에 중요한 변화가 있으면 리스크 브리프를 받습니다. 설명회 우선 좌석도 드립니다.",
       "Summaries are free with sign-up. Analysis members see full lists plus the AI-analysed, human-reviewed why-now and target buyers for every country, get a weekly email summary with closing-soon alerts for 10 countries (sent after staff review), and a Middle East risk brief when there is a significant change. Priority seats at the meet-ups too.", "earth"),
      ("brief", "국가 진출 브리프", "Market-entry brief", "상담 후 견적", "By quote",
@@ -419,7 +419,7 @@ def pricing_page(L, C, PLANS, PLAN_NOTE):
 <label class="chk"><input type="checkbox" name="privacy_agree" value="yes" required> <span>{f'<a href="/{L}/legal/privacy/" target="_blank">개인정보 처리방침</a>에 동의합니다 (필수)' if ko else f'I agree to the <a href="/{L}/legal/privacy/" target="_blank">Privacy Policy</a> (required)'}</span></label>
 <label class="chk"><input type="checkbox" name="marketing" value="yes"> {"새 공고·소식 이메일(광고)을 받겠습니다 (선택)" if ko else "Send me news and offers by email (optional)"}</label>
 <button class="btn pri" type="submit">{"견적 요청 보내기" if ko else "Request a quote"}</button></form>
-<p class="note">{"분석 회원 VAT 포함 · 기업·기관 상품 VAT 별도 · 자동갱신 없음 · 결제일부터 7일 안에 유료 자료를 쓰지 않았다면 전액 환불 · 이용을 시작한 뒤 해지하면 남은 기간까지 이용 · 연간 선납은 이용한 달을 월 요금으로 계산해 뺀 금액 환불 · 맞춤 보고서는 작업 시작 전까지 전액 환불, 받은 뒤에는 청약철회 제한 · 학생·NGO(19세 이상) 50% 할인 · 결과물은 'AI 작성 + 사람 검수'로 표시합니다 · " if ko else "Analysis membership includes VAT; business and institutional products exclude VAT · no auto-renewal · full refund within 7 days of payment if no paid material was used · after use starts, cancel and keep access to the end of the period · annual prepay refunds the balance after charging the months used at the monthly price · custom reports are fully refundable until work starts, and cannot be withdrawn once delivered · 50% off for students and NGOs (19+) · deliverables are labelled 'AI-drafted, human-reviewed' · "}<a href="/{L}/legal/refund/">{"환불 정책" if ko else "Refund policy"}</a> · <a href="/{L}/legal/terms/">{"이용약관" if ko else "Terms"}</a> · 73036396@naver.com</p>
+<p class="note">{"분석 회원과 기업·기관 상품 모두 VAT 별도 · 자동갱신 없음 · 결제일부터 7일 안에 유료 자료를 쓰지 않았다면 전액 환불 · 이용을 시작한 뒤 해지하면 남은 기간까지 이용 · 연간 선납은 이용한 달을 월 요금으로 계산해 뺀 금액 환불 · 맞춤 보고서는 작업 시작 전까지 전액 환불, 받은 뒤에는 청약철회 제한 · 학생·NGO(19세 이상) 50% 할인 · 결과물은 'AI 작성 + 사람 검수'로 표시합니다 · " if ko else "Analysis membership and business products: VAT excluded · no auto-renewal · full refund within 7 days of payment if no paid material was used · after use starts, cancel and keep access to the end of the period · annual prepay refunds the balance after charging the months used at the monthly price · custom reports are fully refundable until work starts, and cannot be withdrawn once delivered · 50% off for students and NGOs (19+) · deliverables are labelled 'AI-drafted, human-reviewed' · "}<a href="/{L}/legal/refund/">{"환불 정책" if ko else "Refund policy"}</a> · <a href="/{L}/legal/terms/">{"이용약관" if ko else "Terms"}</a> · 73036396@naver.com</p>
 {credit(["sign"] + [o[-1] for o in offers], ko)}</div></section>
 <script>(function(){{var NEED={json.dumps({k: [v[0], v[1] if ko else v[2]] for k, v in NEED.items()}, ensure_ascii=False)},TP={json.dumps({x[0]: (x[1]+" "+x[3]) if ko else (x[2]+" "+x[4]) for x in TIERS}, ensure_ascii=False)};var q=new URLSearchParams(location.search),p=q.get("p")||q.get("t"),c=q.get("c"),nd=q.get("need"),t=q.get("t");
 if(t&&TP[t]){{document.querySelectorAll('.tiers [data-t="'+t+'"]').forEach(function(x){{x.classList.add("hit")}});var b=document.getElementById("needban");if(b){{var w=nd&&NEED[nd]?NEED[nd][1]:"";b.innerHTML="<span>"+(w?({json.dumps('보려는 내용: ' if ko else 'You want: ')}+"<b>"+w+"</b><br>"):"")+{json.dumps('가장 저렴한 등급' if ko else 'Lowest plan')}+"</span><span class=p>"+TP[t]+"</span><a class='btn pri' href='#order' data-pick='"+t+"'>"+{json.dumps('이 등급으로 신청' if ko else 'Request this plan')}+"</a>";b.hidden=false;}}}}
@@ -788,7 +788,7 @@ def unlock_page(L, C):
 # ---------------------------------------------------------------- GCSME members (/L/gcsme/) — alternative A
 def gcsme_page(L, C):
     ko = L == "ko"
-    rows = [("Analysis membership", "₩20,000/mo", "월 20,000원 (VAT 포함)", "All why-now & target buyers, weekly alerts for 10 countries"),
+    rows = [("Analysis membership", "₩20,000/mo", "월 20,000원 (VAT 별도)", "All why-now & target buyers, weekly alerts for 10 countries"),
             ("Market-entry brief", "By quote", "상담 후 견적", "One country, human-reviewed, turnaround confirmed with the quote"),
             ("Project partnership", "free first call", "첫 상담 무료 · 비용은 상담 후 결정", "Introductions to Korean partners and consortia; fees agreed after the first call")]
     tr = "".join(f"<tr><th>{a}</th><td><b>{b}</b></td><td>{c if ko else d}</td></tr>" for a, b, c, d in rows)
@@ -1056,7 +1056,7 @@ def membership_page(L, C):
 <div><h3>{T("연결이 닿지 않는다", "Connections are hard to reach")}</h3><p>{T("믿을 만한 현지 상대를 만나기까지 시간과 비용이 큽니다.", "Meeting a trustworthy local counterpart takes time and money.")}</p></div></div></div></section>
 <section class="band" id="tiers"><div class="in"><h2>{T("멤버십 등급 v2.0", "Membership grades v2.0")}</h2>
 <details class="mfull"><summary>{T("등급별 전체 비교표 열기", "Open the full grade table")}</summary><div class="tscroll"><table class="tiers">{thead}{trows}</table></div></details>
-<p class="note">{T("M1은 GOV RADAR 분석 회원(월 20,000원)과 같은 등급입니다. 부가세 포함, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다. 투자 유치·계약·매출을 보장하지 않습니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩20,000/month). VAT included; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed. We do not guarantee investment, contracts or sales.")}</p>
+<p class="note">{T("M1은 GOV RADAR 분석 회원(월 20,000원)과 같은 등급입니다. 부가세 별도, 세금계산서 발행. 등급과 요금은 v2.0 안이며 확정되면 다시 안내합니다. 투자 유치·계약·매출을 보장하지 않습니다.", "M1 is the same grade as the GOV RADAR analysis membership (₩20,000/month). VAT excluded; tax invoices issued. Grades and prices are the v2.0 proposal and will be confirmed. We do not guarantee investment, contracts or sales.")}</p>
 <h3 style="margin-top:34px">{T("한 단계 오를 때마다 더해지는 것", "What each level adds")}</h3><div class="mstep">{steps}</div></div></section>
 <section class="band alt"><div class="in"><h2>{T("멤버십으로 쓰는 두 개의 창구", "Two doors, one membership")}</h2><div class="mdoor">
 <a href="/{L}/"><b>radar.wmm-hoa.com · GOV RADAR</b><p>{T("세계 정부 아젠다, 공공 입찰, 제재 동향, 재난 대비 정보를 나라별로 모아 보여 줍니다. 분석 의뢰와 입찰 적합도 판정도 여기서 신청합니다.", "Government agendas, public tenders, sanctions and disaster preparedness by country. Analysis requests and tender fit assessments are ordered here.")}</p></a>

@@ -1,4 +1,4 @@
-"""GOV RADAR /mdb direct public route: map-first still applies to unrelated non-member pages."""
+"""GOV RADAR /mdb direct public route: map-first applies only to the home pages (2026-11-28)."""
 import pathlib
 import re
 import shutil
@@ -16,15 +16,16 @@ class PublicTenderBoardGate(unittest.TestCase):
         assert m, "map-first gate missing"
         cls.gate = m.group(1).removeprefix("<script>").removesuffix("</script>")
 
-    def test_public_tender_board_is_exempted(self):
-        self.assertIn(r"(legal|member|pay|mdb)", self.gate)
+    def test_only_home_pages_are_gated(self):
+        self.assertIn(r"(index\.html)?$/.test(location.pathname)", self.gate)
 
     def test_mdb_direct_access_and_home_map_first(self):
         if not shutil.which("node"):
             self.skipTest("Node not installed")
         import json
         for path, expect in [("/ko/mdb/","NO_REDIRECT"),("/en/mdb/","NO_REDIRECT"),
-                             ("/ko/about/","/map/"),("/ar/about/","/map/ar/")]:
+                             ("/ko/about/","NO_REDIRECT"),("/ko/thanks/","NO_REDIRECT"),("/ko/pricing/","NO_REDIRECT"),
+                             ("/ko/japan/","NO_REDIRECT"),("/","/map/"),("/ko/","/map/"),("/ar/","/map/ar/"),("/en/index.html","/map/en/")]:
             with self.subTest(path=path):
                 js = f"""
                 const location={{search:'',hash:'',pathname:{json.dumps(path)},replace:(x)=>process.stdout.write(x)}};

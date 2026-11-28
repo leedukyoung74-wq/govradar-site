@@ -84,7 +84,7 @@ PLANS = {
         ("EXECUTE","By quote","Human-reviewed reports, proposals, online remote review, CONNECT introductions")],
 }
 for _l in ("es","fr","ar","vi","id"): PLANS[_l] = PLANS["en"]
-PLAN_NOTE = {"ko":"분석 회원 VAT 포함 · 기업·기관 서비스 VAT 별도 · 학생 할인 등급은 없고 무료가 누구에게나 같습니다 · 언제든 해지 가능 (환불 정책 참고)","en":"Analysis member VAT included; other business services VAT excluded · no student tier: FREE is the same for everyone · cancel any time (see refund policy)"}
+PLAN_NOTE = {"ko":"분석 회원과 기업·기관 서비스 모두 VAT 별도 · 학생 할인 등급은 없고 무료가 누구에게나 같습니다 · 언제든 해지 가능 (환불 정책 참고)","en":"Analysis member and business services: VAT excluded · no student tier: FREE is the same for everyone · cancel any time (see refund policy)"}
 
 # 2026-11-15 대표 지시: 홍보·광고 메일은 별도 동의(선택)
 _MKT = {
