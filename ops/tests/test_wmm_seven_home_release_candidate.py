@@ -25,6 +25,8 @@ def page(lang,*,extra="",form="/nfform?next=/ko/thanks/"):
         f'<p>{P.COUNTRY[lang]}</p>'
         f'<small>{P.COPY[lang]}</small>'
         f'<p>{P.MONTHLY_LABEL[lang]}</p>'
+        f'<label><input name="sol" value="Analysis membership">'
+        f'<span>{P.MONTHLY_LABEL[lang]} ({P.VAT_INCLUDED[lang]})</span></label>'
         '<b id="kp-t">—</b><span id="kp-u"></span>'
         f'<form method="POST" action="{form}"></form>{extra}</main></body></html>'
     )
@@ -126,6 +128,43 @@ class SevenHomeCandidateTests(unittest.TestCase):
             r=P.build(src,live,out)
             self.assertEqual(r["state"],"OWNER_RELEASE_REVIEW_REQUIRED")
             self.assertEqual(r["checks"]["ko"]["existing_live_obsolete_19800_mentions"],1)
+
+    def test_vat_excluded_m1_label_blocks_each_locale(self):
+        variants={"ko":"VAT 별도", "en":"VAT excl.", "es":"sin IVA",
+                  "fr":"HT", "ar":"دون الضريبة", "vi":"chưa VAT",
+                  "id":"belum PPN"}
+        with tempfile.TemporaryDirectory() as temp:
+            base=Path(temp);src=base/"candidate";live=base/"live";out=base/"out"
+            self.fixtures(src,live)
+            for lang,bad in variants.items():
+                p=src/lang/"index.html"
+                old=p.read_text(encoding="utf-8")
+                p.write_text(old.replace(P.VAT_INCLUDED[lang],bad),encoding="utf-8")
+            r=P.build(src,live,out)
+            self.assertEqual(set(r["blocked_locales"]),set(P.LANGS))
+            for lang in P.LANGS:
+                self.assertFalse(r["checks"][lang]["check_results"]["member_card_vat_included"])
+
+    def test_other_business_vat_excluded_does_not_block_m1_offer(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base=Path(temp);src=base/"candidate";live=base/"live";out=base/"out"
+            self.fixtures(src,live)
+            p=src/"ko"/"index.html"
+            p.write_text(page("ko",extra="<p>기업 서비스는 VAT 별도 견적</p>"),encoding="utf-8")
+            r=P.build(src,live,out)
+            self.assertNotIn("ko",r["blocked_locales"])
+            self.assertTrue(r["checks"]["ko"]["check_results"]["member_card_vat_included"])
+
+    def test_existing_live_bad_vat_reported_without_promoting_to_approval(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base=Path(temp);src=base/"candidate";live=base/"live";out=base/"out"
+            self.fixtures(src,live)
+            p=live/"en"/"index.html"
+            p.write_text(page("en").replace(P.VAT_INCLUDED["en"],"VAT excl."),encoding="utf-8")
+            r=P.build(src,live,out)
+            self.assertEqual(r["state"],"OWNER_RELEASE_REVIEW_REQUIRED")
+            self.assertTrue(r["checks"]["en"]["existing_live_membership_vat_excluded"])
+            self.assertFalse(r["checks"]["ko"]["existing_live_membership_vat_excluded"])
 
     def test_release_workflow_does_not_deploy_or_create_cron(self):
         s=(ROOT/".github"/"workflows"/"wmm_seven_home_release_candidate.yml").read_text()
